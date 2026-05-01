@@ -1,0 +1,41 @@
+@page "/account/register"
+@model PreseMakerRepo.Api.Pages.Account.RegisterModel
+@{ ViewData["Title"] = "Register"; }
+
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <h1 class="h4 mb-4">Create Account</h1>
+
+        @if (Model.ErrorMessage is not null)
+        {
+            <div class="alert alert-danger">@Model.ErrorMessage</div>
+        }
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="Username" class="form-label">Username</label>
+                <input id="Username" asp-for="Username" class="form-control" autocomplete="username" required />
+                <div class="form-text">3–30 characters, letters, numbers, underscores, hyphens.</div>
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email address</label>
+                <input id="Email" asp-for="Email" type="email" class="form-control" required />
+                <div class="form-text">Use your institution email for EDU verification.</div>
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input id="Password" asp-for="Password" type="password" class="form-control" required />
+                <div class="form-text">Min 8 characters, uppercase letter, digit, and special character.</div>
+            </div>
+            <div class="mb-4">
+                <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                <input id="ConfirmPassword" asp-for="ConfirmPassword" type="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Create Account</button>
+        </form>
+
+        <p class="text-center mt-3 text-muted small">
+            Already have an account? <a asp-page="/Account/Login">Log in</a>
+        </p>
+    </div>
+</div>

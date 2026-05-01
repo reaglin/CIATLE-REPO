@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"] != null ? ViewData["Title"] + " — " : "")Admin · PreseMaker</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">PreseMaker Repository</a>
+            <span class="navbar-text text-warning fw-bold">Admin Console</span>
+            <form method="post" asp-page="/Account/Logout" asp-area="">
+                <button type="submit" class="btn btn-outline-light btn-sm">Log Out</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-md-block bg-light sidebar py-3 admin-sidebar" style="min-height:calc(100vh - 56px)">
+                <div class="nav flex-column">
+                    <a class="nav-link @(Context.Request.Path == "/admin" ? "active" : "")" href="/admin">Dashboard</a>
+                    <a class="nav-link @(Context.Request.Path == "/admin/flagged" ? "active" : "")" href="/admin/flagged">Flagged Content</a>
+                    <a class="nav-link @(Context.Request.Path == "/admin/contributors" ? "active" : "")" href="/admin/contributors">Contributors</a>
+                    <hr />
+                    <a class="nav-link" href="/">← Public Site</a>
+                </div>
+            </nav>
+
+            <main class="col-md-10 ms-sm-auto px-4 py-4">
+                @if (TempData["Success"] is string ok)
+                {
+                    <div class="alert alert-success alert-dismissible fade show">@ok <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                }
+                @if (TempData["Error"] is string err)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show">@err <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                }
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

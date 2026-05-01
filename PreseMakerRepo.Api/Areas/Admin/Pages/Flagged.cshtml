@@ -1,0 +1,120 @@
+@page "/admin/flagged"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.FlaggedModel
+@{ ViewData["Title"] = "Flagged Content"; }
+
+<h1 class="h4 mb-4">Flagged Content <span class="badge bg-danger">@Model.Items.Count</span></h1>
+
+@if (!Model.Items.Any())
+{
+    <div class="alert alert-success">No flagged content. Everything looks good!</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Content</th>
+                    <th>Type</th>
+                    <th>Course</th>
+                    <th>Contributor</th>
+                    <th>Flags</th>
+                    <th>Reason</th>
+                    <th>Flagged</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>
+                            @if (item.ContentType == "module")
+                            {
+                                <a href="/modules/@item.ContentId" target="_blank" class="text-decoration-none">@item.Title</a>
+                            }
+                            else
+                            {
+                                <a href="/materials/@item.ContentId" target="_blank" class="text-decoration-none">@item.Title</a>
+                            }
+                        </td>
+                        <td><span class="badge bg-secondary">@item.ContentType</span></td>
+                        <td class="small">@item.CourseId</td>
+                        <td class="small">@item.ContributorUsername</td>
+                        <td><span class="badge bg-warning text-dark">@item.FlagCount</span></td>
+                        <td class="small text-muted" style="max-width:180px">@(item.FlagReason?.Length > 80 ? item.FlagReason[..80] + "…" : item.FlagReason)</td>
+                        <td class="small text-muted text-nowrap">@item.MostRecentFlagUtc.ToString("MMM d, yyyy")</td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                @if (item.ContentType == "module")
+                                {
+                                    <form method="post" asp-page-handler="ClearModule">
+                                        <input type="hidden" name="id" value="@item.ContentId" />
+                                        <button type="submit" class="btn btn-success btn-sm" title="Clear Flag">✓ Clear</button>
+                                    </form>
+                                    <button type="button" class="btn btn-danger btn-sm"
+                                            data-bs-toggle="modal" data-bs-target="#removeModal"
+                                            data-id="@item.ContentId" data-type="module"
+                                            data-email="@item.ContributorEmail">Remove</button>
+                                }
+                                else
+                                {
+                                    <form method="post" asp-page-handler="ClearMaterial">
+                                        <input type="hidden" name="id" value="@item.ContentId" />
+                                        <button type="submit" class="btn btn-success btn-sm" title="Clear Flag">✓ Clear</button>
+                                    </form>
+                                    <button type="button" class="btn btn-danger btn-sm"
+                                            data-bs-toggle="modal" data-bs-target="#removeModal"
+                                            data-id="@item.ContentId" data-type="material"
+                                            data-email="@item.ContributorEmail">Remove</button>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<!-- Remove Modal -->
+<div class="modal fade" id="removeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title">Remove Content</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <form id="removeForm" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Reason</label>
+                        <textarea name="reason" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="notify" value="true" class="form-check-input" id="notifyCheck" checked />
+                        <label class="form-check-label" for="notifyCheck">Notify contributor by email</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Remove Content</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+document.getElementById('removeModal').addEventListener('show.bs.modal', function(e) {
+    var btn = e.relatedTarget;
+    var id = btn.dataset.id;
+    var type = btn.dataset.type;
+    var form = document.getElementById('removeForm');
+    var handler = type === 'module' ? 'RemoveModule' : 'RemoveMaterial';
+    form.action = '?handler=' + handler;
+    form.insertAdjacentHTML('afterbegin', '<input type="hidden" name="id" value="' + id + '" />');
+});
+document.getElementById('removeModal').addEventListener('hidden.bs.modal', function() {
+    document.getElementById('removeForm').querySelectorAll('input[name="id"]').forEach(el => el.remove());
+});
+</script>
+}

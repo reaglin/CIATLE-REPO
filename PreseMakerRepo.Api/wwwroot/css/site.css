@@ -1,0 +1,32 @@
+html { font-size: 14px; }
+@media (min-width: 768px) { html { font-size: 16px; } }
+html { position: relative; min-height: 100%; }
+body { margin-bottom: 60px; }
+
+/* Taxonomy grid cards */
+.taxonomy-card { transition: transform .12s ease, box-shadow .12s ease; cursor: pointer; text-decoration: none; color: inherit; }
+.taxonomy-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,.12); color: inherit; }
+
+/* License badges */
+.badge-cc-by       { background-color: #198754; }
+.badge-cc-by-sa    { background-color: #0d6efd; }
+.badge-cc-by-nc    { background-color: #ffc107; color: #212529 !important; }
+.badge-cc-by-nc-sa { background-color: #dc3545; }
+.badge-edu { background-color: #6f42c1; }
+.badge-material-type { background-color: #495057; }
+
+/* Content cards */
+.content-card { border-left: 4px solid #0d6efd; }
+.content-card.flagged { border-left-color: #ffc107; }
+.content-card.removed { border-left-color: #dc3545; opacity: .65; }
+
+/* Admin sidebar */
+.admin-sidebar .nav-link { color: #495057; }
+.admin-sidebar .nav-link.active, .admin-sidebar .nav-link:hover { color: #0d6efd; background-color: #e9ecef; border-radius: .375rem; }
+
+/* Stat cards */
+.stat-card .display-5 { font-size: 2rem; }
+
+/* Inline file preview */
+.material-preview iframe { width: 100%; height: 480px; border: 1px solid #dee2e6; border-radius: .375rem; }
+.material-preview img { max-width: 100%; border: 1px solid #dee2e6; border-radius: .375rem; }

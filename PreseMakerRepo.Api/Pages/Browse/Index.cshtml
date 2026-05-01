@@ -1,0 +1,82 @@
+@page "/browse"
+@model PreseMakerRepo.Api.Pages.Browse.IndexModel
+@{ ViewData["Title"] = Model.IsSearch ? $"Search: {Model.Q}" : "Browse"; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item active">Browse</li>
+    </ol>
+</nav>
+
+@if (Model.IsSearch)
+{
+    <h1 class="h4 mb-1">Search Results</h1>
+    <p class="text-muted mb-3">@Model.TotalResults result@(Model.TotalResults != 1 ? "s" : "") for "<strong>@Model.Q</strong>"</p>
+
+    @if (!Model.SearchResults.Any())
+    {
+        <div class="alert alert-info">No results found. Try a different search term or <a asp-page="/Browse/Index">browse by discipline</a>.</div>
+    }
+    else
+    {
+        @foreach (var r in Model.SearchResults)
+        {
+            <div class="card mb-3 content-card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <span class="badge bg-secondary me-1">@r.ResultType</span>
+                            @if (r.MaterialType is not null)
+                            {
+                                <span class="badge badge-material-type me-2">@r.MaterialType</span>
+                            }
+                            <span class="text-muted small">@r.CourseId</span>
+                        </div>
+                        <small class="text-muted">@r.SubmittedUtc.ToString("MMM d, yyyy")</small>
+                    </div>
+                    <h5 class="mt-2 mb-1">
+                        @if (r.ResultType == "module")
+                        {
+                            <a asp-page="/Module/Detail" asp-route-moduleId="@r.ModuleId" class="text-decoration-none">@r.Title</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/Material/Detail" asp-route-materialId="@r.MaterialId" class="text-decoration-none">@r.Title</a>
+                            <small class="text-muted fw-normal ms-2">in <a asp-page="/Module/Detail" asp-route-moduleId="@r.ModuleId">@r.ModuleTitle</a></small>
+                        }
+                    </h5>
+                    @if (!string.IsNullOrEmpty(r.Description))
+                    {
+                        <p class="text-muted small mb-1">@(r.Description.Length > 200 ? r.Description[..200] + "…" : r.Description)</p>
+                    }
+                    <small class="text-muted">
+                        @r.ContributorUsername
+                        @if (r.IsEduVerified) { <span class="badge badge-edu ms-1">EDU</span> }
+                        @if (!string.IsNullOrEmpty(r.InstitutionName)) { <span>· @r.InstitutionName</span> }
+                    </small>
+                </div>
+            </div>
+        }
+    }
+}
+else
+{
+    <h1 class="h4 mb-3">Browse by Discipline</h1>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 taxonomy-grid">
+        @foreach (var node in Model.Disciplines)
+        {
+            <div class="col">
+                <a asp-page="/Browse/Level1" asp-route-level1Key="@node.Key" class="card h-100 taxonomy-card">
+                    <div class="card-body">
+                        <h6 class="card-title mb-1">@node.Name</h6>
+                        <p class="card-text text-muted small mb-0">
+                            @node.CourseCount course@(node.CourseCount != 1 ? "s" : "")
+                            · @node.ModuleCount module@(node.ModuleCount != 1 ? "s" : "")
+                        </p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+}

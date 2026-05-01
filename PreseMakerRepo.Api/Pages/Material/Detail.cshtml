@@ -1,0 +1,124 @@
+@page "/materials/{materialId:guid}"
+@model PreseMakerRepo.Api.Pages.Material.DetailModel
+@{ ViewData["Title"] = Model.Material?.Title; }
+
+@if (Model.Material is null) { return; }
+@{ var mat = Model.Material; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Course" asp-route-courseId="@mat.Module.CourseId">@mat.Module.CourseId</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Module/Detail" asp-route-moduleId="@mat.ModuleId">@mat.Module.Title</a></li>
+        <li class="breadcrumb-item active">@mat.Title</li>
+    </ol>
+</nav>
+
+<div class="row g-4">
+    <div class="col-lg-8">
+        <h1 class="h3 mb-1">@mat.Title</h1>
+        <p class="mb-3">
+            <span class="badge badge-material-type me-2">@mat.Type</span>
+            <span class="text-muted small">@mat.FileName · @FormatSize(mat.FileSizeBytes)</span>
+        </p>
+
+        @if (!string.IsNullOrEmpty(mat.Description))
+        {
+            <p>@mat.Description</p>
+        }
+
+        @if (Model.CanPreview)
+        {
+            <div class="mb-3">
+                <button id="previewToggleBtn" class="btn btn-outline-secondary btn-sm">Show Preview</button>
+            </div>
+            <div id="materialPreview" class="material-preview d-none mb-3">
+                @if (mat.ContentType.StartsWith("image/"))
+                {
+                    <img src="@Model.DownloadUrl" alt="@mat.Title" />
+                }
+                else
+                {
+                    <iframe src="@Model.DownloadUrl" title="@mat.Title"></iframe>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <a href="@Model.DownloadUrl" class="btn btn-primary w-100 mb-2">Download</a>
+                <p class="text-muted small mb-0">@mat.ContentType</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h6 class="card-title">Contributor</h6>
+                <p class="mb-1 fw-semibold">
+                    @mat.Contributor.UserName
+                    @if (mat.Contributor.IsEduVerified) { <span class="badge badge-edu">EDU</span> }
+                </p>
+                @if (!string.IsNullOrEmpty(mat.Contributor.InstitutionName))
+                {
+                    <p class="text-muted small mb-0">@mat.Contributor.InstitutionName</p>
+                }
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h6 class="card-title">License</h6>
+                <a href="@Model.LicenseUrl" target="_blank" rel="noopener"
+                   class="badge @Model.LicenseBadgeClass text-decoration-none">@Model.LicenseDisplayName</a>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h6 class="card-title">Part of Module</h6>
+                <a asp-page="/Module/Detail" asp-route-moduleId="@mat.ModuleId" class="text-decoration-none small">
+                    @mat.Module.Title
+                </a>
+            </div>
+        </div>
+
+        <button class="btn btn-outline-danger btn-sm w-100"
+                data-bs-toggle="modal" data-bs-target="#reportModal">
+            Report This Material
+        </button>
+    </div>
+</div>
+
+<!-- Report Modal -->
+<div class="modal fade" id="reportModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Report Material</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="reportForm" data-endpoint="@Model.ReportEndpoint">
+                    <label for="reportReason" class="form-label">Reason (optional)</label>
+                    <textarea id="reportReason" class="form-control" rows="3" maxlength="500"
+                              placeholder="Describe the issue…"></textarea>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" id="reportSubmitBtn" class="btn btn-danger">Submit Report</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@functions {
+    static string FormatSize(long bytes)
+    {
+        if (bytes < 1024) return $"{bytes} B";
+        if (bytes < 1024 * 1024) return $"{bytes / 1024.0:F1} KB";
+        return $"{bytes / (1024.0 * 1024):F1} MB";
+    }
+}

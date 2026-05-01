@@ -1,0 +1,95 @@
+@page "/admin"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.IndexModel
+@{ ViewData["Title"] = "Dashboard"; }
+
+<h1 class="h4 mb-4">Dashboard</h1>
+
+<div class="row g-3 mb-4">
+    <div class="col-6 col-md-3">
+        <div class="card stat-card text-center py-3">
+            <div class="display-5 fw-bold text-primary">@Model.PublishedModules</div>
+            <div class="text-muted small">Published Modules</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="card stat-card text-center py-3">
+            <div class="display-5 fw-bold text-warning">@Model.FlaggedModules</div>
+            <div class="text-muted small">Flagged Modules</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="card stat-card text-center py-3">
+            <div class="display-5 fw-bold">@Model.TotalMaterials</div>
+            <div class="text-muted small">Materials</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="card stat-card text-center py-3">
+            <div class="display-5 fw-bold text-success">@Model.TotalContributors</div>
+            <div class="text-muted small">Contributors</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">Module Summary</h6>
+                <dl class="row mb-0 small">
+                    <dt class="col-7">Total</dt><dd class="col-5">@Model.TotalModules</dd>
+                    <dt class="col-7">Published</dt><dd class="col-5 text-success">@Model.PublishedModules</dd>
+                    <dt class="col-7">Flagged</dt><dd class="col-5 text-warning">@Model.FlaggedModules</dd>
+                    <dt class="col-7">Removed</dt><dd class="col-5 text-danger">@Model.RemovedModules</dd>
+                    <dt class="col-7">Last 30 days</dt><dd class="col-5">@Model.RecentModules30Days</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">Contributors</h6>
+                <dl class="row mb-0 small">
+                    <dt class="col-7">Total</dt><dd class="col-5">@Model.TotalContributors</dd>
+                    <dt class="col-7">Suspended</dt><dd class="col-5 text-danger">@Model.SuspendedContributors</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">Moderation</h6>
+                <p class="mb-2">
+                    <span class="badge bg-danger fs-6">@Model.OpenFlags</span>
+                    open flag@(Model.OpenFlags != 1 ? "s" : "")
+                </p>
+                @if (Model.OpenFlags > 0)
+                {
+                    <a href="/admin/flagged" class="btn btn-warning btn-sm">Review Flagged Content</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="h6 text-muted mb-2">Recent Modules</h2>
+<div class="table-responsive">
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr><th>Title</th><th>Course</th><th>Contributor</th><th>Submitted</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model.RecentModulesList)
+            {
+                <tr>
+                    <td><a href="/modules/@m.Id">@m.Title</a></td>
+                    <td>@m.CourseId</td>
+                    <td>@m.Contributor.UserName</td>
+                    <td class="text-muted small">@m.SubmittedUtc.ToString("MMM d, yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

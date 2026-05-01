@@ -1,0 +1,18 @@
+@page "/account/confirm-email"
+@model PreseMakerRepo.Api.Pages.Account.ConfirmEmailModel
+@{ ViewData["Title"] = "Email Confirmation"; }
+
+<div class="row justify-content-center">
+    <div class="col-md-6 text-center py-5">
+        @if (Model.Success)
+        {
+            <div class="alert alert-success">@Model.Message</div>
+            <a asp-page="/Account/Login" class="btn btn-primary">Log In</a>
+        }
+        else
+        {
+            <div class="alert alert-warning">@Model.Message</div>
+            <a asp-page="/Index" class="btn btn-outline-secondary">Return Home</a>
+        }
+    </div>
+</div>

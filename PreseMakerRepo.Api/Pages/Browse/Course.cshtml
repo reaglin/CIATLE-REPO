@@ -1,0 +1,63 @@
+@page "/courses/{courseId}"
+@model PreseMakerRepo.Api.Pages.Browse.CourseModel
+@{ ViewData["Title"] = Model.Course?.CourseId; }
+
+@if (Model.Course is null) { return; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Index">Browse</a></li>
+        <li class="breadcrumb-item active">@Model.Course.CourseId</li>
+    </ol>
+</nav>
+
+<div class="d-flex justify-content-between align-items-start mb-1">
+    <h1 class="h4 mb-0">@Model.Course.CourseId — @Model.Course.Title</h1>
+    @if (Model.Course.CreditHours.HasValue)
+    {
+        <span class="badge bg-secondary">@Model.Course.CreditHours credit hours</span>
+    }
+</div>
+@if (!string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl))
+{
+    <p class="mb-3"><a href="@Model.Course.CurriculumGuideUrl" target="_blank" rel="noopener">Curriculum Guide ↗</a></p>
+}
+
+<hr />
+<h2 class="h5 mb-3">Modules <span class="badge bg-secondary">@Model.Modules.Count</span></h2>
+
+@if (!Model.Modules.Any())
+{
+    <div class="alert alert-info">No published modules yet for this course.</div>
+}
+else
+{
+    @foreach (var m in Model.Modules)
+    {
+        var matCount = Model.PublishedMaterialCount(m);
+        var types = Model.MaterialTypes(m).ToList();
+        <div class="card mb-3 content-card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="card-title mb-1">
+                        <a asp-page="/Module/Detail" asp-route-moduleId="@m.Id" class="text-decoration-none">@m.Title</a>
+                    </h5>
+                    <small class="text-muted ms-2 text-nowrap">@m.SubmittedUtc.ToString("MMM d, yyyy")</small>
+                </div>
+                <p class="text-muted small mb-2">@(m.Description.Length > 150 ? m.Description[..150] + "…" : m.Description)</p>
+                <div class="d-flex align-items-center flex-wrap gap-1">
+                    <span class="badge bg-light text-dark border">@matCount material@(matCount != 1 ? "s" : "")</span>
+                    @foreach (var t in types)
+                    {
+                        <span class="badge badge-material-type">@t</span>
+                    }
+                    <span class="ms-auto text-muted small">
+                        @m.Contributor.UserName
+                        @if (m.Contributor.IsEduVerified) { <span class="badge badge-edu">EDU</span> }
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
+}

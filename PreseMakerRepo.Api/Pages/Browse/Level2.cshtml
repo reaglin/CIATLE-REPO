@@ -1,0 +1,71 @@
+@page "/browse/{level1Key}/{level2Key}"
+@model PreseMakerRepo.Api.Pages.Browse.Level2Model
+@{ ViewData["Title"] = Model.Prefix is not null ? $"{Model.Prefix.Key} — {Model.Prefix.Name}" : "Browse"; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Index">Browse</a></li>
+        <li class="breadcrumb-item">
+            <a asp-page="/Browse/Level1" asp-route-level1Key="@Model.Level1Key">@Model.Discipline?.Name</a>
+        </li>
+        <li class="breadcrumb-item active">@Model.Prefix?.Key — @Model.Prefix?.Name</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-1">@Model.Prefix?.Key — @Model.Prefix?.Name</h1>
+<p class="text-muted mb-4">
+    @Model.Prefix?.CourseCount course@(Model.Prefix?.CourseCount != 1 ? "s" : "")
+    · @Model.Prefix?.ModuleCount module@(Model.Prefix?.ModuleCount != 1 ? "s" : "")
+</p>
+
+@if (!Model.IsLeaf)
+{
+    <div class="row row-cols-2 row-cols-md-3 g-3 taxonomy-grid">
+        @foreach (var node in Model.Level3Nodes)
+        {
+            <div class="col">
+                <a asp-page="/Browse/Level3"
+                   asp-route-level1Key="@Model.Level1Key"
+                   asp-route-level2Key="@Model.Level2Key"
+                   asp-route-level3Key="@node.Key"
+                   class="card h-100 taxonomy-card">
+                    <div class="card-body">
+                        <h6 class="card-title mb-1">@node.Key — @node.Name</h6>
+                        <p class="card-text text-muted small mb-0">
+                            @node.CourseCount course@(node.CourseCount != 1 ? "s" : "")
+                        </p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+}
+else
+{
+    @if (!Model.Courses.Any())
+    {
+        <div class="alert alert-info">No courses with published materials found in this subject area.</div>
+    }
+    else
+    {
+        <div class="list-group">
+            @foreach (var c in Model.Courses.OrderBy(c => c.CourseId))
+            {
+                <a asp-page="/Browse/Course" asp-route-courseId="@c.CourseId"
+                   class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>@c.CourseId</strong>
+                            <span class="ms-2 text-muted">@c.Title</span>
+                        </div>
+                        @if (c.CreditHours.HasValue)
+                        {
+                            <span class="badge bg-light text-dark">@c.CreditHours cr</span>
+                        }
+                    </div>
+                </a>
+            }
+        </div>
+    }
+}

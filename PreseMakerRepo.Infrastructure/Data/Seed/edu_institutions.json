@@ -1,0 +1,22 @@
+[
+  { "emailDomain": "fau.edu",     "institutionName": "Florida Atlantic University",            "state": "FL", "country": "US" },
+  { "emailDomain": "fiu.edu",     "institutionName": "Florida International University",       "state": "FL", "country": "US" },
+  { "emailDomain": "fsu.edu",     "institutionName": "Florida State University",               "state": "FL", "country": "US" },
+  { "emailDomain": "ufl.edu",     "institutionName": "University of Florida",                  "state": "FL", "country": "US" },
+  { "emailDomain": "usf.edu",     "institutionName": "University of South Florida",            "state": "FL", "country": "US" },
+  { "emailDomain": "ucf.edu",     "institutionName": "University of Central Florida",          "state": "FL", "country": "US" },
+  { "emailDomain": "fgcu.edu",    "institutionName": "Florida Gulf Coast University",          "state": "FL", "country": "US" },
+  { "emailDomain": "unf.edu",     "institutionName": "University of North Florida",            "state": "FL", "country": "US" },
+  { "emailDomain": "famu.edu",    "institutionName": "Florida A&M University",                 "state": "FL", "country": "US" },
+  { "emailDomain": "fit.edu",     "institutionName": "Florida Institute of Technology",        "state": "FL", "country": "US" },
+  { "emailDomain": "broward.edu", "institutionName": "Broward College",                        "state": "FL", "country": "US" },
+  { "emailDomain": "mdc.edu",     "institutionName": "Miami Dade College",                     "state": "FL", "country": "US" },
+  { "emailDomain": "sfsc.edu",    "institutionName": "South Florida State College",            "state": "FL", "country": "US" },
+  { "emailDomain": "polk.edu",    "institutionName": "Polk State College",                     "state": "FL", "country": "US" },
+  { "emailDomain": "irsc.edu",    "institutionName": "Indian River State College",             "state": "FL", "country": "US" },
+  { "emailDomain": "spcollege.edu","institutionName": "St. Petersburg College",                "state": "FL", "country": "US" },
+  { "emailDomain": "valenciacollege.edu","institutionName": "Valencia College",                "state": "FL", "country": "US" },
+  { "emailDomain": "pasco-hernando.edu","institutionName": "Pasco-Hernando State College",     "state": "FL", "country": "US" },
+  { "emailDomain": "seminolestate.edu","institutionName": "Seminole State College of Florida", "state": "FL", "country": "US" },
+  { "emailDomain": "cf.edu",      "institutionName": "College of Central Florida",             "state": "FL", "country": "US" }
+]

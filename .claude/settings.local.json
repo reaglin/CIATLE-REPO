@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet new *)",
+      "Bash(dotnet sln *)",
+      "PowerShell(Rename-Item *)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet build *)",
+      "Bash(dotnet ef *)",
+      "Bash(dotnet tool install *)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\(r'C:/Users/ronal/Downloads/taxonomy.json'\\)\\); tree=d['tree']; print\\('disciplines:', len\\(tree\\)\\); print\\('total prefixes:', sum\\(len\\(t.get\\('children',[]\\)\\) for t in tree\\)\\)\")",
+      "PowerShell($d = Get-Content \"C:\\\\Users\\\\ronal\\\\Downloads\\\\taxonomy.json\" | ConvertFrom-Json; $tree = $d.tree; \"Disciplines: $\\($tree.Count\\)\"; \"Total prefixes: $\\(\\($tree | ForEach-Object { $_.children.Count } | Measure-Object -Sum\\).Sum\\)\")",
+      "PowerShell($d = Get-Content \"C:\\\\Users\\\\ronal\\\\Downloads\\\\edu_institutions.json\" | ConvertFrom-Json; \"Entry count: $\\($d.Count\\)\")",
+      "Bash(xargs grep *)"
+    ]
+  }
+}

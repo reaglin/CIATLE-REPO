@@ -1,0 +1,41 @@
+@page "/browse/{level1Key}/{level2Key}/{level3Key}"
+@model PreseMakerRepo.Api.Pages.Browse.Level3Model
+@{ ViewData["Title"] = Model.Subject is not null ? $"{Model.Subject.Key} — {Model.Subject.Name}" : "Browse"; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Index">Browse</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Level1" asp-route-level1Key="@Model.Level1Key">@Model.Discipline?.Name</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Level2" asp-route-level1Key="@Model.Level1Key" asp-route-level2Key="@Model.Level2Key">@Model.Prefix?.Name</a></li>
+        <li class="breadcrumb-item active">@Model.Subject?.Key — @Model.Subject?.Name</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-4">@Model.Subject?.Key — @Model.Subject?.Name</h1>
+
+@if (!Model.Courses.Any())
+{
+    <div class="alert alert-info">No courses with published materials found in this subject area.</div>
+}
+else
+{
+    <div class="list-group">
+        @foreach (var c in Model.Courses.OrderBy(c => c.CourseId))
+        {
+            <a asp-page="/Browse/Course" asp-route-courseId="@c.CourseId"
+               class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>@c.CourseId</strong>
+                        <span class="ms-2 text-muted">@c.Title</span>
+                    </div>
+                    @if (c.CreditHours.HasValue)
+                    {
+                        <span class="badge bg-light text-dark">@c.CreditHours cr</span>
+                    }
+                </div>
+            </a>
+        }
+    </div>
+}

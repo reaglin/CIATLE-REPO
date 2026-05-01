@@ -1,0 +1,242 @@
+[
+  {
+    "emailDomain": "famu.edu",
+    "institutionName": "Florida A&M University",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fau.edu",
+    "institutionName": "Florida Atlantic University",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fgcu.edu",
+    "institutionName": "Florida Gulf Coast University",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fiu.edu",
+    "institutionName": "Florida International University",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "floridapoly.edu",
+    "institutionName": "Florida Polytechnic University",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fsu.edu",
+    "institutionName": "Florida State University",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "ncf.edu",
+    "institutionName": "New College of Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "ucf.edu",
+    "institutionName": "University of Central Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "ufl.edu",
+    "institutionName": "University of Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "unf.edu",
+    "institutionName": "University of North Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "usf.edu",
+    "institutionName": "University of South Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "uwf.edu",
+    "institutionName": "University of West Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "broward.edu",
+    "institutionName": "Broward College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "chipola.edu",
+    "institutionName": "Chipola College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "cf.edu",
+    "institutionName": "College of Central Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "cfk.edu",
+    "institutionName": "The College of the Florida Keys",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "daytonastate.edu",
+    "institutionName": "Daytona State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "easternflorida.edu",
+    "institutionName": "Eastern Florida State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fgc.edu",
+    "institutionName": "Florida Gateway College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fscj.edu",
+    "institutionName": "Florida State College at Jacksonville",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "fsw.edu",
+    "institutionName": "Florida SouthWestern State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "gulfcoast.edu",
+    "institutionName": "Gulf Coast State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "hccfl.edu",
+    "institutionName": "Hillsborough Community College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "irsc.edu",
+    "institutionName": "Indian River State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "lssc.edu",
+    "institutionName": "Lake-Sumter State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "mdc.edu",
+    "institutionName": "Miami Dade College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "nfc.edu",
+    "institutionName": "North Florida College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "nwfsc.edu",
+    "institutionName": "Northwest Florida State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "palmbeachstate.edu",
+    "institutionName": "Palm Beach State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "phsc.edu",
+    "institutionName": "Pasco-Hernando State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "pensacolastate.edu",
+    "institutionName": "Pensacola State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "polk.edu",
+    "institutionName": "Polk State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "sfcollege.edu",
+    "institutionName": "Santa Fe College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "seminolestate.edu",
+    "institutionName": "Seminole State College of Florida",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "southflorida.edu",
+    "institutionName": "South Florida State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "sjrstate.edu",
+    "institutionName": "St. Johns River State College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "spcollege.edu",
+    "institutionName": "St. Petersburg College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "scf.edu",
+    "institutionName": "State College of Florida, Manatee-Sarasota",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "tcc.fl.edu",
+    "institutionName": "Tallahassee Community College",
+    "state": "FL",
+    "country": "US"
+  },
+  {
+    "emailDomain": "valenciacollege.edu",
+    "institutionName": "Valencia College",
+    "state": "FL",
+    "country": "US"
+  }
+]
