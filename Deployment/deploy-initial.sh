@@ -3,7 +3,7 @@
 # Run as root or with sudo. Replace DOMAIN with your actual domain.
 set -euo pipefail
 
-DOMAIN="yourdomain.com"
+DOMAIN="floridacourserepo.com"
 APP_DIR="/opt/presemaker-repo/app"
 DATA_DIR="/var/presemaker-repo"
 ETC_DIR="/etc/presemaker-repo"
@@ -55,8 +55,8 @@ apt-get install -y nginx certbot python3-certbot-nginx
 
 # 10. Place Nginx config
 cp /path/to/nginx-site.conf /etc/nginx/sites-available/presemaker-repo
-# Edit the file to replace yourdomain.com with $DOMAIN
-sed -i "s/yourdomain.com/$DOMAIN/g" /etc/nginx/sites-available/presemaker-repo
+# Edit the file to replace floridacourserepo.com with $DOMAIN
+sed -i "s/floridacourserepo.com/$DOMAIN/g" /etc/nginx/sites-available/presemaker-repo
 ln -sf /etc/nginx/sites-available/presemaker-repo /etc/nginx/sites-enabled/presemaker-repo
 rm -f /etc/nginx/sites-enabled/default
 nginx -t && systemctl reload nginx

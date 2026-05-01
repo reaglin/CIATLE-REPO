@@ -16,17 +16,22 @@ public class CourseModel : PageModel
 
     public TaxonomyCourse? Course { get; set; }
     public IReadOnlyList<ModuleEntity> Modules { get; set; } = [];
+    public bool HasGuide { get; set; }
 
     public async Task<IActionResult> OnGetAsync(string courseId)
     {
+        var normalizedId = courseId.ToUpperInvariant();
+
         Course = await _db.TaxonomyCourses.AsNoTracking()
             .Include(c => c.Level3Node).ThenInclude(n => n!.Parent).ThenInclude(n => n!.Parent)
-            .FirstOrDefaultAsync(c => c.CourseId == courseId.ToUpperInvariant() &&
+            .FirstOrDefaultAsync(c => c.CourseId == normalizedId &&
                                       c.CourseId != WellKnownIds.OrphanCourseId);
         if (Course is null) return NotFound();
 
+        HasGuide = await _db.CurriculumGuides.AnyAsync(g => g.CourseId == normalizedId);
+
         Modules = await _db.Modules.AsNoTracking()
-            .Where(m => m.CourseId == courseId.ToUpperInvariant() &&
+            .Where(m => m.CourseId == normalizedId &&
                         m.Status == ContentStatus.Published &&
                         m.Id != WellKnownIds.OrphanModuleId)
             .Include(m => m.Contributor)

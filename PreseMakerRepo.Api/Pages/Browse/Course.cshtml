@@ -19,7 +19,15 @@
         <span class="badge bg-secondary">@Model.Course.CreditHours credit hours</span>
     }
 </div>
-@if (!string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl))
+@if (Model.HasGuide)
+{
+    <p class="mb-3">
+        <a asp-page="/Browse/Guide" asp-route-courseId="@Model.Course.CourseId" class="btn btn-outline-primary btn-sm">
+            View Curriculum Guide
+        </a>
+    </p>
+}
+else if (!string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl))
 {
     <p class="mb-3"><a href="@Model.Course.CurriculumGuideUrl" target="_blank" rel="noopener">Curriculum Guide ↗</a></p>
 }

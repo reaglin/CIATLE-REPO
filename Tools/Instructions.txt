@@ -1,0 +1,36 @@
+Done. Here's what was created in Tools/:
+
+  generate_guide.py — the main script
+  requirements.txt — two dependencies
+  .env.example — template for your credentials
+
+  ---
+  How to use it
+
+  One-time setup:
+  cd Tools
+  pip install -r requirements.txt
+
+  Set env vars (PowerShell):
+  $env:ANTHROPIC_API_KEY = "sk-ant-..."
+  $env:REPO_ADMIN_EMAIL  = "your@email.com"
+  $env:REPO_ADMIN_PASSWORD = "yourpassword"
+
+  Generate a single guide:
+  python generate_guide.py ETS1010
+  Claude will web-search the course, show you a preview, then ask [y / n / e] before pushing.
+
+  Batch a list:
+  python generate_guide.py ETS1010 ETS1020 PHY1038
+  # or from a file:
+  python generate_guide.py --file courses.txt
+
+  Edit before pushing:
+  Choose e at the prompt — it saves a draft to Tools/drafts/ETS1010_guide.json. Edit the JSON, then:
+  python generate_guide.py --push-draft ETS1010
+
+  Skip all review prompts (batch auto-approve):
+  python generate_guide.py --file courses.txt --yes
+
+  The model defaults to claude-opus-4-7 (best quality for research + writing). Set GUIDE_MODEL=claude-sonnet-4-6 if you
+  want faster/cheaper runs.

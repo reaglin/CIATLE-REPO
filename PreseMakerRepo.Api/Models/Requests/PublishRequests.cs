@@ -39,3 +39,12 @@ public record CoursePublishRequest(
     IReadOnlyList<PublishModuleRequest> Modules);
 
 public record ReportRequest(string? Reason);
+
+public record UpsertCurriculumGuideRequest(
+    string Title,
+    string HtmlContent,
+    int? Credits,
+    int? ContactHours,
+    string? Prerequisites,
+    string? Version,
+    DateTime? GeneratedUtc);

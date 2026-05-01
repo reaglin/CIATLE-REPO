@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Environment / secrets files — never commit these
+**/.env
+**/.env.*
+*.env

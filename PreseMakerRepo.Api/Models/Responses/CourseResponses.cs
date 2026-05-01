@@ -106,6 +106,17 @@ public record MaterialDetailDto(
     string Status,
     string DownloadUrl);
 
+public record CurriculumGuideDto(
+    string CourseId,
+    string Title,
+    string HtmlContent,
+    int? Credits,
+    int? ContactHours,
+    string? Prerequisites,
+    string? Version,
+    DateTime GeneratedUtc,
+    DateTime UpdatedUtc);
+
 public record SearchResultDto(
     string ResultType,       // "module" | "material"
     Guid ModuleId,

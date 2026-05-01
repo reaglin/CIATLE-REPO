@@ -16,6 +16,7 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<TaxonomyCourse> TaxonomyCourses => Set<TaxonomyCourse>();
     public DbSet<EduInstitution> EduInstitutions => Set<EduInstitution>();
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+    public DbSet<CurriculumGuide> CurriculumGuides => Set<CurriculumGuide>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

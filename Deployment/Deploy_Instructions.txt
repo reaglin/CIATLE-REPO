@@ -1,0 +1,22 @@
+From PowerShell to Open Server
+>ssh root@129.121.101.162
+>(Enter password)
+
+DIRECTIONS 
+
+PowerShell
+  dotnet publish PreseMakerRepo.Api -c Release -r linux-x64 --self-contained false -o /tmp/presemaker-release
+
+Server:
+systemctl stop presemaker-repo 
+rm -f /opt/presemaker-repo/app/PreseMakerRepo.Api
+systemctl is-active presemaker-repo
+
+PowerShell:
+  scp -r /tmp/presemaker-release/. root@129.121.101.162:/opt/presemaker-repo/app/
+
+Server:
+  chmod +x /opt/presemaker-repo/app/PreseMakerRepo.Api 
+  chown -R presemaker:presemaker /opt/presemaker-repo/app  
+  systemctl start presemaker-repo
+  systemctl status presemaker-repo --no-pager

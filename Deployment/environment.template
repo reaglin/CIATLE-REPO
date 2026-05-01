@@ -7,16 +7,16 @@ ConnectionStrings__DefaultConnection=Data Source=/var/presemaker-repo/data/repo.
 Jwt__SecretKey=<256-bit random key — generate with: openssl rand -base64 32>
 
 Email__SmtpHost=smtp.yourprovider.com
-Email__SmtpUsername=noreply@yourdomain.com
+Email__SmtpUsername=noreply@floridacourserepo.com
 Email__SmtpPassword=<smtp password>
-Email__FromAddress=noreply@yourdomain.com
-Email__AdminAddress=admin@yourdomain.com
+Email__FromAddress=noreply@floridacourserepo.com
+Email__AdminAddress=admin@floridacourserepo.com
 
-AdminBootstrap__Email=admin@yourdomain.com
+AdminBootstrap__Email=admin@floridacourserepo.com
 AdminBootstrap__Username=admin
 AdminBootstrap__Password=<strong initial password — change immediately after first login>
 
 Security__ReporterIpSalt=<random string — generate with: openssl rand -base64 16>
 
-Cors__AllowedOrigins__0=https://yourdomain.com
-Cors__AllowedOrigins__1=https://www.yourdomain.com
+Cors__AllowedOrigins__0=https://floridacourserepo.com
+Cors__AllowedOrigins__1=https://www.floridacourserepo.com

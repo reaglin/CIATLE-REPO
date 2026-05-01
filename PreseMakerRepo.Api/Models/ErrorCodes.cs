@@ -24,6 +24,7 @@ public static class ErrorCodes
     public const string InvalidCourseId = "INVALID_COURSE_ID";
     public const string InvalidModuleId = "INVALID_MODULE_ID";
     public const string InvalidMaterialType = "INVALID_MATERIAL_TYPE";
+    public const string GuideNotFound = "GUIDE_NOT_FOUND";
     public const string RateLimitExceeded = "RATE_LIMIT_EXCEEDED";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
 }

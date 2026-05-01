@@ -11,7 +11,23 @@
       "Bash(python3 -c \"import json; d=json.load\\(open\\(r'C:/Users/ronal/Downloads/taxonomy.json'\\)\\); tree=d['tree']; print\\('disciplines:', len\\(tree\\)\\); print\\('total prefixes:', sum\\(len\\(t.get\\('children',[]\\)\\) for t in tree\\)\\)\")",
       "PowerShell($d = Get-Content \"C:\\\\Users\\\\ronal\\\\Downloads\\\\taxonomy.json\" | ConvertFrom-Json; $tree = $d.tree; \"Disciplines: $\\($tree.Count\\)\"; \"Total prefixes: $\\(\\($tree | ForEach-Object { $_.children.Count } | Measure-Object -Sum\\).Sum\\)\")",
       "PowerShell($d = Get-Content \"C:\\\\Users\\\\ronal\\\\Downloads\\\\edu_institutions.json\" | ConvertFrom-Json; \"Entry count: $\\($d.Count\\)\")",
-      "Bash(xargs grep *)"
+      "Bash(xargs grep *)",
+      "WebFetch(domain:roneaglin.online)",
+      "Bash(python3)",
+      "Bash(awk -F: '{print $2}')",
+      "Bash(awk -F, '{print $4, $7}')",
+      "Bash(awk -F, '{print $4}')",
+      "Bash(awk -F, '{gsub\\(/^\"/, \"\", $7\\); print $4, $7}')",
+      "Bash(awk -F, 'BEGIN{OFS=\"|\"}{gsub\\(/^\"/, \"\", $7\\); print $4, $7}')",
+      "Bash(awk -F'|' '!a[$1]++')",
+      "Bash(grep -c \"^,*$\" EngineeringTechnology_StatewideInventory.csv)",
+      "Bash(grep -n \"^,*$\" EngineeringTechnology_StatewideInventory.csv)",
+      "Bash(awk -F: '{print NR\": Course prefix\", substr\\($2, index\\($2, \"CET\"\\), 8\\), \"OR\", substr\\($2, index\\($2, \"EET\"\\), 8\\)}')",
+      "Bash(awk -F, '{ *)",
+      "Bash(sed -n '10p' EngineeringTechnology_StatewideInventory.csv)",
+      "Bash(powershell -ExecutionPolicy Bypass -File GenerateCoursesSql.ps1)",
+      "Bash(curl *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); g=d['data']; print\\(f'CourseId: {g[\\\\\"courseId\\\\\"]}\\\\nTitle: {g[\\\\\"title\\\\\"]}\\\\nCredits: {g[\\\\\"credits\\\\\"]}\\\\nContactHours: {g[\\\\\"contactHours\\\\\"]}\\\\nUpdatedUtc: {g[\\\\\"updatedUtc\\\\\"]}\\\\nHTML length: {len\\(g[\\\\\"htmlContent\\\\\"]\\)} chars'\\)\")"
     ]
   }
 }

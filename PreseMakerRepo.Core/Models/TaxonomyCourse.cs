@@ -14,4 +14,5 @@ public class TaxonomyCourse
     public string? CurriculumGuideUrl { get; set; }
 
     public ICollection<Module> Modules { get; set; } = new List<Module>();
+    public CurriculumGuide? Guide { get; set; }
 }

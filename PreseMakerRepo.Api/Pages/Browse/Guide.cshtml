@@ -1,0 +1,58 @@
+@page "/courses/{courseId}/guide"
+@model PreseMakerRepo.Api.Pages.Browse.GuideModel
+@{ ViewData["Title"] = Model.Guide?.Title ?? "Curriculum Guide"; }
+
+@if (Model.Guide is null || Model.Course is null) { return; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Index">Browse</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Browse/Course" asp-route-courseId="@Model.Course.CourseId">@Model.Course.CourseId</a></li>
+        <li class="breadcrumb-item active">Curriculum Guide</li>
+    </ol>
+</nav>
+
+<div class="d-flex justify-content-between align-items-start mb-2">
+    <div>
+        <h1 class="h4 mb-0">@Model.Guide.Title</h1>
+        <small class="text-muted">@Model.Course.CourseId — @Model.Course.Title</small>
+    </div>
+    <a asp-page="/Browse/Course" asp-route-courseId="@Model.Course.CourseId" class="btn btn-outline-secondary btn-sm">
+        ← Course Modules
+    </a>
+</div>
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+    @if (Model.Guide.Credits.HasValue)
+    {
+        <span class="badge bg-secondary">@Model.Guide.Credits credit hours</span>
+    }
+    @if (Model.Guide.ContactHours.HasValue)
+    {
+        <span class="badge bg-secondary">@Model.Guide.ContactHours contact hours</span>
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.Guide.Prerequisites))
+    {
+        <span class="badge bg-light text-dark border">Prerequisites: @Model.Guide.Prerequisites</span>
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.Guide.Version))
+    {
+        <span class="badge bg-light text-dark border">v@Model.Guide.Version</span>
+    }
+</div>
+
+<hr />
+
+<div class="curriculum-guide-content">
+    @Html.Raw(Model.Guide.HtmlContent)
+</div>
+
+<hr class="mt-4" />
+<p class="text-muted small">
+    Generated @Model.Guide.GeneratedUtc.ToString("MMMM d, yyyy")
+    @if (Model.Guide.UpdatedUtc != Model.Guide.GeneratedUtc)
+    {
+        <span>· Updated @Model.Guide.UpdatedUtc.ToString("MMMM d, yyyy")</span>
+    }
+</p>

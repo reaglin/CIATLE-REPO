@@ -85,3 +85,16 @@ public class ReportRequestValidator : AbstractValidator<ReportRequest>
         RuleFor(x => x.Reason).MaximumLength(500).When(x => x.Reason is not null);
     }
 }
+
+public class UpsertCurriculumGuideRequestValidator : AbstractValidator<UpsertCurriculumGuideRequest>
+{
+    public UpsertCurriculumGuideRequestValidator()
+    {
+        RuleFor(x => x.Title).NotEmpty().MaximumLength(300);
+        RuleFor(x => x.HtmlContent).NotEmpty();
+        RuleFor(x => x.Credits).InclusiveBetween(1, 12).When(x => x.Credits.HasValue);
+        RuleFor(x => x.ContactHours).InclusiveBetween(1, 300).When(x => x.ContactHours.HasValue);
+        RuleFor(x => x.Prerequisites).MaximumLength(500).When(x => x.Prerequisites is not null);
+        RuleFor(x => x.Version).MaximumLength(50).When(x => x.Version is not null);
+    }
+}

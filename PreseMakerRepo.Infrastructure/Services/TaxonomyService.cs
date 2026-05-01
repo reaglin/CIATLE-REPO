@@ -32,7 +32,8 @@ public class TaxonomyService : ITaxonomyService
         var courseCountByLeaf = await _db.TaxonomyCourses
             .AsNoTracking()
             .Where(c => c.Level3Key != null &&
-                        _db.Modules.Any(m => m.CourseId == c.CourseId && m.Status == ContentStatus.Published))
+                        (_db.Modules.Any(m => m.CourseId == c.CourseId && m.Status == ContentStatus.Published) ||
+                         _db.CurriculumGuides.Any(g => g.CourseId == c.CourseId)))
             .GroupBy(c => c.Level3Key!)
             .Select(g => new { Key = g.Key, Count = g.Count() })
             .ToDictionaryAsync(x => x.Key, x => x.Count);
@@ -83,7 +84,7 @@ public class TaxonomyService : ITaxonomyService
     public async Task<IReadOnlyList<TaxonomyCourse>> GetCoursesByLevel3Async(string level3Key) =>
         await _db.TaxonomyCourses
             .AsNoTracking()
-            .Where(c => c.Level3Key == level3Key && c.IsActive)
+            .Where(c => c.Level3Key == level3Key.ToUpper() && c.IsActive)
             .OrderBy(c => c.CourseId)
             .ToListAsync();
 

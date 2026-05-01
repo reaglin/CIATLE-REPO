@@ -309,6 +309,81 @@ public class CoursesController : ControllerBase
             material.FileName);
     }
 
+    // GET /api/v1/courses/{courseId}/guide
+    [HttpGet("{courseId}/guide")]
+    public async Task<IActionResult> GetCurriculumGuide(string courseId)
+    {
+        var guide = await _db.CurriculumGuides.AsNoTracking()
+            .FirstOrDefaultAsync(g => g.CourseId == courseId.ToUpperInvariant());
+
+        if (guide is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.GuideNotFound, "No curriculum guide found for this course."));
+
+        return Ok(ApiResponse<CurriculumGuideDto>.Ok(new CurriculumGuideDto(
+            guide.CourseId,
+            guide.Title,
+            guide.HtmlContent,
+            guide.Credits,
+            guide.ContactHours,
+            guide.Prerequisites,
+            guide.Version,
+            guide.GeneratedUtc,
+            guide.UpdatedUtc)));
+    }
+
+    // PUT /api/v1/courses/{courseId}/guide
+    [Authorize(Policy = "AdminOnly")]
+    [HttpPut("{courseId}/guide")]
+    public async Task<IActionResult> UpsertCurriculumGuide(
+        string courseId,
+        [FromBody] UpsertCurriculumGuideRequest request,
+        [FromServices] IValidator<UpsertCurriculumGuideRequest> validator)
+    {
+        var vResult = await validator.ValidateAsync(request);
+        if (!vResult.IsValid) return BadRequest(ValidationError(vResult));
+
+        var normalizedId = courseId.ToUpperInvariant();
+        var course = await _db.TaxonomyCourses.AsNoTracking()
+            .FirstOrDefaultAsync(c => c.CourseId == normalizedId);
+        if (course is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.CourseNotFound, "Course not found in taxonomy."));
+
+        var existing = await _db.CurriculumGuides
+            .FirstOrDefaultAsync(g => g.CourseId == normalizedId);
+
+        var now = DateTime.UtcNow;
+
+        if (existing is null)
+        {
+            _db.CurriculumGuides.Add(new Core.Models.CurriculumGuide
+            {
+                CourseId = normalizedId,
+                Title = request.Title,
+                HtmlContent = request.HtmlContent,
+                Credits = request.Credits,
+                ContactHours = request.ContactHours,
+                Prerequisites = request.Prerequisites,
+                Version = request.Version,
+                GeneratedUtc = request.GeneratedUtc ?? now,
+                UpdatedUtc = now
+            });
+        }
+        else
+        {
+            existing.Title = request.Title;
+            existing.HtmlContent = request.HtmlContent;
+            existing.Credits = request.Credits;
+            existing.ContactHours = request.ContactHours;
+            existing.Prerequisites = request.Prerequisites;
+            existing.Version = request.Version;
+            existing.GeneratedUtc = request.GeneratedUtc ?? existing.GeneratedUtc;
+            existing.UpdatedUtc = now;
+        }
+
+        await _db.SaveChangesAsync();
+        return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Curriculum guide saved.")));
+    }
+
     // ── Helpers ──────────────────────────────────────────────────────────────
 
     private async Task<List<string>?> ResolveLeafKeysAsync(string? level1, string? level2, string? level3)
