@@ -1,5 +1,6 @@
 using System.Text;
 using FluentValidation;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -39,8 +40,19 @@ try
     // Infrastructure: DB, Identity core, all services
     builder.Services.AddInfrastructure(builder.Configuration);
 
+    // ForwardedHeaders — trust X-Forwarded-For/Proto from local Nginx proxy
+    builder.Services.Configure<ForwardedHeadersOptions>(options =>
+    {
+        options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+        options.KnownNetworks.Clear();
+        options.KnownProxies.Clear();
+        options.KnownProxies.Add(System.Net.IPAddress.Loopback);
+        options.KnownProxies.Add(System.Net.IPAddress.IPv6Loopback);
+    });
+
     // JWT options + service
     builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
+    builder.Services.Configure<SecurityOptions>(builder.Configuration.GetSection("Security"));
     builder.Services.AddSingleton<JwtService>();
 
     // Multi-scheme auth: /api/* → JWT Bearer, everything else → Cookie
@@ -141,7 +153,15 @@ try
         await AdminBootstrap.SeedAsync(sp, builder.Configuration, startupLogger);
     }
 
+    // --run-migrations: apply DB schema and seeds, then exit (used during deployment)
+    if (args.Contains("--run-migrations"))
+    {
+        Log.Information("Migration-only mode complete. Exiting.");
+        return;
+    }
+
     // Request pipeline
+    app.UseForwardedHeaders();
     app.UseMiddleware<GlobalExceptionMiddleware>();
 
     if (!app.Environment.IsDevelopment())

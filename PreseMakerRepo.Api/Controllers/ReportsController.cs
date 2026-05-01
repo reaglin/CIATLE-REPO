@@ -6,6 +6,7 @@ using Microsoft.Extensions.Options;
 using PreseMakerRepo.Api.Models;
 using PreseMakerRepo.Api.Models.Requests;
 using PreseMakerRepo.Api.Models.Responses;
+using PreseMakerRepo.Api.Options;
 using PreseMakerRepo.Core.Enums;
 using PreseMakerRepo.Core.Models;
 using PreseMakerRepo.Infrastructure.Data;
@@ -21,12 +22,15 @@ public class ReportsController : ControllerBase
     private readonly AppDbContext _db;
     private readonly IMemoryCache _cache;
     private readonly RepositoryOptions _repo;
+    private readonly string _ipSalt;
 
-    public ReportsController(AppDbContext db, IMemoryCache cache, IOptions<RepositoryOptions> repo)
+    public ReportsController(AppDbContext db, IMemoryCache cache,
+        IOptions<RepositoryOptions> repo, IOptions<SecurityOptions> security)
     {
         _db = db;
         _cache = cache;
         _repo = repo.Value;
+        _ipSalt = security.Value.ReporterIpSalt;
     }
 
     // POST /api/v1/courses/{courseId}/modules/{moduleId}/report
@@ -126,10 +130,9 @@ public class ReportsController : ControllerBase
         return true;
     }
 
-    private static string HashIp(string ip)
+    private string HashIp(string ip)
     {
-        // Salt with a fixed app-level salt; not stored raw per security requirements
-        var bytes = SHA256.HashData(Encoding.UTF8.GetBytes("presemaker-ip-salt:" + ip));
+        var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(_ipSalt + ":" + ip));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
 }

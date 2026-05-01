@@ -1,0 +1,20 @@
+[Unit]
+Description=PreseMaker Community Repository
+After=network.target
+
+[Service]
+Type=notify
+User=presemaker
+Group=presemaker
+WorkingDirectory=/opt/presemaker-repo/app
+ExecStart=/opt/presemaker-repo/app/PreseMakerRepo.Api
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=presemaker-repo
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://localhost:5000
+EnvironmentFile=/etc/presemaker-repo/environment
+
+[Install]
+WantedBy=multi-user.target
