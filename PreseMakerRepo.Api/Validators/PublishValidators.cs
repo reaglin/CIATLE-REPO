@@ -86,6 +86,15 @@ public class ReportRequestValidator : AbstractValidator<ReportRequest>
     }
 }
 
+public class UpsertGuideTemplateRequestValidator : AbstractValidator<UpsertGuideTemplateRequest>
+{
+    public UpsertGuideTemplateRequestValidator()
+    {
+        RuleFor(x => x.WorkingTitle).NotEmpty().MaximumLength(200);
+        RuleFor(x => x.Prompt).NotEmpty();
+    }
+}
+
 public class UpsertCurriculumGuideRequestValidator : AbstractValidator<UpsertCurriculumGuideRequest>
 {
     public UpsertCurriculumGuideRequestValidator()
@@ -96,5 +105,6 @@ public class UpsertCurriculumGuideRequestValidator : AbstractValidator<UpsertCur
         RuleFor(x => x.ContactHours).InclusiveBetween(0, 300).When(x => x.ContactHours.HasValue);
         RuleFor(x => x.Prerequisites).MaximumLength(500).When(x => x.Prerequisites is not null);
         RuleFor(x => x.Version).MaximumLength(50).When(x => x.Version is not null);
+        RuleFor(x => x.TaxonomyKey).MaximumLength(100).When(x => x.TaxonomyKey is not null);
     }
 }

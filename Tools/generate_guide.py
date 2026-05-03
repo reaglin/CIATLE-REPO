@@ -47,12 +47,68 @@ except ImportError:
 BASE_URL = os.environ.get("REPO_BASE_URL", "https://floridacourserepo.com").rstrip("/")
 DRAFTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "drafts")
 LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generate_guide.log")
+QUEUE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "queue.csv")
+ACTIVITY_LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "activity.log")
 
 
 def log_event(course_id: str, event: str, status: str) -> None:
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"{ts} [{course_id}] {event}: {status}\n")
+
+
+def log_activity(actor: str, message: str) -> None:
+    """Append one line to activity.log if it exists. Silent no-op if not."""
+    if not os.path.exists(ACTIVITY_LOG):
+        return
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    with open(ACTIVITY_LOG, "a", encoding="utf-8") as f:
+        f.write(f"{ts}  {actor:<8}  {message}\n")
+
+
+def update_queue_state(course_id: str, new_state: str) -> bool:
+    """Update queue.csv to reflect a status change. Silent no-op if no queue.
+
+    Returns True if a row was updated, False otherwise.
+    """
+    if not os.path.exists(QUEUE_FILE):
+        return False
+    import csv
+    with open(QUEUE_FILE, encoding="utf-8-sig", newline="") as f:
+        rows = list(csv.DictReader(f))
+        fieldnames = list(rows[0].keys()) if rows else []
+    if not rows:
+        return False
+
+    cid = course_id.upper()
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    updated = False
+    for r in rows:
+        if r.get("course_id", "").upper() == cid:
+            r["status"] = new_state
+            if new_state == "drafted" and not r.get("drafted_utc"):
+                r["drafted_utc"] = ts
+            elif new_state == "pushed" and not r.get("pushed_utc"):
+                r["pushed_utc"] = ts
+            updated = True
+            break
+
+    if updated:
+        with open(QUEUE_FILE, "w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(rows)
+    return updated
+
+
+def read_queue_course_ids(state: str) -> list[str]:
+    """Return course IDs in queue.csv with the given state, in file order."""
+    if not os.path.exists(QUEUE_FILE):
+        return []
+    import csv
+    with open(QUEUE_FILE, encoding="utf-8-sig", newline="") as f:
+        return [r["course_id"] for r in csv.DictReader(f)
+                if r.get("status") == state]
 
 
 SYSTEM_PROMPT = """\
@@ -141,7 +197,7 @@ def was_guide_pushed(course_id: str) -> bool:
     path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
     if os.path.exists(path):
         try:
-            with open(path, encoding="utf-8") as f:
+            with open(path, encoding="utf-8-sig") as f:
                 data = json.load(f)
             if data.get("pushed_utc"):
                 return True
@@ -160,7 +216,7 @@ def mark_draft_pushed(course_id: str) -> None:
     if not os.path.exists(path):
         return
     try:
-        with open(path, encoding="utf-8") as f:
+        with open(path, encoding="utf-8-sig") as f:
             data = json.load(f)
         data["pushed_utc"] = datetime.now(timezone.utc).isoformat()
         with open(path, "w", encoding="utf-8") as f:
@@ -254,6 +310,8 @@ def _push_with_token_refresh(
         push_guide(session, course_id, data, token)
         log_event(course_id, "PUSH", "Success")
         mark_draft_pushed(course_id)
+        update_queue_state(course_id, "pushed")
+        log_activity("push", f"PUSHED {course_id}")
         verify_guide(session, course_id)
     except requests.HTTPError as exc:
         if exc.response.status_code == 401:
@@ -263,15 +321,23 @@ def _push_with_token_refresh(
                 push_guide(session, course_id, data, token)
                 log_event(course_id, "PUSH", "Success")
                 mark_draft_pushed(course_id)
+                update_queue_state(course_id, "pushed")
+                log_activity("push", f"PUSHED {course_id} (after re-auth)")
                 verify_guide(session, course_id)
             except Exception as exc2:
                 log_event(course_id, "PUSH", f"ERROR: {exc2}")
+                update_queue_state(course_id, "error")
+                log_activity("push", f"ERROR {course_id}: {exc2}")
                 raise
         else:
             log_event(course_id, "PUSH", f"ERROR: HTTP {exc.response.status_code}")
+            update_queue_state(course_id, "error")
+            log_activity("push", f"ERROR {course_id}: HTTP {exc.response.status_code}")
             raise
     except Exception as exc:
         log_event(course_id, "PUSH", f"ERROR: {exc}")
+        update_queue_state(course_id, "error")
+        log_activity("push", f"ERROR {course_id}: {exc}")
         raise
     return token
 
@@ -397,6 +463,8 @@ def process_course(
     display_guide(course_id, data)
     draft_path = save_draft(course_id, data)
     print(f"\n  Draft saved: {draft_path}")
+    update_queue_state(course_id, "drafted")
+    log_activity("local", f"DRAFT {course_id} → drafts/{course_id}_guide.json")
 
     if auto_approve:
         choice = "y"
@@ -449,7 +517,7 @@ def process_course_batch(
 
         # Draft present but guide not yet pushed — load and push (no generation)
         try:
-            with open(draft_path, encoding="utf-8") as f:
+            with open(draft_path, encoding="utf-8-sig") as f:
                 data = json.load(f)
         except Exception as exc:
             print(f"  ERROR reading draft: {exc}")
@@ -486,6 +554,8 @@ def process_course_batch(
         display_guide(course_id, data)
         save_draft(course_id, data)
         print(f"  Draft saved: {draft_path}")
+        update_queue_state(course_id, "drafted")
+        log_activity("local", f"DRAFT {course_id} → drafts/{course_id}_guide.json")
 
         if auto_approve:
             choice = "y"
@@ -514,7 +584,7 @@ def run_push_draft(course_id: str, session: requests.Session) -> None:
     if not os.path.exists(path):
         print(f"No draft found at: {path}")
         sys.exit(1)
-    with open(path, encoding="utf-8") as f:
+    with open(path, encoding="utf-8-sig") as f:
         data = json.load(f)
     display_guide(course_id, data)
     choice = input("  Push to site? [y/N] ").strip().lower()
@@ -528,8 +598,12 @@ def run_push_draft(course_id: str, session: requests.Session) -> None:
 def run_push_draft_batch(
     file_path: str, session: requests.Session, auto_approve: bool, delay: int
 ) -> None:
-    """Batch-push saved drafts listed in a file."""
-    with open(file_path, encoding="utf-8") as f:
+    """Batch-push saved drafts listed in a file.
+
+    Note: --delay is ignored here. The delay exists to throttle Anthropic API
+    calls during generation; pushes hit only your repo's API and don't need it.
+    """
+    with open(file_path, encoding="utf-8-sig") as f:
         course_ids = [
             ln.strip().upper()
             for ln in f
@@ -545,11 +619,7 @@ def run_push_draft_batch(
     if auto_approve and os.environ.get("REPO_ADMIN_EMAIL"):
         token = get_token(session)
 
-    for i, course_id in enumerate(course_ids):
-        if i > 0 and delay > 0:
-            print(f"  Waiting {delay}s before next course...")
-            time.sleep(delay)
-
+    for course_id in course_ids:
         path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
         if not os.path.exists(path):
             print(f"\n[{course_id}] No draft found at: {path}")
@@ -557,7 +627,7 @@ def run_push_draft_batch(
             continue
 
         try:
-            with open(path, encoding="utf-8") as f:
+            with open(path, encoding="utf-8-sig") as f:
                 data = json.load(f)
         except Exception as exc:
             print(f"\n[{course_id}] ERROR reading draft: {exc}")
@@ -604,10 +674,19 @@ def main() -> None:
                         help="Push a previously saved draft without regenerating")
     parser.add_argument("--push-draft-file", metavar="FILE",
                         help="Text file with course IDs to push from saved drafts (# for comments)")
+    parser.add_argument("--from-queue", action="store_true",
+                        help="Generate the next N queued courses from queue.csv "
+                             "(uses --queue-n, default 5). Equivalent to "
+                             "'queue_mgr.py next-batch | xargs python generate_guide.py'.")
+    parser.add_argument("--push-from-queue", action="store_true",
+                        help="Push every drafted course from queue.csv (no Anthropic API calls).")
+    parser.add_argument("--queue-n", type=int, default=5, metavar="N",
+                        help="With --from-queue: how many courses to generate this run (default 5)")
     parser.add_argument("--yes", "-y", "--auto", action="store_true",
                         help="Auto-approve all guides without prompting")
     parser.add_argument("--delay", "-d", type=int, default=60, metavar="SECONDS",
-                        help="Seconds to wait between courses in a batch (default: 60)")
+                        help="Seconds to wait between courses during generation only "
+                             "(default: 60). Ignored for push-only batches.")
     args = parser.parse_args()
 
     if args.push_draft:
@@ -618,21 +697,56 @@ def main() -> None:
         run_push_draft_batch(args.push_draft_file, requests.Session(), args.yes, args.delay)
         return
 
-    # Collect course IDs; flag which came from --file for smart routing
-    direct_ids: list[str] = [c.upper().strip() for c in args.courses]
-    file_ids: list[str] = []
-    if args.file:
-        with open(args.file, encoding="utf-8") as f:
-            file_ids = [
-                ln.strip().upper()
-                for ln in f
-                if ln.strip() and not ln.startswith("#")
-            ]
+    if args.push_from_queue:
+        # Push every course in 'drafted' state from queue.csv.
+        ids = read_queue_course_ids("drafted")
+        if not ids:
+            print("No drafted courses in queue. Nothing to push.")
+            return
+        # Reuse the batch path by writing a temp list file
+        import tempfile
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as tf:
+            tf.write("\n".join(ids))
+            tmp_path = tf.name
+        try:
+            run_push_draft_batch(tmp_path, requests.Session(), args.yes, args.delay)
+        finally:
+            try:
+                os.unlink(tmp_path)
+            except OSError:
+                pass
+        return
 
-    course_ids = direct_ids + file_ids
-    if not course_ids:
-        parser.print_help()
-        sys.exit(1)
+    if args.from_queue:
+        # Generate the next N queued courses.
+        ids = read_queue_course_ids("queued")[:args.queue_n]
+        if not ids:
+            print("No queued courses found. Use 'queue_mgr.py add' to populate.")
+            return
+        print(f"From queue, drafting next {len(ids)} course(s): {', '.join(ids)}")
+        # Treat them like file-supplied IDs so we get the smart batch routing
+        # (skip if already drafted/pushed).
+        args.courses = []  # ensure we don't double up if user also passed positionals
+        # Fall through to the main loop below with file_ids = ids
+        file_ids = ids
+        direct_ids = []
+        course_ids = ids
+    else:
+        # Collect course IDs; flag which came from --file for smart routing
+        direct_ids = [c.upper().strip() for c in args.courses]
+        file_ids = []
+        if args.file:
+            with open(args.file, encoding="utf-8-sig") as f:
+                file_ids = [
+                    ln.strip().upper()
+                    for ln in f
+                    if ln.strip() and not ln.startswith("#")
+                ]
+
+        course_ids = direct_ids + file_ids
+        if not course_ids:
+            parser.print_help()
+            sys.exit(1)
 
     print(f"Processing {len(course_ids)} course(s): {', '.join(course_ids)}")
 

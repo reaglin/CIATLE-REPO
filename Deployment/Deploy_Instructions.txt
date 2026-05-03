@@ -1,3 +1,9 @@
+AUTOMATED - 
+From Bash Window (after build) in CIATLE-REPO root directory
+bash Deployment/deploy-update.sh
+
+
+MANUAL:
 From PowerShell to Open Server
 >ssh root@129.121.101.162
 >(Enter password)

@@ -25,6 +25,8 @@ public static class ErrorCodes
     public const string InvalidModuleId = "INVALID_MODULE_ID";
     public const string InvalidMaterialType = "INVALID_MATERIAL_TYPE";
     public const string GuideNotFound = "GUIDE_NOT_FOUND";
+    public const string TaxonomyPlacementRequired = "TAXONOMY_PLACEMENT_REQUIRED";
+    public const string GuideTemplateNotFound = "GUIDE_TEMPLATE_NOT_FOUND";
     public const string RateLimitExceeded = "RATE_LIMIT_EXCEEDED";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
     public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";

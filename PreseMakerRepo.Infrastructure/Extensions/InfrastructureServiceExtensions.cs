@@ -58,6 +58,7 @@ public static class InfrastructureServiceExtensions
         // Seeders (called from startup pipeline)
         services.AddScoped<TaxonomySeed>();
         services.AddScoped<EduSeed>();
+        services.AddScoped<GuideTemplateSeed>();
 
         return services;
     }

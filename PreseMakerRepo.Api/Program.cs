@@ -150,6 +150,7 @@ try
 
         await sp.GetRequiredService<TaxonomySeed>().SeedAsync();
         await sp.GetRequiredService<EduSeed>().SeedAsync();
+        await sp.GetRequiredService<GuideTemplateSeed>().SeedAsync();
         await AdminBootstrap.SeedAsync(sp, builder.Configuration, startupLogger);
     }
 

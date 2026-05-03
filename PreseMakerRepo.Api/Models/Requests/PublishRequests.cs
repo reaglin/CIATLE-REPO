@@ -40,6 +40,8 @@ public record CoursePublishRequest(
 
 public record ReportRequest(string? Reason);
 
+public record UpsertGuideTemplateRequest(string WorkingTitle, string Prompt);
+
 public record UpsertCurriculumGuideRequest(
     string Title,
     string HtmlContent,
@@ -47,4 +49,5 @@ public record UpsertCurriculumGuideRequest(
     int? ContactHours,
     string? Prerequisites,
     string? Version,
-    DateTime? GeneratedUtc);
+    DateTime? GeneratedUtc,
+    string? TaxonomyKey);

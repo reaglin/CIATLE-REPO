@@ -343,10 +343,45 @@ public class CoursesController : ControllerBase
         if (!vResult.IsValid) return BadRequest(ValidationError(vResult));
 
         var normalizedId = courseId.ToUpperInvariant();
-        var course = await _db.TaxonomyCourses.AsNoTracking()
-            .FirstOrDefaultAsync(c => c.CourseId == normalizedId);
-        if (course is null)
-            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.CourseNotFound, "Course not found in taxonomy."));
+
+        // (1) Course already known — proceed directly.
+        // (2) Explicit taxonomy key supplied — validate it and create the course.
+        // (3) Prefix matches a taxonomy node — create the course there.
+        // (4) None resolved — reject with a descriptive error.
+        if (await _db.TaxonomyCourses.FindAsync(normalizedId) is null)
+        {
+            string? resolvedKey = null;
+
+            if (request.TaxonomyKey is not null)
+            {
+                var key = request.TaxonomyKey.ToUpperInvariant();
+                if (!await _db.TaxonomyNodes.AnyAsync(n => n.Key == key))
+                    return UnprocessableEntity(ApiResponse<object?>.Fail(
+                        ErrorCodes.TaxonomyNodeNotFound,
+                        $"Taxonomy key '{request.TaxonomyKey}' does not exist."));
+                resolvedKey = key;
+            }
+            else
+            {
+                var prefix = ExtractCoursePrefix(normalizedId);
+                if (prefix is not null && await _db.TaxonomyNodes.AnyAsync(n => n.Key == prefix))
+                    resolvedKey = prefix;
+            }
+
+            if (resolvedKey is null)
+                return UnprocessableEntity(ApiResponse<object?>.Fail(
+                    ErrorCodes.TaxonomyPlacementRequired,
+                    "Course not found and taxonomy placement could not be determined from the course ID. " +
+                    "Please specify the taxonomy node key via the 'taxonomyKey' field."));
+
+            _db.TaxonomyCourses.Add(new TaxonomyCourse
+            {
+                CourseId = normalizedId,
+                Title = normalizedId,
+                Level3Key = resolvedKey,
+                IsActive = true
+            });
+        }
 
         var existing = await _db.CurriculumGuides
             .FirstOrDefaultAsync(g => g.CourseId == normalizedId);
@@ -535,11 +570,14 @@ public class CoursesController : ControllerBase
 
         await _db.SaveChangesAsync();
 
+        var guideStatus = await EnsureGuideStubAsync(normalizedId);
+
         return StatusCode(201, ApiResponse<object>.Ok(new
         {
             courseId = normalizedId,
             modulesPublished,
             materialsPublished,
+            guideStatus,
             courseUrl = $"{Request.Scheme}://{Request.Host}/courses/{normalizedId}"
         }));
     }
@@ -589,11 +627,14 @@ public class CoursesController : ControllerBase
         var (module, _) = await SaveModuleAsync(normalizedId, userId!, req, form);
         await _db.SaveChangesAsync();
 
+        var guideStatus = await EnsureGuideStubAsync(normalizedId);
+
         return StatusCode(201, ApiResponse<object>.Ok(new
         {
             moduleId = module.Id,
             courseId = normalizedId,
             materialsPublished = module.Materials.Count,
+            guideStatus,
             moduleUrl = $"{Request.Scheme}://{Request.Host}/api/v1/courses/{normalizedId}/modules/{module.Id}"
         }));
     }
@@ -769,5 +810,38 @@ public class CoursesController : ControllerBase
             .Select(e => new FieldError(e.PropertyName, e.ErrorMessage))
             .ToList();
         return ApiResponse<object?>.Fail(ErrorCodes.ValidationError, "One or more validation errors occurred.", details);
+    }
+
+    // Creates a "Not Completed" stub guide if no guide exists yet.
+    // Returns "exists" or "stub_created" for the publish response.
+    private async Task<string> EnsureGuideStubAsync(string courseId)
+    {
+        var exists = await _db.CurriculumGuides.AnyAsync(g => g.CourseId == courseId);
+        if (exists) return "exists";
+
+        var now = DateTime.UtcNow;
+        _db.CurriculumGuides.Add(new Core.Models.CurriculumGuide
+        {
+            CourseId = courseId,
+            Title = "Not Completed",
+            HtmlContent = "<p>Not Completed</p>",
+            Credits = null,
+            ContactHours = null,
+            Prerequisites = null,
+            Version = null,
+            GeneratedUtc = now,
+            UpdatedUtc = now
+        });
+        await _db.SaveChangesAsync();
+        return "stub_created";
+    }
+
+    // Returns the alpha prefix before the first digit (e.g. "EGN" from "EGN1111C"),
+    // or null if the course ID doesn't follow the prefix-digit pattern.
+    private static string? ExtractCoursePrefix(string courseId)
+    {
+        int i = 0;
+        while (i < courseId.Length && char.IsLetter(courseId[i])) i++;
+        return i > 0 && i < courseId.Length && char.IsDigit(courseId[i]) ? courseId[..i] : null;
     }
 }

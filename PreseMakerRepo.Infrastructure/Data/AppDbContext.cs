@@ -17,6 +17,7 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<EduInstitution> EduInstitutions => Set<EduInstitution>();
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
     public DbSet<CurriculumGuide> CurriculumGuides => Set<CurriculumGuide>();
+    public DbSet<RepoGuideTemplate> GuideTemplates => Set<RepoGuideTemplate>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

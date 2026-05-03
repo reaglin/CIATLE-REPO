@@ -21,7 +21,7 @@ dotnet publish PreseMakerRepo.Api -c Release -r linux-x64 --self-contained false
 ssh "$REMOTE_USER@$REMOTE_HOST" "systemctl stop presemaker-repo && rm -f $APP_DIR/PreseMakerRepo.Api"
 
 # 3. Copy new binaries
-rsync -a --delete "$RELEASE_DIR/" "$REMOTE_USER@$REMOTE_HOST:$APP_DIR/"
+scp -r "$RELEASE_DIR/." "$REMOTE_USER@$REMOTE_HOST:$APP_DIR/"
 
 # 4. Fix permissions, run migrations, restart
 ssh "$REMOTE_USER@$REMOTE_HOST" bash <<EOF

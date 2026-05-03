@@ -117,6 +117,11 @@ public record CurriculumGuideDto(
     DateTime GeneratedUtc,
     DateTime UpdatedUtc);
 
+public record GuideTemplateResponse(
+    string WorkingTitle,
+    string Prompt,
+    DateTime UpdatedUtc);
+
 public record SearchResultDto(
     string ResultType,       // "module" | "material"
     Guid ModuleId,
