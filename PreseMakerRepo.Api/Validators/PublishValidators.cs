@@ -10,9 +10,9 @@ public class PublishModuleRequestValidator : AbstractValidator<PublishModuleRequ
     {
         RuleFor(x => x.Title).NotEmpty().Length(3, 120);
         RuleFor(x => x.Description).NotEmpty().Length(10, 2000);
-        RuleFor(x => x.License).NotEmpty()
-            .Must(v => Enum.TryParse<LicenseType>(v, ignoreCase: true, out _))
-            .WithMessage("License must be one of: CcBy40, CcBySa40, CcByNc40, CcByNcSa40.");
+        When(x => x.License is not null, () =>
+            RuleFor(x => x.License!).Must(v => Enum.TryParse<LicenseType>(v, ignoreCase: true, out _))
+                .WithMessage("License must be one of: CcBy40, CcBySa40, CcByNc40, CcByNcSa40."));
         RuleFor(x => x.Materials).NotNull().NotEmpty()
             .WithMessage("At least one material is required.");
         RuleForEach(x => x.Materials).SetValidator(new MaterialMetadataItemValidator());
@@ -56,9 +56,9 @@ public class PublishMaterialRequestValidator : AbstractValidator<PublishMaterial
         RuleFor(x => x.Type).NotEmpty()
             .Must(v => Enum.TryParse<MaterialType>(v, ignoreCase: true, out _))
             .WithMessage("Material type is not recognized.");
-        RuleFor(x => x.License).NotEmpty()
-            .Must(v => Enum.TryParse<LicenseType>(v, ignoreCase: true, out _))
-            .WithMessage("License must be one of: CcBy40, CcBySa40, CcByNc40, CcByNcSa40.");
+        When(x => x.License is not null, () =>
+            RuleFor(x => x.License!).Must(v => Enum.TryParse<LicenseType>(v, ignoreCase: true, out _))
+                .WithMessage("License must be one of: CcBy40, CcBySa40, CcByNc40, CcByNcSa40."));
         RuleFor(x => x.Description).MaximumLength(1000).When(x => x.Description is not null);
     }
 }
@@ -92,8 +92,8 @@ public class UpsertCurriculumGuideRequestValidator : AbstractValidator<UpsertCur
     {
         RuleFor(x => x.Title).NotEmpty().MaximumLength(300);
         RuleFor(x => x.HtmlContent).NotEmpty();
-        RuleFor(x => x.Credits).InclusiveBetween(1, 12).When(x => x.Credits.HasValue);
-        RuleFor(x => x.ContactHours).InclusiveBetween(1, 300).When(x => x.ContactHours.HasValue);
+        RuleFor(x => x.Credits).InclusiveBetween(0, 12).When(x => x.Credits.HasValue);
+        RuleFor(x => x.ContactHours).InclusiveBetween(0, 300).When(x => x.ContactHours.HasValue);
         RuleFor(x => x.Prerequisites).MaximumLength(500).When(x => x.Prerequisites is not null);
         RuleFor(x => x.Version).MaximumLength(50).When(x => x.Version is not null);
     }

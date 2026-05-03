@@ -9,8 +9,10 @@ Usage:
     python generate_guide.py ETS1010
     python generate_guide.py ETS1010 ETS1020 ETS1030
     python generate_guide.py --file courses.txt
-    python generate_guide.py ETS1010 --yes          # skip review prompts
-    python generate_guide.py --push-draft ETS1010   # push a saved draft
+    python generate_guide.py ETS1010 --yes              # skip review prompts
+    python generate_guide.py ETS1010 --auto             # same as --yes
+    python generate_guide.py --push-draft ETS1010       # push a saved draft
+    python generate_guide.py --push-draft-file list.txt # batch push saved drafts
 
 Required env vars:
     ANTHROPIC_API_KEY
@@ -30,13 +32,28 @@ import os
 import re
 import sys
 import textwrap
+import time
 from datetime import datetime, timezone
 
 import anthropic
 import requests
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+except ImportError:
+    pass
+
 BASE_URL = os.environ.get("REPO_BASE_URL", "https://floridacourserepo.com").rstrip("/")
 DRAFTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "drafts")
+LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generate_guide.log")
+
+
+def log_event(course_id: str, event: str, status: str) -> None:
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(f"{ts} [{course_id}] {event}: {status}\n")
+
 
 SYSTEM_PROMPT = """\
 You are a curriculum developer for the Florida Course Repository, a public library of
@@ -47,8 +64,9 @@ Your job: research a given Florida college course and produce a structured curri
 Use web_search to look up:
 - The official SCNS course description (search "Florida SCNS <COURSE_ID>" or the course title)
 - Typical learning outcomes at Florida colleges (Valencia, FSCJ, SPC, etc.)
-- Standard topics and content areas
-- Credit hours and contact hours if not already given
+- Learning Outcomes should be categorized as required (where they are common among all schools) and optional (can be covered, but not required
+- Standard topics and content areas. Give required topics based on common coverage of identified offerings and option coverage.
+- Credit hours and contact hours
 - Typical prerequisites or co-requisites
 
 Then return ONLY a raw JSON object — no explanation, no markdown fences — with exactly
@@ -64,8 +82,13 @@ these fields:
 }
 
 HTML content format:
-- Sections: Course Description, Learning Outcomes, Major Topics, Resources & Tools,
-  Career Pathways  (omit any section you cannot verify)
+- Sections:
+   Course Description,
+   Learning Outcomes (required and optional),
+   Major Topics (required and optional),
+   Resources & Tools,
+   Career Pathways  (omit any section you cannot verify)
+   Special Information (Certificaton Preperation, specific job preparation)
 - Use <h2> for section headings
 - Use <p> for paragraphs, <ul><li> for lists, <strong> for key terms
 - No <html>, <head>, <body>, or <style> tags — inner content only
@@ -74,6 +97,10 @@ HTML content format:
 Be factual and specific to Florida college standards. Omit rather than fabricate.\
 """
 
+
+# ---------------------------------------------------------------------------
+# API helpers
+# ---------------------------------------------------------------------------
 
 def get_course_info(session: requests.Session, course_id: str) -> dict | None:
     try:
@@ -86,6 +113,172 @@ def get_course_info(session: requests.Session, course_id: str) -> dict | None:
     resp.raise_for_status()
     return resp.json().get("data")
 
+
+def check_guide_on_site(session: requests.Session, course_id: str) -> bool:
+    """Returns True if the course already has a curriculum guide URL on the site.
+
+    Note: curriculumGuideUrl is only populated once the course has published
+    modules. For guide-only courses, this returns False even when a guide
+    exists — callers should also check was_guide_pushed() via the log.
+    """
+    try:
+        resp = session.get(f"{BASE_URL}/api/v1/courses/{course_id}", timeout=10)
+    except requests.RequestException:
+        return False
+    if resp.status_code != 200:
+        return False
+    data = resp.json().get("data") or {}
+    return bool(data.get("curriculumGuideUrl"))
+
+
+def was_guide_pushed(course_id: str) -> bool:
+    """Returns True if the guide was previously pushed successfully.
+
+    Checks the draft file's pushed_utc stamp first (written after every
+    successful push), then falls back to the log file for entries written
+    before the stamp feature existed.
+    """
+    path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+            if data.get("pushed_utc"):
+                return True
+        except Exception:
+            pass
+    if not os.path.exists(LOG_FILE):
+        return False
+    marker = f"[{course_id}] PUSH: Success"
+    with open(LOG_FILE, encoding="utf-8") as f:
+        return any(marker in line for line in f)
+
+
+def mark_draft_pushed(course_id: str) -> None:
+    """Stamp the draft JSON with the push timestamp so future batches skip it."""
+    path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
+    if not os.path.exists(path):
+        return
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        data["pushed_utc"] = datetime.now(timezone.utc).isoformat()
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+
+
+def verify_guide(session: requests.Session, course_id: str) -> None:
+    """Confirm the guide is visible on the site after a push; always logs the result.
+
+    The push already confirmed success via the PUT response. This GET check
+    upgrades the log to 'Success (URL confirmed)' when curriculumGuideUrl is
+    present, but does not downgrade it — the URL is only populated once the
+    course has published modules.
+    """
+    try:
+        resp = session.get(f"{BASE_URL}/api/v1/courses/{course_id}", timeout=10)
+    except requests.RequestException as exc:
+        # Can't reach the API, but the push already succeeded.
+        log_event(course_id, "VERIFY", "Success (guide saved; GET check unreachable)")
+        return
+    if resp.status_code == 404:
+        log_event(course_id, "VERIFY", "Success (guide saved; course not yet browsable — no published modules)")
+        return
+    if resp.status_code != 200:
+        log_event(course_id, "VERIFY", f"Success (guide saved; GET returned HTTP {resp.status_code})")
+        return
+    data = resp.json().get("data") or {}
+    if data.get("curriculumGuideUrl"):
+        print("  Verified: guide URL is live on site.")
+        log_event(course_id, "VERIFY", "Success (URL confirmed)")
+    else:
+        print("  Guide saved. URL will appear once the course has published modules.")
+        log_event(course_id, "VERIFY", "Success (guide saved; URL pending published modules)")
+
+
+def get_token(session: requests.Session) -> str:
+    email = os.environ.get("REPO_ADMIN_EMAIL")
+    password = os.environ.get("REPO_ADMIN_PASSWORD")
+    if not email or not password:
+        print("Error: REPO_ADMIN_EMAIL and REPO_ADMIN_PASSWORD are required to push.")
+        sys.exit(1)
+    resp = session.post(
+        f"{BASE_URL}/api/v1/auth/login",
+        json={"email": email, "password": password},
+        timeout=10,
+    )
+    resp.raise_for_status()
+    token = resp.json()["data"]["accessToken"]
+    print("  Authenticated as admin.")
+    return token
+
+
+def push_guide(session: requests.Session, course_id: str, data: dict, token: str) -> None:
+    credits = data.get("credits")
+    if credits is None or not (0 <= int(credits) <= 12):
+        raise ValueError(
+            f"credits={credits!r} is outside the valid range 0–12. "
+            f"Edit the draft at drafts/{course_id}_guide.json and push with --push-draft."
+        )
+    contact_hours = data.get("contact_hours")
+    payload = {
+        "title": data["title"],
+        "htmlContent": data["html_content"],
+        "credits": int(credits),
+        "contactHours": int(contact_hours) if contact_hours else None,
+        "prerequisites": data.get("prerequisites"),
+        "version": data.get("version"),
+        "generatedUtc": datetime.now(timezone.utc).isoformat(),
+    }
+    resp = session.put(
+        f"{BASE_URL}/api/v1/courses/{course_id}/guide",
+        json=payload,
+        headers={"Authorization": f"Bearer {token}"},
+        timeout=15,
+    )
+    resp.raise_for_status()
+    msg = (resp.json().get("data") or {}).get("message", "Saved.")
+    print(f"  {msg}")
+
+
+def _push_with_token_refresh(
+    session: requests.Session,
+    course_id: str,
+    data: dict,
+    token: str,
+) -> str:
+    """Push guide, refreshing the token once on 401. Returns the (possibly new) token."""
+    try:
+        push_guide(session, course_id, data, token)
+        log_event(course_id, "PUSH", "Success")
+        mark_draft_pushed(course_id)
+        verify_guide(session, course_id)
+    except requests.HTTPError as exc:
+        if exc.response.status_code == 401:
+            print("  Token expired — re-authenticating...")
+            token = get_token(session)
+            try:
+                push_guide(session, course_id, data, token)
+                log_event(course_id, "PUSH", "Success")
+                mark_draft_pushed(course_id)
+                verify_guide(session, course_id)
+            except Exception as exc2:
+                log_event(course_id, "PUSH", f"ERROR: {exc2}")
+                raise
+        else:
+            log_event(course_id, "PUSH", f"ERROR: HTTP {exc.response.status_code}")
+            raise
+    except Exception as exc:
+        log_event(course_id, "PUSH", f"ERROR: {exc}")
+        raise
+    return token
+
+
+# ---------------------------------------------------------------------------
+# Guide generation
+# ---------------------------------------------------------------------------
 
 def build_prompt(course_id: str, info: dict | None) -> str:
     if info:
@@ -112,9 +305,7 @@ def build_prompt(course_id: str, info: dict | None) -> str:
 
 
 def extract_json(text: str) -> dict:
-    # Strip markdown code fences if present
     text = re.sub(r"```(?:json)?\s*", "", text).strip()
-    # Find outermost { ... }
     match = re.search(r"\{[\s\S]*\}", text)
     if not match:
         raise ValueError(
@@ -135,7 +326,7 @@ def generate_guide(course_id: str, course_info: dict | None) -> dict:
     client = anthropic.Anthropic(api_key=api_key)
     response = client.messages.create(
         model=model,
-        max_tokens=4096,
+        max_tokens=8192,
         system=SYSTEM_PROMPT,
         tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
         messages=[{"role": "user", "content": build_prompt(course_id, course_info)}],
@@ -146,6 +337,10 @@ def generate_guide(course_id: str, course_info: dict | None) -> dict:
     )
     return extract_json(text)
 
+
+# ---------------------------------------------------------------------------
+# Display / persistence
+# ---------------------------------------------------------------------------
 
 def display_guide(course_id: str, data: dict) -> None:
     sep = "=" * 70
@@ -174,46 +369,9 @@ def save_draft(course_id: str, data: dict) -> str:
     return path
 
 
-def get_token(session: requests.Session) -> str:
-    email = os.environ.get("REPO_ADMIN_EMAIL")
-    password = os.environ.get("REPO_ADMIN_PASSWORD")
-    if not email or not password:
-        print("Error: REPO_ADMIN_EMAIL and REPO_ADMIN_PASSWORD are required to push.")
-        sys.exit(1)
-    resp = session.post(
-        f"{BASE_URL}/api/v1/auth/login",
-        json={"email": email, "password": password},
-        timeout=10,
-    )
-    resp.raise_for_status()
-    token = resp.json()["data"]["accessToken"]
-    print("  Authenticated as admin.")
-    return token
-
-
-def push_guide(
-    session: requests.Session, course_id: str, data: dict, token: str
-) -> None:
-    payload = {
-        "title": data["title"],
-        "htmlContent": data["html_content"],
-        "credits": data.get("credits"),
-        "contactHours": data.get("contact_hours"),
-        "prerequisites": data.get("prerequisites"),
-        "version": data.get("version"),
-        "generatedUtc": datetime.now(timezone.utc).isoformat(),
-    }
-    resp = session.put(
-        f"{BASE_URL}/api/v1/courses/{course_id}/guide",
-        json=payload,
-        headers={"Authorization": f"Bearer {token}"},
-        timeout=15,
-    )
-    resp.raise_for_status()
-    msg = (resp.json().get("data") or {}).get("message", "Saved.")
-    print(f"  {msg}")
-    print(f"  View: {BASE_URL}/courses/{course_id}/guide")
-
+# ---------------------------------------------------------------------------
+# Processing modes
+# ---------------------------------------------------------------------------
 
 def process_course(
     course_id: str,
@@ -221,14 +379,21 @@ def process_course(
     token: str | None,
     auto_approve: bool,
 ) -> str | None:
-    """Generate and optionally push a guide. Returns a token if one was obtained."""
+    """Single-course mode: always regenerate, then prompt to push."""
     course_id = course_id.upper().strip()
     print(f"\n[{course_id}] Fetching course info from repo...")
     info = get_course_info(session, course_id)
     if not info:
         print("  Course not found in taxonomy — generating from course ID only.")
+        log_event(course_id, "TAXONOMY", "Not found in repo — guide generated from course ID only")
 
-    data = generate_guide(course_id, info)
+    try:
+        data = generate_guide(course_id, info)
+    except Exception as exc:
+        log_event(course_id, "GENERATE", f"ERROR: {exc}")
+        raise
+
+    log_event(course_id, "GENERATE", "Success")
     display_guide(course_id, data)
     draft_path = save_draft(course_id, data)
     print(f"\n  Draft saved: {draft_path}")
@@ -241,7 +406,7 @@ def process_course(
     if choice == "y":
         if token is None:
             token = get_token(session)
-        push_guide(session, course_id, data, token)
+        token = _push_with_token_refresh(session, course_id, data, token)
     elif choice == "e":
         print(f"  Edit the draft then run:")
         print(f"    python generate_guide.py --push-draft {course_id}")
@@ -251,7 +416,99 @@ def process_course(
     return token
 
 
+def process_course_batch(
+    course_id: str,
+    session: requests.Session,
+    token: str | None,
+    auto_approve: bool,
+) -> tuple[str | None, bool]:
+    """
+    Smart batch mode (used with --file):
+      1. Draft exists + guide on site  → skip (already done)
+      2. Draft exists + guide not on site → push existing draft
+      3. No draft → generate then push
+
+    Returns (token, api_called) where api_called is False only when the course
+    was skipped entirely — no delay needed before the next course in that case.
+    """
+    course_id = course_id.upper().strip()
+    print(f"\n[{course_id}] Processing...")
+
+    draft_path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
+
+    generated = False  # True only when the Anthropic API was called
+
+    if os.path.exists(draft_path):
+        log_event(course_id, "DRAFT", "Draft file exists")
+        print(f"  Draft found: {draft_path}")
+
+        if check_guide_on_site(session, course_id) or was_guide_pushed(course_id):
+            log_event(course_id, "SITE", "Guide exists on site — skipping")
+            print("  Guide already on site. Skipping.")
+            return token, False
+
+        # Draft present but guide not yet pushed — load and push (no generation)
+        try:
+            with open(draft_path, encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as exc:
+            print(f"  ERROR reading draft: {exc}")
+            log_event(course_id, "PUSH", f"ERROR reading draft: {exc}")
+            return token, False
+
+        display_guide(course_id, data)
+
+        if auto_approve:
+            choice = "y"
+        else:
+            choice = input("  Push existing draft? [y/N] ").strip().lower()
+
+        if choice != "y":
+            print("  Skipped.")
+            return token, False
+
+    else:
+        # No draft: generate from scratch (Anthropic API call)
+        print("  No draft found — generating...")
+        info = get_course_info(session, course_id)
+        if not info:
+            print("  Course not found in taxonomy — generating from course ID only.")
+            log_event(course_id, "TAXONOMY", "Not found in repo — guide generated from course ID only")
+
+        try:
+            data = generate_guide(course_id, info)
+        except Exception as exc:
+            log_event(course_id, "GENERATE", f"ERROR: {exc}")
+            raise
+
+        generated = True
+        log_event(course_id, "GENERATE", "Success")
+        display_guide(course_id, data)
+        save_draft(course_id, data)
+        print(f"  Draft saved: {draft_path}")
+
+        if auto_approve:
+            choice = "y"
+        else:
+            choice = input("  Push to site? [y / n / e=edit and push later] ").strip().lower()
+
+        if choice == "e":
+            print(f"  Edit the draft then run:")
+            print(f"    python generate_guide.py --push-draft {course_id}")
+            return token, generated
+        elif choice != "y":
+            print("  Skipped.")
+            return token, generated
+
+    # Shared push path (draft-was-present or freshly generated)
+    if token is None:
+        token = get_token(session)
+    token = _push_with_token_refresh(session, course_id, data, token)
+    return token, generated
+
+
 def run_push_draft(course_id: str, session: requests.Session) -> None:
+    """Push a single saved draft interactively."""
     course_id = course_id.upper().strip()
     path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
     if not os.path.exists(path):
@@ -262,12 +519,75 @@ def run_push_draft(course_id: str, session: requests.Session) -> None:
     display_guide(course_id, data)
     choice = input("  Push to site? [y/N] ").strip().lower()
     if choice == "y":
-        session_obj = requests.Session()
-        token = get_token(session_obj)
-        push_guide(session_obj, course_id, data, token)
+        token = get_token(session)
+        _push_with_token_refresh(session, course_id, data, token)
     else:
         print("  Aborted.")
 
+
+def run_push_draft_batch(
+    file_path: str, session: requests.Session, auto_approve: bool, delay: int
+) -> None:
+    """Batch-push saved drafts listed in a file."""
+    with open(file_path, encoding="utf-8") as f:
+        course_ids = [
+            ln.strip().upper()
+            for ln in f
+            if ln.strip() and not ln.startswith("#")
+        ]
+    if not course_ids:
+        print("No course IDs found in file.")
+        return
+
+    print(f"Pushing drafts for {len(course_ids)} course(s): {', '.join(course_ids)}")
+
+    token: str | None = None
+    if auto_approve and os.environ.get("REPO_ADMIN_EMAIL"):
+        token = get_token(session)
+
+    for i, course_id in enumerate(course_ids):
+        if i > 0 and delay > 0:
+            print(f"  Waiting {delay}s before next course...")
+            time.sleep(delay)
+
+        path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
+        if not os.path.exists(path):
+            print(f"\n[{course_id}] No draft found at: {path}")
+            log_event(course_id, "PUSH", "ERROR: Draft file not found")
+            continue
+
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as exc:
+            print(f"\n[{course_id}] ERROR reading draft: {exc}")
+            log_event(course_id, "PUSH", f"ERROR reading draft: {exc}")
+            continue
+
+        print(f"\n[{course_id}] Pushing draft...")
+        display_guide(course_id, data)
+
+        if auto_approve:
+            choice = "y"
+        else:
+            choice = input("  Push to site? [y/N] ").strip().lower()
+
+        if choice != "y":
+            print("  Skipped.")
+            continue
+
+        if token is None:
+            token = get_token(session)
+
+        try:
+            token = _push_with_token_refresh(session, course_id, data, token)
+        except Exception as exc:
+            print(f"  ERROR: {exc}")
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -278,50 +598,75 @@ def main() -> None:
     parser.add_argument("courses", nargs="*", metavar="COURSE_ID",
                         help="One or more course IDs (e.g. ETS1010)")
     parser.add_argument("--file", "-f", metavar="FILE",
-                        help="Text file with one course ID per line (# for comments)")
+                        help="Text file with one course ID per line (# for comments); "
+                             "uses smart batch logic (skip if guide already on site)")
     parser.add_argument("--push-draft", metavar="COURSE_ID",
                         help="Push a previously saved draft without regenerating")
-    parser.add_argument("--yes", "-y", action="store_true",
+    parser.add_argument("--push-draft-file", metavar="FILE",
+                        help="Text file with course IDs to push from saved drafts (# for comments)")
+    parser.add_argument("--yes", "-y", "--auto", action="store_true",
                         help="Auto-approve all guides without prompting")
+    parser.add_argument("--delay", "-d", type=int, default=60, metavar="SECONDS",
+                        help="Seconds to wait between courses in a batch (default: 60)")
     args = parser.parse_args()
 
     if args.push_draft:
         run_push_draft(args.push_draft, requests.Session())
         return
 
-    course_ids: list[str] = list(args.courses)
+    if args.push_draft_file:
+        run_push_draft_batch(args.push_draft_file, requests.Session(), args.yes, args.delay)
+        return
+
+    # Collect course IDs; flag which came from --file for smart routing
+    direct_ids: list[str] = [c.upper().strip() for c in args.courses]
+    file_ids: list[str] = []
     if args.file:
         with open(args.file, encoding="utf-8") as f:
-            course_ids += [
-                ln.strip()
+            file_ids = [
+                ln.strip().upper()
                 for ln in f
                 if ln.strip() and not ln.startswith("#")
             ]
 
+    course_ids = direct_ids + file_ids
     if not course_ids:
         parser.print_help()
         sys.exit(1)
 
-    print(f"Generating guides for {len(course_ids)} course(s): {', '.join(c.upper() for c in course_ids)}")
+    print(f"Processing {len(course_ids)} course(s): {', '.join(course_ids)}")
 
     session = requests.Session()
-    # Authenticate once up front when auto-approving a batch so we don't re-auth every course
     token: str | None = None
-    if args.yes and (os.environ.get("REPO_ADMIN_EMAIL")):
+    if args.yes and os.environ.get("REPO_ADMIN_EMAIL"):
         token = get_token(session)
 
-    for cid in course_ids:
+    api_called_last = False
+    for i, cid in enumerate(course_ids):
+        if i > 0 and args.delay > 0 and api_called_last:
+            print(f"  Waiting {args.delay}s before next course...")
+            time.sleep(args.delay)
         try:
-            token = process_course(cid, session, token, auto_approve=args.yes)
+            # Use smart batch logic for file-sourced IDs; always-regenerate for CLI IDs
+            if cid in file_ids:
+                token, api_called_last = process_course_batch(cid, session, token, auto_approve=args.yes)
+            else:
+                token = process_course(cid, session, token, auto_approve=args.yes)
+                api_called_last = True
         except KeyboardInterrupt:
             print("\nInterrupted.")
             sys.exit(0)
         except json.JSONDecodeError as exc:
             print(f"  ERROR: Could not parse JSON from model response: {exc}")
+            api_called_last = True
         except requests.HTTPError as exc:
             print(f"  ERROR: API call failed: {exc.response.status_code} {exc.response.text[:200]}")
+            # HTTPError always comes from the repo API (push/auth), never from Anthropic
+            api_called_last = cid not in file_ids
         except Exception as exc:
             print(f"  ERROR: {exc}")
+            # Local errors (validation, file I/O) don't consume Anthropic tokens
+            api_called_last = cid not in file_ids
 
 
 if __name__ == "__main__":

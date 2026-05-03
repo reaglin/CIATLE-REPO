@@ -87,6 +87,32 @@ public class TaxonomyController : ControllerBase
         return Ok(ApiResponse<TaxonomyNodeDto>.Ok(dto));
     }
 
+    // GET /api/v1/taxonomy/{level1Key}/{level2Key}/courses  (2-level taxonomy leaf)
+    [HttpGet("{level1Key}/{level2Key}/courses")]
+    public async Task<IActionResult> GetLevel2Courses(
+        string level1Key, string level2Key,
+        [FromQuery] int page = 1, [FromQuery] int pageSize = 100)
+    {
+        var node = await _taxonomy.GetNodeAsync(level2Key);
+        if (node is null || node.Level != 2 || node.ParentKey != level1Key)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.TaxonomyNodeNotFound, "Taxonomy node not found."));
+
+        pageSize = Math.Clamp(pageSize, 1, 200);
+        var courses = await _taxonomy.GetCoursesByLevel3Async(level2Key);
+        var paged = courses
+            .OrderBy(c => c.CourseId)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(c => new CourseListItem(c.CourseId, c.Title, c.CreditHours, 0, 0, null, c.CurriculumGuideUrl))
+            .ToList();
+
+        var result = new PagedResult<CourseListItem>(
+            paged, courses.Count, page, pageSize,
+            (int)Math.Ceiling(courses.Count / (double)pageSize));
+
+        return Ok(ApiResponse<PagedResult<CourseListItem>>.Ok(result));
+    }
+
     // GET /api/v1/taxonomy/{level1Key}/{level2Key}/{level3Key}
     [HttpGet("{level1Key}/{level2Key}/{level3Key}")]
     public async Task<IActionResult> GetLevel3(

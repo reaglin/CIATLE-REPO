@@ -11,7 +11,7 @@ public record PublishModuleRequest(
     string Description,
     IReadOnlyList<string>? Outcomes,
     IReadOnlyList<object>? TopicHierarchy,
-    string License,
+    string? License,
     IReadOnlyList<MaterialMetadataItem> Materials);
 
 public record UpdateModuleRequest(
@@ -26,7 +26,7 @@ public record PublishMaterialRequest(
     string Title,
     string Type,
     string? Description,
-    string License);
+    string? License);
 
 public record UpdateMaterialRequest(
     string? Title,

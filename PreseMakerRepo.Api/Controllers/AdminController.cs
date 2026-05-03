@@ -109,6 +109,27 @@ public class AdminController : ControllerBase
                 (int)Math.Ceiling(total / (double)pageSize))));
     }
 
+    // POST /api/v1/admin/contributors/confirm-email
+    [HttpPost("contributors/confirm-email")]
+    public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request)
+    {
+        var user = await _userManager.FindByEmailAsync(request.Email);
+        if (user is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.ContributorNotFound, "No account found with that email."));
+
+        if (user.EmailConfirmed)
+            return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse($"Email for {user.Email} is already confirmed.")));
+
+        var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        var result = await _userManager.ConfirmEmailAsync(user, token);
+
+        if (!result.Succeeded)
+            return StatusCode(500, ApiResponse<object?>.Fail(ErrorCodes.InternalServerError,
+                string.Join("; ", result.Errors.Select(e => e.Description))));
+
+        return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse($"Email confirmed for {user.Email}.")));
+    }
+
     // POST /api/v1/admin/modules/{id}/clear-flag
     [HttpPost("modules/{id:guid}/clear-flag")]
     public async Task<IActionResult> ClearModuleFlag(Guid id, [FromBody] ClearFlagRequest request)

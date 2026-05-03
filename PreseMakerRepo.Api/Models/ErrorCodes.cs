@@ -27,4 +27,5 @@ public static class ErrorCodes
     public const string GuideNotFound = "GUIDE_NOT_FOUND";
     public const string RateLimitExceeded = "RATE_LIMIT_EXCEEDED";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
+    public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";
 }

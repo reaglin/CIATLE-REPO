@@ -366,3 +366,12 @@ FodyWeavers.xsd
 **/.env
 **/.env.*
 *.env
+
+# Artifacts/
+Deployment/
+Tools/drafts/
+Tools/*.log
+Tools/*.txt
+
+#AI Permissions
+**/.claude

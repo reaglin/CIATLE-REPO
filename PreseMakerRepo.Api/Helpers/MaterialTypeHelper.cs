@@ -22,7 +22,10 @@ public static class MaterialTypeHelper
             "text/html"
         ],
         [MaterialType.Document] = [
-            "text/markdown", "text/plain", "application/pdf"
+            "text/markdown", "text/plain", "application/pdf",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/json", "application/xml", "text/xml", "text/csv",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         ],
         [MaterialType.Image] = [
             "image/png", "image/jpeg", "image/gif", "image/svg+xml", "application/zip"

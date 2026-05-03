@@ -27,7 +27,13 @@
       "Bash(sed -n '10p' EngineeringTechnology_StatewideInventory.csv)",
       "Bash(powershell -ExecutionPolicy Bypass -File GenerateCoursesSql.ps1)",
       "Bash(curl *)",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); g=d['data']; print\\(f'CourseId: {g[\\\\\"courseId\\\\\"]}\\\\nTitle: {g[\\\\\"title\\\\\"]}\\\\nCredits: {g[\\\\\"credits\\\\\"]}\\\\nContactHours: {g[\\\\\"contactHours\\\\\"]}\\\\nUpdatedUtc: {g[\\\\\"updatedUtc\\\\\"]}\\\\nHTML length: {len\\(g[\\\\\"htmlContent\\\\\"]\\)} chars'\\)\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); g=d['data']; print\\(f'CourseId: {g[\\\\\"courseId\\\\\"]}\\\\nTitle: {g[\\\\\"title\\\\\"]}\\\\nCredits: {g[\\\\\"credits\\\\\"]}\\\\nContactHours: {g[\\\\\"contactHours\\\\\"]}\\\\nUpdatedUtc: {g[\\\\\"updatedUtc\\\\\"]}\\\\nHTML length: {len\\(g[\\\\\"htmlContent\\\\\"]\\)} chars'\\)\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ronal\\\\source\\\\repos\\\\PreseMaker\" -Recurse -Force)",
+      "Bash(Select-Object -First 50)",
+      "Bash(Format-List FullName)",
+      "Bash(Get-ChildItem -Recurse -Directory -Depth 2)",
+      "Bash(Select-Object FullName)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ronal\\\\source\\\\repos\\\\PreseMaker\\\\PreseMaker\" -Recurse -Directory)"
     ]
   }
 }
