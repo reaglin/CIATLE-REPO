@@ -372,6 +372,7 @@ Deployment/
 Tools/drafts/
 Tools/*.log
 Tools/*.txt
+Tools/*.zip
 
 # Large inventory/data files — removed from history, do not re-add
 Specifications/*Inventory*.csv
