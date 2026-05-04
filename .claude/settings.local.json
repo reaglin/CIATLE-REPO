@@ -38,7 +38,23 @@
       "Bash(Git)",
       "Bash(Website)",
       "Bash(Batch)",
-      "Bash(Existing\")"
+      "Bash(Existing\")",
+      "Bash(git rev-list *)",
+      "Bash(git cat-file *)",
+      "Bash(sort -k3 -rn)",
+      "Bash(git filter-repo *)",
+      "Bash(python -m git_filter_repo --version)",
+      "Bash(git-filter-repo --version)",
+      "Bash(where git-filter-repo *)",
+      "Bash(python *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebSearch",
+      "Bash(Test-Path C:\\\\Users\\\\ronal\\\\Downloads *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ronal\\\\source\\\\repos\\\\CIATLE-REPO\" -Directory)",
+      "Bash(Select-Object Name)"
     ]
   }
 }

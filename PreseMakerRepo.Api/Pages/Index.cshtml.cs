@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PreseMakerRepo.Core.Constants;
 using PreseMakerRepo.Core.Enums;
 using PreseMakerRepo.Core.Interfaces;
@@ -12,18 +13,22 @@ public class IndexModel : PageModel
 {
     private readonly AppDbContext _db;
     private readonly ITaxonomyService _taxonomy;
+    private readonly IConfiguration _config;
 
-    public IndexModel(AppDbContext db, ITaxonomyService taxonomy)
+    public IndexModel(AppDbContext db, ITaxonomyService taxonomy, IConfiguration config)
     {
         _db = db;
         _taxonomy = taxonomy;
+        _config = config;
     }
 
     public IReadOnlyList<TaxonomyNodeSummary> Disciplines { get; set; } = [];
     public IReadOnlyList<Core.Models.Module> RecentModules { get; set; } = [];
+    public string Level2Label { get; set; } = "Subdiscipline";
 
     public async Task OnGetAsync()
     {
+        Level2Label = _config["SiteSettings:Level2Label"] ?? "Subdiscipline";
         var tree = await _taxonomy.GetFullTreeAsync();
         Disciplines = tree.Roots;
 

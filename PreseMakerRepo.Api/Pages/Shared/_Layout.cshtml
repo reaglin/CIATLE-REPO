@@ -3,14 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@(ViewData["Title"] != null ? ViewData["Title"] + " — " : "")PreseMaker Repository</title>
+    <title>@(ViewData["Title"] != null ? ViewData["Title"] + " — " : "")Florida Course Repo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
+    <div class="bg-light border-bottom py-1 text-center" style="font-size:.8rem">
+        Sponsored by <a href="https://edu-agentic.com/" target="_blank" rel="noopener">eAgentic Software</a>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-lg">
-            <a class="navbar-brand fw-bold" asp-page="/Index">PreseMaker Repository</a>
+            <a class="navbar-brand fw-bold" asp-page="/Index">Florida Course Repo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -79,9 +82,11 @@
 
     <footer class="bg-light border-top py-3 mt-5">
         <div class="container-lg text-center text-muted small">
-            <span>PreseMaker Community Repository</span>
+            <span>Florida Course Repo</span>
             <span class="mx-2">·</span>
             <span>Open educational resources for Florida college courses</span>
+            <span class="mx-2">·</span>
+            <a href="https://edu-agentic.com/" target="_blank" rel="noopener" class="text-muted">Sponsored by eAgentic Software</a>
         </div>
     </footer>
 
