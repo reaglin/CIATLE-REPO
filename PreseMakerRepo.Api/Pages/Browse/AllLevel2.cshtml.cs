@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using PreseMakerRepo.Core.Interfaces;
-using PreseMakerRepo.Core.Models;
 
 namespace PreseMakerRepo.Api.Pages.Browse;
 
@@ -20,30 +19,45 @@ public class AllLevel2Model : PageModel
 
     public string Level2Label { get; set; } = "Subdiscipline";
     public IReadOnlyList<Level2Item> Items { get; set; } = [];
-    public new int Page { get; set; } = 1;
+    public string SelectedLetter { get; set; } = string.Empty;
+    public IReadOnlyList<char> AvailableLetters { get; set; } = [];
     public int TotalCount { get; set; }
-    public int TotalPages { get; set; }
 
-    private const int PageSize = 50;
-
-    public async Task OnGetAsync(int page = 1)
+    public async Task OnGetAsync(string? letter = null)
     {
         Level2Label = _config["SiteSettings:Level2Label"] ?? "Subdiscipline";
-        Page = Math.Max(1, page);
 
         var tree = await _taxonomy.GetFullTreeAsync();
 
         var all = tree.Roots
             .SelectMany(l1 => l1.Children.Select(l2 => new Level2Item(
                 l2.Key, l2.Name, l1.Key, l1.Name, l2.CourseCount, l2.ModuleCount)))
-            .OrderBy(x => x.Name)
-            .ThenBy(x => x.Key)
+            .OrderBy(x => x.Key)
             .ToList();
 
         TotalCount = all.Count;
-        TotalPages = (int)Math.Ceiling((double)TotalCount / PageSize);
-        Page = Math.Min(Page, Math.Max(1, TotalPages));
 
-        Items = all.Skip((Page - 1) * PageSize).Take(PageSize).ToList();
+        AvailableLetters = all
+            .Where(x => x.Key.Length > 0 && char.IsLetter(x.Key[0]))
+            .Select(x => char.ToUpper(x.Key[0]))
+            .Distinct()
+            .OrderBy(c => c)
+            .ToList();
+
+        // Default to first available letter if none specified or invalid
+        char chosen = AvailableLetters.Count > 0 ? AvailableLetters[0] : 'A';
+        if (!string.IsNullOrEmpty(letter) && char.IsLetter(letter[0]))
+        {
+            char requested = char.ToUpper(letter[0]);
+            if (AvailableLetters.Contains(requested))
+                chosen = requested;
+        }
+
+        SelectedLetter = chosen.ToString();
+
+        Items = all
+            .Where(x => x.Key.Length > 0 &&
+                        char.ToUpper(x.Key[0]) == chosen)
+            .ToList();
     }
 }
