@@ -373,5 +373,9 @@ Tools/drafts/
 Tools/*.log
 Tools/*.txt
 
+# Large inventory/data files — removed from history, do not re-add
+Specifications/*Inventory*.csv
+Specifications/*Inventory*.xlsx
+
 #AI Permissions
 **/.claude
