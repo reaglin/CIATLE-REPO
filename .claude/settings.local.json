@@ -33,7 +33,12 @@
       "Bash(Format-List FullName)",
       "Bash(Get-ChildItem -Recurse -Directory -Depth 2)",
       "Bash(Select-Object FullName)",
-      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ronal\\\\source\\\\repos\\\\PreseMaker\\\\PreseMaker\" -Recurse -Directory)"
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ronal\\\\source\\\\repos\\\\PreseMaker\\\\PreseMaker\" -Recurse -Directory)",
+      "Bash(AddModule)",
+      "Bash(Git)",
+      "Bash(Website)",
+      "Bash(Batch)",
+      "Bash(Existing\")"
     ]
   }
 }
