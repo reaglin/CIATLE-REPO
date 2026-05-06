@@ -9,3 +9,11 @@ public record SuspendContributorRequest(string Reason, bool NotifyContributor = 
 public record AdminContactRequest(string Subject, string Body);
 
 public record ConfirmEmailRequest(string Email);
+
+public record UpdateTaxonomyNodeRequest(string Name);
+
+public record UpdateTaxonomyCourseRequest(
+    string Title,
+    int? CreditHours,
+    bool IsActive,
+    string? CurriculumGuideUrl);

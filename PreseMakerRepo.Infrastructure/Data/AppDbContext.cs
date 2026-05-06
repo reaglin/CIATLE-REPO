@@ -18,6 +18,7 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
     public DbSet<CurriculumGuide> CurriculumGuides => Set<CurriculumGuide>();
     public DbSet<RepoGuideTemplate> GuideTemplates => Set<RepoGuideTemplate>();
+    public DbSet<TaxonomyNodeDescription> TaxonomyNodeDescriptions => Set<TaxonomyNodeDescription>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -11,4 +11,5 @@ public class TaxonomyNode
 
     public ICollection<TaxonomyNode> Children { get; set; } = new List<TaxonomyNode>();
     public ICollection<TaxonomyCourse> Courses { get; set; } = new List<TaxonomyCourse>();
+    public TaxonomyNodeDescription? Description { get; set; }
 }

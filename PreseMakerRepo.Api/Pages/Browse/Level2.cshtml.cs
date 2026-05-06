@@ -31,6 +31,7 @@ public class Level2Model : PageModel
     public IReadOnlyList<TaxonomyNodeSummary> Level3Nodes { get; set; } = [];
     public bool IsLeaf { get; set; }
     public HashSet<string> CourseIdsWithGuides { get; set; } = [];
+    public string? Description { get; set; }
 
     public async Task<IActionResult> OnGetAsync(string level1Key, string level2Key)
     {
@@ -73,6 +74,11 @@ public class Level2Model : PageModel
         {
             Level3Nodes = Prefix.Children;
         }
+
+        var desc = await _db.TaxonomyNodeDescriptions
+            .AsNoTracking()
+            .FirstOrDefaultAsync(d => d.NodeKey == Prefix.Key);
+        Description = desc?.HtmlContent;
 
         return Page();
     }

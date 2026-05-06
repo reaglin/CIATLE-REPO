@@ -12,7 +12,12 @@
     </ol>
 </nav>
 
-<h1 class="h4 mb-4">@Model.Subject?.Key — @Model.Subject?.Name</h1>
+<h1 class="h4 mb-1">@Model.Subject?.Key — @Model.Subject?.Name</h1>
+
+@if (!string.IsNullOrEmpty(Model.Description))
+{
+    <div class="taxonomy-description mb-4 mt-3">@Html.Raw(Model.Description)</div>
+}
 
 @if (!Model.Courses.Any())
 {

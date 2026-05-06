@@ -286,6 +286,79 @@ public class AdminController : ControllerBase
         return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Email sent.")));
     }
 
+    // PUT /api/v1/admin/taxonomy/nodes/{key}
+    [HttpPut("taxonomy/nodes/{key}")]
+    public async Task<IActionResult> UpdateTaxonomyNode(string key, [FromBody] UpdateTaxonomyNodeRequest request)
+    {
+        var node = await _db.TaxonomyNodes.FindAsync(key);
+        if (node is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.TaxonomyNodeNotFound, "Taxonomy node not found."));
+
+        node.Name = request.Name;
+        await _db.SaveChangesAsync();
+
+        return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Taxonomy node updated.")));
+    }
+
+    // PUT /api/v1/admin/taxonomy/courses/{courseId}
+    [HttpPut("taxonomy/courses/{courseId}")]
+    public async Task<IActionResult> UpdateTaxonomyCourse(string courseId, [FromBody] UpdateTaxonomyCourseRequest request)
+    {
+        var course = await _db.TaxonomyCourses.FindAsync(courseId);
+        if (course is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.CourseNotFound, "Taxonomy course not found."));
+
+        course.Title = request.Title;
+        course.CreditHours = request.CreditHours;
+        course.IsActive = request.IsActive;
+        course.CurriculumGuideUrl = request.CurriculumGuideUrl;
+        await _db.SaveChangesAsync();
+
+        return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Taxonomy course updated.")));
+    }
+
+    // POST /api/v1/admin/contributors/{id}/promote
+    [HttpPost("contributors/{id}/promote")]
+    public async Task<IActionResult> PromoteContributor(string id)
+    {
+        var contributor = await _userManager.FindByIdAsync(id);
+        if (contributor is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.ContributorNotFound, "Contributor not found."));
+
+        if (await _userManager.IsInRoleAsync(contributor, "Administrator"))
+            return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Contributor is already an Administrator.")));
+
+        var result = await _userManager.AddToRoleAsync(contributor, "Administrator");
+        if (!result.Succeeded)
+            return StatusCode(500, ApiResponse<object?>.Fail(ErrorCodes.InternalServerError,
+                string.Join("; ", result.Errors.Select(e => e.Description))));
+
+        return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Contributor promoted to Administrator.")));
+    }
+
+    // POST /api/v1/admin/contributors/{id}/demote
+    [HttpPost("contributors/{id}/demote")]
+    public async Task<IActionResult> DemoteContributor(string id)
+    {
+        var selfId = ClaimsHelper.GetUserId(User);
+        if (id == selfId)
+            return UnprocessableEntity(ApiResponse<object?>.Fail(ErrorCodes.ValidationError, "You cannot remove your own Administrator role."));
+
+        var contributor = await _userManager.FindByIdAsync(id);
+        if (contributor is null)
+            return NotFound(ApiResponse<object?>.Fail(ErrorCodes.ContributorNotFound, "Contributor not found."));
+
+        if (!await _userManager.IsInRoleAsync(contributor, "Administrator"))
+            return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Contributor is not an Administrator.")));
+
+        var result = await _userManager.RemoveFromRoleAsync(contributor, "Administrator");
+        if (!result.Succeeded)
+            return StatusCode(500, ApiResponse<object?>.Fail(ErrorCodes.InternalServerError,
+                string.Join("; ", result.Errors.Select(e => e.Description))));
+
+        return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Administrator role removed from contributor.")));
+    }
+
     // GET /api/v1/admin/stats
     [HttpGet("stats")]
     public async Task<IActionResult> GetStats()

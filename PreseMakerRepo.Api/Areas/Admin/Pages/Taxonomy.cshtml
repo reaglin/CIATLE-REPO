@@ -1,0 +1,359 @@
+@page "/admin/taxonomy"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.TaxonomyModel
+@{ ViewData["Title"] = "Taxonomy Editor"; }
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h4 mb-0">Taxonomy Editor</h1>
+    <span class="text-muted small">Edit names, descriptions, and course fields — keys and relationships are read-only.</span>
+</div>
+
+@if (!Model.Level1Nodes.Any())
+{
+    <div class="alert alert-info">No taxonomy nodes found.</div>
+}
+
+<div class="accordion" id="taxonomyRoot">
+    @for (int i1 = 0; i1 < Model.Level1Nodes.Count; i1++)
+    {
+        var l1 = Model.Level1Nodes[i1];
+        var l1CollapseId = $"l1c{i1}";
+        var l1HasDesc = Model.Descriptions.ContainsKey(l1.Key);
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#@l1CollapseId">
+                    @l1.Name
+                    <span class="badge bg-secondary ms-2 fw-normal">@l1.Key</span>
+                    @if (l1HasDesc) { <span class="badge bg-info ms-1 fw-normal" title="Has description">desc</span> }
+                </button>
+            </h2>
+            <div id="@l1CollapseId" class="accordion-collapse collapse">
+                <div class="accordion-body p-2">
+                    <div class="d-flex gap-2 justify-content-end mb-3">
+                        <button type="button" class="btn btn-sm btn-outline-secondary edit-node-btn"
+                                data-bs-toggle="modal" data-bs-target="#editNodeModal"
+                                data-key="@l1.Key" data-name="@l1.Name">
+                            Edit Name
+                        </button>
+                        <button type="button" class="btn btn-sm @(l1HasDesc ? "btn-info" : "btn-outline-info") edit-desc-btn"
+                                data-bs-toggle="modal" data-bs-target="#editDescModal"
+                                data-key="@l1.Key" data-label="@l1.Name (@l1.Key)">
+                            @(l1HasDesc ? "Edit Description" : "Add Description")
+                        </button>
+                    </div>
+
+                    @{ var l2List = l1.Children.OrderBy(c => c.Name).ToList(); }
+                    <div class="accordion" id="l2root-@i1">
+                        @for (int i2 = 0; i2 < l2List.Count; i2++)
+                        {
+                            var l2 = l2List[i2];
+                            var l2CollapseId = $"l2c{i1}_{i2}";
+                            var l2HasDesc = Model.Descriptions.ContainsKey(l2.Key);
+                            <div class="accordion-item mb-1">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed py-2" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#@l2CollapseId"
+                                            style="background-color:#f8f9fa">
+                                        <strong class="me-2">@l2.Key</strong>
+                                        <span class="text-muted fw-normal">@l2.Name</span>
+                                        @if (l2HasDesc) { <span class="badge bg-info ms-2 fw-normal" title="Has description">desc</span> }
+                                    </button>
+                                </h3>
+                                <div id="@l2CollapseId" class="accordion-collapse collapse">
+                                    <div class="accordion-body py-2 ps-4">
+                                        <div class="d-flex gap-2 justify-content-end mb-2">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary edit-node-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#editNodeModal"
+                                                    data-key="@l2.Key" data-name="@l2.Name">
+                                                Edit Name
+                                            </button>
+                                            <button type="button" class="btn btn-sm @(l2HasDesc ? "btn-info" : "btn-outline-info") edit-desc-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#editDescModal"
+                                                    data-key="@l2.Key" data-label="@l2.Key — @l2.Name">
+                                                @(l2HasDesc ? "Edit Description" : "Add Description")
+                                            </button>
+                                        </div>
+
+                                        @{ var l3List = l2.Children.OrderBy(c => c.Name).ToList(); }
+                                        @foreach (var l3 in l3List)
+                                        {
+                                            var l3HasDesc = Model.Descriptions.ContainsKey(l3.Key);
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-2">
+                                                    <div>
+                                                        <strong>@l3.Key</strong>
+                                                        <span class="ms-2 text-muted small">@l3.Name</span>
+                                                        @if (l3HasDesc) { <span class="badge bg-info ms-1 fw-normal" title="Has description">desc</span> }
+                                                    </div>
+                                                    <div class="d-flex gap-1">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary edit-node-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#editNodeModal"
+                                                                data-key="@l3.Key" data-name="@l3.Name">
+                                                            Edit Name
+                                                        </button>
+                                                        <button type="button" class="btn btn-sm @(l3HasDesc ? "btn-info" : "btn-outline-info") edit-desc-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#editDescModal"
+                                                                data-key="@l3.Key" data-label="@l3.Key — @l3.Name">
+                                                            @(l3HasDesc ? "Edit Description" : "Add Description")
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                @{ var courseList = l3.Courses.OrderBy(c => c.CourseId).ToList(); }
+                                                @if (courseList.Count > 0)
+                                                {
+                                                    <table class="table table-sm table-hover mb-0">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Course ID</th>
+                                                                <th>Title</th>
+                                                                <th>Credits</th>
+                                                                <th>Active</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach (var c in courseList)
+                                                            {
+                                                                <tr>
+                                                                    <td class="small fw-bold">@c.CourseId</td>
+                                                                    <td>@c.Title</td>
+                                                                    <td class="text-center">@c.CreditHours</td>
+                                                                    <td>
+                                                                        @if (c.IsActive)
+                                                                        {
+                                                                            <span class="badge bg-success">Active</span>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <span class="badge bg-secondary">Inactive</span>
+                                                                        }
+                                                                    </td>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-sm btn-outline-secondary edit-course-btn"
+                                                                                data-bs-toggle="modal" data-bs-target="#editCourseModal"
+                                                                                data-course-id="@c.CourseId"
+                                                                                data-title="@c.Title"
+                                                                                data-credit-hours="@(c.CreditHours?.ToString() ?? "")"
+                                                                                data-is-active="@c.IsActive.ToString().ToLower()"
+                                                                                data-curriculum-guide-url="@(c.CurriculumGuideUrl ?? "")">
+                                                                            Edit
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                }
+                                                else
+                                                {
+                                                    <p class="text-muted small mb-0 ps-1">No courses assigned to this node.</p>
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Edit Node Name Modal -->
+<div class="modal fade" id="editNodeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Taxonomy Node</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" asp-page-handler="EditNode">
+                <input type="hidden" name="key" id="nodeKey" />
+                <div class="modal-body">
+                    <p class="small text-muted mb-3">Key: <code id="nodeKeyDisplay"></code></p>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" id="nodeName" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Course Modal -->
+<div class="modal fade" id="editCourseModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Course — <code id="editCourseIdDisplay"></code></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" asp-page-handler="EditCourse">
+                <input type="hidden" name="courseId" id="editCourseId" />
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Title</label>
+                        <input type="text" name="title" id="editCourseTitle" class="form-control" required />
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Credit Hours</label>
+                            <input type="number" name="creditHours" id="editCourseCreditHours"
+                                   class="form-control" min="0" max="12" />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-end pb-1">
+                            <div class="form-check">
+                                <input type="checkbox" name="isActive" id="editCourseIsActive"
+                                       value="true" class="form-check-input" />
+                                <label class="form-check-label" for="editCourseIsActive">Active</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Curriculum Guide URL</label>
+                        <input type="url" name="curriculumGuideUrl" id="editCourseCurriculumGuideUrl"
+                               class="form-control" placeholder="https://…" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Description Editor Modal -->
+<div class="modal fade" id="editDescModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h5 class="modal-title mb-0">Description — <span id="descLabel"></span></h5>
+                    <small class="text-muted">Structural HTML only · no images, scripts, or inline styles</small>
+                </div>
+                <button type="button" class="btn-close ms-3" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" asp-page-handler="SaveDescription" id="descForm">
+                <input type="hidden" name="key" id="descKey" />
+                <input type="hidden" name="htmlContent" id="descHtmlContent" />
+                <div class="modal-body p-0">
+                    <div class="d-flex justify-content-end align-items-center border-bottom px-3 py-2 bg-light">
+                        <button type="button" id="toggleModeBtn" class="btn btn-sm btn-outline-secondary">
+                            Raw HTML
+                        </button>
+                    </div>
+                    <!-- Quill editor -->
+                    <div id="quillEditor" style="height:400px; border:none; font-size:1rem;"></div>
+                    <!-- Raw HTML textarea (hidden by default) -->
+                    <textarea id="rawHtmlEditor" class="form-control font-monospace"
+                              style="display:none; height:400px; border-radius:0; border:none; resize:none; font-size:0.85rem;"
+                              placeholder="Enter raw HTML here…" spellcheck="false"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <span class="text-muted small me-auto">Clear all content and save to remove this description.</span>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Description</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet" />
+<script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+<script>
+// All descriptions keyed by node key
+const descriptions = {
+    @foreach (var kv in Model.Descriptions)
+    {
+        @:@System.Text.Json.JsonSerializer.Serialize(kv.Key): @System.Text.Json.JsonSerializer.Serialize(kv.Value),
+    }
+};
+
+// Initialise Quill with limited toolbar
+const quill = new Quill('#quillEditor', {
+    theme: 'snow',
+    modules: {
+        toolbar: [
+            [{ header: [2, 3, 4, 5, 6, false] }],
+            ['bold', 'italic', 'underline'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['link'],
+            ['blockquote'],
+            ['clean']
+        ]
+    }
+});
+
+let isRawMode = false;
+
+document.getElementById('toggleModeBtn').addEventListener('click', function () {
+    if (isRawMode) {
+        // raw → Quill
+        quill.clipboard.dangerouslyPasteHTML(document.getElementById('rawHtmlEditor').value);
+        document.getElementById('rawHtmlEditor').style.display = 'none';
+        document.getElementById('quillEditor').style.display = 'block';
+        this.textContent = 'Raw HTML';
+        isRawMode = false;
+    } else {
+        // Quill → raw
+        document.getElementById('rawHtmlEditor').value = quill.root.innerHTML;
+        document.getElementById('quillEditor').style.display = 'none';
+        document.getElementById('rawHtmlEditor').style.display = 'block';
+        this.textContent = 'Visual Editor';
+        isRawMode = true;
+    }
+});
+
+document.getElementById('editDescModal').addEventListener('show.bs.modal', function (e) {
+    const key = e.relatedTarget.dataset.key;
+    const label = e.relatedTarget.dataset.label;
+    document.getElementById('descKey').value = key;
+    document.getElementById('descLabel').textContent = label;
+
+    const html = descriptions[key] || '';
+    quill.clipboard.dangerouslyPasteHTML(html);
+
+    // Always start in visual mode
+    document.getElementById('rawHtmlEditor').style.display = 'none';
+    document.getElementById('quillEditor').style.display = 'block';
+    document.getElementById('toggleModeBtn').textContent = 'Raw HTML';
+    isRawMode = false;
+});
+
+document.getElementById('descForm').addEventListener('submit', function () {
+    document.getElementById('descHtmlContent').value = isRawMode
+        ? document.getElementById('rawHtmlEditor').value
+        : quill.root.innerHTML;
+});
+
+// Existing node/course modal wiring
+document.getElementById('editNodeModal').addEventListener('show.bs.modal', function (e) {
+    const btn = e.relatedTarget;
+    document.getElementById('nodeKey').value = btn.dataset.key;
+    document.getElementById('nodeKeyDisplay').textContent = btn.dataset.key;
+    document.getElementById('nodeName').value = btn.dataset.name;
+});
+
+document.getElementById('editCourseModal').addEventListener('show.bs.modal', function (e) {
+    const btn = e.relatedTarget;
+    document.getElementById('editCourseId').value = btn.dataset.courseId;
+    document.getElementById('editCourseIdDisplay').textContent = btn.dataset.courseId;
+    document.getElementById('editCourseTitle').value = btn.dataset.title;
+    document.getElementById('editCourseCreditHours').value = btn.dataset.creditHours;
+    document.getElementById('editCourseIsActive').checked = btn.dataset.isActive === 'true';
+    document.getElementById('editCourseCurriculumGuideUrl').value = btn.dataset.curriculumGuideUrl;
+});
+</script>
+}

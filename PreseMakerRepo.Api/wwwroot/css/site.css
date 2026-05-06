@@ -27,6 +27,13 @@ body { margin-bottom: 60px; }
 /* Stat cards */
 .stat-card .display-5 { font-size: 2rem; }
 
+/* Taxonomy node descriptions */
+.taxonomy-description { padding: 1rem 1.25rem; background: #f8f9fa; border-left: 4px solid #0d6efd; border-radius: .375rem; }
+.taxonomy-description h2, .taxonomy-description h3 { font-size: 1.15rem; margin-top: 1rem; }
+.taxonomy-description h4, .taxonomy-description h5, .taxonomy-description h6 { font-size: 1rem; margin-top: .85rem; }
+.taxonomy-description ul, .taxonomy-description ol { padding-left: 1.5rem; }
+.taxonomy-description p:last-child { margin-bottom: 0; }
+
 /* Curriculum guide rendered HTML */
 .curriculum-guide-content h1, .curriculum-guide-content h2 { font-size: 1.3rem; margin-top: 1.5rem; }
 .curriculum-guide-content h3 { font-size: 1.1rem; margin-top: 1.25rem; }

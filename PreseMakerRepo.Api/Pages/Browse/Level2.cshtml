@@ -14,10 +14,15 @@
 </nav>
 
 <h1 class="h4 mb-1">@Model.Prefix?.Key — @Model.Prefix?.Name</h1>
-<p class="text-muted mb-4">
+<p class="text-muted mb-3">
     @Model.Prefix?.CourseCount course@(Model.Prefix?.CourseCount != 1 ? "s" : "")
     · @Model.Prefix?.ModuleCount module@(Model.Prefix?.ModuleCount != 1 ? "s" : "")
 </p>
+
+@if (!string.IsNullOrEmpty(Model.Description))
+{
+    <div class="taxonomy-description mb-4">@Html.Raw(Model.Description)</div>
+}
 
 @if (!Model.IsLeaf)
 {
