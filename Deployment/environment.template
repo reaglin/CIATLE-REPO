@@ -6,11 +6,13 @@ ConnectionStrings__DefaultConnection=Data Source=/var/presemaker-repo/data/repo.
 
 Jwt__SecretKey=<256-bit random key — generate with: openssl rand -base64 32>
 
-Email__SmtpHost=smtp.yourprovider.com
-Email__SmtpUsername=noreply@floridacourserepo.com
-Email__SmtpPassword=<smtp password>
-Email__FromAddress=noreply@floridacourserepo.com
-Email__AdminAddress=admin@floridacourserepo.com
+Email__SmtpHost=smtp-relay.brevo.com
+Email__SmtpPort=587
+Email__SmtpUseSsl=true
+Email__SmtpUsername=<brevo smtp login — found at Transactional > Settings > SMTP & API>
+Email__SmtpPassword=<brevo smtp password — found at Transactional > Settings > SMTP & API>
+Email__FromAddress=info@edu-agentic.com
+Email__AdminAddress=<your admin email>
 
 AdminBootstrap__Email=admin@floridacourserepo.com
 AdminBootstrap__Username=admin

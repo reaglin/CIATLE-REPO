@@ -54,7 +54,10 @@
       "WebSearch",
       "Bash(Test-Path C:\\\\Users\\\\ronal\\\\Downloads *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\ronal\\\\source\\\\repos\\\\CIATLE-REPO\" -Directory)",
-      "Bash(Select-Object Name)"
+      "Bash(Select-Object Name)",
+      "Bash(bash Deployment/deploy-update.sh)",
+      "Bash(Get-ChildItem *)",
+      "Bash(grep -v \"^$\")"
     ]
   }
 }
