@@ -102,7 +102,10 @@ public class UpsertCurriculumGuideRequestValidator : AbstractValidator<UpsertCur
         RuleFor(x => x.Title).NotEmpty().MaximumLength(300);
         RuleFor(x => x.HtmlContent).NotEmpty();
         RuleFor(x => x.Credits).InclusiveBetween(0, 12).When(x => x.Credits.HasValue);
-        RuleFor(x => x.ContactHours).InclusiveBetween(0, 300).When(x => x.ContactHours.HasValue);
+        // PSAV clock-hour programs legitimately run far past a term-length course:
+        // FLDOE curriculum frameworks reach ~1350 hours (e.g. Practical Nursing).
+        // The ceiling is a sanity guard against typos, not a course-length policy.
+        RuleFor(x => x.ContactHours).InclusiveBetween(0, 1500).When(x => x.ContactHours.HasValue);
         RuleFor(x => x.Prerequisites).MaximumLength(500).When(x => x.Prerequisites is not null);
         RuleFor(x => x.Version).MaximumLength(50).When(x => x.Version is not null);
         RuleFor(x => x.TaxonomyKey).MaximumLength(100).When(x => x.TaxonomyKey is not null);

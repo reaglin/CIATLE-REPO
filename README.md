@@ -257,6 +257,33 @@ All published materials carry a Creative Commons license selected by the contrib
 
 ---
 
+## Publishing Courses and Curriculum Guides — `Tools/`
+
+[`Tools/`](Tools/) is the content pipeline for **deploying new courses and their curriculum
+guides to the live site**. It is separate from the server build — guides are published over
+the REST API, so adding one requires no redeploy.
+
+**Start here: [`Tools/Generate_Guides_and_Push_Process.md`](Tools/Generate_Guides_and_Push_Process.md)** —
+the end-to-end process, prioritize through verify.
+
+| Document | Covers |
+|---|---|
+| [`Tools/Generate_Guides_and_Push_Process.md`](Tools/Generate_Guides_and_Push_Process.md) | The full process — **read first** |
+| [`Tools/CLAUDE.md`](Tools/CLAUDE.md) | Guide *content* standards: quality bar, HTML sections, SCNS/Florida pedagogy |
+| [`Tools/QUEUE_GUIDE.md`](Tools/QUEUE_GUIDE.md) | `queue.csv` schema, status values, priority tiers |
+| [`Tools/README.md`](Tools/README.md) | Per-tool command reference |
+
+```powershell
+cd Tools
+python queue_mgr.py next-batch --n 5              # prioritize
+                                                  # draft to drafts/{ID}_guide.json
+python validate_drafts.py --drafted               # preflight against server validators
+python queue_mgr.py reconcile
+python generate_guide.py --push-from-queue --yes  # push to the live site
+```
+
+---
+
 ## Specifications
 
 Three detailed specification documents govern Phase 1 scope:

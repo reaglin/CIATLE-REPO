@@ -368,7 +368,6 @@ FodyWeavers.xsd
 *.env
 
 # Artifacts/
-Deployment/
 Tools/drafts/
 Tools/*.log
 Tools/*.txt

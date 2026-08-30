@@ -18,18 +18,38 @@ If a session ever drifts toward producing volume over quality, return here.
 
 ---
 
-## Workflow: interactive batch processing of 5
+## Workflow: run it from this repo
 
-Sessions follow this loop. Do not skip the confirmation step.
+Guides are written **directly into `Tools/drafts/`** from a Claude Code session in
+`CIATLE-REPO`. The old chat → "Download All" → ZIP → `import_zip_to_drafts.ps1` bridge is
+**no longer part of the loop**, and neither is the `Set-ExecutionPolicy` step that existed
+only to let that importer run. Both still work if a batch ever arrives from a claude.ai
+chat, but nothing here depends on them.
 
-1. **Identify the next 5 candidates.** Read `queue.csv` if uploaded, otherwise compute from `courses_2plus_institutions.csv` minus already-completed work in `drafts/` and the activity log.
-2. **Present the proposed batch to the user as a table** with course ID, institution count, title, and brief notes. Flag any uncertainty (generic titles, content variation risk, low institution count).
-3. **Wait for confirmation.** The user may approve, substitute courses, or remove items. Common reasons to substitute: faculty requests, courses at non-public-college institutions, BAS courses that aren't true engineering courses.
-4. **Clear `/mnt/user-data/outputs/` of prior `.json` files.** This ensures the user's "Download All" zip contains only the current batch.
-5. **Generate the 5 guides** as a single Python build script in `/home/claude/build_guides_N.py`, then execute. Each guide goes to `/mnt/user-data/outputs/{COURSE_ID}_guide.json`.
-6. **Validate.** Confirm all 6 required keys present, sensible credit/contact-hour values.
-7. **Call `present_files`** with all 5 paths. The user cannot download files that haven't been presented; never end a generation turn without this call.
-8. **Provide sanity-check notes** in a brief table: course, credits, contact hours, file size — followed by short bullets flagging anything worth the user's review (unusual hour counts, generic titles, novel content, institutional variation).
+The `/guide` skill (`.claude/skills/guide/SKILL.md` at the repo root) drives the loop.
+Do not skip the confirmation step.
+
+1. **Identify the next candidates** — `python queue_mgr.py next-batch --n 5`. `queue.csv`
+   is authoritative; `courses_2plus_institutions.csv` is the inventory it draws from.
+2. **Present the proposed batch as a table** — course ID, institution count, title, notes.
+   Flag any uncertainty (generic titles, content variation risk, low institution count).
+3. **Wait for confirmation.** The user may approve, substitute, or remove items. Common
+   reasons to substitute: faculty requests, non-public-college institutions, BAS courses
+   that aren't true engineering courses.
+4. **Write each guide** to `drafts/{COURSE_ID}_guide.json`. Research first — SCNS framework
+   and Florida college catalogs — then write. Batch size is a judgment call; the old cap of
+   5 came from chat output limits that no longer apply.
+5. **Validate** — `python validate_drafts.py {IDS}`. This mirrors the server rules exactly,
+   so a clean run means the push will not come back 400. **Never push past a `FAIL`.**
+6. **Reconcile and push** — `python queue_mgr.py reconcile`, then
+   `python generate_guide.py --push-from-queue --yes`.
+7. **Confirm** — `python queue_mgr.py status`, and spot-check
+   `https://floridacourserepo.com/api/v1/courses/{ID}/guide`. (`curriculumGuideUrl` staying
+   `null` on the course endpoint is normal — it only populates once a course has published
+   modules.)
+8. **Provide sanity-check notes** in a brief table: course, credits, contact hours, file
+   size — followed by short bullets flagging anything worth review (unusual hour counts,
+   generic titles, novel content, institutional variation).
 
 When in doubt about scope, **err toward fewer high-quality guides over more rushed ones.**
 
@@ -67,6 +87,22 @@ Every guide is a JSON file with **exactly these six top-level keys**:
 - `credits=0` is valid for PSAV (Postsecondary Adult Vocational) clock-hour courses; `contact_hours` carries the real measurement.
 - `prerequisites` is a single string or null. Be specific (course numbers, grade requirements, standing requirements). Where prerequisites vary by institution, say so explicitly.
 - `version` starts at "1.0" and increments only when a guide is materially updated.
+
+**Hard limits the server enforces.** A guide that breaks one of these is rejected with an
+HTTP 400 (`PublishValidators.cs`, `UpsertCurriculumGuideRequestValidator`):
+
+| Field | Limit |
+|---|---|
+| `title` | non-empty, ≤ 300 chars |
+| `html_content` | non-empty |
+| `credits` | integer **0–12** — never null (`push_guide` rejects null before the server sees it) |
+| `contact_hours` | integer **0–1500** |
+| `prerequisites` | ≤ 500 chars, or null |
+| `version` | ≤ 50 chars |
+
+⚠️ **Never copy a PSAV clock-hour count into `credits`.** Set `credits: 0` and put the
+hours in `contact_hours`. That single mistake stalled 11 guides for months. Run
+`python validate_drafts.py` to catch it — and every other limit above — before pushing.
 
 ---
 
@@ -156,11 +192,9 @@ After generating, surface anything in this list to the user as part of the post-
 
 ## File conventions
 
-- **Output filename**: `{COURSE_ID}_guide.json` exactly. Course ID is uppercase, no spaces. The PowerShell importer (`import_zip_to_drafts.ps1`) and `queue_mgr.py reconcile` both depend on this naming.
-- **Outputs directory**: `/mnt/user-data/outputs/` — clear before each batch so the "Download All" zip is clean.
-- **Working directory**: `/home/claude/` — for build scripts and intermediate work the user doesn't need to see.
-- **Project files**: `/mnt/project/` — read-only; treat as reference only, never expect modifications to persist back.
-- **Always call `present_files`** with all 5 output paths after generation. Files that aren't presented cannot be downloaded by the user.
+- **Output filename**: `{COURSE_ID}_guide.json` exactly. Course ID is uppercase, no spaces. `queue_mgr.py reconcile` matches drafts to queue entries by extracting the course ID from the filename, so don't rename them.
+- **Output directory**: `Tools/drafts/` — write guides straight here. This is the same directory the push reads from; there is no staging step.
+- **Never write a `.py` or `.ps1` file named after a stdlib module** (`queue`, `csv`, `json`, `email`, …) into this directory — it shadows the real module and breaks `requests`/`urllib3`. That is why the queue tool is `queue_mgr.py`; don't rename it back.
 
 ---
 
@@ -182,13 +216,20 @@ Title keywords that flag shell courses regardless of code: INTERNSHIP, COOPERATI
 
 When starting a fresh session in this project:
 
-1. Read this file (you are here).
-2. Read `README.md` for tooling and command details.
-3. Look for `queue.csv` in `/mnt/user-data/uploads/` — if present, that's the authoritative work queue. If absent, compute candidates from `courses_2plus_institutions.csv`.
-4. Check `/mnt/user-data/uploads/` for any guide JSONs the user is asking you to revise vs. generate fresh.
-5. Confirm with the user what they want to work on this session before generating anything.
+1. Read this file (you are here) — it governs guide *content*.
+2. Read `Generate_Guides_and_Push_Process.md` for the end-to-end process (it is the
+   start-here document), `README.md` for per-tool detail, and `QUEUE_GUIDE.md` for the queue
+   schema and priority tiers. `.claude/skills/guide/SKILL.md` at the repo root drives the
+   mechanics.
+3. Run `python queue_mgr.py status` to see where things stand. `queue.csv` is the
+   authoritative work queue; `courses_2plus_institutions.csv` is the inventory to refill from.
+4. Run `python validate_drafts.py --quiet` if the queue shows `error` rows, to see what is
+   blocking them.
+5. Confirm with the user what they want to work on before generating anything.
 
-The user maintains the queue, runs `queue_mgr.py reconcile` on their machine, and pushes guides via `generate_guide.py --push-from-queue`. Claude does not push to the live site directly.
+Pushing to the live site runs from this repo (`generate_guide.py --push-from-queue`), using
+the `REPO_ADMIN_*` credentials in `Tools/.env`. It is a write to production — confirm the
+batch with the user before pushing, and never push a draft that `validate_drafts.py` fails.
 
 ---
 

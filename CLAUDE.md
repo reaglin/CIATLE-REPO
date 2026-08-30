@@ -6,19 +6,43 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **PreseMaker Community Repository** — a publicly browsable, contributor-maintained library of course materials organized by a configurable hierarchical taxonomy (Florida SCNS by default). It exposes a REST API for the PreseMaker desktop client, a Razor Pages web frontend for browsing, and an admin console for moderation.
 
-**Current Status:** Three comprehensive spec files exist (`Specifications/`) but implementation has not started. The repo contains only the ASP.NET Core 8 scaffolding template.
+**Current Status:** Implemented and **live in production** at
+[floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
+three-project solution exists and is deployed; 643 curriculum guides are published.
 
-## Solution Structure (Target)
-
-Three-project solution (not yet created — currently a single web project):
+## Solution Structure
 
 | Project | Purpose |
 |---|---|
 | `PreseMakerRepo.Api` | ASP.NET Core host: controllers, Razor pages, admin console |
 | `PreseMakerRepo.Core` | Domain models, enums, interfaces — no infrastructure dependencies |
 | `PreseMakerRepo.Infrastructure` | EF Core, file storage, email, JWT, services |
+| **`Tools/`** | **Content pipeline — how new courses and curriculum guides get published to floridacourserepo.com.** Not part of the server build. |
+| `Deployment/` | Server deploy scripts (`deploy-update.ps1` — prefer over the `.sh`; `bash` is not on PATH on this machine) |
 
 URL namespaces: `/api/v1/` (REST), `/browse/` (web frontend), `/admin/` (admin console).
+
+## Publishing curriculum guides — `Tools/`
+
+`Tools/` is the toolchain for **deploying new courses and their curriculum guides to
+floridacourserepo.com**. It is content tooling, not server code: guides go over the REST API,
+so publishing a guide needs no redeploy.
+
+**Start at [`Tools/Generate_Guides_and_Push_Process.md`](Tools/Generate_Guides_and_Push_Process.md)** —
+the end-to-end process (prioritize → generate → validate → push → verify). Supporting docs:
+`Tools/CLAUDE.md` (guide content standards), `Tools/QUEUE_GUIDE.md` (queue schema),
+`Tools/README.md` (per-tool reference).
+
+The `/guide` skill (`.claude/skills/guide/SKILL.md`) drives this loop in a Claude Code session.
+
+```powershell
+cd Tools
+python queue_mgr.py next-batch --n 5              # prioritize
+                                                  # draft to drafts/{ID}_guide.json
+python validate_drafts.py --drafted               # preflight (mirrors server validators)
+python queue_mgr.py reconcile
+python generate_guide.py --push-from-queue --yes  # push to the live site
+```
 
 ## Build & Run Commands
 

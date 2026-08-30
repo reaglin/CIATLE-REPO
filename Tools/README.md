@@ -7,8 +7,13 @@ library of open educational materials aligned to the
 
 This directory holds everything needed to run the pipeline end-to-end:
 extract candidate courses from the state inventory, manage a queue, draft
-guides in chat with Claude, validate and import them, and push them to the
-live site.
+guides in a Claude Code session in this repo, validate them, and push them
+to the live site.
+
+> **New here? Read [`Generate_Guides_and_Push_Process.md`](Generate_Guides_and_Push_Process.md)
+> first** -- it is the start-here document for the whole process, from
+> prioritizing courses through verifying them live. This file is the
+> per-tool command reference that supports it.
 
 ---
 
@@ -18,24 +23,27 @@ Once the queue has courses in it (`queue.csv` exists and shows `queued`
 entries), the per-batch loop is:
 
 ```powershell
-# 1. In a Claude chat, ask for the next N guides from the queue.
-#    Claude generates JSON files and packages them as a single download.
+# 1. Pick the batch:
+python queue_mgr.py next-batch --n 5
 #
-# 2. Right-click the chat's "Download All" link and save the ZIP as
-#    .\files.zip   in this directory (C:\Users\ronal\source\repos\CIATLE-REPO\Tools).
+# 2. In a Claude Code session in this repo, ask for those guides (or just
+#    run /guide). Claude writes them straight to .\drafts\ -- no ZIP, no
+#    Set-ExecutionPolicy, no importer.
 #
-# 3. Validate, extract, reconcile:
-.\import_zip_to_drafts.ps1
+# 3. Preflight against the server's rules:
+python validate_drafts.py --drafted
 #
-# 4. Eyeball the new files in .\drafts\, then push to the site:
+# 4. Reconcile, then push to the site:
+python queue_mgr.py reconcile
 python generate_guide.py --push-from-queue --yes
 #
 # 5. Confirm:
 python queue_mgr.py status
 ```
 
-Each batch is typically 4-5 guides because Claude's per-response output is
-the constraint.
+Batch size is a judgment call. The old 4-5 cap came from a chat's
+per-response output limit, which no longer applies -- but quality still
+beats volume, so 5 remains a sensible default.
 
 ---
 
@@ -110,11 +118,11 @@ Original tool from before we added the pipeline. Does two things now:
    python generate_guide.py --file courses.txt --yes
    ```
    This requires `ANTHROPIC_API_KEY` in the environment (or a `.env` file).
-   Most batches in this project skip this path entirely -- Claude generates
-   the JSON in chat, and you import via the ZIP.
+   Most batches skip this path entirely -- Claude writes the JSON straight
+   into `drafts/`, and you push from there.
 
-2. **Pushes existing draft files to the repo API.** This is the path
-   used after `import_zip_to_drafts.ps1`:
+2. **Pushes existing draft files to the repo API.** This is the path the
+   normal loop uses, after `validate_drafts.py` comes back clean:
    ```powershell
    python generate_guide.py --push-from-queue --yes      # all `drafted` in queue
    python generate_guide.py --push-draft ETS1010         # single draft
@@ -122,7 +130,34 @@ Original tool from before we added the pipeline. Does two things now:
    ```
    This requires `REPO_ADMIN_EMAIL` and `REPO_ADMIN_PASSWORD` in env.
 
+### `validate_drafts.py`
+Preflight check that mirrors the server's FluentValidation rules
+(`PublishValidators.cs`) plus `generate_guide.py`'s own push guard. A draft
+that passes here will not come back as an HTTP 400.
+
+```powershell
+python validate_drafts.py                 # every file in drafts/
+python validate_drafts.py EGN3311 EGN3321 # named courses
+python validate_drafts.py --drafted       # everything staged to push
+python validate_drafts.py --errors        # everything currently failing
+python validate_drafts.py --quiet         # failures only
+```
+
+Exit code is 0 when everything checked is publishable, 1 otherwise, so it
+slots into a script. Beyond the hard limits it warns on credit/contact-hour
+mismatches worth a second look — a 3-credit course with 90 contact hours, or
+a PSAV clock-hour count accidentally copied into `credits`.
+
+**Run it before every push.** The 29 guides that sat at `status=error` for
+months were all caught by it in one pass: 23 exceeded the then-300-hour
+`contact_hours` cap, and the rest had `credits` set to the clock-hour count
+or an over-long `prerequisites` string.
+
 ### `import_zip_to_drafts.ps1`
+*Legacy — only needed when a batch comes from a claude.ai chat rather than a
+Claude Code session in this repo. Guides written here go straight to
+`drafts/`, so the ZIP round-trip (and its `Set-ExecutionPolicy` prerequisite)
+is not part of the normal loop any more.*
 PowerShell glue that bridges Claude's chat output to your local pipeline.
 
 ```powershell
@@ -171,7 +206,7 @@ Tools/
 ├── extract_courses.py                 (one-time CSV cleaner)
 ├── queue_mgr.py                       (queue management)
 ├── generate_guide.py                  (push tool + standalone generator)
-├── import_zip_to_drafts.ps1           (chat-output importer)
+├── import_zip_to_drafts.ps1           (legacy chat-output importer)
 ├── make_batch.py                      (legacy ad-hoc filter)
 │
 ├── All_StatewideInventory_clean1.csv  (input: state inventory, ~9 MB)

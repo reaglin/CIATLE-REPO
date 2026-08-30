@@ -1,0 +1,55 @@
+EDITING THE ENVIRONMENT FILE ON THE SERVER
+==========================================
+
+The environment file holds all secrets and configuration for the live application.
+Location on server: /etc/presemaker-repo/environment
+
+
+STEP 1 — SSH into the server
+-----------------------------
+ssh root@129.121.101.162
+
+
+STEP 2 — Edit the file
+-----------------------
+nano /etc/presemaker-repo/environment
+
+Make your changes, then save and exit:
+  Ctrl+O  (save)
+  Enter   (confirm filename)
+  Ctrl+X  (exit)
+
+
+STEP 3 — Restart the service to apply changes
+----------------------------------------------
+systemctl restart presemaker-repo
+systemctl status presemaker-repo --no-pager
+
+Look for "active (running)" in the status output.
+
+
+STEP 4 — Verify (optional)
+---------------------------
+Check the last 50 log lines for any startup errors:
+  journalctl -u presemaker-repo -n 50
+
+
+COMMON CHANGES
+--------------
+Rotate Brevo SMTP password:
+  Update Email__SmtpPassword=<new password from Brevo dashboard>
+  Brevo dashboard > Transactional > Settings > SMTP & API > regenerate key
+
+Rotate JWT secret key:
+  Generate new key on server: openssl rand -base64 32
+  Update Jwt__SecretKey=<new key>
+  NOTE: This invalidates all active user sessions — everyone will be logged out.
+
+Update admin email:
+  Update Email__AdminAddress=<new address>
+
+
+REMINDER
+--------
+Never commit the environment file to git.
+Never share its contents — it contains live secrets.

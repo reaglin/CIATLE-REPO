@@ -1,6 +1,19 @@
-AUTOMATED - 
-From Bash Window (after build) in CIATLE-REPO root directory
-bash Deployment/deploy-update.sh
+AUTOMATED (PowerShell - preferred on this machine)
+From PowerShell in the CIATLE-REPO root directory:
+  .\Deployment\deploy-update.ps1
+
+Uses native Windows OpenSSH (ssh/scp) and the dotnet CLI. You will be
+prompted for the server password up to three times unless key auth is set up.
+Add -SkipMigrations when the release contains no new EF migration.
+
+AUTOMATED (bash)
+Note: bash is NOT on PATH on this machine. Git Bash is installed at
+  C:\Program Files\Git\bin\bash.exe
+so the bash script must be invoked by full path:
+  & "C:\Program Files\Git\bin\bash.exe" Deployment/deploy-update.sh
+Prefer the PowerShell script above - Git Bash rewrites /tmp/presemaker-release
+into a Windows path when passing it to dotnet, which is a needless risk in a
+production deploy.
 
 
 MANUAL:
