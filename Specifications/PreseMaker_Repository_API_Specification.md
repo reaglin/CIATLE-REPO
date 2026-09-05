@@ -20,6 +20,7 @@
 9. [Contributor Profile](#9-contributor-profile)
 10. [Search](#10-search)
 11. [Error Codes Reference](#11-error-codes-reference)
+12. [Guide Requests](#12-guide-requests)
 12. [Accepted MIME Types by Material Type](#12-accepted-mime-types-by-material-type)
 13. [License Reference](#13-license-reference)
 
@@ -1255,6 +1256,8 @@ For `resultType: "material"`, the object additionally includes `materialType`, `
 | 422 | `INVALID_MODULE_ID` | Module ID is not found or is not eligible to receive contributions |
 | 422 | `INVALID_MATERIAL_TYPE` | Declared material type is not recognized |
 | 429 | `RATE_LIMIT_EXCEEDED` | Request limit for this endpoint has been exceeded |
+| 409 | `GUIDE_ALREADY_EXISTS` | A curriculum guide is already published for the requested course |
+| 404 | `GUIDE_REQUEST_NOT_FOUND` | No guide requests exist for the course |
 | 500 | `INTERNAL_SERVER_ERROR` | Unhandled server error |
 
 **Validation error detail shape** (used when `code` is `VALIDATION_ERROR`):
@@ -1308,3 +1311,62 @@ New material types and their accepted MIME types are added to the configuration 
 ---
 
 *Followed by: PreseMaker_Repository_DesignSpec.md (Implementation)*
+
+---
+
+## 12. Guide Requests
+
+Visitor requests for curriculum guides that do not exist yet. Requests are the demand signal for the
+content pipeline: the admin console ranks courses by request count, and `Tools/queue_mgr.py
+import-requests` pulls open requests into the generation queue. Added 2026-09-03.
+
+### 12.1 POST /guide-requests [Public]
+
+Record a request. Rate-limited to `Repository:GuideRequestRateLimitPerHour` (default 5) per requester IP
+per hour; the same requester asking for the same course within 24 hours is counted once. The requester
+IP is stored as a salted SHA-256 hash only.
+
+**Request:**
+```json
+{
+  "courseId": "EET2325C",
+  "courseTitle": "Communications Systems II",
+  "institution": "Daytona State College",
+  "reason": "Needed for an articulation review (optional)",
+  "email": "optional@example.edu"
+}
+```
+`courseId` is normalized (spaces/hyphens removed, uppercased) and must match `^[A-Z]{3}\d{4}[A-Z]?$`.
+When the course is in the taxonomy its taxonomy title is stored instead of `courseTitle`.
+
+**Response 200:**
+```json
+{ "success": true, "data": { "courseId": "EET2325C", "requestCount": 3, "alreadyRequestedByYou": false,
+  "message": "Thank you. 3 people have now requested a guide for EET2325C." }, "error": null }
+```
+**Response 400:** `VALIDATION_ERROR` · **409:** `GUIDE_ALREADY_EXISTS` · **429:** `RATE_LIMIT_EXCEEDED`
+
+### 12.2 GET /guide-requests [Admin]
+
+Per-course ranking, most requested first. Query: `status` = `open` (default) | `queued` | `published` |
+`declined` | `all`; `minCount` (default 1).
+
+**Response 200:**
+```json
+{ "success": true, "data": [
+  { "courseId": "EET2325C", "courseTitle": "Communications Systems II",
+    "institutions": ["Daytona State College", "Valencia College"], "requestCount": 3,
+    "firstRequestedUtc": "2026-09-03T14:02:11Z", "lastRequestedUtc": "2026-09-04T09:40:00Z",
+    "status": "Open", "inTaxonomy": true, "hasGuide": false, "adminNotes": null }
+], "error": null }
+```
+
+### 12.3 PATCH /guide-requests/{courseId}/status [Admin]
+
+Set the status of every request for a course.
+
+**Request:** `{ "status": "Queued", "notes": "Added to the generation queue" }` — status one of
+`Open`, `Queued`, `Published`, `Declined`.
+
+**Response 200:** `{ "success": true, "data": { "message": "3 request(s) for EET2325C marked Queued." }, "error": null }`
+**Response 404:** `GUIDE_REQUEST_NOT_FOUND`

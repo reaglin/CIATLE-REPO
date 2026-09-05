@@ -16,7 +16,11 @@
 
     @if (!Model.SearchResults.Any())
     {
-        <div class="alert alert-info">No results found. Try a different search term or <a asp-page="/Browse/Index">browse by discipline</a>.</div>
+        <div class="alert alert-info">
+            No results found. Try a different search term or <a asp-page="/Browse/Index">browse by discipline</a>.
+            Looking for a course that has no guide yet?
+            <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Q">Request a curriculum guide</a>.
+        </div>
     }
     else
     {

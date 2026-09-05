@@ -1,0 +1,94 @@
+@page "/admin/guide-requests"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.GuideRequestsModel
+@{ ViewData["Title"] = "Guide Requests"; }
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h4 mb-0">Guide Requests</h1>
+    <div>
+        <a class="btn btn-outline-secondary btn-sm" asp-page-handler="Csv">Download open requests (CSV)</a>
+    </div>
+</div>
+
+<p class="text-muted">
+    Visitor requests for curriculum guides, ranked by demand. The queue tool pulls the open ones with
+    <code>python queue_mgr.py import-requests</code>, which also marks them <em>Queued</em>. Requests whose guide is
+    published are closed automatically.
+</p>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-success py-2">@Model.Message</div>
+}
+
+<ul class="nav nav-pills mb-3">
+    @foreach (var s in new[] { "open", "queued", "published", "declined", "all" })
+    {
+        <li class="nav-item">
+            <a class="nav-link @(string.Equals(Model.Status, s, StringComparison.OrdinalIgnoreCase) ? "active" : "")"
+               asp-page="/GuideRequests" asp-route-status="@s">@char.ToUpper(s[0])@s[1..]</a>
+        </li>
+    }
+</ul>
+
+@if (Model.Items.Count == 0)
+{
+    <div class="alert alert-light border">No @(Model.Status == "all" ? "" : Model.Status) requests.</div>
+}
+else
+{
+    <p class="small text-muted">@Model.Items.Count course(s) · @Model.TotalRequests request(s)</p>
+    <div class="table-responsive">
+        <table class="table table-sm table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>Requests</th>
+                    <th>Course</th>
+                    <th>Title</th>
+                    <th>Requested at (schools)</th>
+                    <th>First / last</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var i in Model.Items)
+            {
+                <tr>
+                    <td><span class="badge bg-primary fs-6">@i.RequestCount</span></td>
+                    <td>
+                        <strong>@i.CourseId</strong>
+                        @if (!i.InTaxonomy) { <span class="badge bg-warning text-dark" title="Not in the taxonomy">not in taxonomy</span> }
+                        @if (i.HasGuide) { <a class="badge bg-success text-decoration-none" href="/courses/@i.CourseId/guide">guide published</a> }
+                    </td>
+                    <td>@i.CourseTitle</td>
+                    <td class="small">@string.Join(" · ", i.Institutions)</td>
+                    <td class="small text-nowrap">@i.FirstRequestedUtc.ToString("yyyy-MM-dd")<br />@i.LastRequestedUtc.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        @{
+                            var cls = i.Status switch { "Published" => "bg-success", "Queued" => "bg-info text-dark", "Declined" => "bg-secondary", _ => "bg-warning text-dark" };
+                        }
+                        <span class="badge @cls">@i.Status</span>
+                        @if (!string.IsNullOrWhiteSpace(i.AdminNotes)) { <div class="small text-muted">@i.AdminNotes</div> }
+                    </td>
+                    <td class="text-nowrap">
+                        <form method="post" asp-page-handler="SetStatus" class="d-inline">
+                            <input type="hidden" name="courseId" value="@i.CourseId" />
+                            <input type="hidden" name="Status" value="@Model.Status" />
+                            <div class="input-group input-group-sm" style="width: 320px;">
+                                <select name="status" class="form-select form-select-sm">
+                                    <option value="Queued">Queued</option>
+                                    <option value="Published">Published</option>
+                                    <option value="Declined">Declined</option>
+                                    <option value="Open">Open</option>
+                                </select>
+                                <input name="notes" class="form-control form-control-sm" placeholder="note (optional)" maxlength="1000" />
+                                <button type="submit" class="btn btn-outline-primary btn-sm">Set</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

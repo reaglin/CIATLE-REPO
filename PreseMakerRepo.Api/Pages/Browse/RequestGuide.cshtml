@@ -1,0 +1,98 @@
+@page "/request-guide"
+@model PreseMakerRepo.Api.Pages.Browse.RequestGuideModel
+@{ ViewData["Title"] = "Request a Curriculum Guide"; }
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Browse/Index">Browse</a></li>
+        @if (Model.InTaxonomy)
+        {
+            <li class="breadcrumb-item"><a asp-page="/Browse/Course" asp-route-courseId="@Model.CourseId">@Model.CourseId</a></li>
+        }
+        <li class="breadcrumb-item active" aria-current="page">Request a Curriculum Guide</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-2">Request a Curriculum Guide</h1>
+<p class="text-muted">
+    No guide yet for the course you need? Tell us which course and where it is offered. Requests are the
+    signal that decides which guides get written next.
+</p>
+
+@if (Model.Submitted)
+{
+    <div class="alert alert-success">
+        <strong>@Model.ResultMessage</strong>
+        @if (Model.OpenRequests > 1)
+        {
+            <div class="small mt-1">@Model.OpenRequests open request@(Model.OpenRequests != 1 ? "s" : "") for @Model.CourseId so far.</div>
+        }
+    </div>
+    <p>
+        @if (Model.InTaxonomy)
+        {
+            <a asp-page="/Browse/Course" asp-route-courseId="@Model.CourseId" class="btn btn-outline-secondary btn-sm">Back to @Model.CourseId</a>
+        }
+        <a asp-page="/Browse/Index" class="btn btn-outline-secondary btn-sm">Browse</a>
+        <a asp-page="/Browse/RequestGuide" class="btn btn-outline-primary btn-sm">Request another</a>
+    </p>
+    return;
+}
+
+@if (Model.Errors.Count > 0)
+{
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach (var e in Model.Errors) { <li>@e</li> }
+        </ul>
+    </div>
+}
+
+@if (Model.HasGuide)
+{
+    <div class="alert alert-info">
+        A curriculum guide for <strong>@Model.CourseId</strong> is already published —
+        <a asp-page="/Browse/Guide" asp-route-courseId="@Model.CourseId">view it</a>.
+    </div>
+}
+else if (Model.InTaxonomy)
+{
+    <div class="alert alert-light border">
+        <strong>@Model.CourseId — @Model.TaxonomyTitle</strong> is in the course catalog but has no guide yet.
+        @if (Model.OpenRequests > 0)
+        {
+            <span class="text-muted">@Model.OpenRequests other visitor@(Model.OpenRequests != 1 ? "s have" : " has") already asked for it.</span>
+        }
+    </div>
+}
+
+<form method="post" class="row g-3" style="max-width: 720px;">
+    <div class="col-md-4">
+        <label class="form-label" for="CourseId">Course number <span class="text-danger">*</span></label>
+        <input class="form-control" id="CourseId" asp-for="CourseId" placeholder="e.g. EET2325C" maxlength="12" required />
+        <div class="form-text">SCNS code: three letters, four digits, optional C or L.</div>
+    </div>
+    <div class="col-md-8">
+        <label class="form-label" for="CourseTitle">Course title <span class="text-danger">*</span></label>
+        <input class="form-control" id="CourseTitle" asp-for="CourseTitle" maxlength="200" required />
+    </div>
+    <div class="col-12">
+        <label class="form-label" for="Institution">School where the course is offered <span class="text-danger">*</span></label>
+        <input class="form-control" id="Institution" asp-for="Institution" placeholder="e.g. Daytona State College" maxlength="200" required />
+    </div>
+    <div class="col-12">
+        <label class="form-label" for="Reason">Why you need it / catalog link <span class="text-muted">(optional)</span></label>
+        <textarea class="form-control" id="Reason" asp-for="Reason" rows="3" maxlength="1000"></textarea>
+    </div>
+    <div class="col-md-8">
+        <label class="form-label" for="Email">Email <span class="text-muted">(optional — to be told when the guide is published; never shown)</span></label>
+        <input class="form-control" id="Email" asp-for="Email" type="email" maxlength="256" />
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Request this guide</button>
+        @if (Model.InTaxonomy)
+        {
+            <a asp-page="/Browse/Course" asp-route-courseId="@Model.CourseId" class="btn btn-link">Cancel</a>
+        }
+    </div>
+</form>

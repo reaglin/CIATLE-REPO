@@ -15,6 +15,7 @@ and verify a guide lives in this directory. The rest of the repo (`PreseMakerRep
 | `CLAUDE.md` | Guide **content** standards — quality bar, HTML sections, Florida/SCNS pedagogy. Authoritative for what a guide says. |
 | `QUEUE_GUIDE.md` | `queue.csv` column map, status values, priority tiers. |
 | `README.md` | Per-tool command reference and hard-won lessons. |
+| `SOURCES.md` | Where to research a course: authoritative sources ranked, which Florida college catalogs actually answer, and the recurring traps to check every time. |
 | `.claude/skills/guide/SKILL.md` (repo root) | Drives this loop in a Claude Code session. |
 
 ---
@@ -213,6 +214,30 @@ curl.exe -s "https://floridacourserepo.com/api/v1/courses/EGN3311/guide"
 
 Don't rely on the push log alone — fetch from the live API and confirm the content and the
 credit/contact-hour values match the local draft.
+
+### ⚠ Always count the pushes — a partial batch does not announce itself
+
+**`queue_mgr.py status` must show `drafted: 0` after a push.** If any row is still `drafted`,
+the loop stopped early, and it can do so *without an error in the log* — the log only records
+guides the loop actually reached.
+
+Worked case, 2026-09-02: a batch of 8 pushed 6 and stopped. `DES0844` and `EEX4242` were left
+`drafted` with **no log entry at all**, and the console output scrolled past the traceback.
+Cause: `generate_guide.py` prints a review preview of each guide, and the Windows console
+defaults to **cp1252**, which cannot encode the **⚠** character the content standard tells us
+to use for flags. `UnicodeEncodeError` on a *display* line killed the whole push loop.
+
+Fixed at the source — `generate_guide.py` now reconfigures stdout/stderr to UTF-8 with
+`errors="replace"` at startup, so an encoding problem degrades a character instead of aborting
+a production push. The habit still stands regardless of the fix:
+
+```powershell
+python queue_mgr.py status            # drafted must be 0
+grep "PUSH:" generate_guide.log | tail -N   # N = batch size; count the Success lines
+```
+
+The general lesson: **a push loop that ends quietly is not the same as a push loop that
+finished.** Reconcile the count every time.
 
 **`curriculumGuideUrl` staying `null` on `/api/v1/courses/{id}` is normal.** It only
 populates once a course has published modules. The `/guide` endpoint returning content is

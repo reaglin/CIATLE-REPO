@@ -44,6 +44,20 @@ try:
 except ImportError:
     pass
 
+# Guides routinely contain non-cp1252 characters -- the "⚠" flag markers, en/em
+# dashes, and other Unicode the content standard explicitly prefers. The Windows
+# console defaults to cp1252, so printing the review preview raised
+# UnicodeEncodeError and killed the whole --push-from-queue loop mid-batch
+# (2026-09-02: DES0844 and EEX4242 were silently left unpushed after six
+# successes, with nothing written to the log). A display encoding problem must
+# never abort a push, so force UTF-8 output and degrade unrepresentable
+# characters instead of raising.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
 BASE_URL = os.environ.get("REPO_BASE_URL", "https://floridacourserepo.com").rstrip("/")
 DRAFTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "drafts")
 LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generate_guide.log")
@@ -577,8 +591,8 @@ def process_course_batch(
     return token, generated
 
 
-def run_push_draft(course_id: str, session: requests.Session) -> None:
-    """Push a single saved draft interactively."""
+def run_push_draft(course_id: str, session: requests.Session, auto_approve: bool = False) -> None:
+    """Push a single saved draft, prompting unless auto_approve is set."""
     course_id = course_id.upper().strip()
     path = os.path.join(DRAFTS_DIR, f"{course_id}_guide.json")
     if not os.path.exists(path):
@@ -587,7 +601,16 @@ def run_push_draft(course_id: str, session: requests.Session) -> None:
     with open(path, encoding="utf-8-sig") as f:
         data = json.load(f)
     display_guide(course_id, data)
-    choice = input("  Push to site? [y/N] ").strip().lower()
+    if auto_approve:
+        choice = "y"
+    else:
+        try:
+            choice = input("  Push to site? [y/N] ").strip().lower()
+        except EOFError:
+            # No terminal to prompt on (piped/redirected stdin). Treat as declined
+            # rather than dying with a traceback, and say why nothing was pushed.
+            print("  Aborted: no input available to confirm. Re-run with --yes to push.")
+            return
     if choice == "y":
         token = get_token(session)
         _push_with_token_refresh(session, course_id, data, token)
@@ -690,7 +713,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.push_draft:
-        run_push_draft(args.push_draft, requests.Session())
+        run_push_draft(args.push_draft, requests.Session(), auto_approve=args.yes)
         return
 
     if args.push_draft_file:

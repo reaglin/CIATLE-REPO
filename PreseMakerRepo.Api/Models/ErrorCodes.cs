@@ -28,6 +28,8 @@ public static class ErrorCodes
     public const string TaxonomyPlacementRequired = "TAXONOMY_PLACEMENT_REQUIRED";
     public const string GuideTemplateNotFound = "GUIDE_TEMPLATE_NOT_FOUND";
     public const string RateLimitExceeded = "RATE_LIMIT_EXCEEDED";
+    public const string GuideAlreadyExists = "GUIDE_ALREADY_EXISTS";
+    public const string GuideRequestNotFound = "GUIDE_REQUEST_NOT_FOUND";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
     public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";
 }

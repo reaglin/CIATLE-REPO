@@ -74,6 +74,31 @@
     </div>
 </div>
 
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">Curriculum Guides</h6>
+                <p class="mb-2">
+                    <span class="badge bg-success fs-6">@Model.PublishedGuides</span> published ·
+                    <span class="badge bg-primary fs-6">@Model.OpenGuideRequests</span>
+                    open request@(Model.OpenGuideRequests != 1 ? "s" : "") for @Model.OpenGuideRequestCourses course@(Model.OpenGuideRequestCourses != 1 ? "s" : "")
+                </p>
+                <a href="/admin/guide-requests" class="btn btn-outline-primary btn-sm">Guide Requests</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">Static Site Export</h6>
+                <p class="mb-2 small">Build a self-contained static copy of the public site (browse pages, every guide) as a zip — a working offline mirror and a content backup.</p>
+                <a href="/admin/static-export" class="btn btn-outline-primary btn-sm">Static Export</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <h2 class="h6 text-muted mb-2">Recent Modules</h2>
 <div class="table-responsive">
     <table class="table table-sm table-hover">

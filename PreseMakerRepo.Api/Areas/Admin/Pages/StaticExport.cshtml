@@ -1,0 +1,122 @@
+@page "/admin/static-export"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.StaticExportModel
+@{
+    ViewData["Title"] = "Static Export";
+    var st = Model.Status;
+}
+@if (st.IsRunning)
+{
+    <meta http-equiv="refresh" content="5" />
+}
+
+<h1 class="h4 mb-2">Static Site Export</h1>
+<p class="text-muted">
+    Builds a self-contained static copy of the public site — the browse tree, every course page in scope,
+    every curriculum guide, and module / material pages — as a zip. Unzip it and open <code>index.html</code>:
+    it works offline as a mirror and doubles as a readable content backup. Search, accounts, downloads, and the
+    guide-request form link back to the live site.
+</p>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-info py-2">@Model.Message</div>
+}
+
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">New export</h6>
+                @if (st.IsRunning)
+                {
+                    <p class="mb-2">
+                        <span class="spinner-border spinner-border-sm text-primary" role="status"></span>
+                        Running since @st.StartedUtc?.ToString("HH:mm:ss") UTC —
+                        <strong>@st.Pages</strong> page(s) written, <strong>@st.Queued</strong> queued
+                    </p>
+                    <p class="small text-muted text-truncate">@st.Current</p>
+                    <form method="post" asp-page-handler="Cancel">
+                        <button type="submit" class="btn btn-outline-danger btn-sm">Cancel</button>
+                    </form>
+                    <p class="small text-muted mt-2 mb-0">This page refreshes every 5 seconds.</p>
+                }
+                else
+                {
+                    <form method="post" asp-page-handler="Start">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" asp-for="IncludeModules" id="IncludeModules" />
+                            <label class="form-check-label" for="IncludeModules">Include module and material pages</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" asp-for="IncludeAllCourses" id="IncludeAllCourses" />
+                            <label class="form-check-label" for="IncludeAllCourses">
+                                Include a page for <em>every</em> active taxonomy course
+                                <span class="text-muted">(thousands of pages; default is courses with a guide or modules)</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Build static site zip</button>
+                    </form>
+                    @if (st.FinishedUtc is not null)
+                    {
+                        <hr />
+                        @if (st.Error is not null)
+                        {
+                            <p class="text-danger small mb-0">Last run failed: @st.Error</p>
+                        }
+                        else
+                        {
+                            <p class="small text-muted mb-0">
+                                Last run: <strong>@st.LastFile</strong> — @st.Pages page(s), @st.Assets asset(s),
+                                @((st.LastBytes / 1024.0 / 1024.0).ToString("0.0")) MB in @st.LastElapsed?.ToString(@"m\:ss").
+                            </p>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title text-muted">How it works</h6>
+                <ul class="small mb-0">
+                    <li>Pages are fetched from this server over loopback and saved as <code>{path}/index.html</code>; links between them are made relative.</li>
+                    <li>Stylesheets, scripts, and images are copied from <code>wwwroot</code>.</li>
+                    <li>Anything that needs the server becomes an absolute link to the live site, and every page carries a "static copy" banner.</li>
+                    <li>Files stay on the server in <code>@Model.ExportDirectory</code> until deleted here — keep the latest as a backup.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="h6 text-muted mb-2">Export files</h2>
+@if (Model.Files.Count == 0)
+{
+    <div class="alert alert-light border">No exports yet.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-sm table-hover align-middle">
+            <thead><tr><th>File</th><th>Created (UTC)</th><th>Size</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var f in Model.Files)
+            {
+                <tr>
+                    <td><code>@f.Name</code></td>
+                    <td class="text-nowrap">@f.LastWriteTimeUtc.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td class="text-nowrap">@((f.Length / 1024.0 / 1024.0).ToString("0.0")) MB</td>
+                    <td class="text-nowrap">
+                        <a class="btn btn-outline-primary btn-sm" asp-page-handler="Download" asp-route-file="@f.Name">Download</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-file="@f.Name" class="d-inline"
+                              onsubmit="return confirm('Delete @f.Name?');">
+                            <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

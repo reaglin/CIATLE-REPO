@@ -64,7 +64,7 @@ QUEUE_FIELDS = [
 VALID_STATES = {"queued", "drafted", "pushed", "skipped", "error"}
 
 # Course IDs look like ABC1234, ABC1234C (lab integrated), or ABC1234L (lab separate)
-COURSE_ID_RE = re.compile(r"^[A-Z]{3}\d{4}[CL]?$")
+COURSE_ID_RE = re.compile(r"^[A-Z]{3}\d{4}[CL]?(?:-(?:SCNS|[A-Z]{2,5}))?$")
 
 
 # ---------------------------------------------------------------------------
@@ -279,6 +279,93 @@ def cmd_add(args) -> None:
         print("  If the course exists but isn't in the inventory, drop a")
         print("  matching draft into drafts/ and run 'reconcile' -- it will")
         print("  pick the orphan draft up automatically.")
+
+
+def cmd_import_requests(args) -> None:
+    """Pull open visitor guide requests from the live site (GET /api/v1/guide-requests) and
+    queue them. Priority = 500 - 10 * request_count (so a single request outranks every
+    catalog-derived row, which sit at 1000 - num_inst), floor 1. Requests for courses that
+    are already queued/pushed are left alone. With --mark-queued the site is told the
+    requests are queued so the admin ranking stays in step."""
+    try:
+        import requests as http
+    except ImportError:
+        print("The 'requests' package is required: pip install -r requirements.txt")
+        return
+
+    base_url = os.environ.get("REPO_BASE_URL", "https://floridacourserepo.com").rstrip("/")
+    email = os.environ.get("REPO_ADMIN_EMAIL")
+    password = os.environ.get("REPO_ADMIN_PASSWORD")
+    if not email or not password:
+        print("REPO_ADMIN_EMAIL and REPO_ADMIN_PASSWORD must be set (see envexample.txt).")
+        return
+
+    session = http.Session()
+    resp = session.post(f"{base_url}/api/v1/auth/login",
+                        json={"email": email, "password": password}, timeout=20)
+    resp.raise_for_status()
+    token = resp.json()["data"]["accessToken"]
+    headers = {"Authorization": f"Bearer {token}"}
+
+    resp = session.get(f"{base_url}/api/v1/guide-requests",
+                       params={"status": "open", "minCount": args.min_count},
+                       headers=headers, timeout=30)
+    resp.raise_for_status()
+    summaries = resp.json()["data"]
+    if not summaries:
+        print("No open guide requests.")
+        return
+
+    rows = load_queue()
+    existing = queue_index(rows)
+    master_idx = {r["course_id"]: r for r in load_master()}
+    added, skipped, not_scns = 0, 0, []
+    queued_ids = []
+    for s in summaries:
+        cid = s["courseId"].upper()
+        count = int(s.get("requestCount") or 1)
+        if not COURSE_ID_RE.match(cid):
+            not_scns.append(cid)
+            continue
+        if s.get("hasGuide"):
+            continue
+        if cid in existing:
+            skipped += 1
+            queued_ids.append(cid)
+            continue
+        schools = "; ".join(s.get("institutions") or [])
+        rows.append({
+            "course_id": cid,
+            "title": s.get("courseTitle") or master_idx.get(cid, {}).get("title", ""),
+            "num_inst": master_idx.get(cid, {}).get("num_inst", ""),
+            "status": "queued",
+            "priority": str(max(1, 500 - 10 * count)),
+            "added_utc": now_iso(),
+            "drafted_utc": "",
+            "pushed_utc": "",
+            "notes": f"Requested by {count} visitor(s)" + (f" ({schools})" if schools else "")
+                     + ("" if s.get("inTaxonomy", True) else " - NOT IN TAXONOMY, verify"),
+        })
+        added += 1
+        queued_ids.append(cid)
+
+    if added:
+        save_queue(rows)
+    log("user", f"IMPORT-REQUESTS -> +{added} queued ({skipped} already in queue, "
+                f"{len(not_scns)} not SCNS-shaped)")
+    print(f"Added {added} requested course(s) to the queue; {skipped} already queued.")
+    if not_scns:
+        print(f"Ignored (not an SCNS code): {', '.join(not_scns)}")
+
+    if args.mark_queued and queued_ids:
+        marked = 0
+        for cid in queued_ids:
+            r = session.patch(f"{base_url}/api/v1/guide-requests/{cid}/status",
+                              json={"status": "Queued", "notes": "Added to the generation queue"},
+                              headers=headers, timeout=20)
+            if r.ok:
+                marked += 1
+        print(f"Marked {marked} course(s) as Queued on the site.")
 
 
 def cmd_status(args) -> None:
@@ -528,6 +615,37 @@ def _print_id_sample(ids: list[str], cap: int = 10) -> None:
         print(f"      {head}, ... ({len(ids) - cap} more)")
 
 
+DEFER_PRIORITY = 9000
+
+
+def cmd_defer(args) -> None:
+    """Push a course to the rear of the queue when its data cannot be verified yet.
+
+    Keeps the course queued (so it is never silently dropped) but moves it behind
+    everything else by raising its priority number, since next-batch sorts ascending.
+    """
+    rows = load_queue()
+    idx = queue_index(rows)
+    deferred = []
+    for raw in args.course_ids:
+        cid = raw.upper()
+        if cid not in idx:
+            sys.exit(f"Course not in queue: {cid}")
+        row = idx[cid]
+        if row.get("status") != "queued":
+            sys.exit(f"{cid} is '{row.get('status')}', not 'queued' - only queued courses can be deferred.")
+        old = int(row.get("priority") or 1000)
+        row["priority"] = str(DEFER_PRIORITY + old)
+        if args.reason:
+            row["notes"] = f"DEFERRED: {args.reason}"
+        deferred.append((cid, old, row["priority"]))
+
+    save_queue(rows)
+    for cid, old, new in deferred:
+        log("user", f"DEFER {cid} priority {old}->{new}" + (f" reason='{args.reason}'" if args.reason else ""))
+        print(f"Deferred {cid}: priority {old} -> {new}")
+
+
 def cmd_next_batch(args) -> None:
     """Print course IDs ready to draft, in priority order."""
     rows = load_queue()
@@ -568,6 +686,15 @@ def main() -> None:
     p_add.add_argument("--note", metavar="TEXT", help="Optional note attached to added rows")
     p_add.set_defaults(func=cmd_add)
 
+    p_imp = sub.add_parser("import-requests",
+                           help="Queue the open visitor guide requests from the live site "
+                                "(needs REPO_ADMIN_EMAIL / REPO_ADMIN_PASSWORD)")
+    p_imp.add_argument("--min-count", type=int, default=1, metavar="N",
+                       help="Only courses requested at least N times (default 1)")
+    p_imp.add_argument("--mark-queued", action="store_true",
+                       help="Also mark the imported requests as Queued on the site")
+    p_imp.set_defaults(func=cmd_import_requests)
+
     p_status = sub.add_parser("status", help="Show queue summary")
     p_status.add_argument("--state", choices=sorted(VALID_STATES))
     p_status.set_defaults(func=cmd_status)
@@ -590,6 +717,13 @@ def main() -> None:
                            help="Sync queue with drafts/ folder and generate_guide.log; "
                                 "auto-adds orphan drafts as new queue entries.")
     p_rec.set_defaults(func=cmd_reconcile)
+
+    p_defer = sub.add_parser("defer",
+                             help="Move courses to the rear of the queue (data not verifiable yet)")
+    p_defer.add_argument("course_ids", nargs="+")
+    p_defer.add_argument("--reason", metavar="TEXT",
+                         help="Why it was deferred; recorded in the notes column")
+    p_defer.set_defaults(func=cmd_defer)
 
     p_next = sub.add_parser("next-batch",
                             help="Print next N course IDs to draft (default 5)")

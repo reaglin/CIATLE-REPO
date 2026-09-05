@@ -1,0 +1,2446 @@
+{
+  "AAE": {
+    "title": "APPLIED ACADEMICS FOR ADULT EDUCATION",
+    "discipline": "APPLIED ACADEMICS FOR ADULT EDUCATION (EFF 8/1/2015)"
+  },
+  "ABE": {
+    "title": "AGRICULTURAL AND BIOLOGICAL ENGINEERING",
+    "discipline": "AGRICULTURE"
+  },
+  "ABT": {
+    "title": "ARABIC CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ABW": {
+    "title": "ARABIC LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ABX": {
+    "title": "ADULT BASIC EDUCATION",
+    "discipline": "ADULT EDUCATION"
+  },
+  "ACG": {
+    "title": "ACCOUNTING: GENERAL",
+    "discipline": "ACCOUNTING"
+  },
+  "ACO": {
+    "title": "ACCOUNTING: OCCUPATIONAL/TECHNICAL VARIABLE PACED",
+    "discipline": "ACCOUNTING"
+  },
+  "ACR": {
+    "title": "HVACR: HEATING/VENTILATION/AC/REFRIGERATION: TECH/TRADES",
+    "discipline": "HUMANITIES"
+  },
+  "ADE": {
+    "title": "ADULT EDUCATION",
+    "discipline": "ADULT EDUCATION"
+  },
+  "ADV": {
+    "title": "ADVERTISING",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "AEB": {
+    "title": "AGRICULTURAL ECONOMICS AND BUSINESS",
+    "discipline": "AGRICULTURE"
+  },
+  "AEC": {
+    "title": "AGRICULTURAL EDUCATION AND COMMUNICATION",
+    "discipline": "AGRICULTURE"
+  },
+  "AEE": {
+    "title": "AGRICULTURE AND EXTENSION EDUCATION",
+    "discipline": "AGRICULTURE"
+  },
+  "AER": {
+    "title": "AUTOMOTIVE MECHANICS",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "AFA": {
+    "title": "AFRICAN-AMERICAN STUDIES",
+    "discipline": "AMERICAN AND AFRICAN-AMERICAN STUDIES"
+  },
+  "AFH": {
+    "title": "AFRICAN HISTORY",
+    "discipline": "HISTORY"
+  },
+  "AFR": {
+    "title": "AEROSPACE STUDIES",
+    "discipline": "MILITARY SCIENCE"
+  },
+  "AFS": {
+    "title": "AFRICAN STUDIES",
+    "discipline": "AFRICAN STUDIES"
+  },
+  "AGE": {
+    "title": "AGRICULTURAL ENGINEERING (DISCONTINUED--SEE AOM)",
+    "discipline": "AGRICULTURE"
+  },
+  "AGG": {
+    "title": "AGRICULTURE - GENERAL",
+    "discipline": "AGRICULTURE"
+  },
+  "AGR": {
+    "title": "AGRONOMY",
+    "discipline": "AGRICULTURE"
+  },
+  "AHM": {
+    "title": "AMHARIC LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "AHT": {
+    "title": "AMHARIC CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "AHW": {
+    "title": "AMHARIC LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "AKA": {
+    "title": "AKAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "AKT": {
+    "title": "AKAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "AKW": {
+    "title": "AKAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ALS": {
+    "title": "AGRICULTURE AND LIFE SCIENCES",
+    "discipline": "AGRICULTURE"
+  },
+  "AMH": {
+    "title": "AMERICAN HISTORY",
+    "discipline": "HISTORY"
+  },
+  "AML": {
+    "title": "AMERICAN LITERATURE",
+    "discipline": "ENGLISH LANGUAGE AND LITERATURE"
+  },
+  "AMS": {
+    "title": "AMERICAN STUDIES",
+    "discipline": "AMERICAN AND AFRICAN-AMERICAN STUDIES"
+  },
+  "AMT": {
+    "title": "AVIATION MAINTENANCE TECHNOLOGY",
+    "discipline": "AERONAUTICAL SCIENCE"
+  },
+  "ANE": {
+    "title": "ANESTHESIA TECHNOLOGY",
+    "discipline": "SURGICAL TECHNOLOGY STUDIES"
+  },
+  "ANG": {
+    "title": "ANTHROPOLOGY--GRADUATE",
+    "discipline": "ANTHROPOLOGY"
+  },
+  "ANS": {
+    "title": "ANIMAL SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "ANT": {
+    "title": "ANTHROPOLOGY",
+    "discipline": "ANTHROPOLOGY"
+  },
+  "AOM": {
+    "title": "AGRICULTURAL OPERATIONS MANAGEMENT",
+    "discipline": "AGRICULTURE"
+  },
+  "APA": {
+    "title": "APPLIED ACCOUNTING",
+    "discipline": "ACCOUNTING"
+  },
+  "APK": {
+    "title": "APPLIED KINESIOLOGY",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "ARA": {
+    "title": "ARABIC LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ARC": {
+    "title": "ARCHITECTURE",
+    "discipline": "ARCHITECTURE"
+  },
+  "ARD": {
+    "title": "ARCHITECTURAL DESIGN",
+    "discipline": "ARCHITECTURE"
+  },
+  "ARE": {
+    "title": "ART EDUCATION",
+    "discipline": "ARCHITECTURE"
+  },
+  "ARH": {
+    "title": "ART HISTORY",
+    "discipline": "ARCHITECTURE"
+  },
+  "ARR": {
+    "title": "AUTOBODY REPAIR AND REFINISHING",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "ART": {
+    "title": "- 006",
+    "discipline": "ARCHITECTURE"
+  },
+  "ARV": {
+    "title": "ART, VOCATIONAL",
+    "discipline": "ARCHITECTURE"
+  },
+  "ASB": {
+    "title": "ACADEMIC SKILLS BUILDING",
+    "discipline": "ADULT EDUCATION"
+  },
+  "ASC": {
+    "title": "AVIATION SCIENCE: GENERAL",
+    "discipline": "AERONAUTICAL SCIENCE"
+  },
+  "ASG": {
+    "title": "ANIMAL SCIENCE: GENERAL",
+    "discipline": "AGRICULTURE"
+  },
+  "ASH": {
+    "title": "ASIAN HISTORY",
+    "discipline": "HISTORY"
+  },
+  "ASL": {
+    "title": "AMERICAN SIGN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ASN": {
+    "title": "ASIAN STUDIES",
+    "discipline": "ASIAN STUDIES"
+  },
+  "AST": {
+    "title": "ASTRONOMY",
+    "discipline": "PHYSICS"
+  },
+  "ATE": {
+    "title": "ANIMAL SCIENCE TECHNOLOGY",
+    "discipline": "AGRICULTURE"
+  },
+  "ATF": {
+    "title": "AVIATION TECHNOLOGY: FLIGHT",
+    "discipline": "AERONAUTICAL SCIENCE"
+  },
+  "ATR": {
+    "title": "ATHLETIC TRAINING",
+    "discipline": "ATHLETIC TRAINING"
+  },
+  "ATT": {
+    "title": "AVIATION TECHNOLOGY: THEORY",
+    "discipline": "AERONAUTICAL SCIENCE"
+  },
+  "AVM": {
+    "title": "AVIATION MANAGEMENT",
+    "discipline": "AERONAUTICAL SCIENCE"
+  },
+  "AVS": {
+    "title": "AVIONICS",
+    "discipline": "AERONAUTICAL SCIENCE"
+  },
+  "AYM": {
+    "title": "AYMARA LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "BAN": {
+    "title": "COMMERCIAL BANKING (AIB COURSES ONLY)",
+    "discipline": "BANKING"
+  },
+  "BCA": {
+    "title": "BUILDING CONSTRUCTION APPRENTICESHIPS",
+    "discipline": "BUILDING CONSTRUCTION"
+  },
+  "BCC": {
+    "title": "BASIC CLINICAL CLERKSHIPS (TO MDC EFF 5/1/2013)",
+    "discipline": "MEDICINE"
+  },
+  "BCH": {
+    "title": "BIOCHEMISTRY (BIOPHYSICS)",
+    "discipline": "BIOCHEMISTRY"
+  },
+  "BCN": {
+    "title": "BUILDING CONSTRUCTION",
+    "discipline": "BUILDING CONSTRUCTION"
+  },
+  "BCT": {
+    "title": "BUILDING CONSTRUCTION TRADES",
+    "discipline": "BUILDING CONSTRUCTION"
+  },
+  "BCV": {
+    "title": "BUILDING CONSTRUCTION: VOCATIONAL",
+    "discipline": "BUILDING CONSTRUCTION"
+  },
+  "BME": {
+    "title": "BIOMEDICAL ENGINEERING",
+    "discipline": "BIOMEDICAL ENGINEERING"
+  },
+  "BMS": {
+    "title": "BASIC MEDICAL SCIENCES",
+    "discipline": "MEDICINE"
+  },
+  "BOT": {
+    "title": "BOTANY",
+    "discipline": "BIOLOGICAL SCIENCE"
+  },
+  "BRC": {
+    "title": "BANKING RELATED COURSES (NOT AIB OR IFE)",
+    "discipline": "BANKING"
+  },
+  "BSC": {
+    "title": "BIOLOGICAL SCIENCES",
+    "discipline": "BIOLOGICAL SCIENCE"
+  },
+  "BTE": {
+    "title": "BUSINESS TEACHER EDUCATION",
+    "discipline": "BUSINESS EDUCATION"
+  },
+  "BUL": {
+    "title": "BUSINESS LAW",
+    "discipline": "BUSINESS LAW"
+  },
+  "CAI": {
+    "title": "COMPUTING: ARTIFICAL INTELLIGENCE",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CAP": {
+    "title": "COMPUTER APPLICATIONS",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CAS": {
+    "title": "CLINICAL AUDIOLOGY AND SPEECH LANGUAGE PATHOLOGY (SEE SPA)",
+    "discipline": "SPEECH PATHOLOGY & AUDIOLOGY"
+  },
+  "CAT": {
+    "title": "CATALAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CBH": {
+    "title": "COMPARATIVE PSYCHOLOGY AND ANIMAL BEHAVIOR",
+    "discipline": "PSYCHOLOGY"
+  },
+  "CBT": {
+    "title": "TECHNOLOGY INSTITUTE CBT",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "CCE": {
+    "title": "CIVIL CONSTRUCTION ENGINEERING",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "CCJ": {
+    "title": "CRIMINOLOGY AND CRIMINAL JUSTICE",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CDA": {
+    "title": "COMPUTER DESIGN/ARCHITECTURE",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CEG": {
+    "title": "CIVIL GEOTECHNICAL ENGINEERING",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "CEN": {
+    "title": "COMPUTER SOFTWARE ENGINEERING",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CES": {
+    "title": "CIVIL ENGINEERING STRUCTURES",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "CET": {
+    "title": "COMPUTER ENGINEERING TECHNOLOGY",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "CGN": {
+    "title": "CIVIL ENGINEERING",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "CGS": {
+    "title": "COMPUTER GENERAL STUDIES",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CHD": {
+    "title": "HOME ECONOMICS: CHILD DEVELOPMENT",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "CHI": {
+    "title": "CHINESE LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CHM": {
+    "title": "CHEMISTRY",
+    "discipline": "CHEMISTRY"
+  },
+  "CHR": {
+    "title": "CHIROPRACTIC",
+    "discipline": "CHIROPRACTIC"
+  },
+  "CHS": {
+    "title": "CHEMISTRY - SPECIALIZED",
+    "discipline": "CHEMISTRY"
+  },
+  "CHT": {
+    "title": "CHINESE CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CHW": {
+    "title": "CHINESE LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CIS": {
+    "title": "COMPUTER SCIENCE AND INFORMATION SYSTEMS",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CJB": {
+    "title": "COLLEGE LEVEL APPLICATION IN CRIMINAL JUSTICE",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJC": {
+    "title": "CORRECTIONS",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJD": {
+    "title": "CRIMINAL JUSTICE DEVELOPMENT",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJE": {
+    "title": "LAW ENFORCEMENT",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJJ": {
+    "title": "JUVENILE JUSTICE",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJK": {
+    "title": "CRIMINAL JUSTICE BASIC TRAINING (A.A.S OR VOCATIONAL)",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJL": {
+    "title": "LAW & PROCESS",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CJT": {
+    "title": "CRIMINAL JUSTICE TECHNOLOGIES",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "CLA": {
+    "title": "CLASSICAL AND ANCIENT STUDIES",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "CLP": {
+    "title": "CLINICAL PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "CLT": {
+    "title": "CLASSICAL CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "CMC": {
+    "title": "CORPORATE MEDIA COMMUNICATION",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "CMM": {
+    "title": "CREEK/MUSKOGEE/MIKASUKI",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CNT": {
+    "title": "COMPUTER NETWORKS",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "COA": {
+    "title": "HOME ECONOMICS: CONSUMER AFFAIRS",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "COE": {
+    "title": "COOPERATIVE EDUCATION",
+    "discipline": "COOPERATIVE EDUCATION"
+  },
+  "COM": {
+    "title": "COMMUNICATION",
+    "discipline": "COMMUNICATIONS"
+  },
+  "COP": {
+    "title": "COMPUTER PROGRAMMING",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "COS": {
+    "title": "COSMETOLOGY",
+    "discipline": "COSMETOLOGY/BARBERING"
+  },
+  "COT": {
+    "title": "COMPUTING THEORY",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CPO": {
+    "title": "COMPARATIVE POLITICS",
+    "discipline": "POLITICAL SCIENCE"
+  },
+  "CPS": {
+    "title": "COMPARATIVE POLICY STUDIES (MULTINATIONAL)",
+    "discipline": "INTERNATIONAL AND COMPARATIVE POLICY STUDIES"
+  },
+  "CPT": {
+    "title": "CARDIOPULMONARY TECHNOLOGY - SEE CVT",
+    "discipline": "CARDIOVASCULAR TECHNOLOGY"
+  },
+  "CRW": {
+    "title": "CREATIVE WRITING",
+    "discipline": "ENGLISH LANGUAGE AND LITERATURE"
+  },
+  "CSP": {
+    "title": "COSMETOLOGY - SPECIALIZED",
+    "discipline": "COSMETOLOGY/BARBERING"
+  },
+  "CST": {
+    "title": "COMPARATIVE STUDIES",
+    "discipline": "INTERDISCIPLINARY STUDIES AND HONORS"
+  },
+  "CTE": {
+    "title": "HOME ECONOMICS: CLOTHING AND TEXTILES",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "CTS": {
+    "title": "COMPUTER TECHNOLOGY AND SKILLS",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "CVT": {
+    "title": "CARDIOVASCULAR TECHNOLOGY",
+    "discipline": "CARDIOVASCULAR TECHNOLOGY"
+  },
+  "CWR": {
+    "title": "CIVIL WATER RESOURCES",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "CYP": {
+    "title": "COMMUNITY PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "CZE": {
+    "title": "CZECH LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CZT": {
+    "title": "CZECH CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "CZW": {
+    "title": "CZECH LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "DAA": {
+    "title": "DANCE, EMPHASIS ON ACTIVITY",
+    "discipline": "DANCE"
+  },
+  "DAE": {
+    "title": "DANCE EDUCATION",
+    "discipline": "DANCE"
+  },
+  "DAN": {
+    "title": "DANCE",
+    "discipline": "DANCE"
+  },
+  "DAS": {
+    "title": "DAIRY SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "DCP": {
+    "title": "DESIGN, CONSTRUCTION AND PLANNING",
+    "discipline": "ARCHITECTURE"
+  },
+  "DEA": {
+    "title": "DENTAL ASSISTING",
+    "discipline": "DENTAL ASSISTANT"
+  },
+  "DEC": {
+    "title": "MARKETING AND DISTRIBUTIVE EDUCATION",
+    "discipline": "BUSINESS EDUCATION"
+  },
+  "DEH": {
+    "title": "DENTAL HYGIENE",
+    "discipline": "DENTAL HYGIENE"
+  },
+  "DEM": {
+    "title": "DEMOGRAPHY",
+    "discipline": "SOCIOLOGY"
+  },
+  "DEN": {
+    "title": "DENTISTRY",
+    "discipline": "DENTISTRY"
+  },
+  "DEP": {
+    "title": "DEVELOPMENTAL PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "DES": {
+    "title": "DENTAL SUPPORT",
+    "discipline": "DENTAL SUPPORT"
+  },
+  "DIE": {
+    "title": "DIETETICS",
+    "discipline": "NUTRITION"
+  },
+  "DIG": {
+    "title": "DIGITAL MEDIA",
+    "discipline": "DIGITAL MEDIA"
+  },
+  "DIM": {
+    "title": "DIESEL, HYBRID AND ALTERNATIVE FUEL TECHNOLOGY",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "DSC": {
+    "title": "DOMESTIC SECURITY",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "DTE": {
+    "title": "DENTAL LABORATORY TECHNOLOGY",
+    "discipline": "DENTAL LABORATORY TECHNOLOGY"
+  },
+  "DUT": {
+    "title": "DUTCH LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "EAB": {
+    "title": "EXPERIMENTAL ANALYSIS OF BEHAVIOR",
+    "discipline": "PSYCHOLOGY"
+  },
+  "EAP": {
+    "title": "ENGLISH FOR ACADEMIC PURPOSES",
+    "discipline": "ENGLISH AS A SECOND LANGUAGE/TEACHING ESL"
+  },
+  "EAS": {
+    "title": "AEROSPACE ENGINEERING",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "EBD": {
+    "title": "EDUCATION: EMOTIONAL/BEHAVIORAL DISORDERS",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "ECH": {
+    "title": "ENGINEERING: CHEMICAL",
+    "discipline": "CHEMICAL/NUCLEAR ENGINEERING"
+  },
+  "ECM": {
+    "title": "ENGINEERING: COMPUTER MATH",
+    "discipline": "COMPUTER MATH/MATERIALS ENGINEERING"
+  },
+  "ECO": {
+    "title": "ECONOMICS",
+    "discipline": "ECONOMICS"
+  },
+  "ECP": {
+    "title": "ECONOMIC PROBLEMS & POLICY",
+    "discipline": "ECONOMICS"
+  },
+  "ECS": {
+    "title": "ECONOMIC SYSTEMS & DEVELOPMENT",
+    "discipline": "ECONOMICS"
+  },
+  "ECT": {
+    "title": "EDUCATION: CAREER/TECHNICAL",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "ECW": {
+    "title": "EDUCATION: CAREER/WORKFORCE",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDA": {
+    "title": "EDUCATIONAL ADMINISTRATION",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDE": {
+    "title": "EDUCATION: ELEMENTARY",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDF": {
+    "title": "EDUCATION: FOUNDATIONS AND POLICY STUDIES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDG": {
+    "title": "EDUCATION: GENERAL",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDH": {
+    "title": "EDUCATION: HIGHER",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDM": {
+    "title": "EDUCATION: MIDDLE SCHOOL",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDP": {
+    "title": "EDUCATIONAL PSYCHOLOGY",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EDS": {
+    "title": "EDUCATION SUPERVISION",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EEC": {
+    "title": "EDUCATION: EARLY CHILDHOOD",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EED": {
+    "title": "EDUCATION: EMOTIONAL DISORDERS - SEE EBD",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EEE": {
+    "title": "ENGINEERING: ELECTRICAL AND ELECTRONIC",
+    "discipline": "ELECTRICAL ENGINEERING"
+  },
+  "EEL": {
+    "title": "ENGINEERING: ELECTRICAL",
+    "discipline": "ELECTRICAL ENGINEERING"
+  },
+  "EER": {
+    "title": "ELECTRICAL/ELECTRONICS REPAIR",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "EES": {
+    "title": "ENVIRONMENTAL ENGINEERING SCIENCE",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "EET": {
+    "title": "ELECTRONIC ENGINEERING TECHNOLOGY",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "EEV": {
+    "title": "ELECTRICAL/ELECTRONIC: VOCATIONAL",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "EEX": {
+    "title": "EDUCATION: EXCEPTIONAL CHILD - CORE COMPETENCIES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EGC": {
+    "title": "COUNSELOR EDUCATION",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EGI": {
+    "title": "EDUCATION: GIFTED",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EGM": {
+    "title": "ENGINEERING SCIENCE",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "EGN": {
+    "title": "ENGINEERING: GENERAL",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "EGS": {
+    "title": "ENGINEERING: SUPPORT",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "EHD": {
+    "title": "EDUCATION: HARD OF HEARING & DEAF",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EIA": {
+    "title": "EDUCATION: INDUSTRIAL ARTS",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EIN": {
+    "title": "INDUSTRIAL ENGINEERING",
+    "discipline": "INDUSTRIAL ENGINEERING"
+  },
+  "EIV": {
+    "title": "EDUCATION: INDUSTRIAL/VOCATIONAL",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "ELD": {
+    "title": "EDUCATION: SPECIFIC LEARNING DISABILITIES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "ELR": {
+    "title": "PREFIX DISCONTINUED. ALL COURSES REASSIGNED",
+    "discipline": "ELECTRICAL ENGINEERING"
+  },
+  "EMA": {
+    "title": "MATERIALS ENGINEERING",
+    "discipline": "COMPUTER MATH/MATERIALS ENGINEERING"
+  },
+  "EMC": {
+    "title": "ENGINEERING: MECHANICAL & CHEMICAL",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "EME": {
+    "title": "EDUCATION: TECHNOLOGY AND MEDIA",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EML": {
+    "title": "ENGINEERING: MECHANICAL",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "EMR": {
+    "title": "EDUCATION: MENTAL RETARDATION",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EMS": {
+    "title": "EMERGENCY MEDICAL SERVICES",
+    "discipline": "EMERGENCY MEDICAL SERVICES"
+  },
+  "ENC": {
+    "title": "ENGLISH COMPOSITION",
+    "discipline": "ENGLISH LANGUAGE AND LITERATURE"
+  },
+  "ENG": {
+    "title": "ENGLISH - GENERAL",
+    "discipline": "ENGLISH LANGUAGE AND LITERATURE"
+  },
+  "ENL": {
+    "title": "ENGLISH LITERATURE",
+    "discipline": "ENGLISH LANGUAGE AND LITERATURE"
+  },
+  "ENS": {
+    "title": "ENGLISH FOR NON-NATIVE SPEAKERS (COLLEGE LVL) DISC. SEE EAP",
+    "discipline": "ENGLISH AS A SECOND LANGUAGE/TEACHING ESL"
+  },
+  "ENT": {
+    "title": "ENTREPRENEURSHIP",
+    "discipline": "MANAGEMENT"
+  },
+  "ENU": {
+    "title": "ENGINEERING: NUCLEAR",
+    "discipline": "CHEMICAL/NUCLEAR ENGINEERING"
+  },
+  "ENV": {
+    "title": "ENGINEERING: ENVIRONMENTAL",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "ENY": {
+    "title": "ENTOMOLOGY",
+    "discipline": "AGRICULTURE"
+  },
+  "EOC": {
+    "title": "OCEAN ENGINEERING",
+    "discipline": "OCEANOGRAPHY/OCEAN ENGINEERING"
+  },
+  "EPD": {
+    "title": "EDUCATION: PHYSICAL & MULTIPLE DISABILITIES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EPH": {
+    "title": "EDUCATION: PHYSICAL & MULTIPLE HANDICAPPED - SEE EPD",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EPI": {
+    "title": "EDUCATOR PREPARATION INSTITUTES",
+    "discipline": "EDUCATOR PREPARATION INSTITUTES"
+  },
+  "ESC": {
+    "title": "EARTH SCIENCE",
+    "discipline": "GEOLOGY"
+  },
+  "ESE": {
+    "title": "EDUCATION: SECONDARY",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "ESI": {
+    "title": "INDUSTRIAL/SYSTEMS ENGINEERING",
+    "discipline": "INDUSTRIAL ENGINEERING"
+  },
+  "ESL": {
+    "title": "COLLEGE-PREP ENGLISH FOR NON-NATIVE SPEAKERS (DISC. SEE TSL)",
+    "discipline": "ENGLISH AS A SECOND LANGUAGE/TEACHING ESL"
+  },
+  "EST": {
+    "title": "ELECTRONIC SPECIALITY TECHNOLOGY (DISC 8/1/2012)",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETC": {
+    "title": "ENGINEERING TECHNOLOGY: CIVIL",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETD": {
+    "title": "ENGINEERING TECHNOLOGY: DRAFTING",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETE": {
+    "title": "EDUCATION: TECHNOLOGY EDUCATION",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "ETG": {
+    "title": "ENGINEERING TECHNOLOGY: GENERAL",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETI": {
+    "title": "ENGINEERING TECHNOLOGY: INDUSTRIAL",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETM": {
+    "title": "ENGINEERING TECHNOLOGY: MECHANICAL",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETN": {
+    "title": "ELECTRONEURODIAGNOSTICS",
+    "discipline": "ELECTRONEURODIAGNOSTICS"
+  },
+  "ETP": {
+    "title": "ENGINEERING TECHNOLOGY: POWER",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "ETS": {
+    "title": "ENGINEERING TECHNOLOGY: SPECIALTY",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "EUH": {
+    "title": "EUROPEAN HISTORY",
+    "discipline": "HISTORY"
+  },
+  "EUS": {
+    "title": "EUROPEAN STUDIES",
+    "discipline": "EUROPEAN STUDIES"
+  },
+  "EVI": {
+    "title": "EDUCATION: VISUALLY IMPAIRED-BLIND",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EVR": {
+    "title": "ENVIRONMENTAL STUDIES",
+    "discipline": "ENVIRONMENTAL STUDIES"
+  },
+  "EVS": {
+    "title": "ENVIRONMENTAL SCIENCE",
+    "discipline": "ENVIRONMENTAL STUDIES"
+  },
+  "EVT": {
+    "title": "EDUCATION: VOCATIONAL/TECHNICAL",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "EXP": {
+    "title": "EXPERIMENTAL PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "FAD": {
+    "title": "HOME ECONOMICS: FAMILY DEVELOPMENT",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "FAM": {
+    "title": "FASHION MODELING",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "FAS": {
+    "title": "FISHERY & AQUACULTURAL SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "FES": {
+    "title": "FIRE AND EMERGENCY SERVICES",
+    "discipline": "FIRE SCIENCE"
+  },
+  "FFP": {
+    "title": "FIRE FIGHTING & PROTECTION",
+    "discipline": "FIRE SCIENCE"
+  },
+  "FIL": {
+    "title": "FILM",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "FIN": {
+    "title": "FINANCE",
+    "discipline": "FINANCE"
+  },
+  "FLE": {
+    "title": "FOREIGN LANGUAGE EDUCATION",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "FNR": {
+    "title": "FORESTRY & NATURAL RESOURCES",
+    "discipline": "AGRICULTURE"
+  },
+  "FOL": {
+    "title": "FOREIGN LANGUAGES",
+    "discipline": "FOREIGN LANGUAGES (MODERN AND CLASSICAL)"
+  },
+  "FOS": {
+    "title": "FOOD SCIENCE",
+    "discipline": "NUTRITION"
+  },
+  "FOT": {
+    "title": "FOREIGN LANGUAGES (IN TRANSLATION)",
+    "discipline": "FOREIGN LANGUAGES (MODERN AND CLASSICAL)"
+  },
+  "FOW": {
+    "title": "FOREIGN LANGUAGES, COMPARATIVE LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGES (MODERN AND CLASSICAL)"
+  },
+  "FRC": {
+    "title": "FRUIT CROPS",
+    "discipline": "AGRICULTURE"
+  },
+  "FRE": {
+    "title": "FRENCH LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "FRT": {
+    "title": "FRENCH CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "FRW": {
+    "title": "FRENCH LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "FSE": {
+    "title": "FUNERAL SERVICES",
+    "discipline": "FUNERAL SERVICES"
+  },
+  "FSS": {
+    "title": "FOOD SERVICE SYSTEMS",
+    "discipline": "NUTRITION"
+  },
+  "FYC": {
+    "title": "FAMILY, YOUTH AND COMMUNITY",
+    "discipline": "AGRICULTURE"
+  },
+  "GCO": {
+    "title": "GOLF COURSE OPERATIONS",
+    "discipline": "AGRICULTURE"
+  },
+  "GEA": {
+    "title": "GEOGRAPHY: REGIONAL AREAS",
+    "discipline": "GEOGRAPHY"
+  },
+  "GEB": {
+    "title": "GENERAL BUSINESS",
+    "discipline": "GENERAL BUSINESS"
+  },
+  "GEO": {
+    "title": "GEOGRAPHY: SYSTEMATIC",
+    "discipline": "GEOGRAPHY"
+  },
+  "GER": {
+    "title": "GERMAN",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "GET": {
+    "title": "GERMAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "GEW": {
+    "title": "GERMAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "GEY": {
+    "title": "GERONTOLOGY",
+    "discipline": "GERONTOLOGY"
+  },
+  "GFD": {
+    "title": "GEOPHYSICAL FLUID DYNAMICS",
+    "discipline": "INTERDISCIPLINARY SCIENCE/NATURAL SCIENCE"
+  },
+  "GIS": {
+    "title": "GEOGRAPHIC INFORMATION SYSTEMS",
+    "discipline": "GEOGRAPHY"
+  },
+  "GLS": {
+    "title": "GRADUATE LIBERAL STUDIES",
+    "discipline": "INTERDISCIPLINARY STUDIES AND HONORS"
+  },
+  "GLY": {
+    "title": "GEOLOGY",
+    "discipline": "GEOLOGY"
+  },
+  "GMS": {
+    "title": "GRADUATE MEDICAL SCIENCES",
+    "discipline": "MEDICINE"
+  },
+  "GMT": {
+    "title": "MODERN GREEK CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "GMW": {
+    "title": "MODERN GREEK LITERATURE (WRITINGS)",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "GRA": {
+    "title": "GRAPHIC ARTS",
+    "discipline": "GRAPHIC ARTS"
+  },
+  "GRE": {
+    "title": "CLASSICAL GREEK (LANGUAGE STUDY)",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "GRG": {
+    "title": "GRAPHIC ARTS - GRADUATE-LEVEL",
+    "discipline": "GRAPHIC ARTS"
+  },
+  "GRK": {
+    "title": "MODERN GREEK LANGUAGE",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "GRW": {
+    "title": "CLASSICAL GREEK LITERATURE (WRITINGS)",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "HAI": {
+    "title": "HAITIAN CREOLE LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HAT": {
+    "title": "HAITIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HBR": {
+    "title": "MODERN HEBREW LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HBT": {
+    "title": "MODERN HEBREW CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HCI": {
+    "title": "COLLEGE HCI",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "HCP": {
+    "title": "HEALTH-CARE PROVIDERS (ASSISTANTS)",
+    "discipline": "PRACTICAL NURSING/HEALTH CARE PROVIDERS"
+  },
+  "HCW": {
+    "title": "HAITIAN CREOLE LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HEB": {
+    "title": "ANCIENT HEBREW (DISCONTINUED - SEE HBR)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HEC": {
+    "title": "HOME ECONOMICS/COMMUNITY",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "HEE": {
+    "title": "HOME ECONOMICS EDUCATION",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "HEV": {
+    "title": "HOME ECONOMICS - VOCATIONAL",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "HFT": {
+    "title": "HOSPITALITY MANAGEMENT",
+    "discipline": "HOSPITALITY MANAGEMENT"
+  },
+  "HHD": {
+    "title": "HOUSING & HOME DESIGN",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "HIM": {
+    "title": "HEALTH INFORMATION MANAGEMENT",
+    "discipline": "HEALTH INFORMATION MANAGEMENT"
+  },
+  "HIN": {
+    "title": "HINDI LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HIS": {
+    "title": "GENERAL HISTORY AND HISTORIOGRAPHY",
+    "discipline": "HISTORY"
+  },
+  "HIT": {
+    "title": "HINDI CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HIW": {
+    "title": "HINDI LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HLP": {
+    "title": "HEALTH/LEISURE/PHYSICAL EDUCATION",
+    "discipline": "HEALTH/LEISURE/PHYSICAL EDUCATION"
+  },
+  "HME": {
+    "title": "HOME ECONOMICS: HOME MANAGEMENT AND EQUIPMENT",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "HMG": {
+    "title": "HOSPITALITY MANAGEMENT GRADUATE",
+    "discipline": "HOSPITALITY MANAGEMENT"
+  },
+  "HMV": {
+    "title": "HOSPITALITY MANAGEMENT, VOCATIONAL",
+    "discipline": "HOSPITALITY MANAGEMENT"
+  },
+  "HMW": {
+    "title": "MODERN HEBREW LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HNG": {
+    "title": "HUNGARIAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HNT": {
+    "title": "HUNGARIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HNW": {
+    "title": "HUNGARIAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "HOE": {
+    "title": "HOME ECONOMICS: GENERAL",
+    "discipline": "FAMILY AND CONSUMER SCIENCES"
+  },
+  "HOS": {
+    "title": "HORTICULTURAL SCIENCES",
+    "discipline": "ORNAMENTAL/HORTICULTURAL SCIENCE"
+  },
+  "HPS": {
+    "title": "HISTORY AND PHILOSOPHY OF SCIENCE",
+    "discipline": "HISTORY AND PHILOSOPHY OF SCIENCE"
+  },
+  "HRD": {
+    "title": "HUMAN RESOURCES DEVELOPMENT (DISCONTINUED--SEE FYC)",
+    "discipline": "AGRICULTURE"
+  },
+  "HSA": {
+    "title": "HEALTH SERVICES ADMINISTRATION",
+    "discipline": "HEALTH SCIENCES/RESOURCES"
+  },
+  "HSC": {
+    "title": "HEALTH SCIENCES",
+    "discipline": "HEALTH SCIENCES/RESOURCES"
+  },
+  "HUM": {
+    "title": "HUMANITIES",
+    "discipline": "HUMANITIES"
+  },
+  "HUN": {
+    "title": "HUMAN NUTRITION",
+    "discipline": "NUTRITION"
+  },
+  "HUS": {
+    "title": "HUMAN SERVICES",
+    "discipline": "HUMAN SERVICES"
+  },
+  "ICE": {
+    "title": "PHYSICAL EDUCATION JULIA OSMOND",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "ICM": {
+    "title": "INTERNATIONAL CONSTRUCTION MANAGEMENT",
+    "discipline": "BUILDING CONSTRUCTION"
+  },
+  "ICW": {
+    "title": "ICELANDIC LITERATURE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "IDC": {
+    "title": "INTERDISCIPLINARY COMPUTING",
+    "discipline": "COMPUTER SCIENCE & COMPUTING TECHNOLOGIES"
+  },
+  "IDD": {
+    "title": "INDUSTRIAL DESIGN",
+    "discipline": "INDUSTRIAL DESIGN"
+  },
+  "IDH": {
+    "title": "INTERDISCIPLINARY HONORS",
+    "discipline": "INTERDISCIPLINARY STUDIES AND HONORS"
+  },
+  "IDN": {
+    "title": "INDONESIAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "IDS": {
+    "title": "INTERDISCIPLINARY STUDIES",
+    "discipline": "INTERDISCIPLINARY STUDIES AND HONORS"
+  },
+  "IDT": {
+    "title": "INDONESIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "IDW": {
+    "title": "INDONESIAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "IEA": {
+    "title": "INDUSTRIAL EDUCATION APPLIED - DISCONTINUED",
+    "discipline": "APPLIED ACADEMICS FOR ADULT EDUCATION (EFF 8/1/2015)"
+  },
+  "IFS": {
+    "title": "INTERDISCIPLINARY FLORIDA STATE UNIVERSITY COURSES",
+    "discipline": "INTERDISCIPLINARY STUDIES AND HONORS"
+  },
+  "IHS": {
+    "title": "INTERDISCIPLINARY HEALTH SCIENCES",
+    "discipline": "INTERDISCIPLINARY HEALTH SCIENCES"
+  },
+  "IND": {
+    "title": "INTERIOR DESIGN",
+    "discipline": "INTERIOR DESIGN"
+  },
+  "INP": {
+    "title": "INDUSTRIAL AND APPLIED PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "INR": {
+    "title": "INTERNATIONAL RELATIONS",
+    "discipline": "POLITICAL SCIENCE"
+  },
+  "INS": {
+    "title": "INTERNATIONAL STUDIES",
+    "discipline": "INTERNATIONAL AND COMPARATIVE POLICY STUDIES"
+  },
+  "INT": {
+    "title": "SIGN LANGUAGE INTERPRETING",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "IPM": {
+    "title": "INTEGRATED PEST MANAGEMENT",
+    "discipline": "INTEGRATED PEST MANAGEMENT"
+  },
+  "ISC": {
+    "title": "INTERDISCIPLINARY SCIENCES",
+    "discipline": "INTERDISCIPLINARY SCIENCE/NATURAL SCIENCE"
+  },
+  "ISM": {
+    "title": "INFORMATION SYSTEMS MANAGEMENT",
+    "discipline": "MANAGEMENT"
+  },
+  "ISS": {
+    "title": "INTERDISCIPLINARY SOCIAL SCIENCES",
+    "discipline": "INTERDISCIPLINARY SOCIAL SCIENCES"
+  },
+  "ITA": {
+    "title": "ITALIAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ITT": {
+    "title": "ITALIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ITW": {
+    "title": "ITALIAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "IUF": {
+    "title": "INTERDISCIPLINARY UNIVERSITY OF FLORIDA COURSES",
+    "discipline": "INTERDISCIPLINARY STUDIES AND HONORS"
+  },
+  "JAM": {
+    "title": "JAMAICAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "JMT": {
+    "title": "JAMAICAN CULTURE IN TRANSLATION",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "JMW": {
+    "title": "JAMAICAN LITERATURE AND WRITING",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "JOU": {
+    "title": "JOURNALISM",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "JPN": {
+    "title": "JAPANESE LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "JPT": {
+    "title": "JAPANESE CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "JPW": {
+    "title": "JAPANESE LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "JRM": {
+    "title": "JURIS MASTER",
+    "discipline": "LATIN AMERICAN STUDIES"
+  },
+  "JST": {
+    "title": "JEWISH/JUDAIC STUDIES",
+    "discipline": "JEWISH/JUDAIC STUDIES"
+  },
+  "KEY": {
+    "title": "COLLEGE KEYC",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "KOR": {
+    "title": "KOREAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "KOT": {
+    "title": "KOREAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "KOW": {
+    "title": "KOREAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "LAA": {
+    "title": "LANDSCAPE ARCHITECTURE",
+    "discipline": "LANDSCAPE ARCHITECTURE"
+  },
+  "LAE": {
+    "title": "LANGUAGE ARTS AND ENGLISH EDUCATION",
+    "discipline": "LANGUAGE ARTS AND ENGLISH EDUCATION"
+  },
+  "LAH": {
+    "title": "LATIN AMERICAN HISTORY",
+    "discipline": "HISTORY"
+  },
+  "LAS": {
+    "title": "LATIN AMERICAN STUDIES",
+    "discipline": "LATIN AMERICAN STUDIES"
+  },
+  "LAT": {
+    "title": "LATIN (LANGUAGE STUDY)",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "LAW": {
+    "title": "- 041",
+    "discipline": "LATIN AMERICAN STUDIES"
+  },
+  "LBS": {
+    "title": "LABOR STUDIES",
+    "discipline": "LABOR STUDIES"
+  },
+  "LDE": {
+    "title": "LANDSCAPE DESIGN",
+    "discipline": "ORNAMENTAL/HORTICULTURAL SCIENCE"
+  },
+  "LDR": {
+    "title": "LEADERSHIP STUDIES",
+    "discipline": "LEADERSHIP STUDIES"
+  },
+  "LEI": {
+    "title": "LEISURE",
+    "discipline": "LEISURE"
+  },
+  "LGL": {
+    "title": "LINGALA LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "LGT": {
+    "title": "LINGALAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "LGW": {
+    "title": "LINGALAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "LIN": {
+    "title": "LINGUISTICS",
+    "discipline": "LINGUISTICS"
+  },
+  "LIS": {
+    "title": "LIBRARY AND INFORMATION STUDIES",
+    "discipline": "LIBRARY AND INFORMATION STUDIES"
+  },
+  "LIT": {
+    "title": "LITERATURE",
+    "discipline": "ENGLISH LANGUAGE AND LITERATURE"
+  },
+  "LNW": {
+    "title": "LATIN LITERATURE (WRITINGS)",
+    "discipline": "CLASSICAL LANGUAGES AND LITERATURE"
+  },
+  "MAA": {
+    "title": "MATHEMATICS - ANALYSIS",
+    "discipline": "MATHEMATICS"
+  },
+  "MAC": {
+    "title": "MATHEMATICS - CALCULUS AND PRECALCULUS",
+    "discipline": "MATHEMATICS"
+  },
+  "MAD": {
+    "title": "MATHEMATICS - DISCRETE",
+    "discipline": "MATHEMATICS"
+  },
+  "MAE": {
+    "title": "MATHEMATICS EDUCATION",
+    "discipline": "MATHEMATICS EDUCATION"
+  },
+  "MAG": {
+    "title": "MECHANIZED AGRICULTURE (DISCONTINUED--SEE AOM)",
+    "discipline": "AGRICULTURE"
+  },
+  "MAN": {
+    "title": "MANAGEMENT",
+    "discipline": "MANAGEMENT"
+  },
+  "MAP": {
+    "title": "MATHEMATICS APPLIED",
+    "discipline": "MATHEMATICS"
+  },
+  "MAR": {
+    "title": "MARKETING",
+    "discipline": "MARKETING"
+  },
+  "MAS": {
+    "title": "MATHEMATICS - ALGEBRAIC STRUCTURES",
+    "discipline": "MATHEMATICS"
+  },
+  "MAT": {
+    "title": "MATHEMATICS",
+    "discipline": "MATHEMATICS"
+  },
+  "MCB": {
+    "title": "MICROBIOLOGY",
+    "discipline": "BIOLOGICAL SCIENCE"
+  },
+  "MCC": {
+    "title": "SPECIAL TOPICS IN MASS COMMUNICATION",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "MDC": {
+    "title": "MEDICINE CLINICAL CLERKSHIPS",
+    "discipline": "MEDICINE"
+  },
+  "MDE": {
+    "title": "MEDICAL ELECTIVES",
+    "discipline": "MEDICINE"
+  },
+  "MDI": {
+    "title": "MEDICAL INTERNSHIPS",
+    "discipline": "MEDICINE"
+  },
+  "MDR": {
+    "title": "MEDICAL RESEARCH",
+    "discipline": "MEDICINE"
+  },
+  "MDS": {
+    "title": "MEDICAL SELECTIVES",
+    "discipline": "MEDICINE"
+  },
+  "MDT": {
+    "title": "SPECIAL TOPICS, ELECTED TOPICS",
+    "discipline": "MEDICINE"
+  },
+  "MDU": {
+    "title": "UNDERGRADUATE MEDICINE COURSES",
+    "discipline": "MEDICINE"
+  },
+  "MDW": {
+    "title": "MIDWIFERY",
+    "discipline": "MIDWIFERY"
+  },
+  "MDX": {
+    "title": "MEDICAL EXTERNSHIPS",
+    "discipline": "MEDICINE"
+  },
+  "MEA": {
+    "title": "MEDICAL ASSISTING TECHNOLOGY",
+    "discipline": "MEDICAL ASSISTING"
+  },
+  "MEL": {
+    "title": "MEDICAL SCIENCE ELECTIVES (DISCONTINUED 8/1/2013)",
+    "discipline": "MEDICINE"
+  },
+  "MEM": {
+    "title": "MEDIEVAL AND EARLY MODERN STUDIES",
+    "discipline": "MEDIEVAL AND EARLY MODERN STUDIES"
+  },
+  "MET": {
+    "title": "METEOROLOGY",
+    "discipline": "METEOROLOGY"
+  },
+  "MGF": {
+    "title": "MATHEMATICS - GENERAL AND FINITE",
+    "discipline": "MATHEMATICS"
+  },
+  "MHF": {
+    "title": "MATHEMATICS - HISTORY AND FOUNDATIONS",
+    "discipline": "MATHEMATICS"
+  },
+  "MHS": {
+    "title": "MENTAL HEALTH SERVICES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "MIS": {
+    "title": "MILITARY SCIENCE",
+    "discipline": "MILITARY SCIENCE"
+  },
+  "MKA": {
+    "title": "MARKETING APPLICATIONS",
+    "discipline": "MARKETING"
+  },
+  "MLS": {
+    "title": "MEDICAL LABORATORY SCIENCE",
+    "discipline": "MEDICAL LABORATORY SCIENCE"
+  },
+  "MLT": {
+    "title": "MEDICAL LABORATORY TECHNOLOGY",
+    "discipline": "MEDICAL LABORATORY SCIENCE"
+  },
+  "MMC": {
+    "title": "MASS MEDIA COMMUNICATION",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "MNA": {
+    "title": "MANAGEMENT: APPLIED",
+    "discipline": "MANAGEMENT"
+  },
+  "MOB": {
+    "title": "MOLECULAR BIOPHYSICS",
+    "discipline": "INTERDISCIPLINARY SCIENCE/NATURAL SCIENCE"
+  },
+  "MOM": {
+    "title": "MOTORCYCLE MECHANICS",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "MRE": {
+    "title": "MEDICAL RECORDS (DISCONTINUED--SEE HIM)",
+    "discipline": "HEALTH INFORMATION MANAGEMENT"
+  },
+  "MSL": {
+    "title": "MILITARY SCIENCE AND LEADERSHIP",
+    "discipline": "MILITARY SCIENCE"
+  },
+  "MSS": {
+    "title": "MASSAGE",
+    "discipline": "MASSAGE"
+  },
+  "MTB": {
+    "title": "MATHEMATICS - TECHNICAL AND BUSINESS",
+    "discipline": "MATHEMATICS"
+  },
+  "MTE": {
+    "title": "MARINE TECHNOLOGY AND NAUTICAL SCIENCE",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "MTG": {
+    "title": "MATHEMATICS - TOPOLOGY AND GEOMETRY",
+    "discipline": "MATHEMATICS"
+  },
+  "MTS": {
+    "title": "MEDICAL TRANSCRIPTION SCIENCE",
+    "discipline": "HEALTH INFORMATION MANAGEMENT"
+  },
+  "MUC": {
+    "title": "MUSIC: COMPOSITION",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUE": {
+    "title": "MUSIC EDUCATION",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUG": {
+    "title": "MUSIC: CONDUCTING",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUH": {
+    "title": "MUSIC: HISTORY/MUSICOLOGY",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUL": {
+    "title": "MUSIC LITERATURE",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUM": {
+    "title": "MUSIC: COMMERCIAL/MANAGEMENT/ADMINISTRATION",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUN": {
+    "title": "MUSIC ENSEMBLES",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUO": {
+    "title": "MUSIC: OPERA/MUSICAL THEATRE",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUR": {
+    "title": "MUSIC: CHURCH",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUS": {
+    "title": "MUSIC",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUT": {
+    "title": "MUSIC: THEORY",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MUY": {
+    "title": "MUSIC: THERAPY",
+    "discipline": "MUSIC - OTHER THAN APPLIED"
+  },
+  "MVB": {
+    "title": "APPLIED MUSIC: BRASSES",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVH": {
+    "title": "HISTORICAL INSTRUMENTS",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVJ": {
+    "title": "APPLIED MUSIC: JAZZ",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVK": {
+    "title": "APPLIED MUSIC: KEYBOARD",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVO": {
+    "title": "APPLIED MUSIC: OTHER",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVP": {
+    "title": "APPLIED MUSIC: PERCUSSION",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVS": {
+    "title": "APPLIED MUSIC: STRINGS",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVV": {
+    "title": "APPLIED MUSIC: VOICE",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "MVW": {
+    "title": "APPLIED MUSIC: WOODWINDS",
+    "discipline": "MUSIC - APPLIED"
+  },
+  "NEM": {
+    "title": "NEMATOLOGY",
+    "discipline": "AGRICULTURE"
+  },
+  "NEW": {
+    "title": "PROFESSIONS TECHNICAL INSTITUTE NPTI",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "NGR": {
+    "title": "NURSING, GRADUATE",
+    "discipline": "NURSING"
+  },
+  "NMT": {
+    "title": "NUCLEAR MEDICINE TECHNOLOGY",
+    "discipline": "MEDICAL IMAGING AND RADIATION THERAPY"
+  },
+  "NSC": {
+    "title": "NAVAL SCIENCE",
+    "discipline": "MILITARY SCIENCE"
+  },
+  "NSG": {
+    "title": "NURSING, GENERIC UNDERGRADUATE",
+    "discipline": "NURSING"
+  },
+  "NSP": {
+    "title": "NURSING: SPECIAL",
+    "discipline": "NURSING"
+  },
+  "NUR": {
+    "title": "NURSING, GENERIC UNDERGRADUATE",
+    "discipline": "NURSING"
+  },
+  "OCA": {
+    "title": "OFFICE COMPUTER APPLICATIONS",
+    "discipline": "OFFICE SYSTEMS TECHNOLOGY"
+  },
+  "OCB": {
+    "title": "BIOLOGICAL OCEANOGRAPHY",
+    "discipline": "OCEANOGRAPHY/OCEAN ENGINEERING"
+  },
+  "OCC": {
+    "title": "CHEMICAL OCEANOGRAPHY",
+    "discipline": "OCEANOGRAPHY/OCEAN ENGINEERING"
+  },
+  "OCE": {
+    "title": "GENERAL OCEANOGRAPHY",
+    "discipline": "OCEANOGRAPHY/OCEAN ENGINEERING"
+  },
+  "OCG": {
+    "title": "GEOLOGICAL OCEANOGRAPHY",
+    "discipline": "OCEANOGRAPHY/OCEAN ENGINEERING"
+  },
+  "OCP": {
+    "title": "PHYSICAL OCEANOGRAPHY",
+    "discipline": "OCEANOGRAPHY/OCEAN ENGINEERING"
+  },
+  "OFT": {
+    "title": "OCCUPATIONAL OFFICE TECHNOLOGY (DISCONTINUED)",
+    "discipline": "OFFICE SYSTEMS TECHNOLOGY"
+  },
+  "OPT": {
+    "title": "OPHTHALMIC TECHNOLOGY/VISION CARE",
+    "discipline": "OPHTHALMIC TECHNOLOGY/VISION CARE"
+  },
+  "ORH": {
+    "title": "ORNAMENTAL HORTICULTURE",
+    "discipline": "ORNAMENTAL/HORTICULTURAL SCIENCE"
+  },
+  "ORI": {
+    "title": "ORAL INTERPRETATION",
+    "discipline": "ORAL INTERPRETATION"
+  },
+  "ORV": {
+    "title": "ORNAMENTAL HORTICULTURE (VARIABLE PACED)",
+    "discipline": "ORNAMENTAL/HORTICULTURAL SCIENCE"
+  },
+  "OSE": {
+    "title": "OPTICAL SCIENCE AND ENGINEERING",
+    "discipline": "ELECTRICAL ENGINEERING"
+  },
+  "OST": {
+    "title": "OFFICE SYSTEMS TECHNOLOGY",
+    "discipline": "OFFICE SYSTEMS TECHNOLOGY"
+  },
+  "OTA": {
+    "title": "OFFICE TECHNOLOGY APPLICATIONS",
+    "discipline": "OFFICE SYSTEMS TECHNOLOGY"
+  },
+  "OTH": {
+    "title": "OCCUPATIONAL THERAPY",
+    "discipline": "OCCUPATIONAL THERAPY"
+  },
+  "PAD": {
+    "title": "PUBLIC ADMINISTRATION",
+    "discipline": "PUBLIC ADMINISTRATION"
+  },
+  "PAF": {
+    "title": "PUBLIC AFFAIRS",
+    "discipline": "PUBLIC ADMINISTRATION"
+  },
+  "PAS": {
+    "title": "PHYSICIAN ASSISTANT",
+    "discipline": "PHYSICIAN ASSISTANT"
+  },
+  "PAX": {
+    "title": "PEACE STUDIES",
+    "discipline": "PEACE STUDIES"
+  },
+  "PAZ": {
+    "title": "PARKS AND ZOOS",
+    "discipline": "AGRICULTURE"
+  },
+  "PCB": {
+    "title": "PROCESS BIOLOGY (CELL/MOLECULAR/ECOLOGY/GENETICS/PHYSIOLOGY)",
+    "discipline": "BIOLOGICAL SCIENCE"
+  },
+  "PCO": {
+    "title": "PSYCHOLOGY FOR COUNSELING",
+    "discipline": "PSYCHOLOGY"
+  },
+  "PEL": {
+    "title": "PHYS. EDU. ACTS - (GEN.)-OBJECT CENTRD, LAND",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PEM": {
+    "title": "PHYS. EDU. ACTS. (GEN.)-PERFOMR. CENTRD., LAND",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PEN": {
+    "title": "PHYSICAL EDU. ACTIVITIES (GEN.)-WATER, SNOW, ICE",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PEO": {
+    "title": "PHYS. EDU. ACTS. (PROFNL.)-OBJECT CENTRD., LAND",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PEP": {
+    "title": "PHYS. EDU. ACTS. (PROFNL.)-PERFMR. CENTRD., LAND",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PEQ": {
+    "title": "PHYS. EDU. ACTS. (PROFNL.) - WATER, SNOW, ICE",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PET": {
+    "title": "PHYSICAL EDUCATION THEORY",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "PGY": {
+    "title": "PHOTOGRAPHY",
+    "discipline": "PHOTOGRAPHY"
+  },
+  "PHA": {
+    "title": "PHARMACY",
+    "discipline": "PHARMACY"
+  },
+  "PHC": {
+    "title": "PUBLIC HEALTH CONCENTRATION",
+    "discipline": "HEALTH SCIENCES/RESOURCES"
+  },
+  "PHH": {
+    "title": "PHILOSOPHY, HISTORY OF",
+    "discipline": "PHILOSOPHY"
+  },
+  "PHI": {
+    "title": "PHILOSOPHY",
+    "discipline": "PHILOSOPHY"
+  },
+  "PHM": {
+    "title": "PHILOSOPHY OF MAN AND SOCIETY",
+    "discipline": "PHILOSOPHY"
+  },
+  "PHP": {
+    "title": "PHILOSOPHERS AND SCHOOLS",
+    "discipline": "PHILOSOPHY"
+  },
+  "PHT": {
+    "title": "PHYSICAL THERAPY",
+    "discipline": "PHYSICAL THERAPY"
+  },
+  "PHY": {
+    "title": "PHYSICS",
+    "discipline": "PHYSICS"
+  },
+  "PHZ": {
+    "title": "PHYSICS (CONTINUED)",
+    "discipline": "PHYSICS"
+  },
+  "PKG": {
+    "title": "PACKAGING SCIENCES",
+    "discipline": "AGRICULTURE"
+  },
+  "PLA": {
+    "title": "PARALEGAL/LEGAL ASSISTANT/LEGAL ADMINISTRATION",
+    "discipline": "PARALEGAL/LEGAL ASSISTING"
+  },
+  "PLP": {
+    "title": "PLANT PATHOLOGY",
+    "discipline": "AGRICULTURE"
+  },
+  "PLS": {
+    "title": "PLANT SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "PLT": {
+    "title": "POLISH CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PLW": {
+    "title": "POLISH LITERATURE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PMA": {
+    "title": "PEST MANAGEMENT",
+    "discipline": "AGRICULTURE"
+  },
+  "PMT": {
+    "title": "PRECISION METALS TECHNOLOGY",
+    "discipline": "PRECISION METALS TECHNOLOGY"
+  },
+  "POL": {
+    "title": "POLISH LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "POR": {
+    "title": "PORTUGUESE LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "POS": {
+    "title": "POLITICAL SCIENCE",
+    "discipline": "POLITICAL SCIENCE"
+  },
+  "POT": {
+    "title": "POLITICAL THEORY",
+    "discipline": "POLITICAL SCIENCE"
+  },
+  "POW": {
+    "title": "PORTUGUESE LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PPE": {
+    "title": "PERSONALITY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "PRN": {
+    "title": "PRACTICAL NURSING",
+    "discipline": "PRACTICAL NURSING/HEALTH CARE PROVIDERS"
+  },
+  "PRO": {
+    "title": "PROSTHETICS/ORTHOTICS",
+    "discipline": "PROSTHETICS AND ORTHOTICS"
+  },
+  "PRT": {
+    "title": "PORTUGUESE CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PSB": {
+    "title": "PSYCHOBIOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "PSC": {
+    "title": "PHYSICAL SCIENCES",
+    "discipline": "PHYSICS"
+  },
+  "PSE": {
+    "title": "POULTRY SCIENCE (DISCONTINUED--SEE ANS)",
+    "discipline": "AGRICULTURE"
+  },
+  "PSG": {
+    "title": "POLYSOMNOGRAPHY",
+    "discipline": "RESPIRATORY CARE"
+  },
+  "PSN": {
+    "title": "PERSIAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PST": {
+    "title": "PERSIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PSW": {
+    "title": "PERSIAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "PSY": {
+    "title": "PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "PTA": {
+    "title": "PRECISION TECHNOLOGY APPRENTICESHIPS",
+    "discipline": "PRECISION METALS TECHNOLOGY"
+  },
+  "PTN": {
+    "title": "PHARMACY TECHNICIAN",
+    "discipline": "PHARMACY"
+  },
+  "PUP": {
+    "title": "PUBLIC POLICY",
+    "discipline": "POLITICAL SCIENCE"
+  },
+  "PUR": {
+    "title": "PUBLIC RELATIONS",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "QMB": {
+    "title": "QUANTITATIVE METHODS IN BUSINESS",
+    "discipline": "QUANTITATIVE METHODS IN BUSINESS"
+  },
+  "RAT": {
+    "title": "RADIATION THERAPY",
+    "discipline": "MEDICAL IMAGING AND RADIATION THERAPY"
+  },
+  "RCS": {
+    "title": "REHABILITATION COUNSELING SERVICES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "REA": {
+    "title": "READING",
+    "discipline": "READING"
+  },
+  "RED": {
+    "title": "READING EDUCATION",
+    "discipline": "LANGUAGE ARTS AND ENGLISH EDUCATION"
+  },
+  "REE": {
+    "title": "REAL ESTATE",
+    "discipline": "REAL ESTATE"
+  },
+  "REL": {
+    "title": "RELIGION UNDERGRADUATE",
+    "discipline": "RELIGION"
+  },
+  "RET": {
+    "title": "RESPIRATORY CARE",
+    "discipline": "RESPIRATORY CARE"
+  },
+  "RHT": {
+    "title": "RADIATION HEALTH/RADIATION PROTECTION TECHNOLOGY",
+    "discipline": "MEDICAL IMAGING AND RADIATION THERAPY"
+  },
+  "RLG": {
+    "title": "RELIGION - GRADUATE",
+    "discipline": "RELIGION"
+  },
+  "RMI": {
+    "title": "RISK MANAGEMENT & INSURANCE",
+    "discipline": "RISK MANAGEMENT AND INSURANCE"
+  },
+  "ROT": {
+    "title": "REACTOR OPERATOR TECHNOLOGY",
+    "discipline": "MEDICAL IMAGING AND RADIATION THERAPY"
+  },
+  "RSD": {
+    "title": "REHABILITATION SCIENCE DOCTORATE",
+    "discipline": "INTERDISCIPLINARY HEALTH SCIENCES"
+  },
+  "RTE": {
+    "title": "RADIOLOGIC TECHNOLOGY",
+    "discipline": "MEDICAL IMAGING AND RADIATION THERAPY"
+  },
+  "RTT": {
+    "title": "RADIO/TELEVISION TECHNOLOGY",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "RTV": {
+    "title": "RADIO-TELEVISION",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "RUS": {
+    "title": "RUSSIAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "RUT": {
+    "title": "RUSSIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "RUW": {
+    "title": "RUSSIAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SAL": {
+    "title": "SOUTH ASIAN LANGUAGES",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SAN": {
+    "title": "IGNACIO COLLEGE SIUN",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "SBM": {
+    "title": "SMALL BUSINESS MGMT: OCCUPATIONAL/TECHNICAL VARIABLE PACED",
+    "discipline": "MANAGEMENT"
+  },
+  "SCA": {
+    "title": "SCANDINAVIAN LANGUAGES",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SCC": {
+    "title": "SECURITY",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "SCE": {
+    "title": "SCIENCE EDUCATION",
+    "discipline": "SCIENCE EDUCATION"
+  },
+  "SCM": {
+    "title": "SUPPLY CHAIN MANAGEMENT",
+    "discipline": "TRANSPORTATION AND LOGISTICS"
+  },
+  "SCT": {
+    "title": "SCANDINAVIAN CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SCW": {
+    "title": "SERBO-CROATIAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SCY": {
+    "title": "SECURITY",
+    "discipline": "CRIMINAL JUSTICE"
+  },
+  "SDS": {
+    "title": "STUDENT DEVELOPMENT SERVICES",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "SEC": {
+    "title": "SERBO-CROATIAN LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SED": {
+    "title": "SPEECH EDUCATION",
+    "discipline": "SPEECH COMMUNICATION"
+  },
+  "SER": {
+    "title": "SMALL ENGINE MECHANICS",
+    "discipline": "MECHANICAL ENGINEERING"
+  },
+  "SHO": {
+    "title": "SHONA LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SHT": {
+    "title": "SHONA CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SLA": {
+    "title": "SECOND LANGUAGE ACQUISITION/INSTRUCTIONAL TECHNOLOGY",
+    "discipline": "ENGLISH AS A SECOND LANGUAGE/TEACHING ESL"
+  },
+  "SLL": {
+    "title": "SLAVIC LANGUAGES",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SLS": {
+    "title": "STUDENT LIFE SKILLS (LEARNING)",
+    "discipline": "STUDENT LIFE SKILLS"
+  },
+  "SLT": {
+    "title": "SLAVIC CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SLW": {
+    "title": "SLAVIC LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SMT": {
+    "title": "SCIENCE OR MATHEMATICS TEACHING",
+    "discipline": "SCIENCE AND MATHEMATICS EDUCATION"
+  },
+  "SNW": {
+    "title": "SCANDINAVIAN LITERATURE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SON": {
+    "title": "SONOGRAPHY",
+    "discipline": "MEDICAL IMAGING AND RADIATION THERAPY"
+  },
+  "SOP": {
+    "title": "SOCIAL PSYCHOLOGY",
+    "discipline": "PSYCHOLOGY"
+  },
+  "SOS": {
+    "title": "SOIL SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "SOW": {
+    "title": "SOCIAL WORK",
+    "discipline": "SOCIAL WORK"
+  },
+  "SPA": {
+    "title": "SPEECH PATHOLOGY AND AUDIOLOGY",
+    "discipline": "SPEECH PATHOLOGY & AUDIOLOGY"
+  },
+  "SPB": {
+    "title": "SPORTS BUSINESS",
+    "discipline": "GENERAL BUSINESS"
+  },
+  "SPC": {
+    "title": "SPEECH COMMUNICATION",
+    "discipline": "SPEECH COMMUNICATION"
+  },
+  "SPM": {
+    "title": "SPORTS MANAGEMENT",
+    "discipline": "PHYSICAL EDUCATION"
+  },
+  "SPN": {
+    "title": "SPANISH LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SPS": {
+    "title": "SCHOOL PSYCHOLOGY",
+    "discipline": "EDUCATION SYSTEMS"
+  },
+  "SPT": {
+    "title": "SPANISH CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SPW": {
+    "title": "SPANISH LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SRK": {
+    "title": "SANSKRIT LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SRT": {
+    "title": "SANSKRIT CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SRW": {
+    "title": "SANSKRIT LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SSA": {
+    "title": "SUB-SAHARAN AFRICAN LANGUAGES",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SSE": {
+    "title": "SOCIAL STUDIES EDUCATION",
+    "discipline": "SOCIAL STUDIES EDUCATION"
+  },
+  "SST": {
+    "title": "SUB-SAHARAN AFRICAN CULTURE IN TRANSLATION OR TRANS. SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SSW": {
+    "title": "SUB-SAHARAN AFRICAN LITERATURE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "STA": {
+    "title": "STATISTICS",
+    "discipline": "STATISTICS"
+  },
+  "STS": {
+    "title": "SURGICAL TECHNOLOGY STUDIES",
+    "discipline": "SURGICAL TECHNOLOGY STUDIES"
+  },
+  "SUR": {
+    "title": "SURVEYING & RELATED AREAS",
+    "discipline": "SURVEYING & MAPPING"
+  },
+  "SVL": {
+    "title": "SAVINGS AND LOAN (IFE COURSES ONLY)",
+    "discipline": "BANKING"
+  },
+  "SWA": {
+    "title": "SWAHILI LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SWS": {
+    "title": "SOIL AND WATER SCIENCES",
+    "discipline": "AGRICULTURE"
+  },
+  "SWT": {
+    "title": "SWAHILI CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SWW": {
+    "title": "SWAHILI LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "SYA": {
+    "title": "SOCIOLOGICAL ANALYSIS",
+    "discipline": "SOCIOLOGY"
+  },
+  "SYD": {
+    "title": "SOCIOLOGY OF DEMOGRAPHY/AREA STUDIES/SOCIOLOGICAL MINORITIES",
+    "discipline": "SOCIOLOGY"
+  },
+  "SYG": {
+    "title": "SOCIOLOGY, GENERAL",
+    "discipline": "SOCIOLOGY"
+  },
+  "SYO": {
+    "title": "SOCIAL ORGANIZATION",
+    "discipline": "SOCIOLOGY"
+  },
+  "SYP": {
+    "title": "SOCIAL PROCESSES",
+    "discipline": "SOCIOLOGY"
+  },
+  "TAR": {
+    "title": "TECHNICAL ARCHITECTURE",
+    "discipline": "ARCHITECTURE"
+  },
+  "TAX": {
+    "title": "TAXATION",
+    "discipline": "ACCOUNTING"
+  },
+  "TCN": {
+    "title": "TELECOMMUNICATIONS",
+    "discipline": "ELECTRICAL ENGINEERING"
+  },
+  "TDR": {
+    "title": "TECHNICAL DRAFTING (PSAV LEVEL)",
+    "discipline": "ENGINEERING TECHNOLOGIES"
+  },
+  "TPA": {
+    "title": "THEATRE PRODUCTION AND ADMINISTRATION",
+    "discipline": "THEATRE ARTS"
+  },
+  "TPP": {
+    "title": "THEATRE PERFORMANCE AND PERFORMANCE TRAINING",
+    "discipline": "THEATRE ARTS"
+  },
+  "TRA": {
+    "title": "TRANSPORTATION AND LOGISTICS",
+    "discipline": "TRANSPORTATION AND LOGISTICS"
+  },
+  "TSL": {
+    "title": "TEACHING ENGLISH AS A SECOND LANGUAGE",
+    "discipline": "ENGLISH AS A SECOND LANGUAGE/TEACHING ESL"
+  },
+  "TTE": {
+    "title": "TRANSPORTATION ENGINEERING",
+    "discipline": "CIVIL/ENVIRONMENTAL ENGINEERING"
+  },
+  "TUR": {
+    "title": "TURKISH LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "TUT": {
+    "title": "TURKISH CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "TUW": {
+    "title": "TURKISH LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "URP": {
+    "title": "URBAN AND REGIONAL PLANNING",
+    "discipline": "URBAN AND REGIONAL PLANNING"
+  },
+  "URS": {
+    "title": "URBAN AND REGIONAL STUDIES",
+    "discipline": "URBAN AND REGIONAL PLANNING"
+  },
+  "VAR": {
+    "title": "VARIABLE-PACED ARCHITECTURE",
+    "discipline": "ARCHITECTURE"
+  },
+  "VEC": {
+    "title": "VEGETABLE CROPS",
+    "discipline": "AGRICULTURE"
+  },
+  "VEM": {
+    "title": "VETERINARY MEDICINE PROFESSIONAL",
+    "discipline": "VETERINARY MEDICINE"
+  },
+  "VIC": {
+    "title": "VISUAL COMMUNICATION",
+    "discipline": "MASS COMMUNICATION"
+  },
+  "VME": {
+    "title": "VETERINARY MEDICINE GRADUATE",
+    "discipline": "VETERINARY MEDICINE"
+  },
+  "VPI": {
+    "title": "VOCATIONAL PREPARATORY INSTRUCTION (DISC 8/1/2015)",
+    "discipline": "APPLIED ACADEMICS FOR ADULT EDUCATION (EFF 8/1/2015)"
+  },
+  "VTN": {
+    "title": "VIETNAMESE LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "VTT": {
+    "title": "VIETNAMESE CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "VTW": {
+    "title": "VIETNAMESE LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "WCL": {
+    "title": "WARD CLERK",
+    "discipline": "HEALTH INFORMATION MANAGEMENT"
+  },
+  "WDS": {
+    "title": "WEED SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "WIS": {
+    "title": "WILDLIFE SCIENCE",
+    "discipline": "AGRICULTURE"
+  },
+  "WOH": {
+    "title": "WORLD HISTORY",
+    "discipline": "HISTORY"
+  },
+  "WOL": {
+    "title": "WOLOF LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "WOT": {
+    "title": "WOLOF CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "WOW": {
+    "title": "WOLOF LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "WST": {
+    "title": "WOMEN'S STUDIES",
+    "discipline": "WOMEN'S AND GENDER STUDIES"
+  },
+  "XHO": {
+    "title": "XHOSA LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "XHT": {
+    "title": "XHOSA CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "XHW": {
+    "title": "XHOSAN LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "YOR": {
+    "title": "YORUBA LANGUAGE",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "YOT": {
+    "title": "YORUBA CULTURE IN TRANSLATION OR TRANSLATION SKILLS",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "YRW": {
+    "title": "YORUBA LITERATURE (WRITINGS)",
+    "discipline": "FOREIGN LANGUAGE EDUCATION"
+  },
+  "ZOO": {
+    "title": "ZOOLOGY",
+    "discipline": "BIOLOGICAL SCIENCE"
+  }
+}

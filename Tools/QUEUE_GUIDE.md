@@ -108,6 +108,34 @@ EEL4580,Wireless and Mobile Communications,,queued,910,2026-05-08T00:00:00Z,,,Fa
 
 ---
 
+## Visitor Guide Requests → the queue (`import-requests`)
+
+Since 2026-09-03 visitors can **request a curriculum guide** on the site (a "Request a Curriculum
+Guide" button on every course page without a guide, the redirect from a missing `/courses/{ID}/guide`
+URL, and the empty-search message → `/request-guide`). Each request records the course number, title,
+the **school where it is offered**, an optional reason and email, and a hashed IP. The admin console
+ranks them by demand at `/admin/guide-requests` (CSV download there too).
+
+Pull the open requests into this queue with:
+
+```powershell
+python queue_mgr.py import-requests                 # needs REPO_ADMIN_EMAIL / REPO_ADMIN_PASSWORD (.env)
+python queue_mgr.py import-requests --min-count 2   # only courses asked for twice or more
+python queue_mgr.py import-requests --mark-queued   # also mark them Queued on the site
+```
+
+- Rows are added with status `queued` and **priority `500 − 10 × request_count`** (floor 1) — a
+  single request outranks every catalog-derived row (those sit at `1000 − num_inst`), and more
+  requests rank higher. `num_inst` is filled from the master CSV when the course is known.
+- `notes` records the request count and the schools, and flags courses **not in the taxonomy**
+  (`NOT IN TAXONOMY, verify`) — check those against the SCNS handbook before drafting.
+- Courses already in the queue (any status) are left alone; courses that already have a guide are
+  skipped. Requests whose guide gets published are closed on the site automatically.
+- Data source: `GET /api/v1/guide-requests?status=open` (admin JWT), one row per course with
+  `courseId`, `courseTitle`, `institutions[]`, `requestCount`, `firstRequestedUtc`,
+  `lastRequestedUtc`, `inTaxonomy`, `hasGuide`. Triage: `PATCH /api/v1/guide-requests/{ID}/status`
+  with `{"status": "Queued|Published|Declined|Open", "notes": "…"}`.
+
 ## Managing the Queue
 
 ### Adding a new course

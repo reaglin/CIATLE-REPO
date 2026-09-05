@@ -5,7 +5,7 @@
 # Run from the repo root:
 #   .\Deployment\deploy-update.ps1
 #
-# You will be prompted for the server password by ssh and scp (three times
+# You will be prompted for the server password by ssh and scp (four times
 # total, unless you have key auth set up).
 
 [CmdletBinding()]
@@ -13,8 +13,10 @@ param(
     [string]$RemoteUser = "root",
     [string]$RemoteHost = "129.121.101.162",
     [string]$AppDir     = "/opt/presemaker-repo/app",
+    [string]$EtcDir     = "/etc/presemaker-repo",
     [string]$ReleaseDir = "$env:TEMP\presemaker-release",
-    [switch]$SkipMigrations
+    [switch]$SkipMigrations,
+    [switch]$SkipTaxonomy
 )
 
 $ErrorActionPreference = "Stop"
@@ -62,6 +64,35 @@ Invoke-Step "Copying binaries to the server" {
     scp -r "$ReleaseDir\." "${target}:$AppDir/"
 }
 
+# 3b. Copy taxonomy.json to the config directory -----------------------------
+# Production reads Taxonomy:ConfigPath = /etc/presemaker-repo/taxonomy.json (see
+# appsettings.json), NOT the copy that ships in the publish output -- only
+# appsettings.Development.json points at Data/Seed/taxonomy.json. Copying the
+# binaries alone therefore leaves the seeded taxonomy untouched, and TaxonomySeed
+# reports success against the stale file with no error anywhere. That is the same
+# silent-no-op failure mode as the CJK/DENTISTRY defect. Ship the file explicitly.
+$taxonomySrc = Join-Path $apiProj "Data\Seed\taxonomy.json"
+if ($SkipTaxonomy) {
+    Write-Host ""
+    Write-Host "==> Skipping taxonomy.json (-SkipTaxonomy)." -ForegroundColor DarkYellow
+} elseif (-not (Test-Path $taxonomySrc)) {
+    throw "Cannot find $taxonomySrc"
+} else {
+    # Fail fast on a malformed file rather than shipping one the seeder cannot parse.
+    Invoke-Step "Validating taxonomy.json" {
+        $json = Get-Content $taxonomySrc -Raw | ConvertFrom-Json
+        $disciplines = $json.tree.Count
+        $prefixes = ($json.tree | ForEach-Object { $_.children.Count } | Measure-Object -Sum).Sum
+        $dupes = $json.tree | Group-Object key | Where-Object Count -gt 1
+        if ($dupes) { throw "Duplicate discipline keys: $($dupes.Name -join ', ')" }
+        Write-Host "    $disciplines disciplines, $prefixes prefixes, no duplicate keys"
+        $global:LASTEXITCODE = 0
+    }
+    Invoke-Step "Copying taxonomy.json to $EtcDir" {
+        scp $taxonomySrc "${target}:$EtcDir/taxonomy.json"
+    }
+}
+
 # 4. Permissions, migrations, restart ---------------------------------------
 $migrationCmd = if ($SkipMigrations) {
     "echo 'Skipping migrations (-SkipMigrations).'"
@@ -81,6 +112,7 @@ $remoteCommands = @(
     "set -euo pipefail"
     "chmod +x $AppDir/PreseMakerRepo.Api"
     "chown -R presemaker:presemaker $AppDir"
+    "chown presemaker:presemaker $EtcDir/taxonomy.json || true"
     "cd $AppDir"
     $migrationCmd
     "systemctl start presemaker-repo"

@@ -31,6 +31,15 @@ else if (!string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl))
 {
     <p class="mb-3"><a href="@Model.Course.CurriculumGuideUrl" target="_blank" rel="noopener">Curriculum Guide ↗</a></p>
 }
+else
+{
+    <p class="mb-3">
+        <span class="text-muted small">No curriculum guide yet.</span>
+        <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" class="btn btn-outline-primary btn-sm ms-2">
+            Request a Curriculum Guide
+        </a>
+    </p>
+}
 
 <hr />
 <h2 class="h5 mb-3">Modules <span class="badge bg-secondary">@Model.Modules.Count</span></h2>

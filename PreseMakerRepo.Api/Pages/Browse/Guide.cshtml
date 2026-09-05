@@ -24,7 +24,10 @@
 </div>
 
 <div class="d-flex flex-wrap gap-2 mb-3">
-    @if (Model.Guide.Credits.HasValue)
+    @* PSAV clock-hour courses correctly carry Credits = 0, so `.HasValue` rendered a
+       meaningless "0 credit hours" badge on 20+ live guides. `null > 0` is false in C#,
+       so this covers the null case too. *@
+    @if (Model.Guide.Credits > 0)
     {
         <span class="badge bg-secondary">@Model.Guide.Credits credit hours</span>
     }
@@ -32,13 +35,21 @@
     {
         <span class="badge bg-secondary">@Model.Guide.ContactHours contact hours</span>
     }
+    @if (Model.Guide.Credits == 0 && Model.Guide.ContactHours > 0)
+    {
+        <span class="badge bg-info text-dark">PSAV clock-hour</span>
+    }
     @if (!string.IsNullOrWhiteSpace(Model.Guide.Prerequisites))
     {
         <span class="badge bg-light text-dark border">Prerequisites: @Model.Guide.Prerequisites</span>
     }
     @if (!string.IsNullOrWhiteSpace(Model.Guide.Version))
     {
-        <span class="badge bg-light text-dark border">v@Model.Guide.Version</span>
+        @* Explicit parentheses are required. Razor treats "@" as a literal email
+           character when it sits between word characters, so "v@Model.Guide.Version"
+           was emitted verbatim -- every guide page rendered the badge text
+           "v@Model.Guide.Version" instead of "v1.0". Found live 2026-09-02. *@
+        <span class="badge bg-light text-dark border">v@(Model.Guide.Version)</span>
     }
 </div>
 

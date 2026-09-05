@@ -55,6 +55,12 @@ try
     builder.Services.Configure<SecurityOptions>(builder.Configuration.GetSection("Security"));
     builder.Services.AddSingleton<JwtService>();
 
+    // Guide requests (visitor demand → content queue) and the static-site export job.
+    builder.Services.AddScoped<GuideRequestService>();
+    builder.Services.AddHttpClient();
+    builder.Services.AddTransient<StaticSiteExporter>();
+    builder.Services.AddSingleton<StaticExportJobService>();
+
     // Multi-scheme auth: /api/* → JWT Bearer, everything else → Cookie
     builder.Services.AddAuthentication(options =>
     {

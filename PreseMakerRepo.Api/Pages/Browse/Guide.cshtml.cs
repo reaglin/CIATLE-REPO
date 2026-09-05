@@ -29,7 +29,8 @@ public class GuideModel : PageModel
 
         Guide = await _db.CurriculumGuides.AsNoTracking()
             .FirstOrDefaultAsync(g => g.CourseId == normalizedId);
-        if (Guide is null) return NotFound();
+        // The natural moment to ask for a guide is discovering there is none.
+        if (Guide is null) return RedirectToPage("/Browse/RequestGuide", new { course = normalizedId });
 
         return Page();
     }

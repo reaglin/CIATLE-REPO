@@ -53,7 +53,7 @@ CONTACT_HOURS_RANGE = (0, 1500)
 # Document-level tags the schema forbids: html_content is inner content only.
 FORBIDDEN_TAGS = ("<html", "<head", "<body", "<style", "<!doctype")
 
-COURSE_ID_RE = re.compile(r"^[A-Z]{3}[0-9]{4}[CL]?$")
+COURSE_ID_RE = re.compile(r"^[A-Z]{3}[0-9]{4}[CL]?(?:-(?:SCNS|[A-Z]{2,5}))?$")
 
 CANONICAL_SECTIONS = (
     "Course Description",

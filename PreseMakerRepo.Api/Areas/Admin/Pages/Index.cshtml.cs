@@ -20,6 +20,9 @@ public class IndexModel : PageModel
     public int TotalContributors { get; set; }
     public int SuspendedContributors { get; set; }
     public int OpenFlags { get; set; }
+    public int OpenGuideRequests { get; set; }
+    public int OpenGuideRequestCourses { get; set; }
+    public int PublishedGuides { get; set; }
     public int RecentModules30Days { get; set; }
     public IReadOnlyList<Module> RecentModulesList { get; set; } = [];
 
@@ -42,6 +45,11 @@ public class IndexModel : PageModel
         TotalContributors = await _db.Users.CountAsync();
         SuspendedContributors = await _db.Users.CountAsync(u => u.IsSuspended);
         OpenFlags = await _db.ContentFlags.AsNoTracking().CountAsync(f => !f.IsResolved);
+
+        var openRequests = _db.GuideRequests.AsNoTracking().Where(r => r.Status == GuideRequestStatus.Open);
+        OpenGuideRequests = await openRequests.CountAsync();
+        OpenGuideRequestCourses = await openRequests.Select(r => r.CourseId).Distinct().CountAsync();
+        PublishedGuides = await _db.CurriculumGuides.AsNoTracking().CountAsync();
 
         var cutoff = DateTime.UtcNow.AddDays(-30);
         RecentModules30Days = await _db.Modules.AsNoTracking()

@@ -19,35 +19,35 @@
       "children": [
         {
           "key": "ABE",
-          "name": "Agricultural Biological Engineering"
+          "name": "Agricultural and Biological Engineering"
         },
         {
           "key": "AEB",
-          "name": "Agricultural Business Economics"
+          "name": "Agricultural Economics and Business"
         },
         {
           "key": "AEC",
-          "name": "Agricultural Communications Education"
+          "name": "Agricultural Education and Communication"
         },
         {
           "key": "AEE",
-          "name": "Agricultural Extension Education"
+          "name": "Agriculture and Extension Education"
         },
         {
           "key": "AGE",
-          "name": "Agricultural Equipment Technology"
+          "name": "Agricultural Engineering (Discontinued - (see AOM)"
         },
         {
           "key": "AGG",
-          "name": "General Agriculture"
+          "name": "Agriculture - General"
         },
         {
           "key": "AGR",
-          "name": "Agronomy and Crop Science"
+          "name": "Agronomy"
         },
         {
           "key": "ALS",
-          "name": "Agricultural Life Sciences"
+          "name": "Agriculture and Life Sciences"
         },
         {
           "key": "ANS",
@@ -59,11 +59,11 @@
         },
         {
           "key": "ASG",
-          "name": "Livestock and Swine Science"
+          "name": "Animal Science: General"
         },
         {
           "key": "ATE",
-          "name": "Animal Disease and Physiology"
+          "name": "Animal Science Technology"
         },
         {
           "key": "DAS",
@@ -75,11 +75,11 @@
         },
         {
           "key": "FAS",
-          "name": "Fisheries and Aquatic Science"
+          "name": "Fishery & Aquacultural Science"
         },
         {
           "key": "FNR",
-          "name": "Forestry and Natural Resources"
+          "name": "Forestry & Natural Resources"
         },
         {
           "key": "FOR",
@@ -87,11 +87,11 @@
         },
         {
           "key": "FRC",
-          "name": "Fruit Crop Science"
+          "name": "Fruit Crops"
         },
         {
           "key": "FYC",
-          "name": "Family Youth Community"
+          "name": "Family, Youth and Community"
         },
         {
           "key": "GCO",
@@ -99,27 +99,23 @@
         },
         {
           "key": "HRD",
-          "name": "Discontinued"
+          "name": "Human Resources Development (Discontinued - (see FYC)"
         },
         {
           "key": "MAG",
-          "name": "Discontinued"
+          "name": "Mechanized Agriculture (Discontinued - (see AOM)"
         },
         {
           "key": "NEM",
           "name": "Nematology"
         },
         {
-          "key": "PKG",
-          "name": "Agricultural Packaging"
-        },
-        {
-          "key": "PMA",
-          "name": "Pest Management Agriculture"
-        },
-        {
           "key": "PAZ",
           "name": "Parks and Zoos"
+        },
+        {
+          "key": "PKG",
+          "name": "Packaging Sciences"
         },
         {
           "key": "PLP",
@@ -130,8 +126,12 @@
           "name": "Plant Science"
         },
         {
+          "key": "PMA",
+          "name": "Pest Management"
+        },
+        {
           "key": "PSE",
-          "name": "Poultry Science"
+          "name": "Poultry Science (Discontinued - (see ANS)"
         },
         {
           "key": "SOS",
@@ -139,19 +139,19 @@
         },
         {
           "key": "SWS",
-          "name": "Soil and Water Science"
+          "name": "Soil and Water Sciences"
         },
         {
           "key": "VEC",
-          "name": "Vegetable Crop Production"
+          "name": "Vegetable Crops"
         },
         {
           "key": "WDS",
-          "name": "Discontinued"
+          "name": "Weed Science"
         },
         {
           "key": "WIS",
-          "name": "Wildlife Conservation Management"
+          "name": "Wildlife Science"
         }
       ]
     },
@@ -189,19 +189,19 @@
         },
         {
           "key": "ARD",
-          "name": "Architecture Doctoral"
+          "name": "Architectural Design"
         },
         {
           "key": "DCP",
-          "name": "Design Construction Planning"
+          "name": "Design, Construction and Planning"
         },
         {
           "key": "TAR",
-          "name": "Architectural Technology"
+          "name": "Technical Architecture"
         },
         {
           "key": "VAR",
-          "name": "Vocational Architecture"
+          "name": "Variable-Paced Architecture"
         }
       ]
     },
@@ -237,15 +237,7 @@
         },
         {
           "key": "ARV",
-          "name": "Vocational Art"
-        },
-        {
-          "key": "ECP",
-          "name": "Economic Problems and Policy"
-        },
-        {
-          "key": "ECS",
-          "name": "Economic Systems Development"
+          "name": "Art, Vocational"
         }
       ]
     },
@@ -255,11 +247,11 @@
       "children": [
         {
           "key": "BOT",
-          "name": "Botany and Plant Biology"
+          "name": "Botany"
         },
         {
           "key": "BSC",
-          "name": "Biological Science"
+          "name": "Biological Sciences"
         },
         {
           "key": "MCB",
@@ -267,7 +259,7 @@
         },
         {
           "key": "PCB",
-          "name": "Cell and Molecular Biology"
+          "name": "Process Biology (Cell/Molecular/Ecology/Genetics/Physiology)"
         },
         {
           "key": "ZOO",
@@ -281,7 +273,7 @@
       "children": [
         {
           "key": "CAI",
-          "name": "Artificial Intelligence Computing"
+          "name": "Computing: Artifical Intelligence"
         },
         {
           "key": "CAP",
@@ -289,23 +281,23 @@
         },
         {
           "key": "CDA",
-          "name": "Computer Architecture Design"
+          "name": "Computer Design/Architecture"
         },
         {
           "key": "CEN",
-          "name": "Software Engineering"
+          "name": "Computer Software Engineering"
         },
         {
           "key": "CGS",
-          "name": "General Computer Applications"
+          "name": "Computer General Studies"
         },
         {
           "key": "CIS",
-          "name": "Information Systems"
+          "name": "Computer Science and Information Systems"
         },
         {
           "key": "CNT",
-          "name": "Computer Networking"
+          "name": "Computer Networks"
         },
         {
           "key": "COP",
@@ -317,7 +309,7 @@
         },
         {
           "key": "CTS",
-          "name": "Technical Computing Skills"
+          "name": "Computer Technology and Skills"
         },
         {
           "key": "IDC",
@@ -335,7 +327,7 @@
         },
         {
           "key": "CJB",
-          "name": "Criminal Justice Applied"
+          "name": "College Level Application in Criminal Justice"
         },
         {
           "key": "CJC",
@@ -350,6 +342,18 @@
           "name": "Law Enforcement"
         },
         {
+          "key": "CJJ",
+          "name": "Juvenile Justice"
+        },
+        {
+          "key": "CJK",
+          "name": "Criminal Justice Basic Training (A.A.S or Vocational)"
+        },
+        {
+          "key": "CJL",
+          "name": "Law & Process"
+        },
+        {
           "key": "CJT",
           "name": "Criminal Justice Technologies"
         },
@@ -359,11 +363,11 @@
         },
         {
           "key": "SCC",
-          "name": "Private Security"
+          "name": "Security"
         },
         {
           "key": "SCY",
-          "name": "Security Vocational"
+          "name": "Security"
         }
       ]
     },
@@ -373,7 +377,7 @@
       "children": [
         {
           "key": "DAA",
-          "name": "Dance Activity Skills"
+          "name": "Dance, Emphasis on Activity"
         },
         {
           "key": "DAE",
@@ -381,7 +385,7 @@
         },
         {
           "key": "DAN",
-          "name": "Dance Theory"
+          "name": "Dance"
         }
       ]
     },
@@ -421,19 +425,7 @@
       "children": [
         {
           "key": "DEN",
-          "name": "Dentistry Professional"
-        },
-        {
-          "key": "CJJ",
-          "name": "Juvenile Justice"
-        },
-        {
-          "key": "CJK",
-          "name": "Criminal Justice Applied"
-        },
-        {
-          "key": "CJL",
-          "name": "Criminal Justice Law"
+          "name": "Dentistry"
         }
       ]
     },
@@ -456,36 +448,12 @@
           "name": "Economics"
         },
         {
-          "key": "EDS",
-          "name": "Educational Supervision"
+          "key": "ECP",
+          "name": "Economic Problems & Policy"
         },
         {
-          "key": "EGI",
-          "name": "Gifted Education"
-        },
-        {
-          "key": "EHD",
-          "name": "Hearing and Deaf Education"
-        },
-        {
-          "key": "ELD",
-          "name": "Learning Disabilities Education"
-        },
-        {
-          "key": "EMR",
-          "name": "Educable Mental Retardation"
-        },
-        {
-          "key": "EPD",
-          "name": "Physical Disabilities Education"
-        },
-        {
-          "key": "MTE",
-          "name": "Marine Engine Repair"
-        },
-        {
-          "key": "SER",
-          "name": "Small Engine Repair"
+          "key": "ECS",
+          "name": "Economic Systems Development"
         }
       ]
     },
@@ -496,6 +464,10 @@
         {
           "key": "EDA",
           "name": "Educational Administration"
+        },
+        {
+          "key": "EDS",
+          "name": "Education Supervision"
         }
       ]
     },
@@ -505,15 +477,43 @@
       "children": [
         {
           "key": "EBD",
-          "name": "Emotional Behavioral Disorders"
+          "name": "Education: Emotional/Behavioral Disorders"
         },
         {
           "key": "EED",
-          "name": "Behavioral Disorders Education"
+          "name": "Education: Emotional Disorders -(see EBD)"
         },
         {
           "key": "EEX",
-          "name": "Exceptional Education"
+          "name": "Education: Exceptional Child - Core Competencies"
+        },
+        {
+          "key": "EGI",
+          "name": "Education: Gifted"
+        },
+        {
+          "key": "EHD",
+          "name": "Education: Hard of Hearing & Deaf"
+        },
+        {
+          "key": "ELD",
+          "name": "Education: Specific Learning Disabilities"
+        },
+        {
+          "key": "EMR",
+          "name": "Education: Mental Retardation"
+        },
+        {
+          "key": "EPD",
+          "name": "Education: Physical & Multiple Disabilities"
+        },
+        {
+          "key": "EPH",
+          "name": "Education: Physical & Multiple Handicapped -(see EPD)"
+        },
+        {
+          "key": "EVI",
+          "name": "Education: Visually Impaired-Blind"
         }
       ]
     },
@@ -523,7 +523,7 @@
       "children": [
         {
           "key": "EDF",
-          "name": "Educational Foundations"
+          "name": "Education: Foundations and Policy Studies"
         },
         {
           "key": "EDP",
@@ -537,7 +537,7 @@
       "children": [
         {
           "key": "EGC",
-          "name": "Guidance and Counseling"
+          "name": "Counselor Education"
         },
         {
           "key": "MHS",
@@ -545,7 +545,7 @@
         },
         {
           "key": "RCS",
-          "name": "Rehabilitation Counseling"
+          "name": "Rehabilitation Counseling Services"
         },
         {
           "key": "SDS",
@@ -553,7 +553,7 @@
         },
         {
           "key": "SPS",
-          "name": "Educational Research Statistics"
+          "name": "School Psychology"
         }
       ]
     },
@@ -573,31 +573,31 @@
       "children": [
         {
           "key": "EDE",
-          "name": "Elementary Education"
+          "name": "Education: Elementary"
         },
         {
           "key": "EDG",
-          "name": "Instructional Methodology"
+          "name": "Education: General"
         },
         {
           "key": "EDH",
-          "name": "Higher Education"
+          "name": "Education: Higher"
         },
         {
           "key": "EDM",
-          "name": "Middle School Education"
+          "name": "Education: Middle School"
         },
         {
           "key": "EEC",
-          "name": "Early Childhood Education"
+          "name": "Education: Early Childhood"
         },
         {
           "key": "EME",
-          "name": "Educational Media Technology"
+          "name": "Education: Technology and Media"
         },
         {
           "key": "ESE",
-          "name": "Secondary Education"
+          "name": "Education: Secondary"
         }
       ]
     },
@@ -607,11 +607,11 @@
       "children": [
         {
           "key": "ECT",
-          "name": "Career Technical Education"
+          "name": "Education: Career/Technical"
         },
         {
           "key": "ECW",
-          "name": "Career Workforce Education"
+          "name": "Education: Career/Workforce"
         }
       ]
     },
@@ -621,11 +621,11 @@
       "children": [
         {
           "key": "CCE",
-          "name": "Civil Engineering Construction"
+          "name": "Civil Construction Engineering"
         },
         {
           "key": "CGN",
-          "name": "Civil Engineering General"
+          "name": "Civil Engineering"
         },
         {
           "key": "TTE",
@@ -639,23 +639,23 @@
       "children": [
         {
           "key": "EEE",
-          "name": "Electrical Electronic Engineering"
+          "name": "Engineering: Electrical and Electronic"
         },
         {
           "key": "EEL",
-          "name": "Electrical Engineering"
+          "name": "Engineering: Electrical"
         },
         {
           "key": "ELR",
-          "name": "Electrical Labs"
+          "name": "Prefix Discontinued. All Courses Reassigned"
         },
         {
           "key": "OSE",
-          "name": "Optical Science Engineering"
+          "name": "Optical Science and Engineering"
         },
         {
           "key": "TCN",
-          "name": "Telecommunications Networking"
+          "name": "Telecommunications"
         }
       ]
     },
@@ -669,7 +669,7 @@
         },
         {
           "key": "EER",
-          "name": "Electronics Service Repair"
+          "name": "Electrical/Electronics Repair"
         },
         {
           "key": "EET",
@@ -677,43 +677,43 @@
         },
         {
           "key": "EEV",
-          "name": "Electronics Vocational"
+          "name": "Electrical/Electronic: Vocational"
         },
         {
           "key": "EST",
-          "name": "Engineering Support Technology"
+          "name": "Electronic Speciality Technology (Disc 8/1/2012)"
         },
         {
           "key": "ETC",
-          "name": "Civil Engineering Technology"
+          "name": "Engineering Technology: Civil"
         },
         {
           "key": "ETD",
-          "name": "Engineering Design Drafting"
+          "name": "Engineering Technology: Drafting"
         },
         {
           "key": "ETG",
-          "name": "General Engineering Technology"
+          "name": "Engineering Technology: General"
         },
         {
           "key": "ETI",
-          "name": "Industrial Systems Technology"
+          "name": "Engineering Technology: Industrial"
         },
         {
           "key": "ETM",
-          "name": "Mechanics Fluids Heat"
+          "name": "Engineering Technology: Mechanical"
         },
         {
           "key": "ETP",
-          "name": "Energy Power Technology"
+          "name": "Engineering Technology: Power"
         },
         {
           "key": "ETS",
-          "name": "Specialty Engineering Technology"
+          "name": "Engineering Technology: Specialty"
         },
         {
           "key": "TDR",
-          "name": "Technical Drafting"
+          "name": "Technical Drafting (PSAV Level)"
         }
       ]
     },
@@ -723,27 +723,27 @@
       "children": [
         {
           "key": "AER",
-          "name": "Automotive Technology"
+          "name": "Automotive Mechanics"
         },
         {
           "key": "ARR",
-          "name": "Auto Body Repair"
+          "name": "Autobody Repair and Refinishing"
         },
         {
           "key": "DIM",
-          "name": "Diesel Engine Mechanics"
+          "name": "Diesel, Hybrid and Alternative Fuel Technology"
         },
         {
           "key": "MOM",
           "name": "Motorcycle Mechanics"
         },
         {
-          "key": "GEO",
-          "name": "Systematic Geography"
+          "key": "MTE",
+          "name": "Marine Technology and Nautical Science"
         },
         {
-          "key": "GIS",
-          "name": "Geographic Information Science"
+          "key": "SER",
+          "name": "Small Engine Mechanics"
         }
       ]
     },
@@ -753,23 +753,15 @@
       "children": [
         {
           "key": "GEA",
-          "name": "Regional Geography"
+          "name": "Geography: Regional Areas"
         },
         {
-          "key": "MRE",
-          "name": "Discontinued"
+          "key": "GEO",
+          "name": "Geography: Systematic"
         },
         {
-          "key": "MTS",
-          "name": "Medical Records Technology"
-        },
-        {
-          "key": "EPH",
-          "name": "Physical Disabilities Education"
-        },
-        {
-          "key": "EVI",
-          "name": "Visual Disabilities Education"
+          "key": "GIS",
+          "name": "Geographic Information Systems"
         }
       ]
     },
@@ -789,19 +781,19 @@
       "children": [
         {
           "key": "NGR",
-          "name": "Graduate Nursing"
+          "name": "Nursing, Graduate"
         },
         {
           "key": "NSG",
-          "name": "Nursing General"
+          "name": "Nursing, Generic Undergraduate"
         },
         {
           "key": "NSP",
-          "name": "Specialty Nursing Courses"
+          "name": "Nursing: Special"
         },
         {
           "key": "NUR",
-          "name": "Nursing"
+          "name": "Nursing, Generic Undergraduate"
         }
       ]
     },
@@ -827,7 +819,7 @@
         },
         {
           "key": "HIS",
-          "name": "History"
+          "name": "General History and Historiography"
         },
         {
           "key": "LAH",
@@ -845,23 +837,23 @@
       "children": [
         {
           "key": "CHD",
-          "name": "Child Development"
+          "name": "Home Economics: Child Development"
         },
         {
           "key": "COA",
-          "name": "Consumer Finance"
+          "name": "Home Economics: Consumer Affairs"
         },
         {
           "key": "CTE",
-          "name": "Clothing and Textiles"
+          "name": "Home Economics: Clothing and Textiles"
         },
         {
           "key": "FAD",
-          "name": "Family Development"
+          "name": "Home Economics: Family Development"
         },
         {
           "key": "FAM",
-          "name": "Discontinued"
+          "name": "Fashion Modeling"
         },
         {
           "key": "HEC",
@@ -873,35 +865,19 @@
         },
         {
           "key": "HEV",
-          "name": "Vocational Home Economics"
+          "name": "Home Economics - Vocational"
         },
         {
           "key": "HHD",
-          "name": "Housing and Interior Design"
+          "name": "Housing & Home Design"
         },
         {
           "key": "HME",
-          "name": "Home Management Equipment"
+          "name": "Home Economics: Home Management and Equipment"
         },
         {
           "key": "HOE",
-          "name": "Home Economics"
-        },
-        {
-          "key": "GLS",
-          "name": "Interdisciplinary Graduate Studies"
-        },
-        {
-          "key": "IDH",
-          "name": "Interdisciplinary Humanities Science"
-        },
-        {
-          "key": "IDS",
-          "name": "Interdisciplinary Studies"
-        },
-        {
-          "key": "SLA",
-          "name": "Second Language Education"
+          "name": "Home Economics: General"
         }
       ]
     },
@@ -911,15 +887,27 @@
       "children": [
         {
           "key": "CST",
-          "name": "Cultural Studies"
+          "name": "Comparative Studies"
+        },
+        {
+          "key": "GLS",
+          "name": "Graduate Liberal Studies"
+        },
+        {
+          "key": "IDH",
+          "name": "Interdisciplinary Honors"
+        },
+        {
+          "key": "IDS",
+          "name": "Interdisciplinary Studies"
         },
         {
           "key": "IFS",
-          "name": "FSU Interdisciplinary Studies"
+          "name": "Interdisciplinary Florida State University Courses"
         },
         {
           "key": "IUF",
-          "name": "UF Interdisciplinary Studies"
+          "name": "Interdisciplinary University of Florida Courses"
         }
       ]
     },
@@ -934,10 +922,6 @@
         {
           "key": "LAW",
           "name": "Law"
-        },
-        {
-          "key": "CMC",
-          "name": "Corporate Communications"
         }
       ]
     },
@@ -947,7 +931,7 @@
       "children": [
         {
           "key": "LIS",
-          "name": "Library Information Studies"
+          "name": "Library and Information Studies"
         }
       ]
     },
@@ -960,8 +944,12 @@
           "name": "Advertising"
         },
         {
+          "key": "CMC",
+          "name": "Corporate Media Communication"
+        },
+        {
           "key": "FIL",
-          "name": "Film and Video Arts"
+          "name": "Film"
         },
         {
           "key": "JOU",
@@ -969,11 +957,11 @@
         },
         {
           "key": "MCC",
-          "name": "Discontinued"
+          "name": "Special Topics in Mass Communication"
         },
         {
           "key": "MMC",
-          "name": "Mass Communication"
+          "name": "Mass Media Communication"
         },
         {
           "key": "PUR",
@@ -989,7 +977,7 @@
         },
         {
           "key": "VIC",
-          "name": "Visual Communications"
+          "name": "Visual Communication"
         }
       ]
     },
@@ -999,23 +987,23 @@
       "children": [
         {
           "key": "MAA",
-          "name": "Mathematical Analysis"
+          "name": "Mathematics - Analysis"
         },
         {
           "key": "MAC",
-          "name": "Calculus and Precalculus"
+          "name": "Mathematics - Calculus and Precalculus"
         },
         {
           "key": "MAD",
-          "name": "Discrete Mathematics"
+          "name": "Mathematics - Discrete"
         },
         {
           "key": "MAP",
-          "name": "Applied Mathematics"
+          "name": "Mathematics Applied"
         },
         {
           "key": "MAS",
-          "name": "Algebraic Structures"
+          "name": "Mathematics - Algebraic Structures"
         },
         {
           "key": "MAT",
@@ -1023,19 +1011,19 @@
         },
         {
           "key": "MGF",
-          "name": "General Finite Mathematics"
+          "name": "Mathematics - General and Finite"
         },
         {
           "key": "MHF",
-          "name": "History of Mathematics"
+          "name": "Mathematics - History and Foundations"
         },
         {
           "key": "MTB",
-          "name": "Technical Business Mathematics"
+          "name": "Mathematics - Technical and Business"
         },
         {
           "key": "MTG",
-          "name": "Topology and Geometry"
+          "name": "Mathematics - Topology and Geometry"
         }
       ]
     },
@@ -1045,7 +1033,7 @@
       "children": [
         {
           "key": "MEA",
-          "name": "Medical Assisting"
+          "name": "Medical Assisting Technology"
         }
       ]
     },
@@ -1055,7 +1043,7 @@
       "children": [
         {
           "key": "MSS",
-          "name": "Massage Therapy"
+          "name": "Massage"
         }
       ]
     },
@@ -1069,7 +1057,7 @@
         },
         {
           "key": "CMM",
-          "name": "Creek Muskogee Language"
+          "name": "Creek/Muskogee/Mikasuki"
         }
       ]
     },
@@ -1080,6 +1068,14 @@
         {
           "key": "HIM",
           "name": "Health Information Management"
+        },
+        {
+          "key": "MRE",
+          "name": "Medical Records (Discontinued - (see HIM)"
+        },
+        {
+          "key": "MTS",
+          "name": "Medical Transcription Science"
         },
         {
           "key": "WCL",
@@ -1107,7 +1103,7 @@
       "children": [
         {
           "key": "BCC",
-          "name": "Discontinued"
+          "name": "Basic Clinical Clerkships (to Mdc Eff 5/1/2013)"
         },
         {
           "key": "BMS",
@@ -1119,11 +1115,11 @@
         },
         {
           "key": "MDC",
-          "name": "Clinical Clerkships"
+          "name": "Medicine Clinical Clerkships"
         },
         {
           "key": "MDE",
-          "name": "Medical Education"
+          "name": "Medical Electives"
         },
         {
           "key": "MDI",
@@ -1135,15 +1131,15 @@
         },
         {
           "key": "MDS",
-          "name": "Medical Sciences"
+          "name": "Medical Selectives"
         },
         {
           "key": "MDT",
-          "name": "Medical Special Topics"
+          "name": "Special Topics, Elected Topics"
         },
         {
           "key": "MDU",
-          "name": "Undergraduate Medicine"
+          "name": "Undergraduate Medicine Courses"
         },
         {
           "key": "MDX",
@@ -1151,7 +1147,7 @@
         },
         {
           "key": "MEL",
-          "name": "Medical Science Electives"
+          "name": "Medical Science Electives (Discontinued 8/1/2013)"
         }
       ]
     },
@@ -1165,7 +1161,7 @@
         },
         {
           "key": "PTA",
-          "name": "Precision Metals Apprentice"
+          "name": "Precision Technology Apprenticeships"
         }
       ]
     },
@@ -1175,15 +1171,15 @@
       "children": [
         {
           "key": "AFR",
-          "name": "Air Force ROTC"
+          "name": "Aerospace Studies"
         },
         {
           "key": "MIS",
-          "name": "Army Military Science"
+          "name": "Military Science"
         },
         {
           "key": "MSL",
-          "name": "Military Leadership"
+          "name": "Military Science and Leadership"
         },
         {
           "key": "NSC",
@@ -1197,15 +1193,15 @@
       "children": [
         {
           "key": "FOL",
-          "name": "Foreign Language"
+          "name": "Foreign Languages"
         },
         {
           "key": "FOT",
-          "name": "Foreign Literature English"
+          "name": "Foreign Languages (in Translation)"
         },
         {
           "key": "FOW",
-          "name": "Foreign Literature Original"
+          "name": "Foreign Languages, Comparative Literature (Writings)"
         }
       ]
     },
@@ -1215,7 +1211,7 @@
       "children": [
         {
           "key": "FSE",
-          "name": "Funeral Services Embalming"
+          "name": "Funeral Services"
         }
       ]
     },
@@ -1236,32 +1232,32 @@
           "name": "Music Conducting"
         },
         {
+          "key": "MUH",
+          "name": "Music: History/Musicology"
+        },
+        {
           "key": "MUL",
           "name": "Music Literature"
         },
         {
+          "key": "MUM",
+          "name": "Music: Commercial/Management/Administration"
+        },
+        {
           "key": "MUN",
-          "name": "Music Ensemble"
+          "name": "Music Ensembles"
         },
         {
           "key": "MUO",
-          "name": "Opera Musical Theatre"
-        },
-        {
-          "key": "MUH",
-          "name": "Music History"
-        },
-        {
-          "key": "MUM",
-          "name": "Music Management"
+          "name": "Music: Opera/Musical Theatre"
         },
         {
           "key": "MUR",
-          "name": "Church Music"
+          "name": "Music: Church"
         },
         {
           "key": "MUS",
-          "name": "Music Studies"
+          "name": "Music"
         },
         {
           "key": "MUT",
@@ -1311,7 +1307,7 @@
         },
         {
           "key": "OCE",
-          "name": "Oceanography"
+          "name": "General Oceanography"
         },
         {
           "key": "OCG",
@@ -1329,11 +1325,11 @@
       "children": [
         {
           "key": "ANE",
-          "name": "Discontinued"
+          "name": "Anesthesia Technology"
         },
         {
           "key": "STS",
-          "name": "Surgical Technology"
+          "name": "Surgical Technology Studies"
         }
       ]
     },
@@ -1343,7 +1339,7 @@
       "children": [
         {
           "key": "OPT",
-          "name": "Ophthalmic Technology"
+          "name": "Ophthalmic Technology/Vision Care"
         }
       ]
     },
@@ -1357,7 +1353,7 @@
         },
         {
           "key": "PTN",
-          "name": "Pharmacy Technology"
+          "name": "Pharmacy Technician"
         }
       ]
     },
@@ -1367,7 +1363,7 @@
       "children": [
         {
           "key": "PHH",
-          "name": "History of Philosophy"
+          "name": "Philosophy, History of"
         },
         {
           "key": "PHI",
@@ -1375,15 +1371,11 @@
         },
         {
           "key": "PHM",
-          "name": "Philosophy of Society"
+          "name": "Philosophy of Man and Society"
         },
         {
           "key": "PHP",
           "name": "Philosophers and Schools"
-        },
-        {
-          "key": "SON",
-          "name": "Sonography Diagnostic Ultrasound"
         }
       ]
     },
@@ -1397,7 +1389,7 @@
         },
         {
           "key": "CHS",
-          "name": "Specialized Applied Chemistry"
+          "name": "Chemistry - Specialized"
         }
       ]
     },
@@ -1407,7 +1399,7 @@
       "children": [
         {
           "key": "ESC",
-          "name": "Earth Sciences"
+          "name": "Earth Science"
         },
         {
           "key": "GLY",
@@ -1439,11 +1431,11 @@
         },
         {
           "key": "PHZ",
-          "name": "Advanced Physics"
+          "name": "Physics (Continued)"
         },
         {
           "key": "PSC",
-          "name": "Physical Science"
+          "name": "Physical Sciences"
         }
       ]
     },
@@ -1463,7 +1455,7 @@
       "children": [
         {
           "key": "PAS",
-          "name": "Physician Assistant Studies"
+          "name": "Physician Assistant"
         }
       ]
     },
@@ -1473,7 +1465,7 @@
       "children": [
         {
           "key": "CPO",
-          "name": "Comparative Political Systems"
+          "name": "Comparative Politics"
         },
         {
           "key": "INR",
@@ -1499,7 +1491,7 @@
       "children": [
         {
           "key": "CBH",
-          "name": "Comparative Animal Behavior"
+          "name": "Comparative Psychology and Animal Behavior"
         },
         {
           "key": "CLP",
@@ -1515,7 +1507,7 @@
         },
         {
           "key": "EAB",
-          "name": "Experimental Behavior Analysis"
+          "name": "Experimental Analysis of Behavior"
         },
         {
           "key": "EXP",
@@ -1523,15 +1515,15 @@
         },
         {
           "key": "INP",
-          "name": "Industrial Applied Psychology"
+          "name": "Industrial and Applied Psychology"
         },
         {
           "key": "PCO",
-          "name": "Counseling Psychology"
+          "name": "Psychology for Counseling"
         },
         {
           "key": "PPE",
-          "name": "Personality Psychology"
+          "name": "Personality"
         },
         {
           "key": "PSB",
@@ -1544,10 +1536,6 @@
         {
           "key": "SOP",
           "name": "Social Psychology"
-        },
-        {
-          "key": "ROT",
-          "name": "Reactor Operations"
         }
       ]
     },
@@ -1565,11 +1553,19 @@
         },
         {
           "key": "RHT",
-          "name": "Radiation Protection Technology"
+          "name": "Radiation Health/Radiation Protection Technology"
+        },
+        {
+          "key": "ROT",
+          "name": "Reactor Operator Technology"
         },
         {
           "key": "RTE",
-          "name": "Radiography"
+          "name": "Radiologic Technology"
+        },
+        {
+          "key": "SON",
+          "name": "Sonography"
         }
       ]
     },
@@ -1579,11 +1575,11 @@
       "children": [
         {
           "key": "REL",
-          "name": "Religion"
+          "name": "Religion Undergraduate"
         },
         {
           "key": "RLG",
-          "name": "THIS Prefix Identifies Graduate"
+          "name": "Religion - Graduate"
         }
       ]
     },
@@ -1593,11 +1589,11 @@
       "children": [
         {
           "key": "PSG",
-          "name": "Although THE Courses ARE"
+          "name": "Polysomnography"
         },
         {
           "key": "RET",
-          "name": "Individuals TO Administer Respiratory"
+          "name": "Respiratory Care"
         }
       ]
     },
@@ -1607,7 +1603,7 @@
       "children": [
         {
           "key": "SOW",
-          "name": "Prefix USED TO Designate"
+          "name": "Social Work"
         }
       ]
     },
@@ -1617,7 +1613,7 @@
       "children": [
         {
           "key": "PRO",
-          "name": "TO Prepare Health Professionals"
+          "name": "Prosthetics/Orthotics"
         }
       ]
     },
@@ -1627,11 +1623,11 @@
       "children": [
         {
           "key": "SED",
-          "name": "Study Represented BY THIS"
+          "name": "Speech Education"
         },
         {
           "key": "SPC",
-          "name": "THIS Prefix Designates Courses"
+          "name": "Speech Communication"
         }
       ]
     },
@@ -1641,27 +1637,11 @@
       "children": [
         {
           "key": "CAS",
-          "name": "THIS Prefix IS TO"
-        },
-        {
-          "key": "MVH",
-          "name": "AN Instructional Program THAT"
-        },
-        {
-          "key": "MVJ",
-          "name": "AN Instructional Program THAT"
-        },
-        {
-          "key": "MVK",
-          "name": "AN Instructional Program THAT"
-        },
-        {
-          "key": "MVO",
-          "name": "AN Instructional Program THAT"
+          "name": "Clinical Audiology and Speech Language Pathology (see SPA)"
         },
         {
           "key": "SPA",
-          "name": "Audiology Courses Concern THE"
+          "name": "Speech Pathology and Audiology"
         }
       ]
     },
@@ -1671,15 +1651,15 @@
       "children": [
         {
           "key": "THE",
-          "name": "OR Participation IN Dramatics"
+          "name": "Theatre"
         },
         {
           "key": "TPA",
-          "name": "THE Study AND OR"
+          "name": "Theatre Production and Administration"
         },
         {
           "key": "TPP",
-          "name": "THE Study AND OR"
+          "name": "Theatre Performance and Performance Training"
         }
       ]
     },
@@ -1689,11 +1669,11 @@
       "children": [
         {
           "key": "HCP",
-          "name": "Health CARE Providers Include:"
+          "name": "Health-Care Providers (Assistants)"
         },
         {
           "key": "PRN",
-          "name": "FOR AN Instructional Program"
+          "name": "Practical Nursing"
         }
       ]
     },
@@ -1703,11 +1683,11 @@
       "children": [
         {
           "key": "URP",
-          "name": "These Courses ARE Primarily"
+          "name": "Urban and Regional Planning"
         },
         {
           "key": "URS",
-          "name": "Historical Examinations AND Analyses"
+          "name": "Urban and Regional Studies"
         }
       ]
     },
@@ -1717,11 +1697,11 @@
       "children": [
         {
           "key": "VEM",
-          "name": "ARE Intended FOR Students"
+          "name": "Veterinary Medicine Professional"
         },
         {
           "key": "VME",
-          "name": "ARE Intended FOR Students"
+          "name": "Veterinary Medicine Graduate"
         }
       ]
     },
@@ -1731,15 +1711,15 @@
       "children": [
         {
           "key": "ABX",
-          "name": "TO Provide Standard Reporting"
+          "name": "Adult Basic Education"
         },
         {
           "key": "ADE",
-          "name": "THE Principles AND Techniques"
+          "name": "Adult Education"
         },
         {
           "key": "ASB",
-          "name": "Program FOR Students WHO"
+          "name": "Academic Skills Building"
         }
       ]
     },
@@ -1749,7 +1729,7 @@
       "children": [
         {
           "key": "IND",
-          "name": "AN Instructional Program IN"
+          "name": "Interior Design"
         }
       ]
     },
@@ -1759,23 +1739,23 @@
       "children": [
         {
           "key": "BCA",
-          "name": "Apprenticeships IN Building Construction"
+          "name": "Building Construction Apprenticeships"
         },
         {
           "key": "BCN",
-          "name": "Building Construction Courses Leading"
+          "name": "Building Construction"
         },
         {
           "key": "BCT",
-          "name": "Building Construction Courses Leading"
+          "name": "Building Construction Trades"
         },
         {
           "key": "BCV",
-          "name": "Building Construction Courses Leading"
+          "name": "Building Construction: Vocational"
         },
         {
           "key": "ICM",
-          "name": "Building Construction Courses WITH"
+          "name": "International Construction Management"
         }
       ]
     },
@@ -1785,11 +1765,11 @@
       "children": [
         {
           "key": "SCM",
-          "name": "Supply Chain Management (Scm)"
+          "name": "Supply Chain Management"
         },
         {
           "key": "TRA",
-          "name": "THE Nature AND Application"
+          "name": "Transportation and Logistics"
         }
       ]
     },
@@ -1799,7 +1779,7 @@
       "children": [
         {
           "key": "WST",
-          "name": "Women'S Experiences Throughout History"
+          "name": "Women's Studies"
         }
       ]
     },
@@ -1809,7 +1789,7 @@
       "children": [
         {
           "key": "MDW",
-          "name": "AN Instructional Program THAT"
+          "name": "Midwifery"
         }
       ]
     },
@@ -1819,23 +1799,39 @@
       "children": [
         {
           "key": "MVB",
-          "name": "AN Instructional Program THAT"
+          "name": "Applied Music: Brasses"
+        },
+        {
+          "key": "MVH",
+          "name": "Historical Instruments"
+        },
+        {
+          "key": "MVJ",
+          "name": "Applied Music: Jazz"
+        },
+        {
+          "key": "MVK",
+          "name": "Applied Music: Keyboard"
+        },
+        {
+          "key": "MVO",
+          "name": "Applied Music: Other"
         },
         {
           "key": "MVP",
-          "name": "Individuals TO Master Percussion"
+          "name": "Applied Music: Percussion"
         },
         {
           "key": "MVS",
-          "name": "Individuals TO Master String"
+          "name": "Applied Music: Strings"
         },
         {
           "key": "MVV",
-          "name": "Individuals TO Master Voice"
+          "name": "Applied Music: Voice"
         },
         {
           "key": "MVW",
-          "name": "Individuals TO Master Woodwind"
+          "name": "Applied Music: Woodwinds"
         }
       ]
     },
@@ -1845,11 +1841,11 @@
       "children": [
         {
           "key": "LAE",
-          "name": "THE Structure OF THE"
+          "name": "Language Arts and English Education"
         },
         {
           "key": "RED",
-          "name": "Diagnose Reading Difficulties AND"
+          "name": "Reading Education"
         }
       ]
     },
@@ -1859,7 +1855,7 @@
       "children": [
         {
           "key": "SSE",
-          "name": "Prepare Individuals TO Apply"
+          "name": "Social Studies Education"
         }
       ]
     },
@@ -1869,27 +1865,27 @@
       "children": [
         {
           "key": "DEM",
-          "name": "THIS Prefix Refers TO"
+          "name": "Demography"
         },
         {
           "key": "SYA",
-          "name": "THIS Prefix Designates Subject"
+          "name": "Sociological Analysis"
         },
         {
           "key": "SYD",
-          "name": "Major Topics: SYD Sociology"
+          "name": "Sociology of Demography/Area Studies/Sociological Minorities"
         },
         {
           "key": "SYG",
-          "name": "THIS Prefix Refers TO"
+          "name": "Sociology, General"
         },
         {
           "key": "SYO",
-          "name": "THIS Prefix Designates Subject"
+          "name": "Social Organization"
         },
         {
           "key": "SYP",
-          "name": "THIS Prefix Designates Subject"
+          "name": "Social Processes"
         }
       ]
     },
@@ -1899,7 +1895,7 @@
       "children": [
         {
           "key": "LEI",
-          "name": "THIS Prefix DEAL WITH"
+          "name": "Leisure"
         }
       ]
     },
@@ -1909,7 +1905,7 @@
       "children": [
         {
           "key": "PAX",
-          "name": "Peace Education Theory AND"
+          "name": "Peace Studies"
         }
       ]
     },
@@ -1919,7 +1915,7 @@
       "children": [
         {
           "key": "COM",
-          "name": "THE COM Prefix Classifies"
+          "name": "Communication"
         }
       ]
     },
@@ -1929,7 +1925,7 @@
       "children": [
         {
           "key": "ORI",
-          "name": "THE ORI Prefix Pertains"
+          "name": "Oral Interpretation"
         }
       ]
     },
@@ -1949,7 +1945,7 @@
       "children": [
         {
           "key": "HLP",
-          "name": "THIS Prefix Describe Theoretical"
+          "name": "Health/Leisure/Physical Education"
         }
       ]
     },
@@ -1959,7 +1955,7 @@
       "children": [
         {
           "key": "ISS",
-          "name": "Introduction TO AND Topics"
+          "name": "Interdisciplinary Social Sciences"
         }
       ]
     },
@@ -1969,7 +1965,7 @@
       "children": [
         {
           "key": "BCH",
-          "name": "Biochemistry Biophysics AND Molecular"
+          "name": "Biochemistry (Biophysics)"
         }
       ]
     },
@@ -1979,7 +1975,7 @@
       "children": [
         {
           "key": "AFS",
-          "name": "THE History Society Politics"
+          "name": "African Studies"
         }
       ]
     },
@@ -1989,7 +1985,7 @@
       "children": [
         {
           "key": "ASN",
-          "name": "Descibe THE General History"
+          "name": "Asian Studies"
         }
       ]
     },
@@ -1999,7 +1995,7 @@
       "children": [
         {
           "key": "EUS",
-          "name": "THE General History Society"
+          "name": "European Studies"
         }
       ]
     },
@@ -2009,11 +2005,11 @@
       "children": [
         {
           "key": "CPS",
-          "name": "Comparative Policy Studies Include"
+          "name": "Comparative Policy Studies (Multinational)"
         },
         {
           "key": "INS",
-          "name": "International Studies Courses Integrate"
+          "name": "International Studies"
         }
       ]
     },
@@ -2023,7 +2019,7 @@
       "children": [
         {
           "key": "REE",
-          "name": "THE Theories AND Techniques"
+          "name": "Real Estate"
         }
       ]
     },
@@ -2033,7 +2029,7 @@
       "children": [
         {
           "key": "RMI",
-          "name": "PURE RISK Analysis AND"
+          "name": "Risk Management & Insurance"
         }
       ]
     },
@@ -2043,7 +2039,7 @@
       "children": [
         {
           "key": "QMB",
-          "name": "THE Applications OF Mathematical"
+          "name": "Quantitative Methods in Business"
         }
       ]
     },
@@ -2053,7 +2049,7 @@
       "children": [
         {
           "key": "BUL",
-          "name": "THE USE OR Apply"
+          "name": "Business Law"
         }
       ]
     },
@@ -2067,11 +2063,11 @@
         },
         {
           "key": "ISC",
-          "name": "Which Several Sciences ARE"
+          "name": "Interdisciplinary Sciences"
         },
         {
           "key": "MOB",
-          "name": "Physics Principles TO THE"
+          "name": "Molecular Biophysics"
         }
       ]
     },
@@ -2081,7 +2077,7 @@
       "children": [
         {
           "key": "STA",
-          "name": "General Education Statistics Courses"
+          "name": "Statistics"
         }
       ]
     },
@@ -2091,7 +2087,7 @@
       "children": [
         {
           "key": "MAE",
-          "name": "ALL Course IN THIS"
+          "name": "Mathematics Education"
         }
       ]
     },
@@ -2101,7 +2097,7 @@
       "children": [
         {
           "key": "LAS",
-          "name": "THE History Society Politics"
+          "name": "Latin American Studies"
         }
       ]
     },
@@ -2111,15 +2107,15 @@
       "children": [
         {
           "key": "HFT",
-          "name": "THE Nature AND Application"
+          "name": "Hospitality Management"
         },
         {
           "key": "HMG",
-          "name": "Graduate Level Courses THAT"
+          "name": "Hospitality Management (Graduate)"
         },
         {
           "key": "HMV",
-          "name": "THE Nature AND Application"
+          "name": "Hospitality Management, Vocational"
         }
       ]
     },
@@ -2129,7 +2125,7 @@
       "children": [
         {
           "key": "DES",
-          "name": "Dental Support Identifies Those"
+          "name": "Dental Support"
         }
       ]
     },
@@ -2139,11 +2135,11 @@
       "children": [
         {
           "key": "CPT",
-          "name": "Individuals TO Perform WIDE"
+          "name": "Cardiopulmonary Technology -(see CVT)"
         },
         {
           "key": "CVT",
-          "name": "Physician Includes Instruction IN"
+          "name": "Cardiovascular Technology"
         }
       ]
     },
@@ -2153,15 +2149,15 @@
       "children": [
         {
           "key": "ABT",
-          "name": "Arabic Literature Linguistics Civilization"
+          "name": "Arabic Culture in Translation or Translation Skills"
         },
         {
           "key": "ABW",
-          "name": "Arabic Literature AND FILM"
+          "name": "Arabic Literature (Writings)"
         },
         {
           "key": "ARA",
-          "name": "Beginning Arabic Through Advanced"
+          "name": "Arabic Language"
         }
       ]
     },
@@ -2171,19 +2167,19 @@
       "children": [
         {
           "key": "HBR",
-          "name": "Beginning Hebrew Through Advanced"
+          "name": "Modern Hebrew Language"
         },
         {
           "key": "HBT",
-          "name": "Hebrew Literature Linguistics Civilization"
+          "name": "Modern Hebrew Culture in Translation or Translation Skills"
         },
         {
           "key": "HEB",
-          "name": "Prefix Deleted"
+          "name": "Ancient Hebrew (Discontinued - (see HBR)"
         },
         {
           "key": "HMW",
-          "name": "Modern Hebrew Literature AND"
+          "name": "Modern Hebrew Literature (Writings)"
         }
       ]
     },
@@ -2193,27 +2189,27 @@
       "children": [
         {
           "key": "HAI",
-          "name": "Beginning Haitian Through Advanced"
+          "name": "Haitian Creole Language"
         },
         {
           "key": "HAT",
-          "name": "Haitian Literature Linguistics Civilization"
+          "name": "Haitian Culture in Translation or Translation Skills"
         },
         {
           "key": "HCW",
-          "name": "Haitian Creole Literature AND"
+          "name": "Haitian Creole Literature (Writings)"
         },
         {
           "key": "JAM",
-          "name": "Jamaican Patois Known Locally"
+          "name": "Jamaican Language"
         },
         {
           "key": "JMT",
-          "name": "Culture OF Jamaica AND"
+          "name": "Jamaican Culture in Translation"
         },
         {
           "key": "JMW",
-          "name": "Literature OF Jamaica AND"
+          "name": "Jamaican Literature and Writing"
         }
       ]
     },
@@ -2223,55 +2219,55 @@
       "children": [
         {
           "key": "HIN",
-          "name": "Beginning Hindi Through Advanced"
+          "name": "Hindi Language"
         },
         {
           "key": "HIT",
-          "name": "Hindi Literature Linguistics Civilization"
+          "name": "Hindi Culture in Translation or Translation Skills"
         },
         {
           "key": "HIW",
-          "name": "Hindi Literature AND FILM"
+          "name": "Hindi Literature (Writings)"
         },
         {
           "key": "IDN",
-          "name": "Beginning Indonesian Through Advanced"
+          "name": "Indonesian Language"
         },
         {
           "key": "IDT",
-          "name": "Indonesian Literature Linguistics Civilization"
+          "name": "Indonesian Culture in Translation or Translation Skills"
         },
         {
           "key": "IDW",
-          "name": "Indonesian Literature AND FILM"
+          "name": "Indonesian Literature (Writings)"
         },
         {
           "key": "SAL",
-          "name": "Beginning South Asian Languages"
+          "name": "South Asian Languages"
         },
         {
           "key": "SRK",
-          "name": "Beginning Sanskrit Through Advanced"
+          "name": "Sanskrit Language"
         },
         {
           "key": "SRT",
-          "name": "Sanskrit Literature Linguistics Civilization"
+          "name": "Sanskrit Culture in Translation or Translation Skills"
         },
         {
           "key": "SRW",
-          "name": "Sanskrit Literature AND FILM"
+          "name": "Sanskrit Literature (Writings)"
         },
         {
           "key": "VTN",
-          "name": "Beginning Vietnamese Languages Through"
+          "name": "Vietnamese Language"
         },
         {
           "key": "VTT",
-          "name": "Vietnamese Literature Linguistics Civilization"
+          "name": "Vietnamese Culture in Translation or Translation Skills"
         },
         {
           "key": "VTW",
-          "name": "Vietnamese Literature AND FILM"
+          "name": "Vietnamese Literature (Writings)"
         }
       ]
     },
@@ -2281,15 +2277,15 @@
       "children": [
         {
           "key": "POR",
-          "name": "Beginning Portuguese Through Advanced"
+          "name": "Portuguese Language"
         },
         {
           "key": "POW",
-          "name": "Portuguese Literature AND FILM"
+          "name": "Portuguese Literature (Writings)"
         },
         {
           "key": "PRT",
-          "name": "Portuguese Literature Linguistics Civilization"
+          "name": "Portuguese Culture in Translation or Translation Skills"
         }
       ]
     },
@@ -2299,39 +2295,39 @@
       "children": [
         {
           "key": "CHI",
-          "name": "Beginning Chinese Through Advanced"
+          "name": "Chinese Language"
         },
         {
           "key": "CHT",
-          "name": "Chinese Literature Linguistics Civilization"
+          "name": "Chinese Culture in Translation or Translation Skills"
         },
         {
           "key": "CHW",
-          "name": "Chinese Literature AND FILM"
+          "name": "Chinese Literature (Writings)"
         },
         {
           "key": "JPN",
-          "name": "Beginning Japanese Through Advanced"
+          "name": "Japanese Language"
         },
         {
           "key": "JPT",
-          "name": "Japanese Literature Linguistics Civilization"
+          "name": "Japanese Culture in Translation or Translation Skills"
         },
         {
           "key": "JPW",
-          "name": "Japanese Literature AND FILM"
+          "name": "Japanese Literature (Writings)"
         },
         {
           "key": "KOR",
-          "name": "Beginning Korean Through Advanced"
+          "name": "Korean Language"
         },
         {
           "key": "KOT",
-          "name": "Korean Literature Linguistics Civilization"
+          "name": "Korean Culture in Translation or Translation Skills"
         },
         {
           "key": "KOW",
-          "name": "Korean Literature AND FILM"
+          "name": "Korean Literature (Writings)"
         }
       ]
     },
@@ -2341,7 +2337,7 @@
       "children": [
         {
           "key": "LIN",
-          "name": "Linguistics Deals WITH THE"
+          "name": "Linguistics"
         }
       ]
     },
@@ -2351,27 +2347,27 @@
       "children": [
         {
           "key": "AMT",
-          "name": "AS SET Forth IN"
+          "name": "Aviation Maintenance Technology"
         },
         {
           "key": "ASC",
-          "name": "IN Order FOR Course"
+          "name": "Aviation Science: General"
         },
         {
           "key": "ATF",
-          "name": "IN Order FOR Course"
+          "name": "Aviation Technology: Flight"
         },
         {
           "key": "ATT",
-          "name": "IN Order FOR Course"
+          "name": "Aviation Technology: Theory"
         },
         {
           "key": "AVM",
-          "name": "IN Order FOR Course"
+          "name": "Aviation Management"
         },
         {
           "key": "AVS",
-          "name": "IN Order FOR Course"
+          "name": "Avionics"
         }
       ]
     },
@@ -2381,19 +2377,23 @@
       "children": [
         {
           "key": "EAP",
-          "name": "Designed TO Teach NON"
+          "name": "English for Academic Purposes"
         },
         {
           "key": "ENS",
-          "name": "THE Courses Classified IN"
+          "name": "English for Non-Native Speakers (College Lvl) Disc.(see EAP)"
         },
         {
           "key": "ESL",
-          "name": "Discontinued"
+          "name": "College-Prep English for Non-Native Speakers (Disc.(see TSL)"
+        },
+        {
+          "key": "SLA",
+          "name": "Second Language Acquisition/Instructional Technology"
         },
         {
           "key": "TSL",
-          "name": "Professional Teacher Education Courses"
+          "name": "Teaching English AS a Second Language"
         }
       ]
     },
@@ -2403,15 +2403,15 @@
       "children": [
         {
           "key": "BAN",
-          "name": "Group OF Courses THAT"
+          "name": "Commercial Banking (Aib Courses Only)"
         },
         {
           "key": "BRC",
-          "name": "Group OF Courses Designed"
+          "name": "Banking Related Courses (Not Aib or Ife)"
         },
         {
           "key": "SVL",
-          "name": "Group OF Courses Approved"
+          "name": "Savings and Loan (Ife Courses Only)"
         }
       ]
     },
@@ -2421,15 +2421,11 @@
       "children": [
         {
           "key": "FIN",
-          "name": "BODY OF Knowledge IN"
+          "name": "Finance"
         },
         {
           "key": "FIT",
-          "name": "BODY OF Knowledge IN"
-        },
-        {
-          "key": "FFP",
-          "name": "Instruction Includes Combination OF"
+          "name": "Finance and Investments"
         }
       ]
     },
@@ -2439,7 +2435,11 @@
       "children": [
         {
           "key": "FES",
-          "name": "Designed TO Build ON"
+          "name": "Fire and Emergency Services"
+        },
+        {
+          "key": "FFP",
+          "name": "Fire Fighting & Protection"
         }
       ]
     },
@@ -2449,15 +2449,15 @@
       "children": [
         {
           "key": "FRE",
-          "name": "Beginning French Through Advanced"
+          "name": "French Language"
         },
         {
           "key": "FRT",
-          "name": "French Literature Linguistics Civilization"
+          "name": "French Culture in Translation or Translation Skills"
         },
         {
           "key": "FRW",
-          "name": "French Literature AND FILM"
+          "name": "French Literature (Writings)"
         }
       ]
     },
@@ -2467,7 +2467,7 @@
       "children": [
         {
           "key": "HUM",
-          "name": "THE Creative Ideas AND"
+          "name": "Humanities"
         }
       ]
     },
@@ -2477,15 +2477,15 @@
       "children": [
         {
           "key": "ITA",
-          "name": "Beginning Italian Through Advanced"
+          "name": "Italian Language"
         },
         {
           "key": "ITT",
-          "name": "Italian Literature Linguistics Civilization"
+          "name": "Italian Culture in Translation or Translation Skills"
         },
         {
           "key": "ITW",
-          "name": "Italian Literature AND FILM"
+          "name": "Italian Literature (Writings)"
         }
       ]
     },
@@ -2495,23 +2495,23 @@
       "children": [
         {
           "key": "ENT",
-          "name": "Definition TO BE Provided"
+          "name": "Entrepreneurship"
         },
         {
           "key": "ISM",
-          "name": "AN Instructional Program OF"
+          "name": "Information Systems Management"
         },
         {
           "key": "MAN",
-          "name": "AN Instructional Program OF"
+          "name": "Management"
         },
         {
           "key": "MNA",
-          "name": "Designed TO MEET Particular"
+          "name": "Management: Applied"
         },
         {
           "key": "SBM",
-          "name": "Group OF Skill Based"
+          "name": "Small Business Mgmt: Occupational/Technical Variable Paced"
         }
       ]
     },
@@ -2521,11 +2521,11 @@
       "children": [
         {
           "key": "MAR",
-          "name": "THIS Sequence Place Emphasis"
+          "name": "Marketing"
         },
         {
           "key": "MKA",
-          "name": "AN Instructional Program OF"
+          "name": "Marketing Applications"
         }
       ]
     },
@@ -2535,19 +2535,19 @@
       "children": [
         {
           "key": "DIE",
-          "name": "Focus ON Nutritional CARE"
+          "name": "Dietetics"
         },
         {
           "key": "FOS",
-          "name": "Focus ON THE Study"
+          "name": "Food Science"
         },
         {
           "key": "FSS",
-          "name": "Focus ON THE Organization"
+          "name": "Food Service Systems"
         },
         {
           "key": "HUN",
-          "name": "Focus ON Human Nutrition"
+          "name": "Human Nutrition"
         }
       ]
     },
@@ -2557,11 +2557,11 @@
       "children": [
         {
           "key": "PAD",
-          "name": "Individuals TO Serve AS"
+          "name": "Public Administration"
         },
         {
           "key": "PAF",
-          "name": "THIS Interdisciplinary Program DRAW"
+          "name": "Public Affairs"
         }
       ]
     },
@@ -2571,71 +2571,71 @@
       "children": [
         {
           "key": "CZE",
-          "name": "Beginning Czech Through Advanced"
+          "name": "Czech Language"
         },
         {
           "key": "CZT",
-          "name": "Czech Literature Linguistics Civilization"
+          "name": "Czech Culture in Translation or Translation Skills"
         },
         {
           "key": "CZW",
-          "name": "Czech Literature AND FILM"
+          "name": "Czech Literature (Writings)"
         },
         {
           "key": "HNG",
-          "name": "Beginning Hungarian Through Advanced"
+          "name": "Hungarian Language"
         },
         {
           "key": "HNT",
-          "name": "Hungarian Literature Linguistics Civilization"
+          "name": "Hungarian Culture in Translation or Translation Skills"
         },
         {
           "key": "HNW",
-          "name": "Hungarian Literature AND FILM"
+          "name": "Hungarian Literature (Writings)"
         },
         {
           "key": "PLT",
-          "name": "Polish Literature Linguistics Civilization"
+          "name": "Polish Culture in Translation or Translation Skills"
         },
         {
           "key": "PLW",
-          "name": "Polish Literature AND FILM"
+          "name": "Polish Literature"
         },
         {
           "key": "POL",
-          "name": "Beginning Polish Through Advanced"
+          "name": "Polish Language"
         },
         {
           "key": "RUS",
-          "name": "Beginning Russian Through Advanced"
+          "name": "Russian Language"
         },
         {
           "key": "RUT",
-          "name": "Russian Literature Linguistics Civilization"
+          "name": "Russian Culture in Translation or Translation Skills"
         },
         {
           "key": "RUW",
-          "name": "Russian Literature AND FILM"
+          "name": "Russian Literature (Writings)"
         },
         {
           "key": "SCW",
-          "name": "Serbo Croatian Literature AND"
+          "name": "Serbo-Croatian Literature (Writings)"
         },
         {
           "key": "SEC",
-          "name": "Beginning Serbo Croation Through"
+          "name": "Serbo-Croatian Language"
         },
         {
           "key": "SLL",
-          "name": "Beginning Slavic Through Advanced"
+          "name": "Slavic Languages"
         },
         {
           "key": "SLT",
-          "name": "Slavic Literature Linguistics Civilization"
+          "name": "Slavic Culture in Translation or Translation Skills"
         },
         {
           "key": "SLW",
-          "name": "Slavic Literature AND FILM"
+          "name": "Slavic Literature (Writings)"
         }
       ]
     },
@@ -2645,15 +2645,15 @@
       "children": [
         {
           "key": "SPN",
-          "name": "Beginning Spanish Through Advanced"
+          "name": "Spanish Language"
         },
         {
           "key": "SPT",
-          "name": "Spanish Literature Linguistics Civilization"
+          "name": "Spanish Culture in Translation or Translation Skills"
         },
         {
           "key": "SPW",
-          "name": "Spanish Literature AND FILM"
+          "name": "Spanish Literature (Writings)"
         }
       ]
     },
@@ -2663,49 +2663,49 @@
       "children": [
         {
           "key": "CLA",
-          "name": "Beginning Classical Languages Through"
+          "name": "Classical and Ancient Studies"
         },
         {
           "key": "CLT",
-          "name": "Classical Literature Linguistics Civilization"
+          "name": "Classical Culture in Translation or Translation Skills"
         },
         {
           "key": "GMT",
-          "name": "Modern Greek Literature Linguistics"
+          "name": "Modern Greek Culture in Translation or Translation Skills"
         },
         {
           "key": "GMW",
-          "name": "NO Longer IN USE"
+          "name": "Modern Greek Literature (Writings)"
         },
         {
           "key": "GRE",
-          "name": "Beginning Greek Through Advanced"
+          "name": "Classical Greek (Language Study)"
         },
         {
           "key": "GRK",
-          "name": "Beginning Modern Greek Through"
+          "name": "Modern Greek Language"
         },
         {
           "key": "GRW",
-          "name": "Classical Greek Literature AND"
+          "name": "Classical Greek Literature (Writings)"
         },
         {
           "key": "LAT",
-          "name": "Beginning IN Latin Through"
+          "name": "Latin (Language Study)"
         },
         {
           "key": "LNW",
-          "name": "Latin Literature AND FILM"
+          "name": "Latin Literature (Writings)"
         }
       ]
     },
     {
-      "key": "FOREIGN_LANGUAGE__CA",
+      "key": "FOREIGN_LANGUAGE__CATALAN",
       "name": "Foreign Language: Catalan Language And Literature",
       "children": [
         {
           "key": "CAT",
-          "name": "Beginning Catalan Through Advanced"
+          "name": "Catalan Language"
         }
       ]
     },
@@ -2715,11 +2715,7 @@
       "children": [
         {
           "key": "FLE",
-          "name": "Teach Foreign Languages Programs"
-        },
-        {
-          "key": "DEC",
-          "name": "Professional Education AND Marketing"
+          "name": "Foreign Language Education"
         }
       ]
     },
@@ -2729,7 +2725,11 @@
       "children": [
         {
           "key": "BTE",
-          "name": "Professional Education AND Business"
+          "name": "Business Teacher Education"
+        },
+        {
+          "key": "DEC",
+          "name": "Marketing and Distributive Education"
         }
       ]
     },
@@ -2739,27 +2739,27 @@
       "children": [
         {
           "key": "PSN",
-          "name": "Beginning Persian Through Advanced"
+          "name": "Persian Language"
         },
         {
           "key": "PST",
-          "name": "Persian Literature Linguistics Civilization"
+          "name": "Persian Culture in Translation or Translation Skills"
         },
         {
           "key": "PSW",
-          "name": "Persian Literature AND FILM"
+          "name": "Persian Literature (Writings)"
         },
         {
           "key": "TUR",
-          "name": "Beginning Turkish Through Advanced"
+          "name": "Turkish Language"
         },
         {
           "key": "TUT",
-          "name": "Turkish Literature Linguistics Civilization"
+          "name": "Turkish Culture in Translation or Translation Skills"
         },
         {
           "key": "TUW",
-          "name": "Turkish Literature AND FILM"
+          "name": "Turkish Literature (Writings)"
         }
       ]
     },
@@ -2769,11 +2769,11 @@
       "children": [
         {
           "key": "EVR",
-          "name": "Group OF Instructional Programs"
+          "name": "Environmental Studies"
         },
         {
           "key": "EVS",
-          "name": "Group OF Instructional Programs"
+          "name": "Environmental Science"
         }
       ]
     },
@@ -2783,7 +2783,7 @@
       "children": [
         {
           "key": "REA",
-          "name": "THIS Prefix DEAL WITH"
+          "name": "Reading"
         }
       ]
     },
@@ -2793,11 +2793,11 @@
       "children": [
         {
           "key": "GEB",
-          "name": "Business Courses Which ARE"
+          "name": "General Business"
         },
         {
           "key": "SPB",
-          "name": "Introduction TO THE Sport"
+          "name": "Sports Business"
         }
       ]
     },
@@ -2807,15 +2807,15 @@
       "children": [
         {
           "key": "AAE",
-          "name": "Applied Academics FOR Adult"
+          "name": "Applied Academics for Adult Education"
         },
         {
           "key": "IEA",
-          "name": "Discontinued"
+          "name": "Industrial Education Applied - Discontinued"
         },
         {
           "key": "VPI",
-          "name": "AND Activities TO Provide"
+          "name": "Vocational Preparatory Instruction (Disc 8/1/2015)"
         }
       ]
     },
@@ -2825,7 +2825,7 @@
       "children": [
         {
           "key": "SUR",
-          "name": "Individuals TO Apply Mathematical"
+          "name": "Surveying & Related Areas"
         }
       ]
     },
@@ -2835,11 +2835,11 @@
       "children": [
         {
           "key": "GRA",
-          "name": "Prepare Individuals FOR Enrollment"
+          "name": "Graphic Arts"
         },
         {
           "key": "GRG",
-          "name": "ARE Correlated WITH THE"
+          "name": "Graphic Arts - Graduate-Level"
         }
       ]
     },
@@ -2849,7 +2849,7 @@
       "children": [
         {
           "key": "HUS",
-          "name": "THE HUS Prefix Includes"
+          "name": "Human Services"
         }
       ]
     },
@@ -2859,31 +2859,27 @@
       "children": [
         {
           "key": "AML",
-          "name": "Surveys Major Authors Thematic"
+          "name": "American Literature"
         },
         {
           "key": "CRW",
-          "name": "Development OF Skills IN"
+          "name": "Creative Writing"
         },
         {
           "key": "ENC",
-          "name": "English Composition Includes Developmental"
+          "name": "English Composition"
         },
         {
           "key": "ENG",
-          "name": "Includes Courses IN Bibliography"
+          "name": "English - General"
         },
         {
           "key": "ENL",
-          "name": "Literature Periods Authors AND"
+          "name": "English Literature"
         },
         {
           "key": "LIT",
-          "name": "Studies IN Multinational Literatures"
-        },
-        {
-          "key": "EML",
-          "name": "AN Instructional Program OF"
+          "name": "Literature"
         }
       ]
     },
@@ -2893,39 +2889,39 @@
       "children": [
         {
           "key": "APK",
-          "name": "Include Instruction IN Biomechanics"
+          "name": "Applied Kinesiology"
         },
         {
           "key": "PEL",
-          "name": "ARE Object Centered LAND"
+          "name": "Phys. Edu. Acts - (Gen.)-Object Centrd, Land"
         },
         {
           "key": "PEM",
-          "name": "ARE Performer Centered LAND"
+          "name": "Phys. Edu. Acts. (Gen.)-Perfomr. Centrd., Land"
         },
         {
           "key": "PEN",
-          "name": "ARE Water SNOW OR"
+          "name": "Physical Edu. Activities (Gen.)-Water, Snow, Ice"
         },
         {
           "key": "PEO",
-          "name": "ARE Object Centered LAND"
+          "name": "Phys. Edu. Acts. (Profnl.)-Object Centrd., Land"
         },
         {
           "key": "PEP",
-          "name": "ARE Performer Centered LAND"
+          "name": "Phys. Edu. Acts. (Profnl.)-Perfmr. Centrd., Land"
         },
         {
           "key": "PEQ",
-          "name": "ARE Water SNOW OR"
+          "name": "Phys. Edu. Acts. (Profnl.) - Water, Snow, Ice"
         },
         {
           "key": "PET",
-          "name": "ARE Theory Based Courses"
+          "name": "Physical Education: Theory"
         },
         {
           "key": "SPM",
-          "name": "Behavioral Dimensions OF Sport"
+          "name": "Sports Management"
         }
       ]
     },
@@ -2935,19 +2931,19 @@
       "children": [
         {
           "key": "ACG",
-          "name": "Accounting IS THE Study"
+          "name": "Accounting: General"
         },
         {
           "key": "ACO",
-          "name": "Generally Variable Paced Instructional"
+          "name": "Accounting: Occupational/Technical Variable Paced"
         },
         {
           "key": "APA",
-          "name": "Applied Accounting (Apa) Courses"
+          "name": "Applied Accounting"
         },
         {
           "key": "TAX",
-          "name": "Instructional Programs Designed TO"
+          "name": "Taxation"
         }
       ]
     },
@@ -2957,7 +2953,7 @@
       "children": [
         {
           "key": "EMS",
-          "name": "Emergency Medical Services IS"
+          "name": "Emergency Medical Services"
         }
       ]
     },
@@ -2967,7 +2963,7 @@
       "children": [
         {
           "key": "SLS",
-          "name": "Develop Skills FOR Students"
+          "name": "Student Life Skills (Learning)"
         }
       ]
     },
@@ -2977,7 +2973,7 @@
       "children": [
         {
           "key": "JST",
-          "name": "Address Historical Political Cultural"
+          "name": "Jewish/Judaic Studies"
         }
       ]
     },
@@ -2987,11 +2983,15 @@
       "children": [
         {
           "key": "HSA",
-          "name": "HSA (Health Services Administration)"
+          "name": "Health Services Administration"
+        },
+        {
+          "key": "HSC",
+          "name": "Health Sciences"
         },
         {
           "key": "PHC",
-          "name": "PHC (Public Health Concentration)"
+          "name": "Public Health Concentration"
         }
       ]
     },
@@ -3001,7 +3001,11 @@
       "children": [
         {
           "key": "EGN",
-          "name": "Lower Level Undergraduate Courses"
+          "name": "Engineering: General"
+        },
+        {
+          "key": "EGS",
+          "name": "Engineering: Support"
         }
       ]
     },
@@ -3011,23 +3015,19 @@
       "children": [
         {
           "key": "EAS",
-          "name": "AN Instructional Program OF"
+          "name": "Aerospace Engineering"
         },
         {
           "key": "EGM",
-          "name": "AN Instructional Program OF"
+          "name": "Engineering Science"
         },
         {
           "key": "EMC",
-          "name": "AN Instructional Program OF"
+          "name": "Engineering: Mechanical & Chemical"
         },
         {
-          "key": "HSC",
-          "name": "HSC (Health Sciences) Prefix"
-        },
-        {
-          "key": "EGS",
-          "name": "Series OF Courses Designed"
+          "key": "EML",
+          "name": "Engineering: Mechanical"
         }
       ]
     },
@@ -3037,11 +3037,11 @@
       "children": [
         {
           "key": "EIN",
-          "name": "Industrial Engineering Topics SUCH"
+          "name": "Industrial Engineering"
         },
         {
           "key": "ESI",
-          "name": "Systems Modeling AND Analysis"
+          "name": "Industrial/Systems Engineering"
         }
       ]
     },
@@ -3051,15 +3051,11 @@
       "children": [
         {
           "key": "ECH",
-          "name": "Design Development AND Operational"
+          "name": "Engineering: Chemical"
         },
         {
           "key": "ENU",
-          "name": "Design Development AND Operational"
-        },
-        {
-          "key": "EMA",
-          "name": "Design Development AND Operational"
+          "name": "Engineering: Nuclear"
         }
       ]
     },
@@ -3069,7 +3065,11 @@
       "children": [
         {
           "key": "ECM",
-          "name": "Computer Mathematics Which Support"
+          "name": "Engineering: Computer Math"
+        },
+        {
+          "key": "EMA",
+          "name": "Materials Engineering"
         }
       ]
     },
@@ -3079,11 +3079,11 @@
       "children": [
         {
           "key": "COS",
-          "name": "Prepare THE Individual FOR"
+          "name": "Cosmetology"
         },
         {
           "key": "CSP",
-          "name": "Prepare THE Individual FOR"
+          "name": "Cosmetology - Specialized"
         }
       ]
     },
@@ -3093,7 +3093,7 @@
       "children": [
         {
           "key": "LBS",
-          "name": "THIS Prefix DEAL WITH"
+          "name": "Labor Studies"
         }
       ]
     },
@@ -3103,7 +3103,7 @@
       "children": [
         {
           "key": "LDR",
-          "name": "Leadership IS Accomplished Through"
+          "name": "Leadership Studies"
         }
       ]
     },
@@ -3113,11 +3113,11 @@
       "children": [
         {
           "key": "IHS",
-          "name": "THE IHS (Interdisciplinary Health"
+          "name": "Interdisciplinary Health Sciences"
         },
         {
           "key": "RSD",
-          "name": "THE Field OF Rehabilitation"
+          "name": "Rehabilitation Science Doctorate"
         }
       ]
     },
@@ -3127,7 +3127,7 @@
       "children": [
         {
           "key": "SMT",
-          "name": "BOTH Science AND Mathematics"
+          "name": "Science or Mathematics Teaching"
         }
       ]
     },
@@ -3137,7 +3137,7 @@
       "children": [
         {
           "key": "ACR",
-          "name": "Individuals TO WORK IN"
+          "name": "HVACR: Heating/Ventilation/Ac/Refrigeration: Tech/Trades"
         }
       ]
     },
@@ -3147,7 +3147,7 @@
       "children": [
         {
           "key": "EPI",
-          "name": "Educator Preparation Institutes (SEE"
+          "name": "Educator Preparation Institutes"
         }
       ]
     },
@@ -3157,19 +3157,19 @@
       "children": [
         {
           "key": "OCA",
-          "name": "AN Instructional Program THAT"
+          "name": "Office Computer Applications"
         },
         {
           "key": "OFT",
-          "name": "AN Instructional Program THAT"
+          "name": "Occupational Office Technology (Discontinued)"
         },
         {
           "key": "OST",
-          "name": "Individuals TO Analyze Perform"
+          "name": "Office Systems Technology"
         },
         {
           "key": "OTA",
-          "name": "Individuals TO Analyze Perform"
+          "name": "Office Technology Applications"
         }
       ]
     },
@@ -3179,23 +3179,19 @@
       "children": [
         {
           "key": "HOS",
-          "name": "\"Hos\" (Horticultural Science) Applies"
+          "name": "Horticultural Sciences"
         },
         {
           "key": "LDE",
-          "name": "\"Lde\" (Landscape Design) Applies"
+          "name": "Landscape Design"
         },
         {
           "key": "ORH",
-          "name": "\"Orh\" (Ornimental Horticulture) IS"
+          "name": "Ornamental Horticulture"
         },
         {
           "key": "ORV",
-          "name": "Vocational Production Processing AND"
-        },
-        {
-          "key": "PGY",
-          "name": "AN Instructional Program THAT"
+          "name": "Ornamental Horticulture (Variable Paced)"
         }
       ]
     },
@@ -3205,7 +3201,7 @@
       "children": [
         {
           "key": "IDD",
-          "name": "Address THE Processes OF"
+          "name": "Industrial Design"
         }
       ]
     },
@@ -3215,7 +3211,7 @@
       "children": [
         {
           "key": "PLA",
-          "name": "THIS Discipline Includes Courses"
+          "name": "Paralegal/Legal Assistant/Legal Administration"
         }
       ]
     },
@@ -3225,7 +3221,7 @@
       "children": [
         {
           "key": "BME",
-          "name": "THE Biomedical Engineering Program"
+          "name": "Biomedical Engineering"
         }
       ]
     },
@@ -3235,7 +3231,7 @@
       "children": [
         {
           "key": "DIG",
-          "name": "AN Interdisciplinary Approach TO"
+          "name": "Digital Media"
         }
       ]
     },
@@ -3245,7 +3241,7 @@
       "children": [
         {
           "key": "MEM",
-          "name": "Medieval AND Early Modern"
+          "name": "Medieval and Early Modern Studies"
         }
       ]
     },
@@ -3255,21 +3251,21 @@
       "children": [
         {
           "key": "HPS",
-          "name": "History AND Philosophy OF"
+          "name": "History and Philosophy of Science"
         }
       ]
     },
     {
-      "key": "FOREIGN_LANGUAGE__AM",
+      "key": "FOREIGN_LANGUAGE__ASL",
       "name": "Foreign Language: American Sign Language And Interpreting",
       "children": [
         {
           "key": "ASL",
-          "name": "American SIGN Language AND"
+          "name": "American Sign Language"
         },
         {
           "key": "INT",
-          "name": "THE Interpreting Between SIGN"
+          "name": "Sign Language Interpreting"
         }
       ]
     },
@@ -3279,35 +3275,35 @@
       "children": [
         {
           "key": "DUT",
-          "name": "Beginning Dutch Through Advanced"
+          "name": "Dutch Language"
         },
         {
           "key": "GER",
-          "name": "Beginning German Through Advanced"
+          "name": "German"
         },
         {
           "key": "GET",
-          "name": "German Literature Linguistics Civilization"
+          "name": "German Culture in Translation or Translation Skills"
         },
         {
           "key": "GEW",
-          "name": "German Literature AND FILM"
+          "name": "German Literature (Writings)"
         },
         {
           "key": "ICW",
-          "name": "Icelandic Literature AND FILM"
+          "name": "Icelandic Literature"
         },
         {
           "key": "SCA",
-          "name": "Beginning Scandanavian Languages Through"
+          "name": "Scandinavian Languages"
         },
         {
           "key": "SCT",
-          "name": "Scandanavian Literature Linguistics Civilization"
+          "name": "Scandinavian Culture in Translation or Translation Skills"
         },
         {
           "key": "SNW",
-          "name": "Scandanavian Literature AND FILM"
+          "name": "Scandinavian Literature"
         }
       ]
     },
@@ -3317,107 +3313,117 @@
       "children": [
         {
           "key": "AHM",
-          "name": "Beginning Amharic Through Advanced"
+          "name": "Amharic Language"
         },
         {
           "key": "AHT",
-          "name": "Amharic Literature Linguistics Civilization"
+          "name": "Amharic Culture in Translation or Translation Skills"
         },
         {
           "key": "AHW",
-          "name": "Amharic Literature AND FILM"
+          "name": "Amharic Literature (Writings)"
         },
         {
           "key": "AKA",
-          "name": "Beginning AKAN Through Advanced"
+          "name": "Akan Language"
         },
         {
           "key": "AKT",
-          "name": "AKAN Literature Linguistics Civilization"
+          "name": "Akan Culture in Translation or Translation Skills"
         },
         {
           "key": "AKW",
-          "name": "AKAN Literature AND FILM"
+          "name": "Akan Literature (Writings)"
         },
         {
           "key": "LGL",
-          "name": "Beginning Lingala Through Advanced"
+          "name": "Lingala Language"
         },
         {
           "key": "LGT",
-          "name": "Lingalan Literature Linguistics Civilization"
+          "name": "Lingalan Culture in Translation or Translation Skills"
         },
         {
           "key": "LGW",
-          "name": "Lingalan Literature AND FILM"
+          "name": "Lingalan Literature (Writings)"
         },
         {
           "key": "SHO",
-          "name": "Beginning Shona Through Advanced"
+          "name": "Shona Language"
         },
         {
           "key": "SHT",
-          "name": "Shona Literature Linguistics Civilization"
+          "name": "Shona Culture in Translation or Translation Skills"
         },
         {
           "key": "SSA",
-          "name": "Beginning SUB Saharan Languages"
+          "name": "Sub-Saharan African Languages"
         },
         {
           "key": "SST",
-          "name": "SUB Saharan African Literature"
+          "name": "Sub-Saharan African Culture in Translation or Trans. Skills"
         },
         {
           "key": "SSW",
-          "name": "SUB Saharan African Literature"
+          "name": "Sub-Saharan African Literature"
         },
         {
           "key": "SWA",
-          "name": "Beginning Swahili Through Advanced"
+          "name": "Swahili Language"
         },
         {
           "key": "SWT",
-          "name": "Swahili Literature Linguistics Civilization"
+          "name": "Swahili Culture in Translation or Translation Skills"
         },
         {
           "key": "SWW",
-          "name": "Swahili Literature AND FILM"
+          "name": "Swahili Literature (Writings)"
         },
         {
           "key": "WOL",
-          "name": "Beginning Wolof Through Advanced"
+          "name": "Wolof Language"
         },
         {
           "key": "WOT",
-          "name": "Wolof Literature Linguistics Civilization"
+          "name": "Wolof Culture in Translation or Translation Skills"
         },
         {
           "key": "WOW",
-          "name": "Wolof Literature AND FILM"
+          "name": "Wolof Literature (Writings)"
         },
         {
           "key": "XHO",
-          "name": "Beginning Xhosa Languages Through"
+          "name": "Xhosa Language"
         },
         {
           "key": "XHT",
-          "name": "Xhosan Literature Linguistics Civilization"
+          "name": "Xhosa Culture in Translation or Translation Skills"
         },
         {
           "key": "XHW",
-          "name": "Xhosan Literature AND FILM"
+          "name": "Xhosan Literature (Writings)"
         },
         {
           "key": "YOR",
-          "name": "Beginning Yoruba Through Advanced"
+          "name": "Yoruba Language"
         },
         {
           "key": "YOT",
-          "name": "Yoruba Literature Linguistics Civilization"
+          "name": "Yoruba Culture in Translation or Translation Skills"
         },
         {
           "key": "YRW",
-          "name": "Yoruba Literature AND FILM"
+          "name": "Yoruba Literature (Writings)"
+        }
+      ]
+    },
+    {
+      "key": "PHOTOGRAPHY",
+      "name": "Photography",
+      "children": [
+        {
+          "key": "PGY",
+          "name": "Photography"
         }
       ]
     }

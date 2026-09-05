@@ -379,3 +379,8 @@ Specifications/*Inventory*.xlsx
 
 #AI Permissions
 **/.claude
+Tools/preview.html
+
+PreseMakerRepo.Api/Data/Seed/taxonomy.json.bak*
+Tools/queue.csv.bak*
+Tools/downloaded/

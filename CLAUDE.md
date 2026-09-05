@@ -19,6 +19,7 @@ three-project solution exists and is deployed; 643 curriculum guides are publish
 | `PreseMakerRepo.Infrastructure` | EF Core, file storage, email, JWT, services |
 | **`Tools/`** | **Content pipeline — how new courses and curriculum guides get published to floridacourserepo.com.** Not part of the server build. |
 | `Deployment/` | Server deploy scripts (`deploy-update.ps1` — prefer over the `.sh`; `bash` is not on PATH on this machine) |
+| **`FEATURE_BACKLOG.md`** | **Queued ideas for future website releases.** Capture list only — nothing there is started or scheduled. Add items here as they come up; distinct from `Deployment/PENDING_SERVER_CHANGES.md`, which holds code already written and awaiting deploy. |
 
 URL namespaces: `/api/v1/` (REST), `/browse/` (web frontend), `/admin/` (admin console).
 
@@ -34,6 +35,17 @@ the end-to-end process (prioritize → generate → validate → push → verify
 `Tools/README.md` (per-tool reference).
 
 The `/guide` skill (`.claude/skills/guide/SKILL.md`) drives this loop in a Claude Code session.
+
+**Demand-driven queue (2026-09-03):** visitors request missing guides at `/request-guide`
+(course, title, school, optional reason/email; rate-limited, hashed IP). Admins rank and triage
+them at `/admin/guide-requests`; `python queue_mgr.py import-requests [--mark-queued]` pulls
+the open requests into `queue.csv` ahead of catalog-derived rows (`Tools/QUEUE_GUIDE.md`).
+API: `GuideRequestsController`; logic: `Api/Services/GuideRequestService.cs`.
+
+**Static site export:** `/admin/static-export` builds a self-contained static zip of the public
+site (browse tree, courses, guides) by fetching the live pages over loopback and rewriting links
+(`Api/Services/StaticSiteExporter.cs`, background `StaticExportJobService`); the zips stay in
+`{Storage:RootPath}/exports/` as backups.
 
 ```powershell
 cd Tools
@@ -67,6 +79,55 @@ dotnet publish -c Release -r linux-x64 --self-contained false
 dotnet ef migrations add <MigrationName> --project PreseMakerRepo.Infrastructure --startup-project PreseMakerRepo.Api
 dotnet ef database update --project PreseMakerRepo.Infrastructure --startup-project PreseMakerRepo.Api
 ```
+
+## Where this project is going — career pathways
+
+**Ron, 2026-09-04.** The curriculum guides are the foundation, not the destination. **The intended
+direction is to take a profession — law, nursing, engineering, accounting — and trace an educational
+path to it: which courses, in what order, at which institutions.**
+
+**This is a later development effort. It is recorded now so that current work is built in a direction
+that supports it**, not to schedule it. The concrete feature entry lives in `FEATURE_BACKLOG.md`.
+**Implementation plan (2026-09-04): [`CAREER_PATHS_PLAN.md`](CAREER_PATHS_PLAN.md)** — data model
+(`CareerPath` + routes JSON + link table, `Institution`/`CourseOffering` seed), `/careers` pages, API,
+`Tools/career_paths/` pipeline, four phases. Start there when building.
+
+**⚠ The project is already useful and is not waiting on this.** 1,749 guides are live and serving
+students today; career pathways is the next layer of value, not a precondition for the current one.
+
+### What the guides are already accumulating toward it
+
+Each guide carries material the pathway layer will need, which is why these sections are written the way
+they are:
+
+- **Career Pathways** — named occupations with **SOC codes**, and named Florida employers.
+- **Prerequisites** — captured verbatim from each institution, including grade conditions, concurrency
+  notation, and co-requisite blocks. **This is the raw graph of what must precede what.**
+- **Position in the curriculum** — where a course sits in a sequence, and what it gates.
+- **Licensure and certification** — the terminal requirement a pathway aims at: NCLEX-RN and the Florida
+  Board of Nursing, ASCP certification plus Florida clinical laboratory licensure, the FE exam and PE
+  licensure, NAACLS and CCNE/ACEN programme accreditation.
+- **Transfer and articulation notes** — where credit moves between institutions and where it does not.
+
+### ⚠ What the build has already learned that a pathway feature must handle
+
+These are not hypotheticals; every one is documented in `Tools/SOURCES.md`:
+
+1. **A course number does not identify a course.** The same SCNS number can carry **two different
+   subjects** at different institutions (`NUR4286`, `NUR4826`) — hence the `-SCNS` / `-<INST>` split.
+2. **Suffixes are filing decisions, not descriptions.** An `L` can be a hospital rotation; a `C` can be a
+   separate programme track. **A pathway built by parsing course codes will be wrong.**
+3. **Institutions run parallel routes through the same subject** — pre-licensure versus degree-completion
+   in nursing, standard versus Professional Track in medical laboratory sciences. **A pathway must know
+   which route a student is on**, because a degree-completion route does not lead to initial licensure.
+4. **Programmatic accreditation frequently outranks course credit.** Eligibility to sit NCLEX-RN or ASCP
+   certification depends on completing an *approved programme* — **so a pathway assembled from
+   individually transferable courses can still fail to qualify anyone.**
+5. **Prerequisite chains are cohort-locked.** In nursing and MLS, one failed course delays an entire
+   block by a year, not a term.
+
+**The honest implication: a naive "take these courses in this order" pathway would mislead students.**
+The value is in encoding the constraints above, which is precisely what the guides have been recording.
 
 ## Technology Stack
 

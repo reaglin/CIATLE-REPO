@@ -68,8 +68,27 @@ public class TaxonomySeed
             _db.TaxonomyNodes.Add(new TaxonomyNode { Key = json.Key, Name = json.Name, Level = level, ParentKey = parentKey });
             return 1;
         }
-        if (existing.Name == json.Name) return 0;
+        // Reconcile placement as well as name. A node that moves to a different
+        // parent in taxonomy.json must move in the database too -- updating only
+        // the name silently left CJJ/CJK/CJL parented under DENTISTRY long after
+        // the JSON had been corrected.
+        if (existing.Name == json.Name
+            && existing.ParentKey == parentKey
+            && existing.Level == level)
+        {
+            return 0;
+        }
+
+        if (existing.ParentKey != parentKey || existing.Level != level)
+        {
+            _logger.LogInformation(
+                "Taxonomy node {Key} re-parented: {OldParent} (level {OldLevel}) -> {NewParent} (level {NewLevel}).",
+                json.Key, existing.ParentKey ?? "<root>", existing.Level, parentKey ?? "<root>", level);
+        }
+
         existing.Name = json.Name;
+        existing.ParentKey = parentKey;
+        existing.Level = level;
         return 1;
     }
 

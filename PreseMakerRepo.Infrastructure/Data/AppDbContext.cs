@@ -19,6 +19,7 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<CurriculumGuide> CurriculumGuides => Set<CurriculumGuide>();
     public DbSet<RepoGuideTemplate> GuideTemplates => Set<RepoGuideTemplate>();
     public DbSet<TaxonomyNodeDescription> TaxonomyNodeDescriptions => Set<TaxonomyNodeDescription>();
+    public DbSet<GuideRequest> GuideRequests => Set<GuideRequest>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

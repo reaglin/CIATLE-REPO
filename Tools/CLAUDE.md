@@ -195,22 +195,199 @@ After generating, surface anything in this list to the user as part of the post-
 - **Output filename**: `{COURSE_ID}_guide.json` exactly. Course ID is uppercase, no spaces. `queue_mgr.py reconcile` matches drafts to queue entries by extracting the course ID from the filename, so don't rename them.
 - **Output directory**: `Tools/drafts/` — write guides straight here. This is the same directory the push reads from; there is no staging step.
 - **Never write a `.py` or `.ps1` file named after a stdlib module** (`queue`, `csv`, `json`, `email`, …) into this directory — it shadows the real module and breaks `requests`/`urllib3`. That is why the queue tool is `queue_mgr.py`; don't rename it back.
+- **`REVIEW_QUEUE.md`** holds findings that need Ron's decision before acting — correction candidates on already-live guides, and scope calls like the skip list. **Add to it whenever a batch turns one up, rather than only mentioning it in the batch report**, and move items to its Resolved section once a decision lands. Findings and evidence still go in `SOURCES.md`; `REVIEW_QUEUE.md` is the short actionable list that points back to it.
 
 ---
 
 ## What to skip (default)
 
-Shell-style EGN courses unless the user says otherwise:
+Shell-style courses in any prefix, unless the user says otherwise:
 - `XXXX900`, `XXXX905`, `XXXX910` — independent study / directed individual study
+- `XXXX920`, `XXXX930` — **special topics / selected topics** (added 2026-08-31)
 - `XXXX940`, `XXXX941`, `XXXX945`, `XXXX949` — internship / cooperative education
 - `XXXX950`, `XXXX951` — special topics
 - `XXXX971`, `XXXX973` — thesis
 - `XXXX980`, `XXXX981` — dissertation
 - `XXXX990`, `XXXX991` — supervised research
 
+### ⚠ The "has it become titled?" exception
+
+**Skip a shell number unless the course has settled into a real, specific title that is
+consistent across institutions — at which point it is no longer a special-topics course and
+is worth a guide.** A specific title in the inventory is *not* sufficient evidence on its own:
+the statewide inventory and catalog scrapes can capture one institution's **section title** for
+one term.
+
+Verify against two or three catalogs before keeping one. Worked example (2026-08-31):
+`CCJ2930` appeared as **"Cybercrime"** at 12 institutions, which looked settled — but FGCU's
+catalog lists CCJ2930 as *"Special Topics: current and emerging issues in criminal justice and
+criminology."* The Cybercrime title was Daytona State's section title, not a statewide course.
+**Skipped.**
+
+**These courses migrate.** When a special-topics offering proves durable, SCNS assigns it a
+permanent number later. So a topic skipped today may reappear under its own number and become
+worth writing then — and, for guides on courses that *did* migrate, it is worth noting that
+older transcripts may carry the same content under the shell number. Do not treat a shell
+number as equivalent to the permanent number it became; SCNS equivalency does not cross
+numbers.
+
 Title keywords that flag shell courses regardless of code: INTERNSHIP, COOPERATIVE, SPECIAL TOPICS, INDEPENDENT STUDY, DIRECTED STUDY, THESIS, DISSERTATION, SUPERVISED RESEARCH.
 
 ---
+
+## ⚠⚠⚠ One number, two subjects: the `-SCNS` / `-<INST>` split
+
+**Ron's decision, 2026-09-04.** Sometimes an SCNS number does not carry a *variant* of a subject at
+different institutions — it carries **two genuinely different subjects**. When that happens, **do not pick
+one and bury the divergence in a warning. Publish both.**
+
+### When this rule applies
+
+Only when the statewide title and the institution's title name **different subjects**, not different
+wordings. Test it against the description, not the title:
+
+| | Same subject, different name → **one guide** | **Different subjects → split** |
+|---|---|---|
+| Example | SCNS "Gender and Culture" vs UWF "Global Gender Issues" | SCNS **"Gerontological Nursing"** vs UWF **"Concepts of Quality and Safety in Nursing"** |
+| Handling | one guide, note the drift, tell the student to carry a syllabus | **three pages — see below** |
+
+### What to publish
+
+For a number `XXXnnnn` carrying two subjects, publish **three** pages:
+
+1. **`XXXnnnn-SCNS`** — the subject as the **statewide catalog** defines it.
+2. **`XXXnnnn-<INST>`** — the subject as the institution actually teaches it (`-UWF`, `-DSC`, …).
+3. **`XXXnnnn`** (the bare number) — a short **disambiguation page** naming both subjects and pointing at
+   the two guides. **The bare number must never silently hold just one reading**, because that is exactly
+   the trap the split exists to prevent.
+
+Every variant guide carries a block at the top of Special Information stating both subjects, listing the
+institutions from the statewide inventory, and warning that **a transfer evaluator matching on the number
+alone cannot tell the two apart**.
+
+### Mechanics (working as of batch 129)
+
+- **The server accepts hyphenated IDs.** `ExtractCoursePrefix` scans letters up to the first digit, so
+  `NUR4826-UWF` resolves to prefix `NUR`, finds the taxonomy node, and creates the course.
+- **The tooling regex was widened** in `queue_mgr.py` and `validate_drafts.py` to
+  `^[A-Z]{3}\d{4}[CL]?(?:-(?:SCNS|[A-Z]{2,5}))?$`. Before that change `reconcile` **silently skipped**
+  hyphenated drafts and they never pushed.
+- ⚠ **When deriving a variant draft by copying an existing one, delete the `pushed_utc` key first** —
+  `reconcile` reads it and marks the new draft as already pushed, so it never gets sent.
+- The disambiguation stub legitimately trips the validator's "no Learning Outcomes / Major Topics"
+  warnings. Non-blocking, and correct for that page type.
+
+### ⚠ Sourcing the `-SCNS` half
+
+**A `-SCNS` guide needs the state catalog's definition of the course, not just its title.** The statewide
+inventory (`courses_2plus_institutions.csv`) gives a title and an institution list and nothing more.
+
+**Do not write a `-SCNS` guide from the title alone** — that is inventing content, which this project does
+not do. Source it from the SCNS catalog, or from a fetchable institution that actually teaches the SCNS
+version. **Ron has offered to supply the SCNS catalog; ask for it.**
+
+### Open cases
+
+| Number | SCNS subject | Institution subject | `-SCNS` | `-<INST>` | bare |
+|---|---|---|---|---|---|
+| `NUR4286` | Gerontological Nursing | Concepts of Quality and Safety in Nursing (UWF) | **⏸ needs catalog** | ✅ `-UWF` live | ✅ live |
+| `NUR4826` | Ethics | Transformational Nursing Leadership (UWF) | **⏸ needs catalog** | ✅ `-UWF` live | ✅ live |
+| `ART3789C` | World Ceramics | Advanced Ceramics: Mold Making and Slip Casting (UWF) | **⏸ candidate** | published as single guide | — |
+| `ART4800` | Criticism Seminar | Portfolio (UWF) | **⏸ candidate** | published as single guide | — |
+| `HSC3102` | Perspectives in Health | Health Science Essentials of Behavior Analysis (UWF) | **⏸ candidate** | published as single guide | — |
+| `PCB4315` | Marine Ecology | Tropical Marine Ecology (UWF, Bahamas field course) | **⏸ candidate** | published as single guide | narrowing, not a different subject — low priority |
+| `ISM4320` | Applications in Information Security | Legal, Ethical, and Human Aspects of Cybersecurity (UWF) | **⏸ candidate** | published as single guide | **strongest candidate in this batch** — technical applications vs human/legal |
+| `ISM4545` | Visual Analytics I | Business Analytics with AI (UWF) | **⏸ candidate** | published as single guide | different centre of gravity; "I" implies a sequence UWF does not run |
+| `MAN4350` | Training and Development | Recruitment and Selection (UWF) | **⚠⚠⚠ COLLISION** | published as single guide | **not a normal drift** — subjects permute across `MAN4320`/`MAN4350`; needs a two-number treatment. See `REVIEW_QUEUE.md`. |
+| `MAN3802` | Principles of Entrepreneurship | Small Business/Family Business Management (UWF) | **⏸ candidate** | published as single guide | venture creation vs managing established firms |
+| `TPP2100` | Acting I | Acting for Non-majors (UWF) | **⏸ candidate** | published as single guide | ⚠ statewide lists BOTH `TPP2100` and `TPP2110C` as "Acting I" — a title, not a number, collision |
+
+**⚠ Watch for more.** This is the extreme end of the drift theme, and two cases surfaced in a single
+prefix — so there are almost certainly others already published as single guides. **When a batch turns one
+up, add it here.**
+
+---
+
+## Institution order, per-school queues, and what to do when a catalog blocks
+
+**Ron's direction, 2026-09-04.** Work the **smaller schools first — UWF, UNF, FGCU** — then the large ones
+(**UCF, UF, USF**), mixing in state colleges. **Keep other schools' work ready to promote**, so a
+bot-blocked catalog stalls nothing.
+
+### The queue is now two-layer
+
+| Layer | File | Role |
+|---|---|---|
+| **Master** | `queue.csv` | **single source of truth for what is DONE.** One row per course. Now carries a **`source_inst`** column recording which institution's catalog a guide was written from. |
+| **Per-school** | `queue_<SCHOOL>.csv` | a *work list*, derived on demand. Courses that school offers which the master has not finished. Disposable — rebuild any time. |
+
+```bash
+python school_queue.py coverage            # per-school workable counts
+python school_queue.py build UNF           # write queue_UNF.csv
+python school_queue.py status              # what per-school queues exist
+```
+
+**Deduplication is automatic**: a course `pushed` or `skipped` in the master is emitted for **no** school.
+The only exception is a deliberate one-number-two-subjects split, handled by publishing `XXXnnnn-<INST>`
+ids rather than by re-queueing the bare number.
+
+**⚠ Rebuild a per-school queue after every push.** It is derived, not maintained — a stale one will
+re-offer finished work.
+
+### ⚠ Focus decision (Ron, 2026-09-04): priority courses across schools, NOT full catalogs
+
+**Work the master `queue.csv` — the ≥2-institution priority subset — not a school's complete offering.**
+
+The per-school queues from `school_queue.py` exist for **block recovery and sequencing**, not as a target
+to exhaust. `queue_UWF.csv` holds 1,575 workable courses; **the 805 priority rows in the master are the
+work.** Do not expand a batch into non-priority courses just because a prefix extraction is already in
+hand — the exception is writing an orphan half needed to dispose of a queued `C` row under the
+split-family rule.
+
+**Why:** breadth across institutions serves more students per guide than depth at one. A course at 12
+institutions is worth more than three courses at two.
+
+### ⚠⚠ Source reachability register (probed 2026-09-04)
+
+**Check this before committing to a school.** Reachability, not course count, is the binding constraint.
+
+| School | Pattern | Status |
+|---|---|---|
+| **UWF** | `catalog.uwf.edu/courseinformation/courses/<prefix>/<prefix>.pdf` (**lowercase**) | ✅ **working** — one fetch per prefix, full descriptions |
+| **DSC** | `daytonastate.smartcatalogiq.com/...` | ✅ worked throughout the DSC build (1,119 courses, complete) |
+| **UNF** | — | ⚠ **no static pattern found.** Server is live; `/courses/` is a landing page with no prefix index, `/coursesaz/` and `/course-descriptions/` 404. **Lead worth chasing: `digitalcommons.unf.edu/course_catalogs/` (archived PDF catalogs).** Resolve before relying on UNF as a fallback. |
+| **FGCU** | `catalog.fgcu.edu/courses/<prefix>/` | ❌ **202 with empty body** — bot-blocked. Previously recorded as search-readable, not fetch-readable. |
+| **Broward** | `catalog.broward.edu/course-descriptions/<prefix>/` | ❌ **202 with empty body** — bot-blocked *now*; worked earlier in the build. **Regression, not a permanent loss — retry.** |
+| **Valencia** | `catalog.valenciacollege.edu/coursedescriptions/coursesoffered/<prefix>/` | ❌ **202 with empty body** — same regression. |
+| Gulf Coast | `gulfcoast.edu/catalog/current/courses/<prefix>/index.html` | was the highest-value pattern in the DSC build; **re-probe before use** |
+
+**⚠ Broward and Valencia both regressed to empty 202s.** They are the two workhorses recorded in this
+file, so **re-probe them at the start of any session that plans to use them** rather than assuming.
+
+### The block-recovery drill
+
+1. **Keep two or three per-school queues built ahead**, not one.
+2. When a catalog returns an empty 202 / 403 / captcha: **do not retry in a loop.** Record it in the
+   register above with the date, switch to another school's queue, and move on.
+3. **Re-probe blocked sources at the start of each session** — these blocks have proven temporary before.
+4. If every named school is blocked, fall back to a prefix at a school that still answers rather than
+   stalling the batch.
+
+### ⚠⚠ Scale reality: "complete UWF" is bigger than the queue suggests
+
+The master queue is a **prioritised subset** (courses at ≥2 institutions), not a school's full offering:
+
+| | Courses UWF offers | Done | **Workable** |
+|---|---|---|---|
+| UWF | 1,885 | 310 | **1,575** |
+
+The 805 rows currently in the master are a *subset* of those 1,575. **`queue_UWF.csv` holds the real
+figure.** Same applies to every school: UNF 1,839 workable, FGCU 1,570, UCF 3,872.
+
+**Implication for sequencing:** finishing a school means ~1,500–1,800 guides, not a few hundred. Ron's
+smaller-schools-first ordering is the right call for exactly that reason — and the state colleges are much
+further along already (MDC 31.5% done, BC 33.5%, SPC 32.3%) because the earlier DSC-era work covered
+high-enrolment shared courses.
 
 ## Session start checklist
 

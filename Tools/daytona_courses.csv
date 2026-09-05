@@ -1,0 +1,1267 @@
+course_id,title,prefix,subject_page
+ACG2021,Principles of Financial Accounting,ACG,acg-accounting
+ACG2071,Principles of Managerial Accounting,ACG,acg-accounting
+ACG3024,Accounting for Non-Financial Majors,ACG,acg-accounting
+ACG3101,Intermediate Accounting I,ACG,acg-accounting
+ACG3113,Intermediate Accounting II,ACG,acg-accounting
+ACG3123,Intermediate Accounting III,ACG,acg-accounting
+ACG3341,Cost Accounting,ACG,acg-accounting
+ACG4401,Accounting Information Systems,ACG,acg-accounting
+ACG4501,Governmental and Nonprofit Accounting,ACG,acg-accounting
+ACG4632,Auditing,ACG,acg-accounting
+ACR0550C,Introduction to HVAC,ACR,acr-air-cond-refrig-and-heat
+ACR0551C,Fundamentals of HVAC,ACR,acr-air-cond-refrig-and-heat
+ACR0560C,Residential Air Conditioning I,ACR,acr-air-cond-refrig-and-heat
+ACR0561C,Residential Air Conditioning II,ACR,acr-air-cond-refrig-and-heat
+ACR0613C,Advanced Technology,ACR,acr-air-cond-refrig-and-heat
+ACR0744C,Commercial Refrigeration I,ACR,acr-air-cond-refrig-and-heat
+ACR0746C,Commercial Refrigeration II,ACR,acr-air-cond-refrig-and-heat
+ACR0810C,Advanced Service Practice,ACR,acr-air-cond-refrig-and-heat
+AER0014C,Automotive Service Assistor and Lab,AER,aer-automotive-service
+AER0110C,Engine Mechanical Service and Repair and Lab,AER,aer-automotive-service
+AER0172C,Automotive Heating and Air Conditioning Systems and Lab,AER,aer-automotive-service
+AER0257C,Automotive Transmission and Transaxles and Lab,AER,aer-automotive-service
+AER0274C,Manual Drivetrain and Axle and Lab,AER,aer-automotive-service
+AER0360C,Electricity/Electronics Fundamentals and Lab,AER,aer-automotive-service
+AER0418C,Automotive Brake Systems and Lab,AER,aer-automotive-service
+AER0453C,Automotive Steering and Suspension and Lab,AER,aer-automotive-service
+AER0503C,Automotive Engine Performance and Lab,AER,aer-automotive-service
+AFR1101,U.S. Military Forces GMC - AF101,AFR,afr-military-science
+AFR1111,The Air Force Today II (General Military Course) - AF102,AFR,afr-military-science
+AFR2130,The Development of Air Power - AF201,AFR,afr-military-science
+AFR2131,The Development of Air Power II (General Military Course) - AF202,AFR,afr-military-science
+AFR3220,Air Force Management & Leadership - AF301,AFR,afr-military-science
+AFR3221,Air Force Leadership Studies II (Professional Officer Course) - AF302,AFR,afr-military-science
+AFR4231,Preparation for Active Duty - AF401,AFR,afr-military-science
+AFR4232,Preparation for Active Duty II (Professional Officer Course) - AF402,AFR,afr-military-science
+AMH2010,United States History to 1877,AMH,amh-history
+AMH2020,United States History 1865 to Present,AMH,amh-history
+AMH2057,The American Civil War,AMH,amh-history
+AMH2058,World War II,AMH,amh-history
+AMH2059,The Vietnam War,AMH,amh-history
+AMH2091,Survey of African American History,AMH,amh-history
+AML2600,Introduction to African American Literature,AML,aml-english-language-and-lit
+ANT2000,Introduction to Anthropology,ANT,ant-anthropology
+APA1111,Office Accounting I,APA,apa-accounting
+APA1121,Office Accounting II,APA,apa-accounting
+APA1711,Computerized Spreadsheet,APA,apa-accounting
+ARH1000,Art Appreciation,ARH,arh-art
+ARH2050,Survey of Art History I,ARH,arh-art
+ARH2051,Survey of Art History II,ARH,arh-art
+ARH2905,Directed Study in Art History,ARH,arh-art
+ARR0021,Automotive Collision Estimating,ARR,arr-automotive-collision
+ARR0121C,Introduction to Refinishing and Lab,ARR,arr-automotive-collision
+ARR0122C,Intermediate Refinishing and Lab,ARR,arr-automotive-collision
+ARR0123C,Advanced Refinishing and Lab,ARR,arr-automotive-collision
+ARR0241C,Introduction to Collision Repair and Lab,ARR,arr-automotive-collision
+ARR0242C,Intermediate Collision Repair and Lab,ARR,arr-automotive-collision
+ARR0243C,Advanced Collision Repair and Lab,ARR,arr-automotive-collision
+ARR0244C,Advanced Overview of Collision and Refinishing and Lab,ARR,arr-automotive-collision
+ARR0381C,Introduction to Unibody and Frame and Lab,ARR,arr-automotive-collision
+ARR0382C,Intermediate Unibody and Frame and Lab,ARR,arr-automotive-collision
+ARR0905,Directed Study in Automotive Body Repair and Refinishing,ARR,arr-automotive-collision
+ARR0949,Cooperative Education Experience in Automotive Body Repair and Refinishing,ARR,arr-automotive-collision
+ART1201C,Design I and Lab,ART,art-art
+ART1203C,Design II and Lab,ART,art-art
+ART1300C,Drawing I and Lab,ART,art-art
+ART1301C,Drawing II and Lab,ART,art-art
+ART1331C,Drawing III and Lab,ART,art-art
+ART1500C,Painting I and Lab,ART,art-art
+ART1501C,Painting II and Lab,ART,art-art
+ART2400C,Printmaking I and Lab,ART,art-art
+ART2540C,Watercolor I and Lab,ART,art-art
+ART2752C,Ceramics I and Lab,ART,art-art
+ART2753C,Wheel Throwing II and Lab,ART,art-art
+ART2754C,Ceramics II and Lab,ART,art-art
+ART2755C,Ceramics III and Lab,ART,art-art
+ASL2140,American Sign Language I,ASL,asl-foreign-lang-sign-lang
+ASL2150,American Sign Language II,ASL,asl-foreign-lang-sign-lang
+ASL2160,American Sign Language III,ASL,asl-foreign-lang-sign-lang
+ASL2200,American Sign Language IV,ASL,asl-foreign-lang-sign-lang
+ASL2905,Directed Study in American Sign Language,ASL,asl-foreign-lang-sign-lang
+AST1002,Astronomy,AST,ast-astronomy
+AST2905,Directed Study in Astronomy,AST,ast-astronomy
+BCA0330,Electrical Academy Union Apprentice I,BCA,bca-build-construct-appren
+BCA0330L,Electrical Academy Union Apprentice I Lab-OJT,BCA,bca-build-construct-appren
+BCA0331,Electrical Academy Union Apprentice 2,BCA,bca-build-construct-appren
+BCA0331L,Electrical Academy Union Apprentice 2 Lab-OJT,BCA,bca-build-construct-appren
+BCA0332,Electrical Academy Union Apprentice 2,BCA,bca-build-construct-appren
+BCA0332L,Electrical Academy Union Apprentice 3 Lab-OJT,BCA,bca-build-construct-appren
+BCA0333,Electrical Academy Union Apprentice 4,BCA,bca-build-construct-appren
+BCA0333L,Electrical Academy Union Apprentice 4 Lab-OJT,BCA,bca-build-construct-appren
+BCA0334,Electrical Academy Union Apprentice 5,BCA,bca-build-construct-appren
+BCA0334L,Electrical Academy Union Apprentice 5 Lab-OJT,BCA,bca-build-construct-appren
+BCA0335L,Electrical Academy Union Apprentice 6 Lab-OJT,BCA,bca-build-construct-appren
+BCA0336,Electrical Academy Union Apprentice 7,BCA,bca-build-construct-appren
+BCA0336L,Electrical Academy Union Apprentice 7 Lab-OJT,BCA,bca-build-construct-appren
+BCA0337,Electrical Academy Union Apprentice 8,BCA,bca-build-construct-appren
+BCA0337L,Electrical Academy Union Apprentice 8 Lab-OJT,BCA,bca-build-construct-appren
+BCA0338,Electrical Academy Union Apprentice 9,BCA,bca-build-construct-appren
+BCA0338L,Electrical Academy Union Apprentice 9 Lab-OJT,BCA,bca-build-construct-appren
+BCA0339,Electrical Academy Union Apprentice 10,BCA,bca-build-construct-appren
+BCA0339L,Electrical Academy Union Apprentice 10 Lab-OJT,BCA,bca-build-construct-appren
+BCA0340,Electrical Apprentice 9 (Union),BCA,bca-build-construct-appren
+BCA0340L,Electrical Apprentice 9 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0341,Electrical Apprentice 10 (Non-Union),BCA,bca-build-construct-appren
+BCA0341L,Electrical Apprentice 10 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0342,Electrical Apprentice 11 (Non-Union),BCA,bca-build-construct-appren
+BCA0342L,Electrical Apprentice 11 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0343L,Electrical Apprentice 12 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0350,Electrical Apprentice I (Non-Union),BCA,bca-build-construct-appren
+BCA0350L,Electrical Apprentice I Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0351,Electrical Apprentice 2 (Non-Union),BCA,bca-build-construct-appren
+BCA0351L,Electrical Apprentice 2 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0352L,Electrical Apprentice 3 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0353,Electrical Apprentice 4 (Non-Union),BCA,bca-build-construct-appren
+BCA0353L,Electrical Apprentice 4 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0354,Electrical Apprentice 5 (Non-Union),BCA,bca-build-construct-appren
+BCA0354L,Electrical Apprentice 5 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0355L,Electrical Apprentice 6 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0356,Electrical Apprentice 7 (Non-Union),BCA,bca-build-construct-appren
+BCA0356L,Electrical Apprentice 7 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0357,Electrical Apprentice 8 (Non-Union),BCA,bca-build-construct-appren
+BCA0357L,Electrical Apprentice 8 Lab-OJT (Non-Union),BCA,bca-build-construct-appren
+BCA0390L,Electrical Academy Union Apprentice 11 Lab-OJT,BCA,bca-build-construct-appren
+BCA0391L,Electrical Academy Union Apprentice 12 Lab-OJT,BCA,bca-build-construct-appren
+BCA0431,Plumbing Apprentice 11,BCA,bca-build-construct-appren
+BCA0431L,Plumbing Apprentice 11 Lab - OJT,BCA,bca-build-construct-appren
+BCA0432,Plumbing Apprentice 12,BCA,bca-build-construct-appren
+BCA0432L,Plumbing Apprentice 12 Lab - OJT,BCA,bca-build-construct-appren
+BCA0433L,Plumbing Apprentice 13 Lab - OJT,BCA,bca-build-construct-appren
+BCA0434,Plumbing Apprentice 14,BCA,bca-build-construct-appren
+BCA0434L,Plumbing Apprentice 14 Lab - OJT,BCA,bca-build-construct-appren
+BCA0435,Plumbing Apprentice 15,BCA,bca-build-construct-appren
+BCA0435L,Plumbing Apprentice 15 Lab - OJT,BCA,bca-build-construct-appren
+BCA0450L,Plumbing Apprentice 1 Lab - OJT,BCA,bca-build-construct-appren
+BCA0451,Plumbing Apprentice 2,BCA,bca-build-construct-appren
+BCA0451L,Plumbing Apprentice 2 Lab - OJT,BCA,bca-build-construct-appren
+BCA0452,Plumbing Apprentice 3,BCA,bca-build-construct-appren
+BCA0452L,Plumbing Apprentice 3 Lab - OJT,BCA,bca-build-construct-appren
+BCA0453L,Plumbing Apprentice 4 Lab - OJT,BCA,bca-build-construct-appren
+BCA0454,Plumbing Apprentice 5,BCA,bca-build-construct-appren
+BCA0454L,Plumbing Apprentice 5 Lab - OJT,BCA,bca-build-construct-appren
+BCA0455,Plumbing Apprentice 6,BCA,bca-build-construct-appren
+BCA0455L,Plumbing Apprentice 6 Lab - OJT,BCA,bca-build-construct-appren
+BCA0456L,Plumbing Apprentice 7 Lab - OJT,BCA,bca-build-construct-appren
+BCA0457,Plumbing Apprentice 8,BCA,bca-build-construct-appren
+BCA0457L,Plumbing Apprentice 8 Lab - OJT,BCA,bca-build-construct-appren
+BCA0458,Plumbing Apprentice 9,BCA,bca-build-construct-appren
+BCA0458L,Plumbing Apprentice 9 Lab - OJT,BCA,bca-build-construct-appren
+BCA0459L,Plumbing Apprentice 10 Lab,BCA,bca-build-construct-appren
+BCH3023C,Biochemistry I and Lab,BCH,bch-biochemistry
+BCN1210,Materials and Processes,BCN,bcn-building-construction
+BCN1251C,Architectural Drawing I and Lab,BCN,bcn-building-construction
+BCN1253C,Architectural Drawing II and Lab,BCN,bcn-building-construction
+BCN2049,Sustainable Design & Construction,BCN,bcn-building-construction
+BCN2905,Directed Study in Construction,BCN,bcn-building-construction
+BCT1040,Blueprint Reading,BCT,bct-building-construction
+BCT2949,Cooperative Education Experience in Construction,BCT,bct-building-construction
+BCT2990,Technical Training,BCT,bct-building-construction
+BCV0080L,Building Construction Assistant I Lab,BCV,bcv-build-construct-voc
+BCV0081L,Carpentry and Masonry Technician Lab,BCV,bcv-build-construct-voc
+BCV0082L,Electrical and Plumbing Technician Lab,BCV,bcv-build-construct-voc
+BCV0084L,Building Construction Assistant II Lab,BCV,bcv-build-construct-voc
+BCV0942C,Building Construction Capstone,BCV,bcv-build-construct-voc
+BOT1010C,General Botany and Lab,BOT,bot-botany
+BOT2150,Native Plants of Central Florida,BOT,bot-botany
+BOT3151,Flora of Central Florida,BOT,bot-botany
+BSC0070,Basic Anatomy and Physiology for Health Careers,BSC,bsc-biological-science
+BSC1005,Survey of Biological Sciences (For Non-Science Majors),BSC,bsc-biological-science
+BSC1005L,Survey of Biological Science (For Non-Science Majors) Lab,BSC,bsc-biological-science
+BSC1010C,General Biology I (For Science Majors) and Lab,BSC,bsc-biological-science
+BSC1011C,General Biology II (For Science Majors) and Lab,BSC,bsc-biological-science
+BSC1020,Human Biology,BSC,bsc-biological-science
+BSC1085C,Human Anatomy and Physiology I and Lab,BSC,bsc-biological-science
+BSC1086C,Human Anatomy & Physiology II and Lab,BSC,bsc-biological-science
+BSC2905,Directed Study in Biological Sciences,BSC,bsc-biological-science
+BUL2241,Business Law I,BUL,bul-business-law
+BUL2242,Business Law II,BUL,bul-business-law
+BUL3130,"Legal, Ethical, and Social Aspects of Business",BUL,bul-business-law
+CAI1320,AI Application & Prompt Engineering,CAI,cai-computing-artificial-intel
+CAI2010,Introduction to AI and Machine Learning with Python Programming,CAI,cai-computing-artificial-intel
+CAP2741,Data Visualization,CAP,cap-computer-science
+CCJ1010,Introduction to Criminology,CCJ,ccj-criminal-justice
+CCJ1020,Introduction to Criminal Justice,CCJ,ccj-criminal-justice
+CCJ1080,Introduction to Criminal Forensic Studies,CCJ,ccj-criminal-justice
+CCJ2647,Organized Crime,CCJ,ccj-criminal-justice
+CCJ2650,"Drugs, Alcohol and Crime",CCJ,ccj-criminal-justice
+CCJ2930,Cybercrime,CCJ,ccj-criminal-justice
+CDA4101,Computer Organization and Design,CDA,cda-computer-science
+CEN2002,Software Design and Development I,CEN,cen-computer-science
+CEN3722,Human Computer Interfaces,CEN,cen-computer-science
+CEN4010,Software Engineering,CEN,cen-computer-science
+CEN4801,Systems Integration,CEN,cen-computer-science
+CET1112C,Digital Fundamentals and Lab,CET,cet-computer-electronic-tech
+CET1600,Network Plus,CET,cet-computer-electronic-tech
+CET2123C,Microcomputer and Basic Digital Communications and Lab,CET,cet-computer-electronic-tech
+CET2154,Computer Hardware & Software,CET,cet-computer-electronic-tech
+CET2660,Fundamentals of Cybersecurity Analysis,CET,cet-computer-electronic-tech
+CET2850,Wireless and Mobile Security,CET,cet-computer-electronic-tech
+CET2949,Internship in Computer Engineering Technology,CET,cet-computer-electronic-tech
+CET3116,Digital Technology,CET,cet-computer-electronic-tech
+CET3198,Digital Systems,CET,cet-computer-electronic-tech
+CET3198L,Digital Systems Lab,CET,cet-computer-electronic-tech
+CET3906,Directed Study in Computer Engineering Technology,CET,cet-computer-electronic-tech
+CET4138C,Programmable Digital Devices and Lab,CET,cet-computer-electronic-tech
+CET4860,Introduction to Digital Forensics,CET,cet-computer-electronic-tech
+CET4861,Advanced Digital Forensics,CET,cet-computer-electronic-tech
+CET4862,Network Forensics and Incident Response,CET,cet-computer-electronic-tech
+CET4884,Security Methods and Practice,CET,cet-computer-electronic-tech
+CGS2100,Microcomputer Applications,CGS,cgs-computer-science
+CGS2820,"Web Programming (JavaScript, Ajax, ASP.Net)",CGS,cgs-computer-science
+CHD1220,Child Growth and Development,CHD,chd-early-childhood-education
+CHD1430,"Observation, Recording and Assessment",CHD,chd-early-childhood-education
+CHD1820,Introduction to Early Childhood Education II,CHD,chd-early-childhood-education
+CHD2320,Curriculum Planning for Early Childhood,CHD,chd-early-childhood-education
+CHD2333,Creative Activities for the Young Child,CHD,chd-early-childhood-education
+CHD2334,Language Arts for the Young Child,CHD,chd-early-childhood-education
+CHD2335,Music and Motor Activities for the Young Child,CHD,chd-early-childhood-education
+CHD2338,Math and Science for the Young Child,CHD,chd-early-childhood-education
+CHD2440,Child Development Practicum,CHD,chd-early-childhood-education
+CHD2801,Child Development Management,CHD,chd-early-childhood-education
+CHD2905,Directed Study in Child Development,CHD,chd-early-childhood-education
+CHM1020,Chemistry in Society,CHM,chm-chemistry
+CHM1025C,Introduction to Chemistry and Lab,CHM,chm-chemistry
+CHM1045C,General College Chemistry I and Lab,CHM,chm-chemistry
+CHM1046C,General College Chemistry II and Lab,CHM,chm-chemistry
+CHM2210C,Organic Chemistry I and Lab,CHM,chm-chemistry
+CHM2211C,Organic Chemistry II and Lab,CHM,chm-chemistry
+CHM2905,Directed Study in Chemistry,CHM,chm-chemistry
+CHM3085,Environmental Chemistry,CHM,chm-chemistry
+CHM3120C,Quantitative Analysis and Lab,CHM,chm-chemistry
+CIS2121,Security Operations Management,CIS,cis-computer-science
+CIS2350,Principles of Information Assurance,CIS,cis-computer-science
+CIS2949,Internship in Computer and Information Systems,CIS,cis-computer-science
+CIS4250,Ethical Issues in IT,CIS,cis-computer-science
+CIS4360,Applied Cybersecurity,CIS,cis-computer-science
+CIS4510,IT Project Management,CIS,cis-computer-science
+CJC1000,Introduction to Corrections,CJC,cjc-criminal-justice
+CJD0259,Le Sem-Auto Pi,CJD,cjd-criminal-justice
+CJD2990,Criminal Justice Bridge Transition,CJD,cjd-criminal-justice
+CJE1670,Crime Scene Investigation,CJE,cje-criminal-justice
+CJE2304,Introduction to Police Supervision,CJE,cje-criminal-justice
+CJJ2002,Juvenile Delinquency,CJJ,cjj-criminal-justice
+CJK0002,Introduction to Law Enforcement,CJK,cjk-criminal-justice
+CJK0013,Law Enforcement Interactions in a Diverse Community,CJK,cjk-criminal-justice
+CJK0016,Communication,CJK,cjk-criminal-justice
+CJK0018,Legal,CJK,cjk-criminal-justice
+CJK0019,Interviewing and Report Writing,CJK,cjk-criminal-justice
+CJK0020,CMS Law Enforcement Vehicle Operations,CJK,cjk-criminal-justice
+CJK0021,Serving Your Community,CJK,cjk-criminal-justice
+CJK0031,CMS First Aid for Criminal Justice Officers,CJK,cjk-criminal-justice
+CJK0040,CMS Criminal Justice Firearms,CJK,cjk-criminal-justice
+CJK0051,Criminal Justice Defensive Tactics,CJK,cjk-criminal-justice
+CJK0063,Fundamentals of Patrol,CJK,cjk-criminal-justice
+CJK0072,Crimes Against Persons,CJK,cjk-criminal-justice
+CJK0073,Crimes Involving Property and Society,CJK,cjk-criminal-justice
+CJK0079,Crime Scene Follow-up Investigations,CJK,cjk-criminal-justice
+CJK0093,Critical Incidents,CJK,cjk-criminal-justice
+CJK0096,Law Enforcement Officer Physical Fitness Training,CJK,cjk-criminal-justice
+CJK0111,Interviewing and Report Writing in Corrections,CJK,cjk-criminal-justice
+CJK0301,Introduction to Corrections,CJK,cjk-criminal-justice
+CJK0306,Communication for Correctional,CJK,cjk-criminal-justice
+CJK0321,Intake and Release,CJK,cjk-criminal-justice
+CJK0324,Supervision in a Correctional Facility,CJK,cjk-criminal-justice
+CJK0326,Supervising Correctional Populations,CJK,cjk-criminal-justice
+CJK0327,Shift Management and Safety,CJK,cjk-criminal-justice
+CJK0336,Incidents and Emergencies in Correctional Facilities,CJK,cjk-criminal-justice
+CJK0340,Officer Wellness and Physical Abilities,CJK,cjk-criminal-justice
+CJK0355,Legal for Correctional Officers,CJK,cjk-criminal-justice
+CJK0400,Traffic Incidents,CJK,cjk-criminal-justice
+CJK0401,Traffic Stops,CJK,cjk-criminal-justice
+CJK0402,Traffic Crash Investigations,CJK,cjk-criminal-justice
+CJK0403,DUI Traffic Stops,CJK,cjk-criminal-justice
+CJK0421,Conducted Electrical Weapon/Dart-Firing Stun Gun,CJK,cjk-criminal-justice
+CJL2072,Civil Rights and Liability in Criminal Justice,CJL,cjl-criminal-justice
+CJT2100,Criminal Investigation,CJT,cjt-criminal-justice
+CLP0999,Psy Req-Cert Prg,CLP,clp-psychology
+CLP2140,Abnormal Psychology,CLP,clp-psychology
+CNT2402,Penetration Testing,CNT,cnt-computer-networking
+CNT2404,Intrusion Detection and Response,CNT,cnt-computer-networking
+CNT3104,Introduction to Telecommunications,CNT,cnt-computer-networking
+CNT4007,Data and Computer Communications,CNT,cnt-computer-networking
+CNT4703,Voice and Data Network Design,CNT,cnt-computer-networking
+COM2998B,Communicatn Req,COM,com-communications
+COM2999B,Communicatn Req,COM,com-communications
+COP1000,Principles of Computer Programming,COP,cop-computer-science
+COP2071,Querying Database,COP,cop-computer-science
+COP2072,Reporting Services,COP,cop-computer-science
+COP2220,Computer Programming C,COP,cop-computer-science
+COP2360,C# Programming,COP,cop-computer-science
+COP2700,Introduction to Database Management,COP,cop-computer-science
+COP2800,Computer Programming Java,COP,cop-computer-science
+COP2905,Directed Study in Computer Programming,COP,cop-computer-science
+COP2949,Internship in Computer Programming,COP,cop-computer-science
+COP3530,Data Structures,COP,cop-computer-science
+COP4610,Operating Systems,COP,cop-computer-science
+COP4708,Applied Database I,COP,cop-computer-science
+COP4709,Applied Database II,COP,cop-computer-science
+COP4813,Web Systems I,COP,cop-computer-science
+COP4834,Web Systems II,COP,cop-computer-science
+COS0013L,Barbering I Lab,COS,cos-cosmetology
+COS0080L,Cosmetology I Lab,COS,cos-cosmetology
+COS0081L,Cosmetology II Lab,COS,cos-cosmetology
+COS0082L,Cosmetology III Lab,COS,cos-cosmetology
+COS0083L,Cosmetology IV Lab,COS,cos-cosmetology
+COS0084L,Cosmetology V Lab,COS,cos-cosmetology
+COS0512L,Barbering II Lab,COS,cos-cosmetology
+COS0561L,Barbering III Lab,COS,cos-cosmetology
+COS0562L,Barbering Lab Bridge: Shaves/Beards/Mustaches,COS,cos-cosmetology
+COS0571L,Barbering IV Lab,COS,cos-cosmetology
+COS0580L,Barbering Lab - Level V,COS,cos-cosmetology
+COS0905,Directed Study in Cosmetology,COS,cos-cosmetology
+COS0930,Special Topics/Seminar in Cosmetology,COS,cos-cosmetology
+COT3100,Discrete Computational Analysis,COT,cot-computing-theory
+CPO2001,Comparative Government,CPO,cpo-political-science
+CRW2100,Creative Writing,CRW,crw-english-language-and-lit
+CSP0003L,Cosmetology Bridge Lab - Introduction to Cosmetology,CSP,csp-cosmetology
+CTS1851,"Internet Web Foundations (HTML, CSS)",CTS,cts-computer-science
+CTS2214,Project Management w/Microsoft Project,CTS,cts-computer-science
+CTS2308,Installing and Configuring Windows Workstation OS,CTS,cts-computer-science
+CTS2321,Linux Fundamentals,CTS,cts-computer-science
+CTS2353,Networking with Windows Server,CTS,cts-computer-science
+CTS2358,Identity with Windows Server,CTS,cts-computer-science
+CTS2370,Virtualization Infrastructure: Installation and Configuration,CTS,cts-computer-science
+CTS2375,Essentials of Cloud Computing,CTS,cts-computer-science
+CTS2450,Business Intelligence,CTS,cts-computer-science
+CTS3348,Linux Administration,CTS,cts-computer-science
+DAA1000,Introduction to Dance,DAA,daa-dance
+DAA1104,Contemporary/Modern Dance I,DAA,daa-dance
+DAA1204,Ballet I,DAA,daa-dance
+DAA1500,Jazz I,DAA,daa-dance
+DAA1520,Tap I,DAA,daa-dance
+DAA2105,Contemporary/Modern Dance II,DAA,daa-dance
+DAA2205,Ballet II,DAA,daa-dance
+DAA2501,Jazz II,DAA,daa-dance
+DAA2540,Musical Theater Dance,DAA,daa-dance
+DAA2610,Dance Composition,DAA,daa-dance
+DAA2640,Rehearsal & Performance (Dance Theatre),DAA,daa-dance
+DAN1100,Dance Appreciation,DAN,dan-dance
+DAN2740,Stretch and Conditioning,DAN,dan-dance
+DAN2905,Directed Study in Dance,DAN,dan-dance
+DEA0000,Introduction to Dental Assisting,DEA,dea-dental-assisting
+DEA0020C,Chairside Assisting I and Lab,DEA,dea-dental-assisting
+DEA0130,Biomedical Science,DEA,dea-dental-assisting
+DEA0801C,Chairside Assisting II and Lab,DEA,dea-dental-assisting
+DEA0850L,Externship I,DEA,dea-dental-assisting
+DEA0851L,Externship II,DEA,dea-dental-assisting
+DEH1002C,Preclinical Dental Hygiene and Lab,DEH,deh-dental-hygiene
+DEH1133,Orofacial Anatomy and Physiology,DEH,deh-dental-hygiene
+DEH1602,Periodontology,DEH,deh-dental-hygiene
+DEH1800,Clinical Dental Hygiene I,DEH,deh-dental-hygiene
+DEH1800L,Dental Hygiene Clinic I,DEH,deh-dental-hygiene
+DEH1802,Clinical Dental Hygiene II,DEH,deh-dental-hygiene
+DEH1802L,Dental Hygiene Clinic II,DEH,deh-dental-hygiene
+DEH2300,Pharmacology,DEH,deh-dental-hygiene
+DEH2400,General and Oral Pathology,DEH,deh-dental-hygiene
+DEH2702C,Community Dental Health and Lab,DEH,deh-dental-hygiene
+DEH2804,Clinical Dental Hygiene III,DEH,deh-dental-hygiene
+DEH2804L,Dental Hygiene Clinic III,DEH,deh-dental-hygiene
+DEH2806,Clinical Dental Hygiene IV,DEH,deh-dental-hygiene
+DEH2806L,Dental Hygiene Clinic IV,DEH,deh-dental-hygiene
+DEP2004,Developmental Psychology,DEP,dep-psychology
+DEP2402,Psychology of Adulthood and Aging,DEP,dep-psychology
+DES0002,Dental Anatomy and Physiology,DES,des-dental-sci-support
+DES0103C,Dental Materials and Laboratory Procedures,DES,des-dental-sci-support
+DES0205C,Dental Radiology and Lab,DES,des-dental-sci-support
+DES0501,Practice Management,DES,des-dental-sci-support
+DES0844,Preventive Dentistry and Nutrition,DES,des-dental-sci-support
+DES1010,Head and Neck Anatomy,DES,des-dental-sci-support
+DES1054,Pain Control and Anesthesia,DES,des-dental-sci-support
+DES1100C,Elements of Dental Materials and Lab,DES,des-dental-sci-support
+DES1200C,Dental Radiography and Lab,DES,des-dental-sci-support
+DES1832L,Expanded Functions for the Dental Hygienist,DES,des-dental-sci-support
+DES1840,Preventive Dentistry,DES,des-dental-sci-support
+DES2600,Medical and Dental Emergencies,DES,des-dental-sci-support
+DIG2000,Introduction to Digital Media,DIG,dig-digital-media
+DIG2030,Fundamentals of Digital Video,DIG,dig-digital-media
+DIG2151,Writing for Media,DIG,dig-digital-media
+DIG2203,Intermediate Digital Video Production,DIG,dig-digital-media
+DIG2251,Introduction to Sound,DIG,dig-digital-media
+DIG2441,Mobile Devices and Applications of Social Media,DIG,dig-digital-media
+DIG2500,Fundamentals of Interactive Media,DIG,dig-digital-media
+DIG2510,Business Practices for Creative Industries,DIG,dig-digital-media
+DIG2940,Internship in Digital Media,DIG,dig-digital-media
+DIG2974,Digital Media Capstone,DIG,dig-digital-media
+EAP1500,High-Intermediate Speaking and Listening,EAP,eap-english-for-academic-purposes
+EAP1501,English Pronunciation,EAP,eap-english-for-academic-purposes
+EAP1520,High-Intermediate Academic Reading,EAP,eap-english-for-academic-purposes
+EAP1585,High-Intermediate Writing and Grammar,EAP,eap-english-for-academic-purposes
+EAP1600,Advanced Speaking and Listening,EAP,eap-english-for-academic-purposes
+EAP1620,Advanced Academic Reading,EAP,eap-english-for-academic-purposes
+EAP1640,Academic Writing,EAP,eap-english-for-academic-purposes
+EAP1660,Grammar,EAP,eap-english-for-academic-purposes
+EAP1685,Advanced Writing and Grammar,EAP,eap-english-for-academic-purposes
+ECO2013,Principles of Macroeconomics,ECO,eco-economics
+ECO2023,Principles of Microeconomics,ECO,eco-economics
+EDE1042,FTCE Test Prep 1 General Knowledge Test of Skills (GKT),EDE,ede-education
+EDE3043,FTCE Test Prep 2,EDE,ede-education
+EDE4223,"Integrated Art, Music and Movement",EDE,ede-education
+EDF1005,Introduction to the Teaching Profession,EDF,edf-education
+EDF4430,Classroom Assessment,EDF,edf-education
+EDF4603,"Critical Issues in Classroom Management, Ethics, Law and Safety",EDF,edf-education
+EDF4943,Student Internship,EDF,edf-education
+EDG2770,Exploring Global Education Issues in International Context,EDG,edg-education
+EDG2905,Directed Study in Education,EDG,edg-education
+EDG4323,Professional Teaching Practices,EDG,edg-education
+EDP2002,Educational Psychology,EDP,edp-education
+EEC2401,"Home, School and Community",EEC,eec-early-childhood-education
+EEC2523,Leadership and Management of Child Care Programs,EEC,eec-early-childhood-education
+EEC2527,Child Care Center Financial and Legal Issues,EEC,eec-early-childhood-education
+EET1011C,Introduction to Electrical Circuits and Lab,EET,eet-electronic-engineer-tech
+EET1021C,Advanced Electrical Circuits and Lab,EET,eet-electronic-engineer-tech
+EET1141C,Analog Devices and Circuits and Lab,EET,eet-electronic-engineer-tech
+EET1607C,Electronics Assembly and Cabling and Lab,EET,eet-electronic-engineer-tech
+EET2142C,Analog Circuits and Basic Analog Communications and Lab,EET,eet-electronic-engineer-tech
+EET2905,Directed Study in Electronics,EET,eet-electronic-engineer-tech
+EET2949,Internship in Electronics,EET,eet-electronic-engineer-tech
+EET3085,Electricity and Electronics,EET,eet-electronic-engineer-tech
+EET3085L,Electricity and Electronics Lab,EET,eet-electronic-engineer-tech
+EET3086,Principles of Electrical Circuits,EET,eet-electronic-engineer-tech
+EET3716,Network Analysis,EET,eet-electronic-engineer-tech
+EET4158,Linear Integrated Circuits,EET,eet-electronic-engineer-tech
+EET4158L,Linear Integrated Circuits Lab,EET,eet-electronic-engineer-tech
+EET4329C,Communications Systems and Lab,EET,eet-electronic-engineer-tech
+EET4732,Feedback Control Systems,EET,eet-electronic-engineer-tech
+EET4732L,Feedback Control Systems Lab,EET,eet-electronic-engineer-tech
+EEX1600,Classroom Management (Early Childhood),EEX,eex-education-except-child
+EEX2010,Introduction to Special Education,EEX,eex-education-except-child
+EEX2080,Teaching the Exceptional Learner,EEX,eex-education-except-child
+EEX4034,Introduction to Exceptional Student Education for Inclusive Teachers,EEX,eex-education-except-child
+EEX4070,Teaching Exceptional Students,EEX,eex-education-except-child
+EEX4221,Assessment of Exceptional Education Students,EEX,eex-education-except-child
+EEX4242,Teaching Exceptional Students in Secondary Schools,EEX,eex-education-except-child
+EEX4265,Curriculum and Instruction for Students with Disabilities 6-12,EEX,eex-education-except-child
+EEX4601,Behavior Management,EEX,eex-education-except-child
+EEX4943,Student Externship,EEX,eex-education-except-child
+EGN1111C,Engineering Drawing and Lab,EGN,egn-engineering
+EGN2045,Engineering and Technology Calculus I,EGN,egn-engineering
+EGN3046,Engineering and Technology Calculus II,EGN,egn-engineering
+EGN3214,Programming for Engineers,EGN,egn-engineering
+EGN3311,Statics,EGN,egn-engineering
+EGN3321,Dynamics,EGN,egn-engineering
+EGN3343,Thermodynamics,EGN,egn-engineering
+EGN3443,Probability and Statistics for Engineers,EGN,egn-engineering
+EGN3613,Engineering Economics Analysis,EGN,egn-engineering
+EGS1000,Professional Performance for Technicians,EGS,egs-engineering-support
+EGS2905,Directed Study in Electronics,EGS,egs-engineering-support
+EIN3314,Work Design and Measurement,EIN,ein-industrial-engineering
+EME3434,Integrating Technology into Math and Science,EME,eme-education
+EMS1119C,Emergency Medical Technician I and Lab,EMS,ems-emergency-medical-services
+EMS1431,Emergency Medical Technician Clinical/Field Experience,EMS,ems-emergency-medical-services
+EMS2603C,Paramedic I and Lab,EMS,ems-emergency-medical-services
+EMS2604C,Paramedic II and Lab,EMS,ems-emergency-medical-services
+EMS2605C,Paramedic III and Lab,EMS,ems-emergency-medical-services
+EMS2659,Paramedic Internship,EMS,ems-emergency-medical-services
+EMS2666,Paramedic Emergency Department Clinical,EMS,ems-emergency-medical-services
+EMS2667,Paramedic Field and Specialty Clinical,EMS,ems-emergency-medical-services
+ENC0027,Introduction to College Reading and Writing,ENC,enc-english-language-and-lit
+ENC0055L,The English Studio,ENC,enc-english-language-and-lit
+ENC1101,Introduction to Composition,ENC,enc-english-language-and-lit
+ENC1102,Writing with Research,ENC,enc-english-language-and-lit
+ENC2210,Report Writing,ENC,enc-english-language-and-lit
+ENC2990,English,ENC,enc-english-language-and-lit
+ENC2998A,English,ENC,enc-english-language-and-lit
+ENC2999,English,ENC,enc-english-language-and-lit
+ENC2999A,English,ENC,enc-english-language-and-lit
+EPI0940,Field Experience I (Professional Foundations),EPI,epi-education
+ESE4945,Internship Seminar,ESE,ese-education
+ESI4312,Operations Research,ESI,esi-industrial-systems-engineering
+ETC2207C,Construction Planning and Estimating and Lab,ETC,etc-engineering-tech-civil
+ETC2245,Construction Methods,ETC,etc-engineering-tech-civil
+ETC4206,Construction Estimating,ETC,etc-engineering-tech-civil
+ETC4241,Construction Materials and Methods,ETC,etc-engineering-tech-civil
+ETC4241L,Construction Materials and Methods Lab,ETC,etc-engineering-tech-civil
+ETC4414C,Structural Steel Design and Lab,ETC,etc-engineering-tech-civil
+ETC4415C,Structural Concrete Design and Lab,ETC,etc-engineering-tech-civil
+ETD2320C,Computer Aided Drafting I (AutoCAD) and Lab,ETD,etd-engineering-tech-draft
+ETD2340C,Computer Aided Drafting II (AutoCAD) and Lab,ETD,etd-engineering-tech-draft
+ETD2357C,Inventor Solid Modeling and Lab,ETD,etd-engineering-tech-draft
+ETD2364C,SolidWorks Solid Modeling and Lab,ETD,etd-engineering-tech-draft
+ETD2368C,SolidWorks II and Lab,ETD,etd-engineering-tech-draft
+ETD2371,Additive Manufacturing I,ETD,etd-engineering-tech-draft
+ETD2372,Additive Manufacturing II,ETD,etd-engineering-tech-draft
+ETD2390C,Introduction to Revit Architecture and Lab,ETD,etd-engineering-tech-draft
+ETD2465C,Tool Design and Lab,ETD,etd-engineering-tech-draft
+ETD2540C,Civil Drafting and Surveying (CAD) and Lab,ETD,etd-engineering-tech-draft
+ETG2520,Statics and Strength of Materials,ETG,etg-engineering-tech-gen
+ETG2906,Directed Study in Engineering,ETG,etg-engineering-tech-gen
+ETG2949,Internship in Engineering,ETG,etg-engineering-tech-gen
+ETG3533,Engineering Strength of Materials,ETG,etg-engineering-tech-gen
+ETG3533L,Engineering Strength of Materials Lab,ETG,etg-engineering-tech-gen
+ETG3541,Applied Mechanics and Physics,ETG,etg-engineering-tech-gen
+ETG3907,Directed Study in Industrial Systems,ETG,etg-engineering-tech-gen
+ETG4950C,Project Management and Senior Design II and Lab,ETG,etg-engineering-tech-gen
+ETI1110,Introduction to Quality Assurance,ETI,eti-engineering-tech-indust
+ETI1411,Survey of Manufacturing Processes,ETI,eti-engineering-tech-indust
+ETI1420,Manufacturing Processes and Materials,ETI,eti-engineering-tech-indust
+ETI1701,Industrial Safety,ETI,eti-engineering-tech-indust
+ETI1843C,Motors and Controls,ETI,eti-engineering-tech-indust
+ETI1851C,Aerospace Mechanics and Mechanical Systems,ETI,eti-engineering-tech-indust
+ETI1852C,Aerospace Composites and Materials Testing,ETI,eti-engineering-tech-indust
+ETI2122,Product Testing and Quality Control,ETI,eti-engineering-tech-indust
+ETI2856C,Aerospace Structural Fabrication,ETI,eti-engineering-tech-indust
+ETI2947,Cooperative Education Experience in Advanced Manufacturing Technology I,ETI,eti-engineering-tech-indust
+ETI2948,Cooperative Education Experience in Advanced Manufacturing Technology II,ETI,eti-engineering-tech-indust
+ETI2949,Cooperative Education Experience in Advanced Manufacturing Technology III,ETI,eti-engineering-tech-indust
+ETI2950C,Capstone Project,ETI,eti-engineering-tech-indust
+ETI3116,Engineering Quality Assurance,ETI,eti-engineering-tech-indust
+ETI3421,Materials and Processes,ETI,eti-engineering-tech-indust
+ETI3690,Technical Sales,ETI,eti-engineering-tech-indust
+ETI4186,Applied Reliability,ETI,eti-engineering-tech-indust
+ETI4205,Applied Logistics,ETI,eti-engineering-tech-indust
+ETI4448,Project Management and Senior Design I,ETI,eti-engineering-tech-indust
+ETI4635,Technical Administration,ETI,eti-engineering-tech-indust
+ETI4640,Operations Management,ETI,eti-engineering-tech-indust
+ETI4704,Occupational Safety,ETI,eti-engineering-tech-indust
+ETM1010,Mechanical Measurement and Instrumentation,ETM,etm-engineering-tech-mech
+ETM2315C,Hydraulic and Pneumatic Power and Control and Lab,ETM,etm-engineering-tech-mech
+ETM4220,Energy Systems,ETM,etm-engineering-tech-mech
+ETM4331,Applied Fluid Mechanics,ETM,etm-engineering-tech-mech
+ETM4512,Design of Machine Elements,ETM,etm-engineering-tech-mech
+ETP4240,Power Systems,ETP,etp-engineering-tech-power
+ETP4240L,Power Systems Lab,ETP,etp-engineering-tech-power
+ETS2540C,Fundamentals of Robotics and Automation,ETS,ets-engineering-tech-spec
+ETS2542C,Programmable Logic Controllers,ETS,ets-engineering-tech-spec
+ETS3543C,Programmable Logic Applications and Device and Lab,ETS,ets-engineering-tech-spec
+ETS4502C,Metrology and Instrumentation and Lab,ETS,ets-engineering-tech-spec
+EUH2000,History of Western Civilization to 1648,EUH,euh-history
+EUH2001,History of Western Civilization from 1648 to Present,EUH,euh-history
+EUH2905,Directed Study in European History,EUH,euh-history
+EVR2001,Introduction to Environmental Science,EVR,evr-environmental-studies
+EVR2001L,Introduction to Environmental Science Lab,EVR,evr-environmental-studies
+EVR2630,Hazardous Material Risk Analysis,EVR,evr-environmental-studies
+EVR2647,Environmental Site Assessment,EVR,evr-environmental-studies
+EVR2861,Environmental Policy and Law,EVR,evr-environmental-studies
+EVR2943,Environmental Internship,EVR,evr-environmental-studies
+EVS2005C,Treatment of Water and Wastewater and Lab,EVS,evs-environmental-science
+EVS2026C,Chemistry and Biology of Natural Waters and Laboratory,EVS,evs-environmental-science
+FFP0030,Firefighter I,FFP,ffp-fire-science
+FFP0031,Firefighter II,FFP,ffp-fire-science
+FFP2801,Introduction to Command,FFP,ffp-fire-science
+FIN1100,Personal Financial Planning,FIN,fin-finance
+FIN2000,Principles of Finance,FIN,fin-finance
+FIN3403,Business Finance,FIN,fin-finance
+FOS1141,Introduction to Cakes,FOS,fos-culinary-mgmt-food-serv
+FOS1142,Pastry Fundamentals,FOS,fos-culinary-mgmt-food-serv
+FOS1151,Nutritional Baking,FOS,fos-culinary-mgmt-food-serv
+FOS1201,Sanitation and Safety,FOS,fos-culinary-mgmt-food-serv
+FOS2140,Chocolate and Confections,FOS,fos-culinary-mgmt-food-serv
+FOS2145,Dessert Production and Presentation,FOS,fos-culinary-mgmt-food-serv
+FOS2146,Advanced Cakes,FOS,fos-culinary-mgmt-food-serv
+FOS2147,Advanced Pastry Techniques,FOS,fos-culinary-mgmt-food-serv
+FOS2161,Specialty Artisan Breads,FOS,fos-culinary-mgmt-food-serv
+FRE1120,Elementary French I Concentrated,FRE,fre-foreign-language-french
+FRE1121,Elementary French II Concentrated,FRE,fre-foreign-language-french
+FRE2220,Intermediate French Reading and Conversation I,FRE,fre-foreign-language-french
+FRE2221,Intermediate French Reading and Conversation II,FRE,fre-foreign-language-french
+FRE2905,Directed Study In French,FRE,fre-foreign-language-french
+FSS1063C,Baking and Lab,FSS,fss-culinary-mgmt-food-serv
+FSS1202C,Food Production I and Lab,FSS,fss-culinary-mgmt-food-serv
+FSS1222C,Food Production II and Lab,FSS,fss-culinary-mgmt-food-serv
+FSS1240C,Contemporary American Cuisine and Lab,FSS,fss-culinary-mgmt-food-serv
+FSS1242C,International Cuisine and lab,FSS,fss-culinary-mgmt-food-serv
+FSS1270,Introduction to Craft Beer and Wine,FSS,fss-culinary-mgmt-food-serv
+FSS1287,Introduction to Craft Beer Production,FSS,fss-culinary-mgmt-food-serv
+FSS2210C,Food Production III and lab,FSS,fss-culinary-mgmt-food-serv
+FSS2284C,Catering and Buffet Management and Lab,FSS,fss-culinary-mgmt-food-serv
+GEB1011,Introduction to Business,GEB,geb-general-business
+GEB2351,International Business,GEB,geb-general-business
+GEB2430,Ethics and Social Responsibility,GEB,geb-general-business
+GEB2905,Directed Study in Business,GEB,geb-general-business
+GEB3213,Business Writing,GEB,geb-general-business
+GEB4891,Strategic Management and Decision Making,GEB,geb-general-business
+GEB4905,Directed Study in Supervision and Management,GEB,geb-general-business
+GEB4930,Selected Topics in Management,GEB,geb-general-business
+GEB4931,Selected Topics in Project Management,GEB,geb-general-business
+GEB4932,Selected Topics in Supply Chain Management,GEB,geb-general-business
+GEO2000,World Geography,GEO,geo-geography
+GEO2420,Cultural Geography,GEO,geo-geography
+GER1120,Elementary German I Concentrated,GER,ger-foreign-language-german
+GER1121,Elementary German II Concentrated,GER,ger-foreign-language-german
+GER2220,Intermediate German Reading and Conversation I,GER,ger-foreign-language-german
+GER2221,Intermediate German Reading and Conversation II,GER,ger-foreign-language-german
+GER2905,Directed Study in German,GER,ger-foreign-language-german
+GIS2040C,Geographic Information Systems and Lab,GIS,gis-geography-info-science
+GLY2010C,Physical Geology and Lab,GLY,gly-geology
+GLY2100,Historical Geology,GLY,gly-geology
+GRA1543,Graphic Design Studio,GRA,gra-interactive-media
+GRA2134,Interactive Design,GRA,gra-interactive-media
+GRA2144,Web Publishing,GRA,gra-interactive-media
+HCP0750C,Phlebotomy Technician - Theory and Clinical,HCP,hcp-nursing-assistant
+HCP0940,Internship Phlebotomy,HCP,hcp-nursing-assistant
+HEV0870,Child Care Worker 1,HEV,hev-child-care-services
+HEV0871,Child Care Worker 2,HEV,hev-child-care-services
+HEV0872,Teacher Aide (Preschool),HEV,hev-child-care-services
+HEV0873,Preschool Teacher,HEV,hev-child-care-services
+HFT1000,Introduction to Hospitality Industry,HFT,hft-hospitality-management
+HFT1021,"Beer, Wine and Beverage Service",HFT,hft-hospitality-management
+HFT1213,Beverage Sanitation and Safety,HFT,hft-hospitality-management
+HFT1287,Introduction to Craft Beer Production,HFT,hft-hospitality-management
+HFT1410,Hotel Operations,HFT,hft-hospitality-management
+HFT1860,Beverage Operations Management,HFT,hft-hospitality-management
+HFT1937,Selected Topics in the Hospitality Industry,HFT,hft-hospitality-management
+HFT1940C,Hospitality Practicum I (Basic) and Lab,HFT,hft-hospitality-management
+HFT1941C,Hospitality Practicum II (Intermediate) and Lab,HFT,hft-hospitality-management
+HFT2009,Hospitality Professionalism,HFT,hft-hospitality-management
+HFT2276,Resorts: Management and Operations,HFT,hft-hospitality-management
+HFT2282,Hospitality Supervision,HFT,hft-hospitality-management
+HFT2454,Hospitality Purchasing and Controls,HFT,hft-hospitality-management
+HFT2500,Hospitality Marketing,HFT,hft-hospitality-management
+HFT2671,Event Risk Management,HFT,hft-hospitality-management
+HFT2750,Event Industry,HFT,hft-hospitality-management
+HFT2780,Introduction to Gaming Operations,HFT,hft-hospitality-management
+HFT2804,Introduction to Beverage Science,HFT,hft-hospitality-management
+HFT2822,Brewery Operations,HFT,hft-hospitality-management
+HFT2860,Beverage Service Mgmt.,HFT,hft-hospitality-management
+HFT2867,Wine Essentials,HFT,hft-hospitality-management
+HFT2942C,Hospitality Practicum III (Advanced) and Lab,HFT,hft-hospitality-management
+HFT3373,"Event Design, Production and Technology",HFT,hft-hospitality-management
+HFT3700,Tourism Management,HFT,hft-hospitality-management
+HFT4064,Bar and Beverage Management,HFT,hft-hospitality-management
+HFT4253,Hotel Management,HFT,hft-hospitality-management
+HFT4277,Club Management,HFT,hft-hospitality-management
+HFT4809,Management of the Foodservice Industry,HFT,hft-hospitality-management
+HHD1361,Practical Interior Applications,HHD,hhd-interior-design
+HIM1000C,Introduction to Health Information Management and Lab,HIM,him-health-information
+HIM1222C,Beginning ICD-10-CM Coding and Lab,HIM,him-health-information
+HIM1273,Billing and Reimbursement Methods,HIM,him-health-information
+HIM1273L,Billing and Reimbursement Methods Lab,HIM,him-health-information
+HIM2012,Legal Aspects of Health Records,HIM,him-health-information
+HIM2253C,Beginning CPT Coding and Lab,HIM,him-health-information
+HIM2283C,Advanced CPT Coding and Lab,HIM,him-health-information
+HIM2400,Health Records in Alternate Settings,HIM,him-health-information
+HIM2430,Concepts of Diseases,HIM,him-health-information
+HIM2442,Coder Biller Pharmacology,HIM,him-health-information
+HIM2652,Electronic Health Record,HIM,him-health-information
+HIM2800,Coding Professional Practice Experience I,HIM,him-health-information
+HLP1081,Fitness Assessment and Improvement,HLP,hlp-health-and-wellness
+HLP2998,Health/Phys Ed Requ,HLP,hlp-health-and-wellness
+HLP2999,Health Phys Ed Requ,HLP,hlp-health-and-wellness
+HSA3101,U.S. Healthcare Systems,HSA,hsa-health-services-administration
+HSA4107,Health Services Administration,HSA,hsa-health-services-administration
+HSA4170,Healthcare Revenue Cycle Management,HSA,hsa-health-services-administration
+HSA4340,Principles of Human Resources Management,HSA,hsa-health-services-admin
+HSA4353,Organizational Behavior,HSA,hsa-health-services-administration
+HSA4383,Quality Management and Process Improvement,HSA,hsa-health-services-administration
+HSA4502,Healthcare Risk Management,HSA,hsa-health-services-admin
+HSA4947,Capstone Project in Healthcare Management,HSA,hsa-health-services-administration
+HSC0005,Healthcare Concepts for the Massage Therapist,HSC,hsc-health-sciences
+HSC1000,Introduction to Health Care,HSC,hsc-health-sciences
+HSC1421,"Health, Safety and Nutrition for the Young Child",HSC,hsc-health-sciences
+HSC1531,Medical Terminology,HSC,hsc-health-sciences
+HSC3730,Research Methods for Health Professions,HSC,hsc-health-sciences
+HSC4550,Pathophysiology for Health Care,HSC,hsc-health-sciences
+HSC4645,Legal and Ethical Aspects of Health Care,HSC,hsc-health-sciences
+HUM2020,Introduction to Humanities,HUM,hum-humanities
+HUM2230,Renaissance to Postmodern Humanities,HUM,hum-humanities
+HUM2740,Humanities Overseas Study Program,HUM,hum-humanities
+HUM2905,Directed Study in Humanities,HUM,hum-humanities
+HUN1201,Human Nutrition,HUN,hun-nutrition
+HUN1203,Culinary Nutrition,HUN,hun-nutrition
+HUN1270,Sports Nutrition,HUN,hun-nutrition
+IDH2028,Honors College Capstone Seminar,IDH,idh-interdisciplinary-honors
+IND1211,History of Architecture & Interiors,IND,ind-interior-design
+IND1233,Studio I-Fundamentals of Interiors,IND,ind-interior-design
+IND1300,Graphics of Interior Design I,IND,ind-interior-design
+IND1429,Textiles for Commercial and Residential Interiors,IND,ind-interior-design
+IND1432,Lighting for Interior Design,IND,ind-interior-design
+IND1935,Building and Barrier Free Codes,IND,ind-interior-design
+IND2210,Interior Design Studio II,IND,ind-interior-design
+IND2220,Commercial Interior Design,IND,ind-interior-design
+IND2408,Specialized Software for Interior Design,IND,ind-interior-design
+IND2410,Kitchen and Bath Design I,IND,ind-interior-design
+IND2411,Materials and Estimating for Kitchen and Bath,IND,ind-interior-design
+IND2414,Kitchen and Bath Design II,IND,ind-interior-design
+IND2500,Professional Practices for the Design Industry,IND,ind-interior-design
+IND2949,Internship in Interior Design,IND,ind-interior-design
+INR2002,International Relations,INR,inr-political-science
+ISM2000,Business Information Processing,ISM,ism-information-systems-mgmt
+ISM4011,Introduction to Management Information Systems,ISM,ism-information-systems-mgmt
+ISS1301,Introduction to Social Research,ISS,iss-social-sciences
+ITA1120,Elementary Italian I Concentrated,ITA,ita-foreign-language-italian
+ITA1121,Elementary Italian II Concentrated,ITA,ita-foreign-language-italian
+ITA2220,Intermediate Italian Reading and Conversation I,ITA,ita-foreign-language-italian
+ITA2221,Intermediate Italian Reading and Conversation II,ITA,ita-foreign-language-italian
+ITA2905,Directed Study in Italian,ITA,ita-foreign-language-italian
+JOU1100,Introduction to Journalism,JOU,jou-mass-comm-journalism
+JOU2905,Directed Study in Journalism,JOU,jou-mass-comm-journalism
+JOU2949,Cooperative Education Experience in Journalism,JOU,jou-mass-comm-journalism
+LAE3414,Children's Literature,LAE,lae-lang-arts-and-english-ed
+LIS2004,Research Strategies for College Students,LIS,lis-library-and-info-studies
+LIT2000,Literature and Culture,LIT,lit-english-language-and-lit
+LIT2040,Dramatic Literature,LIT,lit-english-language-and-lit
+LIT2110,Masterpieces of World Literature I,LIT,lit-english-language-and-lit
+LIT2120,Masterpieces of World Literature II,LIT,lit-english-language-and-lit
+MAC1105,College Algebra,MAC,mac-mathematics
+MAC1114,College Trigonometry,MAC,mac-mathematics
+MAC1140,Pre-Calculus Algebra,MAC,mac-mathematics
+MAC2233,Calculus for Business and Nonphysical Sciences I,MAC,mac-mathematics
+MAC2311C,Calculus I and Lab,MAC,mac-mathematics
+MAC2312C,Calculus II and Lab,MAC,mac-mathematics
+MAC2313C,Calculus III and Lab,MAC,mac-mathematics
+MAD2104,Discrete Mathematics,MAD,mad-mathematics
+MAE2801,Elementary School Mathematics,MAE,mae-mathematics-education
+MAE4326,How Children Learn Mathematics,MAE,mae-mathematics-education
+MAE4803,Mathematics Content for Elementary Grades,MAE,mae-mathematics-education
+MAN2021,Principles of Management,MAN,man-management
+MAN3240,Organizational Behavior,MAN,man-management
+MAN3350,Training and Development,MAN,man-management
+MAN3353,Management Theory and Practices,MAN,man-management
+MAN3570,Purchasing and Materials Management,MAN,man-management
+MAN3593,Scheduling and Logistics,MAN,man-management
+MAN4120,Leadership Challenges and Supervision,MAN,man-management
+MAN4162,Customer Relations for Managers,MAN,man-management
+MAN4301,Human Resource Management,MAN,man-management
+MAN4320,Recruitment and Selection,MAN,man-management
+MAN4330,Compensation and Benefits,MAN,man-management
+MAN4402,Employment Law,MAN,man-management
+MAN4504,Operational Decision Making,MAN,man-management
+MAN4520,Quality Management,MAN,man-management
+MAN4535,Business Process Analysis,MAN,man-management
+MAN4583,Applied Project Management,MAN,man-management
+MAN4584,Project Risk Management,MAN,man-management
+MAN4597,Global Supply Chain Management,MAN,man-management
+MAN4741,Agile Project Management,MAN,man-management
+MAN4900,Capstone Project in Supervision and Management,MAN,man-management
+MAN4901,Capstone Project in Human Resource Management,MAN,man-management
+MAN4905,Directed Study in Supervision and Management,MAN,man-management
+MAN4930,Capstone Project in Supply Chain Management,MAN,man-management
+MAN4931,Capstone Project in Project Management,MAN,man-management
+MAP2302C,Differential Equations and Lab,MAP,map-mathematics-applied
+MAR2011,Principles of Global Marketing,MAR,mar-marketing
+MAR2101,Social Media Marketing,MAR,mar-marketing
+MAR2321,Advertising,MAR,mar-marketing
+MAR2720,Digital Marketing,MAR,mar-marketing
+MAS3105,Linear Algebra,MAS,mas-mathematics
+MAS3301,Abstract Algebra,MAS,mas-mathematics
+MAS4203,Number Theory,MAS,mas-mathematics
+MAT0018C,Mathematics I (Pre-Algebra) and Lab,MAT,mat-mathematics
+MAT0022,Integrated Arithmetic and Algebra,MAT,mat-mathematics
+MAT0028C,Mathematics II (Elementary Algebra) and Lab,MAT,mat-mathematics
+MAT0056L,Developmental Mathematics II Lab,MAT,mat-mathematics
+MAT1033,Intermediate Algebra,MAT,mat-mathematics
+MCB1010C,Microbiology and Lab,MCB,mcb-microbiology
+MCB2905,Directed Study in Microbiology,MCB,mcb-microbiology
+MEA0005,Introduction to Medical Assisting,MEA,mea-medical-assisting
+MEA0204C,Clinical Procedures for Medical Assisting and Lab,MEA,mea-medical-assisting
+MEA0230C,Medical Terminology for Medical Assisting and Lab,MEA,mea-medical-assisting
+MEA0231C,Anatomy and Physiology for Medical Assisting and Lab,MEA,mea-medical-assisting
+MEA0242C,Pharmacology for Medical Assisting and Lab,MEA,mea-medical-assisting
+MEA0256C,Laboratory Procedures for Medical Assisting,MEA,mea-medical-assisting
+MEA0310C,Clerical Procedures for Medical Assisting and Lab,MEA,mea-medical-assisting
+MEA0334C,Coding for Medical Assisting and Lab,MEA,mea-medical-assisting
+MEA0801,Externship for Medical Assisting,MEA,mea-medical-assisting
+MEA0905,Directed Study in Medical Assisting,MEA,mea-medical-assisting
+MET2010,Meteorology,MET,met-meteorology
+MGF2130,Mathematical Thinking,MGF,mgf-mathematics
+MGF2131,Mathematics in Context,MGF,mgf-mathematics
+MHF4404,History of Mathematics,MHF,mhf-mathematics
+MKA2021,Building Selling Relationships,MKA,mka-marketing
+MMC1000,Introduction to Mass Communication,MMC,mmc-mass-communication
+MNA2161,Customer Service Management,MNA,mna-management
+MNA2345,Supervision of Personnel,MNA,mna-management
+MNA2949,Cooperative Education Experience in Management,MNA,mna-management
+MSL1001,Basic Military Science I - MSL101,MSL,msl-military-science
+MSL1002,Basic Leadership - MSL102,MSL,msl-military-science
+MSL2101,Basic Military Leadership I - MSL201,MSL,msl-military-science
+MSL2102,Leadership and Teamwork - MSL202,MSL,msl-military-science
+MSL3201,Officership I - MSL301,MSL,msl-military-science
+MSL3202,Applied Team Leadership - Army ROTC - MSL 302,MSL,msl-military-science
+MSL3203,The Joint Environment - Army ROTC - MSL 399,MSL,msl-military-science
+MSL4301,The Army Officer - MSL401,MSL,msl-military-science
+MSL4302,Leadership in a Complex World - Army ROTC - MSL 402,MSL,msl-military-science
+MSS0156,Anatomy and Physiology for Massage Therapist I,MSS,mss-massage-therapy
+MSS0157,Anatomy and Physiology Massage Therapist II,MSS,mss-massage-therapy
+MSS0215,Statutes/Rules and Ethics,MSS,mss-massage-therapy
+MSS0274,Pathology Related to Massage Therapy,MSS,mss-massage-therapy
+MSS0283,Allied Modalities I,MSS,mss-massage-therapy
+MSS0284,Allied Modalities II,MSS,mss-massage-therapy
+MSS0315,Theory and Practice of Hydrotherapy,MSS,mss-massage-therapy
+MSS0601,Professional and Personal Development,MSS,mss-massage-therapy
+MSS0803,Massage Theory and Clinical Practicum I,MSS,mss-massage-therapy
+MSS0803L,Massage Theory and Clinical Practicum I Lab,MSS,mss-massage-therapy
+MSS0804,Massage Theory and Practicum II,MSS,mss-massage-therapy
+MSS0804L,Massage Theory and Practicum II Lab,MSS,mss-massage-therapy
+MSS0905,Directed Study in Massage Therapy,MSS,mss-massage-therapy
+MTG4212,Modern Geometry,MTG,mtg-mathematics
+MUC2301,Introduction to Electronic Music Production,MUC,muc-music
+MUC2601,Introduction to Songwriting,MUC,muc-music
+MUL1010,Music Appreciation,MUL,mul-music
+MUL2380,Popular Music in America,MUL,mul-music
+MUM1610,Survey of Recording Technology,MUM,mum-music-production
+MUM1622,Sound Reinforcement,MUM,mum-music-production
+MUM1634,The Digital Audio Workstation,MUM,mum-music-production
+MUM2600,Audio Engineering I,MUM,mum-music-production
+MUM2600L,Audio Engineering I Lab,MUM,mum-music-production
+MUM2601,Audio Engineering II,MUM,mum-music-production
+MUM2601L,Audio Engineering II Lab,MUM,mum-music-production
+MUM2603,Studio Maintenance,MUM,mum-music-production
+MUM2607,Soundtrack Development,MUM,mum-music-production
+MUM2609,Studio Production,MUM,mum-music-production
+MUM2611,Live Recording Techniques,MUM,mum-music-production
+MUM2630C,Sound for Media,MUM,mum-music-production
+MUM2640,Post Production Sound,MUM,mum-music-production
+MUM2677,Sound Reinforcement II,MUM,mum-music-production
+MUM2700,Survey of Music Business,MUM,mum-music-production
+MUM2716,Automated Show Control,MUM,mum-music-production
+MUN1031,Contemporary Music Ensemble I,MUN,mun-music
+MUN1032,Contemporary Music Ensemble II,MUN,mun-music
+MUN1120,College Band,MUN,mun-music
+MUN1210,Orchestra,MUN,mun-music
+MUN1340,Concert Choir,MUN,mun-music
+MUN1362,Madrigal Dinner Rehearsal and Performance,MUN,mun-music
+MUN1420,Woodwind Chamber Ensemble,MUN,mun-music
+MUN1430,Brass Chamber Ensemble,MUN,mun-music
+MUN1440,Percussion Chamber Ensemble,MUN,mun-music
+MUN1460,Mixed Chamber Ensemble,MUN,mun-music
+MUN1480,Guitar Chamber Ensemble,MUN,mun-music
+MUN1640,Music Theater Ensemble,MUN,mun-music
+MUN1710,Jazz Ensemble,MUN,mun-music
+MUN1711,Jazz Combo,MUN,mun-music
+MUN1720,Jazz Choir,MUN,mun-music
+MUN2412,String Chamber Ensemble II,MUN,mun-music
+MUN2432,Brass Chamber Ensemble II,MUN,mun-music
+MUN2442,Percussion Chamber Ensemble,MUN,mun-music
+MUN2489,Guitar Chamber Ensemble II,MUN,mun-music
+MUN2491,Woodwind Chamber Ensemble II,MUN,mun-music
+MUS1010L,Recital Seminar,MUS,mus-music
+MUS2360,Learning Basic Music Using the Computer,MUS,mus-music
+MUS2905,Cooperative Education Experience in Music,MUS,mus-music
+MUT1111C,Music Theory I,MUT,mut-music-theory
+MUT1122C,Music Theory II and Lab,MUT,mut-music-theory
+MUT1241C,Sight Singing and Ear Training,MUT,mut-music-theory
+MUT2126C,Music Theory III and Lab,MUT,mut-music-theory
+MUT2127C,Music Theory IV and Lab,MUT,mut-music-theory
+MVB1211,"Applied Music Secondary, Trumpet",MVB,mvb-music
+MVB1212,"Applied Music Secondary, French Horn",MVB,mvb-music
+MVB1213,"Applied Music Secondary, Trombone",MVB,mvb-music
+MVB1214,"Applied Music Secondary, Baritone Horn",MVB,mvb-music
+MVB1215,"Applied Music Secondary, Tuba",MVB,mvb-music
+MVB1311,"Applied Music Principal, Trumpet",MVB,mvb-music
+MVB1312,"Applied Music Principal, French Horn",MVB,mvb-music
+MVB1313,"Applied Music Principal, Trombone",MVB,mvb-music
+MVB1314,"Applied Music Principal, Baritone Horn",MVB,mvb-music
+MVB1315,"Applied Music Principal, Tuba",MVB,mvb-music
+MVB2221,"Applied Music Secondary, Trumpet",MVB,mvb-music
+MVB2222,"Applied Music Secondary, French Horn",MVB,mvb-music
+MVB2223,"Applied Music Secondary, Trombone",MVB,mvb-music
+MVB2224,"Applied Music Secondary, Baritone Horn",MVB,mvb-music
+MVB2225,"Applied Music Secondary, Tuba",MVB,mvb-music
+MVB2321,"Applied Music Principal, Trumpet",MVB,mvb-music
+MVB2322,"Applied Music Principal, French Horn",MVB,mvb-music
+MVB2323,"Applied Music Principal, Trombone",MVB,mvb-music
+MVB2324,"Applied Music Principal, Baritone Horn",MVB,mvb-music
+MVB2325,"Applied Music Principal, Tuba",MVB,mvb-music
+MVK1111,Applied Music-Group (Piano) I-II,MVK,mvk-music
+MVK1211,"Applied Music Secondary, Piano",MVK,mvk-music
+MVK1212,"Applied Music Secondary, Harpsichord",MVK,mvk-music
+MVK1213,"Applied Music Secondary, Organ",MVK,mvk-music
+MVK1311,"Applied Music Principal, Piano",MVK,mvk-music
+MVK1312,"Applied Music Principal, Harpsichord",MVK,mvk-music
+MVK1313,"Applied Music Principal, Organ",MVK,mvk-music
+MVK2121,Applied Music-Group (Piano) III-IV,MVK,mvk-music
+MVK2221,"Applied Music Secondary, Piano",MVK,mvk-music
+MVK2222,"Applied Music Secondary, Harpsichord",MVK,mvk-music
+MVK2223,"Applied Music Secondary, Organ",MVK,mvk-music
+MVK2321,"Applied Music Principal, Piano",MVK,mvk-music
+MVK2322,"Applied Music Principal, French Horn",MVK,mvk-music
+MVK2323,"Applied Music Principal, Organ",MVK,mvk-music
+MVO1210,"Applied Music Secondary, Other Instruments",MVO,mvo-music
+MVO1310,"Applied Music Principal, Other Instruments",MVO,mvo-music
+MVO2220,"Applied Music Secondary, Other Instruments",MVO,mvo-music
+MVO2320,"Applied Music Principal, Other Instruments",MVO,mvo-music
+MVP1211,"Applied Music Secondary, Percussion",MVP,mvp-music
+MVP1311,"Applied Music Principal, Percussion",MVP,mvp-music
+MVP2221,"Applied Music Secondary, Percussion",MVP,mvp-music
+MVP2321,"Applied Music Principal, Percussion",MVP,mvp-music
+MVS1116,Beginning Class Guitar,MVS,mvs-music
+MVS1211,"Applied Music Secondary, Violin",MVS,mvs-music
+MVS1212,"Applied Music Secondary, Viola",MVS,mvs-music
+MVS1213,"Applied Music Secondary, Cello",MVS,mvs-music
+MVS1214,"Applied Music Secondary, String Bass",MVS,mvs-music
+MVS1215,"Applied Music Secondary, Harp",MVS,mvs-music
+MVS1216,"Applied Music Secondary, Guitar",MVS,mvs-music
+MVS1311,"Applied Music Principal, Violin",MVS,mvs-music
+MVS1312,"Applied Music Principal, Viola",MVS,mvs-music
+MVS1313,Applied Music Principal Cello,MVS,mvs-music
+MVS1314,"Applied Music Principal, String Bass",MVS,mvs-music
+MVS1315,"Applied Music Principal, Harp",MVS,mvs-music
+MVS1316,"Applied Music Principal, Guitar",MVS,mvs-music
+MVS2126,Intermediate Class Guitar,MVS,mvs-music
+MVS2221,"Applied Music Secondary, Violin",MVS,mvs-music
+MVS2222,"Applied Music Secondary, Viola",MVS,mvs-music
+MVS2223,"Applied Music Secondary, Cello",MVS,mvs-music
+MVS2224,"Applied Music Secondary, String Bass",MVS,mvs-music
+MVS2225,"Applied Music Secondary, Harp",MVS,mvs-music
+MVS2226,"Applied Music Secondary, Guitar",MVS,mvs-music
+MVS2321,"Applied Music Principal, Violin",MVS,mvs-music
+MVS2322,"Applied Music Principal, Viola",MVS,mvs-music
+MVS2323,"Applied Music Principal, Cello",MVS,mvs-music
+MVS2324,"Applied Music Principal, String Bass",MVS,mvs-music
+MVS2325,"Applied Music Principal, Harp",MVS,mvs-music
+MVS2326,"Applied Music Principal, Guitar",MVS,mvs-music
+MVV1111,Beginning Class Voice,MVV,mvv-music
+MVV1211,"Applied Music Secondary, Voice",MVV,mvv-music
+MVV1311,"Applied Music Principal, Voice",MVV,mvv-music
+MVV2121,Intermediate Voice,MVV,mvv-music
+MVV2221,"Applied Music Secondary, Voice",MVV,mvv-music
+MVV2321,"Applied Music Principal, Voice",MVV,mvv-music
+MVW1211,"Applied Music Secondary, Flute",MVW,mvw-music
+MVW1212,"Applied Music Secondary, Oboe",MVW,mvw-music
+MVW1213,"Applied Music Secondary, Clarinet",MVW,mvw-music
+MVW1214,"Applied Music Secondary, Bassoon",MVW,mvw-music
+MVW1215,"Applied Music Secondary, Saxophone",MVW,mvw-music
+MVW1311,"Applied Music Principal, Flute",MVW,mvw-music
+MVW1312,"Applied Music Principal, Oboe",MVW,mvw-music
+MVW1313,"Applied Music Principal, Clarinet",MVW,mvw-music
+MVW1314,"Applied Music Principal, Bassoon",MVW,mvw-music
+MVW1315,"Applied Music Principal, Saxophone",MVW,mvw-music
+MVW2221,"Applied Music Secondary, Flute",MVW,mvw-music
+MVW2222,"Applied Music Secondary, Oboe",MVW,mvw-music
+MVW2223,"Applied Music Secondary, Clarinet",MVW,mvw-music
+MVW2224,"Applied Music Secondary, Bassoon",MVW,mvw-music
+MVW2225,"Applied Music Secondary, Saxophone",MVW,mvw-music
+MVW2321,"Applied Music Principal, Flute",MVW,mvw-music
+MVW2322,"Applied Music Principal, Oboe",MVW,mvw-music
+MVW2323,"Applied Music Principal, Clarinet",MVW,mvw-music
+MVW2324,"Applied Music Principal, Bassoon",MVW,mvw-music
+MVW2325,"Applied Music Principal, Saxophone",MVW,mvw-music
+NUR1005C,Transition into Professional Nursing and Lab,NUR,nur-nursing
+NUR1020C,Nursing Process I and Lab,NUR,nur-nursing
+NUR1230C,Nursing Process III and Lab,NUR,nur-nursing
+NUR1322,Maternal Child Nursing for Transition into Professional Nursing Student,NUR,nur-nursing
+NUR1423C,Nursing Process II and Lab,NUR,nur-nursing
+NUR2731C,Nursing Process IV and Lab,NUR,nur-nursing
+NUR2905,Directed Study in Nursing,NUR,nur-nursing
+NUR2940C,Nursing Process V and Lab,NUR,nur-nursing
+NUR2990,Advanced Standing,NUR,nur-nursing
+NUR3065,Health Assessment,NUR,nur-nursing
+NUR3125,Pathophysiology,NUR,nur-nursing
+NUR3145,Pharmacology,NUR,nur-nursing
+NUR3655,Nursing in a Multicultural Society,NUR,nur-nursing
+NUR3826,Legal and Ethical Aspects of Nursing,NUR,nur-nursing
+NUR3846,Critical Approaches to Nursing Theory,NUR,nur-nursing
+NUR4169,Nursing Research and Evidence-Based Practice,NUR,nur-nursing
+NUR4636C,Community Health Nursing and Lab,NUR,nur-nursing
+NUR4827C,Leadership and Clinical Decision-Making and Lab,NUR,nur-nursing
+NUR4837,Health Care Policy and Economics,NUR,nur-nursing
+OCB2000C,Introduction to Marine Biology and Lab,OCB,ocb-marine-biology
+OCE1001,Introduction to Oceanography,OCE,oce-oceanography
+OCE1001L,Introduction to Oceanography Lab,OCE,oce-oceanography
+OCE2905,Directed Study in Oceanography,OCE,oce-oceanography
+OCE3014C,Oceanography: Coastal Ocean Studies in Biogeochemistry and Lab,OCE,oce-oceanography
+OST1100,Document Formatting I,OST,ost-office-systems
+OST1110,Document Formatting II,OST,ost-office-systems
+OST1141,Keyboarding,OST,ost-office-systems
+OST1330,Business English,OST,ost-office-systems
+OST1435,Legal Terminology,OST,ost-office-systems
+OST2336,Business Communications,OST,ost-office-systems
+OST2401,Office Procedures,OST,ost-office-systems
+OST2431,Legal Operations,OST,ost-office-systems
+OST2461,Medical Office Procedures,OST,ost-office-systems
+OST2501,Office Management,OST,ost-office-systems
+OST2713,Advanced Computer Software Applications,OST,ost-office-systems
+OST2828,Business Presentation Software,OST,ost-office-systems
+OTH1001,Introduction to Occupational Therapy,OTH,oth-occupational-therapy
+OTH1003,Human Occupation Across the Lifespan,OTH,oth-occupational-therapy
+OTH1006,Documentation Through the Occupational Therapy Process,OTH,oth-occupational-therapy
+OTH1014C,Analysis of Human Movement and Lab,OTH,oth-occupational-therapy
+OTH1114C,Occupational Therapy Skills and Techniques I and Lab,OTH,oth-occupational-therapy
+OTH1800,Occupational Therapy Practicum I,OTH,oth-occupational-therapy
+OTH1802,Occupational Therapy Practicum II,OTH,oth-occupational-therapy
+OTH2261C,Occupational Therapy Skills and Techniques II and Lab,OTH,oth-occupational-therapy
+OTH2264C,Occupational Therapy Skills and Techniques III and Lab,OTH,oth-occupational-therapy
+OTH2300,Psychosocial Occupational Therapy,OTH,oth-occupational-therapy
+OTH2410,Conditions in Occupational Therapy,OTH,oth-occupational-therapy
+OTH2420C,Occupational Therapy for Physical Dysfunction and Lab,OTH,oth-occupational-therapy
+OTH2520C,Developmental Issues and Lab,OTH,oth-occupational-therapy
+OTH2704C,Advanced Practice and Professionalism for OTA,OTH,oth-occupational-therapy
+OTH2840,O.T. Supervised Clinical Practice I,OTH,oth-occupational-therapy
+OTH2841,O.T. Supervised Clinical Practice II,OTH,oth-occupational-therapy
+OTH2933,O.T. Seminar for Clinical Practice,OTH,oth-occupational-therapy
+PCB2033C,Introduction to Ecology and Lab,PCB,pcb-biological-science
+PCB3034C,General Ecology and Lab,PCB,pcb-biological-science
+PCB3060,Introduction to Genetics,PCB,pcb-biological-science
+PCB3203,Cell Physiology,PCB,pcb-biological-science
+PET2084,Personal Health and Wellness,PET,pet-health-and-wellness
+PET2621,Principles of Athletic Training,PET,pet-health-and-wellness
+PET2622,Care and Prevention of Athletic Injuries,PET,pet-health-and-wellness
+PGY1100,Analog Photography,PGY,pgy-photography
+PGY1101,Photography as an Art Form,PGY,pgy-photography
+PGY1201,Studio and Location Lighting,PGY,pgy-photography
+PGY1209,Intermediate Studio and Location Lighting,PGY,pgy-photography
+PGY1800,Photography I: Media and Methods,PGY,pgy-photography
+PGY1802,Digital Image Processing and Applications,PGY,pgy-photography
+PGY1850,Multimedia Production,PGY,pgy-photography
+PGY2000,Then and Now: Popular Themes in Photography,PGY,pgy-photography
+PGY2107,Commercial/Illustration Photography,PGY,pgy-photography
+PGY2116,Color and Design,PGY,pgy-photography
+PGY2160,Camera Culture,PGY,pgy-photography
+PGY2207,Lens-Based Practices: Art and Commerce,PGY,pgy-photography
+PGY2210,Professional Studio Portraiture,PGY,pgy-photography
+PGY2270,Field Survey in Professional Photography,PGY,pgy-photography
+PGY2273,Professional Strategies for Photographers,PGY,pgy-photography
+PGY2470,Advanced Photo Workshop,PGY,pgy-photography
+PGY2650,Photography II: Concept and Narrative,PGY,pgy-photography
+PGY2750,Introduction to Video Production,PGY,pgy-photography
+PGY2801,Digital Photography,PGY,pgy-photography
+PGY2806,Multidimensional Imaging and Expression,PGY,pgy-photography
+PGY2930,Special Topics in Photography,PGY,pgy-photography
+PGY2935,Portfolio Workshop,PGY,pgy-photography
+PGY2949,Cooperative Education Experience in Photography,PGY,pgy-photography
+PHI2010,Introduction of Philosophy,PHI,phi-philosophy
+PHI2100,"Philosophy of Reasoning, Argument and Critical Thinking",PHI,phi-philosophy
+PHI2600,Introduction to Ethics,PHI,phi-philosophy
+PHT1006,Introduction to Physical Therapy,PHT,pht-physical-therapist
+PHT1128,Kinesiology of PTA,PHT,pht-physical-therapist
+PHT1251,Patient Care Skills,PHT,pht-physical-therapist
+PHT1251L,Patient Care Skills Lab,PHT,pht-physical-therapist
+PHT1300,Pathology for PTA,PHT,pht-physical-therapist
+PHT2129,Neuroscience for PTA,PHT,pht-physical-therapist
+PHT2140,Rehabilitation Skills for PTA,PHT,pht-physical-therapist
+PHT2140L,Rehabilitation Skills Lab,PHT,pht-physical-therapist
+PHT2211,Modalities I,PHT,pht-physical-therapist
+PHT2211L,Modalities I Lab,PHT,pht-physical-therapist
+PHT2214,Modalities II,PHT,pht-physical-therapist
+PHT2214L,Modalities II Lab,PHT,pht-physical-therapist
+PHT2220,Therapeutic Exercise I,PHT,pht-physical-therapist
+PHT2220L,Therapeutic Exercise I Lab,PHT,pht-physical-therapist
+PHT2221,Therapeutic Exercise II,PHT,pht-physical-therapist
+PHT2221L,Therapeutic Exercise II Lab,PHT,pht-physical-therapist
+PHT2235,Therapeutic Exercise III,PHT,pht-physical-therapist
+PHT2235L,Therapeutic Exercise III Lab,PHT,pht-physical-therapist
+PHT2804,PTA Clinical Practicum I,PHT,pht-physical-therapist
+PHT2810,PTA Clinical Practicum II,PHT,pht-physical-therapist
+PHT2820,PTA Clinical Practicum III,PHT,pht-physical-therapist
+PHT2931,PTA Seminar,PHT,pht-physical-therapist
+PHY1020,Conceptual Physics,PHY,phy-physics
+PHY1032,Energy and its Environmental Effects,PHY,phy-physics
+PHY1053C,General Physics I and Lab,PHY,phy-physics
+PHY1054C,General Physics II and Lab,PHY,phy-physics
+PHY2048C,Physics with Calculus I and Lab,PHY,phy-physics
+PHY2049C,Physics with Calculus II and Lab,PHY,phy-physics
+PHY2905,Directed Study in Physics,PHY,phy-physics
+PHY3101,Modern Physics,PHY,phy-physics
+PHY3221,Classical Mechanics,PHY,phy-physics
+PHY3513,Thermal Physics (Thermodynamics and Elementary Statistical Mechanics),PHY,phy-physics
+PHY4424,Geometrical and Physical Optics,PHY,phy-physics
+PLA1003,Introduction to Law,PLA,pla-paralegal
+PLA1104,Legal Research,PLA,pla-paralegal
+PLA2114,Legal Writing,PLA,pla-paralegal
+PLA2201,Civil Litigation,PLA,pla-paralegal
+PLA2303,Criminal Law,PLA,pla-paralegal
+PLA2460,Bankruptcy Law,PLA,pla-paralegal
+PLA2600,Estate Law,PLA,pla-paralegal
+PLA2610,Property Law,PLA,pla-paralegal
+PLA2763,Legal Technology,PLA,pla-paralegal
+PLA2800,Family Law,PLA,pla-paralegal
+PLA2872,Artificial Intelligence and the Law,PLA,pla-paralegal
+PLA2880,Constitutional Law,PLA,pla-paralegal
+PLA2905,Directed Study in Legal Assisting,PLA,pla-paralegal
+PLA2930,Selected Topics in Legal Studies,PLA,pla-paralegal
+PLA2949,Legal Internship,PLA,pla-paralegal
+PMT0076C,Advanced Welder II,PMT,pmt-precision-metals
+PMT0077C,Advanced Welder 1A,PMT,pmt-precision-metals
+PMT0078C,Advanced Welder 1B,PMT,pmt-precision-metals
+PMT0106C,Introduction to Welding I and Lab,PMT,pmt-precision-metals
+PMT0109C,Introduction to Welding II and Lab,PMT,pmt-precision-metals
+PMT0121C,Welding III (Shield Metal Arc) and Lab,PMT,pmt-precision-metals
+PMT0131C,Welding VII (Gas Tungsten Arc) and Lab,PMT,pmt-precision-metals
+PMT0134C,Welding V (Gas Metal Arc) and Lab,PMT,pmt-precision-metals
+PMT0154C,Welding IV (Plasma Cut Welding and Introduction to MIG) and Lab,PMT,pmt-precision-metals
+PMT0161C,Welding VI (Introduction to Pipe Welding) and Lab,PMT,pmt-precision-metals
+PMT0171C,Welding VIII (Advanced Gas Tungsten Arc and Pipe Welding) and Lab,PMT,pmt-precision-metals
+PMT0202C,Introduction to Machining and Lab,PMT,pmt-precision-metals
+PMT0215C,Manual Machining and Lab,PMT,pmt-precision-metals
+PMT0228C,Electrical Discharge Machining (EDM) and Lab,PMT,pmt-precision-metals
+PMT0251C,CNC Mill and Lab,PMT,pmt-precision-metals
+PMT0260C,CAD/CAM Programming and Lab,PMT,pmt-precision-metals
+PMT0265C,CNC Multi-Axis and Lab,PMT,pmt-precision-metals
+PMT0290,Cooperative Education Experience in Machining,PMT,pmt-precision-metals
+PMT0720C,CNC Lathe and Lab,PMT,pmt-precision-metals
+POS2041,American Federal Government,POS,pos-political-science
+POS2112,State and Local Government,POS,pos-political-science
+PPE2001,Survey of Personality,PPE,ppe-psychology
+PRN0004C,Introduction to Nursing and Lab,PRN,prn-nursing-practical
+PRN0042C,Neuromuscular Sensory Nursing and Lab,PRN,prn-nursing-practical
+PRN0090,Nursing Assistant,PRN,prn-nursing-practical
+PRN0120C,Maternal/Child Health Nursing and Lab,PRN,prn-nursing-practical
+PRN0207C,Medical-Surgical Nursing I and Lab,PRN,prn-nursing-practical
+PRN0904,Directed Study in Practical Nursing,PRN,prn-nursing-practical
+PSB2442,Addictions I - Psychology of Addictions,PSB,psb-psychology
+PSC1121,Physical Science,PSC,psc-physical-sciences
+PSY1012,General Psychology,PSY,psy-psychology
+PSY2934,Special Topics in Forensic Psychology,PSY,psy-psychology
+QMB1001,Business Math,QMB,qmb-quant-methods-in-business
+RED3012,Principles of Reading,RED,red-lang-arts-and-english-educ
+RED3309,Early and Emergent Reading,RED,red-lang-arts-and-english-educ
+RED4511,"Intermediate Literacy, Reading and Thinking",RED,red-lang-arts-and-english-educ
+RED4519,"Diagnosis, Intervention in Reading",RED,red-lang-arts-and-english-educ
+RED4844,Reading Practicum,RED,red-lang-arts-and-english-educ
+REL2300,World Religion,REL,rel-religion
+RET1021,Respiratory Care Introduction,RET,ret-respiratory-care
+RET1025C,Principles of Respiratory Care and Lab,RET,ret-respiratory-care
+RET1026C,Basic Equipment of Respiratory Care and Lab,RET,ret-respiratory-care
+RET1264C,Advanced Equipment of Respiratory Care and Lab,RET,ret-respiratory-care
+RET1265C,Mechanical Ventilation and Lab,RET,ret-respiratory-care
+RET1295,Chest Medicine,RET,ret-respiratory-care
+RET1450,Basic Physiologic Monitoring,RET,ret-respiratory-care
+RET1485,Cardiopulmonary Anatomy and Physiology,RET,ret-respiratory-care
+RET1874,Clinical Practice I,RET,ret-respiratory-care
+RET1875,Clinical Practice II,RET,ret-respiratory-care
+RET2244,Life Support,RET,ret-respiratory-care
+RET2350,Cardiopulmonary Pharmacology,RET,ret-respiratory-care
+RET2714,Neonatal and Pediatric Respiratory Care,RET,ret-respiratory-care
+RET2876,Clinical Practice III,RET,ret-respiratory-care
+RET2934,Respiratory Care Seminar,RET,ret-respiratory-care
+RET3041,Cardiopulmonary Education and Promotion,RET,ret-respiratory-care
+RET3536,Cardiopulmonary Rehabilitation,RET,ret-respiratory-care
+RET3960,ProfessionalCredentialing,RET,ret-respiratory-care
+RET4245,Advanced Life Support,RET,ret-respiratory-care
+RET4354,Advanced Pharmacology,RET,ret-respiratory-care
+RET4445,Cardiopulmonary Diagnostics,RET,ret-respiratory-care
+RET4950,Cardiopulmonary Capstone,RET,ret-respiratory-care
+RMI2001,Principles of Risk Management and Insurance,RMI,rmi-insurance
+RMI2110,Personal Insurance Planning,RMI,rmi-insurance
+RMI2212,Personal and Business Property Insurance,RMI,rmi-insurance
+RTE1000,Fundamentals of Radiologic Technology,RTE,rte-radiography
+RTE1001,Medical Terminology for Radiographers,RTE,rte-radiography
+RTE1111,Patient Care in Radiography,RTE,rte-radiography
+RTE1111L,Patient Care in Radiography Lab,RTE,rte-radiography
+RTE1418,Radiographic Exposures and Processing,RTE,rte-radiography
+RTE1457C,Radiographic Exposures II and Lab,RTE,rte-radiography
+RTE1503C,Radiographic Procedures I and Lab,RTE,rte-radiography
+RTE1513C,Radiographic Procedures II and Lab,RTE,rte-radiography
+RTE1523C,Radiographic Procedures III and Lab,RTE,rte-radiography
+RTE1804L,Radiographic Clinical Education I,RTE,rte-radiography
+RTE1814L,Radiographic Clinical Education II,RTE,rte-radiography
+RTE1824L,Radiographic Clinical Education III,RTE,rte-radiography
+RTE2061,Radiography Seminar,RTE,rte-radiography
+RTE2385,Radiation Biology and Protection,RTE,rte-radiography
+RTE2563C,Selected Radiographic Special Procedures I,RTE,rte-radiography
+RTE2573C,Selected Radiographic Special Procedures II,RTE,rte-radiography
+RTE2613,Radiation Physics I,RTE,rte-radiography
+RTE2623,Radiation Physics II,RTE,rte-radiography
+RTE2782,Radiographic Pathology,RTE,rte-radiography
+RTE2834L,Radiographic Clinical Education IV,RTE,rte-radiography
+RTE2844L,Radiographic Clinical Education V,RTE,rte-radiography
+RTE2854L,Radiographic Clinical Education VI,RTE,rte-radiography
+RTE3116,Advanced Patient Care,RTE,rte-radiography
+RTE3213,Radiology Information Systems,RTE,rte-radiography
+RTE3253,Teaching in the Health Profession,RTE,rte-radiography
+RTE3590,Computed Tomography,RTE,rte-radiography
+RTE3765,Anatomy for the Medical Imager,RTE,rte-radiography
+RTE4474,Quality Management in Imaging,RTE,rte-radiography
+RTE4574,Advanced Imaging Modalities,RTE,rte-radiography
+RTE4942L,CT Practicum,RTE,rte-radiography
+RTV1000,Fundamentals of Broadcast Production,RTV,rtv-mass-comm-radio-tv
+RTV1251,Digital Video Editing,RTV,rtv-mass-comm-radio-tv
+RTV1510,Studio Television Production,RTV,rtv-mass-comm-radio-tv
+RTV1520,Broadcast Videography,RTV,rtv-mass-comm-radio-tv
+RTV1613,Digital Video Effects,RTV,rtv-mass-comm-radio-tv
+RTV1670,Television Directing,RTV,rtv-mass-comm-radio-tv
+RTV2104,Broadcast Research/Newswriting/Presentation Skills,RTV,rtv-mass-comm-radio-tv
+RTV2241,Producing for Television,RTV,rtv-mass-comm-radio-tv
+RTV2290,Selected Topics in Remote Sports Production,RTV,rtv-mass-comm-radio-tv
+RTV2534,Electronic Field Production,RTV,rtv-mass-comm-radio-tv
+RTV2540,Workshop in Studio Production,RTV,rtv-mass-comm-radio-tv
+RTV2541,Team Media Production,RTV,rtv-mass-comm-radio-tv
+RTV2600,Acting for the Lens and Camera,RTV,rtv-mass-comm-radio-tv
+RTV2940,Practicum for Television Broadcasting,RTV,rtv-mass-comm-radio-tv
+RTV2949,Cooperative Education Experience in Radio and Television,RTV,rtv-mass-comm-radio-tv
+SBM2000,Small Business Management,SBM,sbm-management-small-bus
+SCE3310,Teaching Science in the Elementary School,SCE,sce-science-education
+SCE3832,Science Concepts in the Elementary Classroom,SCE,sce-science-education
+SLS1122,Managing Your Success,SLS,sls-student-life-skills
+SLS1127,Faculty Peer Mentoring Experience for Marine and Environmental Science Programs,SLS,sls-student-life-skills
+SLS1130L,DSC Basics,SLS,sls-student-life-skills
+SLS2301,Career Development,SLS,sls-student-life-skills
+SLS2505,Critical Thinking,SLS,sls-student-life-skills
+SLS2940,Service Learning,SLS,sls-student-life-skills
+SLS3355L,Orientation to Education Programs Lab,SLS,sls-student-life-skills
+SMT4301,Classroom Interaction in Math and Science Teaching,SMT,smt-science-and-mathematics-education
+SON1000,Introduction to Medical Sonography,SON,son-sonography
+SON1100C,Principles and Protocols of Imaging and Lab,SON,son-sonography
+SON1113,Cross Sectional Anatomy,SON,son-sonography
+SON1141,Small Parts Sonography,SON,son-sonography
+SON1210,Introduction to Sonographic Physics and Instrumentation,SON,son-sonography
+SON1804L,Clinical 1,SON,son-sonography
+SON1814L,Clinical 2,SON,son-sonography
+SON2061,Seminar,SON,son-sonography
+SON2111C,Abdominal Sonography 1 and Lab,SON,son-sonography
+SON2112C,Abdominal Sonography 2 and Lab,SON,son-sonography
+SON2121C,OB/GYN Sonography 1 and Lab,SON,son-sonography
+SON2122C,OB/GYN Sonography 2 and Lab,SON,son-sonography
+SON2171C,Vascular Sonography and Lab,SON,son-sonography
+SON2211,Medical Sonographic Physics,SON,son-sonography
+SON2824L,Clinical 3,SON,son-sonography
+SON2834L,Clinical 4,SON,son-sonography
+SOP2002,Introduction to Social Psychology,SOP,sop-psychology
+SOP2772,Psychology of Human Sexuality,SOP,sop-psychology
+SOS2006C,Introduction to Soil Science and Lab,SOS,sos-soil-science
+SPC1017,Introduction to Communication,SPC,spc-speech-communication
+SPC2608,Oral Communications/Research/Presentation Skills,SPC,spc-speech-communication
+SPC2999A,Speech Requirmt,SPC,spc-speech-communication
+SPN1120,Elementary Spanish I Concentrated,SPN,spn-foreign-language-spanish
+SPN1121,Elementary Spanish II Concentrated,SPN,spn-foreign-language-spanish
+SPN2220,Intermediate Spanish III Concentrated,SPN,spn-foreign-language-spanish
+SPN2221,Intermediate Spanish IV Concentrated,SPN,spn-foreign-language-spanish
+SPN2905,Directed Study in Spanish,SPN,spn-foreign-language-spanish
+SSE3312,Teaching Social Studies,SSE,sse-social-studies-education
+SSI2997A,Social Sci Req,SSI,ssi-sociology
+SSI2998,Social Science Requ,SSI,ssi-sociology
+SSI2999,Social Science Requ,SSI,ssi-sociology
+STA2023,Elementary Statistics,STA,sta-statistics
+STA4024,Statistics II,STA,sta-statistics
+STS0003,Introduction to Surgical Technology,STS,sts-surgical-tech-studies
+STS0008,Pharmacology for Surgical Technology,STS,sts-surgical-tech-studies
+STS0120,Surgical Specialities I,STS,sts-surgical-tech-studies
+STS0121,Surgical Specialities II,STS,sts-surgical-tech-studies
+STS0122,Surgical Specialities III,STS,sts-surgical-tech-studies
+STS0155,Surgical Techniques and Procedures,STS,sts-surgical-tech-studies
+STS0155L,Surgical Techniques and Procedures Lab,STS,sts-surgical-tech-studies
+STS0255L,Surgical Procedures Clinical I,STS,sts-surgical-tech-studies
+STS0256L,Surgical Procedures Clinical II,STS,sts-surgical-tech-studies
+STS0257L,Surgical Procedures Clinical III,STS,sts-surgical-tech-studies
+STS1302,Introduction to Surgical Technology,STS,sts-surgical-tech-studies
+STS1303,Fundamentals of Surgical Technology,STS,sts-surgical-tech-studies
+STS1304L,Operating Room Techniques Laboratory,STS,sts-surgical-tech-studies
+STS1307,Surgical Equipment and Instrumentation,STS,sts-surgical-tech-studies
+STS1308,Perioperative Patient Care Concepts,STS,sts-surgical-tech-studies
+STS1323,Surgical Procedures I,STS,sts-surgical-tech-studies
+STS1327L,Principles and Practices of Surgical Technology Laboratory,STS,sts-surgical-tech-studies
+STS1931,Surgical Technology Special Topics Seminar,STS,sts-surgical-tech-studies
+STS2179,Surgical Biomedical Fundamentals,STS,sts-surgical-tech-studies
+STS2324,Surgical Procedures II,STS,sts-surgical-tech-studies
+STS2340,Surgical Pharmacology,STS,sts-surgical-tech-studies
+STS2365,Professional Skills for the Surgical Technologist,STS,sts-surgical-tech-studies
+STS2944,Surgical Clinical I,STS,sts-surgical-tech-studies
+STS2945,Surgical Clinical II,STS,sts-surgical-tech-studies
+STS2946,Surgical Clinical III,STS,sts-surgical-tech-studies
+SWS2000C,Introduction to Soil Science and Lab,SWS,sws-soil-and-water-sciences
+SWS2007,The World of Water,SWS,sws-soil-and-water-sciences
+SYD2707,Race and Ethnicity,SYD,syd-sociology-demography
+SYD2803,Gender and Society,SYD,syd-sociology-demography
+SYG2000,Introduction to Sociology,SYG,syg-sociology
+SYG2010,Social Problems,SYG,syg-sociology
+SYG2430,The American Family,SYG,syg-sociology
+TAX2000,Personal Income Tax,TAX,tax-accounting
+TAX3001,Federal Income Tax,TAX,tax-accounting
+TAX3011,Taxation of Business Organizations,TAX,tax-accounting
+TDR0304C,Computer Aided Drafting (CAD) and Lab,TDR,tdr-technical-drafting
+THE1000,Theatre Appreciation,THE,the-theatre-arts
+TPA2200,Stagecraft,TPA,tpa-theatre-arts
+TPP1110,Acting 1,TPP,tpp-theatre-arts
+TPP1111,Acting 2,TPP,tpp-theatre-arts
+TPP1200C,Healthcare Theater,TPP,tpp-theatre-arts
+TPP2118,Acting 3,TPP,tpp-theatre-arts
+TPP2119,Acting 4,TPP,tpp-theatre-arts
+TPP2120C,Creative Improvisation: Innovation for Theatre and the Real World and Lab,TPP,tpp-theatre-arts
+TPP2190,Theatre Rehearsal and Performance,TPP,tpp-theatre-arts
+TPP2250,Musical Theatre Performance,TPP,tpp-theatre-arts
+TPP2300,Beginning Directing,TPP,tpp-theatre-arts
+TSL3080,ESOL Issues and Strategies I,TSL,tsl-teaching-eng-second-lang
+TSL4081,ESOL Issues and Strategies II,TSL,tsl-teaching-eng-second-lang
+WOH2012,World History Before 1500,WOH,woh-history
+WOH2022,World History After 1500,WOH,woh-history
