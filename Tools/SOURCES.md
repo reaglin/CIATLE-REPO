@@ -15915,3 +15915,182 @@ No prerequisite over-length (longest 458 of 500). One expected validator warning
 stub). `CIS4368` carries a single non-ASCII character, `²` in "(ISC)²" — correct as written, and the
 assembler's new non-ASCII reporter flagged it for a human look rather than blocking, which is the right
 behaviour for that check.
+
+
+---
+
+## Batch 176 (2026-09-07) — AML3604, ATT1120, BOT4404C, COM3014, CRW4211, PHI3400
+
+Six pushed, six verified live. Queue: **2,087 pushed / 427 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FIU (Coursedog cache), FGCU (prefix PDFs), FSU (bulletin departments), and —
+for the first time as a primary source — **FSCJ and NWFSC** via the Coursedog catalogs recovered in batch
+173.
+
+### ✅ `ATT1120` — the new Coursedog sources carried a course on their own
+
+**The first guide in this project written primarily from FSCJ and NWFSC.** Neither UWF nor any previously
+reachable source carries the course (the inventory's UWF listing is wrong — see below), so before batch 173
+this row was unwritable.
+
+Both descriptions are full and they agree almost word for word:
+
+> *"This course provides the classroom instruction required for instrument flight training and the FAA
+> Instrument-Airplane Knowledge Test. Topics include flight by instrument reference, flight physiology, IFR
+> aircraft operations and procedures, radio navigation…"* — FSCJ, 3 credits; NWFSC, 3 credit hours,
+> *"offered as needed."*
+
+⚠ **That near-identity is itself the finding.** Aviation course content is **set by federal regulation**
+(14 CFR Parts 61 and 91, and the FAA's published Airman Certification Standards), not by institutional
+preference. **This is the second kind of external content standardisation the register has now recorded**,
+after `CIS4368`'s NSA/CAE Knowledge Unit alignment in batch 175 — and it is stronger, because it is
+regulatory rather than advisory. **Practical consequence for guide-writing: hedging language should be
+LIGHTER than institution count alone would suggest** for federally regulated course content.
+
+**Guide content notes worth keeping:**
+
+- ⚠ **The ground-school / flight-training distinction is stated prominently**, because it is the single most
+  common misunderstanding: this course prepares the FAA written test and does not confer the rating.
+- ⚠ **Cost was written up honestly.** Flight training is billed hourly and typically costs several times
+  the ground-school tuition, and **flight fees are frequently not covered by standard financial aid** —
+  the most common financial surprise in collegiate aviation.
+- ⚠ **Medical certification advice: obtain a first-class medical BEFORE investing in training** if a
+  professional career is intended. Discovering a disqualifying condition after paying for a rating is a
+  serious and avoidable outcome.
+- ⚠ **The Restricted ATP hour reduction** (1,000 hours for graduates of approved four-year aviation
+  programmes, 1,250 for two-year, against the standard 1,500) is a substantive reason to train inside an
+  accredited institutional programme, and it is not widely understood by students choosing where to train.
+- ⚠ **Transfer in aviation is not primarily a course-articulation question.** Logged flight hours are the
+  student's regardless of institution, but **a receiving programme may require its own standardisation
+  flights and checkrides** before accepting a transfer into a stage of its sequence. The guide tells
+  students to ask about flight training specifically, not just coursework.
+- **Safety framing**: the guide states flatly that **no approach minimum, altitude, frequency or procedure
+  should ever come from an AI tool** — read the current chart. Regulations amend, the AIM revises twice a
+  year, chart cycles run every 28 days.
+
+### Inventory reliability — two more errors, making FIVE in four batches
+
+`ATT1120` and `BOT4404C` were both dropped from batch 175 when UWF's prefix PDFs came back empty despite the
+inventory listing UWF for each. Confirmed again this batch. Running tally of `courses_2plus_institutions.csv`
+institution-list errors found:
+
+| Course | Inventory says | Actually |
+|---|---|---|
+| `MUG2101` (batch 173) | UWF | UWF carries `MUG3104`, not `MUG2101` |
+| `TPA3230C` (batch 173) | four institutions carry the `C` | **none of them do** — all carry bare `TPA3230` |
+| `BOT4404C` (batch 175) | UWF | not in UWF's `bot` PDF |
+| `ATT1120` (batch 175) | UWF | not in UWF's `att` PDF |
+| `COP3014C` (batch 176) | UWF | **UWF carries `COP3014`** (no `C`), "Algorithm and Program Design" |
+
+⚠⚠ **Five errors, and they cluster on two patterns**: (a) an institution listed that carries the subject
+under a *different number*, and (b) a *suffix* in the inventory that no institution actually uses. **Both
+patterns mean the inventory records the SCNS catalog rather than current institutional offerings.** The
+standing rule from batch 175 holds and should be applied before every batch:
+
+> **The inventory's institution list is a starting hypothesis, not evidence.** Verify against a live catalog
+> before treating an institution as a source and before asserting an institution count in a guide.
+
+⚠ **`COP3014C` was pulled from this batch on that basis** and left `queued`. UWF carries `COP3014`
+"Algorithm and Program Design" (prereq COP 2334 / COP 2253 / EEL 4834) — recognisably the statewide
+"Programming 2" subject, but **without the `C` suffix**, and FAMU and FAU are unreachable. Rather than write
+a `C`-suffixed guide from a bare-number course at one institution, it was deferred. **Same reasoning as
+`TPA3230C`, and a lighter case: the subject is consistent here, only the suffix is in doubt.**
+
+### ⚠ A sourcing gotcha on FSU bulletin pages, worth recording
+
+Batch 172 recorded that FSU bulletin pages carry degree-requirement lists as well as course entries, and
+that searching for the number followed by a period lands on the entry. **That is not sufficient.** This
+batch, searching `"COP 3014."` matched inside a *requirements paragraph* — *"…by earning a grade of C or
+higher in COP 3014 or COP 3363."* — and the 330 characters printed after it were an unrelated course's
+description, producing a plausible and entirely wrong result.
+
+> ⚠ **Refined rule: a number followed by a period is not enough. Verify that what follows is a TITLE
+> followed by a parenthesised credit value** (`COP 3014. Algorithm… (3).`), which is the entry format. If
+> the next words are ordinary prose, you are inside a requirements paragraph.
+
+**This is the second method error caught by re-checking rather than by a failure** (after batch 172's FGCU
+directory-URL probe), and both were caught because the result contradicted an expectation. **The contradiction
+is the signal.**
+
+### `BOT4404C` — a thin-evidence guide, written as one
+
+Only **one** Florida catalog description was obtainable (FIU, 4 credits, *"a lecture and laboratory course
+covering the biology of marine and freshwater algae"*). The guide says so explicitly in its second
+paragraph rather than hedging quietly, and treats the Optional sections as genuinely optional.
+
+⚠ **Contact hours: 4 credits / 80 hours, a documented convention.** The project's standing `C` convention is
+~20 contact hours per credit (3 cr ≈ 60), extending to 80 at 4 credits. **The guide notes that many
+4-credit laboratory sciences actually schedule 3 lecture + 3 laboratory hours weekly, nearer 90**, and tells
+the student to check their own timetable. ⚠ **The validator did not warn at 4 cr / 80 hrs**, which suggests
+its credit/hour rule is proportional rather than fixed at the 3-credit case — worth knowing.
+
+**Florida makes this course unusually applied**, and the guide leans on it: *Karenia brevis* red tide on the
+Gulf coast, Lake Okeechobee cyanobacteria, the *Sargassum* belt, and Indian River Lagoon seagrass loss are
+all phycology, all local, all current, and all supported by **free FWC, DEP and NOAA data** that makes an
+original undergraduate project realistic.
+
+⚠ **A genuinely good AI-as-subject-matter case here**: automated plankton image classification
+(Imaging FlowCytobot, FlowCam) is **operationally deployed in Florida red tide monitoring**. The guide makes
+the course-relevant point that these classifiers are trained on expert labels, fail on rare and novel taxa,
+and therefore **raise the value of organismal expertise rather than replacing it** — which is a real answer
+to students wondering whether taxonomic skill is still worth acquiring.
+
+### `AML3604` — format as a stated pedagogical fact
+
+UWF's description does something unusual: it identifies the course as *"a discussion and collaborative group
+work course"* in the description itself, and names the *"divided self"* — pointing directly at Du Bois's
+**double consciousness**, which the guide uses as the organising key to the tradition.
+
+⚠ **"Discussion course" is a substantive claim about method, not catalog filler**, and the guide treats it
+as one: preparation is visible rather than absorbable, participation is normally graded, and **quiet
+students should speak to the instructor in week two rather than week twelve.** Worth generalising — several
+guides in the queue will describe discussion-format courses, and this is the right handling.
+
+⚠ **Florida is genuinely in this tradition**, which is not true of most literature courses written here:
+**Zora Neale Hurston** and **Eatonville** (the first incorporated Black municipality in the United States,
+and the setting of *Their Eyes Were Watching God*), Hurston's **Federal Writers' Project** folklore work held
+by the State Archives and available free through *Florida Memory*, James Weldon Johnson and the Ritz in
+Jacksonville's LaVilla, and Bethune-Cookman. **An original archival paper using the Florida FWP material is
+a realistic undergraduate project and an unusual one.**
+
+### `COM3014` and `PHI3400` — framing divergences that are NOT transfer risks
+
+Both had descriptions that diverge in emphasis, and in both cases the correct call was that **this is
+instructor-level variation within a settled subject, not an institutional disagreement**:
+
+- **`COM3014`** — UWF frames gender as *"constructed, performed, evaluated and negotiated through
+  communication"* (constructionist); FGCU as *"distinct verbal and nonverbal vocabularies of men and
+  women"* (difference framework). ⚠ **Both frameworks are standard content in this course everywhere** —
+  they are two of the field's competing explanations, and a well-taught section presents both. Recorded as
+  emphasis, not divergence.
+- **`PHI3400`** — UWF organises by problem; **FSU titles it *History and Philosophy of Science*** and
+  organises by historical episode. Same core problems reached by different routes.
+
+⚠ **This distinction is worth stating as a rule**, because this file has trained itself to look for
+divergence and could over-report it:
+
+> **A difference in EMPHASIS between two descriptions of a settled subject is not a transfer risk.** It is a
+> transfer risk when the *subject*, the *number*, the *credits*, the *suffix* or the *sequence position*
+> differs. Framing differences belong in the guide as "check the syllabus", not in the drift register.
+
+⚠ One genuine content note recorded for `COM3014`: **catalog copy in this area ages faster than the
+scholarship.** FGCU's description is framed in binary terms while the current research literature is not.
+The guide tells students the syllabus will be more current than the catalog.
+
+### Repeatability, second instance
+
+`CRW4211` repeats to 6 sh at UWF, as `CRW3310` did in batch 175. The same two warnings were carried:
+**repeatability does not always survive transfer**, and **financial aid counts attempted hours**, with
+Bright Futures and Florida Prepaid carrying their own repeat rules. **Now applied consistently to workshop
+courses; it should extend to ensembles and studios as they come up.**
+
+### Tooling: a new assembler check
+
+⚠ **A markdown artefact (`**bold**`) leaked into `COM3014.html`** and was caught by inspection before
+assembly. **`assemble37.py` now fails hard on markdown-in-HTML** — `\*\*…\*\*` and bare `_italic_` — alongside
+the existing malformed-tag scan. **Both checks should be carried forward into every future assembler.**
+
+### Process note
+
+No prerequisite over-length (longest 468 of 500). No validator warnings. Six courses required six UWF
+fetches, one FGCU fetch, two Coursedog cache reads, one FSU department read and one UF API call.
