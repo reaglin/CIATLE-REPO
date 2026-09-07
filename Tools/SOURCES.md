@@ -15757,3 +15757,161 @@ unlisted preparation.
 No prerequisite over-length (longest 449 of 500), no validator warnings, no push failures. Prefix-batching
 continues to pay: six courses needed six UWF fetches, one FIU cache read, one FGCU fetch, three FSU
 department fetches and one UF API call.
+
+
+---
+
+## Batch 175 (2026-09-07) — ARH4470, CIS4368, CRW3310 + the `COM3003` three-page split
+
+Six pushed, six verified live. Queue: **2,081 pushed / 433 queued / 1 error / 371 skipped** (total row
+count rose 2,884 → 2,886 as the two split ids entered the queue).
+
+Sources: UWF (prefix PDFs), FIU (Coursedog cache), FGCU (prefix PDFs), FSU (bulletin departments), UF
+(course-search API).
+
+### ⚠⚠⚠ `COM3003` — the split rule executed in full for the first time in this run
+
+**The `-SCNS` / `-<INST>` rule (Ron, 2026-09-04) has been unexecutable for most of the cases in the
+open-cases table**, because the `-SCNS` half needs the statewide subject sourced from a real catalog and
+the institutions holding the majority reading have generally been unfetchable. **Here both halves were
+sourceable, so all three pages were published.**
+
+| | Statewide / FIU | UWF |
+|---|---|---|
+| Title | **Human Communication** | **Integrated Advertising &amp; Public Relations Concepts** |
+| Subject | communication theory survey — interpersonal, small group, organisational, intercultural | advertising and PR methods, advertisement preparation, industry research, campaigns |
+| Function | gateway to the communication major | gateway to UWF's advertising and PR sequence |
+| Prerequisite | none at FIU | COM 2713* (concurrency permitted) |
+
+**Published:** `COM3003-SCNS` (Human Communication), `COM3003-UWF` (Integrated Advertising &amp; PR
+Concepts), and `COM3003` as the disambiguation page. All three live.
+
+⚠⚠ **The decisive evidence was the prerequisite chain, not the titles.** UWF lists `COM3003` as an
+*alternative* prerequisite for two of its own courses:
+
+- `ADV3300` — *"Prerequisite: ADV 3000 OR COM 3003"*
+- `PUR4801` — *"Prerequisite: (COM 3003 OR PUR 3000) AND PUR 3100"*
+
+**`COM3003` is interchangeable with the introductory advertising course and the introductory public
+relations course at UWF.** A communication theory survey would not be. **The number functions as an
+advertising/PR gateway there and as a theory gateway everywhere else.**
+
+**This is the third case where prerequisite chains settled a divergence the descriptions alone left
+arguable** — after `CLP4302` (statistics required → the course reads research; abnormal psych only → a
+skills course) and `CHM4455`. **Promote it to a standing diagnostic:**
+
+> ⚠ **When two institutions' descriptions of a number look like they might be the same subject, look at
+> what each institution treats the course as a PREREQUISITE FOR, and what it accepts as an ALTERNATIVE to
+> it.** A course's function in its own institution's prerequisite graph is harder to fake than its
+> description and frequently more informative.
+
+**Mechanics notes for the next split:**
+
+- ⚠ **`queue_mgr.py add --course COM3003-SCNS` FAILS** — `add` only accepts ids present in
+  `courses_2plus_institutions.csv`, and split ids never are. **The tool tells you the right path in its
+  own error text: drop the draft into `drafts/` and run `reconcile`, which adds orphan drafts
+  automatically.** It did, cleanly, reporting `+2 orphan draft(s) added to queue`.
+- The disambiguation stub trips `validate_drafts.py` with *"no Learning Outcomes section"* and *"no Major
+  Topics section"*. **Non-blocking and correct for that page type**, exactly as `CLAUDE.md` records.
+- The bare-number page was retitled to say what it is — *"Two Different Subjects Under One Number
+  (Disambiguation)"* — so the title alone warns a reader who arrives from a search result.
+
+### ⚠⚠ `CRW3310` — poetry at three institutions, FICTION at FSU
+
+| Institution | `CRW3310` | Poetry is |
+|---|---|---|
+| **Statewide** | **Poetry Writing** | this number |
+| UWF | **Poetry Writing** — traditional forms and contemporary free verse | this number |
+| UF | **Advanced Seminar in Poetry Writing** | this number |
+| **FSU** | **fiction** — *"practice in short story, novella, or novel"* | **`CRW3311`** Poetic Technique |
+
+**Poetry and fiction are different genres, not variants.** Different craft, different reading, different
+workshop conventions, different professional paths.
+
+**Not split**: FSU is **not among the institutions the statewide inventory records for this number**, and
+the majority reading (statewide title + UWF + UF) is unambiguous. Written as Poetry Writing with the FSU
+divergence flagged prominently. ⚠ **But FSU is a major destination for Florida creative-writing students,
+including for its MFA**, so the divergence will be met in practice even though it is outside the counted
+set. **Worth recording as a limit of the inventory: a divergence at an institution the inventory does not
+list for a number is still a real transfer risk.**
+
+⚠ **Repeatability recorded as a finding in its own right.** UWF's `CRW3310` repeats to 6 sh, FSU's to 9.
+Taking a workshop twice is normal practice — but **repeatability rules do not always survive transfer**
+(a receiving institution may accept the number once and treat the second instance as excess elective), and
+**financial aid counts attempted hours**, with Bright Futures and Florida Prepaid carrying their own repeat
+rules. **This is the first time repeatability has been treated as a transfer/aid issue rather than as a
+catalog detail**, and it applies to every workshop, ensemble and studio course in the queue.
+
+### `CIS4368` — a prerequisite-level divergence, and an NSA/CAE alignment worth recording
+
+| Institution | Prerequisite |
+|---|---|
+| UWF | **`COP 4710`** — database systems |
+| FGCU | **`COP 3710`** — database systems |
+
+**Same course, different level number.** The divergence is in the *prerequisite* rather than in this
+course, but the consequence is the familiar one: **a student arriving with `COP3710` where `COP4710` is
+expected can fail a prerequisite check despite holding the preparation.** ⚠ In a gated sequence that
+blocks registration rather than merely a graduation audit — **resolve before the registration window
+opens.**
+
+⚠ **UWF's description is unusually informative about provenance:** the course *"follows guidelines set
+forth by the National Security Agency Centers of Academic Excellence in Information Assurance and Cyber
+Defense"* and is *"a core knowledge unit"* for CAE designation. **Recorded because it is a new kind of
+external standardisation for this project's register** — not programmatic accreditation of a degree
+(nursing, MLS, social work, CFP Board, ACS) but **a federally published Knowledge Unit specification that
+constrains an individual course's content.** Consequence for guide-writing: **content variation across CAE
+institutions should be lower than for an ordinary elective**, which is a genuine hedging signal.
+
+The guide states plainly what students routinely get wrong: **CAE designation is institutional, not a
+personal certification** — "graduated from a CAE-designated programme" is the accurate résumé claim — and
+it gates **CyberCorps: Scholarship for Service** eligibility, which is under-applied for.
+
+⚠ **Legal boundary section written at length** because this course teaches attack technique. The Computer
+Fraud and Abuse Act and **Florida's Computer Crimes Act (Ch. 815)** both criminalise unauthorised access
+regardless of intent or damage, and **an academic-integrity or criminal finding is reportable in the
+background investigations this field's employment depends on.** Same treatment as the criminal justice
+guides in batch 174.
+
+### `ARH4470` — clean, with a genuine hedging note about recency
+
+UWF (*"central issues and concepts of contemporary movements in art"*, meets the College-Level
+Communication Skills Requirement) and FIU (*"a survey of art from 1945 to the present"*) agree; the number
+is stable. **Clean articulation.**
+
+Two notes worth keeping:
+
+- ⚠ **Where the course starts genuinely varies and is not arbitrary** — 1945, 1960 and 1989 are each
+  defensible, and each implies a different claim about what "contemporary" means. A student needing
+  Abstract Expressionism covered should check.
+- ⚠ **There is no settled canon for the last twenty years**, because canon formation takes decades. Good
+  versions of the course say so. **This is a legitimate case for hedging in a guide** that is not about
+  institutional variation at all — it is about the state of the discipline.
+
+### Inventory reliability — the pattern from batch 173 recurred twice more
+
+Batch 173 found that `courses_2plus_institutions.csv` wrongly lists **UWF** for `MUG2101`. This batch found
+two more:
+
+- **`BOT4404C`** — inventory lists UWF; **UWF does not carry it** (not in the `bot` prefix PDF).
+- **`ATT1120`** — inventory lists UWF; **UWF does not carry it** (not in the `att` prefix PDF).
+
+Both were dropped from the batch as a result and replaced. ⚠ **Three confirmed institution-list errors in
+three batches.** Standing practice, now stated:
+
+> **The inventory's institution list is a starting hypothesis, not evidence.** Verify against a live
+> catalog before relying on it — especially before treating an institution as a source, and before
+> asserting an institution count in a guide.
+
+**Both `BOT4404C` and `ATT1120` remain writable from other sources** — `BOT4404C` from FIU (4 cr,
+lecture-and-laboratory phycology) and `ATT1120` from **FSCJ and NWFSC**, the two Coursedog schools
+recovered in batch 173. ⚠ **`ATT1120` will be the first course in this project written primarily from the
+new Coursedog sources**, and both descriptions are full and consistent (FAA Instrument-Airplane Knowledge
+Test preparation, 3 credits at both).
+
+### Process note
+
+No prerequisite over-length (longest 458 of 500). One expected validator warning (the disambiguation
+stub). `CIS4368` carries a single non-ASCII character, `²` in "(ISC)²" — correct as written, and the
+assembler's new non-ASCII reporter flagged it for a human look rather than blocking, which is the right
+behaviour for that check.

@@ -286,10 +286,30 @@ inventory (`courses_2plus_institutions.csv`) gives a title and an institution li
 not do. Source it from the SCNS catalog, or from a fetchable institution that actually teaches the SCNS
 version. **Ron has offered to supply the SCNS catalog; ask for it.**
 
+### ⚠ The prerequisite-chain diagnostic (promoted to a standing test, batch 175)
+
+**When two institutions' descriptions of a number look like they *might* be the same subject, stop reading
+the descriptions and look at the prerequisite graph.** Ask two questions:
+
+1. **What does each institution treat this course as a prerequisite FOR?**
+2. **What does each institution accept as an ALTERNATIVE to it?**
+
+**A course's function in its own institution's prerequisite graph is harder to fake than its description
+and is frequently more informative.** Three cases have now turned on it:
+
+| Number | What the chain revealed |
+|---|---|
+| `CLP4302` | FGCU gates on research methods **and statistics** → the course reads research. UWF gates on abnormal psychology alone → a skills course. |
+| `CHM4455` | Physical chemistry required → a quantitative treatment. |
+| **`COM3003`** | UWF accepts it **interchangeably with `ADV3000` and `PUR3000`** as the gateway to its advertising and PR sequence → it is an advertising/PR foundation, not a theory survey. |
+
+**Apply this before concluding that a divergence is mere title drift.**
+
 ### Open cases
 
 | Number | SCNS subject | Institution subject | `-SCNS` | `-<INST>` | bare |
 |---|---|---|---|---|---|
+| **`COM3003`** | **Human Communication** (theory survey: interpersonal, small group, organisational, intercultural) | **Integrated Advertising &amp; Public Relations Concepts** (UWF) | ✅ **`-SCNS` LIVE** (sourced from FIU) | ✅ **`-UWF` LIVE** | ✅ **live** | ✅✅ **SPLIT COMPLETED 2026-09-07 (batch 175) — the first full three-page execution of this rule.** Both halves were sourceable, so all three pages published. ⚠ **The decisive evidence was the PREREQUISITE CHAIN, not the titles**: UWF lists `COM3003` as interchangeable with `ADV3000` and `PUR3000` as a gateway to `ADV3300` and `PUR4801`. A theory survey would not be. |
 | `NUR4286` | Gerontological Nursing | Concepts of Quality and Safety in Nursing (UWF) | **⏸ needs catalog** | ✅ `-UWF` live | ✅ live |
 | `NUR4826` | Ethics | Transformational Nursing Leadership (UWF) | **⏸ needs catalog** | ✅ `-UWF` live | ✅ live |
 | `ART3789C` | World Ceramics | Advanced Ceramics: Mold Making and Slip Casting (UWF) | **⏸ candidate** | published as single guide | — |
