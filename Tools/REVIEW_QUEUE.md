@@ -674,6 +674,74 @@ which is why these divergences persist instead of being corrected toward each ot
 **Consequence is the same as item 22:** SCNS articulates on the number, so a student moving to or from FSU
 files a substitution. Noted prominently in the live guide. **No action needed.**
 
+## 25. ⚠⚠⚠ `TPA3230C` — THREE subjects under one number, and nobody uses the suffix (batch 173) — **NEEDS A DECISION**
+
+**Pulled from batch 173, not written.** This is the most severe divergence this project has found, and it is the
+first with **three** readings rather than two.
+
+| Institution | Code carried | Title | What it teaches |
+|---|---|---|---|
+| **Statewide (SCNS)** | `TPA3230C` | **Costume Design** | — |
+| UWF | `TPA3230` (no C) | **Costume Construction** | patterning, cutting, fitting, draping, construction |
+| FSU | `TPA3230` (no C) | **Costuming I** | costume sewing; "the craft of sewing costumes for theatre" |
+| FGCU | `TPA3230` (no C) | **Costume Design** | "theoretical and practical approach to costume design including make-up" |
+| FIU | `TPA3230` (no C) | **Costume History** | "Fashion from Ancient to Modern Times in correlation to society and theatrical styles" |
+
+**Three genuinely different subjects.** Construction/sewing (UWF, FSU) is a majority of 2; design (FGCU)
+matches the statewide title; history (FIU) matches nothing. **Construction versus design is not a variant —
+it is the real professional division in this field**: the draper/technician builds, the designer conceives,
+and they are different jobs with different career paths. UWF underlines the point by placing design
+separately at `TPA4045`/`TPA4046`.
+
+⚠ **A second, independent problem: no institution carries the `C` suffix.** All four carry bare
+`TPA3230`. The queued ID `TPA3230C` may not correspond to a course that currently exists anywhere — which
+means even a correctly written guide might be filed under a code nobody can match.
+
+**Why I did not just write it.** Following the `LAE3314` precedent (item 20): writing a single guide would
+publish one subject under a number that means something else at three of the four institutions, and the
+statewide title points at the reading held by only one of them. **The `-SCNS` / `-<INST>` rule was designed
+for two subjects and does not obviously extend to three.**
+
+**Options as I see them:**
+
+- **(a)** Publish a **disambiguation page at the bare number** plus per-subject guides — the split rule
+  generalised to three (`TPA3230-SCNS`, `TPA3230-UWF`, `TPA3230-FIU`, or similar). Most faithful, most work.
+- **(b)** Publish **one guide covering all three readings explicitly**, as was done for `CLP4302`. Cheaper,
+  and it worked there — but `CLP4302` had two readings, not three.
+- **(c)** **Resolve the suffix first.** If `TPA3230C` is a dead code, the queue row may simply be wrong and
+  should be replaced with `TPA3230`.
+- **(d)** Skip it.
+
+**Needs from you:** which of these, and whether the suffix question changes the answer. **Row left `queued`
+with an explanatory note**, so it will not be silently re-picked.
+
+## 26. ⚠⚠ `PUR4801` — pulled from batch 173; the collision CLAUDE.md predicted, now confirmed from the other side
+
+`CLAUDE.md` already flagged this: *"The project will meet this again from the other side when PUR4801 comes
+up in the queue."* It came up. **I pulled it rather than writing it, and I think that was right, but it is
+your call.**
+
+**What the sources show:**
+
+- **Statewide `PUR4801` = "Public Relations Cases"** (FAMU, UCF, UNF, USF, UWF).
+- **UWF's `PUR4801` = "Public Relations Campaigns"** — a capstone, *"applying communication and public
+  relations research and theory for a real client"*, prereq (COM 3003 OR PUR 3000) AND PUR 3100.
+- **FGCU numbers the campaigns capstone `PUR4800`** ("PR Campaigns/Capstone"); **FSU also carries `PUR4800`,
+  not `PUR4801`**; **FIU carries `PUR4800`** ("P.R. Campaigns").
+- ⚠ **`PUR4800C` "Public Relations Campaigns" (7 institutions, including UWF) is ALREADY PUBLISHED here.**
+
+**So writing `PUR4801` from UWF alone would republish, under a different number, a subject this repository
+already covers — while leaving the subject four other institutions actually teach under that number
+(Public Relations Cases) undocumented.** That is the `LAE3314` failure mode exactly.
+
+⚠ **One extra piece of evidence worth having:** UWF's own catalog says *"Credit may not be received in both
+PUR 4801 and PUR 4802."* So UWF runs two campaigns-capstone numbers as alternates, neither of which is the
+statewide reading.
+
+**Needs from you:** (a) write `PUR4801` as *Public Relations Cases* from a non-UWF source once one is
+reachable (UCF/UNF/USF are all currently unfetchable — this is the blocker); (b) treat it as a
+`-SCNS`/`-UWF` split; or (c) skip. **Row left `queued` with an explanatory note.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

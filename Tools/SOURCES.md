@@ -15334,3 +15334,261 @@ institution runs**, which is only knowable from the tradition-divergence finding
 No prerequisite over-length this batch (longest 442 of 500). The batch-170 tightening plus the
 batch-171 practice of trimming connective tissue rather than warnings is holding. One validator warning,
 deliberate and documented (PHY3802L contact hours).
+
+
+---
+
+## Batch 173 (2026-09-07) — ACG3343, ADV3300, SPM3004, SPN3400, SYO4250, TPA2232C
+
+**Six pushed, six verified live. Two rows PULLED and held for Ron (`TPA3230C`, `PUR4801`).**
+Queue: **2,069 pushed / 443 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin departments), FIU (Coursedog cache), UF
+(course-search API), EFSC (CourseLeaf), and **two new Coursedog schools found this batch**.
+
+### ⚠⚠⚠ The register was wrong: Coursedog in Florida is not FIU-only
+
+`CLAUDE.md` recorded: *"Coursedog in Florida — CLOSED 2026-09-07. Twenty Florida catalog hosts swept
+through the bootstrap endpoint; only FIU is a Coursedog school."* **That is false, and it was closed one
+batch too early.** Two more Florida Coursedog schools surfaced within a single batch:
+
+| School | Coursedog school id | Catalog id | Size |
+|---|---|---|---|
+| **NWFSC** (Northwest Florida State College) | `nwfsc_banner_sql` | `DGLrTHoh5uNIMFsdbzWf` | 1,781 courses |
+| **FSCJ** (Florida State College at Jacksonville) | `fscj_peoplesoft` | `sGHd4uJQXFdgDUaffhTv` | **22,693 courses** |
+
+Both added to `scratchpad/coursedog.py`. NWFSC cached to `nwfsc_courses.json`; FSCJ paged via
+`scratchpad/fscj_dump.py` into `fscj_courses.json`.
+
+**How NWFSC was found, because the method generalises: the 404 body size was the tell.**
+`catalog.nwfsc.edu/course-descriptions/tpa/` returned **404 with a 1,167,757-byte body**. A real 404 is
+small (CF's was 636 bytes). A 404 carrying a megabyte is a client-rendered application returning its shell
+for an unknown route — so the host answers, the path is wrong, and the platform is probably an SPA.
+Grepping that body for `courseleaf|smartcatalog|acalog|coursedog` returned **COURSEDOG**.
+
+**Why the earlier sweep missed both.** It tested a guessed host list. **FSCJ was already sitting in the
+register as "answers; platform unidentified"** and was never put through the bootstrap endpoint. The
+lesson, recorded in the register:
+
+> ⚠ **Re-sweep the bootstrap endpoint against every host the register already records as answering, not
+> against a guessed list.** A host recorded as "unidentified platform" is a host that has not been
+> identified, not one that has been ruled out.
+
+**Two further gotchas recorded:**
+
+- ⚠ **`coursedog.fetch()` caps at `limit=5000` and returns a partial result silently.** The first FSCJ probe
+  reported `22693 courses in catalog; 5000 fetched` and then said `MUG2101 not found` — **an inconclusive
+  result that looks exactly like a conclusive one.** Page it.
+- The response shape is `{listLength, data, limit, skip}` — `fetch()` returns the envelope, not the list.
+  Iterating it directly yields the integer values of the envelope keys and fails confusingly.
+
+### ⚠⚠⚠ `TPA3230C` — PULLED. Three subjects under one number, and nobody uses the suffix
+
+The most severe divergence in the project so far, and the first with **three** readings rather than two.
+
+| Institution | Code carried | Title | Subject |
+|---|---|---|---|
+| **Statewide** | `TPA3230C` | **Costume Design** | — |
+| UWF | `TPA3230` | **Costume Construction** | patterning, cutting, fitting, draping |
+| FSU | `TPA3230` | **Costuming I** | costume sewing, shop practice |
+| FGCU | `TPA3230` | **Costume Design** | design incl. makeup |
+| FIU | `TPA3230` | **Costume History** | fashion ancient → modern |
+
+**Construction versus design is not a variant of one subject** — it is the profession's own division of
+labour. The draper/technician builds; the designer conceives. Different jobs, different career paths,
+different courses. UWF makes the point structurally by placing design separately at `TPA4045`/`TPA4046`.
+And FIU's costume *history* matches neither.
+
+⚠ **The independent second problem: not one of the four institutions carries the `C` suffix.** All four
+carry bare `TPA3230`. **The queued ID may not correspond to a course that exists anywhere.**
+
+**Pulled per the `LAE3314` precedent** (batch 156): writing one guide would publish one subject under a
+number meaning something else at three of four institutions, and the statewide title points at the reading
+held by only one. **Row left `queued` with an explanatory note** so it is not silently re-picked. Added to
+the `CLAUDE.md` open-cases table and to `REVIEW_QUEUE.md` as item 25, which sets out four options —
+including the genuinely open question of whether the `-SCNS`/`-<INST>` rule, designed for **two** subjects,
+extends to three.
+
+⚠ A forward-pointer was written into the live `TPA2232C` guide warning students about `TPA3230`
+specifically, since it is the course they naturally look at next.
+
+### ⚠⚠ `PUR4801` — PULLED. The collision this file predicted, confirmed from the other side
+
+`CLAUDE.md` had recorded: *"The project will meet this again from the other side when PUR4801 comes up in
+the queue."* It came up this batch.
+
+- **Statewide `PUR4801` = "Public Relations Cases"** (FAMU, UCF, UNF, USF, UWF).
+- **UWF's `PUR4801` = "Public Relations Campaigns"** — a real-client capstone, prereq (COM 3003 OR PUR 3000)
+  AND PUR 3100.
+- **FGCU, FSU and FIU all number the campaigns capstone `PUR4800`**, not `PUR4801`. Confirmed at all three
+  this batch.
+- ⚠ **`PUR4800C` "Public Relations Campaigns" is ALREADY PUSHED in this repository** (7 institutions).
+
+**So writing `PUR4801` from UWF would republish an already-published subject under a different number,
+while leaving the subject four institutions actually teach under that number undocumented.** Pulled.
+
+⚠ **New evidence found this batch:** UWF's catalog states *"Credit may not be received in both PUR 4801 and
+PUR 4802."* **UWF runs two campaigns-capstone numbers as alternates**, neither being the statewide reading.
+That makes UWF's numbering here idiosyncratic rather than merely divergent.
+
+**The blocker on writing it properly is sourcing**: the four institutions holding the majority reading
+(FAMU, UCF, UNF, USF) are all currently unfetchable. Recorded as `REVIEW_QUEUE.md` item 26.
+
+### ⚠⚠ `SPN3400` — numbers match, content diverges: the transfer risk running *backwards*
+
+| | UWF | FGCU |
+|---|---|---|
+| `SPN3400` | **Advanced Stylistics** (= statewide title) | **Conversation and Composition I** |
+| `SPN3410` | **Composition and Conversation** | — |
+
+**FGCU's `SPN3400` is, by content, UWF's `SPN3410`.**
+
+This is worth recording as a distinct pattern because **it inverts the failure mode this file usually
+documents.** The normal case is *content agrees, numbers diverge* → articulation fails and a substitution is
+needed. Here **numbers agree and content diverges**, so:
+
+> ⚠ **SCNS articulates the credit cleanly and that is precisely the problem.** An FGCU student arrives at
+> UWF recorded as having completed *Advanced Stylistics* — a course they did not take — and may still owe
+> *Composition and Conversation*, which they did take. The articulation succeeding is what conceals the gap.
+
+Name it: **silent mis-articulation**. It produces either an unearned waiver or a duplicated course, and
+unlike a failed articulation **nothing flags it**, because from the system's point of view nothing went
+wrong. The guide tells students to raise it with the language faculty rather than the registrar, since only
+faculty can judge placement.
+
+⚠ Also noted: FGCU's *"I"* implies a sequence UWF does not run under that name — the same signal recorded
+for `ISM4545` and `MUL4400`.
+
+### ⚠⚠ `ACG3343` — a number divergence with a lopsided institution count
+
+| | `ACG3343` | `ACG3341` |
+|---|---|---|
+| Statewide title | Cost Accounting | Cost Accounting |
+| Institutions | **4** (Florida publics: MDC, UWF) | **10** (DSC, FAU, FGCU, FSU, IRSC, USF…) |
+| Prerequisite | ACG 2071 and CGS 2570 (UWF) | ACG 2071 and CGS (FGCU) |
+
+Same subject; near-identical prerequisite pairings; FGCU's and FSU's `ACG3341` descriptions match UWF's
+`ACG3343`. **`ACG3341` is already pushed in this repository**, so the two guides now cross-reference each
+other and the live `ACG3343` guide leads with the number problem.
+
+**What makes this instance different from the earlier number divergences** (`MUT3311`/`MUT4311`,
+`COP3813`/`COP4813`, `PHI3500`/`PHI4500`): those were roughly balanced conventions. **This is a widely used
+number and an outlier** — 10 institutions against 4, of which two are private. The practical advice the
+guide gives follows from that asymmetry: *if you are choosing where to take it, `ACG3341` is the safer
+number.* That advice is not available in the balanced cases.
+
+⚠ **Also recorded — entry conditions do not travel with the number.** UWF gates on `ACG 2071` + `CGS 2570`.
+**FSU gates on `ACG 2071` with a B or better, a competency examination at 70%, and `QMB 3200` (statistics)
+completed at C− or taken concurrently.** Materially heavier. **A transferring student should never assume
+the prerequisite structure of a course number is portable**; this is the clearest example of it found so
+far.
+
+⚠ FIU's row for `ACG3343` reads *"Inactivated per 2024 SCNS review. Last term offered fall 2016."* — useful
+confirmation that the Coursedog data carries lifecycle metadata, which no other Florida source does.
+
+### `TPA2232C` — a *tied* credit disagreement, which the tie-break rule does not cover
+
+| Institution | Code | Title | Credits |
+|---|---|---|---|
+| Statewide | `TPA2232C` | **Beginning Costume** | — |
+| UF | `TPA2232C` | Beginning Costume | (not published) |
+| UWF | `TPA2232C` | Technical Theatre — Costumes and Makeup | **4** |
+| NWFSC | `TPA2232` (no C) | Intro Costume Technology | **3** |
+
+⚠ **`REVIEW_QUEUE.md` item 21's rule is "majority of documented sources." Here the documented sources are
+1–1.** This is the first tied case, and it is new information for that item: **the rule as written has no
+tie-break.**
+
+**Published at 3 credits / 60 contact hours**, on this reasoning, recorded so it is not re-litigated:
+
+1. **3 credits with a `C` suffix is the standard SCNS shape**, and 60 hours follows.
+2. NWFSC states 3 explicitly for the same subject.
+3. ⚠ **UWF's fourth credit is attributable to identifiable extra content** — its version adds *stage
+   makeup*. **The confirming evidence is that UWF separately carries `TPA2248` Introduction to Stage Makeup
+   at 3 sh**, so makeup is normally its own course and UWF has combined two subjects into one.
+4. The statewide title *Beginning Costume* does not imply makeup.
+
+**The generalisable form of point 3 is worth keeping:** when credit values disagree, look for *what the
+extra credit buys*. If the higher-credit institution's description names content the others' do not, the
+divergence is explained rather than arbitrary — and the lower value is the better representation of the
+statewide course.
+
+⚠ Suffix divergence again: NWFSC carries the bare `TPA2232`. Same treatment as elsewhere — noted in the
+guide, syllabus retention advised.
+
+### `SPM3004`, `ADV3300`, `SYO4250` — the clean cases
+
+- **`SPM3004`** — three sources, three titles (statewide/FGCU *Principles of Sports Management*, UWF
+  *Introduction to Contemporary Sport Management*, EFSC *Introduction to Sports Management*), **one number,
+  clean articulation**. The titles track the assigned textbook: the two dominant texts are *Contemporary
+  Sport Management* and *Principles and Practice of Sport Management*, and institutions have named the
+  course after whichever they use. **A tidy demonstration that title drift often has a mundane cause.**
+  ⚠ Note EFSC teaches this 3000-level course as a state college (baccalaureate programme) — so it is
+  available *before* transfer, with the standard caveat about upper-division residency requirements.
+- **`ADV3300`** — UWF *Advertising Media Strategy and Planning*, FGCU *Advertising Media Planning*,
+  statewide *Media Planning*. Clean. ⚠ UWF also runs an **`ADV3300C`** and states credit may be received in
+  only one — another instance of an institution maintaining lecture and lecture-lab variants of one course,
+  as with `TPA2200`/`TPA2200C`.
+- **`SYO4250`** — UWF and FSU agree. ⚠ **UWF requires instructor permission**, a registration gate rather
+  than a content bar; flagged prominently in the guide because it is a common and entirely avoidable way to
+  miss a course. ⚠ **UWF houses it in the Department of Anthropology, FSU in Sociology** — recorded because
+  departmental home predicts emphasis (quantitative stratification vs ethnographic/cultural), though it does
+  not affect articulation.
+
+### Cross-batch: the "no prerequisite ≠ no useful preparation" practice is now standing
+
+Four of six again listed no prerequisite. Each guide states the useful preparation instead. The
+non-obvious ones this batch:
+
+- `ADV3300` → **arithmetic and Excel**. The most quantitative course in most advertising curricula, and
+  students who chose advertising to avoid mathematics are regularly caught out.
+- `SPM3004` → **not academic at all**: the preparation that changes outcomes is accumulating industry
+  experience early.
+- `TPA2232C` → **willingness to do physical, deadline-driven shop work**, plus the honest warning that
+  scheduled hours understate the commitment (open shop, production calls, tech week).
+
+### ⚠⚠ `MUG2101` — the long-standing deferral, reframed (and it was never a sourcing problem)
+
+`MUG2101` has been the project's only unresolved deferral for several batches, recorded as a
+"state-college-only course, every route blocked". **The two new Coursedog schools were checked first: it is
+at neither FSCJ (22,693 courses) nor NWFSC (1,781).** But searching for it surfaced what it actually is, and
+the framing in the register was wrong.
+
+**Conducting is taught across Florida at FOUR different course levels under six different numbers:**
+
+| Number | Statewide title | Institutions | Level |
+|---|---|---|---|
+| `MUG1200` / `MUG1201` | Basic/Choral Conducting (FSCJ's own codes) | FSCJ | **1000** |
+| **`MUG2101`** | **CONDUCTING I** | FSW, MDC, SPC, TCF, HSBC (+ a stale UWF listing) | **2000** |
+| **`MUG3104`** | **BASIC CONDUCTING** | FGCU, FSU, UCF, UNF, USF, UWF (+1) | **3000** |
+| `MUG3301` | Basic Conducting | FAU (+2 out-of-state) | 3000 |
+| `MUG4104` | CONDUCTING 1 | FAMU, UF | **4000** |
+
+⚠ **`MUG3104` is ALREADY PUSHED in this repository** (7 institutions). UWF's entry confirms the pairing:
+**UWF carries `MUG3104` "Conducting 1", 2 sh, prereq MUT 2117, co-req MUE 4411** — applied conducting, baton
+technique, score analysis. That is the same subject `MUG2101` names at the state colleges.
+
+**So the reframing:** `MUG2101` is not an unsourceable mystery course. It is **the lower-division number for
+a subject this repository has already documented**, in a prefix where the same subject is numbered at the
+1000, 2000, 3000 and 4000 levels depending on the institution. The `ACG3343`/`ACG3341` situation, with four
+levels instead of two.
+
+⚠ **Correction to the inventory, worth recording:** `courses_2plus_institutions.csv` lists **UWF** among
+`MUG2101`'s institutions. **UWF does not carry it** — its `MUG` offering is `MUG3104`, `MUG3108`, `MUG4905`
+and nothing else. **The inventory's institution lists can be stale**, and this is the second time this batch
+that an inventory row disagreed with a live catalog (the other being `TPA3230C`'s suffix). **Verify the
+institution list against a catalog before treating it as evidence.**
+
+**Direct sourcing is still blocked** — FSW (acalog, content-blocked), MDC (CurricUNET SPA), SPC (curl 000),
+TCF and HSBC unprobed/private. But the decision is now a *scope* question rather than a sourcing one, and it
+should go to Ron on that basis rather than sitting on a retry list. Queue note updated accordingly.
+
+### Process note
+
+⚠ **A method error caught and corrected this batch** (also amended in the batch 172 entry above): the FGCU
+probe was first run against the *directory* URL that this register records as bot-blocked. It returned 200
+with a body and no matches — a result that looked authoritative and was reached the wrong way. Re-probed
+against the documented `.pdf` pattern; conclusion held, method did not. **Same lesson as Broward/Valencia:
+a 200 from a source recorded as blocked is not evidence the source answered.**
+
+No prerequisite over-length this batch (longest 455 of 500). No validator warnings.
