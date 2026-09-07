@@ -633,6 +633,47 @@ course code.**
 silently drop FGCU students out of an orchestration requirement they have in fact completed. Logged in
 `SOURCES.md` batch 163. **No action needed now** — flagged so the pathway data model accounts for it.
 
+## 23. ⚠ "Tradition divergence" — a new drift category, two instances in consecutive batches — *informational*
+
+Recording a pattern, not asking for a decision yet. **Two courses one batch apart turned out to carry one
+subject taught through two different scholarly methodologies**, with titles that give no hint of it:
+
+| Number | Version A | Version B |
+|---|---|---|
+| `PHI3130` Logic (batch 171) | UWF **"Modern Logic"** — symbolic: propositional + predicate calculus, natural deduction | FGCU **"Logic"** — critical reasoning: categorical logic, **fallacies**, argument reconstruction |
+| `SPC4540` Persuasion (batch 172) | FSU **"Persuasion"** — social-scientific: attitude change, ELM, experimental evidence | UWF **"Propaganda and Persuasion"** — rhetorical/critical: campaigns, movements, advertising |
+
+**Why this is its own category.** It is not a one-number-two-subjects split (both really are logic; both
+really are persuasion), and it is not ordinary title drift (the content genuinely differs). It sits
+between them: **same subject, different methodology, and the descriptions differ in their VERBS rather
+than their NOUNS** — "theories tested against evidence" versus "explores how it works". The reliable tell
+is the **assigned textbook**, which belongs unambiguously to one tradition (Perloff vs Jowett &amp; O'Donnell;
+a symbolic-logic text vs a critical-thinking text).
+
+**Handling so far:** single guide, comparison table in Special Information, and outcome subsections
+per version. That treatment works and both guides are live. **Credit articulates either way**, so there is
+no transfer damage — the cost is a student enrolling expecting one and getting the other.
+
+**Why it is on your radar:** two instances in consecutive batches from unrelated prefixes suggests this is
+common rather than exceptional, and **it is invisible to any matching on number or title**. Likely places
+to meet it again: research methods, ethics, media studies, and anywhere a subject is taught in both a
+social-science and a humanities department. Relevant to `CAREER_PATHS_PLAN.md` for the same reason item 22
+is. **No action needed now.**
+
+## 24. ⚠ `PHI3500` / `PHI4500` — another number divergence, and this one is deliberate (batch 172) — *informational*
+
+Second instance of the item-22 pattern. **FSU numbers metaphysics `PHI4500`; FAMU, FIU, UF, UNF and UWF
+use `PHI3500`.** Same subject, same description in substance.
+
+What makes this one worth adding rather than just logging: **FSU's degree requirements show the choice is
+deliberate.** `PHI 4500 Metaphysics` sits under "Contemporary Metaphysics and Epistemology" alongside
+`PHI 3300 Knowledge and Belief` — so FSU places metaphysics a level above epistemology while the other
+five institutions place them side by side at 3000. **The number is carrying a curricular judgement**,
+which is why these divergences persist instead of being corrected toward each other.
+
+**Consequence is the same as item 22:** SCNS articulates on the number, so a student moving to or from FSU
+files a substitution. Noted prominently in the live guide. **No action needed.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

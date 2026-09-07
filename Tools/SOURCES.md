@@ -15148,3 +15148,177 @@ tightening noted there is holding, but the pattern remains: **it is always the g
 structural warnings to convey.** The three warnings competing for space in `IDS4890` were the
 standing-not-content gate, the program restriction, and the once-a-year rotation. Trimming the
 narrative connective tissue rather than dropping a warning is the right fix and worked here.
+
+
+---
+
+## Batch 172 (2026-09-07) — PHH3400, PHI3500, PHI3800, PHY3722C, PHY3802L, SPC4540
+
+Sourced from **UWF** (prefix PDFs), **FIU** (Coursedog cache) and **FSU**
+(`registrar.fsu.edu/bulletin/undergraduate-departments/<department>`). Six pushed, six verified live.
+Queue: **2,063 pushed / 449 queued / 1 error / 371 skipped**.
+
+### Source note — FSU earned its promotion this batch
+
+The CLAUDE.md register's promotion of FSU to a general-purpose third source (from "useful only for the
+FAMU-FSU joint engineering college") paid for itself here. **FGCU carries none of these six courses** —
+probed all four prefixes, all returned 200 with full bodies, and none of the six numbers appears — and
+**UF's course-search API returned titles with empty descriptions** for the two it does carry. Without
+FSU this batch would have been single-sourced on UWF for four of the six.
+
+Departments used: `philosophy`, `physics`, `communication`. Format is clean HTML with full descriptions,
+credits and prerequisites. **Extraction gotcha worth recording:** FSU's bulletin pages carry *degree
+requirement lists* as well as course entries, and a bare `PHH 3400` matches the requirement list first.
+**Search for the number followed by a period** (`PHH 3400.`) to land on the catalog entry — the
+requirement lists write the number without one.
+
+### ⚠⚠ `PHI3500` — number AND level divergence at FSU
+
+**FSU numbers its metaphysics course `PHI4500`.** Same subject, same description in substance
+(*"critical consideration of recent philosophical work... on the question of what exists"*), different
+number and different level.
+
+This is the **number-divergence** category already documented for `MUT3311`/`MUT4311` and `COP3813`/
+`COP4813`, and it is the most damaging of the drift types because it is the one SCNS cannot see through:
+**articulation runs on the number, and SCNS makes no exception for a level difference within the same
+subject.** A student moving between FSU and any of FAMU/FIU/UF/UNF/UWF must file a substitution.
+
+⚠ Confirming evidence that this is deliberate rather than an artifact: **FSU's philosophy degree
+requirements list `PHI 4500 Metaphysics` under "Contemporary Metaphysics and Epistemology"** alongside
+`PHI 3300 Knowledge and Belief` — so FSU places metaphysics one level above epistemology while the other
+institutions place them side by side at 3000. **The number is expressing a curricular judgement**, which
+is exactly why these divergences persist rather than getting corrected.
+
+Also recorded: **FIU carries `PHI3500` under two titles — "Metaphysics" and "What Is Reality?"** — the
+second evidently a general-education-facing rename. Noted in the guide, because a transcript reading
+"What Is Reality?" will not be recognised by a transfer evaluator reading titles.
+
+### `PHI3800` — the benign inverse: three titles, one number
+
+| Source | Title |
+|---|---|
+| **Statewide (SCNS)** | **Aesthetics** |
+| FIU | Aesthetics |
+| UWF | **Philosophy of Art** |
+| FSU | **Philosophy of the Arts** |
+
+**Number identical at all three; articulation clean.** Worth logging explicitly as the *harmless* half of
+the drift taxonomy, because this file has accumulated many cases of the damaging pattern (titles agree,
+numbers do not) and comparatively few statements of the reverse. **Title drift with number agreement
+costs a student nothing but a moment of confusion in a degree audit.** The rule it illustrates:
+*numbers articulate, titles describe* — and when they disagree, believe the number.
+
+⚠ One content note: UWF's description explicitly includes **commercialism, propaganda and pornography**
+where FSU's stays with the analytic core. Handled in the guide with a short paragraph on how contentious
+material is treated in a philosophy classroom (analytical, not advocative; state the strongest case for a
+view you reject) rather than by omitting it.
+
+### ⚠⚠ `PHY3802L` — an `L` suffix at 2–3 credits, and a credit divergence
+
+| Institution | Title | Credits | Prerequisite |
+|---|---|---|---|
+| UWF | Intermediate Physics Lab | **3** | PHY 3106 |
+| FIU | Intermediate Physics Lab | **3** | — |
+| FSU | **Intermediate Laboratory** | **2** | PHY 3101 |
+
+Two findings in one course.
+
+**1. The suffix convention breaks here.** This file and `CLAUDE.md` both record `L` = lab-only, *typically
+1 credit / 30–45 hours*. **This course carries 2 or 3.** It is not a catalog error — all three
+institutions describe a substantial multi-week experimental course. **Add to the suffix-is-a-filing-
+decision theme: an `L` tells you the course is laboratory-only and tells you nothing about its size.**
+
+**2. Credit divergence resolved by the majority rule** (`REVIEW_QUEUE.md` item 21): published at **3
+credits**, following UWF and FIU against FSU's 2. The transfer consequence is the one already documented
+in this file — **credit transfers; credit hours do not multiply** — so an FSU student moving to a
+3-credit institution is one hour short against the total even though the course requirement is satisfied.
+
+**Contact hours: 90, a deliberate override.** `validate_drafts.py` warns (`3 credits with 90 contact
+hours (expected ~45, or ~60 for a C course)`) and the warning is correct to fire — the validator's model
+is lecture-and-C-suffix. **The reasoning, recorded here so it is not re-litigated:** the project's own
+stated convention is that a lab is scheduled at roughly 30–45 clock hours *per credit*, so three credits
+of pure laboratory is 90–135. **90 is the conservative end of the project's own range**, and it matches
+the standard shape of an intermediate physics laboratory (two long afternoon sessions weekly). This is
+the second documented deliberate hour override after **GRA studio 3cr = 72**.
+
+⚠ The practical point the guide leads with: **do not schedule this as though it were a 3-credit
+lecture.** Six scheduled hours plus 8–12 hours of analysis and writing makes it the largest single time
+commitment in most physics majors' junior year, and the credit value actively understates it.
+
+### `SPC4540` — a social-scientific / rhetorical split, structurally identical to last batch's `PHI3130`
+
+| | FSU | UWF |
+|---|---|---|
+| Title | **Persuasion** (= statewide title) | **Propaganda and Persuasion** |
+| Description | *"the psychology of attitude formation and change... theories of persuasion and principles of persuasive communication across multiple contexts"* | *"persuasive activity at a variety of turns in the modern world"*, focus on **social movements, political campaigns and advertising** |
+| Tradition | **social-scientific** — ELM, dissonance, inoculation, experimental evidence | **rhetorical / critical** — campaign and movement analysis |
+| Signature text | Perloff or O'Keefe | **Jowett and O'Donnell, *Propaganda and Persuasion*** (UWF's title tracks it) |
+
+⚠ **This is the same drift category opened one batch ago by `PHI3130`** (UWF symbolic logic vs FGCU
+critical reasoning): *same subject, two scholarly traditions, invisible from the title*. Two instances in
+consecutive batches from unrelated prefixes suggests the category is common rather than exceptional, and
+it is now worth naming properly:
+
+> **Tradition divergence.** One number, one subject, two disciplinary methodologies — typically
+> social-scientific versus humanistic-critical. The titles are compatible, the descriptions differ in
+> *verbs* rather than in *nouns* ("theories... tested" vs "explores... how it works"), and the reliable
+> tell is the **assigned textbook**, which belongs unambiguously to one tradition.
+
+**Not a `-SCNS`/`-<INST>` split candidate.** Both teach persuasion; neither is a different subject.
+Handled with a comparison table in Special Information and outcome subsections for each version — the
+same treatment `PHI3130` received, and it works well for this shape.
+
+**Where it does matter to a student:** graduate work in communication research wants the social-scientific
+version; agency, campaign and advocacy work is better served by the critical version. Credit articulates
+either way.
+
+### `PHY3722C` — a clean case, recorded because clean cases are evidence too
+
+UWF (3 sh, prereq PHY 2049, *"introductory course in electronic design and circuitry with emphasis on
+common instrumentation... both lecture and laboratory components"*) and FIU (3 cr, Electronics) agree.
+Standard `C`-suffix treatment: **3 credits / 60 contact hours**, no override needed.
+
+Two notes worth keeping:
+
+- ⚠ **The `EEL` substitution question.** An engineering circuits course (e.g. `EEL3111C`) covers
+  overlapping material at greater depth and departments frequently accept it — but **it is a substitution,
+  not an articulation**, because the numbers differ. The guide tells students to ask the physics
+  department *before* taking the course rather than after.
+- **The prerequisite is genuine content, not a maturity proxy** — the inverse of `MHF3202` from batch 171,
+  where the calculus prerequisite stands in for maturity and almost none of the calculus is used. Having
+  both cases documented one batch apart is useful: **"is this prerequisite content or a proxy?" is a
+  question worth asking on every course**, and the answer changes the advice completely.
+
+### `PHH3400` — the consistency case
+
+UWF (*"development of modern philosophy from the Renaissance through the 18th century; Descartes, Locke,
+Berkeley, Hume, Spinoza, Leibniz and Kant"*) and FSU (*"critical study of the theories of 17th- and
+18th-century Western philosophers... both the empiricist and rationalist traditions"*) describe the same
+course, and the statewide title matches both. **Unusually high consistency for an upper-division
+humanities course**, and worth recording as a counterweight: the drift cases dominate this file because
+they are what needs documenting, not because drift is the norm.
+
+The one real variation is **whether the course reaches Kant** — some institutions stop at Hume and treat
+Kant separately. Flagged in the guide as a gap to close before graduate study rather than as a transfer
+risk.
+
+### Cross-batch note: "no prerequisite" ≠ "no useful preparation"
+
+Four of this batch's six list **no prerequisite** (PHH3400, PHI3500, PHI3800, SPC4540). Following the
+rule generalised in batch 171 from `INR4102`, each guide's prerequisites string now **states what the
+useful preparation actually is** rather than recording the absence. The pattern has now appeared often
+enough to treat as standing practice:
+
+- `PHH3400` → PHI 2010 for vocabulary, PHI 3130 for argument reconstruction
+- `PHI3500` → same, plus the warning that "introductory" describes background, not difficulty
+- `PHI3800` → PHI 2010, *plus genuine experience of an art form* (the non-obvious one)
+- `SPC4540` → communication theory, **and statistics for the social-scientific version**
+
+⚠ `SPC4540` is the sharpest case: the useful preparation **depends on which version of the course your
+institution runs**, which is only knowable from the tradition-divergence finding above.
+
+### Process note
+
+No prerequisite over-length this batch (longest 442 of 500). The batch-170 tightening plus the
+batch-171 practice of trimming connective tissue rather than warnings is holding. One validator warning,
+deliberate and documented (PHY3802L contact hours).
