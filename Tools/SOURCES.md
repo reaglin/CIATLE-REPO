@@ -10001,3 +10001,5150 @@ Broward); **chloride-driven reinforcement corrosion** is the dominant durability
 exposure; and the post-Surfside **milestone inspection and structural integrity reserve study**
 requirements have created sustained demand for assessment of *existing* reinforced concrete - a different
 skill from new design.
+
+
+---
+
+## Batch 143 findings (2026-09-04) - CJL3510, ECO3203, FIN4504, LAT1120C, PAD3003
+
+### The UF 4-credit + calculus/grade-gate pattern is now confirmed as a *pattern*, not a one-off
+
+Three courses in three consecutive batches show the same shape: **UF awards 4 credits and adds a gate; the
+rest of Florida awards 3.**
+
+| Course | UF | Everyone else | UF's extra gate |
+|---|---|---|---|
+| `ECO3101` (batch 140) | **4 cr** | 3 cr (FSU, UCF, UWF) | MAC2233 or higher calculus |
+| `ECO3203` (this batch) | **4 cr** | 3 cr (FGCU, UWF) | MAC2233 or higher calculus |
+| `FIN4504` (this batch) | **4 cr** | 3 cr (UWF) | **FIN3403 at minimum grade B** + ACG2021/2071 at C |
+
+**Treat "UF may be 4 credits with a gate" as a standing check on any upper-division UF-offered course**,
+rather than rediscovering it per course. Two distinct harms to warn about: the credit shortfall on
+transfer, and the invisible difficulty/preparation gap that no transcript records.
+
+`FIN4504` adds a third variety of gate worth noting separately: **a minimum grade in the prerequisite**
+(B in FIN3403), which is a planning constraint rather than a content one - a C in corporate finance bars a
+student from the course entirely. Same shape as UF's **B in MHF3202** for `MAS4301` (batch 142). **UF uses
+minimum-grade prerequisites as a difficulty signal across departments** - check for them.
+
+### `CJL3510` - five titles, the widest spread recorded so far
+
+| Institution | Title |
+|---|---|
+| statewide | Courts and the Criminal Justice System |
+| **UWF** | Courts |
+| **FSU** | The Courts |
+| **FAMU** | American Court System |
+| **UCF** | **Prosecution and Adjudication** |
+
+UCF's is the trap - it reads as a narrower specialist course, and a student scanning a catalog for a courts
+requirement may not recognise it. The description confirms it is the same subject approached through
+process (charging, adjudicating, sentencing) rather than through institutional structure. **One guide.**
+The framing difference is real enough to shift emphasis, though, so it is noted in the guide.
+
+### `FIN4504` and `ECO3203` - title drift where the title implies a narrower course
+
+`FIN4504` is *Investments* at UWF and **Equity and Capital Markets** at UF. Same subject; UF's title
+signals more weight on equity and less on fixed income and derivatives. Recorded because it is the same
+failure mode as CJL3510/UCF: **a title that names a subset of the course.**
+
+### `LAT1120C` - a rare case where the C suffix is fully explained by the catalog
+
+UWF states it outright: *"In addition to the three hours of scheduled classroom time, students are required
+to do one hour of laboratory work per week."* That is 3 lecture + 1 lab = **4 credits / 60 contact hours**,
+and it is the cleanest confirmation of C-suffix contact-hour convention found so far. UF lists the same
+course as **LAT1120 (no C) and still awards 4 credits** - so **credits are a more reliable signal than the
+suffix**. Worth generalising: where a C-suffix course and its bare-number twin carry the same credit value,
+the suffix is a filing decision; where credits differ, look for real added contact.
+
+**Florida-specific student-facing fact captured in the guide:** the SUS foreign-language requirement is
+**two semesters of the same language**, so LAT1120C alone does not satisfy it - a student must continue to
+LAT1121C. Also flagged: **CLA and CLT prefixed courses are taught in English and do NOT satisfy a foreign
+language requirement**, which is the most common mix-up in the classics prefix family.
+
+### `PAD3003` - the owning department predicts the emphasis (third instance of this pattern)
+
+UWF houses PAD3003 in the **Department of Business Administration**, not political science. That tilts the
+course managerial (budgeting, personnel, organisation theory) where a political-science home tilts it
+political and legal (bureaucratic politics, administrative law, accountability). **Ask which textbook is
+used**: Rosenbloom's three-perspectives framework signals balance; Denhardt or Starling tilts managerial.
+
+This is now the third recorded case of **owning department predicting course content** - after `BSC4434`
+(UWF Public Health vs UF Microbiology, batch 140) and `HSA3170` (prerequisite predicts emphasis, batch
+141). **Add the owning department to the standard things to capture when a catalog gives it** - UWF's PDFs
+always do, which is another reason to prefer them.
+
+### Florida public-administration facts worth reusing in any PAD/POS/URP guide
+
+- **The Sunshine Law is unusually strong.** Ch. 286 (open meetings) and Ch. 119 (public records), with
+  records access in the state constitution. Two board members may not privately discuss board business;
+  drafts and emails are generally public; penalties are personal. National texts badly understate this.
+- **Florida is a council-manager state to an unusual degree**, which makes city/county management a
+  realistic career path here in a way it is not in strong-mayor states.
+- **Emergency management is a core administrative function, not a specialty** - every one of the 67
+  counties has a professional emergency manager.
+- **Revenue structure:** no personal income tax; sales tax, doc stamps and local property tax, the latter
+  constrained by **Save Our Homes caps and the homestead exemption**. Procyclical and structurally
+  constrained - generic public finance material does not cover this.
+- **NASPAA accreditation** is the credential gate for the MPA, which is the professional qualification in
+  this field. Same "programme outranks course" structure as nursing/MLS/teacher-prep/ACCE/ABET.
+
+### Source notes
+
+- **UF catalog department slugs continue to be the main friction.** Confirmed working this batch:
+  `economics/`, `classics/` (LAT), `finance/` (FIN - note **not** `finance_insurance_and_real_estate/`,
+  which 404s). Failed: `public_administration/` (404) - PAD content is presumably under a political science
+  or public affairs slug not yet identified. **Keep a running list; guessing costs a fetch each time.**
+- **Stale Acalog ids are a recurring waste.** Search-surfaced `catoid`/`coid` pairs for
+  `catalog.scf.edu` and `catalog.sfcollege.edu` both 404'd this batch, as Santa Fe did in batch 141.
+  **A search hit on an Acalog course URL does not mean the id is still live** - the snippet is often from
+  an archived catalog year. Prefer the FGCU/UWF PDF route where the institution has one.
+- **FGCU PDF route used again successfully** (`eco`), and correctly returned **404 for `lat`** - FGCU does
+  not teach Latin, matching the inventory. A clean 404 is a useful negative signal, not a failure.
+
+### Deployment interaction (2026-09-04)
+
+Ron deployed mid-session. Post-deploy checks: the site returned 200 and guide pushes worked normally, but
+**the deploy did not include the missing taxonomy nodes** - `CES`/`CEG`/`CWR`/`ENV` are still absent from
+`taxonomy.json`, and the `CES4702C` retry still returned 422. Logged in
+`Deployment/PENDING_SERVER_CHANGES.md` as a blocking item for the next deploy, at Ron's request, with the
+copy-paste JSON and both application routes.
+
+
+---
+
+## Batch 144 findings (2026-09-04) - PUR3000, SCE4310, SOP3004
+
+### WARNING - `PUR3000` is a one-number-two-subjects candidate, and the majority reading is CONFIRMED
+
+UF and FGCU both teach **Principles of Public Relations** (history of the profession, nature of PR, code of
+ethics, PR process, management function). **UWF teaches *Introduction to Public Affairs*** - government,
+nonprofit and media policy communication, advocacy, issues management, civic engagement.
+
+Public affairs is a *subfield* of PR, so this is not a clean two-subject case like NUR4286. But a UWF
+student will not have covered PR history, media relations, campaign planning or agency practice - and
+**both institutions make PUR3000 the prerequisite for PUR3100 (PR Writing)**, which assumes exactly that
+content. Logged as REVIEW_QUEUE item 14 and added to the open-cases table in `Tools/CLAUDE.md`.
+
+**What makes this entry different from the others on that table:** the majority reading is confirmed at
+**two** institutions from their own catalogs, so a `-SCNS` guide would not have to be written from a title
+alone. The blocker recorded for the NUR cases ("needs the SCNS catalog") does not apply here.
+
+### The teacher-preparation pattern reproduces exactly across prefixes
+
+`SCE4310` is the science sibling of `MAE4310` (batch 140) and behaves identically: programme-admission
+gating, cohort-locked methods block, required K-6 field experience, B.E.S.T. Standards + CPALMS alignment,
+FEAPs, and an FTCE subject-area subtest (**Subtest 4 Science**, where MAE4310 maps to **Subtest 2
+Mathematics**). FGCU's prerequisites are **EDG3323 and EDF4112, both concurrent-eligible**.
+
+**Treat the methods-course shape as a template**: for any `XXE4xxx` methods number, expect programme
+approval under Rule 6A-5.066 to be the binding constraint, not SCNS articulation. The remaining block
+members to expect in the queue are **RED** (reading), **SSE** (social studies) and **TSL** (ESOL).
+
+**Also reproduces: the elementary/secondary adjacent-number trap.** `SCE4310` (K-6) vs `SCE4320` (middle
+and secondary, UWF) vs `SCE4330` (grades 6-12, FGCU) - three numbers, different certification areas.
+Identical to `MAE4310` vs `MAE4320`.
+
+**One content finding specific to science methods, worth keeping:** the research literature documents that
+elementary candidates arrive with **the same science misconceptions as the general public** (seasons, Moon
+phases, force and motion) and with low science confidence. Instructors design for it. The guide states this
+plainly rather than implying candidates should already know the content - that is the honest treatment and
+it is what the sources support.
+
+### `SOP3004` - the important adjacency is to a DIFFERENT PREFIX
+
+`SOP3004` (psychology) and **`SYP3000` (sociology), both titled "Social Psychology"**, are genuinely
+different courses - different departments, different methods (experimental vs observational/interpretive),
+different literatures. **This is a prefix collision on a shared title**, the mirror image of the `TPP2100`/
+`TPP2110C` case already in the open-cases table (a title collision across two numbers in one prefix).
+Flagged in the guide; worth checking whenever a title appears under two prefixes.
+
+**Replication crisis handling.** Social psychology is the field where the replication crisis hit hardest,
+so the guide names which classic findings have and have not survived: conformity, dissonance, FAE,
+intergroup bias and the bystander effect are robust; **social priming, ego depletion, facial feedback and
+power posing are not**; the **Stanford Prison Experiment is now treated as methodologically compromised
+rather than as evidence**. Several textbooks still in Florida use present the old account. **A guide for
+any psychology course whose content predates 2011 should check replication status rather than repeating
+the textbook.**
+
+### Scope decision applied: applied music skipped (Ron, 2026-09-04)
+
+Ron: "skip the applied music". Marked **40 rows** skipped - `MVB`, `MVP`, `MVS`, `MVV`, `MVW` principal
+applied and studio instruction numbers (`MVV3331`/`MVV4341` plus 38 siblings). These are individual studio
+lessons: content is set per student per term by the applied instructor, so a statewide guide cannot say
+anything true beyond the jury/recital structure.
+
+**Held back deliberately: `MVV4640 Vocal Pedagogy`** - it sits under the voice prefix but is a classroom
+course *about teaching* singing, not studio instruction, so it does not fall under the exclusion. Left
+`queued`. **Rule for the future: `MV*` numbers are applied instruction and out of scope, except classroom
+courses that happen to carry the prefix** - check the title before bulk-skipping.
+
+### Source notes
+
+- **UF slug `public_relations/` works.** Running list of confirmed UF catalog slugs:
+  `economics/`, `classics/`, `finance/`, `microbiology_and_cell_science/`, `civil_and_coastal_engineering/`,
+  `mathematics/`, `public_relations/`. Confirmed 404: `finance_insurance_and_real_estate/`,
+  `public_administration/`, `biological_sciences/` (for BSC4434C).
+- **FGCU PDF route used for `pur` and `sce`** - both returned full entries with prerequisites. FGCU is now
+  the most productive second source in the register for prefixes it teaches.
+
+
+---
+
+## Batch 145 findings (2026-09-04) - CCJ4700, EGS1006C, FRE2200C, HSA4191, MMC2000
+
+### WARNING - `EGS1006C` is a ONE-credit course, and the queue's institution count hides that
+
+The statewide title ("Introduction to the Engineering Profession") reads like a 3-credit survey. It is
+**1 credit** at every institution checked: **UCF** (`EGS1006C`, 1 cr, prereq "new student status or C.I.",
+classroom + online), **UWF** (`EGS1006`, 1 sh, hands-on design component, Mechanical Engineering),
+**UF** (`EGS1006`, 1 cr, weekly rotation through engineering departments in groups of 20).
+
+⚠ **A WebSearch summary asserted "UF awards 3 college credits for the course."** That came from a
+dual-enrollment marketing page and contradicts UF's own engineering advising material. **Another instance
+of the batch-140 rule: a search snippet is not a catalog.** Published at **1 credit / 30 contact hours**
+(the C denotes the integrated hands-on component, ~2 contact hours weekly).
+
+**Note the transfer reality recorded in the guide:** this course usually transfers as *elective* credit
+because receiving engineering programmes require their own first-year introduction course, often
+discipline-specific and carrying ABET student-outcome assessment. At 1 credit that is a small cost - but it
+is worth stating rather than letting a student assume it substitutes.
+
+### `FRE2200C` - contact structure is constant, credit value is not, and FSCJ spells it out
+
+**FSCJ publishes the exact split**, which almost no Florida catalog does:
+`FRE2200` = **3 credits, "4 (3 lecture hours, 1 unsupervised laboratory hour)"**.
+**UWF** `FRE2200C` = **4 semester hours**, prereq FRE1120C AND FRE1121C.
+**FAMU** `FRE2221` carries the notation **(3,1)** - the same 3+1 structure recorded a third way.
+
+So the difference is purely **whether the lab hour is credit-bearing**. Published at 4/60 (the C-suffix
+reading) with the 3-credit pattern documented prominently.
+
+⚠⚠ **The more serious finding is a numbering divergence, not a credit one.** Florida runs **two competing
+French sequences**: `FRE2200`/`FRE2210` (FSCJ, UWF, most of this course's institutions) versus
+`FRE2220`/`FRE2221` (FSW, FAMU). **SCNS equivalency does not cross numbers**, so a student completing
+FRE2220 who needs FRE2200 has taken a different course as far as articulation is concerned. **Check for
+this pattern in every language prefix** - SPN, GER, ITA and POR are likely to have the same split.
+
+**Reusable language-course facts captured** (apply to LAT1120C, FRE2200C and any future SPN/GER/ITA guide):
+the SUS admission requirement is **two years of the same language in high school or two semesters
+postsecondary**; the B.A. requirement is often *through the intermediate level*, which is where FRE2200C
+sits; **switching languages partway leaves both incomplete**; and **literature-in-translation courses
+(LIT/FOT/CLA/CLT prefixes) do NOT satisfy a foreign language requirement** - a recurring student mix-up
+already flagged for Latin in batch 143.
+
+### `CCJ4700` - the statistics question is the real variation, and it is invisible
+
+Five titles (statewide *Methods of Research in Criminal Justice*; UWF *Research Design in Criminal
+Justice*; FAMU/FIU *Research Methods in Criminal Justice*; FIU also *Research Methods and Analysis*; FSU
+*Introduction to Research Methods in Criminology*; FAU *Methods of Research*). **3 credits everywhere** -
+no credit risk.
+
+**The consequential divergence is whether statistics is a prerequisite or is taught inside the course.**
+That changes the workload substantially and does not appear on a transcript. Same shape as the PSY3213C
+packaging finding (batch 140) and the HSA3170 prerequisite-predicts-emphasis finding (batch 141).
+
+⚠ **Different-number trap:** FGCU numbers its research methods course **`CCJ3700`** (*Meth Criminal Justice
+Research*, seen in the batch-142 FGCU extraction), not CCJ4700. Equivalency does not cross numbers.
+
+### `HSA4191` - the hands-on tool list is the employable part, and UWF publishes it
+
+UWF's catalog is unusually specific: students complete case study projects "using relevant job-related
+software, such as **Excel workbooks, Access databases, and commercial electronic health record system
+interfaces**." That is rare detail and it is what makes the course employable - a graduate with a working
+Access database and a clean EHR report has a demonstrable skill.
+
+**Credential finding worth reusing:** **CAHIMS** (HIMSS) is attainable by a student or recent graduate
+*without* years of experience, and most students do not know it exists. Contrast with **RHIA/RHIT**, which
+require a **CAHIIM-accredited HIM programme** - a different degree from health services administration, so
+an HSA graduate cannot sit them. Same "programme outranks course" structure as nursing/MLS/teacher-prep.
+
+**⚠ A professional rule that belongs in every health-data guide:** never enter PHI into a public AI
+service - it is a HIPAA disclosure to a party with no business associate agreement, i.e. a reportable
+breach, not a grey area. And **de-identification has a defined legal meaning** (Safe Harbor's 18
+identifiers, or expert determination); removing the name is not sufficient.
+
+**Florida systems named in the guide:** AHCA / FloridaHealthFinder.gov (facility-level data, usable for
+course projects), **Florida SHOTS** (immunisation registry), **E-FORCSE** (prescription drug monitoring,
+mandated for controlled-substance prescribers under Florida law), Florida HIE.
+
+### `MMC2000` - four titles, and a genuinely strong Florida angle
+
+Titles: *Introduction to Mass Media* (statewide, FAMU), *Introduction to the Mass Media* (FSU, FAMU
+alternate), *Principles of Mass Communication* (UWF), *Introduction to Mass Communications* (MDC). 3
+credits, 3 lecture hours. **FAMU tags it with a Humanities general education attribute** - useful, since
+other institutions place it in social science. Category placement is decided by the receiving institution
+as always.
+
+**Florida is a genuinely strong setting for this subject** and the guide says so with specifics: the
+Sunshine Law and Ch. 119 give Florida some of the strongest open-government law in the country (directly
+relevant to journalism practice); **Miami is a global centre of Spanish-language media** (Univision and
+Telemundo headquarters); and the **Poynter Institute** in St. Petersburg - owner of the *Tampa Bay Times*,
+home of PolitiFact and MediaWise - is one of the world's leading journalism training and media-literacy
+organisations, publishing much of its material free.
+
+**Currency warning recorded:** media-industry figures date faster than almost any other subject in the
+repository. The guide tells students to treat textbook numbers as snapshots and points them at Pew.
+
+### Scope note: `MVV4640` deliberately left queued
+
+When the applied-music family was skipped (batch 144), **`MVV4640 Vocal Pedagogy` was held back** - it
+carries the voice prefix but is a classroom course *about teaching* singing, not studio instruction.
+Awaiting Ron's call. **Rule: check the title before bulk-skipping a prefix family.**
+
+### Source notes
+
+- **UF slug list grows:** `public_relations/` confirmed (batch 144); this batch confirmed **404** for
+  `eng.ufl.edu/students/advising/...egs1006/`. Still unresolved: a working UF slug for PAD and for EGS.
+- **`catalog.fscj.edu/courses/<numeric-id>` remains reliable** and was the only source in this batch that
+  published a lecture/lab contact-hour split. **When contact hours matter, try FSCJ first.**
+- **FGCU PDF route** used again for `hsa`. Now the most productive second source in the register.
+
+
+---
+
+## Batch 146 findings (2026-09-05) - ACG4201, ACG4651, CAP4770, MUE2040, MUH3212
+
+### WARNING - the ACG prefix has the widest intermediate-course numbering divergence found so far
+
+Both accounting guides gate on "the second intermediate financial accounting course", and Florida numbers
+that course **four different ways**:
+
+| Institution | Intermediate number used as prerequisite |
+|---|---|
+| **UWF**, **FSU** | `ACG3111` (FSU: C- or better) |
+| **FAU** | `ACG3151` (ACG4201) / `ACG3141` (ACG4651) |
+| **UCF** | `ACG3141` + `ACG4401C`, each C or better, **plus accounting major/minor status** |
+| **FIU** | `ACG4101` |
+
+**SCNS equivalency does not cross numbers**, so a transferring accounting student cannot assume intermediate
+credit maps. **Advice recorded in both guides: map the whole ACG chain at the receiving institution before
+transferring**, not course by course. This is a worse version of the MHF2191/MHF3202 problem from batch 142.
+
+**⚠ FIU requires ACG4651 to be completed in the student's final semester.** A scheduling constraint that can
+delay graduation if found late. Worth checking for "must be taken in final term" clauses generally - this is
+the first instance recorded.
+
+**⚠ UWF co-teaches ACG4201 with graduate ACG5205 and does NOT permit credit for both.** So a student
+continuing into UWF's accounting master's forecloses the graduate course by taking the undergraduate one.
+The co-taught pattern has appeared repeatedly (BSC4434/BSC5459, MAA4402/MAA5404, FIN4504/FIN5505,
+ACG4201/ACG5205) - **but this is the first with an explicit no-double-credit clause. Look for it.**
+
+### CPA licensure - deliberately hedged, and the reason is recorded here
+
+Florida's CPA education and experience requirements **have been under active revision**, in Florida and
+nationally, with new pathways introduced. Both accounting guides therefore state the durable structure
+(national exam via NASBA, substantial upper-division accounting and business credits, experience under a
+licensed CPA, historically well above 120 total hours) and **explicitly tell the student to verify with the
+Florida Board of Accountancy and re-check before applying**, rather than printing a number that may be
+stale. **Apply the same treatment to any licensure whose rules are in flux** - a wrong specific is worse
+than an accurate pointer.
+
+### WARNING - `MUE2040` credits range 1 to 3
+
+**FGCU 1 credit. UWF 2 semester hours** (with **10 hours of school observation**, majors only).
+**UF 2-3 credits.** Published at **2/30**, the middle and most common. The observation hours are
+*additional* to class time and must occur during the school day - the same constraint documented for
+MAE4310 and SCE4310.
+
+**⚠ Catalog oddity worth knowing at UWF:** `MUE2040` (*Introduction to Music Teaching*) and `MUE3311`
+(*Methods for the Elementary School Music Teacher*) carry **near-identical descriptions** in the UWF
+catalog - both 2 sh, both "How to teach music in the elementary school... For music majors only." Almost
+certainly a catalog copy error rather than two identical courses. **Read the syllabus, not the catalog, when
+planning at UWF in this prefix.**
+
+### `CAP4770` - the prerequisite route predicts the course, and neither route requires statistics
+
+**UWF gates on COP4710 (databases)** -> data preparation, warehousing, tool use.
+**FGCU gates on COP3003 (object-oriented programming)** -> algorithm development (FGCU says so explicitly).
+
+**Neither institution requires statistics or linear algebra.** That is the finding worth carrying: students
+enrol without statistical background, find the libraries trivial and the *model evaluation* hard, and cannot
+tell a good model from a bad one - which is the entire professional skill. The guide names the specific
+traps (target leakage, time-ignorant validation splits, accuracy on imbalanced data) and points at
+*An Introduction to Statistical Learning*, which is free.
+
+**Fourth instance of "owning department predicts content"**: UWF's `CAP4774` (*Databases for Data Science*)
+sits in **Cybersecurity & Information Technology**, not Computer Science, while CAP4770 is in CS. After
+BSC4434 (batch 140), HSA3170 (141) and PAD3003 (143), treat the department line as standard capture.
+
+### `MUH3212` - the theory prerequisite is the real gate, and MUL is the trap
+
+FGCU requires **MUT2116** (music theory) before music history. The course expects score reading, formal
+analysis and correct theoretical vocabulary - it is **music history for musicians**, not music appreciation.
+
+**⚠ The prefix trap: `MUL`-prefixed music appreciation (MUL2010-range) is a general education course for
+non-majors and is NOT a substitute for MUH3212 in a music degree.** Same shape as the CLA/CLT-vs-LAT trap
+(batch 143) and SOP-vs-SYP (batch 144).
+
+**Period boundary varies**: UWF's second half is "18th through 20th centuries", FGCU's is "Classical period
+through the present" - slightly different starting points, so splitting the sequence across institutions can
+leave a small pre-Classical gap. Same pattern as EUH1000/EUH1001 (batch 140).
+
+**Music transfer is governed by placement examinations and auditions as much as by transcript** - recorded
+in both music guides. A transferring music major sits theory and aural skills placement tests and auditions
+for studio placement regardless of what transferred. **Course-equivalency tables do not settle music
+transfer**; contact the receiving department.
+
+### Writing-designation tally is now worth tracking
+
+`MUH3212` and `CCJ4700` both **meet UWF's College-Level Communication Skills Requirement**, joining
+`PSY3213`, `LAH2020` (FGCU: CLWS + WCOM), `HSA3111` and `MAS4301` (UWF Computation Skills). **UWF tags these
+in its catalog and no other Florida source does so consistently.** Capture the designation whenever the UWF
+entry carries it - it tells a student the writing load is graded as writing, and it is institution-specific
+so it does not transfer.
+
+### Source notes
+
+- **FGCU PDF route** used for `mue`, `muh`, `cap` - all returned full entries with prerequisites and
+  credits. Still the most productive second source in the register.
+- **`catalog.fiu.edu/courses/<numeric-id>`** confirmed again (ACG4651, id 0100441), including the
+  final-semester clause that no other source published.
+- **Search-only institutions still search-readable**: FSU, FAU and UCF accounting entries came from scoped
+  WebSearch snippets, which carried credit values and prerequisite numbers accurately this time. The
+  batch-140/145 caution stands - snippets are a lead, catalogs are the source - but for *prerequisite
+  numbers* the snippets agreed with the two catalogs that were directly fetchable.
+
+
+---
+
+## Batch 147 findings (2026-09-05) - CCJ4641, CHM4130C, CLP4314, COP2830C, COP4020
+
+### WARNING - `CHM4130C`: the C-suffix form is the MINORITY; most of Florida splits it
+
+| Institution | Form |
+|---|---|
+| **UWF** | `CHM4130` 3 sh + **`CHM4130L`** 1 sh corequisite ("Required lab"; material fee on the lab) |
+| **FGCU** | `CHM4130` 3 cr + **`CHM4130L`** 1 cr corequisite |
+| **UF** | `CHM4130` + `CHM4130L` |
+| **USF** | **`CHM4130C`** *Methods of Instrumental Analysis* - integrated, and part of a **two-semester lab sequence** with `CHM4131C` |
+
+Total is 4 credits either way. Published at **4 / 90 contact hours** (45 lecture + ~45 lab).
+
+**Two practical consequences recorded in the guide.** Under the split you must **register for both numbers**,
+and the lab is offered in fewer sections because instrument capacity caps it. For transfer, **the split is
+the safer direction**: CHM4130 + CHM4130L generally satisfies a CHM4130C requirement, but CHM4130 alone does
+not, because the lab is what the receiving programme and the ACS certification care about.
+
+**This is the same C-vs-split pattern as `PSY3213C` (batch 140) and `CES4702C` (142), but it is the first
+where the split is dominant and the C is the outlier.** The quantitative-analysis prerequisite has the same
+split one level down (`CHM3120` / `CHM3120L` / `CHM3120C`).
+
+### `COP2830C` - the widest title spread in COP, and an "I vs II" level difference inside it
+
+| Institution | Title | Position |
+|---|---|---|
+| statewide | Web Programming | - |
+| **Seminole State** | **Web Programming I** | 3.00 cr, **no prerequisite**, lab fee - the FIRST course |
+| **Florida SouthWestern** | **Internet Programming HTML II** | 3 cr, **prerequisite COP1822** - the SECOND course |
+| **Florida Gateway** | Basic Web Page Programming | - |
+| **UWF** | **Script Programming** (`COP2830`, no C) | outlier name |
+
+**The "I" and "II" are not decorative** - the same SCNS number is the entry course at one institution and
+the second course at another. A transferring student can land ahead of or behind the assumed start.
+**Check for this whenever a title carries a numeral.**
+
+⚠ **Contact-hour call recorded:** validator warned at 45 (C-suffix expects ~60). Set to **60** because the
+statewide id carries the C, the institutions charge a lab fee, and the guide text does not state hours.
+Contrast `CES4702C` (batch 142), left at 45 **because most institutions there publish it without the C as a
+lecture course**. The deciding question is whether the C is dominant in the family, not whether the queued
+id has it.
+
+⚠⚠ **Currency: this is the fastest-dating subject in the repository.** Seminole State's catalog description
+still names **XHTML** - superseded by HTML5 over a decade ago. Almost certainly an un-refreshed entry rather
+than what is taught, but **for web/IT courses the catalog description is the least reliable content guide in
+the whole register.** Guides in this area should say so.
+
+⚠ **Transfer disappointment worth stating plainly** (now in the guide): `COP2830C` **generally does NOT
+satisfy a computer science major requirement** at a Florida university - CS degrees run on the
+COP2220/COP3014 -> COP3530 chain plus discrete maths and theory. It counts far more often toward IT,
+information systems and digital media bachelor's programmes.
+
+### `COP4020` - the prerequisite chain changes what the course can assume
+
+**UWF:** COP3530 + COP4027. **FGCU:** COP3530 + **COT4420 (theory of computation)** + CEN3031.
+
+COT4420 is the significant one: a student arriving with formal languages and automata already knows grammars
+as formal objects, so syntax and parsing can be taught at speed. Without it, grammars are met for the first
+time here. **Same "invisible on a transcript" shape as the CCJ4700 statistics question (batch 145) and the
+MAA4402 proof-vs-application split (142).**
+
+### `CLP4314` - prerequisite divergence is the widest in the CLP prefix
+
+**UWF: none listed. FGCU: PSY2012 + (PSY3213 or PSY3017) + (STA2122 or PSY3205)** - general psych,
+research methods *and* statistics. FGCU's version is effectively restricted to psych majors deep in the
+degree; UWF's is open. Also predicts teaching level: a section with the full chain assigns primary research
+and expects results-section literacy.
+
+**Evidence-quality caution written into the guide** (extends the batch-144 replication treatment): the
+**Type A** construct did not hold up - hostility is the component that predicts cardiovascular outcomes;
+claims that psychological state causes or cures cancer are unsupported **and carry real cost because they
+imply patients are responsible for their disease**; much older psychoneuroimmunology has smaller effect
+sizes than early reporting suggested. **Apply this treatment to any health-behaviour or psychology course.**
+
+### `CCJ4641` - the exception that proves the title-drift rule
+
+**Titles are stable** - *Organized Crime* at essentially every institution, 3 credits everywhere. Worth
+recording precisely because it is unusual in this repository.
+
+**Florida-specific material captured** (reusable for any CCJ/CJL/financial-crime guide): Florida sits on the
+primary Latin America/Caribbean trafficking corridor; **Miami is a major international financial centre**,
+making laundering a live enforcement problem; Florida has **its own RICO statute (Ch. 895, F.S.)** and a
+constitutionally established **Office of Statewide Prosecution** for multi-circuit organised activity - an
+institution most states lack; and Florida has a large **organised fraud** problem (Medicare fraud, PIP and
+insurance fraud, Palm Beach sober-home fraud, elder financial exploitation) that employs far more
+investigators than the traditional mafia material does.
+
+**Scholarly correctives named in the guide** because the topic is the most mythologised in criminal justice:
+Reuter's *Disorganized Crime* (enterprises are smaller and less coordinated than enforcement rhetoric
+claims) and Gambetta's *The Sicilian Mafia* (protection supplied where the state does not supply it).
+
+### Scope candidates surfaced, NOT acted on - need Ron's call
+
+Two families are rising in the queue that resemble the applied-music category already skipped:
+
+- **`MUN3313 Concert Choir`** (9 inst) and other **`MUN`** ensemble numbers - participation courses,
+  audition-based, repertoire set per term by the director. A statewide guide can say little beyond the
+  rehearsal/performance structure.
+- **`PEL1341 Beginning Tennis`** (9 inst) and other **`PEL`/`PEM`/`PEN`** activity numbers - physical
+  activity instruction.
+
+**Both are analogous to `MV*` applied instruction but neither is obviously in the same category** - an
+ensemble carries real musicianship content, and activity courses have defined skill outcomes. **Do not
+bulk-skip without asking.** `MVV4640 Vocal Pedagogy` is still queued pending the same kind of call.
+
+### Source notes
+
+- **FGCU PDF route** used for `chm`, `clp`, `cop`. Still the strongest second source.
+- **`seminolestate.edu/catalog/courses/<courseid-lowercase>`** confirmed working (`cop2830`) - clean,
+  guessable, one course per page, and it published the credit value and lab-fee note. **Good for state
+  college courses**, which the university-focused sources do not cover.
+- **UWF `uwfdump.py` prefix dumps** were essential this batch: `CHM4130C` and `COP2830C` both returned
+  "not found" on a targeted search because UWF files them **without the C**. **When a targeted UWF lookup
+  fails, dump the prefix before concluding the institution does not teach it.**
+
+
+---
+
+## Batch 148 findings (2026-09-05) - MAP4341, MUE4480, PHY4604, SOW4522, STA4321
+
+### WARNING WARNING - `PHY4604` is the widest prerequisite gap recorded in this repository
+
+| Institution | Title | Prerequisite | Shape |
+|---|---|---|---|
+| **UWF** | *Quantum Theory I* | **PHY3107** (upper-division modern physics) **and PHZ4113** (mathematical physics) | **first of a two-term sequence** with PHY4605 |
+| **FGCU** | *Introduction to Quantum Theory* | **PHY2049C** only - second semester of intro calculus-based physics | **standalone single term** |
+
+These are not the same course. UWF's student arrives having met the Schrodinger equation, linear algebra,
+complex analysis, special functions and PDEs; FGCU's arrives from introductory physics. **A single-term
+survey cannot reach perturbation theory, scattering, identical particles or relativistic corrections** -
+standard second-semester material - and graduate qualifying exams assume the fuller treatment.
+
+**Invisible on a transcript.** Same failure mode as the `MAA4402` proof-vs-application split (batch 142),
+`CCJ4700` statistics-inside-or-outside (145) and `COP4020` theory-of-computation gate (147), but the gap
+here is the largest: **two full upper-division courses of preparation versus none.**
+
+### `STA4321` - the calculus prerequisite ranges from Calc II to the full sequence
+
+**UWF: MAC2311 + MAC2312.** **UF: MAC2313** or equivalent third-semester calculus. **FSU: all three.**
+
+The reason it matters is concrete: **multivariate distributions require multiple integration**. Joint
+densities, marginals, conditionals and multi-variable transformations are all double and triple integrals.
+A Calc-II-gated section teaches the multivariable calculus as needed, which compresses.
+
+**⚠ Title finding worth keeping: UF's own syllabus for STA4321/5325 is titled *Introduction to
+Probability*.** That is the honest description - **the first course is overwhelmingly probability, not
+statistics**; inference is STA4322. Students expecting to do statistics in term one are routinely
+surprised, and the guide says so up front.
+
+**Actuarial alignment recorded:** SOA **Exam P is this course**, examinations may be sat as an
+undergraduate, and Florida's catastrophe-driven insurance industry makes it a strong in-state path.
+
+### WARNING - `SOW4522`: the clearest case yet of SCNS equivalency that does NOT mean transferability
+
+Field education is tied to a specific programme's field office, agency relationships, learning contract and
+competency assessment. **A receiving CSWE-accredited programme will require its own field sequence**,
+because its accreditation depends on having supervised and assessed the student itself. The guide states
+plainly: **do not plan to transfer during or after the field year.**
+
+**Structure captured:** UWF *Senior Field Seminar* 3 sh, corequisite **SOW4510** with a **minimum 400
+hours** in an agency under a qualified supervisor, graded S/U, gated behind **eight named SOW courses + 18
+sh in the major + 2.5 major GPA + departmental permission**. FGCU *BSW Integrative Senior Seminar* 3 cr,
+corequisite SOW4060. **FSU *Integrative Field Seminar* 2 credits.** Published at 3/45.
+
+**⚠ New course-type precedent.** This is the first **field/practicum-paired seminar** in the repository. It
+is NOT a shell number (4522 is not on the skip list) and it is a real graded course, but it behaves
+unlike anything else: content is generated by the placement, no two sections match, credits understate
+workload, and the binding constraints are **400 unpaid business-hours, Level 2 background screening, and a
+placement match made 1-2 terms ahead**. **Expect the same shape for other `SOW45xx` field numbers and for
+nursing/education practicum seminars** - treat the field manual, not the catalog, as the operative source.
+
+**CSWE + licensure structure recorded:** field education is CSWE's designated **signature pedagogy**;
+**a BSW does not lead to clinical licensure** - Florida's LCSW requires an MSW plus supervised clinical
+experience plus the ASWB clinical exam - but a CSWE-accredited BSW earns **MSW advanced standing**
+(~1 year instead of 2), which makes the BSW efficient rather than terminal.
+
+### `MUE4480` - credits 1 or 2, and the prerequisite is *theory*, not conducting
+
+**FGCU 1 credit** (*Marching Band Techniques*, prereq MUT2117 + MUS1360); **UWF 2 sh** (*Marching Band
+Methods*, prereq MUT1112). Published at **2/30**. Same 1-2 range as `MUE2040` (batch 146) - **the MUE
+prefix runs low-credit methods courses and the values are not stable; check every one.**
+
+**The theory prerequisite is the tell:** arranging and adapting music for the instrumentation actually in
+the room is the working skill, so both institutions gate on MUT rather than on conducting or methods.
+
+**⚠ Florida-specific safety content that belongs in any outdoor-activity guide:** Florida is the **lightning
+capital of the US**, and the marching season runs August-October. **Exertional heat illness is a documented
+cause of death in marching band.** A Florida director owns hydration scheduling, acclimatisation, work-rest
+ratios, an emergency action plan and a lightning policy; FHSAA heat and lightning policies apply to band as
+to athletics. Sources used: Korey Stringer Institute, NFHS lightning guidance.
+
+**⚠ Prefix distinction recorded:** **participating in a marching band under an `MUN` number is not the same
+as learning to run one under `MUE4480`**, and a programme requiring the methods course will not accept
+ensemble credit. Directly relevant to the pending `MUN` scope question.
+
+### `MAP4341` - multivariable calculus is the divergence; ODEs are universal
+
+**UWF: MAP2302 only. FGCU: MAC2313 + MAP2302.** Also **co-taught with graduate MAP5345** at UWF and
+**meets UWF's College-Level Computation Skills Requirement** (as does `STA4321` - the UWF designation tally
+continues from batch 146).
+
+**Emphasis split worth checking:** sections run **analytical** (hand-derived series solutions throughout)
+or **computational** (finite differences, stability, MATLAB/Python implementation). Mathematics departments
+tend analytical, engineering-adjacent programmes computational. Practitioners solve PDEs numerically far
+more often than analytically, so the distinction matters for a student's purposes.
+
+**Reusable Florida framing for any PDE/modelling course:** the **National Hurricane Center** and NOAA's
+**Atlantic Oceanographic and Meteorological Laboratory** in Miami; storm-surge and coastal modelling;
+**groundwater modelling for the five water management districts**; and CFD/structural dynamics across the
+Space Coast aerospace sector. Numerical weather prediction is PDE solution at scale and it is headquartered
+in this state.
+
+### Source notes
+
+- **FGCU PDF route** used for `map`, `mue`, `phy`, `sow`. The `sow` extraction returned the SOW4522 header
+  with **no description body** - the only partial failure of this route so far. Filled from scoped
+  WebSearch, which surfaced FGCU, UWF and FSU credit values and corequisites.
+- **UWF prefix dump was again necessary**: the targeted `SOW4522` lookup returned the *tail of the
+  preceding course* (the 400-hour field education entry) before the real header. **When a UWF targeted hit
+  looks like it starts mid-sentence, dump the prefix and read the surrounding lines** - the same lesson as
+  batch 147's CHM/COP misses, in a different form.
+- **Scoped WebSearch carried accurate credit values and prerequisite numbers again** for UF, FSU and USF
+  (STA4321) and FSU (SOW4522). Consistent with batch 146: snippets are unreliable for *credit totals*
+  (batch 145's EGS1006C error) but have been reliable for *prerequisite course numbers*.
+
+### Scope calls still open (unchanged from batch 147)
+
+`MUN3313 Concert Choir` and the `MUN` ensembles; `PEL1341 Beginning Tennis` and the `PEL`/`PEM`/`PEN`
+activity numbers; and `MVV4640 Vocal Pedagogy` held back from the batch-144 applied-music skip. **Not
+drafted and not skipped** - awaiting Ron. Note the MUE4480 finding above gives a reason to treat `MUN`
+ensembles as genuinely distinct from methods courses.
+
+
+---
+
+## Batch 149 findings (2026-09-05) - ACG3401, THE2300, TPA2000C, TPA2248C, ZOO4513C
+
+### WARNING WARNING - `TPA2248C` is the widest CREDIT spread recorded: 1 to 3
+
+| Institution | Title | Credits |
+|---|---|---|
+| **FGCU**, **USF** | *Workshop in Stage Makeup* | **1** |
+| **FSU** | *Stage Makeup* | **2** |
+| **UWF** | *Introduction to Stage Makeup* | **3** (material and supply fee) |
+| **FAU** | *Theatrical Makeup* | - |
+
+A 1-credit workshop and a 3-credit studio are not the same experience: the workshop covers corrective and
+basic old-age and stops; the 3-credit version reaches character work, prosthetics, hair and a design
+portfolio. **Published at the 2/45 middle**, with the spread stated in the Course Description.
+
+**⚠ Plus a numbering trap:** **FSCJ carries stage makeup as `TPA1248`** - a *1000-level* number. Equivalency
+does not cross numbers. Same shape as `MHF2191`/`MHF3202` (batch 142) and `CCJ3700`/`CCJ4700` (145).
+
+### `TPA2000C` - three titles, and UF's retitle is a Florida industry signal
+
+| Institution | Title | Note |
+|---|---|---|
+| statewide, **FSU**, **Seminole State** | Introduction to Theatrical Design | - |
+| **UWF** | **Theatrical Design for Performers** | prereq TPA2200/2200C - sits *after* technical theatre, aimed at actors |
+| **UF** | **Entertainment Design Fundamentals** | broadens the frame to themed entertainment |
+
+UF's retitle is not cosmetic - it reflects that **Orlando is one of two global centres of the themed
+entertainment industry** and that Disney Imagineering and Universal Creative are realistic destinations.
+Recorded in the guide as the distinctively Florida career path, alongside the cruise lines and the Orlando
+convention/live-event sector. **Worth reusing for any TPA/THE/TPP guide: Florida is a national centre for
+live entertainment employment, not a regional market.**
+
+**⚠ Contact-hour call: left at 45 despite the C-suffix warning.** UWF, FSU, UF and Seminole State all list
+`TPA2000` **without** the C, so the C is a minority - the same reasoning applied to `CES4702C` (batch 142),
+and the opposite of `COP2830C` (147, set to 60 because the C is dominant there). **The rule is
+whether the C is dominant in the family, not whether the queued id carries it.**
+
+### `ZOO4513C` - C at FGCU, no C at UWF, credits stable
+
+FGCU **`ZOO4513C`** 3 cr, prereq the intro biology majors sequence; UWF **`ZOO4513`** 3 sh, prereq BSC2011/L,
+**co-taught with graduate ZOO5514**. Published **3/60** (the C form, with the observational component as
+integrated contact).
+
+**⚠ Field-work constraints written into the guide, reusable for any Florida biology/ecology course:**
+vertebrate research requires **IACUC** determination (the committee's call, not the student's, even for
+observation); and **Florida wildlife is heavily protected** - manatees and sea turtles under both federal
+and state law, marine mammal approach distances set by NOAA, and anything that alters behaviour may
+constitute harassment in the legal sense. **Projects need lead time for permits and institutional access.**
+
+**Florida study systems named** (genuinely exceptional here): campus *Anolis* lizards - one of the most
+studied behavioural systems in biology; wading bird rookeries; manatee winter aggregations; sea turtle
+nesting beaches; Indian River Lagoon and Sarasota Bay dolphins; **Archbold Biological Station**, home of the
+classic Florida scrub-jay cooperative-breeding work; Mote Marine.
+
+### `ACG3401` - a fourth instance of the ACG numbering problem, plus a new one
+
+Prerequisite intermediate accounting is **ACG3101** at UWF and **ACG3103** at FGCU - adding to ACG3111,
+ACG3141, ACG3151 and ACG4101 already recorded (batch 146). **The ACG prefix now has six numbers for the
+same sequence position across Florida.**
+
+**⚠ And the course itself is dual-numbered:** it appears as **`ACG3401`** at UWF and FGCU but as
+**`ACG4401`/`ACG4401C`** at UCF and FAU, where it is the auditing prerequisite. **Different SCNS numbers for
+the same course** - this makes it one of the more transfer-hostile courses in the accounting sequence, and
+the guide says so.
+
+**FGCU additionally requires `ISM3011`**, which produces a materially more technical section (database
+design, systems development) - another "invisible on a transcript" depth difference.
+
+**Career finding worth reusing:** **IT audit is the most direct and most under-recognised destination** from
+this course - every public accounting firm has the practice, demand exceeds supply, pay runs above general
+audit, and **CISA** (ISACA) is the credential. Students routinely do not know the path exists.
+
+### `THE2300` - a triple general-education designation
+
+**FGCU tags it CRIT (GE Critical Thinking Competency) + GEHM (Humanities) + HEAS (Human Expression and
+Society)**; **UWF** counts it for Humanities **and** its College-Level Communication Skills Requirement. So
+it is an unusually efficient gen-ed choice **and a writing course** - students pick it as a light humanities
+elective and meet a graded writing load. Same pattern as `LAH2020` (batch 140).
+
+**FGCU attribute codes continue to be the single best source of gen-ed designations in Florida** - no other
+catalog publishes them so plainly. Fourth batch running that they have added something.
+
+### Sensitive-content handling: `TPA2248C`
+
+Two items handled explicitly rather than left unstated, per the `Tools/CLAUDE.md` rule:
+
+1. **Skin tone and product range.** Theatrical makeup instruction and standard kit specs were historically
+   built around light skin; performers with darker skin have routinely found course kits did not contain a
+   matching foundation or workable highlight/shadow tones. Current professional practice requires competence
+   across the full range, and the guide tells students to raise it if their kit does not serve them.
+2. **Character makeup vs racial impersonation.** Blackface, yellowface and equivalents are prohibited in
+   professional and educational theatre and are not a legitimate application of the craft. Stated directly.
+
+**Also captured:** the **kit costs $100-$250** on top of any material fee; **students work on their own and
+each other's faces**; **latex and spirit gum allergies** need declaring at the start. And a Florida
+licensure point - **applying makeup on others commercially is regulated by the Florida Board of Cosmetology**
+and this course does not qualify anyone for it.
+
+### Source notes
+
+- **FGCU PDF route** used for `the`, `tpa`, `zoo`, `acg` - all clean.
+- **UWF prefix dumps were again required**: `TPA2000C`, `TPA2248C` and `ZOO4513C` all returned "not found"
+  on targeted lookup because **UWF files all three without the C**. Third batch running that this has been
+  necessary. **Treat a failed UWF targeted lookup as "dump the prefix", never as "not offered".**
+- **`seminolestate.edu/catalog/courses/<id>`** confirmed again (`tpa2000`).
+- **Scoped WebSearch** supplied FSU, UF, USF and FAU credit values for the two TPA courses - the only route
+  to those institutions, and it surfaced the `TPA1248` numbering trap that no catalog fetch would have.
+
+
+---
+
+## Batch 150 findings (2026-09-05) - ATT1100C, BOT2010C, CCJ3024, CCJ4644, CHM4130L
+
+### `CHM4130L` completes the split family started in batch 147
+
+`CHM4130C` (batch 147) documented that **most of Florida splits instrumental analysis**; this batch writes
+the orphan half. UWF **CHM4130L 1 sh**, prereq (CHM3120/L) AND (CHM3400C OR CHM3411), **corequisite
+CHM4130**; FGCU CHM4130L 1 credit. Published **1 / 45** (weekly 3-4 hour session).
+
+**The two guides are now cross-referenced** and between them cover both packagings. **Do the same for any
+other C/L split already in the queue** - the `BOT2010`/`BOT2010L` pair in this same batch is the next
+instance, and `PSY3213`/`PSY3213L` (batch 140) is still outstanding as an orphan.
+
+**⚠ Honest workload finding worth reusing for any 1-credit science lab:** the credit value badly understates
+it. Instrument time is scheduled and finite, a failed run waits a week, and formal reports are substantial.
+**A 1-credit lab routinely consumes more time than the 3-credit lecture it accompanies.**
+
+### WARNING - `ATT1100C` is 5 credits, and the credit range is 3-5
+
+**Gulf Coast State College: `ATT1100C` *Private Pilot Operations*, 5 credits, 4 lecture + 2 lab hours**,
+including **FAA-approved BATD simulator** instruction - that is what the C denotes.
+**FSCJ and NWFSC: `ATT1100` (no C), 3 credits** - classroom only.
+
+Published **5 / 90**. Highest credit value recorded in this repository.
+
+**⚠ The finding that matters most to a student is cost, and it is not the tuition.** The certificate needs
+flight instruction billed separately: aircraft ~$150-220/hr plus instructor ~$50-90/hr, FAA minimum 40 hours
+but **national average 60-75**, so a realistic private certificate runs **$12,000-18,000** on top of
+tuition, before medical, knowledge test (~$175) and examiner fee ($800-1,000). **Financial aid frequently
+does not cover flight fees the way it covers tuition.** The guide says so plainly and points at the
+AOPA/EAA/WAI/OBAP scholarships, which are underapplied.
+
+**⚠ Two structural facts captured that no catalog states:** obtain the **medical certificate before paying
+for training** (conditions and medications can require special issuance or disqualify - discovering that
+after 20 flight hours is an avoidable loss); and the **Restricted ATP** provision reduces the airline
+requirement from 1,500 hours to 1,000 for graduates of an approved four-year aviation degree (1,250 for
+two-year) - **which is the actual reason to complete an aviation degree rather than train independently.**
+
+**⚠ Prefix distinction:** **`ATT` = Aviation Technology: Theory** (ground school, academic); **`ATF` =
+Aviation Technology: Flight** (the flight training that carries the fees). **Enrolling in ATT is not
+enrolling in flight training**, and students assume otherwise.
+
+**Source note: UWF's ATT prefix PDF is an empty shell** - header only, no courses - despite UWF appearing in
+the inventory's institution list. Either the inventory is stale or UWF delivers aviation differently.
+Gulf Coast carried the batch.
+
+### WARNING - `CCJ3024`: the same number is introductory at some institutions and advanced at others
+
+| Institution | Framing |
+|---|---|
+| **UWF** | "**introductory** analysis of the American criminal justice system" |
+| **FAMU** | *Intro Criminal Justice* |
+| **FAU** | comprehensive survey of police, courts, corrections |
+| **UF** | "an **advanced overview** of criminal law, criminal procedure, and criminological theory" |
+
+**This creates a duplication problem specific to transfer students.** A student arriving with the
+lower-division **CCJ1020/CCJ2020** may find CCJ3024 substantially redundant at an introduction-framed
+institution and appropriately pitched at an advanced-framed one. **Some programmes waive it for holders of
+the lower-division course and some do not** - the guide tells students to ask before enrolling.
+
+Same "invisible on a transcript" family as PHY4604 (batch 148), MAA4402 (142), CCJ4700 (145) and COP4020
+(147) - but the first where the divergence is **level rather than content or prerequisite**.
+
+**UWF's writing designation is unusually explicit here:** "additional focus will be on academic writing, APA
+formatting, searching and using scholarly references," plus College-Level Communication Skills. It is a
+gateway that teaches the major's writing conventions alongside content - a sensible design worth noting.
+
+### `CCJ4644` - second stable-title course in a row, and a strong Florida frame
+
+Titles stable (*White Collar Crime* everywhere), 3 credits everywhere. With `CCJ4641` (batch 147) that is
+**two consecutive stable-title courses in the CCJ prefix** - worth recording since instability is the norm
+elsewhere in this repository.
+
+**Florida material captured, reusable across CCJ/ACG/FIN guides:** South Florida as a **national epicentre
+of Medicare fraud** with a standing federal Strike Force presence; **insurance fraud** driven by the PIP
+system, property market and hurricane claims, with a dedicated state investigative division (DFS Division of
+Investigative and Forensic Services); **elder financial exploitation** at a scale the demographics make
+unique; and **Miami's international banking** making laundering a live enforcement problem. Plus the
+**Office of Statewide Prosecution** and **Florida's own RICO Act (Ch. 895, F.S.)**.
+
+**Career finding:** **AML/BSA analyst is the largest private-sector destination and the one students most
+overlook** - every bank, MSB and crypto exchange employs them, **CAMS** is attainable early. Same shape as
+the IT-audit finding for ACG3401 (batch 149).
+
+### `BOT2010C` - another split family, and Florida is genuinely exceptional for the subject
+
+**UF `BOT2010C` 3 cr integrated; UWF `BOT2010` 3 sh + `BOT2010L` corequisite** with material fee, and UWF's
+"meets General Education requirement in Natural Sciences." Published **3 / 60**.
+
+**⚠ The general-education consequence of the split is the practical point:** most institutions require a
+science **with laboratory**, so a split-form student who registers only the lecture does not satisfy it.
+Same register-both-numbers warning as CHM4130/4130L.
+
+**Florida study resource worth adding to the register: the [Atlas of Florida Plants](https://florida.plantatlas.usf.edu)**
+(USF) - free, county-level distribution maps and images for every plant in the state. Best single botany
+resource for a Florida student and useful for any course with a plant identification component.
+
+**Florida framing captured:** one of the most diverse floras in the continental US; distinctive communities
+(pine flatwoods, scrub, hammock, cypress swamp, mangrove, salt marsh, Everglades) usually within a field
+trip; **fire ecology** as a management necessity rather than a curiosity; and **invasive species** -
+Brazilian pepper, melaleuca, Australian pine, cogongrass, hydrilla - as observable examples of introduction
+and consequence. Employer side: UF/IFAS, FDACS and the Florida Forest Service, DEP, the five water
+management districts, **Everglades restoration**, and wetland delineation consulting, where **plant
+identification is a scarce and marketable skill**.
+
+### Source notes
+
+- **Gulf Coast State College** (`gulfcoast.edu/catalog/current/courses/<prefix>/index.html`) carried
+  `ATT1100C` with **explicit lecture/lab hour split** - one of only two sources in the register that
+  publishes hours that way (FSCJ is the other). **Try Gulf Coast and FSCJ first when contact hours matter.**
+- **`catalog.ufl.edu/UGRD/courses/botany/`** confirmed working - add `botany/` to the UF slug list
+  (`economics/`, `classics/`, `finance/`, `microbiology_and_cell_science/`, `civil_and_coastal_engineering/`,
+  `mathematics/`, `public_relations/`, `botany/`).
+- **UWF prefix dumps again required** for `BOT2010C` and `ATT1100C` - fourth consecutive batch. `BOT` was a
+  split-family miss; `ATT` was an empty prefix page. **The rule holds: a failed UWF targeted lookup means
+  dump the prefix, and an empty prefix dump is itself a finding.**
+- **Scoped WebSearch** supplied FSU/FAU/FIU/UF framings for the CCJ pair and the FSCJ/NWFSC 3-credit ATT
+  comparison. Reliable for prerequisite numbers and framings; the batch-145 caution about credit totals from
+  snippets still stands, and was the reason Gulf Coast was fetched directly for ATT1100C.
+
+### ⭐ Orphan-half sweep (run 2026-09-05, after batch 150)
+
+Writing `CHM4130L` prompted a sweep for the same situation elsewhere: **published `C`-suffix guides whose
+split-family partner is still sitting in the queue.** Six were found, and they are unusually cheap to write
+because the paired guide already establishes the subject:
+
+| Published `C` guide | Orphan partner still queued |
+|---|---|
+| `AFR1101C` | `AFR1101L` |
+| `AFR2130C` | `AFR2130L` |
+| `BOT2010C` (batch 150) | `BOT2010L` |
+| `BSC1085C` | `BSC1085L` |
+| `BSC1086C` | `BSC1086L` |
+| `GLY2010C` | `GLY2010L` |
+
+**Worth clearing as a batch.** Each needs the split-versus-integrated framing, the register-both-numbers
+warning, and the honest "a 1-credit lab outruns its credit value" note - all established in `CHM4130L`,
+which is the template. Note `PSY3213L` is a separate case: `PSY3213C` was published in batch 140 but the L
+half is not currently in the queue at all.
+
+**Re-run the sweep after any batch containing a `C`-suffix course:**
+
+```python
+import csv, re
+rows = list(csv.DictReader(open("queue.csv", encoding="utf-8-sig")))
+pushed = {r["course_id"] for r in rows if r["status"] == "pushed"}
+queued = {r["course_id"] for r in rows if r["status"] == "queued"}
+for cid in sorted(pushed):
+    m = re.match(r"^([A-Z]{3}\d{4})C$", cid)
+    if m and (m.group(1) + "L" in queued or m.group(1) in queued):
+        print(cid, "-> partner still queued")
+```
+
+
+---
+
+## Batch 151 findings (2026-09-05) - ORPHAN-HALF SWEEP COMPLETE
+
+All six orphans identified after batch 150 are published: `AFR1101L`, `AFR2130L`, `BOT2010L`, `BSC1085L`,
+`BSC1086L`, `GLY2010L`. **Re-running the sweep returns none - every published `C`-suffix guide now has its
+split partner written or accounted for.** Re-run it after any batch containing a `C` course; the script is
+in the batch-150 section above.
+
+### WARNING WARNING - `BSC1085L`/`BSC1086L`: UWF calls the A&P laboratory "OPTIONAL", and that is a trap
+
+UWF's catalog says **"Optional lab associated with course"** for BSC1085L, and the BSC1086 lecture entry
+says **"Lab optional."** That is genuinely uncommon for a science course and it is the most consequential
+student-facing finding in this batch.
+
+**Essentially every nursing and allied health programme in Florida requires anatomy and physiology WITH
+laboratory.** Prerequisite lists are written that way. A student who reads "optional" and takes the lecture
+alone discovers at application time that the prerequisite does not count - typically after the deadline.
+
+**And it compounds:** UWF requires **BSC1085/L** (the first course *and its laboratory*) as the prerequisite
+for BSC1086L. A student who skipped the "optional" first-term lab is **blocked from the second one** and
+must go back, losing a term. Both guides state this explicitly.
+
+**Also captured:** health programmes commonly impose a **minimum grade** (B or C), **attempt limits**, and a
+**currency requirement** (A&P older than 5-7 years may not be accepted) - the last matters for returning
+students and appears in no course catalog.
+
+**⚠ And the sequence trap:** `BSC1085`/`1086` (1000-level) and `BSC2085`/`2086` (majors level) are
+**different numbers**, and many professional programmes - PA, medical, DPT - require the 2000-level
+sequence. Not interchangeable. This catches students late and is now stated in both guides.
+
+### `AFR1101L`/`AFR2130L` - a course type unlike anything else in this repository
+
+**ROTC Leadership Laboratory.** Two structural facts no catalog conveys:
+
+1. **Credits: UF 1, UWF 0.** UWF's are genuinely **zero-credit** courses - taken because the programme
+   requires them, not because they count toward a degree. Published at 1/30.
+2. **SCNS equivalency is close to meaningless here.** Participation is governed by the **AFROTC detachment**,
+   not the registrar. A transferring cadet must be accepted by the receiving detachment or arrange a
+   **crosstown agreement** (travel to a host campus); placement, Field Training selection, fitness, medical
+   and contracting status all move through the programme, not the transcript. **Transferring in the
+   sophomore year is especially disruptive** - it falls immediately before Field Training selection.
+
+**This is the second course type where SCNS equivalency does not imply transferability**, after `SOW4522`
+field seminar (batch 148). **Expect the same for MSL (Army ROTC) and NSC (Naval ROTC).**
+
+**What the guides capture that catalogs do not:** the academic course is often open to anyone but **LLAB
+generally requires being an enrolled cadet**; uniform, grooming and fitness standards are continuous;
+attendance is a **duty**, tracked through the chain of command; **DoDMERB medical qualification** should be
+started early because disqualifying conditions and waivers take time; and - the point the programme itself
+makes - **the GMC carries NO service obligation for non-scholarship cadets**. The obligation attaches on
+contracting in the junior year, which makes the sophomore year the decision point. Commitment is **~4 years
+active duty**, ~10 years for pilots from completion of training.
+
+**⚠ Numbering divergence: USF uses `AFR2001`** (*Air Force ROTC Leadership Laboratory*) - a single number
+taken repeatedly across terms rather than paired term-by-term with an academic course. Different SCNS
+number and a genuinely different structure.
+
+### Contact-hour confirmation for 1-credit science labs
+
+**Tallahassee State publishes `GLY2010L` as 1 credit / 3 laboratory hours per week** - the first explicit
+per-week figure for a science lab in the register, confirming **45 contact hours** as the right value.
+Pasco-Hernando publishes **30 hours** for `BSC1085L` (2 hrs/week). So the honest range is 30-45; the guides
+say so and the drafts use 45 where a 3-hour session is the documented pattern.
+
+### `GLY2010L` - Florida geology is genuinely hard to teach from a standard textbook
+
+Worth recording because it shapes every Florida geology guide: the state has **no exposed igneous or
+metamorphic bedrock, essentially no relief, no active tectonics and no volcanoes.** The textbook's
+mountain-building, glaciation and volcanism chapters describe things a Florida student cannot go and see,
+and specimen sets are necessarily shipped in.
+
+**What Florida has instead is world-class carbonate and karst geology**: more documented sinkhole activity
+than any state; the **Floridan Aquifer**, one of the most productive on Earth and the reason hydrogeology is
+the dominant geological profession here; **the largest concentration of first-magnitude artesian springs on
+Earth** (Silver, Rainbow, Wakulla, Ichetucknee); barrier islands and 1,350 miles of coast; and leading US
+**phosphate** production with exceptionally fossiliferous marine sediments.
+
+**⚠ Florida licenses professional geologists** (Ch. 492, F.S., Board of Professional Geologists, DBPR) -
+qualifying degree, experience, ASBOG examinations. Add to the licensure register alongside PE, PG-adjacent
+and the health boards.
+
+### AI-integration finding specific to identification courses
+
+`GLY2010L` and `BOT2010L` produced a clean contrast worth reusing:
+
+- **Plant photo-identification genuinely works** (iNaturalist, PlantNet) and is used by working ecologists as
+  a first pass - but degrades badly on **sterile material, close congeners, and grasses/sedges/rushes**,
+  which are exactly what Florida wetland delineation turns on.
+- **Mineral/rock photo-identification does NOT work, and the reason is fundamental**: the diagnostic
+  properties are not visual. Hardness is a scratch test, cleavage is felt, streak needs a plate, specific
+  gravity is heft, carbonates need acid. A photograph carries colour and rough texture - **the two least
+  reliable properties**.
+
+**The generalisable point for any identification course: a determinative key produces a defensible answer
+because it records which characters were observed.** "The app said *Quercus virginiana*" is not a
+professional determination; "leaves alternate, entire, revolute; stellate pubescence beneath; acorn
+solitary" is.
+
+### Source notes
+
+- **`catalog.tsc.fl.edu/preview_course_nopop.php?catoid=..&coid=..` WORKS** - returned GLY2010L in full with
+  the lecture/lab hour split. **This is a correction to the register**, which recorded TSC as "empty" based
+  on `preview_program.php`. **The pattern is: Acalog *course* URLs work at TSC; programme URLs do not.**
+  Same distinction already noted for FSCJ.
+- **`catalog.ufl.edu/UGRD/courses/air_force_science/` 404s** - no working UF slug found for AFR. Scoped
+  WebSearch carried it.
+- **UWF prefix dumps** were the primary source for all six, and again essential: `BOT2010L`, `BSC1085L`,
+  `BSC1086L` and `GLY2010L` are all filed as split halves, and the AFR labs needed the full prefix dump to
+  find the 0-credit values.
+- **New Florida resource added:** the **[Atlas of Florida Plants](https://florida.plantatlas.usf.edu)** (USF)
+  - free, county-level distribution maps and images for every plant in the state. Best single botany
+  resource for a Florida student; cited in both BOT guides.
+
+
+---
+
+## Batch 152 findings (2026-09-05) - MAD4401, MUH3211, PHI3640, PHI3700, PHY4605
+
+### Two sequence partners completed
+
+`PHY4605` completes the quantum sequence begun with `PHY4604` (batch 148); `MUH3211` completes the music
+history sequence begun with `MUH3212` (batch 146). **Both guides cross-reference their partners.**
+
+**⚠ `PHY4605` carries a structural consequence of the batch-148 finding.** Because UWF runs quantum as a
+two-term sequence and FGCU runs a single standalone survey, **PHY4605 does not exist at the single-course
+institutions.** The guide states the implication plainly: perturbation theory, identical particles,
+scattering and the variational method are second-semester topics almost everywhere, **graduate qualifying
+examinations assume them**, and a student from a single-course institution should identify and close the gap.
+
+**⚠ Scheduling finding worth generalising: UWF offers PHY4605 SPRING SEMESTER ONLY.** Single-offering-per-year
+is common for upper-division courses at smaller departments and **missing one costs a year, not a term**.
+Worth checking and stating for any upper-division sequence course.
+
+**⚠ `MUH3211` is the harder half of the music history sequence, and the guide says why:** almost none of the
+repertoire is music students have heard. Chant, Machaut, Josquin, Palestrina and Monteverdi are unfamiliar
+in a way Mozart and Beethoven are not, and the stylistic distinctions are subtler - Palestrina vs Victoria
+is genuinely hard where Mozart vs Wagner is not. **The listening list is the same size and much harder.**
+
+**Period-boundary divergence (same shape as EUH1000/1001, batch 140):** UWF's first half runs to the **end of
+the 17th century**; FGCU's runs **through the Baroque** (~1750). Splitting the sequence across institutions
+can leave a gap around the late Baroque / pre-Classical generation.
+
+### `MAD4401` - both institutions state a PROGRAMMING prerequisite explicitly, which is rare
+
+**UWF: MAS3105 (linear algebra) + "a computer language is required prior to this course."**
+**FGCU: MAC2313 (Calculus III) + one of MAS4730, COP2006 or EGN1041C.**
+
+**Explicit programming prerequisites in a mathematics course are unusual** and reflect that the course cannot
+be done without it. The *mathematics* prerequisite is the divergence - linear algebra vs multivariable
+calculus - and **linear algebra is the more directly relevant**: matrix norms, condition numbers,
+factorisations and iterative solvers are a substantial share of the course.
+
+**Reusable teaching point captured:** the course is genuinely **two subjects at once** - examinations test
+derivation and error analysis (mathematics), assignments test implementation (programming), and both are
+graded. Students strong at one and weak at the other find half the course hard.
+
+**AI-integration finding that generalises to any numerical/computational course:** language models produce
+**numerical code that runs and is subtly wrong**, and the characteristic errors are exactly the course's
+content - Gaussian elimination without pivoting, naive quadratic formula losing significance, unstable
+recurrences, absolute rather than relative convergence tolerance. **None throws an error; they produce a
+number.** The check that catches all of it is the one the course teaches: **verify the observed convergence
+rate against the theoretical one.** A fourth-order method that does not show 16x error reduction under step
+halving is wrong, whoever wrote it.
+
+### `PHI3640` / `PHI3700` - the philosophy pair, and a prefix distinction worth recording
+
+Both UWF versions **meet the College-Level Communication Skills Requirement** (the UWF designation tally
+continues: PSY3213, MAS4301, HSA3111, MUH3211, MUH3212, CCJ3024, CCJ4700, MAD4401, PHI3640, PHI3700).
+
+**⚠ `PHI` vs `REL` is the distinction students get wrong**, and it is now stated in the PHI3700 guide:
+philosophy of religion asks **whether religious claims are true**; religious studies asks **what religions
+are and do**. Different disciplines, different methods, **and they do not substitute in either direction**.
+Same shape as MUL-vs-MUH (batch 146), CLA/CLT-vs-LAT (143) and SOP-vs-SYP (144).
+
+**Handled deliberately in PHI3700** - the course is emotionally loaded in a way most are not, so the guide
+states plainly what it is *not*: not a course about whether God exists, not religious studies, **not
+apologetics in either direction**, and **personal beliefs are not assessed** - grades are for argument
+quality, and a paper defending a conclusion the instructor rejects, argued well, earns a high grade.
+Students on both sides worry about this.
+
+**⚠ Florida content that makes `PHI3640` concrete** and is reusable for any environmental guide: **Everglades
+restoration** as a live case in the "faking nature" / restoration-value debate; **manatee protection vs
+coastal development** and the 2021 seagrass mortality event; **Florida panther recovery vs development**;
+**springs and aquifer depletion** as a distributive justice question; **sea level rise and managed retreat**
+as intergenerational ethics in real time; **lethal control of pythons and lionfish** raising animal-ethics
+questions directly; **phosphate mining and Piney Point**; and **red tide** and nutrient loading.
+
+**AI-integration finding specific to philosophy:** models are trained toward inoffensive balance on contested
+topics, which produces **exactly the studied neutrality a philosophy paper must not have**. A paper
+surveying four positions and concluding the issue is complex is a weak paper however fluent. **The
+discipline requires taking a position and defending it under objection** - currently beyond generation, and
+the thing the course exists to teach.
+
+### Source notes
+
+- **FGCU PDF route** used for `mad` and `muh` - both clean.
+- **`catalog.ufl.edu/UGRD/courses/philosophy/` and `.../physics/` both confirmed working.** Running UF slug
+  list: `economics/`, `classics/`, `finance/`, `microbiology_and_cell_science/`,
+  `civil_and_coastal_engineering/`, `mathematics/`, `public_relations/`, `botany/`, `philosophy/`,
+  `physics/`. Confirmed 404: `finance_insurance_and_real_estate/`, `public_administration/`,
+  `biological_sciences/`, `air_force_science/`.
+- ⚠ **UF's philosophy page does NOT list PHI3640** despite UF appearing in the inventory's institution list
+  for it. Either not currently offered or filed elsewhere. **Treat an inventory institution list as a lead,
+  not a guarantee** - same lesson as UWF's empty ATT prefix (batch 150).
+- **`catalog.usf.edu/preview_course_nopop.php` 404'd on a search-surfaced id** for PHI3640 - the recurring
+  stale-Acalog-id problem (SFC batch 141/149, SCF 149). **A search hit on an Acalog course URL does not mean
+  the id is live.**
+
+
+---
+
+## Batch 153 findings (2026-09-05) - PPE4003, SPM3306, SPM4505, STA4222, TSL4080
+
+### ⚠⚠⚠ TOOLING BUG FOUND AND FIXED: a targeted lookup can match another course's PREREQUISITE line
+
+**This one nearly produced a false one-number-two-subjects finding, and the lesson generalises to every
+catalog extraction done in this project.**
+
+Looking up `STA4222` in UWF's `sta` prefix, the targeted matcher reported UWF's STA 4222 as **"Data in the
+workplace"** - which would have been a textbook split candidate against the statewide title *Sample Survey
+Design*. **It was wrong.** The regex matched the string `STA 4222` inside the prerequisite line of a
+*different* course:
+
+```
+STA 4091   Data in the Workplace
+  Prerequisite: STA 4012 OR STA 4121 OR STA 3162C OR STA 4173 OR STA 4222
+```
+
+The scripts printed 1300 characters starting at the **first** match, so the excerpt was STA 4091's entry.
+UWF's actual STA 4222 is **Sampling Theory** - exactly the statewide subject. **No split.**
+
+**Fixed.** New shared helper `find_entry.py` in the scratchpad, wired into both `uwf.py` and `pdfget.py`:
+
+```python
+def locate(txt, cid, span=1300):
+    # Prefer a match that STARTS A LINE -- the catalog entry itself --
+    # over one buried inside another course's prerequisite list.
+    m = re.match(r"([A-Z]{3})(\d{4}[A-Z]?)", cid)
+    pat = m.group(1) + r"\s*" + m.group(2) + r"\b"
+    hits = list(re.finditer(pat, txt))
+    if not hits: return "none", ""
+    for h in hits:
+        if h.start() == txt.rfind("\n", 0, h.start()) + 1:
+            return "entry", txt[h.start():h.start() + span]
+    return "xref-only", ...   # every hit is a cross-reference
+```
+
+It now reports one of **`entry`** / **`xref-only`** / **`none`** rather than a bare True/False.
+
+**⚠ The `xref-only` verdict is itself a finding**: it means the institution references the number in a
+prerequisite chain but does not have its own entry for it - which usually means a PDF page boundary or a
+genuinely absent course, and needs a prefix dump to settle. **Anything sourced from a targeted lookup
+before this fix (batches up to 152) was excerpted from the first match. Where a batch's finding rests on a
+surprising title, it is worth re-checking with the new locator.** Most lookups will be unaffected, because
+the entry normally precedes any cross-reference in the same file - the failure needs a course whose number
+appears in an *earlier* course's prerequisite line, i.e. a **backward reference in an alphabetically
+ordered file**, which is exactly what STA 4091 -> STA 4222 is.
+
+### ⚠⚠ NEW SOURCE: the UF course-search API - works for ANY course, no department slug needed
+
+**This retires the UF slug-guessing problem entirely.** `catalog.ufl.edu/UGRD/courses/<slug>/` required
+knowing the department slug, 404'd on four of fourteen guesses, and - discovered this batch - **is not even
+complete**: UF's `statistics/` page returned 200 but listed only `STA4241` and `STA6127`, with **no
+STA 4222 despite UF offering it.** A department page returning 200 is not proof a course is absent.
+
+The API answers directly:
+
+```
+POST https://catalog.ufl.edu/course-search/api/?page=fose&route=search
+     {"other":{"srcdb":""},"criteria":[{"field":"keyword","value":"STA 4222"}]}
+  -> {"srcdb":"2026","count":1,"results":[{"key":"8880","code":"STA 4222",
+      "title":"Sample Survey Design","srcdb":"2026"}]}
+```
+
+- ⚠ **The keyword MUST be spaced** (`"STA 4222"`). `"STA4222"` returns `count: 0` - a silent false
+  negative, and the exact shape of error this register exists to prevent.
+- Confirmed working: `STA 4222` -> Sample Survey Design; `SPM 3306` -> Sport Marketing.
+- Confirmed genuinely absent at UF: `SPM 4505`, `PPE4003`, `TSL4080` (count 0 on all three).
+- ⚠ **The companion `route=details` call FAILS**: every payload shape tried returned
+  `{"fatal":"Could not execute database query: no such column: undefined"}`. **So the API gives
+  authoritative TITLE and EXISTENCE but not the description.** That is still a large win - title
+  confirmation is what the one-number-two-subjects check needs, and existence-checking is what the
+  inventory institution lists need.
+- Helper written: `scratchpad/uf.py`, callable as `python uf.py STA4222 SPM3306 ...`.
+
+### Source register updates
+
+- **UNF - refined, still unreachable.** `catalog.unf.edu/...` no longer 404s: it now **301s to
+  `www.unf.edu/catalog/...`**. The undergraduate course index at
+  `www.unf.edu/catalog/courses/?level=ug` returns **200 with 151 KB** - but it is **nav chrome only**;
+  zero course numbers in the HTML, no `fetch(`, no data-url attributes, no JSON endpoint. **Client-side
+  rendered.** The `digitalcommons.unf.edu/course_catalogs/` archived-PDF lead is still the outstanding
+  one and is linked from the catalog home page. **Update the register: the old note (`/coursesaz/` and
+  `/course-descriptions/` 404) is stale.**
+- **FLDOE is bot-blocked.** `fldoe.org/academics/eng-language-learners/` and its consent-decree page both
+  return **403 behind Akamai** (`errors.edgesuite.net` reference). ⚠ **Relevant well beyond this batch** -
+  FLDOE curriculum frameworks are the primary source for every PSAV guide. Re-probe before relying on it.
+- **FGCU PDF route confirmed again** for `ppe`, `sta`, `spm`, `tsl`. ⚠ A near-empty return is meaningful:
+  FGCU's `ppe` PDF is **319 characters** - the prefix holds exactly one course.
+- **`pdfget.py` needed the NFKD fix again** for FGCU's ligatures. Now applied permanently in the script
+  rather than per-call.
+- Probed and dead this batch: `catalog.lssc.edu` (connection failure, code 000), `catalog.fsw.edu` and
+  `catalog.usf.edu` bare `content.php` (**empty 202** - Acalog ids remain non-guessable at both),
+  `catalog.fiu.edu/courses/spm4505/` (404 - **the FIU route needs the numeric id, not the course code**;
+  the 404 page is 448 KB, so size is not a success signal there).
+
+### `PPE4003` - the prerequisite gap is the story, and it is wide
+
+**UWF lists NO prerequisite. FGCU requires PSY2012 + research methods (PSY3213 or PSY3017) + statistics
+(STA2122 or PSY3205)** - the full lower-division methods sequence.
+
+**This changes what the course can be.** Where methods and statistics are enforced, the course can be
+taught as a critical examination of evidence - factor structure, validity coefficients, effect sizes,
+heritability estimates. Where they are not, the same catalog description supports a descriptive tour of
+the theories. **Both are legitimate; they are not the same course**, and a graduate program reading a
+transcript cannot tell which one a student took. Guide states this explicitly and advises taking methods
+first regardless.
+
+**Mental-health-adjacent handling** (per the CLAUDE.md sanity-check list): the course covers trauma,
+defence mechanisms, psychopathology and clinical instruments. Guide states plainly that **studying
+personality theory does not qualify anyone to diagnose - others or themselves**, points to institutional
+counselling and 988, and frames using them as ordinary.
+
+**Reusable content note:** the guide addresses the MBTI/enneagram question head-on, because every student
+arrives having taken one. Framing kept evidential rather than dismissive - dichotomous types do not match
+the observed continuous trait distribution, test-retest reliability is poor over modest intervals,
+incremental validity over the FFM is minimal. **Distinguishing an instrument with a validity literature
+from one with a marketing department is the durable professional skill**, and it generalises to any
+assessment-adjacent course.
+
+### `SPM3306` / `SPM4505` - the sport management pair, and a real cross-numbering trap
+
+Both UWF courses carry a **concurrent prerequisite of SPM3004 with a grade of C or better** and are **open
+only to juniors and seniors**. FGCU gates its whole SPM sequence on SPM3004, which itself requires
+**MAN3025** - so the transfer question is a *chain*, not a course.
+
+**⚠ Cross-numbering finding: FGCU does not offer SPM3306 at all.** Its comparable course is **SPM4304
+Sports Promotion** (market definition, consumer analysis, segmentation, licensing, positioning, pricing,
+promotion, communication, distribution, plus sponsorship, fundraising, sales and PR). FGCU also runs
+**SPM4104** (facility/event) and **SPM3403** (communication and social media) as separate courses covering
+material SPM3306 folds in elsewhere. **SCNS equivalency runs on the number, so SPM4304 does not
+automatically satisfy an SPM3306 requirement** - the guide tells students to request a syllabus-based
+substitution. **FGCU offers no SPM4505 equivalent at all.**
+
+**⚠ SPM4505 prerequisite gap worth flagging generally: UWF requires no accounting course.** The course
+covers financial statements, assets, liabilities and cash flow from the ground up, which is workable - but
+students without ACG2021 hit the statement-analysis section mid-term and struggle. Guide advises taking
+ACG2021 first regardless of enforcement, on the reasoning that **this course teaches you to use financial
+statements and ACG2021 teaches you where the numbers come from.**
+
+**Honesty point the guides make that programs often soften:** entry into sport marketing is **through
+sales**, essentially universally, and performance there gates access to everything else. The guides say so
+and tell students to weight the selling, CRM and pricing components accordingly.
+
+**Florida-specific material assembled for reuse in any sport guide:** nine major professional franchises;
+Daytona International Speedway and the Daytona 500; the F1 Miami Grand Prix; **PGA Tour HQ at Ponte Vedra
+Beach** and The Players; Arnold Palmer Invitational at Bay Hill; the Miami Open; the **Grapefruit League**
+spring training complexes (largely **county tourist-development-tax financed** - the direct link to the
+finance guide); IMG Academy in Bradenton; ESPN Wide World of Sports at Walt Disney World; five D-I
+athletic departments (UF, FSU, Miami, UCF, USF).
+
+**⚠ Genuinely useful primary-source list captured in SPM4505** and reusable for any sport/athletics
+finance question: **EADA** (US Dept of Education - revenue and expense by sport for every institution
+receiving federal aid), NCAA membership financial reports, **SEC EDGAR**, and **municipal bond official
+statements via MSRB EMMA** - the most detailed public documents that exist on stadium deals. Guide warns
+explicitly that **Forbes/Sportico franchise valuations are estimates about private businesses, not audited
+figures.**
+
+### `STA4222` - widest prerequisite spread yet recorded, and it changes the course's depth
+
+**UWF: MAC2311 (Calculus I) OR STA2023 (Elements of Statistics).** That single `OR` admits both a student
+with a calculus sequence and a student whose entire background is one gen-ed course. Other Florida
+institutions gate it on a calculus-based probability sequence (STA4321/STA4322).
+
+**This beats PHY4604 (batch 148) as the widest invisible depth gap found so far.** After STA2023 the course
+must be formula-based; after calculus-based probability it can derive the estimators, prove unbiasedness
+and treat Horvitz-Thompson properly. **Same number, same title, different mathematical course.**
+
+**⚠ Title divergence that is NOT a split:** UWF titles it **Sampling Theory**; UF and the statewide
+inventory say **Sample Survey Design**. Same subject, different centre of gravity (derivation vs survey
+construction). Recorded as drift, not a split - and **the UF API title check is what settled it.**
+
+**⚠ UWF includes ADAPTIVE and FIELD sampling, which is not universal** and is a strong Florida fit -
+adaptive designs are what you use for rare, clustered targets (fish populations, contamination, invasive
+species), which is exactly FWC and NOAA Southeast Fisheries work.
+
+**AI-integration finding, and one of the strongest in the project so far:** this course's core lesson -
+*what is the target population, what is the frame, and what is the difference* - **is the right first
+question about any machine learning model**, since training data is a sample and almost never a
+probability sample. The guide also covers **synthetic respondents / silicon sampling** as the live
+controversy: models reproduce how demographic groups are *written about*, compress within-group variance,
+cannot represent anyone underrepresented in text, and - decisively - **design-based inference is licensed
+by the randomisation, and there is no randomisation**, so the confidence interval has no interpretation.
+
+**The concrete AI check captured** (same shape as MAD4401's convergence-rate check, batch 152): generated
+survey code routinely **ignores the design and computes simple-random-sample standard errors**. It throws
+no error; it produces a too-narrow interval. **Compute the design effect and confirm the software used the
+design** - if a cluster sample's SE is not larger than the SRS SE, the design was ignored.
+
+### `TSL4080` - the ESOL guide, and the messiest course-numbering in the project so far
+
+UWF titles it **ESOL Principles and Practices**; the statewide title is **ESOL Curriculum & Pedagogy**.
+UWF's is the first of a two-course sequence (**TSL4081** requires it) and is **taught concurrently with the
+graduate TSL5085**.
+
+**⚠⚠ Numbering divergence is the worst yet recorded for a single subject.** FGCU **does not use TSL4080
+at all**, dividing the same standards across **TSL3080** (Foundations of ESOL), **TSL3083** (Teaching
+English Learners), **TSL4340** (Methods, Curriculum and Instruction) and **TSL4520** (Second Language
+Acquisition; prereq TSL3080 or EDF3132 or MUE2040). Others use combinations of TSL3080/4080/4081/4140/
+4324/4340/4520, and **some deliver the competencies by INFUSION** across methods, reading and assessment
+courses with no TSL-prefixed course at all.
+
+**⚠ This creates a failure mode worse than an ordinary transfer problem.** The **ESOL endorsement is
+granted against STANDARDS coverage, not course numbers** - so a transfer that looks clean on a transcript
+can still leave a gap in the *endorsement* file, discovered late. Guide's instruction: **take completed
+syllabi to the receiving institution's certification officer, not just the transcript, and ask which ESOL
+standards remain unmet.** Do it early, not in the final term.
+
+**Florida legal framing handled carefully.** Florida's ESOL teacher-preparation requirement traces to a
+**1990 consent decree** on services to English language learners, plus federal obligations under Title VI,
+the EEOA and *Lau v. Nichols*. ⚠ **FLDOE was 403 and could not be fetched**, so the guide states the
+framework at the level supportable from catalog text and settled public record, and **explicitly tells
+students to verify current endorsement requirements with FLDOE and their certification officer** rather
+than relying on the guide. **Both FGCU course descriptions cite the "Florida Teacher Standards for ESOL
+Endorsement (2010)" by name** - that is catalog-sourced and safe to state.
+
+**Terminology finding worth carrying forward:** the field's term has moved **LEP -> ELL -> EL -> ML/MLL**
+(multilingual learner). **UWF's description uses "Multilingual Learners (MLs)"**, the current professional
+preference; older federal and state documents still say LEP. Students meet all of them.
+
+**⚠⚠ The most important AI finding in this batch, and it harms real students:** automated
+**AI-writing detectors disproportionately flag non-native English writers.** The mechanism is direct -
+detectors key on lexical variety and syntactic unpredictability, and second-language writers use a
+narrower range of common constructions, so their own honest writing scores as machine-generated. **A
+teacher acting on a detector score alone will systematically punish exactly the students this course is
+about.** Guide states these are not evidence, and that concerns are addressed through process - drafts,
+conferences, in-class writing, conversation. **This belongs in any guide for a course whose graduates
+will grade student writing.**
+
+**Second AI point specific to ESOL, with a legal edge:** machine translation is good enough for classroom
+convenience and **not good enough for documents where accuracy is a legal obligation** - service plans,
+eligibility and placement notices, consent forms, IEPs. **A machine translation of a legal notice is not
+compliance**, and an app is not a substitute for a qualified interpreter at a meeting where decisions
+about a child are made (neither, as the guide notes, is the child).
+
+**Also captured:** the hardest professional judgement in the course is **language difference vs learning
+disability**, which errs in *both* directions - multilingual learners are both over-referred and
+under-referred to special education. Guide gives the distinguishing data (home-language performance, rate
+of progress against true peers, difficulties appearing across both languages) and stresses it is a team
+decision.
+
+
+---
+
+## Batch 154 findings (2026-09-05) - ACG4682, ARH4450, ARH4710, ASC1210, BOT4503C, BOT4503L
+
+**Ron's standing instruction this batch: work unblocked rows, note the blocked ones, return to them later.**
+Skipped and noted: `CES4605C`, `CWR3201C`, `CWR4202C`, `CEG3011C` (all four **taxonomy-node blocked** -
+see `Deployment/PENDING_SERVER_CHANGES.md`), and `MUN3313`, `MUN3713`, `PEL1341` (**scope calls awaiting
+Ron**, `REVIEW_QUEUE.md` items 15-16). `ASC1610C` deferred this batch for a sourcing reason - see below.
+
+### ⚠⚠⚠ BROWARD HAS RECOVERED - the register was stale
+
+`catalog.broward.edu/course-descriptions/<prefix>/` **returns 200 with full content again.** The register
+recorded it as bot-blocked (empty 202) since 2026-09-04. Confirmed working this batch on `asc` (14,859
+chars extracted) and `att` (46 KB). **This is the second confirmed regression-then-recovery for Broward**,
+so the register note stands: these blocks are temporary and Broward should be **re-probed at the start of
+every session** rather than assumed dead.
+
+**⚠ Broward publishes CONTACT HOURS explicitly**, which almost no Florida catalog does:
+
+```
+ASC1210 AVIATION WEATHER (3.00 Credits)
+Total Contact Hrs: 48.00
+Lecture Hrs: 48.00
+```
+
+That makes Broward disproportionately valuable for the credit/contact-hour sanity check this project runs
+on every guide. **48 hours for a 3-credit lecture is Broward's standard convention** (16 weeks x 3), against
+the 45 this project defaults to (15 weeks x 3). Previously recorded once at line ~1027 for EVR1001;
+**now confirmed as the general Broward pattern, not a one-off.** ASC1210 published at **48**, sourced.
+
+### ⚠ NEW TOOL: `htmlget.py` - HTML catalog fetch + flatten + entry locator
+
+Broward's page defeated a naive search because the HTML embeds **zero-width spaces (`\u200b`)** inside
+course codes, so `ASC 1210` was not findable as a literal string. Wrote `scratchpad/htmlget.py`:
+
+- strips `<script>`/`<style>`, converts block tags to newlines so entries start on their own line,
+- unescapes entities, **removes `\u200b` and `\u00a0`**, NFKD-normalises to ASCII,
+- reuses `find_entry.locate()` from batch 153, so it inherits the **entry vs xref-only** distinction.
+
+Callable as `python htmlget.py <url> ASC1210 ASC1610C`. **This is now the general HTML-catalog counterpart
+to `pdfget.py`**, and it should be the default for Broward, Valencia and any other HTML catalog.
+
+### Source register updates
+
+- **Broward**: ❌ -> ✅ **recovered** (see above). Publishes contact hours.
+- **Pensacola State**: `catalog.pensacolastate.edu` returns 200 but is **nav chrome only**; the real course
+  data sits behind `www.pensacolastate.edu/coursesearch.php`, which returns a **213-byte stub** for every
+  query including `?subject=ASC`. **JS-driven. Dead for fetching.**
+- **Pasco-Hernando (`catalog.phsc.edu`)** and **Miami Dade (`catalog.mdc.edu`)**: connection failure,
+  curl code 000. (MDC program-sheet PDFs at `mdc.edu/academics/programs/ps/<CODE>.pdf` are a separate
+  route and were not re-probed.)
+- **FSCJ**: root `catalog.fscj.edu` is 200 (516 KB) but **prefix paths 404** - `/course-descriptions/asc/`
+  and `/courses/asc/` both. ⚠ Note the 404 page is **466 KB**, so *size is not a success signal at FSCJ*.
+  The `/courses/<numeric-id>` route still needs a search to surface ids.
+- **FIU**: reconfirmed that `catalog.fiu.edu/courses/<course-code>/` **does not work** - it needs the
+  numeric id. Its 404 page is **448 KB**. Same size-is-not-success trap as FSCJ.
+- **FAMU**: `catalog.famu.edu/course-descriptions/acg/` and `/courses/acg/` both 404 (636 bytes). FAMU is
+  Acalog (`preview_entity.php`), ids not guessable.
+- **UWF has NO `asc` prefix** - the PDF 404s outright. ⚠ **UWF is listed in the statewide inventory for
+  both ASC1210 and ASC1610C and does not appear to teach either.** Third instance of the
+  batch-150/152 lesson: **an inventory institution list is a lead, not a guarantee.**
+- **FGCU PDF route** reconfirmed for `acg`, `arh`, `bot`. FGCU has **no ACG4682 and no ARH4450**, but does
+  have ARH4710 and BOT4503C.
+- **UF course-search API** (new in batch 153) used again and worked: confirmed ARH4450 and ARH4710 at UF,
+  and confirmed **ACG4682, BOT4503C and ASC1210 are genuinely absent at UF** (count 0).
+
+### ⚠⚠ `ASC1610C` DEFERRED - a C/no-C question I would not guess at
+
+The queue row is **`ASC1610C` "AIRCRAFT SYSTEMS AND COMPONENTS"** (BC;FSCJ;MDC;NWFSC;PHSC;PSC;UWF).
+**Broward - the only institution I could reach - lists `ASC1610` WITHOUT the C**, titled
+**"Aircraft Engines, Structures, and Systems"**, 3 credits. UWF has no ASC prefix at all. Every other
+listed institution is currently unfetchable (PSC JS-only, PHSC/MDC connection failure, NWFSC 403,
+FSCJ needs ids, BC has the no-C form).
+
+So the open question is whether ASC1610C and ASC1610 are the same course under a suffix disagreement, or
+two different courses - and **there is no second reachable source to settle it.** Left `queued`, no draft
+written. **Retry when PSC, PHSC, MDC or FSCJ becomes reachable**, or via a targeted search for an FSCJ
+numeric id. Logged to `REVIEW_QUEUE.md` as a sourcing block rather than a decision item.
+
+### `BOT4503C` + `BOT4503L` - a split family disposed of in one batch
+
+**Both halves were queued**, so both were written rather than leaving an orphan (the explicit exception in
+`CLAUDE.md` to the priority-rows-only rule). The family:
+
+| Institution | Configuration |
+|---|---|
+| **FGCU** | **BOT 4503C**, 3 credits, integrated lecture+lab |
+| **UWF** | **BOT 4503** (3 cr lecture) + **BOT 4503L** (1 cr lab), co-requisite, **4 credits total**, material fee |
+
+**Contact-hour decision, applying the established rule** (C dominant -> 60; C minority -> 45): the
+inventory lists BOT4503L at 4 institutions (FAU;FIU;FSU;UWF), leaving FGCU/UCF/UNF on the integrated
+form - so **split is the majority and C is the minority.** But unlike CES4702C and TPA2000C, **FGCU's
+BOT4503C is documented as genuinely integrated lecture+lab**, so it was published at **60 hours**, and
+BOT4503L at **45** (1 credit, ~3 hr/week lab). ⚠ **This is a deliberate departure from the C-minority rule**
+on the grounds that the rule is a proxy for "is there really a lab in there?" and here the answer is
+documented rather than inferred. **Worth Ron's eye if the rule should be restated that way.**
+
+**⚠ The transfer trap is stated in both guides, and it runs in both directions**, because SCNS equivalency
+operates on the full number including suffix: 4503C, 4503 and 4503L are three different numbers. Integrated
+-> split leaves a lab requirement unsatisfied on paper and the student **one credit short**; split ->
+integrated is usually cleaner but the arithmetic still differs. Guides tell students to request a
+syllabus-based substitution rather than trust the transcript, and the two guides **cross-link to each
+other**.
+
+**⚠ Prerequisite finding: FGCU requires SECOND-SEMESTER GENERAL CHEMISTRY** (CHM1046C) for BOT4503C, on
+top of the full BSC1010C/BSC1011C majors sequence. UWF requires only BSC2011/L. **The chemistry gate is
+the informative one** - photosynthesis, respiration, membrane transport and hormone signalling are all
+chemistry, and the guide advises taking organic chemistry first where sequencing allows.
+
+**Reusable AI point for any lab course** (extends the MAD4401/STA4222 pattern): a model will cheerfully
+generate a plausible absorbance table or light-response curve. **That is fabrication of scientific data** -
+academic misconduct as a student, research misconduct as a professional. The guide makes the stronger
+argument too: the point of the lab is the encounter with **noisy data that sometimes contradicts the
+textbook**, and generated data has none of those properties. Also flagged the subtler failure - a model
+confidently explaining *why your result was low* when it has no access to what happened at your bench.
+**The notebook is the evidence.**
+
+### `ARH4450` - a genuine PERIOD-COVERAGE divergence, caught by the new UF API
+
+| Institution | Title | Coverage |
+|---|---|---|
+| **UWF** | **Modern Art: 1850-1980** | Realism to 1980 - ~130 years |
+| **UF** | **Early Twentieth Century Art** | a much narrower window |
+| statewide | MODERN ART | - |
+
+**A student taking the UF version may never encounter Realism, Impressionism, Abstract Expressionism, Pop,
+Minimalism or Conceptual art; a student taking the UWF version covers all of it at lower resolution.**
+Assessed as **scope narrowing, not a different subject** - same call as PCB4315 - so **one guide, not a
+split**, with the divergence stated prominently and advice to pair with ARH4470 (Contemporary Art) and a
+19th-century course to close gaps.
+
+⚠ **This is the second time the UF API's title has changed a batch's conclusion** (STA4222 was the first,
+batch 153). **The API is now doing real work on the one-number-two-subjects check** and should be run on
+every UF-listed course as a matter of course.
+
+UWF flag: ARH4450 **meets the College-Level Communication Skills Requirement** (running tally: PSY3213,
+MAS4301, HSA3111, MUH3211, MUH3212, CCJ3024, CCJ4700, MAD4401, PHI3640, PHI3700, ARH4450, ARH4470,
+ARH4563).
+
+### `ARH4710` - unusually CONSISTENT statewide, which is itself worth recording
+
+Every institution examined titles it *History of Photography* and describes the same arc (invention to
+contemporary). **Directly contrasts with its sibling ARH4450 in the same prefix and the same batch** -
+so title/scope stability is course-specific, not prefix-specific, and cannot be assumed from a neighbour.
+FGCU requires **ARH2050 or ARH2051**; UWF requires nothing.
+
+**⚠ Best AI-integration fit in the project so far.** The discipline's central question - what grounds a
+photograph's claim to be evidence - *is* the question generative imagery raises. Guide's framing: the
+indexical guarantee (light physically reflected off a real thing) is gone for generated images, so
+authority **relocates** from the appearance of the image to **provenance, chain of custody, capture-level
+authentication and corroboration**. And the historical material is the right preparation, because it shows
+manipulation is as old as the medium (combination printing, staged war photographs, retouched political
+history). **Reverse image search flagged as a genuinely valuable research tool** in this field.
+
+**Florida research resource worth reusing: `Florida Memory`**, the State Archives' digital photographic
+collection - hundreds of thousands of images covering tourism image-making, Everglades drainage,
+segregation and civil rights, migrant agricultural labour, hurricanes and the space programme. Guide
+recommends it for the research paper because it lets an undergraduate make an **original** argument rather
+than restate the literature on a canonical photographer.
+
+### `ACG4682` - title drift with a real professional distinction behind it
+
+**UWF titles it "Forensic Accounting"; the statewide title is "Fraud Examination."** Not a split - but the
+distinction is genuine and is stated in the guide: **fraud examination** is the narrower, ACFE-defined
+activity of resolving allegations from inception to disposition; **forensic accounting** additionally
+covers litigation support, damages, valuation and expert testimony. A forensic-titled course spends
+syllabus time on litigation that a fraud-titled course spends on scheme detail. **Read the syllabus, not
+the title.**
+
+**⚠ Availability flag, unusual for this project:** ACG4682's adoption is **concentrated in PRIVATE
+institutions** (CFK, EWU, KU=Keiser, RU=Rasmussen). Among Florida publics only **FAMU, TSC and UWF** carry
+it. Guide tells students to check availability early and notes it is often offered once a year. Prereq at
+UWF is **ACG3101**.
+
+**Professional caution captured, and it generalises:** an examination requires **predication** - a
+reasonable basis for believing fraud occurred - and investigating on suspicion alone exposes the examiner
+to defamation, false imprisonment and wrongful-termination claims. And **the examiner reports findings;
+the examiner does not declare guilt.** Students write their first report as an accusation and must learn
+to write it as an account.
+
+**⚠ AI point with teeth:** generative tools have lowered the cost of the **deception layer** most frauds
+depend on - internally consistent fabricated invoices, business email compromise written in fluent
+contextual English (removing the linguistic tells that made it detectable), synthetic audio in social
+engineering against payment approval. **The response is process control, not detection**: out-of-band
+verification of payment instructions, callbacks to independently obtained numbers, dual authorisation for
+vendor bank-detail changes. An old control lesson made urgent again.
+
+### `ASC1210` - the first aviation guide, and the safety point that defines the course
+
+Broward's description is the fullest available: meteorology basics (temperature, pressure, moisture,
+stability, clouds, air masses, fronts, thunderstorms, icing, fog) **plus** analysis and interpretation of
+**National Weather Service maps, reports and forecasts**. The course is genuinely two halves - the physics,
+and a **literacy in coded products** (METAR, TAF, PIREP, SIGMET, AIRMET) acquired by repetition.
+
+**⚠ The reason the course exists, stated plainly in the guide:** continued VFR flight into IMC is one of
+the deadliest general-aviation accident categories and has an exceptionally high fatality rate - and **the
+pilots involved usually had the briefing.** It is a decision failure, not an information failure, and it is
+interrupted on the ground. So the guide gives real weight to **personal minima set in advance and in
+writing** and to pre-deciding what will cause a diversion.
+
+**⚠ Florida-specific gap worth generalising to any Florida aviation guide: STRUCTURAL ICING IS RARE at low
+altitude in the peninsula**, which is itself a hazard - a Florida-trained pilot can accumulate hundreds of
+hours with **zero icing exposure** and meet it for the first time elsewhere. Named explicitly.
+
+Other Florida content: **highest lightning density in the US**; near-daily sea-breeze convection on a
+schedule reliable enough to plan around; six months of hurricane exposure; density altitude degradation on
+hot humid afternoons; and one of the largest flight-training industries anywhere.
+
+**Two AI failure modes named, both operational:**
+1. ⚠ **Datalink weather latency.** ADS-B FIS-B radar mosaics are **not real time** and the displayed
+   timestamp may reflect transmission rather than observation. A cell at 40 kt moves miles in that gap.
+   **Datalink radar is for strategic avoidance, never tactical gap penetration** - pilots have flown into
+   storms the display showed as clear, and a confident-looking AI-enhanced display makes this easier to
+   forget.
+2. **A language model's METAR/TAF summary is not a briefing.** Models decode most groups correctly and
+   then miss a conditional group or reverse a trend. Regulatory weather decisions rest on **official
+   sources** (NWS/FAA products via Flight Service or an approved provider), and decoding raw products is a
+   certificate-level competency - not one to outsource.
+
+Also recorded: **aircraft dispatcher (SOC 53-2022) is an underrated career** in which weather analysis
+*is* the job, the dispatcher shares legal responsibility with the captain for Part 121 release, and
+certification is far faster and cheaper than flight training. ⚠ Articulation caution: **A.S. aviation
+degrees are career-and-technical**, so transfer into a bachelor's programme runs on a specific
+institution-to-institution articulation agreement rather than the A.A. transfer guarantee.
+
+
+---
+
+## Batch 155 findings (2026-09-05) - CIS4361, CNT4403, CJE4610, COP2334C, ECO4401, ECO4704
+
+Blocked rows skipped and noted again per Ron's standing instruction: `CES4605C`, `CWR3201C`, `CWR4202C`,
+`CEG3011C` (taxonomy nodes), `MUN3313`, `MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing block,
+`REVIEW_QUEUE.md` item 18).
+
+### ⚠⚠⚠ `CNT4403` - the widest PREREQUISITE DIVERGENCE recorded in this project
+
+| Institution | Prerequisite |
+|---|---|
+| **UWF** | **(COP3530 Data Structures OR COP3022 Intermediate Programming) AND (CNT4007 Computer Networks OR COP4635 Systems & Networks II)** |
+| **FGCU** | **COP3003** - one programming course |
+
+**Two upper-division courses including an explicit networking requirement, against a single intro
+programming course.** This beats STA4222 (batch 153, MAC2311 *or* STA2023) as the widest gap found, because
+STA4222's divergence was one course deep and this one is two, and because **the networking course is not
+substitutable knowledge** - the material assumes you can read a protocol header and reason about what
+happens at each hop.
+
+Guide's advice: **take a networking course before this one regardless of enforcement.** A student without
+it spends the term learning networking under the pressure of also learning attacks against it.
+
+**Title drift in the same course**: UWF *Computer and Network Security*; FGCU *Network Security*; statewide
+**"Data Security."** ⚠ **The statewide title is genuinely misleading** - it suggests data-at-rest,
+encryption, classification and database security, which is *not* what this course is. A student wanting
+that should look at CIS4368 (Database Security). Recorded as drift, not a split, since all three
+descriptions describe network security defence.
+
+### `CIS4361` / `CNT4403` - a two-course security ladder worth treating as a pair
+
+`CIS4361` (UWF: *Information Technology Security*, statewide *Applied Security*) requires **one programming
+course - COP2253 Java, COP2334 C++ or COP2830 Script**. That deliberately low gate makes it the broad
+foundations course; CNT4403 is the deep technical one. **The two guides cross-link**, and both say take
+CIS4361 first.
+
+⚠ Note the UWF dependency chain this reveals: **COP2334 (batch 155's own COP2334C) is one of the accepted
+prerequisites for CIS4361**, and CNT4403 is in turn prerequisite to **CNT4416 Cyber Operations with
+Defensive AI**. Three of this batch's six courses sit on one ladder.
+
+**Reusable AI content developed for the security pair, and it is not generic:**
+- **Security is adversarial, which breaks the assumption ML rests on** - that future data resembles training
+  data. Attackers observe what is detected and change it. Add the **base-rate problem** (attacks are rare,
+  so even an accurate classifier floods analysts with false positives) and the real bottleneck is **triage,
+  not detection**.
+- ⚠ **The classic phishing advice is obsolete.** "Spot it by the bad grammar" no longer works, so the
+  defensive shift is **away from teaching detection and toward process controls that do not depend on
+  it** - out-of-band verification, callbacks to independently obtained numbers, dual authorisation,
+  phishing-resistant hardware keys. **Same conclusion the ACG4682 fraud guide reached from the other
+  direction** (batch 154), which is a good sign it is right.
+- **AI systems are a new attack surface** belonging in a foundations course: prompt injection, training-data
+  poisoning, model/data extraction. Good exercise: **ask which CIA property each violates.**
+- **Detection engineering trade-off**: hand-written signatures give precision and explainability; models
+  give coverage of unanticipated variants. **Write the Snort/Suricata/Zeek rules by hand first** - knowing
+  what a signature can express is what lets you judge whether a model adds anything.
+
+### `CJE4610` - an explicit DUPLICATE-CREDIT restriction, which is rare and expensive to miss
+
+**UWF states: "Credit may not be received in both CJE 4610 and CCJ 4239."** ⚠ **First explicit
+duplicate-credit prohibition captured in this project.** It is easy to miss and costs three credit hours,
+and it is a particular risk for a transfer student who took a criminal investigation course under a
+different number. Guide tells students to raise it with an advisor rather than assume the numbers sort
+themselves out. **Worth checking for similar restrictions whenever a catalog entry ends with a "credit may
+not be received" clause - it should be treated as extractable data, not boilerplate.**
+
+Sequence note: **UWF's CJE4613 (Homicide) explicitly "reviews and expands on" the same investigative
+theory, evidence, interview and forensic material** in the death-investigation context - a clean next step
+to name in the guide.
+
+**⚠ Three professional corrections the guide states plainly**, all supported by the published record and
+all counterintuitive to students:
+1. **Forensic science is more limited than its reputation** - results take weeks or months, many cases yield
+   no usable physical evidence, and the **NAS 2009** and **PCAST 2016** reports found several accepted
+   comparison disciplines lacked the empirical validation their courtroom presentation implied.
+2. **Confessions can be false**, and identifiable interrogation practices produce them (minimisation, false
+   evidence ploys, length, suspect vulnerability). Hence the professional shift toward information-gathering
+   methods and full recording of custodial interrogations.
+3. **Confirmation bias / tunnel vision is the central cognitive risk of the job** - not a character flaw but
+   how reasoning works under case pressure, with learnable countermeasures.
+
+**⚠ Career-pathway fact worth reusing in every Florida criminal justice guide: the degree does NOT
+certify anyone.** Sworn law enforcement requires **CJSTC-approved basic recruit training plus the State
+Officer Certification Examination**, separate from the degree. Some agencies sponsor recruits; others
+require the academy first at the candidate's expense. **Students routinely assume these are one track.**
+
+Content-sensitivity handling (per the CLAUDE.md checklist): violent crime, death, sexual assault and child
+victimisation with graphic case material. Guide notes advance warning is customary, points to institutional
+counselling and 988, and adds that **cumulative exposure to traumatic material is a documented occupational
+hazard** in investigative work whose culture historically discouraged discussing it.
+
+### `COP2334C` - another C/no-C family, and the clearest AI problem in the whole curriculum
+
+**UWF offers COP2334 WITHOUT the suffix** (*Programming Using C++*, 3 credits, Dept of Computer Science);
+the state colleges use the integrated **COP2334C**. ⚠ **The bare COP2334 is NOT in the inventory or the
+queue**, so unlike BOT4503C/BOT4503L this family needed only the one guide - **no orphan half.**
+
+Contact hours: **published at 60**, consistent with the batch-150 COP2830C decision (C dominant among the
+institutions actually offering the queued number -> integrated hours). The state colleges are the adopters
+here; UWF is the outlier.
+
+**⚠⚠ This is the course where AI presents the sharpest pedagogical problem in the curriculum, and the guide
+addresses it directly rather than generically.** The argument recorded, because it should be reused in
+every intro-programming guide:
+
+- **The tools can do every assignment**, first try, correctly commented. Pretending otherwise is not worth
+  writing.
+- **But the assignment is not the point.** The purpose of writing a loop to sum an array is not the sum -
+  it is the mental model that makes the *next* problem solvable, and that model is built by writing
+  something wrong, seeing it fail, and fixing it. **The student who generates the solution obtains the
+  artefact and skips the construction**, and the loss is invisible until the first closed-book exam, the
+  data structures course, or a whiteboard interview.
+- **Not a moral argument.** Professional developers use these tools constantly - *from a foundation that
+  lets them recognise wrong output*. Building that foundation is what this one course does.
+- **Legitimate uses named**: concept explanation, explaining code you wrote back to you, unlimited practice
+  problems at your level, and hints (not fixes) after a genuine attempt.
+- ⚠ **C++-specific failure**: generated C++ is frequently a **mixture of eras** - 1998-style raw-pointer
+  memory management with modern syntax, allocation without matching release. **It compiles, runs, and
+  leaks**, and a beginner cannot see it because seeing it is what the course teaches. Verify against
+  **cppreference.com** and the **C++ Core Guidelines**, and **turn on compiler warnings and sanitisers.**
+- Structural note: as generated code became universal, **assessment shifted toward proctored, hand-written
+  and oral formats.**
+
+Also captured (reusable for any intro programming guide): the five things that actually predict passing -
+**write code daily in small amounts**; never let a concept go unresolved because the material is strictly
+cumulative; **read the error message** rather than changing things at random; **trace by hand on paper**;
+and get help early and in person. And: **start a public repository from this course** - employers hiring at
+entry level look at code.
+
+### `ECO4401` - a "mathematical" course with NO mathematics prerequisite
+
+**⚠ UWF requires ECO2013 AND ECO2023 - the two principles courses - and lists no mathematics prerequisite
+at all.** Other Florida institutions gate it on calculus (MAC2233 or MAC2311), and some add intermediate
+micro or linear algebra.
+
+**This is the same shape as STA4222 (batch 153) and arguably more surprising**, because the course title
+contains the word "mathematical." UWF's own framing - "basic mathematical tools" applied to "practical
+problems" - is consistent with a course that develops the mathematics as it goes, which is a legitimate
+design. But **the same SCNS number therefore denotes courses of materially different mathematical level.**
+
+**⚠ The consequence the guide states, because students discover it too late:** economics as a research
+discipline is conducted in mathematics, first-year PhD study is essentially a mathematics programme, and
+**admissions committees weight mathematical preparation - real analysis in particular - above economics
+grades.** A student who takes only the minimum mathematics forecloses graduate economics quietly, years
+before it becomes visible. Guide says take calculus and linear algebra regardless of enforcement.
+
+Title drift: **UWF *Introduction to Mathematical Economics*; UF *Mathematical Economics*** (confirmed via
+the UF course-search API). The word "Introduction" is a fair signal of level. Not a split.
+
+**AI point specific to formal economics**: the tools are strong at the *mechanics* - differentiate, set up
+and solve a Lagrangian, invert a matrix - and weak at exactly the discipline. **Modelling** (deciding what
+to represent and what to assume) and **interpretation** (that the multiplier is the shadow price of the
+constraint) are the course's content and the tools' blind spot. They will also **answer a badly posed
+problem confidently rather than say it is badly posed**, which is the most useful thing an economist can
+say. **The check is economic, not algebraic: does the sign make sense?** An upward-sloping demand curve or
+profit maximised where MC exceeds MR is wrong however clean the algebra.
+
+### `ECO4704` - a College-of-Business framing, and the distributional honesty point
+
+UWF titles it **International Trade and Commercial Policy**, prerequisite **(ECO2013 AND ECO2023) OR
+ECO3003**. ⚠ **UWF's description includes "financing and management of business ventures overseas"** -
+applied trade-finance content (letters of credit, Incoterms, documentation, hedging) that a version taught
+in an arts-and-sciences economics department generally omits in favour of theory and empirics. **Placement
+of the economics department predicts course content** - the same lesson as owning-department findings for
+BSC4434, HSA3170, PAD3003 and CAP4770.
+
+**⚠ Field-division warning worth reusing:** international economics splits into **trade** (this course) and
+**international finance / open-economy macro** (ECO4713 or similar). Students take one and assume they
+covered both. **They do not substitute.**
+
+**⚠ The distributional point, handled deliberately.** Comparative advantage establishes **aggregate** gains;
+it does **not** establish that everyone gains. Stolper-Samuelson and the specific-factors model predict
+concentrated losses, and the empirical work on import competition found effects **larger, more
+geographically concentrated and far more persistent** than the standard adjustment story predicted. The
+guide's framing: **none of this overturns comparative advantage - it qualifies the policy conclusion drawn
+from it**, since compensating the losers is a separate political decision that largely was not made. A
+course presenting only the aggregate result teaches a model rather than the world, and **students who have
+heard the political argument and then meet an unqualified defence of liberalisation reasonably conclude the
+discipline is not being straight with them.**
+
+**Florida content assembled and highly reusable:** the state as the principal US gateway to Latin America
+and the Caribbean - **PortMiami**, **Port Everglades**, **Port Tampa Bay**, **JAXPORT**; **Miami
+International Airport** as a dominant air-cargo gateway for Latin American freight; the concentration of
+**Latin American regional headquarters**, trade finance, freight forwarders and customs brokers in Miami;
+and **international tourism as an export in the balance of payments**, a point students find genuinely
+clarifying.
+
+⚠ **Career route worth surfacing in any trade or logistics guide: licensed CUSTOMS BROKER.** A defined
+professional pathway with a CBP-administered licensing examination, well compensated, concentrated in
+Florida, and **largely invisible to undergraduates because nobody tells them it exists.**
+
+**AI point for trade**: the deployed uses are real (risk-based cargo targeting, sanctions and denied-party
+screening, tariff classification, supply-chain forecasting, trade-finance document processing) but **the
+questions that matter in trade policy are causal, not predictive** - what a tariff would do, whether an
+agreement created or diverted trade. A model predicting well from historical data answers none of them,
+because the policy change alters the relationship that generated the data. **This is the Lucas critique in
+a new form.** Also flagged: models are **unreliable on tariff rates, agreement provisions and trade
+volumes** because trade policy moves faster than training data - and the primary sources (WTO, UN Comtrade,
+USITC DataWeb, Census, agreement texts) are free and authoritative, so there is no excuse.
+
+### Source notes
+
+- **UWF PDF route**: clean on `cis`, `cnt`, `cje`, `cop`, `eco`.
+- **FGCU PDF route**: clean on `cnt`. ⚠ FGCU's `cnt` PDF is only **839 characters** - the prefix holds one
+  course. Small returns remain meaningful (cf. FGCU `ppe` at 319 chars, batch 154).
+- **UF course-search API**: confirmed **ECO4401**; confirmed **absent at UF** - ECO4704, CIS4361, CJE4610,
+  COP2334C. Third batch running where the API settled a title question.
+- **Broward (recovered, batch 154) reconfirmed working** on `cop` (57 KB) and `cje` (44 KB) - though neither
+  carried the specific queued course. `htmlget.py` handled both cleanly.
+- **Palm Beach State**: `catalog.palmbeachstate.edu/course-descriptions/cop/` **connection failure (curl
+  000)**. Add to the standing retry list.
+
+
+---
+
+## Batch 156 findings (2026-09-05) - EEX3070, ENL4251, FIN4414, FIN4424, FIN4514, LIT2030
+
+Blocked rows skipped and noted per Ron's standing instruction: `CES4605C`, `CWR3201C`, `CWR4202C`,
+`CEG3011C` (taxonomy), `MUN3313`, `MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing block).
+**`LAE3314` was pulled from this batch as a split candidate** - see immediately below.
+
+### ⚠⚠⚠ `LAE3314` - a NEW one-number-two-subjects candidate, and the first where UWF holds the MINORITY reading
+
+**Statewide title: "CHILDREN'S LITERATURE." UWF's LAE 3314: "Literacy for the Emergent Learner."**
+
+These are not variant wordings of one subject. Children's literature is the study of a **body of
+literature** - genres, history, authors, evaluation and selection, reader response, censorship. UWF's
+course is **early literacy instruction**: development from birth through the primary grades, language
+skills, **phonological awareness, word identification, fluency and comprehension**, theories of early
+literacy development and effective practices for instructing young children. **Different disciplines,
+different methods, and they do not substitute in either direction.**
+
+**⚠ The confirming evidence is inside UWF's own prefix.** The full `lae` dump shows UWF carries
+**LAE 5468 "Literature for Children and Young Adults"** at graduate level - so UWF *does* teach the
+children's-literature subject, **under a different number**. That is strong evidence the divergence is
+real rather than a catalog abbreviation.
+
+**⚠⚠ What makes this case different from every prior split candidate: UWF is the OUTLIER, not the
+majority.** In ISM4320, PUR3000, MAN3802 and the rest, UWF's reading was one of two live readings. Here
+the statewide title says Children's Literature across CC, FAMU, FLAC, FSWSC, KU and SFSC, and UWF is
+alone. **Writing a single guide from the UWF description would publish the minority subject under a number
+most institutions use for something else** - precisely the trap the split rule exists to prevent.
+
+**Action taken: PULLED from the batch, no draft written, added to the CLAUDE.md open-cases table and
+`REVIEW_QUEUE.md`.** Per the documented rule, **a `-SCNS` half must not be written from a title alone** -
+that is inventing content. Sourcing attempted and failed: FGCU has no LAE3314 (1,791-char prefix, clean
+fetch); **Broward's `lae` page 404s** (its first 404 since recovering); `catalog.chipola.edu` connection
+failure; `catalog.southflorida.edu` returns 200/196 KB but has **no per-prefix course-description route**;
+`catalog.fsw.edu` still empty 202. **Needs the SCNS catalog, which Ron has offered to supply.**
+
+### `EEX3070` - a certification requirement, not merely a degree requirement
+
+**UWF states the course is "required for all education majors"** - the pattern across Florida educator
+preparation programmes, because **Florida requires preparation in teaching students with disabilities for
+initial certification.** Same structural shape as the ESOL requirement in TSL4080 (batch 153), and the
+same transfer hazard: **the requirement is satisfied against standards, not course numbers**, so a transfer
+that looks clean on a transcript can leave a certification gap. Guide repeats the instruction to take
+syllabi to the certification officer early.
+
+**Title drift confirmed by the UF API**: UWF *Teaching Students with Exceptionalities in Various
+Environments*; **UF *Teachers and Learners in the Inclusive School***; statewide *Teaching Exceptional
+Students*. Not a split - all cover law, categories, IEP, accommodations, collaboration. ⚠ But note the UF
+title **states the pedagogical commitment** (inclusion) where the others state the population, which is a
+fair signal of how the course is organised.
+
+**⚠ The teaching point the guide leads with, and it generalises:** disability categories are real, legally
+defined and consequential for eligibility - **but the category does not tell you how to teach the
+student.** Two students with the same label may need different instruction; two with different labels may
+need the same adjustment. Teachers who learn only the categories arrive expecting the label to supply the
+answer.
+
+**Second framing captured, for the fairness objection students actually raise:** an accommodation
+**removes a barrier unrelated to what is being assessed.** Extended time for a student whose disability
+affects processing speed makes a mathematics test measure mathematics rather than speed. A teacher who has
+not resolved this objection implements accommodations resentfully or inconsistently.
+
+**⚠ Two hard points stated plainly:** (1) **distinguishing disability from difference errs in BOTH
+directions** - over-identification where the issue is language or interrupted schooling, and
+under-identification where difficulties are attributed to those factors; disproportionality by race,
+ethnicity and language status is documented and persistent. (2) **Implementing an IEP is a legal
+obligation on the general education teacher**, not a courtesy from the ESE department - new teachers
+receive a stack of IEPs, do not read them closely, and discover the significance later.
+
+**⚠ AI point that CONNECTS TO THE TSL4080 FINDING and extends it:** AI-writing detectors produce elevated
+false positives for atypical writing - which includes **students with language-based learning disabilities
+and students using word prediction or speech-to-text as accommodations.** So **a teacher acting on a
+detector score can accuse a student of cheating for using an accommodation they are legally entitled to.**
+Two guides now carry versions of this; it belongs in any guide whose graduates will grade student writing.
+
+Also flagged: **identifiable student data must not be entered into consumer AI tools** (federal education
+records obligations), and **automated simplification that strips content along with difficulty produces
+exactly the reduced-expectations instruction the course argues against.**
+
+### `ENL4251` - repeatable to 12 sh, and why that is NOT a shell
+
+**UWF: "Topics in Victorian Literature," 3 sh, may be repeated for up to 12 sh of credit**, covering the
+period leading to and including Victoria's reign (1837-1901).
+
+⚠ **Assessed against the shell-course skip rule and KEPT.** The number is not in the 9xx shell range, the
+subject is fixed and specific, the period is defined, and it holds a settled place in the English major as
+a **period requirement**. Repeatability here means **the text selection and organising theme rotate**
+between offerings - novel and social reform one term, poetry and the crisis of faith another. **This is a
+third category worth naming: not a shell, not a fixed-content course, but a fixed-SUBJECT course with
+rotating content.** Practical consequences stated in the guide: check the specific offering's reading
+list before registering, and a second enrolment may transfer as elective rather than as a second period
+course.
+
+**Workload finding worth reusing for any period-literature guide:** the binding constraint is **reading
+volume, and it does not compress** - *Middlemarch* is ~800 pages and a triple-decker does not skim. Advice:
+get ahead on the long novels in the first weeks, and read with a pen, because finding a quotation in an
+800-page novel three weeks later costs an hour.
+
+### The FIN sequence - three courses, one ladder, and the heaviest prerequisite chain in the project
+
+| Course | UWF title | Prerequisite |
+|---|---|---|
+| `FIN4414` | **Financial Theory and Practice** | FIN3403 |
+| `FIN4424` | **Problems in Corporate Finance** | **FIN4414 AND GEB3213 AND (ACG3101 OR FIN4461 OR ACG4180)** |
+| `FIN4514` | Security Analysis and Portfolio Management | FIN4504 |
+
+**⚠ FIN4424's three-part gate is the heaviest single prerequisite recorded in this project**, beating
+CNT4403 (batch 155). And **each element maps to something the course does**: finance depth for the
+valuation apparatus, accounting/statement analysis because case work begins with reading statements
+critically, and **GEB3213 business communication because the deliverable is a written recommendation and an
+oral defence.** That last one is the interesting find - **a communication prerequisite on a finance course
+is a statement that the analysis is not the deliverable.**
+
+**⚠ Scheduling consequence students underestimate:** FIN3403 -> FIN4414 -> FIN4424 is a **three-semester
+chain that cannot be compressed**, with the accounting requirement running in parallel behind its own
+chain. **A student adding the finance major in the junior year may not reach this course before
+graduating.**
+
+**Title drift, all confirmed:** UF and statewide say **Financial Management** for FIN4414; UWF says
+**Financial Theory and Practice** - and the UWF title is arguably more accurate, since the course's
+distinctive feature is presenting capital-structure and asset-pricing *theory* alongside what firms
+actually do. Statewide **Problems in Financial Management** vs UWF **Problems in Corporate Finance**:
+⚠ **"Problems" in the SCNS title signals the CASE METHOD, not remediation** - students read it as a
+troubleshooting or remedial course when it is the most advanced course in the sequence.
+
+**⚠ `FIN4514` is TITLE-STABLE STATEWIDE** - unusual in this project, and the guide explains why:
+the subject tracks a well-defined professional body of knowledge that **the CFA curriculum has effectively
+standardised.** Worth generalising: **where a professional credential standardises a syllabus, statewide
+title drift largely disappears.**
+
+**⚠ Minimum-grade gates flagged across the sequence.** Several Florida finance programmes attach a minimum
+grade to FIN3403 before progression (**UF has used a B**), so **a passing D may not advance a student.**
+Same UF pattern recorded in batch ~148 for ECO3101/ECO3203/FIN4504. All three guides say check rather than
+assume.
+
+**⚠ AACSB caution added to all three finance guides:** colleges of business holding AACSB accreditation
+apply their own rules to upper-division business credit, so **confirm with the receiving college of
+business, not the registrar alone.**
+
+**Professional-honesty content in FIN4514 worth reusing:** the evidence that most active managers
+underperform low-cost index funds after fees is strong, yet a large industry sells active management and
+many graduates will work in it. The guide treats this as **a genuine professional tension rather than a
+rhetorical one**, and names the honest resolutions - less efficient market segments, value from planning
+and behaviour coaching rather than selection, fee level as the most reliable predictor of net performance,
+and the **suitability-versus-fiduciary distinction** as a real and consequential difference.
+
+**AI findings across the three finance guides**, each specific rather than generic:
+- **FIN4414**: the tools do the arithmetic; **everything they do badly is what the course teaches** -
+  choosing a project-specific discount rate, deciding which cash flows are incremental, judging whether a
+  distress-cost estimate is credible. "A student who lets the tool do the reasoning is training for a job
+  that is disappearing rather than the one that remains."
+- **FIN4424**: three named failure modes in case work - **assumptions invented rather than derived** (the
+  question "where did this number come from?" ends the discussion), **fabricated figures when the data is
+  in the case**, and **the recommendation that recommends nothing** (generated analysis defaults to
+  balance, which is exactly the weak submission the course trains students out of). **The oral defence is
+  where this resolves itself** - which is why the case method has proved resistant to the shortcut.
+- **FIN4514**: why ML struggles specifically with return prediction - **extremely low signal-to-noise**
+  (sixty years of monthly returns is ~700 observations), **adaptive markets** that arbitrage away a
+  discovered pattern, and **backtest overfitting** as the discipline's characteristic failure. The course's
+  own material on data mining, survivorship bias and multiple testing is exactly the equipment needed to
+  evaluate a quantitative strategy pitch.
+
+### `LIT2030` - the Gordon Rule finding, which applies far beyond this course
+
+**⚠⚠ Broward states it explicitly: LIT2030 is a writing credit course and "students must earn a MINIMUM
+GRADE OF C to meet the requirements of the Gordon Rule for writing."** UWF's version **meets the General
+Education requirement in Humanities AND the College-Level Communication Skills Requirement.**
+
+**The consequence students discover too late: in a Gordon Rule writing course, a D is a PASSING GRADE THAT
+DOES NOT SATISFY THE REQUIREMENT.** The credit posts, the GPA absorbs it, and the writing requirement
+remains unmet - surfacing at a graduation check or after transfer. **This should be checked and stated in
+every general-education writing-designated guide going forward**, and it is a strong candidate for a
+standing note.
+
+**Broward contact hours again 48** (3 credits, all lecture) - third confirmation of the Broward
+sixteen-week convention. Published at 48.
+
+**Course-design finding:** UWF's LIT2030 combines **critical analysis AND original composition** ("writing
+of short analytical papers and creative works"). The pairing is pedagogically deliberate - attempting a
+sonnet teaches more about where the volta falls than reading about it does - and the creative component is
+**assessed on engagement with technique rather than talent.**
+
+**⚠ The obstacle the guide names, because it is the real one:** most students arrive believing **a poem is
+a code with a hidden meaning the instructor knows.** Dismantling that is much of what the first weeks do -
+a poem is an object made of language whose effects can be described, and interpretations are argued from
+textual evidence rather than divined.
+
+**AI point specific to poetry, and unusually productive:** models **write competent verse** - metrically
+correct, cleanly rhymed, on any subject. The guide's response is analytical rather than defensive:
+**read the generated poem closely with the course's own tools and say what is missing.** The answer is
+typically **specificity and risk** - generated verse reaches for the expected image, resolves its tensions
+neatly, and avoids the strange particular detail that makes a poem feel observed rather than assembled.
+**Articulating why it is generic requires everything the course teaches**, and several instructors now
+assign exactly this. Also flagged: **scansion is a known weak point** for these models, and it is a core
+assessable skill tested in class.
+
+### Source notes
+
+- **UWF PDF route** clean on `eex`, `enl`, `lae`, `lit`, `fin`. ⚠ **The `fin` prefix needed two calls** -
+  the first `head`-truncated before FIN4514; not a tooling fault, but worth remembering that a large
+  prefix PDF can bury a later target.
+- **UF course-search API**: confirmed **EEX3070** (*Teachers and Learners in the Inclusive School*) and
+  **FIN4414** (*Financial Management*); confirmed **absent at UF** - LAE3314, ENL4251, LIT2030, FIN4424,
+  FIN4514. **Fourth consecutive batch in which the API settled a title question.**
+- **Broward** (recovered batch 154): `lit` worked and supplied the Gordon Rule and contact-hour data;
+  ⚠ **`lae` 404'd** - Broward's coverage is not universal, and a 404 there means the prefix is not offered
+  rather than that the site is down.
+- **FGCU PDF route** clean on `lae` (1,791 chars, no LAE3314).
+- New dead ends this batch: `catalog.chipola.edu` (curl 000), `catalog.southflorida.edu` (200 but no
+  per-prefix course route - a **landing-page-only** catalog, same shape as UNF).
+
+
+---
+
+## Batch 157 findings (2026-09-05) - MAA4211, MUG3104, MUT3611, PHH3100, PHI2103, PHP3786
+
+Blocked rows skipped and noted: `CES4605C`, `CWR3201C`, `CWR4202C`, `CEG3011C` (taxonomy), `MUN3313`,
+`MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate, item 20).
+
+### ⚠⚠⚠ FIRST 2-CREDIT GUIDES IN THE PROJECT - and the credit value was confirmed, not assumed
+
+**`MUG3104` and `MUT3611` are both 2 semester hours, published at 2 credits / 30 contact hours.**
+
+| Course | UWF | FGCU | statewide title |
+|---|---|---|---|
+| `MUG3104` | **Conducting 1**, 2 sh | **Introduction to Conducting**, 2 credits | Basic Conducting |
+| `MUT3611` | **Musical Structure and Style**, 2 sh | **Form and Analysis**, 2 credits | Form and Analysis |
+
+**Two independent sources agreeing on 2 credits is what made this safe to publish.** Had only UWF been
+available it would have looked like a local quirk. **The general rule this establishes: when a credit value
+departs from the 3-credit default, confirm it at a second institution before publishing** - and record the
+confirmation, because the sanity-check list in `CLAUDE.md` flags anything outside the standard bands.
+
+**⚠ 2- and 1-credit values are NORMAL for applied and skills-based music courses**, which has three
+consequences the guides state: degree-total arithmetic when planning a graduation term; **financial-aid
+full-time-status thresholds** for students near the line; and **workload that is not proportional to
+credit** - podium practice, score preparation and video review all happen outside the scheduled meeting.
+Music majors accumulate many low-credit enrolments, so a music transcript has more courses than another
+major's for the same credit total. **Expect more 1- and 2-credit music rows in the queue.**
+
+Validator accepted 2 cr / 30 hrs with **no warning**, so the existing bands already tolerate it.
+
+### ⚠⚠ `MAA4211` - the statewide title actively misleads, and UF's title is the honest one
+
+**Statewide and UWF: "Advanced Calculus I." UF: "Real Analysis and Advanced Calculus 1."**
+
+**This is not drift - it is a title that causes real harm.** "Advanced Calculus" reads as more calculus:
+harder integrals, further techniques. **The course is real analysis** - the rigorous reconstruction of
+single-variable calculus from the completeness axiom, assessed almost entirely by proof, containing
+essentially no new computational technique. UWF's own description gives it away ("theory of functions of a
+real variable... rigorous discussion of limits... point set topology on the real line") but the title is
+what students register from.
+
+**Historical cause recorded:** "advanced calculus" was the traditional American title for this course and
+persisted in catalogues after the content became fully rigorous. **The guide leads with this correction.**
+
+**⚠ Prerequisite finding: UWF requires MAC2313 AND MHF3202** - and MHF3202 (sets and logic) is the
+substantive one. **Do not attempt real analysis without a proof course first**; the computation-to-proof
+transition is the documented hard point of the mathematics major, and doing it simultaneously with the
+analytical content is how students fail. **⚠ UF has attached a MINIMUM GRADE OF B to MHF3202** - the
+third UF minimum-grade gate recorded (with FIN3403 and the ECO sequence). **UF's use of minimum-grade
+prerequisites is now a documented pattern, not an isolated case.**
+
+**Honest-difficulty content the guide states, which generalises to any proof-transition course:** a calculus
+problem set of twenty exercises might take three hours; **a real analysis set of six proofs can take
+twelve, much of it staring at a problem making no visible progress.** That is the normal experience of the
+subject, not evidence of incapacity - and **students who read the struggle as a verdict drop a course they
+would have passed.**
+
+**Reusable AI finding, and unusually sharp:** models produce proofs that **read correctly** - right
+vocabulary, conventional structure, conclusion following hypothesis - **containing steps that are
+unjustified, circular, or assume what was to be proved.** The named characteristic errors: choosing delta
+in terms of a point-dependent quantity when uniformity was required; interchanging limits without
+justification; applying a theorem whose hypotheses fail; **treating a supremum as a maximum**; asserting
+convergence from terms getting close without invoking completeness. **A student who cannot yet tell a
+correct proof from a fluent one is exactly the student the course exists to create** - and the timed
+examination is where the gap surfaces. Also noted: **proof assistants (Lean) VERIFY rather than generate**
+and will not accept an unjustified step - a genuinely different activity worth pointing students toward.
+
+### `MUG3104` - a CO-REQUISITE that blocks registration
+
+**UWF: prerequisite MUT2117, CO-REQUISITE MUE4411** (a music education course). ⚠ **First co-requisite
+recorded in this project that gates enrolment rather than merely sequencing it.** It means UWF's Conducting
+1 is scheduled inside a music-education block, and a student outside that programme, or one who has not
+reached MUE4411, **may not be able to register at all.** Guide says verify co-requisite availability when
+planning, because **a co-requisite failure blocks registration rather than complicating it.**
+
+**Teaching content worth reusing:** conducting is **mostly preparation** - the gesture is the visible part,
+the work is score study, and a conductor who has not internalised the score is reading rather than
+listening. And the three universal beginner difficulties, all normal and all improvable: hands that do not
+do what you intend, **left and right wanting to mirror when they must be independent**, and discomfort
+watching yourself on video. **Video review is named as the single highest-return practice** - the gap
+between intended and actual gesture is invisible from the inside.
+
+**AI point:** conducting is among the least automatable activities in the curriculum, and the guide says
+why rather than asserting it - a physical skill exercised in real time whose value is communication with an
+ensemble. Two specific cautions: **synthesised playback misleads** (notation software renders mechanical
+balance and uniform articulation, eliminating by construction exactly the balance, blend, intonation and
+articulation problems a conductor must anticipate), and **motion-tracking feedback is a mirror with a
+memory, not an assessment** - it can flag an inconsistent ictus, it cannot judge whether the gesture
+communicated the music.
+
+### `MUT3611` - title drift that signals a real difference in organisation
+
+**UWF *Musical Structure and Style*** (systematic analysis of 17th-20th century music, **emphasis on
+structural designs AND stylistic trends**) vs **FGCU *Form and Analysis*** (small song forms, variation,
+rondo, sonata, **with emphasis on score reading and aural analysis**) vs **UF *Form and Analysis 1***.
+
+**Same course, but the titles predict the organising principle**: a "Form and Analysis" course works
+through formal types systematically; a "Musical Structure and Style" course covers the same forms
+organised **historically across four centuries** with more weight on stylistic development. Neither is more
+rigorous. ⚠ **UF's "1" indicates a sequence** - institutions differ on whether this material occupies one
+course or two, and the two-course version reaches further into post-tonal analysis.
+
+⚠ **FGCU's explicit mention of AURAL analysis is worth flagging** - hearing a structure is a distinct and
+harder skill than seeing it, and courses vary in how much they demand it.
+
+**Music-transfer caution added to both music guides:** institutions accredited by **NASM** apply their own
+curricular requirements, and music departments **routinely require a theory placement examination of
+transfer students regardless of transcript credit.** Meet the department, not just the registrar.
+
+**Analytical teaching point captured:** **identifying a movement as sonata form is the beginning of an
+analysis, not the result of one.** The questions that follow are the analysis - where exactly does the
+transition begin and what makes that the boundary; why this key rather than the expected one; what happens
+in the recapitulation that did not happen in the exposition. **The passages that resist the model are the
+interesting ones**, and students who treat an anomaly as an error in their analysis rather than as the
+finding miss the exercise.
+
+### `PHH3100` - a scope-narrowing title, and the PHH/PHI/PHP prefix grid
+
+**Statewide "Ancient Philosophy"; UF "Ancient Greek Philosophy."** In practice the same course - the
+surviving corpus is overwhelmingly Greek and the Roman Stoics appear as Stoic sources rather than as a
+Roman tradition. **The difference is in what the title promises**: "Ancient Philosophy" could admit ancient
+Indian, Chinese or Near Eastern thought, and almost no version does. Guide states this as **a real
+limitation of the standard curriculum, increasingly acknowledged in the field**, and tells students wanting
+non-Western material to find a course that offers it explicitly.
+
+**The genuine variation is where the course STOPS** - some end at Aristotle, some carry through the
+Hellenistic schools, some continue to Neoplatonism. UWF's explicitly includes Hellenistic, Epicurean and
+Stoic material, which is the more useful arrangement.
+
+**⚠ SCNS philosophy prefix grid, now documented across four batches:**
+- **PHI** = general philosophy (PHI2103 Critical Thinking, PHI3640 Environmental Ethics, PHI3700 Philosophy
+  of Religion)
+- **PHH** = history of philosophy (PHH3100 Ancient, **PHH3400 Modern** - Renaissance through 18th century,
+  Descartes/Locke/Berkeley/Hume/Spinoza/Leibniz/Kant)
+- **PHP** = philosophical schools and movements (PHP3786 Existentialism)
+- **PHM** = social and political philosophy
+- **REL** = religious studies, a **different discipline** (batch 152)
+
+**A student searching for movement-based courses should look under PHP** - and this grid is worth stating
+in future philosophy guides.
+
+**Stoicism-revival handling worth reusing:** many students arrive having met Stoicism as maxims about
+emotional control. The guide complicates it productively: **ancient Stoicism is a complete system whose
+ethics depends on a providentially ordered physics**, and its claim that virtue is the only good entails
+that health, wealth and the lives of one's children are genuinely indifferent to happiness. **The popular
+version keeps the psychological techniques and discards the metaphysics that motivated them.** Not a reason
+to dismiss the revival - but knowing what was dropped is exactly the payoff of reading the primary texts.
+
+### `PHI2103` - a triple general-education designation, and the honest limits of the subject
+
+**⚠ FGCU carries THREE attributes on this one course: GE Critical Thinking Competency + General Education
+Humanities + Human Expression and Society.** **One course satisfying both a competency and a distribution
+requirement is efficient degree planning** and is worth surfacing to students. UWF's meets a General
+Education requirement and states the course is *appropriate for and applicable to any major*.
+
+**⚠ PHI2103 vs PHI2100 distinction recorded**, because students confuse adjacent numbers: **PHI2103
+Critical Thinking** is practical reasoning on real arguments (informal fallacies, evidence, source
+credibility, cognitive bias); **PHI2100 Introduction to Logic** is the formal symbolic course. **Neither
+substitutes for the other**, and the choice should follow purpose - critical thinking for general
+education and general reasoning, logic for philosophy/mathematics/CS and as formal foundation.
+
+**⚠⚠ Two honest cautions the guide states, and both are unusual for a course to admit about itself:**
+1. **Fallacy labels are a tool, not a trump card.** Students finish able to name fallacies and acquire the
+   reflex of ending disagreements by naming one. **Several standard fallacies have perfectly legitimate
+   versions** - appeal to authority is fine when the authority is appropriate; a slippery slope is valid
+   when the causal chain is real. **Naming a fallacy is the beginning of an objection, not the objection.**
+2. **These skills are applied selectively, and training does not fix it.** People scrutinise arguments for
+   conclusions they dislike far more rigorously, and reasoning training can make people **better at
+   constructing sophisticated defences of what they already believe.** The realistic countermeasure is a
+   habit, not a technique: **apply the analysis to your own position first, and ask what evidence would
+   change your mind - if the answer is nothing, you are not holding the position on evidential grounds.**
+
+**⚠⚠ The AI argument in this guide is the strongest general statement of the theme in the project so far,
+and should be reused:** the cost of producing fluent, confident, well-structured text has collapsed.
+Fluency was never evidence of truth, but it functioned as a **heuristic** - a coherent, well-sourced-looking
+argument was more likely to be the product of someone who had done the work. **That heuristic no longer
+holds.** What still works is exactly what this course teaches: check whether premises support the
+conclusion, verify the source exists and says what is claimed, ask what would count as evidence against.
+
+Two named failure modes: **fabricated support** (studies that do not exist, statistics with no source,
+quotations never uttered, real journals cited for articles never published), and **framing mirroring** -
+ask for evidence a claim is true and you get it; ask for evidence it is false and you get that instead.
+**That is confirmation bias with a machine attached**, and a student who does not notice will reinforce
+what they already believed while feeling they researched it. **Best assignment recorded: have a model
+generate an argument on a contested question, then apply the full apparatus to it** - fluent enough to be
+worth analysing, flawed reliably enough to reward it, and it demonstrates the course's central lesson that
+**persuasiveness and soundness are different properties.**
+
+### `PHP3786` - the movement whose own vocabulary applies to the technology
+
+FGCU requires **ENC1101 AND ENC1102** - the full composition sequence, an accurate signal of a
+writing-intensive course. UWF's reading list is notably demanding and German-weighted: **Hegel,
+Kierkegaard, Nietzsche, Jaspers, Sartre, Heidegger, Merleau-Ponty** - Jaspers and Merleau-Ponty are omitted
+by many courses. ⚠ **The reading list is the real variation**: a section centred on Heidegger's *Being and
+Time* is substantially harder than one centred on Sartre's popular lecture and Camus's essays. Both are
+legitimate; check which you are getting.
+
+**Terminological caution recorded:** "existentialism" is a **retrospective label** applied to thinkers who
+mostly did not use it and who disagreed profoundly - Kierkegaard a Christian, Nietzsche announcing the
+death of God, Heidegger rejecting the label outright. **What unites them is a starting point, not a
+doctrine.**
+
+**⚠ Content and wellbeing note - this is the most substantive one in the project so far.** The course
+engages sustainedly with **death, meaninglessness, despair, anxiety and suicide**: Camus opens by declaring
+suicide the only serious philosophical problem; Heidegger's authenticity runs through being-toward-death;
+Kierkegaard's *Sickness Unto Death* is a taxonomy of despair. **It is difficult precisely because it is
+engaging rather than dry.** Two things stated: **Camus's argument is an argument AGAINST suicide**, and
+students meeting fragments out of context frequently take the opposite impression; and institutional
+counselling plus **988** are named as ordinary resources.
+
+**Four popular misreadings corrected, and the corrections are more interesting than the slogans:**
+"existence precedes essence" is **not a licence** but total responsibility, which Sartre calls anguish;
+"God is dead" is **a diagnosis of catastrophe**, spoken by a madman nobody understands; "hell is other
+people" concerns **the look** fixing you as an object, not that people are unpleasant; the absurd is **the
+specific relation** between human demand for meaning and the world's silence, with revolt rather than
+resignation as the conclusion.
+
+**⚠ AI content that is genuinely novel:** existentialist writing is **quotable**, so the training data is
+saturated with decontextualised quotation and popular misreading - and models **reproduce the slogan
+version of every position above.** They also **fabricate quotations in these authors' voices with
+particular fluency**, because the styles are distinctive and imitable. **A fabricated Nietzsche aphorism
+sounds exactly like Nietzsche.**
+
+And the sharpest framing found so far for the balance problem: models are trained toward balanced treatment
+of contested questions, producing the surveyed non-committal essay. **In existentialism the mismatch is
+acute, because the tradition's central claim is that a life is constituted by choices that cannot be
+evaded - so a fluent refusal to commit is, in the course's own vocabulary, an unusually neat instance of
+BAD FAITH.** Guide proposes three paper topics using the course's apparatus on the technology: whether a
+system producing text about freedom has anything Sartre would recognise as freedom (consciousness as the
+capacity to negate); whether Dasein as the entity for whom its own being is an issue requires mortality;
+and whether outsourcing life-constituting decisions to a system producing the statistically expected answer
+is a technological form of **das Man**.
+
+### Source notes
+
+- **UWF PDF route** clean on `maa`, `mug`, `mut`, `phh`, `php`, `phi`.
+- **FGCU PDF route** clean on `mug` (663 chars), `mut` (3,950), `phi` (6,886), `php` (790). ⚠ **Small
+  prefix returns continue to be meaningful** - FGCU `mug` at 663 chars holds two courses, and that is the
+  answer rather than a failed fetch.
+- **UF course-search API**: confirmed **MAA4211** (*Real Analysis and Advanced Calculus 1* - the batch's
+  most consequential finding), **MUT3611** (*Form and Analysis 1*), **PHH3100** (*Ancient Greek
+  Philosophy*), **PHP3786** (*Existentialism*); confirmed absent at UF - PHI2103, MUG3104. **Fifth
+  consecutive batch in which the API changed or settled a conclusion.**
+- ⚠ **Tooling note:** an early attempt piped `pdfget.py` output through `grep -A9 -E "-> entry"` and the
+  shell parsed the `->` as an option. Use `grep -E "^OK|entry$|none$|^[A-Z]{3} [0-9]{4}"` instead when
+  filtering these dumps.
+
+
+---
+
+## Batch 158 findings (2026-09-05) - ACG3111, POS3413, PSY4302C, PUR4800C, SPC3301, SPM4723
+
+Blocked rows skipped and noted per the standing instruction: `CES4605C`, `CWR3201C`, `CWR4202C`,
+`CEG3011C` (taxonomy), `MUN3313`, `MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314`
+(split candidate, item 20).
+
+### ⚠⚠⚠ `ACG3111` - TWO PARALLEL INTERMEDIATE ACCOUNTING NUMBER FAMILIES IN FLORIDA
+
+**The single most consequential articulation finding of the session.** Florida institutions number the
+intermediate accounting sequence two incompatible ways, and one family has three courses where the other
+has two:
+
+| Family | Sequence | Institutions |
+|---|---|---|
+| **3101 / 3111** | ACG3101 (Intermediate I) -> **ACG3111 (Intermediate II)** | UWF, FSU, FAMU, Chipola, Santa Fe, St. Thomas |
+| **3103 / 3113 / 4123** | ACG3103 (I) -> ACG3113 (II) -> **ACG4123 (III)** | FGCU, UNF, USF, MDC, EFSC |
+
+Sourced directly: **UWF's ACG list** shows 3101 -> 3111; **FGCU's ACG list** shows 3103 -> 3113 -> 4123
+("Intermediate Fin. Acctg. I / II / III").
+
+**⚠ Because the same body of material is divided into two courses in one family and three in the other,
+the content boundary between "first" and "second" course is NOT in the same place.** SCNS equivalency
+operates on the number, so **ACG3111 and ACG3113 are different numbers** and do not automatically satisfy
+each other - despite both being "intermediate accounting II". A student moving two-course -> three-course
+may find topics uncovered; the reverse may find them duplicated.
+
+**⚠ Compounding title trap: the statewide inventory records ACG3111 as "FINANCIAL ACCOUNTING & REPORTING
+I" while UWF titles it "Intermediate Financial Accounting II".** Institutions use different naming
+conventions and **the numeral counts within their own convention**. A student reading "…Reporting I"
+reasonably concludes this is the FIRST course of the sequence. It is not - at UWF it explicitly continues
+ACG3101. **Rule captured: read the prerequisite, not the numeral.**
+
+**Repository state that made this findable:** `ACG3101` and `ACG3113` are **already pushed**, so the guide
+cross-links all three. **Worth doing deliberately for any split-family subject** - the three guides read
+together are the clearest available account of the divergence.
+
+**⚠ UWF's prerequisite chain is the heaviest in accounting: ACG3101 AND FIN3403 AND TAX4001.** Requiring
+intermediate I is universal; **requiring corporate finance AND federal taxation before intermediate II is
+not**, and it is defensible - the bond/lease/pension material is present-value work, and the deferred tax
+unit is genuinely hard without knowing how tax law creates book-tax differences. **Scheduling consequence:
+three prerequisites, and TAX4001 has its own chain behind it.**
+
+Reusable teaching content: the **three hardest topics in undergraduate accounting all sit in this course -
+deferred taxes, pensions and leases** - and they are hard for one shared reason: **the accounting is
+representing an economic arrangement whose timing does not match its legal form**, so the standard imposes
+a model that must be learned rather than derived. Also flagged: **lease accounting and revenue recognition
+were substantially revised in recent standards**, so older study materials actively mislead, and **the
+codification is the authority when a source disagrees with the textbook.**
+
+### ⚠⚠⚠ `PUR4800C` - THREE numbers for one capstone, and one of them means something else
+
+**The messiest numbering situation recorded in this project.**
+
+| Number | Where | Title |
+|---|---|---|
+| **PUR4800C** | statewide / queued | Public Relations Campaigns |
+| **PUR4800** | FGCU | PR Campaigns/Capstone, 3 credits |
+| **PUR4801** | **UWF** | **Public Relations Campaigns** - the campaigns capstone |
+| **PUR4801** | statewide inventory | **Public Relations CASES** - a different subject |
+
+**Read the last two rows together: UWF uses PUR4801 for its campaigns capstone, while statewide PUR4801 is
+recorded as "Public Relations Cases."** So the same number carries the capstone at one institution and case
+study at others - and **PUR4801 is separately queued** (FAMU;UCF;UNF;USF;UWF), meaning the project will hit
+this collision again from the other side.
+
+⚠ **No reachable institution actually uses the `C` form** - FGCU uses PUR4800, UWF uses PUR4801. Published
+at **45 contact hours with the expected non-blocking C-suffix warning**, consistent with the CES4702C /
+TPA2000C precedent: **no documented lab -> fall back to institution count -> C not dominant -> 45.** This
+is a clean test case for the rule restatement proposed in `REVIEW_QUEUE.md` item 19.
+
+**Guide's practical advice: the PLAN BOOK is the evidence.** A completed campaign plan book with research,
+objectives, tactics, budget and evaluation demonstrates what the course was more convincingly than a
+transcript line, and departments evaluating a substitution will look at it.
+
+**⚠ Note the PUR prefix now carries TWO open divergence cases** - `PUR3000` (item 14, Principles of PR vs
+UWF's Introduction to Public Affairs) and this numbering tangle. **Treat PUR numbering as requiring
+verification generally rather than assuming statewide consistency.**
+
+### `PSY4302C` - the SECOND duplicate-credit restriction, confirming the pattern
+
+**UWF: "Credit may not be received in both PSY 4302 and PSY 4383."** This is the **second** such clause
+captured (after `CJE4610` / `CCJ4239`, batch 155), which confirms the batch-155 recommendation:
+**a catalog entry ending in a "credit may not be received" clause is extractable data, not boilerplate**,
+and should be searched for routinely.
+
+**Suffix variation:** queued number is **PSY4302C** (integrated, with supervised administration and
+scoring); **UWF offers PSY4302 without the C**, 3 sh, titled **"Psychology of Assessment."** PSY4302 is
+**not in the inventory at all**, so the C form is the only inventoried row -> **C dominant -> published at
+60 contact hours.** Guide advises students heading to school or clinical psychology to **get the laboratory
+version**, since graduate programmes value demonstrated administration experience.
+
+⚠ **STA2023 is only RECOMMENDED at UWF, not required** - for a course that is applied psychometrics.
+Guide says treat the recommendation as a requirement: **without statistics a student can pass by memorising
+procedures but cannot develop the judgement the course exists to build**, which is reading a test manual's
+reliability and validity evidence and deciding whether the instrument supports the interpretation.
+
+**⚠⚠ The AI section here is the strongest measurement-literacy argument in the project.** Commercial systems
+claiming to infer depression, personality, honesty or employability from speech, video, keystrokes or
+social text **are psychological tests, whatever vendors call them, and the *Standards for Educational and
+Psychological Testing* apply in full.** The five questions a graduate of this course can ask - **criterion,
+validity coefficient and sample, differential prediction across groups, reliability, and base rate** - are
+the ones vendors are least willing to answer. **The base-rate point is where the harm concentrates**: a
+screener with excellent sensitivity and specificity, applied to a low-prevalence condition, produces mostly
+false positives. That is arithmetic and it is unavoidable.
+
+Two professional habits flagged to form as a student: **client data and protocol content never go into
+consumer AI tools**, and **test items are secure materials** whose disclosure damages validity for everyone.
+
+### `SPM4723` - completes the UWF sport management prerequisite pattern
+
+**Third SPM course in the project, and the gate is identical across all three**: `SPM3306` (batch 153),
+`SPM4505` (batch 153) and now `SPM4723` all require **SPM3004 as a CONCURRENT prerequisite with a minimum
+grade of C, open only to juniors and seniors.** **A consistent departmental pattern is worth recording as
+such** - it means a student can plan the whole upper-division SPM block around one gate.
+
+Title drift: statewide **Sport Law**; UWF **Sport Law and Risk Management**; **UF "Legal Issues in Sport"**
+(confirmed via the API). ⚠ **The UWF title flags a real emphasis difference** - a version titled "and Risk
+Management" devotes real time to the applied plan and usually requires students to produce one, which is a
+portfolio artefact and a job responsibility. **FGCU does not offer SPM4723 at all.**
+
+**⚠ Two Florida-specific liability exposures worth reusing in any Florida sport/recreation guide:**
+**lightning** - Florida leads the nation in lightning density, making weather protocols a serious and
+litigated exposure at outdoor facilities - and **heat illness prevention** in a climate supporting
+year-round outdoor activity, a recurring source of catastrophic injury claims in youth and school sport.
+Also: **Florida's sovereign immunity framework with statutory damages caps materially changes the liability
+calculus for public institutions.**
+
+**The one lesson the guide says to carry into a career:** *in litigation, what you did matters far less
+than what you can prove you did.* **Good practice without documentation looks identical to no practice**
+when a plaintiff's attorney takes a deposition three years later.
+
+**AI point with real professional stakes:** models **fabricate case citations** - plausible names, courts,
+years and holdings for decisions that do not exist - and there have been **publicised sanctions against
+attorneys who filed briefs containing invented citations.** Two further failure modes specific to law:
+**stating the majority rule without noticing jurisdiction matters** (waiver enforceability, assumption of
+risk, immunity and recreational use statutes all vary by state), and **stating superseded law**, which is
+live in amateur athletics right now. Also flagged forward: **AI systems are becoming a source of liability
+rather than only a tool** - facial recognition at venues, algorithmic crowd monitoring, biometric wearable
+data - so **a current risk management plan needs a section on what data is collected, on what basis, and
+who can access it.**
+
+### `SPC3301` - two legitimate versions of the same course, and a service-learning commitment
+
+**UWF's is skills- and application-forward** (self-awareness, impression management, rapport, conflict,
+ethical use of interpersonal power, diversity, leadership, technology) **with a hands-on SERVICE LEARNING
+project in a professional setting.** **FGCU's is theory-forward** - systems and symbolic interaction
+approaches, interpersonal needs, self-disclosure, listening, perception, attraction, social conflict -
+prerequisite **ENC1102**.
+
+⚠ **The service-learning component is a substantial out-of-class commitment** (placement hours,
+supervision, reflection) that a lecture-and-discussion section does not carry. **Flag this wherever a
+course description mentions service learning** - it changes the real workload well beyond the credit value.
+
+**⚠ Transfer caution worth generalising: students assume any SPC course satisfies any SPC requirement.**
+SPC3301 (interpersonal) and SPC2608 (public speaking) are different subjects and should not substitute.
+
+**Content-sensitivity handling** (per the CLAUDE.md checklist): the course invites analysis of one's own
+relationships, and covers **coercive control, relational aggression and manipulation** as recognisable
+patterns. Guide states plainly that **the student controls what they disclose** - reflection assignments can
+be completed honestly using ordinary interactions, and choosing a less personal example is not evading the
+assignment - and that **the course is not therapy and the instructor is not a therapist**, with counselling
+and 988 named.
+
+**Five "common sense" corrections captured, all research-backed and all reusable:** deception detection is
+near chance and confidence does not track accuracy; **more communication is not automatically better**;
+popular gender-difference claims are far larger in bestsellers than in research; **how people fight
+predicts outcomes better than whether they fight**, with contempt the damaging element; and **you cannot
+not communicate** - silence and withdrawal are messages.
+
+**AI point specific to this subject, and unusually good:** the course teaches that most people do not
+listen well and that the barriers are attention and self-focus - so **a tool that summarises a conversation
+so you need not attend to it optimises information transfer and eliminates what listening actually does in
+a relationship**, which is to demonstrate that the other person mattered enough to attend to. Also: if a
+condolence message or apology was generated, **the content dimension may be identical while the relational
+message - that you took time and attention for this person - is precisely what is absent.**
+
+### `POS3413` - the analytical frame worth reusing
+
+Trivial title drift (statewide *The American Presidency*; UWF *The Presidency*). The substantive capture is
+UWF's framing: **"a separated system of branches SHARING power"** - the Constitution does not assign each
+branch a distinct sphere, it gives each a share of the others' functions, so presidential power is
+fundamentally about persuading and bargaining rather than commanding. **The field's two competing accounts
+- power as persuasion vs the unilateral-action literature - are both true, and the tension between them
+organises the modern discipline.**
+
+**⚠ Exceptional free primary source recorded: The American Presidency Project (UC Santa Barbara)** - public
+papers, executive orders, proclamations, press conferences, statements and approval data back to
+Washington. **Comprehensive AND open, which is rare.** Guide recommends it for original undergraduate
+research: counting and coding executive orders, tracing signing-statement language across administrations.
+
+**Politically-charged-subject handling worth reusing:** the guide states that **assessments of presidential
+power correlate strongly with whether one's own party holds the office** - among the public and, less
+excusably, among commentators - and that **the discipline's standard is consistency across
+administrations.** Also that **claims a development is unprecedented are usually wrong**, which reframes
+the question from "is this outrageous" to "what changed, when, and under what conditions" - a question that
+can actually be answered.
+
+⚠ **Florida career note worth reusing in any political science guide: Florida's status as the largest swing
+state for much of the past quarter-century means campaigns, parties and consulting firms maintain
+year-round Florida operations** - genuinely unusual, and it creates student opportunities that most states
+do not have. Plus **Tallahassee** as a full capital with an accessible legislative internship programme.
+
+### Source notes
+
+- **UWF PDF route** clean on `pos`, `psy`, `pur`, `spc`, `spm`, `acg`. **Prefix dumps were essential
+  again** - PSY4302C and PUR4800C both returned `none` on targeted lookup, and only the full dump revealed
+  UWF's **PSY4302** and **PUR4801**. **The batch-153 locator fix continues to pay off: `none` now reliably
+  means "not under that exact number" rather than "not offered".**
+- **FGCU PDF route** clean on `pur` (2,609 chars), `spc` (4,501), `acg`. **Listing every course line in a
+  prefix** - rather than only the targeted lookup - is what surfaced FGCU's PUR4800 and the 3103/3113/4123
+  accounting family. **Worth doing routinely when a targeted lookup misses.**
+- **UF course-search API**: confirmed **SPM4723** (*Legal Issues in Sport*); confirmed absent at UF -
+  PSY4302C, PUR4800C, ACG3111, POS3413, SPC3301. **Sixth consecutive batch using it.**
+- ⚠ **Authoring note:** a malformed closing tag (`</by>`) was introduced in the SPM4723 draft and caught by
+  a regex scan of all guides in the scratchpad before assembly. **Worth running that scan routinely** -
+  `re.findall(r"</[^a-zA-Z/][^>]*>|</[a-zA-Z]+[^>]*\s[^>]*>", s)` over the HTML directory takes a second
+  and the validator does not check markup well-formedness.
+
+
+---
+
+## Batch 159 findings (2026-09-05) - AFR4211, AFR4211L, APK3110C, APK4125C, CHM3400C, CJE3444
+
+### ⚠⚠ NEW BLOCKED ROW: `CES3100C` (Structural Analysis) joins the taxonomy-blocked set
+
+The taxonomy block now covers **five** queued rows, not four: `CES4605C`, `CES3100C`, `CWR3201C`,
+`CWR4202C`, `CEG3011C`. **The CES/CWR/CEG/ENV prefixes will keep surfacing as the queue advances** - they
+are ordinary civil engineering courses at high institution counts, so they sit near the top of the priority
+order and will be skipped every batch until the nodes are deployed. See
+`Deployment/PENDING_SERVER_CHANGES.md`.
+
+Also skipped and noted: `MUN3313`, `MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing block),
+`LAE3314` (split candidate, item 20).
+
+### ⚠⚠⚠ NEW WORKING UF SOURCE: department slug pages return FULL DESCRIPTIONS **WITH CREDITS**
+
+`catalog.ufl.edu/UGRD/courses/applied_physiology_and_kinesiology/` returned **200 / 58.7 KB with complete
+course entries including credit values**:
+
+```
+APK 3110C  Physiology of Exercise and Training  3 Credits ...
+APK 4125C  Physical Fitness Assessment and Exercise Prescription  3 Credits ...
+```
+
+**This matters because the UF course-search API's `route=details` call is broken** (batch 153) - the API
+gives title and existence only. **The slug pages give the description AND the credit value**, which the API
+cannot. **So the two UF routes are complementary and should both be used**: the API to confirm a course
+exists and get its exact title (works for any course, no slug needed), the slug page to get the description
+and credits (needs the right slug, and is not always complete - see the batch-155 finding that UF's
+`statistics/` page omits STA4222).
+
+**Running UF slug list, now 11 confirmed working:** `economics/`, `classics/`, `finance/`,
+`microbiology_and_cell_science/`, `civil_and_coastal_engineering/`, `mathematics/`, `public_relations/`,
+`botany/`, `philosophy/`, `physics/`, **`applied_physiology_and_kinesiology/`**.
+
+**⚠ And it immediately corrected an assumption.** I had inferred APK3110C/APK4125C were 4 credits from
+UWF's 3+1 split. **UF documents both integrated courses at 3 credits.** Published at 3, not 4. **The
+lesson: for a C-suffix course, do not infer the integrated credit value by summing the split halves** -
+the integrated form frequently compresses rather than combining.
+
+### ⚠⚠ FIRST ZERO-CREDIT GUIDE IN THE PROJECT: `AFR4211L` at 0 sh
+
+**UWF lists AFR4211L at 0 semester hours**, as a required co-requisite of AFR4211. Published at
+**credits=0, contact_hours=30**; the validator accepted it without warning (credits=0 is schema-valid, and
+was already used for PSAV clock-hour courses - **this is the first non-PSAV use**).
+
+**A zero-credit REQUIRED course has consequences worth stating in any guide that meets one:** it is
+mandatory and registered for; it contributes **nothing to credit totals or to full-time enrollment status**
+(so it cannot help a student reach a threshold for financial aid, scholarship or athletic eligibility);
+**the time commitment is entirely real** and in this case substantial; and it still appears on the
+transcript. **The credit value understates the workload by more than any other course encountered so far.**
+
+### `AFR4211` / `AFR4211L` - the AFROTC pair, and the transferability caveat made concrete
+
+**⚠ THREE conflicting titles, including conflicting sequence numerals:**
+
+| Source | Title |
+|---|---|
+| statewide inventory | *U.S. Defense Policy and Strategy Formulation* |
+| **UWF** | *National Security, Leadership Responsibilities and Commissioning Preparation* **I** |
+| **UF** (via API) | *Preparation for Active Duty* **2** |
+
+**UWF says "I" and UF says "2" for the same course**, counted from different starting points within the
+two-semester senior sequence. **Do not infer sequence position from an AFR title.**
+
+**⚠⚠ The SCNS-equivalency-is-not-transferability caveat, which the register has carried abstractly since
+the ROTC-labs note, is now documented concretely.** Two separate things are true: **the academic credit
+generally transfers** under SCNS in the ordinary way; **the ROTC programme standing does not.**
+Commissioning is administered by the Air Force through a **specific detachment**, and a cadet changing
+institutions must transfer between detachments - a process involving both detachment commanders, the
+cadet's record, scholarship status and available allocations. **The university registrar cannot resolve any
+part of it.**
+
+**Cross-town agreements explained the inventory anomaly**: Santa Fe College appears alongside UF because
+students at institutions without their own detachment participate through a host detachment nearby. **Worth
+remembering when an inventory institution list contains an unexpected small college for a military course.**
+
+**Scope note:** both guides state plainly that these are **not standalone electives** - non-cadets cannot
+generally enrol, and AFROTC is entered in the first or second year or by pre-enrolment scholarship, **not
+as a senior**. Each guide includes a short "what a non-cadet should take from this" section pointing to
+the free public doctrine and strategy documents and to political science alternatives.
+
+**Florida content assembled and highly reusable for any military/defense guide:** **MacDill AFB (Tampa)
+hosts BOTH U.S. Central Command and U.S. Special Operations Command** - two of the Unified Combatant
+Commands the course studies; **Eglin AFB** (one of the largest installations in the world, test and
+evaluation); **Hurlburt Field** (Air Force Special Operations Command); **Tyndall AFB**; **Patrick Space
+Force Base** and **Cape Canaveral Space Force Station**; plus NAS Pensacola, Jacksonville, Mayport and
+Whiting Field. **UWF cadets are in an unusually immersive military environment.**
+
+### `APK3110C` / `APK4125C` - a clean two-course split family, and the exercise science sequence
+
+| Course | UWF (split) | UF (integrated) |
+|---|---|---|
+| Exercise Physiology | **APK3110** (3 sh) + **APK3110L** (1 sh) = **4 credits** | **APK3110C**, **3 credits** |
+| Exercise Prescription | **APK4125** (3 sh) + **APK4125L** (1 sh) = **4 credits** | **APK4125C**, **3 credits** |
+
+**⚠ Same subject, 3 credits at one institution and 4 at another** - a credit divergence on top of the
+suffix divergence. **Checked and confirmed: APK3110L and APK4125L are NOT in the inventory**, so unlike
+`BOT4503C`/`BOT4503L` (batch 154) there were **no orphan halves to write** - only the C rows are queued.
+**Running that check before drafting is now routine and it saves writing guides nobody queued.**
+
+Title drift on both, with UF's titles more informative: statewide *Exercise Physiology* vs UF **"Physiology
+of Exercise and Training"** (which names the course's acute-vs-chronic structure), and statewide *Exercise
+Prescription* vs UF **"Physical Fitness Assessment and Exercise Prescription"** / UWF **"Exercise Testing
+and Prescription"** - **both institutional titles name the ASSESSMENT half that the statewide title omits**,
+and assessment is roughly half the course.
+
+**⚠ Career-pathway fact that changed recently and that students plan around wrongly: athletic training now
+requires a MASTER'S degree from a CAATE-accredited programme** plus BOC examination and Florida licensure.
+The former bachelor's pathway is gone. **Flag this in any exercise science / kinesiology guide.**
+
+**⚠ Florida-specific safety content worth reusing:** exertional heat stroke is a leading cause of sudden
+death in sport and training, it is survivable with correct recognition, and **Florida's climate makes it
+year-round rather than seasonal**. The two facts that save lives: **rectal temperature is the only valid
+field measure of core temperature** in an exercising collapse, and **immediate cold-water immersion before
+transport** is the standard of care - **cool first, transport second.**
+
+**AI content specific to exercise science, and it is the strongest applied-measurement argument yet:**
+wearables now report estimated VO2max, sleep stages, "recovery" and "strain", and **clients arrive
+believing them.** This course supplies exactly the framework to evaluate them - an estimated VO2max is a
+regression prediction, not a measurement; optical heart rate degrades at high intensity; sleep staging is a
+classification with substantial error against polysomnography; proprietary recovery scores are undisclosed
+composites that are generally not independently validated. **Trends within an individual are often
+informative even when absolute values are wrong** - and explaining that distinction to a client is the
+professional skill. Also flagged for APK4125C: **generated exercise programmes skip the SCREENING step
+entirely**, which is the safety system, and that is the single most dangerous feature of automated
+prescription for the populations this course serves.
+
+### `CHM3400C` - a 4-credit survey, and a survey-vs-sequence decision students get wrong
+
+**UWF lists CHM3400C at 4 semester hours** with an integrated laboratory. Published at **4 credits / 90
+contact hours** (3 lecture + 3 lab weekly). **Second non-3-credit value this session after the 2-credit
+music courses** - the queue is now regularly producing them.
+
+**⚠⚠ The consequential finding is that UWF offers BOTH:**
+
+| Course | Credits | What it is |
+|---|---|---|
+| **CHM3400C** Basic Physical Chemistry | **4 sh** | one-semester SURVEY, integrated lab |
+| **CHM3410** Physical Chemistry I | **5 sh** | first half of the full majors SEQUENCE |
+
+**`CHM3410` is also queued**, so the project will write the other half. The guide states the decision rule
+plainly: the survey serves biochemistry, biology, environmental science and health-professions students
+meeting a prerequisite; **the full sequence is for chemistry majors and anyone intending graduate study.**
+**The trap is asymmetric** - a student who takes the survey and later needs the sequence has spent four
+credits that do not count toward it, so **if there is any realistic chance you need the sequence, take the
+sequence.**
+
+**Prerequisite finding:** UWF requires **CHM2211/L AND MAC2312 AND (PHY2054/L OR PHY2049/L)** - organic II
+with lab, Calculus II, and second-semester physics with lab. **The mathematics is the underestimated one**,
+and the guide says review calculus before the term because the material moves too fast to recover
+mid-semester. Also noted: **PHY2049 (calculus-based) is better preparation than PHY2054 (algebra-based)**
+for the quantum material.
+
+**Lab finding worth reusing for any physical science guide:** the p-chem laboratory **treats uncertainty
+more rigorously than any earlier chemistry course** - error propagation, systematic vs random error, and
+**a measurement without an uncertainty is an incomplete result**, marked as such.
+
+**AI check captured, matching the MAD4401 / STA4222 pattern:** the characteristic failure in physical
+chemistry is **sign errors** - work done on vs by the system, direction of heat flow, sign of a free energy
+change - plus dropped units and **applying an equation outside its conditions of validity**. **The check is
+physical, not algebraic: verify units, verify sign against expectation, verify the equation's conditions
+hold.** If a spontaneous process shows positive ΔG, the arithmetic is irrelevant.
+
+### `CJE3444` - the strongest "what does not work" evidence content in the project
+
+UWF's description contains the course's thesis in a parenthesis: community crime prevention is **"prevention
+outside the traditional confines of the CJS"** - the most effective interventions frequently involve no
+police, courts or corrections at all.
+
+**⚠⚠ The negative-evidence material is unusually valuable and belongs in the register**, because it is a
+case where popular policy and the evaluation literature diverge sharply: **"scared straight" programmes
+have been evaluated repeatedly and found to INCREASE subsequent offending**; the original DARE curriculum
+showed no measurable effect; correctional boot camps generally show no recidivism reduction; and
+**neighbourhood watch - among the most widely promoted community programmes - has a weak and mixed evidence
+base and works best in exactly the cohesive neighbourhoods with least crime to prevent.** Meanwhile the
+best-supported approaches are less intuitive: **hot spots policing, focused deterrence, situational
+modification, and early developmental intervention** with cost-benefit ratios among the best in social
+policy.
+
+**Two professional lessons the guide draws:** an intervention that sounds sensible and that everyone
+supports **may still not work**, and evaluation is the only way to know; and **programmes persist despite
+negative evidence** for political and organisational reasons - they are visible, they feel like action, and
+they have constituencies.
+
+**⚠ Free evaluation resources recorded, and they are excellent:** **CrimeSolutions.gov** (NIJ - rates
+programmes effective / promising / no effects from systematic review), the **Campbell Collaboration** Crime
+and Justice group, the **Center for Problem-Oriented Policing** POP guides and SARA materials, and
+**Blueprints for Healthy Youth Development**. Florida-specific: **FDLE UCR data by county and agency**, and
+the **Florida Crime Prevention Training Institute** (Attorney General's office) offering a **Certified
+Crime Prevention Practitioner** credential.
+
+**Equity dimension stated rather than avoided:** prevention strategies are not neutral in who bears their
+cost. Surveillance and order-maintenance approaches concentrate burden on people who use public space;
+**design solutions can displace PEOPLE rather than crime** (hostile architecture prevents sleeping more
+reliably than offending); school security measures have measured effects on climate and exclusionary
+discipline. **The question "who bears the cost and who receives the benefit?" belongs in every prevention
+analysis alongside effectiveness.**
+
+**AI content:** the **place-based** case is strong and the course's own evidence supports it (crime
+concentrates, hot spots policing has among the best evidence bases). The **person-based** case is weak and
+the problems are documented - **historical enforcement data records where police were deployed as much as
+where crime occurred**, so a model trained on it learns the deployment pattern and creates a feedback loop.
+**Facial recognition matches are investigative leads requiring corroboration**, and the documented wrongful
+arrests share the tunnel-vision pattern this project has now recorded twice (see CJE4610, batch 155).
+Also: **models are unreliable on the EVALUATION literature specifically**, because popular accounts of
+programmes vastly outnumber evaluations in any training corpus - so a model will call a programme effective
+when the systematic reviews say otherwise. **Check every effectiveness claim against CrimeSolutions.gov.**
+
+### Source and tooling notes
+
+- **UWF PDF route** clean on `afr`, `apk`, `chm`, `cje`, `dep`. **Prefix dumps again essential** - both APK
+  targets returned `none` and only the dump revealed the split family.
+- **FGCU PDF route** clean on `apk` (6,196 chars) and `chm` (21,838) - **neither carries APK3110C,
+  APK4125C or CHM3400C.** A large clean fetch that contains none of the targets is a real finding.
+- **UF**: the API confirmed AFR4211 and returned not-found for CHM3400C, DEP3103 and CJE3444; **the new
+  slug page supplied APK descriptions and credits.**
+- ⚠ **Tooling improvement adopted this batch:** the HTML **well-formedness scan is now built into the
+  assemble script** and raises `SystemExit` before any draft is written, rather than being a separate
+  manual step. Pattern: `re.findall(r"</[^a-zA-Z/][^>]*>|</[a-zA-Z]+[^>]*\s[^>]*>", s)`. **The validator
+  does not check markup, so this is the only guard against a malformed tag reaching production.**
+
+
+---
+
+## Batch 160 findings (2026-09-06) - DEP3103, DEP4305, DEP4404, ECP3530, EML4804C, ENC3213
+
+### ⚠⚠ THE TAXONOMY BLOCK NOW COVERS SIX QUEUED ROWS
+
+`ENV3001C` (Environmental Engineering, FAU;FIU;UCF;UF;UNF;UWF) surfaced this batch and is blocked on the
+missing **ENV** node. The blocked set is now:
+
+| Row | Title | Prefix |
+|---|---|---|
+| `CES4605C` | Steel Design | CES |
+| `CES3100C` | Structural Analysis | CES |
+| `CWR3201C` | Fluid Mechanics | CWR |
+| `CWR4202C` | Hydraulics | CWR |
+| `CEG3011C` | Soil Mechanics | CEG |
+| **`ENV3001C`** | **Environmental Engineering** | **ENV** |
+
+Plus `CES4702C` still sitting at `status=error` with a validated draft. **All four missing prefixes are now
+represented in the blocked set** - CEG, CES, CWR and ENV - and every one of these is a core civil
+engineering course at 6-9 institutions, so they sit near the top of the priority order and are skipped
+every batch. `Deployment/PENDING_SERVER_CHANGES.md` updated.
+
+Also skipped: `MUN3313`, `MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split
+candidate, item 20).
+
+### ⚠⚠ `EML4804C` - the FIRST case where BOTH split halves were already published
+
+`EML4804` and `EML4804L` are **already `pushed`** in the queue. This is the reverse of the `BOT4503C`
+situation (batch 154, where the C was queued and the L had to be written alongside it) and the reverse of
+`APK3110C`/`APK4125C` (batch 159, where the L halves were not in the inventory at all).
+
+**So the repository now documents all three members of one family**, and the new guide cross-links both
+existing ones. **This is the ideal end state for a split family and it is worth aiming at deliberately** -
+the three guides read together are a far better account of the divergence than any one of them.
+
+**UWF's pair are MUTUAL co-requisites**: EML4804 lists EML4804L in its prerequisite structure, and
+EML4804L lists EML4804. 3 sh + 1 sh = 4 credits total.
+
+⚠ **Credit value published with an explicit caveat.** No reachable institution documents the integrated
+form's credits, and the **batch-159 lesson explicitly cautions against summing the split halves** (UF's
+integrated APK courses are 3 credits where UWF's split pairs total 4). Published at the standard
+**3 credits / 60 contact hours** for an integrated C course, and **the guide tells students to verify at
+their own institution** rather than relying on it. **That disclosure is the honest handling when a value
+cannot be sourced.**
+
+⚠ **Statewide title says "Mechatronics II"; UWF says "Mechatronic Systems" with no numeral**, and **no
+corresponding "Mechatronics I" appears in the inventory.** Guide tells students not to assume from the
+statewide title that they have missed a prerequisite course.
+
+⚠ **Departmental ownership finding worth generalising:** UWF houses EML4804 in the **Department of
+Electrical and Computer Engineering** despite the EML (mechanical) prefix. **An electrically-housed
+mechatronics course assumes more circuits and less mechanical dynamics; a mechanically-housed one the
+reverse.** Same shape as the owning-department findings for BSC4434, HSA3170, PAD3003, CAP4770 and
+ECO4704 - **the prefix does not tell you which department teaches it, and the department predicts the
+emphasis.**
+
+### ⚠⚠ FGCU's PSYCHOLOGY DEPARTMENT GATE CONFIRMED AS A DEPARTMENTAL PATTERN (third and fourth instances)
+
+**FGCU requires PSY2012 AND (PSY3213 or PSY3017) AND (STA2122 or PSY3205)** - general psychology plus
+research methods plus statistics - on **DEP4305** and **DEP4404**, identical to its requirement on
+**PPE4003** (batch 154). **Four upper-division psychology courses, one gate.**
+
+**This is now established as a departmental policy rather than four course-level judgements**, and it is
+worth recording as such because it predicts what FGCU will require on any future PSY/DEP/PPE/CLP row -
+**and because UWF, by contrast, lists NO prerequisite on any of them.**
+
+**The consequence recorded across all four guides:** where methods and statistics are enforced the course
+can examine evidence critically; where they are not, the same catalog description supports a descriptive
+treatment. **Both legitimate, not the same course, and a graduate programme reading a transcript cannot
+tell which one a student took.**
+
+**⚠ DEP4404 carries the sharpest version of the argument**, and it is subject-specific: **the central
+findings of cognitive ageing depend on which research design produced them.** Cross-sectional studies
+confound age with cohort and **systematically overstate decline**; longitudinal studies introduce practice
+effects and **selective attrition** (the participants who drop out are disproportionately those declining
+fastest). **The two designs disagree, and a student who cannot explain why cannot evaluate any claim about
+normal decline.**
+
+### The DEP trio - a lifespan sequence written as a set
+
+Deliberately held together across two batches so the three could cross-link. Statewide titles vs UWF:
+**DEP3103** *Child Psychology* / UWF *Child Development*; **DEP4305** *Adolescent Psychology* / UWF
+*Psychology of Adolescence*; **DEP4404** *Psychology of Adult Development and Aging* / UWF *Adulthood and
+Aging*. All trivial drift.
+
+**⚠ The transfer caution common to all three, and it is the practically important one: a combined LIFESPAN
+course (DEP2004 or DEP3054 at many institutions) does NOT substitute for the separate courses.** The
+combined course is taken by nursing, education and allied health students needing one developmental course;
+it necessarily gives adulthood and ageing - the majority of the lifespan - a small fraction of one term.
+**A psychology major intending graduate work needs the separate courses**, and a receiving department will
+look at which was taken.
+
+**Reusable "what the course corrects" material, and these lists are among the strongest in the project:**
+
+- **DEP3103**: milestone ages are averages with wide normal ranges; **Piaget substantially underestimated
+  young children**; most parenting research is correlational and **child effects on parents are real**;
+  most "critical periods" are sensitive periods; **bilingual exposure does not delay language development**;
+  **learning styles have no supporting evidence** despite near-universal belief among educators.
+- **DEP4305**: **"storm and stress" is overstated**; **adolescents do NOT think they are invulnerable** -
+  they estimate risks about as accurately as adults, and the better account is **reward sensitivity plus
+  the peer-presence effect**; parent-adolescent conflict is normal and mostly mundane; **peer influence is
+  substantially selection**; **parental monitoring works largely through disclosure**, which reverses the
+  usual causal story about surveillance; **the social media and wellbeing literature is genuinely
+  contested** and popular claims outrun the data.
+- **DEP4404**: **cognitive decline is selective, not general** (speed-dependent abilities decline,
+  knowledge-based abilities hold or improve); **dementia is not normal ageing** and treating it as
+  inevitable delays help-seeking for **treatable causes** - depression, medication effects, delirium,
+  thyroid disorders; **emotional wellbeing generally holds up or improves**; **depression is not normal in
+  old age**, is under-treated, and responds as well as in younger adults; **older workers do not perform
+  worse**; **grief does not proceed in stages**; **most older adults live independently**; and **physical
+  exercise has better evidence for cognitive benefit than commercial brain training does.**
+
+**⚠ DEP4404 has the strongest Florida employment case of any course in the project so far.** Florida's
+proportion aged 65+ is among the highest in the nation and several counties (Sumter, Charlotte, Citrus,
+Sarasota) are among the oldest in the country. **Geriatric specialisations are under-subscribed relative to
+demand across essentially every helping profession** - geropsychology, geriatric social work, geriatric
+medicine, geriatric nursing all report shortages. Recorded infrastructure: **Florida Department of Elder
+Affairs**, Area Agencies on Aging, the long-term care ombudsman programme, and **elder financial
+exploitation as a major state enforcement priority**.
+
+**⚠ AI content in DEP4404 that connects two prior findings:** voice cloning has made the "grandchild in
+trouble" call far more convincing and generated text has removed the linguistic tells from scam messages -
+**the same defence-is-process-not-detection conclusion reached independently in ACG4682 (fraud, batch 154)
+and CIS4361 (security, batch 155).** Three guides now converge on it.
+
+### `ECP3530` - five market failures as the organising structure
+
+UWF titles it **Health Economic Policy** (prereq **ECO2023** only); **UF titles it "Health Care
+Economics"**; statewide *Economics of Health*. ⚠ **The UWF title signals a real orientation** - policy
+analysis with economics as toolkit, versus applied microeconomics with health as the domain. Both cover the
+same core.
+
+**The reusable teaching frame:** uncertainty explains insurance; **asymmetric information** explains
+licensure and the agency relationship; **moral hazard** explains cost-sharing; **adverse selection**
+explains why voluntary insurance markets are unstable and why every system achieving broad coverage uses
+compulsion, subsidy or pooling; **externalities** explain public funding for vaccination. **Once those five
+are understood most health policy debates become legible** as arguments about which failure to prioritise.
+
+**⚠ ECP prefix documented**: applied economics fields (labour, health, urban, environmental, public
+sector), distinct from **ECO** (general and theory) and **ECS** (comparative systems). **Students looking
+for applied field courses should search under ECP.** Adds to the prefix grids already recorded for
+philosophy (PHI/PHH/PHP/PHM) and music.
+
+**"What the course corrects" list:** the US does **not** consume dramatically more care - it **pays more
+per unit**; administrative costs are real but do not explain most of the gap; **most cost growth is
+technology and intensity**; insurance affects utilisation substantially and health outcomes more modestly;
+**preventive care is usually valuable but does NOT save money**; and **non-profit hospitals behave much
+like for-profit ones** in pricing and competitive conduct.
+
+**⚠ Florida policy hook worth reusing: Florida has not adopted Medicaid expansion**, which makes the state
+a live case study students can analyse with free data (KFF state health facts, CMS NHEA, AHCA) rather than
+in the abstract.
+
+**AI point specific to health economics, and it is a clean application of the course's own theory:** a
+technology that reduces the cost of producing a service **does not reduce spending if the payment system
+pays per service** - it increases volume. And **better individual risk prediction UNDERMINES pooling**: the
+more precisely a risk can be predicted, the less there is to pool. Also flagged: **most AI tools deployed
+in health care have never been evaluated for cost-effectiveness** - accuracy on a validation set is not
+evidence of improved outcomes, and "what is the incremental cost per QALY?" is the right question and is
+rarely answered.
+
+### `ENC3213` - the widest title divergence with the most practical consequence
+
+**Statewide "Writing for Managers" vs UWF "Professional and Technical Writing."** Assessed as **drift with
+a real emphasis difference, not a split** - both are upper-division workplace writing producing reports,
+proposals, correspondence and instructions - **but the framing determines what is weighted**: a business
+framing emphasises internal correspondence, persuasive messages and management reporting; a technical
+framing emphasises instructions, procedures, specifications and communicating technical content to
+non-technical readers.
+
+**Guide's advice: read the syllabus rather than the title, and choose the section that matches your
+field.** ⚠ Also flagged: **ENC3241 and ENC3250 are adjacent numbers covering similar ground and do NOT
+automatically substitute** - check which number the degree audit names.
+
+⚠ **Gordon Rule note carried forward from LIT2030 (batch 156)**: where a writing designation applies, a
+minimum grade of C is normally required, so **a D passes the course without satisfying the requirement.**
+**This is now the second guide carrying that warning and it should be standard for any writing-designated
+course.**
+
+**Reusable teaching content - the academic-to-workplace shift:** professional writing **front-loads the
+conclusion**, is structured to be skimmed, uses headings and lists because readers navigate rather than
+progress, and addresses someone who knows **less** about the matter, is busy, and did not ask for a
+demonstration of thoroughness. **Students who write beautiful prose frequently do worse than students who
+write plainly**, because the standard is usability rather than elegance.
+
+**⚠ The AI treatment in this guide is the most direct in the project, and deliberately so:** the tools
+**do** produce competent professional prose, workplaces are already using them, and **pretending otherwise
+in a professional writing course would be a disservice.** What remains scarce is what the course teaches -
+**audience analysis** (the rhetorical situation is information you have and the model does not: the
+sceptical director, the legal secondary audience, the decision already made informally), **deciding what
+matters**, **accuracy and accountability** (your name is on it), and **voice**. The closing framing:
+**"if competent prose is now cheap, the differentiator is knowing what to write, for whom, and being right
+about the content"** - which is precisely what the course grades.
+
+### Source notes
+
+- **UWF PDF route** clean on `dep`, `ecp`, `eml`, `enc`. **Prefix dump again decisive** - EML4804C
+  returned `none` and only the dump revealed EML4804 + EML4804L.
+- **FGCU PDF route** clean on `dep` (2,994 chars) - supplied both DEP entries and the departmental
+  prerequisite pattern. ⚠ **FGCU has no `ecp` coverage of ECP3530** (4,645-char clean fetch, no match).
+- **UF course-search API**: confirmed **DEP4305** (*Adolescent Psychology*) and **ECP3530** (*Health Care
+  Economics*); confirmed absent at UF - DEP3103, DEP4404, EML4804C. **Seventh consecutive batch using it.**
+- ⚠ **The well-formedness scan built into the assemble script (batch 159) ran clean on all six drafts.**
+  Keeping it in every assemble script from here.
+
+
+---
+
+## Batch 161 findings (2026-09-06) - ENL4240, ENL4341, ESC2000, EXP4404, FIN3124, FIN4132
+
+Blocked rows skipped and noted: the six taxonomy-blocked civil engineering courses, `MUN3313`, `MUN3713`,
+`PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate, item 20).
+
+### ⚠⚠ FGCU PSYCHOLOGY GATE - FIFTH INSTANCE, now conclusively a departmental policy
+
+**FGCU's EXP4404 requires PSY2012 AND (PSY3213 or PSY3017) AND (STA2122 or PSY3205)** - identical to
+`PPE4003` (batch 154), `DEP4305` and `DEP4404` (batch 160). **Five upper-division psychology courses across
+three prefixes (PPE, DEP, EXP), one gate.**
+
+**Recording this as a settled departmental fact rather than a per-course observation.** It predicts what
+FGCU will require on any future PSY/DEP/PPE/EXP/CLP/SOP row, and **UWF continues to list NO prerequisite
+beyond PSY2012 or nothing at all on the same courses.** The "same number, different depth" consequence now
+applies across five documented pairs.
+
+### ⚠⚠⚠ `EXP4404` - a REAL SCOPE DIVERGENCE, and the cause is structural
+
+| Institution | Title | Scope |
+|---|---|---|
+| **FGCU** | Psychology of Learning | **Conditioning only** - "respondent and instrumental conditioning" |
+| **UWF** | Psychology of Learning | **Conditioning PLUS** attention, memory, cognitive processes, physiological correlates |
+| **UF** | **Psychology of Learning and Memory** | names the broader scope in the title |
+
+**⚠ The cause is what else the department offers.** FGCU runs a separate **EXP4604 (Human Memory and
+Cognition)**, so memory lives there and EXP4404 stays narrow. UWF folds it in. **So the same number covers
+a narrower or broader territory depending on whether the institution has somewhere else to put the
+cognitive material.**
+
+**This is a NEW mechanism for scope divergence** and it generalises: **before assuming what a transferred
+course covered, check what ELSE the sending department offers in that prefix.** A neighbouring course's
+existence determines the course's boundaries. Same underlying logic as the ACG two-family finding (batch
+158) but operating on content rather than on numbering.
+
+**EXP prefix documented**: experimental psychology (learning, memory, cognition, sensation and perception),
+distinct from PSY (general), DEP (developmental), SOP (social), CLP (clinical), PPE (personality), PSB
+(biological). **Adds to the prefix grids recorded for philosophy (PHI/PHH/PHP/PHM) and economics
+(ECO/ECP/ECS).**
+
+**⚠ AI content here runs OPPOSITE to every other guide in the project, and is worth reusing.** Learning
+theory **contributed to the technology** rather than merely being affected by it: reinforcement learning
+descends directly from the animal learning tradition, and **the temporal difference learning rule is a
+direct descendant of the Rescorla-Wagner model that this course teaches** - both learn from prediction
+error. The connection runs back too: **dopamine neuron firing corresponds to a reward prediction error
+signal**, a computational model developed for animal conditioning turning out to describe what neurons do.
+**The course's material on biological constraints (preparedness, instinctive drift, one-trial taste
+aversion) is precisely the corrective to over-reading the analogy.**
+
+Also captured: **variable-ratio schedules produce high, persistent, extinction-resistant responding** -
+taught as an empirical finding and simultaneously the design principle behind engagement-optimised systems.
+**Behaviour analysis has a professional ethics framework; consumer technology design largely does not.**
+
+**Career finding worth reusing: the RBT -> BCBA pathway is unusually well defined and unusually
+employable in Florida.** Registered Behavior Technician is attainable with a high school diploma plus
+training, **many undergraduates work as RBTs while studying**, and Florida has a large autism services
+sector with insurance mandates supporting it plus one of the larger state behaviour analysis associations.
+⚠ **But BCBA coursework must come from a programme with a verified course sequence - an undergraduate
+learning course is preparation, not credit toward certification.**
+
+### ⚠ UWF's "Topics in..." REPEATABLE CONVENTION confirmed as departmental
+
+`ENL4240` is **"Topics in Romantic Literature," repeatable to 12 sh** - identical structure to `ENL4251`
+("Topics in Victorian Literature," batch 156) and to UWF's graduate British literature courses. **Two
+undergraduate period courses plus the graduate sequence = a consistent English department convention, not
+a per-course anomaly.**
+
+**The category recorded in batch 156 holds and is now confirmed: not a shell, not a fixed-content course,
+but a FIXED-SUBJECT course with ROTATING CONTENT.** Practical consequences repeated in both guides: check
+the offering's reading list before registering, and a second enrolment may transfer as elective rather than
+as a second period course.
+
+### `ENL4240` / `ENL4341` - two period courses with opposite workload profiles
+
+**Worth recording as a contrast because it affects advising.** The Victorian course (batch 156) is
+dominated by **reading VOLUME** - 800-page novels that cannot be skimmed. **Romantic literature is
+dominated by reading DIFFICULTY** - twenty lines that take an hour. **Milton is both**: 10,000 lines of
+Latinate blank verse. Advice differs accordingly: get ahead on the long novels; read the Romantics aloud
+and more than once; for Milton, **find the main verb first** and **do not stop at Book II.**
+
+**⚠ `ENL4341` is a SINGLE-AUTHOR course**, one of the few surviving in English curricula (with Shakespeare
+and Chaucer - UWF's ENL4333 sits alongside). Format consequences recorded: **nowhere to hide**, strictly
+cumulative, and it produces depth of familiarity with one major work rather than breadth. Typically
+satisfies a **pre-1800 / early modern period requirement**, which is the distribution category students
+most often find themselves short of late.
+
+**Reusable religious-content handling** (same shape as PHI3700, batch 152): the course engages continuously
+with Christian theology, **no religious commitment is required or assumed**, and **the analytical question
+is what the poem argues and how, not whether its premises are true** - a student can write an excellent
+paper on Milton's theodicy while thinking the framework mistaken. **Milton himself was heterodox by his own
+church's standards**, which is part of what makes the poem interesting.
+
+**⚠ AI content in ENL4341 is unusually specific and good:** Milton's style is **distinctive and imitable**,
+so a fabricated Miltonic line sounds exactly like Milton - and in a course where the exact words are the
+entire evidence base, that invalidates the argument. Also: **<em>Areopagitica</em>'s argument** - that
+truth emerges from unrestricted encounter with error and that virtue untested is not virtue - **is directly
+applicable to contemporary disputes about generated content and moderation**, and is more interesting than
+most contemporary contributions to them. And the closing observation: the poem is about **a created being's
+relationship to the authority that made it**, read in a decade when people are building systems and arguing
+about alignment.
+
+**ENL4240 AI content** makes a point no other guide can: **the modern idea of authorship is largely a
+ROMANTIC INVENTION** - that a work expresses an individual's inner life, that originality is the primary
+value. **When people say generated writing "has no self behind it," they are applying a Romantic
+criterion**, and this is the course that shows where it came from. **Coleridge's imagination/fancy
+distinction** (fancy recombines fixed materials; imagination dissolves and re-creates) **gives students a
+far more precise vocabulary for describing what a language model does** than the public possesses.
+
+### `ESC2000` - a lecture/lab separation that determines whether a requirement is met
+
+**ESC2000 is a 3-credit LECTURE course**; the laboratory, where offered, is a separate **ESC2000L**
+enrolment. ⚠ **Florida general education requirements frequently distinguish a science course from a
+LABORATORY science course**, and education, nursing and science programmes commonly require the latter.
+**Taking ESC2000 alone may satisfy a general science requirement while leaving a laboratory requirement
+unmet** - discovered at a graduation check. **Same shape as the Gordon Rule minimum-grade trap (LIT2030,
+ENC3213) - a requirement that appears satisfied and is not.**
+
+**⚠ Florida is geologically ATYPICAL, and the guide says so rather than treating the state as generic:**
+essentially **no surface exposure of igneous or metamorphic rock** - Florida is a **carbonate platform**;
+the **Floridan aquifer** is among the world's most productive and supplies most of the state's drinking
+water; **karst is everywhere**, with sinkholes as a real insurance and land-use hazard and one of the
+world's great concentrations of **first-magnitude springs**; coastal processes and beach nourishment are
+continuous public expenditure; and **South Florida's low elevation and porous limestone mean seawalls
+cannot exclude water arriving through the ground.**
+
+**Contested-science handling worth reusing** (UWF's own description says "critical analysis of scientific
+theories"): for **age of the Earth**, teach how the evidence works and how conclusions were reached rather
+than asserting a claim on authority - multiple independent methods agreeing is the point. For **climate**,
+**distinguish the established mechanism from the uncertain magnitudes**: the physics of CO2 absorption, the
+observed warming and its attribution are not in scientific dispute, while climate sensitivity, regional
+projections and ice sheet behaviour are genuinely uncertain. **A course teaching that distinction equips
+students better than either alarm or dismissal**, and what to do about it involves value judgements the
+physical science does not settle.
+
+**Misconception list captured:** seasons are axial tilt not distance (**the most persistent misconception
+in the subject**); "theory" does not mean guess; earthquakes cannot be predicted though hazard can be
+forecast; the greenhouse effect is why Earth is habitable; groundwater is mostly pore space **except in
+Florida, where karst conduits genuinely do carry flowing water** - which is why the aquifer is both
+productive and contamination-vulnerable.
+
+### The FIN personal-planning track - a third branch of the finance major
+
+**`FIN3124` and `FIN4132` open the personal financial planning track**, distinct from the corporate branch
+(FIN4414 -> FIN4424) and the investments branch (FIN4504 -> FIN4514) already documented. **The three lead
+to genuinely different working lives** and the guides now say so.
+
+**⚠⚠ FIN4132 prerequisite divergence, and it changes the course:**
+
+| Institution | Prerequisite | Title |
+|---|---|---|
+| **UWF** | **TAX4001** (federal income taxation) | Estate Planning |
+| **FGCU** | **FIN3403** (corporate finance) | Estate Planning |
+| **UF** | - | **Estate and Tax Planning** |
+
+**UF's title points the same direction as UWF's gate.** A tax-gated version can treat transfer taxation,
+basis rules and fiduciary income tax properly; a finance-gated version develops the tax concepts as it goes
+and weights the non-tax material (trusts, titling, incapacity, succession). **Guide advises taking TAX4001
+first regardless: the step-up-at-death vs carryover-on-gifts trade-off is nearly opaque without a basis
+concept.**
+
+**⚠ CFP Board registration attaches to a PROGRAMME, not to courses.** Both guides warn that a transferred
+planning course may not count toward the CFP education requirement at the receiving institution -
+**confirm with the programme director early, because discovering it late can add a full course.** This is
+a distinct transfer hazard from SCNS equivalency and from AACSB rules, and it is the third accreditation
+layer documented in the finance sequence.
+
+**⚠ The single most useful personal takeaway in any guide so far, from FIN4132: CHECK YOUR BENEFICIARY
+DESIGNATIONS.** Retirement accounts, life insurance and payable-on-death accounts pass by designation,
+**override any will**, and are typically set once and forgotten through marriage, divorce, births and
+deaths. **The most common estate planning failure is not the absence of a will but a stale designation.**
+
+**Florida-specific estate law recorded, and it is genuinely distinctive:** the state's **homestead
+provisions restrict devise** - a homestead cannot be freely left by will where there is a surviving spouse
+or minor child, **so plans drafted without accounting for it fail**, which surprises people relocating from
+other states; **no state estate, inheritance or income tax**, which drives wealth relocation and sustains
+the trust industry; **tenancy by the entirety** with creditor protection; a distinctive **elective share**;
+and routine **ancillary probate** because so many non-residents own Florida property.
+
+**Professional boundary flagged in both guides: a planner is not a lawyer.** Drafting documents or advising
+on the legal effect of an instrument is **the unauthorised practice of law**, a criminal offence in
+Florida. The professional skill is noticing that beneficiary designations contradict the will and getting
+the attorney involved.
+
+**Career honesty captured in FIN3124:** the profession has a documented demographic problem - a large share
+of practising advisers approaching retirement with a thin pipeline - so **hiring conditions for entrants
+are unusually favourable**; the standard entry role is **paraplanner/associate**, not immediate client
+advising; and **entry-level work at some firms is substantially sales from personal networks**, which is a
+legitimate model, is not what most students picture, and is **a common cause of early attrition.** Guide
+tells students to ask in an interview how a role is compensated and where clients come from.
+
+### Source notes
+
+- **UWF PDF route** clean on `enl`, `esc`, `exp`, `fin`. ⚠ **The `fin` prefix again needed a targeted
+  second call** - the first `head` truncation cut off FIN4132, same as the FIN4514 issue in batch 156.
+  **For large prefix PDFs, call `locate()` directly rather than piping through `head`.**
+- **FGCU PDF route** clean on `exp` (2,143 chars) and `fin` (7,059) - supplied the EXP4404 scope divergence
+  and the FIN4132 prerequisite divergence, both of which were the batch's most valuable findings. ⚠ FGCU
+  `esc` returned **590 chars with no ESC2000** - a near-empty prefix is itself a finding.
+- **UF course-search API**: confirmed **EXP4404** (*Psychology of Learning and Memory*), **FIN3124**
+  (*Introduction to Financial Planning & Wealth Management*) and **FIN4132** (*Estate & Tax Planning*) -
+  **all three titles were more informative than the statewide ones and all three changed what the guide
+  said.** Confirmed absent at UF: ENL4240, ENL4341, ESC2000. **Eighth consecutive batch using it.**
+- **Well-formedness scan** built into the assemble script ran clean on all six.
+
+
+---
+
+## Batch 162 findings (2026-09-06) - FIN4560, GRA2111C, HFT4295, JOU3101C, JOU4181
+
+### 🎉 MILESTONE: the repository passed 2,000 published guides in this batch (2,003 pushed)
+
+Batch size was **5 rather than 6**, deliberately: `JPN1120C` and `JPN1121C` were the next priority rows and
+they are a **language sequence pair**, held together for the following batch on the same reasoning applied
+to the DEP trio (batch 160) and the JOU pair here. **Sequence pairs written together cross-link properly
+and share their sourcing work; split across batches they do neither.**
+
+Blocked rows skipped and noted: the six taxonomy-blocked civil engineering courses, `MUN3313`, `MUN3713`,
+`PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate, item 20).
+
+### ⚠⚠⚠ `HFT4295` - THE HEAVIEST PREREQUISITE CHAIN IN THE PROJECT: six courses
+
+**FGCU requires FSS3338C AND HFT3221 AND HFT3253 AND HFT3573 AND HFT3670 AND HFT4464**, with the last three
+permitted **concurrently**. **UWF requires two: HFT3221 AND HFT4277.**
+
+**This beats the previous record holder, FIN4424's three-part gate (batch 156).** And it is not
+bureaucratic excess - **it is a definition**. FGCU's own description says the course *integrates all of the
+student's previous HTM courses*, and a course that integrates everything necessarily requires everything.
+**The three concurrent permissions are the mechanism that makes it schedulable**; without them a student
+would need an extra term.
+
+⚠ **Recorded as the binding constraint on graduation for transfer students** in hospitality: a transfer
+arriving with two of the six will not reach the capstone in one year whatever the credit total says.
+
+**Title variation with UWF as the outlier**: statewide and FGCU both say *Resort & Hospitality Strategic
+Management*; **UWF says *Strategic Leadership in Hospitality Management*** and its description names
+leadership, budgeting, records and reports, staff organisation - reading as a **general management
+capstone** where FGCU's is framed purely around **strategic decision-making capability**. Both case-method.
+
+**Industry-structure teaching point captured and reusable:** the defining structural fact of modern lodging
+is **the separation of ownership, brand and operation** - and **many hospitality strategic problems are
+conflicts among owner, operator and brand rather than problems with the market.** A student who does not
+understand the structure misreads the case. Also: **labour is the strategic problem, not a functional one**
+(turnover cost is chronically underestimated because it is diffuse, and in Florida's coastal markets the
+workforce cannot afford to live near the property), and **distribution cost is a structural strategic
+issue** rather than a marketing preference.
+
+### ⚠⚠ `FIN4560` - and UWF runs a BOND fund, not an equity fund
+
+**UWF offers FIN4561 (Bond Fund Management) and does NOT list FIN4560.** The queued statewide number is the
+**equity** fund course, offered at FGCU, FAU, UCF, UNF and USF.
+
+**Same process, different asset class.** Governance, thesis discipline, committee presentation, attribution
+and succession are common; the analysis is not - equity work is company valuation, fixed income work is
+credit, duration, convexity and curve positioning. **The guide notes the fixed income version is arguably
+the scarcer skill**, since far fewer graduates can discuss duration positioning than stock picking and the
+bond market is larger.
+
+**⚠ FGCU's FIN4560 is a SECOND-STAGE course**: titled *Seminar in Portfolio Management*, prerequisite
+**FIN4934** (its own student-managed fund course), with students in a **senior analyst role mentoring
+juniors** in "portfolio strategy, risk management and **succession planning**." **A two-stage fund
+structure produces genuine hierarchy** - first-year analysts under supervision, second-year seniors setting
+strategy and handling succession - which is closer to a real investment organisation. **Check whether your
+institution's fund is one course or two; the senior role is not available to a student who joins in their
+final term.**
+
+**Reusable pedagogy point:** a fund persists across cohorts, so **students inherit positions from people
+who have graduated and hand over to people they will never meet** - which forces written investment policy,
+documented theses and transition memoranda because the fund cannot run on personal memory. **The closest
+most undergraduates come to real institutional continuity obligations.**
+
+**⚠ Assessment note worth generalising: student-managed funds should NOT be graded on investment
+performance**, and well-run ones are not. Over a semester, over a small portfolio, performance is dominated
+by noise. **Process quality is the assessable thing** - which is also how professional investment
+organisations evaluate analysts, and teaching students to **distinguish a bad decision from a bad outcome**
+is arguably the course's most valuable content.
+
+### ⚠ `JOU3101C` - suffix AND title both vary, and both are informative
+
+| Source | Number | Title |
+|---|---|---|
+| statewide | **JOU3101C** | Reporting I |
+| **UWF** | **JOU3101** (no suffix) | **Digital and Multimedia Journalism** |
+
+**Two variations at once.** The `C` indicates integrated newsroom/lab time. **The title difference reflects
+a real curricular decision**: "Reporting I" positions the course as the first of a reporting sequence;
+**"Digital and Multimedia Journalism" positions it as a converged-media introduction**, which is how many
+programmes restructured the introductory course as the print/broadcast/online distinction collapsed.
+**Underlying skills identical** - sourcing, interviewing, leads, structure, AP style, law, ethics.
+
+⚠ **Transfer note specific to journalism: clips settle a substitution question faster than a transcript.**
+Recorded in both JOU guides.
+
+**UWF prerequisite artefact worth flagging:** JOU4181's prerequisite names **JOU3100 OR JOU3101**, but
+**JOU3100 does not appear in UWF's current course listing** - most likely a prerequisite retained after a
+renumbering. **Catalog artefacts like this are worth naming in a guide rather than silently resolving**,
+because a student reading the catalog will hit the same puzzle.
+
+### ⚠⚠ `JOU4181` - "PERMISSION IS REQUIRED", and it is a real structural gate
+
+**UWF states permission is required to enrol.** Enrolment restrictions on advanced reporting courses are
+common and the reasons are practical: the work involves **real institutions, real officials and frequently
+actual publication**, so instructors need confidence a student's reporting is ready - **a student who
+misquotes a county commissioner damages a source relationship future cohorts need.** Sections are also
+small because close individual editing is the pedagogy.
+
+⚠ **Flagged as the point of highest risk in the journalism major for transfer students**: a restricted
+course, offered once a year, in a small section, requiring evidence of reporting competence.
+
+**⚠⚠ Florida's public records law recorded as a GENUINE STUDENT ADVANTAGE, not just a legal topic.**
+Florida's Sunshine Law and public records provisions are **among the broadest in the United States** -
+constitutional basis, presumption of openness, narrow exemptions, **no requirement to explain why you want
+a record**, and a meetings rule so strict that **two members of a board discussing board business outside a
+noticed meeting is a violation.** Practical technique captured: **specific requests beat broad ones**
+(broad produces delay and a large fee estimate), fees are limited to actual cost, and **a denial should be
+tested rather than accepted** - the First Amendment Foundation runs a hotline.
+
+⚠ **Counterpart legal caution recorded in both JOU guides: Florida requires ALL-PARTY CONSENT to record a
+private conversation**, unlike many states. Recording a phone interview without agreement is unlawful here.
+
+**Sources recorded for the Florida public affairs beat, all free:** the Attorney General's
+**Government-in-the-Sunshine Manual**; the **First Amendment Foundation**; county **property appraiser**
+sites; clerk **docket search**; the **Florida Division of Elections** campaign finance database; **Florida
+Auditor General** reports on local entities; FDLE crime data; Florida Health Charts.
+
+**Accuracy-policy content worth reusing in any journalism guide:** most programmes apply an **automatic
+failing grade to any story containing a factual error** - a misspelled name, a wrong title, a misquoted
+figure - regardless of other merit. **The reasoning is professional rather than pedagogical**: credibility
+is the publication's entire asset, and in the case of a name the damage falls on someone who did nothing
+wrong.
+
+### `GRA2111C` - a studio course, and the GRA contact-hour convention applied
+
+**Published at 3 credits / 72 contact hours**, per the **GRA convention already documented in this file**
+(~32 lecture + 40 lab). **The validator warned** (expects ~45, or ~60 for a C course) - **warning accepted
+and overridden deliberately**, because the 72-hour figure is sourced from prior project research rather
+than inferred. ⚠ **Worth noting that the validator's C-course expectation of 60 does not fit studio
+disciplines**, where contact hours run higher; that is a bands question rather than a data error.
+
+**⚠ Title variation with UF as the outlier, and it is genuinely informative:**
+
+| Source | Title |
+|---|---|
+| statewide | Graphic Design I |
+| **UWF** | Introduction to Graphic Design |
+| **UF** | **Visual Methods and Processes** |
+
+**UF's framing is method-first rather than profession-first**, which is common where **the foundation year
+is shared across graphic design, illustration, digital media and studio art.** Practical consequence: a
+methods-framed foundation may weight process, drawing and conceptual exploration more heavily and
+typography/software less. **Both transfer under the same number; bring the portfolio.**
+
+**⚠⚠ The structural fact that matters most in an art and design degree, and it surprises transfer students:
+many programmes admit to the upper-division major by PORTFOLIO REVIEW**, before or after the foundation
+year - **so completing foundation courses does not guarantee progression.** Recorded alongside the NASAD
+accreditation note and the A.S.-is-a-career-degree caution.
+
+**Professional-constraint finding students consistently do not know: FONTS ARE LICENSED SOFTWARE**, with
+desktop, web, application and broadcast uses licensed separately - **a font legally installed on your
+computer may not be legally embeddable in a client's product.** Recorded as the copyright constraint
+students are most often unaware of.
+
+**⚠ AI content: this is the field most visibly disrupted in the project so far, and the guide says so
+plainly** - the commodity end of visual production (stock imagery, simple layouts, routine asset variation)
+has been substantially devalued and roles consisting mainly of executing straightforward visual tasks are
+under pressure. **Students should hear that rather than discovering it at graduation.** The compensating
+argument is specific rather than consoling: generative systems are **notably poor at exactly what this
+course drills - typography, hierarchy, precise alignment and legible text** - and **the designers who
+remain valuable are those who can look at a generated option and say precisely why it does not work.**
+Also flagged as live professional risk: **training-data and output-copyright questions are unsettled**, and
+**a designer delivering work warrants something about its provenance**; vendor indemnity terms vary.
+
+### Source notes
+
+- **UWF PDF route** clean on `fin`, `gra`, `hft`, `jou`. ⚠ **Applied the batch-161 lesson and called
+  `locate()` directly rather than piping through `head`** for the multi-target lookups - no truncation this
+  time.
+- **FGCU PDF route** clean on `fin` (7,059), `hft` (18,718) and `gra` (2,535). **The `hft` fetch supplied
+  the six-course prerequisite chain - the batch's headline finding - and `fin` supplied both the FIN4560
+  two-stage structure and the confirmation that UWF's bond fund is a genuine divergence.** ⚠ FGCU has **no
+  GRA2111C** despite a clean 2,535-char prefix fetch.
+- **UF course-search API**: confirmed **GRA2111C** (*Visual Methods and Processes* - which changed the
+  guide) and **JOU4181** (*Public Affairs Reporting*, stable). Confirmed absent at UF: FIN4560, HFT4295,
+  JOU3101C. **Ninth consecutive batch using it.**
+- ⚠ **UF art slugs probed and all 404**: `art/`, `graphic_design/`, `design_construction_and_planning/`.
+  **The slug route remains hit-or-miss; the API remains the reliable UF check.**
+- **Well-formedness scan** built into the assemble script ran clean on all five.
+
+
+---
+
+## Batch 163 findings (2026-09-06) - JPN1120C, JPN1121C, MAE4320, MUE3311, MUT4311, PHI3320
+
+Blocked rows skipped and noted, unchanged from batch 162: the six taxonomy-blocked civil engineering
+courses, `MUN3313`, `MUN3713`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate,
+item 20).
+
+**⚠ `MUG2101` was probed for this batch and DEFERRED.** UWF does not offer it; Broward's catalog has **no
+MUG prefix at all**; `catalog.spcollege.edu` and `catalog.hccfl.edu` both returned **curl 000** (connection
+failure). `PHI3320` was substituted. **MUG2101 needs a state-college source and should be retried when one
+of the blocked state-college catalogs recovers** - it is a conducting course and the natural companion to
+MUE3311 and MUT4311, both written this batch.
+
+### ⚠⚠ THE CONTACT-HOUR PRECEDENT CHECK, DONE AGAINST THE LIVE API - and it is now a repeatable technique
+
+**JPN1120C/JPN1121C are 4 sh at UWF, which sits outside the normal 3cr/45hr pattern.** Rather than infer,
+**the live API was queried for the guides this repository has already published on the parallel language
+sequences**: FRE1120C, FRE1121C, FRE2220C, FRE2221C, SPN1120C, SPN1121C. **All six return `credits=4`,
+`contactHours=60`.** JPN was published at **4 / 60** to match exactly.
+
+**⚠ Record this as a general method: the repository is now large enough to be its own precedent source.**
+Where a course sits in a family the project has already covered, `GET /api/v1/courses/<ID>/guide` on the
+siblings settles a credit or contact-hour question faster and more reliably than re-deriving it from
+catalogs. **2,009 published guides is a usable reference corpus, not just an output.**
+
+The **4-credit integrated-C language convention** is now confirmed across three languages (FRE, SPN, JPN)
+and should be treated as settled for beginning language sequences.
+
+### ⚠⚠⚠ `MUE3311` - A DOCUMENTED CREDIT DISAGREEMENT BETWEEN TWO SOURCES, resolved to 3
+
+| Source | Title | Credits |
+|---|---|---|
+| **FGCU** | Teaching Music, Elementary | **3** |
+| **UWF** | Methods for the Elementary School Music Teacher | **2** |
+| UF | Music in Elementary Schools | - |
+
+**Published at 3**, on two grounds: FGCU documents 3 for **this same number**, and **UWF's music department
+applies 2-semester-hour values broadly across its curriculum** - its conducting, form-and-analysis and
+instrumentation courses are all 2 hours, so the 2 appears to be a **departmental convention rather than a
+statewide norm for this course.** ⚠ **The guide states both values prominently and says which it used**,
+per the standing rule that where sources disagree the guide shows the disagreement rather than hiding it.
+
+**Scope difference worth recording:** UWF's description explicitly includes **"how to begin and maintain an
+elementary choral programme"**, which FGCU's does not. A course including that component covers
+recruitment, young-voice rehearsal technique and concert logistics - **practical content a graduate
+assigned to an elementary school with a chorus needs immediately.**
+
+**Enrolment restriction: UWF states "for music majors only."** Recorded because it catches two groups -
+**elementary education majors** wanting classroom music (directed to a separate non-major course; the two
+are NOT interchangeable, since this one assumes theory, functional keyboard and notation reading) and
+**performance-track music majors** who may need permission.
+
+**Reusable teaching content captured:** the **child voice is higher and narrower than adults assume**, which
+makes adult-chosen repertoire unsingable and is the most common practical error new elementary music
+teachers make; **transitions are where lessons fail**, not content; the job means **500 children a week,
+thirty minutes each, names expected**; and **advocacy is a standing professional expectation** in this
+field rather than an occasional inconvenience.
+
+**⚠ The "music makes you smarter" argument is addressed honestly rather than repeated.** Transfer research
+is contested and **advocacy built on instrumental cognitive benefits is fragile** - it invites the reply
+that the same gains might be had more cheaply. **The guide gives the stronger argument instead**: music is
+worth teaching because a school that teaches none has decided a major domain of human expression is not
+part of an education.
+
+### ⚠⚠ `MUT4311` - SCNS NUMBER DIVERGENCE, not a title drift: FGCU uses MUT3311
+
+| Source | Number | Title | Credits |
+|---|---|---|---|
+| statewide | **MUT4311** | Orchestration | - |
+| **UWF** | **MUT4311** | Instrumentation | **2** |
+| **FGCU** | **MUT3311** | Orchestration and Arranging | **3** |
+
+**This is a different failure mode from the one-number-two-subjects cases.** Same subject, **different
+number** - the digit is a level marker (3 = junior, 4 = senior) and both placements are defensible.
+
+**⚠ It matters more for transfer than a title difference would, because SCNS equivalency operates on the
+NUMBER.** MUT3311 and MUT4311 are different numbers, so **the automatic equivalency that makes Florida
+transfer work does not apply between them**; a student moving between the two institutions needs a
+**course substitution**, which is a departmental decision. **Add this to the transfer-risk patterns
+alongside the suffix cases:** a number divergence defeats articulation in a way a title divergence does
+not.
+
+The practical remedy recorded is subject-specific and genuinely effective: **bring the scores you wrote.**
+A faculty member looking at a competent piano-to-orchestra realisation and a clean extracted part set
+knows within minutes whether the course was equivalent.
+
+**Published at 2 credits / 30 hours** - UWF is **the only source that documents this number**, so its value
+governs. ⚠ **But the guide flags that the workload is out of proportion to the credit**: a single
+orchestration project runs 10-20 hours and part extraction alone is several hours, so **6-10 hours a week
+is realistic on a 2-credit course.**
+
+**⚠ Reusable finding on live readings:** where a programme has student work read by a live ensemble, that is
+the highest-value component of the course, because **notation software renders every note perfectly at any
+dynamic in any register regardless of whether a human could produce it** - a passable playback is the
+strongest possible evidence the parts have not been checked. Balance problems, impossible breaths, page
+turns and mistranslated transpositions surface only in the room.
+
+### `MAE4320` - clean, and the educator-preparation gate restated
+
+UWF: **Teaching Mathematics in Middle and Secondary Schools**, 3 sh. Statewide title is the narrower
+**Teaching Mathematics in Middle School**. Published 3/45.
+
+⚠ **The recurring education-prefix prerequisite pattern applies**: admission to the **educator preparation
+programme** is a separate application from admission to the university (minimum GPA, General Knowledge Test
+scores, background screening) and it **gates the methods sequence**. Recorded again because it is the
+single most common scheduling surprise in Florida education majors.
+
+### `PHI3320` - and the AI section is unusually substantive because AI is the SUBJECT
+
+UWF: **Philosophy of Mind**, 3 sh, **Department of History and Philosophy**; mind-body problem, mental
+representation, consciousness, the computer model of mind. **Meets the College-Level Communication Skills
+Requirement**, which is a real workload signal - the writing is how the philosophy is graded. Not offered
+at UF under this number. Published 3/45.
+
+**⚠ This is the first guide in the project where AI is both the tool students might misuse AND the course's
+own subject matter**, and the section separates the two explicitly. **The course supplies the conceptual
+equipment for questions people now ask daily**: "does it really understand" is *exactly* Searle's question
+with the systems and robot replies standing; **whether a system is conscious is a different question from
+whether it is intelligent**, and conflating them is the commonest public error; and **the other-minds
+problem applies to machines with unusual force** because our grounds for attributing mentality rest on
+physiological similarity the analogy does not survive.
+
+**Discipline-specific AI failure modes recorded** (reusable for any humanities guide): generated
+philosophical writing is **fluent and shallow - well-organised summary, which is already the graded-down
+failure mode**; **attributions and thought-experiment descriptions are subtly wrong** in a discipline where
+the exact form of the argument is the content; and models **flatten disagreement into balanced summary**,
+which is the one thing philosophical writing must not be.
+
+**⚠ Mental-health-adjacent content check applied** (per CLAUDE.md). The guide names plainly that some
+students find the personal stakes of this subject genuinely unsettling, **normalises it as engagement
+rather than a problem**, and points to the instructor and to the free counselling services every Florida
+institution provides. Supportive and resource-pointing, not triggering.
+
+### Source notes
+
+- **UWF PDF route** clean on `jpn`, `mae`, `mue`, `mut`, `phi`. **`locate()` called directly** on the large
+  prefixes per the batch-161 lesson.
+- **FGCU PDF route** supplied **both of this batch's headline findings** - the MUE3311 credit disagreement
+  and the MUT3311 number divergence. ⚠ **FGCU is now the single most productive cross-check source in the
+  project for divergence detection**, because it documents credits explicitly where UWF's PDF sometimes
+  does not.
+- **UF course-search API**: confirmed MUE3311 (*Music in Elementary Schools*). Confirmed absent at UF:
+  PHI3320 under this number. **Tenth consecutive batch using it.**
+- ⚠ **`catalog.spcollege.edu` and `catalog.hccfl.edu` both returned curl 000** on the MUG2101 probe - add
+  both to the standing retry list alongside PSC, PHSC, MDC, Palm Beach State, UNF and Chipola.
+- **Broward has no MUG prefix**; not a block, just an absence.
+- **Well-formedness scan** in the assemble script ran clean on all six.
+- ⚠ **Two prerequisites exceeded the 500-char server limit and were trimmed before push** - MUT4311
+  (551 -> 451) and PHI3320 (535 -> 452). **This is now routine enough to be worth stating as a drafting
+  rule: prerequisite blocks carrying a warning plus an explanation run long; aim for 450 and check.**
+
+
+---
+
+## Batch 164 findings (2026-09-06) - PHI3670, POS3424, POT4204, PSY2023, PUR3100, SOW3203
+
+Blocked rows skipped and noted, unchanged: the six taxonomy-blocked civil engineering courses, `MUN3313`,
+`MUN3713`, `MUN3443`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate).
+
+### 🎉🎉 SOURCE RECOVERY: BROWARD **AND** VALENCIA ARE BOTH BACK
+
+Both had been recorded in `CLAUDE.md` as **empty 202s (bot-blocked) since 2026-09-04**. Re-probed at the
+start of this batch:
+
+| Source | URL probed | Result |
+|---|---|---|
+| **Broward** | `catalog.broward.edu/course-descriptions/psy/` | **200, 37,091 bytes** ✅ |
+| **Broward** | `.../mus/` | **200, 48,775 bytes** ✅ |
+| **Valencia** | `catalog.valenciacollege.edu/coursedescriptions/coursesoffered/psy/` | **200, 19,132 bytes** ✅ |
+| **Valencia** | `.../mus/` | **200, 14,989 bytes** ✅ |
+
+⚠ **The diagnostic that made this visible is worth reusing.** A probe for a prefix the college does not
+carry (`mug`) returned **404 with a full 28 KB body** rather than the 202-with-empty-body signature. **A
+real 404 with content means the server is answering you; an empty 202 means it is not.** Probing a
+*known-good* prefix immediately confirmed the recovery. **Always probe a prefix the school definitely has
+when testing a block, not the prefix you happen to want.**
+
+**Both are now the two most valuable state-college sources again** and should be used for lower-division
+cross-checks in the next batches.
+
+### ⚠⚠⚠ `PSY2023` - THE SECOND CREDIT DISAGREEMENT IN TWO BATCHES, and this one is 1 vs 3
+
+| Source | Title | Credits | Notes |
+|---|---|---|---|
+| statewide / **FSU** | **Careers in Psychology** | **1** | **S/U grade only**; prereq PSY 2012 |
+| **FGCU** | Careers in Psychology | **1** | prereq PSY 2012 |
+| **UWF** | **Professional Development in Psychology** | **3** | broader: competencies, ethics, communication |
+
+**Published at 1 credit / 15 contact hours.** ⚠ **Note this resolves the OPPOSITE WAY from MUE3311 in batch
+163 (where the higher value won), and the same rule produced both: MAJORITY OF DOCUMENTED SOURCES.** Two
+independent sources say 1 and both use the statewide title; UWF is the single outlier and its version is
+genuinely larger in scope. **This is supporting evidence for REVIEW_QUEUE item 21 option (a).**
+
+**⚠⚠ A transfer consequence recorded here for the first time, and it generalises:** a student completing
+the 1-credit version and transferring to an institution requiring 3 is **short two credits toward the
+requirement even though the number is identical and the credit transfers automatically under SCNS.**
+**Credit transfers; credit HOURS do not multiply.** Add to the transfer-risk patterns alongside number
+divergence (MUT4311/MUT3311) and the one-number-two-subjects splits.
+
+**The course's whole value is a function of WHEN it is taken, and FSU's catalog says so explicitly**
+("take it early ... so they can pursue opportunities"). Recorded prominently: research experience, faculty
+relationships and an honors thesis **cannot be compressed** - a sophomore has six semesters, a senior has
+none. **Reusable framing for any careers/orientation course.**
+
+**Content finding worth reusing across psychology and counseling guides: the LMHC/LMFT/LCSW master's route
+is the shorter path to doing therapy**, and many students aiming at extremely competitive funded clinical
+PhD programmes do not know it exists. Florida licenses these through the **Board of Clinical Social Work,
+Marriage & Family Therapy and Mental Health Counseling**, a different board from the **Board of
+Psychology** (doctoral only). Also captured: **school psychology and I-O psychology** as the two
+underpublicised strong-outcome routes, and **BCBA** as the growth field.
+
+### ⚠⚠ `SOW3203` - CSWE accreditation, and the THIRD profession in this repository where accreditation outranks course credit
+
+Joins **nursing** and **medical laboratory science** in the pattern already recorded in the root
+`CLAUDE.md` career-pathways section. Specifically:
+
+- **Licensure requires a CSWE-accredited programme** - a social work degree from an unaccredited programme
+  does not lead to Florida licensure regardless of content.
+- **Advanced standing** (a one-year MSW instead of two) **requires a CSWE-accredited BSW** - a year of
+  tuition and a year of foregone income turns on the accreditation of the bachelor's programme.
+- **Transferred courses transfer as credit and do not necessarily satisfy the professional sequence.**
+
+⚠ **Two further structural gates recorded, both of which end degrees:**
+
+1. **Level 2 background screening.** Field placements are in child welfare, hospitals, schools and
+   corrections, all requiring screening under Florida law. **A criminal history can prevent placement, and
+   without a placement the degree cannot be completed.** The guide tells students to raise it with the
+   programme director **early and confidentially** - many histories are not disqualifying, and discovering
+   the problem in the junior year is the avoidable failure.
+2. **The field practicum: CSWE requires 400 hours (BSW) / 900 (MSW), during business hours, generally
+   unpaid.** Flagged as **the most common reason students do not finish**, and something to plan for
+   financially two years out.
+
+**Cohort-locking recorded again** (same as nursing/MLS): practice courses run once a year, so **a failed
+course costs a year, not a term.**
+
+**Florida practice realities captured as a reusable block for any Florida human-services guide:** Florida
+**has not expanded Medicaid** (a daily constraint in healthcare and behavioural health practice); child
+welfare is delivered through **privatised Community-Based Care lead agencies** under DCF contract; the
+**ageing population** makes gerontological practice unusually large here; **disaster/hurricane response is
+a routine professional demand rather than a speciality interest**; immigration status materially affects
+eligibility; rural counties have real service scarcity **and correspondingly available loan-repayment
+incentives**.
+
+**⚠ Compensation honesty applied per the mental-health-adjacent content rule:** the guide states plainly
+that Florida social work wages are modest relative to the education required, points students to BLS and
+**Florida Department of Commerce** data rather than national averages, and then gives **concrete
+mitigations** (VA and hospital systems pay better, clinical licensure raises earnings, **loan repayment
+programmes for shortage areas are underused**, PSLF applies to most social work employment). Support
+resources named: campus counselling, the programme director, and **988**.
+
+### ⚠ `PUR3100` - PREREQUISITE CHAINS DIVERGE, and the divergence tells you what the course assumes
+
+| Institution | Title | Prerequisite | What it gates on |
+|---|---|---|---|
+| **UWF** | Writing for Public Relations | **COM 2713** (media writing) | **WRITING** |
+| **FGCU** | Public Relations Writing | **PUR 3000** (principles) | **SUBJECT KNOWLEDGE** |
+
+**Both 3 credits, same course.** ⚠ **New pattern worth naming: a prerequisite difference is a transfer risk
+distinct from a title or credit difference**, because a transfer student may have satisfied one chain and
+not the other. **And this course is the bottleneck in a sequential PR curriculum** (principles → writing →
+campaigns/cases → capstone), so a missing prerequisite offered once a year **delays everything after it by
+a year.**
+
+**FGCU runs a REAL CLIENT project** - nonprofit or campus organisation, materials the client actually uses.
+Recorded as **the strongest version of the course**: less predictable workload clustered on client
+deadlines, **much higher portfolio value** (published work under a named organisation), and **a
+professional reference**.
+
+**The automatic-failure-for-a-factual-error norm recorded in the JOU guides (batch 162) applies here
+too**, and for the same professional reason - which now makes it a **cross-prefix convention in
+Florida communication programmes** rather than a journalism quirk.
+
+**⚠ The AI section is the most direct disruption statement in the project since GRA2111C.** Routine
+formulaic PR output - a standard release from a set of facts, a first-draft social post, boilerplate - **is
+now producible by a tool, and that work was a meaningful share of entry-level output.** The guide says so
+and then gives the specific compensating argument: **news judgement (deciding what is not worth pitching,
+and telling a client so) and journalist relationships are the parts that are not automated**, and the
+editorial ability to say precisely why a generated release will not work is what the course teaches.
+**Also recorded as a legal rather than ethical matter: undisclosed AI-generated testimonials, reviews or
+apparently independent commentary are deceptive practices under FTC endorsement guidelines**, not grey
+areas.
+
+### `PHI3670` - title drift across three sources, one of which signals a scope difference
+
+| Source | Title |
+|---|---|
+| statewide / **FSU** | **Ethical Theory** |
+| **FGCU** | Ethics in Theory and Practice |
+| **UWF** | Ethics |
+
+Credits agree at 3 everywhere; same subject. ⚠ **But FGCU's description is worth flagging: "an in-depth
+exploration of A significant tradition ... or AN important topic of debate" - singular.** That reads as a
+course that may go **deep on one theory rather than surveying all of them**, with the tradition varying by
+term. A student expecting a comparative survey could get a semester on virtue theory. **Recorded as a
+"check the syllabus" case rather than a split candidate.**
+
+**⚠ Ethical theory vs applied ethics recorded as a substitution trap**: Florida institutions carry both,
+they are different courses, and a programme requiring one will not usually accept the other. **Where a
+professional programme requires "an ethics course," the requirement is often specific.**
+
+### `POS3424` - scope differs on ONE word that matters a great deal in Florida
+
+**UWF's description includes "the U.S. Congress AND the Florida Legislature in action"; FGCU's is
+Congress-only.** Both transfer under the same number - emphasis, not a split. **But the state content is
+the more immediately useful half for anyone intending to work in Florida politics.**
+
+**A reusable Florida-Legislature contrast block was captured** and is worth reusing in any Florida
+government guide: **~60-day fixed session** (time is the binding constraint on everything); **balanced
+budget requirement** (appropriations is genuinely zero-sum, unlike the federal process); **term limits**
+(eight years per chamber - reduces institutional memory and correspondingly **raises the influence of
+staff, agencies and lobbyists who stay**); **governor's line-item veto**, which the President lacks; **no
+filibuster**; **citizen-initiative constitutional amendment**; and the **Fair Districts amendments**, which
+make Florida one of the most instructive states in the country on redistricting law.
+
+**⚠⚠ Florida-specific research sources captured, all free, and genuinely strong**: the **committee staff
+analyses** published for every Florida bill (non-partisan, thorough, **better than most secondary
+coverage** and largely unknown to students), and **The Florida Channel (thefloridachannel.org)**, which
+archives gavel-to-gavel committee and floor video. **A spring course can track a live bill from filing to
+floor with staff analyses and video at every stage - a research opportunity students in most states do not
+have.**
+
+### `POT4204` - and a note on teaching a contested national story
+
+UWF: "**writings and speeches of theorists AND POLITICAL ACTORS**" and texts that "**question**" the
+principles as well as elaborate them. ⚠ **Both phrases are load-bearing and shaped the guide**: American
+political thought is done largely in **public argument rather than treatises** (Lincoln's speeches,
+Douglass, Seneca Falls, King's Birmingham letter, Court opinions **are** the primary texts), and **the
+tradition contains its own critics**.
+
+**The guide's handling of contested content, applying the project's honest-hedging standard:** the
+disagreements in the course are **disagreements the tradition itself contains** (Garrison vs Douglass on
+whether the Constitution was proslavery; whether Progressive constitutionalism was fulfilment or
+betrayal), so **a course presenting them as settled in either direction misrepresents the sources**. And
+**reading a text seriously is not endorsing it** - Calhoun is assigned because the argument was
+influential, and understanding how it worked is the only way to understand what defeating it required.
+
+**⚠ Practical warning recorded for this course type: primary-source reading load.** Eighteenth and
+nineteenth-century prose is genuinely harder than contemporary academic writing; **Federalist No. 10 is
+nine pages and takes most students over an hour the first time.** Technique given: read aloud when a
+sentence will not resolve (this prose was written to be heard).
+
+**⚠ AI-specific finding for historical humanities courses, worth reusing:** **American political history
+has an unusually large corpus of confidently circulated FAKE FOUNDING-ERA QUOTATIONS**, and a model will
+reproduce them fluently. **Founders Online, the Avalon Project and the Founders' Constitution settle these
+in seconds and are free.** Also: **the tools reproduce the received interpretation, which in this field is
+frequently the contested one** - knowing that a question is contested is itself course content, and the
+tool will not tell you.
+
+### Source notes
+
+- **UWF PDF route** clean on `mug`, `phi`, `phy`, `pos`, `pot`, `psy`, `pur`, `sow`.
+- **FGCU PDF route** clean on `phi`, `pos`, `pot`, `psy`, `pur`, `sow`, `mug`. **Supplied the PSY2023
+  credit disagreement and the PUR3100 prerequisite divergence - the batch's two headline findings.**
+  **Third consecutive batch in which FGCU produced the divergence the guide turned on.**
+- ⚠ **NEW WORKING SOURCE: the FSU undergraduate bulletin generalises beyond the FAMU-FSU joint college.**
+  `registrar.fsu.edu/bulletin/undergraduate-departments/<department>` returned clean HTML for
+  **psychology** (47,245 chars), **philosophy** (33,489) and **social-work** (22,377), each with full
+  course descriptions, credits and prerequisites. **This was previously recorded in this file as useful
+  only for the joint engineering college - it is a general-purpose source and should be promoted in the
+  reachability register.** It supplied the decisive second vote on PSY2023's 1 credit.
+- **UF course-search API**: confirmed **POT4204** (*American Political Thought*). Confirmed absent at UF
+  under these numbers: MUG2101, PHI3670, PHY3424C, POS3424, PSY2023, PUR3100, SOW3203. **Eleventh
+  consecutive batch using it.**
+- ⚠ **`MUG2101` DEFERRED A SECOND TIME and should now be treated as blocked, not pending.** UWF's `mug`
+  PDF fetches cleanly (1,128 chars) and contains **only MUG 3104, MUG 3108 and MUG 4905 - no MUG2101**;
+  FGCU's `mug` PDF likewise. The course is offered at **FSWSC, HSBC, MDC, SPC, TCF and UWF** - i.e. it is
+  a **state-college course**, and every one of those catalogs is unreachable: `catalog.tcc.fl.edu`,
+  `catalog.spcollege.edu` and `catalog.hccfl.edu` all return **curl 000**; `www.mdc.edu` 404s.
+  ⚠ **`catalog.fsw.edu` is a PARTIAL block worth recording precisely: the root returns 200 (26,789 bytes,
+  acalog catoid=27, Course Descriptions at navoid=5491) but BOTH `content.php` and `search_advanced.php`
+  return empty 202s.** Root-reachable, content-blocked. **MUG2101 needs a state-college recovery.**
+- ⚠ **UWF has NO upper-division physics**: the `phy` PDF contains only PHY 1020, 2048, 2048L, 2049, 2049L
+  and 2053. **`PHY3424C Optics` must be sourced from FIU, FSU, UNF or FAMU** - noted for whoever picks it
+  up.
+- **Well-formedness scan** ran clean on all six.
+- **No prerequisite trimming needed this batch** - the batch-163 "aim for 450" drafting rule worked; the
+  longest was SOW3203 at 476.
+
+
+---
+
+## Batch 165 findings (2026-09-06) - AMH4575, PHY3424C, PUR4400C, SOW3350, SOW4510C, ZOO4454C
+
+Blocked rows skipped and noted, unchanged: the six taxonomy-blocked civil engineering courses, `MUN3313`,
+`MUN3713`, `MUN3443`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate),
+`MUG2101` (state-college block, batch 164).
+
+### ⚠⚠⚠ THE HEADLINE PATTERN: FOUR OF SIX ROWS CARRY A `C` THE SOURCING INSTITUTIONS DO NOT
+
+**This is the largest suffix-divergence cluster the project has seen, and it appeared in one batch across
+four unrelated prefixes.**
+
+| Queued number | Institution form found | Institution | What the C actually denotes |
+|---|---|---|---|
+| **PHY3424C** | **PHY 3424** (3 cr) | FSU | integrated lab; FSU puts the lab in a separate **PHY 3802L Intermediate Laboratory** |
+| **PUR4400C** | **PUR 4400** (3 cr) | UWF **and** FSU | integrated applied/simulation time; **UF DOES carry PUR 4400C** (confirmed via the API) |
+| **ZOO4454C** | **ZOO 4454** (3 cr) | UWF | integrated lecture+lab; **FGCU carries ZOO 4454C** |
+| **SOW4510C** | **SOW 4510 + SOW 4522** | UWF **and** FSU | the C records **seminar+placement integration**, which both institutions run as two co-requisite courses |
+
+**⚠ Recorded as a general lesson: the statewide inventory's suffix is NOT reliably what institutions use,
+and the divergence is common enough that it should be CHECKED rather than assumed on every `C` row.**
+Where the sourcing institution has no C, this batch published at the C convention (60 hours) and stated the
+non-C form and its 45 hours explicitly in the guide. **UF's confirmation of PUR 4400C validated that
+approach** - the C form does exist, just not at the institutions whose catalogs fetch cleanly.
+
+### ⚠⚠⚠ `SOW4510C` - A NEW PROJECT RECORD: AN EIGHT-COURSE PREREQUISITE CHAIN
+
+**UWF requires SOW 3103 AND 3113 AND 3203 AND 3313 AND 3322 AND 3350 AND 4232 AND 4403**, co-requisite
+SOW 4522, plus **18 sh of required social work courses, a 2.5 GPA IN THE MAJOR, and permission.** **FSU
+requires completion of ALL required social work courses plus a 3.0 GPA in them.**
+
+**This beats HFT4295's six-course chain (batch 162).** And like HFT4295 it is **a definition rather than
+excess** - a practicum that applies the entire curriculum requires the entire curriculum.
+
+**⚠ Two structural findings recorded that generalise to any capstone practicum:**
+
+1. **A GPA gate IN THE MAJOR that is separate from university academic standing.** 2.5 at UWF, **3.0 at
+   FSU**. **A student can be in good standing with the university and ineligible for field.** This is a
+   different failure mode from the prerequisite chain and students do not anticipate it.
+2. **The 400 hours are during BUSINESS HOURS and generally UNPAID.** 400 hours over a semester is ~25-30
+   hrs/week. Recorded as **the most common reason students do not finish the degree**, with concrete
+   mitigations given (programme stipends, child-welfare paid apprenticeships, financial-aid treatment of
+   the practicum term, planning two years out).
+
+**⚠ Least-portable-course finding, worth generalising:** field education is **the part of a social work
+programme CSWE accreditation most directly governs**, so programmes are generally unwilling to accept a
+practicum completed elsewhere - the placement, supervision and competency assessment are theirs to
+certify. **The guide's advice is blunt: do not plan to transfer after starting field.** Combined with the
+SOW4510/4522 number split defeating automatic SCNS equivalency, this is the single least transferable
+course the project has documented.
+
+**Credit published at 9 / 400 contact hours, and the derivation is stated openly in the guide.** ⚠ **This
+is a variable-credit course at BOTH documented institutions** - UWF field 1-9 sh + seminar 3 sh; FSU field
+6-12 sh (repeatable to 12) + seminar 2 sh. **The 400 hours is SOURCED** (UWF states it; it is the CSWE
+minimum); **the 9 credits is the midpoint of the documented combined ranges and is labelled indicative.**
+**The validator did not warn at 9/400.**
+
+### ⚠⚠ `ZOO4454C` - UWF TEACHES A DIFFERENT AND MUCH NARROWER SUBJECT: A SPLIT CANDIDATE
+
+| Source | Number | Title | Scope |
+|---|---|---|---|
+| statewide / **FGCU** | **ZOO 4454C** | **Ichthyology** | **all fishes** - ~35,000 species, integrated lecture+lab |
+| **UWF** | **ZOO 4454** | **Elasmobranch Biology** | **sharks, rays, skates, chimaeras only** - ~1,200 species, lecture |
+
+**Three divergences at once: subject scope, number suffix, and format.** UWF's is *a survey of current
+advances in elasmobranch biology*, prereq BSC 2011/L, **offered concurrently with the graduate ZOO 5452**.
+
+⚠ **This is stronger than the PCB4315 "narrowing, not a different subject" case ruled low-priority
+earlier.** Elasmobranchs are ~3% of fish species, and **a student completing UWF's course has not covered
+the teleosts** - i.e. every fish a Florida fisheries biologist actually handles (snook, snapper, grouper,
+seatrout, bass, mullet, tarpon). **The employability consequence is concrete, not academic.** Added to the
+one-number-two-subjects open-cases table in `CLAUDE.md` as a candidate.
+
+**Published as Ichthyology** (statewide title, FGCU-documented, majority reading) with UWF's divergence in
+a prominent Special Information table. The guide notes fairly that **UWF's course is the better one for a
+student intending shark research**, and that the concurrent graduate offering signals a real research
+group - **the problem is only that it occupies a number the rest of the state uses for something broader.**
+
+### `SOW3350` - and a prerequisite-direction finding worth reusing
+
+UWF *Principles of Interviewing & Documentation* 3 sh, **meets College-Level Communication Skills
+Requirement**; FSU *Interviewing and Documentation* (3). Clean agreement. 3/45.
+
+⚠ **The important structural note runs FORWARD rather than backward: SOW3350 is itself one of the eight
+prerequisites for SOW4510.** Recorded as a reusable framing - **for courses inside a cohort-locked
+sequence, "what this course gates" matters more to a student than "what gates this course,"** because that
+is where the year-long delay comes from.
+
+**Reusable pedagogy captured:** the interview/documentation pairing is deliberate - **the interview obtains
+the information, the record is where it becomes real** (read at 3 a.m. by another practitioner, subpoenaed,
+audited, following the client between agencies for years). **The central teachable distinction is
+observation vs inference**: *"Client was hostile"* is a judgement; *"Client raised his voice and stated he
+would not return"* is an observation. **Test given: could a reader disagree with this sentence without
+disputing a fact? If yes, it is a judgement.** Also captured: **labels like "non-compliant" and
+"manipulative" record the writer's frustration and follow the client indefinitely**; **explain the limits
+of confidentiality BEFORE a disclosure, not after**; and **42 CFR Part 2** protects substance use records
+more strictly than HIPAA, which surprises students.
+
+### `PUR4400C` - the legal/communication counsel conflict, and a Florida career finding
+
+UWF *Crisis Public Relations* (3 sh, prereq **PUR 3000 OR COM 3003**); FSU *Crisis Communication* (3,
+advanced seminar, no prereq listed). **UWF's alternative prerequisite is informative** - permitting either
+the PR principles course or a general communication course signals the department treats crisis capability
+as relevant beyond the PR track.
+
+**⚠ The professional tension recorded as unresolvable rather than glossed:** **legal counsel and
+communication counsel want opposite things** - silence and admission-avoidance vs prompt human
+acknowledgement. Both protect the organisation from different threats. **Learning to argue the
+communication case in front of general counsel, and to lose gracefully when the legal exposure genuinely
+outweighs the reputational one, is the grown-up skill.** Also recorded: **expressing sympathy is not an
+admission of liability** and many jurisdictions protect such expressions explicitly - a widely
+misunderstood point.
+
+**⚠⚠ A concrete, free, résumé-bearing Florida credential identified: the FEMA Emergency Management
+Institute ICS courses (IS-100, IS-200, IS-700, IS-800).** Free, online, certificated, completable in a few
+evenings, and **the standard credential for public information work in a government or emergency
+context.** Combined with the CDC's **CERC** manual, this gives a Florida communication graduate something
+concrete most graduates lack. **Recorded because Florida's hurricane season makes emergency public
+information a routine operational function** across counties, districts, hospitals, universities, utilities
+and tourism operators - **disaster communication is not a niche in this state.** Also captured: emergency
+public information is **life-safety messaging where the objective is BEHAVIOUR rather than reputation**,
+and the warning-message evidence base is specific (people confirm through multiple sources before acting;
+ambiguity produces delay; specific who-and-what-to-do outperforms urgency).
+
+**Three student errors recorded as reusable**: waiting for complete information (the vacuum gets filled);
+**writing for the organisation rather than the people affected - victims come first, in the statement, in
+notification order and in concern**; and the non-apology, which every audience recognises instantly.
+
+### `PHY3424C` - the successive-approximation structure, and the alignment point
+
+FSU *Optics* (3), prereq **PHY 2049C**: geometrical optics, wave optics, optical instrumentation,
+properties of light, lasers, fibre optics. ⚠ **UWF has NO upper-division physics at all** (only PHY 1020,
+2048, 2048L, 2049, 2049L, 2053) - confirmed and recorded in batch 164.
+
+**Pedagogical framing captured:** optics is taught in **successive approximations, each exact enough for
+its domain and superseded by the next** - geometrical optics is *wrong* and *completely adequate* for
+designing a camera lens. **Learning when a simpler model suffices is the transferable habit**, and optics
+is where most students meet the idea explicitly.
+
+**⚠ Two specific difficulty warnings recorded**: **sign conventions in geometrical optics cause more lost
+marks than any conceptual difficulty** (conventions differ between textbooks and a sign error propagates
+silently to a confidently wrong answer - write the convention at the top of every problem set); and
+**optical alignment is a manual skill, frustrating at first, and is NOT a measure of physics ability** -
+students frequently conclude the equipment is broken when it is not.
+
+**⚠ Career finding specific to Florida and stronger than expected: Central Florida is a genuine optics and
+photonics cluster** built around **UCF's CREOL**, with Lockheed Martin Orlando, L3Harris in
+Melbourne/Palm Bay, Northrop and the Space Coast. **The employable differentiator is alignment competence
+rather than grades**, which is a direct argument for seeking out the integrated `C` version. Also recorded:
+**laser safety training is an ANSI Z136 regulatory requirement and is worth putting on a résumé.**
+
+### `AMH4575` - the "long movement" framing, and Florida history that is genuinely under-taught
+
+UWF *Civil Rights* (3 sh, Dept of History and Philosophy): **"from its roots in the nineteenth century to
+the present."** UF: **"Civil Rights Movement*s*"** - plural.
+
+**⚠ Both framings are substantive claims and the guide explains them.** UWF's chronology commits to **the
+long civil rights movement** thesis - the mass phase as the visible portion of decades of organising, not a
+sudden moral awakening. **Worked example given: Rosa Parks was a trained activist and long-serving NAACP
+secretary who had attended Highlander months earlier, and the boycott had been planned for** - which does
+not diminish the act, it makes it intelligible. **UF's plural implies overlapping struggles** and predicts
+more comparative and post-1965 content.
+
+**⚠⚠ A substantial Florida-history block was captured and should be reused in any Florida history guide**,
+because most Florida students have never encountered it: the **Tallahassee bus boycott (1956)**, begun by
+two FAMU students, running concurrently with Montgomery; **St. Augustine (1964)**, a major campaign with
+King present whose coverage helped secure the Civil Rights Act - **arguably the most consequential Florida
+campaign and the least taught**; the **Groveland case (1949)**, posthumously exonerated by the state in
+2021; **Harry T. and Harriette Moore**, murdered by a bomb in Mims on Christmas night 1951 and among the
+first martyrs of the modern movement; the **Ocoee (1920)** and **Rosewood (1923)** massacres; and the
+**Johns Committee (1956-65)**, whose records at the State Archives are extraordinary primary sources on how
+state power was used against the movement.
+
+**⚠ Archives identified, all free, and this is where original undergraduate work is available**: **Florida
+Memory** (State Library and Archives), the **Samuel Proctor Oral History Program** at UF, and the
+**Meek-Eaton Black Archives** at FAMU. **The guide explicitly tells students to choose a Florida topic**
+rather than writing another paper on Birmingham.
+
+**⚠ Difficult-content handling applied per the CLAUDE.md rule.** The guide states plainly that the material
+includes graphic violence, explains **why courses assign it** (it is the record, and the movement's own
+strategy depended on making that violence visible), notes that instructors normally signal it and that
+asking is reasonable, and frames classroom discussion around the historian's discipline - argue from
+evidence, represent other positions accurately, distinguish what you can establish from what you believe.
+
+**⚠⚠ AI finding specific to this subject and severe: a large number of quotations circulate attributed to
+King, Malcolm X and other movement figures that they did not say** - some invented, some paraphrases
+hardened into quotations, some genuine but stripped of context that reverses their meaning. **A model
+reproduces these fluently with confident attribution.** The **King Papers at Stanford** hold authenticated
+texts and are free. **This is the second batch running in which fabricated-quotation risk in a historical
+humanities field has been the leading AI caution** (POT4204, batch 164, on founding-era quotations) -
+**treat it as a standing hazard for any history guide.**
+
+### Source notes
+
+- **UWF PDF route** clean on `adv`, `amh`, `mug`, `phy`, `pur`, `sow`, `zoo`.
+- **FGCU PDF route** clean on `mug`, `pur`, `zoo`. **Supplied the ZOO4454C Ichthyology reading** that
+  established UWF as the outlier.
+- **FSU bulletin** (`registrar.fsu.edu/bulletin/undergraduate-departments/<dept>`) clean on `physics`
+  (39,287 chars), `communication` (53,683), `social-work` (22,377). ⚠ **Second consecutive batch in which
+  the FSU bulletin supplied the decisive source** - it produced PHY3424, PUR4400 and the SOW4510r/4522
+  split. **Its promotion in the reachability register (batch 164) is confirmed as correct.**
+- **UF course-search API**: confirmed **AMH 4575** (*Civil Rights Movements*) and **PUR 4400C**
+  (*Crisis Communications* - **the C form, which settled the suffix question**). Confirmed absent at UF:
+  MUG2101, PHY3424C, ZOO4454C, SOW4510C, PUR4400 (unsuffixed). **Twelfth consecutive batch using it.**
+- ⚠ **FAU AND FIU ARE BOTH COURSEDOG SPAs - a documented lead, not a working route.** `catalog.fau.edu`
+  and `catalog.fiu.edu` return 200 with large bodies but are **client-rendered Nuxt apps**; the FIU school
+  id is **`fiu_peoplesoft`** (extracted from an S3 asset path). **Every Coursedog API shape tried returned
+  `{"error":"Unauthenticated"}`**: `app.coursedog.com/api/v1/ca/<school>/catalogs`,
+  `.../cm/<school>/courses/search/$filters`, the `/public` variants, and the catalog-domain proxy (404).
+  **Cracking this would unlock FAU and FIU together and is worth a focused attempt later** - it is the
+  largest remaining reachability gap after UNF.
+- ⚠ **`catalog.usf.edu` root returns 200 (75 KB) but exposes no course-description path** - its only
+  course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a working route.
+- **`catalog.tcc.fl.edu`, `catalog.spcollege.edu`, `catalog.hccfl.edu` curl 000; `www.mdc.edu` 404** -
+  standing retry list unchanged.
+- **Well-formedness scan** ran clean on all six.
+- ⚠ **One prerequisite trimmed** (PHY3424C, 502 -> 496). The batch-163 "aim for 450" rule held for the
+  other five.
+
+
+---
+
+## Batch 166 findings (2026-09-06) - AMS2010, BCH3033, BCH3033L, BCH3034, CAI4203, CCJ3014
+
+Blocked rows skipped and noted, unchanged: the six taxonomy-blocked civil engineering courses, `MUN3313`,
+`MUN3713`, `MUN3443`, `PEL1341` (scope calls), `ASC1610C` (sourcing), `LAE3314` (split candidate),
+`MUG2101` (state-college block). **`ADV2000C` deferred** - UWF's `adv` PDF fetches cleanly (3,782 chars)
+and **contains no ADV2000 or ADV2000C**; its institutions are EFSC, IRSC, RU, UIC and UWF, i.e. mostly
+state colleges and privates. Needs a state-college source.
+
+**The BCH family (BCH3033 + BCH3033L + BCH3034) was written together under the split-family rule** - all
+three were queued, they cross-link, and they share their sourcing.
+
+### ⚠⚠⚠ `AMS2010` - A COURSE THAT SITS INSIDE A FLORIDA STATUTORY GRADUATION REQUIREMENT
+
+**This is the first guide in the project for a course whose main practical significance is a state
+requirement rather than its content.** UWF: *Civil Discourse and the American Political Order*, 3 sh, Dept
+of Government, **meets General Education Humanities AND the College-Level Communication Skills
+Requirement**; UF carries the same title.
+
+**Florida requires students at SUS and FCS institutions to demonstrate CIVIC LITERACY to graduate**,
+normally by **an approved course PLUS an assessment**. ⚠ **The guide deliberately does NOT state the
+current approved course list or passing score**, because both are set by the Board of Governors and State
+Board of Education and are periodically revised - **stating a number that goes stale would be worse than
+telling the student where to look.** The guide instead tells students to verify four things with an
+advisor: which course counts, whether there is a separate examination, **that their CATALOG YEAR governs
+rather than current rules**, and to do it in the sophomore year.
+
+⚠ **The named failure mode is real and recorded**: students discovering in a graduation audit that a
+requirement they thought a course covered was in fact **a course plus an examination they never sat.**
+**POS 2041 and AMH 2020 are also commonly designated for the same purpose** - so this course is one route,
+not the route.
+
+**Reusable content captured:** the guide defines **civil discourse precisely** as engaging the strongest
+version of an opposing argument, distinguishing factual from value disputes, being explicit about what
+would change your mind, and separating argument from person - **explicitly NOT avoiding disagreement or
+softening a position.** ⚠ **The single most useful analytical tool recorded: the factual/value/definitional
+dispute distinction**, because *arguments that are actually about values do not resolve by producing more
+facts.*
+
+**⚠⚠ The best free resource identified in several batches: the National Constitution Center's Interactive
+Constitution**, which for each clause publishes **a JOINT statement by two scholars of differing views on
+what is agreed, plus separate statements on what is disputed.** **It models the civil discourse the course
+teaches, applied to the document the course studies** - a genuinely unusual artefact and worth reusing in
+any constitutional-content guide.
+
+### ⚠⚠ `CAI4203` - PREREQUISITE DIVERGENCE WHERE ONE INSTITUTION IS SUBSTANTIVELY RIGHT
+
+| Institution | Title | Prerequisites |
+|---|---|---|
+| **UWF** | Deep Learning | **COP 3530 AND MAS 3105** (data structures + **linear algebra**) |
+| **FGCU** | Neural Networks & Deep Learning | **COP 3530** only |
+
+**Both 3 credits, same material.** ⚠ **The guide takes a position rather than reporting neutrally, and
+states the reason: a forward pass IS a sequence of matrix multiplications, backpropagation IS the chain
+rule applied to that sequence, and the commonest practical error in the course - a shape mismatch between
+layers - is a linear algebra error presenting as a runtime exception.** A student without it can follow
+framework code and cannot reason about it. **Advice given: take it anyway, or learn it alongside; it is a
+few weeks of self-study, not a lost year.**
+
+**⚠ A course-design finding worth generalising to any fast-moving technical subject: CONTENT DATES FASTER
+HERE THAN ANYWHERE ELSE IN THE CURRICULUM.** Goodfellow's *Deep Learning*, the standard reference,
+**predates the transformer entirely.** Two consequences recorded: **an instructor supplementing with papers
+and recent lecture material is doing it right, not being disorganised**; and **the fundamentals do not
+date** - backpropagation, gradient descent, regularisation and honest evaluation are unchanged.
+**"Architectures are the fashion; the foundations are the course."**
+
+**⚠ Career honesty applied**: a single course does not make an ML engineer; **the bar for research roles is
+a graduate degree and the bar for ML engineering roles is strong software engineering PLUS ML** - the
+software half being what applicants underweight. **Three named differentiators: a portfolio you can
+explain including what did not work, real software engineering skill, and demonstrated work with messy
+data.**
+
+**⚠⚠ The reflexive AI point is the strongest in the project so far and is specific to this course**: the
+systems a student uses to study this course are the systems the course explains. **A student who finishes
+it understands that the model producing confident code is a next-token predictor with no verification
+mechanism and confidence unrelated to correctness - because those are properties of the architecture they
+just spent a semester studying.** Recorded as a more durable form of AI literacy than any policy
+discussion.
+
+**Also captured, and specific to this subject: generated training code contains characteristic
+METHODOLOGICAL errors rather than syntax errors** - **data leakage** (fitting a scaler before splitting;
+splitting temporal data randomly) and **repeated test-set evaluation during development.** **The code runs,
+produces a good number, and is wrong** - which is exactly the failure the course teaches students to
+detect.
+
+### ⚠ The BCH family - three guides, and the registration trap
+
+**UWF sources, all clean:** BCH 3033 *Biochemistry I* 3 sh, prereq **BSC 2010/L AND CHM 2210**;
+**BCH 3033L** *Biochemistry I Laboratory* **1 sh**, prereq **BCH 3033 with an ASTERISK indicating it may
+be taken CONCURRENTLY**; BCH 3034 *Biochemistry II* 3 sh, prereq BCH 3033. **UWF notes a material and
+supply fee for the lab.**
+
+**⚠⚠ Prerequisite divergence with a real curricular argument behind it:**
+
+| Institution | Prerequisites | Format |
+|---|---|---|
+| **UWF** | **BSC 2010/L AND CHM 2210** (biology + organic I) | 3 sh |
+| **Broward** | **CHM 2211 pre-or-corequisite, MINIMUM GRADE C** (organic II), **no biology at all** | **3 cr / 48 contact hrs, all lecture** |
+
+**One institution treats biochemistry as a biology course requiring chemical tools; the other as a
+chemistry course with biological subject matter.** Both defensible, and the practical implication is
+recorded (pacing differs).
+
+⚠ **Broward's 48 contact hours confirms the documented Broward 3-credit convention** already in this file.
+**Published at 45.**
+
+⚠ **Scope divergence recorded: Broward's description INCLUDES DNA replication, transcription and protein
+synthesis; UWF's does not.** Programmes with a separate molecular biology course omit the central dogma
+from biochemistry; programmes without one include it. **Practical consequence flagged for pre-medical
+students: you can complete both biochemistry semesters and not have met the central dogma in this
+sequence - and the MCAT examines it regardless of which course delivered it.**
+
+**⚠ The registration trap recorded prominently in all three guides: BCH3033 and BCH3033L are separately
+numbered and separately enrolled**, and forgetting the lab is the most common error in the sequence.
+**Three checks given, and the second is the one that catches people: does your DEGREE require the lab; do
+the PROFESSIONAL SCHOOLS you will apply to require a lab science specifically (a lecture-only biochemistry
+course may not satisfy them, and a degree audit is not the same document as a medical school's
+prerequisite list); and is the 1-credit lab offered every term** - one-credit labs frequently are not.
+
+**⚠⚠ The credit-to-time ratio finding, worth generalising to every `L` course in this repository: a
+1-credit lab means a 3-4 hour weekly session - three to four times the contact time of a 1-credit lecture
+- plus prep and reports, realistically 5-8 hours a week.** Also recorded: **lab sessions are long fixed
+blocks that generally CANNOT be made up**, because equipment, reagents and instructor time are allocated to
+that session - **so a work conflict is a real problem and a missed session in a multi-week purification can
+be unrecoverable.**
+
+**Reusable lab pedagogy captured:** the **multi-week protein purification** is the spine of nearly every
+biochemistry lab, **each week's material is the next week's input** (so losing a sample has persisting
+consequences), and **the purification table is the most instructive artefact** because it makes the central
+trade visible - **every step raises purity and loses material.** ⚠ **Students frequently misread declining
+yield as failure; it is the expected result.** Also: **unpolymerised acrylamide is a potent neurotoxin
+absorbed through skin** and is the one lab hazard unfamiliar to students; **many departments now use
+pre-cast gels partly for this reason.**
+
+**⚠⚠ Research-misconduct language included in the lab guide in the plainest possible terms**: generating
+plausible data for a failed experiment, or adjusting real data toward the expected result, **is fabrication
+and falsification - the two most serious categories of research misconduct.** **The constructive half
+matters more and is stated: an experiment that did not work is a legitimate result, and a report that
+diagnoses the likely cause will generally out-grade one reporting a suspiciously perfect outcome.**
+
+**⚠ BCH3034 study-method finding, and it is the strongest single piece of advice in the three guides:
+studying metabolism as MEMORISATION is the standard mistake.** The material presents as diagrams to
+reproduce; **the examinations ask why a step is irreversible, what happens if an enzyme is deficient, why
+the cell does not run the pathway backwards, and what a tissue is doing under given conditions.** **What is
+actually worth memorising is a short list** - regulated enzymes and their effectors, overall equations and
+yields, cellular locations, clinical connections. **The full list of intermediates is the least valuable
+thing on the page.**
+
+**Also recorded as the course's most useful organising idea:** a pathway and its reverse **cannot both be
+thermodynamically favourable, so they must differ at the irreversible steps - which is precisely what
+allows them to be separately regulated.** Glycolysis/gluconeogenesis is the worked case.
+
+**⚠ Metabolism-course pacing hazard recorded: the course ACCELERATES.** Glycolysis and the citric acid
+cycle are covered slowly; **lipid, amino acid and nucleotide metabolism arrive faster and in greater
+volume, and the integration material at the end assumes all of it** - so falling two weeks behind mid-term
+is not recoverable at the end.
+
+**⚠ AI finding specific to structural biology, and it is a genuine advance rather than a caution:
+AlphaFold-class structure prediction now covers essentially the entire known protein universe and is
+freely available.** The guide gives the two things worth understanding rather than being impressed by:
+**a predicted structure is a prediction with a confidence score, least reliable exactly where structure is
+most interesting** (disordered regions, conformational change, ligand-bound states, novel folds); and
+**prediction has not replaced crystallography, NMR or cryo-EM, not least because the predictors were
+trained on their output.**
+
+**⚠ Newborn-screening example captured as the clearest "why this course still matters" case in the
+project**: Florida's newborn screening programme uses algorithmic interpretation of mass spectrometry to
+flag suspected inherited metabolic disorders - **and a person must then interpret the metabolite pattern,
+know which pathway is blocked, understand what accumulates and what is depleted, and decide what
+confirmatory testing is warranted. That reasoning is exactly what BCH3034 teaches and is not what the
+algorithm does.**
+
+### ⚠ `CCJ3014` - and the distinction students most reliably get wrong
+
+UWF: *Criminology*, 3 sh, Dept of Criminal Justice - *causes, types and patterns of crime; major schools of
+thought and current research introduced, compared and contrasted.*
+
+**⚠ Recorded prominently: CRIMINOLOGY IS NOT CRIMINAL JUSTICE.** CCJ 3014 studies **the phenomenon** (why
+crime occurs, how it is distributed, what explains it); **CCJ 3024** studies **the system** (police, courts,
+corrections). **Most programmes require both and they are not substitutable** - a recurring registration
+error.
+
+**⚠⚠ A "findings that contradict common belief" block was captured and is the guide's most valuable
+section**, reusable wherever public belief diverges from evidence: **certainty of apprehension deters and
+severity of punishment largely does not** (among the best-supported findings in the field and among the
+least reflected in policy); **violent crime declined substantially from the early 1990s while public
+perception frequently moved the other way**; **crime is extremely concentrated** in few places and few
+people; **the age-crime curve means most offending stops on its own and desistance is the normal outcome**;
+**offenders and victims are substantially the same population**; **people with serious mental illness are
+far more likely to be victimised than to offend violently**; and **Scared Straight was repeatedly evaluated,
+found to INCREASE offending, and is still widely believed to work.** ⚠ **The general lesson recorded as the
+course's most valuable content: intuitive appeal is a poor predictor of effectiveness.**
+
+**⚠⚠ Measurement finding that is the discipline's core methodological point and generalises widely: each
+crime data source measures something different, and an apparent change in crime can be a change in
+reporting, recording or law rather than in behaviour.** **The UCR-to-NIBRS transition has genuinely
+complicated recent trend analysis** - recorded because it is a live data caveat a student will hit.
+
+**⚠⚠ Florida certification finding, and every student in this course needs it: THE DEGREE AND THE
+CERTIFICATION ARE SEPARATE.** Sworn law enforcement and correctional positions require **CJSTC
+certification** - a **basic recruit training academy**, the **State Officer Certification Examination**, and
+background/physical standards. **A criminology degree does not confer it.** Many Florida state colleges
+host academies and some agencies sponsor recruits; **the routes differ substantially in sequence and cost
+and should be identified early.**
+
+**⚠ The professional AI section is one of the strongest in the project because the course's own methods
+apply directly.** Algorithmic tools already deployed in the justice system - **pretrial/sentencing risk
+assessment**, **predictive policing**, **facial recognition** - and **the central criminological objection
+to predictive policing is a feedback problem the field is equipped to explain: a model trained on ARREST
+data predicts where arrests have occurred, patrol follows the prediction, arrests follow patrol, and the
+prediction is confirmed. ARREST DATA IS NOT CRIME DATA** - which is exactly what the course's measurement
+unit teaches. **Recorded as a genuine professional contribution a criminology graduate is better placed to
+make than almost anyone else in the room.**
+
+### Source notes
+
+- **UWF PDF route** clean on `adv`, `ams`, `bch`, `cai`, `ccj`. ⚠ **The `ams` PDF is only 760 chars -
+  AMS2010 is the ONLY course in the prefix at UWF**, which is itself informative about the prefix.
+- **FGCU PDF route** clean on `cai` (3,856), `ccj` (15,719), `bch` (2,233). **Supplied the CAI4203
+  prerequisite divergence - the batch's headline technical finding.** ⚠ **FGCU has neither CCJ3014 nor
+  BCH3033** despite clean prefix fetches.
+- ⚠⚠ **BROWARD USED PRODUCTIVELY FOR THE FIRST TIME SINCE ITS RECOVERY**, and it earned its place:
+  `catalog.broward.edu/course-descriptions/bch/` returned **6,318 chars** with **BCH3033 including
+  "Total Contact Hrs: 48.00 / Lecture Hrs: 48.00" and "Pre or Corequisite: CHM2211 (minimum grade: C)"**.
+  **Broward is the only routinely fetchable Florida source that publishes CONTACT HOURS explicitly** -
+  which makes it uniquely valuable for the credit/hour questions that have driven three of the last four
+  batches. **Use it whenever a contact-hour figure is in doubt.** ⚠ Broward has BCH3033 but **not** BCH3033L
+  or BCH3034 - consistent with a state college offering the lecture inside a bachelor's programme.
+- **UF course-search API**: confirmed **AMS 2010** (*Civil Discourse and the American Political Order*).
+  Confirmed absent at UF under these numbers: CCJ3014, BCH3033, CAI4203. **Thirteenth consecutive batch.**
+- ⚠ **FSU bulletin misses**: `political-science` (36,459 chars) has **no AMS2010**;
+  `interdisciplinary-social-science` and `criminology` both **404**. **The FSU department-slug route
+  requires the right slug and there is no index** - worth noting that a 404 here means a wrong slug rather
+  than a block, since `psychology`, `philosophy`, `social-work`, `physics` and `communication` all work.
+- ⚠ **COURSEDOG REMAINS CLOSED.** Four further endpoint shapes tried for FIU (`/api/v1/ca/<school>/
+  courses/search/$filters`, `/api/v1/ca/<school>/programs`, `catalog.fiu.edu/api/catalogs`,
+  `/api/v1/catalogs/<school>`) - all `Unauthenticated` or `Cannot GET`. **Stop attempting this
+  opportunistically; it needs a focused session inspecting the SPA's actual network calls.**
+- **Well-formedness scan** ran clean on all six.
+- ⚠ **Two prerequisites trimmed** (BCH3033L 501 -> 495; CCJ3014 525 -> 463). **The "aim for 450" rule
+  continues to be the right target** - the four that held were 453-477.
+
+
+---
+
+## Batch 167 findings (2026-09-06) - CHM3410, CHM3411, CLP4302, CLP4390, COM3465, CRW3110
+
+Blocked rows skipped and noted, unchanged: the six taxonomy-blocked civil engineering courses, `MUN3313`,
+`MUN3713`, `MUN3443`, `PEL1341` (scope), `ASC1610C` (sourcing), `LAE3314` (split candidate), `MUG2101`
+and `ADV2000C` (state-college block).
+
+### 🎉🎉🎉 COURSEDOG CRACKED - FIU IS OPEN, 27,923 COURSES, AND THE GATE WAS ONE HTTP HEADER
+
+**After failing across three batches, the FAU/FIU Coursedog block is solved.** The method, recorded in
+full because it generalises to every Coursedog school:
+
+1. The catalog site is a **Nuxt SPA**. Fetch its HTML and collect every
+   `https://static.catalog.prod.coursedog.com/.../_nuxt/*.js` bundle (45 of them for FIU, ~1.7 MB total).
+2. Grep the concatenated bundles for the API base: `` `${BASE_URL}/api/v1/` `` with
+   **`BASE_URL:"https://app.coursedog.com"`** in the page's Nuxt payload.
+3. Grep for the endpoint templates. The productive ones are
+   **`` `/cm/${school}/courses` ``** with **`` `${this.coursesUrl}/search/${filters}` ``** and query
+   params **`catalogId`, `skip`, `limit`, `sortBy`**.
+4. The **schoolId** comes from an S3 asset path in the page HTML:
+   `coursedog-images-public.s3.us-east-2.amazonaws.com/`**`fiu_peoplesoft`**`/...`
+5. The **catalogId** is the only UUID in the page HTML:
+   `0dd4e360-91f5-47cf-924a-1267dc972068`.
+
+**⚠⚠⚠ AND THE ACTUAL GATE: the request must carry `Referer: https://<catalog host>/`.** Without it every
+shape returns `{"error":"Unauthenticated"}`; with it the same URL returns the full catalog. **No API key,
+no cookie, no token - one header.** This is why three batches of endpoint-guessing failed: the path was
+right from the second attempt and the headers were wrong.
+
+Working call:
+```
+GET https://app.coursedog.com/api/v1/cm/fiu_peoplesoft/courses/search/$filters
+      ?catalogId=0dd4e360-91f5-47cf-924a-1267dc972068&skip=0&limit=5000
+Referer: https://catalog.fiu.edu/
+```
+
+**Tooling written: `scratchpad/coursedog.py`**, with `SCHOOLS` mapping, `discover_catalog_id()`, paging,
+and a `--dump` mode for a whole prefix. **`scratchpad/fiu_courses.json` caches all 27,923 FIU courses**
+(code, name, credits, college, description) - **paging the full catalog takes ~2-3 minutes, so use the
+cache rather than re-fetching.**
+
+**The returned records are RICHER than any other Florida source**: `code`, `name`, `credits`, `college`,
+`description`, `cipCode`, `career`, `campus`, and a `components` array carrying **`contactHours`** per
+component. ⚠ **Note the data is messy in a specific way: the same code appears multiple times** with
+different colleges and credit values (BCH3033 returns three rows - 3.33 cr, 4 cr, and the real 3 cr
+CASE entry). **Prefer the row with a real college name and a populated description.**
+
+⚠ **FAU IS NOT YET OPEN.** Same technique, but `fau_peoplesoft`, `fau`, `fau_banner`, `floridaatlantic`
+and `fau_edu` all return Unauthenticated with the FAU Referer, and **the cached `fau.html` contains no
+`coursedog-images-public` S3 path** to read the real schoolId from. **Next step: re-fetch
+`catalog.fau.edu` fresh and grep for the S3 asset path, or for any `[a-z]+_[a-z]+` school token.** ⚠ Also
+note the FAU page carried **the same UUID as FIU**, which suggests that UUID may be a build id rather
+than a catalogId - so FAU's catalogId may also need `discover_catalog_id()` to find something else.
+
+**Immediate confirmation of a batch-165 finding: FIU carries `PHY3424` WITHOUT the `C`** (*Optics*, 3 cr,
+CASE) - a third institution agreeing that the statewide `C` suffix is the minority form for that number.
+
+### ⚠⚠⚠ `CLP4302` - THE STRONGEST SPLIT CANDIDATE SINCE `PUR3000`
+
+| Source | Title | What it actually teaches |
+|---|---|---|
+| statewide / **FGCU** / **UF** | Intro to Clinical Psychology | **Surveys scientific basis, training, roles, models, controversies and ethics** - a disciplinary survey |
+| **UWF** | Introduction to Clinical Psychology | **HELPING SKILLS**: dynamics of communication in a helping relationship, empathy, nonverbal behaviour, problem solving, crisis intervention, interview techniques, **experiential activities** |
+
+**These are different courses, not different emphases.** One is a survey of a discipline assessed by
+examination and paper; the other is a skills course assessed substantially by demonstrated performance in
+role play.
+
+**⚠⚠ THE PREREQUISITE CHAINS ARE THE DECISIVE EVIDENCE, and this is a reusable diagnostic:**
+
+- **FGCU: PSY 2012 + (PSY 3213 or PSY 3017) + (STA 2122 or PSY 3205) + CLP 4143** - gates on **research
+  methods AND statistics**.
+- **UWF: CLP 3144 alone** - abnormal psychology.
+
+**A department requiring statistics before a course is telling you the course reads research; a
+department requiring only abnormal psychology is telling you it does not.** ⚠ **Record this as a general
+technique: where a title drift is ambiguous, COMPARE THE PREREQUISITE CHAINS - they encode what the
+department thinks the course requires, and they are harder to fudge than a catalog description.**
+
+**Published as a single guide COVERING BOTH VERSIONS with each clearly labelled**, since a student
+arriving does not know which one their institution runs. Added to the open-cases table in `CLAUDE.md`.
+
+⚠ **Transfer risk stated explicitly in the guide**: SCNS equivalency operates on the number, so the credit
+transfers automatically - **but a student who completed the skills version and transfers where CLP4302 is
+the survey has satisfied a requirement without covering its content**, and meets the gap in a later course
+that assumes it.
+
+### ⚠⚠ `CHM3410` / `CHM3411` - THE SEQUENCE-ORDERING TRAP, which no articulation check can detect
+
+**Florida institutions do not agree on which half of physical chemistry comes first.**
+
+- **Thermodynamics first** (UWF, FGCU): CHM3410 = gases, thermo, solutions, equilibrium, electrochemistry,
+  kinetics; CHM3411 = quantum, spectroscopy, statistical mechanics.
+- **Quantum first** (the McQuarrie textbook ordering, used elsewhere): **the content of the two numbers is
+  reversed.**
+
+**⚠⚠ The consequence is concrete and expensive: a student completing CHM3410 at a thermo-first institution
+and transferring to a quantum-first one can take THERMODYNAMICS TWICE AND NEVER TAKE QUANTUM MECHANICS -
+with an apparently complete transcript, because both numbers appear.** **SCNS matches on the number and
+cannot see this.** **Recorded as a new class of transfer risk: CONTENT-ORDER divergence**, distinct from
+the number divergence (MUT4311/MUT3311), suffix divergence and subject splits already catalogued.
+
+**Credit divergence as well:**
+
+| | CHM3410 | CHM3411 |
+|---|---|---|
+| **FGCU** | **3 cr** + separate **CHM 3410L (1 cr)** corequisite | **3 cr** |
+| **UWF** | **5 semester hours** (single course) | **4 semester hours** |
+
+**Published at 3/45 for both**, matching FGCU's documented value for the bare lecture number - a reading
+**confirmed by the existence of CHM 3410L as its own SCNS number**, which is the state system's own
+indication that the lab is a distinct course. ⚠ **UWF's 5 sh is the largest single-course credit value the
+project has published against**, and is flagged prominently.
+
+**⚠ Minimum-grade condition recorded: UWF requires C- OR HIGHER in every prerequisite.** These courses run
+annually, so **a below-threshold grade in organic chemistry II costs a year.** Reusable for any science
+sequence.
+
+**Reusable teaching content captured:** physical chemistry's difficulty is specific - **it is the first
+chemistry course in which the mathematics is not incidental**; **partial derivatives are used continuously
+and are covered in neither Calculus I nor II**, so most students meet them mid-derivation. **The
+highest-return preparation is making the mathematics automatic beforehand.** And for the second semester,
+**a linear algebra course is more useful preparation than another chemistry course**, since the entire
+quantum formalism is an eigenvalue problem.
+
+**⚠ The "check limiting cases" habit is recorded as the general defence against generated derivations** -
+does the expression reduce correctly for an ideal gas, as T goes to zero, as the box grows, at infinite
+dilution? **That is the physical chemist's diagnostic and it catches nearly every AI-introduced error.**
+
+### `CLP4390` - and the expectation gap that defines the course
+
+UWF *Introduction to Forensic Psychology*, 3 sh, prereq **PSY 2012 only**, criminal and civil with primary
+focus on the criminal legal system.
+
+**⚠ The course's defining feature is the gap between what students expect (criminal profiling) and what it
+teaches (competency, insanity, eyewitness memory, false confessions, jury decision-making, risk
+assessment, ethics).** **Profiling is covered honestly: weak evidentiary support, a very small fraction of
+practice, and essentially no employment.** Recorded as a service the course performs.
+
+**A "findings that contradict common belief" block was captured**, parallel to the CCJ3014 one and equally
+reusable: **the insanity defence is raised and succeeds rarely**; **competency, not insanity, is the
+workhorse evaluation** and concerns present functioning; **confident eyewitnesses are frequently wrong and
+confidence is inflated by post-identification feedback**; **innocent people confess**, by well-understood
+mechanisms, with juveniles and people with intellectual disability over-represented; **jurors frequently do
+not understand instructions and curative instructions often fail**; **structured risk assessment beats
+unstructured clinical judgement**; **experts drift toward the side that retained them, measurably**; and
+**human lie detection is near chance, with confidence unrelated to accuracy.**
+
+**⚠ The professional AI section is strong because the course's own methods apply**: algorithmic risk
+assessment is deployed in pretrial, sentencing and parole decisions, **structured approaches genuinely do
+outperform unstructured judgement**, AND the concerns are real (differential error rates, race correlates
+surviving race exclusion, opacity). **The distinctive contribution named: distinguishing what an
+instrument PREDICTS from what it is used to DECIDE, and insisting on the base rate - and the point that
+the false-positive/false-negative trade-off is a VALUE JUDGEMENT rather than a technical parameter.**
+Also recorded: **fabricated case citations have produced actual court sanctions for attorneys**, and
+**Florida's expert-testimony standard has changed in recent years** so guides should point at the current
+rule rather than state one.
+
+### `COM3465` - three titles, three defensible emphases, and a real Florida credential
+
+| Source | Title | Emphasis |
+|---|---|---|
+| statewide | Conflict Resolution | outcome-focused |
+| **UWF** | **Conflict Management** | interpersonal, organisational, cross-cultural **and moral** conflicts; **hands-on learning emphasised** |
+| **UF** | **Conflict Management and Negotiation in the Professions** | professional/workplace, negotiation named |
+
+⚠ **The resolution/management distinction is substantive rather than cosmetic**: "resolution" implies
+conflicts are problems to be ended; **"management" accepts that many conflicts are ongoing features of
+relationships and asks how to conduct them well** - the more current and more useful framing. **UWF's
+inclusion of "moral conflicts" is unusual and worth noting**, since value-based conflicts resist
+interest-based negotiation.
+
+**⚠⚠ A concrete, published Florida career route identified: the Florida Supreme Court certifies mediators**
+through the **Florida Dispute Resolution Center** (Office of the State Courts Administrator) in county,
+family, circuit civil, dependency and appellate categories. **County certification is the most accessible
+entry point and does not require a law degree.** **Requirements change and the guide points at the DRC
+rather than stating them.** Also captured: **Florida courts require mediation in many civil and family
+matters**, and **county Citizen Dispute Settlement Centers take volunteers and observers** - a free first
+step. ⚠ **Worth flagging in guides: where a section includes substantial supervised mediation practice, it
+may count toward certification training/observation requirements - students should ask and get it in
+writing.**
+
+**Reusable content**: **positions vs interests** as the highest-leverage idea; **BATNA - negotiating power
+comes from your alternatives, not your manner**, so **the best preparation for any negotiation is
+improving your alternatives beforehand**; **no conflict style is inherently best** and avoidance is
+correct for trivial or unwinnable issues; **the fundamental attribution error as the main engine of
+escalation**; and **designing solutions that let the other side retreat with dignity.** ⚠ Also recorded as
+a course outcome rather than a failure: **recognising when a matter is NOT a conflict-management problem** -
+abuse, IPV, harassment and severe power imbalance require formal process, not peer mediation.
+
+**⚠ AI point specific to this subject and genuinely interesting: generated conflict messages have a
+recognisable register - smooth, balanced, professionally warm - and in a genuine dispute that reads as
+evasive or uncaring.** **The perception that the other party is engaging personally is a substantial part
+of what de-escalates**, which makes this one of the clearest cases where using the tool defeats the
+purpose. Also: **online dispute resolution is established rather than experimental** (large platforms,
+and court systems including Florida's), and **procedural-justice research finds satisfaction depends
+heavily on feeling heard - so an efficient automated process may produce settlements without resolution.**
+
+### `CRW3110` - repeatable, and the honest careers section
+
+UWF *Fiction Writing*, 3 sh, **REPEATABLE for up to 6 sh**, workshop in narrative fiction, **"emphasis on
+writing for publication in specific markets."** UF: **Advanced Seminar in Fiction Writing.**
+
+⚠ **The repeatability is a design feature worth explaining**: one semester produces ~3 stories and one
+real revision - **enough to learn the vocabulary and be humbled, not enough to become good.** A second
+term with a different instructor and group produces markedly more improvement.
+
+⚠ **UF's "Advanced Seminar" implies a higher entry point** (prior workshop, possibly portfolio admission) -
+**a level divergence worth checking before transferring in either direction.** **UWF's markets emphasis is
+the unusual and valuable feature**: reading literary magazines, identifying fit, manuscript format,
+cover letters and submission norms are concrete professional knowledge many workshops omit.
+
+**⚠ Career honesty applied at full strength, per the project's standard**: **almost nobody earns a living
+writing literary fiction**; short story publication in even prestigious magazines pays little or nothing;
+**"anyone who tells a student otherwise is not being kind."** The guide then does the useful work -
+naming the transferable destinations (**grant writing, technical writing, editing, content, marketing**),
+and giving the one piece of advice that matters: **apply only to FUNDED MFA programmes**, because **debt
+for an MFA is a much riskier proposition than debt for a professional degree.** Closing framing:
+**most working fiction writers write around another job, which is the historical norm rather than a modern
+failure.**
+
+**⚠⚠ The AI section is the most direct in the project on creative work, and it is neither alarmed nor
+reassuring.** Recorded: **generated fiction is competent and empty because averaging over a corpus
+produces the centre of it**, and **the specific, strange, exactly-observed detail is precisely what the
+mechanism cannot supply** - which is what the course spends its time on. Professional landscape captured:
+**magazines increasingly require disclosure or prohibit generated work outright** and several closed
+submissions under the volume; **US copyright registration currently requires human authorship**; training-
+data litigation is unresolved. **Closing argument recorded as reusable for any creative field: the value
+of fiction was never the production of grammatical sentences describing events - it is that a particular
+person noticed something and found a form for it precisely enough that a stranger recognises it. That
+transaction requires someone on both ends.**
+
+### Source notes
+
+- **UWF PDF route** clean on `chm`, `clp`, `com`, `crw`.
+- **FGCU PDF route** clean on `chm` (21,838), `clp` (4,163). **Supplied both headline findings** - the
+  CLP4302 prerequisite chain that proved the split, and the CHM3410/3410L structure that settled the
+  credit reading. **Fourth consecutive batch in which FGCU produced the decisive divergence.**
+- **UF course-search API**: confirmed **CLP 4302**, **CRW 3110** (*Advanced Seminar in Fiction Writing*)
+  and **COM 3465** (*Conflict Management and Negotiation in the Professions*). Absent at UF: CHM3410,
+  CHM3411, CLP4390. **Fourteenth consecutive batch.**
+- **FIU via Coursedog** - see the unlock above. Now a first-class source.
+- **Well-formedness scan** clean on all six.
+- ⚠ **Two prerequisites trimmed** (COM3465 507 -> 491; CRW3110 502 -> 413).
+
+
+---
+
+## Batch 168 findings (2026-09-07) - BCN3762, BCN4720C, CEN4721, CHM4455, COP4710, ENC3416
+
+Blocked rows skipped and noted, unchanged: the six taxonomy-blocked civil engineering courses, `MUN3313`,
+`MUN3713`, `MUN3443`, `PEL1341` (scope), `ASC1610C` (sourcing), `LAE3314` (split candidate), `MUG2101`
+and `ADV2000C` (state-college block).
+
+**⚠ `COP3813C` deferred.** UWF's `cop` PDF fetches cleanly (15,531 chars) and **contains no COP3813C**;
+FIU's cached catalog has none either. Institutions are EFSC, FAU, FSCJ, UNF and UWF - **predominantly
+state colleges.** Needs a state-college source; add to the same deferred list as MUG2101 and ADV2000C.
+
+### ⚠⚠ COURSEDOG FOLLOW-UP: THE BOOTSTRAP ENDPOINT FOUND, AND FAU DEFINITIVELY ANSWERED
+
+Continuing batch 167's unlock, the bundle grep turned up **the discovery endpoint that makes the whole
+technique portable**:
+
+```
+GET https://app.coursedog.com/api/v1/catalogs/urls?url=<catalog host>
+Referer: https://<catalog host>/
+  -> {"school": "...", "catalog": {"id": "..."}, "catalogSettings": {...}, "noindex": ...}
+```
+
+**For `catalog.fiu.edu` this returns `school: fiu_peoplesoft` and `catalogId: g6m34J5gUCpRQCPvL0tJ`.**
+⚠ Note that is a **different id from the UUID scraped out of the page HTML** (`0dd4e360-...`) - **both
+work**, so the UUID appears to be an alternate handle. **Use the bootstrap endpoint rather than scraping
+the page: it is one call and it returns both ids.** `scratchpad/coursedog.py` should be updated to call it.
+
+**⚠⚠ FAU IS ANSWERED AND THE ANSWER IS NO.** The bootstrap returns, for the three URL forms tried:
+`Url with url: "https://catalog.fau.edu/" does not exists` and, for the bare host,
+**`Url: "https://catalog.fau.edu" does not have entity assigned`**. **The host is registered in Coursedog
+but has NO CATALOG ASSIGNED**, which is why every schoolId guess failed - there was nothing to find.
+**FAU's course catalog is not served from a public Coursedog catalog at that host.** ⚠ **Stop attempting
+FAU via Coursedog.** If FAU is wanted later, the lead is to find what host its catalog actually lives on
+and re-run the bootstrap against that.
+
+**Also confirmed from the cached FIU data: FIU carries `PHY3424` without the `C`** - the third
+institution agreeing with batch 165's suffix finding. **And the cache immediately paid for itself this
+batch**, supplying COP4710 and BCN3762 cross-checks with no network cost.
+
+### ⚠⚠ `CHM4455` - 2 CREDITS PLUS A COREQUISITE LABORATORY
+
+UWF *Introduction to Polymer Science*, **2 sh**, prereq **CHM 2210/L AND CHM 2211/L AND (CHM 3400C OR
+CHM 3410)**, **corequisite CHM 4455L**. Statewide title is *Polymer Chemistry*.
+
+**Published at 2/30 - the single-documented-source rule** (same resolution as MUT4311). ⚠ **Two credits is
+low for the scope and the guide says so and tells students to verify.** **The corequisite laboratory is
+the more consequential fact**: CHM 4455L is a separate registration and at UWF must be taken concurrently,
+and **the lab is the part that appears on a resume** (synthesis and characterisation experience).
+
+**⚠ A reusable diagnostic recorded: the PHYSICAL CHEMISTRY prerequisite tells you what kind of course this
+is.** Polymer science is thermodynamics, kinetics and statistics applied to very large molecules - the
+free-radical rate derivation is a steady-state kinetics problem, T_g and solution behaviour are
+thermodynamics, and molecular weight distributions are statistics. **A department requiring p-chem is
+signalling a quantitative rather than descriptive treatment** - the same inference pattern as batch 167's
+CLP4302 statistics-prerequisite finding.
+
+**Reusable teaching content captured:** the course's organising insight is that **size becomes a
+qualitative difference** past a threshold (entanglement, viscoelasticity, glass transition, rubber
+elasticity - none predictable from small-molecule chemistry); **polymers are statistical objects**, so
+molecular weight is a distribution with more than one average and **different properties are governed by
+different averages**; and the **structure-property-PROCESSING triangle**, where the same polymer processed
+differently behaves differently. **Study habit recorded: for every concept, name a material** - tacticity
+is isotactic vs atactic polypropylene, branching is HDPE vs LDPE, T_g is rigid vs plasticised PVC.
+
+**⚠ Environmental content handled with evidence per the project standard**, and a distinction worth
+reusing anywhere plastics appear: **bio-based, biodegradable and compostable are three separate claims
+that are routinely conflated** - **a bio-based polyethylene is chemically identical to petroleum-derived
+polyethylene and exactly as persistent.** Also: **persistence follows from structure** (saturated backbone,
+no hydrolysable linkages, no enzymatic route), and **recycling is limited by real technical constraints**
+(resin immiscibility, additive contamination, molecular weight loss per cycle), not only by policy.
+
+### ⚠⚠ `BCN3762` / `BCN4720C` - FLORIDA'S BUILDING CODE AS A CASE STUDY, AND THE SCHEDULE AS EVIDENCE
+
+**BCN3762** - UWF *Building Codes* (3 sh, **commercial construction**, by occupancy classification and
+construction type); **FIU *Building Codes and Quality Control*** (3 cr, local/county/state codes **and
+their relation to quality control**, prereq BCN 3027 and (BCN 2210 or ARC 1461)).
+
+⚠ **FIU's quality-control addition is substantive, and the reason is captured**: post-disaster
+investigation repeatedly finds that **failures were compliant in DESIGN and non-compliant in EXECUTION** -
+which is exactly why quality control belongs in a codes course. ⚠ **UWF's explicit limitation to
+COMMERCIAL construction is also worth flagging**: the Florida Residential Code is a separate volume and a
+large share of Florida construction is residential.
+
+**A substantial Florida-specific block was captured and is reusable in any Florida construction guide:**
+**the statewide Florida Building Code exists because of Hurricane Andrew (1992)**, whose damage was
+attributed substantially to construction quality and enforcement rather than to unaddressable wind loads;
+**a three-year update cycle** (so section numbers move between editions - always confirm the adopted
+edition); **the High-Velocity Hurricane Zone** (Miami-Dade and Broward) with its own stricter provisions
+and **Notices of Acceptance**; **statewide Florida Product Approval**, which is a real procurement
+constraint; **windborne debris opening protection and a required continuous load path**; **flood/base flood
+elevation provisions**; **threshold buildings and special inspection**; and **the Building Commission's
+declaratory statements** as the mechanism for authoritative interpretation.
+
+⚠ **Exam-format finding worth reusing: codes examinations are frequently OPEN-CODE, and an open-code exam
+is HARDER for an unprepared student** - you cannot look up an answer efficiently in a document you have
+never navigated. **The skill assessed is navigation, not memorisation; nobody memorises the code.**
+
+**BCN4720C** - UWF *Scheduling*, 3 sh, prereq **BCN 2251C**, **hands-on software experience** (the `C`
+suffix is software lab time). Published **3/60**.
+
+**⚠⚠ The finding students do not anticipate, and it drives several of the course's obsessions: THE
+SCHEDULE IS A LEGAL DOCUMENT.** Construction delay disputes are common and expensive, **the baseline and
+its updates are the primary documentary record in a delay claim**, and **a valid claim is most often lost
+because contractual NOTICE was not given in time rather than on the merits.** Recorded alongside: **float
+ownership is a contractual question, not a technical one** - it determines who may consume float and who
+is compensated when it is exhausted.
+
+**⚠ The hand-calculation justification recorded, and it generalises to any software-backed technique:
+software computes exactly what it is told and produces a confident, well-formatted, wrong schedule from
+bad logic - a hard-coded constraint, an open end, or the wrong out-of-sequence setting shifts the critical
+path with no error signal. A manager who cannot reproduce the forward/backward pass cannot detect it.**
+
+**A "good schedule vs plausible schedule" checklist was captured** (hard-coded constraints, open ends,
+soft logic presented as hard, lags concealing missing activities, invented durations, **omitted long-lead
+procurement which is frequently the actual critical path**, and **no weather allowance - not optional in
+Florida**). Also recorded: the **DCMA 14-point assessment** as a free published schedule-quality checklist,
+and **AACE RP 29R-03** as the industry reference on forensic schedule analysis.
+
+**⚠ Concrete credentials identified in both guides**: **ICC certification examinations are open to
+students** and map onto the codes course; **AACE's PSP** and **PMI-SP** for scheduling; **Florida licenses
+building code administrators, plans examiners and inspectors** through its own board. **Free advice given:
+go to a building department - plan review counters are public and watching a plans examiner work a
+submittal teaches more than any lecture.**
+
+### `COP4710` / `CEN4721` - and a prerequisite-level divergence
+
+**COP4710** - UWF *Database Systems* (3 sh, prereq **COP 2334/2253/2830**, a FIRST programming course,
+**offered concurrently with graduate COP 5725**); **FIU *Database Management*** (3 cr, prereq **COP
+3337/3804**, a SECOND object-oriented course, **additional fees**). ⚠ **A level divergence rather than a
+content one** - UWF's lighter gate makes the course accessible earlier and to non-CS students.
+
+⚠ **FIU names relational algebra, tuple calculus and domain calculus explicitly; UWF emphasises case
+applications in SQL** - the theory/practice weighting differs and students should notice which they are
+getting.
+
+**Reusable content**: **a schema outlives the code** - an application can be rewritten in a weekend, a
+schema holding production data cannot; **the relational model is unusually well founded** (set theory and
+first-order logic, so normalisation is theorems rather than conventions); and **NULL three-valued logic is
+the source of more silently wrong queries than any other single feature** (`NULL = NULL` is not true;
+`NOT IN` with a NULL returns nothing; aggregates skip NULLs). **The AI caution is the sharpest form of a
+recurring one: a generated query that RETURNS RESULTS is not a correct query**, and a subtly wrong join
+propagates silently into a report, a bill or a clinical dashboard.
+
+**CEN4721** - FGCU *Human Computer Interaction* (3 cr, prereq **COP 3003**, **"the interdisciplinary
+nature of HCI will be noted"**); UF *Human-Computer Interaction*.
+
+**⚠ The course's founding claims recorded as reusable**: **usability is an engineering property, not a
+matter of taste** - the correct response to a design disagreement is to test it; **you are not the user**,
+and nearly every method exists to substitute evidence for that intuition; and **accessibility is a design
+requirement with a standard (WCAG) and a legal framework**, not an enhancement.
+
+**⚠⚠ The strongest AI caution in the batch, and it cuts to the discipline's core: GENERATED "USER
+RESEARCH" IS NOT USER RESEARCH.** Asking a model what users would want produces a plausible summary of
+what is commonly written about users - **which is precisely the intuition-substituting-for-evidence the
+entire discipline exists to prevent.** **Synthetic personas are the most dangerous application in this
+domain** because they produce a confident artefact that looks like research and contains no contact with
+any person. Also recorded: **automated accessibility checkers detect a well-documented minority of
+problems (commonly cited around a third)** - keyboard order, focus, meaningful alt text and screen-reader
+comprehensibility all require a human.
+
+**⚠ IRB warning added**: student HCI projects involving human participants may require institutional
+review board approval - **classroom exercises are often exempt or covered by a blanket protocol but this
+varies, and discovering it after collecting data can make the data unusable.**
+
+### `ENC3416` - and the copyright point worth generalising
+
+UWF *Digital Writing*, 3 sh, Dept of English: **compose and analyse digital texts incorporating images,
+sounds, video and language**; **theory, analysis and production**; **audience analysis**; **e-Portfolio as
+the culminating project**; **meets the College-Level Communication Skills Requirement.**
+
+**⚠ Workload correction recorded**: students assume a course involving video and audio is a lighter
+writing course. **It is not** - the writing appears as text inside compositions (scripts, captions,
+microcopy, where student work is weakest), as analysis, and as **reflective statements, which are
+frequently the most heavily weighted single assessment because they are where the rhetorical reasoning is
+visible.** Also: **a five-minute video is easily fifteen hours of work.**
+
+**⚠⚠ A copyright block was captured that applies to every media-producing guide in this repository:**
+**images found through a search engine are not free to use**, nor is streaming music, nor a film clip;
+**fair use is a four-factor legal defence assessed case by case, not a blanket educational permission**;
+and **a public e-portfolio is PUBLICATION**, not classroom use. **The free-and-licensed source list**
+(Unsplash/Pexels/Pixabay, Wikimedia Commons, Library of Congress, Smithsonian Open Access, Noun Project,
+Free Music Archive, Incompetech, YouTube Audio Library, Freesound, Google Fonts) **is the practical
+answer**, and the operational habit is **record the licence at the moment you download, not at the end.**
+
+**⚠ Accessibility-as-composition content captured**, reusable across writing and design guides: alt text
+that conveys **what the image is doing in context** rather than describing decoratively; **captions and
+transcripts**; contrast, and **never colour alone**; **real semantic headings rather than large bold
+text**, which is what makes a document navigable by screen reader; meaningful link text (**"click here"
+fails for both sighted and screen-reader users**). **And the clearest genuine AI win in the batch:
+automatic captioning has made accessibility compliance dramatically cheaper - but an UNCORRECTED
+auto-caption track is not accessible, it is the appearance of accessibility**, and can be worse than none.
+
+### Source notes
+
+- **UWF PDF route** clean on `bcn`, `cen`, `chm`, `cop`, `enc`. ⚠ **`cen` is small (4,525 chars) and has
+  no CEN4721** despite UWF being listed in the inventory - a reminder that inventory institution lists are
+  not always confirmed by the catalog.
+- **FGCU PDF route** clean on `cen` (5,465). **Supplied CEN4721**, which UWF did not have.
+- **FIU via the Coursedog cache** - supplied COP4710 and BCN3762 with no network call. **Working as
+  intended.**
+- **UF course-search API**: confirmed **CEN 4721** (*Human-Computer Interaction*). Absent at UF: BCN4720C,
+  CHM4455, COP4710. **Fifteenth consecutive batch.**
+- **Well-formedness scan** clean on all six.
+- ⚠ **One prerequisite trimmed** (COP4710 518 -> 470). Five held between 442 and 498.
+
+
+---
+
+## Batch 169 findings (2026-09-07) - ADV2000C, COP3813C, ENL4333, EUH3411, EUH3576, GIS4043C
+
+**Ron's direction this batch: "Alternate sources if there are difficulties retrieving some classes."** The
+batch was built around that instruction, and it cleared two of the three long-standing deferrals.
+
+### 🎉🎉 NEW SOURCE UNLOCKED: EFSC (EASTERN FLORIDA STATE COLLEGE) - AND IT IS COURSELEAF
+
+**`catalog.easternflorida.edu/course-descriptions-information/<prefix>/` works, HTML and PDF.**
+
+Discovered by fetching the catalog root and grepping the stylesheet links: **`courseleaf.css`** - **EFSC
+runs the same CourseLeaf platform as UWF, FGCU, Broward and Valencia**, so the existing prefix-directory
+pattern and the existing `htmlget.py`/`pdfget.py` tooling work unchanged. Verified: `adv/` (70,229),
+`cop/` (96,498), `psy/` (74,243), and `adv/adv.pdf` (99,369).
+
+⚠ **Record the platform-identification technique, because it generalises**: **fetch a catalog root and
+grep the HTML for `courseleaf`, `smartcatalog`, `acalog` or `coursedog`.** The platform determines the URL
+pattern, and CourseLeaf is the one this project already has tooling for. **A prefix a college does not
+carry returns 202 on CourseLeaf** (EFSC `mug/` = 202), which is a different signal from the empty-202
+block - **on CourseLeaf, probe a prefix the college definitely has.**
+
+**EFSC immediately resolved two of the three deferred courses**, both of which had been blocked for
+several batches because their institution lists are predominantly state colleges.
+
+### ⚠⚠ TALLAHASSEE WAS NEVER BLOCKED - THE COLLEGE RENAMED AND MOVED DOMAIN
+
+**`catalog.tcc.fl.edu` returned curl 000 across several batches and was recorded on the standing retry
+list as a block. It is not a block.** `www.tcc.fl.edu` **redirects to `www.tsc.fl.edu`** -
+**Tallahassee Community College is now Tallahassee State College** - and **`catalog.tsc.fl.edu` is live
+(200, 385,903 bytes).**
+
+⚠⚠ **This is a correction with a general lesson: a curl 000 means DNS/connection failure, which can mean
+the host no longer exists rather than that it is blocking you. Follow redirects (`curl -L`) on the college's
+main domain before recording a block.** The register has been corrected.
+
+**(The new host is acalog and its `content.php`/`search_advanced.php` return empty 202s, so TSC is
+content-blocked like FSW - but that is a different and correctly-characterised finding.)**
+
+### ⚠ COURSEDOG IS FIU-ONLY IN FLORIDA - AVENUE CLOSED
+
+Using the batch-168 bootstrap endpoint, **twenty Florida catalog hosts were swept in one pass**:
+UCF, USF, UNF, FAMU, FGCU, FloridaPoly, EFSC, IRSC, FSCJ, TCC, Valencia, Broward, MDC, SPC, HCC, Palm
+Beach State, FSW, Santa Fe, Polk, Daytona State. **Every one returned "does not exist" or "does not have
+entity assigned". Only FIU is a Coursedog school in Florida.** ⚠ **Stop treating Coursedog as a general
+Florida strategy** - it was a one-institution unlock, and a valuable one.
+
+### Other platform findings from the sweep
+
+- **IRSC uses SmartCatalogIQ** (`irsc.smartcatalogiq.com`, 200) - **the same platform as the DSC build**,
+  with `/en/<year>/catalog/...` paths. **Not yet exercised; a live lead for the next state-college need.**
+- **FSCJ** (`catalog.fscj.edu`, 200, 516 KB) and **Santa Fe** (`catalog.sfcollege.edu`, 200) both answer -
+  platforms unidentified, worth a `courseleaf` grep when needed.
+- **MDC** uses **CurricUNET** (`mdc.curricunet.com/catalog/iq/3279`, 200 but only 10 KB - probably an SPA
+  shell). A lead, not a route.
+- **`spcollege.smartcatalogiq.com`, `fsw.smartcatalogiq.com`, `mdc.smartcatalogiq.com` all return 500** -
+  those schools are not on SmartCatalog.
+
+**⚠ `MUG2101` remains the one unresolved deferral.** Its institutions are FSWSC, HSBC, MDC, SPC, TCF and
+UWF; UWF does not carry it, and every state-college route is blocked (TSC and FSW acalog-blocked, MDC an
+SPA, SPC and HCC connection-failed). **The remaining lead is FSCJ or Santa Fe if either carries MUG.**
+
+### ⚠⚠ `ADV2000C` and `COP3813C` - BOTH RECOVERED, AND BOTH DROP THE `C`
+
+| Queued | EFSC form | Credits | Note |
+|---|---|---|---|
+| **ADV2000C** | **ADV 2000** *Advertising* | 3 | no prereq; EFSC has only ADV 2000 and ADV 2948 in the prefix |
+| **COP3813C** | **COP 3813** *Client Side Web Application Programming* | 3 | prereq **COP 3330 grade C + departmental approval or Bachelor's admission**; **lab fee** |
+
+**That is the fifth and sixth `C`-suffix divergence in recent batches.** Published at the C convention
+(60 hours) with the unsuffixed form stated.
+
+**⚠⚠ COP3813C carries the more consequential divergence, and it is a TITLE one: "Internet Programming"
+(statewide) vs "CLIENT SIDE Web Application Programming" (EFSC).** Client-side and server-side are
+different skill sets, and **a graduate who has done only one is half-equipped.** The guide tells students
+to check the syllabus and to get the other half elsewhere if needed.
+
+**⚠ A NEW GATE TYPE recorded, specific to state colleges offering bachelor's degrees: "departmental
+approval or admission to the Bachelor's programme".** EFSC restricts its upper-division courses to
+students admitted to a bachelor's programme - **a separate application from admission to the college.**
+**This will recur on every state-college upper-division row** and is worth checking whenever a 3000/4000
+course is sourced from a state college.
+
+### ⚠⚠ `GIS4043C` - ANOTHER CO-REQUISITE SPLIT, AND THE PATTERN IS NOW WELL ESTABLISHED
+
+**UWF runs GIS 4043 (3 sh) + GIS 4043L (1 sh) as mutual co-requisites** where the statewide number is the
+integrated GIS4043C. Published 3/60. **Same shape as SOW4510/4522 (batch 165) and CHM 3410/3410L (batch
+167)** - three instances in five batches. ⚠ **The split version yields 4 credits where the integrated
+yields 3**, and **credit transfers while credit hours do not multiply.**
+
+**Reusable content captured**: **the "how-to vs why" framing** UWF's description uses is the best short
+statement of the GIS/GIScience distinction - **a graduate who learned only the software is obsolete when
+the interface changes.** The **three spatial-statistics traps** worth reusing anywhere spatial data
+appears: **Tobler's first law and spatial autocorrelation** (spatial data violates the independence
+assumption of ordinary statistics); **the modifiable areal unit problem** (results change, sometimes
+reverse, with the aggregation units); and **the ecological fallacy**. Also: **every projection sacrifices
+something and choosing one is choosing what to sacrifice**; **a choropleth of raw counts maps population,
+not the phenomenon**; and **the same data classified four ways produces four defensible and
+different-looking maps** - the standard and most effective classroom demonstration.
+
+**⚠ Florida GIS employment is unusually strong and the reason is structural**: the state's defining
+management problems are spatial - **hurricane evacuation and storm surge, sea level rise, five water
+management districts, Everglades restoration, growth management, and property assessment across 67
+counties.** **FGDL (the Florida Geographic Data Library at UF) identified as the first place a Florida
+student should look for data.**
+
+### `ENL4333`, `EUH3411`, `EUH3576` - three humanities guides, and a recurring structural finding
+
+**All three turned out to have the same practical warning: CHECK WHETHER THE SUBJECT IS SPLIT ACROSS TWO
+COURSES.** Shakespeare is frequently divided (early/late) at different numbers; **Roman history is
+commonly Republic + Empire**; and **UWF pairs EUH3576 with EUH 3570 Russia to 1917.** ⚠ **Recorded as a
+general humanities-guide check: where a department splits a period or an author, a transfer student's
+single course covers half of what a receiving requirement may assume.**
+
+**`ENL4333`** - UWF *Shakespeare*, 3 sh: "selected comedies, histories and tragedies" (genre-balanced
+selection). **Reusable content**: the plays are **scripts for a commercial theatre**, not novels;
+**the text is an editor's reconstruction** and *King Lear*'s two early texts support different endings;
+**the language difficulty is unfamiliarity rather than complexity and resolves by about the fourth play**
+- **read the notes, read aloud, do not substitute a modern-English translation for the text.**
+⚠ **Edition warning: buy the assigned edition, because line numbering differs and discussion proceeds by
+line number.**
+
+**`EUH3411`** - UWF *Rome and the Mediterranean World*, 3 sh: **"structures of family, government and
+military"** plus **culture, social relationships, wealth and women's roles** - a social/institutional
+history rather than a narrative of emperors. **Reusable**: the **alliance system** as the decisive
+innovation (each victory converted into greater capacity); **Rome's demonstrated ability to absorb
+catastrophic defeat**; **citizenship extension as the contrast with Greek practice**; and **the army's
+transformation into a force loyal to generals** as the key structural cause of the Republic's fall.
+⚠ **A politically-live-subject block was included**: Roman history is invoked in contemporary arguments
+about decline, borders and empire, and **the guide gives the evidence** - the eastern empire continued
+another thousand years, emperors came from Spain, North Africa and Syria, and citizenship was extended
+almost universally in 212 CE.
+
+**`EUH3576`** - UWF *Soviet Union since 1917*, 3 sh, with an unusually complete catalog topic list (War
+Communism, NEP, Stalinism, Khrushchev, Brezhnev, Gorbachev, collapse, successor states).
+**⚠⚠ The evidentiary framing is the distinctive content: the archives opened after 1991 and the field was
+rewritten in a generation - a 1985 book and a 2015 book are working from different evidence**, and access
+has since narrowed again in Russia. **The totalitarian/revisionist debate and the post-archival synthesis**
+recorded as the organising historiography.
+
+**⚠⚠ Politically-contested-history handling applied at its fullest in this guide**, and the approach is
+reusable: **the Holodomor genocide question is presented as genuinely contested with the strongest form of
+each position rather than adjudicated by assertion**; **the Nazi-Soviet Pact's differing place in Baltic,
+Polish and Russian memory** is named; **Russian memory laws and the 2021 shutdown of Memorial** are stated
+as facts about the politics of the history; and students are warned that **both apologetics minimising the
+terror and polemics inflating figures beyond archival support circulate freely and are easy to mistake for
+scholarship.** ⚠ **Casualty figures are explicitly flagged as contested with ranges rather than given as
+single numbers.**
+
+**⚠ Difficult-content and personal-connection note added**: Florida has a substantial population with
+family origins in the former Soviet Union and Eastern Bloc, and **the material may land personally in a
+way it does not for classmates.**
+
+**⚠ The closing AI observation in EUH3576 is the strongest in the batch and is reusable**: this is the
+history of **a state that rewrote its own past continuously - retouching photographs to remove purged
+officials, revising encyclopaedias.** Students read that as a defining feature of the system, and **living
+in an environment where any record can be fabricated or dismissed as fabricated gives it an immediacy it
+did not have twenty years ago. The historian's answer has not changed: provenance, corroboration, chains of
+custody.**
+
+### Source notes
+
+- ⚠⚠ **NEW: EFSC CourseLeaf** - `catalog.easternflorida.edu/course-descriptions-information/<prefix>/`
+  (and `/<prefix>.pdf`). **Supplied both recovered deferrals.** Added to the reachability register.
+- **UWF PDF route** clean on `enl` (3,733), `euh` (13,915), `gis` (34,953). ⚠ **UWF has no EUH3411 or
+  EUH3576 in the `enl` PDF and vice versa** - a reminder to fetch the right prefix rather than assuming a
+  multi-prefix PDF.
+- **UF course-search API**: not used this batch (the queued rows were sourced from UWF and EFSC directly).
+- **Well-formedness scan** clean on all six.
+- ⚠ **One prerequisite trimmed** (COP3813C 514 -> 470). Five held between 444 and 478.
+
+
+---
+
+## Ron's correction (2026-09-07): `COP4813` at DSC is equivalent to `COP3813` and is also client-side
+
+**Ron confirmed this directly after batch 169, and verifying it at DSC produced a better picture than EFSC
+alone had given. `COP3813C` was updated to v1.1 and republished.**
+
+**Verified at DSC via SmartCatalogIQ:**
+
+| | Title | Credits | Prereq | Term |
+|---|---|---|---|---|
+| **COP 4813** | **Web Systems I** | 3.00 | **COP 3530** | Fall |
+| **COP 4834** | **Web Systems II** | 3.00 | COP 4813 | Spring |
+
+**COP4813**: *"development of web systems with a focus on **client-side** development. Topics include
+XHTML, the Document Object Model (DOM), Cascading Style Sheets (CSS), use of JavaScript for providing
+client-side interactivity, **ADA accessibility**, JavaScript Object Notation (JSON), and design for mobile
+platforms. A web site design project is included."*
+
+**COP4834**: *"Advanced web design with **server side** technology (focus on .NET)... develop, test and
+publish database driven web sites using cloud based servers and .NET publishing standards, including code
+management. Programming of a **full stack development project** is required."*
+
+**⚠⚠ THREE FINDINGS, and the first is a transfer risk:**
+
+1. **`COP4813` is a LEVEL DIVERGENCE — a 4000-level number for a 3000-level statewide course.** SCNS
+   equivalency operates on the number, so **COP 3813 and COP 4813 do not automatically articulate** and a
+   substitution is required. **Same category as MUT4311/MUT3311 (batch 163).** ⚠ **This is now the third
+   documented instance of number/level divergence** and it is worth treating as a standing check:
+   **a title drift still articulates automatically; a number divergence does not, and it is invisible to
+   anything matching on course code.**
+
+2. **Two institutions independently confirm the CLIENT-SIDE scope**, which was flagged in batch 169 as the
+   more consequential divergence from the statewide "Internet Programming" title. **EFSC's title says it;
+   DSC's description says it explicitly.** The guide's advice to get the server side elsewhere is now
+   backed by a concrete model: **DSC runs the two halves as a proper Fall/Spring sequence.**
+
+3. **DSC lists "ADA accessibility" as an explicit catalog topic** — useful evidence that **Florida
+   programmes treat web accessibility as core content rather than as an optional enhancement**, which
+   supports the accessibility emphasis the guide already carried. **Better than asserting it.**
+
+**⚠ Source note: DSC's SmartCatalogIQ is confirmed working on the CURRENT catalog**, not merely
+historically. The pattern is
+`daytonastate.smartcatalogiq.com/en/<year>/college-catalog/course-descriptions/<prefix-slug>/<level>/<course>`
+— e.g. `.../cop-computer-science/4000/cop4813`. ⚠ **Two gotchas**: the prefix slug is descriptive
+(`cop-computer-science`, not `cop`), and **the index page lists only titles — the individual course page
+carries the description, credits, prerequisite and term offered.** **A trailing slash 404s.**
+**This also gives a live template for IRSC, which is on the same platform.**
+
+---
+
+## Batch 170 findings (2026-09-07) - EME3410, EXP4204C, FIN4128, GRA2208C, GRA3102C, HSA4430
+
+Blocked rows skipped and noted, unchanged: the six taxonomy-blocked civil engineering courses, `MUG2101`
+(state-college block, the only remaining deferral), `MUN3313`, `MUN3713`, `MUN3443`, `PEL1341` (scope),
+`ASC1610C` (sourcing), `LAE3314` (split candidate).
+
+### ⚠⚠ `EME3410` - THE LARGEST SCOPE DIVERGENCE IN THE PROJECT SO FAR
+
+| Source | Title | Scope |
+|---|---|---|
+| statewide | **Integrating Technology in the Classroom** | **General** — any subject, any level |
+| **Broward** | **Enhancing Mathematics and Science Education with Technology Applications** | **K-12 MATHEMATICS AND SCIENCE specifically**, inquiry-based learning, interdisciplinary STEM |
+
+**This is not a title drift — it is a different course.** Broward's version is aimed at mathematics and
+science teachers and covers subject-specific technologies (dynamic geometry, graphing, computer algebra,
+probeware, simulations). **An elementary, English or social studies education major would find a
+substantial part of it aimed elsewhere**, and the reverse: a maths/science major taking the general
+version gets no subject-specific pedagogy. **Both are legitimate; they are not interchangeable.**
+⚠ **Recorded as a "read the description, not the title" case and a real transfer risk**, since the credit
+articulates automatically either way.
+
+**Broward supplied 3 credits / 48 contact hours and prereq EDF 3280 (min grade C)** — the Broward
+48-hour convention again, published at 45.
+
+**⚠⚠ AN EVIDENCE CORRECTION MADE IN THE GUIDE, and it is worth recording as a policy.** Broward's
+description mentions aligning technology with **"learning styles"**. **The specific claim that matching
+instruction to a preferred modality improves learning — the meshing hypothesis — has been tested
+repeatedly and is NOT supported.** The guide says so plainly, and then does the constructive half:
+**what IS well supported is presenting material in multiple representations for all students, which is
+what Universal Design for Learning recommends for different (access) reasons.** ⚠ **This is the first time
+this project has had to correct a claim appearing in a source catalog description.** The approach taken —
+**state the catalog's framing, give the evidence, and supply the better-supported practice it points at**
+— is the right precedent: **the guide serves students, not the catalog.**
+
+**Also captured for reuse in any edtech/education guide**: **TPACK** as the organising framework;
+**SAMR with the caveat that "higher" is not automatically better and substitution is frequently right**;
+**Mayer's multimedia learning principles**, which are well replicated and **routinely violated by
+commercial products**; **the test that if you cannot state the objective without naming the tool, the tool
+is driving the lesson**; and **engagement is not learning**.
+
+**⚠⚠ A law-and-policy block was captured that every new teacher needs**: **"it's for education" is NOT a
+copyright exemption**; **do not sign a class up for a service on your own initiative — COPPA requires
+verifiable parental consent for under-13 data collection and districts obtain it centrally through
+approved-vendor agreements**; **FERPA constrains what may be posted or displayed, including on a classroom
+social media account**; and **AI-detection software produces false positives at rates high enough that
+accusing a student on a detector's output alone is indefensible, with non-native English writers flagged
+disproportionately.** ⚠ **That last point is one a new teacher needs BEFORE facing the situation.**
+
+### ⚠⚠ `FIN4128` - A FIVE-COURSE CHAIN, AND A PROGRAMME-REGISTRATION GATE
+
+UWF *Capstone in Financial Planning*, 3 sh, prereq **FIN 3124 AND FIN 4132\* AND FIN 4133 AND FIN 4504
+AND RMI 3119**. ⚠ **The asterisk indicates concurrency is permitted — the mechanism that makes the chain
+schedulable**, the same device recorded for HFT4295's six-course chain in batch 162.
+
+**⚠⚠ The structurally important finding: this course's content is determined by an OUTSIDE PROFESSIONAL
+BODY.** The **CFP Board** registers university programmes meeting its education requirement, and **a
+registered programme must include a capstone producing a comprehensive financial plan.** That explains the
+chain (the capstone requires every certification content area) and it produces the transfer warning:
+**CFP Board registration attaches to a PROGRAMME, not to individual courses — so a set of individually
+transferred courses may not discharge the education requirement.** ⚠ **This is the fourth profession in
+this repository where programmatic recognition outranks course credit**, after nursing, medical laboratory
+science and social work. **Add financial planning to that list.**
+
+**⚠ The single most consequential planning fact recorded: check that your programme is CFP
+Board-registered before assuming the education requirement is met.** A general finance degree does not
+qualify a graduate to sit the examination.
+
+**Florida-specific planning content captured and reusable**: **no state income tax**, which changes Roth
+conversion, retirement location and income timing analysis; **the constitutionally protected homestead
+exemption** with both tax benefit and **creditor protection**; **Save Our Homes and portability**; **strong
+creditor protection for annuities and life insurance cash value**; **no state estate tax**; **elective
+share and homestead devise restrictions**, which constrain how a homestead may be left and surprise
+clients with out-of-state documents; **domicile establishment** as a real practice area; and **windstorm
+and flood insurance cost and availability**, which is a first-order risk management issue in Florida
+rather than a detail.
+
+### `GRA2208C` / `GRA3102C` - the studio sequence, and the GRA hour convention applied again
+
+**Both published at 3 credits / 72 contact hours** per the **GRA studio convention documented in batch
+162** (~32 lecture + 40 lab). ⚠ **The validator warned on both (expects ~45, or ~60 for a C course) and
+the warnings were accepted and overridden deliberately** — same disposition as GRA2111C. **This is now the
+third, fourth and fifth GRA guide at 72 hours, so the convention is settled for the prefix.**
+
+**⚠ Title divergence on GRA3102C**: statewide **Visual Communication**; UWF **Graphic Design Studio I**.
+**The statewide title names a subject; UWF's names a POSITION IN A SEQUENCE.** Recorded as a genuine
+transfer check, because **"Visual Communication" is used elsewhere for more theoretical courses** — visual
+literacy, semiotics, communication theory, sometimes without a studio component. **A design programme
+expecting a studio will not accept a theory course, and the credit transfers either way.**
+
+**⚠⚠ The cohort-locking finding restated with a design-specific mechanism**: **GRA 3102C requires GRA 2111C
+AND GRA 2208C**, studios commonly run **once a year**, and the sequence is strictly ordered — **so
+deferring a foundation studio shifts every subsequent studio by a YEAR.** Combined with **the portfolio
+review that many art and design programmes use for admission to the upper-division major** — recorded in
+batch 162 and restated here — **completing the foundations does not guarantee progression.**
+
+**Reusable typography content**: **typography is mostly not about choosing typefaces — it is the management
+of space**, and spacing is what determines readability; **the discipline is largely one of restraint**;
+**professional standards derive from how reading works**, so many judgements can be argued from function
+rather than preference; and the detail conventions (**typographers' quotation marks, en/em dashes, real
+small capitals**) that are **the most reliable giveaway in student work**. ⚠ **Font licensing restated as
+the constraint students are most often unaware of**: **desktop, web, application, ebook and broadcast uses
+are licensed separately**, so a font legally installed on your computer may not be legally embeddable in a
+client's product.
+
+### `EXP4204C` / `HSA4430` - and a prerequisite finding that recurs
+
+**EXP4204C** — FIU *Sensation and Perception* (**EXP 4204**, no `C`), 3 cr, **lab fee**. ⚠ **The lab fee
+indicates a laboratory component despite the missing suffix** — a useful reminder that **the suffix records
+a curricular designation and the fee records what actually happens.** Published 3/60.
+
+**Reusable content**: **perception is inference rather than reception**, and **illusions are evidence
+rather than curiosities** — each is a case where a normally reliable assumption has been deliberately
+violated; **every constancy has an illusion attached to it**; and **signal detection theory separates
+SENSITIVITY from DECISION CRITERION**, which is **one of the most transferable ideas in psychology** and
+applies to radiologists, jurors and any judgement under uncertainty. ⚠ **A health/accessibility block was
+added specific to this course**: flickering stimuli carry a small risk for photosensitive epilepsy;
+**stereo demonstrations do not work for the substantial minority with reduced stereopsis, and that is data
+rather than failure**; colour demonstrations differ for the ~8% of men with colour deficiency.
+
+**HSA4430** — FGCU *Health Economics*, 3 cr, **no prerequisite listed**, "public sector issues and the
+interactions between health and labor markets."
+
+**⚠⚠ A prerequisite-absence finding worth generalising: FGCU lists NO prerequisite for a health economics
+course, and that absence is itself information about the level.** The guide records that this produces
+**genuinely different courses under one number** — a section gated on microeconomics is an economics
+course applied to health; an ungated one is more descriptive and institutional. ⚠ **This is the same
+inference pattern used for CLP4302 (batch 167, statistics prerequisite proving the split) and CHM4455
+(batch 168, physical chemistry prerequisite signalling a quantitative course). PREREQUISITE CHAINS ARE A
+RELIABLE DIAGNOSTIC OF WHAT A COURSE ACTUALLY IS**, and are harder to fudge than a catalog description.
+
+**Reusable health economics content**: **the specific market failures** — uncertainty, asymmetric
+information, third-party payment, externalities, entry barriers — **each with predictable consequences**;
+**the unavoidable trade-off between financial protection and efficient use** that no system escapes;
+**prices rather than utilisation explain why the US spends more than other countries**; **the evidence that
+medical care is a modest contributor to population health relative to social and behavioural factors**, so
+**spending more on medical care is not the same as buying more health**; and **the discipline of separating
+empirical, predictive and normative questions**, which public argument reliably conflates.
+
+⚠ **The algorithmic-bias case recorded**: a widely used population health algorithm **underestimated
+illness in Black patients because it used prior SPENDING as a proxy for NEED**, and less had historically
+been spent on them — **an economically sensible proxy encoding an existing inequity.** Reusable wherever
+health algorithms appear.
+
+### Source notes
+
+- **UWF PDF route** clean on `eme` (32,779), `exp` (3,794), `fin` (9,895), `gra` (16,679), `hsa` (16,006).
+  ⚠ **UWF carries none of EME3410, EXP4204C or HSA4430** despite being listed in the inventory for all
+  three — **a reminder that inventory institution lists are not confirmed by the catalog**, recorded
+  before in batch 168 for CEN4721.
+- **Broward** supplied **EME3410** with contact hours and a minimum-grade prerequisite. **Second
+  consecutive batch in which Broward's explicit contact-hour publication earned its register promotion.**
+- **FGCU PDF route** supplied **HSA4430**.
+- **FIU Coursedog cache** supplied **EXP4204** with its lab fee. ⚠ **Note the cache's duplicate-row
+  behaviour again** — three EXP4204 rows, two with a 3.33-credit artefact and college "11"; **the row with
+  a real college name and a description is the usable one.**
+- **DSC SmartCatalogIQ** confirmed working on the current catalog (see the COP4813 note above).
+- **Well-formedness scan** clean on all six.
+- ⚠ **FOUR prerequisites trimmed this batch** (EME3410 532->481, EXP4204C 508->469, FIN4128 508->484,
+  HSA4430 552->456) — the most in any batch. **The "aim for 450" rule is being drifted past when a guide
+  has several structural warnings to convey; tighten earlier.**
+- **Two accepted validator warnings** (GRA2208C, GRA3102C at 72 hours) — deliberate, per the documented
+  GRA studio convention.
+
+
+---
+
+## Batch 171 (2026-09-07) — IDS4890, INR4102, MHF3202, MUE4481C, MUL4400, PHI3130
+
+All six sourced from UWF (`catalog.uwf.edu/courseinformation/courses/<prefix>/<prefix>.pdf`), with
+FIU (Coursedog cache, `scratchpad/fiu_courses.json`) and FGCU (CourseLeaf) as second sources.
+Six pushed, six verified live. Queue: **2,057 pushed / 455 queued / 1 error / 371 skipped**.
+
+### The finding of the batch: logic is taught in two departments, and the versions differ
+
+`PHI3130` and `MHF3202` came into the same batch by design — both are "logic" courses, and the pair
+shows how differently the same subject is delivered depending on which department owns it.
+
+| | `PHI3130` (Philosophy) | `MHF3202` (Mathematics) |
+|---|---|---|
+| UWF title | **Modern Logic** | **Set Theory and Mathematical Logic** |
+| Prerequisite | **none** | **MAC 2312 (Calculus II)**, concurrency permitted |
+| Content | propositional + predicate logic, applied to evaluating arguments | basic set theory, propositional calculus, predicate calculus, **methods of mathematical proof** |
+| Purpose | reasoning skill; general-education mathematics/computation credit | **the transition-to-proof course** — a gate, not a service course |
+| Who takes it | anyone | mathematics majors, almost exclusively |
+
+The overlap in the middle two rows is real — both cover propositional and predicate calculus — but the
+*point* of each is different. `PHI3130` ends at evaluating arguments; `MHF3202` uses the same apparatus
+as scaffolding for writing proofs. **A student who takes one does not thereby have the other**, and a
+transfer evaluator looking only at "propositional and predicate logic" in two descriptions could
+plausibly conclude otherwise. Recorded in both guides.
+
+### `PHI3130` — a formal-vs-informal split inside the number
+
+⚠ **Two meaningfully different courses run under `PHI3130`.**
+
+- **UWF — "Modern Logic":** *"training and skills of modern symbolic logic and their application to the
+  evaluation of arguments"* — propositional logic, predicate logic. **Formal.**
+- **FGCU — "Logic":** categorical and propositional logic, **fallacies**, argument structure and
+  reconstruction. **Substantially informal / critical reasoning.**
+
+This is the same family as the drift cases already catalogued, but with an unusual property: **the two
+versions are hard to tell apart from the titles**, because "Logic" reads as a complete description of
+both. The distinguishing evidence is in the description body — the presence or absence of *fallacies*
+and *argument reconstruction* is the reliable tell, since a symbolic-logic course does not teach
+fallacies and a critical-reasoning course does not teach natural deduction in a formal system.
+
+Not a `-SCNS`/`-<INST>` split candidate: these are two treatments of one subject (validity of
+arguments), not two subjects. Handled as a single guide with a prominent Special Information warning
+telling the student to check which version their institution runs. **Added to the drift register as a
+"same title, different formalism" case — a category the earlier drift examples did not include**, since
+the previous cases (`PUR3000`, `MAN3802`, `ISM4320`) all diverged in *subject matter* rather than in
+*level of formalisation*.
+
+### `MHF3202` — the bottleneck course of the mathematics major
+
+Worth recording as a curriculum-structure finding rather than a sourcing one. `MHF3202` gates real
+analysis, abstract algebra and topology — i.e. **the entire upper division of the mathematics degree**.
+UWF's asterisk on `MAC 2312*` (concurrency permitted) is therefore not a minor notation: it is the
+mechanism that lets a student take the transition course alongside Calculus II rather than after it,
+which is what makes a four-year sequence fit.
+
+⚠ **The prerequisite is a proxy, not a dependency.** Almost none of the calculus is used in the course.
+It stands in for mathematical maturity. This matters for two populations:
+
+1. **Transfer students**, for whom this course is frequently the binding constraint on graduating in
+   two years after transfer — it is the one upper-division-gating course that is sometimes available at
+   a state college (IRSC carries it), so taking it before transferring is high-leverage.
+2. **Late deciders**, who declare mathematics in the sophomore year and then find the sequence
+   unfittable because this course was deferred.
+
+Recorded in the guide's prerequisites string and Special Information.
+
+### `MUL4400` — credit *and* scope divergence in the same number
+
+| | UWF | FIU |
+|---|---|---|
+| Title | Piano Literature | **Keyboard Literature I** |
+| Credits | **2** | **3** |
+| Scope | Baroque → **21st century** | beginnings → **1828** |
+
+Two independent divergences on one number. The scope one is the more consequential: FIU's course is
+**half of a sequence** (the "I" and the 1828 cut-off — Beethoven's death year plus one, the conventional
+boundary — both say so), while UWF's is a **single whole-period survey**. A student who completes FIU's
+`MUL4400` has covered Baroque through early Romantic; a student who completes UWF's has covered
+everything, more thinly. Neither is a subset of the other in any useful sense.
+
+⚠ **The credit mismatch compounds it.** Per the established rule (`REVIEW_QUEUE.md` item 21), the guide
+was published at **2 credits / 30 hours** matching UWF *and* the statewide title "Piano Literature";
+FIU's 3-credit "Keyboard Literature I" is the divergent reading. But the transfer consequence is the
+one already documented in this file: **credit transfers; credit hours do not multiply.** A student
+moving from UWF to FIU carries 2 hours into a 3-hour requirement and is short one hour, and a student
+moving the other way carries 3 into 2 and wastes one.
+
+**Not promoted to a split candidate** — both teach solo keyboard repertoire, so it is scope-and-hours
+divergence rather than two subjects. Noted in the guide.
+
+### `MUE4481C` — a 1-credit techniques course, and why the credit value is the headline
+
+FIU carries it as **"Jazz Tech", 1 credit**: *"Pedagogical techniques for the implementation of the jazz
+ensemble in elementary and secondary schools."* Not offered at UWF.
+
+The 1-credit value is the thing worth stating first in the guide, because it sets expectations
+correctly: this is a short methods course in a series of instrument- and ensemble-specific techniques
+courses inside a music-education degree, not a jazz survey. Two practical consequences recorded:
+
+- ⚠ **No prior jazz experience is assumed.** Worth saying explicitly, because the title deters exactly
+  the students the course exists for — future band directors who have never played jazz and will
+  nonetheless be handed a jazz band.
+- ⚠ **Rotation risk.** 1-credit techniques courses commonly run once a year or once every two years.
+  In a degree with a fixed graduation term this is a real scheduling hazard.
+
+### `IDS4890` — a generic-title course where the *degree* is the content
+
+UWF: **"Senior Capstone"**, 3 sh, explicitly *the Senior Capstone for the Bachelor of General Studies*,
+*"designed to encourage self-analysis of career and intellectual interests."*
+
+⚠ **The `IDS` prefix plus a `4890` number plus the word "Capstone" is about as generic as a course
+listing gets**, and the institutional variation is correspondingly wide. Four distinct things run under
+this shape across Florida:
+
+1. a **general-studies** capstone (UWF) — self-analysis, integration of a deliberately broad program;
+2. an **interdisciplinary-major** capstone — a substantial project in the student's own combination;
+3. a **university-wide** capstone attached to a general-education or honors framework;
+4. an **honours thesis-adjacent** capstone.
+
+These are not variants of one course in the way that, say, two versions of statics are. The guide
+therefore hedges heavily and leads with the instruction to read the *program's* description rather than
+the course's.
+
+⚠ **The gate is standing, not content.** The prerequisite string records this: no course prerequisite,
+but senior standing, frequently a credit-count minimum, and usually a restriction to students in the
+specific degree. Plus the scheduling warning — **capstones are often run once a year**, and finding that
+out in the final term is a common and entirely avoidable graduation delay.
+
+### `INR4102` — a catalog description written as an argument
+
+UWF's entry for **American Foreign Policy** (3 sh, Department of Government) is unusually rhetorical for
+a course listing: it frames the subject through tensions — Americans *"seek to change the world and
+remain distinct from it"*, *"energetically export their religious views yet officially support
+secularism"*, *"denounce imperialism and coercion yet are accused of building a global empire."*
+
+Recorded here as a **sourcing observation**: a description in that register is a statement of the
+instructor's or department's approach, not a neutral content list, and it should be treated as evidence
+about *how* the course is taught rather than as the outcome inventory. The guide's Required Outcomes
+were therefore built from what an American foreign policy course must cover regardless of framing
+(institutional actors and the constitutional allocation of foreign-affairs power, the major theoretical
+frameworks, the historical arc, contemporary policy problems), with the interpretive framing carried in
+Course Description and Optional Outcomes.
+
+⚠ **Prerequisite note worth generalising:** UWF lists none, but the *useful* preparation is an
+introductory IR course, because realism/liberalism/constructivism are introduced there and this course
+**applies** them rather than teaching them. A student arriving without that background is not blocked
+but is doing two things at once. This is the same pattern already recorded for `CLP4302` (statistics →
+the course reads research) and `CHM4455` (physical chemistry → quantitative treatment): **a listed
+prerequisite of "none" is not the same as no useful preparation**, and the guides should say what the
+useful preparation is even when nothing is required.
+
+### Process note
+
+Prerequisite over-length recurred once (`IDS4890`, 506 chars). Down from four in batch 170 — the
+tightening noted there is holding, but the pattern remains: **it is always the guide with several
+structural warnings to convey.** The three warnings competing for space in `IDS4890` were the
+standing-not-content gate, the program restriction, and the once-a-year rotation. Trimming the
+narrative connective tissue rather than dropping a warning is the right fix and worked here.

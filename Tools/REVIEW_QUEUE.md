@@ -10,7 +10,43 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-03 (batch 94)
+**Last updated:** 2026-09-05 (batch 148)
+
+---
+
+## ⭐ DECISION LIST — everything awaiting Ron, in one pass
+
+Ron asked (2026-09-05) for the open items collected so they can be reviewed together. **This is the index;
+the detail is in the numbered sections below.** Items are ordered by how much they unblock.
+
+### A. Blocking work right now
+
+| # | Item | The ask | What it unblocks |
+|---|---|---|---|
+| **13** | **Four taxonomy nodes missing** (`CES`, `CEG`, `CWR`, `ENV`) | Add four leaf nodes under the existing `CIVIL_ENVIRONMENTAL_` parent — via the admin taxonomy editor (no redeploy) and/or `taxonomy.json` + deploy. Copy-paste JSON is in `Deployment/PENDING_SERVER_CHANGES.md`. | **`CES4702C` (written, validated, sitting at `status=error`) plus 13 more queued rows.** Nothing else in the pipeline is blocked. |
+
+### B. Scope calls — whole course families, cheap to decide, large effect on the queue
+
+| # | Item | The ask | Notes |
+|---|---|---|---|
+| **15** | **`MUN` ensembles** (`MUN3313 Concert Choir`, 9 inst, + siblings) | In scope or skip? | Audition-based participation; repertoire set per term by the director. **But** batch 148 established that ensemble credit is *not* interchangeable with methods-course credit, so these are genuinely distinct from the `MV*` applied instruction already skipped. |
+| **16** | **`PEL`/`PEM`/`PEN` activity courses** (`PEL1341 Beginning Tennis`, 9 inst, + siblings) | In scope or skip? | Physical activity instruction. Unlike applied music these have defined statewide skill outcomes, so a guide is writable — the question is whether it is worth writing. |
+| **17** | **`MVV4640 Vocal Pedagogy`** | Confirm it stays in scope. | Held back deliberately when the 40 applied-music rows were skipped (batch 144): it carries the voice prefix but is a **classroom course about teaching singing**, not studio instruction. Currently still `queued`. |
+| **5, 6, 8** | The pre-existing scope items (`PHT2931`; re-screen the skipped 9xx rows; six requirement-placeholder shells) | Unchanged from before this session. | **Item 6 remains the highest-value item on this page.** |
+
+### C. Correction candidates — live guides, need a go-ahead before republishing
+
+| # | Item | The ask |
+|---|---|---|
+| **10** | `MAN4350` / `MAN4320` number collision | Two-number treatment — how? |
+| **11** | `MAN4720` missing UWF residency/permission requirement | Which of three options; and whether to sweep other live capstone guides |
+| **14** | **`PUR3000`** split candidate | Split into `-SCNS` / `-UWF` / bare, or leave as one guide? **Better evidenced than the other candidates** — UF *and* FGCU confirm the majority reading from their own catalogs, so unlike the NUR cases this does not need the SCNS catalog to proceed. |
+| **1, 2, 3, 4** | `ETI4448`, `RTE2563C`, `EET1025C`, `TPP2118`/`TPP2119` | Unchanged from before this session. |
+
+### Closed since this list was started
+
+**12** `BCN2405C` — resolved without needing a decision (title drift, not a subject split; published as one
+guide, batch 141). **7** `PHT1006C` and **9** split-family `C`-suffix rows — closed earlier.
 
 ---
 
@@ -262,10 +298,80 @@ Sources that failed in a way that looks temporary. I retry these opportunistical
 
 | Source | Failure | First seen |
 |---|---|---|
-| `fldoe.org` | 403 | long-standing |
+| `fldoe.org` | 403 (Akamai) — **re-confirmed batch 153**; matters beyond one batch, it is the primary source for every PSAV curriculum framework | long-standing |
 | `floridastatecollegecatalog.fscj.edu` | **TLS certificate expired** — distinct from a bot filter | batch ~90 |
 | `catalog.nwfsc.edu` | 403 | batch 92 |
 | `catalog.sfcollege.edu` | empty response body | batch 92 |
+| `www.pensacolastate.edu/coursesearch.php` | 213-byte stub for every query — JS-driven | batch 154 |
+| `catalog.phsc.edu`, `catalog.mdc.edu` | connection failure (curl 000) | batch 154 |
+| `catalog.palmbeachstate.edu` | connection failure (curl 000) | batch 155 |
+| `www.unf.edu/catalog/courses/?level=ug` | 200 / 151 KB but **nav chrome only**, client-side rendered. Lead: `digitalcommons.unf.edu/course_catalogs/` | batch 153 |
+
+**✅ Recovered — do not treat as blocked:** `catalog.broward.edu/course-descriptions/<prefix>/` returned
+full content again in **batch 154** after being recorded as bot-blocked on 2026-09-04. Second
+regression-then-recovery for Broward. **Re-probe at session start rather than assuming either state.**
+
+---
+
+## 18. `ASC1610C` — cannot be sourced, not a decision (batch 154) — *informational*
+
+Queue row is **`ASC1610C` "Aircraft Systems and Components"** (BC;FSCJ;MDC;NWFSC;PHSC;PSC;UWF).
+**Broward — the only reachable institution — lists `ASC1610` WITHOUT the `C`**, titled *Aircraft Engines,
+Structures, and Systems*, 3 credits. UWF has no `ASC` prefix at all.
+
+Open question: same course under a suffix disagreement, or two different courses? **No second reachable
+source exists to settle it** — PSC is JS-only, PHSC and MDC fail to connect, NWFSC is 403, FSCJ needs a
+numeric id. Left `queued`, no draft written, **no decision needed from Ron** — this is a sourcing block
+that clears itself when one of those catalogs comes back. Retry alongside the standing list above.
+
+---
+
+## 20. ⚠⚠ `LAE3314` — a split candidate where UWF holds the MINORITY reading (batch 156)
+
+**Statewide title: "Children's Literature." UWF's LAE 3314: "Literacy for the Emergent Learner."**
+
+Not variant wordings. Children's literature is the study of a body of literature — genres, history,
+authors, selection, reader response. UWF's course is early-literacy *instruction* — development from birth
+through primary grades, phonological awareness, word identification, fluency, comprehension. **Different
+disciplines; they do not substitute in either direction.**
+
+**Confirming evidence from inside UWF's own catalog:** UWF carries **`LAE 5468` "Literature for Children
+and Young Adults"** at graduate level — so UWF does teach the children's-literature subject, under a
+different number. The divergence is real, not a catalog abbreviation.
+
+**⚠ What makes this different from every prior split candidate: UWF is the outlier.** In ISM4320, PUR3000
+and the rest, UWF's reading was one of two live readings. Here the statewide title reads Children's
+Literature across CC, FAMU, FLAC, FSWSC, KU and SFSC, and UWF stands alone. **Publishing a single guide
+from the UWF description would put the minority subject under a number most institutions use for something
+else** — exactly the trap the split rule exists to prevent.
+
+**Action taken:** pulled from batch 156, **no draft written**, row left `queued`. Sourcing attempted and
+failed for the majority reading — FGCU has no LAE3314, Broward's `lae` page 404s, Chipola fails to
+connect, South Florida State has no per-prefix course route, FSW is still an empty 202.
+
+**What I need from you:** this is the case the **SCNS catalog** you offered would settle. With it I can
+write `LAE3314-SCNS` (children's literature), `LAE3314-UWF` (emergent literacy) and the bare-number
+disambiguation page. Without it, writing the `-SCNS` half would be inventing content, which the rule
+forbids.
+
+---
+
+## 19. Should the C-suffix contact-hour rule be restated? (batch 154) — *low priority*
+
+The working rule from batches 149–151 is **"C dominant → 60 hours; C minority → 45."** It was applied to
+CES4702C (kept 45), COP2830C (changed to 60) and TPA2000C (kept 45).
+
+**`BOT4503C` was published at 60 in deliberate departure from it.** By institution count the split form is
+the majority (BOT4503L is listed at four institutions), so the rule says 45 — but **FGCU's catalog documents
+BOT4503C as genuinely integrated lecture+lab**, and UWF's split form carries a real 1-credit lab with a
+material fee. Publishing 45 would have described a lab-bearing course as a lecture.
+
+**Suggested restatement:** *the deciding question is whether the `C` form documentably carries a lab, not
+how many institutions use the suffix.* Institution count is a proxy to fall back on when the catalog is
+silent. **No action needed unless you want the rule changed in `CLAUDE.md`** — flagging it because the two
+readings will keep diverging.
+
+---
 
 ---
 ## 10. ⚠⚠⚠ `MAN4350` / `MAN4320` — a number COLLISION needing a decision (batch 138)
@@ -396,6 +502,136 @@ Structures", **CEG** "Civil Engineering: Geotechnical", **CWR** "Civil Engineeri
 completes it. The other 12 blocked rows are still `queued` and will hit the same 422 when they come up.
 
 **Needs from you:** add the four nodes (either route), then tell me and I will push CES4702C and re-check.
+
+## 14. `PUR3000` — a split candidate with an unusually clear majority (batch 144)
+
+**Found while writing PUR3000.** Two Florida institutions confirm the statewide reading and one teaches a
+different subject under the same number.
+
+| Institution | Title | What it actually covers |
+|---|---|---|
+| **UF** | Principles of Public Relations | "Nature and role of public relations in a democratic society, activities of public relations professionals... ethics and professional development... Emphasizes management functions and developing effective public relations strategies." Prereq: sophomore standing |
+| **FGCU** | Principles of Public Relations | "An introduction to the field and study of public relations. Explores the history of the profession, the nature of public relations, its established code of ethics, and the responsibilities and duties of public relations professionals." Prereq: ENC1102 |
+| **UWF** | **Introduction to Public Affairs** | "How communication shapes the relationship between government, nonprofit organizations, the media, and the public... strategic messaging, advocacy, and public relations in influencing policy debates... how public affairs professionals communicate with diverse audiences, manage issues, and represent organizational interests in the public sphere." No prereq listed |
+
+**Why this is a stronger candidate than most on the list.** Public affairs is a *subfield* of public
+relations, so the overlap is real — but a UWF student completing PUR3000 will not have covered the history
+of the profession, the four-step PR process, media relations, campaign planning, or corporate and agency
+practice, which is the entire substance of the course at UF and FGCU. **And the next course in the sequence
+assumes them**: FGCU makes PUR3000 the explicit prerequisite for PUR3100 (PR Writing), and UWF has its own
+PUR3100 (*Writing for Public Relations*).
+
+**Unlike most entries in the open-cases table, the majority reading here is confirmed at two institutions,
+not inferred** — so a `-SCNS` guide would not be written from a title alone. That removes the usual blocker
+recorded for the NUR cases.
+
+**Published as a single guide** (the UF/FGCU subject), with the divergence quoted at the top of the Course
+Description and repeated in Special Information under transfer risk. Added to the open-cases table in
+`Tools/CLAUDE.md`.
+
+**Needs from you:** whether to split this one into `PUR3000-SCNS` / `PUR3000-UWF` / `PUR3000`. It is a
+better-evidenced candidate than the ART/HSC/PCB entries already on the list, and unlike the NUR cases it
+does not need the SCNS catalog to proceed.
+
+## 15. `MUN` ensemble numbers — scope decision (batch 147)
+
+**Surfaced by** `MUN3313 Concert Choir` (9 institutions) reaching the head of the queue, with other `MUN`
+numbers behind it.
+
+**Why it is a question.** These are performing-ensemble courses: students audition, rehearse and perform,
+and the repertoire is chosen by the director each term. In that respect they resemble the `MV*` applied
+studio instruction already skipped (batch 144, 40 rows) — a statewide guide cannot say what the content
+will be.
+
+**Why it is not obviously the same thing.** Batch 148 turned up a relevant distinction while writing
+`MUE4480`: **participating in an ensemble under an `MUN` number is not the same as the methods course, and
+programmes do not accept ensemble credit for methods requirements.** Ensembles carry real, assessable
+musicianship outcomes — sight-reading, blend, intonation, rehearsal literacy — and they are degree
+requirements every term in music degrees, not electives. A guide could usefully cover audition
+expectations, the every-term requirement, how ensemble credit accumulates, and the Florida MPA structure,
+without pretending to know the repertoire.
+
+**Needs from you:** skip the `MUN` family, or write them with that framing?
+
+## 16. `PEL` / `PEM` / `PEN` activity courses — scope decision (batch 147)
+
+**Surfaced by** `PEL1341 Beginning Tennis` (9 institutions) reaching the head of the queue.
+
+Physical activity instruction. These differ from applied music in that they have **defined skill outcomes**
+that are reasonably stable statewide — a beginning tennis course teaches the same strokes everywhere — so a
+guide is genuinely writable. The question is whether it is worth writing: they are typically 1 credit,
+elective, and carry no articulation complexity.
+
+**Needs from you:** in scope or skip? If skipped, the same bulk-mark treatment used for `MV*` applies.
+
+## 17. `MVV4640 Vocal Pedagogy` — confirm scope (batch 144)
+
+Held back deliberately when the applied-music family was skipped. It carries the `MVV` voice prefix but is
+a **classroom course about teaching singing** — pedagogy, vocal anatomy, repertoire selection for students —
+not individual studio instruction. Left `queued` rather than assumed.
+
+**Needs from you:** confirm it stays in scope (I write it), or skip it with the rest of the prefix.
+
+## 21. Two documented sources DISAGREE on credits — confirm the tie-break rule (batch 163)
+
+**Surfaced by** `MUE3311 Public School Music`, where **FGCU documents 3 credits and UWF documents 2** for
+the same SCNS number. This is the first case in the project where two catalogs give different credit
+values for the *same* number and both are legible sources — previous credit questions were "one source, is
+it right?" rather than "two sources, which one?"
+
+**What I did, pending your call.** Published at **3**, on two grounds:
+
+1. FGCU documents 3 for **this same number**, and 3 is the national norm for a course of this scope.
+2. **UWF's music department applies 2-semester-hour values broadly** — its conducting, form-and-analysis
+   and instrumentation courses are all 2 — so the 2 reads as a **departmental convention** rather than a
+   statewide value for this particular course.
+
+The guide states **both** values prominently and says which it used, per the standing "show the
+disagreement" rule.
+
+**The general question, which is what actually needs deciding.** When two catalogs disagree on credits:
+
+- **(a) Publish the majority/national norm** and flag the outlier — what I did here.
+- **(b) Publish the lower value**, on the conservative reasoning that a student who plans for fewer credits
+  is never short.
+- **(c) Publish neither number as authoritative** — state the range in the guide and set the JSON to the
+  more common value purely as a required field.
+
+**Note this is not hypothetical going forward:** the same UWF 2-hour convention produced `MUT4311` at 2
+credits this batch, where **FGCU's equivalent course is 3 but carries a different number** (MUT3311), so
+the tie-break did not apply and UWF governed by default. **A rule here would settle a recurring music-prefix
+case and any others like it.**
+
+### ⚠ Update (batch 164): a SECOND case, and it resolves the OPPOSITE way under the same rule
+
+`PSY2023 Careers in Psychology` — **FSU and FGCU both document 1 credit; UWF documents 3.** Published at
+**1**, i.e. the *lower* value, where MUE3311 took the *higher*. **Both were decided by rule (a) — majority
+of documented sources — which is evidence that (a) is the rule that generalises**, since it handled two
+cases that pull in opposite directions without special pleading. In both, UWF was the outlier.
+
+**A transfer consequence surfaced that applies to every case of this kind:** a student who completes a
+1-credit version and transfers where 3 is required is **short two credits toward the requirement**, even
+though the number is identical and the credit transfers automatically. **Credit transfers; credit *hours*
+do not multiply.** Whatever rule you pick, the guides should keep stating both values so a student can see
+the gap coming.
+
+**Needs from you:** (a), (b), (c), or something else.
+
+## 22. ⚠ `MUT4311` / `MUT3311` — a NUMBER divergence, which defeats articulation (batch 163) — *informational*
+
+Recording the pattern rather than asking for a decision. **FGCU teaches this course as `MUT3311`
+"Orchestration and Arranging" (3 cr); UWF and the statewide inventory use `MUT4311` (2 cr at UWF).** Same
+subject; the digit is a level marker (3 = junior, 4 = senior).
+
+**Why it belongs on your radar: SCNS equivalency operates on the NUMBER.** A title drift still articulates
+automatically; **a number divergence does not** — a student moving between those two institutions needs a
+departmental course substitution. This is a *third* distinct transfer-risk pattern alongside the
+one-number-two-subjects splits and the suffix cases, and **it is invisible to anything that matches on
+course code.**
+
+**Relevant to the career-pathways feature** (`CAREER_PATHS_PLAN.md`): a pathway assembled by number would
+silently drop FGCU students out of an orchestration requirement they have in fact completed. Logged in
+`SOURCES.md` batch 163. **No action needed now** — flagged so the pathway data model accounts for it.
 
 ## Resolved
 
