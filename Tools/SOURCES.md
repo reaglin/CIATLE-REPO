@@ -15161,10 +15161,22 @@ Queue: **2,063 pushed / 449 queued / 1 error / 371 skipped**.
 ### Source note — FSU earned its promotion this batch
 
 The CLAUDE.md register's promotion of FSU to a general-purpose third source (from "useful only for the
-FAMU-FSU joint engineering college") paid for itself here. **FGCU carries none of these six courses** —
-probed all four prefixes, all returned 200 with full bodies, and none of the six numbers appears — and
-**UF's course-search API returned titles with empty descriptions** for the two it does carry. Without
-FSU this batch would have been single-sourced on UWF for four of the six.
+FAMU-FSU joint engineering college") paid for itself here. **FGCU carries none of these six courses**, and
+**UF's course-search API returned titles with empty descriptions** for the two it does carry. Without FSU
+this batch would have been single-sourced on UWF for four of the six.
+
+⚠ **Method correction, recorded so it is not repeated.** The FGCU probe was first run against the
+*directory* URL (`catalog.fgcu.edu/courses/<prefix>/`), which is the form this register records as
+**bot-blocked**. It returned 200 with a full body and no matching numbers — a result that *looked*
+authoritative and was reached the wrong way. **Re-probed against the correct form**
+(`catalog.fgcu.edu/courses/<prefix>/<prefix>.pdf`) for all four prefixes: all four PDFs parsed cleanly
+(phi 6,886 chars; phh 2,306; phy 8,861; spc 4,501) and **none of the six numbers appears in any of them**.
+The conclusion holds; the first method did not establish it.
+
+**The general lesson, which is the same one that cost two days on Broward and Valencia:** a 200 with a
+body from a source recorded as blocked is not evidence the source answered — it may be a different
+endpoint answering a different question. **Use the URL form the register records as working, and if a
+result contradicts an expectation, re-derive it with the documented pattern before writing it down.**
 
 Departments used: `philosophy`, `physics`, `communication`. Format is clean HTML with full descriptions,
 credits and prerequisites. **Extraction gotcha worth recording:** FSU's bulletin pages carry *degree
