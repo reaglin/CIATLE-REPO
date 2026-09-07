@@ -15592,3 +15592,168 @@ against the documented `.pdf` pattern; conclusion held, method did not. **Same l
 a 200 from a source recorded as blocked is not evidence the source answered.**
 
 No prerequisite over-length this batch (longest 455 of 500). No validator warnings.
+
+
+---
+
+## Batch 174 (2026-09-07) — AMH4170, ASH4404, CCJ3651, CDA3101, CHM4611, CJC4010
+
+Six pushed, six verified live. Queue: **2,075 pushed / 437 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FIU (Coursedog cache), FGCU (prefix PDFs), FSU (bulletin departments), UF
+(course-search API). Deliberately spread across computer science, history, criminology and chemistry after
+two humanities-weighted batches.
+
+### ⚠⚠⚠ `CDA3101` — FSU runs the number as the SECOND course of a sequence
+
+| Institution | `CDA3101` is… | Prerequisite |
+|---|---|---|
+| UWF | **Introduction to Computer Organization** — the whole introduction, assembly included | COT 3100 (discrete maths) |
+| UF | **Introduction to Computer Organization** | — |
+| **FSU** | **Computer Organization II** | **`CDA3100` Computer Organization I** |
+
+FSU's `CDA3100` (coreq `COP3330`) covers number representation, ISA, logic design, datapath and control,
+pipelining and memory hierarchy; its `CDA3101` then goes deeper into processor design and I/O. **UWF and UF
+put all of it in one course.** Majority reading is the single-course one (UWF + UF against FSU), so the
+guide is written that way with the sequence divergence flagged prominently.
+
+⚠ **Both transfer directions break, and differently:**
+
+- **Into FSU:** the credit articulates on the number, so FSU records `CDA3101` complete — **but the student
+  has never taken `CDA3100`**, which is itself a degree requirement and a prerequisite elsewhere. They are
+  recorded as holding the second course of a sequence whose first course they still owe.
+- **Out of FSU:** the student holds the deeper second course but may need to show the earlier material was
+  covered across two courses.
+- ⚠ **A visiting/transient student cannot simply take FSU's `CDA3101`** — the prerequisite is enforced.
+
+**Category: sequence-position divergence.** Same shape as `MUL4400` (batch 171), but **sharper, because
+FSU's prerequisite proves the position rather than implying it.** And it is another instance of the
+`SPN3400` pattern from batch 173 — **numbers match, content does not, so articulation succeeds and conceals
+the gap.** That makes three cases in four batches; the pattern is not rare.
+
+### ⚠⚠ `AMH4170` — the scope divergence is Reconstruction, which is half the subject
+
+| | Statewide / FIU | UWF |
+|---|---|---|
+| Title | **Civil War and Reconstruction** | **The American Civil War** |
+| Scope | sectionalism → the war → **"the restoration of the nation"** | causes → conduct 1861–1865 → consequences → memory |
+| Reconstruction | **yes** | **not named** |
+
+UWF's description is unusually detailed — it lists ten specific objectives — and **every one of them stops at
+the war and its consequences.** Reconstruction as a period is absent. FIU's names "the restoration of the
+nation" explicitly.
+
+⚠ **Why this is worse than an ordinary scope narrowing.** Reconstruction is not an epilogue to the Civil
+War; **it is where the war's central question was actually decided.** The Fourteenth and Fifteenth
+Amendments, the collapse of interracial democracy in the South, and the legal architecture that followed all
+belong to that period. A student who takes the war course and believes they have covered "Civil War and
+Reconstruction" has a gap in the half that bears most on constitutional law, civil rights history and
+graduate study.
+
+**Credit articulates cleanly**, which is again the risk rather than the reassurance. Guide leads with the
+warning and tells students to read the reading list (Foner or equivalent present? does the schedule run past
+1865?) rather than the title.
+
+### ⚠⚠ `CHM4611` — one course or two, plus a credit divergence, plus FSU on a different number
+
+| | UWF | FIU | FSU |
+|---|---|---|---|
+| Code | `CHM4611` | `CHM4611` | **`CHM4610`** |
+| Title | Inorganic Chemistry | **Advanced Inorganic Chemistry** (= statewide) | Inorganic Chemistry |
+| Credits | **4** | **3** | 3 |
+| Prerequisite | physical chemistry | **`CHM3610`** + organic + physical | organic; physical as coreq |
+| Position | the department's **only** inorganic course | the **second** of two | first inorganic course |
+
+Three divergences stacked on one number. **FIU requires a prior inorganic course**, so its `CHM4611` is
+genuinely the *advanced* one the statewide title names. **UWF has no prior inorganic course** — its 4-credit
+version is the whole subject in one block.
+
+**Published at 3 credits / 45 hours**, matching the statewide title, FIU's stated credits, and the standard
+3-credit lecture shape. ⚠ **This is the second consecutive batch where a credit disagreement was resolved by
+asking what the extra credit BUYS** (batch 173's `TPA2232C`: UWF's fourth credit was stage makeup; here it
+is the introductory inorganic material FIU places in `CHM3610`). **The test is generalising well and is
+worth treating as the standing tie-break supplement to `REVIEW_QUEUE.md` item 21:**
+
+> When credit values disagree, look for content in the higher-credit institution's description that the
+> others' do not name. If it is there, the divergence is explained rather than arbitrary, and **the lower
+> value better represents the statewide course**.
+
+⚠ Also: **FSU numbers it `CHM4610`** — a fourth instance of plain number divergence this session, after
+`PHI3500`/`PHI4500`, `ACG3343`/`ACG3341` and `MUG2101`/`MUG3104`.
+
+⚠ **Programme-level accreditation note added to the guide.** ACS certification requires inorganic coverage
+at this depth, so a student moving between certified and non-certified programmes meets the requirement at
+the *programme* level regardless of how individual credits articulate. **This is the fifth profession
+documented where accreditation outranks course credit** — after nursing, medical laboratory science, social
+work (CSWE) and financial planning (CFP Board).
+
+### `CCJ3651` and `CJC4010` — clean articulation, but Florida-specific substance worth recording
+
+Both are clean on the number and vary only in title (`CCJ3651`: statewide/FIU *Drugs and Crime*, UWF *Drugs,
+Crime, and Criminal Justice*; `CJC4010`: statewide/UWF *Corrections*, FGCU *American Corrections*, UF
+*Introduction to Corrections* — the last tracking Clear, Reisig and Cole's market-leading textbook).
+
+⚠ **The more useful finding is that Florida's correctional system is structurally unlike the national case
+these courses' textbooks describe:**
+
+- **Florida abolished discretionary parole for most offences in 1983.** Most inmates are released by
+  sentence expiration, not by a parole board. **National textbook chapters on parole decision-making
+  describe a process Florida largely does not use.**
+- **Florida requires service of at least 85% of the sentence imposed** (offences after 1 Oct 1995), which
+  drives both population size and the ageing of the inmate population.
+
+Recorded in the `CJC4010` guide as a standing warning to read national material with the state's structure
+in mind. **This is the kind of state-level divergence the project should look for in every professionally
+regulated field**, and it is distinct from the course-numbering divergences that dominate this file.
+
+⚠ **Mental-health-adjacent handling** (per `CLAUDE.md`): `CCJ3651` covers addiction and overdose and
+`CJC4010` covers incarceration and custody violence, and criminal justice cohorts contain many students with
+direct personal or family exposure. Both guides use non-stigmatising language deliberately (and say why —
+stigma is an evidenced barrier to treatment-seeking, which is course content rather than etiquette), state
+that no student is required to disclose personal experience, and carry **support resources**: SAMHSA
+1-800-662-HELP, 988, Florida 211, institutional counselling, and Florida's naloxone standing order. The
+`CJC4010` guide additionally notes **correctional officer occupational stress** and employee assistance
+programmes, since a substantial share of its readers already work in the system.
+
+⚠ Both guides also state plainly that **a criminal justice degree is not academy certification** — Florida
+sworn officers need a CJSTC-approved Basic Recruit Training Program and the State Officer Certification
+Examination — and that **academic integrity findings are reportable in background investigations**, which
+raises the professional stakes in this discipline above the usual.
+
+### `ASH4404` — the benign case
+
+Statewide *Modern China*, UWF *China Since the Opium War*, FIU *History of China*. Same number, same period
+(19th century → present), same scope. **Clean.**
+
+⚠ One caution recorded: **FIU's "History of China" could be misread as a full-span course** covering
+antiquity onward. Its description specifies the modern period. Pre-modern China is normally `ASH3100` (FSU
+carries it separately), so this number does not satisfy a pre-modern requirement.
+
+⚠ UWF's description states explicitly that **no prerequisites or prior knowledge of China are needed** —
+recorded because it is unusually clear, and because it means the standing "no prerequisite ≠ no useful
+preparation" practice needed a different treatment here: the guide says the world history survey and any
+imperialism course help, while stating firmly that **no Chinese language is required or expected**, since
+that assumption deters students.
+
+### Cross-batch observations
+
+**1. Sequence-position divergence is now a recognised category with three instances**: `MUL4400` (batch
+171), `SPN3400` (173), `CDA3101` (174). In each, **the number articulates and the content does not**, so
+nothing flags the mismatch. Worth watching for wherever an institution runs a "I/II" sequence and another
+runs a single course.
+
+**2. Plain number divergence has appeared in every batch this session**: `PHI3500`/`PHI4500` (172),
+`ACG3343`/`ACG3341` and `MUG2101`/`MUG3104` (173), `CHM4611`/`CHM4610` (174). **Four prefixes, four
+disciplines.** This is not an occasional accident; it is a structural feature of SCNS that the
+career-pathways feature will have to model explicitly.
+
+**3. "No prerequisite" was again the norm** — four of six list none. The useful-preparation note that
+recurs most is **statistics or research methods**, named for both criminology courses this batch and for
+`SPC4540` last batch. In evidence-based social science courses it is consistently the highest-leverage
+unlisted preparation.
+
+### Process note
+
+No prerequisite over-length (longest 449 of 500), no validator warnings, no push failures. Prefix-batching
+continues to pay: six courses needed six UWF fetches, one FIU cache read, one FGCU fetch, three FSU
+department fetches and one UF API call.
