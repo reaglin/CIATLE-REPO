@@ -742,6 +742,34 @@ statewide reading.
 reachable (UCF/UNF/USF are all currently unfetchable — this is the blocker); (b) treat it as a
 `-SCNS`/`-UWF` split; or (c) skip. **Row left `queued` with an explanatory note.**
 
+## 27. ⚠⚠ `MMC4601` — statewide says "Video Game Analysis", UWF teaches minorities and mass media (batch 177)
+
+**Pulled from batch 177, not written.** Third instance of the `LAE3314` shape, and the starkest yet.
+
+| | Statewide (SCNS) | UWF |
+|---|---|---|
+| Title | **VIDEO GAME ANALYSIS** | **Minorities and the Mass Media** |
+| Institutions | FAMU, FIU, STU, UWF | — |
+| Subject | — (not sourceable) | *"Concerns of mass media as they pertain to minority issues; review of mass media portrayals of minorities; problems of minority access to mass media; prospects for mass media and cultural diversity."* |
+
+**These are not two wordings of one subject.** Game studies and media representation of minority groups are
+different fields with different literatures.
+
+**Why I pulled it rather than writing it.** Writing from UWF alone would publish one subject under a number
+that means something else at three other institutions — the `LAE3314` failure mode exactly. **And unlike
+`COM3003` (batch 175, split completed), the `-SCNS` half is NOT sourceable**: the FIU Coursedog cache has no
+description for this number, and FAMU and STU are unreachable.
+
+**Needs from you:** (a) hold until a source for the statewide reading is reachable, then split as `COM3003`
+was; (b) publish the UWF reading alone with a prominent warning; or (c) skip. **Row left `queued` with an
+explanatory note.**
+
+⚠ **Worth noting the pattern across three batches:** `LAE3314`, `PUR4801` and now `MMC4601` are all cases
+where **UWF holds a minority reading and the majority reading cannot be sourced.** `COM3003` was the one case
+where it could be, and that one got split immediately. **The binding constraint on executing your split rule
+is source reachability, not judgement** — which is why the Coursedog recoveries in batch 173 matter beyond
+the courses they directly unlocked.
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

@@ -16094,3 +16094,167 @@ the existing malformed-tag scan. **Both checks should be carried forward into ev
 
 No prerequisite over-length (longest 468 of 500). No validator warnings. Six courses required six UWF
 fetches, one FGCU fetch, two Coursedog cache reads, one FSU department read and one UF API call.
+
+
+---
+
+## Batch 177 (2026-09-07) — EUH3122, EUH4465, FIN3244, HFT3221, PHC4024, PHC4101
+
+Six pushed, six verified live. **One row pulled and held (`MMC4601`).** Queue: **2,093 pushed / 421 queued /
+1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin departments), FIU (Coursedog cache).
+
+### ⚠⚠ `MMC4601` — PULLED. Statewide "Video Game Analysis", UWF "Minorities and the Mass Media"
+
+| | Statewide | UWF |
+|---|---|---|
+| Title | **VIDEO GAME ANALYSIS** | **Minorities and the Mass Media** |
+| Subject | not sourceable | media portrayals of minorities, access to media, cultural diversity in media |
+
+**Game studies and media representation are different fields.** Pulled per the `LAE3314` precedent, and
+recorded as `REVIEW_QUEUE.md` item 27.
+
+⚠ **The pattern across four batches is now clear and worth stating.** Four one-number-two-subjects cases have
+surfaced this session:
+
+| Case | UWF reading | Majority reading | Sourceable? | Outcome |
+|---|---|---|---|---|
+| `COM3003` (batch 175) | Integrated Advertising &amp; PR | Human Communication | **YES — FIU** | ✅ **split completed, 3 pages live** |
+| `PUR4801` (batch 173) | PR Campaigns | PR Cases | no | held |
+| `TPA3230C` (batch 173) | Costume Construction | (three-way) | partly | held |
+| `MMC4601` (batch 177) | Minorities and Mass Media | Video Game Analysis | **no** | held |
+
+> ⚠⚠ **The binding constraint on executing Ron's split rule is SOURCE REACHABILITY, not judgement.** In every
+> case the divergence was easy to identify; only `COM3003` could be published, because only there was the
+> statewide reading obtainable from a fetchable catalog. **This is the strongest argument yet for continuing
+> to invest in source recovery** — the Coursedog work in batch 173 matters well beyond the courses it
+> directly unlocked.
+
+### ⚠⚠ `FIN3244` — the prerequisite structures conflict, and the course sits on opposite sides of the sequence
+
+| | UWF | FGCU |
+|---|---|---|
+| Title | Financial Markets and Institutions | Money &amp; Capital Markets (= statewide) |
+| Prerequisite | **ACG 2071 AND ECO 2013 AND ECO 2023** | **FIN 3403** (Business Finance) |
+| Position | **before** corporate finance | **after** corporate finance |
+
+**The same course is an entry point to the finance sequence at one institution and a follow-on at the
+other.** UWF gates on foundational accounting and economics; FGCU requires the corporate finance course
+first.
+
+**Fourth documented instance of sequence-position divergence**, after `MUL4400` (171), `SPN3400` (173) and
+`CDA3101` (174). ⚠ **The number articulates cleanly in every one of them, which is exactly what conceals the
+problem.** A student transferring from UWF may hold this course without `FIN3403` — itself a requirement and
+a prerequisite elsewhere.
+
+⚠ **Also recorded: FIU's catalog row for this number reads "Introduction to Financial Markets" at 1 CREDIT.**
+The row carries markers suggesting an older catalog entry, and FIU is not among the institutions the
+inventory lists for the number. **Published at 3 credits** (UWF, FGCU, statewide), with the 1-credit record
+noted. **This is the second time this session a stale-looking Coursedog row has surfaced** (after
+`ACG3343`'s "inactivated per 2024 SCNS review, last offered fall 2016") — **the Coursedog data carries
+lifecycle metadata no other Florida source does, and it needs reading rather than just querying.**
+
+### ⚠⚠ `PHC4024` — UWF teaches the broader course under an epidemiology number
+
+| | Statewide / FGCU / FIU | UWF |
+|---|---|---|
+| Title | **Applied Epidemiology** | **Applied Research Methods in Public Health** |
+| Scope | outbreak investigation, field epidemiology, surveillance, control | public health research methods generally, building on epi and biostatistics |
+
+**Written to the majority reading** (statewide title + two documented institutions). **Not treated as a
+split** — both are public health methods courses and one contains the other, which is scope narrowing rather
+than a different subject, the same call made for `PCB4315`.
+
+⚠ **But the practical consequence is sharp and the guide says so:** the two prepare for different next steps.
+**Field epidemiology careers — health department work, CSTE, the EIS track — need the outbreak-investigation
+version**, and its investigation exercise is the portfolio piece. **Research and graduate study are arguably
+better served by the broader version.** Credit articulates either way, so a receiving programme records
+applied epidemiology regardless.
+
+### `PHC4101` — accreditation, and a 4000-level number on a foundation course
+
+Clean articulation (statewide *Public Health Concepts*, UWF *Essentials of Public Health*, FSU *Introduction
+to Public Health* — three titles, one subject).
+
+⚠ **CEPH accreditation recorded as the SIXTH profession where programmatic accreditation outranks course
+credit**, after nursing, medical laboratory science, social work (CSWE), financial planning (CFP Board) and
+chemistry (ACS). **The pattern is now consistent enough to state as a rule in guide-writing:**
+
+> **In any professionally accredited field, the receiving PROGRAMME decides, not the registrar.** An
+> accredited programme may require its own version of a course to document coverage for accreditation,
+> regardless of how the credit articulates.
+
+⚠ **A structural oddity worth recording: `PHC4101` carries a 4000-level number while functioning as the
+introductory survey.** The practical effect is that **students defer it**, when as the map of the field it is
+most useful *before* epidemiology and biostatistics. The guide tells them to take it early. **Watch for this
+pattern elsewhere — a senior-level number on a foundation course is a scheduling trap.**
+
+### `EUH3122` — period coverage diverges by two centuries
+
+| Institution | Title | Period |
+|---|---|---|
+| UWF | High Middle Ages (= statewide) | **1050–1450** |
+| FGCU | **Feudal Society, 1000–1400** | 1000–1400 |
+| FIU | **Later Medieval Europe** | **13th–15th c.** (c. 1200–1500) |
+
+UWF and FGCU are the same course. ⚠ **FIU's begins two centuries later — after the Gregorian reform, the
+Investiture Controversy, the First Crusade, the founding of the universities and the demographic expansion.
+That is to say, after most of what "High Middle Ages" names.**
+
+**Scope divergence, not a split** — it is the same subject over a different slice. Recorded with the standing
+warning: **the credit articulates cleanly, which is the risk rather than the reassurance.**
+
+⚠ A terminology note also recorded: **FGCU's "Feudal Society" title uses a term the field has substantially
+critiqued** (Brown 1974, Reynolds 1994). **The title should not be read as a statement that the course is
+dated** — courses using it normally teach the critique. Worth knowing generally: **a contested term in a
+course title is not evidence about the course's currency.**
+
+### `EUH4465` — sensitive-content handling at its most demanding
+
+UWF *Nazi Germany*; **FSU *Weimar and Nazi Germany***. Same subject; the difference is **how many weeks sit
+before 1933**, which the guide flags as worth checking because **the Weimar material is where the course's
+central analytical question lives** — a course starting in 1933 can describe the dictatorship, one starting
+in 1918 can explain how a democracy produced it.
+
+Handling recorded for reuse:
+
+- ⚠ **Holocaust denial is explicitly NOT presented as a position to weigh.** The guide states that the
+  Holocaust is among the most documented events in modern history and that denial is treated as an object of
+  study, not an interpretation. **This is the first guide in the project to state a "not both sides" position
+  explicitly**, and it is the correct call — the alternative would misrepresent the discipline.
+- ⚠ **The AI section is the strongest warning written in this project so far**, and for a specific reason:
+  **this subject is a deliberate target of organised falsification.** Denial and distortion material exists
+  in training corpora; overt denial is generally caught by guardrails, **subtler distortion is not** —
+  inflated or deflated figures, false equivalence, treating settled evidentiary questions as open. The guide
+  directs students to USHMM, Yad Vashem and the Avalon Project and tells them **not to generate images of
+  the period**, since synthetic photographs corrupt a visual record deniers already contest.
+- **Florida-specific**: Holocaust instruction is required by statute in Florida public schools, and the state
+  maintains a Commissioner's Task Force on Holocaust Education — which makes this course direct preparation
+  for Florida secondary teaching, and the Florida Holocaust Museum (St. Petersburg), Holocaust Memorial
+  Miami Beach and the Naples museum genuine local resources.
+
+### `HFT3221` — a Florida-central course, and employment law that dates fast
+
+Statewide and FGCU title it *Management of Resort and Hospitality Human Resources*; UWF *Human Resources in
+the Hospitality Industry*. Clean articulation.
+
+⚠ **The content warning worth generalising: this course contains material with an expiry date.** Florida's
+minimum wage rises on a scheduled series of annual increases under the 2020 constitutional amendment (with a
+separately calculated tipped minimum); federal overtime thresholds have been revised and litigated
+repeatedly; tip pooling rules have changed at federal level; and **Florida enacted employment verification
+requirements for private employers above a headcount threshold** that national textbooks do not cover.
+**Any specific figure in a textbook, a lecture or this guide needs verification against DOL and the Florida
+Department of Commerce.**
+
+⚠ Also recorded: **hospitality has documented elevated rates of workplace sexual harassment**, driven by
+structural features the course examines — tipped compensation creating dependence on customer goodwill,
+isolated work in guest rooms, alcohol service, a young and often precarious workforce. Handled with the
+**Title IX responsible-employee note** now used in several guides: faculty disclosure normally triggers an
+institutional report; **confidential resources do not**.
+
+### Process note
+
+No prerequisite over-length (longest 461 of 500), no validator warnings, no push failures, and the new
+markdown-in-HTML check passed clean on all six. Six courses required six UWF fetches, one FGCU fetch, three
+FSU department fetches and one FIU cache read.
