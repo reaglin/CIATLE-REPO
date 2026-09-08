@@ -401,6 +401,41 @@ carries no laboratory and may satisfy only part of a general-education science r
 guide AND in the prerequisite string, which is what a queue reader sees first. Instances: `AST2037`
 (batch 180), `BSC1050` (batch 182).
 
+### ⚠⚠ Three DIFFERENT shapes behind a `C` suffix — do not conflate them (batch 183)
+
+| Shape | Example | What it means | What transfers |
+|---|---|---|---|
+| **Split family** | `CGN3501C` (UF) vs `CGN3501` + `CGN3501L` (UWF); `EEE3308C` vs `EEE3308` + `EEE3308L` | one course, packaged as one enrolment or two | same content, **3 cr vs 4 cr**, one grade vs two |
+| **Suffix divergence** | `BCN3224C` (UF, integrated) vs bare `BCN3224` (UWF, lecture only, no lab partner) | ⚠ **genuinely different courses** — one has laboratory hours the other does not | content differs |
+| **`C` nobody carries** | `TPA3230C`, `COP3014C`, `INP3004C`, `CJE3674C`, `CTS4348C`, `DAA2204C`, `EEE3396C` | the queued id may not exist at any institution | see `REVIEW_QUEUE.md` item 28 |
+
+⚠⚠ **Diagnostic for the split family: RECIPROCAL concurrent prerequisites.** `EEE 3308` lists
+`EEE 3308L*` and `EEE 3308L` lists `EEE 3308*` — **neither can be taken alone, so the pair IS the `C`
+course.** Where the queue holds the `C` id, write one guide covering both halves and state the three
+consequences: **credit count, two grades, and register for both.**
+
+### ⚠⚠ Two institutions agreeing with each other outrank a statewide title (batch 183)
+
+**`HFT4274`**: statewide title **Resort Management**; **FGCU teaches "Vacation Ownership & Timeshare" and
+FIU teaches "Short-Term Rental / Vacation Ownership".** Two independent catalogs agree with each other and
+both contradict the statewide label.
+
+⚠ **The statewide title is a single SCNS label with no description behind it.** Two agreeing descriptions
+are stronger evidence. **Write to the agreeing pair, and say in the guide what to expect if a third
+institution teaches the broader subject instead.** (Contrast `BSC1050`, where only ONE catalog was
+reachable — there the divergence block is a warning, not a correction.)
+
+### ⚠⚠ State-college catalog blocks are RATE-TRIGGERED, not permanent (batch 183)
+
+**Broward and Valencia answered with full 200 bodies in batch 182 and returned empty 202s in batch 183,
+minutes later** — including on `cop`, a prefix Broward certainly carries. **Roughly six requests in quick
+succession tripped it.**
+
+- ⚠ **Do not record a source as blocked on the basis of a burst.**
+- **Space state-college probes out; batch them at the start of a session rather than mid-batch.**
+- **This explains the long-standing blocked → recovered → blocked pattern for Broward and Valencia** that
+  the register recorded across several sessions without accounting for.
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of

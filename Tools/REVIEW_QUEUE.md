@@ -884,6 +884,60 @@ lands in the general `BSC` prefix and leans whichever way the institution does.
 
 **Flagging it only so you know a live guide carries a narrower subject than its statewide title implies.**
 
+## 33. ⚠⚠ The C-suffix class (item 28) now has SEVEN members — it is systematic, not anomalous (batch 183)
+
+Three more queued `C` ids were found where **no institution carries the suffix**:
+
+| Queued id | What institutions actually carry |
+|---|---|
+| **`CTS4348C`** | UWF `CTS 4348` "Linux System Administration"; FIU `CTS 4348` "Unix Sys Admin" |
+| **`DAA2204C`** | UF bare `DAA 2204`; FIU bare `DAA 2204` |
+| **`EEE3396C`** | UWF bare `EEE 3396`; UF bare `EEE 3396` |
+
+**Full class: `TPA3230C`, `COP3014C`, `INP3004C`, `CJE3674C`, `CTS4348C`, `DAA2204C`, `EEE3396C`.**
+
+⚠ **Seven rows is no longer a handful of anomalies.** It is consistent with the inventory recording SCNS
+catalog identifiers rather than institutional offerings. **A single decision on the class unblocks all
+seven.** The recommendation in item 28 — **(a) write at the queued `C` id with a note** — still stands, and
+these three are all cleanly sourced and ready to write the moment it lands.
+
+⚠ `CTS4348C` is worth doing first: UWF's prerequisite is `COP 4634 OR COP 4610 OR CGS 3763`, and this
+repository published **`CGS3763` in batch 181** — the guides would link.
+
+**Needs from you:** the item 28 decision. Nothing else is blocked by it.
+
+## 34. ⚠⚠ `DAA2204C` also carries a SEQUENCE-POSITION divergence (batch 183) — needs a decision beyond the suffix
+
+| Source | Title |
+|---|---|
+| Statewide | **Ballet I** |
+| UF | **Contemporary Ballet Practices 1** |
+| **FIU** | ⚠⚠ **Ballet Tech II** — *"Continuation of Ballet Techniques I…"* |
+
+**Statewide and UF number this as the FIRST course in the sequence; FIU numbers it as the SECOND.**
+
+⚠ **Ninth sequence-position divergence and the most consequential kind**: a student who took `DAA2204`
+elsewhere and transfers to FIU is placed a level away from where they were taught — **and in a technique
+course, level placement is the whole point.**
+
+**Needs from you:** whether this row should be written at all once item 28 is decided, or held. **My
+recommendation: write it, and lead with the placement warning** — the divergence is exactly the thing a
+student needs told, and no other source will tell them.
+
+## 35. ⚠ `EUH3570` — chronological divergence found, sourcing done, row deferred (batch 183) — *informational*
+
+| Source | Title | Span |
+|---|---|---|
+| Statewide | **Modern Russia** | — |
+| **UWF** | **Russia to 1917** | ⚠ **ends where "modern" begins**; `EUH 3576` "Soviet Union since 1917" is the partner course |
+| **FIU** | **Russian History** | *"from the time of tribal Slavs until today"* — the whole span in one course |
+
+**Three different chronological scopes under one number.** ⚠ A student taking the statewide "Modern Russia"
+at UWF gets **pre-1917 Russia**, which is close to the opposite of what the title promises.
+
+**No decision needed** — the row is queued and workable, and the sourcing is recorded here so it is not
+re-derived. **Flagging it because a live guide written from the title alone would have been wrong.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

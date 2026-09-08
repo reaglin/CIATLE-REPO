@@ -17034,3 +17034,182 @@ Assembler clean — no malformed tags, no markdown leakage. No validator warning
 Longest prerequisite 464 of 500. ⚠ **`AMH3403` and `CCJ2002` are single-source guides**, both handled with
 the batch-181 `CGS3763` pattern: **separate what the subject makes safe from what only one catalog can
 attest.** Both say so in the Course Description rather than hedging quietly.
+
+---
+
+## Batch 183 (2026-09-08) — BCN3224C, CGN3501C, EEC4301, EEE3308C, EME4673, HFT4274
+
+Six pushed, six verified live. Queue: **2,129 pushed / 385 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin), FIU and FSCJ (Coursedog caches),
+UF (course-search API).
+
+### ⚠⚠ Two split families in one batch — and `EEE3308` shows the pattern's clearest form
+
+| Number | Integrated | Split |
+|---|---|---|
+| **`CGN3501C`** | **UF** `CGN 3501C`, 3 cr | **UWF** `CGN 3501` (3 sh) + `CGN 3501L` (1 sh) = **4 cr** |
+| **`EEE3308C`** | **UF** `EEE 3308C`, 3 cr | **UWF** `EEE 3308` (3 sh) + `EEE 3308L` (1 sh) = **4 cr** |
+
+⚠⚠ **`EEE3308` carries RECIPROCAL concurrency and that is the diagnostic worth keeping**: `EEE 3308`
+lists `EEE 3308L*` among its prerequisites **and** `EEE 3308L` lists `EEE 3308*`. **Neither can be taken
+alone.** That is not a course with an optional companion — **it is one course the registrar records as two**,
+and it is the cleanest evidence yet that a split family is a packaging decision rather than a curricular one.
+
+**Recorded as a rule: reciprocal concurrent prerequisites between an `X` and an `XL` mean the pair IS the
+`XC` course.** Where the queue holds the `C` id, write it as one guide covering both halves and say so.
+
+⚠ **Both guides state the three consequences explicitly** — the credit difference (3 vs 4), two grades
+rather than one, and **register for both halves**, which is the error students actually make.
+
+### ⚠ `BCN3224C` — suffix divergence WITHOUT a split
+
+Distinct from the two above: **UF carries `BCN 3224C` (integrated) and UWF carries bare `BCN 3224`
+"Construction Materials and Method" (3 sh lecture) with no laboratory partner at all.** So this is not one
+course packaged two ways — **it is an integrated course at one institution and a lecture course at the
+other**, plus title drift.
+
+⚠ **The taxonomy now has three distinguishable shapes and they should not be conflated:**
+
+| Shape | Example | What transfers |
+|---|---|---|
+| **Split family** | `CGN3501C` / `CGN3501`+`CGN3501L` | same content, 3 cr vs 4 cr |
+| **Suffix divergence** | `BCN3224C` / `BCN3224` | ⚠ **content differs — one has lab hours the other does not** |
+| **C-suffix nobody carries** | `CTS4348C`, `TPA3230C` | the queued id may not exist anywhere |
+
+### ⚠⚠ `HFT4274` — the inverse divergence: two institutions agree AGAINST the statewide title
+
+| | Title | Subject |
+|---|---|---|
+| Statewide | **Resort Management** | broad resort operations |
+| **FGCU** | **Vacation Ownership & Timeshare** | ⚠ the narrower, specific segment |
+| **FIU** | **Short-Term Rental / Vacation Ownership** | ⚠ same segment, extended to platform competition |
+
+**Every previous title divergence had the statewide title holding the majority reading.** ⚠⚠ **Here two
+independent institutions agree with each other and both diverge from it** — which is stronger evidence than
+either one alone, and **stronger than the statewide title**, since that title is a single SCNS label with no
+description behind it.
+
+**Rule recorded: two independent institutions agreeing with each other outrank a statewide title they both
+contradict.** The guide is written to vacation ownership and says plainly what to expect if a third
+institution teaches general resort operations instead.
+
+⚠ **This one is also unusually valuable content**: **Orlando is the largest timeshare market in the world**,
+and Marriott Vacations, Hilton Grand Vacations, Travel + Leisure Co., Holiday Inn Club Vacations and
+Westgate are all Central Florida operations. **The guide is built on Chapter 721, Florida Statutes, DBPR's
+Division of Condominiums and Timeshares, and the operators' own SEC 10-K filings** — ⚠ **the filings
+disclose sales-and-marketing cost as a share of contract sales and default rates on consumer receivables,
+which is the real economics of the business and is free at sec.gov.**
+
+⚠ **The guide addresses the industry's complaint history directly rather than around it** — rescission
+rights, the documented FTC and state actions, the exit-company second-order harm — **on the principle that
+a course about a sales-driven consumer industry owes students the regulatory picture, not advocacy in
+either direction.**
+
+### ⚠⚠ `EEC4301` — the thinnest row written so far, and the handling is the record
+
+| Institution | Status |
+|---|---|
+| **FSCJ** | ✅ current, full description |
+| **FIU** | ⚠⚠ **"Inactivated per SCNS review, last term offered Summer 2012"** |
+| UWF | ❌ not in the `EEC` catalog, despite being listed |
+| FSU | ❌ **no `EEC` prefix at all** in the teacher education bulletin, despite being listed |
+
+**One live description out of four listed institutions.** ⚠ **The guide leads with a table stating exactly
+that**, tells the reader to confirm the course is offered before enrolling, and notes that **the two
+verifiable readings emphasise different things** (developmental theory plus curriculum planning at FSCJ;
+issues and programme assessment at FIU).
+
+⚠ **Fourth "Inactivated per SCNS review" instance**, after `ACG3343`, `STA4173` and `AST2037`. **The
+standing statement holds and is now load-bearing: a live-looking catalog entry is not evidence a course is
+currently offered.** Here it is the difference between one source and two.
+
+**Teacher preparation named again as programmatic-approval-outranks-credit** — second consecutive batch
+after `EEX4254`/`EEX4474`, and the guide also separates **teacher certification from Florida's DCF/DEL
+childcare credential ladder (CDA, Staff Credential, Director Credential)**, which lead to different jobs at
+different pay. ⚠ **Students conflate these constantly and the guide says so.**
+
+### ⚠ Three more rows pulled into the C-suffix class decision (`REVIEW_QUEUE.md` item 28)
+
+| Queued id | What institutions actually carry |
+|---|---|
+| **`CTS4348C`** | UWF `CTS 4348` "Linux System Administration"; **FIU `CTS 4348` "Unix Sys Admin"** — ⚠ same subject, neither with the `C` |
+| **`DAA2204C`** | UF bare `DAA 2204`; FIU bare `DAA 2204` |
+| **`EEE3396C`** | UWF bare `EEE 3396`; UF bare `EEE 3396` |
+
+⚠⚠ **Item 28 now has SEVEN members** (`TPA3230C`, `COP3014C`, `INP3004C`, `CJE3674C`, plus these three).
+**This has stopped being a handful of anomalies and is now a systematic property of the inventory file** —
+consistent with it recording SCNS catalog identifiers rather than institutional offerings. **A decision on
+the class would unblock seven rows at once.**
+
+⚠ **`CTS4348C` is worth writing when the class is decided**: UWF's prerequisite is
+`COP 4634 OR COP 4610 OR CGS 3763` — **and this repository published `CGS3763` in batch 181**, so the
+prerequisite chain links two guides.
+
+### ⚠⚠ `DAA2204C` — a sequence-position divergence found while checking a suffix
+
+| Source | Title |
+|---|---|
+| Statewide | **Ballet I** |
+| **UF** | **Contemporary Ballet Practices 1** |
+| **FIU** | ⚠⚠ **Ballet Tech II** — *"Continuation of Ballet Techniques I…"* |
+
+**Statewide and UF number this as the FIRST course; FIU numbers it as the SECOND.** ⚠ **Ninth
+sequence-position divergence, and the most consequential kind** — a student who has taken `DAA2204`
+elsewhere and transfers to FIU has been placed a level above where they were taught, or below.
+**Recorded in `REVIEW_QUEUE.md` alongside the suffix problem; not written.**
+
+### ⚠ `EUH3570` — a chronological divergence found and deferred
+
+Not in this batch, but found while sourcing and worth recording so it is not re-derived:
+
+| Source | Title | Span |
+|---|---|---|
+| Statewide | **Modern Russia** | — |
+| **UWF** | **Russia to 1917** | ⚠ **ends where "modern" begins**; UWF's `EUH 3576` "Soviet Union since 1917" is the partner |
+| **FIU** | **Russian History** | *"from the time of tribal Slavs until today"* — the whole span in one course |
+
+⚠ **Three different chronological scopes under one number.** The sequence-partner drill (batch 181) caught
+it immediately. **Queued for a later batch with the sourcing already done.**
+
+### ⚠⚠ OPERATIONAL: Broward and Valencia re-blocked MID-SESSION — the block is rate-triggered
+
+**In batch 182, minutes earlier, both returned 200 with full bodies** (`ccj`, `bsc`, `evr` at Broward;
+`ccj`, `bsc` at Valencia) and supplied the sector-divergence finding. **In this batch both returned empty
+202s**, including on `cop` — a prefix Broward certainly carries.
+
+⚠⚠ **This changes what the register's "blocked" status means.** The correct probe rule (batch 164) is
+already recorded — *probe a prefix the school definitely has* — and **it worked exactly as designed: the
+`cop` probe is what proved this was a block rather than a missing prefix.** What is new is the cause:
+
+> ⚠ **These blocks are rate-triggered, not permanent.** Roughly six requests in quick succession tripped it.
+> **Space state-college probes out, batch them at the start of a session rather than mid-batch, and do not
+> record a source as blocked on the basis of a burst.**
+
+**This also explains the historical pattern** of Broward and Valencia appearing blocked, then recovering,
+then blocking again — recorded across several sessions and never accounted for.
+
+### ⚠ Taxonomy pre-check used prospectively for the first time
+
+**The batch-182 check (`grep -c '"<PREFIX>"' taxonomy.json`) was run BEFORE drafting**, and it shaped the
+batch: `CEG4801C`, `ENV4351` and `ENV4514C` were skipped as blocked prefixes without a wasted push, while
+`BCN`, `CGN`, `CTS`, `DAA`, `EEC`, `EEE`, `EME` and `HFT` were confirmed present. ⚠ **`CGN` has a node even
+though `CES`, `CWR`, `CEG` and `ENV` do not** — which is why `CGN3501C` could be written and the rest of
+the civil cluster still cannot. **The check cost one command and prevented a failed production write.**
+
+### Further inventory discrepancies
+
+- **`EEC4301`** — UWF and FSU both listed, **neither appears to carry it** (13th and 14th).
+- **`CGN3501`** — **FIU carries it and is not listed** (15th).
+- **`HFT4274`** — UWF listed, **not in UWF's `hft` catalog** (16th).
+
+⚠ **Sixteen confirmed errors.** The standing rule is unchanged and is now very well supported: *the
+inventory's institution list is a hypothesis, not evidence.*
+
+### Process note
+
+Assembler clean — no malformed tags, no markdown leakage. No validator warnings, no push failures.
+Longest prerequisite 482 of 500. ⚠ **Three guides carry 60 contact hours** (`BCN3224C`, `CGN3501C`,
+`EEE3308C`) per the `C`-suffix convention, and each explains in the guide what the figure is in the split
+or lecture-only form — **because a student reading the number needs to know which shape their institution
+uses.**
