@@ -16555,3 +16555,146 @@ supply chain across `TRA`/`MAN`/`MAR`.
 No prerequisite over-length (longest 471 of 500), no validator warnings, no push failures, markdown check
 clean. ⚠ **`RTV2000` was sourced from FSCJ but not written** — UWF does not carry it (a further inventory
 institution-list discrepancy), leaving it single-sourced; deferred rather than written thin.
+
+
+---
+
+## Batch 180 (2026-09-08) — AST2037, CAP4136, CEN3031, CLP3144, COM3461, COM4620
+
+Six pushed, six verified live. Queue: **2,111 pushed / 403 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FIU (Coursedog cache), UF (course-search API).
+
+### ⚠⚠ The queue has crossed into thin-coverage territory — a structural note
+
+**Every course in this batch is recorded at THREE institutions**, and one of those is frequently private or
+the entry is inactive. That is a change in kind, not degree: earlier batches worked 5–12 institution rows.
+
+**Consequences now in force, per `CLAUDE.md`'s hedging rule (2–3 institutions → explicit hedging):**
+
+- ⚠ **Every guide in this batch states its evidence base openly in the Course Description** rather than
+  hedging quietly, and treats Optional sections as genuinely optional.
+- ⚠ **Second sources are harder to obtain**, and UF's course-search API — which returns titles but empty
+  descriptions — was the only corroboration available for three of the six. **A title-only confirmation is
+  real but weak evidence**, and the guides say so implicitly by naming what each source actually provided.
+- **Expect this to continue.** ~400 rows remain and the institution counts will keep falling.
+
+### `CLP3144` — the most sensitive guide written in this project so far
+
+Abnormal psychology covers suicide, self-harm, trauma, substance use and eating disorders, and is taken in
+large numbers by students who have personal or family experience of them. Handling recorded for reuse:
+
+- ⚠ **A warning in the second paragraph of the Course Description**, before any content, rather than buried
+  in Special Information.
+- **A full support block**: 988, Crisis Text Line, SAMHSA, NEDA, campus counselling, Florida 211 — with the
+  note that **campus counselling is confidential where faculty disclosure may trigger referral.**
+- ⚠ **"Medical student syndrome" named explicitly** — studying symptom criteria makes people recognise
+  themselves; that is a normal cognitive effect and nearly universal in this course.
+- ⚠⚠ **A section stating plainly what the course does NOT qualify a student to do** — diagnose anyone,
+  including themselves, a friend or a public figure — **and the constructive alternative**: that asking
+  someone directly about suicidal thoughts does not plant the idea, which is a well-evidenced finding and
+  the single most useful thing a non-clinician can do.
+- **Florida's Baker Act** explained, including the commonly misunderstood parts: it authorises **examination,
+  not treatment**; it is time-limited; and **family members cannot initiate it directly.**
+
+⚠ **The intellectual content also required care.** The guide states that <strong>homosexuality was classified
+as a disorder in the DSM until 1973</strong> as the standard cautionary example of social disapproval mistaken
+for pathology, presents the DSM's documented limitations alongside its utility, and names the biopsychosocial
+model as undercutting *both* the "chemical imbalance" and the "character weakness" framings students arrive
+with.
+
+### `CAP4136` — a guide where the legal section had to come first
+
+Malware analysis teaches attack technique on live hostile software. The guide **tells the reader in the
+Course Description to read the legal section before anything else**, which no previous guide has done.
+
+Recorded because the reasoning generalises: ⚠ **where a course's practical work carries genuine legal
+exposure and third-party risk, the warning belongs at the top, not in Special Information.** Content
+included: CFAA and Florida Chapter 815; **never execute malware on a network you do not fully control**;
+⚠ **public sandbox submission is publication** — uploading to VirusTotal exposes the sample and its metadata
+to the industry and potentially alerts its author, which is an operational error in a live incident; and the
+professional consequence, since this field's employment depends on background investigation and clearance.
+
+⚠ **Also a nice internal link:** the prerequisite is `CDA3101`, for which this repository published a guide
+in batch 174. **The guides now reference each other where a prerequisite chain runs between them** — this
+batch also links `COM4620`→`PHI2603`, `COM3461`→`COM3003`, and `COM4620`→`COM3003`.
+
+### `CEN3031` — a seventh sequence-position divergence, signalled by a Roman numeral
+
+| Institution | Title | Sequence? |
+|---|---|---|
+| **UWF** | **Software Engineering I** | ⚠ **yes — `CEN3032` follows** |
+| FGCU | Software Engineering Fundamentals | title implies standalone |
+| UF | Introduction to Software Engineering | title implies standalone |
+
+**Where a two-course sequence exists, the first half typically covers process, requirements and design and
+leaves implementation and the larger project to the second** — so a standalone course covers more ground
+than a sequence's first half. ⚠ **Seventh instance of this pattern**, and the pattern holds exactly:
+**the number articulates cleanly, which is what conceals it.**
+
+⚠ **Worth recording as a heuristic: a Roman numeral or an "I" in a course title is a sequence signal and
+should trigger a check** — it has now flagged `MUL4400`, `SPN3400` (FGCU's "Conversation and Composition
+I"), `CDA3101` (FSU's "Computer Organization II") and `CEN3031`.
+
+### `AST2037` — general-education status, and a laboratory trap
+
+⚠ **Two things a student needs and the catalog does not say:**
+
+1. **No `C` or `L` suffix means no laboratory** — so **this course will not satisfy a laboratory science
+   requirement**, which many general-education programmes impose. A student choosing it to clear a science
+   requirement may clear only half of one.
+2. ⚠ **The Gordon Rule does NOT apply.** Its components are writing and mathematics; a natural science
+   lecture course is outside both. **Recorded because the new Gordon Rule practice could otherwise be
+   over-applied** — the standing instruction is to check for the designation, not to assume it.
+
+⚠ **Third "Inactivated per SCNS review" row encountered** (FIU's entry for this number), after `ACG3343` and
+`STA4173`. **The pattern is now firm enough to state: inactivated courses remain visible in catalog data,
+and a live-looking entry is not evidence a course is currently offered.**
+
+### `COM3461` — a course whose central risk is misusing its own frameworks
+
+⚠ **The most interesting pedagogical note in this batch.** Intercultural communication teaches Hofstede's
+dimensions and Hall's context framework — **and those are national averages from specific dated samples,
+with within-nation variance exceeding between-nation variance on most dimensions.**
+
+> ⚠⚠ **Applying a national score to the individual in front of you is precisely the error the course exists
+> to prevent.** A generalisation is a statement about a distribution; a stereotype is its application to a
+> person.
+
+The guide states a test for whether the course was learned correctly: **if it has given you more confident
+predictions about individuals, you learned it wrong; if it has made you slower to interpret and quicker to
+ask, you learned it right.**
+
+⚠ **And the AI section turns the tool into the lesson**: asked how to communicate with people "from X
+culture", a model produces exactly the unhedged lookup table the course argues against — **so comparing that
+output against what the research supports is a genuinely good assigned exercise**, and some instructors use
+it.
+
+### `COM4620` — three things students conflate, separated
+
+⚠ **Law, professional codes and ethics are three different standards**, and the guide separates them
+explicitly: **law is a floor and is lower than ethics**; **professional codes sit between and are
+enforceable within professional bodies**; ethics sometimes requires declining what both permit. **Some
+obligations are all three at once** — FTC disclosure of a material connection — **and knowing which is which
+matters when they diverge.**
+
+⚠ **The AI section acknowledges the obvious irony rather than avoiding it**, then makes the stronger
+practical argument: models are trained toward balanced non-commitment on contested moral questions, **which
+is exactly the analysis this course's grading criteria are written against.** A model reliably produces a
+mediocre ethics paper.
+
+### Cross-batch: the emphasis-vs-divergence rule held under pressure
+
+**Three courses this batch had descriptions differing in emphasis** — `COM3461` (context/critical vs
+skills/social-scientific), `COM4620` (business and public life vs communication contexts), `CEN3031`
+(sequence vs standalone).
+
+⚠ **Only `CEN3031` was recorded as a divergence.** The other two are the field's own internal divisions
+appearing at different institutions, not institutional disagreement — **exactly the distinction established
+in batch 176.** The rule is doing useful work: it prevented two false positives while catching a real one.
+
+### Process note
+
+No prerequisite over-length (longest 480 of 500), no validator warnings, no push failures, markdown check
+clean. ⚠ **`ECP4703` was probed and is not at UWF** — a further inventory institution-list discrepancy,
+consistent with the pattern in `REVIEW_QUEUE.md` item 28. Not pursued.
