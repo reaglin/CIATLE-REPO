@@ -964,6 +964,65 @@ widening rather than closing.**
 sweep the general-education and 2000-level ones only.** Flagging only that the population of correct guides
 is now large enough to make the inconsistent older ones more visible.
 
+## 38. ⚠⚠ `SPC4680` — split candidate: UWF holds the MINORITY reading again (batch 185)
+
+| Source | Title | Subject |
+|---|---|---|
+| Statewide | **Rhetorical Criticism** | analysis of rhetorical texts |
+| **FSU** | **Methods of Rhetorical Criticism** | *"methods for the practice of doing criticism of rhetorical discourse… Aristotelian, Metaphor, narrative, post-modern, and cultural approaches to the analysis of texts"* |
+| **UF** | **Rhetorical Criticism** | confirmed |
+| **UWF** | ⚠ **Rhetoric, Media, and Civic Life** | applied — leadership, advocacy, civic engagement, media change |
+
+⚠⚠ **Second case where UWF holds the minority reading**, after `LAE3314` (item 20) — **and the strongest,
+because FSU and UF agree with each other AND with the statewide title.**
+
+**Published as a single guide written to the majority (methods) reading, with UWF's emphases as a labelled
+variant, and a two-column syllabus test so a student can tell which version they are in.**
+
+⚠ **Why it may deserve a split rather than a warning:** **a methods course and an applied advocacy course
+are different preparations.** **The methods version is what graduate programmes in rhetoric expect as a
+writing sample and as background**; the applied version prepares for public affairs and advocacy work.
+**A transfer student moving between them has a real gap, in one direction or the other.**
+
+**Needs from you:** whether this joins the split queue. **My recommendation: treat it as a stronger `PUR3000`
+— a genuine candidate, below `LAE3314` in urgency because both readings are legitimate upper-division
+rhetoric courses and neither leaves a student with nothing.**
+
+## 39. ⚠ `RTV3511` — THREE production courses under one number; craft divergence (batch 185) — *informational, published with a warning*
+
+| Source | Title | Craft |
+|---|---|---|
+| Statewide / **UWF** | Video Storytelling | **single-camera FIELD production** |
+| **FIU** | Video Studio Production | **multi-camera STUDIO production** |
+| **UF** | Fundamentals of Production | general foundation |
+
+⚠⚠ **Field and studio production are different crafts** — different equipment, crew roles, job titles and
+failure modes. **A graduate trained on one does not walk into the other.**
+
+**Published as a single guide following the statewide/UWF reading, with the studio material as a labelled
+variant and an instruction to ask what equipment the section uses.**
+
+⚠ **Also captured for the record: FIU gates this course on five prerequisite courses AND a 2.85 cumulative
+GPA.** **Production sequences run on fixed rotations, so a miss delays a degree by a year rather than a
+term.**
+
+**No decision needed** — flagging it because **if the split queue is ever worked, this is a stronger case
+than several already in the open-cases table**, and the sourcing is done.
+
+## 40. ⚠ `PHY3220` — credit-count divergence, a shape with no identifier signal (batch 185) — *informational*
+
+**UWF lists this course at 4 semester hours; the statewide title and most institutions carry 3.**
+
+⚠ **No laboratory, no second registration — the same course with a different credit value.** **Unlike the
+split-family, suffix and phantom-`C` cases, nothing in the identifier signals it.**
+
+**Consequence:** a transfer student is a credit short or long against a degree requirement, and **physics
+degrees have tight credit budgets, so it surfaces in the final audit.** **The guide states the credit value
+explicitly and tells the reader to check their own.**
+
+⚠ **Worth knowing for the queue generally: if credit counts diverge silently on one number, they will on
+others.** **The inventory carries no credit field, so this is only ever visible from a catalog.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

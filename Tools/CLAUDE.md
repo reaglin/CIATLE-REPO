@@ -354,6 +354,8 @@ and is frequently more informative.** Three cases have now turned on it:
 
 | `BSC1050` | **Environmental Science** — the broad applied field (pollution, resources, energy, policy) | ⚠ **Fundamentals of Ecology** — the science of organism-environment interaction, a COMPONENT of the above (UWF) | **⏸ candidate** | published as single guide (UWF/ecology reading), with a divergence block | — | ⚠ **The only reachable catalog holds the NARROWER reading** — three of four institutions are private or small colleges outside catalog reach. Likely cause: the number sits on a prefix boundary (Florida numbers environmental science `EVR1001` and majors ecology `PCB3043`), so a non-majors course spanning both lands in general `BSC` and leans whichever way the institution does. See batch 182 in `SOURCES.md`. |
 
+| `SPC4680` | **Rhetorical Criticism** — methods for the criticism of rhetorical discourse: Aristotelian, metaphor, narrative, post-modern, cultural (FSU **and** UF, matching the statewide title) | ⚠ **Rhetoric, Media, and Civic Life** — applied preparation for leadership, advocacy and civic engagement, with attention to the shift from traditional to digital media (UWF) | **⏸ candidate** | published as single guide (majority/methods reading) with a labelled variant section | — | ⚠⚠ **Second case where UWF holds the MINORITY reading**, after `LAE3314` — and the strongest, since FSU and UF agree with each other AND with the statewide title. A methods course and an applied advocacy course are different preparations, and the methods version is what graduate study in rhetoric expects. See batch 185 in `SOURCES.md`. |
+
 ### ⚠⚠ SECTOR number divergence — FCS and SUS using different numbers (batch 182)
 
 **Distinct from ordinary number divergence, which runs between institutions. This runs along the SECTOR
@@ -479,6 +481,42 @@ The strongest AI sections are the ones where the failure mode and the course's o
 
 ⚠ **Where this holds, it is a far better argument than a generic integrity warning** — it tells the student
 something about their own field.
+
+### ⚠ CREDIT-COUNT divergence — a fourth shape, and invisible from the identifier (batch 185)
+
+**`PHY3220`: UWF lists 4 semester hours; the statewide title and most institutions carry 3.** No
+laboratory, no second registration — **the same course simply carries a different credit value.**
+
+⚠ **Unlike split family, suffix divergence and `C`-ids-nobody-carries, nothing in the course identifier
+signals it.** **Consequence: a transfer student is a credit short or long against a degree requirement, and
+in tightly budgeted majors it surfaces only in the final audit.** **State the credit value explicitly in
+the guide and tell the reader to check their own.**
+
+### ⚠⚠ Prerequisites separate DEPTH as reliably as they separate SUBJECT (batch 185)
+
+The prerequisite-chain diagnostic (batch 175) was developed to settle whether two institutions teach
+different SUBJECTS. **`PSB4002` shows it also settles DEPTH:**
+
+| Institution | Gate | What it signals |
+|---|---|---|
+| **FGCU** | general psychology **AND** research methods **AND** statistics **AND** biology with lab | reads primary research at the cellular level |
+| **UWF** | **none** | a broader biological-psychology survey |
+
+⚠ **Where two catalogs describe the same field in compatible language, the GATE is the better signal of
+what the course will demand** — and the guide should say so, because a transfer student moving from the
+survey into a programme built on the rigorous version meets the gap in the next course.
+
+### ⚠ A syllabus TEST beats a generic divergence warning (batch 185)
+
+Where a guide covers a divergence, give the reader an observable way to tell which version they are in.
+`SPC4680`:
+
+| Methods version | Applied version |
+|---|---|
+| named critical approaches, assigned artefact analyses, a substantial critical essay, journal readings | media change, advocacy projects, assessment of contemporary campaigns, produced persuasive work |
+
+⚠ **"Check your syllabus" is advice; a two-column test is usable.** Apply this wherever the divergence is
+one of emphasis rather than of subject.
 
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 

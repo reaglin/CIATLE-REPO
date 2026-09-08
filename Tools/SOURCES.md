@@ -17366,3 +17366,118 @@ Assembler clean — no malformed tags, no markdown leakage. No validator warning
 prerequisite 493 of 500 (`PHI4633`). ⚠ **`GRA3112C` and `GRA4154C` were probed and pulled**: neither is at
 UWF, UF, FSU's art bulletin or in the FIU cache. **Not added to the C-suffix class — the problem is
 sourcing, not the suffix.** Left queued.
+
+---
+
+## Batch 185 (2026-09-08) — PHY3220, PLA4885, PSB4002, RTV3511, SOW4403, SPC4680
+
+Six pushed, six verified live. Queue: **2,141 pushed / 373 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin), FIU (Coursedog cache), UF (course-search API).
+⚠ **No state-college probes**, per the batch 183 rate-limit finding. **Second consecutive batch sourced
+entirely from the four university routes.**
+
+### ⚠⚠⚠ `RTV3511` — THREE different production courses, and the crafts are not interchangeable
+
+| Source | Title | What it teaches |
+|---|---|---|
+| Statewide / **UWF** | **Video Storytelling** | ⚠ **SINGLE-CAMERA "film style" FIELD production** — field shooting and post, audio, lighting, continuity, editing |
+| **FIU** | **Video Studio Production** | ⚠ **MULTI-CAMERA TELEVISION STUDIO production** — studio equipment, newscasts, live directing |
+| **UF** | **Fundamentals of Production** | a general production foundation |
+
+⚠⚠ **This is the most consequential divergence type yet found for a CRAFT course.** Field and studio
+production are **different equipment, different crew roles, different job titles and different failure
+modes**: field work is one camera shot out of sequence and assembled in the edit; studio work is several
+cameras cut live from a control room. **A graduate trained on one does not walk into the other.**
+
+⚠ **Also captured: FIU requires FIVE prerequisite courses and a 2.85 cumulative GPA.** **Competitive-entry
+production sequences are common and the GPA condition is checked at registration rather than flagged in
+advance** — **and because production courses run on fixed rotations, a miss delays a degree by a year.**
+**The guide states this in the prerequisite field.**
+
+### ⚠⚠ `SPC4680` — UWF holds the MINORITY reading, and two sources plus the statewide title agree against it
+
+| Source | Title | Subject |
+|---|---|---|
+| Statewide | **Rhetorical Criticism** | analysis of rhetorical texts |
+| **FSU** | **Methods of Rhetorical Criticism** | *"methods for the practice of doing criticism of rhetorical discourse… Aristotelian, Metaphor, narrative, post-modern, and cultural approaches"* |
+| **UF** | **Rhetorical Criticism** | confirmed |
+| **UWF** | ⚠ **Rhetoric, Media, and Civic Life** | applied — leadership, advocacy, civic engagement, media change |
+
+⚠ **Second case where UWF holds the minority reading**, after `LAE3314` (children's literature vs emergent
+literacy). **The batch-183 rule applied cleanly: two independent catalogs agreeing outrank a lone one** —
+and here they also agree WITH the statewide title, which makes it the strongest such case so far.
+
+**Written to the majority reading (methods), with UWF's emphases covered as a labelled variant.** ⚠ **The
+guide gives the reader a syllabus test to tell which version they are in** — named critical methods and
+assigned artefact analyses versus advocacy projects and media assessment — **which is more useful than a
+generic warning.** **Added to `REVIEW_QUEUE.md` as a split candidate.**
+
+### ⚠⚠ `PSB4002` — the widest PREREQUISITE gap recorded for a single number
+
+| Institution | Required before entry |
+|---|---|
+| **FGCU** | general psychology **AND** research methods **AND** statistics **AND** general biology with lab |
+| **UWF** | ⚠ **none** |
+
+**The prerequisite-chain diagnostic (batch 175) did the work again**, and this time it distinguishes
+**depth** rather than subject: **four gates including statistics and lab biology signal a course that reads
+primary research at the cellular level** — and FGCU's description confirms it (*"gross/cellular neural and
+physiological components"*). **UWF's topic list is a broader biological-psychology survey.**
+
+⚠ **Recorded as a distinct use of the diagnostic: prerequisites separate DEPTH as reliably as they separate
+SUBJECT.** **Where two catalogs describe the same field, the gate is the better signal of what the course
+will demand.**
+
+⚠ **The guide also carries the field's own standard correction — that "a chemical imbalance" is not an
+explanation**, and that a drug affecting serotonin relieving symptoms does not establish that low serotonin
+caused them. **Students find this genuinely surprising, and it is the same class of correction as the
+`CLP3144` DSM material.**
+
+### ⚠ `PHY3220` — a CREDIT-COUNT divergence, which is a new variety
+
+**UWF lists this course at 4 semester hours; the statewide title and most physics courses at this level
+carry 3.**
+
+⚠ **Distinct from the split-family and suffix cases**: there is no laboratory and no second registration —
+**the same course simply carries a different credit value**, presumably an extra lecture or recitation hour.
+**Consequence: a transfer student may be a credit short or long against a degree requirement**, and
+**physics degrees have tight credit budgets, so it surfaces in the final audit.**
+
+**Taxonomy note: this is now a fourth distinguishable shape** alongside split family, suffix divergence and
+`C`-ids-nobody-carries — **and unlike those three it is invisible from the identifier.**
+
+### `SOW4403` and `PLA4885` — two professional-boundary guides
+
+⚠ **`SOW4403`: research is one of the nine CSWE competencies**, and the guide states the consequence
+plainly — **a methods course taken in psychology or sociology may transfer as credit without satisfying the
+competency**, because **accreditation attaches to the programme.** **Tenth field recorded under
+programmatic-approval-outranks-credit.** ⚠ **The guide also warns specifically about `HUS` (human services)
+coursework not substituting for `SOW` in an accredited programme — a documented recurring transfer
+problem.**
+
+⚠⚠ **`PLA4885`: unlicensed practice of law is a criminal offence in Florida** (Chapter 454), and the guide
+makes the boundary a named competency: **a paralegal may research, draft and explain procedure; a paralegal
+may not advise a client on what the law means for their case.** ⚠ **The point recorded for reuse: the risk
+RISES with knowledge** — a paralegal who has studied constitutional law is more able to answer and no more
+permitted to.
+
+⚠ **`PLA4885`'s AI section is the strongest legal-domain one written so far**, because the failure is
+documented rather than hypothetical: **attorneys in multiple US jurisdictions have been sanctioned for
+filing briefs citing cases that do not exist.** **A real case with a WRONG holding attached is more
+dangerous than an invented one**, since it survives a casual existence check.
+
+### ⚠ `SOW4403` — why students dislike the course, answered concretely
+
+Recorded because the handling generalises to every required methods course. **The guide does not exhort;
+it names three interventions that felt obviously helpful and were not** — **"Scared Straight", some
+grief-counselling protocols, and critical incident stress debriefing** — and concludes: **research is what
+distinguishes a practice that helps from one that merely feels like helping, and clients bear the cost of
+the difference.**
+
+### Process note
+
+Assembler clean — no malformed tags, no markdown leakage. No validator warnings, no push failures.
+⚠ **`PHY3220`'s prerequisite string landed at 499 of 500 characters** — one under the limit, and the
+assembler's length report is again the only reason a 501 would have been caught before the server rejected
+it. ⚠ **`PHY3220` is the first guide in this project to carry `credits: 4`.**
