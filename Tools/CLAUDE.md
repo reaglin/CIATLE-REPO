@@ -518,6 +518,38 @@ Where a guide covers a divergence, give the reader an observable way to tell whi
 ⚠ **"Check your syllabus" is advice; a two-column test is usable.** Apply this wherever the divergence is
 one of emphasis rather than of subject.
 
+### ⚠ "Offered concurrently with <5xxx>" — a dual-listed course (batch 186)
+
+**`SOW4700` is "offered concurrently with `SOW 5710`"** — undergraduate and graduate sections sharing a
+classroom, with extra requirements for the graduate students.
+
+⚠⚠ **Two consequences a guide must state:** the pace and reading are pitched above a typical undergraduate
+course (generally a benefit), and **taking the undergraduate version may block taking the graduate one for
+credit later** — dual-listed pairs frequently carry a repeat restriction. **This matters to anyone
+continuing to graduate study at the same institution, and it must be known before registering.**
+
+**Look for the phrase in catalog entries; it is easy to read past.**
+
+### ⚠ The caches answer two independent failure modes (batch 186)
+
+**`RTV2000` was written entirely from the cached FSCJ Coursedog data**, and it needed to be for two separate
+reasons at once:
+
+1. **The live state-college HTTP routes were being left alone** under the rate-limit rule (batch 183).
+2. ⚠ **The inventory pointed at the wrong institution** — it lists UWF, which does not carry the number.
+
+⚠ **Keep `fiu_courses.json`, `fscj_courses.json` and `nwfsc_courses.json` current.** **They cover
+rate-limiting AND inventory error, and those failures are independent.**
+
+### ⚠ Watch the 500-character prerequisite ceiling (batch 186)
+
+**`SCE4320` failed the validator at 546 characters** — the first blocking failure in eleven batches, and it
+needed two trims.
+
+⚠ **Prerequisite strings have been growing as more warnings are packed into them**, and **three of the last
+twelve have come within 30 characters of the limit.** **The assembler's length report is what catches this
+before the push; keep reading it.** **When trimming, cut the connective tissue and keep the warnings.**
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of

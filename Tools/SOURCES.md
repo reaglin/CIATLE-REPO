@@ -17481,3 +17481,128 @@ Assembler clean — no malformed tags, no markdown leakage. No validator warning
 ⚠ **`PHY3220`'s prerequisite string landed at 499 of 500 characters** — one under the limit, and the
 assembler's length report is again the only reason a 501 would have been caught before the server rejected
 it. ⚠ **`PHY3220` is the first guide in this project to carry `credits: 4`.**
+
+---
+
+## Batch 186 (2026-09-08) — PLA3703, PLA4263, RTV2000, SCE4320, SOW4700, STA4234
+
+Six pushed, six verified live. Queue: **2,147 pushed / 367 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin), FIU and **FSCJ** (Coursedog caches).
+⚠ **Third consecutive batch with no state-college HTTP probes** — but **FSCJ's cached Coursedog data carried
+a whole guide this batch**, which is the point of caching.
+
+### ⚠⚠ `RTV2000` — the FSCJ cache rescued a row the inventory had mislabelled
+
+**The statewide inventory lists UWF; UWF's `RTV` catalog does not carry the number.** ⚠ **Seventeenth
+confirmed institution-list error** — <strong>and the row would have been unwritable on that basis alone.</strong>
+
+**The FSCJ Coursedog cache had a full description**, and it matches the statewide title exactly. ⚠ **Recorded
+as a concrete argument for the caches: they answer when the live HTTP routes are rate-limited AND when the
+inventory points at the wrong institution.** **The two failure modes are independent and the cache covers
+both.**
+
+⚠ **Content note worth reusing: this is a SURVEY, not a production course**, and the guide says so in the
+first paragraph and again in the prerequisite field. **Students routinely enrol expecting equipment.**
+⚠ **Also captured: the institutions carrying it are predominantly Florida College System colleges** —
+**which is characteristic of 2000-level media surveys, and is why the UWF listing looked wrong before it
+was checked.**
+
+### ⚠⚠ `STA4234` — prerequisite divergence where one institution adds CALCULUS
+
+| Institution | Prerequisite | What it signals |
+|---|---|---|
+| **UWF** | `STA 2023` OR `STA 3162C` | introductory statistics only — an applied, procedure-oriented course |
+| **FGCU** | (`STA 2023` or `STA 2037`) **AND** (`MAC 2311` or `MAC 2233`) | ⚠ **plus calculus** — "theory and applications", and the general linear model in matrix form |
+| **FIU** | — | ⚠ **exclusion: credit not given for both `STA 4234` and `STA 5236`** |
+
+**Second consecutive batch in which the prerequisite chain separates DEPTH rather than subject**, after
+`PSB4002`. ⚠ **The pattern is now firm enough to state as a rule and it has been added to `CLAUDE.md`:
+where two catalogs describe the same field compatibly, the GATE is the better signal of what the course
+will demand.**
+
+⚠ **The guide leads its prerequisite field with "THE PREREQUISITE PREDICTS THE COURSE"** — the first time
+that framing has been put in the field a queue reader sees first.
+
+### ⚠⚠ `SOW4700` — a DUAL-LISTED course, and a new finding type
+
+**UWF states the course is "offered concurrently with `SOW 5710`"** — the graduate version, sharing a
+classroom with additional requirements for graduate students.
+
+⚠ **Two consequences the guide states:**
+
+1. **The pace and reading may be pitched above a typical undergraduate course** — generally a benefit.
+2. ⚠⚠ **Taking the undergraduate version may block taking the graduate one for credit later.** **Dual-listed
+   pairs frequently carry a repeat restriction**, and **a student heading into an MSW at the same
+   institution needs to know before registering, not after.**
+
+**Recorded as a distinct catalog signal to look for: "offered concurrently with <5xxx number>."** **It is
+easy to read past and it has a real consequence for anyone continuing to graduate study at the same
+institution.**
+
+### ⚠ `SOW4700` — the title change is the field's own, and it is substantive
+
+**Statewide: "Chemical Addiction." UWF: "Substance Use, Prevention, and Treatment."**
+
+⚠⚠ **Not cosmetic.** **The current clinical term is <em>substance use disorder</em> — a spectrum with severity
+specifiers rather than a category a person is in or out of** — **and the research associates "addict",
+"abuser" and "clean/dirty" with more punitive judgements, including by clinicians.** **UWF lists terminology
+as the course's opening topic for that reason.**
+
+⚠ **The guide's AI section makes the sharpest use of this yet: training data is full of the stigmatising
+vocabulary, because that is how most published text has described this population — so generated text
+reproduces exactly what the course's first unit exists to correct.** **Third instance of the
+tool's-output-IS-the-target-error pattern** after `PET3640C` and `COM3461`.
+
+⚠⚠ **Clinical safety content the guide states plainly**: **alcohol and benzodiazepine withdrawal can be
+fatal and requires medical management; opioid withdrawal is agonising and generally is not.** **Getting
+that backwards is a common assumption and a dangerous one.** And: **medications for opioid use disorder
+substantially reduce mortality** — stated because the "substituting one drug for another" belief remains
+common among practitioners.
+
+### ⚠ `SCE4320` — scope divergence against a BANDED certification
+
+| | Title | Range |
+|---|---|---|
+| Statewide | **Special Methods: Middle Grades Science** | middle grades |
+| **UWF** | **Teaching Science in Middle and Secondary Schools** | ⚠ **6–12** |
+
+⚠⚠ **This divergence matters more than most title drift because Florida certification is banded.**
+**Middle Grades General Science 5–9 and the secondary single-subject certificates (Biology, Chemistry,
+Physics, Earth-Space 6–12) are different certificates with different subject-area examinations.**
+**A methods course aimed only at middle grades may not fully serve a secondary candidate.**
+
+⚠ **Eighteenth inventory error: FSU is listed and its teacher education bulletin carries no `SCE 4320`**
+(it lists `SCE 4310` elementary, plus 4362, 4363, 4891, 4892).
+
+⚠ **Recognition note worth keeping**: UWF's description uses **"the practice of science", "disciplinary core
+ideas" and "crosscutting themes"** — **these are the three dimensions of the NRC Framework and NGSS, and
+spotting that vocabulary tells you immediately what architecture a methods course is built on.**
+
+### `PLA3703` and `PLA4263` — completing the paralegal core
+
+With `PLA4885` (batch 185), the repository now covers **the three courses a Florida paralegal programme is
+built around: constitutional law, professional ethics and evidence.** ⚠ **The guides cross-reference each
+other on the two points that connect them** — **privilege and confidentiality (ethics → evidence)** and
+**the unlicensed-practice boundary, which recurs in all three.**
+
+⚠⚠ **`PLA4263` carries a Florida-specific correction worth recording**: **UWF emphasises the FEDERAL Rules
+of Evidence, but Florida cases are tried under Chapter 90, Florida Statutes.** **The codes are closely
+modelled and not identical — numbering, several hearsay exceptions, and the privileges differ.** **Most
+Florida paralegals work state cases.** **The guide's professional habit: establish which body of law governs
+before answering an evidence question.**
+
+⚠ **`PLA3703` records the structural fact that explains the whole course**: **a paralegal has no licence and
+therefore no independent discipline — but the conduct is imputed to the supervising attorney, whose licence
+is at risk.** **Rule 5.3.** **And the point recorded in batch 185 recurs and generalises: the UPL risk RISES
+with competence.**
+
+### Process note
+
+⚠ **`SCE4320`'s prerequisite string failed the validator at 546 characters** and needed two trims to reach
+475. **First blocking validator failure in eleven batches.** **The assembler's length report showed it
+before the push, which is exactly what that report is for** — **but the guides' prerequisite fields have
+been growing as more warnings are packed into them, and 500 is a real ceiling.** ⚠ **Worth watching: three
+of the last twelve prerequisite strings have come within 30 characters of the limit.**
+
+No malformed tags, no markdown leakage, no push failures.

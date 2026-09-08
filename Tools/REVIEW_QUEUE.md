@@ -1023,6 +1023,40 @@ explicitly and tells the reader to check their own.**
 ⚠ **Worth knowing for the queue generally: if credit counts diverge silently on one number, they will on
 others.** **The inventory carries no credit field, so this is only ever visible from a catalog.**
 
+## 41. ⚠ `SCE4320` — scope divergence against a BANDED certification (batch 186) — *informational*
+
+| | Title | Range |
+|---|---|---|
+| Statewide | **Special Methods: Middle Grades Science** | middle grades |
+| **UWF** | **Teaching Science in Middle and Secondary Schools** | ⚠ **6–12** |
+
+⚠⚠ **This matters more than ordinary title drift because Florida science certification is banded.**
+**Middle Grades General Science 5–9 and the secondary single-subject certificates (Biology, Chemistry,
+Physics, Earth-Space 6–12) are different certificates with different subject-area examinations** — **so a
+methods course aimed only at middle grades may not fully serve a secondary candidate.**
+
+**Published with the scope difference stated in the guide and in the prerequisite field.** ⚠ **Also an
+inventory error: FSU is listed and its teacher education bulletin carries no `SCE 4320`.**
+
+**No decision needed** — recorded because **methods courses are the least portable coursework in a teacher
+preparation programme**, and this is the first case where a title divergence maps onto a certification
+boundary rather than onto content.
+
+## 42. ⚠ Prerequisite strings are approaching the 500-character server limit (batch 186) — *process, no decision needed*
+
+**`SCE4320` failed the validator at 546 characters** — the first blocking failure in eleven batches.
+⚠ **Three of the last twelve prerequisite strings have landed within 30 characters of the ceiling**
+(`PHY3220` at 499, `CLP4110` at exactly 500 in batch 181, `PHI4633` at 493).
+
+**Cause: the prerequisite field has become the place where the most consequential warnings go**, because it
+is what a queue reader and the course page show first — concurrency traps, exclusions, GPA gates,
+screening deadlines, accreditation warnings.
+
+⚠ **Nothing is broken**; the assembler reports the length and the validator blocks before the push.
+**Flagging it because if the field ever needs to carry more, the ceiling is a server-side constant in
+`PublishValidators.cs`** — **the same file as the contact-hours cap noted in the `/guide` skill.** **If you
+ever revisit that file for another reason, raising this limit would be worth considering at the same time.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
