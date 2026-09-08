@@ -16397,3 +16397,161 @@ into a recognisable form worth stating:
 No prerequisite over-length (longest 467 of 500), no validator warnings, no push failures, markdown check
 clean. ⚠ **`GIS4035C` was also probed and is not at UWF** — a sixth inventory institution-list discrepancy,
 consistent with the pattern in item 28. Not pursued this batch.
+
+
+---
+
+## Batch 179 (2026-09-08) — APK2100C, MUS2241, PHY4323, PUP4004, SOW4232, STA4173
+
+Six pushed, six verified live. Queue: **2,105 pushed / 409 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin departments), FIU (Coursedog cache).
+
+### ⚠⚠⚠ Gordon Rule follow-on: UWF's catalog labels have been Gordon Rule designations all along
+
+**Batch 178 found the Gordon Rule via FSCJ's Coursedog text. This batch closes the loop on it, and the
+connection is one this file should have made much earlier.**
+
+`STA4173` at UWF carries the note **"Meets College-Level Computation Skills Requirement."** Guides written
+across many previous batches recorded UWF's parallel label, **"Meets College-Level Communication Skills
+Requirement"**, on `PHH3400`, `PHI3130`, `PHI3800`, `ARH4470`, `PHI3400` and others — **and simply
+reported it as an institutional designation without identifying what it was.**
+
+> ⚠⚠ **These two UWF labels are the two halves of the Gordon Rule.** "Communication Skills" is the writing
+> component; "Computation Skills" is the mathematics component. **Rule 6A-10.030 is the same rule FSCJ
+> names explicitly.**
+
+**Why this matters and is not merely tidy:** the labels carry a **grade consequence** that none of those
+earlier guides stated. **A Gordon Rule course normally requires a grade of C or higher to count, and a C−
+does not satisfy it.** A student reading one of those earlier guides learned that the course carried a
+designation; they did not learn that passing it with a C− would fail to satisfy the requirement.
+
+⚠ **Action taken:** the `STA4173` guide states the connection and the grade threshold explicitly.
+**Standing practice, now recorded in `CLAUDE.md`: whenever a UWF entry carries either "College-Level
+Communication Skills Requirement" or "College-Level Computation Skills Requirement", the guide should
+identify it as a Gordon Rule designation and state the C-or-higher condition.**
+
+⚠ **This is also a retro-correction candidate for `REVIEW_QUEUE.md`** — roughly a dozen live guides carry
+the label without the explanation. **Not urgent** (the guides are not wrong, only incomplete), but worth a
+sweep when convenient. **Logged rather than acted on unilaterally, since it touches published guides.**
+
+### ⚠⚠⚠ `APK2100C` — a PREFIX divergence, and the most practically damaging kind yet documented
+
+**Human anatomy and physiology is taught in Florida under two prefixes:**
+
+| Route | Numbers | Where |
+|---|---|---|
+| **`BSC`** | `BSC2085C` / `BSC2086C` | ⚠ **essentially every Florida College System institution and most universities** — and what health-professions prerequisites normally NAME |
+| **`APK`** | `APK2100C` / `APK2105C` | where the course sits in an exercise science or movement sciences department, as at UWF |
+
+**Both cover the same material. They do not always satisfy the same requirement** — because <strong>receiving
+programmes list prerequisites by course number, and the prerequisite check runs on the number.</strong>
+
+⚠ **This is a new category for the register: prefix divergence.** Distinct from the number divergences
+already documented (`PHI3500`/`PHI4500`, `ACG3343`/`ACG3341`, `MUG2101`/`MUG3104`, `CHM4611`/`CHM4610`),
+because here **the subject, the level and the suffix all match — only the disciplinary prefix differs.**
+
+⚠⚠ **And it is the most consequential divergence documented so far, for three reasons:**
+
+1. **It hits a lower-division course**, so students meet it before transferring, when they have least
+   advising support.
+2. **It gates competitive admission** — nursing, PT, OT, PA, and the rest — where **a prerequisite
+   mismatch does not merely delay a degree audit; it can invalidate an application.**
+3. **The volume is enormous.** A&amp;P is among the highest-enrolment sequences in the state.
+
+**The guide leads with it, tells students to read target-programme prerequisites literally, and notes that
+`BSC` is the safer default for anyone undecided.** ⚠ It also flags the related traps: **science
+prerequisite recency limits** (five to seven years is common) and **laboratory-capacity registration
+pressure**, since being closed out of A&amp;P delays every downstream application by a semester.
+
+### ⚠⚠ `STA4173` — prerequisite LEVEL divergence, and a dead FIU row
+
+| | UWF | FSU |
+|---|---|---|
+| Prerequisite | **STA 2023** — lower-division introductory statistics | **a previous UPPER-DIVISION statistics course** |
+| Framing | "a second course in statistics for students in the **Biological Sciences**" | methods to analyse **the occurrence of disease in human populations** |
+| Emphasis | general biological statistics | **epidemiological** |
+
+**Sixth sequence-position divergence** documented (after `MUL4400`, `SPN3400`, `CDA3101`, `FIN3244`,
+`SOW4232` below). ⚠ **You may not be able to take FSU's version as a transient student with only
+`STA2023`** — the prerequisite is enforced and upper-division.
+
+⚠ Also: **FIU's row for this number is marked "Inactivated per SCNS review."** Second inactivated-row
+sighting after `ACG3343`. **Confirming that Coursedog lifecycle metadata is worth reading rather than
+skipping** — it prevents planning around a dead course.
+
+### `SOW4232` — prerequisite divergence, and CSWE reinforced
+
+UWF requires **`SOW4403`** (research methods) before the policy course; **FSU lists none**, and FSU's
+description says "a **beginning** understanding" where UWF's does not.
+
+⚠ **The consequence is what the course can assume:** a policy course following research methods can expect
+students to read programme evaluations critically and make the analysis genuinely evidence-based. One
+without cannot.
+
+⚠ **CSWE accreditation restated with a detail not previously recorded:** <strong>CSWE prohibits granting
+academic credit for life or work experience</strong> — which surprises students entering from human services
+careers, and which no amount of transferred credit changes. **Also recorded: `HUS`-prefix human services
+courses do NOT substitute for `SOW` courses in an accredited programme.** Another prefix trap, in the same
+batch as `APK2100C`.
+
+### `PUP4004` — an unusual departmental placement with a real administrative consequence
+
+⚠ **UWF houses public policy in the College of Business, Department of Business Administration** — where
+FGCU tags it a College of Business course and FIU places it in its school of public affairs.
+
+**The academic content is unaffected; the administrative consequence is not.** Business colleges commonly
+restrict upper-division courses to students admitted to the college, with their own GPA and lower-division
+requirements — **and that restriction is invisible in the catalog course description.** A political science
+major wanting this course at UWF should check before registration.
+
+⚠ **Worth generalising: departmental placement is not merely descriptive.** It predicts enrolment
+restrictions, which requirement the credit satisfies at a receiving institution, and sometimes the course's
+emphasis. **Guides should note it where it is unusual.**
+
+### `PHY4323` — prerequisite-number divergence, again in the prerequisite rather than the course
+
+| | UWF | FSU |
+|---|---|---|
+| Maths methods prerequisite | **`PHZ4113`** (4000-level) | **`PHZ3113`** (3000-level) |
+| Mechanics required first | not listed | **yes** (`PHY3221`) |
+| Grade condition | ⚠ **C− or better in prerequisites** | not stated |
+
+**Same shape as `CIS4368`** (UWF `COP4710` vs FGCU `COP3710`) — <strong>a number divergence in the
+PREREQUISITE, which fails a registration check even when the preparation is present.</strong> ⚠ In a gated
+sequence — and this course gates `PHY4324` — that costs a term.
+
+⚠ **UWF's explicit C− grade condition is worth recording as a pattern**: grade conditions on prerequisites
+are common in physics and engineering and are enforced. **Passing is not always sufficient to proceed.**
+
+### `MUS2241` — a 1-credit course with a scope difference and a rotation trap
+
+Statewide and FIU: **Italian Diction**, 1 credit. UWF: **Diction I: English and Italian**, 1 credit —
+**two languages in the same single hour.** ⚠ Transferring from FIU into a programme assuming English was
+covered leaves a gap; the reverse produces duplication. **Diction is taught as a sequence, so the guide
+tells students to ask about the whole sequence rather than this course alone.**
+
+⚠ **Rotation risk restated** (as for `MUE4481C` in batch 171): **1-credit music courses commonly run once a
+year**, and a missed offering can delay a fixed sequence by a full year.
+
+⚠ **Music-specific transfer note worth keeping:** the larger issue in music transfer is **not credit but
+placement** — theory, aural skills and applied study are all placed by examination or audition regardless
+of transferred credit.
+
+### Cross-batch: prefix divergence is now a named category
+
+Two instances in this batch alone (`APK`/`BSC` for anatomy; `HUS`/`SOW` in social work), plus earlier
+observations that conservation sits across `GEO`/`EVR`/`SWS`, informatics across `HSA`/`HIM`/`CIS`, and
+supply chain across `TRA`/`MAN`/`MAR`.
+
+> ⚠⚠ **PREFIX DIVERGENCE: the same subject taught under different SCNS prefixes at different institutions,
+> where the number, level and suffix may all match.** It defeats prerequisite checks and requirement
+> matching even though credit articulates. **It is most damaging in lower-division courses feeding
+> competitive professional admission** — `APK2100C` being the clearest case. **Guides should name the
+> alternative prefix explicitly wherever one exists.**
+
+### Process note
+
+No prerequisite over-length (longest 471 of 500), no validator warnings, no push failures, markdown check
+clean. ⚠ **`RTV2000` was sourced from FSCJ but not written** — UWF does not carry it (a further inventory
+institution-list discrepancy), leaving it single-sourced; deferred rather than written thin.

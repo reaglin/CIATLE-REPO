@@ -807,6 +807,31 @@ psychology are consistently described everywhere they appear. **Only the suffix 
 **Needs from you:** one choice, applied to the class. **All three rows are left `queued` with explanatory
 notes.** ⚠ **This will keep recurring** — the inventory has ~400 rows left and `C` suffixes are common.
 
+## 29. ⚠ Retro-sweep candidate: ~a dozen live guides record UWF's Gordon Rule labels without explaining them (batch 179) — *low urgency, your call*
+
+**Not a correction — an incompleteness.** Batch 178 identified the Gordon Rule; batch 179 established that
+**UWF's two catalog labels are its two halves**:
+
+- *"Meets College-Level **Communication** Skills Requirement"* = the **writing** component
+- *"Meets College-Level **Computation** Skills Requirement"* = the **mathematics** component
+
+**Guides written before batch 179 faithfully recorded whichever label UWF carried and correctly said the
+designation is institution-specific and may not transfer — but did not say what the designation IS, and did
+not state the grade consequence.** Affected guides include (at least) `PHH3400`, `PHI3130`, `PHI3400`,
+`PHI3800`, `ARH4470`, `MHF3202`, `AML3604` and `INR4102`.
+
+⚠ **What the reader misses:** that **a C− does not satisfy a Gordon Rule course at most institutions.** A
+student who read one of those guides learned the course carried a designation; they did not learn that
+passing it below C would fail to satisfy the requirement it was designated for.
+
+**Options:** (a) sweep them on a version bump when convenient; (b) leave them — they are incomplete, not
+wrong, and new guides now handle it; (c) sweep only the ones most likely to be taken FOR the requirement
+(the 2000-level and general-education ones).
+
+**Needs from you:** whether to spend a batch's worth of effort on the sweep. **My recommendation is (c)** —
+the general-education courses are where students actually rely on the designation. **Nothing is blocked
+either way; new guides already state it.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

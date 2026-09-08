@@ -286,6 +286,27 @@ inventory (`courses_2plus_institutions.csv`) gives a title and an institution li
 not do. Source it from the SCNS catalog, or from a fetchable institution that actually teaches the SCNS
 version. **Ron has offered to supply the SCNS catalog; ask for it.**
 
+### ⚠⚠ PREFIX divergence — a named category (batch 179)
+
+**The same subject taught under different SCNS prefixes at different institutions, where the number, level
+and suffix may all otherwise match.** Credit articulates; **prerequisite checks and requirement matching do
+not**, because receiving programmes name prerequisites by course number.
+
+| Subject | Competing prefixes | Notes |
+|---|---|---|
+| **Anatomy &amp; Physiology** | **`BSC2085C`/`BSC2086C`** vs **`APK2100C`/`APK2105C`** | ⚠⚠ **The most damaging case found.** `BSC` is what nearly every health-professions prerequisite NAMES. Lower-division, huge enrolment, gates competitive admission. |
+| Social work | `SOW` vs `HUS` (human services) | ⚠ `HUS` does **not** substitute in a CSWE-accredited programme. |
+| Conservation / resources | `GEO` vs `EVR` vs `SWS` | applied as a general elective where no matching department exists |
+| Health informatics | `HSA` vs `HIM` vs `CIS` | |
+| Supply chain | `TRA` vs `MAN` vs `MAR` | |
+
+⚠ **Most damaging in lower-division courses feeding competitive professional admission**, because the
+student meets it before transfer, with least advising support, and a mismatch can invalidate an application
+rather than merely delay an audit.
+
+**Guides should name the alternative prefix explicitly wherever one exists**, and tell students to read
+target-programme prerequisites literally.
+
 ### ⚠ The prerequisite-chain diagnostic (promoted to a standing test, batch 175)
 
 **When two institutions' descriptions of a number look like they *might* be the same subject, stop reading
@@ -455,7 +476,18 @@ baccalaureate degree.
   private or out-of-state institutions.
 
 **Standing practice: guides for 1000- and 2000-level general-education courses — composition, humanities,
-mathematics — should check for and mention Gordon Rule status.** It surfaced first in FSCJ's Coursedog
+mathematics — should check for and mention Gordon Rule status.**
+
+⚠⚠ **UWF's catalog labels ARE Gordon Rule designations** (identified batch 179):
+
+| UWF label | Gordon Rule component |
+|---|---|
+| *"Meets College-Level **Communication** Skills Requirement"* | the **writing** half |
+| *"Meets College-Level **Computation** Skills Requirement"* | the **mathematics** half |
+
+**Whenever a UWF entry carries either label, say what it is AND state the C-or-higher condition.**
+⚠ Roughly a dozen already-published guides record the label without the explanation — they are
+incomplete rather than wrong. A retro-sweep is a `REVIEW_QUEUE.md` candidate. It surfaced first in FSCJ's Coursedog
 entry for `PHI2603`; **CourseLeaf PDFs do not carry it.**
 
 ### General-education category designations
