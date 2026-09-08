@@ -352,6 +352,55 @@ and is frequently more informative.** Three cases have now turned on it:
 
 | `EEX4474` | **Teaching Students with Moderate/Severe Disabilities** — curriculum and instruction for students with severe and multiple disabilities (UWF, statewide title) | ⚠ **Assessment of infants and young children** (FGCU) | **⏸ candidate** | published as single guide (UWF/statewide reading), with a divergence block | — | ⚠⚠ **First divergence found inside a course PAIR.** `EEX4254` (mild/moderate) and `EEX4474` (moderate/severe) are the standard two-course split of an ESE methods sequence and are taken together — so **a student can complete a coherent-looking pair and have covered something different at the other institution.** Both guides cross-reference each other. See batch 181 in `SOURCES.md`. |
 
+| `BSC1050` | **Environmental Science** — the broad applied field (pollution, resources, energy, policy) | ⚠ **Fundamentals of Ecology** — the science of organism-environment interaction, a COMPONENT of the above (UWF) | **⏸ candidate** | published as single guide (UWF/ecology reading), with a divergence block | — | ⚠ **The only reachable catalog holds the NARROWER reading** — three of four institutions are private or small colleges outside catalog reach. Likely cause: the number sits on a prefix boundary (Florida numbers environmental science `EVR1001` and majors ecology `PCB3043`), so a non-majors course spanning both lands in general `BSC` and leans whichever way the institution does. See batch 182 in `SOURCES.md`. |
+
+### ⚠⚠ SECTOR number divergence — FCS and SUS using different numbers (batch 182)
+
+**Distinct from ordinary number divergence, which runs between institutions. This runs along the SECTOR
+boundary:** the two-year colleges as a group use one number and the universities as a group use another.
+
+| Subject | FCS number | SUS number |
+|---|---|---|
+| Introductory criminal justice | **`CCJ1020`** (Broward, EFSC, Valencia — all three checked; **none carries `CCJ2002`**) | **`CCJ2002`** |
+
+⚠ **Why it matters more than a between-institution divergence: it hits EVERY A.A. transfer student in the
+discipline**, not the unlucky few. SCNS equivalency does not cross numbers. Mitigating facts are real — same
+survey, common general-education core protects A.A. completers, departments know the pairing — **but
+mid-degree transfers are not protected.**
+
+**Drill: when a LOWER-DIVISION course appears in the queue at SUS institutions only, check two or three FCS
+catalogs for the same subject under a different number before writing.** Broward, Valencia and EFSC are
+reachable and make this cheap.
+
+### ⚠⚠ Check the taxonomy prefix BEFORE drafting, not after pushing (batch 182)
+
+A push for a prefix with no taxonomy node returns **HTTP 422**. The seed file answers in one command:
+
+```
+grep -c '"<PREFIX>"' PreseMakerRepo.Api/Data/Seed/taxonomy.json
+```
+
+**Zero means the push will fail.** Confirmed blocked as of 2026-09-08: **`CES`, `CWR`, `CEG`, `ENV`** — ten
+queue rows, and they sit at the head of the priority order, which is why the queue's top has stopped moving.
+`TTE`, `ASC`, `MUN`, `PEL`, `MVV` and `MUG` all have nodes. **This is a server-side taxonomy addition, not a
+content problem.**
+
+### ⚠ One institution, TWO introductory courses (batch 182)
+
+A general-education version and a majors version of the same subject can share a department, a description
+and almost a title. `CCJ 2002` (gen ed, lower division, *"designed for students across disciplines"*) versus
+`CCJ 3024` (majors, upper division, **carries the Gordon Rule writing designation**) at UWF.
+
+**Tells:** the level, the phrase about serving students across disciplines, and **which of the two carries
+the writing designation.** ⚠ **They are not substitutes, and guides must say so.**
+
+### ⚠ Lab-suffix warning is now standing practice (batch 182)
+
+**Every 1000/2000-level natural science course with no `C` or `L` suffix gets an explicit warning that it
+carries no laboratory and may satisfy only part of a general-education science requirement** — in the
+guide AND in the prerequisite string, which is what a queue reader sees first. Instances: `AST2037`
+(batch 180), `BSC1050` (batch 182).
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of

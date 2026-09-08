@@ -832,6 +832,58 @@ wrong, and new guides now handle it; (c) sweep only the ones most likely to be t
 the general-education courses are where students actually rely on the designation. **Nothing is blocked
 either way; new guides already state it.**
 
+## 30. ⚠⚠ Ten queue rows are blocked by MISSING TAXONOMY NODES, not by content (batch 182) — *needs a server change*
+
+**Confirmed 2026-09-08 by retrying `CES4702C`** (the standing one-line retry): still **HTTP 422**. The cause
+is now pinned down — the taxonomy seed has **no node for the prefixes `CES`, `CWR`, `CEG` or `ENV`**:
+
+```
+grep -c '"CES"' PreseMakerRepo.Api/Data/Seed/taxonomy.json   -> 0
+```
+
+`TTE`, `ASC`, `MUN`, `PEL`, `MVV` and `MUG` all return 1, so those rows are workable.
+
+**Rows blocked:** `CES3100C`, `CES4605C`, **`CES4702C` (status=error, draft written and validated)**,
+`CWR3201C`, `CWR4202C`, `CEG3011C`, `CEG4801C`, `ENV3001C`, `ENV4351`, `ENV4514C`.
+
+⚠ **These sit at the HEAD of the priority order**, which is why the queue's top has not moved for several
+batches and each batch has to reach further down. They are civil, water-resources and environmental
+engineering — a coherent block, and exactly the kind of content the repository's engineering audience wants.
+
+**Needs from you:** whether to add the four taxonomy nodes (a `taxonomy.json` edit plus a deploy, since
+`TaxonomySeed` is idempotent and runs at startup). **Once deployed, `CES4702C` pushes with a one-line
+retry and the other nine become writable.** **My recommendation: yes** — it is a small server change that
+unblocks ten priority rows.
+
+## 31. ⚠ `CJE3674C` joins the C-suffix class decision (item 28) (batch 182)
+
+Queued as **`CJE3674C`**; **UWF carries bare `CJE 3674` "Introduction to the Forensic Sciences"**, no suffix.
+Three of the four inventory institutions are private (Keiser and two others). **Fourth member of the class
+covered by item 28**, alongside `TPA3230C`, `COP3014C` and `INP3004C`. **Pulled from batch 182 rather than
+guessing at the id.**
+
+⚠ Also recorded for whenever it is written: UWF's entry carries an exclusion — *credit may not be received
+in both `CJE 3674` and `CJE 3670`.*
+
+**Needs from you:** nothing new — this is another instance of item 28, and the recommendation there
+(write at the queued `C` id with a note) still stands.
+
+## 32. ⚠ `BSC1050` published from the only reachable catalog, which holds the NARROWER subject (batch 182) — *informational, no action needed*
+
+Statewide title **Environmental Science**; **UWF's is Fundamentals of Ecology** — a component of it, not a
+synonym. **Three of four institutions are private or small colleges outside catalog reach**, so UWF is the
+only verified description.
+
+**Published as a single guide from UWF's reading with a divergence block at the top**, per the `EEX4474`
+precedent — writing an environmental-science guide from the statewide title alone would be inventing
+content. **Added to the open-cases table in `CLAUDE.md`.**
+
+⚠ **Likely cause worth knowing:** the number sits on a prefix boundary. Florida numbers introductory
+environmental science **`EVR1001`** and majors-level ecology **`PCB3043`**; a non-majors course spanning both
+lands in the general `BSC` prefix and leans whichever way the institution does.
+
+**Flagging it only so you know a live guide carries a narrower subject than its statewide title implies.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

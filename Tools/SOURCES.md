@@ -16852,3 +16852,185 @@ during drafting: a bare `<a>CEDS</a>` anchor in `CLP4110.html` corrected to `<st
 *"unexpected EOF while looking for matching `''"*. **Same documented pattern; switched to the Write tool
 and it succeeded.** Recorded again because it has now cost time twice: **for guide-sized HTML, do not use a
 heredoc.**
+
+---
+
+## Batch 182 (2026-09-08) — AMH3403, BSC1050, CCJ2002, CJJ4010, ECO3303, EUH3121
+
+Six pushed, six verified live. Queue: **2,123 pushed / 391 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin), FIU (Coursedog cache), UF (course-search API),
+Broward / EFSC / Valencia (state-college catalogs, used for the sector comparison below).
+
+### ⚠⚠ SECTOR NUMBER DIVERGENCE — a new named variety, found on `CCJ2002`
+
+**The introductory criminal justice course carries a DIFFERENT NUMBER in the Florida College System than in
+the State University System.**
+
+| Sector | Number | Title |
+|---|---|---|
+| **FCS** — Broward, Eastern Florida State, Valencia (all three checked) | **`CCJ1020`** | Introduction to Criminal Justice / American Criminal Justice |
+| **SUS** — UWF and the inventory's other three | **`CCJ2002`** | Crime in America / Survey of Crime and Justice |
+
+⚠ **None of the three state college catalogs carries `CCJ2002` at all.** Broward publishes the measurement
+explicitly: **3 credits, 48 total contact hours, all lecture.**
+
+**Why this deserves its own name in the divergence taxonomy.** Every previously recorded number divergence
+was *between institutions*. **This one runs along the sector boundary** — the two-year colleges as a group
+use one number and the universities as a group use another — **which means it hits every A.A. transfer
+student in the discipline rather than the unlucky few who picked the wrong pair of institutions.**
+
+⚠ **The mitigating facts are real and the guide states them**: the courses genuinely are the same survey,
+A.A. completers are protected by the common general-education core, and departments know the pairing.
+**But SCNS equivalency does not cross numbers**, and mid-degree transfers are not protected. **The guide
+tells the student to confirm in writing.**
+
+**Drill added: when a lower-division course appears in the queue at SUS institutions only, check two or
+three FCS catalogs for the same subject under a different number before writing.** The state-college
+catalogs recovered in batch 164 make this cheap.
+
+### ⚠⚠ `CCJ2002` — two introductory courses at ONE institution, for different audiences
+
+Separately from the sector problem, **UWF runs two introductions to the same field**:
+
+| | `CCJ 2002` Survey of Crime and Justice | `CCJ 3024` Criminal Justice System |
+|---|---|---|
+| Level | lower division | **upper division** |
+| Audience | *"designed for students across disciplines"* | criminal justice majors |
+| Designation | **General Education, Social Sciences** | ⚠ **College-Level Communication Skills (Gordon Rule writing)** |
+
+⚠⚠ **They are not substitutes, and the writing designation is on the OTHER one.** A student who takes the
+gen-ed course expecting to have covered the major's introduction has not.
+
+**Generalises: a general-education version and a majors version of the same subject can share a department,
+a description and almost a title.** The tells are the level, the phrase *"designed for students across
+disciplines"*, and **which of the two carries the writing designation.**
+
+### ⚠ Gordon Rule — second and third live applications, in opposite directions
+
+- **`ECO3303`** carries UWF's *"Meets College-Level Communication Skills Requirement"* → **the guide names
+  it as the writing half and states the C-or-higher condition**, per the standing practice.
+  ⚠ **Worth noting: FSU's and FIU's entries for the same number carry no such designation** — which the
+  guide explains is an administrative difference, not evidence their versions involve less writing.
+  **A writing-designated ECONOMICS course is unusual and the guide tells students to take it deliberately**,
+  since it lets them satisfy the requirement inside the major.
+- **`BSC1050`** and **`CCJ2002`** → ⚠ **the guides state explicitly that the Gordon Rule does NOT apply**
+  (natural science and social science are outside both components). **Third and fourth times this negative
+  statement has been needed** since the practice was adopted, after `AST2037`. **The practice is working as
+  intended: check for the designation, do not assume it.**
+
+### ⚠⚠ `BSC1050` — a title divergence where the ONLY reachable source holds the minority-scope reading
+
+| | Title | Scope |
+|---|---|---|
+| Statewide inventory | **Environmental Science** | broad applied field — pollution, resources, energy, policy |
+| **UWF (only retrievable catalog)** | **Fundamentals of Ecology** | ⚠ **the science of organism–environment interaction; a COMPONENT of the above** |
+
+⚠ **Three of the four institutions are private or small colleges outside this project's catalog reach**
+(Keiser plus two others), so **UWF is the only verified description and this is a genuinely single-source
+guide.**
+
+**Handled per the `EEX4474` precedent**: publish the verified reading, labelled, with a divergence block at
+the top telling the student that an Environmental Science version will cover more applied ground. ⚠ **The
+alternative — writing an environmental science guide from the statewide title — would be inventing content**,
+which the `-SCNS` sourcing rule already prohibits. **Added to the open-cases table.**
+
+⚠ **A likely explanation worth recording:** the number sits on a prefix boundary. **Florida numbers
+introductory environmental science as `EVR1001` and majors-level ecology as `PCB3043`**, so a non-majors
+course spanning both lands in the general `BSC` prefix — **and what an institution calls it depends on which
+side it leans toward.** This is prefix divergence expressing itself as title instability.
+
+### `BSC1050` — the laboratory trap again, and it is now a pattern
+
+⚠ **No `C` or `L` suffix means no laboratory, so the course may satisfy only part of a general education
+science requirement.** Second instance after `AST2037` (batch 180). **Stated as a numbered planning warning
+in the prerequisite string as well as the guide**, because the prerequisite field is what a queue reader
+sees first.
+
+**Standing practice from here: every 1000/2000-level natural science course without a `C` or `L` suffix gets
+this warning.**
+
+### `EUH3121` — four titles, one course, and a fourth institution the inventory omits
+
+| UWF | FGCU | FIU | UF |
+|---|---|---|---|
+| Fall of Rome, Birth of Europe | Fall of Rome / Barbarian Kingdoms | Early Medieval Europe | The Early Middle Ages |
+
+**All four describe 400–1050 and the same organising question.** ⚠ **Title drift, not subject divergence** —
+and the emphasis-vs-divergence rule from batch 176 held again: FIU names the Greek and Arabic spheres
+alongside the Latin West, which is a coverage emphasis, not a different course.
+
+⚠ **The practical risk is administrative, and the guide says so: a transfer evaluator or degree audit
+searching by TITLE will not find the match.** Search by number. **This is the cleanest example so far of
+title drift creating a real transfer hazard with no academic divergence behind it.**
+
+⚠ **Tenth inventory discrepancy: FIU carries `EUH3121` and the inventory does not list it.** Unusually, the
+error worked in the project's favour — it supplied a third full description. **`AMH3403` and `EUH3121` both
+list FSU; FSU carries neither** (its `AMH 3xxx` and `EUH 3xxx` ranges were enumerated directly). **Eleventh
+and twelfth.**
+
+### `EUH3121` — the sequence-partner drill from batch 181, applied prospectively
+
+**The rule added yesterday was exercised for the first time.** `EUH3121`'s partner is `EUH3122`, and both
+reachable institutions carry it:
+
+- **UWF**: `EUH 3122` High Middle Ages, **1050–1450**
+- **FGCU**: `EUH 3122` Feudal Society, **1000–1400**
+
+⚠ **The handover points differ slightly (1000 vs 1050; 1400 vs 1450)** — not a divergence, but **the guide
+tells a student splitting the sequence across institutions to check the syllabus for the gap.** **The drill
+cost one extra lookup and produced a real note.**
+
+### `CJJ4010` — two findings the guide states plainly because students disbelieve them
+
+⚠⚠ **Transfer to adult court is associated with HIGHER reoffending** than keeping comparable youth in the
+juvenile system — one of the better-supported findings in the field and the opposite of the policy
+intuition behind the 1990s expansion.
+
+⚠⚠ **Some well-known prevention programmes make outcomes worse** — "Scared Straight"-style prison visits,
+repeatedly evaluated, repeatedly found to increase offending, still periodically funded.
+
+**Recorded because the pairing generalises**: this field's evidence base repeatedly contradicts the
+intuitive policy, **which is why the guide points at CrimeSolutions and Blueprints as free evidence ratings
+rather than leaving the student to argue from plausibility.** The 1990s "superpredator" episode is presented
+the same way — **as a case study in weak social science amplified politically into durable statute**, which
+is exactly what UWF's description means by examining how politics responds.
+
+### ⚠ `CJJ4010` — mandatory reporting stated as professional competence, not as an aside
+
+The guide names **Florida's Chapter 39 duty to report suspected child abuse or neglect — which applies to
+everyone — and the Florida Abuse Hotline (1-800-96-ABUSE).** ⚠ **Many students in this course will hold
+positions carrying that duty within a year.** Recorded as a pattern: **where a course's students are about
+to enter a role with a statutory duty, the guide states the duty and the number.**
+
+### ⚠⚠ Blocked-row status re-probed — the civil engineering cluster is STILL blocked
+
+**`CES4702C` was retried and returned HTTP 422 again.** Cause confirmed from the taxonomy seed: **the
+prefixes `CES`, `CWR`, `CEG` and `ENV` have no taxonomy node**, while `TTE`, `ASC`, `MUN`, `PEL`, `MVV` and
+`MUG` do.
+
+⚠ **This is now a cheap diagnostic and should be used before drafting, not after pushing:**
+
+```
+grep -c '"<PREFIX>"' PreseMakerRepo.Api/Data/Seed/taxonomy.json
+```
+
+**Zero means the push will 422.** **Seven queue rows are blocked on those four prefixes** — `CES3100C`,
+`CES4605C`, `CES4702C` (error), `CWR3201C`, `CWR4202C`, `CEG3011C`, `ENV3001C`, plus `CEG4801C`, `ENV4351`
+and `ENV4514C` further down. **Ten rows in total, and they are the head of the priority order**, which is
+why the queue's top has stopped moving. **This is a server-side taxonomy addition, not a content problem.**
+
+### ⚠ `CJE3674C` pulled from this batch — a fourth C-suffix-nobody-carries case
+
+Queued as **`CJE3674C`**; **UWF carries bare `CJE 3674` "Introduction to the Forensic Sciences"** with no
+suffix, and three of the four inventory institutions are private. ⚠ **Belongs with `TPA3230C`, `COP3014C`
+and `INP3004C` under `REVIEW_QUEUE.md` item 28**, which is still awaiting a decision. **Substituted out
+under the standing instruction rather than guessing at the id.** UWF's entry also carries an exclusion
+(*credit may not be received in both `CJE 3674` and `CJE 3670`*), recorded for when the row is written.
+
+### Process note
+
+Assembler clean — no malformed tags, no markdown leakage. No validator warnings, no push failures.
+Longest prerequisite 464 of 500. ⚠ **`AMH3403` and `CCJ2002` are single-source guides**, both handled with
+the batch-181 `CGS3763` pattern: **separate what the subject makes safe from what only one catalog can
+attest.** Both say so in the Course Description rather than hedging quietly.
