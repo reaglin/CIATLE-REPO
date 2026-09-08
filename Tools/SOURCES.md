@@ -17606,3 +17606,147 @@ been growing as more warnings are packed into them, and 500 is a real ceiling.**
 of the last twelve prerequisite strings have come within 30 characters of the limit.**
 
 No malformed tags, no markdown leakage, no push failures.
+
+---
+
+## Batch 187 (2026-09-08) — ACG4180, AMH4420, SPM4703, SYD4800, ZOO4472C, ZOO4485
+
+Six pushed, six verified live. Queue: **2,153 pushed / 361 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FSU (bulletin), FIU (Coursedog cache), UF (course-search API).
+
+### ⚠⚠ Dual-listed courses are systematic at UWF, not incidental — three in two batches
+
+| Course | Dual-listed with | Batch |
+|---|---|---|
+| `SOW4700` | `SOW 5710` | 186 |
+| **`ACG4180`** | **`ACG 5185`** | 187 |
+| **`ZOO4485`** | **`ZOO 5486`** | 187 |
+
+**The catalog phrase is consistent — "offered concurrently with <5xxx>; graduate students will be assigned
+additional work"** — and it now looks like a standing UWF practice across colleges (Health, Business,
+Science and Engineering all represented).
+
+⚠⚠ **`ACG4180` is the case where the repeat restriction matters most, and the guide says so directly**:
+**Florida CPA licensure requires 150 semester hours, and a Master of Accountancy at the same institution is
+the usual route to them** — **so an accounting student is unusually likely to meet `ACG 5185` later.**
+**Discovering a repeat restriction at that point is expensive.**
+
+**Standing practice confirmed: search every UWF entry for "offered concurrently", and where it appears, tell
+the reader to check the repeat restriction before registering.**
+
+### ⚠⚠ `SYD4800` — a TERMINOLOGY-ERA divergence, and a new category
+
+| Source | Title |
+|---|---|
+| Statewide | **Gender and Society** |
+| **UF** | **Sociology of Gender** |
+| **FIU** | **Theories of Gender** ⚠ *"Inactivated per SCNS review"* |
+| **UWF** | ⚠ **Sociology of Sex Roles** |
+
+⚠ **This is not title drift and it is not subject divergence — it is the same course carrying vocabulary
+from different decades of the field's own development.** **"Sex roles" is role-theory language from the
+1970s; the framework that replaced it treats gender as continuously produced in interaction and built into
+institutions rather than as a role learned once.**
+
+**Second instance in two batches**, after **`SOW4700`'s "chemical addiction" → "substance use"**. ⚠ **Worth
+naming as a category, because the handling is different from a subject divergence: the course is the same,
+and what the guide owes the reader is the CURRENT vocabulary plus an explanation of why it changed** —
+**a student who learns only the older term will be using language the current literature has moved past.**
+
+⚠ **Also captured: at UWF this course sits in the Department of ANTHROPOLOGY rather than Sociology**, which
+predicts a stronger comparative and cross-cultural frame. **Departmental placement as an emphasis signal is
+worth checking generally.**
+
+### ⚠⚠ `ZOO4472C` — three titles, a suffix that moves, and the field-schedule warning
+
+| Source | Number and title |
+|---|---|
+| Statewide | `ZOO 4472C` **Ornithology** |
+| **UF** | ⚠ `ZOO 4472C` **Avian Biology** — **with the `C`** |
+| **UWF** | `ZOO 4472` **Avian Science** — no suffix, ⚠ **prerequisite includes `STA 2023`** |
+| **FIU** | `ZOO 4472` **Ornithology** — ⚠ *"Inactivated per SCNS review"*, but with the fullest description |
+
+⚠ **Second case where the queued `C` exists at an institution** (after `PET3640C` in batch 184) — **the
+suffix is real here, carried by UF.**
+
+⚠⚠ **The emphases differ with the suffix and the prerequisite.** **FIU's (inactive) entry is classical
+ornithology — systematics, anatomy, physiology, evolution — with labs teaching identification, banding and
+censusing, and alternate-Saturday field trips.** **UWF's is methodological: ecology, field technique and
+data management for research and monitoring, gated on statistics.** **The statistics prerequisite is the
+tell, and it is the same DEPTH-signalling pattern recorded in `PSB4002` and `STA4234`.**
+
+⚠ **The most practically useful thing in the guide is not academic**: **ask about the field schedule before
+registering.** **Field ornithology happens at dawn, and FIU's entry names an overnight weekend trip.**
+**That determines whether a working student can take the course at all**, and no other source tells them.
+
+### ⚠ `ZOO4485` — an OCEANOGRAPHY prerequisite as an emphasis signal
+
+**UWF requires `OCE 3007` alongside majors biology.** ⚠ **Unusual, and informative in the same way the
+statistics gates are: it signals a course treating marine mammals as animals in a physical ocean** —
+**thermal conductivity, sound propagation, pressure and productivity as the environment that explains the
+adaptations.** **A student without oceanography meets those at speed.**
+
+**The prerequisite-as-signal diagnostic has now fired on four consecutive batches** (`PSB4002` depth,
+`STA4234` calculus, `ZOO4472C` statistics, `ZOO4485` oceanography). ⚠ **It has become the single most
+productive analytical move in the sourcing workflow.**
+
+### `SPM4703` — three emphases, and a minimum-grade sequence condition
+
+| Institution | Title | Emphasis |
+|---|---|---|
+| **FSU** | Introduction to Sports Analytics | general analytical methods |
+| **UF** | ⚠ Sport **Marketing** Analytics | customer and campaign |
+| **UWF** | Sport Analytics | ⚠ **accounting and finance forward** — managerial accounting, financial planning, KPIs, balanced scorecard |
+
+⚠⚠ **The clarification the guide leads with: sport analytics in a MANAGEMENT degree is business analytics
+whose subject happens to be a sport organisation** — **revenue, pricing, sponsorship, fan behaviour** —
+**not athlete performance analysis, which sits under `APK`/`PET` or statistics.** **Students arrive
+expecting the second.**
+
+⚠ **Also captured: FSU's follow-on `SPM 4705` requires this course with a <strong>C− or better</strong>** — a
+**minimum-grade sequence condition**, so passing is not sufficient to continue. **Same shape as the
+`EEE3308` prerequisite grade condition from batch 183.**
+
+### `AMH4420` — the most Florida-specific guide in the repository
+
+Two sources agreeing exactly on scope (UWF and FSU), and unusually rich local content: ⚠ **St. Augustine
+(1565) predating Jamestown by forty-two years; Fort Mose (1738) as the first legally sanctioned free Black
+settlement in what became the United States; the Second Seminole War as the longest and costliest of the
+American Indian wars; Ocoee (1920), Rosewood (1923) and the Tabert case that ended convict leasing; and the
+twentieth-century transformation by railroads, air conditioning, the space programme and Disney.**
+
+⚠ **The interpretive thread the guide keeps returning to — is Florida a Southern state? — connects it to
+`AMH3403` (batch 182)**, and the two guides now read against each other.
+
+⚠⚠ **Florida Memory is named as making an original undergraduate research paper genuinely feasible**, which
+is true here and is not true in most states. **Recorded because it is a concrete, checkable recommendation
+rather than generic advice.**
+
+### ⚠ TTE3004C pulled — ninth member of the C-suffix class
+
+**UWF carries bare `TTE 3004`; FSU carries bare `TTE 3004`.** ⚠ **Neither has the `C`.** **Added to the
+`REVIEW_QUEUE.md` item 28 class, which now has nine members.**
+
+⚠ **Sourcing was completed before the pull and is recorded here so it is not re-derived**: **UWF's version
+is modes, planning, economics and public policy (prerequisite `EGS 3441*`); FSU's is highway and traffic
+engineering, planning, design, construction and safety (prerequisites `CEG 2202`, `CEG 2202L`, `STA 2122`).**
+⚠ **A real emphasis divergence — systems-and-policy versus highway-and-traffic — waiting for the class
+decision.**
+
+⚠ **Also pulled: `PHZ3151C`** (computational physics) — **not at UWF despite being listed, and not
+retrievable at FAU, FL Poly or UCF.** **A sourcing failure rather than a suffix problem; left queued.**
+
+### Process note
+
+⚠⚠ **TWO prerequisite strings failed the validator this batch** — `ACG4180` at 518 and `SYD4800` at 542 —
+**one batch after `SCE4320` failed at 546.** **Three failures in two batches, after eleven clean ones.**
+
+⚠ **This is the growth the development note now records.** **Ron directed on 2026-09-08 that the ceiling be
+raised in the next site publish, and `Deployment/PENDING_SERVER_CHANGES.md` carries the full note**: raise
+`Prerequisites` from **500 to 1000** in **both** `PublishValidators.cs` **and** the EF column configuration
+(the latter needing a migration), plus the mirror in `validate_drafts.py` and the limits tables in
+`Tools/CLAUDE.md` and the `/guide` skill.
+
+**Until it deploys, guides continue to be written to 500 and trimmed where needed** — **cutting connective
+tissue, never the warnings.** No malformed tags, no markdown leakage, no push failures.

@@ -550,6 +550,46 @@ needed two trims.
 twelve have come within 30 characters of the limit.** **The assembler's length report is what catches this
 before the push; keep reading it.** **When trimming, cut the connective tissue and keep the warnings.**
 
+### ⚠⚠ TERMINOLOGY-ERA divergence — a category of its own (batch 187)
+
+**Not title drift, not subject divergence: the same course carrying vocabulary from different decades of
+the field's own development.**
+
+| Number | Older term | Current term | Why it changed |
+|---|---|---|---|
+| **`SYD4800`** | UWF **"Sociology of Sex Roles"** | UF **"Sociology of Gender"** | role theory framed gender as expectations attached to two categories; the replacement treats it as produced in interaction and built into institutions |
+| **`SOW4700`** | statewide **"Chemical Addiction"** | UWF **"Substance Use, Prevention, and Treatment"** | *substance use disorder* is a spectrum with severity specifiers; the older vocabulary is associated with more punitive clinical judgements |
+
+⚠ **The handling differs from a subject divergence.** **The course is the same.** **What the guide owes the
+reader is the CURRENT vocabulary plus an explanation of why it changed** — because **a student who learns
+only the older term will be using language the current literature has moved past**, and in clinical fields
+that has consequences beyond style.
+
+⚠ **It also predicts an AI failure mode**: training data is dominated by older text, so **generated prose
+reproduces the superseded vocabulary** — which is worth saying in the guide's AI section.
+
+### ⚠⚠ The prerequisite-as-signal diagnostic — now the most productive sourcing move
+
+Originally a test for whether two institutions teach different SUBJECTS (batch 175). It has since fired on
+DEPTH and on EMPHASIS, four batches running:
+
+| Course | Gate | What it signalled |
+|---|---|---|
+| `PSB4002` | four courses incl. statistics + lab biology (FGCU) vs none (UWF) | reads primary research at cellular level vs a survey |
+| `STA4234` | **calculus** added at FGCU | theory and the matrix formulation vs applied procedures |
+| `ZOO4472C` | **statistics** at UWF | estimating survival and abundance, not just describing birds |
+| `ZOO4485` | **oceanography** at UWF | marine mammals as animals in a physical ocean |
+| `ACG4180` | **finance**, not accounting | taught from the statement USER's side |
+
+⚠ **Read the prerequisite before the description.** **It is harder to write loosely than a course
+description and it constrains what the course can assume.**
+
+### ⚠ Departmental placement is an emphasis signal too (batch 187)
+
+**`SYD4800` sits in ANTHROPOLOGY at UWF, not Sociology** — predicting a stronger comparative and
+cross-cultural frame. **`PLA4885` and `PLA4263` sit in CRIMINAL JUSTICE, not a law or legal studies
+department.** ⚠ **The UWF prefix PDFs print the college and department on every entry; read that line.**
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of

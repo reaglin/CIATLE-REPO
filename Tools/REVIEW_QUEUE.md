@@ -1052,10 +1052,48 @@ boundary rather than onto content.
 is what a queue reader and the course page show first — concurrency traps, exclusions, GPA gates,
 screening deadlines, accreditation warnings.
 
-⚠ **Nothing is broken**; the assembler reports the length and the validator blocks before the push.
-**Flagging it because if the field ever needs to carry more, the ceiling is a server-side constant in
-`PublishValidators.cs`** — **the same file as the contact-hours cap noted in the `/guide` skill.** **If you
-ever revisit that file for another reason, raising this limit would be worth considering at the same time.**
+✅ **RESOLVED as a decision — Ron directed 2026-09-08 that the ceiling be raised in the next site publish.**
+**A full development note is now in `Deployment/PENDING_SERVER_CHANGES.md`**: raise `Prerequisites` from
+**500 to 1000** in BOTH `PublishValidators.cs` and the EF column configuration (the latter needs a
+migration — SQLite tolerates the widened column, PostgreSQL will not), plus the client-side mirror in
+`validate_drafts.py` and the limits tables in `Tools/CLAUDE.md` and the `/guide` skill.
+
+⚠ **Also flagged in that note:** the `/guide` skill's limits table still records `contact_hours` as
+**0–300** when the server has been **0–1500** since the PSAV fix — worth correcting in the same pass.
+
+**Nothing is blocked in the meantime**: `validate_drafts.py` catches over-length strings before the push,
+and guides continue to be written to the 500-character limit until the change deploys.
+
+## 43. ⚠ `TTE3004C` — ninth member of the C-suffix class, with sourcing already done (batch 187)
+
+**UWF carries bare `TTE 3004`; FSU carries bare `TTE 3004`.** ⚠ **Neither has the `C`.**
+
+**Class now stands at nine**: `TPA3230C`, `COP3014C`, `INP3004C`, `CJE3674C`, `CTS4348C`, `DAA2204C`,
+`EEE3396C`, `GIS4035C`-adjacent cases aside, and now **`TTE3004C`**.
+
+⚠ **Sourcing is complete and recorded so it is not re-derived when the class decision lands:**
+
+| Institution | Emphasis | Prerequisites |
+|---|---|---|
+| **UWF** | transportation modes, interaction between modes, facility design, planning, economics, public policy | `EGS 3441*` |
+| **FSU** | ⚠ highway and traffic engineering, planning and design, construction, operation, management, safety | `CEG 2202`, `CEG 2202L`, `STA 2122` |
+
+⚠ **A real emphasis divergence — systems-and-policy versus highway-and-traffic — worth a labelled variant
+section when the row is written.** **`TTE` has a taxonomy node, so unlike the CES/CWR/CEG/ENV cluster this
+row is pushable the moment the suffix question is settled.**
+
+**Needs from you:** nothing new — this is another instance of item 28.
+
+## 44. ⚠ `PHZ3151C` — sourcing failure, left queued (batch 187) — *informational*
+
+**Computational physics.** ⚠ **Not at UWF despite being listed** (nineteenth inventory error), **and FAU,
+Florida Polytechnic and UCF publish no fetchable descriptions.**
+
+⚠ **Deliberately NOT added to the C-suffix class** — the problem is that no catalog answered, not that the
+suffix is spurious. **Left queued and workable if a source opens up.**
+
+**Same shape as `GRA3112C`/`GRA4154C` (item 36): a small cluster of rows whose institutions are exactly the
+ones this project cannot currently reach.**
 
 ## Resolved
 
