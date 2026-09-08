@@ -439,6 +439,37 @@ smaller-schools-first ordering is the right call for exactly that reason — and
 further along already (MDC 31.5% done, BC 33.5%, SPC 32.3%) because the earlier DSC-era work covered
 high-enrolment shared courses.
 
+## ⚠⚠ Florida-wide requirements that affect guides (found 2026-09-08, batch 178)
+
+### The Gordon Rule
+
+**State Board of Education Rule 6A-10.030.** Florida public institutions require designated
+**writing-intensive** coursework plus designated **mathematics** coursework for an associate or
+baccalaureate degree.
+
+- ⚠⚠ **A grade of C or higher is required for a Gordon Rule course to count. A C-minus does not satisfy
+  it at most institutions** — stricter than the ordinary passing standard, and a common and expensive trap.
+- ⚠ **The designation is made by the INSTITUTION, not by the course number.** The same number can be
+  designated at one Florida institution and not another.
+- Designation normally travels within the Florida public system but should be confirmed, especially from
+  private or out-of-state institutions.
+
+**Standing practice: guides for 1000- and 2000-level general-education courses — composition, humanities,
+mathematics — should check for and mention Gordon Rule status.** It surfaced first in FSCJ's Coursedog
+entry for `PHI2603`; **CourseLeaf PDFs do not carry it.**
+
+### General-education category designations
+
+⚠ **Distinct from the Gordon Rule and separately unreliable in transfer.** A course can transfer as credit
+without satisfying the general-education CATEGORY a student expected. Florida's common general-education
+core gives substantial protection for A.A. completers, but **category placement is institution-specific**.
+
+### ⚠ Coursedog sources carry metadata CourseLeaf does not
+
+FSCJ, NWFSC and FIU records include **regulatory notes (the Gordon Rule text), structured `requisites`
+objects with prerequisite/corequisite rules, college names, and lifecycle status** ("Inactivated per 2024
+SCNS review, last offered fall 2016"). **Mine these deliberately rather than only reading `description`.**
+
 ## Session start checklist
 
 When starting a fresh session in this project:

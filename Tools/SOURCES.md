@@ -16258,3 +16258,142 @@ institutional report; **confidential resources do not**.
 No prerequisite over-length (longest 461 of 500), no validator warnings, no push failures, and the new
 markdown-in-HTML check passed clean on all six. Six courses required six UWF fetches, one FGCU fetch, three
 FSU department fetches and one FIU cache read.
+
+
+---
+
+## Batch 178 (2026-09-08) — GEO3372, HSA4192, INR4334, INR4403, PHI2603, TRA4202
+
+Six pushed, six verified live. **One row pulled and held (`INP3004C`).** Queue: **2,099 pushed / 415 queued
+/ 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FIU (Coursedog cache), **FSCJ (Coursedog cache)**.
+
+### ⚠⚠⚠ NEW FLORIDA-WIDE FINDING: the Gordon Rule
+
+**FSCJ's entry for `PHI2603` records something no previously used source has surfaced:**
+
+> *"This course fulfills the Gordon Rule writing requirement and must be completed with a grade of C or
+> higher pursuant to State Board of Education Rule 6A-10.030."*
+
+**This is a statewide Florida requirement that this project has not documented in 178 batches, and it bears
+directly on the mission.** Summary of what it is:
+
+- It requires designated **writing-intensive** coursework, plus designated **mathematics** coursework, as a
+  condition of an associate or baccalaureate degree from a Florida public institution.
+- ⚠⚠ **A grade of C or higher is required for a Gordon Rule course to count.** A **C−** does not satisfy it
+  at most institutions. **This is stricter than the ordinary passing standard**, and students who pass a
+  course but land below C must retake it.
+- ⚠ **The designation is made by the INSTITUTION, not by the course number.** The same number can be
+  Gordon-designated at one Florida institution and not at another.
+- Designation normally travels with the course inside the Florida public system, **but should be confirmed
+  rather than assumed**, especially from private or out-of-state institutions.
+
+**Why this matters for the project generally:** the Gordon Rule attaches to **general-education composition,
+humanities and mathematics courses** — a large share of the lower-division rows still in the queue.
+⚠ **Guides for 1000- and 2000-level general-education courses should check for and mention Gordon Rule
+status**, because it is a grade-threshold trap that costs students a whole term when missed. **This is now
+standing practice.**
+
+**How it surfaced is itself the lesson: FSCJ's Coursedog data carries regulatory and requirement metadata
+that CourseLeaf PDFs do not.** It also carries the structured `requisites` object with prerequisite and
+corequisite rules. **The Coursedog sources are richer than the register credits them for — worth mining
+deliberately rather than only querying for descriptions.**
+
+### ⚠⚠ `HSA4192` — FIU teaches a different subject, and this time UWF holds the statewide reading
+
+| | Statewide / UWF | FIU |
+|---|---|---|
+| Title | **Health Informatics** / Current Topics in Health Informatics | **Healthcare Quality Management** |
+| Subject | medical informatics; computer applications in medicine; **data classification and coding**; documentation law and ethics | **work systems, job analysis, space utilisation, inventory control, operations management** |
+
+**Health informatics and healthcare quality management are different fields** — data and systems versus
+operations and process improvement.
+
+⚠ **Worth recording specifically because it inverts the session's dominant pattern.** Four previous
+one-number-two-subjects cases this session (`COM3003`, `PUR4801`, `TPA3230C`, `MMC4601`) all had **UWF
+holding the divergent reading**. **Here UWF matches the statewide title and FIU is the outlier.** The
+project should not develop a prior that UWF is always the divergent institution — <strong>it is simply the
+most-sourced one, which means its divergences are the most visible.</strong>
+
+Written to the statewide reading with the FIU divergence flagged. **Not a split** — the statewide half is
+sourced from UWF, so a split would be executable, but the CEPH/CAHIIM accreditation framing already forces
+the "ask the programme" advice that a split would deliver.
+
+⚠ **CAHIIM recorded as the SEVENTH profession where programmatic accreditation outranks course credit** —
+after nursing, medical laboratory science, social work (CSWE), financial planning (CFP Board), chemistry
+(ACS) and public health (CEPH). **AHIMA's RHIA credential requires graduation from a CAHIIM-accredited
+programme**, which transferred credits cannot substitute for.
+
+### ⚠⚠ `INP3004C` held — and a CLASS-level decision requested (REVIEW_QUEUE item 28)
+
+Inventory carries `INP3004C`; **UWF and FIU both carry `INP3004`** without the suffix, and agree on the
+subject. **Third instance of the same problem** after `TPA3230C` (batch 173) and `COP3014C` (batch 176).
+
+**Rather than hold a third row individually, `REVIEW_QUEUE.md` item 28 now asks Ron for ONE decision
+covering the class**, with a recommendation (write at the queued `C` id with a prominent note, for the two
+where the subject is not in doubt).
+
+⚠ **The systematic explanation, recorded:** combined with the five institution-list errors from batch 176,
+the likeliest account is that **`courses_2plus_institutions.csv` reflects the SCNS catalog rather than
+current institutional offerings.** SCNS may hold a `C`-suffixed number institutions have dropped or never
+adopted. **This will recur — roughly 400 rows remain and `C` suffixes are common.**
+
+### `TRA4202` — analytics or systems, and the new sources carry half the batch again
+
+| | UWF | FSCJ |
+|---|---|---|
+| Title | **Logistics Systems and Analytics** | **Logistics Technology** |
+| Centre of gravity | quantitative — network analysis and design, inventory analytics | information systems — EDI, IoT, ERP, TMS, WMS; plus forecasting, S&amp;OP, capacity planning |
+
+**Same subject, different emphasis** — and per the rule established in batch 176, **an emphasis difference
+is not a transfer risk.** Recorded as "check the syllabus", not as drift. ⚠ **But the guide says plainly
+that the two produce different capabilities**, because an analyst role wants the modelling and an operations
+role wants the systems fluency.
+
+⚠ **Second Florida-College-System baccalaureate case this batch** (with `HSA4192` at PSC and SPC): a
+4000-level number taught at a state college, so **available before transfer** — with the standing caution
+that **upper-division hours taken at a state college may not satisfy a university's residency requirement.**
+
+### `PHI2603` — a scope divergence inside a general-education course
+
+UWF frames it explicitly **"within the Western Canon"**; FSCJ explicitly includes **"multicultural aspects
+of ethics"** and professional codes. ⚠ **A real scope difference in a course most students take to satisfy a
+requirement** — and one that matters if a receiving programme or a personal interest wants comparative
+material. Flagged; articulation unaffected.
+
+⚠ Also recorded: **general-education CATEGORY designations are institution-specific** and do not
+automatically travel, even where the credit does. Distinct from the Gordon Rule question and worth checking
+separately.
+
+### `GEO3372`, `INR4334`, `INR4403` — clean, with three notes worth keeping
+
+- **`GEO3372`** — ⚠ the prerequisite (`EVR 2001` OR `ESC 2000` OR `GLY 2010`) is **satisfiable at a Florida
+  state college before transfer**, and the guide says so. **This is the useful form of prerequisite
+  advice**: not just what it is, but where and when to get it. ⚠ With the caution that an environmental
+  *studies* course is not always accepted where an environmental *science* course is required.
+- **`INR4334`** — the "no prerequisite ≠ no useful preparation" case is unusually clean: **UWF's description
+  names the theoretical traditions as material to be EXAMINED, not introduced**, which is direct textual
+  evidence that an introductory IR course is assumed. Same diagnostic as `INR4102` (batch 171).
+- **`INR4403`** — ⚠ **the AI warning here is the most concrete in the project**: lawyers in several
+  jurisdictions have been **sanctioned by courts** for filing briefs citing AI-fabricated cases. That is not
+  a hypothetical risk about a study habit; it is a documented professional consequence, and it makes the
+  "verify every authority in the primary source" instruction land properly for pre-law students.
+
+### Cross-batch: sensitive and high-stakes content handling is now consistent
+
+Several guides this session have carried professional-consequence warnings, and the practice has settled
+into a recognisable form worth stating:
+
+> ⚠ **Where a field's employment depends on background investigation, clearance, licensure or bar
+> admission, the guide says so plainly and notes that academic integrity findings are reportable.** Applied
+> so far to: criminal justice (`CCJ3651`, `CJC4010`), cybersecurity (`CIS4368`), national security
+> (`INR4334`), law (`INR4403`), finance (`FIN3244`), health information (`HSA4192`), aviation (`ATT1120`).
+> **The professional stake is frequently a stronger argument than the academic one, and students respond to
+> it.**
+
+### Process note
+
+No prerequisite over-length (longest 467 of 500), no validator warnings, no push failures, markdown check
+clean. ⚠ **`GIS4035C` was also probed and is not at UWF** — a sixth inventory institution-list discrepancy,
+consistent with the pattern in item 28. Not pursued this batch.

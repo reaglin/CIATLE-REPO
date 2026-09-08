@@ -770,6 +770,43 @@ where it could be, and that one got split immediately. **The binding constraint 
 is source reachability, not judgement** — which is why the Coursedog recoveries in batch 173 matter beyond
 the courses they directly unlocked.
 
+## 28. ⚠⚠ A CLASS of held rows: `C`-suffixed ids that no reachable institution carries — **ONE DECISION COVERS THREE (batches 173–178)**
+
+**Three rows are now held for the same reason, and holding them one at a time is not serving you.** Asking
+once, about the class, is better.
+
+| Row | Statewide id &amp; title | What institutions actually carry |
+|---|---|---|
+| `TPA3230C` | Costume Design | **UWF, FSU, FGCU, FIU all carry `TPA3230`** (no `C`) — and three different subjects |
+| `COP3014C` | Programming 2 | **UWF carries `COP3014`** (no `C`), "Algorithm and Program Design"; FAMU/FAU unreachable |
+| `INP3004C` | Industrial Psychology | **UWF and FIU both carry `INP3004`** (no `C`); FIU 3 cr, "Intro. Ind/Org Psy" |
+
+**The pattern is systematic, not coincidental.** In each case `courses_2plus_institutions.csv` records a
+`C`-suffixed number that **no institution I can reach actually uses**. Combined with the five
+institution-list errors already documented (batch 176), the likeliest explanation is that **the inventory
+reflects the SCNS catalog rather than current institutional offerings** — SCNS may well hold a `C`-suffixed
+number that institutions have since dropped or never adopted.
+
+⚠ **`TPA3230C` is different from the other two and should stay held regardless** — it has a genuine
+three-way subject divergence (item 25), which is a separate problem from the suffix.
+
+**For `COP3014C` and `INP3004C` the subject is NOT in doubt.** Programming 2 and industrial/organisational
+psychology are consistently described everywhere they appear. **Only the suffix is questionable.**
+
+**Options as I see them:**
+
+- **(a)** **Write them at the queued `C` id**, with a prominent note that the reachable institutions carry
+  the bare number. The guide is findable at the id the queue and any SCNS-derived system uses, and the
+  student is warned. **My recommendation for `COP3014C` and `INP3004C`.**
+- **(b)** **Write them at the bare number** (`COP3014`, `INP3004`) and skip the `C` rows. Matches reality;
+  loses anyone searching the `C` id.
+- **(c)** **Write both** — a full guide at the bare number and a short pointer at the `C` id. Most complete,
+  most work, and the mechanism already exists (it is what the `COM3003` disambiguation page does).
+- **(d)** Keep holding.
+
+**Needs from you:** one choice, applied to the class. **All three rows are left `queued` with explanatory
+notes.** ⚠ **This will keep recurring** — the inventory has ~400 rows left and `C` suffixes are common.
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
