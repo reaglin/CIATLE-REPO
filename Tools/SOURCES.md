@@ -17213,3 +17213,156 @@ Longest prerequisite 482 of 500. ⚠ **Three guides carry 60 contact hours** (`B
 `EEE3308C`) per the `C`-suffix convention, and each explains in the guide what the figure is in the split
 or lecture-only form — **because a student reading the number needs to know which shape their institution
 uses.**
+
+---
+
+## Batch 184 (2026-09-08) — EUH3570, FIN4133, GIS4035C, HFT4343, PET3640C, PHI4633
+
+Six pushed, six verified live. Queue: **2,135 pushed / 379 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin), FIU (Coursedog cache), UF (course-search API).
+⚠ **No state-college probes this batch**, per the rate-limit finding recorded in batch 183.
+
+### ⚠⚠ `PET3640C` — the FIRST queued `C` id that an institution actually carries
+
+**Seven consecutive `C`-suffix rows had turned out to be carried by nobody** (`REVIEW_QUEUE.md` items 28
+and 33). **This one breaks the run:**
+
+| Institution | What it carries |
+|---|---|
+| **UWF** | bare `PET 3640` "Adapted Physical Education and Sport" |
+| **FIU** | ⚠ **BOTH `PET 3640` "Adapted Phys Activities" AND `PET 3640C` "Adapted P E"** |
+
+⚠ **An institution carrying both forms is the signature of a course run in two shapes — a lecture section
+and an integrated section with a scheduled practicum.** The guide covers the integrated form (the statewide
+identifier), states **60 contact hours** for it against 45 for the lecture form, and tells the student to
+check which they are in.
+
+⚠⚠ **This is a useful correction to the emerging assumption.** After seven misses it would have been easy to
+conclude the inventory's `C` suffixes are always spurious. **They are not — the check has to be run each
+time, and finding BOTH forms at one institution is the pattern that resolves it cleanly.**
+
+### ⚠ `PET3640C` — practicum guides need the screening warning up front
+
+The guide states, in the prerequisite string as well as the body: ⚠⚠ **if a practicum is required, start
+Level 2 background screening in week one.** Same failure mode recorded for `EEC4301` — **clearance takes
+time and students who leave it late run out of term.**
+
+**Standing practice from here: every guide for a course with placement or practicum hours carries the
+screening warning in the prerequisite field**, which is what a queue reader sees first. Also carried:
+FERPA confidentiality in placements, and **Chapter 39 mandatory reporting with the Abuse Hotline number** —
+third consecutive batch in which a course puts students into a role with a statutory duty.
+
+### ⚠⚠ `PET3640C` — the field's own error, automated
+
+The guide's AI section makes an argument worth reusing:
+
+> ⚠⚠ **Ask a model what activities suit "a student with cerebral palsy" and it will answer — but the label
+> predicts very little about any individual.** **The whole discipline exists to replace category-based
+> assumptions with individual assessment**, so **generic output reinstates exactly what the course teaches
+> you to abandon.**
+
+**This is the sharpest instance yet of a pattern seen in `COM3461` (national culture scores) and `CJJ4010`
+(risk instruments): the tool's characteristic output IS the error the course was built to correct.**
+⚠ **Where that is true, say so — it is a better argument than a generic integrity warning.**
+
+### ⚠ Gordon Rule — fifth and sixth applications, and a useful contrast pair
+
+- **`PHI4633`** carries UWF's *"Meets College-Level Communication Skills Requirement"* → **named as the
+  writing half with the C-or-higher condition.** ⚠ **FIU's entry for the same number carries no such
+  label** — the same institution-specific pattern as `ECO3303` in batch 182, and the guide again explains
+  that this is an administrative difference rather than evidence of less writing.
+- ⚠ **Worth noting for the retro-sweep question (`REVIEW_QUEUE.md` item 29): the label keeps appearing.**
+  **Six live guides now carry the full explanation.** The ~12 older ones that record the label without it
+  remain incomplete.
+
+### ⚠⚠ `EUH3570` — a chronological divergence, and the title is actively misleading
+
+Sourced in batch 183 and written here.
+
+| Source | Title | Period |
+|---|---|---|
+| Statewide | **Modern Russia** | — |
+| **UWF** | **Russia to 1917** | ⚠⚠ **10th century to the October Revolution.** Its Soviet material is `EUH 3576` "Soviet Union since 1917" |
+| **FIU** | **Russian History** | *"tribal Slavs until today"* — the whole span |
+
+⚠⚠ **A student registering for "Modern Russia" at UWF gets the tsars.** **This is the first divergence where
+the statewide title points at close to the OPPOSITE of what one institution teaches under it** — not a
+narrowing, not an emphasis, but a different half of the timeline.
+
+**The guide covers the full span and marks which material sits on each side of 1917**, so it is usable in
+either version, and leads with a table telling the reader to check.
+
+⚠ **Handling note worth reusing: where institutions split a subject chronologically, write the whole span
+and label the halves.** That is cheaper than two guides and it serves the student in both versions.
+
+### `GIS4035C` — a third split family, and three titles for one course
+
+| Institution | Number and title | Packaging |
+|---|---|---|
+| **FSU** | `GIS 4035` **Introduction to Remote Sensing** | ⚠ **corequisite `GIS 4035L`** — two registrations, 4 credits |
+| **UWF** | `GIS 4035` **Photo Interpretation and Remote Sensing** | single hands-on course, 3 sh |
+| Statewide | `GIS 4035C` **Remote Sensing of Environment** | the integrated identifier |
+
+⚠ **Note the prerequisite notation at UWF: `GIS 4043*/L*` — the prerequisite is ITSELF a split family**, and
+both halves are required. **First instance of a split-family prerequisite recorded**; the guide says
+explicitly that the lecture alone does not satisfy it.
+
+⚠⚠ **Three different titles for one number is the most in any row so far** (`EUH3121` had four, but they
+were transparently the same subject). **Remote Sensing of Environment / Introduction to Remote Sensing /
+Photo Interpretation and Remote Sensing would not match on a title-based degree audit.**
+
+### ⚠⚠ `HFT4343` — an emphasis divergence across the life of a building, plus a RENUMBERING
+
+| Institution | Title | Which side |
+|---|---|---|
+| **FGCU** (matches statewide) | **Resort & Rec Facilities Mgt.** | ⚠ **OPERATING an existing facility** — building systems, engineering-maintenance, renovation, **plus recreation programming** |
+| **FIU** | **Hotel and Restaurant Planning and Design** | ⚠ **CREATING one** — the planning and design cycle, feasibility, aesthetics, real projects |
+
+**Both are facility-focused and they sit on opposite sides of the building's life.** ⚠ **FIU's version does
+not mention the recreation programming half at all**, which is a genuine coverage gap rather than an
+emphasis. **FGCU's reading was taken as the statewide one; the design variant is covered as Optional.**
+
+⚠⚠ **New finding type: FGCU's entry records "Previously HFT 4342."** **A catalog-documented renumbering.**
+**This matters practically** — older transcripts and pre-change articulation tables carry `HFT 4342`, and a
+degree audit searching for it is looking at the same course. **Catalogs record this only sometimes; capture
+it when they do.**
+
+⚠ **Pairs with `HFT4274` from batch 183.** The two together now cover the resort sector properly: **`HFT4274`
+is the ownership and sales model, `HFT4343` is the physical plant.** **Neither carries the "resort
+management" content the statewide titles imply, and the guides say so.**
+
+### `FIN4133` — single-source, and the CFP registration trap stated plainly
+
+Only UWF's catalog answered; FSU's finance bulletin does not carry it. **Handled with the established
+single-source pattern** — ⚠ **the subject is safe because the CFP Board's topic list standardises it
+nationally; the mechanics are UWF's.**
+
+⚠⚠ **The point the guide makes hardest: a CFP Board-REGISTERED PROGRAMME satisfies the education
+requirement — not an accumulation of finance courses covering the same topics.** **Ninth field in which
+programmatic recognition outranks course credit**, alongside nursing, MLS, social work, chemistry, public
+health, health information management, teacher preparation and financial planning's earlier appearance.
+
+⚠ **Also recorded as a durable teaching point: every dollar figure in this subject is indexed and changes
+annually.** **Contribution limits, phase-outs, the Social Security wage base, IRMAA brackets and RMD tables
+all move; the textbook is out of date the year it prints.** **Learn the RULE and look up the NUMBER** — and
+the guide notes that models reproduce **pre-SECURE-Act inherited IRA rules and superseded RMD ages** with
+complete fluency, which in practice is a 25% excise tax.
+
+### `PHI4633` — Florida's own case at the centre of the course
+
+⚠ **The Terri Schiavo case (1990–2005) is a Pinellas County case** and it contains nearly every element of
+the course: persistent vegetative state, substituted judgement without a written directive, surrogate
+conflict, the withdrawing-versus-killing distinction, and intervention by the Florida legislature, the
+governor, Congress and the President. **Chapter 765, Florida Statutes exists partly in response.**
+
+⚠ **The guide's practical suggestion — complete your own advance directive, the Florida forms are free —
+is offered as grounding rather than as an exercise**, and it is consistent with the mental-health-adjacent
+handling rule: **give the student something to do, not only something to feel.**
+
+### Process note
+
+Assembler clean — no malformed tags, no markdown leakage. No validator warnings, no push failures. Longest
+prerequisite 493 of 500 (`PHI4633`). ⚠ **`GRA3112C` and `GRA4154C` were probed and pulled**: neither is at
+UWF, UF, FSU's art bulletin or in the FIU cache. **Not added to the C-suffix class — the problem is
+sourcing, not the suffix.** Left queued.

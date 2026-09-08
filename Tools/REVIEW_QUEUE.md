@@ -938,6 +938,32 @@ at UWF gets **pre-1917 Russia**, which is close to the opposite of what the titl
 **No decision needed** — the row is queued and workable, and the sourcing is recorded here so it is not
 re-derived. **Flagging it because a live guide written from the title alone would have been wrong.**
 
+## 36. ⚠ `GRA3112C` and `GRA4154C` — sourcing failure, not a suffix problem (batch 184) — *informational*
+
+Both were probed and pulled from batch 184. **Neither appears at UWF (no `gra` catalog entry), at UF, in
+FSU's art bulletin, or in the FIU cache** — and the inventory lists FAU, FSU, UCF, UNF and UWF between
+them, none of which publishes a fetchable description for these numbers.
+
+⚠ **Deliberately NOT added to the C-suffix class (items 28 and 33)** — the problem here is that no catalog
+answered, not that the `C` is spurious. **They remain queued and workable if a source opens up.**
+
+**Studio art courses are a systematic gap**: the institutions that carry them are the ones whose catalogs
+this project cannot currently reach. **Worth noting if a new source ever becomes available.**
+
+## 37. ⚠ Gordon Rule retro-sweep (item 29) — the case has strengthened (batch 184) — *no new decision needed*
+
+**Six live guides now carry the full Gordon Rule explanation** (`ENG3010`, `ECO3303`, `PHI4633` and three
+earlier), against roughly a dozen older ones that record UWF's label without saying what it is or that a
+C-minus does not satisfy it.
+
+⚠ **The label keeps appearing** — it has now surfaced in three of the last four batches, across English,
+economics, philosophy and criminal justice prefixes. **The gap between the newer and older guides is
+widening rather than closing.**
+
+**Nothing is blocked**; new guides handle it correctly. **Recommendation from item 29 stands: option (c),
+sweep the general-education and 2000-level ones only.** Flagging only that the population of correct guides
+is now large enough to make the inconsistent older ones more visible.
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

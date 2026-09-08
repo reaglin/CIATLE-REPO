@@ -436,6 +436,50 @@ succession tripped it.**
 - **This explains the long-standing blocked → recovered → blocked pattern for Broward and Valencia** that
   the register recorded across several sessions without accounting for.
 
+### ⚠ A `C` id IS sometimes real — check every time (batch 184)
+
+Seven consecutive queued `C` rows turned out to be carried by no institution, which made "the inventory's
+`C` suffixes are spurious" a tempting generalisation. **`PET3640C` refutes it: FIU carries BOTH
+`PET 3640` and `PET 3640C`.**
+
+⚠ **An institution carrying BOTH forms is the clean signature of a course run in two shapes** — a lecture
+section and an integrated section with a scheduled practicum or laboratory. **Write the `C` id, state the
+contact-hour difference (60 vs 45), and tell the student to check which section they are in.**
+
+### ⚠⚠ Chronological divergence — write the whole span and label the halves (batch 184)
+
+**`EUH3570`**: statewide **"Modern Russia"**; **UWF teaches "Russia to 1917"** (its Soviet material is
+`EUH 3576`); **FIU teaches the whole span in one course.** ⚠⚠ **A student registering for "Modern Russia"
+at UWF gets the tsars** — the first divergence where the statewide title points at close to the OPPOSITE
+half of the timeline.
+
+**Handling: cover the full span, mark clearly which material sits on each side of the split, and lead with
+a table telling the reader to check their own catalog.** Cheaper than two guides and it serves the student
+in either version.
+
+### ⚠ Practicum courses: the screening warning goes in the PREREQUISITE field (batch 184)
+
+**Florida requires Level 2 background screening for anyone working with children or vulnerable adults, and
+clearance takes time.** Students who leave it late run out of term (`EEC4301`, `PET3640C`).
+
+**Standing practice: every guide for a course with placement or practicum hours states, in the prerequisite
+string as well as the body, that screening should be started in week one** — the prerequisite field is what
+a queue reader sees first. Carry FERPA confidentiality and **Chapter 39 mandatory reporting (Florida Abuse
+Hotline 1-800-96-ABUSE)** in the body.
+
+### ⚠⚠ When the tool's characteristic output IS the course's target error, say so (batch 184)
+
+The strongest AI sections are the ones where the failure mode and the course's own subject coincide:
+
+| Course | The coincidence |
+|---|---|
+| **`PET3640C`** | The discipline exists to replace **diagnosis-based assumptions with individual assessment**; a model asked about "a student with cerebral palsy" produces exactly the category-based answer the course teaches you to abandon. |
+| `COM3461` | Intercultural communication warns against applying national averages to individuals; a model produces the unhedged lookup table. |
+| `CJJ4010` | The course studies disproportionate minority contact; risk instruments trained on past decisions encode it. |
+
+⚠ **Where this holds, it is a far better argument than a generic integrity warning** — it tells the student
+something about their own field.
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of
