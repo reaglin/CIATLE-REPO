@@ -16698,3 +16698,157 @@ in batch 176.** The rule is doing useful work: it prevented two false positives 
 No prerequisite over-length (longest 480 of 500), no validator warnings, no push failures, markdown check
 clean. ⚠ **`ECP4703` was probed and is not at UWF** — a further inventory institution-list discrepancy,
 consistent with the pattern in `REVIEW_QUEUE.md` item 28. Not pursued.
+
+---
+
+## Batch 181 (2026-09-08) — CGS3763, CLP4110, COP4534, EEX4254, EEX4474, ENG3010
+
+Six pushed, six verified live. Queue: **2,117 pushed / 397 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FIU (Coursedog cache), UF (course-search API).
+
+### ⚠⚠ `EEX4474` — a subject divergence inside a course PAIR, which is new
+
+| Institution | What the entry describes |
+|---|---|
+| **UWF** | **Curricula for Teaching Students with Severe Disabilities** — curriculum and instruction for students with severe and multiple disabilities |
+| **FGCU** | ⚠ **assessment of infants and young children** |
+
+**These are different courses.** UWF's reading matches the statewide title (`TCHNG STUDENTS MOD/SEV DISABIL`)
+and is the one the guide carries; **FGCU's is early-childhood assessment**, which is neither the same
+population nor the same activity.
+
+⚠ **What makes this instance worth recording is the pairing.** `EEX4254` (mild/moderate) and `EEX4474`
+(moderate/severe) are the standard two-course split of an exceptional-student-education methods sequence,
+and **institutions take them together.** So the divergence is not one number going wrong in isolation —
+**a student can complete a coherent-looking pair at one institution and have covered something different at
+the other half.** The `EEX4254` guide therefore carries a forward warning and the `EEX4474` guide carries
+the divergence block; **both were written to be read together.**
+
+**Generalised: when a number diverges, check its sequence partner before assuming the divergence is
+isolated.** A pair is how a curriculum divides a subject, and a division drawn differently at two
+institutions produces two divergences, not one.
+
+### ⚠ Teacher preparation — the eighth field where programmatic approval outranks course credit
+
+Recorded in both `EEX` guides and now added to the running list (nursing, medical laboratory science,
+social work/CSWE, financial planning/CFP Board, chemistry/ACS, public health/CEPH, health information
+management/CAHIIM, **teacher preparation**).
+
+⚠ **Florida certification requires completion of a state-approved teacher preparation program plus the
+FTCE** — **not an accumulation of transferable education courses.** A student who assembles the right
+course list outside an approved program has the credits and cannot be certified. **This is the same
+structural trap the nursing guides document**, and it deserves the same prominence: the guides say it
+plainly rather than implying it through a transfer note.
+
+### `ENG3010` — the Gordon Rule practice applied for the first time in a live guide
+
+UWF's entry carries **"Meets College-Level Communication Skills Requirement"**, which batch 179 established
+is **UWF's label for the writing half of the Gordon Rule** (Rule 6A-10.030).
+
+Per the practice Ron approved, the guide **says what the label is AND states the grade condition**:
+
+> ⚠⚠ **A Gordon Rule course must normally be completed with a grade of C or higher to count. A C− does not
+> satisfy it at most institutions. Passing is not sufficient.**
+
+⚠ It also records the two qualifications that keep the statement honest: **the designation is made by the
+institution, not by the course number**, and it normally travels within the Florida public system when the
+sending institution applied it — **but confirm rather than assume.**
+
+**This is now a repeatable pattern**: the label appears in UWF prefix PDFs across many prefixes, and every
+future guide whose UWF entry carries either label should get the same treatment.
+
+### ⚠ `ENG3010` — three enrolment conditions, one of which is a transfer trap
+
+UWF attaches **majors-only restriction**, a **co-requisite (`ENC 3350`)** and an **exclusion**: *credit may
+not be received in both `ENG 3010` and `ENC 3320`.*
+
+⚠ **The exclusion is the one that bites a transfer student**, and it bites in the direction students do not
+anticipate: **arriving with `ENC 3320` already completed may mean this course cannot be taken for credit.**
+Recorded because **an exclusion pair is a different object from a prerequisite** — the queue has produced
+many prerequisites and few exclusions, and they need naming explicitly rather than folding into the
+prerequisite string.
+
+⚠ **The co-requisite has a scheduling consequence worth stating**: a conflict between the two courses blocks
+**both**, since neither can be taken alone.
+
+### `COP4534` — an eighth sequence-position divergence, and the "II" heuristic holds again
+
+| Institution | Title | Reading |
+|---|---|---|
+| **UWF** | **Data Structures and Algorithms II** | ⚠ **second half of a sequence** continuing `COP 3530` |
+| FIU | Algorithm Techniques (statewide title) | design paradigms as the subject |
+
+**Number and prerequisite agree at both**, so articulation is clean — **which is again what conceals it.**
+⚠ **Eighth instance**, and the Roman-numeral/"I"/"II" heuristic recorded in batch 180 flagged it on sight.
+The heuristic has now caught `MUL4400`, `SPN3400`, `CDA3101`, `CEN3031` and `COP4534`.
+
+⚠ **The practical consequence here is narrower than in earlier instances and the guide says so**: both
+institutions cover both halves of the material, so this is an emphasis question for a student choosing
+between them, not a coverage gap. **Recorded as a divergence anyway** — the sequence framing predicts which
+topics sit in which course, and a transfer student can meet an assumed topic or repeat a covered one.
+
+### ⚠ `COP4534` — the concurrent-prerequisite advice inverted
+
+UWF permits `COT 3100` (discrete mathematics) **concurrently**. The guide takes an unusually directive line:
+
+> ⚠⚠ **Take discrete mathematics BEFORE this course if you possibly can.** The course's proofs — induction,
+> invariants, counting, recurrence, graph theory — **are discrete mathematics.** **The concurrency option
+> exists for scheduling reasons, not pedagogical ones.**
+
+Recorded because it generalises: **an asterisked prerequisite tells you what the registrar permits, not what
+the course assumes.** Prior guides have stated the concurrency rule correctly and neutrally; **where the
+concurrent course supplies the machinery the host course uses in week three, neutral is not helpful.**
+`CGS3763` in this same batch has a concurrent prerequisite where the neutral statement IS correct — the
+difference is whether the concurrent course is a tool or a topic.
+
+### `CGS3763` — a genuinely single-source guide, and how it was handled
+
+Three institutions in the inventory (MDC, UCF, UWF); **only UWF's catalog was retrievable.** MDC is
+CurricUNET (SPA shell, no route) and UCF was not reachable for this prefix.
+
+⚠ **The handling, recorded as the pattern for the thin rows now filling the queue:** the guide **separates
+what is safe from what is not, in the Course Description, before any content.**
+
+- **The subject matter is safe** — operating systems is specified by the ACM/IEEE computing curricula and
+  the topic list is essentially invariant nationally.
+- ⚠ **The mechanics are not** — prerequisites, language, project weight and whether kernel work is included
+  vary, and the guide can only state UWF's.
+
+**That distinction is more useful than a generic "varies by institution" hedge**, because it tells the
+student *which parts* of the guide to check and which to trust. ⚠ **Use it wherever a well-standardised
+subject is sourced from one catalog.**
+
+### `CLP4110` — a fourth mental-health-sensitive guide, and an inventory discrepancy
+
+Eating disorders. Handled on the `CLP3144` template from batch 180: **warning early, full support-resource
+block (NEDA, 988, Crisis Text Line, campus counselling, Florida 211), and an explicit statement of what the
+course does NOT qualify a student to do.**
+
+⚠ **Content-specific additions the template did not cover:**
+
+- ⚠⚠ **The guide deliberately omits specific weights, calorie figures and behaviour detail**, and says so.
+  This is standard practice in the field's own safe-messaging guidance and is **not squeamishness** — such
+  detail functions as instruction for a reader with an active disorder.
+- **The DSM-5 range is named accurately** — pica, rumination, ARFID, anorexia nervosa, bulimia nervosa,
+  binge-eating disorder — ⚠ **including that ARFID and BED are the ones students have usually never heard
+  of**, and that **BED is the most prevalent eating disorder**, which contradicts the assumption most
+  students arrive with.
+- ⚠ **The stereotype correction is stated plainly**: eating disorders occur across every body weight, sex,
+  age and ethnic group, **and the assumption that they do not is a documented cause of missed diagnosis.**
+
+⚠ **Inventory discrepancy (the ninth):** the inventory lists FSU, UF and UWF. **FGCU also carries this
+course.** Consistent with `REVIEW_QUEUE.md` item 28 and the standing rule — *the inventory's institution
+list is a hypothesis, not evidence.*
+
+### Process note
+
+Assembler ran clean — no malformed tags, no markdown leakage. **`CLP4110`'s prerequisite string landed at
+exactly 500 of 500 characters**, the limit, and passed; ⚠ **worth noting that the assembler reports the
+length, which is the only reason a 501 would be caught before the server rejected it.** One markup fix
+during drafting: a bare `<a>CEDS</a>` anchor in `CLP4110.html` corrected to `<strong>`.
+
+⚠ **Heredoc failure recurred** on the `COP4534` write — a `bash` heredoc with a quoted delimiter failed with
+*"unexpected EOF while looking for matching `''"*. **Same documented pattern; switched to the Write tool
+and it succeeded.** Recorded again because it has now cost time twice: **for guide-sized HTML, do not use a
+heredoc.**

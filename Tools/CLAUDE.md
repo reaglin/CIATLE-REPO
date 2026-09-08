@@ -350,6 +350,19 @@ and is frequently more informative.** Three cases have now turned on it:
 
 | `TPA3230C` | **Costume Design** (statewide title) | **THREE different subjects, none of them agreeing**: UWF `TPA3230` = *Costume Construction* (patterning, cutting, draping); FSU `TPA3230` = *Costuming I* (costume sewing); FGCU `TPA3230` = *Costume Design*; FIU `TPA3230` = *Costume History* (fashion ancient→modern) | **⏸ HELD** | **NOT WRITTEN — pulled from batch 173** | — | ⚠⚠⚠ **The most severe case in this table: THREE subjects, not two**, and construction vs design is a real professional division (draper vs designer — different jobs, different careers). **Compounding problem: NO institution carries the `C` suffix** — all four carry bare `TPA3230`, so the queued ID may not exist anywhere. UWF puts design at `TPA4045`/`TPA4046` instead. See `REVIEW_QUEUE.md` item 25 and batch 173 in `SOURCES.md`. |
 
+| `EEX4474` | **Teaching Students with Moderate/Severe Disabilities** — curriculum and instruction for students with severe and multiple disabilities (UWF, statewide title) | ⚠ **Assessment of infants and young children** (FGCU) | **⏸ candidate** | published as single guide (UWF/statewide reading), with a divergence block | — | ⚠⚠ **First divergence found inside a course PAIR.** `EEX4254` (mild/moderate) and `EEX4474` (moderate/severe) are the standard two-course split of an ESE methods sequence and are taken together — so **a student can complete a coherent-looking pair and have covered something different at the other institution.** Both guides cross-reference each other. See batch 181 in `SOURCES.md`. |
+
+### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
+
+A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of
+numbers — an ESE methods sequence, a two-term language sequence, `I`/`II` course pairs — the split itself is a
+curricular decision, and two institutions can draw it in different places.** That produces **two**
+divergences, not one, and the second is invisible if only the first number is probed.
+
+**Drill:** on finding a divergence, identify the number's partner from the prerequisite chain or the title
+family, and probe it at the same institutions before writing either guide. `EEX4254`/`EEX4474` is the worked
+example.
+
 **⚠ Watch for more.** This is the extreme end of the drift theme, and two cases surfaced in a single
 prefix — so there are almost certainly others already published as single guides. **When a batch turns one
 up, add it here.**
