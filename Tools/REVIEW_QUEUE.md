@@ -1177,6 +1177,88 @@ answered, not that the suffix is spurious.
 across four prefixes, and it will not shrink without a new source** — **worth noting collectively, because
 individually each looks like an anomaly and together they are a coverage gap.**
 
+## 49. ⚠⚠⚠ SCNS is now scriptable — this **retires several open items and enables a retro-sweep** (EEE sweep, 2026-09-09)
+
+**`flscns.fldoe.org` is fully queryable** via `Tools/scratchpad/scns.py`: an ~80 MB flat file of every
+course at every Florida institution, and a per-prefix statewide description CSV. Details in
+`SOURCES.md` Tier 3.
+
+**Why this needs Ron's attention rather than just a note:** it changes what several standing items are
+waiting on.
+
+| Open item | What SCNS now supplies |
+|---|---|
+| **Item 30** — 10 rows blocked by missing taxonomy nodes (`CES`, `CWR`, `CEG`, `ENV`) | Unaffected — still a server-side change. |
+| **Items 28 / 33 / 43** — the **C-suffix class** (does the queued `C` id exist anywhere?) | ⚠⚠ **Answered mechanically now.** The flat file lists the exact suffixed id per institution. **The whole class can be resolved in one pass instead of case by case.** |
+| **Item 29 / 37** — **Gordon Rule retro-sweep** | ⚠⚠ `gordon_rule` and `gordon_writing` are **data fields** in the flat file, plus the five gen-ed category flags. **No more inferring designation from UWF label text.** |
+| **Items 36 / 44 / 48** — the **seven sourcing-failure rows** across four prefixes | ⚠ **Partly answered.** `scns.py institution <PREFIX> <id>` returns an institution's own catalog text — a route into schools that are bot-blocked or have no static pattern. Worth re-trying all seven. |
+| **`-SCNS` split halves marked "⏸ needs catalog"** (`NUR4286`, `NUR4826`, `LAE3314`) | ⚠⚠ **Unblocked.** `Tools/CLAUDE.md` records that a `-SCNS` guide needs the state's definition and that Ron would need to supply it. **The statewide CSV is that definition** — description, prerequisites, corequisites, transferability. |
+
+**Decision needed from Ron:** which of these to run, and in what order. My recommendation, cheapest and
+highest-value first:
+
+1. **Resolve the C-suffix class (items 28/33/43)** — one pass over the flat file settles nine rows.
+2. **Write the three blocked `-SCNS` halves** (`NUR4286`, `NUR4826`, `LAE3314`) now that the source exists.
+3. **Gordon Rule retro-sweep** — mechanical, and it corrects roughly a dozen already-published guides.
+4. **Re-try the seven sourcing-failure rows** through the institution report.
+
+---
+
+## 50. ⚠⚠⚠ `courses_2plus_institutions.csv` overstates institution counts systematically — **retro-sweep candidate** (EEE sweep, 2026-09-09)
+
+The inventory's institution list has been described as *"a HYPOTHESIS, not evidence — five confirmed
+errors in four batches."* **The EEE sweep makes it much worse than that, and identifies the mechanism.**
+
+**10 of 29 queued EEE courses were single-institution in SCNS** while the inventory claimed 2–4
+(`EEE3396C` 4→1, `EEE4314C` 3→1, `EEE4351C` 3→1, `EEE4376C` 3→1, `EEE4260C` 2→1, `EEE4306C` 2→1,
+`EEE4309C` 2→1, `EEE4330` 2→1, `EEE4377` 2→1, `EEE4450` 2→1). That is **a third of the prefix.**
+
+**The mechanism is now certain:** the inventory counts institutions carrying the **bare or
+differently-suffixed** number against the **suffixed** id. It records the SCNS *catalog*, not current
+*offerings*.
+
+⚠⚠ **Why this matters beyond accuracy.** Institution count drives two things in this project:
+**queue priority** (`priority = 1000 - num_inst`) and **the hedging level a guide is written at**
+(8+ institutions = confident; 2–3 = explicit hedging; 1 = treat as a custom guide). **Both have been
+wrong wherever the count was inflated** — courses have been prioritised above their real reach, and
+some single-institution courses have been written with more confidence than the evidence supports.
+
+**Decision needed from Ron:**
+
+- **(a) Correct the inventory in place** — regenerate `num_inst` for all rows from the flat file. Mechanical,
+  one pass, and fixes priority ordering going forward. ⚠ Will reshuffle the queue order noticeably.
+- **(b) Leave the inventory and check per-course at drafting time** — no disruption, but the priority
+  ordering stays wrong and it depends on the drafter remembering.
+- **(c) Correct the inventory AND audit published guides** that asserted an institution count. Largest
+  effort; the only option that fixes already-live text.
+
+**My recommendation: (a) now, (c) opportunistically** — regenerate the counts so priority and hedging are
+right going forward, and correct published assertions when a guide is next touched for another reason.
+A standalone audit of ~2,196 pushed guides is not proportionate, but a wrong count in a *published* guide
+is a factual error, so it should be fixed whenever one is revisited.
+
+---
+
+## 51. ⚠⚠ `EEE4306C` and `EEE4309C` — statewide records that contradict what is taught (EEE sweep) — *informational, published with warnings*
+
+Two cases where the SCNS statewide record and the teaching institutions disagree, handled under the
+batch-183 rule (**two agreeing catalogs outrank a statewide title**) and recorded here because they are
+evidence that the statewide *titles* are less reliable than the statewide *descriptions*.
+
+- **`EEE4306C`** — statewide title *Semiconductor Devices I*, description device physics. **UF and UWF
+  both teach *Electronic Circuits 2***. Wrote to the institutions; recorded the divergence in the guide
+  so an evaluator reading the statewide title is not misled.
+- **`EEE4309C`** — UCF's *Electronics II* is **digital/mixed-signal**; the statewide description for that
+  number is **analogue**. ⚠ **A UCF graduate with "Electronics II" on the transcript has not covered
+  feedback amplifier theory in a second-course treatment.** Published with a two-column syllabus test.
+
+**No decision needed** unless Ron wants the `-SCNS`/`-<INST>` split applied to either. **My reading is
+that neither warrants a split**: for `EEE4306C` no institution teaches the statewide reading, so a
+`-SCNS` page would describe a course nobody offers; for `EEE4309C` the divergence is of emphasis within
+second-course electronics rather than of subject. Both are flagged in-guide instead.
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

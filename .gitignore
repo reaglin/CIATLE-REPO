@@ -384,3 +384,15 @@ Tools/preview.html
 PreseMakerRepo.Api/Data/Seed/taxonomy.json.bak*
 Tools/queue.csv.bak*
 Tools/downloaded/
+
+# Guide-pipeline scratchpad: keep the source-fetching tooling, drop the working data.
+# The SCNS flat file is ~80 MB and the html/ + meta.json pair is guide content,
+# which is excluded from git for the same reason Tools/drafts/ is.
+Tools/scratchpad/__pycache__/
+Tools/scratchpad/html/
+Tools/scratchpad/meta.json
+Tools/scratchpad/*.csv
+Tools/scratchpad/*.html
+Tools/scratchpad/*.bin
+Tools/scratchpad/crslist.txt
+Tools/scratchpad/*_courses.json

@@ -427,8 +427,64 @@ deferred pending a decision on how to treat the suffix mismatch, not for lack of
 
 ## Tier 3 — Statewide references
 
-- **SCNS** (`flscns.fldoe.org`) — the authority on course numbering and equivalency. Hard to
-  query programmatically; useful for confirming a number exists and at what level.
+### ⚠⚠⚠ SCNS is SOLVED (2026-09-09, EEE prefix sweep) — it is now the FIRST source to check
+
+**`flscns.fldoe.org` — the authority on course numbering and equivalency.** This entry previously
+read *"hard to query programmatically."* **That is no longer true.** Both the whole-database
+download and the statewide description report are scriptable, and the client lives at
+**`Tools/scratchpad/scns.py`**.
+
+```bash
+python scratchpad/scns.py flatfile crslist.txt   # ~80 MB: EVERY course at EVERY Florida institution
+python scratchpad/scns.py statewide EEE out.csv  # statewide descriptions + prereqs for a prefix
+```
+
+**⚠ Three things that will silently defeat you, all handled inside `scns.py`:**
+
+1. **Routes are EXTENSIONLESS.** The site's own HTML prints `PbCourseDescriptions.aspx`, but every
+   `.aspx` URL 301s to `/Default`. Use `/PbCourseDescriptions`.
+2. **You must ACCEPT THE TERMS MODAL first** (POST `ctl00$btnModalYes=Accept`) in the same cookie
+   session. Without it every report returns **0 records with no error** — which looks exactly like
+   a bot block and is not one.
+3. **The report is an SSRS ReportViewer that loads ASYNC.** The first GET carries no data; re-GET
+   the report route to pick up `ReportSession` + `ControlID`, then pull CSV from
+   `Reserved.ReportViewerWebControl.axd`.
+
+#### What the flat file answers that nothing else could
+
+`crslist.txt` is fixed-width, 411 chars/record (layout in `scns.py:FIELDS`). Per course it carries:
+
+| Field | Why it matters to this project |
+|---|---|
+| **`inst_title`** vs **`state_title`** | ⚠⚠ **Both titles in one record — the divergence test, mechanised.** This is what the project has been probing catalogs one at a time to discover. |
+| institution + `status` (A/D) | ⚠⚠ **The authoritative institution list for an EXACT course id** — suffix included |
+| `credit`, `clock_hours` | per-institution credit value; catches credit divergence |
+| `gordon_rule`, `gordon_writing` | Gordon Rule designation **as a data field** — no more inferring it from UWF label text |
+| `ge_com/hum/math/nat_sci/soc_sci` | general-education category flags |
+| `transferable` | the SCNS transfer guarantee code |
+
+**⚠⚠ This retires the standing warning about `courses_2plus_institutions.csv`.** That file records
+the SCNS *catalog*, not current *offerings*, and the EEE sweep confirmed the failure mode at scale:
+**10 of 29 queued EEE courses were single-institution in SCNS** while the inventory claimed 2–4,
+because the inventory counts institutions carrying the **bare or differently-suffixed** number
+against the suffixed id. Examples: `EEE3396C` (inventory 4 → actually **FLPOLY only**), `EEE4314C`
+(3 → **USF only**), `EEE4351C` (3 → **USF only**), `EEE4376C` (3 → **FSU only**).
+**Verify institution counts against the flat file before asserting one in a guide.**
+
+#### The statewide CSV closes the `-SCNS` sourcing gap
+
+`Tools/CLAUDE.md` records as an open problem that *"a `-SCNS` guide needs the state catalog's
+definition of the course, not just its title"* and that Ron would need to supply the catalog.
+**The statewide report supplies exactly that**, per prefix, as CSV: `DS_Title`, `Course`
+(full description), `DS_Prerequisites1`, `DS_Corequisites1`, `DS_Transferable1`,
+`DS_Course_Intent1` (LOWER/UPPER/GRADUATE), `IN_Dual_Enrollment1`.
+
+⚠ **Match statewide rows to a course id on the LAST THREE DIGITS only** (`ID_Century`), not on the
+suffix — the statewide record is per *number*, so `EEE3300` and `EEE3300L` share one row, and
+`IN_Lab` is `N` on every row.
+
+⚠ **Institution-level descriptions** are available too (`scns.py institution EEE <id>`, ids from
+`institution_map()`) — a route into catalogs that are bot-blocked or have no static pattern.
 - **Online Sunshine** (`leg.state.fl.us`) — Florida Statutes, free and authoritative. Used
   constantly for the regulatory content that makes guides Florida-specific.
 - **Florida Administrative Code** — rules (65C-22 child care, Chapter 33 corrections,
@@ -18015,3 +18071,133 @@ names.**
 
 **No prerequisite overflows this batch** (longest 477 of 500) — **the first clean batch on that measure in
 four.** No malformed tags, no markdown leakage, no push failures.
+
+---
+
+### EEE prefix sweep (31 guides, 2026-09-09) — **the whole prefix closes**, and SCNS is solved
+
+Ron's direction: *"produce guides for the courses with EEE prefixes that have not been completed…
+we specifically need EEE3342C."* All 29 outstanding undergraduate EEE courses written and pushed,
+plus a two-page split, plus a disambiguation stub — **31 pages, 0 blocking validator failures.**
+Graduate 5xxx/6xxx excluded per the standing procedure. `EEE3308C` was the only one already live.
+
+#### ⚠⚠⚠ The headline: SCNS became scriptable, and it changes the sourcing order
+
+Detailed in the Tier 3 section above and in the reachability register. **Check SCNS before any
+institution catalog from now on.** The flat file answers *"who actually offers this exact id, and
+what does each of them call it"* in one local query — which is the question the project has been
+answering by probing catalogs one at a time since it started.
+
+#### ⚠⚠ The inventory is wrong about institution counts far more often than assumed
+
+**10 of 29 queued EEE courses were single-institution in SCNS** while
+`courses_2plus_institutions.csv` claimed 2–4:
+
+| Course | Inventory says | SCNS active reality |
+|---|---|---|
+| `EEE3396C` | 4 (FIU;FLPOLY;UF;UWF) | **FLPOLY only** — UF/UWF/FIU carry bare `EEE3396` |
+| `EEE4314C` | 3 (FIU;UCF;USF) | **USF only** — UCF/FIU carry bare `EEE4314` |
+| `EEE4351C` | 3 (FAMU;FSU;USF) | **USF only** — FAMU/FSU carry bare `EEE4351` |
+| `EEE4376C` | 3 (FAMU;FLPOLY;FSU) | **FSU only** — FAMU/FLPOLY carry bare `EEE4376` |
+| `EEE4260C` | 2 (UF;USF) | **USF only** — UF carries bare `EEE4260` |
+| `EEE4306C` | 2 (UF;UWF) | **UF only** — UWF carries `EEE4306` + `EEE4306L` |
+| `EEE4309C` | 2 (UCF;UNF) | **UCF only** — UNF carries `EEE4309` + `EEE4309L` |
+| `EEE4330`, `EEE4377`, `EEE4450` | 2 each | **FAMU only** in each case |
+
+**The mechanism is now certain: the inventory counts institutions carrying the BARE or
+DIFFERENTLY-SUFFIXED number against the suffixed id.** It records the SCNS *catalog*, not current
+*offerings*. ⚠ **Never assert an institution count in a guide without checking the flat file.**
+
+#### ⚠⚠⚠ `EEE4775` — the cleanest one-number-two-subjects case found
+
+Statewide + FIU: **Massive Storage and I/O for Big Data Computing.** UCF: **Real-Time Systems.**
+No shared content, textbook or skill set. Three pages published. Two firsts:
+
+- **The first divergence surfaced MECHANICALLY** — `inst_title` ≠ `state_title` in the flat file,
+  not by reading two catalogs and noticing. That comparison is now a one-line filter over any prefix.
+- **UCF holds the minority reading** against both the state record and FIU, so the mismatch resolves
+  *against* a UCF student transferring out unless they document it. Said explicitly in the guide.
+
+#### ⚠⚠ PREFIX divergence: UCF is the sole outlier for introductory digital logic
+
+`EEE3342C` (Ron's specific request) is UCF-only — and the reason is a prefix decision, verified by
+filtering the flat file for level-3/4 courses whose titles name digital logic:
+
+| Number | Institutions |
+|---|---|
+| **`EEL3705`** (+`L`) | FAMU, FSU, USF |
+| **`EEL3701`(C)** (+`L`) | UF, UNF, UWF |
+| **`EEL3712`** (+`L`) | FIU |
+| **`EEL3702`** (+`L`) | FLPOLY |
+| **`CDA3201C`/`CDA3203`**, **`CDA3200`** | FAU, FGCU |
+| **`EEE3342C`** | **UCF — alone in the state** |
+
+Every other Florida SUS institution files digital logic under `EEL` or `CDA`. ⚠ **A UCF transcript
+line for `EEE3342C` matches no other institution's prerequisite string**, in either direction. This
+is the batch-179 PREFIX-divergence category, and it is the most consequential thing in that guide.
+
+#### ⚠⚠ Two courses whose statewide record contradicts what is taught
+
+- **`EEE4306C`** — statewide title *Semiconductor Devices I* (device physics); **UF and UWF both
+  teach *Electronic Circuits 2*** (feedback, op-amps, digital electronics). Two agreeing catalogs
+  against one stale statewide label → **wrote to the institutions** per the batch-183 rule, and
+  recorded the divergence so an evaluator reading the statewide title is not misled.
+- **`EEE4309C`** — UCF titles it *Electronics II* but teaches **digital/mixed-signal** (logic
+  families, flip-flops, memory cells, A/D–D/A); the statewide description is **analogue** (frequency
+  response, power amplifiers, oscillators, power supplies). ⚠ **A UCF graduate with "Electronics II"
+  on the transcript has not covered feedback amplifier theory in a second-course treatment**, and a
+  reader will assume otherwise. Given a two-column syllabus test in the guide.
+
+#### ⚠ Credit divergence, invisible from the identifier (the batch-185 category, again)
+
+**`EEE4304C`: FIU 4 credits (*Electronics II and Lab*), Florida Poly 3 (*Analog Electronics*).**
+Wrote the integrated 4-credit form per the batch-189 rule and stated Florida Poly's value alongside.
+⚠ Florida Poly also carries **`EEE3304C` under the SAME title** at a lower level — flagged.
+
+#### ⚠ A title collision worth remembering: four numbers say "Electronics II"
+
+`EEE4301` (FAMU/FSU/USF), `EEE4304C` (FIU/FLPOLY), `EEE4306C` (UF), `EEE4309C` (UCF) — and the
+statewide titles behind them **disagree with each other**: 4301 is statewide *Electronic Circuits and
+Systems Design*, 4304 is statewide *Electronics II*, 4306 is statewide *Semiconductor Devices I*.
+**Read the description and the prerequisite chain, never the title.**
+
+#### ⚠ Verification is two different subjects under one number too — but not a split
+
+**`EEE4701`**: UF teaches **formal methods** (model checking, temporal logic); UCF teaches
+**simulation-based verification** (constrained-random, UVM). Both are genuinely "verification" and
+both match the statewide description's wording, so this is **emphasis divergence, not a subject
+split** — one guide covering both, labelled, with a syllabus test. ⚠ **But the skills barely
+overlap**, and the guide says so plainly: a graduate of one is not qualified in the other.
+
+#### Content worth carrying
+
+- **The AI section is strongest where the tool's characteristic failure IS the course's target
+  error** (the batch-184 pattern). Unusually rich in this prefix: `EEE3300` — a model applies a
+  small-signal formula without checking the operating point, which is exactly the bias-then-linearise
+  discipline the course teaches. `EEE4301`/`EEE4306C`/`EEE4304C` — reports closed-loop gain and omits
+  the stability check. `EEE4351C`/`EEE3396C`/`EEE4314C` — quotes a device parameter with no
+  temperature, doping or bias, when the whole course is that these are functions not constants.
+  `EEE4773` — produces a pipeline whose high accuracy comes from data leakage. `EEE4701` — generates
+  a testbench from the same reading of the spec that produced the design, which is **a tautology
+  dressed as evidence** and the deepest failure available in that field.
+- **`EEE4330` and `EEE4421C` carry a physical-safety warning, not an academic one:** never take an
+  HF or piranha procedure from a generated answer. HF exposure is *painless at first*. This is the
+  first time the AI section has had to say that ignoring it causes injury rather than a poor grade.
+- **Cleanroom access needs separate gowning certification** — stated in the prerequisite field for
+  `EEE4421C`, same pattern as the Level 2 screening warning for practicum courses (batch 184).
+- **Florida market honesty.** Radar (`EEE4550`) and real-time systems (`EEE4775-UCF`) are genuinely
+  strong Florida markets — L3Harris Melbourne/Palm Bay, NOAA hurricane-hunter radar at Lakeland,
+  Space Coast avionics. **IC design, MEMS and neuromorphic work are not**, and those guides say so
+  and tell the student to plan a national search rather than implying local opportunity.
+
+#### Mechanics
+
+- **`EEE3342C` was not in the queue OR the inventory** — added via the documented orphan-draft +
+  `reconcile` path, which picked it up along with both `EEE4775` variant ids automatically.
+- **New helper `Tools/scratchpad/mkguide.py`** — authors guide bodies as plain HTML in
+  `scratchpad/html/{ID}.html` plus a `meta.json` row, then assembles the draft JSON. ⚠ Removes the
+  quote-escaping class of error entirely from 25 KB documents, and re-checks the four server limits
+  before writing. Recommended for any multi-guide batch.
+- **Longest prerequisite string 432 of 500** — no overflow, second clean batch on that measure.
+- The `EEE4775` disambiguation stub trips the expected "no Learning Outcomes / Major Topics"
+  warnings. Non-blocking and correct for that page type, as documented.
