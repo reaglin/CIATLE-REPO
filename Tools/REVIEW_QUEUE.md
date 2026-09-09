@@ -1259,6 +1259,114 @@ second-course electronics rather than of subject. Both are flagged in-guide inst
 
 ---
 
+## 52. ✅ Item 30 RESOLVED — the seven missing taxonomy prefixes are added (2026-09-09) — *needs a deploy*
+
+`PreseMakerRepo.Api/Data/Seed/taxonomy.json` now carries all seven prefixes that had active
+undergraduate courses but no node, so pushes to them will no longer return **HTTP 422**:
+
+| Prefix | Name | Placed under |
+|---|---|---|
+| `CEG` | Civil Geotechnical Engineering | `CIVIL_ENVIRONMENTAL_` |
+| `CES` | Civil Engineering Structures | `CIVIL_ENVIRONMENTAL_` |
+| `CWR` | Civil Water Resources | `CIVIL_ENVIRONMENTAL_` |
+| `EES` | Environmental Engineering Science | `CIVIL_ENVIRONMENTAL_` |
+| `ENV` | Engineering: Environmental | `CIVIL_ENVIRONMENTAL_` |
+| `ETE` | Education: Technology Education | `EDUCATION__CAREER_TE` |
+| `EVT` | Education: Vocational/Technical | `EDUCATION__CAREER_TE` |
+
+Placement was taken from the **SCNS discipline code**, not guessed: all five civil prefixes are
+discipline **028**, the same as the `CCE`/`CGN`/`TTE` already under that node; `ETE` and `EVT` are
+discipline **025**, the same as `ECT`/`ECW`. Names are SCNS's own prefix names. The diff is **28
+insertions, 0 deletions** — purely additive, no reformatting.
+
+⚠ **A full statewide audit was run, so this is now known to be complete**: these were the *only*
+seven prefixes in the entire SCNS catalog with active undergraduate courses and no taxonomy node.
+
+**⚠ ACTION FOR RON: this takes effect on the next deploy.** `TaxonomySeed.UpsertNodeAsync` is a
+true per-node upsert with no "table already populated" early return, so the new nodes insert against
+the existing production database — no reset, no migration. **Until it is deployed, the 196
+outstanding civil/environmental engineering courses remain unpushable**, and that is now the single
+largest blocker to the engineering-first direction.
+
+---
+
+## 53. ✅ Item 50 RESOLVED — inventory counts regenerated from SCNS; **the C-suffix mechanism is proven** (2026-09-09)
+
+`courses_2plus_institutions.csv` has been regenerated against the SCNS flat file. **3,442 of 16,650
+rows had a wrong `num_inst` or institution list — 20% of the inventory.**
+
+| Result | Rows |
+|---|---|
+| Already correct | 13,151 |
+| **Overstated** | **3,255** |
+| Understated | 164 |
+| No active SCNS record (left untouched) | 80 |
+
+⚠⚠⚠ **949 rows overstated by three or more institutions**, and the mechanism is now proven rather
+than inferred:
+
+| Course | Inventory claimed | SCNS actual | The bare number |
+|---|---|---|---|
+| **`ACG2071C`** | **44** | **1** (Valencia) | `ACG2071` = **45** |
+| `ACG2021C` | 39 | 3 | `ACG2021` = 39 |
+| `CES4605C` | 9 | 1 | — |
+| `TPA3230C` | 5 | 1 | — |
+
+**The inventory assigned the BARE number's institution count to the C-suffixed id.** `ACG2071C` is
+the clean proof: 45 institutions carry `ACG2071`, exactly one carries `ACG2071C`, and the inventory
+recorded 44 against the suffixed row.
+
+⚠⚠ **This is the same defect behind the C-suffix class (items 28, 33, 43).** Those items ask whether
+a queued `C` id is carried by anybody; **the flat file answers it directly for every one of them, and
+the answer is now in the inventory.** Item 33 called the class "systematic, not anomalous" — it is,
+and this is why.
+
+**Consequences already applied:**
+
+- **Queue priorities re-derived** for `queued` rows (`priority = 1000 - num_inst`). 63 rows moved;
+  manual sub-929 tiers (faculty requests) were preserved, and `pushed`/`skipped` history was not
+  rewritten. ⚠ **The head of the queue changed materially** — `CES4605C` was the top item at a
+  claimed 9 institutions and has **one**; `CWR3201C` and `CWR4202C` went 9 → 2.
+- ⚠ **Hedging level in already-published guides is the part NOT fixed.** The hedging rules key off
+  institution count (8+ confident, 2–3 explicit hedging, 1 custom guide), so guides written against
+  an inflated count may be more confident than the evidence supports. `EEE3308C`, published before
+  this session, is a concrete instance: **1 institution (UF), not the 4 the inventory claimed.**
+  Per the item-50 decision this is fixed opportunistically when a guide is next touched, not by a
+  standalone audit of 2,196 pages.
+
+---
+
+## 54. ⚠ Thirteen published guides are for courses SCNS marks DISCONTINUED (2026-09-09) — *needs Ron's view*
+
+Cross-checking the inventory against the flat file surfaced **80 inventory rows with no active SCNS
+record — all discontinued, none fabricated**. Of those, **13 already have published guides**:
+
+`APK4119C`, `COS0009C`, `DAA1500C`, `EGN1006C`, `MUT1122C`, `MUT2126C`, `MUT2127C`, `OTA0030C`,
+`OTA0040C`, `OTA0041C`, `OTA0043C`, `OTA0631C`, and one further row.
+
+⚠ **This is not necessarily an error.** The project deliberately uses DSC's archived catalogs for
+discontinued courses (Tier 0, 2026-09-02), and `Tools/CLAUDE.md` notes that older transcripts still
+carry content under superseded numbers — so a guide for a discontinued course can genuinely serve a
+student holding that credit.
+
+**The question for Ron is whether these pages should say so.** A student reading a guide for
+`OTA0041C` has no way to know the course is no longer offered anywhere in Florida.
+
+**Options:**
+
+- **(a) Add a discontinued banner** to those 13 pages — a short block stating that SCNS records the
+  course as discontinued, that it may still appear on older transcripts, and pointing at the current
+  equivalent where one exists. **My recommendation**; it is 13 pages and it converts a silent
+  inaccuracy into useful information.
+- **(b) Leave them** — the content is still correct about what the course *was*.
+- **(c) Unpublish** — my view is that this is wrong: the guides serve exactly the students least well
+  served elsewhere.
+
+⚠ **Going forward, the flat file makes this checkable before drafting** — `status != 'A'` is one
+field. Worth adding to the pre-draft checks alongside the taxonomy-prefix check.
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

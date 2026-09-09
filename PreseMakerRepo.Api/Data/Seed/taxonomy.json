@@ -612,6 +612,14 @@
         {
           "key": "ECW",
           "name": "Education: Career/Workforce"
+        },
+        {
+          "key": "ETE",
+          "name": "Education: Technology Education"
+        },
+        {
+          "key": "EVT",
+          "name": "Education: Vocational/Technical"
         }
       ]
     },
@@ -624,8 +632,28 @@
           "name": "Civil Construction Engineering"
         },
         {
+          "key": "CEG",
+          "name": "Civil Geotechnical Engineering"
+        },
+        {
+          "key": "CES",
+          "name": "Civil Engineering Structures"
+        },
+        {
           "key": "CGN",
           "name": "Civil Engineering"
+        },
+        {
+          "key": "CWR",
+          "name": "Civil Water Resources"
+        },
+        {
+          "key": "EES",
+          "name": "Environmental Engineering Science"
+        },
+        {
+          "key": "ENV",
+          "name": "Engineering: Environmental"
         },
         {
           "key": "TTE",

@@ -383,6 +383,7 @@ Tools/preview.html
 
 PreseMakerRepo.Api/Data/Seed/taxonomy.json.bak*
 Tools/queue.csv.bak*
+Tools/courses_2plus_institutions.csv.bak*
 Tools/downloaded/
 
 # Guide-pipeline scratchpad: keep the source-fetching tooling, drop the working data.
