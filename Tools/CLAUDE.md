@@ -698,18 +698,60 @@ ids rather than by re-queueing the bare number.
 **⚠ Rebuild a per-school queue after every push.** It is derived, not maintained — a stale one will
 re-offer finished work.
 
-### ⚠ Focus decision (Ron, 2026-09-04): priority courses across schools, NOT full catalogs
+### ⚠⚠⚠ Focus decision (Ron, 2026-09-09): COMPLETE THE PREFIX, and ENGINEERING FIRST
 
-**Work the master `queue.csv` — the ≥2-institution priority subset — not a school's complete offering.**
+**This supersedes the 2026-09-04 focus decision below.** Ron's direction, verbatim:
 
-The per-school queues from `school_queue.py` exist for **block recovery and sequencing**, not as a target
-to exhaust. `queue_UWF.csv` holds 1,575 workable courses; **the 805 priority rows in the master are the
-work.** Do not expand a batch into non-priority courses just because a prefix extraction is already in
-hand — the exception is writing an orphan half needed to dispose of a queued `C` row under the
-split-family rule.
+> *"As we progress, try to do all courses in a prefix as we come across the prefixes. Engineering and
+> Engineering Technology prefixes have priority, even if there are classes that are only taught at a
+> single school."*
 
-**Why:** breadth across institutions serves more students per guide than depth at one. A course at 12
-institutions is worth more than three courses at two.
+Three changes to how batches are chosen:
+
+1. **Finish the prefix.** When work touches a prefix, complete it rather than taking only the queued
+   rows from it. A half-done prefix is the thing to avoid.
+2. **Engineering and Engineering Technology prefixes come first**, ahead of strict institution-count
+   ordering. The SCNS disciplines that qualify: **171** engineering general/support, **028**
+   civil/environmental, **029** electrical, **172** mechanical, **173** industrial, **174**
+   chemical/nuclear, **175** computer math/materials, **413** biomedical, **058** ocean, and **032**
+   engineering technologies.
+3. **⚠⚠ Single-institution courses are IN SCOPE.** This is the largest change. It reverses the
+   ≥2-institution filter that has shaped the queue since the project began.
+
+#### ⚠⚠ What this means mechanically: `courses_2plus_institutions.csv` no longer defines the work
+
+The master inventory holds **only courses at two or more institutions** — so single-school courses are
+not merely deprioritised, they are **structurally invisible** to `queue_mgr.py add`, which refuses any
+course not in the master.
+
+**Use the SCNS flat file as the inventory instead** (`scratchpad/scns.py`, see `SOURCES.md` Tier 3).
+It lists every course at every Florida institution, so it is the only source that can enumerate a
+complete prefix. Filter to **active** status, **levels 1-4**, and drop `x9xx` shells.
+
+⚠ **Single-institution courses still get the single-institution TREATMENT.** Scope changed; the
+quality bar did not. A course at one school is written as a custom guide for that school, with
+explicit hedging, per the hedging-by-institution-count rules above. Do not let wider scope become
+thinner sourcing.
+
+#### ⚠ Prefix completeness is now the progress measure
+
+"Done" for a prefix means every active, non-shell, undergraduate course in it has a guide — not
+every queued row. **`EEE` illustrates the difference: 29 queued rows were completed on 2026-09-09,
+which finished the prefix under the old rule and left 78 of its 108 courses unwritten under this one.**
+
+**Report prefix coverage as `pushed / total` from the flat file**, not as queue rows cleared.
+
+### ⚠ Superseded — Focus decision (Ron, 2026-09-04): priority courses across schools, NOT full catalogs
+
+**Superseded 2026-09-09 by the decision above.** Retained for the reasoning, which still applies as a
+tie-breaker *within* a prefix: where a prefix is large, work its higher-institution-count courses first,
+because breadth across institutions serves more students per guide.
+
+The per-school queues from `school_queue.py` exist for **block recovery and sequencing**, not as a
+target to exhaust. The original text read: *"Work the master `queue.csv` — the ≥2-institution priority
+subset — not a school's complete offering &hellip; Do not expand a batch into non-priority courses just
+because a prefix extraction is already in hand."* **That restriction no longer holds** — completing the
+prefix is now the goal, and a prefix extraction already in hand is exactly what should be expanded.
 
 ### ⚠⚠ Source reachability register (re-probed 2026-09-06, batch 164)
 

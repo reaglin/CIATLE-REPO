@@ -483,8 +483,48 @@ definition of the course, not just its title"* and that Ron would need to supply
 suffix — the statewide record is per *number*, so `EEE3300` and `EEE3300L` share one row, and
 `IN_Lab` is `N` on every row.
 
-⚠ **Institution-level descriptions** are available too (`scns.py institution EEE <id>`, ids from
-`institution_map()`) — a route into catalogs that are bot-blocked or have no static pattern.
+#### ⚠⚠⚠ The INSTITUTION report reaches schools that block HTTP — and carries learning outcomes
+
+```bash
+python scratchpad/scns.py institution EEE 22 usf_eee.csv   # 22 = USF; ids from institution_map()
+```
+
+**This is the more significant half of the SCNS solve.** The statewide report gives the state's
+definition; the institution report gives **a named school's own catalog record**, and it is served by
+FLDOE rather than by the school &mdash; so **it works for institutions whose own catalogs are bot-blocked
+or have no static pattern.** Verified 2026-09-09 against **USF** (acalog `content.php` returns empty
+202s) and **Florida Polytechnic** (same block). Both answered in full.
+
+Columns: `Inst_Abbr`, `CourseNumber`, `DS_Title`, `DS_Course_Credit`, `DS_Catalog` (the catalog
+description), **`DS_Learning_Outcome`**, **`DS_Textbooks1`**.
+
+⚠⚠ **Learning outcomes and adopted textbooks are richer than anything the project has had from a
+catalog.** Course outcomes normally have to be inferred from a description; here a school states them.
+
+⚠ **Coverage of those two columns is uneven and must be checked per school, not assumed:**
+
+| School | Rows | With learning outcomes | With textbooks |
+|---|---|---|---|
+| USF | 64 | **54** | 38 |
+| Florida Poly | 22 | 4 | 3 |
+
+So it **supplements** institution catalogs rather than replacing them &mdash; `DS_Catalog` and
+`DS_Course_Credit` are reliably present, the other two are a bonus that some schools populate well.
+
+⚠ **Two parsing quirks, handled by `scns.read_report_csv()`:** the export is UTF-8 **with a BOM**, and
+numeric cells arrive prefixed with a **non-breaking space** (credit reads `'\xa03'`, not `'3'`), which
+breaks `int()` and any naive comparison. Everything is upper-case in the source &mdash; that is the data,
+not a defect.
+
+⚠ **The `Type` parameter is `CourseDescriptions`, not `InstitutionCourse`** (a plausible guess that
+silently yields no report), and unlike the statewide report the institution report **only arms after
+Run Report is POSTed with the dropdowns set**. Both handled inside `report_csv()`.
+
+**What this changes for the reachability register:** the blocked-school list still governs *live
+catalog* access &mdash; current section numbers, meeting patterns, term offerings &mdash; but for the
+content a guide actually needs (title, credits, description, prerequisites, often outcomes), **a block
+is no longer a reason to defer a course.** Re-try the standing sourcing-failure rows through this route
+before recording another one.
 - **Online Sunshine** (`leg.state.fl.us`) — Florida Statutes, free and authoritative. Used
   constantly for the regulatory content that makes guides Florida-specific.
 - **Florida Administrative Code** — rules (65C-22 child care, Chapter 33 corrections,

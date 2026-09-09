@@ -92,11 +92,24 @@ def flatfile(out):
 def report_csv(prefix, kind='StatewideCourse', institution='', out=None):
     """Pull a course-description report as CSV.
 
-    kind='StatewideCourse'   -> the state's definition: description, prereqs, transferability
-    kind='InstitutionCourse' -> that school's own catalog text (needs institution=<numeric id>)
+    kind='StatewideCourse'    -> the state's definition: description, prereqs, transferability
+    kind='CourseDescriptions' -> that school's own catalog text (needs institution=<numeric id>)
+
+    NOTE the Type values are exactly these two strings, taken from the window.open() call the
+    site emits on Run Report. 'InstitutionCourse' is NOT a valid Type and yields no report.
     """
     page = 'PbStateCourseDetailReport' if kind == 'StatewideCourse' else 'PbCourseDescriptions'
     o = session(page)
+    if kind != 'StatewideCourse':
+        # The institution report only arms after Run Report is posted with the dropdowns set;
+        # the statewide report arms from the GET alone.
+        f = _hidden(_get(o, page))
+        f.update({'__EVENTTARGET': 'ctl00$ContentPlaceHolder1$btnRunReport',
+                  '__EVENTARGUMENT': '',
+                  'ctl00$ContentPlaceHolder1$ddlInstitution': str(institution),
+                  'ctl00$ContentPlaceHolder1$ddlDiscipline': '',
+                  'ctl00$ContentPlaceHolder1$ddlPrefixes': prefix})
+        _post(o, page, f)
     url = ('Reports/CourseDescriptionReport?instituion=%s&dis=&prefix=%s'
            '&discontinued=0&Type=%s' % (institution, prefix, kind))
     html = _get(o, url)          # this GET arms the viewer and mints the session
@@ -152,6 +165,23 @@ def parse_flatfile(path, prefix=None, active_only=True):
             yield r
 
 
+def read_report_csv(path):
+    """Read a statewide or institution report CSV into dicts, cleaning the two quirks.
+
+    The exports are UTF-8 with a BOM, and numeric cells arrive prefixed with a
+    non-breaking space (credit reads '\\xa03', not '3'), which breaks int() and any
+    naive comparison. Everything is upper-case in the source; that is the data, not a bug.
+    """
+    import csv as _csv
+    import io as _io
+    raw = open(path, encoding='utf-8-sig', errors='replace').read()
+    out = []
+    for row in _csv.DictReader(_io.StringIO(raw)):
+        out.append({k: (v or '').replace('\xa0', ' ').replace('�', ' ').strip()
+                    for k, v in row.items()})
+    return out
+
+
 def institution_map(o=None):
     """id -> 'CODE - NAME', scraped from the institution dropdown."""
     o = o or opener()
@@ -181,7 +211,7 @@ if __name__ == '__main__':
     elif cmd == 'institution':
         pre, inst = sys.argv[2].upper(), sys.argv[3]
         out = sys.argv[4] if len(sys.argv) > 4 else 'scns_%s_%s.csv' % (pre, inst)
-        report_csv(pre, 'InstitutionCourse', institution=inst, out=out)
+        report_csv(pre, 'CourseDescriptions', institution=inst, out=out)
         print('wrote', out)
     else:
         print(__doc__)
