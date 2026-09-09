@@ -618,6 +618,42 @@ Instances so far:
 ⚠ **Where a catalog states one, put it in the prerequisite field** — it determines whether a student can
 plan a term around the course at all.
 
+### ⚠⚠ For a queued `C` id, state the INTEGRATED form's hours (batch 189)
+
+**`APK2000C` tripped the validator's first WARNING rather than a failure**: *"an integrated lecture+lab (C)
+course but has only 45 contact hours"*, because the guide had been written to UWF's unsuffixed 45-hour
+lecture version.
+
+⚠ **The rule, now applied consistently across `BCN3224C`, `GIS4035C`, `ZOO4472C`, `APK4119C`, `APK4220C`
+and `APK2000C`: give the integrated form's hours — that is what the queued identifier represents — and
+describe the unsuffixed version alongside it.** **Doing it the other way round produces a warning and, more
+importantly, a guide that does not describe the course the identifier names.**
+
+### ⚠ Where a description names a discipline the prerequisite does not, that gap is where students fail (batch 189)
+
+**`APK4220C`**: the formal gate is exercise physiology plus anatomy. ⚠⚠ **The description names "fundamentals
+of engineering (kinematics and kinetics) and basic mathematics and physics" — and neither appears in the
+prerequisite.** **Students arrive from a kinesiology curriculum that required no physics, meet vectors and
+free-body diagrams in week two, and conclude the course is impossible.**
+
+**Name exactly what is needed and say to prepare it** — for that course, trigonometry, algebra, units and
+rates, **not** calculus. ⚠ **This is the counterpart to the prerequisite-as-signal diagnostic: read the
+description for disciplines the gate omits.**
+
+### ⚠ Writing 1-credit LABORATORY guides (batch 189)
+
+**`APK2100L` and `APK2105L` are the first lab-only guides written deliberately.** They are shorter than a
+lecture guide — 21–23 KB against a batch average of 27 — **and that is correct: a 1-credit laboratory has
+less to say about content and more about format, safety, assessment and transfer traps.**
+
+⚠⚠ **State the credit-to-contact-hour ratio explicitly**: a 1-credit laboratory carries **two to three
+contact hours a week**, so it consumes far more scheduled time than its credit value suggests. **Students
+plan around credits and are caught by hours.**
+
+⚠ **Where students are the SUBJECTS** (physiology, exercise testing), the guide must say: **participation is
+voluntary, results are not medical advice, classmates' measurements are private, and bloodborne pathogen
+procedures apply strictly.**
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of

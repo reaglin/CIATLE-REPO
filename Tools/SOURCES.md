@@ -17879,3 +17879,139 @@ most work, and they are exactly the ones that overflow.**
 the mirror in `validate_drafts.py` and the limits tables in `Tools/CLAUDE.md` and the `/guide` skill.**
 
 No malformed tags, no markdown leakage, no push failures.
+
+---
+
+## Batch 189 (2026-09-08) — APK2000C, APK2100L, APK2105L, APK4119C, APK4220C, ARH3724
+
+Six pushed, six verified live. Queue: **2,165 pushed / 349 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FIU (Coursedog cache), UF (course-search API).
+
+### ⚠⚠ The APK anatomy-and-physiology family is now COMPLETE — five guides, cross-referenced
+
+**With `APK2100C` and `APK2105C` already live, this batch adds both orphan laboratory halves.** ⚠ **The
+family now reads as a set:**
+
+| Guide | Role | Status |
+|---|---|---|
+| `APK2000C` | the gateway survey | ✅ this batch |
+| `APK2100C` | A&P I, integrated | ✅ earlier |
+| **`APK2100L`** | **A&P I laboratory** | ✅ **this batch** |
+| `APK2105C` | A&P II, integrated | ✅ batch 188 |
+| **`APK2105L`** | **A&P II laboratory** | ✅ **this batch** |
+
+**This is the split-family rule executed deliberately rather than incidentally** — the same practice as
+`BCH3033`/`BCH3033L`/`BCH3034` and `BOT4503C`/`BOT4503L`. ⚠⚠ **And every one of the five carries the
+`BSC`/`APK` prefix warning**, which was the point of doing them together: **a student meets whichever
+number their institution uses, and the warning has to be on all of them.**
+
+⚠ **The live `APK2100C` guide was checked before writing and already carries it** (`BSC2085` appears five
+times), **so the family is consistent.**
+
+### ⚠⚠ `APK2105L`'s prerequisite line is the cleanest evidence in the repository for the prefix problem
+
+**`APK 2100C` OR `BSC 1085/L` OR `APK 2100/L`** — ⚠ **UWF stating, in its own catalog, that the two
+prefixes are equivalent.**
+
+**Recorded because of what it does NOT establish.** ⚠⚠ **The institution accepting either prefix for its own
+admission is a different question from a nursing or physical therapy programme accepting `APK` on an
+application form that names `BSC`.** **The guides now make that distinction explicitly rather than letting
+the catalog line reassure a reader**, and the instruction is procedural: **get the published list, ask in
+writing if the prefix differs, save the reply — before the sequence, because the fix afterwards is two more
+semesters.**
+
+### ⚠ Two lab-only guides — a shape the repository had not yet done deliberately
+
+**`APK2100L` and `APK2105L` are 1-credit laboratory courses**, and they are shorter than a lecture guide
+should be — **21 KB and 23 KB against the batch's 26–29 KB.** ⚠ **That is correct rather than thin:** a
+1-credit laboratory has less to say about content and more to say about **format, safety, assessment and the
+transfer traps**, and the guides are weighted accordingly.
+
+⚠⚠ **The credit-to-contact-hour ratio is worth stating in every lab guide and was stated in both**: **a
+1-credit laboratory carries two to three contact hours a week, so it consumes far more scheduled time than
+its credit value suggests.** **Students plan around credits and are caught by hours.**
+
+⚠ **Also recorded, and specific to the physiology laboratory: students are the subjects.** **The guide states
+that participation as a subject is voluntary, that results are not medical advice, that classmates'
+measurements are private, and that bloodborne pathogen procedures apply strictly.** **`APK2105L` is the
+first guide in the repository to need all four.**
+
+### ⚠⚠ `APK4119C` — a title divergence that changes the course's professional destination
+
+| Source | Title | What it teaches |
+|---|---|---|
+| Statewide | **Exercise Program Design** | training design, broadly |
+| **UWF** | ⚠ **Exercise Testing for SPECIAL POPULATIONS** | pathophysiology and exercise response in disease, on the **ACSM guidelines**; diagnostic techniques, medical and surgical treatments, clinical assessment |
+
+⚠ **UWF's is the CLINICAL exercise physiology course, and it is what maps onto the ACSM-CEP credential.**
+**A general programme-design course does not.** **The guide follows UWF's reading — the better-evidenced
+one — and marks where the general version differs.**
+
+⚠⚠ **Two details captured that catalogs rarely give:** **"Equipment fees will be assessed"** — a real cost
+attached to the course — and **the ACSM anchor, which tells a student that the course content and the
+certification examination content are the same thing.**
+
+⚠ **The scope-of-practice section is the fourth in three batches** (paralegal UPL, dietetics licensure,
+exercise prescription) — **and the same observation holds each time: the risk rises with knowledge.** **A
+student who has studied pathophysiology can interpret a finding and is not licensed to.**
+
+### ⚠⚠ `APK4220C` — an unlisted prerequisite that determines who fails
+
+**Formal gate: `(APK 3110/L)` AND `(ATR 3132 OR PCB 3097/L)`.** ⚠⚠ **The description names "fundamentals of
+engineering (kinematics and kinetics) and basic mathematics and physics" — and NEITHER appears in the
+prerequisite.**
+
+**Students arrive from a kinesiology curriculum that may have required no physics at all, meet vectors,
+trigonometry and free-body diagrams in week two, and conclude the course is impossible.** ⚠ **The guide
+names exactly what is needed — trigonometry, algebra, units and rates, not calculus — and says to revise it
+before the term.**
+
+**Recorded as a pattern worth looking for: where a course description names a discipline the prerequisite
+does not, that gap is where the failures are.**
+
+⚠ **Also: split family (`APK 4220L`, where the motion capture, EMG and force plates are) AND dual-listed
+with `APK 5226`.** **Third dual-listing in four batches.**
+
+### `ARH3724` — and the strongest historical argument about AI written so far
+
+Two agreeing sources (UWF and FIU). ⚠ **UWF's framing is distinctive and worth noting: it treats graphic
+design in relation to the OTHER design disciplines** — fashion, architecture, industrial, furniture, digital
+media — **which is a design-history rather than an art-history framing.**
+
+⚠⚠ **The guide's AI section makes an argument the course's own material supports and that no other guide in
+this repository could make: this field has been through it before.** **Photography was going to end
+painting; phototypesetting ended metal type as a trade; and desktop publishing destroyed the typesetting
+profession within a decade while putting the tools on every designer's desk.** **What happened each time was
+that the technical barrier became cheap, the work moved toward what the tools could not do, and total output
+rose while average quality fell.**
+
+⚠ **Also captured because it is commercially concrete: the US Copyright Office has held that purely
+AI-generated images are not protectable by copyright** — **which matters to a client buying a logo, and a
+designer should know it.**
+
+⚠ **Florida resource worth recording: the <strong>Wolfsonian–FIU</strong> in Miami Beach** — <strong>a major
+museum of modern design and propaganda arts, holding internationally significant material on exactly this
+course's period, and it is part of a Florida public university.</strong>
+
+### ⚠ Three APK rows pulled for lack of any reachable source
+
+**`APK3220C`** (biomechanics — UF has the title only), **`APK4114C`** and **`APK4600C`** — ⚠ **none at UWF
+despite two of them listing it, and no other institution reachable.** **Sourcing failures rather than suffix
+problems; left queued.** **Nineteenth through twenty-first inventory discrepancies.**
+
+### Process note
+
+⚠ **First validator WARNING rather than a failure this batch**: `APK2000C` flagged as *"an integrated
+lecture+lab (C) course but has only 45 contact hours"*. **Corrected to 60 for consistency with every other
+`C`-suffix row in the project** (`BCN3224C`, `GIS4035C`, `ZOO4472C`, `APK4119C`, `APK4220C`), **and the
+guide's format paragraph rewritten to state the integrated form first with UWF's 45-hour lecture version
+alongside.**
+
+⚠⚠ **Worth recording as a rule: for a queued `C` id, state the INTEGRATED form's hours — that is what the
+identifier represents — and describe the unsuffixed version alongside.** **Doing it the other way round
+produces a validator warning and, more importantly, a guide that does not describe the course the identifier
+names.**
+
+**No prerequisite overflows this batch** (longest 477 of 500) — **the first clean batch on that measure in
+four.** No malformed tags, no markdown leakage, no push failures.

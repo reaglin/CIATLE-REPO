@@ -1142,6 +1142,41 @@ afterwards is two more semesters.**
 mistake, and because `APK2100C`, `APK2100L` and `APK2105L` are still in the queue** — **the same warning
 belongs on each of them.**
 
+## 47. ✅ The APK anatomy-and-physiology family is COMPLETE (batch 189) — *informational, closes part of item 46*
+
+**Item 46 flagged that the `BSC`/`APK` prefix warning belonged on `APK2100C`, `APK2100L` and `APK2105L` as
+well as `APK2105C`.** ✅ **Done.**
+
+| Guide | Status |
+|---|---|
+| `APK2000C` gateway survey | ✅ batch 189 |
+| `APK2100C` A&P I integrated | ✅ earlier — **checked live, already carries the warning** |
+| `APK2100L` A&P I laboratory | ✅ batch 189 |
+| `APK2105C` A&P II integrated | ✅ batch 188 |
+| `APK2105L` A&P II laboratory | ✅ batch 189 |
+
+**All five carry the prefix warning and the register-for-both-halves warning, and they cross-reference each
+other.** ⚠ **The split-family rule executed deliberately rather than incidentally**, as with
+`BCH3033`/`BCH3033L`/`BCH3034`.
+
+**No decision needed.** ⚠ **`APK2105L`'s prerequisite line is now the repository's cleanest evidence for the
+prefix problem** — UWF stating in its own catalog that `APK 2100C`, `BSC 1085/L` and `APK 2100/L` are
+interchangeable — **and the guides are explicit that an institution accepting either prefix for its own
+admission is a different question from a nursing programme accepting `APK` on a form that names `BSC`.**
+
+## 48. ⚠ `APK3220C`, `APK4114C`, `APK4600C` — sourcing failures, left queued (batch 189) — *informational*
+
+**None is at UWF** — ⚠ **two of them list UWF in the inventory** (nineteenth through twenty-first
+discrepancies) — **and UF publishes a title only for `APK3220C`, with UCF, USF and Florida Polytechnic
+unreachable.**
+
+⚠ **Deliberately NOT added to the C-suffix class (items 28, 33, 43)** — the problem is that no catalog
+answered, not that the suffix is spurious.
+
+**Same shape as `GRA3112C`/`GRA4154C` (item 36) and `PHZ3151C` (item 44).** ⚠ **That set is now seven rows
+across four prefixes, and it will not shrink without a new source** — **worth noting collectively, because
+individually each looks like an anomaly and together they are a coverage gap.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
