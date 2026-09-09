@@ -356,6 +356,8 @@ and is frequently more informative.** Three cases have now turned on it:
 
 | `SPC4680` | **Rhetorical Criticism** — methods for the criticism of rhetorical discourse: Aristotelian, metaphor, narrative, post-modern, cultural (FSU **and** UF, matching the statewide title) | ⚠ **Rhetoric, Media, and Civic Life** — applied preparation for leadership, advocacy and civic engagement, with attention to the shift from traditional to digital media (UWF) | **⏸ candidate** | published as single guide (majority/methods reading) with a labelled variant section | — | ⚠⚠ **Second case where UWF holds the MINORITY reading**, after `LAE3314` — and the strongest, since FSU and UF agree with each other AND with the statewide title. A methods course and an applied advocacy course are different preparations, and the methods version is what graduate study in rhetoric expects. See batch 185 in `SOURCES.md`. |
 
+| `APK4200` | **Motor Development** — developmental aspects of movement and the acquisition of motor skills across the lifespan (FIU, matching the statewide title) | ⚠⚠ **Neuromechanics of Human Movement** — neural mechanisms of movement and control, central and peripheral, prerequisite `APK 3110L` (UWF) | **⏸ candidate** | published as one guide covering **both**, each labelled | — | ⚠⚠ **Third case where UWF holds the MINORITY reading**, after `LAE3314` and `SPC4680`. **Different fields, different literatures, different audiences**: motor development serves teachers and adapted-activity specialists; neuromechanics serves exercise science and rehabilitation. ⚠ **A student needing motor development for a certification who takes the neuromechanics course has not covered it, and the transcript will not show it.** The prerequisite settled it — an exercise physiology LAB is not a developmental course's gate. See batch 188. |
+
 ### ⚠⚠ SECTOR number divergence — FCS and SUS using different numbers (batch 182)
 
 **Distinct from ordinary number divergence, which runs between institutions. This runs along the SECTOR
@@ -589,6 +591,32 @@ description and it constrains what the course can assume.**
 **`SYD4800` sits in ANTHROPOLOGY at UWF, not Sociology** — predicting a stronger comparative and
 cross-cultural frame. **`PLA4885` and `PLA4263` sit in CRIMINAL JUSTICE, not a law or legal studies
 department.** ⚠ **The UWF prefix PDFs print the college and department on every entry; read that line.**
+
+### ⚠ "May be repeated for up to N sh" + "Topics in" = a variable-content course (batch 188)
+
+**`AML4640` at UWF: "Topics in Native American Literature", repeatable to 12 semester hours.**
+
+⚠⚠ **Two consequences a guide must state.** The student can take it more than once for credit — unusual and
+useful. **And the transcript line conveys nothing about what was actually covered**, since content varies by
+term. **A receiving institution or a graduate programme evaluating it will ask, so the syllabus and reading
+list are the only record.**
+
+**Look for the repeat clause in the credit line; it is easy to read past.** Expect it on `AML`, `LIT`, `ENG`
+and studio numbers.
+
+### ⚠ Restricted-enrolment courses — a scheduling blocker no other source surfaces (batch 188)
+
+**Courses closed to non-majors, or gated on a cumulative GPA, are invisible until registration fails.**
+Instances so far:
+
+| Course | Restriction |
+|---|---|
+| `ENG3010` (UWF) | English majors and minors only |
+| `RTV3511` (FIU) | five prerequisite courses **and a 2.85 cumulative GPA** |
+| **`APK4163` (FIU)** | **Bachelor of Science in Sport and Exercise Science major, or instructor consent** |
+
+⚠ **Where a catalog states one, put it in the prerequisite field** — it determines whether a student can
+plan a term around the course at all.
 
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 

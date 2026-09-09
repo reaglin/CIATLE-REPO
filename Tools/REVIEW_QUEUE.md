@@ -1095,6 +1095,53 @@ suffix is spurious. **Left queued and workable if a source opens up.**
 **Same shape as `GRA3112C`/`GRA4154C` (item 36): a small cluster of rows whose institutions are exactly the
 ones this project cannot currently reach.**
 
+## 45. ⚠⚠⚠ `APK4200` — a full one-number-two-subjects case; strongest split candidate since `CLP4302` (batch 188)
+
+| Source | Title | Subject |
+|---|---|---|
+| Statewide / **FIU** | **Motor Development** | how movement skills are acquired across the lifespan |
+| **UWF** | ⚠⚠ **Neuromechanics of Human Movement** | how the nervous system produces and controls movement |
+
+⚠⚠ **Different fields, not different emphases.** **Different literatures, different prerequisites, different
+professional audiences** — motor development for teachers, adapted-activity specialists and early childhood
+professionals; neuromechanics for exercise scientists, biomechanists and rehabilitation science.
+
+⚠ **The prerequisite settled it before the descriptions did**: **UWF gates on `APK 3110L`, an exercise
+physiology LABORATORY.** **No developmental course requires that.**
+
+⚠⚠ **The concrete harm is checkable and specific: a student who needs motor development for a Florida
+teaching or adapted-physical-activity certification and takes the neuromechanics course has not covered the
+required material, and the transcript will not show it.**
+
+**Published as one guide covering both readings in labelled sections, with the divergence leading the
+prerequisite field.** **Added to the open-cases table.**
+
+**Needs from you:** whether this joins the split queue. ⚠ **My recommendation: yes, and high in it** —
+**this is a cleaner case than several already in the table, because a named certification requirement is at
+stake rather than an emphasis a student might not notice.**
+
+## 46. ⚠⚠ `APK2105C` — the BSC/APK prefix divergence, now evidenced from a catalog line (batch 188) — *informational, but the highest-stakes row written*
+
+**CLAUDE.md has recorded this as "the most damaging case found" since batch 179.** ⚠ **UWF's own
+prerequisite is the evidence: `APK 2100C` OR `BSC 1085/L` OR `APK 2100/L`.**
+
+**The institution treats the prefixes as equivalent for its own admission — which is not the question.**
+⚠⚠ **Nearly every competitive Florida health-professions programme writes its prerequisite list naming
+`BSC` numbers, because that is what most Florida College System institutions teach.** **A student completing
+the `APK` sequence holds an equivalent course under a number the application form does not list.**
+
+⚠ **Compounded by a split family**: UF carries integrated `APK 2105C`; UWF requires `APK 2105L` as a
+separate co-requisite registration — **and health prerequisites specify A&P WITH LABORATORY.** **Two
+independent transfer problems on one number.**
+
+**The guide's instruction is procedural**: get the target programme's published list, ask admissions in
+writing if the prefix differs, save the reply, keep the syllabus — **before the sequence, because the fix
+afterwards is two more semesters.**
+
+**No decision needed.** ⚠ **Flagging it because this is the row most likely to prevent a real, expensive
+mistake, and because `APK2100C`, `APK2100L` and `APK2105L` are still in the queue** — **the same warning
+belongs on each of them.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

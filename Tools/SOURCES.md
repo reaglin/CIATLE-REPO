@@ -17750,3 +17750,132 @@ raised in the next site publish, and `Deployment/PENDING_SERVER_CHANGES.md` carr
 
 **Until it deploys, guides continue to be written to 500 and trimmed where needed** — **cutting connective
 tissue, never the warnings.** No malformed tags, no markdown leakage, no push failures.
+
+---
+
+## Batch 188 (2026-09-08) — AMH3540, AMH4544, AML4640, APK2105C, APK4163, APK4200
+
+Six pushed, six verified live. Queue: **2,159 pushed / 355 queued / 1 error / 371 skipped**.
+
+Sources: UWF (prefix PDFs), FGCU (prefix PDFs), FSU (bulletin), FIU (Coursedog cache), UF (course-search API).
+
+### ⚠⚠⚠ `APK4200` — a full one-number-two-subjects case, and the third where UWF holds the minority reading
+
+| Source | Title | Subject |
+|---|---|---|
+| Statewide / **FIU** | **Motor Development** | *"developmental aspects of movement and the factors influencing the acquisition and performance of motor skills"* — ⚠ **how movement skills emerge across the lifespan** |
+| **UWF** | ⚠⚠ **Neuromechanics of Human Movement** | *"neural mechanisms of human movement and control… central and peripheral components… mechanistic control of coordinated movement"* — ⚠ **how the nervous system produces movement**. Prerequisite `APK 3110L`. |
+
+⚠⚠ **These are different fields with different literatures, prerequisites and audiences.** **Motor
+development serves physical education teachers, adapted-activity specialists and early childhood
+professionals; neuromechanics serves exercise scientists, biomechanists and rehabilitation science.**
+
+⚠ **The concrete harm is specific and checkable: a student who needs motor development for a teaching or
+adapted-physical-activity certification and takes the neuromechanics course has not covered the required
+material** — **and the transcript will not show it.** **Third case where UWF holds the minority reading**,
+after `LAE3314` and `SPC4680`.
+
+**Published as one guide covering both readings in clearly labelled sections**, with the prerequisite field
+leading on the divergence. **Added to `REVIEW_QUEUE.md` as a split candidate.**
+
+⚠ **The prerequisite is again the tell**: **UWF gates on an exercise physiology LABORATORY**, which no
+developmental course would require. **Fifth consecutive batch in which the prerequisite settled the
+question before the descriptions did.**
+
+### ⚠⚠⚠ `APK2105C` — the prefix-divergence case, documented from a catalog line
+
+**CLAUDE.md has recorded the `BSC`/`APK` anatomy-and-physiology split as "the most damaging case found"
+since batch 179.** ⚠ **This batch supplies the direct evidence: UWF's own prerequisite reads
+`APK 2100C` OR `BSC 1085/L` OR `APK 2100/L`.**
+
+**The institution treats the two prefixes as equivalent for its own admission — which is precisely the point,
+because it is not the institution's acceptance that matters.** ⚠⚠ **Nearly every competitive
+health-professions programme in Florida writes its prerequisite list naming `BSC` numbers, because that is
+what most Florida College System institutions teach.** **A student who completes the `APK` sequence holds
+an equivalent course under a number the application form does not list.**
+
+**The guide's instruction is deliberately procedural rather than reassuring**: ⚠ **get the target
+programme's published list; if it names a prefix you do not have, email admissions and ask in writing; save
+the reply; keep the syllabus — and do it BEFORE the sequence, because the fix afterwards is two more
+semesters.**
+
+⚠ **Compounded by a split family**: **UF carries integrated `APK 2105C`; UWF requires co-requisite
+`APK 2105L` as a separate registration** — **and health prerequisites specify A&P WITH LABORATORY, so a
+lecture-only transcript line does not satisfy them.** **Two independent transfer problems on one number,
+which is unusual.**
+
+### ⚠⚠ `AML4640` — THREE terminology eras on one number, and the terminology is the subject
+
+| Source | Title |
+|---|---|
+| Statewide | **American-Indian Literature** |
+| **UWF** | **Topics in Native American Literature** |
+| **FIU** | ⚠ **Indigenous US Literature** |
+
+**Third terminology-era divergence in three batches**, after `SOW4700` and `SYD4800` — ⚠ **and the first
+with three variants rather than two.**
+
+⚠⚠ **What makes this one different: in this field the terminology question IS course content.** **All three
+terms are in current use by different constituencies, and the field's own critical position is that every
+pan-tribal label is an externally imposed collective for hundreds of distinct nations** — **the preference
+being specific national names.** **So the guide does not simply prefer the current term; it explains why
+the field resists all three, which is the actual scholarly move.**
+
+⚠ **Also captured — a NEW catalog signal: "may be repeated for up to 12 sh of credit" plus a title
+beginning "Topics in".** **A repeatable variable-content course.** **Two consequences: you can take it more
+than once, and — more important — <strong>the transcript line conveys nothing about what you read</strong>,
+so the syllabus and reading list are the only record.** **Worth looking for generally; several `AML`, `LIT`
+and `ENG` numbers will carry it.**
+
+⚠ **And a fourth Gordon Rule application**: UWF's entry carries the College-Level Communication Skills
+Requirement.
+
+### `APK4163` — a genuine DOUBLE prerequisite gate, plus a major restriction
+
+**UWF: `(HUN 2201 OR HUN 1201 OR HSC 2577)` AND `(APK 3110/L OR PET 3351C)`** — ⚠ **a nutrition course AND
+exercise physiology with laboratory.** **The double gate signals a course working at the intersection of
+two sciences and re-teaching neither.**
+
+⚠ **FIU adds a MAJOR RESTRICTION** — Bachelor of Science in Sport and Exercise Science, or instructor
+consent. **Second restricted-enrolment course found** after `ENG3010`'s English-majors-only condition
+(batch 181). **Worth checking for: it is a scheduling blocker that no other source surfaces.**
+
+⚠⚠ **The guide's substantive core is the scope-of-practice boundary**: **"dietitian/nutritionist" is a
+LICENSED title in Florida under Chapter 468, Part X.** **A trainer or coach may give general nutrition
+information and may not provide individualised medical nutrition therapy.** ⚠ **Same shape as the paralegal
+UPL boundary recorded in batches 185–186 — and the same observation applies: the risk RISES with
+knowledge.**
+
+### `AMH3540` and `AMH4544` — two well-sourced history rows, and one reframing worth reusing
+
+⚠ **`AMH4544` had all three institutions retrievable**, which is rare for a three-institution row. **UWF,
+FGCU and FIU agree on scope and differ usefully in emphasis** — **UWF reaches furthest back, beginning with
+the pre-colonial Vietnamese state and French Indochina.**
+
+⚠⚠ **The guide makes that starting point the analytical centre rather than background**: **American accounts
+long treated Vietnam as a Cold War theatre rather than a country with its own anticolonial history, and
+getting the sequence right changes the analysis of everything after it.** **Recorded because it generalises:
+where one institution's description reaches further back than the others, ask whether that is scope or
+correction.**
+
+⚠ **`AMH3540` needed the opposite move — telling students what the course is NOT.** **Both descriptions
+name civil-military relations, technology, economics and politics; neither is a chronicle of battles.**
+**Students arrive expecting operational history and get institutional history, and the guide says so in the
+first alert block and again in the prerequisite field.**
+
+### Process note
+
+⚠⚠ **THREE prerequisite strings failed the 500-character validator this batch** (`AML4640` 575,
+`APK2105C` 529, `APK4200` 524) — **after two failures last batch and one the batch before.**
+**Six failures in three batches, following eleven clean ones.**
+
+⚠ **The cause is visible in what failed: every one of them was carrying a divergence warning, a
+programmatic-approval warning or both.** **These are the guides where the prerequisite field is doing the
+most work, and they are exactly the ones that overflow.**
+
+**Ron directed on 2026-09-08 that the ceiling be raised in the next site publish**, and
+`Deployment/PENDING_SERVER_CHANGES.md` carries the full development note: **`Prerequisites` from 500 to
+1000 in both `PublishValidators.cs` and the EF column configuration (the latter needing a migration), plus
+the mirror in `validate_drafts.py` and the limits tables in `Tools/CLAUDE.md` and the `/guide` skill.**
+
+No malformed tags, no markdown leakage, no push failures.
