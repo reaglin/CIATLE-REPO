@@ -17,7 +17,12 @@ public static partial class CourseTitles
                  : IsReal(courseId, stateTitle) ? stateTitle
                  : IsReal(courseId, guideTitle) ? guideTitle
                  : null;
-        return pick is null ? courseId : Readable(pick.Trim());
+        if (pick is null) return courseId;
+
+        // Guide titles often lead with the course number ("EEE3300: Electronics I"); pages already show the
+        // number beside the title, so drop it rather than print it twice.
+        var shown = LeadingCourseId().Replace(pick.Trim(), string.Empty, 1).Trim();
+        return shown.Length == 0 ? courseId : Readable(shown);
     }
 
     /// <summary>False for empty, the course-id placeholder, and the "Not Completed" guide stub.</summary>
@@ -42,6 +47,10 @@ public static partial class CourseTitles
             return char.ToUpperInvariant(lower[0]) + lower[1..];
         });
     }
+
+    /// <summary>"EEE3300: ", "EEE 3300 – ", "NUR4826-UWF: " at the start of a title.</summary>
+    [GeneratedRegex(@"^[A-Za-z]{3}\s?\d{4}[A-Za-z]?(?:-[A-Za-z]{2,5})?\s*[:\-–—]\s+|^[A-Za-z]{3}\s?\d{4}[A-Za-z]?(?:-[A-Za-z]{2,5})?\s*:\s*")]
+    private static partial Regex LeadingCourseId();
 
     [GeneratedRegex(@"[A-Za-z][A-Za-z']*")]
     private static partial Regex Word();

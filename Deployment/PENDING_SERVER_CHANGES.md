@@ -6,6 +6,34 @@ the REST API and need no deploy.
 
 Bundle these into the next deploy, then delete the entry.
 
+## Next deploy (branch `feature/next-deploy`) — no migration
+
+**Written, awaiting deploy:**
+
+- **Course titles no longer repeat the course number.** Found on the live site right after the 2026-09-11
+  deploy: 882 of the first 1,000 guide courses still carry the course-id placeholder title, so pages fall
+  back to the guide title — and about one guide title in five leads with the number, giving
+  "EEE3300 — EEE3300: Electronics I". `CourseTitles.Display` now drops a leading course number
+  (`EEE3300: `, `EEE 3300 – `, `NUR4826-UWF: `). Display only; stored titles are untouched and the `Tools/`
+  session's course data will replace the placeholders.
+
+**To build before this deploy (Ron, 2026-09-11):**
+
+- **Remove the "Recently Added" section from the home page** (`Pages/Index.cshtml`, and the
+  `RecentModules` query in `Index.cshtml.cs`). Planned with `COURSE_CATALOG_PLAN.md` phase 3.
+
+## ✅ DEPLOYED 2026-09-11, verified live — Course catalog phases 1 + 2 (delete this entry when convenient)
+
+Verified after deploy: catalog / queue / institutions APIs 200 (both migrations applied); header
+"3,003 courses · 2,197 curriculum guides"; section cards, `/programs`, `/careers`, `/queue/guides`, new
+`site.js` and `site.css` served; guide pages render. **806 guide-less courses were already in the database**
+(mostly Engineering Technology prefixes — ETI, CET, EET, ETS, ETD, ETP) and are now listed with Request Guide;
+some carry bad data for the `Tools/` session to correct (e.g. `EEV0360L` credits = 30, clock hours in the
+credit field; `ETC5605` is graduate-level). The ⚠ taxonomy-nodes entry below is also resolved — CES, CWR, CEG
+and ENV are in `taxonomy.json` and deployed.
+
+### Original entry
+
 ## Course catalog — phases 1 + 2: courses without guides, one-click requests, main page (branch `feature/course-catalog`, 2026-09-11) — ⚠ TWO MIGRATIONS
 
 `COURSE_CATALOG_PLAN.md` phases 1 and 2, deployed together (Ron, 2026-09-11). **Merge
