@@ -2,7 +2,9 @@
 
 **Status:** plan written 2026-09-11 (Ron's decisions in §1, answers in §12). **Phases 1 and 2 built and
 DEPLOYED 2026-09-11, verified live**; the contract for the `Tools/` session is `Tools/COURSE_API.md`.
-Phases 3–5 not started; the next deploy's pending items are in `Deployment/PENDING_SERVER_CHANGES.md`.
+**Phases 3 and 4 built 2026-09-11 on branch `feature/next-deploy`, awaiting deploy** (phase 4 is tooling and
+needs none); the next deploy's pending items are in `Deployment/PENDING_SERVER_CHANGES.md`. Phase 5
+(Programs) not started.
 **Ask (Ron, 2026-09-11):** list every course that exists, not only the ones with a guide. Guides are
 generated **on request**. Each course row carries two buttons — **Course Resources** and **View Guide** /
 **Request Guide**. Requests and resource submissions go into **public queues** that the AI sessions work.
@@ -310,7 +312,7 @@ session runs thousands.
 | **1 — Courses without guides** | Migration `AddCourseCatalog`; course / batch / institution / delete APIs; list filters; course page (offered-at, no-guide state); Level3 row layout + with/without-guide filter; "N courses · M guides" counts + header wording (folds in the uncommitted `SiteStatsService` work); search; `noindex`; export rule; **`Tools/COURSE_API.md`** for the content session | push ~20 guide-less courses with offerings via a scratch script; browse a leaf, filter, open a course page; existing guide pages unchanged | **Deploy 1** (migration) → **unblocks the content session** to start adding courses |
 | **2 — Requests + main page** | One-click Request Guide (fetch + no-JS fallback, count, "Requested ✓ — updated weekly, check back"); email field removed from `/request-guide` (kept for courses not yet listed); `Channel` + optional institution; `/queue/guides` + public queue API; Courses / Programs / Career Paths options, `/programs` + `/careers` coming-soon pages, navbar | click Request on 3 courses → counts update, rows appear in `/queue/guides`, admin ranking agrees; home page options work at phone width | **Deploy 2** |
 | **3 — Course Resources** | **Remove the home page's "Recently Added" section (Ron, 2026-09-11).** `CourseResource` + migration; resources page with submit form; Resources button + count on rows and course page; `/queue/resources`; resource API; `/admin/resources`; rate limits | submit a website and a YouTube link → pending in the queue, not clickable; approve via API → live on the page with player; reject shows note | **Deploy 3** |
-| **4 — AI review loop** | `Tools/resources/` client + rubric + `/resources` skill; request-first notes for the content session | run `/resources` against local pending items end to end | none (tooling) |
+| **4 — AI review loop** ✅ built 2026-09-11 | `Tools/resources/review_resources.py` (queue · apply `decisions.json` · approve/reject/add · listings · edit/remove/restore/delete), `Tools/resources/APPROVAL_RULES.md` (**Ron to complete**), `Tools/resources/README.md`, and the `/resources` skill (in the untracked `.claude/skills/`) | `python review_resources.py --base-url http://localhost:5199 queue` then `apply` a decisions file | none (tooling) |
 | **5 — Programs interface** | `Program` + `ProgramCourse` + migration (§4); admin program API (upsert, batch); public `/programs` (by school and credential) and `/programs/{slug}` (requirement blocks, course rows with guide/request + resources buttons); course-page "Required in these programs"; `Tools/PROGRAM_API.md`. **Content comes from the schools' catalogs via the `Tools/` session, by Ron's rules** — the site only provides the interface. | push one programme from a scratch JSON; open it; course rows link through | **Deploy 5** |
 | **Later** | **Career Paths** per `CAREER_PATHS_PLAN.md` — its "Schools" data now exists (phase 1) and it can link the programmes that feed each path (phase 5) | | |
 

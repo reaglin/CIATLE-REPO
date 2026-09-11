@@ -24,6 +24,10 @@ Bundle these into the next deploy, then delete the entry.
   `CourseResources` and `ResourceSubmissions`; a course with resources or suggestions can no longer be
   deleted over the API.
 - **Home page "Recently Added" section removed** (Ron, 2026-09-11).
+- **Reviewer tooling (phase 4) — no deploy needed.** `Tools/resources/` (client, README, Ron's
+  `APPROVAL_RULES.md` to complete) ships in the same commit but is content tooling; the `/resources` skill
+  lives in the untracked `.claude/skills/`, so it is on this machine only. It works against the live site as
+  soon as the deploy above lands.
 
 - **Course titles no longer repeat the course number.** Found on the live site right after the 2026-09-11
   deploy: 882 of the first 1,000 guide courses still carry the course-id placeholder title, so pages fall
