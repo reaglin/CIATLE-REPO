@@ -1504,7 +1504,16 @@ about who suggested it.
 Every course listing a link (normalised first), and one listing. **400:** `INVALID_RESOURCE_URL` ·
 **404:** `RESOURCE_NOT_FOUND`.
 
-### 15.5 POST /resource-submissions/{id}/approve [Admin]
+### 15.5 POST /resources/{id}/helpful [Public]
+
+Thumbs-up one course's listing, or take the vote back. Anonymous: the voter is a salted SHA-256 hash of the
+IP, one toggleable vote per visitor per listing; rate-limited to `Repository:ResourceVoteRateLimitPerHour`
+(default 60) per IP per hour. Listings are returned most-helpful first.
+
+**Response 200:** `{ "resourceId", "helpfulCount", "voted": true }` · **404:** `RESOURCE_NOT_FOUND` ·
+**429:** `RATE_LIMIT_EXCEEDED`
+
+### 15.6 POST /resource-submissions/{id}/approve [Admin]
 
 ```json
 { "title": "…", "summary": "…", "note": null,
@@ -1514,17 +1523,17 @@ Every course listing a link (normalised first), and one listing. **400:** `INVAL
 `alsoFor` entries. **Response 200:** `{ submissionId, status, results: [ { courseId, outcome: "created|updated|unknownCourse", resourceId } ], message }`
 **409:** `SUBMISSION_NOT_PENDING` · **422:** `COURSE_NOT_FOUND` (no course given is listed)
 
-### 15.6 POST /resource-submissions/{id}/reject [Admin]
+### 15.7 POST /resource-submissions/{id}/reject [Admin]
 
 `{ "note": "short public-safe reason" }` — required, ≤300.
 
-### 15.7 POST /resources [Admin]
+### 15.8 POST /resources [Admin]
 
 List a link directly (a resource the reviewer found, or more courses for an existing link):
 `{ "url", "title", "summary", "courses": [ { "courseId", "title?", "summary?" } ] }`. A course already
 listing the link has its listing updated and restored. **Response 200:** `{ url, type, results: [...] }`.
 
-### 15.8 PATCH /resources/{id} · DELETE /resources/{id} [Admin]
+### 15.9 PATCH /resources/{id} · DELETE /resources/{id} [Admin]
 
 `{ "title"?, "summary"?, "status"?: "active" | "removed" }` edits one course's listing; DELETE removes it
 permanently. **404:** `RESOURCE_NOT_FOUND`.

@@ -23,6 +23,10 @@ this file only covers the mechanics.
   product, and who offers it.**
 - Pages show the title, the summary with a small "AI-written summary" label, the site name, and "Also listed
   for" (other courses with a listing of the same link). YouTube videos show a thumbnail that plays in place.
+- **Visitors thumbs-up a listing**, and listings are ordered most-helpful first. `helpfulCount` comes back on
+  every listing, so you can see what readers value — there is no cap on resources per course; the votes sort
+  them. Voting is `POST /api/v1/resources/{id}/helpful` (public, anonymous, one toggleable vote per visitor);
+  it is a visitor action, not a reviewer one.
 - The submitter's note is input for you; it is never shown on the course page.
 
 ## Authentication

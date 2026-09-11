@@ -16,4 +16,8 @@ public class RepositoryOptions
 
     /// <summary>Resource suggestions accepted per requester IP per hour.</summary>
     public int ResourceSubmissionRateLimitPerHour { get; set; } = 10;
+
+    /// <summary>Thumbs-up votes accepted per visitor IP per hour — high enough to rate a page of resources,
+    /// low enough to blunt a script.</summary>
+    public int ResourceVoteRateLimitPerHour { get; set; } = 60;
 }

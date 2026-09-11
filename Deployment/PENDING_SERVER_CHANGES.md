@@ -6,7 +6,7 @@ the REST API and need no deploy.
 
 Bundle these into the next deploy, then delete the entry.
 
-## Next deploy (branch `feature/next-deploy`) — ⚠ MIGRATION `AddCourseResources`
+## Next deploy (branch `feature/next-deploy`) — ⚠ MIGRATIONS `AddCourseResources`, `AddResourceVotes`
 
 **Deploy without `-SkipMigrations`.** `deploy-update.ps1` now backs up the database first (new
 `Deployment/backup-db.ps1`, see `Deployment/DATABASE_BACKUPS.md`).
@@ -23,6 +23,10 @@ Bundle these into the next deploy, then delete the entry.
   listing. Each course has its own listing of a link. Admin: **`/admin/resources`**. Migration adds
   `CourseResources` and `ResourceSubmissions`; a course with resources or suggestions can no longer be
   deleted over the API.
+- **Helpful votes on resources (phase 4b).** A thumbs-up on each listing, anonymous and toggleable (salted
+  IP hash, 60/IP/hour), with listings ordered most-helpful first — Ron's alternative to capping how many
+  resources a course may carry. `POST /api/v1/resources/{id}/helpful`; counts show in `/admin/resources` and
+  on every listing the reviewer reads. Migration `AddResourceVotes`.
 - **Home page "Recently Added" section removed** (Ron, 2026-09-11).
 - **Reviewer tooling (phase 4) — no deploy needed.** `Tools/resources/` (client, README, Ron's
   `APPROVAL_RULES.md` to complete) ships in the same commit but is content tooling; the `/resources` skill

@@ -15,9 +15,13 @@ public sealed record CourseResourceDto(
     string Host,
     string Status,
     string Source,
+    int HelpfulCount,
     IReadOnlyList<string> AlsoForCourseIds,
     DateTime CreatedUtc,
     DateTime UpdatedUtc);
+
+/// <summary>Result of a thumbs-up: the listing's new count, and whether this visitor's vote now stands.</summary>
+public sealed record ResourceVoteResponse(Guid ResourceId, int HelpfulCount, bool Voted);
 
 /// <summary>Result of a visitor's suggestion: submitted · alreadySubmitted · alreadyListed · recentlyRejected.</summary>
 public sealed record ResourceSubmittedResponse(Guid? SubmissionId, string Outcome, string Message);

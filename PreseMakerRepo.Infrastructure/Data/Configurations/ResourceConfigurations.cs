@@ -31,6 +31,22 @@ public class CourseResourceConfiguration : IEntityTypeConfiguration<CourseResour
     }
 }
 
+public class CourseResourceVoteConfiguration : IEntityTypeConfiguration<CourseResourceVote>
+{
+    public void Configure(EntityTypeBuilder<CourseResourceVote> b)
+    {
+        b.ToTable("CourseResourceVotes");
+        // One vote per visitor per listing; voting again takes the vote back.
+        b.HasKey(v => new { v.CourseResourceId, v.VoterHash });
+        b.Property(v => v.VoterHash).HasMaxLength(64);
+
+        b.HasOne(v => v.CourseResource)
+         .WithMany(r => r.Votes)
+         .HasForeignKey(v => v.CourseResourceId)
+         .OnDelete(DeleteBehavior.Cascade);
+    }
+}
+
 public class ResourceSubmissionConfiguration : IEntityTypeConfiguration<ResourceSubmission>
 {
     public void Configure(EntityTypeBuilder<ResourceSubmission> b)

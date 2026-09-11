@@ -48,6 +48,9 @@ public class ResourceService
     public enum ChangeOutcome { Done, NotFound, NotPending, InvalidUrl, NoListedCourses }
     public sealed record Result<T>(ChangeOutcome Outcome, T? Value, string Message);
 
+    public enum VoteOutcome { Added, Removed, NotFound, RateLimited }
+    public sealed record VoteResult(VoteOutcome Outcome, int HelpfulCount, bool Voted);
+
     private readonly AppDbContext _db;
     private readonly IMemoryCache _cache;
     private readonly RepositoryOptions _repo;
@@ -130,10 +133,61 @@ public class ResourceService
         var id = NormalizeCourseId(courseId);
         var rows = await _db.CourseResources.AsNoTracking()
             .Where(r => r.CourseId == id && r.Status == ResourceStatus.Active)
-            .OrderByDescending(r => r.CreatedUtc)
+            // Most helpful first — that is what the thumbs-up is for; newest breaks ties.
+            .OrderByDescending(r => r.HelpfulCount)
+            .ThenByDescending(r => r.CreatedUtc)
             .ToListAsync();
         var elsewhere = await ElsewhereAsync(rows.Select(r => r.Url).Distinct().ToList());
         return rows.Select(r => ToDto(r, elsewhere)).ToList();
+    }
+
+    /// <summary>
+    /// Thumbs-up on one course's listing: adds this visitor's vote, or takes it back if they already voted.
+    /// Anonymous — the voter is a salted hash of their IP, so one household counts once. Reading the listings
+    /// again is what re-orders them.
+    /// </summary>
+    public async Task<VoteResult> VoteAsync(Guid listingId, string ip)
+    {
+        var listing = await _db.CourseResources
+            .FirstOrDefaultAsync(r => r.Id == listingId && r.Status == ResourceStatus.Active);
+        if (listing is null) return new VoteResult(VoteOutcome.NotFound, 0, false);
+
+        var hash = HashIp(ip);
+        var vote = await _db.CourseResourceVotes
+            .FirstOrDefaultAsync(v => v.CourseResourceId == listingId && v.VoterHash == hash);
+
+        if (vote is null)
+        {
+            if (!CheckVoteRateLimit(hash)) return new VoteResult(VoteOutcome.RateLimited, listing.HelpfulCount, false);
+            _db.CourseResourceVotes.Add(new CourseResourceVote
+            {
+                CourseResourceId = listingId,
+                VoterHash = hash,
+                CreatedUtc = DateTime.UtcNow
+            });
+            listing.HelpfulCount++;
+        }
+        else
+        {
+            _db.CourseResourceVotes.Remove(vote);
+            listing.HelpfulCount = Math.Max(0, listing.HelpfulCount - 1);
+        }
+        // Deliberately not touching UpdatedUtc: that tracks reviewer edits, which is what admin sorts on.
+        await _db.SaveChangesAsync();
+        return new VoteResult(vote is null ? VoteOutcome.Added : VoteOutcome.Removed, listing.HelpfulCount, vote is null);
+    }
+
+    /// <summary>Which of these listings this visitor has already voted for, so the page can show it.</summary>
+    public async Task<HashSet<Guid>> VotedAsync(string ip, IReadOnlyCollection<Guid> listingIds)
+    {
+        if (listingIds.Count == 0) return [];
+        var hash = HashIp(ip);
+        var ids = listingIds.ToList();
+        var voted = await _db.CourseResourceVotes.AsNoTracking()
+            .Where(v => v.VoterHash == hash && ids.Contains(v.CourseResourceId))
+            .Select(v => v.CourseResourceId)
+            .ToListAsync();
+        return voted.ToHashSet();
     }
 
     public Task<int> PendingCountAsync(string courseId)
@@ -392,7 +446,7 @@ public class ResourceService
 
     private static CourseResourceDto ToDto(CourseResource r, Dictionary<string, List<string>> elsewhere) =>
         new(r.Id, r.CourseId, r.Type.ToString(), r.Url, r.YouTubeVideoId, r.Title, r.Summary, ResourceUrls.DisplayHost(r.Url),
-            r.Status.ToString(), r.Source.ToString(),
+            r.Status.ToString(), r.Source.ToString(), r.HelpfulCount,
             (elsewhere.GetValueOrDefault(r.Url) ?? []).Where(c => c != r.CourseId).ToList(),
             r.CreatedUtc, r.UpdatedUtc);
 
@@ -424,6 +478,19 @@ public class ResourceService
             return 0;
         });
         if (count >= _repo.ResourceSubmissionRateLimitPerHour) return false;
+        _cache.Set(key, count + 1, TimeSpan.FromHours(1));
+        return true;
+    }
+
+    private bool CheckVoteRateLimit(string voterHash)
+    {
+        var key = $"resource_vote_rate:{voterHash}";
+        var count = _cache.GetOrCreate(key, entry =>
+        {
+            entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1);
+            return 0;
+        });
+        if (count >= _repo.ResourceVoteRateLimitPerHour) return false;
         _cache.Set(key, count + 1, TimeSpan.FromHours(1));
         return true;
     }

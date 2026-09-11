@@ -36,6 +36,8 @@ public class ResourcesModel : PageModel
     public bool HasGuide { get; set; }
     public IReadOnlyList<CourseResourceDto> Resources { get; set; } = [];
     public int PendingCount { get; set; }
+    /// <summary>Listings this visitor has already found helpful.</summary>
+    public HashSet<Guid> VotedIds { get; set; } = [];
     public string? SuccessMessage { get; set; }
     public List<string> Errors { get; } = new();
 
@@ -80,6 +82,27 @@ public class ResourcesModel : PageModel
         return Page();
     }
 
+    /// <summary>The thumbs-up button. Answers JSON for site.js; a plain form post reloads the page.</summary>
+    public async Task<IActionResult> OnPostVoteAsync(string courseId, Guid id)
+    {
+        var result = await _resources.VoteAsync(id, ClientIp());
+        if (Request.Headers.Accept.ToString().Contains("application/json", StringComparison.OrdinalIgnoreCase))
+        {
+            return new JsonResult(new
+            {
+                resourceId = id,
+                helpfulCount = result.HelpfulCount,
+                voted = result.Voted,
+                outcome = char.ToLowerInvariant(result.Outcome.ToString()[0]) + result.Outcome.ToString()[1..]
+            });
+        }
+        if (result.Outcome == ResourceService.VoteOutcome.RateLimited)
+            TempData["Error"] = "Too many votes from your connection this hour. Please try again later.";
+        return RedirectToPage(new { courseId });
+    }
+
+    private string ClientIp() => HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+
     private async Task<bool> LoadAsync(string courseId)
     {
         var id = courseId.Trim().ToUpperInvariant();
@@ -96,6 +119,7 @@ public class ResourcesModel : PageModel
         DisplayTitle = CourseTitles.Display(id, Course.Title, Course.StateTitle, guideTitle);
         Resources = await _resources.ForCourseAsync(id);
         PendingCount = await _resources.PendingCountAsync(id);
+        VotedIds = await _resources.VotedAsync(ClientIp(), Resources.Select(r => r.Id).ToList());
         return true;
     }
 }

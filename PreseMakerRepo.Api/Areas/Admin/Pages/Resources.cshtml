@@ -51,6 +51,7 @@
                         <a href="/courses/@r.CourseId/resources" class="fw-semibold">@r.CourseId</a>
                         <span class="badge text-bg-light border ms-1">@r.Type</span>
                         <span class="badge @(r.Status == "Active" ? "text-bg-success" : "text-bg-danger") ms-1">@r.Status</span>
+                        <span class="badge text-bg-light border ms-1" title="Visitors who found this helpful">👍 @r.HelpfulCount</span>
                         <span class="small text-muted ms-1">@r.Source · updated @r.UpdatedUtc.ToString("yyyy-MM-dd")</span>
                         <div class="small text-break"><a href="@r.Url" target="_blank" rel="noopener noreferrer">@r.Url</a></div>
                         @if (r.AlsoForCourseIds.Any())

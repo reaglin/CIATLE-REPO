@@ -62,6 +62,24 @@ public class ResourcesController : ControllerBase
         };
     }
 
+    /// <summary>Thumbs-up one course's listing, or take the vote back. Anonymous, one vote per visitor.</summary>
+    [HttpPost("api/v1/resources/{id:guid}/helpful")]
+    public async Task<IActionResult> Helpful(Guid id)
+    {
+        var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+        var result = await _resources.VoteAsync(id, ip);
+        return result.Outcome switch
+        {
+            ResourceService.VoteOutcome.NotFound =>
+                NotFound(ApiResponse<object?>.Fail(ErrorCodes.ResourceNotFound, "Resource not found.")),
+            ResourceService.VoteOutcome.RateLimited =>
+                StatusCode(429, ApiResponse<object?>.Fail(ErrorCodes.RateLimitExceeded,
+                    "Too many votes from your connection this hour. Please try again later.")),
+            _ => Ok(ApiResponse<ResourceVoteResponse>.Ok(
+                new ResourceVoteResponse(id, result.HelpfulCount, result.Voted)))
+        };
+    }
+
     [HttpGet("api/v1/resources")]
     public async Task<IActionResult> ForUrl([FromQuery] string? url)
     {

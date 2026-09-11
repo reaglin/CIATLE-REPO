@@ -33,6 +33,11 @@ public class CourseResource
 
     public ResourceStatus Status { get; set; } = ResourceStatus.Active;
 
+    /// <summary>Thumbs-up count for this course's listing; kept in step with <see cref="Votes"/>.</summary>
+    public int HelpfulCount { get; set; }
+
+    public ICollection<CourseResourceVote> Votes { get; set; } = new List<CourseResourceVote>();
+
     public ResourceLinkSource Source { get; set; }
 
     /// <summary>The visitor suggestion this listing came from, for the course it was suggested for.</summary>

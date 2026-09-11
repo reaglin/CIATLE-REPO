@@ -24,6 +24,7 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<CourseOffering> CourseOfferings => Set<CourseOffering>();
     public DbSet<CourseResource> CourseResources => Set<CourseResource>();
     public DbSet<ResourceSubmission> ResourceSubmissions => Set<ResourceSubmission>();
+    public DbSet<CourseResourceVote> CourseResourceVotes => Set<CourseResourceVote>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

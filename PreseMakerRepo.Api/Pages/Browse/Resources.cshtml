@@ -79,7 +79,20 @@ else
                                 <span class="badge text-bg-light border me-1">@(isVideo ? "Video" : "Website")</span>@r.Host
                             </div>
                             <p class="mb-1 resource-summary">@r.Summary</p>
-                            <div class="small text-muted fst-italic">AI-written summary</div>
+                            <div class="d-flex flex-wrap align-items-center gap-2">
+                                <span class="small text-muted fst-italic">AI-written summary</span>
+                                @{ var voted = Model.VotedIds.Contains(r.Id); }
+                                <form method="post" class="js-vote-form ms-auto"
+                                      asp-page="/Browse/Resources" asp-route-courseId="@Model.Course.CourseId" asp-page-handler="Vote">
+                                    <input type="hidden" name="id" value="@r.Id" />
+                                    <button type="submit" class="btn btn-sm js-vote @(voted ? "btn-success" : "btn-outline-secondary")"
+                                            data-id="@r.Id" aria-pressed="@(voted ? "true" : "false")"
+                                            title="@(voted ? "You found this helpful — press again to take it back" : "Found this helpful?")">
+                                        👍 <span class="vote-count">@r.HelpfulCount</span>
+                                        <span class="visually-hidden">@(voted ? "you found this helpful" : "mark as helpful")</span>
+                                    </button>
+                                </form>
+                            </div>
                             @if (r.AlsoForCourseIds.Any())
                             {
                                 <div class="small mt-2">

@@ -104,6 +104,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Course resources: the thumbs-up records (or takes back) a vote in place. Without JavaScript the form
+// posts normally and the page reloads.
+document.addEventListener('submit', function (e) {
+    var form = e.target.closest('.js-vote-form');
+    if (!form || !window.fetch || !window.FormData) return;
+    e.preventDefault();
+    var btn = form.querySelector('.js-vote');
+    if (!btn || btn.dataset.busy) return;
+    btn.dataset.busy = '1';
+
+    fetch(form.action, {
+        method: 'POST', body: new FormData(form), credentials: 'same-origin', headers: { 'Accept': 'application/json' }
+    })
+        .then(function (resp) {
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
+            return resp.json();
+        })
+        .then(function (data) {
+            delete btn.dataset.busy;
+            if (data.outcome === 'rateLimited') {
+                showToast('Too many votes from your connection this hour. Please try again later.', 'danger');
+                return;
+            }
+            var count = btn.querySelector('.vote-count');
+            if (count) count.textContent = data.helpfulCount;
+            btn.setAttribute('aria-pressed', data.voted ? 'true' : 'false');
+            btn.classList.toggle('btn-success', !!data.voted);
+            btn.classList.toggle('btn-outline-secondary', !data.voted);
+            btn.title = data.voted ? 'You found this helpful — press again to take it back' : 'Found this helpful?';
+        })
+        .catch(function () {
+            delete btn.dataset.busy;
+            form.submit();          // falls back to the ordinary post
+        });
+});
+
 // Course resources: a YouTube thumbnail becomes a privacy-enhanced (youtube-nocookie) player only when
 // clicked, so no player loads until the visitor asks for it.
 document.addEventListener('click', function (e) {
