@@ -16,7 +16,8 @@ public sealed record CourseRow(
     int OfferingCount,
     bool HasGuide,
     bool HasModules,
-    int RequestCount);
+    int RequestCount,
+    int ResourceCount);
 
 /// <summary>A course list with its with/without-guide filter applied.</summary>
 public sealed record CourseListView(IReadOnlyList<CourseRow> Rows, string Show, int Total, int WithGuide)
@@ -94,7 +95,8 @@ public class CourseDirectory
                     .FirstOrDefault(),
                 HasModules = _db.Modules.Any(m => m.CourseId == c.CourseId && m.Status == ContentStatus.Published),
                 RequestCount = _db.GuideRequests.Count(r => r.CourseId == c.CourseId &&
-                    (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued))
+                    (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued)),
+                ResourceCount = _db.CourseResources.Count(r => r.CourseId == c.CourseId && r.Status == ResourceStatus.Active)
             })
             .ToListAsync();
 
@@ -106,7 +108,8 @@ public class CourseDirectory
                 r.OfferingCount,
                 r.GuideTitle is not null,
                 r.HasModules,
-                r.RequestCount))
+                r.RequestCount,
+                r.ResourceCount))
             .ToList();
     }
 }

@@ -26,6 +26,8 @@ public class CourseModel : PageModel
     public IReadOnlyList<OfferingView> Offerings { get; set; } = [];
     /// <summary>Guide requests still waiting (Open or Queued).</summary>
     public int RequestCount { get; set; }
+    /// <summary>Listed resources.</summary>
+    public int ResourceCount { get; set; }
 
     /// <summary>A course with nothing but its listing — kept out of search indexes until it has more.</summary>
     public bool IsListingOnly => !HasGuide && Modules.Count == 0;
@@ -45,6 +47,8 @@ public class CourseModel : PageModel
             .Select(g => g.Title)
             .FirstOrDefaultAsync();
         HasGuide = guideTitle is not null;
+        ResourceCount = await _db.CourseResources.AsNoTracking()
+            .CountAsync(r => r.CourseId == normalizedId && r.Status == ResourceStatus.Active);
         if (!HasGuide)
             RequestCount = await _db.GuideRequests.AsNoTracking().CountAsync(r => r.CourseId == normalizedId &&
                 (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued));

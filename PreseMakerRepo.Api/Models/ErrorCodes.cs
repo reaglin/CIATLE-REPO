@@ -32,6 +32,10 @@ public static class ErrorCodes
     public const string GuideRequestNotFound = "GUIDE_REQUEST_NOT_FOUND";
     public const string CourseHasContent = "COURSE_HAS_CONTENT";
     public const string BatchTooLarge = "BATCH_TOO_LARGE";
+    public const string InvalidResourceUrl = "INVALID_RESOURCE_URL";
+    public const string ResourceNotFound = "RESOURCE_NOT_FOUND";
+    public const string ResourceSubmissionNotFound = "RESOURCE_SUBMISSION_NOT_FOUND";
+    public const string SubmissionNotPending = "SUBMISSION_NOT_PENDING";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
     public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";
 }

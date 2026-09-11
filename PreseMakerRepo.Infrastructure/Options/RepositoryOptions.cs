@@ -13,4 +13,7 @@ public class RepositoryOptions
     /// <summary>One-click Request Guide button presses accepted per requester IP per hour — higher than the
     /// form limit, because working down a subject page is several clicks.</summary>
     public int GuideRequestButtonRateLimitPerHour { get; set; } = 20;
+
+    /// <summary>Resource suggestions accepted per requester IP per hour.</summary>
+    public int ResourceSubmissionRateLimitPerHour { get; set; } = 10;
 }

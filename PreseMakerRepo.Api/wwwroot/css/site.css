@@ -55,6 +55,18 @@ body { margin-bottom: 60px; }
 .offering-more > summary { cursor: pointer; list-style: none; }
 .offering-more > summary::-webkit-details-marker { display: none; }
 
+/* Course resources */
+.resource-summary { white-space: pre-line; }
+.resource-honeypot { position: absolute !important; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.yt-lite { background: #000; border-radius: .375rem; overflow: hidden; }
+.yt-lite-play { padding: 0; border: 0; background: #000; cursor: pointer; }
+.yt-lite-play img { width: 100%; height: 100%; object-fit: cover; opacity: .88; transition: opacity .12s ease; }
+.yt-lite-play:hover img, .yt-lite-play:focus-visible img { opacity: 1; }
+.yt-lite-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 3.6rem; height: 2.5rem;
+    border-radius: .6rem; background: rgba(204, 0, 0, .92); color: #fff; font-size: 1.2rem; line-height: 2.5rem; text-align: center; }
+.yt-lite iframe { border: 0; }
+.queue-link { max-width: 28rem; }
+
 /* Inline file preview */
 .material-preview iframe { width: 100%; height: 480px; border: 1px solid #dee2e6; border-radius: .375rem; }
 .material-preview img { max-width: 100%; border: 1px solid #dee2e6; border-radius: .375rem; }

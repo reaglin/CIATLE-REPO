@@ -105,9 +105,27 @@ today (backwards compatible) — but a later course upsert **replaces the `Title
 **`GuideRequest`** — `Institution` becomes optional (empty for one-click requests on known courses);
 add `Channel` enum (`Button` / `Form` / `Api`).
 
-### Phase 3 — `AddCourseResources`
+### Phase 3 — `AddCourseResources` (as built, 2026-09-11)
 
-**`CourseResource`** (new):
+Ron's direction while building: **a link is lightweight, so it may be listed for many courses redundantly;
+the same resource may have a different description on each course; an admin can remove it from one course or
+change its description without affecting the others; resources may be free or products offered by vendors /
+sales agents, and the AI notes which in the summary.** So there is no shared resource table:
+
+- **`CourseResource`** — one course's listing: `Id`, `CourseId` (FK, cascade), `Type` (Website · YouTube),
+  normalised `Url` (unique per course; indexed for "also listed for"), `YouTubeVideoId`, `Title` ≤200,
+  `Summary` ≤2000 (AI-written, plain text), `Status` (Active · Removed), `Source` (Submitted · Reviewer),
+  `SubmissionId`, `CreatedUtc`, `UpdatedUtc`.
+- **`ResourceSubmission`** — the public queue: `Id`, `CourseId`, normalised `Url`, `Type`, `YouTubeVideoId`,
+  `Description` ≤500 (submitter's; input for the reviewer, never shown on the course page), `Status`
+  (Pending · Approved · Rejected), `DecisionNote` ≤300 (public), `CourseResourceId`, `SubmittedUtc`,
+  `DecidedUtc`, `SubmitterIpHash`, `SubmitterUserId`.
+
+Also decided (Ron, 2026-09-11): the page shows the **AI summary only**, with a small **"AI-written summary"**
+label; the AI may **list resources it finds itself** (no queue); YouTube shows a **thumbnail that plays on
+click** (youtube-nocookie). Contract for the reviewer: `Tools/RESOURCE_API.md`.
+
+**Original sketch (superseded)** — `CourseResource` (new):
 
 | Column | Type | Notes |
 |---|---|---|
@@ -220,7 +238,20 @@ has no guide** (courses with guides stay visible). The existing guide `PUT` is u
 | GET | `/api/v1/queue/guides?status=open` | **public** | the ranked queue, no personal data — what the content session reads to choose guides |
 | GET / PATCH | `/api/v1/guide-requests…` | Admin | existing ranking with detail, and status triage |
 
-### Phase 3 — resources
+### Phase 3 — resources (as built; full contract `Tools/RESOURCE_API.md`)
+
+| Verb | Route | Auth | Purpose |
+|---|---|---|---|
+| GET | `/api/v1/courses/{id}/resources` | public | a course's active listings |
+| POST | `/api/v1/courses/{id}/resources` | public | suggest `{url, description?}` (10/IP/hour; dedupe) |
+| GET | `/api/v1/queue/resources?status=pending\|decided\|all` | public | the review queue |
+| GET | `/api/v1/resources?url=…` · `/api/v1/resources/{id}` | public | where a link is listed · one listing |
+| POST | `/api/v1/resource-submissions/{id}/approve` | Admin | `{title, summary, note?, alsoFor?: [{courseId, title?, summary?}]}` |
+| POST | `/api/v1/resource-submissions/{id}/reject` | Admin | `{note}` (public reason) |
+| POST | `/api/v1/resources` | Admin | list a link directly: `{url, title, summary, courses: [{courseId, title?, summary?}]}` |
+| PATCH / DELETE | `/api/v1/resources/{id}` | Admin | edit, remove / restore, or delete **one course's** listing |
+
+Superseded sketch:
 
 | Verb | Route | Auth | Purpose |
 |---|---|---|---|
@@ -239,7 +270,10 @@ from `/api/v1/queue/guides`), then Ron's standing rules (engineering first, comp
 Updating `Tools/CLAUDE.md` and `Generate_Guides_and_Push_Process.md` is the content session's job, from
 Ron's rules plus `Tools/COURSE_API.md`.
 
-**Resource review (Phase 4).** A small client `Tools/resources/review_resources.py` (`list` / `approve` /
+**Resource review (Phase 4).** *Updated 2026-09-11: approval follows Ron's rules set
+(`Tools/resources/APPROVAL_RULES.md`, to be written); **products are allowed** and the summary says so; each
+course gets its own listing and summary — see §4 phase 3 and `Tools/RESOURCE_API.md`. The original sketch
+follows.* A small client `Tools/resources/review_resources.py` (`list` / `approve` /
 `reject`), a rubric `Tools/resources/REVIEW_GUIDE.md`, and a `/resources` skill. The session fetches each
 pending URL and approves only when it is **reachable**, **relevant to that course** (checked against the
 course title and guide), **educational rather than promotional**, **free to view** (or plainly marked if

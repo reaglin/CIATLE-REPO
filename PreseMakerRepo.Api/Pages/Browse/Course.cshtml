@@ -57,6 +57,13 @@
 }
 
 <div class="d-flex flex-wrap align-items-center gap-2 my-3">
+    <a asp-page="/Browse/Resources" asp-route-courseId="@Model.Course.CourseId" class="btn btn-outline-secondary btn-sm">
+        Resources
+        @if (Model.ResourceCount > 0)
+        {
+            <span class="badge text-bg-secondary ms-1">@Model.ResourceCount</span>
+        }
+    </a>
     @if (Model.HasGuide)
     {
         <a asp-page="/Browse/Guide" asp-route-courseId="@Model.Course.CourseId" class="btn btn-primary btn-sm">View Curriculum Guide</a>

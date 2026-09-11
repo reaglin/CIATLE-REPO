@@ -310,7 +310,9 @@ public class CourseCatalogService
 
         var hasContent = await _db.CurriculumGuides.AnyAsync(g => g.CourseId == id, ct)
                          || await _db.Modules.AnyAsync(m => m.CourseId == id, ct)
-                         || await _db.GuideRequests.AnyAsync(r => r.CourseId == id, ct);
+                         || await _db.GuideRequests.AnyAsync(r => r.CourseId == id, ct)
+                         || await _db.CourseResources.AnyAsync(l => l.CourseId == id, ct)
+                         || await _db.ResourceSubmissions.AnyAsync(s => s.CourseId == id, ct);
         if (hasContent) return DeleteOutcome.HasContent;
 
         _db.TaxonomyCourses.Remove(course);          // offerings go with it (cascade)

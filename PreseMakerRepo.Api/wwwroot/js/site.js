@@ -104,6 +104,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Course resources: a YouTube thumbnail becomes a privacy-enhanced (youtube-nocookie) player only when
+// clicked, so no player loads until the visitor asks for it.
+document.addEventListener('click', function (e) {
+    var play = e.target.closest('.yt-lite-play');
+    if (!play) return;
+    var box = play.closest('.yt-lite');
+    var id = box && box.dataset.video;
+    if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+    var frame = document.createElement('iframe');
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    frame.title = box.dataset.title || 'YouTube video';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    frame.allowFullscreen = true;
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    box.replaceChildren(frame);
+    frame.focus();
+});
+
 // Report modal submit
 document.addEventListener('DOMContentLoaded', function () {
     var submitBtn = document.getElementById('reportSubmitBtn');

@@ -66,6 +66,9 @@ try
     // browse pages render (courses with and without guides).
     builder.Services.AddScoped<CourseCatalogService>();
     builder.Services.AddScoped<CourseDirectory>();
+
+    // Course resources: visitor suggestions, the public review queue, and the reviewer's API.
+    builder.Services.AddScoped<ResourceService>();
     builder.Services.AddHttpClient();
     builder.Services.AddTransient<StaticSiteExporter>();
     builder.Services.AddSingleton<StaticExportJobService>();

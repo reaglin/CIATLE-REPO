@@ -5,8 +5,11 @@
 # Run from the repo root:
 #   .\Deployment\deploy-update.ps1
 #
-# You will be prompted for the server password by ssh and scp (four times
-# total, unless you have key auth set up).
+# Backs up the production database first (Deployment\backup-db.ps1) — migrations
+# change the schema in place. Pass -SkipBackup only when you have just taken one.
+#
+# You will be prompted for the server password by ssh and scp several times
+# (six with the backup), unless you have key auth set up — see DATABASE_BACKUPS.md.
 
 [CmdletBinding()]
 param(
@@ -16,7 +19,8 @@ param(
     [string]$EtcDir     = "/etc/presemaker-repo",
     [string]$ReleaseDir = "$env:TEMP\presemaker-release",
     [switch]$SkipMigrations,
-    [switch]$SkipTaxonomy
+    [switch]$SkipTaxonomy,
+    [switch]$SkipBackup
 )
 
 $ErrorActionPreference = "Stop"
@@ -44,6 +48,16 @@ if (-not (Test-Path $apiProj)) {
 Write-Host "Deploying to $target$AppDir" -ForegroundColor Yellow
 Write-Host "Publishing from $apiProj"
 Write-Host "Staging in      $ReleaseDir"
+
+# 0. Back up the database ----------------------------------------------------
+# Migrations run against the live file, so take a verified copy first. backup-db.ps1 throws on any
+# failure, which stops the deploy before anything is changed.
+if ($SkipBackup) {
+    Write-Host ""
+    Write-Host "==> Skipping database backup (-SkipBackup)." -ForegroundColor DarkYellow
+} else {
+    & (Join-Path $PSScriptRoot "backup-db.ps1") -RemoteUser $RemoteUser -RemoteHost $RemoteHost -Label "predeploy"
+}
 
 # 1. Publish -----------------------------------------------------------------
 if (Test-Path $ReleaseDir) {

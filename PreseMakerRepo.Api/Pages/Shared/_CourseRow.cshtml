@@ -19,6 +19,14 @@
             }
         </div>
         <div class="course-row-actions d-flex gap-2">
+            <a asp-page="/Browse/Resources" asp-route-courseId="@Model.CourseId" class="btn btn-sm btn-outline-secondary"
+               title="Websites and videos for this course">
+                Resources
+                @if (Model.ResourceCount > 0)
+                {
+                    <span class="badge text-bg-secondary ms-1">@Model.ResourceCount<span class="visually-hidden"> listed</span></span>
+                }
+            </a>
             @if (Model.HasGuide)
             {
                 <a asp-page="/Browse/Guide" asp-route-courseId="@Model.CourseId" class="btn btn-sm btn-primary">View Guide</a>

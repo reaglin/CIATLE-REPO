@@ -6,9 +6,24 @@ the REST API and need no deploy.
 
 Bundle these into the next deploy, then delete the entry.
 
-## Next deploy (branch `feature/next-deploy`) — no migration
+## Next deploy (branch `feature/next-deploy`) — ⚠ MIGRATION `AddCourseResources`
+
+**Deploy without `-SkipMigrations`.** `deploy-update.ps1` now backs up the database first (new
+`Deployment/backup-db.ps1`, see `Deployment/DATABASE_BACKUPS.md`).
 
 **Written, awaiting deploy:**
+
+- **Course Resources (`COURSE_CATALOG_PLAN.md` phase 3).** Every course row and course page gets a
+  **Resources** button (with a count). `/courses/{id}/resources` lists reviewed websites, videos and products
+  — AI-written summary with a small label, "Also listed for", YouTube thumbnails that play on click — with an
+  **Add a resource** form (URL + optional note, honeypot, 10/IP/hour). Suggestions go to the public queue
+  **`/queue/resources`** (links shown as plain text; tabs with the guide queue; navbar item renamed
+  "Queues"). Reviewer API for the AI session (`Tools/RESOURCE_API.md`): approve with title, summary and other
+  courses; reject with a public reason; list a found link directly; edit / remove / delete one course's
+  listing. Each course has its own listing of a link. Admin: **`/admin/resources`**. Migration adds
+  `CourseResources` and `ResourceSubmissions`; a course with resources or suggestions can no longer be
+  deleted over the API.
+- **Home page "Recently Added" section removed** (Ron, 2026-09-11).
 
 - **Course titles no longer repeat the course number.** Found on the live site right after the 2026-09-11
   deploy: 882 of the first 1,000 guide courses still carry the course-id placeholder title, so pages fall
@@ -17,10 +32,9 @@ Bundle these into the next deploy, then delete the entry.
   (`EEE3300: `, `EEE 3300 – `, `NUR4826-UWF: `). Display only; stored titles are untouched and the `Tools/`
   session's course data will replace the placeholders.
 
-**To build before this deploy (Ron, 2026-09-11):**
-
-- **Remove the "Recently Added" section from the home page** (`Pages/Index.cshtml`, and the
-  `RecentModules` query in `Index.cshtml.cs`). Planned with `COURSE_CATALOG_PLAN.md` phase 3.
+**Verify after deploy:** `GET /api/v1/queue/resources` → 200; a course row shows **Resources**; suggest a
+link on a test course's Resources page → it appears on `/queue/resources` unlinked; approve it at
+`/admin/resources` (or reject it) and check the listing, then remove the test listing.
 
 ## ✅ DEPLOYED 2026-09-11, verified live — Course catalog phases 1 + 2 (delete this entry when convenient)
 

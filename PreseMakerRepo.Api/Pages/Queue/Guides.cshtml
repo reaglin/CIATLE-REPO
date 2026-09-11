@@ -16,9 +16,11 @@
 <nav aria-label="breadcrumb" class="mb-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Guide Request Queue</li>
+        <li class="breadcrumb-item active" aria-current="page">Queues</li>
     </ol>
 </nav>
+
+<partial name="_QueueNav" model='"guides"' />
 
 <h1 class="h4 mb-2">Guide Request Queue</h1>
 <p class="text-muted" style="max-width: 760px;">

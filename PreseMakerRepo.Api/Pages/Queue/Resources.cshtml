@@ -1,0 +1,115 @@
+@page "/queue/resources"
+@model PreseMakerRepo.Api.Pages.Queue.ResourcesModel
+@using PreseMakerRepo.Api.Services
+@{
+    ViewData["Title"] = "Resource Review Queue";
+    ViewData["NoIndex"] = true;
+    var pending = Model.Queue.Filter == ResourceService.QueuePending;
+    var filters = new[]
+    {
+        (Key: ResourceService.QueuePending, Label: "Pending", Count: Model.Queue.Pending),
+        (Key: ResourceService.QueueDecided, Label: "Decided (30 days)", Count: Model.Queue.DecidedRecently)
+    };
+    static string Shorten(string s, int max) => s.Length <= max ? s : s[..(max - 1)] + "…";
+}
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Queues</li>
+    </ol>
+</nav>
+
+<partial name="_QueueNav" model='"resources"' />
+
+<h1 class="h4 mb-2">Resource Review Queue</h1>
+<p class="text-muted" style="max-width: 760px;">
+    Links suggested on a course's <strong>Resources</strong> page wait here for review. Approved links are listed
+    with a short AI-written summary — on the course they were suggested for, and on other courses they suit.
+    Links here are shown as plain text and are not clickable until they have been reviewed.
+</p>
+
+<ul class="nav nav-pills mb-3" aria-label="Filter the queue">
+    @foreach (var f in filters)
+    {
+        var active = Model.Queue.Filter == f.Key;
+        <li class="nav-item">
+            <a class="nav-link @(active ? "active" : "")" aria-current="@(active ? "page" : null)"
+               asp-page="/Queue/Resources" asp-route-status="@f.Key">
+                @f.Label <span class="badge @(active ? "text-bg-light" : "text-bg-secondary")">@f.Count.ToString("N0")</span>
+            </a>
+        </li>
+    }
+</ul>
+
+@if (!Model.Queue.Items.Any())
+{
+    <div class="alert alert-light border" style="max-width: 760px;">
+        @if (pending)
+        {
+            <text>No suggestions are waiting for review. Open any course's <strong>Resources</strong> page to suggest a website or video.</text>
+        }
+        else
+        {
+            <text>No suggestions have been decided in the last 30 days.</text>
+        }
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-sm align-middle">
+            <thead>
+                <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Suggested link</th>
+                    <th scope="col">Note</th>
+                    <th scope="col">@(pending ? "Submitted" : "Decided")</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Queue.Items)
+                {
+                    <tr>
+                        <td>
+                            <a asp-page="/Browse/Resources" asp-route-courseId="@item.CourseId" class="fw-semibold text-decoration-none">@item.CourseId</a>
+                            @if (item.CourseTitle != item.CourseId)
+                            {
+                                <div class="small text-muted">@item.CourseTitle</div>
+                            }
+                        </td>
+                        <td class="small queue-link">
+                            <span class="badge text-bg-light border me-1">@(item.Type == "YouTube" ? "Video" : "Website")</span>
+                            <span class="text-break">@Shorten(item.Url, 100)</span>
+                        </td>
+                        <td class="small text-muted">@(string.IsNullOrWhiteSpace(item.Description) ? "—" : Shorten(item.Description, 200))</td>
+                        <td class="small text-nowrap">@((pending ? item.SubmittedUtc : item.DecidedUtc ?? item.SubmittedUtc).ToString("MMM d, yyyy"))</td>
+                        <td>
+                            @switch (item.Status)
+                            {
+                                case "Approved":
+                                    <a asp-page="/Browse/Resources" asp-route-courseId="@item.CourseId" class="badge text-bg-success text-decoration-none">Listed</a>
+                                    break;
+                                case "Rejected":
+                                    <span class="badge text-bg-secondary">Not added</span>
+                                    break;
+                                default:
+                                    <span class="badge text-bg-light border">Pending</span>
+                                    break;
+                            }
+                            @if (!string.IsNullOrWhiteSpace(item.DecisionNote))
+                            {
+                                <div class="small text-muted">@item.DecisionNote</div>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<p class="small text-muted mt-3">
+    Also available as JSON: <code>/api/v1/queue/resources?status=pending</code> (or <code>decided</code>, <code>all</code>).
+</p>

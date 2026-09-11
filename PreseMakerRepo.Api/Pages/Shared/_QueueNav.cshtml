@@ -1,0 +1,12 @@
+@* Switches between the two public queues. Model: "guides" or "resources". *@
+@model string
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link @(Model == "guides" ? "active" : "")" aria-current="@(Model == "guides" ? "page" : null)"
+           asp-page="/Queue/Guides">Guide requests</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(Model == "resources" ? "active" : "")" aria-current="@(Model == "resources" ? "page" : null)"
+           asp-page="/Queue/Resources">Resource suggestions</a>
+    </li>
+</ul>

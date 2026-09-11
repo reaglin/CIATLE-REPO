@@ -26,44 +26,6 @@
 
 <hr />
 
-@if (Model.RecentModules.Any())
-{
-    <section class="mb-5">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h2 class="h5 mb-0">Recently Added</h2>
-            <a asp-page="/Browse/Index" class="btn btn-outline-secondary btn-sm">Browse All</a>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 g-3">
-            @foreach (var m in Model.RecentModules)
-            {
-                <div class="col">
-                    <div class="card h-100 content-card">
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">
-                                <a asp-page="/Module/Detail" asp-route-moduleId="@m.Id" class="stretched-link text-decoration-none">@m.Title</a>
-                            </h6>
-                            <div class="text-muted small">
-                                @m.CourseId
-                                @if (m.Contributor is not null)
-                                {
-                                    <span class="ms-2">· @m.Contributor.UserName</span>
-                                    @if (m.Contributor.IsEduVerified)
-                                    {
-                                        <span class="badge badge-edu ms-1">EDU</span>
-                                    }
-                                }
-                            </div>
-                        </div>
-                        <div class="card-footer text-muted small">
-                            Added @m.SubmittedUtc.ToString("MMM d, yyyy")
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </section>
-}
-
 <section>
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="h5 mb-0">Browse by Discipline</h2>

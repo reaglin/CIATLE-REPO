@@ -1461,4 +1461,71 @@ Removes a course added in error, with its offerings. **404:** `COURSE_NOT_FOUND`
 | GET | `/institutions` | Public | `[ { "code", "name", "sector", "scnsId", "offeringCount" } ]` |
 | PUT | `/institutions/{code}` | Admin | `{ "name", "sector", "scnsId" }` → 201 / 200 |
 | POST | `/institutions/batch` | Admin | `{ "institutions": [ { "code", "name", "sector", "scnsId" } ] }` (≤ 1000) → counts + results |
+
+---
+
+## 15. Course Resources
+
+Reviewed websites, videos and products listed for a course. Added 2026-09-11 (`COURSE_CATALOG_PLAN.md`
+phase 3). **The full contract for the reviewing AI session is `Tools/RESOURCE_API.md`;** this section
+summarises it.
+
+**Every listing belongs to one course.** The same link may be listed for many courses, each with its own
+title and summary; editing or removing one course's listing leaves the others alone. Summaries are written
+by the reviewer (an AI session) and say whether a resource is free or a commercial product. The server never
+fetches a submitted URL.
+
+**Link handling:** `http`/`https`, public host only (no IP literals, `localhost`, local suffixes or
+user-info); fragment and tracking parameters (`utm_*`, `fbclid`, `gclid`, …) stripped; YouTube links
+normalised to `https://www.youtube.com/watch?v=<id>`.
+
+### 15.1 GET /courses/{courseId}/resources [Public]
+
+A course's active listings: `id, courseId, type (Website|YouTube), url, youTubeVideoId, title, summary, host,
+status, source (Submitted|Reviewer), alsoForCourseIds, createdUtc, updatedUtc`. **404:** `COURSE_NOT_FOUND`.
+
+### 15.2 POST /courses/{courseId}/resources [Public]
+
+Suggest a link: `{ "url": "https://…", "description": "optional note for the reviewer" }`. Rate-limited to
+`Repository:ResourceSubmissionRateLimitPerHour` (default 10) per IP per hour; refused when the link is
+already listed for the course, already waiting, or was rejected for that course within 30 days.
+
+**Response 200:** `{ "submissionId", "outcome": "submitted|alreadySubmitted|alreadyListed|recentlyRejected", "message" }`
+**400:** `VALIDATION_ERROR`, `INVALID_RESOURCE_URL` · **404:** `COURSE_NOT_FOUND` · **429:** `RATE_LIMIT_EXCEEDED`
+
+### 15.3 GET /queue/resources [Public]
+
+The public review queue. `status` = `pending` (default, oldest first) | `decided` (last 30 days) | `all`.
+Items carry the course, link, type, host, the submitter's note, status, dates and decision note — nothing
+about who suggested it.
+
+### 15.4 GET /resources?url=… · GET /resources/{id} [Public]
+
+Every course listing a link (normalised first), and one listing. **400:** `INVALID_RESOURCE_URL` ·
+**404:** `RESOURCE_NOT_FOUND`.
+
+### 15.5 POST /resource-submissions/{id}/approve [Admin]
+
+```json
+{ "title": "…", "summary": "…", "note": null,
+  "alsoFor": [ { "courseId": "EET1015C" }, { "courseId": "EEE3300", "summary": "tailored for this course" } ] }
+```
+`title` ≤200 and `summary` 20–2000 apply to every course unless an `alsoFor` entry overrides them; ≤100
+`alsoFor` entries. **Response 200:** `{ submissionId, status, results: [ { courseId, outcome: "created|updated|unknownCourse", resourceId } ], message }`
+**409:** `SUBMISSION_NOT_PENDING` · **422:** `COURSE_NOT_FOUND` (no course given is listed)
+
+### 15.6 POST /resource-submissions/{id}/reject [Admin]
+
+`{ "note": "short public-safe reason" }` — required, ≤300.
+
+### 15.7 POST /resources [Admin]
+
+List a link directly (a resource the reviewer found, or more courses for an existing link):
+`{ "url", "title", "summary", "courses": [ { "courseId", "title?", "summary?" } ] }`. A course already
+listing the link has its listing updated and restored. **Response 200:** `{ url, type, results: [...] }`.
+
+### 15.8 PATCH /resources/{id} · DELETE /resources/{id} [Admin]
+
+`{ "title"?, "summary"?, "status"?: "active" | "removed" }` edits one course's listing; DELETE removes it
+permanently. **404:** `RESOURCE_NOT_FOUND`.
 **Response 404:** `GUIDE_REQUEST_NOT_FOUND`

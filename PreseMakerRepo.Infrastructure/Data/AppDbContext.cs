@@ -22,6 +22,8 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<GuideRequest> GuideRequests => Set<GuideRequest>();
     public DbSet<Institution> Institutions => Set<Institution>();
     public DbSet<CourseOffering> CourseOfferings => Set<CourseOffering>();
+    public DbSet<CourseResource> CourseResources => Set<CourseResource>();
+    public DbSet<ResourceSubmission> ResourceSubmissions => Set<ResourceSubmission>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

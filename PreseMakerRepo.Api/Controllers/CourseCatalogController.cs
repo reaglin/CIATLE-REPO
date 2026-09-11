@@ -102,7 +102,7 @@ public class CourseCatalogController : ControllerBase
                 NotFound(ApiResponse<object?>.Fail(ErrorCodes.CourseNotFound, "Course not found.")),
             CourseCatalogService.DeleteOutcome.HasContent =>
                 Conflict(ApiResponse<object?>.Fail(ErrorCodes.CourseHasContent,
-                    "The course has a curriculum guide, modules or guide requests. Set isActive to false instead.")),
+                    "The course has a curriculum guide, modules, guide requests or resources. Set isActive to false instead.")),
             _ => Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse($"Course {courseId.Trim().ToUpperInvariant()} deleted.")))
         };
     }

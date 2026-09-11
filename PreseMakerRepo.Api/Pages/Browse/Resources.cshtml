@@ -1,0 +1,150 @@
+@page "/courses/{courseId}/resources"
+@model PreseMakerRepo.Api.Pages.Browse.ResourcesModel
+@{
+    ViewData["Title"] = Model.Course is null ? "Resources" : $"Resources — {Model.Course.CourseId} {Model.DisplayTitle}";
+    if (Model.Course is not null && !Model.Resources.Any()) ViewData["NoIndex"] = true;
+    const int ShownOtherCourses = 8;
+}
+
+@if (Model.Course is null) { return; }
+
+@{
+    var taxonomy = new List<PreseMakerRepo.Core.Models.TaxonomyNode>();
+    for (var n = Model.Course.Level3Node; n is not null; n = n.Parent) taxonomy.Insert(0, n);
+}
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        @if (taxonomy.Count >= 2)
+        {
+            <li class="breadcrumb-item"><a asp-page="/Browse/Level2" asp-route-level1Key="@taxonomy[0].Key" asp-route-level2Key="@taxonomy[1].Key">@taxonomy[1].Key</a></li>
+        }
+        <li class="breadcrumb-item"><a asp-page="/Browse/Course" asp-route-courseId="@Model.Course.CourseId">@Model.Course.CourseId</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Resources</li>
+    </ol>
+</nav>
+
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+    <h1 class="h4 mb-0">Resources for @Model.Course.CourseId — @Model.DisplayTitle</h1>
+    <div class="d-flex gap-2">
+        @if (Model.HasGuide)
+        {
+            <a asp-page="/Browse/Guide" asp-route-courseId="@Model.Course.CourseId" class="btn btn-sm btn-primary">View Guide</a>
+        }
+        else
+        {
+            <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" rel="nofollow"
+               class="btn btn-sm btn-outline-primary js-request-guide" data-course="@Model.Course.CourseId">Request Guide</a>
+        }
+    </div>
+</div>
+<p class="text-muted small mb-4">
+    Websites, videos and products suggested by visitors and vendors, reviewed before they are listed. Each
+    summary is written by AI and says whether a resource is free or a commercial product.
+    <a href="#add-resource">Add a resource</a>
+</p>
+
+@if (!Model.Resources.Any())
+{
+    <div class="alert alert-light border mb-4">
+        No resources are listed for this course yet. Know a good website or video? <a href="#add-resource">Suggest it below</a>.
+    </div>
+}
+else
+{
+    <div class="mb-4">
+        @foreach (var r in Model.Resources)
+        {
+            var isVideo = r.Type == "YouTube" && PreseMakerRepo.Api.Helpers.ResourceUrls.IsVideoId(r.YouTubeVideoId);
+            <article class="card mb-3 resource-card">
+                <div class="card-body">
+                    <div class="row g-3">
+                        @if (isVideo)
+                        {
+                            <div class="col-md-5 col-lg-4">
+                                <div class="ratio ratio-16x9 yt-lite" data-video="@r.YouTubeVideoId" data-title="@r.Title">
+                                    <button type="button" class="yt-lite-play" aria-label="Play video: @r.Title">
+                                        <img src="https://i.ytimg.com/vi/@r.YouTubeVideoId/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" />
+                                        <span class="yt-lite-icon" aria-hidden="true">▶</span>
+                                    </button>
+                                </div>
+                            </div>
+                        }
+                        <div class="@(isVideo ? "col-md-7 col-lg-8" : "col-12")">
+                            <h2 class="h6 mb-1">
+                                <a href="@r.Url" target="_blank" rel="nofollow ugc noopener noreferrer">@r.Title<span class="visually-hidden"> (opens in a new tab)</span></a>
+                            </h2>
+                            <div class="small text-muted mb-2">
+                                <span class="badge text-bg-light border me-1">@(isVideo ? "Video" : "Website")</span>@r.Host
+                            </div>
+                            <p class="mb-1 resource-summary">@r.Summary</p>
+                            <div class="small text-muted fst-italic">AI-written summary</div>
+                            @if (r.AlsoForCourseIds.Any())
+                            {
+                                <div class="small mt-2">
+                                    <span class="text-muted">Also listed for</span>
+                                    @for (var i = 0; i < Math.Min(ShownOtherCourses, r.AlsoForCourseIds.Count); i++)
+                                    {
+                                        var other = r.AlsoForCourseIds[i];
+                                        <a asp-page="/Browse/Resources" asp-route-courseId="@other" class="text-decoration-none">@other</a>@(i < Math.Min(ShownOtherCourses, r.AlsoForCourseIds.Count) - 1 ? ", " : "")
+                                    }
+                                    @if (r.AlsoForCourseIds.Count > ShownOtherCourses)
+                                    {
+                                        <span class="text-muted">and @(r.AlsoForCourseIds.Count - ShownOtherCourses) more</span>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+}
+
+<section id="add-resource" class="card" style="max-width: 720px;" aria-labelledby="add-resource-heading">
+    <div class="card-body">
+        <h2 id="add-resource-heading" class="h5 mb-1">Add a resource</h2>
+        <p class="small text-muted">
+            Suggest a website or YouTube video that helps with @Model.Course.CourseId — free resources and products
+            suited to the course are both welcome; vendors, please say what you offer. Every suggestion is reviewed
+            before it is listed, and the review queue is public — <a asp-page="/Queue/Resources">see the queue</a>.
+            @if (Model.PendingCount > 0)
+            {
+                <span>@Model.PendingCount @(Model.PendingCount == 1 ? "suggestion is" : "suggestions are") waiting for review for this course.</span>
+            }
+        </p>
+
+        @if (Model.SuccessMessage is not null)
+        {
+            <div class="alert alert-success py-2" role="status">@Model.SuccessMessage</div>
+        }
+        @if (Model.Errors.Count > 0)
+        {
+            <div class="alert alert-danger py-2" role="alert">
+                <ul class="mb-0">
+                    @foreach (var e in Model.Errors) { <li>@e</li> }
+                </ul>
+            </div>
+        }
+
+        <form method="post" asp-page="/Browse/Resources" asp-route-courseId="@Model.Course.CourseId" asp-fragment="add-resource">
+            <div class="resource-honeypot" aria-hidden="true">
+                <label for="Homepage">Leave this field empty</label>
+                <input asp-for="Homepage" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="ResourceUrl">Link <span class="text-danger">*</span></label>
+                <input class="form-control" asp-for="ResourceUrl" inputmode="url" autocomplete="off" maxlength="2048" required
+                       placeholder="https://… — a website, or a YouTube video link" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="Description">What is it, and how does it help? Free or paid? <span class="text-muted">(optional)</span></label>
+                <textarea class="form-control" asp-for="Description" rows="3" maxlength="500"></textarea>
+                <div class="form-text">Helps the reviewer. It is not shown on this page.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit for review</button>
+        </form>
+    </div>
+</section>

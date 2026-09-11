@@ -1,0 +1,146 @@
+@page "/admin/resources"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.ResourcesModel
+@{ ViewData["Title"] = "Resources"; }
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h4 mb-0">Resources</h1>
+    <a class="btn btn-outline-secondary btn-sm" href="/queue/resources" target="_blank">Public queue ↗</a>
+</div>
+
+<p class="text-muted">
+    The AI reviewer approves and rejects suggestions over the API (<code>Tools/RESOURCE_API.md</code>). Use this page
+    to reverse a decision or correct a listing. Each listing belongs to one course — editing or removing it does not
+    affect other courses that list the same link.
+</p>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-info py-2">@Model.Message</div>
+}
+
+<ul class="nav nav-pills mb-3">
+    @foreach (var (key, label) in new[] { ("pending", "Pending"), ("decided", "Decided (30 days)"), ("listed", "Listings") })
+    {
+        <li class="nav-item">
+            <a class="nav-link @(Model.Tab == key ? "active" : "")" asp-page="/Resources" asp-route-tab="@key">
+                @label
+                @if (key == "pending" && Model.Queue is not null) { <span class="badge text-bg-light">@Model.Queue.Pending</span> }
+            </a>
+        </li>
+    }
+</ul>
+
+@if (Model.Tab == "listed")
+{
+    <form method="get" class="d-flex gap-2 mb-3" style="max-width: 520px;">
+        <input type="hidden" name="tab" value="listed" />
+        <input name="q" value="@Model.Q" class="form-control form-control-sm" placeholder="Course id, title or link" />
+        <button class="btn btn-outline-primary btn-sm" type="submit">Search</button>
+    </form>
+
+    @if (!Model.Listings.Any())
+    {
+        <div class="alert alert-light border">No listings.</div>
+    }
+    @foreach (var r in Model.Listings)
+    {
+        <div class="card mb-2 @(r.Status == "Removed" ? "border-danger-subtle" : "")">
+            <div class="card-body py-2">
+                <div class="d-flex flex-wrap justify-content-between gap-2">
+                    <div>
+                        <a href="/courses/@r.CourseId/resources" class="fw-semibold">@r.CourseId</a>
+                        <span class="badge text-bg-light border ms-1">@r.Type</span>
+                        <span class="badge @(r.Status == "Active" ? "text-bg-success" : "text-bg-danger") ms-1">@r.Status</span>
+                        <span class="small text-muted ms-1">@r.Source · updated @r.UpdatedUtc.ToString("yyyy-MM-dd")</span>
+                        <div class="small text-break"><a href="@r.Url" target="_blank" rel="noopener noreferrer">@r.Url</a></div>
+                        @if (r.AlsoForCourseIds.Any())
+                        {
+                            <div class="small text-muted">Also listed for: @string.Join(", ", r.AlsoForCourseIds)</div>
+                        }
+                    </div>
+                    <div class="d-flex gap-1 align-items-start">
+                        <form method="post" asp-page-handler="Status" asp-route-tab="@Model.Tab" asp-route-q="@Model.Q">
+                            <input type="hidden" name="id" value="@r.Id" />
+                            <input type="hidden" name="status" value="@(r.Status == "Active" ? "removed" : "active")" />
+                            <button class="btn btn-sm @(r.Status == "Active" ? "btn-outline-danger" : "btn-outline-success")" type="submit">
+                                @(r.Status == "Active" ? "Remove" : "Restore")
+                            </button>
+                        </form>
+                        <form method="post" asp-page-handler="Delete" asp-route-tab="@Model.Tab" asp-route-q="@Model.Q"
+                              onsubmit="return confirm('Delete this listing permanently?');">
+                            <input type="hidden" name="id" value="@r.Id" />
+                            <button class="btn btn-sm btn-outline-secondary" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <details class="mt-1">
+                    <summary class="small">@r.Title</summary>
+                    <form method="post" asp-page-handler="Update" asp-route-tab="@Model.Tab" asp-route-q="@Model.Q" class="mt-2">
+                        <input type="hidden" name="id" value="@r.Id" />
+                        <input name="title" value="@r.Title" maxlength="200" class="form-control form-control-sm mb-1" />
+                        <textarea name="summary" rows="4" maxlength="2000" class="form-control form-control-sm mb-1">@r.Summary</textarea>
+                        <button class="btn btn-sm btn-primary" type="submit">Save this course's listing</button>
+                    </form>
+                </details>
+            </div>
+        </div>
+    }
+}
+else if (Model.Queue is not null)
+{
+    @if (!Model.Queue.Items.Any())
+    {
+        <div class="alert alert-light border">Nothing here.</div>
+    }
+    @foreach (var s in Model.Queue.Items)
+    {
+        <div class="card mb-2">
+            <div class="card-body py-2">
+                <div class="d-flex flex-wrap justify-content-between gap-2">
+                    <div>
+                        <a href="/courses/@s.CourseId/resources" class="fw-semibold">@s.CourseId</a>
+                        <span class="small text-muted">@s.CourseTitle</span>
+                        <span class="badge text-bg-light border ms-1">@s.Type</span>
+                        <span class="badge text-bg-secondary ms-1">@s.Status</span>
+                        <div class="small text-break"><a href="@s.Url" target="_blank" rel="noopener noreferrer">@s.Url</a></div>
+                        @if (!string.IsNullOrWhiteSpace(s.Description)) { <div class="small text-muted">Submitter: @s.Description</div> }
+                        @if (!string.IsNullOrWhiteSpace(s.DecisionNote)) { <div class="small">Note: @s.DecisionNote</div> }
+                        <div class="small text-muted">Submitted @s.SubmittedUtc.ToString("yyyy-MM-dd HH:mm")@(s.DecidedUtc is null ? "" : $" · decided {s.DecidedUtc:yyyy-MM-dd HH:mm}")</div>
+                    </div>
+                    @if (s.Status != "Pending")
+                    {
+                        <form method="post" asp-page-handler="Reopen" asp-route-tab="@Model.Tab">
+                            <input type="hidden" name="id" value="@s.Id" />
+                            <button class="btn btn-sm btn-outline-secondary" type="submit">Reopen</button>
+                        </form>
+                    }
+                </div>
+                @if (s.Status == "Pending")
+                {
+                    <div class="row g-2 mt-1">
+                        <div class="col-lg-8">
+                            <details>
+                                <summary class="small">Approve…</summary>
+                                <form method="post" asp-page-handler="Approve" asp-route-tab="@Model.Tab" class="mt-2">
+                                    <input type="hidden" name="id" value="@s.Id" />
+                                    <input name="title" maxlength="200" class="form-control form-control-sm mb-1" placeholder="Title" required />
+                                    <textarea name="summary" rows="3" maxlength="2000" class="form-control form-control-sm mb-1" placeholder="Summary (20–2000 characters; say if it is a paid product)" required></textarea>
+                                    <input name="alsoFor" class="form-control form-control-sm mb-1" placeholder="Also list for (course ids, comma-separated)" />
+                                    <input name="note" maxlength="300" class="form-control form-control-sm mb-1" placeholder="Public note (optional)" />
+                                    <button class="btn btn-sm btn-success" type="submit">Approve and list</button>
+                                </form>
+                            </details>
+                        </div>
+                        <div class="col-lg-4">
+                            <form method="post" asp-page-handler="Reject" asp-route-tab="@Model.Tab" class="d-flex gap-1">
+                                <input type="hidden" name="id" value="@s.Id" />
+                                <input name="note" maxlength="300" class="form-control form-control-sm" placeholder="Reason (public)" required />
+                                <button class="btn btn-sm btn-outline-danger" type="submit">Reject</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
