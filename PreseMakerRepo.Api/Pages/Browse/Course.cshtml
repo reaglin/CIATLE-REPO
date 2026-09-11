@@ -68,7 +68,12 @@
     else
     {
         <span class="text-muted small">No curriculum guide yet.</span>
-        <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" class="btn btn-outline-primary btn-sm" rel="nofollow">Request Guide</a>
+        <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" rel="nofollow"
+           class="btn btn-outline-primary btn-sm js-request-guide" data-course="@Model.Course.CourseId">Request Guide</a>
+        @if (Model.RequestCount > 0)
+        {
+            <span class="text-muted small">@Model.RequestCount @(Model.RequestCount == 1 ? "person has" : "people have") asked for this guide.</span>
+        }
     }
 </div>
 

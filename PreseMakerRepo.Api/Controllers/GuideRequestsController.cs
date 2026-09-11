@@ -35,10 +35,12 @@ public class GuideRequestsController : ControllerBase
 
         var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
         var userId = User.Identity?.IsAuthenticated == true ? User.FindFirst("sub")?.Value : null;
-        var result = await _service.CreateAsync(request, ip, userId);
+        var result = await _service.CreateAsync(request, ip, userId, GuideRequestChannel.Api);
 
         return result.Outcome switch
         {
+            GuideRequestService.CreateOutcome.DetailsRequired => BadRequest(ApiResponse<object?>.Fail(
+                ErrorCodes.ValidationError, $"{result.CourseId} is not listed on the site: courseTitle and institution are required.")),
             GuideRequestService.CreateOutcome.GuideExists => Conflict(ApiResponse<object?>.Fail(
                 ErrorCodes.GuideAlreadyExists, $"A curriculum guide for {result.CourseId} is already published.")),
             GuideRequestService.CreateOutcome.RateLimited => StatusCode(429, ApiResponse<object?>.Fail(

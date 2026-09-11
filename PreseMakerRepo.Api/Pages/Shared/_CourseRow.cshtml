@@ -25,7 +25,16 @@
             }
             else
             {
-                <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.CourseId" class="btn btn-sm btn-outline-primary" rel="nofollow">Request Guide</a>
+                @* One click records the request (site.js); without JavaScript the link opens the request page. *@
+                <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.CourseId" rel="nofollow"
+                   class="btn btn-sm btn-outline-primary js-request-guide" data-course="@Model.CourseId"
+                   title="Ask for a curriculum guide to be written for this course">
+                    Request Guide
+                    @if (Model.RequestCount > 0)
+                    {
+                        <span class="badge text-bg-primary ms-1">@Model.RequestCount<span class="visually-hidden"> requests so far</span></span>
+                    }
+                </a>
             }
         </div>
     </div>

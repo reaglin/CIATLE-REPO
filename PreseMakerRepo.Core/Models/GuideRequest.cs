@@ -20,14 +20,18 @@ public class GuideRequest
     /// <summary>Course title as the requester knows it (from the taxonomy when the course is known).</summary>
     public string CourseTitle { get; set; } = string.Empty;
 
-    /// <summary>The school where the course is offered.</summary>
+    /// <summary>The school where the course is offered. Empty for one-click requests on a listed course,
+    /// whose offerings are already known.</summary>
     public string Institution { get; set; } = string.Empty;
 
     /// <summary>Optional free text: why the guide is wanted, catalog URL, etc.</summary>
     public string? Reason { get; set; }
 
-    /// <summary>Optional — to be told when the guide is published. Never shown publicly.</summary>
+    /// <summary>No longer collected (requests are anonymous, 2026-09-11); kept for rows recorded earlier.
+    /// Never shown publicly.</summary>
     public string? RequesterEmail { get; set; }
+
+    public GuideRequestChannel Channel { get; set; } = GuideRequestChannel.Form;
 
     /// <summary>Salted SHA-256 of the requester's IP; never the raw address.</summary>
     public string? RequesterIpHash { get; set; }

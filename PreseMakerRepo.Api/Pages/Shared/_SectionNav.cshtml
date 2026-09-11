@@ -1,0 +1,33 @@
+@* The site's three ways in: Courses · Programs · Career Paths. Model: the active key. *@
+@model string
+@{
+    var sections = new[]
+    {
+        (Key: "courses", Label: "Courses", Page: "/Index", Soon: false,
+         Blurb: "Every Florida course — open its curriculum guide, or request one."),
+        (Key: "programs", Label: "Programs", Page: "/Programs/Index", Soon: true,
+         Blurb: "Degrees and certificates, with the courses each one requires."),
+        (Key: "careers", Label: "Career Paths", Page: "/Careers/Index", Soon: true,
+         Blurb: "From a profession back to the programs and courses that lead there.")
+    };
+}
+<nav class="section-nav mb-4" aria-label="Explore the repository">
+    <div class="row row-cols-3 g-2 g-md-3">
+        @foreach (var s in sections)
+        {
+            var active = s.Key == Model;
+            <div class="col">
+                <a asp-page="@s.Page" class="card h-100 section-card @(active ? "active" : "")" aria-current="@(active ? "page" : null)">
+                    <div class="card-body p-2 p-md-3">
+                        <div class="fw-semibold section-card-label">@s.Label</div>
+                        @if (s.Soon)
+                        {
+                            <div class="small text-muted">Coming soon</div>
+                        }
+                        <p class="small text-muted mb-0 mt-1 d-none d-md-block">@s.Blurb</p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</nav>

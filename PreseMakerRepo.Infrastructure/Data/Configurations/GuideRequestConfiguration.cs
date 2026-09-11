@@ -19,6 +19,7 @@ public class GuideRequestConfiguration : IEntityTypeConfiguration<GuideRequest>
         b.Property(r => r.RequesterUserId).HasMaxLength(450);
         b.Property(r => r.AdminNotes).HasMaxLength(1000);
         b.Property(r => r.Status).HasConversion<int>();
+        b.Property(r => r.Channel).HasConversion<int>();
 
         // Ranking by course and filtering by status are the two admin/queue queries.
         b.HasIndex(r => new { r.CourseId, r.Status });

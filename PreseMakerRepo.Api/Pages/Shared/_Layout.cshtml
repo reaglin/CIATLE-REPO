@@ -42,10 +42,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMain">
+                @{
+                    var navPath = Context.Request.Path.Value ?? string.Empty;
+                    string NavActive(params string[] prefixes) =>
+                        prefixes.Any(p => navPath.StartsWith(p, StringComparison.OrdinalIgnoreCase)) ? "active" : "";
+                }
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" asp-page="/Browse/Index">Browse</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link @NavActive("/browse", "/courses")" asp-page="/Browse/Index">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link @NavActive("/programs")" asp-page="/Programs/Index">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link @NavActive("/careers")" asp-page="/Careers/Index">Career Paths</a></li>
+                    <li class="nav-item"><a class="nav-link @NavActive("/queue", "/request-guide")" asp-page="/Queue/Guides">Guide Requests</a></li>
                 </ul>
                 <form class="d-flex me-3" method="get" asp-page="/Browse/Index">
                     <input class="form-control form-control-sm me-2" type="search" name="q"
@@ -114,7 +120,10 @@
         </div>
     </footer>
 
-    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="polite"></div>
+
+    @* One antiforgery token for the one-click Request Guide buttons (site.js). *@
+    <form id="fcrAntiforgery" class="d-none" aria-hidden="true">@Html.AntiForgeryToken()</form>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

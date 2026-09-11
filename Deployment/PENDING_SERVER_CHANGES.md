@@ -6,12 +6,21 @@ the REST API and need no deploy.
 
 Bundle these into the next deploy, then delete the entry.
 
-## Course catalog — phase 1: courses without guides (branch `feature/course-catalog`, 2026-09-11) — ⚠ MIGRATION
+## Course catalog — phases 1 + 2: courses without guides, one-click requests, main page (branch `feature/course-catalog`, 2026-09-11) — ⚠ TWO MIGRATIONS
 
-`COURSE_CATALOG_PLAN.md` phase 1. **Merge `feature/course-catalog` into `master` first, then deploy
-WITHOUT `-SkipMigrations`** — migration `AddCourseCatalog` adds columns to `TaxonomyCourses` (`StateTitle`,
-`ContactHours`, `OfferingCount`, `Source`, `CreatedUtc`, `UpdatedUtc`) and the `Institutions` and
-`CourseOfferings` tables. Existing rows get `Source = Guide`, `OfferingCount = 0`; nothing is backfilled.
+`COURSE_CATALOG_PLAN.md` phases 1 and 2, deployed together (Ron, 2026-09-11). **Merge
+`feature/course-catalog` into `master` first, then deploy WITHOUT `-SkipMigrations`** — migration
+`AddCourseCatalog` adds columns to `TaxonomyCourses` (`StateTitle`, `ContactHours`, `OfferingCount`, `Source`,
+`CreatedUtc`, `UpdatedUtc`) and the `Institutions` and `CourseOfferings` tables; migration
+`GuideRequestChannel` adds `GuideRequests.Channel`. Existing rows get `Source = Guide`, `OfferingCount = 0`,
+`Channel = Form`; nothing is backfilled.
+
+**Phase 2 — what changes:** **Request Guide** records the request in one click (anonymous, no email; per-IP
+limit `Repository:GuideRequestButtonRateLimitPerHour`, default 20) and shows the running count; the
+`/request-guide` form no longer asks for an email and needs title + school only for unlisted courses; new public
+queue page **`/queue/guides`** and API **`GET /api/v1/queue/guides`**; the main page gains **Courses ·
+Programs · Career Paths** (the last two are "coming soon" pages at `/programs` and `/careers`) and the navbar
+reads Courses · Programs · Career Paths · Guide Requests.
 
 **What changes for visitors:** subject pages list **every** listed course (not only courses with a guide or
 module) with **View Guide / Request Guide** buttons and an All · With guide · Without guide filter; course
@@ -32,7 +41,10 @@ curl -s https://floridacourserepo.com/api/v1/institutions                    # 2
 ```
 
 Then open a prefix page (e.g. `/browse/ELECTRICAL_ENGINEERI/EEE`) and a guide page — the header strip reads
-"N courses · M curriculum guides" and guides render as before. **Then tell the `Tools/` session that
+"N courses · M curriculum guides" and guides render as before. Press **Request Guide** on a course without a
+guide: the button turns to "Requested ✓", and the course appears on `/queue/guides` and in
+`curl -s https://floridacourserepo.com/api/v1/queue/guides`. Decline that test request in
+`/admin/guide-requests` afterwards. **Then tell the `Tools/` session that
 `Tools/COURSE_API.md` is live.**
 
 ## ⚠ BLOCKING NEXT DEPLOY — four taxonomy nodes missing (added 2026-09-04, Ron to handle)

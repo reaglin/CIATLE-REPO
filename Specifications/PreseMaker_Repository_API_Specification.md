@@ -1341,6 +1341,12 @@ IP is stored as a salted SHA-256 hash only.
 `courseId` is normalized (spaces/hyphens removed, uppercased) and must match `^[A-Z]{3}\d{4}[A-Z]?$`.
 When the course is in the taxonomy its taxonomy title is stored instead of `courseTitle`.
 
+**Changed 2026-09-11 (`COURSE_CATALOG_PLAN.md` phase 2):** `courseTitle` and `institution` are required only
+when the course is **not listed** on the site (otherwise **400** `VALIDATION_ERROR`). **`email` is ignored** —
+requests are anonymous. The web site's one-click Request Guide button records requests through the
+`/request-guide?handler=Quick` page handler (antiforgery-protected), with its own per-IP limit
+(`Repository:GuideRequestButtonRateLimitPerHour`, default 20).
+
 **Response 200:**
 ```json
 { "success": true, "data": { "courseId": "EET2325C", "requestCount": 3, "alreadyRequestedByYou": false,
@@ -1371,6 +1377,27 @@ Set the status of every request for a course.
 `Open`, `Queued`, `Published`, `Declined`.
 
 **Response 200:** `{ "success": true, "data": { "message": "3 request(s) for EET2325C marked Queued." }, "error": null }`
+
+### 12.4 GET /queue/guides [Public]
+
+The public guide request queue, in the order guides are written: most requested first, ties to the earliest
+request. Added 2026-09-11. Contains nothing about requesters (no schools typed by them, reasons, notes or
+hashes). A course whose guide is published is `Published` whatever its request rows say; a course is
+`Declined` only when every request was declined.
+
+Query: `status` = `waiting` (default; Open + Queued; `open` accepted) | `published` | `declined` | `all`.
+
+**Response 200:**
+```json
+{ "success": true, "data": {
+  "filter": "waiting", "waiting": 12, "published": 40, "declined": 1,
+  "items": [
+    { "rank": 1, "courseId": "EET2325C", "title": "Communications Systems II", "requestCount": 3,
+      "firstRequestedUtc": "2026-09-03T14:02:11Z", "lastRequestedUtc": "2026-09-04T09:40:00Z",
+      "status": "Open", "hasGuide": false, "isListed": true }
+  ] }, "error": null }
+```
+**Response 400:** `VALIDATION_ERROR` (unknown `status`). The page `/queue/guides` renders the same data.
 
 ---
 

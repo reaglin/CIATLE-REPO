@@ -39,6 +39,12 @@ body { margin-bottom: 60px; }
 .curriculum-guide-content h3 { font-size: 1.1rem; margin-top: 1.25rem; }
 .curriculum-guide-content ul, .curriculum-guide-content ol { padding-left: 1.5rem; }
 
+/* Main sections: Courses · Programs · Career Paths */
+.section-card { color: inherit; text-decoration: none; border-width: 2px; transition: border-color .12s ease, box-shadow .12s ease; }
+.section-card:hover { color: inherit; border-color: #9ec5fe; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.section-card.active { border-color: #0d6efd; background-color: #f5f9ff; }
+.section-card.active .section-card-label { color: #0d6efd; }
+
 /* Course rows — courses with and without guides */
 .course-row-link:hover .course-row-title { text-decoration: underline; }
 .course-row-actions .btn { min-width: 7.5rem; }

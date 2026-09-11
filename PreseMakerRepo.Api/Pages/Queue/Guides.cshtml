@@ -1,0 +1,121 @@
+@page "/queue/guides"
+@model PreseMakerRepo.Api.Pages.Queue.GuidesModel
+@using PreseMakerRepo.Api.Services
+@{
+    ViewData["Title"] = "Guide Request Queue";
+    ViewData["NoIndex"] = true;
+    var waiting = Model.Queue.Filter == GuideRequestService.QueueWaiting;
+    var filters = new[]
+    {
+        (Key: GuideRequestService.QueueWaiting, Label: "Waiting", Count: Model.Queue.Waiting),
+        (Key: GuideRequestService.QueuePublished, Label: "Published", Count: Model.Queue.Published),
+        (Key: GuideRequestService.QueueDeclined, Label: "Declined", Count: Model.Queue.Declined)
+    };
+}
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Guide Request Queue</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-2">Guide Request Queue</h1>
+<p class="text-muted" style="max-width: 760px;">
+    Every <strong>Request Guide</strong> click lands here. Curriculum guides are written in order of demand —
+    the most-requested courses first — and the site is updated weekly. Requests are anonymous; nothing about
+    who asked is shown.
+</p>
+
+<ul class="nav nav-pills mb-3" aria-label="Filter the queue">
+    @foreach (var f in filters.Where(f => f.Count > 0 || f.Key != GuideRequestService.QueueDeclined || Model.Queue.Filter == f.Key))
+    {
+        var active = Model.Queue.Filter == f.Key;
+        <li class="nav-item">
+            <a class="nav-link @(active ? "active" : "")" aria-current="@(active ? "page" : null)"
+               asp-page="/Queue/Guides" asp-route-status="@f.Key">
+                @f.Label <span class="badge @(active ? "text-bg-light" : "text-bg-secondary")">@f.Count.ToString("N0")</span>
+            </a>
+        </li>
+    }
+</ul>
+
+@if (!Model.Queue.Items.Any())
+{
+    <div class="alert alert-light border" style="max-width: 760px;">
+        @if (waiting)
+        {
+            <text>No guide requests are waiting right now. <a asp-page="/Browse/Index">Browse courses</a> and use
+            <strong>Request Guide</strong> on any course without a guide.</text>
+        }
+        else
+        {
+            <text>Nothing here yet.</text>
+        }
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-sm align-middle">
+            <thead>
+                <tr>
+                    @if (waiting) { <th scope="col" class="text-end">#</th> }
+                    <th scope="col">Course</th>
+                    <th scope="col" class="text-end">Requests</th>
+                    <th scope="col">First requested</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Queue.Items)
+                {
+                    <tr>
+                        @if (waiting) { <td class="text-end text-muted">@item.Rank</td> }
+                        <td>
+                            @if (item.IsListed)
+                            {
+                                <a asp-page="/Browse/Course" asp-route-courseId="@item.CourseId" class="fw-semibold text-decoration-none">@item.CourseId</a>
+                            }
+                            else
+                            {
+                                <span class="fw-semibold">@item.CourseId</span>
+                            }
+                            @if (item.Title != item.CourseId)
+                            {
+                                <div class="small text-muted">@item.Title</div>
+                            }
+                        </td>
+                        <td class="text-end"><span class="badge text-bg-primary">@item.RequestCount</span></td>
+                        <td class="small text-nowrap">@item.FirstRequestedUtc.ToString("MMM d, yyyy")</td>
+                        <td class="text-nowrap">
+                            @switch (item.Status)
+                            {
+                                case "Published" when item.HasGuide:
+                                    <a asp-page="/Browse/Guide" asp-route-courseId="@item.CourseId" class="btn btn-sm btn-outline-success">View guide</a>
+                                    break;
+                                case "Published":
+                                    <span class="badge text-bg-success">Published</span>
+                                    break;
+                                case "Queued":
+                                    <span class="badge text-bg-info">In progress</span>
+                                    break;
+                                case "Declined":
+                                    <span class="badge text-bg-secondary">Declined</span>
+                                    break;
+                                default:
+                                    <span class="badge text-bg-light border">Waiting</span>
+                                    break;
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<p class="small text-muted mt-3">
+    Also available as JSON: <code>/api/v1/queue/guides?status=waiting</code> (or <code>published</code>,
+    <code>declined</code>, <code>all</code>).
+</p>

@@ -121,6 +121,23 @@ on the site yet the guide push still creates it — with the course id as a plac
 course's base data too** (before or after the guide). On an existing course the guide push never touches
 the course's title, credits or offerings.
 
+## Guide requests — the priority signal
+
+Visitors press **Request Guide** on any course without a guide (one click, anonymous). Those requests are
+**the first priority for writing guides.** Read them from the public queue — no token needed:
+
+```
+GET /api/v1/queue/guides?status=waiting     # Open + Queued, most requested first (ties: earliest request)
+GET /api/v1/queue/guides?status=published   # courses whose guide is out
+```
+
+Each item: `rank, courseId, title, requestCount, firstRequestedUtc, lastRequestedUtc, status (Open · Queued ·
+Published · Declined), hasGuide, isListed`. `isListed: false` means someone asked for a course the site does
+not list yet — add its base data before (or with) the guide. The same list is on the site at `/queue/guides`.
+
+`queue_mgr.py import-requests` (admin endpoint `GET /api/v1/guide-requests`) still works and still marks
+requests `Queued`; a published guide closes its requests automatically.
+
 ## Error codes
 
 | HTTP | Code | When |

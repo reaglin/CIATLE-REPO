@@ -2,17 +2,27 @@
 @model IndexModel
 @{ ViewData["Title"] = "Home"; }
 
-<div class="py-4 text-center">
+<div class="pt-3 pb-2 text-center">
     <h1 class="display-6 fw-bold">Florida Course Repo</h1>
     <p class="lead text-muted">Open educational resources for Florida college courses</p>
-    <form class="d-flex justify-content-center mt-3" method="get" asp-page="/Browse/Index">
+</div>
+
+<partial name="_SectionNav" model='"courses"' />
+
+<section aria-labelledby="find-course" class="mb-4">
+    <h2 id="find-course" class="visually-hidden">Find a course</h2>
+    <form class="d-flex justify-content-center" method="get" asp-page="/Browse/Index" role="search">
         <div class="input-group" style="max-width:560px">
-            <input type="search" name="q" class="form-control form-control-lg"
+            <input type="search" name="q" class="form-control form-control-lg" aria-label="Search courses"
                    placeholder="Search courses by number or title…" />
             <button type="submit" class="btn btn-primary btn-lg">Search</button>
         </div>
     </form>
-</div>
+    <p class="text-center small text-muted mt-2 mb-0">
+        No guide for your course yet? Use <strong>Request Guide</strong> on it — the most-requested courses are
+        written first. <a asp-page="/Queue/Guides">See the request queue</a>.
+    </p>
+</section>
 
 <hr />
 

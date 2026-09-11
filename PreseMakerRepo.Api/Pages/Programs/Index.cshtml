@@ -1,0 +1,22 @@
+@page "/programs"
+@{
+    ViewData["Title"] = "Programs";
+    ViewData["NoIndex"] = true;
+}
+
+<partial name="_SectionNav" model='"programs"' />
+
+<div class="mx-auto" style="max-width: 720px;">
+    <span class="badge text-bg-secondary mb-2">Coming soon</span>
+    <h1 class="h3">Programs</h1>
+    <p class="lead">
+        Associate and bachelor's degrees and certificates at Florida colleges and universities — with the courses
+        each program requires, linked to their curriculum guides.
+    </p>
+    <p>
+        Program information will come from each school's own catalog, so a program page will show what that
+        institution actually requires: general education, core courses and electives.
+    </p>
+    <p class="mb-4">In the meantime, every course is listed under Courses.</p>
+    <a class="btn btn-primary" asp-page="/Browse/Index">Browse courses</a>
+</div>

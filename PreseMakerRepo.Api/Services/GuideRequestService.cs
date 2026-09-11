@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
+using PreseMakerRepo.Api.Helpers;
 using PreseMakerRepo.Api.Models.Requests;
 using PreseMakerRepo.Api.Models.Responses;
 using PreseMakerRepo.Api.Options;
@@ -19,11 +20,18 @@ namespace PreseMakerRepo.Api.Services;
 /// "Request a Curriculum Guide": shared by the REST endpoint and the web form.
 /// Rate-limits per hashed IP (like content reports), refuses requests for courses that
 /// already have a guide, deduplicates the same requester asking for the same course within
-/// a day, and produces the per-course ranking the admin console and the queue tool use.
+/// a day, and produces the per-course ranking the admin console and the queue tool use, and the
+/// public queue anyone can read. Requests are anonymous: no email is collected.
 /// </summary>
 public class GuideRequestService
 {
-    public enum CreateOutcome { Created, AlreadyRequested, GuideExists, RateLimited }
+    /// <summary><see cref="DetailsRequired"/>: the course is not listed, so its title and a school are needed.</summary>
+    public enum CreateOutcome { Created, AlreadyRequested, GuideExists, RateLimited, DetailsRequired }
+
+    public const string QueueWaiting = "waiting";
+    public const string QueuePublished = "published";
+    public const string QueueDeclined = "declined";
+    public const string QueueAll = "all";
 
     public sealed record CreateResult(CreateOutcome Outcome, string CourseId, int RequestCount, bool InTaxonomy, string? TaxonomyTitle);
 
@@ -55,21 +63,27 @@ public class GuideRequestService
     {
         var course = await _db.TaxonomyCourses.AsNoTracking()
             .Where(c => c.CourseId == courseId && c.CourseId != WellKnownIds.OrphanCourseId)
-            .Select(c => new { c.Title })
+            .Select(c => new { c.Title, c.StateTitle })
             .FirstOrDefaultAsync();
+        var displayTitle = course is null ? null : CourseTitles.Display(courseId, course.Title, course.StateTitle);
         var hasGuide = await _db.CurriculumGuides.AsNoTracking()
             .AnyAsync(g => g.CourseId == courseId && g.Title != CurriculumGuide.StubTitle);
         var open = await _db.GuideRequests.AsNoTracking()
             .CountAsync(r => r.CourseId == courseId && r.Status != GuideRequestStatus.Declined);
-        return (course != null, course?.Title, hasGuide, open);
+        return (course != null, displayTitle, hasGuide, open);
     }
 
-    public async Task<CreateResult> CreateAsync(CreateGuideRequestRequest request, string ip, string? userId)
+    public async Task<CreateResult> CreateAsync(CreateGuideRequestRequest request, string ip, string? userId,
+        GuideRequestChannel channel = GuideRequestChannel.Form)
     {
         TryNormalizeCourseId(request.CourseId, out var courseId);
         var (inTaxonomy, title, hasGuide, _) = await LookupAsync(courseId);
         if (hasGuide)
             return new CreateResult(CreateOutcome.GuideExists, courseId, 0, inTaxonomy, title);
+
+        // A listed course is identified by its id; one that is not listed needs enough to find it.
+        if (!inTaxonomy && (string.IsNullOrWhiteSpace(request.CourseTitle) || string.IsNullOrWhiteSpace(request.Institution)))
+            return new CreateResult(CreateOutcome.DetailsRequired, courseId, 0, inTaxonomy, title);
 
         var ipHash = HashIp(ip);
         // The same person asking again the same day counts once.
@@ -83,22 +97,22 @@ public class GuideRequestService
             return new CreateResult(CreateOutcome.AlreadyRequested, courseId, existing, inTaxonomy, title);
         }
 
-        if (!CheckRateLimit(ipHash))
+        if (!CheckRateLimit(ipHash, channel))
             return new CreateResult(CreateOutcome.RateLimited, courseId, 0, inTaxonomy, title);
 
         _db.GuideRequests.Add(new GuideRequest
         {
             Id              = Guid.NewGuid(),
             CourseId        = courseId,
-            CourseTitle     = (inTaxonomy && !string.IsNullOrWhiteSpace(title) ? title : request.CourseTitle).Trim(),
-            Institution     = request.Institution.Trim(),
+            CourseTitle     = (inTaxonomy && !string.IsNullOrWhiteSpace(title) ? title! : request.CourseTitle ?? string.Empty).Trim(),
+            Institution     = request.Institution?.Trim() ?? string.Empty,
             Reason          = Clean(request.Reason),
-            RequesterEmail  = Clean(request.Email)?.ToLowerInvariant(),
             RequesterIpHash = ipHash,
             RequesterUserId = userId,
             IsInTaxonomy    = inTaxonomy,
             RequestedUtc    = DateTime.UtcNow,
-            Status          = GuideRequestStatus.Open
+            Status          = GuideRequestStatus.Open,
+            Channel         = channel
         });
         await _db.SaveChangesAsync();
 
@@ -176,23 +190,95 @@ public class GuideRequestService
         return published.Count;
     }
 
-    /// <summary>Emails of requesters who asked to be told, for a course (distinct).</summary>
-    public Task<List<string>> NotificationEmailsAsync(string courseId) =>
-        _db.GuideRequests.AsNoTracking()
-            .Where(r => r.CourseId == courseId && r.RequesterEmail != null)
-            .Select(r => r.RequesterEmail!).Distinct().ToListAsync();
+    /// <summary>Requests still waiting for a course (Open or Queued) — the count shown beside Request Guide.</summary>
+    public Task<int> WaitingCountAsync(string courseId) =>
+        _db.GuideRequests.AsNoTracking().CountAsync(r => r.CourseId == courseId &&
+            (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued));
+
+    /// <summary>waiting (default; "open" is accepted) · published · declined · all.</summary>
+    public static bool TryParseQueueFilter(string? raw, out string filter)
+    {
+        filter = string.IsNullOrWhiteSpace(raw) ? QueueWaiting : raw.Trim().ToLowerInvariant();
+        if (filter == "open") filter = QueueWaiting;
+        return filter is QueueWaiting or QueuePublished or QueueDeclined or QueueAll;
+    }
+
+    /// <summary>
+    /// The public guide request queue: one row per requested course, most requested first (ties go to the
+    /// earliest request) — the order guides are written in. A course whose guide is published counts as
+    /// Published whatever its request rows say; a course counts as Declined only when every request was.
+    /// </summary>
+    public async Task<PublicGuideQueueResponse> PublicQueueAsync(string filter)
+    {
+        var rows = await _db.GuideRequests.AsNoTracking()
+            .Select(r => new { r.CourseId, r.CourseTitle, r.Status, r.RequestedUtc })
+            .ToListAsync();
+        var ids = rows.Select(r => r.CourseId).Distinct().ToList();
+        var courses = await _db.TaxonomyCourses.AsNoTracking()
+            .Where(c => ids.Contains(c.CourseId) && c.Level3Key != null)
+            .Select(c => new
+            {
+                c.CourseId,
+                c.Title,
+                c.StateTitle,
+                GuideTitle = _db.CurriculumGuides
+                    .Where(g => g.CourseId == c.CourseId && g.Title != CurriculumGuide.StubTitle)
+                    .Select(g => g.Title)
+                    .FirstOrDefault()
+            })
+            .ToDictionaryAsync(c => c.CourseId, StringComparer.OrdinalIgnoreCase);
+
+        var all = rows.GroupBy(r => r.CourseId).Select(g =>
+            {
+                courses.TryGetValue(g.Key, out var course);
+                var hasGuide = course?.GuideTitle is not null;
+                var status = hasGuide || g.Any(r => r.Status == GuideRequestStatus.Published) ? GuideRequestStatus.Published
+                           : g.All(r => r.Status == GuideRequestStatus.Declined) ? GuideRequestStatus.Declined
+                           : g.Any(r => r.Status == GuideRequestStatus.Queued) ? GuideRequestStatus.Queued
+                           : GuideRequestStatus.Open;
+                var counted = g.Where(r => r.Status != GuideRequestStatus.Declined).ToList();
+                var dated = counted.Count > 0 ? counted : g.ToList();
+                var title = course is not null
+                    ? CourseTitles.Display(g.Key, course.Title, course.StateTitle, course.GuideTitle)
+                    : CourseTitles.Readable(g.OrderByDescending(r => r.RequestedUtc).First().CourseTitle.Trim());
+                return new PublicGuideQueueItem(0, g.Key, string.IsNullOrWhiteSpace(title) ? g.Key : title,
+                    counted.Count, dated.Min(r => r.RequestedUtc), dated.Max(r => r.RequestedUtc),
+                    status.ToString(), hasGuide, course is not null);
+            })
+            .ToList();
+
+        static bool IsWaiting(PublicGuideQueueItem i) => i.Status is nameof(GuideRequestStatus.Open) or nameof(GuideRequestStatus.Queued);
+        var selected = all.Where(i => filter switch
+            {
+                QueueWaiting => IsWaiting(i),
+                QueuePublished => i.Status == nameof(GuideRequestStatus.Published),
+                QueueDeclined => i.Status == nameof(GuideRequestStatus.Declined),
+                _ => true
+            })
+            .OrderByDescending(i => i.RequestCount).ThenBy(i => i.FirstRequestedUtc).ThenBy(i => i.CourseId)
+            .Select((i, index) => i with { Rank = index + 1 })
+            .ToList();
+
+        return new PublicGuideQueueResponse(filter,
+            all.Count(IsWaiting),
+            all.Count(i => i.Status == nameof(GuideRequestStatus.Published)),
+            all.Count(i => i.Status == nameof(GuideRequestStatus.Declined)),
+            selected);
+    }
 
     // ── helpers ──────────────────────────────────────────────────────────────
 
-    private bool CheckRateLimit(string ipHash)
+    private bool CheckRateLimit(string ipHash, GuideRequestChannel channel)
     {
-        var key = $"guide_request_rate:{ipHash}";
+        var button = channel == GuideRequestChannel.Button;
+        var key = $"guide_request_rate:{(button ? "button" : "form")}:{ipHash}";
+        var limit = button ? _repo.GuideRequestButtonRateLimitPerHour : _repo.GuideRequestRateLimitPerHour;
         var count = _cache.GetOrCreate(key, entry =>
         {
             entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1);
             return 0;
         });
-        if (count >= _repo.GuideRequestRateLimitPerHour) return false;
+        if (count >= limit) return false;
         _cache.Set(key, count + 1, TimeSpan.FromHours(1));
         return true;
     }

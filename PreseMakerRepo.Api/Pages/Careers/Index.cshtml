@@ -1,0 +1,25 @@
+@page "/careers"
+@{
+    ViewData["Title"] = "Career Paths";
+    ViewData["NoIndex"] = true;
+}
+
+<partial name="_SectionNav" model='"careers"' />
+
+<div class="mx-auto" style="max-width: 720px;">
+    <span class="badge text-bg-secondary mb-2">Coming soon</span>
+    <h1 class="h3">Career Paths</h1>
+    <p class="lead">
+        Start from a profession — registered nurse, mechanical engineer, accountant, lawyer — and trace the path
+        back: the programs that lead there and the courses along the way.
+    </p>
+    <p>
+        Career Paths will also say plainly where licensure or program accreditation decides whether a route
+        qualifies you, because a set of individually transferable courses is not always enough.
+    </p>
+    <p class="mb-4">
+        In the meantime, most curriculum guides include a <strong>Career Pathways</strong> section describing the
+        careers the course supports.
+    </p>
+    <a class="btn btn-primary" asp-page="/Browse/Index">Browse courses</a>
+</div>

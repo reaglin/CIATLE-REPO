@@ -12,17 +12,17 @@ public class CreateGuideRequestRequestValidator : AbstractValidator<CreateGuideR
             .NotEmpty().WithMessage("Enter the course number (e.g. EET2325C).")
             .Must(id => GuideRequestService.TryNormalizeCourseId(id, out _))
             .WithMessage("Course number must be an SCNS code: three letters and four digits, optionally followed by C or L (e.g. ENC1101, EET2325C).");
-        RuleFor(x => x.CourseTitle)
-            .NotEmpty().WithMessage("Enter the course title.")
-            .MinimumLength(3).MaximumLength(200);
-        RuleFor(x => x.Institution)
-            .NotEmpty().WithMessage("Enter the school where the course is offered.")
-            .MinimumLength(2).MaximumLength(200);
+        // Title and school are required only for a course that is not listed — the service decides that,
+        // because only it knows whether the course is listed.
+        RuleFor(x => x.CourseTitle!)
+            .MinimumLength(3).WithMessage("The course title must be at least 3 characters.")
+            .MaximumLength(200)
+            .When(x => !string.IsNullOrWhiteSpace(x.CourseTitle));
+        RuleFor(x => x.Institution!)
+            .MinimumLength(2).WithMessage("The school name must be at least 2 characters.")
+            .MaximumLength(200)
+            .When(x => !string.IsNullOrWhiteSpace(x.Institution));
         RuleFor(x => x.Reason).MaximumLength(1000);
-        RuleFor(x => x.Email)
-            .EmailAddress().When(x => !string.IsNullOrWhiteSpace(x.Email))
-            .WithMessage("Enter a valid email address, or leave it blank.")
-            .MaximumLength(256);
     }
 }
 

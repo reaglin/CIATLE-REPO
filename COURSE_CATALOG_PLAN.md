@@ -1,8 +1,9 @@
 # Course catalog, guide requests & course resources — implementation plan
 
-**Status:** plan written 2026-09-11 (Ron's decisions in §1, answers in §12). **Phase 1 built 2026-09-11 on
-branch `feature/course-catalog` — not yet deployed** (`Deployment/PENDING_SERVER_CHANGES.md`); the contract
-for the `Tools/` session is `Tools/COURSE_API.md`. Phases 2–5 not started.
+**Status:** plan written 2026-09-11 (Ron's decisions in §1, answers in §12). **Phases 1 and 2 built 2026-09-11
+on branch `feature/course-catalog` — to be deployed together, not yet deployed**
+(`Deployment/PENDING_SERVER_CHANGES.md`); the contract for the `Tools/` session is `Tools/COURSE_API.md`.
+Phases 3–5 not started.
 **Ask (Ron, 2026-09-11):** list every course that exists, not only the ones with a guide. Guides are
 generated **on request**. Each course row carries two buttons — **Course Resources** and **View Guide** /
 **Request Guide**. Requests and resource submissions go into **public queues** that the AI sessions work.
