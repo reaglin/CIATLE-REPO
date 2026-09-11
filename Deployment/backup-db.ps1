@@ -4,6 +4,7 @@
 #   .\Deployment\backup-db.ps1                     # timestamped backup, downloaded and verified
 #   .\Deployment\backup-db.ps1 -Label before-import
 #   .\Deployment\backup-db.ps1 -NoDownload         # server copy only
+#   .\Deployment\backup-db.ps1 -DbPath /var/presemaker-repo/data/repo.db   # when the path cannot be found
 #
 # What it does, in one ssh call:
 #   1. reads the database path from /etc/presemaker-repo/environment;
@@ -22,6 +23,8 @@ param(
     [string]$RemoteUser   = "root",
     [string]$RemoteHost   = "129.121.101.162",
     [string]$EnvFile      = "/etc/presemaker-repo/environment",
+    # Set this when the database is not where the environment file says (the script reports what it found).
+    [string]$DbPath       = "",
     [string]$BackupDir    = "/var/presemaker-repo/backups",
     [string]$ServiceName  = "presemaker-repo",
     [string]$Label        = "",
@@ -38,8 +41,19 @@ $suffix = if ($Label) { "-" + ($Label -replace '[^A-Za-z0-9_-]', '') } else { ""
 # PowerShell -> ssh -> bash, and there are no CR line endings (see the note in deploy-update.ps1).
 $remoteScript = @'
 set -euo pipefail
-DB=$(sed -n 's/^ConnectionStrings__DefaultConnection=.*Data Source=\([^;]*\).*/\1/p' '__ENVFILE__' | head -n 1)
-if [ -z "$DB" ] || [ ! -f "$DB" ]; then echo "Database file not found (from __ENVFILE__): '$DB'" >&2; exit 1; fi
+DB='__DBPATH__'
+if [ -z "$DB" ]; then DB=$(grep -ihs DefaultConnection '__ENVFILE__' /etc/systemd/system/presemaker-repo.service | tr -d '\r' | sed -n 's/.*[Dd]ata[ _]*[Ss]ource *= *\([^;"]*\).*/\1/p' | sed 's/[[:space:]]*$//' | head -n 1); fi
+if [ -z "$DB" ]; then DB=$(grep -ihs DefaultConnection '__ENVFILE__' /etc/systemd/system/presemaker-repo.service | tr -d '\r' | sed -n 's/.*[Ff]ilename *= *\([^;"]*\).*/\1/p' | sed 's/[[:space:]]*$//' | head -n 1); fi
+if [ -z "$DB" ]; then for GUESS in /var/presemaker-repo/data/repo.db /var/presemaker-repo/repo.db /opt/presemaker-repo/app/repo.db; do if [ -f "$GUESS" ]; then DB="$GUESS"; break; fi; done; fi
+if [ -z "$DB" ] || [ ! -f "$DB" ]; then
+  echo "Could not find the database file. Looked for a Data Source= path in __ENVFILE__ and the systemd unit, then in the usual locations." >&2
+  echo "-- lines mentioning DefaultConnection (secrets masked):" >&2
+  grep -ihs DefaultConnection '__ENVFILE__' /etc/systemd/system/presemaker-repo.service | sed -E 's/(Password|SecretKey|Pwd)=[^;"]*/\1=***/Ig' >&2 || true
+  echo "-- *.db files under /var and /opt:" >&2
+  find /var /opt -maxdepth 5 -name '*.db' -size +0 2>/dev/null | head -n 10 >&2 || true
+  echo "-- then re-run with the path, e.g.:  .\\Deployment\\backup-db.ps1 -DbPath /var/presemaker-repo/data/repo.db" >&2
+  exit 1
+fi
 mkdir -p '__BACKUPDIR__'
 DEST="__BACKUPDIR__/repo-$(date -u +%Y%m%d-%H%M%S)__SUFFIX__.db"
 if command -v sqlite3 >/dev/null 2>&1; then
@@ -63,6 +77,7 @@ echo "SHA256=$(sha256sum "$DEST" | cut -d ' ' -f 1)"
 '@
 
 $remoteScript = $remoteScript.
+    Replace('__DBPATH__', $DbPath).
     Replace('__ENVFILE__', $EnvFile).
     Replace('__BACKUPDIR__', $BackupDir).
     Replace('__SUFFIX__', $suffix).
