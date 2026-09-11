@@ -1,5 +1,6 @@
 @page "/browse/{level1Key}/{level2Key}"
 @model PreseMakerRepo.Api.Pages.Browse.Level2Model
+@using PreseMakerRepo.Api.Helpers
 @{ ViewData["Title"] = Model.Prefix is not null ? $"{Model.Prefix.Key} — {Model.Prefix.Name}" : "Browse"; }
 
 <nav aria-label="breadcrumb" class="mb-3">
@@ -14,10 +15,10 @@
 </nav>
 
 <h1 class="h4 mb-1">@Model.Prefix?.Key — @Model.Prefix?.Name</h1>
-<p class="text-muted mb-3">
-    @Model.Prefix?.CourseCount course@(Model.Prefix?.CourseCount != 1 ? "s" : "")
-    · @Model.Prefix?.ModuleCount module@(Model.Prefix?.ModuleCount != 1 ? "s" : "")
-</p>
+@if (Model.Prefix is not null)
+{
+    <p class="text-muted mb-3">@CountText.Courses(Model.Prefix.CourseCount, Model.Prefix.GuideCount, Model.Prefix.ModuleCount)</p>
+}
 
 @if (!string.IsNullOrEmpty(Model.Description))
 {
@@ -37,48 +38,14 @@
                    class="card h-100 taxonomy-card">
                     <div class="card-body">
                         <h6 class="card-title mb-1">@node.Key — @node.Name</h6>
-                        <p class="card-text text-muted small mb-0">
-                            @node.CourseCount course@(node.CourseCount != 1 ? "s" : "")
-                        </p>
+                        <p class="card-text text-muted small mb-0">@CountText.Courses(node.CourseCount, node.GuideCount)</p>
                     </div>
                 </a>
             </div>
         }
     </div>
 }
-else
+else if (Model.CourseList is not null)
 {
-    @if (!Model.Courses.Any())
-    {
-        <div class="alert alert-info">No courses with published materials found in this subject area.</div>
-    }
-    else
-    {
-        <div class="list-group">
-            @foreach (var c in Model.Courses.OrderBy(c => c.CourseId))
-            {
-                var hasGuide = Model.CourseIdsWithGuides.Contains(c.CourseId);
-                <div class="list-group-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <a asp-page="/Browse/Course" asp-route-courseId="@c.CourseId"
-                               class="fw-semibold text-decoration-none">@c.CourseId</a>
-                            <span class="ms-2 text-muted">@c.Title</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2 ms-2 flex-shrink-0">
-                            @if (hasGuide)
-                            {
-                                <a asp-page="/Browse/Guide" asp-route-courseId="@c.CourseId"
-                                   class="badge bg-primary text-decoration-none">Curriculum Guide</a>
-                            }
-                            @if (c.CreditHours.HasValue)
-                            {
-                                <span class="badge bg-light text-dark">@c.CreditHours cr</span>
-                            }
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    }
+    <partial name="_CourseList" model="Model.CourseList" />
 }

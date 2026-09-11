@@ -7,13 +7,16 @@
     <title>@(ViewData["Title"] != null ? ViewData["Title"] + " — " : "")Florida Course Repo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @if (ViewData["NoIndex"] is true)
+    {
+        <meta name="robots" content="noindex,follow" />
+    }
 </head>
 <body>
     @{
-        // Cached in SiteStatsService, so on all but the first render each half hour this is a
-        // dictionary lookup. Counts courses with a published module or a curriculum guide - the
-        // same definition Browse uses per discipline, so the header and the tree agree.
-        var courseCount = await SiteStats.GetCoursesWithMaterialsAsync();
+        // Cached in SiteStatsService (dropped on course and guide writes), so this is normally a
+        // dictionary lookup. Same definitions Browse uses per discipline, so the header and the tree agree.
+        var siteCounts = await SiteStats.GetSiteCountsAsync();
     }
     <div class="bg-light border-bottom py-1" style="font-size:.8rem">
         <div class="container-lg d-flex flex-wrap align-items-center justify-content-center gap-2">
@@ -22,7 +25,7 @@
                out and both lines simply centre. *@
             <span class="d-none d-md-block flex-fill"></span>
             <span class="text-center">
-                Materials for <strong>@courseCount.ToString("N0")</strong> courses available.
+<strong>@siteCounts.Courses.ToString("N0")</strong> courses · <strong>@siteCounts.Guides.ToString("N0")</strong> curriculum guides
             </span>
             <span class="d-none d-md-block flex-fill text-end">
                 Sponsored by <a href="https://edu-agentic.com/" target="_blank" rel="noopener">eAgentic Software</a>
@@ -46,7 +49,7 @@
                 </ul>
                 <form class="d-flex me-3" method="get" asp-page="/Browse/Index">
                     <input class="form-control form-control-sm me-2" type="search" name="q"
-                           placeholder="Search modules…" value="@Context.Request.Query["q"]" />
+                           placeholder="Search courses…" value="@Context.Request.Query["q"]" />
                     <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
                 </form>
                 <ul class="navbar-nav mb-2 mb-lg-0">

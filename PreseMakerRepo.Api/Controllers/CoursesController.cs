@@ -14,6 +14,8 @@ using PreseMakerRepo.Core.Interfaces;
 using PreseMakerRepo.Core.Models;
 using PreseMakerRepo.Infrastructure.Data;
 using PreseMakerRepo.Infrastructure.Options;
+using PreseMakerRepo.Infrastructure.Services;
+using Microsoft.Extensions.Caching.Memory;
 using System.Text.Json;
 
 namespace PreseMakerRepo.Api.Controllers;
@@ -337,7 +339,8 @@ public class CoursesController : ControllerBase
     public async Task<IActionResult> UpsertCurriculumGuide(
         string courseId,
         [FromBody] UpsertCurriculumGuideRequest request,
-        [FromServices] IValidator<UpsertCurriculumGuideRequest> validator)
+        [FromServices] IValidator<UpsertCurriculumGuideRequest> validator,
+        [FromServices] IMemoryCache cache)
     {
         var vResult = await validator.ValidateAsync(request);
         if (!vResult.IsValid) return BadRequest(ValidationError(vResult));
@@ -379,7 +382,10 @@ public class CoursesController : ControllerBase
                 CourseId = normalizedId,
                 Title = normalizedId,
                 Level3Key = resolvedKey,
-                IsActive = true
+                IsActive = true,
+                Source = CourseSource.Guide,
+                CreatedUtc = DateTime.UtcNow,
+                UpdatedUtc = DateTime.UtcNow
             });
         }
 
@@ -416,6 +422,7 @@ public class CoursesController : ControllerBase
         }
 
         await _db.SaveChangesAsync();
+        SiteCache.InvalidateCounts(cache);
         return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Curriculum guide saved.")));
     }
 
@@ -823,7 +830,7 @@ public class CoursesController : ControllerBase
         _db.CurriculumGuides.Add(new Core.Models.CurriculumGuide
         {
             CourseId = courseId,
-            Title = "Not Completed",
+            Title = Core.Models.CurriculumGuide.StubTitle,
             HtmlContent = "<p>Not Completed</p>",
             Credits = null,
             ContactHours = null,

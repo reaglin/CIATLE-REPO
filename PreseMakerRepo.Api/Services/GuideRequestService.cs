@@ -57,7 +57,8 @@ public class GuideRequestService
             .Where(c => c.CourseId == courseId && c.CourseId != WellKnownIds.OrphanCourseId)
             .Select(c => new { c.Title })
             .FirstOrDefaultAsync();
-        var hasGuide = await _db.CurriculumGuides.AsNoTracking().AnyAsync(g => g.CourseId == courseId);
+        var hasGuide = await _db.CurriculumGuides.AsNoTracking()
+            .AnyAsync(g => g.CourseId == courseId && g.Title != CurriculumGuide.StubTitle);
         var open = await _db.GuideRequests.AsNoTracking()
             .CountAsync(r => r.CourseId == courseId && r.Status != GuideRequestStatus.Declined);
         return (course != null, course?.Title, hasGuide, open);
@@ -117,7 +118,8 @@ public class GuideRequestService
         var rows = await query.ToListAsync();
         var courseIds = rows.Select(r => r.CourseId).Distinct().ToList();
         var withGuide = await _db.CurriculumGuides.AsNoTracking()
-            .Where(g => courseIds.Contains(g.CourseId)).Select(g => g.CourseId).ToListAsync();
+            .Where(g => courseIds.Contains(g.CourseId) && g.Title != CurriculumGuide.StubTitle)
+            .Select(g => g.CourseId).ToListAsync();
         var guideSet = withGuide.ToHashSet(StringComparer.OrdinalIgnoreCase);
 
         return rows.GroupBy(r => r.CourseId)
@@ -167,7 +169,7 @@ public class GuideRequestService
     {
         var published = await _db.GuideRequests
             .Where(r => (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued) &&
-                        _db.CurriculumGuides.Any(g => g.CourseId == r.CourseId))
+                        _db.CurriculumGuides.Any(g => g.CourseId == r.CourseId && g.Title != CurriculumGuide.StubTitle))
             .ToListAsync();
         foreach (var r in published) { r.Status = GuideRequestStatus.Published; r.StatusUtc = DateTime.UtcNow; }
         if (published.Count > 0) await _db.SaveChangesAsync();

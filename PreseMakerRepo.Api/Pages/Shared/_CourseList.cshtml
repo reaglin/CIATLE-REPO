@@ -1,0 +1,41 @@
+@using PreseMakerRepo.Api.Services
+@model CourseListView
+@{
+    var filters = new[]
+    {
+        (Key: CourseListView.ShowAll, Label: "All", Count: Model.Total),
+        (Key: CourseListView.ShowGuides, Label: "With guide", Count: Model.WithGuide),
+        (Key: CourseListView.ShowNoGuide, Label: "Without guide", Count: Model.Total - Model.WithGuide)
+    };
+}
+@if (Model.Total == 0)
+{
+    <div class="alert alert-info">No courses are listed in this subject yet.</div>
+    return;
+}
+
+<div class="btn-group btn-group-sm flex-wrap mb-2" role="group" aria-label="Filter courses by guide">
+    @foreach (var f in filters)
+    {
+        var active = Model.Show == f.Key;
+        <a href="?show=@f.Key" rel="nofollow"
+           class="btn @(active ? "btn-secondary" : "btn-outline-secondary")"
+           aria-current="@(active ? "true" : null)">
+            @f.Label <span class="badge @(active ? "bg-light text-dark" : "bg-secondary")">@f.Count.ToString("N0")</span>
+        </a>
+    }
+</div>
+
+@if (!Model.Rows.Any())
+{
+    <div class="alert alert-light border">No courses match this filter.</div>
+}
+else
+{
+    <div class="list-group course-list">
+        @foreach (var row in Model.Rows)
+        {
+            <partial name="_CourseRow" model="row" />
+        }
+    </div>
+}

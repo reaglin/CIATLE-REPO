@@ -30,6 +30,8 @@ public static class ErrorCodes
     public const string RateLimitExceeded = "RATE_LIMIT_EXCEEDED";
     public const string GuideAlreadyExists = "GUIDE_ALREADY_EXISTS";
     public const string GuideRequestNotFound = "GUIDE_REQUEST_NOT_FOUND";
+    public const string CourseHasContent = "COURSE_HAS_CONTENT";
+    public const string BatchTooLarge = "BATCH_TOO_LARGE";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
     public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";
 }

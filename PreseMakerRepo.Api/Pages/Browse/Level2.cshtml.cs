@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using PreseMakerRepo.Core.Enums;
+using PreseMakerRepo.Api.Services;
 using PreseMakerRepo.Core.Interfaces;
-using PreseMakerRepo.Core.Models;
 using PreseMakerRepo.Infrastructure.Data;
 
 namespace PreseMakerRepo.Api.Pages.Browse;
@@ -12,25 +11,29 @@ public class Level2Model : PageModel
 {
     private readonly ITaxonomyService _taxonomy;
     private readonly AppDbContext _db;
+    private readonly CourseDirectory _directory;
 
-    public Level2Model(ITaxonomyService taxonomy, AppDbContext db)
+    public Level2Model(ITaxonomyService taxonomy, AppDbContext db, CourseDirectory directory)
     {
         _taxonomy = taxonomy;
         _db = db;
+        _directory = directory;
     }
+
+    /// <summary>all · guides · noguide</summary>
+    [BindProperty(SupportsGet = true)] public string? Show { get; set; }
 
     public string Level1Key { get; set; } = string.Empty;
     public string Level2Key { get; set; } = string.Empty;
     public TaxonomyNodeSummary? Discipline { get; set; }
     public TaxonomyNodeSummary? Prefix { get; set; }
 
-    // Populated when prefix is a leaf (no Level 3 children) — standard for SCNS
-    // Only courses with published modules or a curriculum guide are included.
-    public IReadOnlyList<TaxonomyCourse> Courses { get; set; } = [];
+    // Populated when prefix is a leaf (no Level 3 children) — standard for SCNS.
+    // Every listed course is included, with or without a guide.
+    public CourseListView? CourseList { get; set; }
     // Populated when prefix has Level 3 children (3-level taxonomies)
     public IReadOnlyList<TaxonomyNodeSummary> Level3Nodes { get; set; } = [];
     public bool IsLeaf { get; set; }
-    public HashSet<string> CourseIdsWithGuides { get; set; } = [];
     public string? Description { get; set; }
 
     public async Task<IActionResult> OnGetAsync(string level1Key, string level2Key)
@@ -48,32 +51,9 @@ public class Level2Model : PageModel
         IsLeaf = !Prefix.Children.Any();
 
         if (IsLeaf)
-        {
-            var normalizedKey = level2Key.ToUpperInvariant();
-
-            var courseIdsWithModules = (await _db.Modules
-                .AsNoTracking()
-                .Where(m => m.Status == ContentStatus.Published &&
-                            _db.TaxonomyCourses.Any(c => c.CourseId == m.CourseId && c.Level3Key == normalizedKey))
-                .Select(m => m.CourseId)
-                .Distinct()
-                .ToListAsync()).ToHashSet();
-
-            CourseIdsWithGuides = (await _db.CurriculumGuides
-                .AsNoTracking()
-                .Where(g => _db.TaxonomyCourses.Any(c => c.CourseId == g.CourseId && c.Level3Key == normalizedKey))
-                .Select(g => g.CourseId)
-                .ToListAsync()).ToHashSet();
-
-            var allCourses = await _taxonomy.GetCoursesByLevel3Async(level2Key);
-            Courses = allCourses
-                .Where(c => courseIdsWithModules.Contains(c.CourseId) || CourseIdsWithGuides.Contains(c.CourseId))
-                .ToList();
-        }
+            CourseList = CourseListView.For(await _directory.ForLeafAsync(level2Key), Show);
         else
-        {
             Level3Nodes = Prefix.Children;
-        }
 
         var desc = await _db.TaxonomyNodeDescriptions
             .AsNoTracking()

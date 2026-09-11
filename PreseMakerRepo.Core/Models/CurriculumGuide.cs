@@ -2,6 +2,12 @@ namespace PreseMakerRepo.Core.Models;
 
 public class CurriculumGuide
 {
+    /// <summary>
+    /// Title of the placeholder guide created when modules are published for a course with no guide.
+    /// A stub is not a guide: it never counts as one and never blocks a guide request.
+    /// </summary>
+    public const string StubTitle = "Not Completed";
+
     public string CourseId { get; set; } = string.Empty;   // PK + FK to TaxonomyCourse
     public string Title { get; set; } = string.Empty;
     public string HtmlContent { get; set; } = string.Empty;

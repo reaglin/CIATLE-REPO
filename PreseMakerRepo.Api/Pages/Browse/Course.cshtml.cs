@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using PreseMakerRepo.Api.Helpers;
 using PreseMakerRepo.Core.Constants;
 using PreseMakerRepo.Core.Enums;
 using PreseMakerRepo.Core.Models;
@@ -14,9 +15,18 @@ public class CourseModel : PageModel
     private readonly AppDbContext _db;
     public CourseModel(AppDbContext db) => _db = db;
 
+    public sealed record OfferingView(string Code, string? Name, string? Title, decimal? Credits, int? ClockHours);
+
     public TaxonomyCourse? Course { get; set; }
+    public string DisplayTitle { get; set; } = string.Empty;
+    /// <summary>The SCNS statewide title, when it reads differently from the title shown.</summary>
+    public string? DifferentStateTitle { get; set; }
     public IReadOnlyList<ModuleEntity> Modules { get; set; } = [];
     public bool HasGuide { get; set; }
+    public IReadOnlyList<OfferingView> Offerings { get; set; } = [];
+
+    /// <summary>A course with nothing but its listing — kept out of search indexes until it has more.</summary>
+    public bool IsListingOnly => !HasGuide && Modules.Count == 0;
 
     public async Task<IActionResult> OnGetAsync(string courseId)
     {
@@ -28,7 +38,25 @@ public class CourseModel : PageModel
                                       c.CourseId != WellKnownIds.OrphanCourseId);
         if (Course is null) return NotFound();
 
-        HasGuide = await _db.CurriculumGuides.AnyAsync(g => g.CourseId == normalizedId);
+        var guideTitle = await _db.CurriculumGuides.AsNoTracking()
+            .Where(g => g.CourseId == normalizedId && g.Title != CurriculumGuide.StubTitle)
+            .Select(g => g.Title)
+            .FirstOrDefaultAsync();
+        HasGuide = guideTitle is not null;
+
+        DisplayTitle = CourseTitles.Display(normalizedId, Course.Title, Course.StateTitle, guideTitle);
+        if (CourseTitles.IsReal(normalizedId, Course.StateTitle))
+        {
+            var stateTitle = CourseTitles.Readable(Course.StateTitle!.Trim());
+            if (!string.Equals(stateTitle, DisplayTitle, StringComparison.OrdinalIgnoreCase))
+                DifferentStateTitle = stateTitle;
+        }
+
+        Offerings = await _db.CourseOfferings.AsNoTracking()
+            .Where(o => o.CourseId == normalizedId && o.IsActive)
+            .OrderBy(o => o.InstitutionCode)
+            .Select(o => new OfferingView(o.InstitutionCode, o.Institution.Name, o.InstitutionTitle, o.Credits, o.ClockHours))
+            .ToListAsync();
 
         Modules = await _db.Modules.AsNoTracking()
             .Where(m => m.CourseId == normalizedId &&

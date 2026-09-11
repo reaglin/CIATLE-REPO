@@ -61,6 +61,11 @@ try
 
     // Visitor-facing site figures (the course count in the header strip); cached internally.
     builder.Services.AddScoped<SiteStatsService>();
+
+    // Course catalog: base course data written by the content pipeline, and the course rows the
+    // browse pages render (courses with and without guides).
+    builder.Services.AddScoped<CourseCatalogService>();
+    builder.Services.AddScoped<CourseDirectory>();
     builder.Services.AddHttpClient();
     builder.Services.AddTransient<StaticSiteExporter>();
     builder.Services.AddSingleton<StaticExportJobService>();

@@ -12,9 +12,26 @@
 @if (Model.IsSearch)
 {
     <h1 class="h4 mb-1">Search Results</h1>
-    <p class="text-muted mb-3">@Model.TotalResults result@(Model.TotalResults != 1 ? "s" : "") for "<strong>@Model.Q</strong>"</p>
+    <p class="text-muted mb-3">
+        @if (Model.CourseResults.Any())
+        {
+            <text>@Model.CourseResults.Count@(Model.CourseResults.Count >= PreseMakerRepo.Api.Pages.Browse.IndexModel.MaxCourseResults ? "+" : "") course@(Model.CourseResults.Count != 1 ? "s" : "") · </text>
+        }
+        @Model.TotalResults module and material result@(Model.TotalResults != 1 ? "s" : "") for "<strong>@Model.Q</strong>"
+    </p>
 
-    @if (!Model.SearchResults.Any())
+    @if (Model.CourseResults.Any())
+    {
+        <h2 class="h6 text-uppercase text-muted mb-2">Courses</h2>
+        <div class="list-group course-list mb-4">
+            @foreach (var row in Model.CourseResults)
+            {
+                <partial name="_CourseRow" model="row" />
+            }
+        </div>
+    }
+
+    @if (!Model.SearchResults.Any() && !Model.CourseResults.Any())
     {
         <div class="alert alert-info">
             No results found. Try a different search term or <a asp-page="/Browse/Index">browse by discipline</a>.
@@ -78,8 +95,7 @@ else
                     <div class="card-body">
                         <h6 class="card-title mb-1">@node.Name</h6>
                         <p class="card-text text-muted small mb-0">
-                            @node.CourseCount course@(node.CourseCount != 1 ? "s" : "")
-                            · @node.ModuleCount module@(node.ModuleCount != 1 ? "s" : "")
+                            @PreseMakerRepo.Api.Helpers.CountText.Courses(node.CourseCount, node.GuideCount, node.ModuleCount)
                         </p>
                     </div>
                 </a>

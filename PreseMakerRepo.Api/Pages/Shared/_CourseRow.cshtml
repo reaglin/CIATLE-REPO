@@ -1,0 +1,32 @@
+@model PreseMakerRepo.Api.Services.CourseRow
+@{
+    var meta = new List<string>();
+    if (Model.CreditHours > 0) meta.Add($"{Model.CreditHours} cr");
+    else if (Model.ContactHours > 0) meta.Add($"{Model.ContactHours} contact hrs");
+    if (Model.OfferingCount > 0) meta.Add($"offered at {Model.OfferingCount} school{(Model.OfferingCount == 1 ? "" : "s")}");
+    if (Model.HasModules) meta.Add("course materials");
+}
+<div class="list-group-item course-row">
+    <div class="d-flex flex-wrap align-items-center column-gap-3 row-gap-2">
+        <div class="course-row-main flex-grow-1">
+            <a asp-page="/Browse/Course" asp-route-courseId="@Model.CourseId" class="course-row-link text-decoration-none">
+                <span class="fw-semibold">@Model.CourseId</span>
+                <span class="course-row-title ms-2 text-body">@Model.Title</span>
+            </a>
+            @if (meta.Count > 0)
+            {
+                <div class="small text-muted">@string.Join(" · ", meta)</div>
+            }
+        </div>
+        <div class="course-row-actions d-flex gap-2">
+            @if (Model.HasGuide)
+            {
+                <a asp-page="/Browse/Guide" asp-route-courseId="@Model.CourseId" class="btn btn-sm btn-primary">View Guide</a>
+            }
+            else
+            {
+                <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.CourseId" class="btn btn-sm btn-outline-primary" rel="nofollow">Request Guide</a>
+            }
+        </div>
+    </div>
+</div>

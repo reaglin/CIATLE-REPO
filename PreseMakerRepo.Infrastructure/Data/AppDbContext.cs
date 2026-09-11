@@ -20,6 +20,8 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<RepoGuideTemplate> GuideTemplates => Set<RepoGuideTemplate>();
     public DbSet<TaxonomyNodeDescription> TaxonomyNodeDescriptions => Set<TaxonomyNodeDescription>();
     public DbSet<GuideRequest> GuideRequests => Set<GuideRequest>();
+    public DbSet<Institution> Institutions => Set<Institution>();
+    public DbSet<CourseOffering> CourseOfferings => Set<CourseOffering>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using PreseMakerRepo.Api.Services;
 using PreseMakerRepo.Core.Constants;
 using PreseMakerRepo.Core.Enums;
 using PreseMakerRepo.Core.Interfaces;
@@ -15,13 +16,17 @@ public class IndexModel : PageModel
     private readonly AppDbContext _db;
     private readonly ITaxonomyService _taxonomy;
     private readonly IConfiguration _config;
+    private readonly CourseDirectory _directory;
 
-    public IndexModel(AppDbContext db, ITaxonomyService taxonomy, IConfiguration config)
+    public IndexModel(AppDbContext db, ITaxonomyService taxonomy, IConfiguration config, CourseDirectory directory)
     {
         _db = db;
         _taxonomy = taxonomy;
         _config = config;
+        _directory = directory;
     }
+
+    public const int MaxCourseResults = 50;
 
     public string Level2Label { get; set; } = "Subdiscipline";
 
@@ -33,6 +38,8 @@ public class IndexModel : PageModel
     public IReadOnlyList<TaxonomyNodeSummary> Disciplines { get; set; } = [];
     public List<SearchResultItem> SearchResults { get; set; } = [];
     public int TotalResults { get; set; }
+    /// <summary>Courses matching by id or title (first page of results only).</summary>
+    public List<CourseRow> CourseResults { get; set; } = [];
 
     public record SearchResultItem(
         string ResultType, Guid ModuleId, string CourseId, string Title,
@@ -58,6 +65,9 @@ public class IndexModel : PageModel
     {
         const int pageSize = 20;
         var pattern = $"%{term}%";
+        if (PageNum <= 1 && (Level is null or "all" or "course"))
+            CourseResults = await _directory.SearchAsync(term, MaxCourseResults);
+
         var includeModules = Level is null or "all" or "module";
         var includeMaterials = Level is null or "all" or "material";
         var results = new List<SearchResultItem>();

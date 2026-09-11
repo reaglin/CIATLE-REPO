@@ -8,7 +8,7 @@
     <form class="d-flex justify-content-center mt-3" method="get" asp-page="/Browse/Index">
         <div class="input-group" style="max-width:560px">
             <input type="search" name="q" class="form-control form-control-lg"
-                   placeholder="Search modules, materials, or course IDs…" />
+                   placeholder="Search courses by number or title…" />
             <button type="submit" class="btn btn-primary btn-lg">Search</button>
         </div>
     </form>
@@ -68,8 +68,7 @@
                     <div class="card-body">
                         <h6 class="card-title mb-1">@node.Name</h6>
                         <p class="card-text text-muted small mb-0">
-                            @node.CourseCount course@(node.CourseCount != 1 ? "s" : "")
-                            · @node.ModuleCount module@(node.ModuleCount != 1 ? "s" : "")
+                            @PreseMakerRepo.Api.Helpers.CountText.Courses(node.CourseCount, node.GuideCount, node.ModuleCount)
                         </p>
                     </div>
                 </a>

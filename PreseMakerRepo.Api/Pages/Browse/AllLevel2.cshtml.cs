@@ -15,7 +15,7 @@ public class AllLevel2Model : PageModel
         _config = config;
     }
 
-    public record Level2Item(string Key, string Name, string Level1Key, string Level1Name, int CourseCount, int ModuleCount);
+    public record Level2Item(string Key, string Name, string Level1Key, string Level1Name, int CourseCount, int ModuleCount, int GuideCount);
 
     public string Level2Label { get; set; } = "Subdiscipline";
     public IReadOnlyList<Level2Item> Items { get; set; } = [];
@@ -31,7 +31,7 @@ public class AllLevel2Model : PageModel
 
         var all = tree.Roots
             .SelectMany(l1 => l1.Children.Select(l2 => new Level2Item(
-                l2.Key, l2.Name, l1.Key, l1.Name, l2.CourseCount, l2.ModuleCount)))
+                l2.Key, l2.Name, l1.Key, l1.Name, l2.CourseCount, l2.ModuleCount, l2.GuideCount)))
             .OrderBy(x => x.Key)
             .ToList();
 

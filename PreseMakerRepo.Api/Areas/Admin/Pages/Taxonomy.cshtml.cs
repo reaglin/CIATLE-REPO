@@ -3,15 +3,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using PreseMakerRepo.Core.Models;
+using Microsoft.Extensions.Caching.Memory;
 using PreseMakerRepo.Infrastructure.Data;
+using PreseMakerRepo.Infrastructure.Services;
 
 namespace PreseMakerRepo.Api.Areas.Admin.Pages;
 
 public class TaxonomyModel : PageModel
 {
     private readonly AppDbContext _db;
+    private readonly IMemoryCache _cache;
 
-    public TaxonomyModel(AppDbContext db) => _db = db;
+    public TaxonomyModel(AppDbContext db, IMemoryCache cache)
+    {
+        _db = db;
+        _cache = cache;
+    }
 
     public IReadOnlyList<TaxonomyNode> Level1Nodes { get; set; } = [];
     public Dictionary<string, string> Descriptions { get; set; } = new();
@@ -38,6 +45,7 @@ public class TaxonomyModel : PageModel
         if (node is null) return NotFound();
         node.Name = name.Trim();
         await _db.SaveChangesAsync();
+        SiteCache.InvalidateCounts(_cache);
         TempData["Success"] = $"Node \"{key}\" updated.";
         return RedirectToPage();
     }
@@ -51,7 +59,9 @@ public class TaxonomyModel : PageModel
         course.CreditHours = creditHours;
         course.IsActive = isActive;
         course.CurriculumGuideUrl = string.IsNullOrWhiteSpace(curriculumGuideUrl) ? null : curriculumGuideUrl.Trim();
+        course.UpdatedUtc = DateTime.UtcNow;
         await _db.SaveChangesAsync();
+        SiteCache.InvalidateCounts(_cache);
         TempData["Success"] = $"Course {courseId} updated.";
         return RedirectToPage();
     }

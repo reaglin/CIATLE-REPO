@@ -1,55 +1,135 @@
 @page "/courses/{courseId}"
 @model PreseMakerRepo.Api.Pages.Browse.CourseModel
-@{ ViewData["Title"] = Model.Course?.CourseId; }
+@using PreseMakerRepo.Api.Helpers
+@{
+    ViewData["Title"] = Model.Course is null ? null : $"{Model.Course.CourseId} — {Model.DisplayTitle}";
+    if (Model.Course is not null && Model.IsListingOnly) ViewData["NoIndex"] = true;
+}
 
 @if (Model.Course is null) { return; }
+
+@{
+    const int ShownCodes = 5;
+    var taxonomy = new List<PreseMakerRepo.Core.Models.TaxonomyNode>();
+    for (var n = Model.Course.Level3Node; n is not null; n = n.Parent) taxonomy.Insert(0, n);
+}
 
 <nav aria-label="breadcrumb" class="mb-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
         <li class="breadcrumb-item"><a asp-page="/Browse/Index">Browse</a></li>
+        @if (taxonomy.Count >= 1)
+        {
+            <li class="breadcrumb-item"><a asp-page="/Browse/Level1" asp-route-level1Key="@taxonomy[0].Key">@taxonomy[0].Name</a></li>
+        }
+        @if (taxonomy.Count >= 2)
+        {
+            <li class="breadcrumb-item"><a asp-page="/Browse/Level2" asp-route-level1Key="@taxonomy[0].Key" asp-route-level2Key="@taxonomy[1].Key">@taxonomy[1].Key</a></li>
+        }
+        @if (taxonomy.Count >= 3)
+        {
+            <li class="breadcrumb-item"><a asp-page="/Browse/Level3" asp-route-level1Key="@taxonomy[0].Key" asp-route-level2Key="@taxonomy[1].Key" asp-route-level3Key="@taxonomy[2].Key">@taxonomy[2].Key</a></li>
+        }
         <li class="breadcrumb-item active">@Model.Course.CourseId</li>
     </ol>
 </nav>
 
-<div class="d-flex justify-content-between align-items-start mb-1">
-    <h1 class="h4 mb-0">@Model.Course.CourseId — @Model.Course.Title</h1>
-    @if (Model.Course.CreditHours.HasValue)
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+    <h1 class="h4 mb-0">@Model.Course.CourseId — @Model.DisplayTitle</h1>
+    <div class="d-flex flex-wrap gap-1">
+        @if (Model.Course.CreditHours > 0)
+        {
+            <span class="badge bg-secondary">@Model.Course.CreditHours credit hour@(Model.Course.CreditHours != 1 ? "s" : "")</span>
+        }
+        @if (Model.Course.ContactHours > 0)
+        {
+            <span class="badge bg-light text-dark border">@Model.Course.ContactHours contact hours</span>
+        }
+    </div>
+</div>
+@if (Model.DifferentStateTitle is not null)
+{
+    <p class="text-muted small mb-1">Statewide (SCNS) title: @Model.DifferentStateTitle</p>
+}
+@if (!Model.Course.IsActive)
+{
+    <div class="alert alert-secondary py-2 small mt-2">This course no longer appears in current catalog data for any Florida institution.</div>
+}
+
+<div class="d-flex flex-wrap align-items-center gap-2 my-3">
+    @if (Model.HasGuide)
     {
-        <span class="badge bg-secondary">@Model.Course.CreditHours credit hours</span>
+        <a asp-page="/Browse/Guide" asp-route-courseId="@Model.Course.CourseId" class="btn btn-primary btn-sm">View Curriculum Guide</a>
+    }
+    else if (!string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl))
+    {
+        <a href="@Model.Course.CurriculumGuideUrl" target="_blank" rel="noopener">Curriculum Guide ↗</a>
+    }
+    else
+    {
+        <span class="text-muted small">No curriculum guide yet.</span>
+        <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" class="btn btn-outline-primary btn-sm" rel="nofollow">Request Guide</a>
     }
 </div>
-@if (Model.HasGuide)
+
+@if (Model.Offerings.Any())
 {
-    <p class="mb-3">
-        <a asp-page="/Browse/Guide" asp-route-courseId="@Model.Course.CourseId" class="btn btn-outline-primary btn-sm">
-            View Curriculum Guide
-        </a>
-    </p>
-}
-else if (!string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl))
-{
-    <p class="mb-3"><a href="@Model.Course.CurriculumGuideUrl" target="_blank" rel="noopener">Curriculum Guide ↗</a></p>
-}
-else
-{
-    <p class="mb-3">
-        <span class="text-muted small">No curriculum guide yet.</span>
-        <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" class="btn btn-outline-primary btn-sm ms-2">
-            Request a Curriculum Guide
-        </a>
-    </p>
+    var shown = Model.Offerings.Take(ShownCodes).ToList();
+    var more = Model.Offerings.Skip(ShownCodes).ToList();
+    <section class="mb-4" aria-labelledby="offered-at">
+        <h2 id="offered-at" class="h6 mb-2">
+            Offered at @Model.Offerings.Count Florida institution@(Model.Offerings.Count != 1 ? "s" : "")
+        </h2>
+        <div class="d-flex flex-wrap align-items-start gap-1">
+            @foreach (var o in shown)
+            {
+                <span class="badge bg-light text-dark border" title="@(o.Name ?? o.Code)">@o.Code</span>
+            }
+            @if (more.Any())
+            {
+                <details class="offering-more">
+                    <summary class="badge bg-light text-primary border">+@more.Count more</summary>
+                    <div class="d-flex flex-wrap gap-1 mt-1">
+                        @foreach (var o in more)
+                        {
+                            <span class="badge bg-light text-dark border" title="@(o.Name ?? o.Code)">@o.Code</span>
+                        }
+                    </div>
+                </details>
+            }
+        </div>
+        <details class="mt-2">
+            <summary class="small">Title and credits at each institution</summary>
+            <div class="table-responsive">
+                <table class="table table-sm small mt-2 mb-0">
+                    <thead>
+                        <tr><th scope="col">Institution</th><th scope="col">Title there</th><th scope="col" class="text-end">Credits</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var o in Model.Offerings)
+                        {
+                            <tr>
+                                <td class="text-nowrap"><strong>@o.Code</strong>@if (o.Name is not null) {<span class="text-muted"> · @o.Name</span>}</td>
+                                <td>@(string.IsNullOrWhiteSpace(o.Title) ? "—" : CourseTitles.Readable(o.Title.Trim()))</td>
+                                <td class="text-end text-nowrap">
+                                    @if (o.Credits > 0) { @o.Credits.Value.ToString("0.##") }
+                                    else if (o.ClockHours > 0) { <text>@o.ClockHours hrs</text> }
+                                    else { <text>—</text> }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </details>
+    </section>
 }
 
-<hr />
-<h2 class="h5 mb-3">Modules <span class="badge bg-secondary">@Model.Modules.Count</span></h2>
+@if (Model.Modules.Any())
+{
+    <hr />
+    <h2 class="h5 mb-3">Modules <span class="badge bg-secondary">@Model.Modules.Count</span></h2>
 
-@if (!Model.Modules.Any())
-{
-    <div class="alert alert-info">No published modules yet for this course.</div>
-}
-else
-{
     @foreach (var m in Model.Modules)
     {
         var matCount = Model.PublishedMaterialCount(m);

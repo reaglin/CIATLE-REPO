@@ -1258,6 +1258,8 @@ For `resultType: "material"`, the object additionally includes `materialType`, `
 | 429 | `RATE_LIMIT_EXCEEDED` | Request limit for this endpoint has been exceeded |
 | 409 | `GUIDE_ALREADY_EXISTS` | A curriculum guide is already published for the requested course |
 | 404 | `GUIDE_REQUEST_NOT_FOUND` | No guide requests exist for the course |
+| 409 | `COURSE_HAS_CONTENT` | Course cannot be deleted: it has a curriculum guide, modules or guide requests |
+| 400 | `BATCH_TOO_LARGE` | A batch exceeds its item limit (500 courses, 1000 institutions) |
 | 500 | `INTERNAL_SERVER_ERROR` | Unhandled server error |
 
 **Validation error detail shape** (used when `code` is `VALIDATION_ERROR`):
@@ -1369,4 +1371,67 @@ Set the status of every request for a course.
 `Open`, `Queued`, `Published`, `Declined`.
 
 **Response 200:** `{ "success": true, "data": { "message": "3 request(s) for EET2325C marked Queued." }, "error": null }`
+
+---
+
+## 14. Course Catalog
+
+Base course data — courses **with or without** a curriculum guide — written by the content pipeline
+(`Tools/`). Added 2026-09-11 (`COURSE_CATALOG_PLAN.md` phase 1). **The full contract, with field rules and
+examples, is `Tools/COURSE_API.md`;** this section summarises it.
+
+A course is listed on the site while it is active, or while it has a published guide or published modules.
+Offerings record which institutions list the course, with each institution's own title and credits.
+
+### 14.1 GET /courses/catalog [Public]
+
+Paged list for reconciliation. Query: `prefix`, `hasGuide` (stubs excluded), `active`, `updatedSince` (UTC),
+`page` (default 1), `pageSize` (default 100, max 1000). Items: `courseId`, `title`, `stateTitle`,
+`creditHours`, `contactHours`, `taxonomyKey`, `isActive`, `source` (`Guide` | `Catalog`), `hasGuide`,
+`offeringCount`, `createdUtc`, `updatedUtc`. Paging shape as §2.4.
+
+### 14.2 GET /courses/{courseId}/offerings [Public]
+
+`{ "course": { …as 14.1… }, "offerings": [ { "institution": "UCF", "institutionName": "University of Central Florida", "title": "ELECTRONICS I", "credits": 3, "clockHours": null, "isActive": true } ] }`
+**404:** `COURSE_NOT_FOUND`.
+
+### 14.3 PUT /courses/{courseId} [Admin]
+
+Upsert one course.
+
+```json
+{ "title": "Electronics I", "stateTitle": "ELECTRONICS I", "creditHours": 3, "contactHours": null,
+  "taxonomyKey": null, "isActive": true,
+  "offerings": [ { "institution": "UCF", "title": "ELECTRONICS I", "credits": 3 } ],
+  "replaceOfferings": true }
+```
+
+`title` is required; other null fields are left unchanged. A title equal to the course id never replaces a
+real title. `replaceOfferings` (default true) removes offerings not in the list. Without `taxonomyKey` a new
+course is placed by prefix.
+
+**Response 201** (created) / **200** (updated or unchanged):
+`{ "success": true, "data": { "courseId": "EEE3300", "outcome": "created", "taxonomyKey": "EEE" }, "error": null }`
+**400:** `INVALID_COURSE_ID`, `VALIDATION_ERROR` · **422:** `TAXONOMY_PLACEMENT_REQUIRED`, `TAXONOMY_NODE_NOT_FOUND`
+
+### 14.4 POST /courses/batch [Admin]
+
+`{ "courses": [ { "courseId": "EEE3300", …as 14.3… } ] }` — at most 500. Items are validated individually;
+valid items are saved in one transaction.
+
+**Response 200:** `{ "created": 1, "updated": 0, "unchanged": 0, "failed": 1, "results": [ { "courseId", "outcome", "taxonomyKey", "errorCode", "message", "fields" } ] }`
+**400:** `VALIDATION_ERROR` (empty), `BATCH_TOO_LARGE`
+
+### 14.5 DELETE /courses/{courseId} [Admin]
+
+Removes a course added in error, with its offerings. **404:** `COURSE_NOT_FOUND` · **409:**
+`COURSE_HAS_CONTENT` (has a guide or stub, modules, or guide requests — set `isActive: false` instead).
+
+### 14.6 Institutions
+
+| Verb | Route | Auth | Body / result |
+|---|---|---|---|
+| GET | `/institutions` | Public | `[ { "code", "name", "sector", "scnsId", "offeringCount" } ]` |
+| PUT | `/institutions/{code}` | Admin | `{ "name", "sector", "scnsId" }` → 201 / 200 |
+| POST | `/institutions/batch` | Admin | `{ "institutions": [ { "code", "name", "sector", "scnsId" } ] }` (≤ 1000) → counts + results |
 **Response 404:** `GUIDE_REQUEST_NOT_FOUND`

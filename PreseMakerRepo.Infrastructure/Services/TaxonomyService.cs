@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using PreseMakerRepo.Core.Enums;
 using PreseMakerRepo.Core.Interfaces;
 using PreseMakerRepo.Core.Models;
@@ -8,11 +9,30 @@ namespace PreseMakerRepo.Infrastructure.Services;
 
 public class TaxonomyService : ITaxonomyService
 {
+    private static readonly TimeSpan TreeCacheFor = TimeSpan.FromMinutes(10);
+
     private readonly AppDbContext _db;
+    private readonly IMemoryCache _cache;
 
-    public TaxonomyService(AppDbContext db) => _db = db;
+    public TaxonomyService(AppDbContext db, IMemoryCache cache)
+    {
+        _db = db;
+        _cache = cache;
+    }
 
-    public async Task<TaxonomyTree> GetFullTreeAsync()
+    /// <summary>
+    /// The tree with per-node counts. Every browse page renders it, and with the full course catalog the
+    /// counts are grouped over tens of thousands of rows, so it is cached; course and guide writes drop
+    /// the entry (<see cref="SiteCache.InvalidateCounts"/>).
+    /// </summary>
+    public async Task<TaxonomyTree> GetFullTreeAsync() =>
+        (await _cache.GetOrCreateAsync(SiteCache.TaxonomyTreeKey, entry =>
+        {
+            entry.AbsoluteExpirationRelativeToNow = TreeCacheFor;
+            return BuildTreeAsync();
+        }))!;
+
+    private async Task<TaxonomyTree> BuildTreeAsync()
     {
         var nodes = await _db.TaxonomyNodes.AsNoTracking().ToDictionaryAsync(n => n.Key);
 
@@ -28,20 +48,36 @@ public class TaxonomyService : ITaxonomyService
             .Select(g => new { Key = g.Key, Count = g.Count() })
             .ToDictionaryAsync(x => x.Key, x => x.Count);
 
-        // Count distinct courses with at least one published module per leaf taxonomy key
+        // Courses listed per leaf: every active course, plus any course that still has a guide or
+        // published modules. The same predicate as CourseDirectory and SiteStatsService, so a leaf's
+        // count, its course list and the header total agree.
         var courseCountByLeaf = await _db.TaxonomyCourses
             .AsNoTracking()
             .Where(c => c.Level3Key != null &&
-                        (_db.Modules.Any(m => m.CourseId == c.CourseId && m.Status == ContentStatus.Published) ||
-                         _db.CurriculumGuides.Any(g => g.CourseId == c.CourseId)))
+                        (c.IsActive ||
+                         _db.CurriculumGuides.Any(g => g.CourseId == c.CourseId && g.Title != CurriculumGuide.StubTitle) ||
+                         _db.Modules.Any(m => m.CourseId == c.CourseId && m.Status == ContentStatus.Published)))
             .GroupBy(c => c.Level3Key!)
             .Select(g => new { Key = g.Key, Count = g.Count() })
             .ToDictionaryAsync(x => x.Key, x => x.Count);
 
+        // Published curriculum guides per leaf (module stubs are not guides).
+        var guideCountByLeaf = await _db.CurriculumGuides
+            .AsNoTracking()
+            .Where(g => g.Title != CurriculumGuide.StubTitle)
+            .Join(_db.TaxonomyCourses.Where(c => c.Level3Key != null),
+                  g => g.CourseId,
+                  c => c.CourseId,
+                  (_, c) => c.Level3Key!)
+            .GroupBy(k => k)
+            .Select(g => new { Key = g.Key, Count = g.Count() })
+            .ToDictionaryAsync(x => x.Key, x => x.Count);
+
+        var counts = new LeafCounts(moduleCountByLeaf, courseCountByLeaf, guideCountByLeaf);
         var roots = nodes.Values
             .Where(n => n.Level == 1)
             .OrderBy(n => n.Name)
-            .Select(n => BuildSummary(n, nodes, moduleCountByLeaf, courseCountByLeaf))
+            .Select(n => BuildSummary(n, nodes, counts))
             .ToList();
 
         return new TaxonomyTree(roots);
@@ -88,26 +124,27 @@ public class TaxonomyService : ITaxonomyService
             .OrderBy(c => c.CourseId)
             .ToListAsync();
 
+    private sealed record LeafCounts(
+        Dictionary<string, int> Modules,
+        Dictionary<string, int> Courses,
+        Dictionary<string, int> Guides);
+
     private static TaxonomyNodeSummary BuildSummary(
         TaxonomyNode node,
         Dictionary<string, TaxonomyNode> allNodes,
-        Dictionary<string, int> moduleCountByLeaf,
-        Dictionary<string, int> courseCountByLeaf)
+        LeafCounts counts)
     {
         var children = allNodes.Values
             .Where(n => n.ParentKey == node.Key)
             .OrderBy(n => n.Name)
-            .Select(n => BuildSummary(n, allNodes, moduleCountByLeaf, courseCountByLeaf))
+            .Select(n => BuildSummary(n, allNodes, counts))
             .ToList();
 
         bool isLeaf = !children.Any();
-        var moduleCount = isLeaf
-            ? moduleCountByLeaf.GetValueOrDefault(node.Key, 0)
-            : children.Sum(c => c.ModuleCount);
-        var courseCount = isLeaf
-            ? courseCountByLeaf.GetValueOrDefault(node.Key, 0)
-            : children.Sum(c => c.CourseCount);
+        var moduleCount = isLeaf ? counts.Modules.GetValueOrDefault(node.Key, 0) : children.Sum(c => c.ModuleCount);
+        var courseCount = isLeaf ? counts.Courses.GetValueOrDefault(node.Key, 0) : children.Sum(c => c.CourseCount);
+        var guideCount = isLeaf ? counts.Guides.GetValueOrDefault(node.Key, 0) : children.Sum(c => c.GuideCount);
 
-        return new TaxonomyNodeSummary(node.Key, node.Name, node.Level, courseCount, moduleCount, children);
+        return new TaxonomyNodeSummary(node.Key, node.Name, node.Level, courseCount, moduleCount, guideCount, children);
     }
 }

@@ -59,17 +59,12 @@ else
                 @if (item.CourseCount > 0)
                 {
                     <span class="text-muted small text-nowrap ms-3">
-                        @item.CourseCount course@(item.CourseCount != 1 ? "s" : "")
-                        @if (item.ModuleCount > 0)
-                        {
-                            <span class="mx-1">·</span>
-                            @item.ModuleCount <text>module@(item.ModuleCount != 1 ? "s" : "")</text>
-                        }
+                        @PreseMakerRepo.Api.Helpers.CountText.Courses(item.CourseCount, item.GuideCount, item.ModuleCount)
                     </span>
                 }
                 else
                 {
-                    <span class="text-muted small ms-3">no content yet</span>
+                    <span class="text-muted small ms-3">no courses listed yet</span>
                 }
             </a>
         }

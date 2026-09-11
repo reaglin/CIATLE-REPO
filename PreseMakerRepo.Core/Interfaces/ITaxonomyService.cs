@@ -13,12 +13,15 @@ public interface ITaxonomyService
 
 public record TaxonomyTree(IReadOnlyList<TaxonomyNodeSummary> Roots);
 
+/// <param name="CourseCount">Courses listed under the node — active courses, plus any course with a guide or published module.</param>
+/// <param name="GuideCount">Of those, courses with a published curriculum guide (stubs excluded).</param>
 public record TaxonomyNodeSummary(
     string Key,
     string Name,
     int Level,
     int CourseCount,
     int ModuleCount,
+    int GuideCount,
     IReadOnlyList<TaxonomyNodeSummary> Children);
 
 public record TaxonomyCourseValidationResult(

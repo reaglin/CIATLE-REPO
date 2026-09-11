@@ -6,6 +6,35 @@ the REST API and need no deploy.
 
 Bundle these into the next deploy, then delete the entry.
 
+## Course catalog — phase 1: courses without guides (branch `feature/course-catalog`, 2026-09-11) — ⚠ MIGRATION
+
+`COURSE_CATALOG_PLAN.md` phase 1. **Merge `feature/course-catalog` into `master` first, then deploy
+WITHOUT `-SkipMigrations`** — migration `AddCourseCatalog` adds columns to `TaxonomyCourses` (`StateTitle`,
+`ContactHours`, `OfferingCount`, `Source`, `CreatedUtc`, `UpdatedUtc`) and the `Institutions` and
+`CourseOfferings` tables. Existing rows get `Source = Guide`, `OfferingCount = 0`; nothing is backfilled.
+
+**What changes for visitors:** subject pages list **every** listed course (not only courses with a guide or
+module) with **View Guide / Request Guide** buttons and an All · With guide · Without guide filter; course
+pages show "Offered at N Florida institutions"; counts read "N courses · M guides" everywhere including the
+header strip; site search finds courses by number or title; guide-less course pages are `noindex`. Courses
+whose stored title is still the course-id placeholder display their guide's title. Until the `Tools/`
+session sends course data, the site looks the same apart from wording.
+
+**New API** (contract `Tools/COURSE_API.md`, spec §14): `GET /api/v1/courses/catalog`,
+`GET /api/v1/courses/{id}/offerings`, `PUT /api/v1/courses/{id}`, `POST /api/v1/courses/batch`,
+`DELETE /api/v1/courses/{id}`, `GET|PUT /api/v1/institutions…`, `POST /api/v1/institutions/batch`.
+
+**Verify after deploy:**
+
+```
+curl -s https://floridacourserepo.com/api/v1/courses/catalog?pageSize=1      # 200, totalCount ≈ number of courses
+curl -s https://floridacourserepo.com/api/v1/institutions                    # 200, []
+```
+
+Then open a prefix page (e.g. `/browse/ELECTRICAL_ENGINEERI/EEE`) and a guide page — the header strip reads
+"N courses · M curriculum guides" and guides render as before. **Then tell the `Tools/` session that
+`Tools/COURSE_API.md` is live.**
+
 ## ⚠ BLOCKING NEXT DEPLOY — four taxonomy nodes missing (added 2026-09-04, Ron to handle)
 
 > **Update 2026-09-06 (batch 160):** the block now covers **six** queued courses, not four — `CES4605C` (Steel Design), **`CES3100C` (Structural Analysis)**, `CWR3201C` (Fluid Mechanics), `CWR4202C` (Hydraulics), `CEG3011C` (Soil Mechanics) and **`ENV3001C` (Environmental Engineering)**. **All four missing prefixes — CEG, CES, CWR and ENV — are now represented in the blocked set.** These are ordinary civil engineering courses at 6–9 institutions each, so they sit near the top of the priority queue and are skipped on every batch. `CES4702C` also remains at `status=error` with its draft validated and intact — it needs only a one-line retry once the nodes exist.

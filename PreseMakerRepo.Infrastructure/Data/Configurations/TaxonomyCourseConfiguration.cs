@@ -12,6 +12,11 @@ public class TaxonomyCourseConfiguration : IEntityTypeConfiguration<TaxonomyCour
         builder.Property(c => c.CourseId).HasMaxLength(50);
         builder.Property(c => c.Title).IsRequired().HasMaxLength(300);
         builder.Property(c => c.CurriculumGuideUrl).HasMaxLength(500);
+        builder.Property(c => c.StateTitle).HasMaxLength(300);
+        builder.Property(c => c.Source).HasConversion<int>();
+
+        // The content pipeline reconciles by "what changed since my last run".
+        builder.HasIndex(c => c.UpdatedUtc);
 
         builder.HasOne(c => c.Level3Node)
                .WithMany(n => n.Courses)
