@@ -15,6 +15,7 @@ using PreseMakerRepo.Api.Validators;
 using PreseMakerRepo.Infrastructure.Data;
 using PreseMakerRepo.Infrastructure.Extensions;
 using PreseMakerRepo.Infrastructure.Seed;
+using PreseMakerRepo.Infrastructure.Services;
 using Serilog;
 using Serilog.Events;
 
@@ -57,6 +58,9 @@ try
 
     // Guide requests (visitor demand → content queue) and the static-site export job.
     builder.Services.AddScoped<GuideRequestService>();
+
+    // Visitor-facing site figures (the course count in the header strip); cached internally.
+    builder.Services.AddScoped<SiteStatsService>();
     builder.Services.AddHttpClient();
     builder.Services.AddTransient<StaticSiteExporter>();
     builder.Services.AddSingleton<StaticExportJobService>();

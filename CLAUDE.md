@@ -42,6 +42,13 @@ them at `/admin/guide-requests`; `python queue_mgr.py import-requests [--mark-qu
 the open requests into `queue.csv` ahead of catalog-derived rows (`Tools/QUEUE_GUIDE.md`).
 API: `GuideRequestsController`; logic: `Api/Services/GuideRequestService.cs`.
 
+**Major update planned (2026-09-11): [`COURSE_CATALOG_PLAN.md`](COURSE_CATALOG_PLAN.md).** Every course
+that exists is listed, with or without a guide; guides are generated **on request** (one-click Request
+Guide, public queue); each course gets **Course Resources** (website / YouTube links, public AI-reviewed
+queue); the main page offers Courses · Programs (soon) · Career Paths (soon). **Split of work:** this
+(root) session builds the site and the course API; the `Tools/` session adds courses — with or without
+guides — by Ron's rules, over that API. Start there when building.
+
 **Static site export:** `/admin/static-export` builds a self-contained static zip of the public
 site (browse tree, courses, guides) by fetching the live pages over loopback and rewriting links
 (`Api/Services/StaticSiteExporter.cs`, background `StaticExportJobService`); the zips stay in

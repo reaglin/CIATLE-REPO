@@ -111,6 +111,17 @@ tracked and used to generate the content queue.
 - Note open questions rather than resolving them prematurely — they are usually Ron's call.
 - Move an item to `Deployment/PENDING_SERVER_CHANGES.md` (or delete it) once it is built.
 
+## Course catalog, one-click guide requests & course resources (Ron, 2026-09-11) — planned, see `COURSE_CATALOG_PLAN.md`
+
+**List every course that exists, not only the ones with a guide; generate guides on request.** Course rows get
+**Course Resources** (website / YouTube links, public AI-reviewed queue) and **View Guide / Request Guide**
+(one click, public queue). Main page gains Courses · Programs (soon) · Career Paths (soon). The `Tools/`
+session adds courses — with or without guides — over a new course API, by rules Ron gives it.
+
+**Status: plan written 2026-09-11 ([`COURSE_CATALOG_PLAN.md`](COURSE_CATALOG_PLAN.md)) — build not started.**
+Supersedes the offerings-seed approach in `CAREER_PATHS_PLAN.md` §4: `Institution` / `CourseOffering` are
+built in phase 1 of this plan and fed by the API.
+
 ## Career pathway tracing (Ron, 2026-09-04) — planned, see `CAREER_PATHS_PLAN.md`
 
 **Take a profession and trace an educational path to it: which courses, in what order, at which

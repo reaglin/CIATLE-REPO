@@ -1,3 +1,4 @@
+@inject PreseMakerRepo.Infrastructure.Services.SiteStatsService SiteStats
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,28 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
-    <div class="bg-light border-bottom py-1 text-center" style="font-size:.8rem">
-        Sponsored by <a href="https://edu-agentic.com/" target="_blank" rel="noopener">eAgentic Software</a>
+    @{
+        // Cached in SiteStatsService, so on all but the first render each half hour this is a
+        // dictionary lookup. Counts courses with a published module or a curriculum guide - the
+        // same definition Browse uses per discipline, so the header and the tree agree.
+        var courseCount = await SiteStats.GetCoursesWithMaterialsAsync();
+    }
+    <div class="bg-light border-bottom py-1" style="font-size:.8rem">
+        <div class="container-lg d-flex flex-wrap align-items-center justify-content-center gap-2">
+            @* The two outer cells share the leftover space equally, which is what puts the count
+               in the true centre rather than merely after the sponsor text. Below md they drop
+               out and both lines simply centre. *@
+            <span class="d-none d-md-block flex-fill"></span>
+            <span class="text-center">
+                Materials for <strong>@courseCount.ToString("N0")</strong> courses available.
+            </span>
+            <span class="d-none d-md-block flex-fill text-end">
+                Sponsored by <a href="https://edu-agentic.com/" target="_blank" rel="noopener">eAgentic Software</a>
+            </span>
+            <span class="d-md-none text-center w-100">
+                Sponsored by <a href="https://edu-agentic.com/" target="_blank" rel="noopener">eAgentic Software</a>
+            </span>
+        </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-lg">
