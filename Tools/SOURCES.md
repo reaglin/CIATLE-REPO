@@ -19589,3 +19589,187 @@ and the reader's own county Local Mitigation Strategy as the way to close the ga
   now firing most batches rather than occasionally.
 - ⚠ **The Bash heredoc failed again** on a long patch script. **Write tool for anything long — or, better for
   small edits inside an existing file, the Edit tool**, which is what actually fixed this batch.
+
+## Batch 202 — CHM, driven by TWO VISITOR REQUESTS (2026-09-12)
+
+⚠⚠ **The first batch in the project driven by the visitor guide queue rather than by `queue.csv`.** Two
+requests were waiting: **`CHM1020`** ("Chemistry in Society") and **`CHM1015`** ("Fundamentals of Chemistry
+Recitation"). Both outrank the local queue, and both turned out to sit on genuinely confusing numbers — so
+the batch was built as the **complete introductory-chemistry entry cluster** around them.
+
+**Six guides:** `CHM1020`, `CHM1020C` (**a v1.1 replacement — see below**), `CHM1020L`, `CHM1015`,
+`CHM1024`, `CHM1025`. **Resources queue:** 0 pending. **Listing:** `CHM` was already complete — 504 courses,
+2 created, 501 unchanged, 0 failed.
+
+✅ **Both requests closed automatically on publish** (`waiting` 2 → 0, `published` 2 → 4). **No manual step
+was needed**, confirming the 2026-09-11 note.
+
+### ⚠⚠ Requests keep landing on divergent numbers — now five in a row
+
+`CLAUDE.md` records that `CET1112` and `CET2127C` both landed on numbers with a divergence, and suggests **a
+request is a signal that the number confuses people.** ⚠⚠ **This batch makes it five consecutive requests,
+and these two are the strongest evidence yet:**
+
+- **`CHM1020`** — **27 public carriers under 18 distinct titles**, no title used by more than four. **The
+  requester asked for it as "Chemistry in Society", which is one of the 18.** ⚠ **Of course they could not
+  tell what it was.**
+- **`CHM1015`** — **1 credit at one carrier and 3 at the other**, and a **recitation** versus a **standalone
+  preparatory course**. The requester used FAMU's recitation title.
+
+⚠ **The drill in `CLAUDE.md` — "check the number's whole family before writing" — paid for itself again.**
+The family scan is what produced everything below.
+
+### ⚠⚠⚠ NEW SHAPE: title fragmentation at scale, with ZERO subject divergence
+
+**`CHM1020`: 27 public carriers, 18 distinct titles** — Chemistry in Society, Chemistry and Society,
+Chemistry in Everyday Life, Chemistry in Your Life, Concepts in Chemistry, Discovering Chemistry, Chemical
+Science, Chemistry for Liberal Studies, Chemistry for the Liberal Arts, General Education Chemistry,
+Fundamentals of Chemistry, Introduction to Chemistry, Introduction to College Chemistry, Introducing General
+Chemistry, Chemistry for General Education, and more.
+
+⚠⚠ **This is the opposite of every divergence in the taxonomy so far, and it needs opposite handling.**
+Maximum variation in the label; **the subject does not diverge at all** — every one of the 18 titles names
+the same one-term non-majors general-education chemistry course.
+
+**So the guide's job here is to REASSURE, not to warn:** *"If your catalog calls it something this guide does
+not mention, it is still this course."* ⚠ **After 202 batches the reflex is to treat a title difference as a
+signal. On a high-carrier general-education number it usually is not** — 27 institutions each branding the
+same required course is marketing, not curriculum. **Added to `CLAUDE.md`.**
+
+### ⚠⚠⚠ NEW: the statewide title can carry "(GE CORE)" — and it is the strongest transfer fact available
+
+**`CHM1020`'s statewide title is `GENERAL CHEMISTRY FOR LIBERAL STUDIES I (GE CORE)`.**
+
+⚠⚠ **That marker identifies a Florida General Education Core course** (s. 1007.25, F.S. — a limited approved
+list across five subject areas). **A core course satisfies its general-education AREA at every Florida public
+college and university and carries that status in transfer** — a materially stronger guarantee than the
+ordinary *"guaranteed transfer to institution offering same course"* boilerplate.
+
+⚠ **First time the project has met or used this marker**, and it is the single most useful fact about the
+course. **Read the statewide title for it.** Added to `CLAUDE.md`.
+
+### ⚠⚠⚠ NEW: the flat file's `hs_credit` field is a real dual-enrolment warning
+
+The flat file's high-school-credit column differs across this family:
+
+| Number | `hs_credit` |
+|---|---|
+| `CHM1020` | ⚠ **ELECTIVE** |
+| `CHM1025` | **SCIENCE** |
+| `CHM1032` | **SCIENCE** |
+
+⚠⚠ **So a dual-enrolled high-school student taking `CHM1020` to satisfy a high-school SCIENCE requirement may
+find it counts as an elective instead.** The college credit is unaffected; the high-school requirement may
+not be met. ⚠ **Nothing a student or parent would normally read says this**, and the field has been sitting
+in `scns.FIELDS` unused. **Guides for dual-enrolment-eligible courses should now state it.** Added to
+`CLAUDE.md`.
+
+### ⚠⚠⚠ NEW: `DS_Transferable1` is NOT always boilerplate — `CHM1024` reads "NOT AUTOMATICALLY TRANSFERABLE"
+
+Almost every course in this catalog carries *"guaranteed transfer to institution offering same course."*
+⚠⚠ **`CHM1024` Chemistry Study Skills does not — it is classified NOT AUTOMATICALLY TRANSFERABLE**, which is
+a deliberate classification of support and study-skills coursework rather than an omission.
+
+**Consequences the guide states:** do not count the credit toward a requirement at another institution, and
+**check with an adviser how it counts toward degree progress, financial-aid satisfactory academic progress
+and Florida excess hours.** ⚠ **It is still worth taking** — one non-transferable credit that gets a student
+through general chemistry beats a transferable one that does not.
+
+⚠ **Standing practice now: read `DS_Transferable1` on every course rather than assuming the boilerplate.**
+Added to `CLAUDE.md`.
+
+### ⚠⚠ Gordon Rule designations diverge again — and on a GE CORE course
+
+Second batch running for the batch-201 capability. Across `CHM1020`'s **27 public carriers**:
+
+| Designation recorded | Carriers |
+|---|---|
+| natural-science general education | **24** |
+| natural science **plus Gordon Rule** | **2** (South Florida State, Tallahassee State) |
+| **none recorded** | **1** (Pasco-Hernando State) |
+
+⚠ **Worth noting that the Gordon Rule flag here appears WITHOUT the writing marker**, which points at the
+**mathematics/computation** half — defensible for a course doing unit conversions and dilution calculations.
+**Stated in the guide with that reading labelled as an inference.**
+
+⚠⚠ **The useful generalisation: GE Core area status is reliable; anything beyond it is institutional.** Even
+on a core course, 27 carriers means 27 answers about Gordon Rule.
+
+### ⚠⚠ `CHM1015` — course-type divergence for the THIRD consecutive batch
+
+Statewide: *"designed for students with deficient backgrounds in physical science&hellip; prepares students
+to take CHM-025."* A preparatory course.
+
+| Carrier | Its title | Credits | What it is |
+|---|---|---|---|
+| Eastern Florida State | Introduction to Chemistry | **3** | standalone preparatory course — matches the statewide description |
+| Florida A&M | **Fundamentals of Chemistry Recitation** | **1** | ⚠⚠ a **recitation** attached to a lecture |
+
+⚠⚠⚠ **After `EDG4442` (batch 200) and `JOU4201` (batch 201), this is the third consecutive batch containing
+course-type divergence** — and the third distinct sub-shape: **placement vs classroom**, **practicum vs
+classroom**, and now **recitation vs standalone course.** **The category is thoroughly established.**
+
+⚠ **A diagnostic the guide gives the reader, which generalises:** *read your catalog entry for a credit value
+and a named corequisite lecture — **if a lecture is named, it is a recitation.***
+
+### ⚠⚠ `CHM1025` — credits from 2 to 4, and the content gap matters more than the arithmetic
+
+**UNF and UCF at 2, most carriers at 3, FAMU at 4** — a factor of two across 18 carriers, invisible from the
+identifier. ⚠ **The sharp point is not the credit count: a 2-credit compressed review covers less than a
+3-credit course, and `CHM2045` assumes the full preparation.** **Ask what is covered, not only what it is
+worth.**
+
+### ⚠⚠⚠ PROCESS FAILURE, and it is the most important thing in this batch
+
+**`drafts/CHM1020C_guide.json` already existed, dated 2026-05-04, and `CHM1020C` already had a LIVE guide.**
+I wrote a new one without checking.
+
+**Two separate failures, both worth fixing:**
+
+1. ⚠⚠⚠ **I did not check whether the courses already had guides before writing them.** The two *requests*
+   carried `hasGuide: false`, and I extended the batch to four family members **without checking those.**
+   `CHM1020C` was published on 2026-05-04 under the old "high-volume gen-ed" priority. **The check is one
+   curl per course and it is now a standing step.**
+2. ⚠⚠⚠ **`validate_drafts.py` validated a STALE FILE and reported it clean.** My `CHM1020C` assembly had
+   **failed** on the prerequisite ceiling, so no new draft was written — **and the validator passed the May
+   draft instead, reporting "6 clean" when only five were mine.** ⚠ **The validator checks what is on disk,
+   not what you just built.** **When `mkguide.py` fails for a course, an older draft can silently satisfy the
+   next validation run.** **Read the assembler's output per course, and treat a missing assembler line as a
+   failure regardless of what the validator says.**
+
+**Handling:** `CHM1020C` was **republished at version 1.1**, which is correct — it is a material rewrite
+(18 KB → 27 KB, adding the three-form comparison, the GE Core explanation, the systematic 3-vs-4 credit
+analysis, `offering_notes` for 7 schools, and the laboratory safety and fabrication material). ⚠ **Flagged
+to Ron rather than silently replaced** — see `REVIEW_QUEUE.md` item 81.
+
+### ⚠⚠ Structural finding: the May-era work took the `C` ids and left the bare and `L` forms
+
+`CHM1020C`, `CHM1025C`, `CHM1045C`, `CHM1046C`, `CHM1045L` and `CHM1046L` were all pushed in **May 2026**;
+**`CHM1020`, `CHM1020L`, `CHM1015`, `CHM1024` and `CHM1025` had never been written.**
+
+⚠ **The cause is visible in the queue row: `CHM1020C` is recorded at "32 institutions".** The flat file shows
+**7** public carriers of the `C` form and **27** of the bare form. ⚠⚠ **So `courses_2plus_institutions.csv`
+AGGREGATED the suffixed variants** — which made the `C` ids look like the high-volume ones and sent the
+early, priority-by-institution-count work to the wrong member of each family.
+
+⚠⚠⚠ **This is a new and specific instance of the inventory-reliability problem, and it predicts where the
+back catalogue is thin: high-enrolment general-education families where the bare or `L` form was passed over
+because the count was attached to the `C`.** **Worth a targeted check on other gen-ed families
+(`BSC`, `PHY`, `AST`, `PSC`) rather than a general sweep.**
+
+### ⚠ Tooling notes
+
+- ⚠ **`generate_guide.py --push-draft` PROMPTS** — it needs `--yes` as well. `--push-from-queue` is the
+  command usually paired with `--yes`, so the single-course path is easy to get wrong; the first attempt
+  aborted with *"no input available to confirm."*
+- ⚠ **`queue_mgr.py reconcile` added the five new courses as "orphan drafts"** rather than matching queue
+  rows, because they were never queued — they came from the request queue. **That is correct behaviour and
+  worth knowing: request-driven work enters the queue through reconcile, not through `queue_mgr.py add`.**
+- ⚠⚠ **Building `offering_notes` FROM the flat file rather than by hand is the right move above about five
+  carriers.** `CHM1020` has 27; transcribing 27 rows by hand invites error. `scratchpad/b202_meta.py` reads
+  the flat file, filters with `scns.is_public`, title-cases with `list_courses.smart_title` (importable once
+  `Tools/` is on `sys.path`), coerces whole floats to `int`, and attaches hand-written notes per institution
+  code. **Reusable pattern.**
+- **Four of six prerequisite strings exceeded 1000 characters on first assembly** (1,015–1,059). ⚠ **Third
+  consecutive batch where most of the prerequisites needed trimming.** The ceiling is now the binding
+  constraint on that field most of the time.

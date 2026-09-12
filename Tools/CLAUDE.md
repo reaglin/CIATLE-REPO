@@ -1264,6 +1264,64 @@ all five `ge_*` keys begin with `g`, so a `k[0]` rendering makes them indistingu
 incomplete rather than wrong. A retro-sweep is a `REVIEW_QUEUE.md` candidate. It surfaced first in FSCJ's Coursedog
 entry for `PHI2603`; **CourseLeaf PDFs do not carry it.**
 
+### ⚠⚠⚠ "(GE CORE)" in the statewide TITLE — the strongest transfer fact available (batch 202)
+
+**`CHM1020`'s statewide title is `GENERAL CHEMISTRY FOR LIBERAL STUDIES I (GE CORE)`.** ⚠⚠ **That
+marker identifies a Florida General Education Core course** (s. 1007.25, F.S. — a limited approved list
+across five subject areas: communication, mathematics, social sciences, humanities, natural sciences).
+
+⚠⚠ **A core course satisfies its general-education AREA at every Florida public college and
+university, and carries that status in transfer** — materially stronger than the ordinary *"guaranteed
+transfer to institution offering same course"* boilerplate, which only promises credit where the same course
+is offered.
+
+- **Lead with it** where a course carries the marker. For a general-education course it is the single most
+  useful fact in the guide, and no student-facing source states it plainly.
+- ⚠ **The protection attaches to the AREA, not to a laboratory component or to any institutional
+  designation.** Whether a programme's "science with laboratory" requirement is met is a programme rule.
+- ⚠⚠ **GE Core area status is reliable; Gordon Rule and general-education CATEGORY designations
+  remain institutional.** On `CHM1020`'s 27 carriers: 24 record a natural-science designation, 2 add a
+  Gordon Rule designation, 1 records none.
+
+### ⚠⚠ Two more statewide fields that are NOT boilerplate — read them (batch 202)
+
+**`DS_Transferable1` — transferability.** Almost every course reads *"guaranteed transfer to institution
+offering same course."* ⚠⚠ **`CHM1024` Chemistry Study Skills reads "NOT AUTOMATICALLY
+TRANSFERABLE"** — a deliberate classification of support and study-skills coursework, not an omission.
+**Where it appears, the guide must say: do not count the credit toward a requirement at another institution,
+and ask an adviser how it counts toward degree progress, financial-aid satisfactory academic progress and
+Florida excess hours.** ⚠ **Read the field rather than assuming the boilerplate.**
+
+**`hs_credit` — dual-enrolment high-school credit.** The flat file records what a dual-enrolled
+high-school student earns, and it differs within a family:
+
+| Number | `hs_credit` |
+|---|---|
+| `CHM1020` | ⚠ **ELECTIVE** |
+| `CHM1025` / `CHM1032` | **SCIENCE** |
+
+⚠⚠ **So a dual-enrolled student taking `CHM1020` for a high-school SCIENCE requirement may receive
+elective credit instead.** The college credit is unaffected; the high-school requirement may not be met.
+**State it in guides for dual-enrolment-eligible courses, with "confirm with your counsellor and district
+articulation agreement."** ⚠ **Nothing a student or parent normally reads says this.**
+
+### ⚠⚠⚠ TITLE FRAGMENTATION AT SCALE — when many titles mean NO divergence (batch 202)
+
+**`CHM1020`: 27 public carriers, 18 distinct titles**, none used by more than four — Chemistry in
+Society, Chemistry in Everyday Life, Concepts in Chemistry, Discovering Chemistry, Chemical Science, General
+Education Chemistry, Chemistry for the Liberal Arts, and eleven more.
+
+⚠⚠ **And the subject does not diverge at all.** Every title names the same one-term non-majors
+general-education chemistry course. **This is the opposite of every shape above, and it needs opposite
+handling: REASSURE rather than warn.** The guide says so directly — *"if your catalog calls it something
+this guide does not mention, it is still this course."*
+
+⚠ **The diagnostic:** on a **high-carrier general-education** number, many titles are **branding**, not
+curriculum — 27 institutions each naming the same required course. ⚠⚠ **Do not read title
+variation as a divergence signal without checking the statewide DESCRIPTION and the carrier count.** The
+signal is strong on a two- or three-carrier upper-division number and weak on a twenty-carrier
+general-education one.
+
 ### General-education category designations
 
 ⚠ **Distinct from the Gordon Rule and separately unreliable in transfer.** A course can transfer as credit
@@ -1304,13 +1362,32 @@ When starting a fresh session in this project:
    ⚠ **Two requests in a row (`CET1112`, `CET2127C`) landed on numbers with a divergence.** A request
    appears to be a signal that the number confuses people, so **check the number's whole family
    before writing** — the bare/`C` pair, the level twin, and what other institutions call it.
-4. Run `python queue_mgr.py status` to see where things stand. `queue.csv` is the
+4. ⚠⚠⚠ **CHECK FOR AN EXISTING LIVE GUIDE ON EVERY COURSE IN THE BATCH, not only the
+   requested ones** (learned the hard way, batch 202 — `CHM1020C` already had a guide published
+   2026-05-04 and was rewritten unknowingly):
+
+   ```bash
+   for c in ID1 ID2 ID3; do printf "%-9s " $c; \
+     curl -s "https://floridacourserepo.com/api/v1/courses/$c/guide" | head -c 120; echo; done
+   ```
+
+   ⚠ **A request's `hasGuide: false` covers only that course.** When a batch is extended into a
+   number's family — which the "check the whole family" drill encourages — **the added members have
+   not been checked.** If a guide exists, decide deliberately whether to replace it (bump `version`, and
+   see `REVIEW_QUEUE.md` item 81) or to skip the number.
+
+   ⚠⚠ **And read `mkguide.py`'s PER-COURSE output, treating a missing line as a failure.**
+   `validate_drafts.py` validates **what is on disk, not what you just built** — so a failed assembly
+   plus an older draft file produces a clean validation of the *wrong file*. That is exactly how the
+   batch-202 miss stayed invisible: five new drafts and one stale one reported as "6 clean".
+
+5. Run `python queue_mgr.py status` to see where things stand. `queue.csv` is the
    authoritative work queue; for prefix completion the live catalog is now the better worklist:
    `curl -s "https://floridacourserepo.com/api/v1/courses/catalog?prefix=<PFX>&hasGuide=false&pageSize=1000"`.
    `courses_2plus_institutions.csv` is the old ≥2-institution inventory; the SCNS flat file is authoritative.
-5. Run `python validate_drafts.py --quiet` if the queue shows `error` rows, to see what is
+6. Run `python validate_drafts.py --quiet` if the queue shows `error` rows, to see what is
    blocking them.
-6. Confirm with the user what they want to work on before generating anything.
+7. Confirm with the user what they want to work on before generating anything.
 
 Pushing to the live site runs from this repo (`generate_guide.py --push-from-queue`), using
 the `REPO_ADMIN_*` credentials in `Tools/.env`. It is a write to production — confirm the

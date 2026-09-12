@@ -1929,6 +1929,86 @@ later"* — **this item exists to record that the cost has dropped a lot, in cas
 
 ---
 
+## 81. ⚠⚠⚠ `CHM1020C` republished at v1.1 over a live May guide — and the process gap that let it happen (batch 202)
+
+**`CHM1020C` already had a live guide, published 2026-05-04** (v1.0, 18 KB, no `offering_notes`, 181-character
+prerequisite). ⚠ **I wrote a replacement without checking, because I extended a request-driven batch into the
+number's family and checked `hasGuide` only for the two requested numbers.**
+
+**Republished as v1.1**, which is the right call on the merits — it is a material rewrite:
+
+| | v1.0 (May) | v1.1 (batch 202) |
+|---|---|---|
+| Size | 18 KB | 27 KB |
+| `offering_notes` | none | 7 public carriers with per-school notes |
+| Credit divergence | not covered | ⚠ the systematic **3-vs-4** split explained (4 = lecture + lab bundled; 3 = same lab work, one credit less) |
+| The three forms | not covered | ⚠ `CHM1020` / `CHM1020L` / `CHM1020C` comparison table and a which-to-register-for decision table |
+| GE Core | not covered | ⚠⚠ the **(GE CORE)** marker and s. 1007.25 transfer protection |
+| Laboratory | brief | safety, dress code, and the **data-fabrication** warning |
+
+**Decision wanted:**
+
+1. ⚠ **Is a v1.1 republish of a pre-flat-file guide acceptable when the course turns up inside a batch you
+   are writing anyway?** Ron's standing position (2026-09-11, on `offering_notes`) was that redoing old
+   guides is *"a task for much later"* and **"do not start a retro-sweep."** ⚠ **This was not a sweep** — it
+   was one course inside a request-driven family — **but it is the first time a live guide has been replaced,
+   and the precedent should be deliberate rather than accidental.** Options: (a) allow it when the course
+   falls inside a batch's scope, (b) allow it only for guides the batch's own research contradicts, (c) leave
+   old guides alone and skip the number.
+2. **Should the old v1.0 content be recoverable?** It is not currently — the push overwrote it. ⚠ **If
+   replacements are going to happen, a copy of the superseded HTML should be kept somewhere first.**
+
+### ⚠⚠⚠ And the two process failures, which are the reusable part
+
+**Both are now fixed as standing steps in `CLAUDE.md`, but they are worth Ron seeing.**
+
+1. ⚠⚠ **No live-guide check before writing.** `GET /api/v1/courses/{id}/guide` is one call per course and
+   answers it definitively. **Now a standing pre-batch step** — the `hasGuide` flag on a *request* does not
+   cover courses added to the batch afterwards.
+2. ⚠⚠⚠ **`validate_drafts.py` validated a STALE draft and reported it clean.** My `CHM1020C` assembly had
+   **failed** on the 1000-character prerequisite ceiling, so no new draft was written — **and the validator
+   then passed the May 4 draft, reporting "6 draft(s) checked: 6 clean" when only five were mine.**
+   ⚠ **The validator checks what is on disk, not what was just built.** **A failed `mkguide.py` run plus an
+   older draft on disk produces a clean validation of the wrong file.**
+   **Standing practice now: read the assembler's per-course output, and treat a MISSING assembler line as a
+   failure regardless of what the validator says.**
+
+⚠ **Worth considering as a tooling change rather than a habit:** `validate_drafts.py` could warn when a
+draft's modification time predates the current session, or `mkguide.py --all` could refuse to leave a stale
+file in place. **Recorded as a suggestion, not done.**
+
+---
+
+## 82. ⚠⚠ The old inventory AGGREGATED suffixed variants — which sent early work to the wrong member of each family (batch 202)
+
+**`CHM1020C`'s queue row records "32 institutions."** The SCNS flat file shows **7** public carriers of the
+`C` form and **27** of the bare `CHM1020`.
+
+⚠⚠ **So `courses_2plus_institutions.csv` counted the bare, `C` and `L` forms together and attached the total
+to one id.** Under the original priority-by-institution-count rule, that made the **`C` id look like the
+high-volume course** — and the May-era work took it.
+
+**The observable result in `CHM`:** `CHM1020C`, `CHM1025C`, `CHM1045C`, `CHM1046C`, `CHM1045L` and
+`CHM1046L` were all published in May 2026, while ⚠ **`CHM1020` (27 carriers), `CHM1020L`, `CHM1015`,
+`CHM1024` and `CHM1025` (18 carriers) had never been written** — including the single most widely offered
+chemistry course in the state, which is what prompted a visitor to request it.
+
+⚠⚠⚠ **This is a specific, checkable prediction about where the back catalogue is thin: high-enrolment
+GENERAL-EDUCATION families where the bare or `L` form was passed over because the institution count was
+attached to the `C`.**
+
+**Decision wanted:** ⚠ **is a targeted check worth running on the other large general-education families —
+`BSC`, `PHY`, `AST`, `PSC`, `MAC`, `STA`?** It is cheap now: one flat-file parse gives per-form carrier
+counts, and one catalog call per id gives `hasGuide`. **That is a report, not a sweep** — and unlike the
+Gordon Rule retro-question (item 80), **what it would surface is MISSING guides on very high-carrier courses
+rather than incomplete detail on existing ones**, which is a different and arguably more urgent kind of gap.
+
+⚠ **Supporting evidence that this is not hypothetical: `CHM1020` is carried by 27 Florida public
+institutions — more than almost any course this project has written — and it was missing until a visitor
+asked for it.**
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
