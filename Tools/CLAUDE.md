@@ -55,23 +55,121 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
+## ⚠⚠ The course catalog — deployed 2026-09-11. Read this before the first batch.
+
+**What changed:** a course no longer has to have a guide. The site now lists **every course that exists**,
+with or without one, and visitors press **Request Guide** on the ones that are missing. The contract is
+[`COURSE_API.md`](COURSE_API.md) (courses) and [`RESOURCE_API.md`](RESOURCE_API.md) (resources); the
+server-side plan is `COURSE_CATALOG_PLAN.md` at the repo root. **Guide content rules did not change** —
+everything below this section still governs what a guide says.
+
+### ⚠⚠⚠ Visitor guide requests are the new top priority
+
+Requests are one anonymous click on a guide-less course page. **They are the strongest demand signal the
+project has ever had — a named person wanted that guide** — and they outrank everything except a faculty
+request. Read them with no token:
+
+```bash
+curl -s "https://floridacourserepo.com/api/v1/queue/guides?status=waiting"   # most-requested first
+```
+
+Each item carries `rank, courseId, title, requestCount, firstRequestedUtc, status, hasGuide, isListed`.
+The same list is public at `https://floridacourserepo.com/queue/guides`.
+
+⚠ **`isListed: false` means someone asked for a course the site does not list yet.** Send its base data
+(§ below) before or with the guide, or the request has nothing to attach to.
+
+**Check this queue at the start of every session**, before `queue_mgr.py next-batch`. A published guide
+closes its requests automatically; `queue_mgr.py import-requests` still works and still marks them `Queued`.
+
+### ⚠⚠ Send the course's base data with every guide
+
+A guide push still creates a missing course — but with **the course id as a placeholder title**, which is
+why so many pages read `EEE3300` instead of *Electronics I*. Fix it in the same batch:
+
+```
+POST /api/v1/courses/batch      # ≤ 500 courses, each validated on its own
+PUT  /api/v1/courses/{courseId} # one course
+```
+
+```json
+{ "courseId": "CET1112", "title": "Digital Electronics and Microprocessors",
+  "stateTitle": "DIGITAL ELECTRONICS & MICROPROCESSORS", "creditHours": 3, "contactHours": 45,
+  "offerings": [ { "institution": "DSC", "title": "DIGITAL ELECTRONICS & MICROPROCESSORS", "credits": 3 } ],
+  "replaceOfferings": true }
+```
+
+Field rules that bite:
+
+| Field | Rule |
+|---|---|
+| `courseId` | `^[A-Z]{3}\d{4}[A-Z]?(-(SCNS\|[A-Z]{2,5}))?$` — **the `-SCNS` / `-<INST>` split is in the contract**, so a variant id is a first-class course |
+| `title` | **required**, ≤ 300, written as sent. Sending the course id as the title never replaces a real one |
+| `creditHours` / `contactHours` | **0–20 / 0–3000 on the COURSE** — wider than the guide's own 0–12 / 0–1500. A PSAV clock-hour course is still `credits: 0` in the **guide** |
+| `offerings[]` | ≤ 250; `institution` is a short code, with that school's own `title`, `credits` and `clockHours`. **This is where the institution list finally lives on the site — and it is the same per-school data the guide's hours table must be built from** (see *RESOLVE THE RANGE* below; build both in one pass so they agree) |
+| `replaceOfferings` | defaults to **`true`** — omitted offerings are **deleted**. Send the whole list or pass `false` |
+| null / omitted | left unchanged on an existing course (except `title`) |
+
+⚠ **Never `DELETE` a course that has a guide** — it returns `409 COURSE_HAS_CONTENT`. A course that stopped
+being offered gets `isActive: false`.
+
+⚠ **Send institutions first**, with names: `POST /api/v1/institutions/batch` with `{code, name, sector,
+scnsId}` (SCNS `institution_map()` supplies them), or the site shows bare codes.
+
+### The 806 guide-less courses already on the site
+
+The deployment found **806 courses with no guide already in the database, and every one of them is an
+Engineering Technology prefix** — which is exactly Ron's priority scope (2026-09-09):
+
+| ETI | CET | EET | ETS | ETD | ETP | TDR | EEV | ETC | ETM | ETG | EER |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 147 | 141 | 112 | 88 | 78 | 66 | 40 | 36 | 35 | 33 | 18 | 12 |
+
+They carry real titles but **no offerings at all** (`offeringCount: 0`), so the institution data has to be
+sent. Known bad data to correct while passing through: **`EEV0360L` has `creditHours: 30`** (those are clock
+hours — PSAV, so `credits: 0` + `contactHours: 30`) and **`ETC5605` is graduate-level**.
+
+⚠ **Prefix completion (2026-09-09) applies to these**: `hasGuide=false` on the catalog endpoint is now a
+better prefix worklist than `queue.csv`, because it is what the site actually shows a visitor as missing.
+
+```bash
+curl -s "https://floridacourserepo.com/api/v1/courses/catalog?prefix=CET&hasGuide=false&pageSize=1000"
+```
+
+### A stub is not a guide
+
+Publishing modules for a course with no guide creates a placeholder guide titled **`Not Completed`**
+(`CurriculumGuide.StubTitle`). It never counts as a guide and never blocks a guide request, and the
+`hasGuide` filters ignore it. **Do not treat a course as done because it has a guide row.**
+
+### Course resources are a second, separate loop
+
+Visitors and vendors suggest links on `/courses/{id}/resources`; an AI session reviews them, writes the
+summary and lists them. That loop is **`RESOURCE_API.md` + `resources/APPROVAL_RULES.md` + the `/resources`
+skill** — not this file. It does not interleave with guide writing; run it as its own session.
+
+---
+
 ## Priority hierarchy
 
 Apply in this order:
 
 1. **Faculty requests** always go to the top of the queue. These are unpredictable and come up mid-session. When the user says "add EGN3214 because a faculty member requested it," that course supersedes the strict-priority pick. Custom specifications from faculty (e.g., "Python only, AI-integrated, two-half structure") are followed precisely.
-2. **Strict priority by institution count** (descending) within `courses_2plus_institutions.csv`, with course ID as tiebreaker. Higher institution count = wider applicability = stronger signal that the guide will help more students.
-3. **Human judgment overrides.** The user may demote or remove courses for reasons including:
-   - Course offered only at non-Florida-public institutions (e.g., Keiser private, FL Tech private). The repository serves Florida public colleges and SUS institutions.
+2. **⚠⚠ Visitor guide requests** (new 2026-09-11) — `GET /api/v1/queue/guides?status=waiting`, most-requested first. Someone pressed **Request Guide** on a course page because they wanted it. **Check this queue before every batch**; a request outranks any catalog-derived row. See the course-catalog section above.
+3. **Engineering and Engineering Technology prefixes**, completing each prefix, per Ron's 2026-09-09 direction below — single-institution courses included.
+4. **Strict priority by institution count** (descending) within `courses_2plus_institutions.csv`, with course ID as tiebreaker. Higher institution count = wider applicability = stronger signal that the guide will help more students.
+5. **Human judgment overrides.** The user may demote or remove courses for reasons including:
+   - Course offered only at non-Florida-public institutions (e.g., Keiser private, FL Tech private). The repository serves Florida public colleges and SUS institutions. ⚠⚠ **Settled 2026-09-11, and it now governs SEARCH as well as selection:** *"In doing search and fetch to determine eligibility for a curriculum guide we will only do public institutions&hellip; we are not adding private institutions as part of our adding data."* So **a private institution's offering is not a reason to write a guide, and is not added to a course's offerings either.** ⚠ **A visitor request overrides it:** *"If one happens to make it up to the list and gets queued for a guide, we will override the rule and supply one."* The override is applied by **queueing that course**, never by widening the filter.
    - Course is part of a BAS or applied-degree program that isn't a true engineering degree (Engineering Technology BAS courses are fine; non-engineering BAS courses that happen to use an engineering prefix are out of scope).
    - Course is a shell (internship, special topics, independent study, thesis, dissertation, supervised research). Default is to skip these.
-4. **When uncertain, ask.** Never silently substitute. Confirm before generating.
+6. **When uncertain, ask.** Never silently substitute. Confirm before generating.
 
 ---
 
 ## Schema (required JSON structure)
 
-Every guide is a JSON file with **exactly these six top-level keys**:
+Every guide is a JSON file with these six required top-level keys, plus the optional
+**`offering_notes`** (below):
 
 ```json
 {
@@ -83,6 +181,59 @@ Every guide is a JSON file with **exactly these six top-level keys**:
   "version": "1.0"
 }
 ```
+
+### ⚠⚠ `offering_notes` — the seventh field (Ron, 2026-09-11)
+
+**An additional field carrying, per school, the title THAT school uses and the hours it requires.** It is
+the structured form of the *RESOLVE THE RANGE* rule below: the six scalars describe the course, and this
+describes where it is actually taught.
+
+```json
+"offering_notes": {
+  "summary": "All five institutions carry it at 3 credits. No institution publishes a contact-hour figure.",
+  "hours_source": "derived",             // published | derived | mixed
+  "derived_contact_hours": 60,
+  "derivation": "Florida convention: 45 hours for a 3-credit lecture course, 60 for a 3-credit C course.",
+  "offerings": [
+    { "institution": "GCSC", "institution_name": "Gulf Coast State College",
+      "title": "Digital and Computer Circuits", "credits": 3, "contact_hours": null,
+      "note": "Offered spring term only. Prerequisite MAC1105 and EET1084C, minimum grade C." }
+  ]
+}
+```
+
+- ⚠⚠ **PUBLIC institutions only** (Ron, 2026-09-11, superseding his earlier answer): list the Florida
+  College System and State University System offerings. **A private, career or out-of-state institution
+  carrying the SCNS number is not added.** Filter with `scns.is_public(code)`.
+- ⚠ **No `sector` field.** `Institution.Sector` on the site is the owner of that fact (Ron, 2026-09-11) —
+  the guide JSON carries the institution code and the site joins. `scns.sector_of()` still exists for
+  filtering and for checking a code, but its value does not go in the draft.
+- ⚠⚠ **`credits` is an INTEGER.** The SCNS flat file writes `3` and `3.0` for the same value — that is a
+  fixed-width export artefact, not a difference. `mkguide.py` coerces a whole float; `validate_drafts.py`
+  **rejects a non-integer credit outright**. A genuine in-school range (`3-4`) leaves `credits` null and
+  says so in `note` — **Ron settled this on 2026-09-11: the note is sufficient, no min/max pair.**
+  Instances so far: `CET1178C` is 3-4 at South Florida State, `CET2949` is 1-4 at Daytona State; both are
+  variable-credit capstone or special-topics numbers.
+- `title` is **that institution's own title**, not the statewide one — the divergence signal, and the thing
+  a student actually sees on a schedule.
+- `contact_hours` per school is the **published** figure or null. Never put a derived figure in a school's
+  row: derived numbers go in `derived_contact_hours` with `hours_source: "derived"` and the `derivation`
+  spelled out.
+- ⚠ **The server does not carry this field yet.** `PUT /courses/{id}/guide` takes the six scalars and drops
+  anything else, so a draft carrying `offering_notes` publishes normally and the field simply does not
+  appear on the site until the server change lands (`Deployment/PENDING_SERVER_CHANGES.md`). **Until then,
+  write the same content into the guide HTML as an `<h3>Offering Notes</h3>` section too** — that is what
+  readers see today, and it makes the later retro-fit a mechanical extraction.
+- **Source it from the SCNS flat file**, which carries per-institution `credit`, `clock_hours` and
+  `inst_title` for every offering. ⚠ Its titles are **all upper-case**: when title-casing them, test small
+  words (`and`, `of`, `the`) **before** any "short and upper-case means acronym" heuristic, or the heuristic
+  fires on `AND` and `THE`. An all-caps source carries no case signal.
+
+⚠ **Existing guides do not have this field.** Ron, 2026-09-11: *"we will have to go back and redo a lot of
+the old guides, but that will be a task for much later."* **Do not start a retro-sweep** — add the field to
+new guides and to any guide being republished for another reason.
+
+---
 
 - `credits=0` is valid for PSAV (Postsecondary Adult Vocational) clock-hour courses; `contact_hours` carries the real measurement.
 - `prerequisites` is a single string or null. Be specific (course numbers, grade requirements, standing requirements). Where prerequisites vary by institution, say so explicitly.
@@ -495,6 +646,43 @@ signals it.** **Consequence: a transfer student is a credit short or long agains
 in tightly budgeted majors it surfaces only in the final audit.** **State the credit value explicitly in
 the guide and tell the reader to check their own.**
 
+### ⚠⚠⚠ RESOLVE THE RANGE: name the school against every differing hour figure (Ron's direction, 2026-09-11)
+
+**This is the standing rule for how a credit or contact-hour divergence is written up.** Where the identified
+offerings of a course carry **different hours at different schools, the guide must name the schools and the
+hours required at each.** A range is not an answer:
+
+| ❌ Never publish | ✅ Publish |
+|---|---|
+| "3–4 credits depending on institution" | a table: **Valencia 3, Miami Dade 4, State College of Florida 4, Daytona State 3** |
+| "contact hours vary" | "**60 contact hours** at the four institutions that publish them; Tallahassee State does not publish hours" |
+| "typically 3 credits" | "**all five institutions carry it at 3 credits**" — state uniformity explicitly too |
+
+**Why a range fails the reader.** A student does not attend "Florida"; they attend one school, transfer to
+one other, and need **their own two numbers**. A range tells them a discrepancy exists and leaves them to do
+the work the guide exists to do — and **the range is precisely where the harm is**: the student short a
+credit against a degree requirement is the one who read "3–4" and assumed 3.
+
+**Where the data comes from — the answer is now cheap:**
+
+1. **The SCNS flat file** carries **per-institution credits** (`credit`) and **clock hours** (`clock_hours`)
+   for every offering of the exact id. One parse answers the whole prefix. ⚠ **Normalise before comparing —
+   `3` and `3.0` are the same number**, and a spurious "varies" is worse than no table. ⚠ A value like
+   `3-4` is a range **inside one school** (variable-credit section) — say so, and say what determines it.
+2. **The course API's `offerings[]`** carries the same per-school `credits` and `clockHours` — so the
+   guide's table and the site's "Offered at N Florida institutions" panel should be built from one pass and
+   agree with each other. See the course-catalog section above.
+3. Where an institution publishes contact hours directly (**Broward** is the reliable one), prefer it over
+   any derived figure and say which school it came from.
+
+**Where no institution publishes hours** — common, and the honest answer is not silence: **give the derived
+figure, label it as derived by the credit-to-hour convention, and name the schools that were checked.**
+A reader can then see the difference between a sourced number and a convention.
+
+**The guide's own `contact_hours` field still holds ONE number** — the value for the identifier being
+published (for a `C` id, the integrated form's hours; see the batch-189 rule). The per-school detail belongs
+in the Special Information table, not in the scalar field.
+
 ### ⚠⚠ Prerequisites separate DEPTH as reliably as they separate SUBJECT (batch 185)
 
 The prerequisite-chain diagnostic (batch 175) was developed to settle whether two institutions teach
@@ -872,11 +1060,16 @@ When starting a fresh session in this project:
    start-here document), `README.md` for per-tool detail, and `QUEUE_GUIDE.md` for the queue
    schema and priority tiers. `.claude/skills/guide/SKILL.md` at the repo root drives the
    mechanics.
-3. Run `python queue_mgr.py status` to see where things stand. `queue.csv` is the
-   authoritative work queue; `courses_2plus_institutions.csv` is the inventory to refill from.
-4. Run `python validate_drafts.py --quiet` if the queue shows `error` rows, to see what is
+3. **Check the visitor request queue first** —
+   `curl -s "https://floridacourserepo.com/api/v1/queue/guides?status=waiting"`. Anything waiting
+   there outranks the local queue (see the course-catalog section).
+4. Run `python queue_mgr.py status` to see where things stand. `queue.csv` is the
+   authoritative work queue; for prefix completion the live catalog is now the better worklist:
+   `curl -s "https://floridacourserepo.com/api/v1/courses/catalog?prefix=<PFX>&hasGuide=false&pageSize=1000"`.
+   `courses_2plus_institutions.csv` is the old ≥2-institution inventory; the SCNS flat file is authoritative.
+5. Run `python validate_drafts.py --quiet` if the queue shows `error` rows, to see what is
    blocking them.
-5. Confirm with the user what they want to work on before generating anything.
+6. Confirm with the user what they want to work on before generating anything.
 
 Pushing to the live site runs from this repo (`generate_guide.py --push-from-queue`), using
 the `REPO_ADMIN_*` credentials in `Tools/.env`. It is a write to production — confirm the

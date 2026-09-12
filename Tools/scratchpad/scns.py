@@ -183,8 +183,16 @@ def read_report_csv(path):
 
 
 def institution_map(o=None):
-    """id -> 'CODE - NAME', scraped from the institution dropdown."""
-    o = o or opener()
+    """id -> 'CODE - NAME', scraped from the institution dropdown.
+
+    The dropdown is only rendered AFTER the terms modal is accepted, so go through
+    session() rather than a bare opener(). Calling this with a fresh opener() used to
+    return {} silently -- the same trap as the reports returning 0 rows.
+
+    NOTE: these ids are short ('22'), while the flat file's `institution` field is
+    7-digit zero-padded ('0000022'). Match on int(), not on the string.
+    """
+    o = o or session('PbCourseInventory')
     h = _get(o, 'PbCourseInventory')
     m = re.search(r'<select[^>]*id="ContentPlaceHolder1_ddlInstitution"[^>]*>.*?</select>',
                   h, re.S)
@@ -193,6 +201,81 @@ def institution_map(o=None):
     return {v: t.strip()
             for v, t in re.findall(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)', m.group(0))
             if v}
+
+
+# --- institution sector -------------------------------------------------------
+#
+# Ron, 2026-09-11: "we can include private schools that offer these courses under
+# Florida numbering." Guides therefore list EVERY institution carrying the number --
+# but a reader needs to know which sector each one is in, because credit moves
+# differently between them. SCNS itself does not publish a sector, so it is mapped
+# here by code.
+#
+# SUS  = State University System of Florida (12 public universities)
+# FCS  = Florida College System (28 public colleges)
+# other = private, career, technical-college or out-of-state provider carrying the
+#         SCNS number. Not a judgement on quality -- a transfer fact: Florida's
+#         common course numbering guarantees transfer between PUBLIC institutions,
+#         and credit from anywhere else is evaluated case by case.
+#
+# ⚠ Codes not listed fall through to 'other'. The technical colleges (xxTC) and the
+#   private universities dominate that tail, which is correct, but CHECK a new code
+#   before asserting a sector in a guide.
+
+SUS_CODES = {
+    'UF', 'FSU', 'FAMU', 'USF', 'FAU', 'UWF', 'UCF', 'FIU', 'UNF', 'FGCU',
+    'NCF',      # New College of Florida
+    'FLPOLY',   # Florida Polytechnic University
+}
+
+FCS_CODES = {
+    'BC',       # Broward College
+    'CF',       # College of Central Florida
+    'CFK',      # The College of the Florida Keys
+    'DSC',      # Daytona State College
+    'EFSC',     # Eastern Florida State College
+    'FGC',      # Florida Gateway College
+    'FSCJ',     # Florida State College at Jacksonville
+    'FSWSC',    # Florida SouthWestern State College
+    'GCSC',     # Gulf Coast State College
+    'HC',       # Hillsborough Community College
+    'IRSC',     # Indian River State College
+    'LSSC',     # Lake-Sumter State College
+    'MDC',      # Miami Dade College
+    'NFC',      # North Florida College
+    'NWFSC',    # Northwest Florida State College
+    'PBSC',     # Palm Beach State College
+    'PESC',     # Pensacola State College
+    'PHSC',     # Pasco-Hernando State College
+    'PSC',      # Polk State College
+    'SCFMS',    # State College of Florida, Manatee-Sarasota
+    'SFC',      # Santa Fe College
+    'SFSC',     # South Florida State College
+    'SJRSC',    # St. Johns River State College
+    'SPC',      # St. Petersburg College
+    'SSCF',     # Seminole State College of Florida
+    'TSC',      # Tallahassee State College (formerly Tallahassee Community College)
+    'VC',       # Valencia College
+}
+
+
+def sector_of(code):
+    """Institution short code -> 'SUS' | 'FCS' | 'other'.
+
+    'other' means the institution is not part of Florida's public system, so its
+    credit is evaluated by the receiving institution rather than guaranteed by
+    statewide numbering. Say so in a guide rather than implying equivalence.
+    """
+    code = (code or '').upper()
+    if code in SUS_CODES:
+        return 'SUS'
+    if code in FCS_CODES:
+        return 'FCS'
+    return 'other'
+
+
+def is_public(code):
+    return sector_of(code) in ('SUS', 'FCS')
 
 
 if __name__ == '__main__':

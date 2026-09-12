@@ -18241,3 +18241,201 @@ overlap**, and the guide says so plainly: a graduate of one is not qualified in 
 - **Longest prerequisite string 432 of 500** — no overflow, second clean batch on that measure.
 - The `EEE4775` disambiguation stub trips the expected "no Learning Outcomes / Major Topics"
   warnings. Non-blocking and correct for that page type, as documented.
+
+
+---
+
+## Batch 190 — the first batch under the course-catalog rules; `CET` prefix opened (2026-09-11)
+
+**Six guides: `CET1112`, `CET1112C` (v1.1), `CET1600`, `CET1610`, `CET2615`, `CET2620`.** Chosen under the
+new priority order: the **visitor request queue** first, then Engineering Technology prefix completion.
+
+### What drove the selection — the request queue is live and had one item
+
+`GET /api/v1/queue/guides?status=waiting` returned exactly one course: **`CET1112`, "Digital Electronics &
+Microprocessors", 1 request, 2026-09-11**, `isListed: true`. That is the first visitor-requested guide the
+project has written, and it set the prefix for the rest of the batch.
+
+⚠ **The request was for a number that is close to a trap**, which is a good argument for the queue: a
+visitor asked for the one course in the family that a Florida public-college student cannot register for.
+
+### ⚠⚠ `CET1112` vs `CET1112C` — the bare id is carried by ONE PRIVATE institution
+
+From the SCNS flat file — the authoritative per-institution list:
+
+| Id | Institutions | Titles |
+|---|---|---|
+| **`CET1112`** | **1 — CBT Technology Institute (private)** | "Digital Electronics & Microprocessors" |
+| **`CET1112C`** | **5, all public** — Gulf Coast, Daytona State, Indian River, Pensacola State, Hillsborough | "Digital and Computer Circuits", "Digital Fundamentals and Lab", "Logic Circuits I", "Digital Fundamentals", "Basic Digital Systems" |
+
+⚠ **The site's stored title for `CET1112` came from the single private institution**, not from the statewide
+record (which says *Digital Fundamentals*). **Both ids were written**, cross-linked, each stating the other's
+shape, hours and institution list. ⚠ The institution title is also **broader** than the statewide one —
+microprocessors are numbered separately in Florida as `CET1117` — so the guide says the course appears to
+compress two statewide subjects and tells the reader to confirm against the syllabus.
+
+### ⚠⚠⚠ `CET2620` — five subjects, one number, and a documented CAUSE
+
+Cisco replaced its four-course CCNA academy curriculum with a three-course one, completing the certification
+blueprint at `CET2615`. **Florida's fourth number lost its course, and five colleges filled it differently:**
+CCNA4 Connecting Networks (SCFMS), Enterprise Core Technologies (SPC), **Network Security** (SFC), **The
+Internet of Things** (TSC), Project Based Learning (HC).
+
+⚠⚠ **This is a new named category: VENDOR-DRIVEN divergence.** Every divergence catalogued so far came from
+institutions reading a subject differently. This one came from **a vendor reorganising a certification track
+that a state course number was pinned to** — so it is predictable rather than idiosyncratic. **Expect it
+wherever a number names a vendor credential: `CET`, `CTS`, `CIS`, `CNT`, and anything tracking CompTIA,
+Microsoft or AWS.** See `REVIEW_QUEUE.md` item 55.
+
+### ⚠⚠ `CET1600` — the same category, smaller: Cisco at five colleges, **CompTIA Network+ at Daytona State**
+
+The statewide description names the CCNA explicitly. **Daytona State titles the course "Network Plus".** The
+theory overlaps almost entirely; **the laboratory skill does not** — a Cisco section lives in the Cisco
+command line, which Network+ does not assess. **The student's exposure is concrete: the wrong exam voucher.**
+`REVIEW_QUEUE.md` item 56.
+
+### Sources
+
+- **SCNS `statewide CET`** — one fetch, 229 century records with descriptions, prerequisites and
+  transferability. ✅ **Confirmed again as the correct first stop**; it answered 5 of the 6 guides' core
+  content before any catalog was touched.
+- **SCNS flat file** (76 MB) — 295 active `CET` rows carrying institution, that institution's own title, and
+  credits. **This is what made every divergence in this batch visible**, and none of them would have surfaced
+  from a catalog sweep.
+- ⚠ **`scns.py institution_map()` was returning `{}`** — it fetched `PbCourseInventory` *without* accepting
+  the terms modal, so the dropdown was absent. **Fixed** to go through `session()`; it now returns 167
+  institutions. The flat file's 7-digit zero-padded institution ids map to the dropdown's short ids by
+  integer value.
+- **Gulf Coast State College** — `gulfcoast.edu/catalog/current/courses/cet/index.html` ✅ **200, 114 KB,
+  full descriptions.** Supplied `CET1112C`'s verified prerequisite (`MAC1105` **and** `EET1084C`, minimum
+  grade C) and, valuably, **"Offered spring"** — a once-a-year offering is a scheduling constraint no other
+  source in this project surfaces. ⚠ It carries only `CET1112C` in this prefix.
+- **Broward** empty 202 (blocked, consistent with the rate-trigger pattern); **Daytona State** 404 with a
+  full body on the 2025-2026 slug — answering, wrong slug. Neither retried, per the burst rule.
+
+### ⚠ Contact hours: a derived figure replaced a derived figure
+
+`CET1112C`'s live v1.0 carried **75** contact hours for a 3-credit integrated course. Republished at **60**,
+the project's standing convention. **Neither figure is sourced** — Gulf Coast publishes the prerequisite and
+the description but no hours, and no other reachable catalog carries the course. **Flagged in
+`REVIEW_QUEUE.md` item 57 rather than changed silently.**
+
+### Mechanics
+
+- **Prefix coverage, measured the new way:** `CET` holds **141 guide-less courses** on the live site out of
+  **187 flat-file codes**; **138 of the 141 are carried by at least one institution**, and **3 are carried by
+  none** — the inventory-error pattern again, at about 2%.
+- **Five drafts were orphans** (not in `queue.csv`) and `reconcile` added them, as designed. **`CET1112C` was
+  NOT** — it already sat in the queue as `pushed` from 2026-05-04, which is how the live v1.0 was noticed
+  before it was overwritten. ⚠ **Check the queue's existing status for every `C`/bare pair; the two ids look
+  independent and are not.**
+- **`CET1112`'s prerequisite string failed at 524 characters** and was trimmed to 459 — the second blocking
+  overflow in five batches. The 500 ceiling is now the binding constraint it was predicted to become.
+- Longest prerequisite in the batch: 483. Guide sizes 14.6–18.4 KB, below the 27 KB average — correct for
+  lower-division technology courses, which have less to say about theory and more about format and transfer.
+
+### ⚠⚠⚠ New standing rule applied to this batch: RESOLVE THE RANGE (Ron, 2026-09-11)
+
+**"Identified offerings of the course with varying hours should specify the schools and the hours required
+at the schools to resolve the ranges."** Recorded in `CLAUDE.md` and the `/guide` skill. Every guide in this
+batch now carries an **"Offerings and hours, school by school"** table in Special Information.
+
+What applying it to six courses immediately showed:
+
+- **Normalise before you claim variation.** The flat file writes the same value as `3` and `3.0`; a naive
+  comparison flagged all six courses as varying when **none of them do**. A spurious "varies" is worse than
+  no table.
+- **Uniformity is worth stating too** — "all six institutions carry it at 3 credits" answers the question a
+  range would have raised.
+- **The variation was in the neighbouring id, not the queued one.** All six bare ids are uniform, but
+  **`CET1600C` is 3 credits at five colleges and 4 at Seminole State** — which also explains the live
+  `CET1600C` guide's 4-credit/90-hour figures. ⚠ **Check the `C`/bare partner's per-school credits, not just
+  the id being written.**
+- **Contact hours are the harder half:** not one Florida institution publishes an hour figure for any of
+  these six courses. The rule's fallback was used throughout — give the derived figure, **label it derived**,
+  and name the schools checked.
+- Across the whole `CET` prefix, **37 codes carry genuinely differing credits between schools**, including
+  in-school ranges (`CET1178C` = `3-4` at South Florida State; `CET2949` = `1-4` at Daytona State). That is
+  the backlog this rule will keep meeting.
+
+### ⚠⚠ New guide FIELD added the same day: `offering_notes` (Ron, 2026-09-11)
+
+Following the RESOLVE THE RANGE rule, Ron added **a seventh guide field** carrying, per school, that
+school's own title and the hours it requires. **Credit hours are integers.** All six batch-190 drafts carry
+it; `validate_drafts.py` and `mkguide.py` were extended to support and check it.
+
+- ⚠ **The server drops it today.** `PUT /courses/{id}/guide` builds its payload from the six named scalars,
+  so the drafts publish normally and the field is simply invisible until the server change lands. The same
+  content is therefore **also** written into the guide HTML as an `<h3>Offering Notes</h3>` section, which
+  makes the later retro-fit an extraction rather than a re-derivation.
+- ⚠⚠ **Raised with the site session: the per-school rows already exist in the database.** `CourseOffering`
+  (institution, that school's title, credits, clock hours) shipped in this release. Duplicating them on the
+  guide would create two sources of truth. The recommendation is a single nullable JSON column holding the
+  **interpretation** (`summary`, `hours_source`, `derivation`, per-school `note`) and rendering the rows
+  from `CourseOffering`.
+- ⚠ **Title-casing the flat file is a trap worth recording.** Its titles are entirely upper-case, so
+  `str.title()` yields *"Digital Fundamentals And Lab"*, and the obvious fix — "short and upper-case means
+  acronym" — fires on `AND`, `THE`, `TO` and `OF`, because **an all-caps source carries no case signal at
+  all**. Test small words FIRST and treat only an explicit acronym list as upper. Brand names (Cisco) are
+  not acronyms.
+- **Open for Ron:** variable-credit courses cannot be expressed as an integer — `CET1178C` is `3-4` at South
+  Florida State, `CET2949` is `1-4` at Daytona State. The pipeline sends `credits: null` plus a note;
+  whether a `credits_min`/`credits_max` pair is worth adding is question 1 in
+  `Deployment/PENDING_SERVER_CHANGES.md`.
+- **No retro-sweep.** Ron: *"we will have to go back and redo a lot of the old guides, but that will be a
+  task for much later."* 2,197 live guides lack the field; new and republished guides get it.
+
+### ✅ Both `offering_notes` questions settled the same day (Ron, 2026-09-11)
+
+1. **Variable credit: the note is sufficient.** No `credits_min`/`credits_max`. A genuine in-school range
+   sends `credits: null` with the range explained in `note`. `credits` stays a plain nullable integer.
+2. **Private institutions ARE listed** — *"we can include private schools that offer these courses under
+   Florida numbering."* Each offering row gained a **`sector`**: `SUS` (12 public universities), `FCS` (28
+   public colleges), `other` (private, career, technical, out-of-state). New helper **`scns.sector_of()`**,
+   with the code lists recorded there; unlisted codes fall through to `other`, so **check a new code before
+   asserting a sector.**
+
+⚠ **Sector is a transfer fact, not a ranking, and the guides say so**: statewide numbering guarantees
+transfer between *public* institutions, and credit from an `other` institution is evaluated case by case.
+Every guide in the batch now states its sector composition in one line after the offerings table.
+`CET1112` carries the full version, because its only offering is private while the public colleges teach
+the subject as `CET1112C`.
+
+⚠ **Raised with the site session and still open:** `Institution` already has a `Sector` column fed by the
+course API, so the guide JSON's copy may be redundant. **Worth settling which side owns it before both are
+populated.**
+
+**The scope bullet in `CLAUDE.md` was clarified rather than changed.** "Course offered only at
+non-Florida-public institutions" remains a reason to demote a course when *picking off the queue* — it is
+not a reason to omit an institution from a listing, and **a visitor request outranks it**, which is why
+`CET1112` was written at all.
+
+### ⚠⚠ Refined the same day (Ron, 2026-09-11) — PUBLIC institutions only, and `CET1112` withdrawn
+
+Three changes that supersede the answers recorded immediately above:
+
+1. **Search and fetch for eligibility covers PUBLIC institutions only** — the Florida College System and the
+   State University System. *"We are not adding private institutions as part of our adding data."* The
+   offering builder now filters on `scns.is_public(code)`. It removed nothing from this batch: all twenty-five
+   offerings across the five remaining guides are FCS.
+2. **`Institution.Sector` owns the sector fact.** The `sector` field added to the offering rows earlier the
+   same day was **removed** — rows carry the institution code and the site joins. `scns.sector_of()` stays,
+   for filtering and for checking a new code, but its value does not go in a draft. ⚠ This is the
+   duplication the split design existed to prevent; it was caught before either side was populated.
+3. **`CET1112` is withdrawn.** Ron: *"I do not plan to add the CET1112 at this time — it was a test and can
+   be removed from the queue."* Draft, HTML, metadata row and queue row all deleted. **The batch is five
+   guides, not six.**
+
+⚠ **The visitor request for `CET1112` is still Open on the public queue** and cannot now be filled. It needs
+`PATCH /api/v1/guide-requests/CET1112/status` → `Declined`, or it sits there permanently. **Flagged, not
+done** — it is a production write.
+
+⚠⚠ **What this batch proved about the request queue, despite the request being a test:** the one course a
+visitor asked for was **the trap in its own family** — a number carried only by a private career college,
+where every public college teaches the subject under the `C` id. **A request queue surfaces exactly the
+courses whose numbering confuses people**, which is a better argument for working it first than demand
+volume alone.
+
+⚠ **`CET1112C`'s guide keeps its warning about the bare number**, and the warning is now doing more work
+than when it was written: there will be no guide at `CET1112` to explain the difference, so the `C` guide is
+the only place a student meets it.

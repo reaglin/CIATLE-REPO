@@ -6,10 +6,12 @@ the REST API and need no deploy.
 
 Bundle these into the next deploy, then delete the entry.
 
-## Nothing is waiting on a deploy right now
+## Open entries
 
-The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below. The only
-entry still open is the `Prerequisites` ceiling further down, which is **not written yet**.
+The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below. **Three entries
+are open, none written yet:** the `Prerequisites` ceiling raise, and the **field sizing** items the
+`Tools/` session raised on 2026-09-11 (both below). They touch adjacent lines in the same validator and
+should ship together.
 
 ## ✅ DEPLOYED 2026-09-11 — course catalog phases 1–4b, in two releases, both verified live
 
@@ -127,6 +129,156 @@ python -c "import json;d=json.load(open('drafts/SCE4320_guide.json',encoding='ut
 ```
 
 **No nginx, systemd or `taxonomy.json` change.**
+
+---
+
+## Curriculum guides: carry the new `offering_notes` field (Ron, 2026-09-11)
+
+**Ron's direction:** the guides gain **an additional field** holding, per school, **the title that school
+uses for the course and the hours it requires** — so a reader can resolve "3 credits at which institution?"
+without leaving the guide. **Credit hours are integers.** Rationale in his words: *"Now I am collecting from
+users the information that they find useful in the guides."*
+
+**The `Tools/` session is already emitting it.** Batch 190's six `CET` drafts carry `offering_notes`, and
+`validate_drafts.py` enforces its shape (including the integer-credits rule). `PUT /api/v1/courses/{id}/guide`
+builds its payload from the six named scalars, so **the field is silently dropped today** — drafts publish
+fine, the data just does not reach the site. Nothing is broken; the field is simply invisible until this
+lands.
+
+### The shape being sent
+
+```json
+"offering_notes": {
+  "summary": "All five institutions carry it at 3 credits. No institution publishes a contact-hour figure.",
+  "hours_source": "derived",              // published | derived | mixed
+  "derived_contact_hours": 60,
+  "derivation": "Florida convention: 45 hours for a 3-credit lecture course, 60 for a 3-credit C course.",
+  "offerings": [
+    { "institution": "GCSC", "institution_name": "Gulf Coast State College",
+      "title": "Digital and Computer Circuits", "credits": 3, "contact_hours": null,
+      "note": "Offered spring term only. Prerequisite MAC1105 and EET1084C, minimum grade C." }
+  ]
+}
+```
+
+### ⚠⚠ Before building it: the per-school rows already exist in the database
+
+**`CourseOffering` (added in this release) already stores exactly this data** — `InstitutionCode`,
+`InstitutionTitle`, `Credits`, `ClockHours` — fed by `offerings[]` on the course API. **Storing the same
+rows again on the guide would create two sources of truth that drift**, which is the failure this project
+has spent months cleaning up elsewhere.
+
+**Recommended split, and it is cheaper than a new table:**
+
+| Part | Where it should live | Why |
+|---|---|---|
+| Per-school **title, credits, clock hours** | **`CourseOffering`** (already there) | already populated by the course API; one writer |
+| **`summary`**, **`hours_source`**, **`derived_contact_hours`**, **`derivation`**, per-school **`note`** | **new on `CurriculumGuide`** | interpretation, not data — no structured source for it |
+
+So the server work is: **one nullable `OfferingNotes` column** (JSON text, suggest ≤ 8000 chars) on
+`CurriculumGuide`, accepted by the guide upsert and rendered on the guide page **joined against the course's
+existing `CourseOffering` rows**. The per-school `note` is the only per-row item with nowhere to go — either
+fold it into the JSON keyed by institution code (simplest) or add a `Note` column to `CourseOffering`.
+
+⚠ **If the simpler path is preferred**, storing the whole blob as sent and rendering it verbatim also works
+and needs no join — but then a course's offerings can disagree with its guide's offerings, and someone will
+have to reconcile them later.
+
+### ✅ Both questions ANSWERED by Ron, 2026-09-11 — and the split design above is APPROVED
+
+1. **Variable-credit courses — the note is sufficient.** No `credits_min`/`credits_max` pair. A row with a
+   genuine in-school range sends `credits: null` and explains it in `note` ("Variable credit: 1 to 4 at this
+   institution"). **So `credits` is a plain nullable integer column/property** — nothing further needed.
+2. **`Institution.Sector` is the OWNER of the sector fact** (Ron, 2026-09-11). The guide JSON does **not**
+   carry a `sector` field — offering rows carry the institution code and **the page joins to `Institution`**.
+   One writer, one source of truth. The `Tools/` session has removed its copy.
+
+3. **Public institutions only** (Ron, 2026-09-11, refining his earlier answer): *"In doing search and fetch
+   to determine eligibility for a curriculum guide we will only do public institutions… we are not adding
+   private institutions as part of our adding data."* So the `Tools/` session sends **FCS and SUS offerings
+   only**; a private, career or out-of-state institution carrying an SCNS number is not added.
+
+   ⚠ **Server-side implication: none required, but worth knowing.** A course's `OfferingCount` and its
+   "Offered at N Florida institutions" panel will therefore count **public institutions only**, which is the
+   intended reading. **No filtering belongs on the server** — the content session decides what a course is,
+   per principle 1 of `COURSE_CATALOG_PLAN.md`.
+
+   ⚠ **A visitor request overrides the rule**, applied by queueing that course rather than by widening the
+   filter. The one live instance, `CET1112` (carried only by a private career college), **was a test click
+   by Ron and is being withdrawn** — its draft is deleted and it is removed from the local queue. **Its
+   request is still Open on `/queue/guides` and should be set to `Declined`** via
+   `PATCH /api/v1/guide-requests/CET1112/status`, or it will sit in the public queue unfillable.
+
+### Not now
+
+**Existing guides do not carry the field**, and Ron has said the retro-fit is *"a task for much later."*
+2,197 live guides would need it. **Do not schedule it with this change** — the column is nullable and a guide
+without it renders exactly as it does today.
+
+---
+
+## Field sizing — align the guide and course ceilings, and the 133 clock-hour rows (from the `Tools/` session, 2026-09-11)
+
+**Raised by the content session after reading the course-catalog release.** Three sizing items, one of
+which **blocks the Engineering Technology guide work that Ron's 2026-09-09 prefix direction points at**.
+
+### 1. ⚠⚠ 133 courses hold CLOCK HOURS in `creditHours`, and the new ceiling rejects them
+
+Measured live 2026-09-11 against `GET /api/v1/courses/catalog?hasGuide=false&pageSize=1000`:
+
+| | |
+|---|---|
+| Guide-less courses on the site | **806** (all Engineering Technology prefixes) |
+| Of those, `creditHours` **> 20** | **133** — values run to **667** |
+| Of those 133, PSAV `0xxx` courses | **132** (the exception is `ETI2941`, a practicum, credits `30`) |
+| Courses with `contactHours` set | **0 of 806** |
+| `creditHours` between 13 and 20 | **0** |
+
+Worst rows: `EEV0940` 667, `TDR0780C` 470, `EEV0142` / `ETI0304` / `ETI0459` / `ETI0473` / `TDR0301` /
+`TDR0302` 450. By prefix: TDR 40, ETI 31, EEV 30, ETP 18, EER 9, ETC 3, ETM 2.
+
+⚠ **This is the PSAV clock-hours-as-credits mistake, already in production data** — the same error the guide
+pipeline guards against with `credits: 0` + `contact_hours`. It predates the catalog release (all 806 rows
+carry `source: Guide`, created as side effects of old pushes).
+
+**Why it needs a decision rather than just a fix:** `UpsertCourseRequestValidator` caps `CreditHours` at
+**20**, so **the content session cannot refresh any of those 133 rows through `PUT /api/v1/courses/{id}`
+without first correcting the value** — a round-trip read-modify-write of the site's own data fails
+validation. The values are also plainly wrong on the public course pages today.
+
+**Recommendation (cheapest path, no migration):** the `Tools/` session corrects them over the API as it
+works each prefix — `creditHours: 0`, `contactHours: <the clock hours>` — since it has to touch every one of
+these courses anyway to add titles and offerings. **No server change required for this item**, but the site
+session should know the rows exist and that the ceiling is what surfaces them. If a bulk fix is preferred
+instead, a one-off migration moving `CreditHours > 20` into `ContactHours` and zeroing credits would clear
+132 of the 133 correctly (`ETI2941` needs a human look — a practicum at 30 is more likely hours than credits
+but is not a `0xxx` course).
+
+### 2. The guide and course validators disagree about the same two fields
+
+| Field | Guide (`UpsertCurriculumGuideRequestValidator`) | Course (`UpsertCourseRequestValidator`) |
+|---|---|---|
+| credits | **0–12** | **0–20** |
+| contact hours | **0–1500** | **0–3000** |
+
+A course record can legitimately hold 20 credits while its own guide is rejected at 13. Nothing has hit this
+yet — there are **zero** rows in the 13–20 band — so it is a latent inconsistency, not a live failure.
+
+**Recommendation:** make the guide ceilings match the course ceilings (**0–20** and **0–3000**). Both
+comments in the source already say the ceiling is "a sanity guard against typos, not a course-length
+policy", and a single number is easier to mirror in `validate_drafts.py` than two.
+
+### 3. The `Prerequisites` 500 → 1000 raise is still the only open entry
+
+Reaffirmed from the content side: `PublishValidators.cs:109` is still `MaximumLength(500)`. The entry above
+has the full rationale and both code sites. **Recommend bundling items 2 and 3 into the same release** — they
+are two adjacent lines in the same validator, and item 3 needs a migration that item 2 does not.
+
+### Sizing items that are correctly sized (checked, no action)
+
+`title` / `stateTitle` ≤ 300 (longest Florida course title seen is well under), `offerings[]` ≤ 250 per
+course (Florida has ~40 public institutions), resource `summary` ≤ 2000, institution `code` ≤ 10,
+`name` ≤ 200.
 
 ---
 

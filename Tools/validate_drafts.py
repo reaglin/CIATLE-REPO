@@ -43,6 +43,17 @@ REQUIRED_KEYS = {
 # (generate_guide.mark_draft_pushed) — present by design, not a schema violation.
 STAMP_KEYS = {"pushed_utc"}
 
+# Optional keys: valid in a draft, not required.
+#
+# offering_notes (Ron, 2026-09-11) — per-school offering data: what each institution
+# calls the course, its INTEGER credit value, its contact hours, and any note. The
+# server does not carry this field yet (PUT /courses/{id}/guide takes the six scalars
+# and drops anything else), so a draft carrying it publishes fine and the field simply
+# does not reach the site until the server change lands. See
+# Deployment/PENDING_SERVER_CHANGES.md. Until then the same content is also written
+# into the guide HTML as an "Offering Notes" section.
+OPTIONAL_KEYS = {"offering_notes"}
+
 # Server-side bounds (PublishValidators.cs lines 103-107).
 MAX_TITLE = 300
 MAX_PREREQ = 500
@@ -88,11 +99,57 @@ def check(path: Path) -> tuple[list[str], list[str]]:
 
     keys = set(data)
     missing = REQUIRED_KEYS - keys
-    extra = keys - REQUIRED_KEYS - STAMP_KEYS
+    extra = keys - REQUIRED_KEYS - STAMP_KEYS - OPTIONAL_KEYS
     if missing:
         errors.append(f"missing key(s): {', '.join(sorted(missing))}")
     if extra:
         warnings.append(f"unexpected key(s): {', '.join(sorted(extra))}")
+
+    # --- offering_notes (optional) -----------------------------------------
+    notes = data.get("offering_notes")
+    if notes is not None:
+        if not isinstance(notes, dict):
+            errors.append("offering_notes is not a JSON object")
+        else:
+            rows = notes.get("offerings")
+            if not isinstance(rows, list) or not rows:
+                errors.append("offering_notes.offerings is missing or empty")
+            else:
+                for i, row in enumerate(rows):
+                    where = f"offering_notes.offerings[{i}]"
+                    if not isinstance(row, dict):
+                        errors.append(f"{where} is not an object")
+                        continue
+                    inst = row.get("institution")
+                    if not isinstance(inst, str) or not inst.strip():
+                        errors.append(f"{where}.institution is empty")
+                    elif len(inst) > 10:
+                        errors.append(f"{where}.institution {inst!r} is over 10 chars")
+                    t = row.get("title")
+                    if t is not None and (not isinstance(t, str) or len(t) > 300):
+                        errors.append(f"{where}.title is not a string of <= 300 chars")
+                    cr = row.get("credits")
+                    # Ron, 2026-09-11: credit hours are INTEGERS. 3.0 is a formatting
+                    # artefact of the SCNS flat file, not a different value.
+                    if cr is not None and not isinstance(cr, int):
+                        errors.append(
+                            f"{where}.credits is {cr!r} — credit hours must be integers"
+                        )
+                    elif isinstance(cr, int) and not 0 <= cr <= 20:
+                        errors.append(f"{where}.credits {cr} is outside 0-20")
+                    ch = row.get("contact_hours")
+                    if ch is not None and (not isinstance(ch, int) or not 0 <= ch <= 3000):
+                        errors.append(f"{where}.contact_hours is not an integer in 0-3000")
+            src = notes.get("hours_source")
+            if src is not None and src not in ("published", "derived", "mixed"):
+                errors.append(
+                    "offering_notes.hours_source must be published, derived or mixed"
+                )
+            elif src is None:
+                warnings.append(
+                    "offering_notes has no hours_source — say whether hours are "
+                    "published by the institutions or derived by convention"
+                )
 
     # --- title -------------------------------------------------------------
     title = data.get("title")

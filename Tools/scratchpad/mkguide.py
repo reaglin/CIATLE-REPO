@@ -38,6 +38,16 @@ def build(cid, meta):
         'prerequisites': meta.get('prerequisites'),
         'version': meta.get('version', '1.0'),
     }
+    # Optional per-school offering data (Ron, 2026-09-11). Carried in the draft ahead of
+    # server support; PUT /courses/{id}/guide currently drops it. Credits are INTEGERS --
+    # the SCNS flat file's '3.0' is formatting, not a different value.
+    notes = meta.get('offering_notes')
+    if notes:
+        for row in notes.get('offerings', []):
+            cr = row.get('credits')
+            if isinstance(cr, float) and cr == int(cr):
+                row['credits'] = int(cr)
+        g['offering_notes'] = notes
     errs = []
     if not g['html_content']:
         errs.append('html_content empty')
@@ -49,15 +59,21 @@ def build(cid, meta):
         errs.append('credits %r out of 0-12' % g['credits'])
     if not isinstance(g['contact_hours'], int) or not 0 <= g['contact_hours'] <= 1500:
         errs.append('contact_hours %r out of 0-1500' % g['contact_hours'])
+    for i, row in enumerate(meta.get('offering_notes', {}).get('offerings', [])):
+        cr = row.get('credits')
+        if cr is not None and not isinstance(cr, (int, float)):
+            errs.append('offering_notes.offerings[%d].credits %r is not numeric' % (i, cr))
     if errs:
         raise SystemExit('%s: %s' % (cid, '; '.join(errs)))
     out = os.path.join(DRAFTS, cid + '_guide.json')
     with open(out, 'w', encoding='utf-8') as fh:
         json.dump(g, fh, ensure_ascii=False, indent=1)
     pre = g['prerequisites']
-    return '%-10s %2d cr %4d hrs  %6.1f KB  prereq %s' % (
+    n = g.get('offering_notes')
+    return '%-10s %2d cr %4d hrs  %6.1f KB  prereq %s  offerings %s' % (
         cid, g['credits'], g['contact_hours'], len(body) / 1024,
-        ('%d chars' % len(pre)) if pre else 'null')
+        ('%d chars' % len(pre)) if pre else 'null',
+        ('%d schools' % len(n['offerings'])) if n else '-')
 
 
 if __name__ == '__main__':

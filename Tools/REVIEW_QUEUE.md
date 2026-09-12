@@ -10,7 +10,7 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-05 (batch 148)
+**Last updated:** 2026-09-11 (batch 190 — the first batch under the course-catalog rules)
 
 ---
 
@@ -1364,6 +1364,91 @@ student holding that credit.
 
 ⚠ **Going forward, the flat file makes this checkable before drafting** — `status != 'A'` is one
 field. Worth adding to the pre-draft checks alongside the taxonomy-prefix check.
+
+---
+
+## 55. ⚠⚠⚠ `CET2620` — **FIVE different subjects under one number**, and the cause is a vendor curriculum change (batch 190)
+
+**The most severe number divergence found so far — worse than `TPA3230C` (three subjects), because there are
+five and two of them are different FIELDS.**
+
+| Institution | Its title for `CET2620` |
+|---|---|
+| State College of Florida, Manatee-Sarasota | **CCNA4 Connecting Networks** |
+| St. Petersburg College | **Enterprise Core Technologies** |
+| Santa Fe College | **Cisco Network Security** |
+| Tallahassee State College | **The Internet of Things** |
+| Hillsborough Community College | **Cisco Network Project Based Learning** |
+
+⚠⚠ **The cause is documented and mechanical, which makes this the most explainable divergence in the
+project.** Cisco replaced its **four**-course CCNA academy curriculum with a **three**-course one (Introduction
+to Networks; Switching, Routing and Wireless Essentials; Enterprise Networking, Security and Automation). The
+CCNA blueprint is now complete at the end of `CET2615`. **Florida's fourth number was left with no course to
+hold, and each college filled the empty slot with something different.**
+
+**Why it matters:** network security and the Internet of Things are different fields with different
+laboratory equipment and different jobs. A transfer evaluator matching on the number cannot tell them apart,
+and neither can an employer reading a transcript.
+
+**What was done:** published as **one guide** with the table above at the top, a labelled optional-outcome
+block per variant, and instructions to read the local course description before registering. **Not split**,
+because the evidence is institutional TITLES from the SCNS flat file — no course descriptions were
+reachable for four of the five.
+
+**The ask:** (a) is a five-way split worth doing, and if so what does the bare number hold? (b) Cheaper
+alternative — leave the single guide and treat this as the worked example of **vendor-driven divergence**,
+a category distinct from institutional drift. ⚠ **Expect more of these wherever a course number is pinned to
+a vendor certification track that the vendor then reorganises** (CompTIA, Microsoft, AWS, Cisco).
+
+---
+
+## 56. ⚠⚠ `CET1600` — a **VENDOR** divergence: five colleges teach Cisco, one teaches CompTIA (batch 190)
+
+`CET1600`'s statewide definition explicitly names the **Cisco CCNA** track. Five of the six colleges follow
+it. **Daytona State College titles the course "Network Plus"** — CompTIA's vendor-neutral **Network+**.
+
+⚠ **A new category, adjacent to but distinct from subject divergence.** The *theory* overlaps almost
+completely (OSI, media, topologies, IPv4 addressing, troubleshooting). **The hands-on skill does not**: a
+Cisco section spends its laboratory time in the Cisco command line, which Network+ neither teaches nor
+assesses. **And the student pays for the wrong exam voucher if they assume.**
+
+**Published with a warning** telling the reader to confirm which examination their section prepares them for
+before booking. **The ask:** is "which certification does this number target?" worth adding as a standing
+check for every course whose statewide description names a vendor credential? There are many in `CET`, `CTS`,
+`CIS` and `CNT`.
+
+---
+
+## 57. ⚠ `CET1112C` — republished as v1.1; **contact hours corrected 75 → 60** (batch 190) — *correction candidate, already acted on*
+
+The live v1.0 guide (title *"Basic Digital Systems"*, pushed 2026-05-04 in the Daytona era) carried **75
+contact hours** for a 3-credit integrated course, was **7 KB**, and had **no prerequisite string at all**.
+
+**Replaced with an 18 KB v1.1** carrying: the five institutions and their differing titles from the SCNS flat
+file; **Gulf Coast State College's verified prerequisite** (`MAC1105` **and** `EET1084C` with minimum grade C)
+and its **spring-only** offering; the `CET1112`/`CET1112C` suffix divergence; and the BSEE/`EEL3701C`
+articulation warning.
+
+⚠ **The contact-hour change is derived, not sourced.** 60 hours is the project's standing convention for a
+3-credit `C` course; the previous 75 was equally derived and is not supported by any catalog the project can
+reach (Gulf Coast publishes the prerequisite and the description but **no hours**). **Flagging rather than
+hiding it: if Ron prefers the higher figure, it is a one-line change.**
+
+---
+
+## 58. ⚠⚠ The site holds **133 courses whose `creditHours` are CLOCK HOURS** (batch 190) — *passed to the site session*
+
+Measured against the live catalog: of the **806 guide-less courses**, **133 carry `creditHours` above 20**,
+running as high as **667**. **132 of the 133 are PSAV `0xxx` courses** — the clock-hours-as-credits mistake
+this pipeline guards against, sitting in production data. `contactHours` is **null on all 806**.
+
+⚠ **It is also a blocker, not just a cosmetic fault:** the new course API caps `creditHours` at **20**, so
+**those rows cannot be refreshed through `PUT /api/v1/courses/{id}` until the value is corrected.**
+
+**Recorded in `Deployment/PENDING_SERVER_CHANGES.md`** with the prefix breakdown and two options (correct
+them over the API while working each prefix — the cheap path, since every one of these courses needs titles
+and offerings anyway — or a one-off migration). **No decision needed from Ron unless he prefers the
+migration.**
 
 ---
 
