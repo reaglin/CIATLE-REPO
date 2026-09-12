@@ -18823,3 +18823,73 @@ clearance matters more than a PE in Florida's aerospace sector.
 no new fetch: the cached `scns_CET.csv` and flat file from batch 190 answered both, which is the cache paying
 off. Prerequisite strings ran 785–942 characters with one outlier at 1079 (`CET2127C`, trimmed to 965) — the
 1000 ceiling accommodates a divergence warning plus a safety warning and still bites on the outlier.
+
+---
+
+## Batch 195 — the standing session order, and three things SCNS supplied directly (2026-09-11)
+
+**Ron's standing order, set this session:** *"each session we will check resources and guide queue requests
+and then start on any courses in the queue."* Recorded in the session-start checklist, resources first.
+
+**Resources: 3 reviewed** (one at the start, two that arrived mid-batch). **Guide requests: none waiting.**
+**Six guides:** `MMC4601`, `PUR4801`, `PEL1341`, `MVV4640`, `MUN3427`, `MUN3123`.
+
+### ⚠⚠ Three things the SCNS record supplied DIRECTLY that it almost never does
+
+The statewide descriptions are usually silent on hours, repeats and scope. Three of six in this batch were
+not, and each is more authoritative than anything the project derives:
+
+| Course | What the state record says | Why it matters |
+|---|---|---|
+| **`PEL1341`** | *"20 or more contact hours"* | ⚠ **The first SOURCED contact-hour figure in the project.** `hours_source` is set to `published` rather than `derived` for the first time. It also explains the 1-vs-2-credit split: a floor with no ceiling. |
+| **`MUN3427`** | *"may be used in the degree program a maximum of 8 times"* | ⚠ **A repeat cap in the STATE record**, where every other ensemble leaves it to each degree audit — which is where students find it late. |
+| **`MVV4640`** | *"this profile covers all course numbers in the MVV 640-649 decade"* | ⚠ **One description governing ten numbers.** The state constrains the institution less than usual, so the local description carries more weight. |
+
+⚠ **Read the statewide description's tail, not just its first sentence.** All three of these sit after the
+subject matter and are easy to skim past.
+
+### ⚠⚠ `MMC4601` — terminology-era divergence, and the most striking one yet
+
+Statewide: *"the contribution of **Blacks and women** in American media."* The three carriers:
+
+| Institution | Title | Credits |
+|---|---|---|
+| **Florida A&M** | Blacks, Women and the Media | **2** |
+| **Florida International** | **Race, Multiculturalism & the Mass Media** | 3 |
+| University of West Florida | Minorities and the Mass Media | 3 |
+
+⚠ **Fifty years of the field's vocabulary visible in three titles at once**, plus a credit divergence.
+⚠⚠ **And a caution the guide states explicitly:** Florida A&M's older-sounding title is *not* an unrevised
+catalog entry — as a historically Black university with a long-established journalism school, it reflects a
+deliberate scholarly tradition. **Do not assume the oldest-sounding title is the least current course.**
+
+### ⚠⚠ `PUR4801` — the collision predicted in batch 158, now confirmed from the other side
+
+Batch 158 recorded that UWF uses `PUR4801` for the campaigns capstone Florida numbers as `PUR4800C`, and
+predicted *"the project will meet this again from the other side when PUR4801 comes up in the queue."*
+**It did.** Three institutions teach the statewide cases subject, **USF** teaches a broader "Advanced Public
+Relations", and **UWF** teaches campaigns. ✅ All five at 3 credits. ⚠ The guide's operative warning: *if
+your programme requires both cases and campaigns, you may take one twice and miss the other.*
+
+### Resources reviewed this session
+
+1. **`COP3530C`** — data structures course site. ✅ More complete than the earlier `COP4708` site (every
+   module has presentation, quiz, assignments; none marked "not included"). ⚠ **The summary names the
+   implementation language — JavaScript in JSFiddle, where most data structures courses use Java or C++** —
+   which is the kind of guidance the rules invite and a student needs before clicking.
+2. **`EGN3443`** — probability and statistics course site, sixteen weekly modules. Listed for `EGN3443` and
+   cross-listed to **`EGS3441`**, the engineering statistics guide published earlier the same session, with
+   Ron's standard note.
+3. ⚠⚠ **A MIS-FILED submission, and the first rejection in the project.** The Statistle app was submitted
+   **against `COP4708` (Applied Database I)** while its own description said it supports **EGN3443**
+   students. **The course id and the description disagreed** — a statistics app does not match a database
+   course.
+
+   **Handling: rejected on the submitted course, then ADDED to `EGN3443` and `EGS3441` where it belongs.**
+   ⚠ Approving would have forced it onto `COP4708`, because `approve` always lists for the submitted course
+   — **`reject` + `add` is the correct pattern for a mis-filed suggestion, and it loses nothing.** The
+   rejection note is public and neutral: *"This is a statistics application and does not relate to applied
+   databases. It has been listed on the statistics courses it supports instead."*
+
+   ⚠ **Worth generalising:** the submitted course id is a claim, not a fact. **Check it against the
+   resource's own content before approving.**

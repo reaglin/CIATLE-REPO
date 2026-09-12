@@ -108,6 +108,24 @@ came from.
 
 ---
 
+## ⚠⚠ The submitted course id is a CLAIM, not a fact — check it (added 2026-09-11)
+
+A suggestion arrives attached to a course, and **that attachment can be wrong.** The first instance: a
+statistics application submitted against `COP4708` (Applied Database I), whose own submitter note said it
+supported `EGN3443` students. **The course id and the description disagreed, and the resource matched
+neither the course it was filed under nor anything like it.**
+
+**Check the submitted course against the resource's actual content before approving.** Where they disagree:
+
+1. **Reject the submission** on the course it was filed under, with the ordinary neutral public note, and
+   say in that note that it has been listed where it belongs.
+2. **`add` it to the courses it does match**, with a proper summary.
+
+⚠ **Do not approve a mis-filed suggestion in the hope that `alsoFor` fixes it.** `approve` always lists the
+resource for the course it was submitted against, so approving puts it on the wrong page as well as the
+right ones. **`reject` + `add` is the pattern, and it loses nothing** — the resource still reaches the
+students it helps.
+
 ## Duplicates
 
 - **The same link is never listed twice for a course** — the site enforces that, matching links after

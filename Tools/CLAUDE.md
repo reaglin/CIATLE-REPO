@@ -1060,9 +1060,25 @@ When starting a fresh session in this project:
    start-here document), `README.md` for per-tool detail, and `QUEUE_GUIDE.md` for the queue
    schema and priority tiers. `.claude/skills/guide/SKILL.md` at the repo root drives the
    mechanics.
-3. **Check the visitor request queue first** —
-   `curl -s "https://floridacourserepo.com/api/v1/queue/guides?status=waiting"`. Anything waiting
-   there outranks the local queue (see the course-catalog section).
+3. ⚠⚠ **Check BOTH public queues first, every session** (Ron's standing order, 2026-09-11:
+   *"each session we will check resources and guide queue requests and then start on any courses
+   in the queue"*):
+
+   ```bash
+   curl -s "https://floridacourserepo.com/api/v1/queue/resources?status=pending"   # resources
+   curl -s "https://floridacourserepo.com/api/v1/queue/guides?status=waiting"      # guide requests
+   ```
+
+   **Resource suggestions are cleared first** — they are quick, a person is waiting on each one, and
+   the rules are in `resources/APPROVAL_RULES.md` (the `/resources` skill drives the loop). **Then
+   guide requests**, which outrank the local queue. **Only then** work `queue.csv`.
+
+   ⚠ **A guide request closes itself when the guide publishes** — no manual step. Verify by
+   re-reading the queue after a push.
+
+   ⚠ **Two requests in a row (`CET1112`, `CET2127C`) landed on numbers with a divergence.** A request
+   appears to be a signal that the number confuses people, so **check the number's whole family
+   before writing** — the bare/`C` pair, the level twin, and what other institutions call it.
 4. Run `python queue_mgr.py status` to see where things stand. `queue.csv` is the
    authoritative work queue; for prefix completion the live catalog is now the better worklist:
    `curl -s "https://floridacourserepo.com/api/v1/courses/catalog?prefix=<PFX>&hasGuide=false&pageSize=1000"`.
