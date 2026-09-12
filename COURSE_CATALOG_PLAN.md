@@ -315,7 +315,7 @@ session runs thousands.
 | **3 — Course Resources** | **Remove the home page's "Recently Added" section (Ron, 2026-09-11).** `CourseResource` + migration; resources page with submit form; Resources button + count on rows and course page; `/queue/resources`; resource API; `/admin/resources`; rate limits | submit a website and a YouTube link → pending in the queue, not clickable; approve via API → live on the page with player; reject shows note | **Deploy 3** |
 | **4 — AI review loop** ✅ built 2026-09-11 | `Tools/resources/review_resources.py` (queue · apply `decisions.json` · approve/reject/add · listings · edit/remove/restore/delete), `Tools/resources/APPROVAL_RULES.md` (**Ron to complete**), `Tools/resources/README.md`, and the `/resources` skill (in the untracked `.claude/skills/`) | `python review_resources.py --base-url http://localhost:5199 queue` then `apply` a decisions file | none (tooling) |
 | **4b — Helpful votes on resources** ✅ built 2026-09-11 | A **thumbs-up** on each resource listing so quality sorts itself out instead of a cap on how many resources a course may carry (Ron's call while settling the approval rules). Sketch: `CourseResourceVote` (listing + salted voter IP hash, one vote each, toggleable) with a `Helpful` counter on the listing; anonymous like guide requests, rate-limited, votes counted per **course listing** so the same link can rank differently on different courses; listings ordered by votes then newest; a one-click button in the style of Request Guide, with the count shown; `POST /api/v1/resources/{id}/helpful`; admin sees counts. **Migration** — deployable with, or after, phase 3. | vote on a listing, reload, see the count and the new order | with phase 3, or its own deploy |
-| **5 — Programs** (next; direction in §14) | Real programmes at named schools — overview, requirements, career paths, courses — kept **minimal and pointing at the school's own catalog**. `Program` + `ProgramCourse` + migration; admin API (upsert, batch); `/programs` (by school and credential) and `/programs/{slug}`; course-page "Required in these programs"; `Tools/PROGRAM_API.md`. **Content comes from the schools' catalogs via the `Tools/` session** — the site only provides the interface. | push one programme from a scratch JSON; open it; course rows link through | **Deploy 5** |
+| **5 — Programs** (next; direction in §14) | **Generic programmes** (Nursing–LPN), each with its courses and an **"Offered at"** list of schools carrying notes, a catalog link and that school's courses — kept minimal and pointing at the school. `Program` + `ProgramCourse` + `ProgramOffering` + `ProgramOfferingCourse` + migration; admin API (upsert, batch); `/programs`, `/programs/{slug}`; course-page "Part of these programs"; `Tools/PROGRAM_API.md`. **Content comes from the schools' catalogs via the `Tools/` session** — the site only provides the interface. | push one programme from a scratch JSON; open it; each school's row lists the courses it carries | **Deploy 5** |
 | **6 — Career Paths** (after programs; §14) | Documented paths whose worth is the join: the **programs and courses that lead there**, each **grounded in linked sources** (licensing boards, BLS/O·NET, FLDOE, associations). `CareerPath` + joins to programs and courses; `/careers`, `/careers/{slug}`; course and program backlinks. ⚠ Reconcile with `CAREER_PATHS_PLAN.md` first — that plan is heavier (curated routes with stages). | open a path: sources cited, programs listed, courses link to guides | **Deploy 6** |
 | **Later** | **Career Paths** per `CAREER_PATHS_PLAN.md` — its "Schools" data now exists (phase 1) and it can link the programmes that feed each path (phase 5) | | |
 
@@ -358,23 +358,41 @@ Each migration phase: `PENDING_SERVER_CHANGES.md` entry, deploy **without** `-Sk
 Both get their own sections. They exist in the guides today only as prose; these sections make them things a
 student can browse. **Ron's framing, close to his words:**
 
-**Programs** are *"centered around real programs offered at schools — an overview, requirements, career
-paths, and courses. Minimal information which simply points the students at the available programs at
-specific schools."*
+**Programs — corrected by Ron, 2026-09-11** (this replaces the per-school reading recorded earlier):
 
-- A program is **a real programme at a named school**, not an abstract degree: Daytona State's A.S. Nursing
-  and Valencia's A.S. Nursing are two programs.
-- Four parts per program: **overview · requirements · career paths · courses**.
-- **Minimal by design.** The site is a signpost, not a second catalog: short text, the school's own catalog
-  page linked, and the repo's own courses linked. Anything that would go stale in a year belongs at the
-  school, not here.
+> *"We aren't targeting a program at a school, we are targeting a program in general — such as Nursing - LPN.
+> This is offered at a number of schools, and we simply link to each of those schools with some notes (unique
+> items about an offering of a specific school) and links to the courses these schools offer that are part of
+> that program."*
+
+- **The program is the page.** One generic program — *Nursing – LPN*, *Welding Technology*, *Paralegal
+  Studies* — not one page per school. Daytona State's and Valencia's LPN programmes are **two offerings of
+  one program**, not two programs.
+- Each **offering** carries the school, a link to that school's own page for it, and **notes covering what is
+  unique about that school's version** — the only place school-specific prose belongs.
+- **Courses hang off the offering**: the courses that school offers which are part of the program.
+- **Minimal by design.** The site is a signpost, not a second catalog. Anything that goes stale in a year
+  belongs at the school.
+
+⚠ **The course lists mostly build themselves.** `CourseOffering` already records which institutions carry
+each course, so a program's course list plus the offering's institution gives "which of these courses does
+DSC actually carry" for free. Per-offering course rows are then only needed for a school's **extras** — the
+courses it requires that the general program list does not name.
 
 **Career Paths** are *"documented paths… the intersection with the repo is the programs and courses that lead
-to those paths… grounded in links to detailed sources that support those career paths."*
+to those paths… grounded in links to detailed sources that support those career paths."* Ron, 2026-09-11:
+*"not a tremendous amount of information: career path name, short description, associated courses; not all,
+but courses that are specific to a career path and areas that might be important, like math is to
+engineering. Programs that can lead to that career path should be listed."*
 
+- Four parts: **name · short description · associated courses · programs that lead there.**
+- **Courses are selective, not exhaustive** — the ones specific to the path, plus the foundations that decide
+  whether someone can follow it (**mathematics for engineering** is Ron's example). Each course carries a
+  short reason, so a student sees *why* it is on the list.
+- **Programs are listed even when obvious** — nursing leads to nursing — because the specifics matter: LPN,
+  A.S.N., B.S.N. and RN-to-BSN reach different kinds of nurse.
 - A path is held together by **its sources** — licensing boards, BLS/O*NET, FLDOE, professional
   associations — not by our own assertions.
-- Its value in this repo is the **join**: which programs lead there, and which courses support it.
 - ⚠ **This is lighter than `CAREER_PATHS_PLAN.md` (2026-09-04)**, which designed curated routes with ordered
   stages, per-route accreditation notes and cohort warnings. That plan's five warnings still hold (a course
   number is not a course; suffixes mislead; parallel routes; accreditation outranks credit; cohort-locked
@@ -385,25 +403,40 @@ to those paths… grounded in links to detailed sources that support those caree
 
 | Table | Holds |
 |---|---|
-| `Program` | Slug, InstitutionCode, Name, Credential (A.S. · A.A. · A.A.S. · B.S. · B.A.S. · certificate · PSAV), CIP code, catalog year, **CatalogUrl** (the school's page — the point of the section), short overview and requirements, Status, UpdatedUtc |
-| `ProgramCourse` | Program + CourseId + block/role — reuses the courses already on the site |
-| `CareerPath` | Slug, Title, Summary, SOC codes, short overview, **SourcesJson** (label · publisher · url) |
-| `CareerPathProgram`, `CareerPathCourse` | the joins that make the section worth having |
+| `Program` | **the generic programme** — Slug (`nursing-lpn`), Name, Credential (PSAV · certificate · A.S. · A.A.S. · B.S. · B.A.S.), CIP code where one exists, short description, Status, UpdatedUtc |
+| `ProgramCourse` | Program + CourseId + role/note — the programme's courses **in general**; each offering shows which of them its school carries, from `CourseOffering` |
+| `ProgramOffering` | Program + InstitutionCode + **CatalogUrl** (that school's page) + **Notes** (what is unique about this school's version) + optional local name |
+| `ProgramOfferingCourse` | only a school's **extras** — courses it requires that the general list does not name |
+| `CareerPath` | Slug, Name, short description, SOC codes, **SourcesJson** (label · publisher · url) |
+| `CareerPathCourse` | selective: course + **why it matters** (specific to the path, or a foundation like mathematics for engineering) |
+| `CareerPathProgram` | the programmes that lead there, obvious ones included |
 
-Pages: `/programs` (browse by school and credential) · `/programs/{slug}` · `/careers` · `/careers/{slug}`;
-backlinks on course pages ("Required in these programs", "Supports these career paths"). Content arrives over
-an admin API from the `Tools/` session, read from the schools' catalogs and the source documents — same split
-as courses and resources: **the site provides the interface, the content session decides what exists.**
+**Pages.** `/programs` (browse by credential and subject) · `/programs/{slug}`: description, the courses,
+then **"Offered at"** — one row per school with its notes, its catalog link, and the courses that school
+carries. `/careers` · `/careers/{slug}`: description, courses with their reasons, programmes that lead there,
+sources. Backlinks on course pages ("Part of these programs", "Supports these career paths").
 
-### Open questions for Ron (do not block starting)
+Content arrives over an admin API from the `Tools/` session, read from the schools' catalogs and the source
+documents — same split as courses and resources: **the site provides the interface, the content session
+decides what exists.**
 
-1. **Programs first, then career paths?** Paths point at programs, so programs first is the cheaper order.
-2. **Career paths: keep the routes/stages tree** from `CAREER_PATHS_PLAN.md`, or the lighter sources +
-   programs + courses shape described above?
-3. **Which schools to start with** — the catalogs already reachable (UWF, FGCU, FSU, DSC, FIU, UCF), or a
-   named few?
-4. **How minimal is minimal?** Does a program page carry its requirement list in full, or a summary plus the
-   catalog link?
+### Answered (Ron, 2026-09-11)
+
+- **A program is generic, schools are offerings.** Not one page per school.
+- **Career paths stay small**: name, short description, selective courses with reasons, and the programmes
+  that lead there.
+- **Order:** programs first, then career paths (paths point at programmes).
+- ⚠ **`CAREER_PATHS_PLAN.md`'s routes-and-stages tree does not survive** this shape. Mine it for the five
+  warnings, the disclaimer wording and the licensure material; drop the ordered-stage routes.
+
+### Still open (do not block starting)
+
+1. **Program identity** — is the spine the **CIP code** where one exists (LPN = 51.3901), with the slug just
+   readable? It would let the `Tools/` session match programmes across catalogs that name them differently.
+2. **Where the general course list comes from** — one school's catalog taken as the template and then
+   generalised, or the common set across several catalogs?
+3. **Which programmes first** — a named few (Nursing–LPN, Welding, Paralegal…), or whatever the reachable
+   catalogs make easy?
 
 ## 13. Out of scope for this release
 
