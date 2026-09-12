@@ -19049,3 +19049,67 @@ which is exactly how a silent reporting bug survives. **Check the response keys,
   available if that is ever reversed.
 - **`replaceOfferings: true`** on every row, which is safe only because the tool always sends a course's
   complete public offering list.
+
+---
+
+## Batch 197 — BCN / CAP / CTS / CIS, and the first batch with listing built in (2026-09-11)
+
+Session order: resources (none), guide requests (none), then the queue. **Six guides:** `BCN4431`,
+`BCN3740`, `CAP4774`, `CAP4786`, `CTS4457`, `CIS2530`. ⚠ **`LAE3314` stays held** (item 20) and **`MUG2101`
+is still catalog-blocked** — both were skipped over again.
+
+✅ **First batch to end with the listing step now that it is standing practice:** the four prefixes yielded
+**1,332 courses — 1,292 created, 40 updated, 0 failed**, with 2,011 offerings. **Site total 6,233 → 7,531 courses.**
+
+### ⚠⚠ `BCN4431` — a SEQUENCE-POSITION collision, which is a new shape
+
+The University of West Florida calls this number **"Structures I"**; Florida International calls it
+**"Structural Design II"**. ⚠ **They cannot both be right about the same number**, and the difference is a
+statement about what the course assumes and what follows it, not a naming preference.
+
+**The diagnostic offered in the guide is the prerequisite, not the title:** the statewide record requires
+**`BCN2405`**, a prior structures course. **Where that is enforced, this is a second course whatever it is
+called.**
+
+⚠ **Not one of the three institutions uses the statewide title** (*Steel &amp; Timber Design*) — all use a
+general "structures" name. **So a catalog cannot tell a student this is specifically a steel and wood
+course**, and concrete sits under separate numbers.
+
+### ⚠⚠ `CAP4786` — a statewide definition that names a PRODUCT STACK, and has dated
+
+The state defines this as *"the handling of big data on Hadoop's MapReduce environment&hellip; Spark."* ⚠
+**MapReduce is rarely written directly now**; Spark superseded it and cloud-native engines have taken much
+of the rest.
+
+⚠⚠ **This is the clearest argument in the catalog for defining a course by SUBJECT rather than by
+technology.** A definition reading "distributed processing of data at scale" would not have dated; one
+naming Hadoop did, predictably. **Worth watching for elsewhere in the computing prefixes**, where product
+names appear more often than in other disciplines.
+
+Florida Polytechnic also titles it **"Topics in"** — the batch-188 variable-content rule — so the transcript
+line conveys nothing about what was covered.
+
+### ⚠ `CAP4774` — two agreeing catalogs against one broader reading, again
+
+Gulf Coast and Polk State both name **data warehousing**; **UWF titles it "Databases for Data Science"**.
+The distinction is real and worth the words: warehousing is dimensional modelling and ETL (an *engineering*
+course), while databases-for-data-science is about getting data *out* for analysis. **Published to the
+majority reading with the divergence stated.**
+
+### ✅ Two clean numbers, recorded deliberately
+
+**`CIS2530`** — three institutions, identical statewide title, identical credits, and ⚠ **a
+state-college-to-university transfer path** (Lake-Sumter and Pensacola State into UWF), which is exactly
+what Florida's numbering exists to protect. **`CTS4457`** — ⚠ **Santa Fe and St. Johns River share an
+identical title**, which usually indicates a deliberately articulated course rather than coincidence.
+
+### ⚠ Two guides where the most important content is not academic
+
+- **`CIS2530`**: the **Computer Fraud and Abuse Act** section. Intent is not a defence; scanning a network
+  you do not administer — *including your own university's* — is the most common way a cybersecurity
+  student ends their career before it starts. ⚠ **In the prerequisite string as well as the body**, because
+  it needs to be read before the skills are acquired.
+- **`BCN3740`**: **Florida's Construction Lien Law** (Chapter 713). Strict notice deadlines that forfeit
+  rights when missed, and ⚠ **the person who sends those notices is frequently the most junior in the
+  office**. Public projects are not lienable — the remedy is the payment bond, with separate deadlines — so
+  *which regime a project is under* is the first question.
