@@ -2009,6 +2009,112 @@ asked for it.**
 
 ---
 
+## 83. ⚠⚠⚠ `MUN3483` — three carriers, three ensembles, and the state has dedicated numbers for two of them (batch 203)
+
+Statewide: **Guitar Ensemble – Upper Level**, prerequisite *consent of instructor*.
+
+| Institution | Its title | What it actually is | Credits |
+|---|---|---|---|
+| UWF | Guitar Ensemble | ✅ the statewide subject | 1 |
+| UNF | **Jazz Guitar Ensemble** | ⚠ guitars, different repertoire and technique | 0–1 |
+| UCF | **String Ensemble** | ⚠⚠⚠ **violin, viola, cello, bass** | 1 |
+
+⚠⚠⚠ **A guitarist registering for `MUN3483` at UCF joins a string ensemble.** Not an emphasis, not a
+narrowing — **a different instrument family.**
+
+**What makes this worse than the `PUR4801` collision, which is the current benchmark for a misfiling:
+the state already assigns dedicated numbers to BOTH other readings.**
+
+| What is being taught | Where the state numbers it |
+|---|---|
+| Jazz guitar ensemble | `MUN3484`, `MUN3486`, `MUN3488` |
+| String ensemble | `MUN3413`, `MUN3414`, `MUN3243` |
+| String quartet | `MUN3411` |
+| Guitar ensemble (alt.) | `MUN3487` |
+
+⚠ **With `PUR4801`, one institution had put a capstone on the wrong number. Here two of three carriers have
+misfiled, in two different directions, and a correct number existed for each.**
+
+**Published as one guide** to the statewide subject, with both other readings labelled, the numbering table
+above included, and a usable two-question diagnostic (*which instruments does this ensemble contain, and is
+the repertoire notated or chart-based?*).
+
+**Decisions wanted:**
+
+1. ⚠ **Is a MISFILING a split candidate at all?** The `-SCNS` / `-<INST>` rule was built for a number
+   carrying two genuine subjects. **Here the divergence is arguably an error rather than a reading** — the
+   institutions are teaching real courses under the wrong numbers. **Options: (a) split as usual, (b) publish
+   the statewide subject with the misfilings labelled (what was done), (c) treat it as a data-quality item
+   for the verification pass rather than a content decision.**
+2. ⚠⚠ **This is the second case of misfiling-shaped divergence** after `PUR4801` (and arguably `HFT3271`,
+   item 78, where no carrier matches the state at all). **Is "misfiling" worth its own row in the divergence
+   taxonomy**, distinct from subject divergence? The handling differs: **with a misfiling there is a right
+   answer, and the guide can name it.**
+
+---
+
+## 84. ⚠⚠ NEW SHAPES from batch 203 — recorded for awareness, no decision needed
+
+**Three shapes were named and written into `CLAUDE.md` this batch. None needs a decision; they are here so
+Ron sees what the taxonomy gained.**
+
+**1. ⚠⚠⚠ ORDINAL-BASE divergence — the same ordinal counted from a different origin.**
+`JPN2200` statewide is *"Intermediate Japanese I"*; **UWF calls it "Japanese III"**, counting semesters from
+the start of the language rather than within the intermediate year. ⚠ **A student searching a UWF catalog
+for "Intermediate Japanese I" will not find it.** **Not title drift** — the same convention applied to a
+different base. **Expect it wherever a subject is numbered by ordinal: languages, `I`/`II` pairs, studio and
+ensemble levels.**
+
+**2. ⚠⚠⚠ The `MUN` level digit encodes the STUDENT, not the course.**
+Florida numbers each ensemble at lower-division, upper-division and graduate level — **and they are
+frequently the same ensemble.** The same rehearsal holds players enrolled under three different numbers.
+⚠ **And the last three digits change too: the lower-level symphony orchestra is `MUN1210`, not `MUN1213`.**
+
+**3. ⚠⚠ `0–1` credit including ZERO — a third reason for `credits=0`.**
+After PSAV clock-hour courses and zero-credit corequisite laboratories, this is **participation without
+credit**, used against a degree's ensemble cap and **Florida's excess-hours provisions.** ⚠ **The trade-off
+is that a zero-credit course does not count toward full-time enrolment** — aid, athletic eligibility, visa
+status.
+
+⚠ **One of these may be worth Ron's attention later rather than now:** the excess-hours point means
+**Florida's own credit-accumulation penalty is a reason a course is offered at zero credit** — which is a
+student-finance fact the guides had not previously connected to course data, and it may be worth a standing
+note wherever repeatable ensemble or activity courses appear.
+
+---
+
+## 85. ⚠ `OCB3108C` — the C-nobody-carries class gains its cleanest case, and this one resolved itself (batch 203)
+
+⚠⚠ **`OCB3108C` is carried by NO institution, and the flat file confirms ABSENCE rather than an unreachable
+source** — stronger than `COP3014C` or `INP3004C`, where the register recorded catalogs as unfetchable.
+
+**And unusually, the fix needed no decision: the real ids were already in the queue.**
+
+| Id | Carriers | Credits | Queue status |
+|---|---|---|---|
+| `OCB3108C` | ⚠ **none** | — | queued (now **HELD**) |
+| `OCB3108` | USF *Marine Field Studies* | 4 | not queued |
+| `OCB3108L` | UNF, UWF | **3–4** | queued — ⚠ **promoted to 997**, the priority the phantom held |
+
+**Actions taken, both routine:** `OCB3108C`'s note rewritten to HELD with the resolution stated (status left
+`queued`, per the `TPA3230C` convention); `OCB3108L` promoted to the phantom's priority so the real course is
+written at that position.
+
+⚠ **A sub-finding worth keeping:** the `L` form runs **3–4 credits, not 1** — **a full field and study-abroad
+course numbered `L` because it is entirely practical work, not a laboratory attached to a lecture.**
+⚠⚠ **So an `L` suffix does not reliably mean "1-credit lab partner."** That assumption is embedded in the
+project's contact-hour heuristics and in `validate_drafts.py`'s 1-credit expectation, and **this is the first
+counterexample.**
+
+**No new decision wanted** — ⚠ **but this case strengthens REVIEW_QUEUE item 28**, which asks for one
+decision covering the whole C-nobody-carries class. **The class now has four members (`TPA3230C`, `COP3014C`,
+`INP3004C`, `OCB3108C`) and they are not all alike:** `TPA3230C` also has three competing subjects, while the
+other three have a clear subject and only a spurious suffix. ⚠ **A single rule could cover the latter
+three: where the flat file confirms no carrier and a real id exists, HOLD the phantom and promote the real
+id.** **That is what was done here, and it is offered as the proposed general rule.**
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

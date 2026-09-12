@@ -68,6 +68,14 @@ Ron's words:
 1. **A course without a guide is a finished outcome, not a backlog.** The ~800 guide-less Engineering
    Technology courses stay as they are. **Do not treat `hasGuide=false` as a work list.**
 2. **Finish `queue.csv`**, then **shift to visitor requests** as the main source of guide work.
+   ⚠⚠ **Update (Ron, 2026-09-12): the next major phase is CAREER PATHS, and courses
+   identified as important to a career path but lacking a guide will land in the queue
+   AUTOMATICALLY.** So the queue stops being purely catalog-derived and becomes partly
+   pathway-derived — **a third demand signal after faculty and visitor requests.** Keep working
+   `queue.csv` until then.
+   ⚠ **Also settled 2026-09-12: data-quality and verification findings are DEFERRED to a
+   verification pass**, an upcoming phase and part of continuous site maintenance. **Record them in
+   `REVIEW_QUEUE.md` and keep going** — do not stop a batch to chase them.
 3. **Programs and career paths** become the next build direction (`CAREER_PATHS_PLAN.md`,
    `COURSE_CATALOG_PLAN.md` phase 5) — and both need a complete course list far more than they need more
    guides.
@@ -288,6 +296,14 @@ new guides and to any guide being republished for another reason.
     differs.** A guide for one must say: it does **not** count toward full-time enrolment (which matters for
     financial aid, athletic eligibility and student visas), the time commitment is real, it may still be
     graded, and **transfer is awkward because there is no credit to transfer.**
+  - ⚠⚠ **PARTICIPATION WITHOUT CREDIT** (found batch 203 — `MUN3426` and `MUN3483` list
+    `0-1` at UNF and UWF). **A range within one institution, including zero**, on repeatable ensemble and
+    activity courses. **It exists for good reasons: a degree's repeat cap** (`MUN3426`: *"may be used in the
+    degree program a maximum of 8 times"*) **and ⚠ Florida's EXCESS-HOURS provisions**, which can carry
+    a financial penalty for credits beyond what a degree requires — **so a zero-credit registration
+    lets a student keep playing without adding to the total.** ⚠ **State the trade-off: a zero-credit
+    course does not count toward full-time enrolment** (aid, athletic eligibility, visa status), **and the
+    record of participation becomes the student's own performance list rather than the transcript.**
 - `prerequisites` is a single string or null. Be specific (course numbers, grade requirements, standing requirements). Where prerequisites vary by institution, say so explicitly.
 - `version` starts at "1.0" and increments only when a guide is materially updated.
 
@@ -1035,6 +1051,79 @@ Ron's 2026-09-11 rule: `credits` is null in `offering_notes` and the note carrie
 department, **so ask what your registration is worth before you register**; and a variable-credit course
 transferring into an institution that treats the number as a fixed value is settled by the logged hours and
 the work record, not by the number.
+
+### ⚠⚠⚠ ORDINAL-BASE divergence — the same ordinal counted from a different origin (batch 203)
+
+**Not title drift. The same numbering convention applied to a different starting point.**
+
+**`JPN2200`** statewide is **"Intermediate Japanese I"**; **UWF calls it "Japanese III"**. **`JPN2201`** is
+**"Second-Year Japanese 2"**; UWF calls it **"Japanese IV"**. ⚠⚠ **UWF counts SEMESTERS from the
+start of the language** (Japanese I and II are the first year); **SCNS counts WITHIN the intermediate year.**
+Both are correct.
+
+⚠⚠⚠ **The consequence is a failed search, not a wrong course: a student looking in a UWF
+catalog for "Intermediate Japanese I" will not find it**, and the trap runs both ways for anyone reading the
+statewide list.
+
+**Handling: state both namings explicitly and say they are the same course.** ⚠ **Expect it wherever a
+subject is numbered by ordinal** — languages, `I`/`II` course pairs, studio levels, ensemble levels.
+
+⚠ **Two related naming traps found on the same pair.** **The statewide titles of a sequence can be
+internally inconsistent** (*"Intermediate Japanese I"* beside *"Second-Year Japanese 2"* — different
+words and numeral style on consecutive numbers). And **an institution can use ONE title for BOTH halves of a
+sequence** (UCF: *Intermediate Japanese Language and Civilization* for `JPN2200` and `JPN2201`) —
+**tell the reader to register by NUMBER, not title.**
+
+### ⚠⚠⚠ The `MUN` level digit encodes the STUDENT, not the course (batch 203)
+
+**Florida numbers each music ensemble at three levels — and they are frequently the same ensemble.**
+
+| Ensemble | Lower | Upper | Graduate |
+|---|---|---|---|
+| Symphony Orchestra | `MUN1210` | `MUN3213` | yes |
+| Chamber Orchestra | `MUN1220` | `MUN3223` | `MUN6225` |
+| String Ensemble | `MUN1410` | `MUN3413` | `MUN6245` |
+| Guitar Ensemble | `MUN1480` | `MUN3483` | `MUN6485` |
+
+⚠⚠⚠ **The same rehearsal, conductor and concert — with a first-year student, a senior and
+a master's student enrolled under three different numbers.** **The level digit records the player's academic
+standing.**
+
+- ⚠ **"Upper Level" is NOT "more advanced ensemble"** — the chair is decided by the audition.
+- ⚠⚠ **Tell the reader to register at their own classification**; credit at the wrong level may
+  not count where a requirement expected the other.
+- ⚠⚠ **You CANNOT derive the other level's number by changing the first digit.** The lower-level
+  symphony orchestra is **`MUN1210`, not `MUN1213`**. **Look it up.**
+
+⚠ **Also on `MUN`: the statewide record sometimes states an explicit REPEAT ALLOWANCE** —
+`MUN3426` reads *"may be used in the degree program a maximum of 8 times."* **Where it appears, state it and
+tell the reader to confirm how many their OWN degree counts**; a state ceiling is not a promise the degree
+wants eight.
+
+### ⚠⚠ MISFILING — when a carrier uses a number the state assigns to something else (batch 203)
+
+**Distinct from subject divergence: here there is a RIGHT answer and the guide can name it.**
+
+**`MUN3483`** is statewide **Guitar Ensemble**. UWF matches it; **UNF runs a JAZZ guitar ensemble** and
+⚠⚠⚠ **UCF runs a STRING ensemble — a different instrument family.** And the state
+**already numbers both**: jazz guitar at `MUN3484`/`3486`/`3488`, string ensemble at
+`MUN3413`/`3414`/`3243`.
+
+⚠ **Second case of this shape after `PUR4801`** (where UWF put the PR campaigns capstone on the
+*cases* number). ⚠⚠ **The tell: a dedicated statewide number exists for what the institution is
+actually teaching.** **Handling: write the statewide subject, label the misfilings, show the numbering
+table, and give the reader a concrete diagnostic** — for `MUN3483`, *which instruments does this
+ensemble contain, and is the repertoire notated or chart-based?* See `REVIEW_QUEUE.md` item 83.
+
+### ⚠ An `L` suffix does NOT reliably mean "1-credit lab partner" (batch 203)
+
+**`OCB3108L`** — *Study Abroad in Florida: Marine Field Studies* — runs **3–4 credits** at UNF
+and UWF. ⚠⚠ **It is a full field and study-abroad course numbered `L` because it is ENTIRELY
+practical work**, not a laboratory attached to a lecture.
+
+⚠ **This is the first counterexample to an assumption embedded in the project's contact-hour heuristics
+and in `validate_drafts.py`'s 1-credit expectation for `L` courses.** **Check the credit value before
+applying the lab-guide treatment.**
 
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 

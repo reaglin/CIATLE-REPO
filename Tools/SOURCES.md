@@ -19773,3 +19773,207 @@ because the count was attached to the `C`.** **Worth a targeted check on other g
 - **Four of six prerequisite strings exceeded 1000 characters on first assembly** (1,015–1,059). ⚠ **Third
   consecutive batch where most of the prerequisites needed trimming.** The ceiling is now the binding
   constraint on that field most of the time.
+
+## Batch 203 — JPN / LIT / MUN (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`JPN2200`, `JPN2201`, `LIT3191`, `MUN3213`, `MUN3426`, `MUN3483`. **Listing:** 893 courses across
+`JPN`/`LIT`/`MUN`/`OCB` — **505 created, 12 updated, 0 failed**, 1,551 offerings. **Site 12,680 → 13,188
+courses.** ✅ **Live-guide check run on all nine candidates before writing** (the new batch-202 step) — none
+had one.
+
+⚠ **Direction recorded (Ron, 2026-09-12):** the batch-201/202 verification findings (items 80–82) are
+deferred to **a verification pass, an upcoming phase and part of continuous site maintenance.** **The next
+major phase is CAREER PATHS**, and ⚠⚠ **courses identified as important to a career path but lacking a guide
+will land in the queue automatically.** Queue work continues meanwhile.
+
+### ⚠⚠⚠ `JPN2200` / `JPN2201` — FOUR parallel number families for the same two years of Japanese
+
+**The finding of the batch, and the most consequential number divergence the project has recorded in a
+language.**
+
+| Family | First year | Second year | Institutions | Credits/term |
+|---|---|---|---|---|
+| **A** | `JPN1120C`/`1121C` or `JPN1130`/`1131` | **`JPN2200` / `JPN2201`** | **FIU, UCF, UWF** | 3–4 then **3** |
+| **B** | `JPN1120` / `JPN1121` | `JPN2220` / `JPN2221` | USF, Miami Dade, FAU, FSU | **4** throughout |
+| **C** | `JPN1130` / `JPN1131` | `JPN2230` / `JPN2231` | UF | ⚠ **5** throughout |
+
+⚠⚠⚠ **Three consequences:**
+
+1. **Two years of Japanese is 12 credits in family A and 20 in family C** — for nominally the same two years.
+2. ⚠ **Most Florida institutions do not carry `JPN2200` at all.** "The second-year Japanese number" depends
+   entirely on where you are.
+3. ⚠⚠⚠ **And `JPN2201` is usually the course that CLOSES a degree foreign-language requirement**, so a
+   number mismatch there is the expensive one: credit transfers as an elective, the requirement does not
+   clear.
+
+⚠ **Why a language sequence is the worst place for this:** **SUS admission expects two sequential credits in
+one world language, Bright Futures carries a comparable requirement, and several institutions impose a
+bachelor's foreign-language competency requirement.** **All three are satisfied by a SEQUENCE, and a
+mid-sequence transfer between families breaks it.**
+
+**Handling: the guides tell the reader to send the syllabus and chapters covered to the language DEPARTMENT,
+not the registrar, and to ask for a placement interview** — ⚠ **language departments place by demonstrated
+proficiency, which is faster and more accurate than an articulation argument.**
+
+### ⚠⚠⚠ NEW SHAPE: ORDINAL-BASE divergence — the same ordinal word counted from a different place
+
+**`JPN2200` statewide is "Intermediate Japanese I". UWF calls it "Japanese III". `JPN2201` statewide is
+"Second-Year Japanese 2"; UWF calls it "Japanese IV".**
+
+⚠⚠ **Both ordinals are correct and they count from different bases.** UWF counts **semesters from the start
+of the language** (Japanese I and II are the first year); SCNS counts **within the intermediate year**.
+⚠ **A student searching a UWF catalog for "Intermediate Japanese I" will not find it, and the trap runs both
+ways.**
+
+**This is not title drift** — the words are not competing descriptions of a subject, they are the **same
+numbering convention applied to a different origin.** ⚠ **Expect it in every sequenced subject that numbers
+by ordinal**: languages, `I`/`II` course pairs, studio and ensemble levels. **Added to `CLAUDE.md`.**
+
+⚠ **Two smaller naming findings on the same pair.** **The statewide titles are internally inconsistent** —
+*"Intermediate Japanese I"* and *"Second-Year Japanese 2"*, different words and a different numeral style on
+consecutive numbers of one sequence. And ⚠⚠ **UCF uses ONE title for both halves** (*Intermediate Japanese
+Language and Civilization*), **distinguished only by the number** — so at UCF you must register by number,
+and the same is true of its first-year pair `JPN1120C`/`JPN1121C`.
+
+### ⚠⚠ `hs_credit` = FOREIGN LANGUAGE — the third value, and the most useful one
+
+Batch 202 found `hs_credit` distinguishing **ELECTIVE** from **SCIENCE**. ⚠ **The Japanese pair adds
+FOREIGN LANGUAGE**, and it is favourable rather than a trap:
+
+- ⚠⚠ **SUS admission expects two sequential credits in one world language and Bright Futures carries a
+  comparable requirement** — **a dual-enrolled student taking these courses is earning exactly that
+  category, above the minimum.**
+- ⚠ **Several Florida institutions also impose a bachelor's foreign-language competency requirement**,
+  commonly cleared by the second term of a second-year sequence — **i.e. by `JPN2201`.**
+
+**Both guides state it.** ⚠ **Standing practice: read `hs_credit` on every dual-enrolment-eligible course —
+the value is sometimes a warning and sometimes a selling point.**
+
+### ⚠⚠⚠ NEW SHAPE: the `MUN` level digit encodes the STUDENT, not the course
+
+**Florida numbers each music ensemble at three levels, and they are frequently the same ensemble:**
+
+| Ensemble | Lower | Upper | Graduate |
+|---|---|---|---|
+| Symphony Orchestra | `MUN1210` | **`MUN3213`** | yes |
+| Chamber Orchestra | `MUN1220` | `MUN3223` | `MUN6225` |
+| String Ensemble | `MUN1410` | `MUN3413` | `MUN6245` |
+| Guitar Ensemble | `MUN1480` | **`MUN3483`** | `MUN6485` |
+
+⚠⚠⚠ **The same rehearsal, the same conductor, the same concert — and a first-year student, a senior and a
+master's student sitting next to each other are enrolled under three different course numbers.** **The level
+digit records the player's academic standing, not a different ensemble.**
+
+**Two consequences the guides state:** ⚠ **"Upper Level" is not "more advanced ensemble"** — the chair is
+decided by the audition; and ⚠⚠ **register at your own classification**, because credit earned at the wrong
+level may not count where a requirement expected the other.
+
+⚠ **And a trap: you CANNOT derive the other level's number by changing the first digit.** The lower-level
+symphony orchestra is **`MUN1210`, not `MUN1213`**; the lower-level guitar ensemble is `MUN1480`, not
+`MUN1483`. **Look it up.** **Added to `CLAUDE.md`.**
+
+### ⚠⚠⚠ `MUN3483` — three carriers, three different ensembles, and the state has separate numbers for two of them
+
+Statewide: **Guitar Ensemble – Upper Level.**
+
+| Institution | Its title | What it actually is |
+|---|---|---|
+| UWF | Guitar Ensemble | ✅ the statewide subject |
+| UNF | **Jazz Guitar Ensemble** | ⚠ guitars, different repertoire and technique |
+| UCF | **String Ensemble** | ⚠⚠⚠ **a different instrument family entirely** |
+
+⚠⚠⚠ **A guitarist registering for `MUN3483` at UCF joins a violin/viola/cello/bass ensemble.**
+
+⚠⚠ **What makes this worse than the `PUR4801` collision: the state already assigns dedicated numbers to
+BOTH other readings.** Jazz guitar ensemble is `MUN3484`/`3486`/`3488`; string ensemble is
+`MUN3413`/`3414`/`3243`. **So two of three carriers are using a number the state assigns to something else
+while a correct number for what they run exists.** ⚠ With `PUR4801` one institution had misfiled a capstone;
+here **two of three have misfiled, in two different directions.**
+
+**Published as one guide** to the statewide subject, with both other readings labelled, the numbering table
+shown, and ⚠ **a two-question diagnostic the reader can actually use: which instruments does this ensemble
+contain, and is the repertoire notated or chart-based?** **Recorded as REVIEW_QUEUE item 83.**
+
+### ⚠⚠ `0–1` credit including ZERO — a THIRD reason a Florida course carries zero credits
+
+`MUN3426` at UNF and UWF, and `MUN3483` at UNF, list credit as **`0-1`** — a range **within one institution,
+including zero.**
+
+⚠ **`CLAUDE.md` records two reasons for `credits=0`: PSAV clock-hour courses, and zero-credit corequisite
+laboratories. This is a third and different one: PARTICIPATION WITHOUT CREDIT**, and it exists for good
+reasons:
+
+- ⚠⚠ **The degree cap.** `MUN3426`'s statewide record states *"may be used in the degree program a maximum
+  of 8 times."* Past that, a student can keep playing at zero credit.
+- ⚠⚠ **Florida's excess-hours provisions**, which can carry a financial penalty for credits beyond what a
+  degree requires. **A zero-credit ensemble registration lets a student keep playing without adding to the
+  total** — a genuinely sensible arrangement that almost nobody knows exists.
+- **Full-time load** already reached.
+
+⚠ **The trade-off the guides state: a zero-credit course does NOT count toward full-time enrolment** —
+financial aid, athletic eligibility, visa status — **and the transcript record becomes your own performance
+list instead.** **Added to `CLAUDE.md` alongside the other two.**
+
+### ⚠ An explicit REPEAT ALLOWANCE in the statewide record — `MUN3426`
+
+*"May be used in the degree program a maximum of 8 times."* ⚠ **Unusually explicit** — most `MUN` numbers
+state nothing, and the batch-188 repeat rule was inferred from credit-line text at one institution.
+**Here the state says it.** **Where it appears, state it and tell the reader to confirm how many their own
+degree counts** — *"may be used eight times"* is a state ceiling, not a promise the degree wants eight.
+
+### ⚠⚠ `OCB3108C` — CONFIRMED ABSENT, not merely unreachable; and the real ids were already queued
+
+⚠⚠ **No institution carries the `C` suffix, and the flat file confirms absence rather than the probe merely
+failing** — a stronger finding than `COP3014C` or `INP3004C`, where the register recorded sources as
+unreachable. The real ids both exist:
+
+| Id | Carriers | Credits |
+|---|---|---|
+| `OCB3108` | USF "Marine Field Studies" | 4 |
+| `OCB3108L` | UNF "Field Studies in Marine Science"; UWF "Study Abroad in Florida – Marine Field Studies" | **3–4** |
+
+⚠ **And an interesting sub-finding: the `L` form runs 3–4 credits, not the usual 1.** **It is a full
+field/study-abroad course numbered `L` because it is ALL fieldwork** — not a laboratory attached to a
+lecture. ⚠ **So an `L` suffix does not reliably mean "1-credit lab partner"**; it can mean "this course is
+entirely practical work."
+
+**Handling, both routine queue actions rather than scope decisions:** `OCB3108C`'s note rewritten to **HELD**
+with the resolution stated (status left `queued`, per the `TPA3230C` convention, since REVIEW_QUEUE item 28
+asks for one decision covering the whole class), and ⚠ **`OCB3108L` promoted from priority 998 to 997 — the
+priority the phantom held — so the REAL course gets written at the position the dead row occupied.**
+
+⚠ Note the ordering effect: at equal priority the queue tie-breaks on **institution count descending**, so
+`OCB3108L` (2 institutions) still sorts behind the 3-institution rows at 997. **That is correct behaviour,
+not a failed promotion.**
+
+### ⚠ `LIT3191` — variable content, with a chronological narrowing layered on top
+
+Statewide: *"Covers a range of topics focusing on non-U.S. literatures. **Texts vary each semester according
+to interest and expertise of the instructor.**"* ⚠ **The batch-188 variable-content pattern, stated by the
+state itself rather than inferred from a repeat clause.**
+
+⚠⚠ **And FGCU narrows it further — "World Literature Post-1800" — which excludes Gilgamesh, the Sanskrit
+epics, classical Chinese and Japanese poetry, the Tale of Genji, classical Arabic and Persian poetry, Greek
+and Roman epic, Dante and the Thousand and One Nights.** **That is not marginal to world literature; it is
+much of its foundation.** UWF matches the statewide title and keeps the full range.
+
+⚠ **Two consequences stated in the guide:** the transcript line conveys nothing about what was read, so
+**save the syllabus now, not in three years** — it is the document that answers "what did you study?" in a
+graduate application; and ⚠⚠ **neither public carrier records a humanities general-education designation**,
+so **do not assume it satisfies a humanities requirement.**
+
+### ⚠ Tooling notes
+
+- ⚠⚠ **All SIX prerequisite strings exceeded 1000 characters on first assembly** (1,004–1,098). **Fourth
+  consecutive batch where most needed trimming.** The ceiling is now the routine binding constraint on that
+  field, not an occasional one.
+- ⚠ **The Bash heredoc failed AGAIN** — this time on an escaped apostrophe (`credit\'s`) inside a
+  single-quoted heredoc, which breaks the outer quoting. **The Edit tool was the fix, and is the right tool
+  for several small replacements inside an existing file.** ⚠ **Standing practice: Write for new files, Edit
+  for changes inside them, and stop reaching for heredocs on anything containing quotes.**
+- ✅ **The batch-202 pattern of building `offering_notes` FROM the flat file worked again** and is now the
+  default (`scratchpad/b203_meta.py`), including automatic `None` for range values like `0-1`.
+- ⚠ **`queue_mgr.py` has no priority-setting command** — `add`, `mark`, `remove`, `defer`, `reconcile`,
+  `status`, `list`, `next-batch`, `ready-to-push`, `import-requests`. **A priority change means editing
+  `queue.csv` directly**; `defer` moves rows to the rear but there is no promote.
