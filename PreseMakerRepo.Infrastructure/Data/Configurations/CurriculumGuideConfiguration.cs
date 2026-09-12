@@ -12,7 +12,9 @@ public class CurriculumGuideConfiguration : IEntityTypeConfiguration<CurriculumG
         builder.Property(g => g.CourseId).HasMaxLength(50);
         builder.Property(g => g.Title).IsRequired().HasMaxLength(300);
         builder.Property(g => g.HtmlContent).IsRequired();
-        builder.Property(g => g.Prerequisites).HasMaxLength(500);
+        // Raised from 500 on 2026-09-11 (migration WidenGuidePrerequisites). SQLite ignores the width, but
+        // PostgreSQL will not, so the column has to move with the validator.
+        builder.Property(g => g.Prerequisites).HasMaxLength(1000);
         builder.Property(g => g.Version).HasMaxLength(50);
 
         builder.HasOne(g => g.Course)

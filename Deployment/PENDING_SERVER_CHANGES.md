@@ -8,10 +8,17 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below. **Three entries
-are open, none written yet:** the `Prerequisites` ceiling raise, and the **field sizing** items the
-`Tools/` session raised on 2026-09-11 (both below). They touch adjacent lines in the same validator and
-should ship together.
+The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below.
+
+**⚠ WRITTEN AND AWAITING DEPLOY — the `Prerequisites` ceiling raise (500 → 1000).** Ron, 2026-09-11: *"The
+500 character prerequisite ceiling is blocking a lot of the guides."* Validator, EF column and the
+`Tools/validate_drafts.py` mirror all moved to 1000, with migration `WidenGuidePrerequisites`. **Deploy
+without `-SkipMigrations`** (the migration is empty on SQLite — see the comment in it — but must be applied
+so the recorded schema stays honest). Details in the entry below.
+
+**Still open, not written yet:** the **`offering_notes`** field on guides and the **field sizing** items the
+`Tools/` session raised on 2026-09-11 (both below). They touch the same validator, so they should ship
+together — after tonight's deploy.
 
 ## ✅ DEPLOYED 2026-09-11 — course catalog phases 1–4b, in two releases, both verified live
 
@@ -59,9 +66,23 @@ push immediately, but **`taxonomy.json` must be updated too**, or the seed file 
 
 ---
 
-## Raise the curriculum-guide `Prerequisites` ceiling from 500 to 1000 characters (added 2026-09-08, Ron's direction)
+## ⚠ WRITTEN 2026-09-11, AWAITING DEPLOY — raise the guide `Prerequisites` ceiling from 500 to 1000
 
-**Ron's note, 2026-09-08: raise the validation ceiling in the next site publish.**
+**Ron's note, 2026-09-08: raise the validation ceiling in the next site publish.** Escalated 2026-09-11: the
+ceiling is blocking guides, so this was written and is ready to deploy on its own.
+
+**What changed** (all in one commit): `PublishValidators.cs` → `MaximumLength(1000)`;
+`CurriculumGuideConfiguration.cs` → `HasMaxLength(1000)`; migration **`WidenGuidePrerequisites`** (empty on
+SQLite by design — TEXT has no declared width — but it carries the width into the model snapshot so a future
+PostgreSQL swap does not narrow the column; the reasoning is in the migration file); `Tools/validate_drafts.py`
+→ `MAX_PREREQ = 1000`; limits tables corrected in `Tools/CLAUDE.md`,
+`Tools/Generate_Guides_and_Push_Process.md` and `.claude/skills/guide/SKILL.md` (whose stale
+`contact_hours 0–300` note was fixed too).
+
+**Deploy without `-SkipMigrations`.** After deploy, push a guide whose `prerequisites` runs past 500
+characters and confirm it does not come back 400 — `SCE4320` is the known case that needed two trims.
+
+**The original write-up follows.**
 
 **Why.** The `prerequisites` field has become the place the guide pipeline puts the warnings a student most
 needs before registering — concurrency traps (`*` prerequisites that are required, not optional), exclusion

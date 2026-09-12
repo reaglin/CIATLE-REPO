@@ -56,7 +56,7 @@ OPTIONAL_KEYS = {"offering_notes"}
 
 # Server-side bounds (PublishValidators.cs lines 103-107).
 MAX_TITLE = 300
-MAX_PREREQ = 500
+MAX_PREREQ = 1000          # raised from 500 on 2026-09-11; mirrors the server rule
 MAX_VERSION = 50
 CREDITS_RANGE = (0, 12)
 CONTACT_HOURS_RANGE = (0, 1500)

@@ -248,7 +248,7 @@ HTTP 400 (`PublishValidators.cs`, `UpsertCurriculumGuideRequestValidator`):
 | `html_content` | non-empty |
 | `credits` | integer **0–12** — never null (`push_guide` rejects null before the server sees it) |
 | `contact_hours` | integer **0–1500** |
-| `prerequisites` | ≤ 500 chars, or null |
+| `prerequisites` | ≤ **1000** chars, or null (raised from 500 on 2026-09-11) |
 | `version` | ≤ 50 chars |
 
 ⚠️ **Never copy a PSAV clock-hour count into `credits`.** Set `credits: 0` and put the

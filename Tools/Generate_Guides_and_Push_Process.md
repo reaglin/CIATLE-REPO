@@ -157,7 +157,7 @@ Enforced by `PreseMakerRepo.Api/Validators/PublishValidators.cs`
 | `html_content` | non-empty |
 | `credits` | integer **0-12**, never null (`push_guide` rejects null before the server sees it) |
 | `contact_hours` | integer **0-1500** |
-| `prerequisites` | ≤ 500 chars, or null |
+| `prerequisites` | ≤ **1000** chars, or null (raised from 500 on 2026-09-11) |
 | `version` | ≤ 50 chars |
 
 ⚠️ **PSAV clock-hour courses take `credits: 0`** with the hours in `contact_hours`. Never

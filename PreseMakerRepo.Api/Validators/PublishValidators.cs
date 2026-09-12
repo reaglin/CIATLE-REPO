@@ -106,7 +106,11 @@ public class UpsertCurriculumGuideRequestValidator : AbstractValidator<UpsertCur
         // FLDOE curriculum frameworks reach ~1350 hours (e.g. Practical Nursing).
         // The ceiling is a sanity guard against typos, not a course-length policy.
         RuleFor(x => x.ContactHours).InclusiveBetween(0, 1500).When(x => x.ContactHours.HasValue);
-        RuleFor(x => x.Prerequisites).MaximumLength(500).When(x => x.Prerequisites is not null);
+        // 1000, raised from 500 on 2026-09-11: this field carries the warnings a student needs before
+        // registering — concurrency traps, exclusion pairs, minimum grades, screening deadlines — and real
+        // ones were being trimmed to fit. Keep it in step with CurriculumGuideConfiguration and
+        // Tools/validate_drafts.py.
+        RuleFor(x => x.Prerequisites).MaximumLength(1000).When(x => x.Prerequisites is not null);
         RuleFor(x => x.Version).MaximumLength(50).When(x => x.Version is not null);
         RuleFor(x => x.TaxonomyKey).MaximumLength(100).When(x => x.TaxonomyKey is not null);
     }
