@@ -429,14 +429,29 @@ decides what exists.**
 - ⚠ **`CAREER_PATHS_PLAN.md`'s routes-and-stages tree does not survive** this shape. Mine it for the five
   warnings, the disclaimer wording and the licensure material; drop the ordered-stage routes.
 
-### Still open (do not block starting)
+### Answered 2026-09-11 — the last three
 
-1. **Program identity** — is the spine the **CIP code** where one exists (LPN = 51.3901), with the slug just
-   readable? It would let the `Tools/` session match programmes across catalogs that name them differently.
-2. **Where the general course list comes from** — one school's catalog taken as the template and then
-   generalised, or the common set across several catalogs?
-3. **Which programmes first** — a named few (Nursing–LPN, Welding, Paralegal…), or whatever the reachable
-   catalogs make easy?
+1. **CIP code is the spine.** A programme is identified by its CIP code; the slug is only for readable URLs.
+   Two consequences worth planning around:
+   - **`Program.CipCode` is the unique key**, not the name. It is what lets the `Tools/` session recognise
+     *Practical Nursing* at one school and *Nursing (LPN)* at another as one programme — the same problem the
+     `-SCNS` / `-<INST>` split solved for courses.
+   - **CIP also joins to FLDOE's curriculum frameworks**, which the guide pipeline already uses for PSAV
+     courses (`Tools/SOURCES.md`), so a programme gets an authoritative statewide description for free.
+     Record the CIP edition (2020) with the code, since codes move between editions.
+2. **The general course list is the common set across several catalogs** — not one school generalised. Take
+   the courses that several schools' versions share; anything only one school requires belongs in that
+   school's offering as an extra.
+   - ⚠ **Match on subject, not only on course id.** `Tools/CLAUDE.md` records prefix divergence — anatomy and
+     physiology is `BSC2085C` at most schools and `APK2100C` at others, and the two never match by id. A
+     "common set" computed by course id alone will silently under-count exactly the courses that gate
+     competitive admission. Use `CourseOffering` and the SCNS flat file to check what each school actually
+     carries before deciding a course is not shared.
+3. **Start with whatever is easiest to reach.** Work from the catalogs already proven reachable in
+   `Tools/SOURCES.md` (UWF, FGCU, FSU, DSC, FIU, UCF, Broward, Valencia, EFSC, FSCJ, NWFSC) rather than
+   choosing programmes first. ⚠ Worth checking early: **FLDOE's own programme inventory is CIP-keyed and
+   statewide**, so it may be a cheaper spine than any single catalog — the catalogs then supply the
+   per-school offerings and notes.
 
 ## 13. Out of scope for this release
 
