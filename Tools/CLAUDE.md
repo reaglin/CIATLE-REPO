@@ -1192,7 +1192,7 @@ wants eight.
 **already numbers both**: jazz guitar at `MUN3484`/`3486`/`3488`, string ensemble at
 `MUN3413`/`3414`/`3243`.
 
-⚠ **THIRD case of this shape as of batch 205**, and the three are not alike — which is why the
+⚠ **FIFTH case of this shape as of batch 207**, and they are not alike — which is why the
 handling differs:
 
 | Number | What was misfiled | Shape |
@@ -1200,6 +1200,25 @@ handling differs:
 | `PUR4801` | UWF's PR **campaigns capstone** on the *cases* number | a different course in the same subject |
 | `MUN3483` | UCF's **string ensemble** on the *guitar ensemble* number | ⚠⚠ a different SUBJECT |
 | `PSY3215` | FIU's **`PSY3211` methods-and-data-analysis course** on the *(CONT)* number | ⚠ the same subject at a different SEQUENCE POSITION |
+| `SPM4012` | FIU's title is the statewide title of **`SPM4018`** (which nobody carries) | ⚠ TITLE-only misfiling — the content still matches |
+| **`SPN3410`** | **UWF's `SPN3400` course** (*Conversation and Composition*) on the `SPN3410` number, **and `SPN3400` holds something else** | ⚠⚠⚠ **RECIPROCAL — a transposed PAIR** |
+
+#### ⚠⚠⚠ The reciprocal sub-shape: BOTH numbers displaced, in exchange with each other (batch 207)
+
+| | State's definition | UWF | FAU | FIU |
+|---|---|---|---|---|
+| `SPN3400` | *Conversation and Composition I* | ⚠⚠ *Advanced Stylistics* | *Advanced Spanish: Conversation* | — |
+| `SPN3410` | *Advanced Oral Expression I* | ⚠⚠ *Composition and Conversation* | ⚠ *Advanced Spanish: Conversation* | ✅ matches |
+
+⚠⚠ **This is worse than a single misfiling, because checking the OTHER number does not resolve it — both
+are wrong, so the usual diagnostic ("a dedicated statewide number exists for what they're teaching") points
+back at a number that is itself occupied.** ⚠ **And FAU carries the IDENTICAL title on both numbers**, so
+within FAU they cannot be told apart by title at all.
+
+⚠⚠ **Drill, and it is cheap: whenever a misfiling is found, look up what the DISPLACED number holds at the
+SAME institution.** If it holds the first number's subject, it is a transposition and **both guides need
+the warning** — including any already published. `SPN3400` had a live guide when this was found; see
+`REVIEW_QUEUE.md` item 89.
 
 ⚠⚠ **The mildest and probably commonest shape is the last: same subject, wrong position in a
 sequence.** **What differs is what the course ASSUMES, not what it covers** — so the warning a guide owes
@@ -1453,6 +1472,21 @@ institution-specific rule itself needs no further evidence; only the flag *inter
 ⚠ **Do not display a flag by the first letter of its key** — `gordon_rule`, `gordon_writing` and
 all five `ge_*` keys begin with `g`, so a `k[0]` rendering makes them indistinguishable. Print the names.
 
+⚠⚠⚠ **And do not test a flag for truthiness — the values are `'Y'`/`'N'` STRINGS, so `'N'` is TRUE in
+Python** (batch 207):
+
+```python
+flags = [k for k in FLAG_KEYS if r.get(k)]          # ⚠⚠ WRONG — every row reads as fully designated
+flags = [k for k in FLAG_KEYS if r.get(k) == 'Y']   # ✅ correct
+```
+
+**The wrong version does not error. It reports every course as carrying every designation**, confidently
+and uniformly, and that goes into a guide as a false statement about the Gordon Rule. It was caught in
+batch 207 only because all-seven-flags-on-every-row is implausible on its face.
+
+⚠ **Standing check: when a flag scan returns the SAME answer for every row, assume the TEST is wrong
+before assuming the DATA is uniform.**
+
 ⚠ A back-catalogue sweep is now a one-parse report rather than an open-ended task — see
 `REVIEW_QUEUE.md` item 80.
 
@@ -1522,6 +1556,30 @@ elective credit instead.** The college credit is unaffected; the high-school req
 **State it in guides for dual-enrolment-eligible courses, with "confirm with your counsellor and district
 articulation agreement."** ⚠ **Nothing a student or parent normally reads says this.**
 
+#### ⚠⚠⚠ COMPUTE THE FIELD'S DISTRIBUTION ACROSS THE PREFIX BEFORE TREATING IT AS A SIGNAL (batch 207)
+
+**The same statewide field is boilerplate in one prefix and evidence in another.** Batch 207 measured it:
+
+| Prefix | `DS_High_School_Credit1` across ACTIVE numbers | Verdict |
+|---|---|---|
+| `SPM` | ⚠ **184 of 184 ELECTIVE** | pure boilerplate — carries **no** information |
+| `SPN` | ✅ **24 FOREIGN LANGUAGE, 178 ELECTIVE** | genuinely **discriminating** |
+
+⚠⚠ **In `SPN` the field produced the batch's most consequential student-facing finding.** `SPN2210`
+carries **ELECTIVE** while its three near-neighbours `SPN2200`, `SPN2220` and `SPN2240` — all covering
+approximately the same second-year Spanish — carry **FOREIGN LANGUAGE**. ⚠⚠⚠ **Florida graduation
+requirements, Bright Futures and SUS admission all expect two sequential credits in ONE world language**,
+so a dual-enrolled student choosing the wrong number of four equivalent ones may not get the credit they
+enrolled for.
+
+**The rule: one `collections.Counter` over the prefix decides whether a field is worth writing about.**
+A field that is uniform is a prefix-level default; a field that splits is evidence. The same test disposed
+of `IN_Dual_Enrollment1` in batch 207 — `Y` on 184/184 SPM and 202/202 SPN rows, therefore meaningless.
+
+⚠ **Say which it is in the guide.** "SCNS marks this available for dual enrolment with elective high-school
+credit — and every active number in the prefix carries the identical marking, so it says nothing about this
+course" is honest and useful. Presenting boilerplate as a finding is not.
+
 ### ⚠⚠⚠ TITLE FRAGMENTATION AT SCALE — when many titles mean NO divergence (batch 202)
 
 **`CHM1020`: 27 public carriers, 18 distinct titles**, none used by more than four — Chemistry in
@@ -1538,6 +1596,61 @@ curriculum — 27 institutions each naming the same required course. ⚠⚠ **Do
 variation as a divergence signal without checking the statewide DESCRIPTION and the carrier count.** The
 signal is strong on a two- or three-carrier upper-division number and weak on a twenty-carrier
 general-education one.
+
+### ⚠⚠⚠ NUMBER FRAGMENTATION AT SCALE — the inverse shape (batch 207)
+
+**Title fragmentation is one number carrying many titles. This is one SUBJECT carrying many numbers**, and
+the risk it creates is the opposite one: not that a number means two things, but that **the course a
+student needs exists under a number their institution does not use.**
+
+**Second-year Spanish runs under FOUR competing statewide families**, all covering approximately the same
+ground:
+
+| Family | Statewide title | Public carriers | Credits | HS credit |
+|---|---|---|---|---|
+| `SPN2200`/`2201` | Intermediate Level: General Review of Basic Skills | **15** | 3 | ✅ Foreign language |
+| `SPN2220`/`2221` | Intermediate Reading and Conversation | **14** | 4 | ✅ Foreign language |
+| `SPN2240`/`2241` | Intermediate Conversation | **10** | 3 | ✅ Foreign language |
+| ⚠ `SPN2210`/`2211` | Intermediate Conversation and Composition | ⚠ **3** | ⚠ **3 or 4** | ⚠⚠ **Elective** |
+
+⚠⚠ **The statewide description of `SPN2210` says the series *"is equivalent to"* the `SPN2200` series — so
+it is an ALTERNATIVE ROUTE through the same level, not a course that follows it.** **A student taking both
+families may not earn credit for both**, and that surfaces at transfer evaluation, late and expensively.
+**Where a statewide description says a series is equivalent to another series, say so in the guide and tell
+the reader to ask an adviser before enrolling in the second.**
+
+⚠ **Quantify the prefix before writing — it sets the hedging level honestly rather than by feel:**
+
+| Prefix | Distinct ids with ≥1 FL public carrier | Carried by exactly ONE | Max |
+|---|---|---|---|
+| `SPM` | 189 | ⚠⚠ **145 (77%)** | 6 |
+| `SPN` | 241 | ⚠ **166 (69%)** | 29 |
+
+⚠⚠ **In prefixes like these, a course transferring cleanly by number is the EXCEPTION**, and the guide
+should say so plainly and tell the reader to plan on sending syllabi. One pass over the flat file answers
+it.
+
+### ⚠⚠⚠ TITLE-versus-DESCRIPTION divergence — inside ONE statewide record (batch 207)
+
+**Every other divergence in this file runs between two records** — institution against institution, or
+institution against the statewide title. ⚠⚠ **This one is internal: the state's own title and the state's
+own description contradict each other.**
+
+| `SPM3104` statewide title | `SPM3104` statewide description |
+|---|---|
+| SPORT FACILITY **AND EVENT** MANAGEMENT | *"planning, design, and management &hellip; maintenance, security, operations, and evaluation"* — ⚠ **events never mentioned** |
+
+**The institutions side with the description:** EFSC *Sports Facilities Management* and UWF *Sport Facility
+Planning and Management* both drop "event"; UNF's "Entertainment" names a venue type, not the discipline.
+⚠⚠⚠ **And the missing half is not housed elsewhere — `SPM4109` *Sport Event Management* and `SPM4140`
+*Esports Event Management* have NO Florida public carrier at all.**
+
+**The consequence is a real student-facing finding, not a cataloguing curiosity: event operations is the
+least reliably covered part of the subject the degree title implies, and it is where a large share of
+graduates actually start work.** The guide says so and tells the reader to close the gap deliberately.
+
+⚠ **The drill: when a statewide title contains a conjunction ("X and Y"), check that the statewide
+DESCRIPTION delivers both halves, and check whether Y has its own number that nobody carries.**
 
 ### General-education category designations
 

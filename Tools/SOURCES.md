@@ -20483,3 +20483,211 @@ works for.**
 - ⚠ **Batch average draft size is 31 KB.** The two education guides (`RED3310` 32.9 KB, `RED4542` 30.2 KB)
   and `SOW4242` (32.6 KB) carry the most Florida-specific regulatory content of any guides written so far —
   the reading endorsement, the privatised child welfare structure, and mandatory reporting.
+
+## Batch 207 — SPM / SPN (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`SPM3104`, `SPM4012`, `SPM4503`, `SPN2210`, `SPN3410`, `SPN4520`. **Listing:** 430 courses across the two
+prefixes — **231 created, 11 updated, 0 failed**, 765 offerings. **Site 16,851 → 17,085 courses**; `SPN`
+went from **7 listed courses to 241**. ✅ Live-guide check run on all six first; none had one.
+
+### ⚠⚠⚠ `SPM3104` — a new divergence shape: the statewide TITLE contradicts the statewide DESCRIPTION
+
+**Every divergence this project has named so far runs between two records** — institution against
+institution, or institution against the statewide title. ⚠⚠ **This one is inside a SINGLE authoritative
+record: the state's own title and the state's own description disagree with each other.**
+
+| The state's title | The state's description |
+|---|---|
+| SPORT FACILITY **AND EVENT** MANAGEMENT (U) | *"elements of planning, design, and management, while examining functions related to maintenance, security, operations, and evaluation"* — ⚠ **events are never mentioned** |
+
+**The institutions side with the description, not the title:** EFSC *Sports Facilities Management*, UWF
+*Sport Facility Planning and Management* — **both drop "event"** — and UNF's *Sport &amp; Entertainment
+Facility Management* names a kind of venue rather than the discipline of running an event.
+
+⚠⚠⚠ **And event management is not housed elsewhere either.** The state carries **`SPM4109` *Sport Event
+Management*** and **`SPM4140` *Esports Event Management and Production*** — **neither has a single Florida
+public carrier.** So the honest finding for the student: **event operations is the least reliably covered
+part of the subject the degree title implies, and it is where a large share of sport management graduates
+actually start work.** The guide says so and tells the reader to close the gap with a game-day job.
+
+**Generalising the shape: when a statewide title contains a conjunction ("X and Y"), check whether the
+statewide DESCRIPTION delivers both halves, and whether Y has its own number that nobody carries.**
+
+### ⚠⚠⚠ `SPN2210` — high-school credit TYPE is a real data field, and this number is the odd one out
+
+**`DS_High_School_Credit1` has been treated as boilerplate. In the `SPN` prefix it is not:**
+
+| Prefix | Distribution across ACTIVE numbers |
+|---|---|
+| `SPM` | ⚠ **184 of 184 ELECTIVE** — pure boilerplate, carries no information |
+| `SPN` | ✅ **24 FOREIGN LANGUAGE, 178 ELECTIVE** — genuinely discriminating |
+
+⚠⚠ **`SPN2210` carries ELECTIVE. Its three nearest neighbours — `SPN2200`, `SPN2220`, `SPN2240` — all carry
+FOREIGN LANGUAGE.** All four families teach approximately the same second-year Spanish.
+
+⚠⚠⚠ **The consequence is concrete and expensive: Florida graduation requirements, Bright Futures and SUS
+admission all expect two sequential credits in ONE world language.** A dual-enrolled student who takes
+`SPN2210` for that purpose may find it recorded as an elective. **The guide tells them to confirm with the
+district articulation agreement — which is what actually governs the award — before the drop deadline**,
+and names the three sibling numbers that do carry language credit.
+
+**Standing rule this produces: before treating ANY statewide flag as a signal, compute its distribution
+across the whole prefix.** A field that is uniform is boilerplate; a field that splits is evidence. The
+same test disposed of the dual-enrolment flag here (`Y` on 184/184 SPM and 202/202 SPN rows — meaningless).
+
+### ⚠⚠ `SPN2210` also shows NUMBER fragmentation at scale — the counterpart to batch 202's TITLE fragmentation
+
+**Batch 202 found one number carrying 18 titles. This is the inverse: one subject carrying four number
+families**, all second-year Spanish, all covering approximately the same ground:
+
+| Family | Statewide title | Public carriers | Credits | HS credit |
+|---|---|---|---|---|
+| `SPN2200`/`2201` | Intermediate Level: General Review of Basic Skills | **15** | 3 | ✅ Foreign language |
+| `SPN2220`/`2221` | Intermediate Reading and Conversation | **14** | 4 | ✅ Foreign language |
+| `SPN2240`/`2241` | Intermediate Conversation | **10** | 3 | ✅ Foreign language |
+| ⚠ `SPN2210`/`2211` | **Intermediate Conversation and Composition** | ⚠ **3** | ⚠ **3 or 4** | ⚠⚠ **Elective** |
+
+⚠ **The statewide description says this series *"is equivalent to"* the `SPN2200`-`2201` series** — so it is
+an ALTERNATIVE ROUTE through the same level, not a course that follows it. **A student taking both families
+may not earn credit for both**, and that surfaces at transfer evaluation, late.
+
+⚠ **Credit divergence on top:** FSCJ carries it at **4**, FIU and UWF at **3**. Nothing in the identifier
+signals it. **FIU carries BOTH `SPN2210` and `SPN2240`**, so at FIU they are two different courses.
+
+### ⚠⚠⚠ `SPN3410` — RECIPROCAL misfiling: one institution has a NUMBER PAIR transposed
+
+**Fifth misfiling instance** (after `PUR4801`, `MUN3483`, `PSY3215`, and FIU's `SPM4012` title below) —
+**and a new sub-shape, because BOTH numbers are displaced, in exchange with each other:**
+
+| | State's definition | UWF teaches | FAU teaches | FIU teaches |
+|---|---|---|---|---|
+| `SPN3400` | *Conversation and Composition I* | ⚠⚠ *Advanced Stylistics* | *Advanced Spanish: Conversation* | — |
+| `SPN3410` | *Advanced Oral Expression I* | ⚠⚠ *Composition and Conversation* | ⚠ *Advanced Spanish: Conversation* | ✅ *Advanced Oral Communication* |
+
+⚠⚠ **UWF teaches the state's `SPN3400` course under `SPN3410`.** ⚠ **FAU carries the IDENTICAL title on
+BOTH numbers**, so within FAU the two are not distinguished by title at all. **Only FIU matches the state**
+(and FGCU matches it on `SPN3400`).
+
+⚠⚠⚠ **`SPN3400` ALREADY HAS A LIVE GUIDE on the site** — so this is a correction candidate on published
+content, not just a finding. **Logged as `REVIEW_QUEUE.md` item 89.**
+
+⚠ **Also: the state numbers this course "I" and NO Florida public institution carries `SPN3411`.** The
+guide tells students not to plan a sequence around a course that does not exist — the second instance of
+this shape after `PSY3215`'s "(CONT)" marker.
+
+### ⚠⚠ `SPN4520` — scope divergence where ALL THREE carriers depart from the state, in the same direction
+
+| Statewide | FIU | UCF | UWF |
+|---|---|---|---|
+| Culture &amp; Civilization of **SPANISH AMERICA** | **Latin American** Culture | **Latin American** Civilization and Culture | **Latin American** Culture &amp; Civilization |
+
+⚠⚠ **Not a disagreement between institutions — a unanimous drift away from the state.** And the two terms
+are not synonyms: **Latin America includes BRAZIL** — largest in the region by area, population and
+economy — **and Haiti; Spanish America does not.**
+
+⚠ **In a course taught in Spanish, Brazilian material is unlikely to receive equal treatment, because the
+sources are in Portuguese.** **The guide gives a one-question syllabus test: is Brazil on the reading
+list?** — and names the `LAS` prefix (taught in English, usually does include Brazil) as the complement,
+flagging the prefix-divergence trap: a programme requiring `LAS` may not accept `SPN4520`, because one
+certifies regional knowledge and the other certifies it *in Spanish*.
+
+⚠ **None of the three carriers records a humanities general-education designation** on this number, which
+the guide states plainly — a student should not assume an upper-division culture course clears a gen-ed
+humanities requirement.
+
+### ⚠⚠ `SPM4012` — departmental/stance divergence, plus a title misfiling
+
+| Carrier | Its title | The stance it signals |
+|---|---|---|
+| FSU | *Sport in Society* | ✅ matches the state — the reference version |
+| UWF | *Sociology of Sport* | the **critical disciplinary** tradition |
+| FIU | ⚠ *Social Aspects of Sport **Management*** | the **applied** version |
+
+⚠ **FIU's title is the statewide title of a DIFFERENT number, `SPM4018`** — which no public institution
+carries. **Fourth title-misfiling instance.**
+
+⚠⚠ **The divergence here is STANCE, and it is a real one:** a sociology-of-sport course is frequently
+critical of the sport industry (athlete labour, public subsidy, racial stratification in leadership); a
+"social aspects of sport management" course may cover the same topics asking *how should a manager
+respond?* rather than *what is wrong here?* **Both defensible, different courses.** **Syllabus test: is the
+reading Coakley/Eitzen/the *Sociology of Sport Journal*, or management-text chapters?**
+
+**Sensitive-content handling applied** per the standing rule: the statewide description names drug use and
+violence, and the field also covers sexual violence in sport, eating disorders, concussion and hazing. The
+guide names supports (988, campus counselling, Title IX, victim advocate) and tells the student they may
+raise a topic with the instructor without explaining why.
+
+### ⚠⚠ `SPM4503` — ONE public carrier, and the sibling it is confused with has FIVE
+
+**UWF alone carries `SPM4503`.** ⚠ **`SPM4505` *Sport Finance* has five carriers and a LIVE guide** — and
+the two are routinely confused. **The guide's highest-value content is the distinction**: economics asks
+how sport MARKETS behave (subsidy, competitive balance, antitrust, labour markets); finance asks how an
+ORGANISATION raises and allocates money. **Not substitutes; a programme requiring one will not normally
+accept the other.**
+
+⚠ **Batch-189 rule fired again — the description names a discipline the gate does not.** No statewide
+prerequisite, but the description promises to *"introduce the methodology of economics."* **The guide names
+exactly what is needed (two-variable graphs, shift vs movement along a curve, rates of change, algebra),
+says CALCULUS IS NOT REQUIRED, and recommends `ECO2023` first.**
+
+⚠ **The two excluded private carriers are informative again** (sixth instance): both name it *Sport
+Economics* / *Sports Economics*, dropping "issues" and naming the discipline — which supports reading it as
+a real economics course rather than a topics survey.
+
+**Strongest Florida content in the batch:** Florida has run the stadium-subsidy experiment repeatedly and
+the results are public record — the state sales-tax rebate programme for professional sports facilities,
+its legislative scrutiny and state audits, the Grapefruit League as a pure relocation-threat bargaining
+case, and no state income tax as a documented factor in athlete location decisions.
+
+### ⚠⚠ Prefix-level statistic worth carrying forward: these prefixes are overwhelmingly single-carrier
+
+| Prefix | Distinct ids with ≥1 FL public carrier | Carried by exactly ONE institution | Max carriers |
+|---|---|---|---|
+| `SPM` | 189 | ⚠⚠ **145 (77%)** | 6 |
+| `SPN` | 241 | ⚠ **166 (69%)** | 29 |
+
+⚠ **In these prefixes a course transferring cleanly by number is the EXCEPTION.** This is the quantitative
+justification for the hedging level applied throughout the batch, and it is cheap to compute for any
+prefix from the flat file. **Worth doing before writing, because it sets the hedging level honestly rather
+than by feel.**
+
+Also: **15% of active statewide `SPM` numbers and 8% of active `SPN` numbers have no Florida public carrier
+at any level** — so the state catalog is somewhat aspirational, but not wildly so.
+
+### ⚠⚠⚠ Tooling — a flag-parsing trap that produces FALSE findings silently
+
+**The flat file's Gordon Rule and gen-ed flags are `'Y'`/`'N'` STRINGS, not booleans or blanks.**
+
+```python
+flags = [k for k in FLAG_KEYS if r.get(k)]          # ⚠⚠ WRONG — 'N' is truthy
+flags = [k for k in FLAG_KEYS if r.get(k) == 'Y']   # ✅ correct
+```
+
+⚠⚠⚠ **The wrong version reported EVERY course as carrying EVERY designation** — Gordon Rule, Gordon
+writing and all five gen-ed categories, on all eighteen rows. **It did not error; it produced a confident,
+uniform, completely false result**, and it would have gone into a guide as "this course carries the Gordon
+Rule designation at every institution." **Caught only because all-seven-flags-on-every-row is implausible
+on its face.**
+
+⚠ **Standing check: when a flag scan returns the SAME answer for every row, assume the test is wrong before
+assuming the data is uniform.** This sits alongside the existing rule about not rendering a flag by its
+first letter — both are ways the same seven fields produce silent nonsense.
+
+**Correct result for this batch: none of the six courses carries a Gordon Rule or general-education
+designation at any carrier.** That is itself worth stating in the `SPN4520` guide, where a student might
+reasonably expect a humanities designation.
+
+### ⚠ Tooling notes
+
+- ⚠⚠ **ALL SIX prerequisites exceeded 1000 characters on first assembly** (1,032–1,184). **Eighth
+  consecutive batch**, and `SPM4012` needed **four** rounds of trimming. ⚠ **The pattern is settled and
+  the estimate should be built in: draft the prerequisite field expecting to cut 5–15%.**
+- ✅ **Write tool for new files, Edit tool for every trim. No heredoc was attempted on Python containing
+  quotes, and nothing failed** — the batch-205 lesson holds for a third batch.
+- ⚠ `ID_Century` in the statewide CSV is the **last three digits only** — the level digit is not in it, so
+  matching a queue id like `SPM3104` against it requires `code[4:]`, not `code[3:]`. A wrong slice returns
+  zero matches, which reads exactly like "the course is not in the statewide file."
+- ⚠ **Batch average draft size is 23 KB** — smaller than recent batches, and appropriately so: three
+  language-skills courses have less transferable content to describe and more format, placement and credit
+  mechanics, which is where their value sits.

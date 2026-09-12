@@ -2207,6 +2207,54 @@ the only available tell is the reading list.**
 
 ---
 
+## 89. ⚠⚠⚠ `SPN3400` has a LIVE guide, and UWF appears to teach something else under that number (batch 207)
+
+**The first correction candidate on a published guide since item 81, and the evidence is mechanical.**
+
+| | State's definition | UWF teaches | FAU teaches | FGCU teaches | FIU teaches |
+|---|---|---|---|---|---|
+| **`SPN3400`** ✅ *live guide* | *Conversation and Composition I* | ⚠⚠ *Advanced Stylistics* | *Advanced Spanish: Conversation* | ✅ *Conversation and Composition I* | — |
+| `SPN3410` *(written this batch)* | *Advanced Oral Expression I* | ⚠⚠ *Composition and Conversation* | ⚠ *Advanced Spanish: Conversation* | — | ✅ *Advanced Oral Communication* |
+
+⚠⚠ **UWF appears to have the pair transposed**: it teaches the state's `SPN3400` course under `SPN3410`,
+and puts *Advanced Stylistics* — which is a different course, closer to advanced composition and style —
+under `SPN3400`. **FAU carries the identical title on both numbers.** FGCU and FIU each match the state on
+the number they carry.
+
+**What was done this batch:** the new `SPN3410` guide states the whole picture, names UWF's transposition
+and FAU's duplicate title, and tells students to send syllabi rather than transcript lines.
+
+**What is NOT done:** ⚠ **the live `SPN3400` guide was written before this was found and does not carry the
+warning.** It is **incomplete rather than wrong** — the statewide subject it describes is correct, and
+correct for FGCU.
+
+⚠ **Recommendation (no action taken):** on the verification pass, republish `SPN3400` at v1.1 with a
+divergence block naming UWF's *Advanced Stylistics* and FAU's duplicate title. **Not urgent** — no student
+is misled about the subject, only about which number carries it at two institutions.
+
+⚠⚠ **The generalisable point, now in `CLAUDE.md`: when a misfiling is found, check what the DISPLACED
+number holds at the SAME institution.** If it holds the first number's subject, it is a transposition, both
+guides need the warning, and one of them may already be published.
+
+---
+
+## 90. ⚠ `SPM4505` Sport Finance (live guide) and `SPM4503` Economic Issues in Sport — a cross-reference worth adding (batch 207)
+
+**Minor, and recorded only so the verification pass has it.** `SPM4503` was written this batch and draws
+the economics/finance distinction explicitly, because the two are routinely confused and their availability
+is very different — **`SPM4505` has five Florida public carriers and `SPM4503` has one (UWF).**
+
+⚠ **The live `SPM4505` guide does not point at `SPM4503`.** A student reading the finance guide and needing
+the economics course would not learn from it that the economics course exists, that it is a different
+course, or that it is available at one school only.
+
+**No decision wanted; no urgency.** A one-paragraph cross-reference at the next republication would close
+it. ⚠ **The general practice worth confirming: where a batch writes one half of a commonly-confused pair
+and the other half is already live, note it here rather than silently leaving the older guide
+one-directional.**
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
