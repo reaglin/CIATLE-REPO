@@ -596,6 +596,21 @@ mid-degree transfers are not protected.**
 catalogs for the same subject under a different number before writing.** Broward, Valencia and EFSC are
 reachable and make this cheap.
 
+#### ⚠⚠ A second sector shape: SAME number, different SCOPE by sector (batch 206)
+
+**Distinct from the number divergence above.** **`RET3354` is carried by two Florida College System
+institutions as *Medical Pharmacology* and by UWF as *Cardiopulmonary Pharmacotherapy*** — **one number,
+and the scope differs along the sector line.**
+
+⚠ **The explanation is the licensure ladder, and it generalises:** **FCS institutions run the entry-level
+A.S. programmes that lead to a credential, so they teach broadly; SUS institutions run degree-completion
+pathways for practitioners who already hold it, so they go deeper on a narrower range.**
+
+⚠⚠ **Expect this in every licensed allied-health field with an A.S.-to-BS ladder** — respiratory care,
+radiography, nursing, dental hygiene, health information management. **And note the inversion it produces:
+the broader-SOUNDING title is usually the entry-level course, and the narrower-sounding one is often
+closest to the statewide description. Judge scope by the programme's level, not by the title.**
+
 ### ⚠⚠ Check the taxonomy prefix BEFORE drafting, not after pushing (batch 182)
 
 A push for a prefix with no taxonomy node returns **HTTP 422**. The seed file answers in one command:
@@ -842,6 +857,26 @@ that has consequences beyond style.
 
 ⚠ **It also predicts an AI failure mode**: training data is dominated by older text, so **generated prose
 reproduces the superseded vocabulary** — which is worth saying in the guide's AI section.
+
+#### ⚠⚠⚠ And sometimes the old vocabulary is not merely dated — it is contrary to STATE LAW (batch 206)
+
+**`RED3310` is the strongest instance of this shape so far, and it differs in kind from `SYD4800` and
+`SOW4700`.** Those were vocabulary the field had moved past. ⚠⚠ **This one has regulatory force behind it.**
+
+**Florida requires evidence-based reading instruction, mandates K-3 screening and progress monitoring, funds
+district reading coaches, and has revised the Reading Endorsement competencies and the B.E.S.T. ELA
+standards accordingly.** ⚠ **So "reading as a process", three-cueing and guessing from context are not
+merely out of date — they are contrary to what Florida requires and what the FTCE tests.**
+
+⚠⚠ **Where a terminology-era divergence touches a LICENSED or CERTIFIED field, check whether the state has
+legislated.** The consequence for the student is then concrete rather than academic: **preparation in the
+superseded model leaves them unready for what their employer is required to do.** Expect the same shape in
+**nursing, athletic training, respiratory care, behaviour analysis and social work.**
+
+⚠ **And a caution that applies to every terminology-era case: A CATALOG TITLE CAN LAG A REVISED SYLLABUS BY
+YEARS.** **Titles change slowly and syllabi change fast.** **Tell the reader to judge by the ASSIGNED TEXT
+and the reading list, not the title** — for `RED3310` the test is whether the text is Moats, Kilpatrick,
+Liben, Lindsey or Seidenberg.
 
 ### ⚠⚠ The prerequisite-as-signal diagnostic — now the most productive sourcing move
 
@@ -1393,6 +1428,27 @@ satisfies the WRITING requirement at two institutions and a SOCIAL SCIENCE requi
 **State it per institution in `offering_notes`, and put the consequence in the prerequisite field**: a
 student using the course to clear a requirement it is not designated for at their own institution has not
 cleared it.
+
+#### ⚠⚠⚠ The two Gordon Rule flags are populated INDEPENDENTLY and INCONSISTENTLY (corrected batch 206)
+
+**Batch 202 read `gordon_rule` appearing WITHOUT `gordon_writing` as pointing at the MATHEMATICS half.
+⚠⚠ `REL1300` refutes that**, because it shows all three combinations on one number:
+
+| Carrier | Gordon Rule flags |
+|---|---|
+| Indian River State | `gordon_rule` **and** `gordon_writing` |
+| Florida State | ⚠⚠ **`gordon_writing` WITHOUT `gordon_rule`** |
+| UWF | none |
+
+**The middle row cannot be reconciled with the batch-202 reading** — a course cannot be the writing half
+without being Gordon Rule designated at all. **The flags are two independent institution-entered fields,
+not a two-bit code.**
+
+⚠⚠ **So the honest statement a guide should make: the flags reliably tell you that SOME designation is
+recorded; they are NOT a safe guide to WHICH.** **Write "a designation is recorded — check your
+institution's list for which component it satisfies" rather than inferring the component.** Four numbers
+now show the divergence — `HIS2050`, `PHI4300`, `REL1300`, `REL3241`, across four disciplines — so the
+institution-specific rule itself needs no further evidence; only the flag *interpretation* was wrong.
 
 ⚠ **Do not display a flag by the first letter of its key** — `gordon_rule`, `gordon_writing` and
 all five `ge_*` keys begin with `g`, so a `k[0]` rendering makes them indistinguishable. Print the names.

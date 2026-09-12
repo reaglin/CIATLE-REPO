@@ -20338,3 +20338,148 @@ help-seeking.
 - ⚠ **Batch average draft size is 31 KB**, up from the low 20s earlier in the project. Not a target — it
   reflects that these six carried substantive Florida-specific professional content (homestead, mediator and
   CMPC credentialing, field-course logistics) that no other source states.
+
+## Batch 206 — RED / REL / RET / SOW (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`RED3310`, `RED4542`, `REL1300`, `REL3241`, `RET3354`, `SOW4242`. **Listing:** 1,338 courses across the four
+prefixes — **1,298 created, 40 updated, 0 failed**, 2,133 offerings. **Site 15,547 → 16,851 courses.**
+✅ Live-guide check run on all nine candidates first; none had one.
+
+### ⚠⚠⚠ `RED3310` — terminology-era divergence with REGULATORY force behind it
+
+**The strongest instance of this shape the project has found.** Statewide title *Teaching Reading in
+Elementary Schools*, and the statewide description's own words are ⚠ *"techniques for **diagnosing,
+prescribing**, and teaching elementary reading"* — **the vocabulary of a deficit-and-remediation model.**
+
+| Carrier | Its title | Era the vocabulary comes from |
+|---|---|---|
+| UNF | ⚠ **Teaching Reading as a Process** | whole-language / process model |
+| UCF | Early Reading, Writing and Language Arts | integrated literacy |
+| UWF | Literacy Instruction for the Elementary… | current |
+
+⚠⚠⚠ **What makes this different from `SYD4800` or `SOW4700`, the project's previous terminology-era cases:
+those were about vocabulary the field had moved past. This one has STATE LAW behind it.** **Florida
+requires evidence-based reading instruction, mandates K-3 screening and progress monitoring, funds district
+reading coaches, and has revised the Reading Endorsement competencies and the B.E.S.T. ELA standards
+accordingly.** ⚠ **So "reading as a process", three-cueing and guessing from context are not merely dated —
+they are contrary to what Florida requires and what the FTCE tests.**
+
+**Handling followed the standing terminology-era treatment (give the current framework and say why it
+changed) with one addition: a five-row before/after table and an explicit syllabus test.** ⚠⚠ **And a
+caution the guide states plainly: a catalog title can lag a revised syllabus by years, so READ THE ASSIGNED
+TEXT, not the title** — Moats, Kilpatrick, Liben, Lindsey or Seidenberg means evidence-aligned.
+
+⚠ **The `RED` prefix is also unusually crowded — roughly thirty active numbers.** `RED4150` carries almost
+the same title as this number, and **`RED4210`/`RED4211` split the same material into TWO courses** (word
+identification and fluency; language and meaning construction) — **a sequence-length divergence inside the
+prefix.** ⚠⚠ **State programme approval specifies reading COMPETENCIES rather than course numbers**, so the
+guide tells transfer students to send the syllabus to a certification officer.
+
+### ⚠⚠ `RED4542` — the single public carrier renamed the course, and the rename is the finding
+
+Statewide: **Diagnosis of Reading Disabilities**. ⚠⚠ **UWF, the only public carrier, calls it *Assessment
+and Differentiated Instruction*.**
+
+| Statewide (older) | UWF (current) |
+|---|---|
+| a **medical/deficit** model — find the disability in the child | an **instructional** model — find out what the child can do and teach accordingly |
+| assessment produces a **label** | assessment produces a **teaching decision** |
+| endpoint is **identification** | ⚠ endpoint is **differentiated instruction that works** |
+
+⚠ **And the two private carriers complete the picture of the transition** — one still says *Reading
+Diagnosis*, the other *Literacy Assessment and Instructional Strategies*. **Fourth instance of the pattern
+where the public-only rule excludes rows whose titles are themselves informative** (after `HSA3551`,
+`LIT3191`, `PSY4832`).
+
+⚠⚠ **The guide's sharpest professional content follows from the old title: a classroom teacher does NOT
+diagnose.** Eligibility is a team determination after formal evaluation and diagnosis of a disorder is a
+clinical act — **so "I think he's dyslexic" to a parent oversteps and can be harmful.** <strong>The guide
+supplies the correct response instead.</strong>
+
+### ⚠⚠⚠ `REL1300` — the Gordon Rule flags diverge THREE ways, and the two flags are independent
+
+**Third Gordon Rule divergence after `HIS2050` and `PHI4300`, and the messiest:**
+
+| Carrier | Humanities gen-ed | Gordon Rule flags |
+|---|---|---|
+| Indian River State | ✅ | ⚠ `gordon_rule` **and** `gordon_writing` |
+| Florida State | ✅ | ⚠⚠ **`gordon_writing` WITHOUT `gordon_rule`** |
+| UWF | ✅ | ❌ none |
+
+⚠⚠⚠ **That middle row is new and it corrects a batch-202 inference.** This project previously read
+`gordon_rule` without `gordon_writing` as pointing to the *mathematics* half. ⚠ **`REL1300` shows the
+reverse combination, which means the two flags are populated INDEPENDENTLY AND INCONSISTENTLY by
+institutions.**
+
+**So the honest statement, now written into `CLAUDE.md`: the flags reliably tell you that SOME designation
+exists; they are NOT a safe guide to WHICH.** ⚠ **Guides should say "a designation is recorded — check your
+institution's list for which" rather than inferring the component.**
+
+✅ **What IS uniform and useful: all three carriers record the HUMANITIES general-education designation**,
+so the guide leads with that as the dependable fact.
+
+### ⚠⚠ `REL3241` — the FOURTH Gordon Rule divergence, in four batches
+
+UWF records the writing designation; **UNF and FGCU record none.** ⚠ **Four numbers now** — `HIS2050`,
+`PHI4300`, `REL1300`, `REL3241` — **across four different disciplines.** **The pattern is thoroughly
+established and the rule needs no further evidence.**
+
+⚠ **A useful contrast the guide draws: none of `REL3241`'s carriers records a humanities general-education
+designation, while all three of `REL1300`'s do.** **Unsurprising — Florida's general education core sits at
+the lower division — but it gives a student a concrete steer: for a humanities gen-ed credit, `REL1300` is
+the number that reliably carries it.**
+
+### ⚠⚠ `RET3354` — divergence along the SECTOR boundary, explained by credentialling
+
+| Sector | Carriers | Title | Why |
+|---|---|---|---|
+| **FCS** | Palm Beach State, Valencia | *Medical Pharmacology* | entry-level **A.S.** programmes leading to NBRC examinations and licensure — broad coverage |
+| **SUS** | UWF | *Cardiopulmonary Pharmacotherapy* | **degree-completion** pathway for already-credentialled practitioners — deeper on cardiopulmonary agents |
+
+⚠ **Distinct from the batch-182 sector-number divergence** (FCS and SUS using *different numbers* for one
+subject). **Here the number is shared and the SCOPE differs by sector, because the two sectors serve
+different points on a licensure ladder.**
+
+⚠⚠ **And a nice inversion worth recording: the broader-SOUNDING titles are the entry-level courses, while
+the narrower-sounding one is closest to the statewide description** (*"applied to respiratory medicine"*).
+**Judge scope by the programme's level, not the title.**
+
+⚠ **The guide's highest-value content is not the divergence: it is that the statewide description names
+"mathematics of drugs and solutions", and dosage calculation is where a respiratory therapist injures a
+patient.** **Dimensional analysis and an order-of-magnitude sanity check are given as the two habits that
+separate safe from unsafe practice** — the same technique this catalog's chemistry guides name.
+
+### ⚠⚠⚠ `SOW4242` — POLICY versus PRACTICE, and accreditation makes it binding
+
+| Carrier | Its title | What it is |
+|---|---|---|
+| FIU | **Child Welfare Policy** | statute, funding, the community-based care model, reform, disproportionality |
+| UWF | **Principles of Social Work Practice with Families and Children** | engagement, assessment, case planning, intervention |
+
+⚠⚠ **Policy and practice are separate COMPETENCY AREAS in accredited social work education, and programmes
+must teach both.** ⚠⚠⚠ **So a programme requiring a practice course will not ordinarily accept a policy
+course in its place — a transfer student can arrive having taken `SOW4242` and still be short the
+requirement it appears to satisfy.**
+
+⚠ **The statewide description contains both readings**, which is why both are defensible: items 1–4 are
+service systems (the policy side) and item 5 is *"the roles of social workers in providing social
+services"* (the practice side).
+
+⚠⚠ **Florida's child welfare system is also genuinely unusual and a national textbook will misdescribe it:**
+**case management is PRIVATISED through regional Community-Based Care lead agencies**; **investigations are
+split between DCF and, in several counties, the sheriff's office**; **several counties have Children's
+Services Councils** — independent taxing districts funding children's services; and **early care runs
+through regional Early Learning Coalitions.** **The guide sets this out because it changes who a graduate
+works for.**
+
+### ⚠ Tooling notes
+
+- ⚠⚠ **ALL SIX prerequisites exceeded 1000 characters on first assembly** (1,009–1,113) and needed two
+  rounds. **Seventh consecutive batch.** ⚠ **Treat this as settled: on any batch with professional
+  certification, state-law or safety content, the prerequisite field will not fit first time.**
+- ✅ **The Edit tool was used for every trim and nothing failed** — the batch-205 lesson applied without
+  incident. **No heredoc was attempted on Python containing quotes.**
+- ⚠ **Batch average draft size is 31 KB.** The two education guides (`RED3310` 32.9 KB, `RED4542` 30.2 KB)
+  and `SOW4242` (32.6 KB) carry the most Florida-specific regulatory content of any guides written so far —
+  the reading endorsement, the privatised child welfare structure, and mandatory reporting.
