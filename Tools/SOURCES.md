@@ -18759,3 +18759,67 @@ two-agreeing-catalogs rule (batch 183) makes UWF the outlier**; the guide says s
 - **SCNS flat file** — per-institution titles and credits; every divergence above came from it.
 - No institution catalog was fetched. FGCU and Broward were still rate-blocked from batch 191 and were not
   retried, per the burst rule.
+
+---
+
+## Batch 194 — two visitor requests, then the last queued engineering rows (2026-09-11)
+
+**Nine guides.** Two from the **visitor request queue** (`CET2127C`, `CET2152C`) and seven clearing **every
+remaining queued engineering row** (`EGS3441`, `EGM3344`, `EGM3401`, `EAS4020`, `TTE4804`, `TTE3004C`,
+`CGN2328C`). The request queue **closed automatically on publication** — 2 waiting before, 0 after.
+
+### New standing rule: for a queued `C` id, the scalar takes the CARRIER's values
+
+Confirmed again here. `TTE3004C` and `CGN2328C` are each carried by one institution at 3 credits, and the
+integrated form's 60 hours were used rather than a lecture course's 45.
+
+### `CET2127C` — a requested course whose number names a different subject than the college teaches
+
+Statewide: **Digital/Microprocessors II** (JK flip-flops, multiplexers, DACs, assembly language, UART and
+parallel-port interfacing). Palm Beach State College, the only carrier: **Programmable Logic Controllers**.
+Different working subjects — embedded design against industrial automation. **Published as one guide
+covering both, labelled, with a comparison table.**
+
+The PLC half carries a hardware-safety warning in the body and the prerequisite string: an emergency stop
+must break the circuit in hardware and must never be implemented in the program.
+
+### `CET2152C` — the contrast case, and a useful calibration point
+
+Statewide *Microprocessor Systems Maintenance*; Hillsborough *Advanced Microprocessors*. Same field, shifted
+emphasis — diagnosis against depth. **Not every title difference deserves the same weight of warning**, and
+having a documented "mild" example makes the severe ones more credible.
+
+### Both requested courses were single-institution, and both colleges are unreachable
+
+Palm Beach State and Hillsborough re-probed per the standing drill. **Catalog subdomains return 000; main
+domains return 404 with full bodies** — the servers answer, so this is a wrong-path problem rather than a
+block. Neither is a Coursedog school. **Eight probes, then stopped.** Guides written from the statewide
+record with the limitation stated in the text.
+
+### `EGM3401` — the statewide "Alternative" means EXTENDED, and both institutions drop the word
+
+The definition is explicit: the standard dynamics syllabus **plus** three-dimensional rigid-body dynamics,
+gyroscopic motion and orbital mechanics. **UF and UWF both title it simply "Dynamics."** The extended scope
+is therefore invisible in a catalog and on a transcript, and the number is the only signal.
+
+### `EGM3344` — 2 credits against 3
+
+UF 3, UWF 2, on a syllabus running from root-finding through ODEs. Two credits cannot cover it at the same
+depth; the guide says to expect the later material compressed or omitted.
+
+### `EAS4020` — a state course definition that specifies FLYING
+
+*"Includes lab sessions flying and making measurements in a general aviation aircraft."* Extraordinary in a
+statewide definition, and the best reason to take the course — but **it cannot be assumed from the number**,
+since aircraft access, insurance and fees vary. The guide gives three questions to ask before registering.
+
+It also carries the project's first honest note that **licensure is not the normal aerospace path**: there is
+no PE Aerospace examination, most aerospace engineers work under the industrial exemption, and a security
+clearance matters more than a PE in Florida's aerospace sector.
+
+### Sources
+
+**SCNS statewide for TTE, CGN, EGM, EAS and EGS** — five clean fetches. The two requested CET courses needed
+no new fetch: the cached `scns_CET.csv` and flat file from batch 190 answered both, which is the cache paying
+off. Prerequisite strings ran 785–942 characters with one outlier at 1079 (`CET2127C`, trimmed to 965) — the
+1000 ceiling accommodates a divergence warning plus a safety warning and still bites on the outlier.

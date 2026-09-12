@@ -10,7 +10,7 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-11 (batch 193)
+**Last updated:** 2026-09-11 (batch 194)
 
 ---
 
@@ -1618,6 +1618,45 @@ What the room bought: the four-institution credit table on `ENV4351`, the three-
 `ENV3001C`, the five-day BOD warning on `ENV3001L`, and the site-assessment-versus-engineering distinction
 on `ENV4330`. **Under the old ceiling each would have lost about half its content.** Recorded as the closing
 evidence on items 61 and 64.
+
+---
+
+## 68. `CET2127C` — a VISITOR-REQUESTED course whose number names a different subject than the college teaches (batch 194)
+
+Statewide: **Digital/Microprocessors II**. Palm Beach State College, the only carrier: **Programmable Logic
+Controllers**. Different working subjects — embedded design against industrial automation. Published as one
+guide covering both, labelled, with a comparison table, and a hardware-safety warning on the PLC half.
+
+Palm Beach State's catalog is unreachable, so the PLC half is written from the subject as standardly taught
+rather than from that college's syllabus, and the guide says so.
+
+**The ask:** none urgent. But this is the **second visitor request in a row to land on a number with a
+divergence**, after `CET1112`. That is a pattern worth naming: a request queue surfaces exactly the courses
+whose numbering confuses people. If Ron agrees, it argues for treating a request as a signal to check the
+number's whole family before writing.
+
+---
+
+## 69. `EGM3401` — a statewide qualifier that both institutions drop (batch 194)
+
+Statewide title **Engineering Mechanics — Dynamics Alternative**; the definition says the standard syllabus
+**plus** 3-D rigid-body dynamics, gyroscopic motion and orbital mechanics. **UF and UWF both title it simply
+"Dynamics."** The extended scope is invisible in a catalog and on a transcript.
+
+Published with the warning. **No decision needed** — recorded because it is a new shape: a statewide
+qualifier that institutions systematically drop. Worth watching for wherever a statewide title carries
+"Alternative", "Honors", "Accelerated" or similar.
+
+---
+
+## 70. Palm Beach State and Hillsborough: answering servers, unknown paths (batch 194)
+
+Re-probed for two visitor-requested courses. **Catalog subdomains return 000; main domains return 404 with
+full bodies** — the servers answer, so this is a wrong-path problem rather than a block, which is a better
+position than the register's "curl 000 / 404" entry implies. Neither is a Coursedog school.
+
+Eight probes, then stopped per the burst rule. **No decision needed** — recorded so the next session starts
+from "find the path" rather than "assume blocked." Both colleges carry courses the project will meet again.
 
 ---
 
