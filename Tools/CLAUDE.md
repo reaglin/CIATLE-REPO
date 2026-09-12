@@ -55,6 +55,52 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
+## ⚠⚠⚠ Direction (Ron, 2026-09-11): LIST courses as you go; guides follow the queue and then requests
+
+Ron's words:
+
+> *"Guideless courses will remain. We will finish the existing queue and shift to requests as we work on
+> programs and career guides. A top priority will be picking up any courses we see at institutions along
+> the way and list them (no guide)."*
+
+**Four things follow, and the last one is the change in working practice.**
+
+1. **A course without a guide is a finished outcome, not a backlog.** The ~800 guide-less Engineering
+   Technology courses stay as they are. **Do not treat `hasGuide=false` as a work list.**
+2. **Finish `queue.csv`**, then **shift to visitor requests** as the main source of guide work.
+3. **Programs and career paths** become the next build direction (`CAREER_PATHS_PLAN.md`,
+   `COURSE_CATALOG_PLAN.md` phase 5) — and both need a complete course list far more than they need more
+   guides.
+4. ⚠⚠ **TOP PRIORITY, and it applies to every batch from now on: every course you SEE while researching
+   gets LISTED.** Writing a guide means reading SCNS and institution catalogs, and that reading surfaces
+   hundreds of courses the site does not hold. **Add them — title, credits, per-institution offerings — with
+   no guide**, over `POST /api/v1/courses/batch` (`COURSE_API.md`).
+
+### How to do it, at the end of every batch
+
+The SCNS flat file already holds every course at every institution, so **the marginal cost of listing a
+whole prefix once you have fetched it is close to zero.** Standing practice:
+
+1. **Institutions first**, with names and sectors: `POST /api/v1/institutions/batch`. Send once; repeats are
+   `unchanged`.
+2. **Build course rows for every prefix the batch touched** — not only the courses you wrote guides for.
+3. **Public institutions only** (`scns.is_public`), per the 2026-09-11 scope rule.
+4. `title` = the most common institution title, title-cased; `stateTitle` = the SCNS statewide title;
+   `creditHours` = the modal integer credit; `offerings[]` = every public institution with its own title and
+   credits.
+5. Push in batches of **≤ 500**, log every `failed` result, and reconcile with
+   `GET /api/v1/courses/catalog?updatedSince=<run start>`.
+
+⚠ **Watch the two traps.** `replaceOfferings` defaults to **`true`**, so send a course's full offering list
+or you will delete the rest. And **a course upsert DOES overwrite an existing title** — which is wanted when
+the stored title is the course id placeholder, and is why the title you send must be a real one.
+
+⚠ **Shell numbers (`x9xx`) are still LISTED even though they are skipped for guides.** The skip list governs
+what gets a guide; it does not govern what exists. A student can enrol in a special-topics course, so the
+catalog should show it.
+
+---
+
 ## ⚠⚠ The course catalog — deployed 2026-09-11. Read this before the first batch.
 
 **What changed:** a course no longer has to have a guide. The site now lists **every course that exists**,

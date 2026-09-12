@@ -24,6 +24,7 @@ The flat file is the fastest way to answer "who offers this, and what do THEY ca
 the statewide CSV carries the description, prerequisites and transferability.
 Record layout in FIELDS below, derived from Downloads/File_Format_for_SCNS_Flat_File.doc.
 """
+import html
 import re
 import sys
 import urllib.request
@@ -198,7 +199,9 @@ def institution_map(o=None):
                   h, re.S)
     if not m:
         return {}
-    return {v: t.strip()
+    # The dropdown text is HTML-escaped: 'FLORIDA A &amp; M UNIVERSITY'. Unescape it,
+    # or the ampersand travels into course data as a literal '&amp;'.
+    return {v: html.unescape(t).strip()
             for v, t in re.findall(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)', m.group(0))
             if v}
 

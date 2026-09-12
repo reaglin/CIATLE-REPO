@@ -18979,3 +18979,73 @@ elite sport attached to universities — is a global outlier that only looks nat
 
 **SCNS statewide for GRA, ARH and SPM** — three fetches, all clean, and the GRA one closed item 36. **No
 institution catalog was fetched**; the flat file and statewide descriptions covered everything.
+
+---
+
+## ⚠⚠⚠ Direction change (Ron, 2026-09-11): LIST courses as you go — and 3,425 listed the same day
+
+> *"Guideless courses will remain. We will finish the existing queue and shift to requests as we work on
+> programs and career guides. A top priority will be picking up any courses we see at institutions along the
+> way and list them (no guide)."*
+
+**Recorded at the top of `CLAUDE.md`.** Four consequences: a guide-less course is a finished outcome and
+**`hasGuide=false` is not a work list**; finish `queue.csv`, then work requests; programs and career paths
+become the build direction; and **every course seen while researching gets listed**.
+
+### New tool: `Tools/list_courses.py`
+
+The insight that makes this cheap: **writing a guide already requires fetching the SCNS data for a whole
+prefix**, so listing that prefix costs one more command. The tool builds course rows from the flat file and
+pushes them over `POST /api/v1/courses/batch`.
+
+```
+python list_courses.py --institutions --yes          # once
+python list_courses.py --prefix CET EET --dry-run    # inspect
+python list_courses.py --prefix CET EET --yes        # send
+```
+
+**Applied immediately to all 18 prefixes this session touched** — CET, CES, CWR, CEG, ENV, MUN, MVV, PEL,
+PUR, MMC, GRA, ARH, SPM, TTE, CGN, EGM, EAS, EGS:
+
+| | |
+|---|---|
+| Courses sent | **3,425** |
+| Created | **3,192** |
+| Updated (existing rows gaining real titles and offerings) | **233** |
+| **Failed** | **0** |
+| Offerings written | **5,191** across **39 public institutions** |
+| Site total before → after | 2,808 → **6,233 courses** |
+
+### ⚠ What the "updated" rows were, and why they matter more than the created ones
+
+**233 courses already existed and were carrying the course id as their title** — the placeholder a guide
+push leaves behind. They now carry real titles, credits and institution lists. ✅ **Verified that a course
+upsert does NOT disturb a guide:** `CGN2328C` and `CGN3501C` both kept `hasGuide: true` while gaining
+offerings.
+
+### Two bugs found by looking at the result rather than the response code
+
+Both pushes returned `failed: 0`, and both of these were still wrong:
+
+1. ⚠⚠ **HTML entities in the SCNS institution names.** The dropdown text is escaped, so `FAMU` arrived as
+   *"Florida a &Amp; M University"*. **`scns.institution_map()` now calls `html.unescape()`** and the
+   institution list was re-pushed. ⚠ **Anything scraped from an HTML page needs unescaping before it becomes
+   data** — the flat file and the CSV reports do not have this problem, only the dropdown scrape does.
+2. ⚠ **Single-letter small words.** `smart_title` lowercased the "A" in "A & M" because *a* is in the
+   small-word list. **Now only words of more than one character are lowercased.**
+
+⚠ **A third near-miss worth recording: my own verification was wrong before the data was.** I reported
+"0 offerings" for every institution by reading a field called `activeOfferingCount`, which does not exist —
+the field is `offeringCount`, and UCF had 813 all along. **A missing key read as zero rather than raising**,
+which is exactly how a silent reporting bug survives. **Check the response keys, not just the numbers.**
+
+### ⚠ Scope decisions taken, and why
+
+- **Public institutions only** (`is_public`), per the 2026-09-11 rule.
+- **All levels**, including graduate — 1,239 of the 3,425 are 5xxx–8xxx — per `COURSE_CATALOG_PLAN.md` §1,
+  *"everything in SCNS"*.
+- ⚠ **Shell numbers (`x9xx`) ARE listed** — 351 of them. **The skip list governs what gets a GUIDE, not what
+  exists.** A student can enrol in a special-topics course, so the catalog should show it. `--no-shell` is
+  available if that is ever reversed.
+- **`replaceOfferings: true`** on every row, which is safe only because the tool always sends a course's
+  complete public offering list.
