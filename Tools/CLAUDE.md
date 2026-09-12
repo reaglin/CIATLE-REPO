@@ -281,7 +281,13 @@ new guides and to any guide being republished for another reason.
 
 ---
 
-- `credits=0` is valid for PSAV (Postsecondary Adult Vocational) clock-hour courses; `contact_hours` carries the real measurement.
+- `credits=0` is valid for **two entirely different things**, and they need different explanations:
+  - **PSAV clock-hour courses** — `contact_hours` carries the real measurement.
+  - ⚠⚠ **ZERO-CREDIT LABORATORIES** (found batch 198, `BCH3034L` at UWF) — a corequisite laboratory whose
+    credit sits on its paired lecture. **The work and the hours are entirely real; only the accounting
+    differs.** A guide for one must say: it does **not** count toward full-time enrolment (which matters for
+    financial aid, athletic eligibility and student visas), the time commitment is real, it may still be
+    graded, and **transfer is awkward because there is no credit to transfer.**
 - `prerequisites` is a single string or null. Be specific (course numbers, grade requirements, standing requirements). Where prerequisites vary by institution, say so explicitly.
 - `version` starts at "1.0" and increments only when a guide is materially updated.
 

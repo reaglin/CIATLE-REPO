@@ -19113,3 +19113,75 @@ identical title**, which usually indicates a deliberately articulated course rat
   rights when missed, and ⚠ **the person who sends those notices is frequently the most junior in the
   office**. Public projects are not lienable — the remedy is the payment bond, with separate deadlines — so
   *which regime a project is under* is the first question.
+
+---
+
+## Batch 198 — ENG / EUH / BCH / CHM (2026-09-11)
+
+Session order: resources (none), guide requests (none), queue, then listing. **Six guides:** `ENG3113`,
+`ENG4013`, `EUH4140`, `EUH4144`, `BCH3034L`, `CHM4610L`. **Listing:** 1,152 courses — **1,107 created, 45
+updated, 0 failed**, 2,050 offerings. **Site 7,531 → 8,644 courses.**
+
+### ⚠⚠⚠ `BCH3034L` — a ZERO-CREDIT laboratory, the first in the project
+
+The University of West Florida, the only public institution carrying the number, lists it at **0.0
+credits** — and that is not a data error.
+
+⚠ **A zero-credit laboratory is a corequisite attached to a lecture that already carries the credit for
+both.** The work and the hours are entirely real; only the accounting differs. **Four consequences the guide
+sets out**, because each catches somebody:
+
+- ⚠⚠ **It does not count toward full-time enrolment.** For a student on financial aid, an athletic
+  scholarship or a student visa, **a zero-credit course does not help reach a credit minimum.**
+- The time commitment is real — about three hours weekly plus reports, **for zero credits**. The
+  plan-around-credits-caught-by-hours problem in its extreme form.
+- It may still be graded and still affect progression.
+- ⚠ **Transfer is genuinely awkward: there is no credit to transfer.** A receiving institution requiring a
+  one-credit biochemistry laboratory may not accept a zero-credit one.
+
+⚠ **Do not confuse this with a PSAV clock-hour course**, which also shows zero credits for an entirely
+different reason. **Both now exist in the catalog and they need different explanations.**
+
+### ⚠⚠ `CHM4610L` — a credit DOUBLING, and it may break an accreditation requirement
+
+UCF **2 credits**; Florida State and UWF **1**. ⚠ **Chemistry degrees are tightly specified and
+ACS-certified programmes carry their own laboratory-hour requirements** — so a one-credit laboratory
+transferring into a two-credit requirement may fall short of a *specific* requirement rather than merely a
+credit count. **A sharper consequence than the usual credit divergence.**
+
+⚠ Also: the statewide record carries this **laboratory** under the **lecture** course's title and
+description (*Inorganic Chemistry: B.S. Majors*) — a clear signal the two are one course in two
+registrations, and a useful diagnostic for other `L` numbers.
+
+### ⚠⚠ `EUH4140` / `EUH4144` — the sequence-partner rule paying off
+
+**Florida Atlantic titles them "Renaissance Europe (1350–1500)" and "Reformation Europe (1500–1650)."**
+⚠ **Read together, the two titles are a deliberate chronological split at 1500 with no gap and no overlap.**
+The other institutions state no dates, so their courses may run to 1600 and overlap their own Reformation
+course — or leave the High Renaissance between two courses covered by neither.
+
+⚠ **This is the batch-181 rule working as intended:** on finding a divergence, check the number's sequence
+partner. **Both guides cross-reference each other and say where the division sits.**
+
+### ⚠ `ENG4013` — three titles naming three different things
+
+**Criticism** (USF), **interpretation** (UNF), **theory** (UWF). ⚠ **These are not synonyms in literary
+study:** criticism is the practice of interpreting works, theory steps back to ask what a text is and where
+meaning resides — and a theory course reads philosophy as much as literature. **The statewide definition
+contains all three**, so every version is legitimate; what differs is the ratio of primary theory to applied
+reading. **The guide tells graduate-school-bound students to seek the theory-weighted version.**
+
+### ⚠ `ENG3113` — UF at 4 credits, and a probable explanation
+
+UF 4, USF 3, UWF 3. ⚠ **The likely cause is a scheduled weekly screening block**, and a 4-credit listing may
+simply be honest about time the other two absorb silently. **The guide says the derived 45 hours understate
+the real commitment for every version** — three hours of class plus a two-hour film is five hours whether or
+not the screening is timetabled.
+
+⚠ UWF's **"Fiction and Film"** is the outlier title and is arguably the most faithful to the number: the
+statewide definition asks for *"verbal versus visual narration"*, **which cannot be done with films alone.**
+
+### Sources
+
+**SCNS statewide for ENG, EUH, BCH and CHM** — four clean fetches. No institution catalog was needed.
+Prerequisite strings ran 777–903 characters.
