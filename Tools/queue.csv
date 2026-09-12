@@ -1481,7 +1481,7 @@ TDR0776,Drafting Detailer 2,11,pushed,989,2026-05-04T00:33:01Z,2026-05-02T15:00:
 TDR0777,Mechanical Drafter,11,pushed,989,2026-05-04T00:33:01Z,2026-05-02T15:01:04Z,2026-05-04T00:33:32Z,(added by reconcile from orphan draft)
 TDR0874,Civil Drafter,11,pushed,989,2026-05-04T00:33:01Z,2026-05-02T15:02:05Z,2026-05-04T00:33:33Z,(added by reconcile from orphan draft)
 TDR0875,Structural Drafter,11,pushed,989,2026-05-04T00:33:01Z,2026-05-02T15:03:05Z,2026-08-30T17:53:34Z,(added by reconcile from orphan draft)
-CES4702C,REINFORCED CONCRETE DESIGN,11,error,989,2026-09-04T01:12:11Z,2026-09-05T00:27:03Z,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+CES4702C,REINFORCED CONCRETE DESIGN,11,pushed,989,2026-09-04T01:12:11Z,2026-09-05T00:27:03Z,2026-09-12T00:45:18Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT2100C,INTRODUCTION TO ARCHAEOLOGY,11,skipped,989,2026-09-04T01:12:11Z,,,UWF publishes lecture-only ANT2100; covered by ANT2100 (published). Batch 124 rule.
 EMS2659,PARAMEDIC INTERNSHIP,11,skipped,989,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 MVK2223,ORGAN,11,skipped,989,2026-08-31T00:09:01Z,,,"Daytona State College project - skipped: applied music/ensemble, individualized instruction"
@@ -1760,7 +1760,6 @@ MVS4343,APP MUS PRIN CELLO,6,skipped,994,2026-09-04T01:12:11Z,,,Applied music: i
 NUR3065L,HEALTH ASSESSMENT,6,skipped,994,2026-09-04T01:12:11Z,,,No UWF equivalent; UWF publishes NUR3067 Health Assessment and Promotion instead (published batch 128). Batch 129.
 NUR4828C,PROFESSIONAL NURSING III,6,skipped,994,2026-09-04T01:12:11Z,,,UWF publishes lecture-only NUR4828; covered by NUR4828 (published batch 128). Batch 129.
 PGY2905C,INDEPENDENT STUDY,6,skipped,994,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
-CEG3011C,SOIL MECHANICS,5,queued,995,2026-09-04T01:12:11Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 MUG2101,CONDUCTING I,5,queued,995,2026-09-04T01:12:11Z,,,"REFRAMED batch 173 - not a sourcing mystery. It is the LOWER-DIVISION number for conducting, whose university counterpart MUG3104 (BASIC CONDUCTING, 7 inst) is ALREADY PUSHED. Conducting is numbered at 1000/2000/3000/4000 across Florida (MUG1200, MUG2101, MUG3104, MUG3301, MUG4104). Checked and absent at both new Coursedog schools (FSCJ 22693 courses, NWFSC 1781). Inventory wrongly lists UWF - UWF carries MUG3104, not MUG2101. Direct source still blocked (FSW/MDC/SPC). Now a SCOPE call, not a sourcing one."
 MUN3133,SYMPHONIC BAND,5,queued,995,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 MUN3323,CHORALE,5,queued,995,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1768,6 +1767,7 @@ MUN4714,CHAMBER JAZZ,5,queued,995,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: 
 MVV4640,VOCAL PEDAGOGY,5,queued,995,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 PUR4801,PUBLIC RELATIONS CASES,5,queued,995,2026-09-04T01:12:12Z,,,"HELD for Ron - batch 173. Numbering collision, already flagged in CLAUDE.md. Statewide PUR4801 = Public Relations Cases (FAMU/UCF/UNF/USF/UWF); UWF alone uses PUR4801 for the campaigns capstone that FGCU/FSU/FIU number PUR4800 and that is ALREADY PUBLISHED here as PUR4800C. Writing from UWF alone would duplicate live content under a number meaning something else elsewhere. See REVIEW_QUEUE item 26."
 TTE4804,HIGHWAY GEOMETRIC DESIGN,5,queued,995,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+CEG3011C,SOIL MECHANICS,5,pushed,995,2026-09-04T01:12:11Z,2026-09-12T00:45:00Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ADV2000C,ADVERTISING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T15:04:22Z,2026-09-07T15:04:35Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH4575,THE CIVIL RIGHTS MOVEMENT,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:08:06Z,2026-09-07T01:08:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMS2010,CIVIL DISCOURSE AND THE AMERICAN POLITICAL ORDER,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:57Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2307,9 +2307,7 @@ COM4120,ORGANIZATIONAL COMMUNICATION,2,queued,998,2026-09-04T01:12:12Z,,,"UWF bu
 COM4301,COMMUNICATION RESEARCH,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COP4723,DATABASE ADMINISTRATION,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COP4864,CLIENT-SIDE PROGRAMMING,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-CWR3201C,FLUID MECHANICS,2,queued,998,2026-09-04T01:12:11Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CWR3201L,FLUID MECHANICS LABORATORY,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-CWR4202C,HYDRAULICS,2,queued,998,2026-09-04T01:12:11Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EAS4020,INTRODUCTION TO FLIGHT,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ECO3106,BEHAVIORAL ECONOMICS,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ECP4613,URBAN ECONOMICS,2,queued,998,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2459,6 +2457,8 @@ THE3243,MUSICAL THEATRE HISTORY,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2
 TPA3022,LIGHTING DESIGN 1,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TPA4061,SCENE DESIGN II,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TRA4155,SUPPLY CHAIN MANAGEMENT,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+CWR3201C,FLUID MECHANICS,2,pushed,998,2026-09-04T01:12:11Z,2026-09-12T00:45:00Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+CWR4202C,HYDRAULICS,2,pushed,998,2026-09-04T01:12:11Z,2026-09-12T00:45:00Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT3153,NORTH AMERICAN ARCHAEOLOGY,2,pushed,998,2026-09-04T01:12:12Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT3311,INDIANS OF THE SOUTHEASTERN UNITED STATES,2,pushed,998,2026-09-04T01:12:12Z,2026-09-04T09:41:48Z,2026-09-04T09:50:27Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT3352,AFRICAN CULTURES,2,pushed,998,2026-09-04T01:12:12Z,2026-09-04T09:39:27Z,2026-09-04T09:50:28Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2737,8 +2737,6 @@ BCN3731C,CONSTRUCTION SAFETY,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026
 BCN4564,CONSTRUCTION MECHANICS II,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CAP4755C,DATAX,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CEG4801C,GEOTECHNICAL DESIGN,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-CES3100C,STRUCTURAL ANALYSIS,1,queued,999,2026-09-04T01:12:11Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-CES4605C,STEEL DESIGN,1,queued,999,2026-09-04T01:12:11Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CGN2328C,TECHNICAL DRAWING AND VISUALIZATION,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CJE3674C,INTRODUCTION TO FORENSIC SCIENCE,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CNT3004C,COMPUTER NETWORKS,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2773,10 +2771,8 @@ TPA4021C,LIGHTING DESIGN II,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-
 TPA4045C,COSTUME DESIGN I,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TPA4077C,SCENE PAINTING,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,queued,999,2026-09-04T01:12:12Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-CET1600,CET1600: Networking Hardware (Networking Fundamentals),,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
-CET1610,"CET1610: Routers (Switching, Routing and Wireless Essentials)",,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
-CET2615,"CET2615: Advanced Routers (Enterprise Networking, Security and Automation)",,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
-CET2620,CET2620: Network Systems Applications (advanced network design and management projects),,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:23Z,2026-09-12T00:32:38Z,(added by reconcile from orphan draft)
+CES3100C,STRUCTURAL ANALYSIS,1,pushed,999,2026-09-04T01:12:11Z,2026-09-12T00:45:01Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+CES4605C,STEEL DESIGN,1,pushed,999,2026-09-04T01:12:11Z,2026-09-12T00:45:01Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT2100,Introduction to Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
 ANT2511,Biological Anthropology,,pushed,1000,2026-09-04T03:07:50Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,(added by reconcile from orphan draft)
 ANT3137,Shipwreck Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
@@ -2798,7 +2794,11 @@ ANT4835,Maritime Archaeological Field Methods,,pushed,1000,2026-09-04T01:37:06Z,
 ANT4836,Scientific and Research Diving,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04T01:37:01Z,2026-09-04T01:37:19Z,(added by reconcile from orphan draft)
 ANT4853C,Geographic Information Systems in Anthropology,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04T01:37:01Z,2026-09-04T01:37:19Z,(added by reconcile from orphan draft)
 ART3713,Figure Sculpture,,pushed,1000,2026-09-04T14:56:43Z,2026-09-04T14:54:56Z,2026-09-04T14:56:48Z,(added by reconcile from orphan draft)
+CET1600,CET1600: Networking Hardware (Networking Fundamentals),,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
+CET1610,"CET1610: Routers (Switching, Routing and Wireless Essentials)",,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
 CET2544,Introduction to VMware and Computer Virtualization Technology,,pushed,1000,2026-05-04T00:32:59Z,2026-05-02T03:05:50Z,2026-05-04T00:33:40Z,(added by reconcile from orphan draft)
+CET2615,"CET2615: Advanced Routers (Enterprise Networking, Security and Automation)",,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
+CET2620,CET2620: Network Systems Applications (advanced network design and management projects),,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:23Z,2026-09-12T00:32:38Z,(added by reconcile from orphan draft)
 CET2792,Microsoft Windows Server Administration,,pushed,1000,2026-05-04T00:32:59Z,2026-05-02T06:13:36Z,2026-05-04T00:33:40Z,(added by reconcile from orphan draft)
 CET2793,Windows Server Administration,,pushed,1000,2026-05-04T00:32:59Z,2026-05-02T06:25:50Z,2026-05-04T00:33:01Z,(added by reconcile from orphan draft)
 CJK0420,Criminal Justice Corrections (Defensive Tactics),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:21Z,(added by reconcile from orphan draft)

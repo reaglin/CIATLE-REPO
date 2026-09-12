@@ -10,7 +10,7 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-11 (batch 190 — the first batch under the course-catalog rules)
+**Last updated:** 2026-09-11 (batch 191)
 
 ---
 
@@ -1449,6 +1449,64 @@ this pipeline guards against, sitting in production data. `contactHours` is **nu
 them over the API while working each prefix — the cheap path, since every one of these courses needs titles
 and offerings anyway — or a one-off migration). **No decision needed from Ron unless he prefers the
 migration.**
+
+---
+
+## 59. ⚠⚠⚠ The queue holds the MINORITY form of several engineering courses — **needs Ron to queue the majority forms** (batch 191)
+
+**The most actionable item in this file.** Working the queued civil-engineering rows revealed that for three
+of them, the queue holds the id **almost nobody uses**, and the id most of Florida uses **is not in the queue
+at all**:
+
+| Queued and now written | Public institutions | Not queued, no guide | Public institutions |
+|---|---|---|---|
+| `CES4605C` | 1 | **`CES4605`** | **8** |
+| `CES4702C` | 3 | **`CES4702`** | **8** |
+| `CWR3201C` | 2 | **`CWR3201`** | **7** |
+
+⚠ **Under the rule that guides are produced only from a queue, these will never be written unless they are
+queued.** They are among the highest-coverage engineering courses in the state — steel design, reinforced
+concrete design and fluid mechanics at every public engineering school in Florida.
+
+**225 such courses** were found across the four prefixes this session touched, listed in
+**`Tools/guideless_found.csv`** with institution counts and titles.
+
+**The ask: which of them to add to `queue.csv`.** A reasonable first cut would be the 4-or-more-institution
+rows, which is about a dozen courses and covers the entire structural and geotechnical core.
+
+---
+
+## 60. ⚠⚠ LEVEL divergence — a new category of number divergence (batch 191)
+
+**The same subject at the 3000 level at some institutions and the 4000 level at others.** Instances found:
+
+| Subject | 3000-level | 4000-level |
+|---|---|---|
+| Structural analysis | `CES3100C` (FGCU), `CES3100` (5 others) | `CES4100C` (UCF) |
+| Soil mechanics | `CEG3011C` (FAU, FGCU, Florida Poly, UNF) | `CEG4011C` (UCF) |
+
+⚠ **Two harms.** The transfer guarantee applies only between institutions sharing a number, so credit is
+evaluated. **And the level digit has its own consequences** — programmes cap transferable upper-division
+credit and impose residency minimums, so a course that is junior-level at one institution and senior-level
+at another can disturb a credit count even where the content is accepted without argument.
+
+**Published with a warning in both guides. No decision needed** unless Ron wants these treated as split
+candidates; the content is genuinely the same, so a single guide with the warning looks right.
+
+---
+
+## 61. ⚠⚠ The prerequisite ceiling is now the normal failure, not an occasional one (batch 191)
+
+**Five of six guides in this batch exceeded 500 characters on the first write** (531, 535, 537, 538, 515);
+only one was clean. Batch 190 had one overflow. Batch 186 had the first.
+
+⚠ **The overflowing strings were not padded** — they carried a credit divergence, a minority-suffix warning,
+minimum-grade conditions and a major-restricted enrolment note, all of which a student needs before
+registering. **The guides most worth reading are the ones whose prerequisite strings do not fit.**
+
+**No decision needed from Ron** — the raise to 1000 characters is already queued in
+`Deployment/PENDING_SERVER_CHANGES.md`. Recorded here as the evidence that it should ship in the next
+release rather than drift.
 
 ---
 

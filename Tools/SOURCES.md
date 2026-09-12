@@ -18439,3 +18439,93 @@ volume alone.
 ⚠ **`CET1112C`'s guide keeps its warning about the bare number**, and the warning is now doing more work
 than when it was written: there will be no guide at `CET1112` to explain the difference, so the `C` guide is
 the only place a student meets it.
+
+---
+
+## Batch 191 — civil engineering: CES / CWR / CEG (2026-09-11)
+
+**Six guides: `CEG3011C`, `CES3100C`, `CES4605C`, `CES4702C`, `CWR3201C`, `CWR4202C`.** All taken from
+`queue.csv`, per Ron's rule that **guides are produced only for courses in a queue requesting them**.
+`CES4702C` was the long-standing `status=error` row — the taxonomy node it needed is now deployed, so it
+pushed on the first attempt and **the queue now has zero error rows.**
+
+### ⚠⚠⚠ The queue was holding the MINORITY form of three of these courses
+
+The single most consequential finding of the batch, and it is about the queue rather than any course:
+
+| Queued id | Public institutions | The form most of Florida uses | Public institutions | In the queue? |
+|---|---|---|---|---|
+| `CES4605C` | **1** (FGCU) | **`CES4605`** | **8** — FAMU, FAU, FIU, FSU, UCF, UF, USF, UWF | ❌ **no** |
+| `CES4702C` | **3** | **`CES4702`** | **8** | ❌ **no** |
+| `CWR3201C` | **2** | **`CWR3201`** | **7** | ❌ **no** |
+
+⚠ **The high-coverage numbers are not in `queue.csv` at all**, so nothing would ever have picked them up.
+Every guide in this batch therefore carries a table of the bare-number institutions alongside its own, and
+says that the two numbers are **different numbers** — statewide numbering guarantees transfer only between
+institutions sharing a number, so between the `C` and bare groups credit is **evaluated, not guaranteed**.
+
+**These are now reported to Ron for queueing** (`Tools/guideless_found.csv`); they are not written, because
+they are not queued.
+
+### ⚠⚠ LEVEL divergence — a new category
+
+**The same subject carried at the 3000 level at some institutions and the 4000 level at others.**
+
+| Subject | 3000-level | 4000-level |
+|---|---|---|
+| Structural analysis | **`CES3100C`** (FGCU), `CES3100` (5 more) | **`CES4100C`** (UCF) |
+| Soil mechanics | **`CEG3011C`** (FAU, FGCU, FLPOLY, UNF) | **`CEG4011C`** (UCF) |
+
+⚠ **Two distinct harms, and the second is easy to miss.** The number differs, so the transfer guarantee does
+not apply and the credit is evaluated. **And the level digit itself carries weight:** programmes cap
+transferable upper-division credit and impose residency minimums, so **a course that is junior-level at one
+institution and senior-level at another can disturb a credit count even when the content is accepted without
+argument.**
+
+### ⚠⚠ The RESOLVE THE RANGE rule fired properly on its second outing
+
+Batch 190 found uniform credits everywhere. This batch found three real divergences, and each guide names
+the school against the figure:
+
+| Course | The split |
+|---|---|
+| **`CEG3011C`** | FAU 3, FGCU 3, Florida Poly 3, **UNF 4** |
+| **`CWR4202C`** | UCF 3, **UNF 4** |
+| `CWR3201` (the bare form) | seven institutions at 3, **UF at 4** |
+
+⚠ **In an ABET-accredited engineering curriculum there is no slack to absorb a credit**, so the difference
+surfaces at the graduation audit. Every guide says so and says to get it confirmed in writing.
+
+### Sources
+
+- **SCNS `statewide` for CES, CWR and CEG** — three fetches, full state definitions. Still the correct
+  first stop.
+- **SCNS flat file** — authoritative per-institution titles and credits; it produced every divergence above.
+- ✅✅ **UCF Kuali worked, and is now exercised rather than merely recorded.** The catalog id is in the
+  `_id` field (**not** `id` — the register's note was right and worth repeating), and the current
+  undergraduate catalog is the one with the latest `endDate`. ⚠⚠ **It publishes
+  `labStudioFieldWorkHours`** — *2 weekly laboratory hours* for `CWR4202C`, `CEG4011C` and `CES4100C`,
+  *0* for `CES4605`, `CES4702` and `CWR3201`. **That is the first Florida source found that corroborates
+  the 60-hour convention for a 3-credit `C` course**, and it also confirms the suffix is the real
+  difference between the two groups above. Its prerequisites carry **minimum grade conditions** too.
+- ❌ **FGCU returned empty 202s on all three prefixes** — rate-triggered, consistent with the batch-183
+  finding. **Not retried.** Broward likewise. The block cost nothing because UCF answered.
+
+### ⚠ A published-guide correction found in passing
+
+The pre-existing `CES4702C` draft asserted that **Florida Polytechnic carries the bare `CES4702`**. The SCNS
+flat file says it carries **`CES4702C`**, and that **UNF carries the `C` form too** — which the draft did not
+mention. Both corrected before pushing. ⚠ **The draft's institution list came from
+`courses_2plus_institutions.csv`**, which is the inventory-unreliability pattern again, now at six confirmed
+instances.
+
+### ⚠⚠ The 500-character prerequisite ceiling: FIVE of six failed on the first write
+
+`CEG3011C` 531, `CWR4202C` 535, `CWR3201C` 537, `CES3100C` 538, `CES4702C` 515. Only `CES4605C` (456) was
+clean. **All six needed the warnings they were carrying** — credit divergence, minority-suffix warning,
+minimum-grade conditions, major-restricted enrolment.
+
+⚠ **This is no longer an occasional overflow; it is the normal case for a course with real transfer
+hazards.** The raise to 1000 characters sitting in `Deployment/PENDING_SERVER_CHANGES.md` is the fix, and
+this batch is the strongest evidence yet for it: **the guides most worth reading are the ones whose
+prerequisite strings do not fit.**
