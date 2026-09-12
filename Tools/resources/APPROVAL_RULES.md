@@ -86,10 +86,18 @@ sentence so it is easy to copy.
 
 ## Resources written for ONE specific course number
 
-A site built for a named course — its modules matching that course's structure — **is still listed for other
-courses whose material it genuinely covers**, under the ordinary course-match test. Say in that course's
-summary that it was written for a different course number and which parts line up, so the student is not
-surprised by the branding when they arrive.
+**Ron's rule, 2026-09-11.** A resource built for a named course — its modules matching that course's
+structure — **is listed for the other courses its content applies to**, under the ordinary course-match
+test. On those other courses, open the summary with **one short standard sentence** naming the source
+course:
+
+> **Developed for COP4708 with application to this course.**
+
+Then describe the resource as normal. Keep the note to that one sentence — ⚠ **do not editorialise about
+how closely it fits or which parts line up.** The student can see the content; the note exists so the
+course number on the page is not a surprise when they arrive.
+
+The listing on the course it was *built* for carries no such note.
 
 ## Self-submitted and staff-submitted resources
 
