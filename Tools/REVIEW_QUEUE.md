@@ -1542,7 +1542,20 @@ institution's use of a number looks like a mistake rather than a variation.
 
 ---
 
-## 64. ⚠⚠⚠ The 500-character prerequisite ceiling now fails FIVE of SIX guides, twice running (batch 192)
+## 64. ✅ RESOLVED — the prerequisite ceiling was raised to 1000 and deployed (2026-09-11)
+
+**Ron deployed the raise** (`c8f4f37`) the same day this item was written. Verified live: a 552-character
+string pushed and read back intact. **Ten guides republished at v1.1 with their trimmed warnings restored**
+(`CES3100C`, `CWR3201C`, `CWR4202C`, `CEG3011C`, `MUN3443`, `MUN3713`, `CES4702C`, `MUN3313`, `MUN3323`,
+`MUN4714`); `CES4605C` and `MUN3133` were never trimmed and were not republished. Detail in `SOURCES.md`.
+
+⚠ One tooling note worth keeping: **`scratchpad/mkguide.py` still carried the old 500** and would have
+blocked long strings locally, looking exactly like the server rejecting them. **When a server limit changes,
+grep `Tools/` for the number as well as updating the validator.**
+
+### The original entry, kept for the evidence
+
+**The 500-character prerequisite ceiling failed FIVE of SIX guides, twice running (batch 192)**
 
 | Batch | Over the limit on first write |
 |---|---|

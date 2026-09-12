@@ -24,7 +24,7 @@ TOOLS = os.path.dirname(HERE)
 HTML = os.path.join(HERE, 'html')
 DRAFTS = os.path.join(TOOLS, 'drafts')
 
-LIMITS = (('title', 300), ('prerequisites', 500), ('version', 50))
+LIMITS = (('title', 300), ('prerequisites', 1000), ('version', 50))  # prereq raised 500 -> 1000, 2026-09-11
 
 
 def build(cid, meta):

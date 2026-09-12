@@ -18630,3 +18630,54 @@ exactly what a student needs before registering. **`Deployment/PENDING_SERVER_CH
   `0-1` registrations and the UWF reversal, none of which is visible from any catalog page.
 - No institution catalog was fetched for this batch. ⚠ **Worth noting that it was not needed**: for
   ensembles the flat file carries what matters — who offers it, what they call it, and what it is worth.
+
+---
+
+## ✅ The prerequisite ceiling is RAISED and DEPLOYED — the trimmed warnings are restored (2026-09-11)
+
+**Ron deployed the 500 → 1000 raise** (commit `c8f4f37`), closing the entry that had been open since
+2026-09-08 and which batches 191 and 192 had made the most pressing pending change in the project.
+
+**Verified against the live server** rather than assumed: `MUN3443` pushed with a **552-character**
+prerequisite string, read back at 552 intact. The old ceiling would have returned HTTP 400.
+
+### Ten guides republished at v1.1 with their warnings restored
+
+Every guide whose prerequisite string had been cut *only* to fit 500 characters:
+
+| Guide | Trimmed to | Restored to |
+|---|---|---|
+| `CES3100C` | 477 | **538** |
+| `CWR3201C` | 480 | **537** |
+| `CWR4202C` | 452 | **535** |
+| `CEG3011C` | 474 | **531** |
+| `MUN3443` | 454 | **552** |
+| `MUN3713` | 438 | **523** |
+| `CES4702C` | 465 | **515** |
+| `MUN3313` | 458 | **511** |
+| `MUN3323` | 456 | **508** |
+| `MUN4714` | 429 | **503** |
+
+**`CES4605C` (456) and `MUN3133` (499) were never trimmed and were NOT republished** — a version bump with
+no content change is noise, and it would misrepresent the guide as revised.
+
+### ⚠ Why this was worth doing rather than leaving
+
+What the trims had removed was not padding. Across the ten: **the reason a prerequisite is real rather than
+nominal** (fluid mechanics gating soil mechanics, because a third of that course is water moving through
+soil), **audition content** (the improvisation component that catches classically trained readers), **the
+zero-credit registration option**, and **credit-spread warnings naming the institution**. Each is something
+a student needs *before* registering, which is exactly why it lives in that field — it is the first thing a
+queue reader and the guide page show.
+
+### Tooling
+
+`validate_drafts.py`, `Tools/CLAUDE.md` and the `/guide` skill were updated in Ron's deploy commit.
+⚠ **`scratchpad/mkguide.py` was missed** and still carried `('prerequisites', 500)` in its `LIMITS` tuple —
+it would have rejected a long string locally before the server ever saw it, which looks exactly like the
+server still being on the old limit. **Fixed.** ⚠ **When a server limit changes, grep for the number in
+`Tools/` as well as in the validator** — the assembler mirrors these limits deliberately, and a stale mirror
+is a confusing failure.
+
+**Unchanged and correct:** `PublishValidators.cs` line 85 caps the *guide-request* `Reason` field at 500.
+Different field, different purpose — leave it.
