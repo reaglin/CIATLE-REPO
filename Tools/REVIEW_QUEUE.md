@@ -10,7 +10,7 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-11 (batch 194)
+**Last updated:** 2026-09-11 (batch 196)
 
 ---
 
@@ -938,7 +938,19 @@ at UWF gets **pre-1917 Russia**, which is close to the opposite of what the titl
 **No decision needed** — the row is queued and workable, and the sourcing is recorded here so it is not
 re-derived. **Flagging it because a live guide written from the title alone would have been wrong.**
 
-## 36. ⚠ `GRA3112C` and `GRA4154C` — sourcing failure, not a suffix problem (batch 184) — *informational*
+## 36. ✅ RESOLVED — `GRA3112C` and `GRA4154C` are written; SCNS answered what no catalog would (2026-09-11)
+
+**Both published in batch 196.** The item was parked as a sourcing failure because no institution catalog
+answered — and **SCNS statewide, solved two days after this was written, answers both completely**: full
+statewide descriptions plus per-institution titles and credits for four institutions each.
+
+⚠⚠ **The general lesson is worth more than the two guides: when a new source lands, re-run the items parked
+for want of one.** This sat as "informational" while the thing it was waiting for already existed. **Items
+44 and 48 name other parked sourcing failures that should be re-tested against SCNS.**
+
+The original entry follows.
+
+### Original entry (batch 184)
 
 Both were probed and pulled from batch 184. **Neither appears at UWF (no `gra` catalog entry), at UF, in
 FSU's art bulletin, or in the FIU cache** — and the inventory lists FAU, FSU, UCF, UNF and UWF between
@@ -1657,6 +1669,39 @@ position than the register's "curl 000 / 404" entry implies. Neither is a Course
 
 Eight probes, then stopped per the burst rule. **No decision needed** — recorded so the next session starts
 from "find the path" rather than "assume blocked." Both colleges carry courses the project will meet again.
+
+---
+
+## 71. ⚠⚠ A third contact-hour shape: the STUDIO course (batch 196) — *tooling fixed, no decision needed*
+
+`GRA3112C` and `GRA4154C` tripped the validator at 90 contact hours. ⚠ **The 90 was right and the validator
+was wrong** — a 3-credit art or design studio meets about six hours a week, because the work is made in the
+room.
+
+| Shape | Ratio | 3 credits |
+|---|---|---|
+| Lecture | ~1:15 | 45 |
+| `C` integrated lecture+lab | ~1:20 | 60 |
+| **Studio** | **~1:30** | **90** |
+
+**`validate_drafts.py` now recognises studio prefixes** (`ART`, `ARE`, `GRA`, `PGY`, `CRW`, `DAA`, `DAN`,
+`THE`, `TPA`, `TPP`, `MUS`, `IND`, `INT`). ⚠ **Without it the warning would have been noise on every studio
+guide the project writes**, which is the condition under which a warning stops being read.
+
+---
+
+## 72. ⚠⚠ `GRA4154C` — "Introduction" at one institution, "Advanced" at three, on a 4000-level number (batch 196)
+
+UCF, UNF and UWF call it **Advanced Illustration**; Florida Atlantic calls it **Introduction to
+Illustration**. ⚠ **The 4000-level number is itself a claim that this is senior work**, making FAU the
+outlier — and in a studio sequence the consequence is real, because the next course assumes a body of prior
+work.
+
+**Published with a diagnostic rather than a guess: check whether your institution enforces the `GRA3512`
+prerequisite.** If it does, the course is advanced whatever it is called.
+
+**No decision needed** — recorded because it is a level divergence *inside* a single number rather than
+between two, which is a shape items 60 and 65 do not cover.
 
 ---
 

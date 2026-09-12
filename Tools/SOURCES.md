@@ -18893,3 +18893,89 @@ your programme requires both cases and campaigns, you may take one twice and mis
 
    ⚠ **Worth generalising:** the submitted course id is a claim, not a fact. **Check it against the
    resource's own content before approving.**
+
+---
+
+## Batch 196 — GRA / ARH / SPM, and a two-year-old sourcing failure closed (2026-09-11)
+
+**Session order as standing:** resources checked (none pending), guide requests checked (none waiting),
+then the course queue. **Seven guides:** `GRA3112C`, `GRA4154C`, `ARH3150`, `ARH3350`, `ARH3728`,
+`SPM3403`, `SPM4604`.
+
+### ✅✅ `REVIEW_QUEUE` item 36 is CLOSED — SCNS answered what no catalog would
+
+`GRA3112C` and `GRA4154C` were pulled from batch 184 as a **sourcing failure**: *"neither appears at UWF, at
+UF, in FSU's art bulletin, or in the FIU cache&hellip; they remain queued and workable if a source opens
+up."* The note added that **studio art courses are a systematic gap** because the institutions carrying them
+are the ones whose catalogs the project cannot reach.
+
+⚠⚠ **SCNS statewide was solved two days after that was written, and it answers both completely** — full
+statewide descriptions, per-institution titles and per-institution credits for four institutions each.
+
+**The general lesson is worth more than the two guides:** ⚠ **when a new source lands, re-run the items that
+were parked for want of one.** Item 36 sat as "informational" while the thing it was waiting for already
+existed. **Other parked sourcing failures should be re-tested against SCNS** — items 44 and 48 name several.
+
+### ⚠⚠ A third contact-hour shape: the STUDIO course
+
+`GRA3112C` and `GRA4154C` tripped the validator's warning — *"3 credits with 90 contact hours (expected ~45,
+or ~60 for a C course)"*. ⚠ **The 90 was correct and the validator's model was incomplete.** A 3-credit art
+or design studio commonly meets **about six hours a week**, because the work is made in the room under
+supervision:
+
+| Shape | Ratio | 3-credit course |
+|---|---|---|
+| Lecture | ~1:15 | 45 hours |
+| `C`-suffix integrated lecture+lab | ~1:20 | 60 hours |
+| **Studio** | **~1:30** | **90 hours** |
+
+**`validate_drafts.py` now knows about studio prefixes** (`ART`, `ARE`, `GRA`, `PGY`, `CRW`, `DAA`, `DAN`,
+`THE`, `TPA`, `TPP`, `MUS`, `IND`, `INT`) and checks them against ~90 instead. ⚠ **This will recur across
+every studio number the project writes**, and the warning would have been noise on all of them.
+
+### ⚠⚠ `GRA4154C` — "Introduction" at one institution, "Advanced" at three, on a 4000-level number
+
+UCF, UNF and UWF all call it **Advanced Illustration**; Florida Atlantic calls it **Introduction to
+Illustration**. ⚠ **The 4000-level number is itself a claim that this is senior work**, which makes FAU the
+outlier — and the divergence is consequential in a studio sequence, where the next course assumes a body of
+prior work. **The diagnostic offered in the guide: check whether your institution enforces the `GRA3512`
+prerequisite.** If it does, the course is advanced whatever it is called.
+
+### ⚠ `GRA3112C` — two agreeing catalogs outrank a generic statewide title, again
+
+Statewide: **"Computer Design II"**, described as *"the technology of electronic art"* — a category that made
+sense when design was being computerised and now describes nothing. **FAU and FSU both name TYPOGRAPHY**;
+UCF's "Intermediate Graphic Design II" marks the same sequence position. ⚠ **UWF's "Visual Identity,
+Branding, and Logo Design" is adjacent but distinct** — a branding studio spends its weeks on marks, a
+typography studio on setting text, and a student taking the former may have set very little body copy.
+
+### ⚠ `ARH3350` — Florida International at 4 credits against 3
+
+⚠ **Art history majors frequently carry tightly specified distribution requirements by period**, which is
+exactly where a credit mismatch surfaces.
+
+### ✅ `ARH3728` — a clean number, recorded as such
+
+Three institutions, identical statewide title, identical 3 credits, no drift. ⚠ **Worth recording when a
+number is clean**, because the register otherwise reads as though every number is broken.
+
+⚠ Its prerequisite is unusually specific for an art history number: **`ARH2050` AND `ARH2051`**, both halves
+of the survey, named at state level — which means a studio student cannot drop into it and must plan a year
+ahead.
+
+### ⚠ `SPM3403` and `SPM4604` — two courses that date faster than most
+
+**`SPM3403`**: three institutions split a broad definition three ways — the SID role (UF), strategic
+communication (UNF), social media (UWF). ⚠ **What differs is what ends up in the student's portfolio**, and
+employers in this field ask to see work.
+
+**`SPM4604`**: ⚠⚠ **the course in this catalog most exposed to current events.** NIL, conference
+realignment and antitrust litigation have unsettled arrangements that stood for decades; **a textbook
+printed before 2021 does not describe the current environment.** UWF's comparative "Around the World"
+framing is noted as the better preparation, since American sport governance — closed leagues, the draft,
+elite sport attached to universities — is a global outlier that only looks natural from inside.
+
+### Sources
+
+**SCNS statewide for GRA, ARH and SPM** — three fetches, all clean, and the GRA one closed item 36. **No
+institution catalog was fetched**; the flat file and statewide descriptions covered everything.

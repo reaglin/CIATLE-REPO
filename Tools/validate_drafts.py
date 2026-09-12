@@ -54,6 +54,15 @@ STAMP_KEYS = {"pushed_utc"}
 # into the guide HTML as an "Offering Notes" section.
 OPTIONAL_KEYS = {"offering_notes"}
 
+# Prefixes whose courses are STUDIO courses, where the credit-to-contact-hour ratio is
+# roughly 1:30 rather than the 1:15 of a lecture course or 1:20 of a C-suffix lab course.
+# A 3-credit studio meets about six hours a week because the work is made in the room.
+# Added 2026-09-11 after GRA3112C and GRA4154C tripped the lecture heuristic at 90 hours,
+# which was the correct figure for a studio.
+STUDIO_PREFIX_RE = re.compile(
+    r"^(ART|ARE|GRA|PGY|CRW|DAA|DAN|THE|TPA|TPP|MUS|IND|INT)\d", re.IGNORECASE
+)
+
 # Server-side bounds (PublishValidators.cs lines 103-107).
 MAX_TITLE = 300
 MAX_PREREQ = 1000          # raised from 500 on 2026-09-11; mirrors the server rule
@@ -217,6 +226,16 @@ def check(path: Path) -> tuple[list[str], list[str]]:
                 f"credits == contact_hours == {credits}: looks like the clock-hour "
                 f"count was copied into credits (PSAV courses want credits=0)"
             )
+        elif credits == 3 and STUDIO_PREFIX_RE.match(course_id):
+            # Studio courses are a third shape the earlier rule did not know about.
+            # A 3-credit art/design STUDIO commonly meets about six hours a week --
+            # roughly 90 contact hours -- because the work is done in the room under
+            # supervision. That is not a lecture course and not a C-suffix lab course.
+            if not (75 <= hours <= 105):
+                warnings.append(
+                    f"3 credits with {hours} contact hours for a studio prefix "
+                    f"(expected ~90; a 3-credit studio meets about six hours a week)"
+                )
         elif credits == 3 and not (40 <= hours <= 70):
             warnings.append(f"3 credits with {hours} contact hours (expected ~45, or ~60 for a C course)")
         elif credits == 1 and not (15 <= hours <= 50):
