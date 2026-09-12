@@ -19274,3 +19274,164 @@ holds the **CODE** (`UWF`, `FAMU`), with the full name in **`institution_name`**
 ⚠ **The shape IS documented** — `CLAUDE.md`'s `offering_notes` block shows the code/`institution_name`
 split and the whole wrapper. **The failure was composing the field from memory instead of reading it.**
 **Copy the block from `CLAUDE.md` or from an existing draft; do not reconstruct it.**
+
+## Batch 200 — TPA / ATF / ATR / COM / ECP / EDG (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`TPA2290L`, `ATF1100L`, `ATR3132`, `COM4561`, `ECP4703`, `EDG4442`. **Listing:** 1,473 courses —
+**1,455 created, 18 updated, 0 failed**, 2,029 offerings. **Site 9,484 → 10,949 courses.**
+
+Queue head skipped as held/blocked: `LAE3314` (REVIEW_QUEUE item 20), `MUG2101` (state-college catalogs).
+
+⚠ **The richest batch for new divergence shapes since the EEE sweep.** Four findings below are categories
+this project had not met before.
+
+### ⚠⚠⚠ `ATF1100L` — the statewide TITLE carries a credit range, and two of three carriers fall outside it
+
+The statewide title is **`PRIVATE PILOT FLIGHT (2 - 3 HOURS) (L)`**. ⚠⚠ **The state wrote the credit range
+into the title string.** And the flat file shows **NWFSC 1, Polk State 1, UWF 3** — **both state colleges sit
+BELOW the bottom of the range the state itself named.**
+
+**The explanation is in the surrounding numbers, and it is a divergence shape worth naming: SEQUENCE-POSITION
+divergence, where one number is the WHOLE course at one institution and a PHASE of it at another.**
+
+| Number | Statewide title | What it covers |
+|---|---|---|
+| `ATF1108` | Primary Flight I (1 hour) | through **first solo** |
+| `ATF1109` | Primary Flight II (1 hour) | the **cross-country phase** through the certificate |
+| **`ATF1100`** | **Private Pilot Flight (2–3 hours)** | the certificate — ⚠ **but `ATF1108`'s own description says a student completes it and "would then take ATF1100" for the cross-country phase** |
+| `ATF1103` | Private Pilot Operations (5 hours) | the **ground school**, not flight |
+| `ATF1114` | Private Pilot Flight Accelerated | same certificate, under sixteen weeks |
+
+⚠ **A 1-credit listing matches the phase reading; a 3-credit listing matches the whole-certificate reading.**
+Published at 3 credits (UWF's, and the top of the state's own range) because the guide describes the complete
+certificate, with the phase reading stated in `offering_notes` and the guide body. **Recorded as an
+inference, not as a claim about those two colleges' catalogs.**
+
+⚠⚠ **Two rules fall out of this.** **Read the statewide TITLE for parenthesised hour figures** — several
+`ATF` entries carry them and they are a credit source no other field in the record duplicates. And **survey
+the whole prefix family in the statewide CSV before writing a course whose credits diverge**: the family
+explained a 3× credit difference that the course's own record could not.
+
+### ⚠⚠ `ATF1100L` — contact hours where the Florida convention is meaningless
+
+A flight course's hours are **hours in an aircraft, sold by the hour.** ⚠ **Published 40, derived from the
+FAA regulatory floor** — 35 flight hours under Part 141, 40 under Part 61 — **not from the credit-to-hour
+convention.** The derivation says so, and says the real figure is higher because the national average exceeds
+the minimum. **Where a course is measured by a regulator, the regulator's floor beats the convention.**
+
+Also carried into the guide because no other source states them: the **Class III medical / student pilot
+certificate lead time** (AME appointment, MedXPress, special issuance for a long list of conditions), the
+**TSA Alien Flight Student Program** requirement for non-citizens, **hourly flight fees separate from
+tuition**, and — from `ATF1114`'s own statewide record — *"not approved for veterans seeking to use veterans
+educational benefits."* ⚠ **The screening-warning rule (batch 184) generalises: where clearance or
+certification gates enrolment, it goes in the prerequisite field.**
+
+### ⚠⚠⚠ `EDG4442` — a FIELD EXPERIENCE and a METHODS COURSE on one number. A new shape.
+
+Statewide: **Teaching Strategies and Classroom Management**, prerequisite *"program admission."* UWF
+**"Effective Learning Environments"**; UF **"Rethinking Discipline and Classroom Management"**; ⚠⚠ **UNF
+"Elementary Field Experience III."**
+
+⚠⚠ **This is not subject divergence, title drift, credit divergence or terminology era. It is COURSE-TYPE
+divergence** — the same number is a campus course at two institutions and a **supervised school placement**
+at the third. **The consequences are logistical and they are severe:** Level 2 background screening before
+entering a building, the **district** calendar during the school day, a cooperating teacher's evaluation, and
+a placement a school can end.
+
+⚠⚠⚠ **And the transfer consequence is the sharpest in this batch: state programme approval specifies
+required coursework and required FIELD HOURS separately**, so **`EDG4442` may satisfy one and not the other,
+and the number does not reveal which.** The guide tells the reader to take the syllabus to a certification
+officer and ask specifically. **Recorded as a split candidate — REVIEW_QUEUE item 75.**
+
+⚠ Also from the family: **classroom management is spread across four adjacent numbers** (`EDG4442`,
+`EDG4443`, and `EDG4444`/`EDG4447` which share a title), so a student can cover the material under a number a
+receiving audit does not recognise.
+
+### ⚠⚠ `TPA2290L` — the first VARIABLE-credit row met in the flat file
+
+The flat file gives UCF's credit as **`VAR`**, not a number — where SJRSC/FIU/UWF give `1.0`. ⚠ **Handled
+under Ron's 2026-09-11 rule: `credits` is null and the note carries it**, no min/max pair. The note says the
+value depends on the assignment's scope and is set with the department, and that a variable-credit
+registration transferring into an institution treating the number as exactly 1 credit needs the production
+credit list and logged hours to settle it.
+
+⚠ Two more findings on this number. **UCF's title is "Theatre Participation – Production I", not "Technical
+Theatre Lab"** — *participation* is broader than *technical* and may credit front-of-house or
+performance-adjacent work. And **the number is the first rung of an eight-course ladder** (`TPA2290L` through
+`TPA2298`) where **the Roman numeral is a TERM COUNT, not a skill level**: the statewide prerequisite for the
+first seven is the identical phrase, *"previous courses in technical theatre."* ⚠ **The state flags only the
+first three as laboratory courses** even though the titles continue the sequence — a records inconsistency,
+and why the later rungs appear without the `L`.
+
+⚠⚠ **The credit-versus-hours trap in its most extreme form so far.** 1 credit, and the statewide outcomes
+themselves say *"competency in working extended hours on a production."* **Published 45 hours and labelled a
+FLOOR**, with the advice to get the production calendar before registering — tech week is five to eight hours
+a day plus every performance call plus a strike past midnight.
+
+### ⚠⚠ `COM4561` — the statewide definition FORKS, and the state names this number by a LOCAL title
+
+Two separate findings on one number.
+
+**1. The definition licenses two courses.** *"The class will take **either a social advocacy or a marketing
+perspective**."* ⚠ **Most SCNS definitions describe one course; this one writes a fork into the record** — and
+the three carriers land on three points of the same pipeline: **FSU "Social Media Campaigns"** (the campaign),
+**UNF "Strategic Social Media"** (the strategy), **UWF "Social Media Content Development"** (the content).
+**Only the campaign reading closes the loop from objective to measured result.** ⚠ The state separately
+numbers **`COM4565` Social Media Advocacy Campaigns**, which makes the fork look like a legacy of sparser
+numbering.
+
+**2. ⚠⚠ A new caution about reading SCNS prerequisite strings.** `COM4564` Social Media Management lists its
+prerequisite as *"COM4561 **Social Media Content Development** with a grade of C- or above"* — **naming this
+number by UWF's LOCAL title rather than by the state's own.** ⚠ **The statewide records are
+institution-contributed, and a local title can end up in a statewide field.** Two uses: **do not treat a title
+inside a prerequisite string as the statewide title**, and **a prerequisite string naming a local title is
+evidence of which institution contributed the entry** — here, confirming `COM4561`→`COM4564` is a real
+sequence at UWF with an explicit C-minus floor.
+
+### ⚠⚠ `ATR3132` — the profession moved to graduate entry, and the statewide record shows it
+
+Athletic training's entry-level degree is now the **master's**; undergraduate professional programmes closed
+to new admissions. ⚠⚠ **So an undergraduate `ATR` course is pre-professional coursework and does not
+accumulate toward Board of Certification eligibility.** A catalog will not say this.
+
+⚠ **The statewide record is the evidence, and reading the prefix family surfaced it mechanically:**
+
+| Number | Stated prerequisite |
+|---|---|
+| `ATR3132` | none |
+| `ATR4106`, `ATR4117`, `ATR4118` | **admission to MAT degree program** (one names an `ATR5xxxC` course) |
+| `ATR4108`, `ATR4128` | **admission into the Doctor of Athletic Training program** |
+
+⚠ **Several are graduate courses still carrying 4000-level numbers** — a field that moved faster than its
+numbering. **A 4000-level `ATR` number is not evidence a course is open to undergraduates.** The guide tells
+the student to work backwards from target professional master's prerequisite lists, where this course
+generally satisfies the biomechanics requirement.
+
+**Title divergence runs one way here: only USF keeps "pathomechanics"** — the injury half that is the reason
+the number exists. FSU says *Kinesiology*, UWF *Functional Kinesiology*. All 3 credits.
+
+### ✅ `ECP4703` — clean, and said so
+
+Three institutions, identical titles, identical credits. **Stated explicitly in the guide**, per the batch-199
+decision (REVIEW_QUEUE item 74). What varies is only how quantitative a section is, given as a two-column
+test.
+
+### ⚠ Tooling notes from this batch
+
+- **`scns.parse_flatfile` field names**: the institution column is **`institution`** (not `inst`) and the
+  course id is **`r['code']`** (`s[10:18]`, prefix+level+century+decade+unit+lab). Two wrong guesses cost a
+  silent empty result — ⚠ **a filter that matches nothing prints nothing, which reads exactly like "no rows
+  exist."**
+- **`inst_map.json` keys are unpadded decimal strings** (`"82"`), while the flat file writes `0000082` —
+  `str(int(code))` bridges them. The value is `"UWF - UNIVERSITY OF WEST FLORIDA"`, so split on `" - "` for
+  the short code. ⚠ **`scns.is_public()` / `sector_of()` take the SHORT ALPHA code, not the number.**
+- **The statewide CSV has no level column.** Match a course as `ID_Century` (the last three digits) plus
+  `DS_Course_Intent1` (`LOWER`/`UPPER`/`GRADUATE`); ⚠ **`IN_Lab` is NOT reliable** — `ATF1100L` carries
+  `IN_Lab = N` with the `(L)` written into the title text instead.
+- ⚠ **Surveying a prefix family from the statewide CSV is now a standing move, and it paid three times in one
+  batch** — it explained `ATF`'s credit divergence, exposed `ATR`'s degree-level shift, and found `EDG`'s four
+  competing classroom-management numbers. **One already-downloaded CSV, one filter on `ID_Century`.**
+- ⚠ **The Bash heredoc failed twice again on long content** (a 250-line Python file and this markdown block),
+  with `unexpected EOF while looking for matching '`. **Use the Write tool for anything long, then `cat` or
+  run the file.** This is the third session it has cost time.

@@ -1740,6 +1740,92 @@ Ron would rather guides stayed silent on clean numbers.
 
 ---
 
+## 75. ⚠⚠⚠ `EDG4442` — a FIELD EXPERIENCE and a METHODS COURSE on one number (batch 200) — **split candidate, and a new shape**
+
+Statewide title: **Teaching Strategies and Classroom Management**, prerequisite *"program admission."*
+
+| Institution | Its title | What it is |
+|---|---|---|
+| UWF | Effective Learning Environments | campus methods course |
+| UF | Rethinking Discipline and Classroom Management | campus methods course |
+| **UNF** | **Elementary Field Experience III** | ⚠⚠ **a supervised school placement** |
+
+⚠⚠ **This is not any divergence shape already in `CLAUDE.md`.** It is not a different subject, a different
+title for the same subject, a credit difference, a chronological split, or a terminology era. **It is a
+different KIND of course**: two institutions teach classroom management on campus and the third places the
+student in a school with a cooperating teacher.
+
+**Why it is more consequential than a title divergence.** A field experience carries **Level 2 background
+screening before entry to a building**, the **school district's** calendar during the school day, a
+cooperating teacher's evaluation, and a placement a school can terminate. None of that applies to a methods
+course, and a student who registers expecting one and gets the other cannot simply work harder.
+
+⚠⚠⚠ **The transfer consequence is the real problem. Florida programme approval specifies required
+COURSEWORK and required FIELD HOURS separately.** So `EDG4442` may satisfy one requirement and not the other,
+**and nothing in the number distinguishes them.** A student transferring between these three institutions can
+arrive with a course that counts for the wrong half.
+
+**Published as one guide** covering the statewide methods subject, with the field-experience reading labelled,
+its five logistical consequences spelled out, a two-column test, and the advice to take the syllabus to a
+certification officer.
+
+**Decisions wanted:**
+
+1. **Is course-TYPE divergence (placement vs classroom) grounds for the `-SCNS` / `-UNF` split?** It is
+   arguably stronger than several candidates already in the table, because the two halves cannot substitute
+   for each other in a *state-approved* sequence — which is a harder constraint than a transfer evaluator's
+   judgement.
+2. ⚠ **Should the divergence taxonomy in `CLAUDE.md` gain "course-type divergence" as a named category?**
+   Expect more of it: field experiences, practica, internships and clinicals all get numbered alongside the
+   coursework they accompany, so this is unlikely to be the only instance.
+
+---
+
+## 76. ⚠⚠ `ATF1100L` — the statewide TITLE states a credit range and two of three carriers fall outside it (batch 200)
+
+Statewide title: **`PRIVATE PILOT FLIGHT (2 - 3 HOURS) (L)`** — the state wrote the credit range into the
+title. Carriers: **NWFSC 1, Polk State 1, UWF 3.**
+
+**The likely explanation, from the prefix family:** `ATF1108` *Primary Flight I (1 hour)* and `ATF1109`
+*Primary Flight II (1 hour)* split the certificate into two phases, and ⚠ **`ATF1108`'s own statewide
+description says a student completes it and "would then take ATF1100"** — so **`ATF1100` is the whole flight
+course at one institution and the second phase at another.** A 1-credit listing fits the phase reading.
+
+**Published at 3 credits** (UWF's, the top of the state's stated range) because the guide describes the
+complete certificate, with the phase reading stated in `offering_notes` and in the body, **labelled as an
+inference** rather than as a claim about those two colleges' catalogs.
+
+**No decision needed on the guide.** Recorded for two reasons:
+
+1. ⚠ **It is the first case of the STATE's own record containing a credit figure that its carriers contradict**
+   — previous credit divergences were between institutions, with the state silent.
+2. ⚠ **The `ATF` prefix has more of these.** Several statewide titles carry parenthesised hour figures
+   (`ATF1103` "(5 HOURS)", `ATF1108` "(1 HOUR)", `ATF1600` "(1 HOUR)"). **Whoever completes the `ATF` prefix
+   should expect to meet this repeatedly** and should read the title as a data field, not a label.
+
+---
+
+## 77. ⚠ A title inside an SCNS prerequisite string can be an INSTITUTION's title, not the state's (batch 200)
+
+`COM4564` *Social Media Management* lists its statewide prerequisite as:
+
+> *"COM4561 **Social Media Content Development** with a grade of C- or above."*
+
+⚠ **But the statewide title of `COM4561` is *Social Media Campaigns*. "Social Media Content Development" is
+UWF's local title.**
+
+**Two things follow, and both are reusable:**
+
+- ⚠ **Do not read a title inside a prerequisite string as the statewide title.** The statewide records are
+  institution-contributed and a local title can land in a statewide field.
+- ⚠ **A prerequisite naming a local title is evidence of which institution contributed the entry** — useful
+  when deciding which catalog to check. Here it confirmed `COM4561`→`COM4564` is a real sequence at UWF, with
+  an explicit C-minus floor, which went into the guide.
+
+**No decision needed** — recorded as a standing caution for anyone mining `DS_Prerequisites1`.
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

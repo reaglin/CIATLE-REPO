@@ -895,6 +895,131 @@ plan around credits and are caught by hours.**
 voluntary, results are not medical advice, classmates' measurements are private, and bloodborne pathogen
 procedures apply strictly.**
 
+### ⚠⚠⚠ COURSE-TYPE divergence — a campus course at one school, a PLACEMENT at another (batch 200)
+
+**A new category, and not a variant of any above.** Not a different subject, not title drift, not credits, not
+chronology, not terminology era: **the same number is a different KIND of course.**
+
+**`EDG4442`** — statewide *Teaching Strategies and Classroom Management*:
+
+| Institution | Its title | What it is |
+|---|---|---|
+| UWF | Effective Learning Environments | campus methods course |
+| UF | Rethinking Discipline and Classroom Management | campus methods course |
+| **UNF** | **Elementary Field Experience III** | ⚠⚠ **supervised school placement** |
+
+⚠⚠ **Why it outranks a title divergence in consequence.** A placement carries **Level 2 background screening
+before entry to a building**, the **school district's** calendar during the school day, a cooperating
+teacher's evaluation, and a placement a school can terminate. **A student who registers expecting a methods
+course and gets a placement cannot solve it by working harder** — the logistics either fit their term or
+they do not.
+
+⚠⚠⚠ **And the transfer consequence is harder than the usual one: state programme approval specifies required
+COURSEWORK and required FIELD HOURS separately**, so **one number can satisfy one and not the other, with
+nothing in the identifier to say which.** **Tell the reader to take the syllabus to the programme's
+certification officer and ask specifically.**
+
+**Handling: one guide on the statewide subject, with the placement reading LABELLED and its logistics spelled
+out**, plus a two-column test. **Screening, calendar, mandatory reporting and FERPA go in the prerequisite
+field**, per the batch-184 rule.
+
+⚠ **Expect more.** Field experiences, practica, internships and clinicals are routinely numbered alongside the
+coursework they accompany. **When a batch turns one up, add it here.** See `REVIEW_QUEUE.md` item 75 for the
+open split question.
+
+### ⚠⚠ SEQUENCE-POSITION divergence — the whole course at one school, a PHASE of it at another (batch 200)
+
+**Distinct from the sequence-PARTNER rule below, which is about two numbers splitting a subject. This is one
+number meaning different amounts of the same subject.**
+
+**`ATF1100L`** — statewide title **`PRIVATE PILOT FLIGHT (2 - 3 HOURS) (L)`**; carriers **NWFSC 1, Polk State
+1, UWF 3.** The prefix family explains it: `ATF1108` *Primary Flight I (1 hour)* and `ATF1109` *Primary
+Flight II (1 hour)* split the certificate into phases, and ⚠ **`ATF1108`'s own statewide description says a
+student completes it and "would then take ATF1100."** **So `ATF1100` is the complete flight course at one
+institution and the second phase at another.**
+
+**Handling: write the identifier's full subject, give the credit value that matches that reading, and state
+the phase reading in `offering_notes` and the body — labelled as an inference where it is one.** ⚠ **Tell the
+reader the question to ask: how many hours does this specific course include, and does it end at completion or
+at a phase?** **Neither the credit count nor the title answers it.**
+
+### ⚠⚠ The statewide TITLE is a data field — read it for parenthesised hour figures (batch 200)
+
+**`PRIVATE PILOT FLIGHT (2 - 3 HOURS) (L)`.** ⚠⚠ **The state wrote the credit range into the title string**,
+and **two of the three carriers sit BELOW the bottom of it** — the first case of the state's own record
+carrying a credit figure that its carriers contradict.
+
+- ⚠ **The `ATF` prefix does this repeatedly**: `ATF1103` "(5 HOURS)", `ATF1108` "(1 HOUR)", `ATF1600`
+  "(1 HOUR)". **Read the title as data, not as a label.**
+- ⚠ **The title also carries the `(L)` and `(G)` markers**, and `ATF1100`'s `IN_Lab` field says **`N`** while
+  its title says `(L)`. **So `IN_Lab` is not reliable — match on `ID_Century` plus `DS_Course_Intent1`
+  instead.**
+
+### ⚠⚠ Where a REGULATOR measures the course, its floor beats the credit-to-hour convention (batch 200)
+
+**`ATF1100L` was published at 40 contact hours, derived from the FAA minimum** — 35 flight hours under Part
+141, 40 under Part 61 — **not from the Florida 1:15 convention.** A flight course's hours are hours in an
+aircraft, **sold by the hour**, and the convention is meaningless for it.
+
+⚠ **State the derivation and say the real figure is higher** where the regulatory number is a floor that
+practice exceeds. **Expect the same shape wherever a licensing body sets hours**: flight training, clinical
+and practicum hours, PSAV clock-hour programmes, apprenticeship hours.
+
+### ⚠ A title inside an SCNS prerequisite string can be a LOCAL title (batch 200)
+
+**`COM4564`'s statewide prerequisite reads *"COM4561 Social Media Content Development with a grade of C- or
+above"* — but the statewide title of `COM4561` is *Social Media Campaigns*.** "Social Media Content
+Development" is **UWF's** title.
+
+- ⚠ **Do not read a title inside `DS_Prerequisites1` as the statewide title.** The records are
+  institution-contributed and a local title can land in a statewide field.
+- ⚠ **Useful in the other direction: a prerequisite naming a local title tells you which institution
+  contributed the entry**, and therefore which catalog to check. Here it confirmed a real `COM4561`→`COM4564`
+  sequence at UWF with an explicit C-minus floor.
+
+### ⚠⚠ SURVEY THE PREFIX FAMILY from the statewide CSV before writing — a standing move (batch 200)
+
+**One already-downloaded CSV and one filter on `ID_Century` paid three times in a single batch:**
+
+| Prefix | What the family revealed that the course's own record could not |
+|---|---|
+| **`ATF`** | the phase/whole-course split that explains a **3× credit divergence** |
+| **`ATR`** | ⚠⚠ the profession's **move to graduate-level entry** — sibling numbers read *"admission to MAT degree program"* and *"admission into the Doctor of Athletic Training program"*, and several are graduate courses still carrying **4000-level numbers** |
+| **`EDG`** | **four adjacent numbers** competing for classroom management (`EDG4442`, `EDG4443`, and `EDG4444`/`EDG4447` sharing a title) |
+
+```python
+rows = scns.read_report_csv('scratchpad/sw_<PFX>.csv')
+[r for r in rows if r['ID_Century'].startswith('44') and r['CourseStatus'] == 'ACTIVE']
+```
+
+⚠ **Do this whenever a course's credits diverge, its title diverges, or its field has a licensure
+dimension.** **A sibling number's prerequisite string is frequently the most informative sentence available
+about the course you are writing.**
+
+### ⚠ A profession can outgrow its undergraduate numbers — say so (batch 200)
+
+**`ATR3132` is an undergraduate course written for "athletic training majors" in a profession whose
+entry-level degree is now the master's.** ⚠⚠ **An undergraduate `ATR` course is pre-professional coursework
+and does not accumulate toward certification eligibility** — and no catalog says this.
+
+**Handling: state the current entry requirement, say plainly what the course does and does not do, and tell
+the student to work backwards from target graduate programmes' prerequisite lists** (this course generally
+satisfies a biomechanics requirement — ⚠ **which is its real value, and worth naming**).
+
+⚠ **Watch for the same shape elsewhere**: physical therapy (DPT), occupational therapy, audiology,
+pharmacy, and physician assistant programmes have all moved their entry credential upward, leaving
+undergraduate courses in those prefixes serving a purpose their titles no longer describe.
+
+### ⚠ `VAR` in the flat file's credit column (batch 200)
+
+**`TPA2290L` at UCF reads `VAR`, not a number**, where the other three carriers read `1.0`. ⚠ **Handled under
+Ron's 2026-09-11 rule: `credits` is null in `offering_notes` and the note carries it — no min/max pair.**
+
+**Say what it means for the reader:** the value depends on the assignment's scope and is set with the
+department, **so ask what your registration is worth before you register**; and a variable-credit course
+transferring into an institution that treats the number as a fixed value is settled by the logged hours and
+the work record, not by the number.
+
 ### ⚠ When a number diverges, check its SEQUENCE PARTNER (batch 181)
 
 A divergence found on one number is not necessarily isolated. **Where a subject is split across a pair of
