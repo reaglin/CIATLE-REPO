@@ -65,6 +65,41 @@ simulator, a full textbook, a single chapter — and which part of the course it
 guidance.** Guidance sounds like "best read alongside the first four weeks" or "assumes calculus", not
 "the best site for this course".
 
+## PreseMaker-generated sites
+
+**Ron's rule, 2026-09-11.** A submitted site built with **PreseMaker** carries a "Created with PreseMaker"
+line, usually in the footer. Where it does, **say so in the summary and give the Microsoft Store link**:
+
+> https://apps.microsoft.com/detail/9mt854nv3fgf?hl=en-US&gl=US
+
+Write it as the last sentence, in the same plain voice as the rest — an attribution, not a pitch:
+
+> *"The site was generated with PreseMaker (Microsoft Store:
+> https://apps.microsoft.com/detail/9mt854nv3fgf?hl=en-US&gl=US)."*
+
+⚠ **This does not change whether the resource is listed.** A PreseMaker site is judged on course match and
+the always-reject list exactly like any other. The rule is about attribution, and it applies to every such
+site regardless of who submitted it.
+
+⚠ **Summaries are plain text**, so the URL appears as text rather than as a link. Keep it on its own
+sentence so it is easy to copy.
+
+## Resources written for ONE specific course number
+
+A site built for a named course — its modules matching that course's structure — **is still listed for other
+courses whose material it genuinely covers**, under the ordinary course-match test. Say in that course's
+summary that it was written for a different course number and which parts line up, so the student is not
+surprised by the branding when they arrive.
+
+## Self-submitted and staff-submitted resources
+
+The rules above make no exception for who submitted a resource or who owns it, and none is intended: a
+resource is judged on course match and the always-reject list. **Disclosure carries the weight instead** —
+the vendor rule for products, and the PreseMaker rule above, both exist so a reader can see where something
+came from.
+
+---
+
 ## Duplicates
 
 - **The same link is never listed twice for a course** — the site enforces that, matching links after
