@@ -1052,6 +1052,30 @@ department, **so ask what your registration is worth before you register**; and 
 transferring into an institution that treats the number as a fixed value is settled by the logged hours and
 the work record, not by the number.
 
+### ⚠⚠⚠ SEQUENCE-LENGTH divergence — the same field as ONE course or as TWO (batch 204)
+
+**Distinct from sequence-position (one number meaning the whole course or a phase) and from the
+sequence-PARTNER rule. Here the STATE numbers the same field both ways.**
+
+**`PHY3107`** is *Modern Physics II*, the second half of a two-term sequence with `PHY3106`. ⚠⚠
+**But `PHY3101` "Elements of Modern Physics" is a ONE-TERM upper-division treatment of the same field** —
+and Florida numbers modern physics at least **seven** ways in total.
+
+⚠⚠⚠ **Three consequences, and the guide must state all three:**
+
+1. **A `PHY3101` completer has done ONE term, not the first half of two.** ⚠ **A one-term course
+   compresses, and what gets compressed is usually the back half of the field** — for modern physics,
+   the nuclear, solid-state and particle material, which is exactly what the second course is about.
+2. ⚠ **A `PHY3106` completer transferring to a one-term institution may find there is no second course
+   to take**, so the material is simply not available.
+3. ⚠⚠ **Check how many institutions carry the second course at all.** **Only TWO Florida public
+   universities carry `PHY3107`**, so a student cannot assume a second term exists at theirs.
+
+**Handling: name the one-term alternative explicitly, say what it compresses, and tell the reader to send a
+TOPIC LIST rather than a title on transfer** — departments place by content coverage. ⚠ **Expect
+this wherever a field is taught as both a survey and a sequence**: modern physics, organic chemistry,
+anatomy and physiology, world history, and the two-term-versus-one-term language sequences.
+
 ### ⚠⚠⚠ ORDINAL-BASE divergence — the same ordinal counted from a different origin (batch 203)
 
 **Not title drift. The same numbering convention applied to a different starting point.**
@@ -1380,6 +1404,19 @@ TRANSFERABLE"** — a deliberate classification of support and study-skills cour
 **Where it appears, the guide must say: do not count the credit toward a requirement at another institution,
 and ask an adviser how it counts toward degree progress, financial-aid satisfactory academic progress and
 Florida excess hours.** ⚠ **Read the field rather than assuming the boilerplate.**
+
+⚠⚠⚠ **Strengthened (batch 204): it is NOT a support-coursework flag.** `CHM1024` was a
+1-credit study-skills corequisite, where the classification explained itself. **`PET4765` Theory and Methods
+of Coaching Sports is a substantive 4000-level theory course and carries the same classification.**
+⚠ **So the field must be read on EVERY course.**
+
+⚠⚠ **And `PET4765` suggests a useful reading of what it can mean: the three carriers teach
+genuinely different courses** — USF *Scientific Principles of Athletic Coaching*, UWF *Theory and
+Practice of Coaching*, FSU *Principles and Problems of Coaching*. **A statewide guarantee would assert an
+equivalence that does not hold, so the classification looks like a deliberate acknowledgement of divergence
+rather than an oversight.** ⚠ **Where you meet it, check whether the titles diverge too — if they
+do, say so in the guide and tell the reader to get a written answer from the receiving department BEFORE
+taking the course.**
 
 **`hs_credit` — dual-enrolment high-school credit.** The flat file records what a dual-enrolled
 high-school student earns, and it differs within a family:

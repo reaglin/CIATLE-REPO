@@ -19977,3 +19977,178 @@ so **do not assume it satisfies a humanities requirement.**
 - ⚠ **`queue_mgr.py` has no priority-setting command** — `add`, `mark`, `remove`, `defer`, `reconcile`,
   `status`, `list`, `next-batch`, `ready-to-push`, `import-requests`. **A priority change means editing
   `queue.csv` directly**; `defer` moves rows to the rear but there is no promote.
+
+## Batch 204 — PET / PHC / PHI / PHY / PLA (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`PET4765`, `PHC4320`, `PHI4300`, `PHY3107`, `PHY4513`, `PLA3240`. **Listing:** 1,750 courses across
+`PET`/`PHC`/`PHI`/`PHY`/`PLA` — **1,684 created, 66 updated, 0 failed**, 3,101 offerings. **Site 13,188 →
+14,878 courses.** ✅ Live-guide check run on all nine candidates first; none had one.
+
+⚠ **Batch average draft size is up sharply — 29 KB against the low-20s of earlier batches.** Not a target;
+it reflects that these six all had substantive Florida-specific professional content (FHSAA certification,
+mediator certification, county environmental-health careers) that no other source states.
+
+### ⚠⚠⚠ `PHI4300` — Gordon Rule divergence, SECOND worked example
+
+After `HIS2050` (batch 201), the flat file's designation flags disagree again — this time on a 4000-level
+philosophy course:
+
+| Institution | Its title | Gordon Rule writing? |
+|---|---|---|
+| USF | Theory of Knowledge | ✅ **yes** |
+| UWF | Skepticism, Knowledge, and Truth | ✅ **yes** |
+| UCF | Theories of Knowledge | ❌ **none recorded** |
+
+⚠⚠ **The designation makes obvious sense for a course taught entirely by argumentative essay, which makes
+UCF the notable case rather than the other two.** ⚠ **And the practical consequence is the same as
+`HIS2050`'s: a UCF student taking this course to clear a writing requirement has not cleared it.**
+
+⚠ **Two instances in four batches confirms this is not a curiosity.** The batch-201 conclusion holds and is
+now load-bearing: **read the flags, never infer the designation from the number.**
+
+### ⚠⚠⚠ `PET4765` — NOT AUTOMATICALLY TRANSFERABLE, and this one is NOT a support course
+
+**Second instance of the rare transferability classification after `CHM1024` (batch 202).** ⚠⚠ **And it
+matters more than the first, because `CHM1024` was a 1-credit study-skills corequisite where the
+classification was self-explaining. `PET4765` is a substantive 4000-level coaching theory course.**
+
+⚠⚠⚠ **So the conclusion from batch 202 has to be strengthened: `DS_Transferable1` is not a
+support-coursework flag. It must be read on every course.**
+
+**The likely reason is visible on the number itself, which makes it instructive rather than arbitrary:**
+
+| Institution | Its title | Emphasis |
+|---|---|---|
+| USF | Scientific Principles of Athletic Coaching | sport science — physiology, motor learning, periodisation |
+| UWF | Theory and Practice of Coaching | the statewide balance |
+| FSU | Principles and Problems of Coaching | the professional problems — administration, parents, officials, law |
+
+⚠ **Three genuinely different preparations under one number. A statewide transfer guarantee would be
+asserting an equivalence that does not hold** — so the classification looks like a deliberate acknowledgement
+of divergence rather than an oversight. **That is a useful reading of the field: NOT AUTOMATICALLY
+TRANSFERABLE can mean "the state knows these courses differ."**
+
+### ⚠⚠ `PET4765` — the statewide description is visibly dated, and the omissions are the story
+
+The statewide objectives read: *"to be cognizant of the problems related to assistants, facilities, and
+equipment"*; *"the regulating by officials."* ⚠ **Mid-twentieth-century physical-education vocabulary.**
+
+⚠⚠ **The competencies named are still real. What is absent is what a current course must cover:**
+**athlete safety as a legal duty** (concussion protocols, heat-illness policy, cardiac emergency planning),
+**abuse prevention and mandatory reporting**, **athlete mental health**, **Title IX**, **long-term athlete
+development and the evidence against early specialisation**, and **athlete-centred coaching**.
+
+⚠ **Handled under the standing terminology-era treatment: give the current framework and say why it
+changed.** ⚠⚠ **And the safety omission is the sharp one — in Florida, heat-illness policy exists because
+student-athletes died**, so a guide that reproduced the statewide list without it would be incomplete in a
+way that matters.
+
+⚠⚠⚠ **The most useful thing in that guide is not course content at all: this course does NOT qualify anyone
+to coach in Florida.** Interscholastic coaching needs **FHSAA and district certifications** — CPR/AED, CDC
+HEADS UP or NFHS concussion training, heat-illness and cardiac training, NFHS *Fundamentals of Coaching*
+plus a rules clinic, Level 2 screening, abuse-prevention training. **Several are free and take under two
+hours.** **A graduate with the certificates is employable; one with only the course is not**, and no catalog
+says so.
+
+### ⚠⚠⚠ `PHY4513` — terminology-era divergence with UNANIMOUS carriers, plus a graduate-title collision
+
+Statewide: **Thermodynamics and Kinetic Theory** — the older pedagogical division. ⚠⚠ **All three carriers
+say "Thermal and Statistical Physics" (UWF, FSU) or "Thermal & Statistical Mechanics" (Florida Poly).**
+
+⚠ **The unanimity is what makes this a strong case rather than drift: the field moved and the statewide
+label did not follow.** The modern framing makes **statistical mechanics the foundation and derives
+thermodynamics from it**; the older one teaches classical thermodynamics and treats kinetic theory as a
+later topic. ⚠⚠ **A student who learns only the classical framing can compute Carnot efficiencies and cannot
+write down a partition function — and the partition function is what a graduate course, the Physics GRE and
+a condensed-matter group assume.**
+
+⚠⚠ **And a second oddity: the state numbers "Thermal & Statistical Physics" separately as `PHY5515`, a
+GRADUATE course.** So **three undergraduate programmes are teaching under the undergraduate thermodynamics
+number while naming the course after a graduate number's title.** Untidy rather than harmful, but:
+
+- ⚠ **a transcript line reading "Thermal and Statistical Physics" does not identify the level** — keep the
+  syllabus for graduate applications;
+- ⚠⚠ **the state's undergraduate numbering still preserves the old split** (`PHY4503` Thermodynamics,
+  `PHY4523` Introductory Statistical Physics as separate courses) **while institutions have merged them**,
+  so **one of the three does not reliably substitute for another on transfer.**
+
+### ⚠⚠⚠ `PHY3107` — ordinal-base divergence AGAIN, plus a new shape: SEQUENCE-LENGTH divergence
+
+**Ordinal-base first, second instance after `JPN2200` one batch ago.** Statewide **Modern Physics II**;
+⚠⚠ **UWF calls it "Calculus-Based Physics IV"**, counting position in the whole introductory sequence
+(mechanics, electromagnetism, first modern physics, this) where the state counts within modern physics.
+**Same course; invisible to anyone searching the other's catalog.** ⚠ **Two instances in consecutive batches
+confirms the shape.**
+
+⚠⚠⚠ **And a NEW shape behind it: Florida numbers "modern physics" at least SEVEN ways, and one of them is a
+ONE-TERM course covering what this TWO-TERM sequence covers over two.**
+
+| Number | Statewide title | Level |
+|---|---|---|
+| `PHY1033` | Descriptive Classical and Modern Physics | lower (non-majors) |
+| `PHY2100` | Topics in Modern Physics for Teachers | lower |
+| `PHY2102` | Applications of Modern Physics Research | lower |
+| `PHY2105` | Modern Physics | lower |
+| ⚠⚠ `PHY3101` | ⚠⚠ **Elements of Modern Physics** — **ONE term** | upper |
+| `PHY3106` | Modern Physics **I** | upper |
+| **`PHY3107`** | **Modern Physics II** | upper |
+| `PHY3110` | Honors in Modern Physics | upper |
+| `PHY4822`/`4823` | Modern Physics Laboratory I & II | upper |
+
+⚠⚠ **SEQUENCE-LENGTH divergence: a student who completed `PHY3101` has done ONE term of modern physics, not
+the first half of two.** **A one-term course compresses, and what gets compressed is usually the nuclear,
+solid-state and particle material that `PHY3107` is mostly about.** ⚠ **Conversely a `PHY3106` completer
+transferring to a `PHY3101` institution may find there is no second course to take.**
+
+⚠⚠⚠ **And the scarcity is the practical point: only TWO Florida public universities carry `PHY3107` at
+all.** **A Florida physics student cannot assume a second modern-physics term exists at their institution.**
+**Added to `CLAUDE.md`.**
+
+### ⚠⚠ `PHC4320` — a scope ADDITION, and the "open to all majors" statement
+
+Statewide **Environmental Health Science**. FSU matches; UF foregrounds the public-health framing; ⚠⚠ **UWF
+adds OCCUPATIONAL health** — a distinct professional field with its own regulator (**OSHA**), discipline
+(**industrial hygiene**), exposure limits and credentials (**CIH, CSP**).
+
+⚠ **An addition rather than a substitution, and it cuts both ways:** the UWF version is the better
+preparation for a safety or industrial-hygiene career and **necessarily compresses the environmental half.**
+Handled with a two-column test.
+
+⚠ **Also notable: the statewide description says explicitly that the course "is open to all major
+programs."** **Rare, useful, and worth acting on** — it is an upper-division course deliberately kept open,
+and the guide names five majors that benefit. ⚠ **A statewide "open to all majors" is an intent, not a
+guarantee; an institution can still restrict a section.**
+
+⚠⚠ **And the career finding worth keeping: Florida's 67 county health departments employ environmental
+health specialists / sanitarians at BACHELOR's level**, with the **REHS/RS** credential as the standard
+qualification. **A stable licensed career very few students know exists, and this course is its foundation.**
+
+### ✅ `PLA3240` — clean, and the statewide description names Florida
+
+Three public carriers — **St. Petersburg College, FGCU, UWF** — **identical titles, identical credits**, and
+an **FCS-to-SUS pairing**. ✅ **Nothing to resolve.** Said explicitly per the batch-199 decision.
+
+⚠ **Two things make this guide unusually actionable.** The statewide description itself says mediation is
+emphasised *"due to its extensive application in the U.S. and particularly Florida"* — ⚠ **Florida courts
+routinely order mediation before civil trial, and the Florida Supreme Court certifies mediators in five
+categories.** And ⚠⚠ **Florida mediator certification does NOT require a law degree** — the county category
+in particular rests on education points, approved training, observations and mentorship. **A paralegal with
+this coursework is on a real, under-advertised path to a credential most people assume needs a JD, and the
+observation hours take time to accumulate — so start as a student.**
+
+⚠ **The statewide three-course prerequisite (`PLA1003`, `PLA2273`, `BUL2130`) is also informative rather
+than bureaucratic:** ethics and UPL, civil procedure, and contract law — **exactly the three things a
+mediation paralegal uses.** **Reading a prerequisite list for what it reveals about the course is now a
+standing move.**
+
+### ⚠ Tooling notes
+
+- ⚠ **Three of six prerequisites exceeded 1000 characters** (1,005–1,083) — **fifth consecutive batch.**
+  ⚠⚠ **Consider this settled: on a batch with real professional-certification content, expect to trim.**
+  **The Edit tool on the metadata script is the right instrument** (Write for the file, Edit for the trims).
+- ⚠ **`validate_drafts.py` again reported a stale/missing draft correctly** — `PET4765` appeared under
+  "Missing draft file(s)" when its assembly failed, which is the batch-202 lesson working as intended:
+  **read the assembler's per-course output, and a missing line is a failure.**
+- ✅ **The flat-file-driven `offering_notes` pattern (batch 202) is now routine** and handled Florida
+  Polytechnic's short code (`FLPOLY`) without intervention.
