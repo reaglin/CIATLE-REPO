@@ -1,6 +1,15 @@
 # Career Paths — implementation plan
 
 **Status:** plan approved for build 2026-09-04 (Ron's decisions in §1). Nothing built yet.
+
+> ⚠ **Superseded in part — Ron re-scoped this 2026-09-11 (see `COURSE_CATALOG_PLAN.md` §14 and phases 5–6).**
+> Career paths now follow **Programs**, and their shape is lighter than the design below: a documented path
+> whose value in the repo is **the programs and courses that lead to it**, **grounded in links to the detailed
+> sources that support it** — rather than curated routes with ordered stages. The five warnings in §3 still
+> hold, and the institution/offering data the plan wanted now exists (`Institution`, `CourseOffering`, built
+> in phase 1). **Read §14 of the course catalog plan first, then mine this file for the parts that survive:**
+> the principles, the disclaimer wording, the SOC-code material in the guides, and the licensure/accreditation
+> handling.
 **Feature ask (Overall_To_Do):** a "Career Paths" section of floridacourserepo.com. Start with a few
 paths, expand if useful. Each page: definition of the profession · necessary skills · courses
 supporting the path · schools represented in the repo offering it · advice. "We may add items if

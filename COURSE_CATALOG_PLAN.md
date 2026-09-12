@@ -315,7 +315,8 @@ session runs thousands.
 | **3 — Course Resources** | **Remove the home page's "Recently Added" section (Ron, 2026-09-11).** `CourseResource` + migration; resources page with submit form; Resources button + count on rows and course page; `/queue/resources`; resource API; `/admin/resources`; rate limits | submit a website and a YouTube link → pending in the queue, not clickable; approve via API → live on the page with player; reject shows note | **Deploy 3** |
 | **4 — AI review loop** ✅ built 2026-09-11 | `Tools/resources/review_resources.py` (queue · apply `decisions.json` · approve/reject/add · listings · edit/remove/restore/delete), `Tools/resources/APPROVAL_RULES.md` (**Ron to complete**), `Tools/resources/README.md`, and the `/resources` skill (in the untracked `.claude/skills/`) | `python review_resources.py --base-url http://localhost:5199 queue` then `apply` a decisions file | none (tooling) |
 | **4b — Helpful votes on resources** ✅ built 2026-09-11 | A **thumbs-up** on each resource listing so quality sorts itself out instead of a cap on how many resources a course may carry (Ron's call while settling the approval rules). Sketch: `CourseResourceVote` (listing + salted voter IP hash, one vote each, toggleable) with a `Helpful` counter on the listing; anonymous like guide requests, rate-limited, votes counted per **course listing** so the same link can rank differently on different courses; listings ordered by votes then newest; a one-click button in the style of Request Guide, with the count shown; `POST /api/v1/resources/{id}/helpful`; admin sees counts. **Migration** — deployable with, or after, phase 3. | vote on a listing, reload, see the count and the new order | with phase 3, or its own deploy |
-| **5 — Programs interface** | `Program` + `ProgramCourse` + migration (§4); admin program API (upsert, batch); public `/programs` (by school and credential) and `/programs/{slug}` (requirement blocks, course rows with guide/request + resources buttons); course-page "Required in these programs"; `Tools/PROGRAM_API.md`. **Content comes from the schools' catalogs via the `Tools/` session, by Ron's rules** — the site only provides the interface. | push one programme from a scratch JSON; open it; course rows link through | **Deploy 5** |
+| **5 — Programs** (next; direction in §14) | Real programmes at named schools — overview, requirements, career paths, courses — kept **minimal and pointing at the school's own catalog**. `Program` + `ProgramCourse` + migration; admin API (upsert, batch); `/programs` (by school and credential) and `/programs/{slug}`; course-page "Required in these programs"; `Tools/PROGRAM_API.md`. **Content comes from the schools' catalogs via the `Tools/` session** — the site only provides the interface. | push one programme from a scratch JSON; open it; course rows link through | **Deploy 5** |
+| **6 — Career Paths** (after programs; §14) | Documented paths whose worth is the join: the **programs and courses that lead there**, each **grounded in linked sources** (licensing boards, BLS/O·NET, FLDOE, associations). `CareerPath` + joins to programs and courses; `/careers`, `/careers/{slug}`; course and program backlinks. ⚠ Reconcile with `CAREER_PATHS_PLAN.md` first — that plan is heavier (curated routes with stages). | open a path: sources cited, programs listed, courses link to guides | **Deploy 6** |
 | **Later** | **Career Paths** per `CAREER_PATHS_PLAN.md` — its "Schools" data now exists (phase 1) and it can link the programmes that feed each path (phase 5) | | |
 
 Rough size: phases 1 and 3 about one session each; 2 under a session; 4 half a session.
@@ -351,6 +352,58 @@ Each migration phase: `PENDING_SERVER_CHANGES.md` entry, deploy **without** `-Sk
 6. **Course titles are corrected by continuous site reviews.** The course `PUT` therefore **writes the title
    it is sent**; the only protection is that a guide push never resets a real title to the `CourseId`
    placeholder.
+
+## 14. Programs and Career Paths — direction (Ron, 2026-09-11)
+
+Both get their own sections. They exist in the guides today only as prose; these sections make them things a
+student can browse. **Ron's framing, close to his words:**
+
+**Programs** are *"centered around real programs offered at schools — an overview, requirements, career
+paths, and courses. Minimal information which simply points the students at the available programs at
+specific schools."*
+
+- A program is **a real programme at a named school**, not an abstract degree: Daytona State's A.S. Nursing
+  and Valencia's A.S. Nursing are two programs.
+- Four parts per program: **overview · requirements · career paths · courses**.
+- **Minimal by design.** The site is a signpost, not a second catalog: short text, the school's own catalog
+  page linked, and the repo's own courses linked. Anything that would go stale in a year belongs at the
+  school, not here.
+
+**Career Paths** are *"documented paths… the intersection with the repo is the programs and courses that lead
+to those paths… grounded in links to detailed sources that support those career paths."*
+
+- A path is held together by **its sources** — licensing boards, BLS/O*NET, FLDOE, professional
+  associations — not by our own assertions.
+- Its value in this repo is the **join**: which programs lead there, and which courses support it.
+- ⚠ **This is lighter than `CAREER_PATHS_PLAN.md` (2026-09-04)**, which designed curated routes with ordered
+  stages, per-route accreditation notes and cohort warnings. That plan's five warnings still hold (a course
+  number is not a course; suffixes mislead; parallel routes; accreditation outranks credit; cohort-locked
+  chains) — but the shape is now sources + programs + courses. **Reconcile before building**: either the
+  routes tree becomes optional detail on a path, or it goes.
+
+### Sketch to confirm before building
+
+| Table | Holds |
+|---|---|
+| `Program` | Slug, InstitutionCode, Name, Credential (A.S. · A.A. · A.A.S. · B.S. · B.A.S. · certificate · PSAV), CIP code, catalog year, **CatalogUrl** (the school's page — the point of the section), short overview and requirements, Status, UpdatedUtc |
+| `ProgramCourse` | Program + CourseId + block/role — reuses the courses already on the site |
+| `CareerPath` | Slug, Title, Summary, SOC codes, short overview, **SourcesJson** (label · publisher · url) |
+| `CareerPathProgram`, `CareerPathCourse` | the joins that make the section worth having |
+
+Pages: `/programs` (browse by school and credential) · `/programs/{slug}` · `/careers` · `/careers/{slug}`;
+backlinks on course pages ("Required in these programs", "Supports these career paths"). Content arrives over
+an admin API from the `Tools/` session, read from the schools' catalogs and the source documents — same split
+as courses and resources: **the site provides the interface, the content session decides what exists.**
+
+### Open questions for Ron (do not block starting)
+
+1. **Programs first, then career paths?** Paths point at programs, so programs first is the cheaper order.
+2. **Career paths: keep the routes/stages tree** from `CAREER_PATHS_PLAN.md`, or the lighter sources +
+   programs + courses shape described above?
+3. **Which schools to start with** — the catalogs already reachable (UWF, FGCU, FSU, DSC, FIU, UCF), or a
+   named few?
+4. **How minimal is minimal?** Does a program page carry its requirement list in full, or a summary plus the
+   catalog link?
 
 ## 13. Out of scope for this release
 
