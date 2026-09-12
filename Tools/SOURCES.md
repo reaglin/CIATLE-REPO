@@ -20152,3 +20152,189 @@ standing move.**
   **read the assembler's per-course output, and a missing line is a failure.**
 - ✅ **The flat-file-driven `offering_notes` pattern (batch 202) is now routine** and handled Florida
   Polytechnic's short code (`FLPOLY`) without intervention.
+
+## Batch 205 — OCB / PLA / POS / POT / PSY (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`OCB3108L`, `PLA4607`, `POS3625`, `POT4013`, `PSY3215`, `PSY4832`. **Listing:** 1,048 courses across the
+five prefixes — **665 created, 14 updated, 0 failed**, 1,812 offerings. **Site 14,878 → 15,547 courses.**
+✅ Live-guide check run on all nine candidates first; none had one.
+
+✅ **`OCB3108L` reached the head of the queue**, confirming the batch-203 promotion worked — the real id was
+written at the position the phantom `OCB3108C` had occupied.
+
+### ⚠⚠⚠ `PSY3215` — a misfiling, a sequence-position problem AND a credit divergence on one number
+
+**The most confused identifier in several batches, and all three problems are independent.**
+
+| Institution | Its title | Credits |
+|---|---|---|
+| FIU | **Research Methods and Data Analysis in Psychology** | **4** |
+| UWF | **Research Methods in Psychological Science** | **3** |
+
+**1. ⚠⚠⚠ A MISFILING — third instance of the shape.** **FIU's title is the statewide title of a DIFFERENT
+number, `PSY3211`** — whose statewide prerequisite is a statistics course and whose scope (methods *plus*
+data analysis) matches FIU's 4 credits exactly. ⚠ **So FIU appears to be running under `PSY3215` a course the
+state numbers `PSY3211`.** **After `PUR4801` and `MUN3483`, this confirms misfiling as a recurring shape.**
+
+**2. ⚠⚠ A sequence-position problem.** **The statewide title carries a "(CONT)" marker** and the description
+says *"complex research projects"* — the vocabulary of a second course. ⚠ **UWF's title reads as a first,
+standalone methods course.** **So the number may be the first methods course at one institution and the
+second at another, which changes what it ASSUMES rather than what it covers** — and a transfer student
+expecting the basics who meets a course that assumes them is in trouble by week three.
+
+**3. ⚠ Credits 3 versus 4**, consistent with data analysis folded in at FIU.
+
+⚠ **And the family is crowded: Florida numbers research methods in psychology at least EIGHT ways** —
+`PSY2210`, `PSY3211`, `PSY3213`, `PSY3215`, `PSY3017`, `PSY3234`, `PSY4320`, plus graduate numbers.
+⚠⚠ **The state also flags `PSY3215` as a LABORATORY course while neither carrier uses an `L` suffix.**
+
+**Published as one guide** to the statewide second-course reading, with all three problems stated and a
+two-question diagnostic: **is this the first or the second methods course, and is statistics a prerequisite,
+a corequisite, or built in?** **Recorded as REVIEW_QUEUE item 86.**
+
+### ⚠⚠⚠ `POT4013` — chronological divergence with THREE endpoints
+
+Statewide: *Political Theory to Machiavelli*, and the description settles the span — *"Plato to St. Thomas
+Aquinas, **Machiavelli**, and other premodern theorists"* plus *"church-state struggles and the emergence of
+the modern state."*
+
+| Carrier | Its title | Stops at |
+|---|---|---|
+| UF | Great Political Thinkers: Ancient &amp; Medieval | ⚠ Aquinas — **no Machiavelli** |
+| FAU | Ancient Political Thought | ⚠⚠ **Rome — no Augustine, no Aquinas, no Machiavelli** |
+| UWF | Ancient Political Philosophy | ⚠⚠ same |
+
+⚠⚠⚠ **So a student at FAU or UWF may complete this number without reading the two figures the statewide
+definition names** — Aquinas and Machiavelli — **and without the church-state material that is half the
+description.** ⚠ **And Machiavelli is the standard dividing line of the field**: courses are split "to
+Machiavelli" and "from Machiavelli", **so a student taking an "ancient" first half and a "modern" second
+half beginning with Hobbes has a gap exactly where the hinge belongs.**
+
+⚠ **Stronger than `EUH3570`'s two-way chronological split** (batch 184) because there are three distinct
+endpoints and the missing material is the field's own turning point. **Handled by covering the full statewide
+span, labelling where each carrier stops, and giving the reader one question: does this course read Aquinas
+and Machiavelli?**
+
+### ⚠⚠ `POT4013` — an undergraduate title that is the state's GRADUATE title, second instance in two batches
+
+**FAU's "Ancient Political Thought" is the statewide title of `POT6016`, a GRADUATE course.** ⚠ **Second
+instance of this shape in consecutive batches** after `PHY4513`, where all three carriers used the title the
+state assigns to the graduate number `PHY5515`.
+
+⚠ **Consequence is the same both times: a transcript line does not identify the level**, and a graduate
+admissions reader unfamiliar with Florida numbering could take it either way. **Keep the syllabus.**
+
+⚠ **Also worth recording: the state's own `POT` list is internally duplicated** — `POT2010` and `POT2300`
+both titled *Classical Political Theory*, plus at least four overlapping ancient-to-modern surveys
+(`POT2014`, `POT3003`, `POT3021`, `POT3025`). **On transfer, do not assume one political-theory number
+substitutes for another; send the reading list.**
+
+### ⚠⚠⚠ `OCB3108L` — a five-week residential field intensive, and the statewide description is remarkable
+
+**The statewide record is unusually detailed and worth quoting because no institution's catalog says as
+much:** a *"5-week, field intensive course&hellip; through a **round-robin trip around Florida**&hellip;
+from the **reefs of the Florida Keys to the open Gulf of Mexico aboard state-of-the-art research
+vessels**, as well as shallow tropical estuaries of the western Everglades, the temperate estuarine and
+coastal environments of northeast Florida, and watersheds in northwest Florida&hellip; **Some field
+activities will be physically demanding.**"*
+
+⚠ **"Study Abroad in Florida" is not a contradiction** — it means a course **structured like study abroad
+(residential, immersive, weeks away) but conducted domestically**, which works because Florida contains
+reefs, open shelf, mangrove and seagrass estuaries, temperate Atlantic coast and spring-fed watersheds
+within one state.
+
+⚠⚠ **The practical content is what makes this guide useful, and none of it is in a catalog:** a **four-course
+prerequisite with a grade condition** (`CHM2045`, `CHM2046`, `BSC2010`, `BSC2011`, each C or better) that
+must be sequenced from the first term; **five weeks that cannot be combined with a job or another course**,
+almost certainly in summer, with the earnings, aid and housing consequences; **field-course fees beyond
+tuition**; **capacity capped by vessel berths**, with registration often opening the previous autumn; and a
+full unpacking of **"physically demanding"** — heat, vessels, wading in soft mud, hauling gear, snorkelling,
+tide-driven starts — **with the list of things to raise privately with the instructor early (swimming
+ability, seasickness, heat tolerance, medication, accommodations), all of which are routine.**
+
+⚠⚠ **And it is the batch-203 `L`-suffix finding in its clearest form: 3–4 credits, no lecture partner, not a
+laboratory.** **The `L` means the course is ENTIRELY practical work.** ⚠ **The transfer consequence is real —
+an evaluator seeing `L` may assume a 1-credit lab and question a 3–4 credit value** — **so the guide tells
+the reader to keep the syllabus and field manual.**
+
+⚠ **Contact hours needed a third derivation method.** Neither the credit-to-hour convention (batch 199) nor a
+regulator's floor (batch 200, `ATF1100L`) fits. **Published 60 as an explicit conservative lower bound for
+comparability, with the derivation stating that the real figure is well over 150 hours** and that the
+commitment is full-time for five weeks.
+
+### ⚠⚠ `PLA4607` — Florida homestead is the most consequential state-specific rule met so far
+
+Statewide *Wills, Estates and Trusts*; UWF matches, **UCF drops "wills"** (*Estates and Trusts*), **St.
+Petersburg College reframes as practice** (*Estate Planning and Administration*). All 3 credits, one FCS and
+two SUS — ⚠ **three framings of one subject, all three present in the statewide description.**
+
+⚠⚠⚠ **But the finding is Florida law rather than the divergence. Article X, section 4 of the Florida
+Constitution does two things no other state's law does:** protects the homestead from forced sale **without a
+dollar cap**, and ⚠⚠ **restricts DEVISE — where a spouse or minor child survives, the homestead cannot be
+freely left by will, and a will purporting to do so is ineffective as to it.**
+
+⚠ **So a perfectly valid will can fail entirely as to the most valuable asset in the estate.** **It is
+constitutional rather than statutory, so it cannot be drafted around in the ordinary way** — and ⚠⚠
+**Florida's retiree population means a great many clients arrive with wills drafted in states that do not
+have this rule.** **Spotting that is a paralegal's contribution, and it is the highest-value page in the
+course.**
+
+⚠ **Second instance of the UPL rule from `PLA3240` (batch 204), and sharper here:** **estate work is the
+area the Florida Bar has litigated about non-lawyer will preparation specifically**, and the line is
+**typing what a client dictates versus advising what the documents should say.** **The guide supplies the
+sentence — "I cannot advise you on that, let me get the attorney" — and notes that "I'm not a lawyer, but…"
+does not cure it.**
+
+### ⚠⚠ `POS3625` — clean between institutions, divergent between DEPARTMENTS
+
+UNF and FSU use the **identical** title; UWF's *First Amendment Freedom* is the same course. ✅ **All 3
+credits, nothing to resolve on the number.**
+
+⚠⚠ **But the real divergence is one the number does not record: whether the course is taught in political
+science or in journalism and mass communication.** A political-science version covers all six freedoms with
+the **religion clauses at length**; a journalism version emphasises **speech and press with defamation,
+privacy, access and shield laws** in practical detail. ⚠ **Both are legitimate; they are different
+preparations.**
+
+⚠⚠ **This is a new axis worth naming: DEPARTMENTAL divergence that is invisible in the statewide record.**
+The project has used departmental placement as an *emphasis signal* since batch 187 (`SYD4800` in
+anthropology), **but that was inferred from a catalog's own department line. Here the same number is taught
+in two different departments at different institutions and the flat file records neither.** ⚠ **The guide
+gives a usable test: look for the religion clauses on the reading list.** **Added to `CLAUDE.md`.**
+
+⚠ Also recorded: **recent doctrine has moved materially on the Establishment and Free Exercise Clauses**, so
+a textbook or lecture notes more than a few years old may state the law incorrectly — **and that is exactly
+where a generated answer is least reliable, because the corpus is dominated by the pre-shift literature.**
+
+### ⚠⚠ `PSY4832` — one public carrier, and the private exclusion is the informative part
+
+**Only UWF carries it publicly**, at the exact statewide title. ⚠ **Both private carriers title it "Sport
+Psychology", dropping "exercise"** — **and that halves the scope**, because sport and exercise psychology are
+two fields with different clients and different goals (performance for athletes; behaviour change for the
+inactive).
+
+⚠⚠ **Third instance of the pattern where the public-only rule excludes rows whose TITLES are the finding**
+(after `HSA3551` and `LIT3191`): **the private carriers diverge from the statewide title and the single
+public carrier does not.** **Recorded in `offering_notes` as an observation without listing the private
+rows.**
+
+⚠ **The guide's most important content is scope of practice**: ⚠⚠ **you cannot practise sport psychology with
+a bachelor's degree**, and the two graduate routes are genuinely different — **the AASP Certified Mental
+Performance Consultant credential (performance work, explicitly NOT psychotherapy) and psychology licensure
+(clinical work).** **The course's job is to teach referral**, since athletes present with depression,
+disordered eating and suicidality at rates comparable to or above their peers while facing extra barriers to
+help-seeking.
+
+### ⚠ Tooling notes
+
+- ⚠⚠ **FIVE of six prerequisites exceeded 1000 characters on first assembly** (1,018–1,082) and needed **two
+  rounds** of trimming. **Sixth consecutive batch.** ⚠ **On a batch with professional-certification,
+  state-law or safety content, assume the prerequisite field will not fit and budget the trims.**
+- ⚠⚠ **The Bash heredoc failed again on an escaped apostrophe inside a quoted heredoc** — the same failure as
+  batch 203, and entirely predictable from the note already in this file. **The Edit tool is the instrument
+  for these trims; stop reaching for heredoc patches on Python containing quotes.** **This is now the
+  fourth session it has cost time.**
+- ⚠ **Batch average draft size is 31 KB**, up from the low 20s earlier in the project. Not a target — it
+  reflects that these six carried substantive Florida-specific professional content (homestead, mediator and
+  CMPC credentialing, field-course logistics) that no other source states.

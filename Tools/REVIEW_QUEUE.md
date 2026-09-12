@@ -2115,6 +2115,98 @@ id.** **That is what was done here, and it is offered as the proposed general ru
 
 ---
 
+## 86. ⚠⚠⚠ `PSY3215` — a misfiling, a sequence-position problem and a credit divergence on one number (batch 205)
+
+**Three independent problems, and the third instance of the misfiling shape.**
+
+| Institution | Its title | Credits |
+|---|---|---|
+| FIU | **Research Methods and Data Analysis in Psychology** | **4** |
+| UWF | **Research Methods in Psychological Science** | **3** |
+
+**1. ⚠⚠⚠ Misfiling.** **FIU's title is the statewide title of `PSY3211`**, a different number whose statewide
+prerequisite is a statistics course and whose scope — methods *plus* data analysis — matches FIU's 4 credits.
+⚠ **FIU appears to be running under `PSY3215` a course the state numbers `PSY3211`.**
+
+**2. ⚠⚠ Sequence position.** The statewide title carries a **"(CONT)"** marker and the description says
+*"complex research projects"*. ⚠ **UWF's title reads as a FIRST, standalone methods course.** **The number
+may be the first methods course at one institution and the second at another** — which changes what it
+**assumes** rather than what it covers, and a transfer student expecting the basics meets a course that
+assumes them.
+
+**3. ⚠ Credits 3 vs 4.** Consistent with data analysis folded in at FIU.
+
+⚠ **Florida numbers research methods in psychology at least EIGHT ways** (`PSY2210`, `PSY3211`, `PSY3213`,
+`PSY3215`, `PSY3017`, `PSY3234`, `PSY4320`, plus graduate numbers), and ⚠⚠ **the state flags `PSY3215` as a
+LABORATORY course while neither carrier uses an `L` suffix.**
+
+**Published as one guide** to the statewide second-course reading, with all three problems stated and a
+two-question diagnostic for the reader.
+
+**Decisions wanted:**
+
+1. ⚠ **Misfiling now has three instances** — `PUR4801` (a capstone on the cases number), `MUN3483` (a string
+   ensemble on the guitar number), and this. **Item 83 asked whether misfiling is a split candidate; this
+   strengthens the case for an answer**, because the three are not alike: `MUN3483` was a different subject,
+   `PUR4801` a different course in the same subject, and `PSY3215` the *same* subject at a different
+   sequence position.
+2. ⚠⚠ **Is a course whose SEQUENCE POSITION differs between carriers a split candidate, or just a warning?**
+   The subject is identical; what differs is whether it is first or second. **This is the mildest of the
+   three misfilings and arguably the most common shape in the catalog** — worth a general rule rather than a
+   per-course decision.
+
+---
+
+## 87. ⚠⚠ An undergraduate title that is the state's GRADUATE title — now twice in two batches (batch 205)
+
+**`POT4013`:** FAU's undergraduate title **"Ancient Political Thought"** is the statewide title of
+**`POT6016`, a GRADUATE course.**
+
+⚠ **Second instance in consecutive batches.** In batch 204, **all three carriers of `PHY4513` used "Thermal
+and Statistical Physics"**, which is the title the state assigns to the graduate number `PHY5515`.
+
+**The consequence is identical both times and mild but real:** ⚠ **a transcript line does not identify the
+level**, and a graduate admissions reader unfamiliar with Florida numbering could take the course either way.
+**Both guides tell the reader to keep the syllabus.**
+
+⚠ **Also recorded on `POT`: the state's own list is internally duplicated** — `POT2010` and `POT2300` are
+both *Classical Political Theory*, and at least four numbers cover overlapping ancient-to-modern surveys.
+
+**No decision wanted.** Recorded because **two instances in two batches suggests this is systematic rather
+than coincidental**, and it may be worth a line in the verification pass: **a check for undergraduate
+courses carrying titles the state assigns to graduate numbers would be one flat-file parse.**
+
+---
+
+## 88. ⚠⚠ DEPARTMENTAL divergence invisible in the statewide record — `POS3625` (batch 205)
+
+**`POS3625` The First Amendment is clean between institutions** — UNF and FSU use the identical title, all
+three carriers at 3 credits, nothing to resolve on the number.
+
+⚠⚠ **But the same number is taught in different DEPARTMENTS at different institutions, and the statewide
+record does not say which:**
+
+| Political science / public law | Journalism / mass communication |
+|---|---|
+| all six freedoms; **religion clauses at length**; doctrinal development; case-analysis essays | ⚠ **speech and press**; defamation, privacy, access, shield laws in practical detail; religion clauses lightly |
+
+⚠ **Both are legitimately this course and they are different preparations** — a pre-law student wants the
+first, a journalism student the second.
+
+**Why this is worth recording as a distinct shape:** ⚠⚠ **the project has used departmental placement as an
+emphasis signal since batch 187** (`SYD4800` sitting in anthropology rather than sociology at UWF). **But
+that was read off a catalog's own department line for one institution.** **Here the number moves between
+departments ACROSS institutions and the flat file records neither the department nor the consequence.**
+
+⚠ **Added to `CLAUDE.md` with the diagnostic that actually works — look for the religion clauses on the
+reading list** — because the department cannot be read from the data and the syllabus can.
+
+**No decision wanted.** ⚠ **But worth flagging for the verification pass: wherever a subject is taught in two
+different departments (media law, statistics, technical writing, ethics, research methods), expect this, and
+the only available tell is the reading list.**
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

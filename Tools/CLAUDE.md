@@ -1052,6 +1052,30 @@ department, **so ask what your registration is worth before you register**; and 
 transferring into an institution that treats the number as a fixed value is settled by the logged hours and
 the work record, not by the number.
 
+### ⚠⚠ DEPARTMENTAL divergence — the same number in two different departments (batch 205)
+
+**Distinct from the batch-187 departmental-placement signal.** That rule read a department off ONE
+institution's own catalog line. ⚠⚠ **This is the same number taught in DIFFERENT departments at
+different institutions, with the statewide record showing neither the department nor the consequence.**
+
+**`POS3625` The First Amendment** is clean between institutions — identical titles at UNF and FSU, all
+three carriers at 3 credits. ⚠ **But it is taught in political science at some institutions and in
+journalism and mass communication at others:**
+
+| Political science / public law | Journalism / mass communication |
+|---|---|
+| all six freedoms; **religion clauses at length**; doctrinal development | ⚠ **speech and press**; defamation, privacy, access and shield laws in practical detail; religion clauses lightly |
+
+⚠ **Both are legitimate and they are different preparations** — a pre-law student wants the first, a
+journalism student the second.
+
+**Handling: give a diagnostic the reader can actually apply to the SYLLABUS, since the department cannot be
+read from the data.** For `POS3625`: **look for the religion clauses on the reading list.**
+
+⚠⚠ **Expect this wherever a subject has two departmental homes**: media law, statistics, technical
+writing, ethics, research methods, nutrition, and public speaking. **The flat file will look clean and the
+course will not be.** See `REVIEW_QUEUE.md` item 88.
+
 ### ⚠⚠⚠ SEQUENCE-LENGTH divergence — the same field as ONE course or as TWO (batch 204)
 
 **Distinct from sequence-position (one number meaning the whole course or a phase) and from the
@@ -1133,8 +1157,19 @@ wants eight.
 **already numbers both**: jazz guitar at `MUN3484`/`3486`/`3488`, string ensemble at
 `MUN3413`/`3414`/`3243`.
 
-⚠ **Second case of this shape after `PUR4801`** (where UWF put the PR campaigns capstone on the
-*cases* number). ⚠⚠ **The tell: a dedicated statewide number exists for what the institution is
+⚠ **THIRD case of this shape as of batch 205**, and the three are not alike — which is why the
+handling differs:
+
+| Number | What was misfiled | Shape |
+|---|---|---|
+| `PUR4801` | UWF's PR **campaigns capstone** on the *cases* number | a different course in the same subject |
+| `MUN3483` | UCF's **string ensemble** on the *guitar ensemble* number | ⚠⚠ a different SUBJECT |
+| `PSY3215` | FIU's **`PSY3211` methods-and-data-analysis course** on the *(CONT)* number | ⚠ the same subject at a different SEQUENCE POSITION |
+
+⚠⚠ **The mildest and probably commonest shape is the last: same subject, wrong position in a
+sequence.** **What differs is what the course ASSUMES, not what it covers** — so the warning a guide owes
+the reader is *"find out whether this is the first or the second course in the sequence,"* not *"this may be
+a different subject."* ⚠⚠ **The tell: a dedicated statewide number exists for what the institution is
 actually teaching.** **Handling: write the statewide subject, label the misfilings, show the numbering
 table, and give the reader a concrete diagnostic** — for `MUN3483`, *which instruments does this
 ensemble contain, and is the repertoire notated or chart-based?* See `REVIEW_QUEUE.md` item 83.
