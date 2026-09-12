@@ -1826,6 +1826,109 @@ UWF's local title.**
 
 ---
 
+## 78. ⚠⚠⚠ `HFT3271` — FOUR subjects, and the statewide title matches NONE of them (batch 201) — **HELD**
+
+**The most severe divergence in the project to date.** Statewide `HFT3271` is **CONDO/RESORT MANAGEMENT**,
+and unlike `TPA3230C` the statewide record carries a **full description**: condominium and resort operation,
+planning, development, financial investment, marketing, the condo-hotel concept and timesharing.
+
+| Institution | Its title | What the field actually is |
+|---|---|---|
+| FIU | **Nightclub Management** | beverage, entertainment and late-night operations |
+| FGCU | **Club Management** | private and country club management — a CMAA professional field |
+| UWF | **Spa Management** | spa and wellness operations |
+| *statewide* | *Condo/Resort Management* | ⚠ **resort and condominium property management — carried by none of them** |
+
+All three at 3 credits.
+
+⚠⚠⚠ **Why this is worse than `TPA3230C`, which is the current benchmark for severity.** There, three
+institutions disagreed but the statewide title matched one of them (FGCU's *Costume Design*), so a
+`-SCNS` guide had a referent. **Here the statewide description has no carrier at all.** A `-SCNS` page would
+have to be written from the statewide description alone, with no institution teaching it — which is close to
+the line the project's sourcing rule draws against writing from a title.
+
+⚠ **These are four different hospitality sub-industries, not four framings of one.** Different employers,
+different credentials (CMAA for clubs, ISPA for spas, ARDA for timeshare and vacation ownership), different
+career paths. A student who took "Spa Management" and transfers into a programme expecting resort property
+management has covered nothing the receiving programme wants.
+
+⚠ **A secondary observation worth keeping:** the queue row's own title is **"SPA MANAGEMENT"** — UWF's local
+title recorded as though it were the course. **Third instance in two batches of local text occupying a field
+that reads as authoritative** (see items 77 and the `HSA3551` prerequisite in batch 201). **The inventory's
+titles are not statewide titles.**
+
+**Pulled from batch 201. Status left `queued` with a `HELD` note, per the `TPA3230C` convention.**
+
+**Decisions wanted:**
+
+1. **Is this writable at all, and how?** Options: (a) a four-way disambiguation page at the bare number with
+   no content guide, (b) three `-<INST>` guides and a disambiguation stub, with **no** `-SCNS` page because
+   nothing carries it, or (c) leave it held.
+2. ⚠ **This and `TPA3230C` now make two cases where a number carries three or more subjects.** **Should the
+   split rule gain an explicit N-way form**, and should option (b) above — **a disambiguation page with no
+   `-SCNS` half** — be permitted when the statewide reading has no carrier?
+
+---
+
+## 79. ⚠⚠ COURSE-TYPE divergence fired again in the very next batch — `JOU4201` (batch 201)
+
+`EDG4442` (item 75, batch 200) named course-type divergence: a campus course at one institution and a
+supervised placement at another. ⚠⚠ **`JOU4201` is the second case, one batch later.**
+
+| Institution | Its title | What it is |
+|---|---|---|
+| USF | News Editing I | classroom editing course, 3 cr |
+| UWF | News Editing | classroom editing course, 3 cr |
+| **UF** | **News Center Practicum** | ⚠⚠ **supervised newsroom placement, 1–3 VARIABLE credits** |
+
+**Two instances in consecutive batches settles the question item 75 raised: this is a recurring shape, not a
+one-off.** The mechanism is the same in both — **a practicum or placement gets numbered alongside the
+coursework it accompanies** — and so is the consequence: **accredited programmes count skills coursework and
+professional experience as SEPARATE requirements**, so the number satisfies one and not the other, with
+nothing in the identifier to say which.
+
+⚠ `JOU4201` additionally carries **variable credit at UF (1–3)** and a quieter scope divergence (statewide
+defines a **feature/magazine/book** editing course; both classroom carriers teach **news** editing).
+
+**Published as one guide** covering the classroom editing course, with the practicum reading labelled, its
+four logistical consequences stated, and a two-column test.
+
+**No new decision needed beyond item 75** — recorded because it is the evidence that item 75's second
+question ("should the taxonomy gain course-type divergence as a named category?") should be answered yes.
+The category is already written into `CLAUDE.md`; **what is open is whether these cases warrant splits.**
+
+---
+
+## 80. ⚠⚠ The Gordon Rule designation is now MACHINE-READABLE — and a retro-sweep candidate just got cheap (batch 201)
+
+`CLAUDE.md` has asserted since batch 178 that *"the designation is made by the INSTITUTION, not by the course
+number"*, and flagged that **roughly a dozen already-published guides record a UWF Gordon Rule label without
+explaining the C-or-higher condition** — noting a retro-sweep as a `REVIEW_QUEUE` candidate.
+
+⚠⚠ **`HIS2050` (batch 201) demonstrated the rule from data for the first time**, and in doing so showed the
+sweep is now cheap:
+
+| Institution | Its title | Designation flags in the SCNS flat file |
+|---|---|---|
+| FAU | Writing History | `gordon_rule`, `gordon_writing`, `ge_com` |
+| FSU | The Historian's Craft | `gordon_rule`, `gordon_writing` |
+| UWF | Explore History | ⚠ **`ge_soc_sci` only — no Gordon Rule** |
+
+⚠ **The flat file carries per-institution designation flags for EVERY course** (`gordon_rule`,
+`gordon_writing`, `ge_com`, `ge_hum`, `ge_math`, `ge_nat_sci`, `ge_soc_sci`, at byte offsets 226–233). They
+have been in `scns.FIELDS` all along and were not being read.
+
+**Decision wanted:** ⚠ **is a retro-sweep worth doing now?** One parse of `crslist.txt` can produce, for every
+published guide, whether each of its carriers designates the course Gordon Rule writing, Gordon Rule
+mathematics, or a general-education category. That would let the sweep be **a report first and a
+republish-list second** — rather than the open-ended task it looked like in batch 179.
+
+⚠ **New guides now get this automatically**, since the check is one lookup; the question is only about the
+back catalogue. Ron's standing position on retro-work (2026-09-11, on `offering_notes`) was *"a task for much
+later"* — **this item exists to record that the cost has dropped a lot, in case that changes the answer.**
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

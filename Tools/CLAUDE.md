@@ -629,9 +629,25 @@ FIU teaches "Short-Term Rental / Vacation Ownership".** Two independent catalogs
 both contradict the statewide label.
 
 ⚠ **The statewide title is a single SCNS label with no description behind it.** Two agreeing descriptions
-are stronger evidence. **Write to the agreeing pair, and say in the guide what to expect if a third
+are stronger evidence. **That condition is part of the rule, not background — check it
+before applying the rule** (see the `HFT3053` refinement below). **Write to the agreeing pair, and say in the guide what to expect if a third
 institution teaches the broader subject instead.** (Contrast `BSC1050`, where only ONE catalog was
 reachable — there the divergence block is a warning, not a correction.)
+
+#### ⚠⚠ Refinement (batch 201): the rule needs a bare LABEL, and TITLES are weaker than DESCRIPTIONS
+
+**`HFT3053`** — statewide **"Prospectus on Tourism"**, and unlike `HFT4274` the statewide record carries
+a **full, specific description** of an issues-and-impacts course. Both public carriers (Pensacola State and
+UWF, identical titles, 3 credits) call it **Travel and Tourism Management**.
+
+⚠⚠ **Two conditions of the batch-183 rule fail here.** The statewide record is **not** a bare label
+— it has a description to weigh. And what the carriers supply is **titles, not descriptions**, so it is
+two titles against one full description rather than two descriptions against one label.
+
+**Handling where either condition fails: cover BOTH readings with a two-column test and say the evidence is
+mixed.** ⚠ **Do not "correct" a described statewide subject on the strength of agreeing titles alone.**
+Reserve the batch-183 correction for the case it was built for: a bare statewide label, contradicted by two
+independent institution **descriptions**.
 
 ### ⚠⚠ State-college catalog blocks are RATE-TRIGGERED, not permanent (batch 183)
 
@@ -1203,6 +1219,38 @@ baccalaureate degree.
 
 **Standing practice: guides for 1000- and 2000-level general-education courses — composition, humanities,
 mathematics — should check for and mention Gordon Rule status.**
+
+#### ⚠⚠⚠ It is MACHINE-READABLE — look it up, do not infer it (batch 201)
+
+**The SCNS flat file carries per-institution designation flags for every course**, and they have been in
+`scns.FIELDS` since the flat file landed:
+
+| Field | Byte offset | Meaning |
+|---|---|---|
+| `gordon_rule` | 226 | Gordon Rule designated |
+| `gordon_writing` | 227 | the **writing** half |
+| `ge_com` / `ge_hum` / `ge_math` / `ge_nat_sci` / `ge_soc_sci` | 228–232 | general-education category |
+
+⚠⚠ **`HIS2050` is the worked example and the first data-sourced proof of the institution-specific
+rule:**
+
+| Institution | Its title | Flags |
+|---|---|---|
+| FAU | Writing History | `gordon_rule`, `gordon_writing`, `ge_com` |
+| FSU | The Historian's Craft | `gordon_rule`, `gordon_writing` |
+| UWF | Explore History | ⚠⚠ **`ge_soc_sci` only — NO Gordon Rule** |
+
+⚠⚠⚠ **Same number, same level, same credits, same research-writing course — and it
+satisfies the WRITING requirement at two institutions and a SOCIAL SCIENCE requirement at the third.**
+**State it per institution in `offering_notes`, and put the consequence in the prerequisite field**: a
+student using the course to clear a requirement it is not designated for at their own institution has not
+cleared it.
+
+⚠ **Do not display a flag by the first letter of its key** — `gordon_rule`, `gordon_writing` and
+all five `ge_*` keys begin with `g`, so a `k[0]` rendering makes them indistinguishable. Print the names.
+
+⚠ A back-catalogue sweep is now a one-parse report rather than an open-ended task — see
+`REVIEW_QUEUE.md` item 80.
 
 ⚠⚠ **UWF's catalog labels ARE Gordon Rule designations** (identified batch 179):
 

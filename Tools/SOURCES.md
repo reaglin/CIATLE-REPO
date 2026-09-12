@@ -19435,3 +19435,157 @@ test.
 - ⚠ **The Bash heredoc failed twice again on long content** (a 250-line Python file and this markdown block),
   with `unexpected EOF while looking for matching '`. **Use the Write tool for anything long, then `cat` or
   run the file.** This is the third session it has cost time.
+
+## Batch 201 — HIS / GEO / JOU / HSA / IDS / HFT (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`HIS2050`, `GEO4340`, `JOU4201`, `HSA3551`, `IDS3052`, `HFT3053`. **Listing:** 2,056 courses —
+**1,724 created, 47 updated, 285 unchanged, 0 failed**, 3,037 offerings. **Site 10,949 → 12,678 courses.**
+
+Queue head skipped: `LAE3314` (item 20) and `MUG2101` (state-college catalogs) as before, plus
+⚠⚠ **`HFT3271` newly HELD — see below and REVIEW_QUEUE item 78.**
+
+### ⚠⚠⚠ `HIS2050` — the Gordon Rule designation DIFFERS between carriers, and the flat file proves it
+
+**This is the finding of the batch, and it is mechanically sourced rather than inferred.** The SCNS flat
+file carries **per-institution designation flags** (`gordon_rule`, `gordon_writing`, `ge_com`, `ge_hum`,
+`ge_math`, `ge_nat_sci`, `ge_soc_sci` at byte offsets 226–233), and on this number they disagree:
+
+| Institution | Its title | Flags set |
+|---|---|---|
+| **FAU** | Writing History | ⚠ `gordon_rule`, `gordon_writing`, `ge_com` |
+| **FSU** | The Historian's Craft | ⚠ `gordon_rule`, `gordon_writing` |
+| **UWF** | Explore History | ⚠⚠ **`ge_soc_sci` only — NO Gordon Rule** |
+
+⚠⚠⚠ **Same number, same level, same 3 credits, same research-writing course — and it satisfies the GORDON
+RULE WRITING requirement at two institutions and a SOCIAL SCIENCE general-education requirement at the
+third.** `CLAUDE.md` has asserted since batch 178 that *"the designation is made by the INSTITUTION, not by
+the course number."* **This is the first case where the project has demonstrated it from data rather than
+inferring it from a catalog label.**
+
+⚠⚠ **And it is a new capability, not just a finding: the flat file can answer the Gordon Rule question for
+EVERY course at EVERY institution in one parse.** The existing rule said to *check for and mention* Gordon
+Rule status on lower-division general-education courses; **it can now be looked up.** Added to `CLAUDE.md`.
+
+**Consequences the guide states:** a UWF student taking this to clear a writing requirement **has not cleared
+it**; an FAU or FSU student may not get the social-science credit; and a transfer student's designation is
+evaluated against the *receiving* institution's list. ⚠ **A Gordon Rule course needs a C or higher — a
+C-minus does not count at most institutions.**
+
+### ⚠⚠⚠ `HFT3271` — HELD. FOUR subjects, and none of them is what the state describes.
+
+**Statewide `HFT3271` = CONDO/RESORT MANAGEMENT**, with a full description: condominium and resort
+operation, planning, development, financial investment, marketing, the condo-hotel concept and
+timesharing. The three public carriers:
+
+| Institution | Its title |
+|---|---|
+| FIU | **Nightclub Management** |
+| FGCU | **Club Management** (private/country club — a CMAA field) |
+| UWF | **Spa Management** |
+
+⚠⚠⚠ **Worse than `TPA3230C` in one specific respect: there the statewide title at least matched one
+institution's minority reading. Here it matches NONE.** Nightclub and beverage operations, private club
+management, spa and wellness management, and resort property management are **four distinct hospitality
+sub-industries** with different employers, different credentials and different career paths.
+
+⚠ **Also note what the queue row itself says: its title is "SPA MANAGEMENT"** — UWF's local title, recorded
+as though it were the course. **Another instance of local text sitting in a field that reads as
+authoritative** (cf. batch 200's item 77).
+
+**Pulled from the batch, status left `queued` with a `HELD` note, per the `TPA3230C` convention.**
+
+### ⚠⚠ `JOU4201` — course-type divergence AGAIN, one batch after it was named
+
+Statewide **Introductory Editing (U)**. USF **News Editing I** and UWF **News Editing**, both 3 credits,
+both classroom courses. ⚠⚠ **UF carries the number as "News Center Practicum" at 1–3 VARIABLE credits** — a
+supervised newsroom placement.
+
+⚠⚠⚠ **Second instance of COURSE-TYPE divergence in consecutive batches** (after `EDG4442`), which settles
+the question the new rule raised: **this is a recurring shape, not a one-off.** The mechanism is the same —
+**a placement or practicum gets numbered alongside the coursework it accompanies** — and so is the
+consequence: accredited programmes count skills coursework and professional experience as **separate**
+requirements, so the number satisfies one and not the other.
+
+⚠ Two further divergences on the same number: **variable credit at UF** (1–3, a range within one
+institution, handled as `credits: null` plus a note), and a quieter scope divergence — **the statewide
+definition is a FEATURE, magazine and book editing course, and both classroom carriers title it NEWS
+editing.** Covered with a two-column test.
+
+### ⚠⚠ `IDS3052` — a 1-versus-3 credit divergence, and the content gap matters more than the arithmetic
+
+FGCU 3, UWF 3, **Florida State 1.** ⚠ **A 1-credit version of an "introduction to integrated studies" is
+almost certainly a programme orientation seminar** — vocabulary, degree requirements, advising, planning the
+major — where a 3-credit version has room for comparative disciplinary epistemology, the integration process
+and a written project.
+
+⚠⚠ **The sharp part is not the two missing credits: it is that a capstone which assumes the integration
+process was taught HERE will find a transfer student unprepared.** The guide tells the reader to ask the
+receiving programme both questions. **Published at 3 credits** (majority, and the reading the statewide
+description's scope fits) with FSU's ~15-hour figure stated in the derivation.
+
+⚠ **The "Integrated" vs "Integrative" title variation is NOT a divergence** — both are standard usage in the
+field. Said so explicitly, because the reflex by batch 201 is to treat every title difference as a signal.
+
+### ⚠⚠ `HSA3551` — the public-only rule turns a three-carrier course into a one-carrier course
+
+Three institutions carry it; ⚠ **two are private (Everglades, Keiser) and are excluded under Ron's
+2026-09-11 public-institutions-only scope rule.** So the guide is written for **one public carrier**, UWF,
+as a single-institution guide with explicit hedging.
+
+⚠ **And the exclusion is informative rather than merely a filter: the two private carriers match the
+statewide title ("Ethics in Healthcare") and the single public carrier does not** — UWF adds
+**professionalism**. Stated in `offering_notes` as an observation about where the divergence sits, without
+listing the private rows.
+
+⚠ **The statewide prerequisite is another local-text-in-a-statewide-field case:** *"admission to the IHHS BAS
+program or permission of the dean."* **One institution's programme, recorded as though general.** Useful as a
+signal though — it tells you the number lives in a **Bachelor of Applied Science** pathway, so classmates
+have clinical experience and the cases are workplace cases.
+
+### ⚠⚠ `HFT3053` — a REFINEMENT to the batch-183 "two agreeing institutions outrank a statewide title" rule
+
+Statewide **"Prospectus on Tourism"** — and unlike `HFT4274`, **the statewide record here carries a full,
+specific DESCRIPTION** of an issues-and-impacts course (behavioural, social, economic, political and
+environmental issues affecting and affected by tourism). Both public carriers — **Pensacola State and UWF,
+identical titles, 3 credits each** — call it **Travel and Tourism Management**.
+
+⚠⚠ **The batch-183 rule was developed for a case where the statewide record was a bare LABEL with no
+description behind it, and its own text says so.** That condition does not hold here. ⚠ **What is available
+from the carriers is their TITLES, not their descriptions** — so it is two titles against a full statewide
+description, which is weaker evidence than two agreeing descriptions.
+
+**Handling: cover both readings with a two-column test, and say the evidence is genuinely mixed.** Added to
+`CLAUDE.md` as a condition on the existing rule.
+
+⚠ Also worth noting: the two carriers are an **FCS/SUS pair in the same city** (Pensacola State and UWF) with
+identical titles and credits — ✅ **the cleanest transfer case the project has recorded.**
+
+### ⚠ `GEO4340` — three titles, all narrower than the state's, in one direction
+
+Statewide **Environmental Hazards**, and its description names *"natural, geographic, and **manmade**
+environmental hazards"* plus *"techniques for the analysis of risks"* and *"strategies for recovering
+losses."* ⚠ **USF "Natural Hazards" and UWF "Natural Hazards and Disasters" drop the manmade half; FSU
+"Living in a Hazardous Environment" suggests a general-education framing.**
+
+⚠ **The dropped half is not a detail:** technological hazards have an owner, a regulator, a cause and a
+liability, and the analytical questions are about design and oversight rather than meteorology. **And parts
+3 and 4 of the definition are risk assessment and loss recovery — the working content of emergency
+management, mitigation planning and catastrophe insurance**, which is a professional skill set rather than a
+descriptive one. The guide gives a two-column test and names the free FEMA independent-study certificates
+and the reader's own county Local Mitigation Strategy as the way to close the gap at no cost.
+
+### ⚠ Tooling notes
+
+- ⚠⚠ **The flat file's designation flags are usable and were not being used.** `FIELDS` has carried
+  `gordon_rule`, `gordon_writing` and the five `ge_*` columns all along. **One parse answers Gordon Rule and
+  general-education status for every course at every institution.**
+- ⚠ **Do not print a flag set by the first letter of its key** — `gordon_rule`, `gordon_writing` and all five
+  `ge_*` keys begin with `g`, so a `k[0]` display renders them all as `G` and the position is the only
+  information. Print the key names.
+- **Four of six prerequisite strings exceeded 1000 characters on first assembly** (1,059–1,096) and needed
+  trimming. ⚠ **Prerequisite strings are now routinely near the ceiling** because the divergence warnings
+  that belong there keep growing. **Trim the connective tissue, keep the warnings** — the batch-186 rule,
+  now firing most batches rather than occasionally.
+- ⚠ **The Bash heredoc failed again** on a long patch script. **Write tool for anything long — or, better for
+  small edits inside an existing file, the Edit tool**, which is what actually fixed this batch.
