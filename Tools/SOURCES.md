@@ -19185,3 +19185,92 @@ statewide definition asks for *"verbal versus visual narration"*, **which cannot
 
 **SCNS statewide for ENG, EUH, BCH and CHM** — four clean fetches. No institution catalog was needed.
 Prerequisite strings ran 777–903 characters.
+
+## Batch 199 — EUH / GEO / EVR / FIN (2026-09-12)
+
+Session order: resources (none), guide requests (none), queue, then listing. **Six guides:** `EUH4185`,
+`EUH4453`, `GEO3421`, `GEO3471`, `EVR4023`, `FIN4461`. **Listing:** 1,173 courses — **840 created, 27
+updated, 306 unchanged, 0 failed**, 1,820 offerings. **Site 8,644 → 9,484 courses.**
+
+Queue head skipped as held/blocked: `LAE3314` (REVIEW_QUEUE item 20), `MUG2101` (state-college catalogs).
+
+### ⚠⚠ `EVR4023` — the statewide definition is a SCIENCE definition, and one of two carriers has left it
+
+Statewide, `EVR4023` is a *physical, chemical and biologic components of coastal systems* course taught
+*"based on readings of scientific papers."* **UWF titles it "Coastal and Marine Environments"** and matches.
+⚠ **FIU titles it "Coastal Resource Management"** — policy, allocation and stakeholders.
+
+⚠ **What makes this sharper than ordinary title drift: the statewide definition names its METHOD, not just
+its subject.** A course built on primary scientific literature and a course built on management case studies
+are different preparations, and **a student needing the science course for a graduate application or a
+technical job has a transcript line that does not distinguish them.** With only two carriers there is no
+majority to appeal to — the tie-break is that UWF agrees with the statewide record.
+
+### ⚠ `GEO3471` — three titles, three scales, and the theory version is the one graduate study expects
+
+**FIU "Political Geography"** (the discipline and its theory), **UCF "World Political Geography"** (a
+regional survey of states and boundaries), **UWF "Geography of World Affairs"** (current international
+issues geographically framed). All 3 credits.
+
+⚠ The statewide definition explicitly spans *"from the local to the geopolitical level."* **A course that
+only does geopolitics has taken half the subject** — and the electoral-geography half (districting,
+gerrymandering, municipal boundaries) is the half with the clearest domestic application. **The guide covers
+the full scale range and tells the reader which version their title implies.**
+
+### ⚠ `EUH4453` — a single carrier whose title drops half the statewide course
+
+**Only UWF carries it, as "The French Revolution."** ⚠ **The statewide definition gives the Napoleonic
+period two of its four sentences.** So the sole carrier's title omits material the state says is half the
+course. **The guide covers 1789–1815 and tells the reader to confirm the syllabus's end date** — a student
+registering for Napoleonic content on the strength of the statewide title may not get it.
+
+### ✅ `GEO3421` and `FIN4461` — clean numbers, and worth SAYING so
+
+Three institutions each, identical titles, identical credit values, no divergence.
+
+⚠ **New handling decision: state the absence of divergence explicitly in the guide.** After 199 batches the
+default assumption a careful reader brings to this catalog is that something diverges — so a guide that
+simply says nothing leaves the reader hunting. **"No title drift, no credit divergence, nothing to resolve"
+is information**, and it converts the usual carry-a-syllabus advice from necessary to merely precautionary.
+
+### ⚠⚠ `FIN4461` — the prefix is the content warning
+
+`FIN`, not `ACG`, and the statewide definition is a **statement-USER's** definition. ⚠ **Accounting asks
+whether the numbers were recorded correctly; this course asks whether they are telling the truth about the
+business.** Students arrive expecting a second accounting course.
+
+⚠ **Where the two agreeing signals are the prefix and the definition, say what the course is NOT.** This is
+the same diagnostic as `ACG4180` (batch 187), where the gate was *finance*, not accounting — **the prefix
+and the prerequisite both encode perspective, and perspective is what a title cannot carry.**
+
+⚠ **The AI section is the strongest in the batch because the failure and the subject coincide** (the
+batch-184 rule): **earnings management is designed to survive a surface reading, which is exactly the reading
+a language model performs.** A model asked to analyse a company summarises what management said — the thing
+the course exists to distrust.
+
+### ⚠ Tooling: the listing step needs TWO caches, and neither is committed
+
+`list_courses.py` failed twice at the start of the listing step — first on a missing
+`scratchpad/crslist.txt` (the 76 MB SCNS flat file), then on a missing `scratchpad/inst_map.json`.
+`crslist.txt` is gitignored (80 MB) and must be rebuilt every fresh tree; **`inst_map.json` is 8 KB, changes
+only when a Florida institution is added or renamed, and is now COMMITTED** so the listing step no longer
+depends on scraping it. To rebuild either:
+
+```
+python scratchpad/scns.py flatfile scratchpad/crslist.txt
+python -c "import sys,json; sys.path.insert(0,'scratchpad'); import scns; json.dump(scns.institution_map(), open('scratchpad/inst_map.json','w',encoding='utf-8'), ensure_ascii=False, indent=1)"
+```
+
+⚠ The flat-file download is ~80 MB and takes a few minutes. **The tool names the flat-file command in its
+error message but not the institution-map one** — which is why the map is now committed rather than left to
+be rediscovered at the end of a batch.
+
+### ⚠ `offering_notes` has a house SHAPE, and the validator enforces it
+
+First assembly of this batch failed on all six drafts: `institution` is capped at **10 characters** — it
+holds the **CODE** (`UWF`, `FAMU`), with the full name in **`institution_name`**. The wrapper also carries
+`summary`, `hours_source` (`published` / `derived` / `mixed`), `derived_contact_hours` and `derivation`.
+
+⚠ **The shape IS documented** — `CLAUDE.md`'s `offering_notes` block shows the code/`institution_name`
+split and the whole wrapper. **The failure was composing the field from memory instead of reading it.**
+**Copy the block from `CLAUDE.md` or from an existing draft; do not reconstruct it.**

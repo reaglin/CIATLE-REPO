@@ -1705,6 +1705,41 @@ between two, which is a shape items 60 and 65 do not cover.
 
 ---
 
+## 73. ⚠⚠ `EVR4023` — the statewide definition names a METHOD, and one of two carriers has left it (batch 199)
+
+Statewide, `EVR4023` is a science course: *physical, chemical and biologic components* of coastal systems,
+taught *"based on readings of scientific papers."* **UWF matches it as "Coastal and Marine Environments."**
+⚠ **FIU teaches "Coastal Resource Management"** — policy, allocation and stakeholders.
+
+⚠ **Why this is a split candidate rather than title drift: the statewide record specifies the METHOD.** A
+course built on primary scientific literature and one built on management case studies are different
+preparations for graduate study and for technical hiring, and **nothing on a transcript distinguishes
+them.**
+
+⚠ **Two carriers means no majority to appeal to.** The tie-break used was that UWF agrees with the statewide
+record, and the guide was published to the science reading with the management version labelled.
+
+**Decision wanted:** is a two-carrier disagreement, where one side matches the statewide definition, enough
+for the `-SCNS` / `-FIU` split — or does the split rule want three or more carriers before it fires? **This
+is the first time the divergence rule has met a straight one-against-one.**
+
+---
+
+## 74. Say so when a number is CLEAN — new handling applied in batch 199 (informational)
+
+`GEO3421` and `FIN4461` each have three institutions, identical titles and identical credit values. Both
+guides now **state the absence of divergence explicitly**: *"no title drift, no credit divergence, nothing
+to resolve."*
+
+⚠ **Rationale: after 199 batches, the assumption a careful reader brings to this catalog is that something
+diverges.** A guide that simply says nothing leaves them hunting for the catch. **Naming the absence is
+information**, and it downgrades the standing carry-a-syllabus advice from necessary to precautionary.
+
+**No decision needed** — recorded so the practice is consistent and so it can be reversed in one place if
+Ron would rather guides stayed silent on clean numbers.
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
