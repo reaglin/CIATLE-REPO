@@ -10,7 +10,7 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-11 (batch 192)
+**Last updated:** 2026-09-11 (batch 193)
 
 ---
 
@@ -1571,6 +1571,53 @@ before registering.**
 `Deployment/PENDING_SERVER_CHANGES.md`. Recorded here as the evidence that it should ship in the next
 release rather than continue to drift. **It is now the single highest-value pending server change for
 guide quality.**
+
+---
+
+## 65. ⚠⚠ `ENV3001` / `ENV4001` — SCNS itself carries the same course at two levels (batch 193)
+
+**The strongest level-divergence case found, and stronger than `CES3100C`/`CES4100C` (item 60), because the
+duplication is in the STATE record rather than only in institutional practice.**
+
+The statewide catalog carries **an identical title and an identical description** for both numbers —
+*"Introduction to Environmental Engineering — Majors"* — at the 3000 level and the 4000 level:
+
+| Number | Institutions |
+|---|---|
+| `ENV3001` | FIU, UCF, UWF (3 credits), **UF (4 credits)** |
+| `ENV4001` | FAMU, FSU, USF (3 credits) |
+
+⚠ SCNS equivalency does not cross numbers, so the transfer guarantee does not run between them, and the
+level digit additionally affects upper-division and residency credit counts.
+
+**The ask:** none on the guides — the queued row was `ENV3001C` and it is written with the warning. But
+**`ENV3001` and `ENV4001` are not in the queue**, between them cover seven institutions, and under the
+queue-only rule will never be written. They belong on the same list as item 59.
+
+---
+
+## 66. ⚠⚠ `ENV4351` — credits of 2, 3 AND 4 on one number (batch 193) — *informational, published with the table*
+
+**The widest credit spread on any technical course in the project.** USF 2, FIU 3, UWF 3, **UF 4**.
+
+⚠ FIU also folds hazardous waste (statewide `ENV4330`) into the same course, so its students cover both
+subjects less deeply while the transcript line reads identically to everyone else's.
+
+**Published as one guide** naming every institution and its credit value, with the audit consequence stated.
+**No decision needed** unless Ron wants a standing practice for courses whose credit value varies by a factor
+of two — at that point the two-credit and four-credit versions are arguably different courses.
+
+---
+
+## 67. ✅ The 1000-character prerequisite ceiling is doing exactly what it was raised to do (batch 193)
+
+First batch written under it. **Prerequisite strings ran 860–960 characters and not one would have fitted
+before**; nothing was trimmed.
+
+What the room bought: the four-institution credit table on `ENV4351`, the three-packagings explanation on
+`ENV3001C`, the five-day BOD warning on `ENV3001L`, and the site-assessment-versus-engineering distinction
+on `ENV4330`. **Under the old ceiling each would have lost about half its content.** Recorded as the closing
+evidence on items 61 and 64.
 
 ---
 

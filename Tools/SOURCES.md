@@ -18681,3 +18681,81 @@ is a confusing failure.
 
 **Unchanged and correct:** `PublishValidators.cs` line 85 caps the *guide-request* `Reason` field at 500.
 Different field, different purpose — leave it.
+
+---
+
+## Batch 193 — environmental engineering: ENV (2026-09-11)
+
+**Six guides: `ENV3001C`, `ENV3001L`, `ENV4102`, `ENV4330`, `ENV4351`, `ENV4514C`** — **every queued ENV
+row**, so the prefix's queued work is complete. These were among the ten rows blocked by the missing
+taxonomy nodes until 2026-09-09.
+
+### ✅ First batch written under the 1000-character prerequisite ceiling
+
+**Prerequisite strings ran 860–960 characters. Not one would have fitted under the old limit**, and nothing
+was trimmed. What the extra room bought, concretely: the credit-spread warning on `ENV4351` naming all four
+institutions and their values; the three-packagings explanation on `ENV3001C`; the five-day BOD warning on
+`ENV3001L`; and the site-assessment-versus-engineering distinction on `ENV4330`. **Under the old ceiling each
+of those would have lost about half its content.**
+
+### ⚠⚠⚠ `ENV4351` — credits of 2, 3 and 4 on the same number
+
+**The widest credit spread found on any technical course.**
+
+| Institution | Title | Credits |
+|---|---|---|
+| **University of South Florida** | Solid Waste Engineering | **2** |
+| Florida International | Solid **and Hazardous** Waste Management | 3 |
+| University of West Florida | Solid Waste Engineering | 3 |
+| **University of Florida** | Solid Waste Management | **4** |
+
+⚠ **Two credits against four is a factor of two**, and the transfer guarantee does not close it. ⚠ **FIU also
+merges a second statewide subject** — hazardous waste, statewide `ENV4330` — into the same term, so its
+students cover each less deeply while the transcript line looks identical.
+
+### ⚠⚠ `ENV3001` — the same course in THREE packagings, plus a level twin
+
+| Arrangement | Number | Institutions |
+|---|---|---|
+| Integrated | **`ENV3001C`** | FAU, UNF — 3 credits |
+| Lecture only | `ENV3001` | FIU, UCF, UWF at 3; **UF at 4** |
+| Laboratory only | **`ENV3001L`** | FIU, UNF, UWF — 1 credit |
+
+⚠⚠ **And the same course exists at the 4000 level as `ENV4001`** (FAMU, FSU, USF) — ⚠ **the statewide catalog
+carries an IDENTICAL title and an IDENTICAL description for both `ENV3001` and `ENV4001`.** That is stronger
+than the batch-191 `CES3100C`/`CES4100C` case: **SCNS itself duplicates the course description across two
+levels**, so the level divergence is in the state record rather than only in institutional practice.
+
+⚠ **UNF carries both `ENV3001C` and `ENV3001L`** — not alternatives for the same student, since the
+integrated form already contains the laboratory. Both guides say so and say to ask an advisor.
+
+### ⚠⚠ `ENV4330` — site assessment versus waste engineering
+
+FIU teaches **"Hazardous Waste Site Assessment"** (contaminated land: sampling, plume characterisation,
+risk, remedy selection — the consulting skill set). UWF teaches **"Hazardous Waste Engineering"** (waste
+streams: generator compliance, storage, treatment, manifesting — the industry and regulator skill set).
+
+⚠ **Both are legitimate readings of the statewide definition, which leads with "rules, regulations and
+management systems" and then adds "evaluation of engineering systems."** Published as one guide covering
+both, each labelled, with the employment consequence stated: *an interviewer asking whether you have done a
+Phase I is asking a specific question.*
+
+### ⚠ `ENV4514C` — the queued id is carried by ONE institution, at a different credit value
+
+UF alone carries the `C` form, at **4 credits**; FAU, Florida Poly and UWF carry the bare `ENV4514` at 3.
+⚠ **The scalar `credits` and `contact_hours` were corrected to 4 and 75 before pushing** — they had been
+drafted at the generic 3-credit/60-hour convention, which contradicted the guide's own offering table. **The
+batch-189 rule applies: the scalar describes the identifier being published, and for a single-carrier id
+that means the carrier's values.**
+
+⚠ **UWF titles its `ENV4514` "Environmental Engineering Design"** — a discipline-wide capstone rather than a
+treatment course. FAU and Florida Poly both name treatment and agree with the statewide title, so **the
+two-agreeing-catalogs rule (batch 183) makes UWF the outlier**; the guide says so.
+
+### Sources
+
+- **SCNS `statewide ENV`** — one fetch; it supplied the state definitions, and the identical
+  `ENV3001`/`ENV4001` descriptions that made the level divergence visible.
+- **SCNS flat file** — per-institution titles and credits; every divergence above came from it.
+- No institution catalog was fetched. FGCU and Broward were still rate-blocked from batch 191 and were not
+  retried, per the burst rule.
