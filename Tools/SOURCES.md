@@ -18529,3 +18529,104 @@ minimum-grade conditions, major-restricted enrolment.
 hazards.** The raise to 1000 characters sitting in `Deployment/PENDING_SERVER_CHANGES.md` is the fix, and
 this batch is the strongest evidence yet for it: **the guides most worth reading are the ones whose
 prerequisite strings do not fit.**
+
+---
+
+## Batch 192 — music ensembles: MUN (2026-09-11)
+
+**Six guides: `MUN3133`, `MUN3313`, `MUN3323`, `MUN3443`, `MUN3713`, `MUN4714`.** Taken from the head of
+`queue.csv`. `LAE3314` was skipped (held at `REVIEW_QUEUE.md` item 20) and `MUG2101` skipped (state-college
+catalogs still blocked).
+
+**First ensemble batch in the project.** They are shorter than a lecture guide — 15.3–16.6 KB — and that is
+correct: a 1-credit ensemble has less to say about content and far more about audition, rehearsal
+commitment, repeatability and transfer caps.
+
+### ⚠⚠ TERMINOLOGY-ERA divergence, and the clearest instance yet — `MUN3323`
+
+The statewide title is **"Women's Glee Club — Upper Level."** ⚠ **Not one of the five institutions carrying
+the number uses it:**
+
+| Institution | Its name |
+|---|---|
+| UCF | **Soprano/Alto Chorus** |
+| UNF | **Osprey Treble Chorus** |
+| FGCU | Bel Canto Choir |
+| UF | Chorale |
+| UWF | Concert Choir |
+
+The field has moved from naming the ensemble by the **gender of its singers** to naming it by **voice type**
+— more accurate, and it does not exclude a trans or non-binary singer whose voice sits in the range.
+
+⚠⚠ **This is the strongest AI-failure coincidence found so far**, and it is the batch-187 prediction firing
+exactly as described: training data is dominated by decades of "women's chorus" text, so a model asked about
+this repertoire reproduces the retired vocabulary fluently. **A student who learns the terminology from a
+model will use language their own department has abandoned** — and, heading into teaching, language Florida
+districts and the professional associations have moved past.
+
+### ⚠⚠ VARIABLE CREDIT — the `0-1` registration, and the first real use of Ron's note-only rule
+
+**Nine of the 35 offerings across this batch are listed `0-1`.** That is not a data error: **a zero-credit
+registration is a deliberate option** letting a student sing or play without adding to a credit load —
+useful at a full-time cap, or where aid is tied to credits. **The commitment is identical either way.**
+
+✅ **Ron's decision of 2026-09-11 held up in practice:** `credits: null` plus a note is sufficient and reads
+well. No `credits_min`/`credits_max` was wanted anywhere in the batch.
+
+### ⚠⚠ `MUN4714` — the widest credit spread on any Florida ensemble number: 0 to 3
+
+| Institution | Title | Credits |
+|---|---|---|
+| FAU | Chamber Jazz | 1 |
+| **FIU** | **Jazz Combo Class** | **3** |
+| UNF | Jazz Combo (Small Group) | 0–1 |
+| UWF | UWF Jazz Band | 1 |
+
+⚠ **FIU's three credits and the word "Class" together suggest a taught course with coursework** rather than
+a rehearse-and-perform ensemble — a different course, not a different accounting. ⚠⚠ It also means **a
+student at FIU reaches their programme's ensemble-credit cap three times faster.**
+
+### ⚠ A probable number reversal at UWF
+
+**UWF titles `MUN3713` (statewide: the LARGE jazz ensemble) "Jazz Combo", and `MUN4714` (statewide: the
+CHAMBER ensemble) "UWF Jazz Band".** The two appear to be **used in reverse of the statewide definitions.**
+Both guides say so and tell the reader to check their own catalog rather than infer the format from the
+statewide title. Not treated as a split — the subject is jazz either way; the format is what is swapped.
+
+### ⚠ Ensemble-specific facts no other course type has
+
+Recorded because they apply to every ensemble guide from here on:
+
+- ⚠⚠ **One credit, three to five rehearsal hours a week**, plus dress rehearsals and concerts **outside**
+  scheduled class time that **cannot be made up.** The standing 1-credit-laboratory warning (batch 189)
+  applies with more force here. **Check concert dates against other courses' exam schedules.**
+- **Repeatability with a cap.** Ensembles are repeated every term and degrees require a set number of
+  semesters — **but programmes cap how many ensemble credits count toward graduation**, so semesters beyond
+  it are work that does not advance the degree. Band and percussion students hit it soonest, being asked to
+  play in several ensembles at once.
+- ⚠ **Placement does not transfer.** Credit moves; a chair or a seat is re-earned by audition.
+- ⚠ **Lower-division ensemble credit does not automatically satisfy an upper-division requirement** — the
+  specific trap for state-college transfer students, whose ensemble credits accumulate at the 1000/2000
+  level.
+- **The name signals rank.** "Symphonic Band" is usually the *second* band below a Wind Ensemble; "Level 2"
+  and "Band II" say so outright. **The number never tells you.**
+- **Real unlisted costs:** concert dress ($100–200), brass mutes (several hundred), reeds (hundreds a year),
+  percussion mallets (several hundred).
+
+### ⚠⚠⚠ The prerequisite ceiling: FIVE of six again — **ten of twelve across two batches**
+
+`MUN3443` 552, `MUN3713` 523, `MUN3313` 511, `MUN4714` 503, `MUN3323` 508; only `MUN3133` (499) squeaked in.
+Batch 191 was also five of six.
+
+⚠ **The overflow is now the normal case, twice running, in two completely unrelated disciplines.** The
+content being trimmed is audition requirements, credit-spread warnings and the rehearsal-hours warning —
+exactly what a student needs before registering. **`Deployment/PENDING_SERVER_CHANGES.md` has the raise to
+1000 characters; this is the evidence it should ship next.**
+
+### Sources
+
+- **SCNS `statewide MUN`** — one fetch, full state definitions and prerequisites for the whole prefix.
+- **SCNS flat file** — per-institution titles and credits; it produced every finding above, including the
+  `0-1` registrations and the UWF reversal, none of which is visible from any catalog page.
+- No institution catalog was fetched for this batch. ⚠ **Worth noting that it was not needed**: for
+  ensembles the flat file carries what matters — who offers it, what they call it, and what it is worth.

@@ -10,7 +10,7 @@ Two kinds of item live here:
   Republishing overwrites live content and bumps the version, so it waits for a go-ahead.
 - **Scope decisions** — the skip list, queue membership, and similar calls that are Ron's to make.
 
-**Last updated:** 2026-09-11 (batch 191)
+**Last updated:** 2026-09-11 (batch 192)
 
 ---
 
@@ -1507,6 +1507,57 @@ registering. **The guides most worth reading are the ones whose prerequisite str
 **No decision needed from Ron** — the raise to 1000 characters is already queued in
 `Deployment/PENDING_SERVER_CHANGES.md`. Recorded here as the evidence that it should ship in the next
 release rather than drift.
+
+---
+
+## 62. ⚠⚠ `MUN3323` — the statewide title uses retired vocabulary; **a retro-sweep candidate for the MUN prefix** (batch 192)
+
+Statewide title: **"Women's Glee Club — Upper Level."** ⚠ **Not one of the five institutions carrying the
+number uses it** — UCF calls it *Soprano/Alto Chorus*, UNF *Osprey Treble Chorus*, FGCU *Bel Canto Choir*,
+UF *Chorale*, UWF *Concert Choir*.
+
+The field has moved from naming a choral ensemble by the **gender of its singers** to naming it by **voice
+type**. The guide is written to the current vocabulary, explains the change, and warns that searching a
+schedule for the old name finds nothing.
+
+**No decision needed on this guide.** The ask is narrower: **are there other MUN and MVK/MVV numbers whose
+statewide titles are similarly dated?** The statewide inventory is the SCNS catalog rather than current
+practice, and choral and vocal numbering is where the terminology has moved most. A sweep of the music
+prefixes for gendered ensemble titles would be cheap from the flat file.
+
+---
+
+## 63. ⚠ `MUN3713` / `MUN4714` — UWF appears to use the two numbers in REVERSE (batch 192)
+
+**Statewide:** `MUN3713` is the large instrumental jazz ensemble; `MUN4714` is the jazz chamber ensemble
+(combo). **UWF titles `MUN3713` "Jazz Combo" and `MUN4714` "UWF Jazz Band"** — apparently swapped.
+
+**Published as-is with a warning in both guides**, telling the reader to check their own catalog rather than
+infer the format from the statewide title. **Not treated as a split** — the subject is jazz either way; only
+the format is exchanged.
+
+**The ask, if any:** whether a probable local numbering error is worth reporting to the institution. The
+project has not previously had a route for that, and this is the second case (after `PUR4801`) where an
+institution's use of a number looks like a mistake rather than a variation.
+
+---
+
+## 64. ⚠⚠⚠ The 500-character prerequisite ceiling now fails FIVE of SIX guides, twice running (batch 192)
+
+| Batch | Over the limit on first write |
+|---|---|
+| 191 (civil engineering) | **5 of 6** — 531, 535, 537, 538, 515 |
+| 192 (music ensembles) | **5 of 6** — 552, 523, 511, 508, 503 |
+
+⚠ **Ten of twelve, in two disciplines with nothing in common.** This is no longer an occasional overflow;
+it is the normal outcome for any course with real transfer hazards. What gets trimmed is audition
+requirements, credit-spread warnings and the rehearsal-hours warning — **precisely what a student needs
+before registering.**
+
+**No decision needed** — the raise to 1000 characters is written up in
+`Deployment/PENDING_SERVER_CHANGES.md`. Recorded here as the evidence that it should ship in the next
+release rather than continue to drift. **It is now the single highest-value pending server change for
+guide quality.**
 
 ---
 
