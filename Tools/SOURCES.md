@@ -20691,3 +20691,236 @@ reasonably expect a humanities designation.
 - ⚠ **Batch average draft size is 23 KB** — smaller than recent batches, and appropriately so: three
   language-skills courses have less transferable content to describe and more format, placement and credit
   mechanics, which is where their value sits.
+
+## Batch 208 — SSE / SYO / SYP / TPA / TRA (2026-09-12)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`SSE4113`, `SYO3100`, `SYO4530`, `SYP3630`, `TPA3223C`, `TRA3153`. **Listing:** 927 courses across the five
+prefixes — **505 created, 8 updated, 0 failed**, 1,265 offerings. **Site 17,085 → 17,595 courses**; `SSE`
+1→145, `SYO` 1→124, `SYP` 0→165, `TRA` 2→80. ✅ Live-guide check run on all six first; none had one.
+
+### ⚠⚠⚠ `TRA3153` — TITLE-versus-DESCRIPTION divergence again, and this time it RESOLVES
+
+**Second instance in consecutive batches of the shape named in batch 207** (`SPM3104`), and the two cases
+together produce a diagnostic that was not available from either alone.
+
+| | `TRA3153` |
+|---|---|
+| Statewide **title** | ⚠ *"Applied Production/Operations Management"* |
+| Statewide **description** | *"...plan, implement, and control efficient and market-responsive integrated **transportation** systems... the strategic and operational roles of **transportation** in supply chains... carrier selection, equipment and shipment planning, **intermodal** operations..."* |
+| FSCJ | **Strategic Transportation Management** |
+| UWF | **Strategic Transportation Management** |
+| The prefix | ⚠⚠ **`TRA` — transportation** |
+
+**Four independent pieces of evidence against one title.** Production/operations management is numbered
+under `MAN` in Florida. **So the guide states the answer rather than hedging** — the first time this
+catalog has corrected a statewide title outright.
+
+#### ⚠⚠ The diagnostic the two cases produce together
+
+**Compare `SPM3104` (batch 207) with `TRA3153`:**
+
+| | Statewide title vs statewide description | Carriers | Conclusion |
+|---|---|---|---|
+| **`TPA3223C`** (this batch) | ✅ **agree** (both say technology) | 2 of 3 say design | ⚠ **the CARRIERS are misfiling** |
+| **`TRA3153`** | ❌ **disagree** | both agree with the description | ⚠ **the TITLE is stale** |
+| **`SPM3104`** (batch 207) | ❌ **disagree** (title promises events, description omits them) | carriers side with the description | ⚠ **the TITLE is stale** |
+
+⚠⚠⚠ **The rule: check the statewide title against the statewide DESCRIPTION first, before looking at
+carriers.** **If they agree, a deviating carrier is misfiling and the state is the reference. If they
+disagree, the title is the stale element and the description plus the carriers settle it.** This is
+cheap — both fields are in the same CSV row — and it turns "two institutions agreeing outrank a statewide
+title" (batch 183) from a judgement call into a test.
+
+⚠ **It also refines the batch-201 caution.** That said: do not correct a *described* statewide subject on
+agreeing titles alone. **Here the description is not being overridden — it is the evidence.** The caution
+applies to overriding a description, not to overriding a title the description already contradicts.
+
+### ⚠⚠⚠ `TPA3223C` — two of three carriers teach DESIGN on a number the state defines as TECHNOLOGY
+
+**Sixth misfiling instance, and the first where a MAJORITY of carriers are the ones misfiling.**
+
+| Carrier | Its title | Side |
+|---|---|---|
+| Statewide (title **and** description) | *Lighting Technology* — *"equipment, dimmers, control and other electronics"* | technology |
+| USF | *Technical Theatre Lighting* | ✅ technology |
+| UWF (bare `TPA3223`) | *Lighting Technology* | ✅ technology |
+| ⚠ UCF | *Lighting Design for Theatre I* | ⚠⚠ **design** |
+| ⚠ FAU | *Lighting Design Topics* | ⚠⚠ **design** |
+
+⚠⚠ **The batch-203 misfiling tell is present and decisive: Florida already numbers lighting design
+separately, and the number is in use** — **`TPA4020` *Lighting Design I* is carried by FSU and UF**, with
+`TPA3221`, `TPA3226`, `TPA4022` and `TPA4024` also defined and carried by nobody.
+
+**Why it matters more than an ordinary title divergence: in theatre these are different professions.**
+Electrician and designer are different jobs, **different unions** (IATSE vs USA Local 829) and different
+career paths — and **electrics is where nearly everyone starts and where the jobs are.** ⚠⚠⚠ **A student
+who needs the electrics skills and takes a design section graduates able to draft a plot and unable to get
+hired to hang it.** The guide gives a five-row technology-versus-design table and one question to ask the
+department.
+
+⚠ **This is the professional-division shape already open on `TPA3230C`** (costume construction vs design,
+`REVIEW_QUEUE.md` item 25) — **same prefix, same kind of split. It is a `TPA` pattern, not two
+coincidences.**
+
+✅ **And the `C` id is REAL here**: three carriers use `TPA3223C` and UWF uses bare `TPA3223`, so both forms
+exist — the batch-184 "a `C` id IS sometimes real" case, strengthened.
+
+### ⚠⚠⚠ `SSE4113` — sector-number divergence hitting one of Florida's largest transfer pathways
+
+| Number | Statewide title | Carriers |
+|---|---|---|
+| ⚠ **`SSE3312`** | Teaching Social Studies in the Elementary School | ⚠⚠ **11** — ten Florida College System institutions **plus UCF** |
+| **`SSE4113`** | Social Studies in the Elementary School — *this course* | **2** — FSU, UWF |
+| `SSE4313` | Teaching Environmental Studies in the Elementary School | 1 — USF |
+| `SSE4112` | ⚠ Social Studies **CONTENT** in the Elementary Classroom | 1 — SPC |
+
+⚠⚠ **This is the batch-182 sector-number shape, and the population affected is unusually large: elementary
+education is one of Florida's biggest A.A.-to-bachelor's transfer pathways**, so most students in the
+subject cross this boundary rather than a few unlucky ones. ⚠ **Not a clean sector line — UCF uses the FCS
+number** — and the guide says so rather than overstating it.
+
+⚠ **`SSE3312` already has a live guide**, so the two are cross-referenceable.
+
+⚠⚠ **A second distinction the family exposes: `SSE4112` is CONTENT and the others are METHODS.** Knowing
+social studies and knowing how to teach it are different things, **and the FTCE Elementary Education K-6
+Social Science subtest examines CONTENT** — so a methods course is necessary and not sufficient
+preparation for it. **The guide says this plainly**, because nothing a student reads does.
+
+### ⚠⚠ `SSE4113` — the statewide record is visibly DECADES out of date
+
+**The statewide description ends: *"INSTITUTIONS: FAMU, FAU, FSU, UWF 1988"*.** ⚠ The record carries a
+**1988** date and an institution list that no longer matches who offers it (FAMU and FAU do not; UWF and
+FSU do). **`SYO4530` shows the same thing with a 1983 date and nine institutions against today's three.**
+
+⚠⚠ **Standing practice this supports: where a statewide description carries an embedded institution list
+or a year, read it as a HISTORICAL definition of the subject rather than a current statement of
+practice** — and say so in the guide. **Parts of the state course file have not been revised in forty
+years**, which is worth knowing generally and is a useful thing to tell a student who has found the state
+record and is confused by it.
+
+### ⚠⚠ `SYO4530` — the title that looks NARROWEST is the most accurate
+
+| Source | Title |
+|---|---|
+| Statewide | *Social Stratification* — description says **"American society (primarily)"** |
+| FIU | *Social Inequalities* (plural) |
+| UF | *Social Inequality* |
+| UWF | ⚠ *Inequality in America* |
+
+⚠⚠ **This INVERTS the project's usual reading.** The standing expectation is that a narrower title signals
+narrower content and is the thing to warn about. **Here the statewide description already restricts the
+course to American society, so UWF's apparently narrow title is simply accurate — and the two
+broader-sounding titles are the ones that may promise comparative and global material the course does not
+deliver.**
+
+⚠ **Drill: before flagging a narrow title as a narrowing, check whether the statewide DESCRIPTION was
+already that narrow.** Same field, same one-CSV-row cost as the title/description test above.
+
+⚠ **A second, subtler point the guide makes: "stratification" and "inequality" are not pure synonyms.**
+Stratification points at structure and classical theory; inequality points at outcomes and contemporary
+data. Most courses do both; the emphasis differs, and the title is a weak but real signal of which.
+
+### ⚠⚠ `SYP3630` — terminology-era divergence between the STATE and the PRESENT, not between institutions
+
+**All three carriers agree** (*Sociology of Popular Culture*, *Popular Culture in Society*, *Popular
+Culture*) — **a rare number with no divergence at all, which the guide says plainly.** The divergence is
+elsewhere:
+
+| The statewide record | The field now |
+|---|---|
+| ⚠ **"mass culture"** | **"popular culture"** — the older term carries a theoretical judgement |
+| audiences who consume what is produced for them | audiences as active interpreters and producers |
+| ⚠⚠ **no mention of internet, streaming, social media or algorithms** | these now structure the entire field |
+
+⚠ **"Mass culture" is the vocabulary of the mid-century mass society thesis** (the Frankfurt School culture
+industry critique). The field moved through British cultural studies and into a digital era the record
+predates entirely.
+
+⚠⚠ **This extends terminology-era divergence (batch 187) to a THIRD location.** Previously it ran between
+institutions (`SYD4800`, `SOW4700`) and then acquired regulatory force (`RED3310`, batch 206). **Here the
+superseded vocabulary is in the STATE'S OWN RECORD** — which means the record cannot be used to check a
+carrier's currency, because it is the least current source available. **Handling: say the description is a
+historical artefact, tell the reader the actual course covers the digital material, and note that the old
+description still gets the core question right.**
+
+### ⚠⚠ The hs_credit distribution test (batch 207) paid off immediately
+
+**Applied to all five prefixes before writing, one `Counter` each:**
+
+| Prefix | `DS_High_School_Credit1` across ACTIVE numbers | Verdict |
+|---|---|---|
+| `SSE` | 110/110 ELECTIVE | boilerplate |
+| `SYO` | 100/100 ELECTIVE | boilerplate |
+| `SYP` | 134/134 ELECTIVE | boilerplate |
+| `TRA` | 89/89 ELECTIVE | boilerplate |
+| ⚠ **`TPA`** | **5 PERFORMING FINE ARTS, 284 ELECTIVE** | ⚠⚠ **discriminating** |
+
+⚠⚠ **The five `TPA` numbers carrying Performing Fine Arts credit are `TPA2000`, `TPA2210`, `TPA2220`,
+`TPA3230` and `TPA3231`** — and `TPA3223C` is **not** among them. **So the guide tells a dual-enrolled
+student who needs performing/fine-arts credit to look at `TPA2220` (Introduction to Stage Lighting)
+instead**, which carries it and is the natural precursor anyway. **That is a concrete, actionable, purely
+data-sourced piece of advice that took one command to find.**
+
+✅ **The test is now cheap enough to be automatic and it correctly silenced four prefixes.** Four of the six
+guides say the marking is a prefix-level default and carries no information — **which is the honest thing to
+write, and better than either asserting it or omitting it.**
+
+### ⚠ `TPA3223C` tripped a validator WARNING — recorded rather than silently overridden
+
+`validate_drafts.py`: *"3 credits with 60 contact hours for a studio prefix (expected ~90; a 3-credit studio
+meets about six hours a week)"*.
+
+**Kept at 60**, for two stated reasons: the batch-189 rule gives the **integrated (`C`) form's** hours, for
+which 60 is the Florida convention; and **the closest precedent in the live corpus agrees** — `TPA2232C`, a
+3-credit `C` in the same prefix, is published at 60.
+
+⚠⚠ **But the live `TPA` guides are inconsistent with each other and with the validator:**
+
+| `TPA2000C` | `TPA2200C` | `TPA2232C` | `TPA2248C` | `TPA2290L` |
+|---|---|---|---|---|
+| 3cr/45h | 3cr/**64h** | 3cr/60h | 2cr/45h | 1cr/45h |
+
+**Three different conventions across five guides in one prefix, and the validator expects a fourth.**
+⚠ **This is a verification-pass item rather than a batch problem** — but it is worth recording that the
+studio-prefix hour convention is currently unsettled in this catalog, and a decision would let the
+validator's warning mean something. See `REVIEW_QUEUE.md` item 91.
+
+### ⚠ Prefix fragmentation — the batch-207 statistic, computed for five more prefixes
+
+| Prefix | Live ids with ≥1 FL public carrier | Carried by exactly ONE | Max |
+|---|---|---|---|
+| `SSE` | 145 | **123 (85%)** | 11 |
+| `SYO` | 124 | **97 (78%)** | 7 |
+| `SYP` | 165 | **140 (85%)** | 6 |
+| ⚠ `TPA` | 414 | ⚠⚠ **324 (78%)** | 10 |
+| `TRA` | 79 | **62 (78%)** | 8 |
+
+⚠⚠ **Seven prefixes measured over two batches and every one lands between 69% and 85% single-carrier.**
+**This is looking like a general property of the Florida catalog rather than a feature of particular
+prefixes** — and if it holds, the honest default hedging level for almost any course is higher than "three
+institutions agree" would suggest. **Worth continuing to measure; if the next few batches confirm it, it
+belongs in `CLAUDE.md` as a baseline rather than a per-batch finding.**
+
+⚠ **`TPA` deserves its own note: 414 live ids is the largest of any prefix measured**, and theatre lighting
+alone runs to **more than twenty-five active statewide numbers**, four of them titled some version of
+*Lighting Design I*. **Transfer in this subject should go by portfolio and syllabus, not by number**, and
+the guide says so — theatre programmes are used to evaluating work directly.
+
+### ⚠ Tooling notes
+
+- ⚠⚠ **ALL SIX prerequisites exceeded 1000 characters on first assembly** (1,023–1,242). **Ninth
+  consecutive batch**, and this one needed **four** rounds. ⚠ **`SSE4113` and `SYO3100` each crossed the
+  line three times by margins under 10 characters** — the endgame is slow because each edit changes the
+  count by less than a sentence. **Draft the prerequisite field at ~850 characters and stop; it always
+  grows.**
+- ⚠⚠⚠ **A heredoc failure, again, and exactly the documented one.** A multi-substitution patch written as
+  `python - <<'PYEOF'` produced a **Python string missing its closing quote** (`SyntaxError: unterminated
+  string literal`), because the replacement text itself contained the quote characters being matched.
+  **This is the failure `CLAUDE.md` already warns about — heredocs on Python containing quotes — and it was
+  entered anyway to batch six edits at once.** ⚠ **Recovered with one Edit call.** **The rule stands with no
+  exception for "just this once, to save calls": Write for new files, Edit for changes inside them.**
+- ⚠ **`ID_Century` is the last three digits** — matching `SPM3104` needs `code[4:]`, not `code[3:]`
+  (recorded batch 207, and it bit again here on first attempt).
+- ⚠ **Batch average draft size 24 KB.** `TPA3223C` is the largest at 26.8 KB, which is right: a technical
+  craft course has more to say about safety, equipment and career structure than a seminar does.

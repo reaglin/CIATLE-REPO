@@ -2255,6 +2255,70 @@ one-directional.**
 
 ---
 
+## 91. ⚠⚠ The studio-prefix contact-hour convention is unsettled — five live `TPA` guides use three conventions (batch 208)
+
+**Surfaced by a validator WARNING on `TPA3223C`:** *"3 credits with 60 contact hours for a studio prefix
+(expected ~90; a 3-credit studio meets about six hours a week)."*
+
+**What is already published in this one prefix:**
+
+| `TPA2000C` | `TPA2200C` | `TPA2232C` | `TPA2248C` | `TPA2290L` | `TPA3223C` (this batch) |
+|---|---|---|---|---|---|
+| 3cr / 45h | 3cr / **64h** | 3cr / 60h | 2cr / 45h | 1cr / 45h | 3cr / 60h |
+
+⚠⚠ **Three different conventions across five guides, and the validator expects a fourth.**
+
+**What was done this batch:** kept at **60**, with the reasons stated — the batch-189 rule gives the
+**integrated (`C`) form's** hours, for which 60 is the Florida convention, and **the closest precedent
+agrees** (`TPA2232C`, a 3-credit `C` in the same prefix). **The warning was recorded rather than waved
+through.**
+
+**What is NOT decided, and is Ron's call:**
+
+1. **Does a studio/production prefix get its own credit-to-hour convention** (the validator's ~90 for a
+   3-credit studio), **or does the `C`-suffix convention (60) govern regardless of prefix?**
+2. If the studio convention wins, **the five live `TPA` guides above need republishing**, and the same
+   question applies to `MUS`/`MVK`/`ART`/`DAA` studio numbers.
+
+⚠ **No urgency and no student is misled** — every one of these guides states the figure is derived and says
+the real commitment is higher. **But the validator's warning currently cannot mean anything**, because the
+corpus does not follow the convention the validator encodes. **A decision either way would make it a useful
+check again.** Verification-pass item.
+
+---
+
+## 92. ⚠⚠ New evidence on held item 25 (`TPA3230C`, costume) — two of its stated facts are wrong (batch 208)
+
+**Not a new decision request — evidence bearing on an item already held**, found while pulling the
+statewide `TPA` record for `TPA3223C`. ⚠ **Two things recorded in `CLAUDE.md`'s open-cases table and in
+item 25 do not match the statewide file:**
+
+| Recorded | ⚠ Actually |
+|---|---|
+| statewide title is **"Costume Design"** | statewide title is **"THEATRE COSTUMING I"** |
+| ⚠⚠ **"NO institution carries the `C` suffix"** | **FAMU carries `TPA3230C`** — *Introduction to Costuming &amp; Wardrobe* |
+
+**And the statewide DESCRIPTION covers BOTH sides of the split the item is held on** — costume cutting
+skills and pattern development **and** rendering, colour theory, design concept and portfolio — closing
+with *"this is the first course in a two course sequence"* (the partner being `TPA3231`).
+
+**Full public carrier list for bare `TPA3230`:** FAMU *Costume Design*, FGCU *Costume Design*, FIU
+*Costume History*, FSU *Costuming I*, UWF *Costume Construction* — **five carriers, four readings.**
+
+⚠⚠ **Why this matters for the held decision: the state defines a course that is genuinely BOTH
+construction and design, which explains why institutions emphasise one half — and it means the queued `C`
+id is real, so the "id nobody carries" objection to writing it no longer applies.** Applying the batch-208
+title/description test: the title (*Costuming I*) and the description **agree** that the course is
+construction-led with design elements, so the carriers teaching pure design or pure history are the
+deviation.
+
+**No action taken** — item 25 stays held and `TPA3230C` stays in the queue. ⚠ **But `CLAUDE.md`'s
+open-cases row for `TPA3230C` should be corrected whenever that table is next touched**, because it
+currently records a statewide title and a carrier fact that are both wrong, and a future session would
+reason from them.
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

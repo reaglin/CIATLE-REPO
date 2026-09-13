@@ -1202,6 +1202,26 @@ handling differs:
 | `PSY3215` | FIU's **`PSY3211` methods-and-data-analysis course** on the *(CONT)* number | ⚠ the same subject at a different SEQUENCE POSITION |
 | `SPM4012` | FIU's title is the statewide title of **`SPM4018`** (which nobody carries) | ⚠ TITLE-only misfiling — the content still matches |
 | **`SPN3410`** | **UWF's `SPN3400` course** (*Conversation and Composition*) on the `SPN3410` number, **and `SPN3400` holds something else** | ⚠⚠⚠ **RECIPROCAL — a transposed PAIR** |
+| **`TPA3223C`** | **UCF and FAU teach lighting DESIGN** on the number the state defines as lighting **TECHNOLOGY** | ⚠⚠⚠ **the MAJORITY of carriers are the ones misfiling** |
+
+#### ⚠⚠ When MOST carriers misfile, the state is still the reference — but say so carefully (batch 208)
+
+**`TPA3223C` is the first case where two of three carriers deviate.** ⚠ It is still misfiling rather than a
+stale statewide title, because **the title/description test above comes out "agree"**: the state says
+*Lighting Technology* and its description says *"equipment, dimmers, control and other electronics."*
+And the batch-203 tell is decisive — **Florida numbers lighting design separately and the number is IN
+USE**: `TPA4020` *Lighting Design I* is carried by FSU and UF.
+
+⚠⚠ **What makes this worth a guide's strongest warning is that the two readings are different
+PROFESSIONS** — electrician and designer are different jobs, different unions (IATSE vs USA Local 829) and
+different career paths, **and electrics is where nearly everyone starts and where the jobs are.** **A
+student who needs the electrics skills and takes a design section graduates able to draft a plot and unable
+to get hired to hang it.**
+
+⚠ **This is the same professional-division split already open on `TPA3230C`** (costume construction vs
+design, `REVIEW_QUEUE.md` item 25). **Two instances in one prefix makes it a `TPA` pattern, not a
+coincidence — expect it on scenery, sound and costume numbers too, and check the design/craft axis on every
+`TPA` course.**
 
 #### ⚠⚠⚠ The reciprocal sub-shape: BOTH numbers displaced, in exchange with each other (batch 207)
 
@@ -1651,6 +1671,52 @@ graduates actually start work.** The guide says so and tells the reader to close
 
 ⚠ **The drill: when a statewide title contains a conjunction ("X and Y"), check that the statewide
 DESCRIPTION delivers both halves, and check whether Y has its own number that nobody carries.**
+
+#### ⚠⚠⚠ THE TITLE/DESCRIPTION TEST — run it before looking at carriers (batch 208)
+
+**Batch 208 produced a second and a third instance, and together they turn a judgement call into a test.**
+Both fields are in the same statewide CSV row, so this costs nothing:
+
+| Case | Statewide title vs statewide DESCRIPTION | Carriers | Conclusion |
+|---|---|---|---|
+| **`TPA3223C`** | ✅ **agree** — both say lighting *technology* | 2 of 3 say *design* | ⚠ **the CARRIERS are misfiling** |
+| **`TRA3153`** | ❌ **disagree** — title says *"Applied Production/Operations Mgmt"*, description is entirely *transportation* | both agree with the description | ⚠ **the TITLE is stale** |
+| **`SPM3104`** | ❌ **disagree** — title promises *events*, description omits them | carriers side with the description | ⚠ **the TITLE is stale** |
+
+⚠⚠ **The rule: compare the statewide title with the statewide DESCRIPTION first.**
+
+- **They AGREE** → the state is the reference, and a deviating carrier is **misfiling**. Write the
+  statewide subject, label the misfiling, and check whether a dedicated number exists for what the carrier
+  actually teaches (it usually does — see the MISFILING section).
+- **They DISAGREE** → the **title is the stale element**, and the description plus the carriers settle it.
+  ⚠ **`TRA3153` is the first time this catalog has corrected a statewide title outright**, and it was
+  safe because four independent things pointed the same way: the description, both carriers, and the
+  prefix itself (`TRA` = transportation; production/operations management is numbered under `MAN`).
+
+⚠ **This REFINES rather than contradicts the batch-201 caution** ("do not correct a *described* statewide
+subject on agreeing titles alone"). That caution protects a statewide **description** from being overridden
+by titles. **Here the description is not being overridden — it is the evidence**, against a title it
+already contradicts.
+
+#### ⚠⚠ The same one-row check settles a narrow-looking title (batch 208)
+
+**`SYO4530`**: statewide *Social Stratification*; FIU *Social Inequalities*, UF *Social Inequality*,
+UWF ⚠ *Inequality in America*. The instinct is to flag UWF as narrowing. ⚠⚠ **But the statewide
+description already says "American society (primarily)" — so UWF's title is simply ACCURATE, and the two
+broader-sounding titles are the ones that may promise comparative material the course does not deliver.**
+
+⚠ **Drill: before flagging a narrow title as a narrowing, check whether the DESCRIPTION was already that
+narrow.** This inverts the usual reading often enough to be worth the one lookup.
+
+#### ⚠⚠ A statewide description with an embedded institution list or a YEAR is a historical record (batch 208)
+
+**`SSE4113`'s description ends *"INSTITUTIONS: FAMU, FAU, FSU, UWF 1988"*; `SYO4530`'s ends with nine
+institutions and *"6/83"*.** In both cases the list no longer matches who offers the course.
+
+⚠⚠ **Read those descriptions as a historical definition of the SUBJECT, not a current statement of
+practice, and say so in the guide.** **Parts of the state course file have not been revised in forty
+years** — which also means the statewide record is sometimes the *least* current source available, and
+cannot be used to check a carrier's currency (see `SYP3630` under terminology-era divergence).
 
 ### General-education category designations
 
