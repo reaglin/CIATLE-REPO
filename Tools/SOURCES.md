@@ -21326,3 +21326,204 @@ the honest default hedging level for almost any course, and it is one flat-file 
   number** (`ARH2051` has three such pairs). **Fix: always give `sorted()` an explicit `key` when tuples
   contain dicts.** Cheap, but it aborted the scan mid-run.
 - ⚠ **Batch average draft size 21 KB.**
+
+## Batch 211 — ARH / ASC (2026-09-14)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`ARH3607`, `ARH3621`, `ARH3773`, `ARH3871`, `ARH4563`, `ASC4460` — **five of them a continuous `ARH`
+prefix run**, continuing the prefix begun with `ARH3301` in batch 210. **Listing:** `ASC` only (`ARH` was
+completed in batch 210) — **66 courses, 63 created, 3 updated, 0 failed.** **Site 18,666 → 18,730**;
+`ASC` 3→67. ✅ Live-guide check run on all six first; none had one.
+
+### ⚠⚠⚠ `ARH3621` — American art is numbered three ways in Florida and TWO OF THE NUMBERS OVERLAP
+
+**The clearest numbering conflict this catalogue has found, because the state's own definition and one
+carrier's use of it disagree.**
+
+| Number | Statewide definition | How it is actually used |
+|---|---|---|
+| `ARH3610` | *American Art* — description says **"colonial times to the present"**, the WHOLE span | FAMU, UCF use the bare title; ⚠⚠ **UF uses it for *American Art 1600-1876*** — the first half only |
+| **`ARH3621`** | *American Art: Colonial to 1876* — the first half | UNF (*American Art I: 1492-1876*), UWF (⚠ *American Art*, **no dates**) |
+| `ARH3620` | *U.S. Art: Centennial through Late Modernism* | UF (*American Art, 1876-1945*) |
+
+⚠⚠ **So two different numbers carry the same first half, and UF's use of `ARH3610` contradicts that
+number's own statewide definition.** **UF pairs 3610+3620; UNF and UWF use 3621.** **A transcript line
+reading `ARH3610` does not establish whether the student covered the whole span or half of it.**
+
+⚠⚠⚠ **And the two carriers of THIS number disagree on the START date: UNF says 1492, UF's neighbouring
+course says 1600.** **That 108-year gap contains the entire Spanish colonial enterprise in North
+America** — which in Florida is not an abstraction: **St. Augustine was founded in 1565**, and a course
+beginning in 1600 excludes Florida's own founding-era visual culture. **This is the sharpest instance yet
+of the project's recurring observation that the standard American narrative starting on the Atlantic
+seaboard is a choice rather than a chronology.**
+
+⚠ **UWF's bare title — *American Art*, with no date range — is the practical trap**, because a student
+cannot tell from it that the course stops in 1876, and neither UNF nor UWF appears to carry the
+second-half number.
+
+### ⚠⚠ `ARH3607` — a statewide PREREQUISITE naming a course only ONE carrier offers
+
+**Statewide gate: `ARH3590` (*Perspectives in Ancient and Non-Western Art*) with a minimum grade of C.**
+⚠⚠ **`ARH3590` is carried by UWF alone.**
+
+**Two inferences, both useful:**
+
+1. ⚠ **UWF almost certainly contributed the statewide entry** — this is the batch-200 rule ("a
+   prerequisite naming a LOCAL title tells you which institution contributed it") **operating on a
+   NUMBER rather than a title.** Same diagnostic, new evidence type.
+2. ⚠⚠ **FSU cannot be enforcing the gate**, since FSU does not carry `ARH3590` — **and FSU's title,
+   *Introduction to Native American Art*, is independently consistent with an unprerequisited course.**
+   Two pieces of evidence agreeing.
+
+**Standing practice this supports: when a statewide prerequisite names a course number, check which
+institutions carry THAT number before quoting the gate as general.** One flat-file lookup, and it
+converts a misleading statewide field into a precise statement about who it binds.
+
+⚠ **Also found: `ARH3600` *Native North American Art*, a statewide number emphasising the POST-CONTACT
+period, has no Florida public carrier.** **The state drew a real curricular distinction — prehistory-to-
+present versus post-contact emphasis — that nobody currently exercises.** The guide turns that into a
+question for the student: *how many weeks fall before contact and how many after?*
+
+### ⚠⚠ `ARH3871` — terminology-era divergence where the statewide description contains BOTH eras
+
+| | UWF: *Women in Art* (and statewide *Women and Art*) | UF: *Gender, Representation and the Visual Arts* |
+|---|---|---|
+| Project | **recovery** — who the women artists were, why they were excluded | **analytic** — how visual culture constructs gender at all |
+| Founding text | Nochlin, *"Why Have There Been No Great Women Artists?"* (1971) | Mulvey (1975), Pollock |
+
+⚠ **Same shape as `SYD4800`'s "Sociology of Sex Roles" → "Sociology of Gender"** (batch 187). **But the
+handling differs, and the difference is worth recording:** the statewide description reads *"issues of
+**gender** … with particular emphasis on **women artists**"* — ⚠⚠ **so it contains BOTH framings, and
+neither carrier has departed from it.** **Each has foregrounded one half of a course the state defined as
+both.**
+
+**That makes this a milder case than a true terminology-era divergence**, where one institution is using
+superseded vocabulary. **Handling: describe both projects, explain the field's movement between them, and
+give a syllabus test (Nochlin plus monographic weeks = recovery; Mulvey/Pollock plus problem-organised
+weeks = analytic).** ⚠ **Do not frame either carrier as behind the field.**
+
+✅ **And a positive finding worth stating for once: BOTH carriers record `gordon_rule` AND
+`gordon_writing`.** After ten documented instances of designation divergence, **a number where both
+carriers agree is worth telling the student they can rely on.**
+
+### ⚠ `ARH3773` — statewide "Critical Studies", carrier "History", and the description covers both
+
+**`ARH3773`: statewide *Critical Studies of Animation*; UWF (the only public carrier) *History of
+Animation*.** The statewide description names **four** dimensions — *"history, aesthetics, technical
+practices and cultural impact"* — **so both titles sit inside it.**
+
+**The useful distinction is organisational rather than substantive**, and the guide gives the test:
+**are the syllabus's week headings PERIODS or PROBLEMS?** A critical-studies course is organised by
+problem (representation, labour, technology, ideology); a history course by chronology.
+
+⚠ **Seventh instance of the informative-exclusion pattern**: the one private Florida carrier uses the
+exact statewide title, which supports critical studies as the intended framing.
+
+**Florida content here is unexpectedly strong and genuinely local:** ⚠⚠ **Disney Feature Animation
+Florida operated in Orlando 1989-2004** and produced *Mulan*, *Lilo &amp; Stitch* and *Brother Bear*;
+⚠ **the Fleischer Studios moved to Miami in 1938** — partly to escape a unionised workforce — and made
+*Gulliver's Travels* and the Superman shorts there before closing in 1942. **Two working feature
+animation studios, both in Florida, both closed, both with documented labour histories** — and the 2004
+closure is a compact local case study in a technological transition displacing a craft workforce, with
+the people involved still living in Central Florida.
+
+### ⚠ `ASC4460` — CRM, and a title addition that changes the syllabus
+
+**Statewide *Crew Resource Management*; UWF *Human Factors and Crew Resource Management*.** ⚠ **CRM sits
+INSIDE human factors**, so the wider title predicts real time on physiology and cognition — spatial
+disorientation, hypoxia, fatigue, attention — before crew behaviour. **A fuller preparation for safety or
+accident-investigation work, and it changes what is examined.**
+
+⚠⚠ **The statewide description names the teaching method, which is rare and consequential:** *"role
+playing and group discussions are key elements of course."* **The skills are behavioural and assessed by
+observation, so a student who does not participate cannot be assessed** — which the guide says plainly,
+along with the advice to raise any difficulty with speaking in week one.
+
+**Subject context the guide leads with, because it reframes the course:** CRM exists because qualified
+pilots in flyable aircraft were crashing them, and accident investigation identified crew communication
+and decision-making rather than stick-and-rudder skill. ⚠ **It is one of the genuinely successful safety
+interventions in modern industry, and its concepts have been adopted in medicine, maritime, rail and
+fire service** — so this is portable knowledge rather than aviation trivia.
+
+⚠⚠ **Best AI section in the batch, and it wrote itself:** automation dependency, mode confusion,
+complacency and skill degradation are **established CRM topics developed for flight management systems**,
+and they transfer directly to current AI adoption everywhere. **Aviation learned expensively that the
+hardest task is monitoring a system that is usually right, and that failures come at the handover.**
+**A student in this course is unusually well equipped to reason about AI elsewhere because aviation has
+already run the experiment.**
+
+### ⚠ Gordon Rule divergence — three more, and a pattern check
+
+| Number | Designated | Not designated |
+|---|---|---|
+| `ARH3607` | UWF (both flags) | FSU |
+| `ARH3621` | UWF (both flags) | UNF |
+| `ARH4563` | UWF (both flags) | FAU |
+| ✅ `ARH3871` | **UF and UWF — both** | — |
+
+⚠⚠ **Eleven numbers now across eleven disciplines.** ⚠ **But note what batch 210 established and this
+batch reinforces: the institution does not predict it either.** UWF designates on all four `ARH` numbers
+here and did NOT designate on both `AMH` numbers last batch. **Neither number nor institution predicts
+designation — only the institution's own list does**, which is exactly what the guides tell students.
+
+### ⚠ hs_credit distribution — `ARH` discriminating, `ASC` boilerplate
+
+| Prefix | `DS_High_School_Credit1` | Verdict |
+|---|---|---|
+| `ARH` | 343 ELECTIVE, ⚠ **8 PERFORMING FINE ARTS** | discriminating |
+| `ASC` | 84/84 ELECTIVE | boilerplate |
+
+✅ **All five `ARH` guides carry the actionable version**: the eight fine-arts numbers are
+`ARH2000`, `ARH2006`, `ARH2010`, `ARH2050`, `ARH2051`, `ARH2060`, `ARH2402` and `ARH2500` — **all lower
+division, and none of them these courses.** **So a dual-enrolled student needing fine-arts credit is
+pointed at `ARH2050`/`ARH2051`/`ARH2500`, which carry it and are the natural precursors anyway.**
+
+### ⚠ Prefix fragmentation — fourteen prefixes, baseline unchanged
+
+| Prefix | Live ids | Carried by exactly ONE | Max |
+|---|---|---|---|
+| `ARH` | **421** | **339 (81%)** | 30 |
+| `ASC` | 76 | 49 (64%) | 7 |
+
+⚠ **Fourteen prefixes now, all between 64% and 85%.** `ARH` remains the largest prefix measured.
+**The baseline promoted to `CLAUDE.md` in batch 210 continues to hold with no exceptions.**
+
+### ⚠ Tooling notes
+
+- ✅✅ **ALL SIX prerequisites under 1000 on first assembly again (886–987), zero trim rounds — second
+  consecutive batch.** The batch-209 rule (draft at ~850) is now reliable rather than promising.
+- ⚠⚠⚠ **THE PUSH WAS KILLED BY MEMORY PRESSURE, AND THE FIRST CHECK LOOKED EXACTLY LIKE A SLOW
+  PUSH.** The metadata build exceeded the 120-second tool timeout, was backgrounded, and completed
+  normally (exit 0). **The push then did the same thing — and did NOT complete: the task was killed with
+  "system is running low on memory."**
+
+  ⚠⚠ **Two things made this dangerous rather than merely annoying:**
+
+  1. **The background output file stayed EMPTY the whole time**, because Python buffers stdout when it is
+     redirected. ⚠ **An empty output file is indistinguishable from a hung process, a slow process and a
+     dead one.** **Fix: run these with `python -u`.** Unbuffered output makes progress visible and makes
+     a kill obvious.
+  2. ⚠⚠⚠ **A killed push can leave a PARTIAL state** — some guides live, some not, and the queue
+     half-marked. **It did not here** (verified: zero guides live, queue unchanged at 231/2323), **but
+     that had to be CHECKED rather than assumed.**
+
+  **Standing recovery drill, which worked cleanly here:**
+  **(1)** curl each course's `/guide` endpoint to see what actually went live;
+  **(2)** `queue_mgr.py status` to see what the queue believes;
+  **(3)** only then re-run. **Reconcile and push separately** — reconcile is fast and the push is the slow
+  half, so splitting them makes the failure point obvious. **The guide upsert is idempotent, so re-pushing
+  an already-live guide is safe** — but knowing the state first is what tells you whether to expect
+  version bumps.
+
+- ⚠ **Why the memory pressure: `ARH` is the largest prefix measured (421 live ids) against an ~80 MB flat
+  file parsed once per prefix**, and several parses had run in the same session. **For large prefixes,
+  expect the metadata build and the push to exceed two minutes, run them with `python -u`, and give them
+  explicit long timeouts rather than letting them background silently.**
+- ⚠ **A scan bug fixed from batch 210 recurred in a new place and was caught by the fix**: `sorted()` on
+  tuples containing dicts needs an explicit `key` wherever an institution carries honours and standard
+  sections of one number. **The `key=lambda x: (x[0], x[2]['inst_title'])` form is now in both the scan
+  and the metadata scripts.**
+- ✅ **Write for new files, Edit for changes throughout. No heredoc on Python containing quotes.**
+- ⚠ **Batch average draft size 19.7 KB** — the `ARH` guides are consistently shorter than the batch
+  average across the project, which is appropriate: a two-carrier upper-division art history elective has
+  less transfer machinery to explain than a licensure-facing course.

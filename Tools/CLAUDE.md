@@ -1944,6 +1944,42 @@ Pushing to the live site runs from this repo (`generate_guide.py --push-from-que
 the `REPO_ADMIN_*` credentials in `Tools/.env`. It is a write to production — confirm the
 batch with the user before pushing, and never push a draft that `validate_drafts.py` fails.
 
+### ⚠⚠⚠ When a push is INTERRUPTED — the recovery drill (batch 211)
+
+**Batch 211's push was killed mid-run by system memory pressure.** ⚠⚠ **A killed push can leave a PARTIAL
+state — some guides live, some not, and the queue half-marked — so the state must be CHECKED, never
+assumed.**
+
+**The drill, in order:**
+
+1. ⚠ **Ask the SITE what is live**, not the queue:
+   ```bash
+   for c in ID1 ID2 ID3; do printf "%-9s " $c; \
+     curl -s "https://floridacourserepo.com/api/v1/courses/$c/guide" | head -c 80; echo; done
+   ```
+2. **Then ask the QUEUE what it believes** — `python queue_mgr.py status`. **Where the two disagree, the
+   site is the fact and the queue is the record to fix** (`queue_mgr.py reconcile`).
+3. **Only then re-run** — and **split reconcile from push**: reconcile is fast, the push is the slow half,
+   so running them as separate commands makes the failure point obvious instead of ambiguous.
+
+✅ **The guide upsert is idempotent, so re-pushing an already-live guide is safe.** **Knowing the state
+first is what tells you whether to expect a version bump and whether anything needs one.**
+
+### ⚠⚠ Run long pipeline commands with `python -u`
+
+**The killed push looked exactly like a slow push for several minutes, because the background output file
+stayed EMPTY — Python buffers stdout when it is redirected to a file.**
+
+⚠⚠⚠ **An empty output file is indistinguishable from a hung process, a slow process and a dead one.**
+
+**Use `python -u` on anything that may run long** — the metadata build, `generate_guide.py`,
+`list_courses.py`. Unbuffered output makes progress visible and makes a kill obvious immediately.
+
+⚠ **Expect long runs on large prefixes.** The SCNS flat file is ~80 MB and is parsed once per prefix, so a
+big prefix (`ARH` is the largest measured at 421 live ids) will push the metadata build and the push past
+the two-minute tool timeout. **Give them explicit long timeouts rather than letting them background
+silently.**
+
 ---
 
 ## Tone and quality bar
