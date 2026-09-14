@@ -840,6 +840,19 @@ needed two trims.
 twelve have come within 30 characters of the limit.** **The assembler's length report is what catches this
 before the push; keep reading it.** **When trimming, cut the connective tissue and keep the warnings.**
 
+#### ⚠⚠⚠ SOLVED (batch 209): draft the prerequisite field at ~850 characters and let it grow
+
+**The ceiling is now 1000, and for NINE consecutive batches every prerequisite in the batch exceeded it on
+first assembly** — batches 201–208, needing up to four rounds of trimming each, with the endgame slow
+because each edit moves the count by less than a sentence.
+
+✅ **Batch 209 broke the run by writing short deliberately**: **three of six came in under the limit on
+first assembly** (886, 924, 955 characters), and the three that ran over needed **one** trim round.
+
+⚠⚠ **So the rule is: write the prerequisite to about 850 characters and stop.** It always grows during
+assembly — the warnings accumulate as the research lands. **Writing to length and then cutting is the
+expensive order; writing short and adding is the cheap one.**
+
 ### ⚠⚠ TERMINOLOGY-ERA divergence — a category of its own (batch 187)
 
 **Not title drift, not subject divergence: the same course carrying vocabulary from different decades of
@@ -1032,6 +1045,73 @@ aircraft, **sold by the hour**, and the convention is meaningless for it.
 practice exceeds. **Expect the same shape wherever a licensing body sets hours**: flight training, clinical
 and practicum hours, PSAV clock-hour programmes, apprenticeship hours.
 
+### ⚠⚠⚠ EXTERNALLY-GOVERNED CURRICULUM — when the syllabus itself belongs to a body outside SCNS (batch 209)
+
+**Every divergence rule in this file assumes the content authority is the INSTITUTION, with SCNS recording
+it.** ⚠⚠ **`AFR` (Air Force ROTC) breaks that assumption: the curriculum is set nationally by Air Force
+ROTC Headquarters (the Holm Center, Maxwell AFB), and every detachment in the country teaches the same
+syllabus.**
+
+⚠ **Distinct from the regulator's-floor rule above.** That is about **HOURS** — a regulator setting a
+minimum the credit convention cannot describe. **This is about CONTENT AND TITLES — an external body
+owning the syllabus itself.**
+
+**Three consequences, and they invert the usual analysis:**
+
+1. ⚠⚠ **The institutions CANNOT diverge from each other on content.** So institutional title variation is
+   **pure catalog lag**, not a divergence signal — and the "two carriers agreeing outrank a statewide
+   title" machinery (batch 183) is beside the point. **Do not write a divergence block for what is only
+   two catalogs updating at different speeds.**
+2. ⚠⚠⚠ **The statewide record is the LEAST current source available**, so it cannot be used to check a
+   carrier's currency. On `AFR` it is forty years behind both carriers.
+3. **The guide's statement of authority has to change.** These guides say: **judge the course by what the
+   detachment issues in week one; nothing in this guide overrides cadre guidance.** ⚠ **That is the honest
+   position whenever the real syllabus is issued by a body outside the state system** — and it is a
+   stronger and more useful sentence than any hedge about institutional variation.
+
+**Worked example — `AFR2132`, and the staleness is self-evident from the text:**
+
+| | Statewide record | Current national curriculum |
+|---|---|---|
+| `AFR2132` | *The Development of Air Power II* — ⚠⚠⚠ description ends **"projects ahead to the year 2000"** | **Team and Leadership Fundamentals II** — leadership theory, team dynamics, ethics, Field Training prep |
+| `AFR1112` | *The Air Force Today II* — "total force structure, offensive and defensive forces" | **Competition and Security** |
+| siblings | ⚠ *Strategic Offensive Forces* / *Strategic Defensive Forces* — Cold War nuclear-triad vocabulary | — |
+
+⚠⚠ **Note it is a change of SUBJECT, not just a title**: the AS200 year used to be air power history and
+is now leadership and team fundamentals, with the history retained as case material. **Within Florida, UWF
+uses the current national naming on all four numbers and Pensacola State still uses the older state
+naming — same course, same national syllabus, different lag.**
+
+⚠ **Where a statewide description names a future that has passed, say so in the guide.** It is the
+clearest possible way to tell a student not to rely on the state record, and it is stronger evidence than
+the embedded-date test (batch 208) because it needs no inference.
+
+**Expect this shape in:** the other services' ROTC prefixes, nationally standardised certification
+curricula, apprenticeship-linked coursework, and anywhere a national body **issues** the syllabus rather
+than approving one.
+
+#### ⚠⚠ And check the CREDIT arrangement, because an external curriculum does not standardise credits (batch 209)
+
+**The national programme fixes the content; each institution still decides what to award for it.**
+`AFR`'s Leadership Laboratory is the worked case:
+
+| Institution | Leadership Laboratory |
+|---|---|
+| Pensacola State, UWF | **0 credits** |
+| ⚠ Santa Fe College, University of Florida | **1 credit** |
+| ⚠ UCF | folded into a **2-credit integrated `C` course** with the lecture |
+
+⚠⚠⚠ **Identical, nationally-specified work is worth 0, 1, or part of 2 credits depending on the
+institution — and the pattern repeats across all four years** (`AFR1101L`, `AFR1112L`, `AFR2130L`,
+`AFR2132L`, `AFR4211L`). **Credit-count divergence (batch 185) and split-family (batch 183) operating
+together on one prefix.**
+
+**What a guide must say:** **progression is governed by the external programme, not the registrar — but
+full-time enrolment status IS governed by the registrar.** ⚠ **So tell the reader to count their credits
+WITHOUT the zero-credit component and check the total against whatever threshold applies to them**
+(financial aid, scholarship conditions, athletic eligibility, insurance, visa status). See the
+zero-credit-laboratory rule in the schema section.
+
 ### ⚠ A title inside an SCNS prerequisite string can be a LOCAL title (batch 200)
 
 **`COM4564`'s statewide prerequisite reads *"COM4561 Social Media Content Development with a grade of C- or
@@ -1043,6 +1123,16 @@ Development" is **UWF's** title.
 - ⚠ **Useful in the other direction: a prerequisite naming a local title tells you which institution
   contributed the entry**, and therefore which catalog to check. Here it confirmed a real `COM4561`→`COM4564`
   sequence at UWF with an explicit C-minus floor.
+
+#### ⚠⚠ The prerequisite field can also be CORRUPT — sanity-check it against the id pattern (batch 209)
+
+**`ADV4802`'s statewide prerequisite reads `"ADV U101C"` — which is not a valid SCNS identifier at all.**
+⚠ **The first corrupted value this project has met in that field, and it is easy to pass straight into a
+guide as though it named a real course.**
+
+**Standing check: before quoting `DS_Prerequisites1`, test any course-looking token in it against
+`^[A-Z]{3}\s?\d{4}[A-Z]?$`.** A token that fails is a data defect, not a course. **Say so in the guide
+and send the reader to the institution's catalog** — which is what `ADV4802`'s guide does.
 
 ### ⚠⚠ SURVEY THE PREFIX FAMILY from the statewide CSV before writing — a standing move (batch 200)
 

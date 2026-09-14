@@ -20924,3 +20924,187 @@ the guide says so — theatre programmes are used to evaluating work directly.
   (recorded batch 207, and it bit again here on first attempt).
 - ⚠ **Batch average draft size 24 KB.** `TPA3223C` is the largest at 26.8 KB, which is right: a technical
   craft course has more to say about safety, equipment and career structure than a seminar does.
+
+## Batch 209 — ACG / ADV / AFR (2026-09-14)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`ACG4151`, `ADV4802`, `AFR1112`, `AFR1112L`, `AFR2132`, `AFR2132L`. **Listing:** 555 courses across the
+three prefixes — **518 created, 37 updated, 0 failed**, 1,028 offerings. **Site 17,595 → 18,119 courses**;
+`ACG` 17→346, `ADV` 2→133, `AFR` 12→76. ✅ Live-guide check run on all six first; none had one.
+
+### ⚠⚠⚠ A new shape: EXTERNALLY-GOVERNED CURRICULUM — where the content authority is outside both SCNS and the institution
+
+**`AFR` is Air Force ROTC, and it breaks an assumption running through every divergence rule in this
+file.** The rules so far all assume the content authority is the institution, with SCNS recording it.
+⚠⚠ **Here it is neither: AFROTC is set nationally by Air Force ROTC Headquarters (the Holm Center,
+Maxwell AFB), and every detachment in the country teaches the same syllabus.**
+
+**Three consequences, and they invert the usual analysis:**
+
+1. ⚠⚠ **The institutions do NOT diverge from each other on content** — they cannot. So institutional
+   title variation is pure catalog lag, not a divergence signal, and the usual "two carriers agreeing
+   outrank the statewide title" machinery is beside the point.
+2. ⚠⚠⚠ **The only thing that varies is the state record, and it is the LEAST current source
+   available.** The statewide record cannot be used to check a carrier's currency here — it is forty
+   years behind both of them.
+3. **The guide's authority statement has to change.** These guides say plainly: **judge the course by
+   what the detachment issues in week one; nothing in this guide overrides cadre guidance.** That is
+   the honest position when the real syllabus is issued by a body outside the state system entirely.
+
+⚠ **Related to but distinct from the batch-200 "regulator's floor" rule** (FAA Part 141/61 hours for
+`ATF1100L`). **That was about HOURS — a regulator setting a minimum the credit convention could not
+describe. This is about CONTENT AND TITLES — an external body owning the syllabus itself.**
+
+**Expect the same shape in:** the other services' ROTC prefixes, nationally standardised certification
+curricula, apprenticeship-linked coursework, and anything where a national accrediting or governing body
+issues the syllabus rather than approving it.
+
+### ⚠⚠⚠ `AFR2132` — the most vivid stale-statewide-record instance the project has found
+
+**The statewide description, in full:**
+
+> *"Study of air power following World War II. Course deals with the peaceful employment of U.S. air
+> power in relief missions and civic action programs in the late 1960's and the air war in Southeast
+> Asia. It also covers the buildup of air power during the 1980's and **projects ahead to the year
+> 2000**."*
+
+⚠⚠⚠ **Its forward horizon is the year 2000.** Written in the 1980s, never revised.
+
+**And it is not merely a dated title — it is a change of SUBJECT:**
+
+| | Statewide record | Current national curriculum |
+|---|---|---|
+| `AFR2132` | *The Development of Air Power II* — air power history | ⚠ **Team and Leadership Fundamentals II** — leadership theory, team dynamics, ethics, communication, Field Training preparation |
+| `AFR1112` | *The Air Force Today II* — "total force structure, offensive and defensive forces" | **Competition and Security** — the contemporary security environment |
+| siblings | ⚠ *Strategic Offensive Forces*, *Strategic Defensive Forces* | Cold War nuclear-triad vocabulary throughout the prefix |
+
+⚠ **Within Florida the catalog titles split by how far each has caught up:** **UWF uses the current
+national naming on all four numbers; Pensacola State still uses the older state naming.** **Same course,
+same national syllabus, different lag.** That is the batch-206 "a catalog title can lag a revised
+syllabus by years" rule, at prefix scale.
+
+**This extends the batch-208 finding** (statewide descriptions with embedded years — `SSE4113` 1988,
+`SYO4530` 1983 — are historical records). ⚠⚠ **`AFR2132` is the strongest case yet because the staleness
+is self-evident from the text rather than inferred from a date stamp.** **Where a statewide description
+names a future that has passed, say so in the guide** — it is the clearest possible way to tell a student
+not to rely on it.
+
+### ⚠⚠⚠ Two ZERO-CREDIT laboratories, and a credit divergence running the whole programme
+
+**`AFR1112L` and `AFR2132L` are both 0 credits at both public carriers** — the batch-198 `BCH3034L`
+zero-credit-laboratory shape, handled per the standing rule (does not count toward full-time enrolment,
+so financial aid, scholarships, athletic eligibility, insurance and visa status are all affected; the
+work is real; there is no credit to transfer).
+
+⚠⚠ **But the family shows something the standing rule does not cover: the SAME laboratory carries
+different credit at different Florida institutions.**
+
+| Institution | Leadership Laboratory |
+|---|---|
+| Pensacola State, UWF | **0 credits** |
+| ⚠ Santa Fe College, University of Florida | **1 credit** |
+| ⚠ UCF | folded into a **2-credit integrated `C` course** with the lecture |
+
+⚠⚠⚠ **Identical, nationally-specified work is worth 0, 1, or part of 2 credits depending on where you
+are enrolled — and the pattern repeats across all four years** (`AFR1101L`, `AFR1112L`, `AFR2130L`,
+`AFR2132L`, `AFR4211L`). **So the same first year of AFROTC is 1cr+0cr at one school, 1cr+1cr at another,
+and a single 2cr course at a third.**
+
+**This is credit-count divergence (batch 185) and split-family (batch 183) operating together on one
+prefix**, and the guides state the practical consequence: **progression is governed by the detachment and
+the national programme, not the registrar — but full-time enrolment counts are governed by the registrar,
+so check your credit total WITHOUT the laboratory against whatever threshold applies to you.**
+
+⚠ **The zero-credit line is at its most misleading on `AFR2132L` specifically**, because that is the
+**Field Training preparation term** — cadre observation there feeds competitive selection for Field
+Training and the Professional Officer Course. **A student reading "0 credits" as "low stakes" has
+misjudged the programme at exactly the point where it counts most**, and the guide says so.
+
+### ⚠⚠ `ACG4151` — the title/description test fires for a third consecutive batch
+
+| Source | Says |
+|---|---|
+| Statewide **title** | ⚠ *Financial Accounting III* — implies a third procedural course |
+| Statewide **description** | ✅ *"critical evaluation of broad framework of financial accounting **theory**"* |
+| UWF (only public carrier) | ✅ *Accounting Theory* |
+
+**Title and description DISAGREE → the title is the stale element**, and the carrier agrees with the
+description. **Record dated 11/82.** ✅ **The batch-208 test resolved this in one lookup.**
+
+**The student-facing consequence is concrete:** *do not expect more intermediate accounting problems.*
+Assessment is essays and cases, and **students who have succeeded in accounting by being good at
+structured problems are exactly the ones who struggle here.**
+
+⚠ **The `ACG` family also shows sequence-length divergence in the state's own record:** intermediate
+accounting is defined BOTH as a two-course sequence (`ACG4101` *(1 of 2)* + `ACG4111` *(2 of 2)*) and as
+a three-course sequence (`ACG4103` + `ACG4113` + `ACG4123`, titled *(1 of 3)* … *(3 of 3)*). **Same
+material, divided in two places** — batch-204's shape, stated explicitly by SCNS for once.
+
+### ⚠⚠ `ADV4802` — a corrupted statewide prerequisite, and a capstone spread over five numbers
+
+⚠⚠⚠ **The statewide prerequisite field reads `"ADV U101C"` — not a valid SCNS identifier.** **A
+corrupted entry, and the first this project has met in the prerequisite field.** The guide says plainly
+that the field is unusable for this course and to read the institution's catalog instead.
+
+⚠ **Standing practice this suggests: sanity-check `DS_Prerequisites1` against the id pattern before
+quoting it.** A malformed value is easy to pass through into a guide as though it named a real course.
+
+**And the campaigns capstone is scattered:** the state defines `ADV4800` *Advertising Campaigns*,
+`ADV4801` *Advertising Campaigns II* and `ADV4802` *Advertising Campaign Strategies* — ⚠ **and this
+catalog has separately recorded that UWF uses `PUR4801` for a campaigns capstone the state numbers
+`PUR4800C`.** **So the same capstone sits across at least five numbers in two prefixes.**
+
+✅ **The guide's answer is the right one for this field: identify the course by what you produced, not by
+its number** — in advertising the portfolio is the credential, and a receiving programme will want you to
+do its own capstone regardless.
+
+⚠ **Useful confirmation from an excluded private carrier** (seventh instance of that pattern): it titles
+`ADV4802` *Advertising and Public Relations Capstone*, which corroborates the statewide description's
+**"capstone experience for advertising and PR majors"** — a SHARED capstone, so teams are
+mixed-discipline by design.
+
+### ⚠ hs_credit distribution test — all three prefixes boilerplate
+
+| Prefix | `DS_High_School_Credit1` | Verdict |
+|---|---|---|
+| `ACG` | 280/280 ELECTIVE | boilerplate |
+| `ADV` | 110/110 ELECTIVE | boilerplate |
+| `AFR` | 40/40 ELECTIVE | boilerplate |
+
+✅ **Correctly silenced all three**, and each guide says the marking is a prefix-level default carrying no
+information. ⚠ **The `AFR` guides add a point the data does not carry: Air Force JROTC is the high-school
+programme and does not substitute for college AFROTC** — a confusion a dual-enrolment student could
+plausibly have.
+
+### ⚠ Prefix fragmentation — eight and nine and ten prefixes in
+
+| Prefix | Live ids with ≥1 FL public carrier | Carried by exactly ONE | Max |
+|---|---|---|---|
+| `ACG` | 346 | **227 (66%)** | ⚠ **37** |
+| `ADV` | 133 | **109 (82%)** | 7 |
+| `AFR` | 76 | **49 (64%)** | 12 |
+
+⚠⚠ **Ten prefixes measured across three batches, all between 64% and 85% single-carrier.** **The
+baseline is holding, and it is now measured widely enough to be worth promoting from a per-batch finding
+to a stated property of the Florida catalog** — probably at the next round of `CLAUDE.md` maintenance.
+
+⚠ **`ACG` is the widest-carried prefix measured so far (max 37 institutions on a single number)** —
+unsurprising for principles of accounting, which nearly every institution teaches, and a useful reminder
+that the single-carrier baseline coexists with a small number of very widely carried general courses.
+
+### ⚠ Tooling notes
+
+- ✅✅ **The prerequisite ceiling was nearly beaten this batch.** Drafting deliberately at ~850
+  characters (the batch-208 lesson) produced **three of six under the limit on first assembly** —
+  `ADV4802` 886, `AFR2132L` 924, `AFR1112L` 955 — against **six of six over in each of the previous two
+  batches.** The three that ran over needed **one trim round**, not four. ⚠ **The lesson is confirmed and
+  should now be the default: draft the prerequisite field short and let it grow, rather than writing to
+  length and cutting.**
+- ✅ **Write tool for new files, Edit tool for every change. No heredoc was attempted on Python
+  containing quotes, and nothing failed** — the rule reasserted after batch 208's self-inflicted
+  breakage.
+- ⚠ **Zero-credit guides validate cleanly**, including `credits: 0` with a non-zero `contact_hours` —
+  confirming the validator handles the zero-credit-laboratory case correctly.
+- ⚠ **Batch average draft size 19 KB** — the smallest of any batch so far, and correct: four of the six
+  are 1-credit and 0-credit courses, where the batch-189 rule applies (less to say about content, more
+  about format, standards, scheduling and transfer traps).
