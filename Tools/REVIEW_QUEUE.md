@@ -2319,6 +2319,42 @@ reason from them.
 
 ---
 
+## 93. ⚠⚠⚠ `AMH2010` and `AMH2020` carry ELECTIVE high-school credit, not AMERICAN HISTORY — and both have live guides (batch 210)
+
+**The largest-population instance yet of the `SPN2210` shape** (batch 207), found by running the
+distribution test on the `AMH` prefix.
+
+| Number | Statewide title | High-school credit |
+|---|---|---|
+| `AMH2010` | Introductory Survey to 1877 **(GE CORE)** | ⚠⚠ **ELECTIVE** |
+| `AMH2020` | Introductory Survey since 1877 **(GE CORE)** | ⚠⚠ **ELECTIVE** |
+| `AMH2041` | Survey of the American Experience I | ✅ **AMERICAN HISTORY** |
+| `AMH2042` | Survey of Social and Cultural History since 1865 | ✅ **AMERICAN HISTORY** |
+
+**Only 2 of 271 active `AMH` numbers carry American History high-school credit, and they are not the two
+canonical surveys.** ⚠⚠⚠ **`AMH2010` and `AMH2020` are among the most heavily dual-enrolled courses in
+Florida** — they are GE Core, they are required for most degrees, and they are exactly what a dual-enrolled
+student takes expecting it to cover the high-school American history requirement.
+
+⚠ **Both already have live guides**, written before the distribution test existed.
+
+**Why this needs care rather than immediate action:** the state course record is not the award mechanism.
+**The district's dual-enrolment articulation agreement governs what appears on a high-school transcript,
+and many districts do grant American History credit for `AMH2010`.** So the honest statement is the one
+used in `SPN2210` and `ARH3301`: *the state record says elective; the articulation agreement governs;
+confirm with your counsellor before the drop deadline.*
+
+⚠ **Recommendation (no action taken):** on the verification pass, add that paragraph to the live
+`AMH2010` and `AMH2020` guides at v1.1. **The guides are incomplete rather than wrong.**
+
+⚠⚠ **Wider question for Ron, since this is now three instances** (`SPN2210`, `ARH3301`, and these two):
+**should the dual-enrolment high-school-credit check become a standing item for every guide on a
+LOWER-DIVISION course?** The test is one `Counter` over the prefix and it has produced actionable,
+student-facing advice every time it fired. Upper-division courses need only the one-line "prefix-level
+default" note.
+
+---
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

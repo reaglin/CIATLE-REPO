@@ -21108,3 +21108,221 @@ that the single-carrier baseline coexists with a small number of very widely car
 - ⚠ **Batch average draft size 19 KB** — the smallest of any batch so far, and correct: four of the six
   are 1-credit and 0-credit courses, where the batch-189 rule applies (less to say about content, more
   about format, standards, scheduling and transfer traps).
+
+## Batch 210 — AMH / APK / ARH (2026-09-14)
+
+Session order: resources (0 pending), guide requests (0 waiting), queue, then listing. **Six guides:**
+`AMH4111`, `AMH4375`, `AMH4641`, `APK3220C`, `APK4114C`, `ARH3301`. **Listing:** 989 courses across the
+three prefixes — **542 created, 26 updated, 0 failed**, 1,557 offerings. **Site 18,119 → 18,666 courses**;
+`AMH` 12→330, `APK` 11→240, `ARH` 11 guided of 421 listed. ✅ Live-guide check run on all six first; none
+had one.
+
+### ⚠⚠⚠ `ARH3301` — a new sub-shape: the carriers depart from the statewide scope in OPPOSITE directions
+
+**Every scope divergence recorded so far runs one way** — carriers narrower than the state (`ZOO4454C`,
+`BSC1050`), or broader (`SPN4520`), or unanimously drifting together. ⚠⚠ **This one splits:**
+
+| Source | Title | Scope |
+|---|---|---|
+| **Statewide** | *Renaissance Art* — description: Renaissance **and Mannerist** work in **Italy AND Northern Europe** | the reference |
+| ⚠ FGCU | *Renaissance **and Baroque** Art* | **BROADER** — adds the 17th century |
+| ⚠ UWF | ***Early** European Renaissance* | **NARROWER** — may exclude High Renaissance and Mannerism |
+
+⚠⚠⚠ **The consequence is unusual and worth stating: with a two-carrier course diverging in opposite
+directions, the two versions may overlap only in the MIDDLE of the period.** One adds a century at the
+end; the other may stop before the material most people picture when they hear "Renaissance art" —
+Leonardo, Michelangelo, Raphael.
+
+**Handling: two syllabus questions rather than a general warning** — *does it reach the High Renaissance
+and Mannerism?* and *does it cover Northern Europe, or Italy only?* ⚠ **The second matters because the
+statewide description requires both halves and a course titled "Renaissance Art" frequently means Italian
+Renaissance art in practice.** Florida numbers the Italian-only course separately as `ARH3302` (UNF).
+
+⚠ **Drill this suggests: when a course has few carriers, check whether they diverge from the state in the
+SAME direction before writing a single divergence block.** Same-direction divergence (batch 207's
+`SPN4520`) means the state record is out of step; opposite-direction divergence means the carriers are
+making independent curricular choices and the student needs a test, not a correction.
+
+### ⚠⚠⚠ `AMH4111` vs `AMH4110` — chronological divergence between two NUMBERS, and the gap is the Revolution
+
+| Number | Statewide title | Ends at | Carriers |
+|---|---|---|---|
+| `AMH4110` | United States History to **1763** | end of the French and Indian War — close of the colonial period | **4** (FAU, FSU, UCF, UF) |
+| `AMH4111` | United States History to **1789** | ratification of the Constitution | **2** (UF, UWF) |
+
+⚠⚠ **Twenty-six years separate the endpoints and they contain the Stamp Act crisis, the Declaration, the
+war, the Articles and the Constitutional Convention.** The state's own descriptions confirm the split —
+`AMH4110` aims at *"the end of the colonial period"*, `AMH4111` at *"the beginning of the colonies through
+the Revolution"* and *"the causes"* of it.
+
+✅ **`UF` carries BOTH**, which is the strongest available evidence that the distinction is real rather
+than a numbering accident.
+
+⚠⚠ **And UWF titles `AMH4111` "Colonial America" — which is `AMH4110`'s subject.** The guide is careful
+here: *"colonial America" is loose usage and many courses under that name do cover the Revolution* — so
+this is **a reason to check, not a conclusion.** The question given to the reader is direct: *does this
+course reach the Revolution and the Constitutional Convention?*, with the last three weeks of the schedule
+as the test.
+
+⚠ **UF's own title points a third way**: *New World Encounters* signals the contact-and-collision framing
+(Native, European, African) that has reoriented the field, and a fourth number — `AMH4112` *The Atlantic
+World* (UWF) — carries it further. **Three overlapping treatments, distinguished by endpoint and by
+frame.**
+
+### ⚠⚠ `AMH4641` — a recent SCNS entry, and the PROSE STYLE is the tell
+
+**`AMH4641` *Video Games and American History* is carried by Florida Polytechnic and UWF.** Its statewide
+description reads:
+
+> *"This course surveys the history of video games and how video games engage history. **This is no
+> trivial subject.** … In this course, we'll examine … We'll learn how to critically analyze video games
+> as historical sources…"*
+
+⚠⚠ **Compare that with `AMH4110`, written in the 1980s:** *"DISCOVERY, EXPLORATION, ORIGINS OF COLONIES.
+DEMOGRAPHIC TRENDS, ETHNO-CULTURAL CONFLICT…"*
+
+**The state course file contains entries from at least two eras, and they are distinguishable by prose
+style alone** — terse all-capitals telegraphese versus full sentences in the first person plural with an
+argument. ⚠⚠ **Where a statewide description reads as though it was written by someone who teaches the
+course, it usually was, and it is MORE reliable than the older entries.** That inverts the usual
+assumption in this catalogue, where the statewide record has repeatedly been the stale element
+(`AFR2132`'s "projects ahead to the year 2000", `ACG4151` dated 11/82, `SSE4113` dated 1988).
+
+**A small, cheap diagnostic worth carrying forward: read the statewide description's REGISTER before
+deciding how much weight to give it.**
+
+⚠ **The number belongs to a coherent recent family** — `AMH4640` *History of the US via Graphic Novels*
+(FLPOLY), `AMH4641`, `AMH4642` *Walt Disney and American History* (UWF, as *Mickey Mouse History*) — all
+upper-division American history taught through a popular medium, all recent. ⚠ **`AMH4640` carries a real
+prerequisite and states it meets writing-intensive requirements**, which is the best available evidence
+for what the family expects.
+
+### ⚠⚠ `APK3220C` — credit divergence on the same C identifier, and the laboratory is the difference
+
+| Institution | Identifier | Title | Credits |
+|---|---|---|---|
+| UF | `APK3220C` | *Biomechanical Basis of Motor Skills* | **3** |
+| ⚠ UWF | `APK3220C` | *Biomechanical Basis of Movement **with Laboratory*** | ⚠ **4** |
+| USF | `APK3220` (bare) | *Biomechanics in Human Motion* | 3 |
+
+⚠⚠ **UWF names the laboratory in the title and carries a fourth credit for it; UF carries the same C
+identifier at three.** Nothing in the code distinguishes them. **The transfer consequence is the standard
+credit-count one — a credit short against a degree requirement, surfacing at final audit.**
+
+⚠ **But the guide makes a further point the credit number only hints at: how much hands-on laboratory you
+actually get.** A 4-credit integrated course with a named lab almost certainly has a scheduled session; a
+3-credit one may fold demonstrations into lecture. **For biomechanics, handling a force plate and
+processing your own motion-capture data is a different education from watching it done.**
+
+### ⚠⚠⚠ `APK3220C` is the INVERSE of the batch-189 `APK4220C` problem — and worth recording as the good case
+
+**Batch 189 recorded `APK4220C`: the description named "fundamentals of engineering (kinematics and
+kinetics) and basic mathematics and physics" and NONE of it appeared in the prerequisite**, so students
+arrived from a kinesiology curriculum and met free-body diagrams unprepared.
+
+✅ **`APK3220C` shows the state doing it right.** The statewide prerequisite is explicit: *"PET 2320C,
+grade of C or better in **MAC 2311, MAC 2233, MAC 1147** (or equivalent), or permission of the
+instructor"* — Calculus I, applied calculus, precalculus, **with a grade condition.**
+
+⚠⚠ **So the warning inverts: the gate is stated, and the risk is students using "permission of the
+instructor" to route around preparation they have not done.** The guide says exactly that, and names what
+is actually needed — **trigonometry above all** (force resolution, joint angles, moment arms), vectors,
+fluent algebra with units, and the position–velocity–acceleration relationship, which many sections handle
+graphically rather than by differentiation.
+
+**Useful general point: where a prerequisite names mathematics explicitly, say what the mathematics is
+FOR.** "Calculus I" tells a student nothing; "you will resolve forces into components every week" tells
+them what to revise.
+
+### ⚠⚠ `APK4114C` — a statewide description that names the CREDENTIAL
+
+**Rare and valuable:** *"**Students are prepared for national credentialing.** Topics include the
+structure and function of body systems, training adaptations, testing and evaluation, exercise techniques
+and program design. Students apply exercise prescriptions and practice stretching and spotting/safety
+techniques."*
+
+⚠ **The credential is the NSCA CSCS, and the topic list maps onto its examination content.** The last
+clause also confirms the `C` suffix is doing real work — applying prescriptions and practising spotting is
+laboratory content assessed practically, and the CSCS practical section uses video items on exercise
+technique.
+
+⚠⚠ **Title divergence with a sequence implication:** UCF calls it ***Strength and Conditioning II***
+(assumes a first course), UWF ***Physiological Basis of Strength Development*** (weights adaptation
+science over programme design). **Since the CSCS tests both halves, the guide tells the student to
+establish which half their section under-serves and read for it separately** — a more useful instruction
+than a generic divergence warning.
+
+**Strongest Florida content in the batch:** ⚠⚠ **exertional heat stroke is a leading cause of sudden death
+in sport and Florida's climate makes it a year-round professional responsibility** — acclimatisation,
+work-to-rest ratios, wet bulb globe temperature, and cold-water immersion before transport. Plus exertional
+sickling, and an unusually strong employment market (spring training, IMG Academy, three pro markets,
+tactical, and a large under-served older-adult strength market).
+
+### ⚠⚠⚠ REVIEW_QUEUE finding: `AMH2010` and `AMH2020` carry ELECTIVE high-school credit — and both have live guides
+
+**Found by running the batch-207 distribution test on `AMH`:**
+
+| Prefix | `DS_High_School_Credit1` | Verdict |
+|---|---|---|
+| `AMH` | 269 ELECTIVE, ⚠ **2 AMERICAN HISTORY** | discriminating |
+| `APK` | 179/179 ELECTIVE | boilerplate |
+| `ARH` | 343 ELECTIVE, ⚠ **8 PERFORMING FINE ARTS** | discriminating |
+
+⚠⚠⚠ **The two `AMH` numbers carrying AMERICAN HISTORY high-school credit are `AMH2041` and `AMH2042` —
+NOT `AMH2010` and `AMH2020`, the canonical US history surveys, both of which are marked (GE CORE) and both
+of which carry ELECTIVE.**
+
+**This is the `SPN2210` shape from batch 207**, and it affects a far larger population: `AMH2010`/`AMH2020`
+are among the most heavily dual-enrolled courses in Florida. ⚠ **Both already have live guides.** Logged
+as `REVIEW_QUEUE.md` item 93 — the guides are incomplete rather than wrong, and the actual award is
+governed by the district articulation agreement, which commonly does grant American History credit.
+
+✅ **The `ARH` half of the test paid off inside this batch:** eight `ARH` numbers carry Performing Fine
+Arts high-school credit — including `ARH2050`, `ARH2051`, `ARH2000`, `ARH2500` — **and `ARH3301` is not
+among them.** The guide tells a dual-enrolled student who needs fine-arts credit to take `ARH2051`
+instead, which carries it and is the natural precursor anyway.
+
+⚠ **Both discriminating fields are lower-division only**, which makes sense — dual-enrolment students take
+lower-division courses. **So on any upper-division course the honest answer is "elective, and the
+non-elective numbers in this prefix are all lower division", which is what these guides say.**
+
+### ⚠ Gordon Rule divergence — three more instances in one batch
+
+| Number | Designated | Not designated |
+|---|---|---|
+| `AMH4111` | UF (`gordon_writing`) | UWF |
+| `AMH4641` | Florida Polytechnic (`gordon_writing`) | UWF |
+| `ARH3301` | UWF (`gordon_rule` **and** `gordon_writing`) | FGCU |
+
+⚠⚠ **That brings the count to eight numbers across eight disciplines.** The institution-specific rule is
+thoroughly established; **what these add is that the pattern shows no institutional consistency
+either** — UWF is the designating institution on `ARH3301` and the non-designating one on both `AMH`
+numbers. **Neither the number nor the institution predicts it. Only the institution's own list does.**
+
+### ⚠ Prefix fragmentation — the baseline holds at thirteen prefixes
+
+| Prefix | Live ids | Carried by exactly ONE | Max |
+|---|---|---|---|
+| `AMH` | 330 | **240 (73%)** | 36 |
+| `APK` | 238 | **183 (77%)** | 4 |
+| ⚠ `ARH` | **421** | **339 (81%)** | 30 |
+
+⚠⚠ **Thirteen prefixes measured across four batches, every one between 64% and 85% single-carrier.**
+**`ARH` at 421 live ids is now the largest prefix measured.** **The baseline is firm enough to promote to
+`CLAUDE.md` as a stated property of the Florida catalog rather than a per-batch observation** — it sets
+the honest default hedging level for almost any course, and it is one flat-file pass to compute.
+
+### ⚠ Tooling notes
+
+- ✅✅✅ **ALL SIX prerequisites came in under 1000 characters on FIRST assembly (930–964) — zero trim
+  rounds, the first time in the project.** The batch-209 rule (draft at ~850 and let it grow) is
+  confirmed and now costs nothing. **Ten batches of four-round trimming ended by writing shorter to begin
+  with.**
+- ✅ **Six assembly lines, six validations, no warnings.** Write for new files, Edit for changes; no
+  heredoc attempted on Python containing quotes.
+- ⚠ **A scan-script bug worth noting: `sorted()` on `(code, name, row_dict)` tuples raised
+  `TypeError: '<' not supported between instances of 'dict' and 'dict'`** when two rows shared a code and
+  name — which happens wherever an institution carries **honours and standard sections of the same
+  number** (`ARH2051` has three such pairs). **Fix: always give `sorted()` an explicit `key` when tuples
+  contain dicts.** Cheap, but it aborted the scan mid-run.
+- ⚠ **Batch average draft size 21 KB.**

@@ -1729,16 +1729,39 @@ families may not earn credit for both**, and that surfaces at transfer evaluatio
 **Where a statewide description says a series is equivalent to another series, say so in the guide and tell
 the reader to ask an adviser before enrolling in the second.**
 
-⚠ **Quantify the prefix before writing — it sets the hedging level honestly rather than by feel:**
+⚠ **Quantify the prefix before writing — it sets the hedging level honestly rather than by feel.**
 
-| Prefix | Distinct ids with ≥1 FL public carrier | Carried by exactly ONE | Max |
-|---|---|---|---|
-| `SPM` | 189 | ⚠⚠ **145 (77%)** | 6 |
-| `SPN` | 241 | ⚠ **166 (69%)** | 29 |
+#### ⚠⚠⚠ THE SINGLE-CARRIER BASELINE — a measured property of the Florida catalog (batches 207-210)
 
-⚠⚠ **In prefixes like these, a course transferring cleanly by number is the EXCEPTION**, and the guide
-should say so plainly and tell the reader to plan on sending syllabi. One pass over the flat file answers
-it.
+**Thirteen prefixes measured across four batches. Every one lands between 64% and 85%:**
+
+| Prefix | Live ids | Single-carrier | Prefix | Live ids | Single-carrier |
+|---|---|---|---|---|---|
+| `SPM` | 189 | 145 (77%) | `TPA` | 414 | 324 (78%) |
+| `SPN` | 241 | 166 (69%) | `TRA` | 79 | 62 (78%) |
+| `SSE` | 145 | 123 (85%) | `ACG` | 346 | 227 (66%) |
+| `SYO` | 124 | 97 (78%) | `ADV` | 133 | 109 (82%) |
+| `SYP` | 165 | 140 (85%) | `AFR` | 76 | 49 (64%) |
+| `AMH` | 330 | 240 (73%) | `APK` | 238 | 183 (77%) |
+| `ARH` | **421** | 339 (81%) | | | |
+
+⚠⚠⚠ **Roughly three-quarters of all Florida course identifiers are carried by exactly ONE public
+institution.** **So a course transferring cleanly by number is the EXCEPTION across the catalog, not a
+feature of unlucky prefixes** — and the honest default hedging level for almost any course is higher than
+"two or three institutions agree" suggests.
+
+**Two consequences for writing:**
+
+1. **Do not treat a two- or three-carrier course as unusual.** It is the norm. Write the
+   single-institution or few-institution treatment without apology, and say plainly that the reader
+   should plan on sending syllabi rather than relying on the number.
+2. ⚠ **The baseline coexists with a small number of very widely carried courses** — `ACG` reaches 37
+   carriers, `AMH` 36, `ARH` and `SPN` around 30, all on lower-division general-education numbers.
+   **Those are the ones where title variation is branding rather than divergence** (see TITLE
+   FRAGMENTATION AT SCALE). **Check the carrier count before deciding which kind of course you are
+   writing.**
+
+**It is one flat-file pass to compute, and it is worth doing before drafting.**
 
 ### ⚠⚠⚠ TITLE-versus-DESCRIPTION divergence — inside ONE statewide record (batch 207)
 
@@ -1761,6 +1784,28 @@ graduates actually start work.** The guide says so and tells the reader to close
 
 ⚠ **The drill: when a statewide title contains a conjunction ("X and Y"), check that the statewide
 DESCRIPTION delivers both halves, and check whether Y has its own number that nobody carries.**
+
+#### ⚠⚠⚠ Check whether the carriers diverge in the SAME direction or OPPOSITE ones (batch 210)
+
+**Before writing a single divergence block, ask which way each carrier departs from the statewide scope.
+The two cases need completely different handling.**
+
+| | Carriers diverge the SAME way | Carriers diverge OPPOSITE ways |
+|---|---|---|
+| Example | **`SPN4520`** — state says *Spanish America*, all three carriers say *Latin American* | **`ARH3301`** — state says Renaissance **+ Mannerism**, Italy **+ North**; ⚠ FGCU adds the **Baroque** (broader), ⚠ UWF restricts to the **Early** Renaissance (narrower) |
+| What it means | ⚠ **the STATE record is out of step** with current practice | ⚠ **the carriers are making independent curricular choices** |
+| Handling | correct toward the carriers; explain the state's term | ⚠⚠ **give the reader a TEST, not a correction** — neither carrier is wrong |
+
+⚠⚠⚠ **The opposite-direction case has a consequence worth stating explicitly in the guide: with only two
+carriers diverging in opposite directions, the two versions may overlap only in the MIDDLE of the
+subject.** On `ARH3301` one adds a century at the end and the other may stop before the High Renaissance —
+so a student could take either and miss what most people mean by the course's own title.
+
+**Handling that works: two concrete syllabus questions rather than a general warning.** For `ARH3301`:
+*does it reach the High Renaissance and Mannerism?* and *does it cover Northern Europe, or Italy only?*
+⚠ The second matters because **the statewide description requires both halves and a course titled simply
+"Renaissance Art" frequently means Italian Renaissance art** — which Florida numbers separately as
+`ARH3302`.
 
 #### ⚠⚠⚠ THE TITLE/DESCRIPTION TEST — run it before looking at carriers (batch 208)
 
@@ -1807,6 +1852,26 @@ institutions and *"6/83"*.** In both cases the list no longer matches who offers
 practice, and say so in the guide.** **Parts of the state course file have not been revised in forty
 years** — which also means the statewide record is sometimes the *least* current source available, and
 cannot be used to check a carrier's currency (see `SYP3630` under terminology-era divergence).
+
+#### ⚠⚠ Read the description's PROSE REGISTER — it dates the entry when no date is stamped (batch 210)
+
+**The state course file contains entries from at least two eras, and they are distinguishable by style
+alone.** Compare, both in `AMH`:
+
+| Era | Example | Style |
+|---|---|---|
+| 1980s | `AMH4110` | *"DISCOVERY, EXPLORATION, ORIGINS OF COLONIES. DEMOGRAPHIC TRENDS, ETHNO-CULTURAL CONFLICT…"* — terse all-capitals telegraphese |
+| Recent | `AMH4641` | *"This course surveys… **This is no trivial subject.** … In this course, **we'll** examine… **We'll** learn how to critically analyze…"* — full sentences, first person plural, an argument |
+
+⚠⚠ **Where a statewide description reads as though it was written by someone who teaches the course, it
+usually was — and it is MORE reliable than the older entries.** That inverts the usual assumption in this
+file, where the statewide record has repeatedly been the stale element (`AFR2132`'s *"projects ahead to
+the year 2000"*, `ACG4151` dated 11/82, `SSE4113` dated 1988, `SYO4530` dated 1983).
+
+**Practical use: read the register before deciding how much weight to give the description.** A recent,
+argued entry can be quoted to the student as a description of the actual course; a 1980s entry should be
+framed as a historical definition of the subject. ⚠ **It costs nothing and it is available on every
+course.**
 
 ### General-education category designations
 
