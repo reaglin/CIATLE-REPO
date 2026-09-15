@@ -1348,9 +1348,20 @@ this sentence verbatim:
 > *"As a higher-level course, it offers training beyond the scope of the lower-level alternate course.
 > **Students must choose whether to take the lower-level or upper-level version of this course.**"*
 
-⚠ **The machine-readable tell is `DS_Course_Intent1`** — it reads `UPPER` on one and `LOWER` on the other.
-⚠⚠ **And the cleanest confirmation is textual: `ATT3134`'s statewide description is `ATT2130`'s WORD FOR
-WORD plus two sentences naming what the upper version adds.** Check that first on any suspected pair.
+⚠⚠⚠ **THE TEST IS THE SENTENCE, NOT THE `(U)` MARKER.** Checked immediately on the next batch: **`BCN`
+has 279 active statewide records, several carrying `(U)`, and NOT ONE contains the "must choose"
+sentence.** `(U)` on its own means only *upper division*, which is common and uninteresting.
+
+**A real alternate-level pair needs all three:**
+
+1. the **"students must choose"** sentence in the statewide description (`grep -c "MUST CHOOSE"` over the
+   prefix CSV settles it in one command);
+2. a **sibling with DIFFERENT last-three-digits** covering the same subject — `ATF` paired 500↔502,
+   510↔511, 530↔531 and `ATT` paired 130↔134, **never the same number at two levels**;
+3. `DS_Course_Intent1` reading **`UPPER` against `LOWER`** across that pair.
+
+⚠⚠ **The cleanest confirmation is textual: `ATT3134`'s statewide description is `ATT2130`'s WORD FOR
+WORD plus two sentences naming what the upper version adds.** Check that once the sentence has matched.
 
 | Lower | Upper `(U)` | Upper adds |
 |---|---|---|

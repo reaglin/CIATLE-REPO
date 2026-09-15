@@ -21733,3 +21733,159 @@ instance of the general problem.
   it a floor.
 - **Batch average draft size 21.9 KB.** The four lower-level guides average 21.3 KB against the upper
   four's 23.0 — appropriately shorter for 1-credit courses, per the batch-189 rule.
+
+---
+
+## Batch 213 — BCN, completing the prefix queue (2026-09-15)
+
+Six guides, all live: **BCN2210**, **BCN2251C**, **BCN3281C**, **BCN3590**, **BCN3731C**, **BCN4564** —
+the last queued `BCN` rows. Sources: Florida's statewide record, **UWF** (prefix PDF, which works for this
+prefix), **UF** (CourseLeaf department page), **FIU** (rebuilt Coursedog cache). `BCN`'s 334 catalog rows
+were already complete on the site (all `unchanged`).
+
+⚠ Also cleared the two courses that had headed the queue for weeks: **`LAE3314`** and **`MUG2101`** marked
+**skipped** with reasons on Ron's instruction — the first pending `REVIEW_QUEUE` item 20, the second
+source-blocked. Both are one command to re-queue. **The queue head now shows workable courses.**
+
+### ⚠⚠⚠ CORRECTION, one batch later: the `(U)` marker is NOT the alternate-level-pair tell
+
+**Batch 212 identified the ALTERNATE-LEVEL PAIR and this batch immediately tested it, which is the right
+order.** `BCN` has **279 active statewide records, several carrying `(U)`, and NOT ONE contains the
+"MUST CHOOSE" sentence.**
+
+⚠ **So `(U)` alone means only *upper division*** — common, and carrying no information. **A real pair needs
+all three of:** the *"students must choose"* sentence; a **sibling with DIFFERENT last-three-digits**
+covering the same subject (`ATF` paired 500↔502, 510↔511, 530↔531; `ATT` 130↔134 — **never the same number
+at two levels**); and `DS_Course_Intent1` reading `UPPER` against `LOWER` across that pair.
+
+**`grep -c "MUST CHOOSE"` over the prefix CSV settles it in one command.** `CLAUDE.md` corrected the same
+day the rule was written. ⚠⚠ **General lesson: a shape found in one prefix should be tested against the
+NEXT prefix before it hardens into a rule.** One batch's evidence made the rule; one batch's evidence
+bounded it.
+
+### ⚠⚠ NEW VARIANT: the title/description test run at INSTITUTION level, not statewide
+
+**The batch-208 test compares a STATEWIDE title against a STATEWIDE description. `BCN3281C` needed it run
+on ONE INSTITUTION'S OWN RECORD**, and the result inverted the finding.
+
+| | |
+|---|---|
+| **UF's title** | ⚠ *Construction Methods Laboratory* |
+| **UF's own description** | *"Construction aspects of surveying with field and classroom exercises in the use of transit, level, chain, and related equipment"* — ⚠⚠ **the statewide surveying description WORD FOR WORD** |
+
+**The survey flagged "2 distinct public institution titles — run the title/description test." The
+description dissolved the divergence entirely:** all three carriers (UWF, UF, and FIU under the bare
+`BCN3281`) teach surveying. **UF's title simply does not describe UF's course.**
+
+⚠ **The student-facing consequence is narrow but real, and worth a line in the guide: a UF student
+scanning a course list for a surveying requirement will not recognise that they have already taken it**,
+and a transfer adviser reading the title without the description reaches the same wrong conclusion.
+**Send the description, not the title.**
+
+⚠⚠ **Standing practice: when carrier titles diverge, read each carrier's OWN description before
+concluding anything.** A title mismatch inside one institution's record is a different and much smaller
+problem than a subject divergence between institutions — and it is far more easily fixed by the reader.
+
+### ⚠⚠ `BCN3731` — misfiling, with an unusually clean diagnostic
+
+| | |
+|---|---|
+| **Statewide title** | *OSHA Analysis &amp; Design of Safety Program — **INDUSTRIAL** (U)* |
+| **Statewide description** | *"principles of safety in typical **industrial** environment&hellip; safety programs for **industry**"* — ⚠ **agrees with its title** |
+| **FAMU** (`BCN3731C`) | *Construction Safety and OSHA Certification* |
+| **UWF** (`BCN3731`, bare) | *Construction Safety* — *"focuses on the **OSHA 29 CFR 1926 Construction Industry Regulations**"* |
+
+⚠⚠ **And Florida already numbers construction safety separately, five times over:** `BCN730` Construction
+Safety, `BCN732` OSHA Standards for Construction Industry, `BCN735` Construction Safety, `BCN737` Advanced
+Issues in Construction Safety and Health, `BCN738` Construction Safety Management. **That is the misfiling
+signature exactly as `CLAUDE.md` defines it — a dedicated statewide number exists for what the carriers
+are actually teaching** — and it is the batch-208 shape where the MAJORITY (here, both) carriers deviate.
+
+⚠⚠⚠ **The diagnostic is the best in this batch because it is a single checkable fact: which CFR part does
+the syllabus cite?** **29 CFR 1910** = general industry, the statewide subject. **29 CFR 1926** =
+construction, what both carriers teach. **They are different standards with different requirements, and
+OSHA's outreach card certifies against one or the other.** A student needing general-industry knowledge
+cannot assume this number supplies it.
+
+⚠ **A caution recorded against the batch-208 rule itself.** Title and description agreeing normally makes
+the state the reference — but here **the PREFIX is a third signal pointing the other way** (`BCN` is
+*Building Construction*; its programmes are construction programmes). **The likely truth is a stale
+statewide record on a construction-prefix number that drifted toward what its students need.** The guide
+therefore labels the divergence and gives the diagnostic rather than declaring either side wrong.
+
+### ⚠⚠ A near-miss worth recording: "construction mechanics" is DOMAIN VOCABULARY, not a stale title
+
+**`BCN4564` "Construction Mechanics II" has a statewide description entirely about HVAC, plumbing, fire
+protection and electrical work, and FIU calls it "Environmental Control in Buildings II".** ⚠ **The first
+read was that this is the batch-208 stale-title shape — title and description disagree, carrier sides with
+the description, therefore correct the title.**
+
+⚠⚠ **That was wrong, and checking the PREFIX FAMILY caught it before drafting.** UWF's `BCN3561`
+"Construction Mechanics" is described as *"introduction to building systems&hellip; heating and cooling,
+plumbing, and electrical systems"*, and `BCN560`, `BCN561` and `BCN591` are all titled *Mechanical and
+Electrical Systems*. **"Construction mechanics" is established Florida usage for BUILDING SERVICES.** The
+title is correct; it is the reader's expectation that is wrong, because everywhere else in engineering
+"mechanics" means statics and strength of materials.
+
+⚠ **The handling differs accordingly: EXPLAIN the term rather than correct it**, and point the reader at
+`BCN2405` and `BCN3431C` for the structural subject they may have been looking for. **Before applying the
+stale-title rule, check whether the "wrong" word is a term of art in that field** — the batch-200
+prefix-family survey is what answers it.
+
+⚠⚠ **A genuine scope divergence survives underneath:** the statewide description covers all of MEP while
+**FIU's own description is the ELECTRICAL half** plus code provisions and cost estimates. Coherent for a
+course numbered *II*, but the guide tells the reader to ask which half they are getting and where the
+rest lives.
+
+### ⚠ Number fragmentation in `BCN` — two subjects, six numbers, twenty-two institutions
+
+| Subject | Numbers | Carriers |
+|---|---|---|
+| Construction materials | `BCN1210`, `BCN1210C`, **`BCN2210`** | 4 + 5 + 2 = **11** |
+| Construction drawings | `BCN1251`, `BCN1251C`, **`BCN2251C`** | 4 + 10 + 2 = **16** |
+
+**All lower division, so per Ron's 2026-09-01 correction this is NOT a transfer barrier** — it is a
+requirement-matching question. ⚠ **The substantive question in both families is the `C` suffix**: whether
+the receiving programme expects the LABORATORY component, which a non-`C` version does not include.
+⚠ **Seminole State carries BOTH `BCN1251` and `BCN2251C`**, the signature of a programme running the
+subject in two shapes.
+
+**Prefix fragmentation: `BCN` 378 live ids, 274 single-carrier (72%), max 10 carriers.** Seventeen
+prefixes measured, still inside the 64–85% band.
+
+### ⚠ Accreditation is programmatic in this field, and every guide says so
+
+**Construction management degrees are accredited by the American Council for Construction Education
+(ACCE)**, some programmes by ABET. ⚠⚠ **Accreditation attaches to the PROGRAMME, not to courses**, so
+assembling transferable courses does not produce an accredited qualification — the same shape already
+recorded for nursing (CCNE/ACEN) and medical laboratory science (NAACLS) in the career-pathways notes.
+**All six guides state it and tell the reader to get a written evaluation.**
+
+### Tooling
+
+- ✅✅ **`scratchpad/survey.py` written — a REUSABLE replacement for the per-batch `b2NN_survey.py`
+  scripts.** One pass gives carriers with per-school titles/credits/clock hours, the statewide title,
+  Gordon Rule and gen-ed flags, the `hs_credit`/`transferable`/`dual_enrollment` distribution **with a
+  BOILERPLATE-or-discriminating verdict**, the prefix single-carrier percentage, and **a live-guide check
+  against the site** (the batch-202 rule). **It carries both batch-212 traps in its docstring** — the
+  `is_public()` code-not-id bug and the `'Y'`/`'N'` string-truthiness bug — so they cannot recur silently.
+  ⚠ **It flagged the `BCN3281C` title divergence that the description then dissolved**, which is exactly
+  the prompt it was written to produce.
+- ⚠ **Windows console encoding crashed the first run.** `survey.py` printed `⚠` and died on cp1252
+  mid-report. **Institution titles are arbitrary data, so hoping for ASCII is not a fix** — the script now
+  calls `sys.stdout.reconfigure(encoding='utf-8', errors='replace')` and uses ASCII markers in its own
+  output. **Worth doing in any reusable tool here; the one-off batch scripts got away with it by luck.**
+- ✅✅ **ZERO prerequisite trim rounds, six of six under 1000 on first assembly** (703–951). **The
+  batch-212 lesson worked**: count a shared boilerplate block against the ~850 target rather than only the
+  course-specific text. Third batch running without a blocking length failure.
+- ✅ **Six of six validated CLEAN — no warnings at all**, unlike batch 212's three expected flight-hour
+  warnings. Classroom courses fit the 1:15 convention, so `45` for a lecture and `60` for a `C` course
+  both pass.
+- ⚠ **UWF's prefix PDF works for `bcn`** — so the batch-212 finding is that the PDF route has *gaps*, not
+  that it is dead. **Try the PDF first, fall through to the search route.**
+- ⚠ **FGCU returned an empty 202** on `catalog.fgcu.edu/courses/bcn/bcn.pdf` this session, having been the
+  project's best cross-check source. **Not retried in a loop** (the batch-183 rate-trigger rule); the
+  `BCN3590` guide names the gap instead. **Re-probe next session before recording anything.**
+- ⚠ **UF's CourseLeaf department slug is `construction_management`, not `building_construction`**
+  (the latter 404s). **Slugs are descriptive and not guessable from the prefix** — the 404-with-body
+  confirmed the host was answering.
