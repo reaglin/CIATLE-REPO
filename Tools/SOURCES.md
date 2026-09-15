@@ -21527,3 +21527,209 @@ pointed at `ARH2050`/`ARH2051`/`ARH2500`, which carry it and are the natural pre
 - ⚠ **Batch average draft size 19.7 KB** — the `ARH` guides are consistently shorter than the batch
   average across the project, which is appropriate: a two-carrier upper-division art history elective has
   less transfer machinery to explain than a licensure-facing course.
+
+---
+
+## Batch 212 — ATF / ATT, the flight-instructor family (2026-09-15)
+
+Nine guides, all live: the five queued `(U)` courses (**ATF3502L**, **ATF3511L**, **ATF3531L**,
+**ATT1110**, **ATT3134**) plus the four lower-level alternates they pair with (**ATF2500L**,
+**ATF2510L**, **ATF2530L**, **ATT2130**), written together on Ron's instruction so both halves of
+every pair carry the same warning. Sources: **Florida's statewide course record** (flat file +
+statewide CSV), **UWF** (via a new route, below), **NWFSC** and **FSCJ** (rebuilt Coursedog caches),
+and **14 CFR** via Cornell LII.
+
+`ATF` and `ATT` are now **complete on the site**: 72 course rows pushed, 24 created, 5 updated,
+43 unchanged, 0 failed.
+
+### ⚠⚠⚠ NEW SHAPE: the ALTERNATE-LEVEL PAIR — the state builds two versions and makes the student choose
+
+**Not a divergence at all, and that is what makes it new.** Every shape in `CLAUDE.md` so far describes
+institutions disagreeing, or a record going stale. **Here SCNS has deliberately created a lower-division
+and an upper-division version of the same course, and says so in the course record:**
+
+> *"As a higher-level course, it offers training beyond the scope of the lower-level alternate course.
+> **Students must choose whether to take the lower-level or upper-level version of this course.**"*
+
+Carried verbatim on all four `(U)` numbers. **`DS_Course_Intent1` reads `UPPER` against `LOWER`** on the
+pair, which is the machine-readable tell.
+
+| Lower alternate | Upper `(U)` | What the upper adds |
+|---|---|---|
+| `ATF2500L` / `ATF2500` | `ATF3502L` | advanced simulation, curriculum development, mentorship |
+| `ATF2510L` | `ATF3511L` | the same, **plus 15 flight hours against 10** |
+| `ATF2530L` | `ATF3531L` | the same |
+| `ATT2130` | `ATT3134` | the same, **plus the FAA Advanced Ground Instructor certificate** |
+
+⚠⚠ **`ATT3134`'s statewide description is `ATT2130`'s WORD FOR WORD plus two sentences.** That is the
+cleanest evidence of the shape available, and it should be the first thing checked on any suspected pair.
+
+⚠⚠⚠ **Polk State carries BOTH halves of all four pairs, at EQUAL credit** (1/1 on the ATF pairs, 3/3 on
+the ATT pair). So the choice is live at one institution and, there, the upper version is strictly better.
+**The guides say so and tell the student to ask their adviser to justify the lower one.**
+
+**Distinguish it from three shapes it resembles and is not:** the `MUN` level digit (which encodes the
+STUDENT's standing on one course), sequence-POSITION divergence (one number meaning the whole course or a
+phase), and sequence-LENGTH divergence (a field taught as one course or two). **Here both versions exist
+simultaneously, are different numbers, and the student picks one.**
+
+### ⚠⚠⚠ The consequence no catalogue states: the choice is worth 250–500 FLIGHT HOURS
+
+**This is the batch's most valuable finding and it drove all nine guides.** Under **14 CFR 61.160**
+(verified against Cornell LII, not asserted from memory), the reduced-hour **Restricted-Privileges ATP**
+is keyed to **SEMESTER CREDIT HOURS OF AVIATION COURSEWORK**:
+
+| Threshold | Requirement |
+|---|---|
+| **1,000 hours** | bachelor's degree + **60** aviation semester credit hours |
+| **1,250 hours** | associate degree + **30**, or bachelor's with 30–59 |
+| 750 hours | former military pilot |
+| 1,500 hours | standard unrestricted ATP |
+
+⚠⚠ **So choosing 1-credit versions across the three flight-instructor courses costs six credits against
+the count that decides the threshold** — and the gap between thresholds is **250 to 500 flight hours**,
+which at a working instructor's rate is months to a year of career progression.
+
+⚠ **Two cautions written into every guide:** the reduction requires an institution **holding an FAA
+letter of authorisation**, and **that institution certifies eligibility** — so the guides tell the reader
+to ask their programme directly rather than infer it from a course number.
+
+**Generalise it: wherever a licensed field ties a federal or state benefit to a COUNT of credit hours,
+a credit-value divergence stops being an accounting curiosity and becomes a career consequence.**
+
+### ⚠⚠⚠ One FAA certificate, FOUR credit values — the externally-governed shape reproduced exactly
+
+The batch-209 `AFR` finding said an external body can own a syllabus while each institution decides the
+credit. **`ATF2500`/`ATF3502L` is the cleanest instance yet, because the federal requirement is a single
+published number that never moves:**
+
+| Number | Institution | Credits | FAA flight requirement |
+|---|---|---|---|
+| `ATF2500L` | NWFSC, Polk State | **1** | **25 hours — identical** |
+| `ATF2500` | Broward, FSCJ | **2** | **25 hours — identical** |
+| `ATF3502L` | Polk State | **1** | **25 hours — identical** |
+| `ATF3502L` | UWF | **3** | **25 hours — identical** |
+
+**Three independent catalogues document the 25 hours** (UWF "a minimum of 25 hours of flight training must
+be logged"; NWFSC "25 hours of dual flight instruction and 6 hours of ground"; FSCJ "25 hours of dual
+instruction and 6.25 hours of pre-/post flight briefings"). **The work does not change. The credit does.**
+
+### ⚠⚠⚠ "The cost for these additional flight hours is not covered by the course fee"
+
+**NWFSC states, on every flight course, the thing no other Florida institution says out loud:**
+
+> *"the hours above are based on FAA-syllabus minimums, and students will often exceed these minimum hours.
+> **The cost for these additional flight hours is not covered by the course fee.**"*
+
+⚠⚠ **This turns the batch-200 "regulator's floor" rule into something sharper: the FAA minimum is also a
+BILLING floor.** A flight course's contact hours are hours in an aircraft, sold by the hour, and exceeding
+the syllabus minimum — common, and not a failure — is charged to the student. **Every ATF guide in this
+batch states it and tells the reader to ask what recent students actually averaged.**
+
+⚠ NWFSC also states students are **expected to fly at least three times a week, not counting Sundays** —
+a real scheduling constraint invisible from a credit value.
+
+⚠⚠ **And the practical test may not be included.** Florida's own record for `ATF2510L`: *"This course does
+not include the checkride; it is at the student's discretion to schedule and complete the MEI checkride."*
+**So the course can be completed, and the credit earned, without the rating being obtained.** Check it on
+every flight course.
+
+### ⚠ `ATT1110` — a title difference that is NOT a divergence, and the batch-208 test says so
+
+Statewide **"Commercial Pilot Flight Theory"**; **both** carriers (FSCJ, UWF) say **"Commercial Pilot
+Ground School"**. The instinct is to reach for the batch-183 rule. ⚠ **Run the title/description test
+first: the statewide DESCRIPTION reads "preparation for FAA commercial pilot written examination…", which
+IS ground school.** Title and description agree in substance; the carriers simply use the industry's
+everyday name. **Handling: reassure, do not warn** — the guide says so directly.
+
+⚠ **Also on this number: the same statewide course is `ATT2110` at five institutions** (Broward, MDC,
+NWFSC, PHSC, Polk State) and `ATT1110` at two. Under Ron's 2026-09-01 correction this is **not** a transfer
+barrier — both are lower division and transfer transparently — so the guide frames it as a
+**requirement-matching** question (which number a programme names) and tells the reader to keep the
+syllabus. **Same handling as the sector-number shape, without the alarm.**
+
+### ⚠ The Advanced Ground Instructor certificate — a credential students do not know they can get
+
+`ATT3134` confers the **FAA AGI certificate**. Worth stating in guides because the value is not obvious
+from the name: it is **permanent**, earned by **knowledge test rather than practical test**, and
+⚠⚠ **needs no medical certificate and no aircraft** — so it keeps earning when a flight instructor is
+medically grounded, between jobs, or weathered out. `ATT2130`'s guide tells the reader to sit it anyway.
+
+### ⚠⚠ The prose-register test (batch 210) dates the pair — and confirms the shape is RECENT
+
+`ATF500`'s statewide description is terse 1980s telegraphese (*"FOR FAA CERT FLIGHT INSTRUCTOR
+CERTIFICATION. PROVIDE THE COMMERCIAL PILOT WITH…"*). **`ATF502`'s is modern full-sentence prose that
+explains its own purpose.** ⚠ **So the `(U)` numbers are a recent SCNS addition layered onto a
+decades-old prefix** — which is exactly why no institution's catalogue explains the choice to students.
+
+### ⚠ A terminology-era case in `ATT2130`: "learning styles"
+
+The statewide description opens on *"different student learning styles."* ⚠ **The underlying observation
+is sound and is what the course usefully teaches** (students differ; vary the explanation). **What has not
+held up is the meshing hypothesis** — that learners sort into fixed types and that matching instruction to
+them improves outcomes. **Handling, per the batch-187 rule: teach the term because the knowledge test uses
+it, explain what changed, and give the reader the diagnostic reframing** ("this explanation did not work
+for this person today" rather than "this is a visual learner"). ⚠ The guide also notes that a model asked
+about instructional method will reproduce the 1990s account, since training data skews old — a checkable
+instance of the general problem.
+
+### Tooling and source findings
+
+- ⚠⚠⚠ **COURSEDOG NOW NEEDS `Origin` AS WELL AS `Referer`.** The batch-167 unlock recorded the gate as
+  ONE header. **As of 2026-09-15 the course-search endpoint returns `401 Unauthorized` on `Referer`
+  alone**; adding `Origin: https://<host>` returns 200. ⚠ **The bootstrap endpoint still accepts `Referer`
+  by itself**, which is why discovery kept working while every fetch failed — a misleading signal.
+  `scratchpad/coursedog.py` rebuilt with both.
+- **All three Coursedog caches were MISSING and are rebuilt**: FIU **27,923**, FSCJ **22,698** (+5),
+  NWFSC **1,802** (+21). `coursedog.py` itself had also been lost and was rewritten from this file's
+  batch-167/173 records — **which worked, and is a good argument for keeping the endpoint details here
+  rather than only in the script.**
+- ⚠⚠ **UWF's prefix-PDF route does not cover every prefix UWF carries.**
+  `catalog.uwf.edu/courseinformation/courses/atf/atf.pdf` **404s** and the `att` PDF is a **title-only
+  stub**, yet UWF is an active SCNS carrier of nine `ATF` and five `ATT` numbers. The course-information
+  **index does not list `atf` or `att` at all** (it lists `atr`).
+- ✅✅ **NEW UWF ROUTE — use it whenever the prefix PDF fails:**
+  **`https://catalog.uwf.edu/search/?P=<PREFIX>%20<NUMBER>`** returns the full course block — description,
+  credits, prerequisites and **the college and department**. Tooling: `scratchpad/uwf_search.py`.
+  ⚠ The element is `<article class="searchresult search-courseresult">`, **not a `<div>`**.
+  ⚠ It also revealed that **UWF files aviation in the College of Business, Department of Commerce** — a
+  batch-187 departmental signal the PDFs would never have shown.
+- ⚠⚠ **`PSC` is POLK STATE COLLEGE. Pensacola State is `PESC`.** The previous session probed
+  `pensacolastate.edu` under the name "psc" — **the wrong school for every course in this batch.**
+  **Check `inst_map.json` before trusting a three-letter code that looks obvious.**
+- ⚠ **Polk State College** (`catalog.polk.edu`) — **acalog (Modern Campus), catoid 55. Root answers 200
+  (53 KB); `content.php` and `search_advanced.php` both return empty 202s.** The same content-blocked
+  pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). **Four of this
+  batch's nine guides therefore name Polk's gap explicitly rather than inventing its descriptions.**
+- ⚠⚠⚠ **A SCAN BUG THAT LOOKED LIKE A FINDING.** The first survey reported **all five courses as carried
+  only by PRIVATE institutions**, which would have skipped the whole batch under the 2026-09-11 scope rule.
+  **The cause: `scns.is_public()` takes an institution CODE (`UWF`), and it was handed the flat file's
+  zero-padded institution ID (`0000082`)** — every row read as private. ⚠ **Also note the flat file's ids
+  are zero-padded while `inst_map.json` keys are unpadded** (`'82'`), so the lookup needs `str(int(id))`.
+  **This is the batch-207 rule firing again: when a scan returns the SAME answer for every row, assume the
+  TEST is wrong before assuming the DATA is uniform.** A uniformly-private public-college prefix was
+  implausible on its face.
+- ⚠ **`transferable` and `hs_credit` in the flat file disagree with the statewide CSV on this prefix**
+  (flat file: `hs_credit` blank, `transferable` `'EL'`; CSV: HS `ELECTIVE`, transferable `GUARANTEED…`).
+  **Both fields are 100% uniform across all 63 `ATF` and 53 `ATT` rows, so by the batch-207 distribution
+  test they carry no information either way** — the guides use the CSV's text and say the dual-enrolment
+  marking is prefix-wide boilerplate.
+- ⚠ **Prefix fragmentation**: `ATF` 44 live ids, 30 single-carrier (**68%**); `ATT` 29 live ids, 19
+  single-carrier (**66%**). **Sixteen prefixes measured, still inside the 64–85% band.** Max carriers is
+  low for both (4 and 7) — a small, specialised prefix family.
+- ✅ **Regulatory citations verified rather than recalled.** 14 CFR Part 141 appendices confirmed via
+  Cornell LII: **D** = Commercial Pilot, **F** = Flight Instructor, **G** = Flight Instructor Instrument,
+  **C** = Instrument Rating, **H** = Ground Instructor. **All three of UWF's citations check out**, which
+  is a useful quality signal for UWF's aviation data generally. ⚠ eCFR itself **403s** to WebFetch;
+  `law.cornell.edu/cfr/text/14/...` answers cleanly and is now the route to use.
+- ⚠ **Prerequisites: one trim round.** Four of nine exceeded 1000 on first assembly — all four the ones
+  carrying the shared choose-your-level warning, which was 490 characters before trimming to 330.
+  **The batch-209 "write to ~850" rule works, but a shared boilerplate block spends the budget twice** —
+  count the block itself against the target, not just the course-specific text.
+- ⚠ **Three validator WARNINGS, all expected and all correct to keep**: `ATF3502L` (3 cr / 31 h),
+  `ATF3511L` and `ATF3531L` (3 cr / 20 h) trip the 1:15 classroom expectation. **These are FAA flight
+  hours, per the batch-200 `ATF1100L` precedent (published at 40 h against the convention's 45).** The
+  validator's expectation does not apply to flight courses; each guide states its derivation and labels
+  it a floor.
+- **Batch average draft size 21.9 KB.** The four lower-level guides average 21.3 KB against the upper
+  four's 23.0 — appropriately shorter for 1-credit courses, per the batch-189 rule.

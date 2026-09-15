@@ -2355,6 +2355,57 @@ default" note.
 
 ---
 
+
+## 94. ⚠ NWFSC's `ATF2530L` catalogue entry carries the WRONG course description (batch 212)
+
+**What was found.** Northwest Florida State College's Coursedog catalogue entry for **`ATF2530L`**, titled
+*"Certified Flight Instructor Instrument"*, prints the description for the **single-engine airplane CFI**
+course — it refers to the *"Certified Flight Instructor Airplane Certificate"* and to the *"Flight
+Instructor Airplane Single Engine Practical Exam"*, neither of which belongs to an instrument instructor
+rating.
+
+**Assessment.** A copy-and-paste error in NWFSC's catalogue, not a statement about the course. The course
+number, the statewide title and the statewide description all identify the instrument instructor rating,
+and NWFSC's sibling entries (`ATF2500L`, `ATF2510L`) are correct and distinct.
+
+**What was done.** The `ATF2530L` guide was written to the statewide record and flags the error explicitly,
+telling the reader to rely on the course number and their own syllabus. No content was taken from the bad
+description.
+
+**Decision wanted from Ron:** whether this is worth reporting to NWFSC. It is a real defect in a public
+catalogue that could mislead a student choosing between two similar-sounding ratings, and NWFSC has been
+one of the project's more reliable sources. **No action needed on the site either way** — the guide already
+handles it.
+
+⚠ **Wider point worth noting: this is the first catalogue-level description error the project has caught at
+a Coursedog source.** The previous instances (`ADV4802`'s corrupt prerequisite, `AFR2132`'s forty-year-old
+description) were in the **statewide** record. **Institution catalogues are not automatically cleaner than
+the state file** — cross-check a description against the course number and the statewide subject whenever
+it is the only source for a guide.
+
+## 95. ⚠⚠ Nine live guides in the `ATF`/`ATT` family may now be incomplete — the alternate-level pair (batch 212)
+
+**Not an error, a gap created by a new finding.** Batch 212 identified the **ALTERNATE-LEVEL PAIR** shape
+(`CLAUDE.md`): SCNS deliberately builds lower- and upper-division versions of the same course and tells
+students they *"must choose"*, and the choice carries an upper-division-credit consequence plus a
+**250–500 flight hour** consequence through 14 CFR 61.160's aviation-credit-hour thresholds.
+
+**The nine guides written in batch 212 all carry it. Earlier `ATF`/`ATT` guides do not**, because the shape
+had not been identified. The ones worth checking:
+
+| Course | Why |
+|---|---|
+| `ATF1100L` | published batch 200; the prefix's other live flight guide |
+| `ATT1100C`, `ATT1120` | published earlier; ground-school siblings |
+
+⚠ **Probably a small job**: `ATF1100L` and the two `ATT` numbers have **no** `(U)` alternate, so they may
+need nothing more than a cross-reference. **The check is one flat-file pass** — look for a sibling number
+whose `DS_Course_Intent1` reads `UPPER` against the same subject.
+
+**Decision wanted from Ron:** whether to fold this into the deferred verification pass (2026-09-12
+direction) or leave it. **Recommend deferring** — the affected guides are not wrong, and the three numbers
+most likely have no alternate at all.
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

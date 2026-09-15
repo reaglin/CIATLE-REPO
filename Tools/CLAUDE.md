@@ -1338,6 +1338,84 @@ actually teaching.** **Handling: write the statewide subject, label the misfilin
 table, and give the reader a concrete diagnostic** — for `MUN3483`, *which instruments does this
 ensemble contain, and is the repertoire notated or chart-based?* See `REVIEW_QUEUE.md` item 83.
 
+### ⚠⚠⚠ ALTERNATE-LEVEL PAIR — the state builds TWO versions and makes the student choose (batch 212)
+
+**Every shape above describes institutions disagreeing, or a record going stale. This one is different:
+SCNS has DELIBERATELY created a lower-division and an upper-division version of the same course, and it
+says so in the course record.** All four `(U)` numbers in the `ATF`/`ATT` flight-instructor family carry
+this sentence verbatim:
+
+> *"As a higher-level course, it offers training beyond the scope of the lower-level alternate course.
+> **Students must choose whether to take the lower-level or upper-level version of this course.**"*
+
+⚠ **The machine-readable tell is `DS_Course_Intent1`** — it reads `UPPER` on one and `LOWER` on the other.
+⚠⚠ **And the cleanest confirmation is textual: `ATT3134`'s statewide description is `ATT2130`'s WORD FOR
+WORD plus two sentences naming what the upper version adds.** Check that first on any suspected pair.
+
+| Lower | Upper `(U)` | Upper adds |
+|---|---|---|
+| `ATF2500L`/`ATF2500` | `ATF3502L` | simulation technique, curriculum development, mentorship |
+| `ATF2510L` | `ATF3511L` | the same, **plus 15 flight hours against 10** |
+| `ATF2530L` | `ATF3531L` | the same |
+| `ATT2130` | `ATT3134` | the same, **plus the FAA Advanced Ground Instructor certificate** |
+
+⚠⚠ **Do not confuse it with three shapes it resembles:** the `MUN` level digit (which encodes the
+STUDENT's standing on ONE course), sequence-POSITION divergence (one number meaning a whole course or a
+phase), and sequence-LENGTH divergence (a field taught as one course or two). **Here both versions exist
+at once, under different numbers, and the student picks one.**
+
+**Handling: write BOTH halves, and put the choice in each.** A student landing on the lower number
+otherwise sees nothing about the decision. ⚠ **Check whether one institution carries both** — Polk State
+carries both halves of all four pairs at **equal credit**, which makes the upper version strictly better
+there, and the guides say so and tell the reader to ask an adviser to justify the lower one.
+
+#### ⚠⚠⚠ Why the choice matters — and it is worth 250–500 FLIGHT HOURS
+
+**Two consequences, and no catalogue states either.**
+
+1. **Upper-division credit.** A bachelor's degree requires it and a 2000-level course cannot supply it
+   (Ron's 2026-09-01 correction: the 2000→3000 step is the real boundary).
+2. ⚠⚠⚠ **A federal rule keyed to a COUNT of credit hours.** Under **14 CFR 61.160** the reduced-hour
+   **Restricted-Privileges ATP** turns on **semester credit hours of aviation coursework** — **1,000 hours**
+   with a bachelor's and **60** such credits, **1,250** with an associate and **30**, against 1,500
+   standard. **Taking 1-credit versions across the three flight-instructor courses costs six credits
+   against that count**, and the gap between thresholds is **250 to 500 flight hours.**
+
+⚠ **State the two cautions:** the reduction needs an institution **holding an FAA letter of authorisation**,
+and **that institution certifies eligibility** — so tell the reader to ask their programme, never to infer
+it from a course number.
+
+⚠⚠ **GENERALISE THIS: wherever a licensed field ties a federal or state benefit to a COUNT of credit
+hours, a credit-value divergence stops being an accounting curiosity and becomes a career consequence.**
+**Look for it in nursing, respiratory care, radiography and the other licensure ladders.**
+
+#### ⚠⚠ And the credit divergence beneath it: ONE federal certificate, FOUR credit values
+
+The batch-209 `AFR` rule said an external body can own a syllabus while each institution sets the credit.
+**The CFI-Airplane certificate is the cleanest instance yet, because the federal requirement is one
+published number that never moves:** `ATF2500L` **1 credit** (NWFSC, Polk State), `ATF2500` **2** (Broward,
+FSCJ), `ATF3502L` **1** at Polk State and **3** at UWF — and **all four require the identical 25 hours of
+flight training**, documented independently by three catalogues. **The work does not change. The credit does.**
+
+#### ⚠⚠⚠ On flight courses the FAA minimum is also a BILLING floor
+
+**NWFSC states on every flight course what no other Florida institution says out loud:**
+
+> *"the hours above are based on FAA-syllabus minimums, and students will often exceed these minimum hours.
+> **The cost for these additional flight hours is not covered by the course fee.**"*
+
+⚠ **Contact hours on an `ATF` course are hours in an aircraft, sold by the hour** (the batch-200 rule), **so
+exceeding the syllabus minimum — common, and not a failure — is charged to the student.** Say it, and tell
+the reader to ask what recent students actually averaged.
+
+⚠⚠ **Check whether the practical test is included.** Florida's own record for `ATF2510L`: *"This course does
+not include the checkride; it is at the student's discretion to schedule and complete the MEI checkride."*
+**So a student can complete the course, earn the credit, and not hold the rating.**
+
+⚠ **Expect the validator to WARN on these** (3 credits against 20–31 contact hours). **That warning is
+correct to keep** — the 1:15 classroom convention does not apply to flight training, per the `ATF1100L`
+precedent. State the derivation in the guide and label the figure a floor.
+
 ### ⚠ An `L` suffix does NOT reliably mean "1-credit lab partner" (batch 203)
 
 **`OCB3108L`** — *Study Abroad in Florida: Marine Field Studies* — runs **3–4 credits** at UNF
@@ -1452,7 +1530,8 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 
 | School | Pattern | Status |
 |---|---|---|
-| **UWF** | `catalog.uwf.edu/courseinformation/courses/<prefix>/<prefix>.pdf` (**lowercase**) | ✅ **working** — one fetch per prefix, full descriptions. The workhorse. |
+| **UWF** | `catalog.uwf.edu/courseinformation/courses/<prefix>/<prefix>.pdf` (**lowercase**) | ✅ **working** — one fetch per prefix, full descriptions. The workhorse. ⚠⚠ **But it does NOT cover every prefix UWF carries** (found batch 212): `atf` **404s** and `att` is a **title-only stub**, though UWF is an active SCNS carrier of both. The course-information index simply does not list them. **A 404 here is not proof UWF lacks the prefix — fall through to the search route below.** |
+| **UWF (search route)** | **`catalog.uwf.edu/search/?P=<PREFIX>%20<NUMBER>`** — `scratchpad/uwf_search.py` | ✅✅ **TOOLED AND RECORDED 2026-09-15 (batch 212). Use whenever the prefix PDF 404s or comes back empty.** ⚠ The session before had already found this route by hand and left cached results but **no register entry**, so batch 212 rediscovered it from scratch — **record a route here the moment it works, not at the end of the batch.** Returns the full course block: description, credits, prerequisites **and the college and department** (a batch-187 departmental signal the PDFs never carry — it is how UWF's aviation programme was found to sit in the College of Business). ⚠ The element is `<article class="searchresult search-courseresult">`, **not a `<div>`**. |
 | **FGCU** | `catalog.fgcu.edu/courses/<prefix>/<prefix>.pdf` (**the `.pdf`, not the directory**) | ✅ **working.** ⚠ The old directory URL is what was bot-blocked; the PDF answers. **Now the single most productive cross-check source in the project** — it documents credits explicitly and has produced the divergence a guide turned on in three consecutive batches. |
 | **FSU** | `registrar.fsu.edu/bulletin/undergraduate-departments/<department>` | ✅ **working, and general-purpose.** Previously recorded here as useful only for the FAMU-FSU joint engineering college — **it is not.** Clean HTML with full descriptions, credits and prerequisites for `psychology`, `philosophy`, `social-work` and others. **Use it as the third vote when UWF and FGCU disagree.** |
 | **⚠⚠ SCNS (statewide)** | `scratchpad/scns.py` — `flscns.fldoe.org` | ✅✅ **SOLVED 2026-09-09 (EEE sweep). CHECK THIS FIRST, BEFORE ANY INSTITUTION CATALOG.** `flatfile` downloads the whole SCNS database (~80 MB) carrying, per course, **both the institution's title AND the statewide title**, the authoritative institution list for the **exact** id, per-institution credits, and Gordon Rule + gen-ed flags. `statewide <PREFIX>` returns full descriptions, prerequisites and transferability as CSV. ⚠ Routes are **extensionless**; you must **accept the terms modal** first or reports return 0 rows silently; the report is an async SSRS viewer. All three handled in `scns.py`. See `SOURCES.md` Tier 3. |
@@ -1466,7 +1545,9 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **FSW** | `catalog.fsw.edu` (acalog, `catoid=27`, Course Descriptions `navoid=5491`) | ⚠ **PARTIAL BLOCK** — root returns 200 (26 KB) but **`content.php` and `search_advanced.php` both return empty 202s.** Root-reachable, content-blocked. |
 | **FIU** | Coursedog API — `scratchpad/coursedog.py` | ✅ **SOLVED 2026-09-06 (batch 167). 27,923 courses, cached in `scratchpad/fiu_courses.json`.** ⚠⚠ **The gate is one header: `Referer: https://catalog.fiu.edu/`** — without it every endpoint returns `{"error":"Unauthenticated"}`. Richest Florida source: code, name, credits, college, description, cipCode, and per-component **contactHours**. ⚠ Duplicate rows per code — prefer the one with a real college name and a description. Full paging takes 2-3 min; **use the cache**. |
 | **FAU** | `catalog.fau.edu` — Coursedog SPA | ❌ **ANSWERED 2026-09-07: no public Coursedog catalog at that host.** The discovery endpoint returns *"does not have entity assigned"* — the host is registered but no catalog is attached, which is why every schoolId guess failed. **Stop attempting FAU via Coursedog.** |
-| **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. |
+| **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. ⚠⚠ **It still accepts `Referer` alone, but the COURSE-SEARCH endpoint no longer does** — see the row below. **Discovery succeeding tells you nothing about whether a fetch will.** |
+| **⚠⚠ Coursedog auth (changed)** | `Referer:` **and** `Origin:` | ⚠⚠⚠ **CHANGED 2026-09-15 (batch 212).** Batch 167 recorded the gate as ONE header. **`Referer` alone now returns `401 Unauthorized`** on `/api/v1/cm/<school>/courses/search/$filters`; adding **`Origin: https://<catalog host>`** returns 200. Both are in the rebuilt `scratchpad/coursedog.py`. **If Coursedog 401s again, suspect another header before concluding the route is closed.** |
+| **Polk State (PSC)** | `catalog.polk.edu` — **acalog (Modern Campus), `catoid=55`** | ⚠ **PARTIAL BLOCK, probed 2026-09-15.** Root answers 200 (53 KB) but **`content.php` and `search_advanced.php` both return empty 202s** — the same content-blocked pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). ⚠⚠ **Note the code: `PSC` is POLK STATE. Pensacola State is `PESC`** — a previous session probed `pensacolastate.edu` as "psc" and was reading the wrong school. **Check `inst_map.json` before trusting an obvious-looking three-letter code.** |
 | **USF** | `catalog.usf.edu` | ⚠ root 200 (75 KB) but **no course-description path exposed**; its only course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a route. |
 | Gulf Coast | `gulfcoast.edu/catalog/current/courses/<prefix>/index.html` | was the highest-value pattern in the DSC build; **re-probe before use** |
 | **EFSC** | `catalog.easternflorida.edu/course-descriptions-information/<prefix>/` (and `/<prefix>.pdf`) | ✅ **NEW 2026-09-07 — CourseLeaf, same as UWF/FGCU/Broward/Valencia, existing tooling works unchanged.** Recovered `ADV2000C` and `COP3813C`. On CourseLeaf a prefix the college does not carry returns **202** — probe a prefix it definitely has. |
@@ -1479,7 +1560,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **Santa Fe** | `catalog.sfcollege.edu` | ⚠ Answers; not Coursedog (bootstrap 404s). Platform still unidentified. |
 | **CF (Central Florida)** | `catalog.cf.edu` | ⚠ Root 200 (26 KB), **acalog** — so likely the same content-blocked pattern as FSW and TSC. Not exercised. |
 | **MDC** | `mdc.curricunet.com/catalog/iq/3279` | ⚠ CurricUNET; 200 but ~10 KB (SPA shell). Lead, not a route. |
-| **State colleges (standing retry list)** | SPC, HCC, PSC, PHSC, Palm Beach State, Chipola | ❌ **curl 000 / 404.** With TSC and FSW content-blocked and MDC an SPA, **this is what still blocks `MUG2101`.** |
+| **State colleges (standing retry list)** | SPC, HCC, PESC, PHSC, Palm Beach State, Chipola | ❌ **curl 000 / 404.** With TSC, FSW and **Polk State** content-blocked and MDC an SPA, **this is what still blocks `MUG2101`.** ⚠ **Corrected 2026-09-15:** this row previously read "PSC", which is **Polk State's** code — Polk State is content-blocked rather than unreachable and now has its own row above. The school meant here is **Pensacola State (`PESC`)**. |
 | **Coursedog in Florida** | bootstrap endpoint, then `scratchpad/coursedog.py` | ✅ **REOPENED 2026-09-07 (batch 173) — the earlier "only FIU" conclusion was WRONG.** Three Florida Coursedog schools are now known: **FIU**, **NWFSC** and **FSCJ**. The earlier sweep missed them because it tested a guessed host list rather than the hosts the register already recorded as answering. ⚠ **Re-sweep the bootstrap endpoint against any host that answers before recording it as an unknown platform.** |
 
 ### ⚠ How to probe a block correctly (learned batch 164)
