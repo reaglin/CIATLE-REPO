@@ -586,6 +586,27 @@ boundary:** the two-year colleges as a group use one number and the universities
 | Subject | FCS number | SUS number |
 |---|---|---|
 | Introductory criminal justice | **`CCJ1020`** (Broward, EFSC, Valencia — all three checked; **none carries `CCJ2002`**) | **`CCJ2002`** |
+| ⚠⚠ **Criminal justice administration** (batch 220) | **`CCJ2452`** — Polk State, Valencia, Florida Gateway, State College of Florida, Tallahassee State (**all five FCS**) | **`CCJ3450`** — UCF, UWF (**both SUS**) |
+
+⚠⚠⚠ **The second row is worse than the first, and the reason is the LEVEL (batch 220).**
+`CCJ1020`/`CCJ2002` are both lower-division, so an A.A. completer's general-education and elective
+protections absorb much of the damage. **`CCJ2452` and `CCJ3450` sit at DIFFERENT LEVELS, and a
+2000-level course CANNOT supply upper-division hours toward a Florida baccalaureate** — so a state-college
+student who takes the subject may have to take it again at the university, **not because the content
+differs but because the level does.** **Tell the reader to get a WRITTEN answer from the receiving
+department before taking the lower-division version.**
+
+⚠⚠ **Two instances in ONE prefix makes it a property of that prefix, not a coincidence.**
+**Generalised drill: where a prefix is found to split one course by sector, check its other
+high-enrolment numbers for the same shape before writing any of them.** One `survey.py` call on the
+suspected twin answers it.
+
+#### ⚠ But the SECTOR does not determine the LEVEL — check carriers, do not infer (batch 220)
+
+**`CCJ3691` is a 3000-level number carried by UWF (SUS) and St. Johns River State College (FCS).**
+⚠ **Florida College System institutions offer upper-division coursework where they hold baccalaureate
+authority**, and several do. **So "FCS implies lower division" is a tendency the sector rule exploits, not
+a fact to rely on.**
 
 ⚠ **Why it matters more than a between-institution divergence: it hits EVERY A.A. transfer student in the
 discipline**, not the unlucky few. SCNS equivalency does not cross numbers. Mitigating facts are real — same
@@ -1787,7 +1808,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **FAU** | `catalog.fau.edu` — Coursedog SPA | ❌ **ANSWERED 2026-09-07: no public Coursedog catalog at that host.** The discovery endpoint returns *"does not have entity assigned"* — the host is registered but no catalog is attached, which is why every schoolId guess failed. **Stop attempting FAU via Coursedog.** |
 | **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. ⚠⚠ **It still accepts `Referer` alone, but the COURSE-SEARCH endpoint no longer does** — see the row below. **Discovery succeeding tells you nothing about whether a fetch will.** |
 | **⚠⚠ Coursedog auth (changed)** | `Referer:` **and** `Origin:` | ⚠⚠⚠ **CHANGED 2026-09-15 (batch 212).** Batch 167 recorded the gate as ONE header. **`Referer` alone now returns `401 Unauthorized`** on `/api/v1/cm/<school>/courses/search/$filters`; adding **`Origin: https://<catalog host>`** returns 200. Both are in the rebuilt `scratchpad/coursedog.py`. **If Coursedog 401s again, suspect another header before concluding the route is closed.** |
-| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | six institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not six coincidences (batch 215).** **FSW, TSC, CF, Polk State, Santa Fe and now FAMU** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
+| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | **SEVEN** institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not seven coincidences (batch 215, confirmed 220).** **FSW, TSC, CF, Polk State, Santa Fe, FAMU and St. Johns River State** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
 | **FAMU** | `catalog.famu.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15.** Root 200 (56 KB); `content.php` and `search_advanced.php` empty 202s. Not Coursedog (bootstrap: *"does not exists"*). ⚠⚠ **FAMU ≠ FAU** — different institutions, both unreachable for different reasons. FAMU is a main carrier of the `RET` professional sequence, so eight batch-215 guides name the gap. |
 | **Polk State (PSC)** | `catalog.polk.edu` — **acalog (Modern Campus), `catoid=55`** | ⚠ **PARTIAL BLOCK, probed 2026-09-15.** Root answers 200 (53 KB) but **`content.php` and `search_advanced.php` both return empty 202s** — the same content-blocked pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). ⚠⚠ **Note the code: `PSC` is POLK STATE. Pensacola State is `PESC`** — a previous session probed `pensacolastate.edu` as "psc" and was reading the wrong school. **Check `inst_map.json` before trusting an obvious-looking three-letter code.** |
 | **USF** | `catalog.usf.edu` | ⚠ root 200 (75 KB) but **no course-description path exposed**; its only course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a route. |
@@ -1799,6 +1820,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **⚠ FSU entry vs requirement text** | `registrar.fsu.edu/bulletin/...` | ⚠ A number followed by a period is **not** enough to locate a catalog entry — it also matches requirement prose (*"a grade of C or higher in COP 3014 or COP 3363."*). **Verify that a TITLE and a parenthesised credit value follow** (`COP 3014. Algorithm… (3).`). Cost a wrong result in batch 176. |
 | **FSCJ** | Coursedog — `scratchpad/coursedog.py fscj` (school `fscj_peoplesoft`, catalog `sGHd4uJQXFdgDUaffhTv`) | ✅ **SOLVED 2026-09-07 (batch 173).** Was "platform unidentified". ⚠ **22,693 courses — the largest Florida catalog found so far**, and `fetch()` caps at limit=5000, so a single call silently returns a PARTIAL result. **Page it** (`scratchpad/fscj_dump.py`) and cache to `scratchpad/fscj_courses.json`. |
 | **NWFSC** | Coursedog — `scratchpad/coursedog.py nwfsc` (school `nwfsc_banner_sql`, catalog `DGLrTHoh5uNIMFsdbzWf`) | ✅ **NEW 2026-09-07 (batch 173).** 1,781 courses, single page, cached in `scratchpad/nwfsc_courses.json`. Full descriptions and credits. Found because a 404 from `catalog.nwfsc.edu` returned a 1.1 MB body — **the body size was the tell.** |
+| **St. Johns River State (SJRSC)** | `catalog.sjrstate.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15 (batch 220).** Root answers 200 (49 KB) and the markup carries 33 acalog references and 21 `content.php` links; a `content.php` probe returns an **empty 202**. ✅ **The batch-215 presumption held exactly — identifying the platform answered it in TWO requests instead of a probing session.** Carrier of `CCJ3691`, so that guide names the gap. |
 | **Santa Fe** | `catalog.sfcollege.edu` | ⚠ **PLATFORM IDENTIFIED 2026-09-15 (batch 214): acalog (Modern Campus), and CONTENT-BLOCKED.** Root answers 200 (30 KB) but `content.php` and `search_advanced.php` both return **empty 202s** — the same pattern as FSW, TSC, CF and Polk State. Not Coursedog. **Root-reachable, content-blocked; treat as unavailable rather than unidentified.** |
 | **UCF (confirmed route)** | Kuali — `ucf.kuali.co` | ✅✅ **RE-CONFIRMED 2026-09-15 (batch 214).** `/api/v1/catalog/public/catalogs/` → pick by `_id` (2026-27 undergraduate = `688b8960ddeb091644d2b1ca`) → `/api/v1/catalog/courses/<catalogId>` (3,676 courses) → detail at `/api/v1/catalog/course/<catalogId>/<pid>`. ⚠ **The detail endpoint needs `pid`, not `id`.** ⚠⚠ **It is the ONLY Florida source reporting laboratory hours as a structured field (`labStudioFieldWorkHours`)** — which settled whether `BOT4850` has a lab. Go here whenever a lab component is in doubt. |
 | **CF (Central Florida)** | `catalog.cf.edu` | ⚠ Root 200 (26 KB), **acalog** — so likely the same content-blocked pattern as FSW and TSC. Not exercised. |
@@ -2013,6 +2035,41 @@ of `IN_Dual_Enrollment1` in batch 207 — `Y` on 184/184 SPM and 202/202 SPN row
 ⚠ **Say which it is in the guide.** "SCNS marks this available for dual enrolment with elective high-school
 credit — and every active number in the prefix carries the identical marking, so it says nothing about this
 course" is honest and useful. Presenting boilerplate as a finding is not.
+
+##### ⚠⚠⚠ STRATIFY THE DISTRIBUTION BY COURSE LEVEL, or the test reports an ARTEFACT (batch 220)
+
+**The `Counter` above is run over ACTIVE rows. That is not the same population as the rows you WRITE
+about, and in `CCJ` the difference inverted the answer.**
+
+`DS_Transferable1` over all **356 active** `CCJ` rows: **186 NOT AUTOMATICALLY TRANSFERABLE / 170
+guaranteed** — a near 50/50 split, which by the test above reads as **strongly discriminating**, in a
+prefix where the batch-202/204 rule already says to read that field on every course. **It nearly became
+four guides' headline finding.**
+
+**Cross-tabulated against `DS_Course_Intent1` it collapses:**
+
+| Intent | GUARANTEED | NOT-AUTO |
+|---|---|---|
+| LOWER | 50 | 0 |
+| UPPER | **119** | 2 |
+| ⚠ GRADUATE | 0 | **130** |
+| ⚠ VARIABLE | 0 | **54** |
+
+⚠⚠⚠ **Of 171 active UNDERGRADUATE rows, 169 are guaranteed.** The whole split is graduate and
+variable-credit rows, which are non-transferable as a class. **For the courses this project writes, the
+field is boilerplate.**
+
+**The rule, and it applies to EVERY field the distribution test is run on:**
+
+```python
+rows = [r for r in active if r['DS_Course_Intent1'] in ('LOWER', 'UPPER')]   # then Counter
+```
+
+⚠⚠ **Run the distribution over the population you are writing about — active, undergraduate,
+non-shell — not over every active row.** One filter is the entire cost, and it is the difference between
+a finding and an artefact. ⚠ **Keep the genuine exceptions the stratified pass surfaces**: in `CCJ` only
+**`CCJ4615`** and **`CCJ4662`** are undergraduate and non-transferable, and those two DO deserve the
+batch-204 treatment.
 
 ### ⚠⚠⚠ TITLE FRAGMENTATION AT SCALE — when many titles mean NO divergence (batch 202)
 
