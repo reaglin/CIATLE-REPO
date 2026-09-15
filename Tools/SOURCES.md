@@ -22245,3 +22245,205 @@ regardless of coursework held.
   each block individually.**
 - **Batch average draft size 19.4 KB** — the two 1-credit laboratories at 16.7 and 17.3 KB are
   appropriately the shortest, per the batch-189 rule.
+
+---
+
+## Batch 216 — EME, completing the prefix queue (2026-09-15)
+
+**Eight guides, all live**, completing every queued `EME` row: **EME2620**, **EME3312**, **EME3351**,
+**EME3624**, **EME4043**, **EME4083**, **EME4674**, **EME4684**. ✅ **Eight of eight clean, ZERO warnings,
+ZERO prerequisite trim rounds.** **267 courses newly listed** (278 rows sent, 267 created, 11 updated,
+0 failed).
+
+Sources: **UWF** (prefix PDF, all eight) and Florida's statewide record. ⚠ **UNF is a carrier of six of
+the eight and was unreachable** — see the register note below, which is a genuine advance on what the
+project previously recorded.
+
+### ⚠⚠ The prefix is a coherent Instructional Design and Technology degree — and it is NOT teacher education
+
+`EME` is *Education: Technology and Media*, and the statewide title of `EME3312` says *"21st Century
+Teaching"*, so the natural reading is teacher preparation. ⚠⚠ **It is not.** UWF's department is literally
+the **Department of Instructional Design and Technology**, inside a School of Education, and the sequence
+— foundations, needs assessment, development, evaluation, leadership, capstone — is **ADDIE built into a
+curriculum** for a design and consulting profession serving corporate, military, healthcare and government
+training.
+
+⚠ **Two guides state plainly that Florida teacher certification runs through a state-approved teacher
+preparation programme and that an ID&T degree is not one.** That is a real student-facing risk: a student
+wanting to teach in K-12 could reasonably enrol here on the strength of the prefix name and the statewide
+title.
+
+### ⚠⚠ `EME3351` — UNF's title indicates a different subject, and it could not be resolved
+
+| Source | Title |
+|---|---|
+| Statewide / UWF | *Introduction to Instructional and Performance Technology* — ⚠ UWF matches the statewide description **verbatim** |
+| ⚠⚠ UNF | **Adult Learning Theory and Curriculum Development** |
+
+**The statewide subject is the distinction between instructional technology and human performance
+technology** — the field's central idea, that performance problems frequently have non-instructional
+causes. **Adult learning theory is related foundational material and is not that.**
+
+⚠ **FLAGGED rather than settled, because UNF's catalogue is unreachable and a TITLE is weaker evidence
+than a description** — this project has repeatedly found divergent titles sitting on courses whose
+descriptions match fine. **The guide tells UNF students to expect adult learning theory and to ask where
+the performance technology material sits in their programme**, and tells transferring students to send the
+syllabus.
+
+### ⚠ `EME3312` — a scope divergence, and only ONE public carrier
+
+**Statewide: *"prepares learners to integrate technology into the classroom."* UWF: *Technology Supported
+Learning*, adding *"distance learning, formal and informal technology based learning and mobile
+learning."*** ⚠⚠ **UWF drops "teaching" from the title entirely and adds informal learning — learning with
+no instructor, curriculum or assessment**, which is a different object of study.
+
+⚠ **The second carrier is PRIVATE** (and titles it something different again), so under the 2026-09-11
+scope rule it is excluded from the offerings and did not inform the guide. **The guide says so explicitly
+rather than silently listing one carrier.**
+
+### ⚠⚠ `EME2620` — the general-education designation differs between the two carriers
+
+| Carrier | Gen-ed designation |
+|---|---|
+| **FAU** | ⚠ **Social Sciences** |
+| **UWF** | ⚠ **none recorded** |
+
+**Same course, same credits, same statewide description — filling a general-education requirement at one
+Florida university and not the other.** The batch-201 institution-specific rule in its cleanest form, and
+the guide leads with it because a student choosing an elective to satisfy a requirement needs it.
+
+### ⚠ Vocabulary shift on the capstone: "Learning Design" against "Instructional Design"
+
+**UNF: *Learning Design and Technology Capstone*. UWF and statewide: *Instructional Design and Technology
+Capstone*.** ⚠ Not drift — **a real movement in the field's self-description**, on the argument that the
+designer's object is the learner's experience rather than the instruction delivered. **Both terms are
+current; job listings use both plus "learning experience designer".** ⚠⚠ **The guide's practical advice is
+to search for all of them**, because a graduate searching only the term their degree used will miss
+openings.
+
+### ⚠ Other course-level findings
+
+- **`EME4684` requires PERMISSION to enrol at UWF** — ⚠ capstone permission normally means prerequisite
+  and readiness verification, and **missing the deadline delays graduation by a term.** The guide says to
+  find out a full term ahead.
+- ⚠⚠ **`EME4043`'s statewide description names FIVE settings** — education, training, **military**, public
+  sector and non-profits — and **names systems thinking explicitly.** It is deliberately not a
+  school-technology course, and the guide reads the description literally.
+- **`dual_enrollment` is DISCRIMINATING in `EME`** (401 `Y`, 8 `N`) ⚠ **but all eight batch courses are
+  `Y`**, so the field separates nothing here. **The guides say the marking is prefix-wide boilerplate
+  rather than presenting it as a finding** — the honest version of a discriminating-but-not-here field.
+- **Prefix fragmentation**: `EME` 281 live ids, 213 single-carrier (**76%**), max **38** carriers.
+
+---
+
+## Batch 217 — GIS, completing the prefix queue (2026-09-15)
+
+**Six guides, all live**, completing every queued `GIS` row: **GIS4006**, **GIS4035L**, **GIS4043L**,
+**GIS4048C**, **GIS4102C**, **GIS4301C**. ✅ **Six of six clean, zero warnings**, one prerequisite trim.
+**146 courses newly listed** (155 sent, 146 created, 9 updated, 0 failed).
+
+⚠⚠ **The best-sourced batch in a while — FIVE carriers reached by four different routes**: UWF (prefix
+PDF), FSU (registrar bulletin), UF (CourseLeaf department page), UCF (Kuali API). Only FAU was
+unreachable.
+
+### ⚠⚠⚠ `GIS4102C` carries a formal ARTIFICIAL INTELLIGENCE course attribute at UF
+
+**UF's catalogue records an *Artificial Intelligence* attribute against GIS Programming.** ⚠⚠ **The first
+time this project has met a formal institutional AI course designation**, and it is worth recording as a
+category.
+
+**Why it matters to a student rather than being trivia:** UF runs a university-wide AI initiative and
+designates courses across the curriculum that carry AI content. ⚠ **Such designations may count toward an
+AI certificate or minor and may appear as a transcript notation** — so a student part-way toward a
+credential should know. **The guide tells them to find out what it counts toward rather than assuming it
+is decorative.**
+
+⚠ **Expect more of these.** Institutions are beginning to tag AI-related coursework formally, and it is a
+fact about a course that no other source records. **Watch the UF CourseLeaf "Attributes:" line.**
+
+### ⚠⚠ A prefix-wide number divergence on the GATEWAY course
+
+**Introductory GIS — the prerequisite for everything in this batch — is not numbered the same way across
+Florida:**
+
+| Institution | Intro GIS |
+|---|---|
+| UWF, FSU | **`GIS 4043`** (3 cr lecture) **+ `GIS 4043L`** (1 cr lab) — 4000-level, split |
+| ⚠ UF | **`GIS 3043C`** — **3000-level, integrated** |
+
+⚠⚠ **Different number, different DIVISION and different packaging for the same subject** — and it is the
+prerequisite named in the statewide record for three of the six courses in this batch. **All six guides
+carry the warning**, because a student transferring will be matched against a number their transcript does
+not contain.
+
+### ⚠ The lab-titled-as-its-lecture pattern, third instance
+
+**Florida gives `GIS4035L` and `GIS4043L` the titles of their LECTURES** — *Remote Sensing of the
+Environment* and *Principles of Geographic Information Systems* — **with no separate descriptions**, so
+the state record cannot distinguish the halves at all. ⚠ **Same as `RET3028L` and `RET3493L` last batch.**
+
+**Three instances in two batches makes it a pattern worth expecting rather than noting each time:** where
+a prefix runs lecture+lab pairs, **the statewide record frequently describes only the subject and leaves
+the institution to distinguish the halves.** **Go to the institution's catalogue for anything about the
+lab specifically.**
+
+### ⚠⚠ UCF's structured lab-hours field produced the best-grounded contact figure in the batch
+
+**`GIS4301C` is 4 credits — the only 4-credit course in the prefix — and UCF publishes `2` weekly
+laboratory hours as a structured field.** That gives 30 lab hours plus ~45 lecture hours = **75**, marked
+`hours_source: mixed` rather than fully derived.
+
+⚠ **Second batch running in which UCF's `labStudioFieldWorkHours` was decisive** (it settled `BOT4850`'s
+missing laboratory in batch 214). **It remains the only Florida source reporting laboratory hours as
+structured data, and it is worth querying whenever lab hours matter.**
+
+### ⚠ Course-level findings
+
+- **`GIS4006`** — UWF pairs a **corequisite lab `GIS4006L`** that FSU does not publish, and ⚠ **names
+  portfolio creation as a course outcome.** The guide leads on classification and normalisation as the
+  decisions that change a map's meaning, since that is what the course is for.
+- **`GIS4035L`** — ⚠⚠ UWF states **"basic competency with ArcGIS Pro software is required"** and that
+  prior intro-GIS coursework is **expected**. **The course does not teach you to operate GIS software**,
+  which is exactly the kind of assumption a student discovers too late. Also uses **Erdas Imagine**, which
+  students frequently cannot run at home.
+- ⚠ **Equipment fees and "permission is required" appear on both UWF labs.** **GIS lab seats are limited
+  by workstation count**, so a late permission request can cost a term in a sequenced programme. Both
+  guides put it in the prerequisite field.
+- **`GIS4048C`** and **`GIS4301C`** are **single-public-carrier** numbers; FAU (4048C) is unreachable, so
+  that guide is written from the statewide record — ⚠ **which is unusually substantive here**, naming a
+  *"generic process for applying GIS techniques in problem solving"* and case studies in environmental and
+  social domains.
+- ⚠ **UWF dual-lists ALL THREE of its courses in this batch** (GIS 5007, GIS 5027L, GIS 5050L). **Fourth
+  UWF department showing the pattern** after Biology (batch 214) and Health Sciences (batch 215) — this is
+  a UWF-wide practice, not departmental. **Expect it on any UWF 4000-level course and check for
+  "offered concurrently with".**
+- **Prefix fragmentation**: `GIS` 155 live ids, 123 single-carrier (**79%**), max 10. `hs_credit`,
+  `transferable` and `dual_enrollment` all uniform — **boilerplate**, and the guides say so.
+
+### Source register
+
+- ✅✅ **UNF ANSWERED, PARTIALLY — a real advance on "no static pattern found".** The register previously
+  recorded UNF as unreachable with a lead worth chasing (`digitalcommons.unf.edu/course_catalogs/`).
+  **That archive is REAL**: it lists catalogue PDFs by year, and the article ids map cleanly to years
+  (2025-2026 = `article=1071`, counting down by year). ⚠⚠ **But the PDF download itself returns 403, with
+  or without a Referer** — bepress bot-blocks it. **So: the archive exists, the ids are known, and the
+  download is blocked.** That is a more precise register entry than a lead, and it closes off a route
+  cheaply for future sessions rather than leaving it to be re-attempted.
+  ⚠ UNF's live catalogue (`catalog.unf.edu`, `www.unf.edu/catalog/courses/`) answers with a large page
+  but is **client-rendered** — the course index contains no course content.
+- ✅ **FSU's registrar bulletin worked again**, though ⚠ **the GIS entries came from a DEGREE REQUIREMENTS
+  list rather than a course-description section** — titles and parenthesised credits only. **That still
+  satisfies the batch-176 verification rule** (a title and a parenthesised credit value follow the
+  number), and it confirmed FSU's lecture+lab pairings, which is what was needed.
+- ✅ **UF CourseLeaf department pages**: the slug for GIS courses is **`geography`**; ⚠ `geomatics` 404s.
+  **Slugs remain descriptive and unguessable from the prefix.**
+- ⚠ **`scratchpad/uwf_pdf.py` needed a fix on first reuse**: UWF abbreviates "College" as **"Col"** in
+  some entries (e.g. *"Col of Arts, Soc Sci and Human"*), so the header pattern **missed those entries and
+  silently merged them into the previous course's body.** Fixed by accepting the abbreviation. ⚠⚠ **Same
+  class of failure as the batch-215 bug it was written to prevent — a parse gap does not error, it
+  produces plausible text for the wrong record.** Caught because `EME2620`'s body ran on into an
+  intelligence-and-national-security course.
+- ✅✅ **Prerequisite budget: 0 of 8 over on first assembly in batch 216**, with a single 141-character
+  shared block. **The batch-215 rule — budget the SUM of shared blocks first — worked exactly as
+  intended.** Batch 217 had two blocks totalling 369 characters and needed one trim on one course.
+- **Batch average draft size: EME 18.4 KB, GIS 18.2 KB.**

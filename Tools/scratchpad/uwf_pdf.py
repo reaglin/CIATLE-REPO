@@ -27,8 +27,11 @@ from pypdf import PdfReader
 # The title must be SHORT and contain no sentence period, or the lazy quantifier
 # happily spans an entire description to reach the next entry's "College of"
 # -- which silently attached three wrong descriptions on the first attempt.
+# NOTE UWF abbreviates "College" as "Col" in some entries (e.g. "Col of Arts,
+# Soc Sci and Human"), so an entry can be MISSED and silently merged into the
+# previous one. Accept the abbreviation.
 HEADER = re.compile(
-    r'([A-Z]{3})\s(\d{4}[A-Z]?)\s+([^.]{1,90}?)\s+(?:College|School)\s+of\s+\w',
+    r'([A-Z]{3})\s(\d{4}[A-Z]?)\s+([^.]{1,90}?)\s+(?:College|Col|School)\s+of\s+\w',
 )
 
 

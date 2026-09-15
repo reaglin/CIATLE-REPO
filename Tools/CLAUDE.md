@@ -1536,6 +1536,50 @@ enter the unit.
 clinical competence under its own accreditation, so it may accept the credit and still require its own
 practicum. **Tell students to keep every competency evaluation and clinical hour log.**
 
+### ⚠⚠ A LAB titled as its LECTURE — expect it on any lecture+lab prefix (batches 215, 217)
+
+**Florida frequently gives a laboratory the title of its lecture, with no separate description**, so the
+statewide record cannot distinguish the halves at all:
+
+| Lab | Statewide title it is given |
+|---|---|
+| `RET3028L` | *Fundamentals of Respiratory Therapy* (its lecture's) |
+| `RET3493L` | *Respiratory Disease Assessment* (its lecture's) |
+| `GIS4035L` | *Remote Sensing of the Environment* (its lecture's) |
+| `GIS4043L` | *Principles of Geographic Information Systems* (its lecture's) |
+
+⚠ **Four instances in two batches. Stop treating it as a finding and expect it.** **Go to the
+institution's catalogue for anything about the lab specifically** — both institutions distinguish the
+halves properly in their own records even where the state does not.
+
+### ⚠⚠ Formal AI course ATTRIBUTES are appearing — a new category (batch 217)
+
+**UF's catalogue records an *Artificial Intelligence* attribute against `GIS4102C` (GIS Programming).**
+⚠ The first formal institutional AI course designation this project has met.
+
+**It matters to a student rather than being trivia:** UF runs a university-wide AI initiative, and such
+designations **may count toward an AI certificate or minor and may appear as a transcript notation.**
+⚠⚠ **Tell the reader to find out what it counts toward** rather than assuming it is decorative.
+
+⚠ **Expect more.** Institutions are beginning to tag AI-related coursework formally, and no other source
+records it. **Watch the UF CourseLeaf `Attributes:` line**, and check whether other catalogues carry
+something equivalent.
+
+### ⚠⚠ UWF DUAL-LISTS across departments — check every UWF 4000-level course (batches 214, 215, 217)
+
+**The batch-186 rule came from one instance. It is now a UWF-wide practice, not a departmental quirk:**
+
+| Department | Courses |
+|---|---|
+| Biology | `BOT4850`/`BOT 5852`, `BSC4303`/`BSC 5305`, `BSC4401L`/`BSC 5406L` |
+| Health Sciences | `BSC4401L` and the `RET` sequence |
+| Earth &amp; Environmental Sciences | `GIS4006`/`GIS 5007`, `GIS4035L`/`GIS 5027L`, `GIS4043L`/`GIS 5050L` |
+
+⚠ **Standing practice: look for "offered concurrently with" on ANY UWF 4000-level course.** Both
+consequences must be stated — the pace sits above a typical undergraduate course (a benefit), and
+**taking the undergraduate version may BLOCK taking the graduate one for credit later**, which has to be
+known before registering.
+
 ### ⚠ An `L` suffix does NOT reliably mean "1-credit lab partner" (batch 203)
 
 **`OCB3108L`** — *Study Abroad in Florida: Marine Field Studies* — runs **3–4 credits** at UNF
@@ -1662,7 +1706,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **Broward** | `catalog.broward.edu/course-descriptions/<prefix>/` | ✅ **RECOVERED 2026-09-06** and used productively in batch 166. ⚠⚠ **The only routinely fetchable Florida source that publishes CONTACT HOURS explicitly** ("Total Contact Hrs: 48.00 / Lecture Hrs: 48.00") plus minimum-grade prerequisite conditions. **Go here first whenever a contact-hour figure is in doubt.** |
 | **Valencia** | `catalog.valenciacollege.edu/coursedescriptions/coursesoffered/<prefix>/` | ✅ **RECOVERED 2026-09-06** — 200 with full body on `psy` and `mus`. Same regression, same recovery. |
 | **DSC** | `daytonastate.smartcatalogiq.com/en/<year>/college-catalog/course-descriptions/<prefix-slug>/<level>/<course>` | ✅ **Confirmed on the CURRENT catalog 2026-09-07**, not just historically. ⚠ Two gotchas: the prefix slug is descriptive (`cop-computer-science`, not `cop`), and **the index page lists only titles — the individual course page carries description, credits, prerequisite and term**. A trailing slash 404s. **Same platform as IRSC.** |
-| **UNF** | — | ⚠ **no static pattern found**, and now 301s to client-rendered pages. **Lead worth chasing: `digitalcommons.unf.edu/course_catalogs/` (archived PDF catalogs).** |
+| **UNF** | live catalogue + `digitalcommons.unf.edu/course_catalogs/` | ⚠⚠ **LEAD CHASED AND CLOSED 2026-09-15 (batch 216).** The live catalogue (`catalog.unf.edu`, `www.unf.edu/catalog/courses/`) answers with a large page but is **client-rendered** — the course index contains **no course content**. The archived-PDF lead is **REAL**: the DigitalCommons page lists catalogue PDFs by year and the article ids map cleanly (2025-26 = `article=1071`, counting down by year). ⚠⚠⚠ **But the PDF download returns 403 with or without a Referer** — bepress bot-blocks it. **So the archive exists, the ids are known, and the download is blocked. Do not re-attempt; write UNF courses from the statewide record and another carrier, and say so in the guide.** |
 | **FSW** | `catalog.fsw.edu` (acalog, `catoid=27`, Course Descriptions `navoid=5491`) | ⚠ **PARTIAL BLOCK** — root returns 200 (26 KB) but **`content.php` and `search_advanced.php` both return empty 202s.** Root-reachable, content-blocked. |
 | **FIU** | Coursedog API — `scratchpad/coursedog.py` | ✅ **SOLVED 2026-09-06 (batch 167). 27,923 courses, cached in `scratchpad/fiu_courses.json`.** ⚠⚠ **The gate is one header: `Referer: https://catalog.fiu.edu/`** — without it every endpoint returns `{"error":"Unauthenticated"}`. Richest Florida source: code, name, credits, college, description, cipCode, and per-component **contactHours**. ⚠ Duplicate rows per code — prefer the one with a real college name and a description. Full paging takes 2-3 min; **use the cache**. |
 | **FAU** | `catalog.fau.edu` — Coursedog SPA | ❌ **ANSWERED 2026-09-07: no public Coursedog catalog at that host.** The discovery endpoint returns *"does not have entity assigned"* — the host is registered but no catalog is attached, which is why every schoolId guess failed. **Stop attempting FAU via Coursedog.** |
