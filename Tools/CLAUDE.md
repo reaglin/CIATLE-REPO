@@ -853,6 +853,17 @@ first assembly** (886, 924, 955 characters), and the three that ran over needed 
 assembly — the warnings accumulate as the research lands. **Writing to length and then cutting is the
 expensive order; writing short and adding is the cheap one.**
 
+#### ⚠⚠ Budget the SUM of SHARED blocks, not each one (batch 212, sharpened batch 215)
+
+**A warning reused across a batch spends its length on EVERY course that uses it.** Batch 212 learned this
+with one shared block (4 of 9 over). ⚠⚠ **Batch 215 had THREE — a credential warning, a placement warning
+and a sequence warning — totalling ~1,100 characters of shared text before any course-specific content,
+and 11 of 12 went over.**
+
+⚠⚠⚠ **Revised rule: allow all shared blocks together about 400 characters, not 400 each.** Trimming the
+blocks fixed 9 of 11; the rest needed individual trims. **Count the boilerplate first, then write the
+course-specific text into what remains.**
+
 ### ⚠⚠ TERMINOLOGY-ERA divergence — a category of its own (batch 187)
 
 **Not title drift, not subject divergence: the same course carrying vocabulary from different decades of
@@ -1485,6 +1496,46 @@ later** — which has to be known before registering, not after.
 ⚠ **The tell is systematic structure.** One bad token is a defect; a repeated prefixing convention is
 notation, and decoding it serves the reader better than a warning does.
 
+### ⚠⚠⚠ LICENSED-PROFESSION SEQUENCES: accreditation, cohorts and clinical hours (batch 215)
+
+**`RET` (respiratory therapy) is the first complete professional sequence this project has written, and it
+established handling that applies to EVERY licensed allied-health prefix** — nursing, radiography, dental
+hygiene, health information management, athletic training.
+
+⚠⚠⚠ **1. The credential runs through the PROGRAMME, not the credit.** CoARC accredits respiratory care
+programmes **as programmes**, and in two distinct kinds — **entry into professional practice** and
+**degree advancement** for therapists who already hold credentials. **NBRC exam eligibility runs through
+completing an appropriate accredited programme, NOT through accumulating transferable credit.** A student
+can hold credit for every course and remain ineligible. **Say so in every course of the sequence**, and
+tell the reader to verify with the accreditor, the credentialing body and the state board directly.
+
+⚠ **Work out WHICH KIND the programme is** — the tell is the curriculum: an entry-level programme has a
+foundations course, a clinical sequence, and a terminal practicum completing new-graduate competencies.
+⚠⚠ **Do not assume the sector predicts it.** The batch-206 note (FCS = entry-level A.S., SUS = degree
+completion) is a tendency, not a rule: **UWF is SUS and runs an entry-level baccalaureate**, the batch-200
+`ATR` shape of a profession raising its entry credential.
+
+⚠⚠ **2. Cohort structure changes the arithmetic of a marginal grade.** Courses run **once a year** in a
+fixed, gated sequence with clinical placements arranged around it. **A failure delays not one term but
+until the course runs again — about a year — and may require re-application.** Reciprocal corequisites
+make it worse: where a lecture and lab each list the other, **failing either means repeating both.**
+**State this; students do not know it in their first term.**
+
+⚠⚠⚠ **3. Clinical practicum hours are NOT classroom hours.** Use roughly **three contact hours per credit
+per week** — 3 credits ≈ **135 hours**, 4 credits ≈ **180** — not the 45/60 classroom convention, which
+misdescribes a rotation badly. **The validator will WARN and the warning is correct to keep** (same as the
+flight-hour case). **Label the derivation.**
+
+⚠⚠ **4. Placement clearances go in the PREREQUISITE field** (the batch-184 rule) and **must be started
+weeks before the term**: Florida **Level 2 fingerprint screening**, immunisations and TB screening, drug
+screening, health insurance, **BLS** — plus **ACLS** for critical care and ⚠ **NRP and PALS before a
+neonatal-paediatric rotation**, where provider courses fill up and an uncertified student simply cannot
+enter the unit.
+
+⚠ **5. Transfer on COMPETENCY RECORDS, not course numbers.** A receiving programme must attest to your
+clinical competence under its own accreditation, so it may accept the credit and still require its own
+practicum. **Tell students to keep every competency evaluation and clinical hour log.**
+
 ### ⚠ An `L` suffix does NOT reliably mean "1-credit lab partner" (batch 203)
 
 **`OCB3108L`** — *Study Abroad in Florida: Marine Field Studies* — runs **3–4 credits** at UNF
@@ -1600,6 +1651,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | School | Pattern | Status |
 |---|---|---|
 | **UWF** | `catalog.uwf.edu/courseinformation/courses/<prefix>/<prefix>.pdf` (**lowercase**) | ✅ **working** — one fetch per prefix, full descriptions. The workhorse. ⚠⚠ **But it does NOT cover every prefix UWF carries** (found batch 212): `atf` **404s** and `att` is a **title-only stub**, though UWF is an active SCNS carrier of both. The course-information index simply does not list them. **A 404 here is not proof UWF lacks the prefix — fall through to the search route below.** |
+| **⚠⚠ UWF PDF parsing** | `scratchpad/uwf_pdf.py` | ⚠⚠⚠ **USE THE PARSER, NOT A NAIVE SPLIT (batch 215).** CourseLeaf lays each entry out as `HEADER … Co-requisite: RET <other>` **then** the description, **then** the next header — so **splitting extracted text on `/ABC \d{4}/` cuts at the COREQUISITE REFERENCE and attaches every description to the WRONG course.** It produced three confidently wrong descriptions before being caught. ⚠ A second attempt failed differently: a lazy `(.*?)` title pattern spanned a whole description to reach the next entry's "College of" — **constrain the title to ≤90 chars with no sentence period.** ⚠⚠ **The general lesson: an extraction bug does not error, it returns plausible text for the wrong record.** It was caught only because "Clinical Practicum I" described ventilator theory. **Sanity-check extracted text against what the title claims.** |
 | **UWF (search route)** | **`catalog.uwf.edu/search/?P=<PREFIX>%20<NUMBER>`** — `scratchpad/uwf_search.py` | ✅✅ **TOOLED AND RECORDED 2026-09-15 (batch 212). Use whenever the prefix PDF 404s or comes back empty.** ⚠ The session before had already found this route by hand and left cached results but **no register entry**, so batch 212 rediscovered it from scratch — **record a route here the moment it works, not at the end of the batch.** Returns the full course block: description, credits, prerequisites **and the college and department** (a batch-187 departmental signal the PDFs never carry — it is how UWF's aviation programme was found to sit in the College of Business). ⚠ The element is `<article class="searchresult search-courseresult">`, **not a `<div>`**. |
 | **FGCU** | `catalog.fgcu.edu/courses/<prefix>/<prefix>.pdf` (**the `.pdf`, not the directory**) | ✅ **working.** ⚠ The old directory URL is what was bot-blocked; the PDF answers. **Now the single most productive cross-check source in the project** — it documents credits explicitly and has produced the divergence a guide turned on in three consecutive batches. |
 | **FSU** | `registrar.fsu.edu/bulletin/undergraduate-departments/<department>` | ✅ **working, and general-purpose.** Previously recorded here as useful only for the FAMU-FSU joint engineering college — **it is not.** Clean HTML with full descriptions, credits and prerequisites for `psychology`, `philosophy`, `social-work` and others. **Use it as the third vote when UWF and FGCU disagree.** |
@@ -1616,6 +1668,8 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **FAU** | `catalog.fau.edu` — Coursedog SPA | ❌ **ANSWERED 2026-09-07: no public Coursedog catalog at that host.** The discovery endpoint returns *"does not have entity assigned"* — the host is registered but no catalog is attached, which is why every schoolId guess failed. **Stop attempting FAU via Coursedog.** |
 | **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. ⚠⚠ **It still accepts `Referer` alone, but the COURSE-SEARCH endpoint no longer does** — see the row below. **Discovery succeeding tells you nothing about whether a fetch will.** |
 | **⚠⚠ Coursedog auth (changed)** | `Referer:` **and** `Origin:` | ⚠⚠⚠ **CHANGED 2026-09-15 (batch 212).** Batch 167 recorded the gate as ONE header. **`Referer` alone now returns `401 Unauthorized`** on `/api/v1/cm/<school>/courses/search/$filters`; adding **`Origin: https://<catalog host>`** returns 200. Both are in the rebuilt `scratchpad/coursedog.py`. **If Coursedog 401s again, suspect another header before concluding the route is closed.** |
+| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | six institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not six coincidences (batch 215).** **FSW, TSC, CF, Polk State, Santa Fe and now FAMU** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
+| **FAMU** | `catalog.famu.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15.** Root 200 (56 KB); `content.php` and `search_advanced.php` empty 202s. Not Coursedog (bootstrap: *"does not exists"*). ⚠⚠ **FAMU ≠ FAU** — different institutions, both unreachable for different reasons. FAMU is a main carrier of the `RET` professional sequence, so eight batch-215 guides name the gap. |
 | **Polk State (PSC)** | `catalog.polk.edu` — **acalog (Modern Campus), `catoid=55`** | ⚠ **PARTIAL BLOCK, probed 2026-09-15.** Root answers 200 (53 KB) but **`content.php` and `search_advanced.php` both return empty 202s** — the same content-blocked pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). ⚠⚠ **Note the code: `PSC` is POLK STATE. Pensacola State is `PESC`** — a previous session probed `pensacolastate.edu` as "psc" and was reading the wrong school. **Check `inst_map.json` before trusting an obvious-looking three-letter code.** |
 | **USF** | `catalog.usf.edu` | ⚠ root 200 (75 KB) but **no course-description path exposed**; its only course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a route. |
 | Gulf Coast | `gulfcoast.edu/catalog/current/courses/<prefix>/index.html` | was the highest-value pattern in the DSC build; **re-probe before use** |
@@ -1983,6 +2037,31 @@ Both fields are in the same statewide CSV row, so this costs nothing:
 subject on agreeing titles alone"). That caution protects a statewide **description** from being overridden
 by titles. **Here the description is not being overridden — it is the evidence**, against a title it
 already contradicts.
+
+#### ⚠⚠⚠ CORRECTED (batch 215): when they disagree, THE CARRIERS decide which element is stale
+
+**The rule above said "they DISAGREE → the title is the stale element." That was true of the cases in hand
+and is NOT a general property of titles.** `RET4277` is the counterexample:
+
+| Source | Says |
+|---|---|
+| Statewide **title** | *Adult Critical Care* |
+| ⚠ Statewide **description** | a survey of *"the different specialty areas available in respiratory therapy"* — **not critical care** |
+| UWF | Critical Care Management — **critical care** |
+| Seminole State | Adult Critical Care — **critical care** |
+
+⚠⚠⚠ **Title and description disagree, and BOTH CARRIERS SIDE WITH THE TITLE — so here the DESCRIPTION is
+the stale element.** Three of four sources agree against it.
+
+**So the test has three outcomes, not two:**
+
+1. **Title and description AGREE** → the state is the reference; a deviating carrier is **misfiling**
+   (`TPA3223C`).
+2. **They DISAGREE and the carriers back the description** → the **TITLE** is stale (`TRA3153`, `SPM3104`).
+3. ⚠ **They DISAGREE and the carriers back the title** → the **DESCRIPTION** is stale (`RET4277`).
+
+⚠⚠ **Always check which element the CARRIERS agree with before deciding.** Never assume the title is the
+stale half just because it usually has been.
 
 #### ⚠⚠ The same one-row check settles a narrow-looking title (batch 208)
 

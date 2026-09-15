@@ -22061,3 +22061,187 @@ biology major is worth a written evaluation** even though the upper-division cre
 - ✅ **Zero trim rounds and zero warnings, five of five** (prerequisites 758–996). **Third consecutive
   batch without a blocking length failure.**
 - **Batch average draft size 19.7 KB.**
+
+---
+
+## Batch 215 — RET, completing the prefix queue (2026-09-15)
+
+**Twelve guides, all live** — the largest batch the project has run — completing every queued `RET` row:
+**RET3028**, **RET3028L**, **RET3493**, **RET3493L**, **RET3884**, **RET3885**, **RET4050**, **RET4277**,
+**RET4616**, **RET4718**, **RET4886**, **RET4887**. Twelve of twelve validated, **zero blocking**, two
+expected clinical-hour warnings. `RET`'s 264 catalog rows were already complete on the site.
+
+**First batch chosen on Ron's "focus on prefixes" direction** — the prefix with the most queued rows,
+worked to completion rather than skimmed.
+
+Sources: **UWF** (prefix PDF, the only reachable carrier), Florida's statewide record, **CoARC** and the
+**NBRC** for the credentialing structure. ⚠ **FAMU, Seminole State and Florida SouthWestern were all
+unreachable**, so eight of the twelve guides name the gap explicitly.
+
+### ⚠⚠⚠ The finding that shaped all twelve: entry-into-practice vs degree advancement
+
+**CoARC accredits respiratory care programmes as PROGRAMMES, and in TWO distinct kinds** (verified
+directly from CoARC, not inferred):
+
+| **Entry into Professional Practice** | **Degree Advancement** (post-professional) |
+|---|---|
+| for students *becoming* therapists | for therapists who are **already credentialed** |
+| accredited at associate, baccalaureate **and master's** | accredited at baccalaureate and master's |
+| includes the full clinical sequence | no entry-level clinical sequence |
+
+⚠⚠ **UWF's is an ENTRY-INTO-PRACTICE baccalaureate, and the curriculum proves it** — a foundations
+course with laboratory, four clinical practica, and a final practicum whose description states that
+*"all clinical competencies expected of new graduates for entry into respiratory therapy practice must
+be completed."*
+
+⚠⚠⚠ **This matters because it is the career-pathways rule from `CLAUDE.md` in its sharpest form:
+ELIGIBILITY TO SIT THE NBRC EXAMINATIONS RUNS THROUGH COMPLETING AN ACCREDITED PROGRAMME, NOT THROUGH
+ACCUMULATING TRANSFERABLE CREDIT.** A student can hold credit for every course in the sequence and remain
+ineligible. **All twelve guides carry the warning and tell the reader to verify with CoARC, the NBRC and
+the Florida Board directly.**
+
+⚠ **It also qualifies the batch-206 sector note.** That recorded FCS institutions running entry-level A.S.
+programmes and SUS institutions running degree completion. **UWF is SUS and runs an ENTRY-LEVEL
+baccalaureate** — the batch-200 `ATR` shape, a profession raising its entry credential. **The sector
+generalisation holds as a tendency, not a rule.**
+
+### ⚠⚠ FOUR numbers, ONE statewide title — and the sequences run in different ORDER
+
+**Florida gives all four clinical practica the identical statewide title, *Clinical Practice*.**
+`RET3884`, `RET3885`, `RET4886` and `RET4887` cannot be told apart or sequenced by title at all.
+
+✅ **The statewide DESCRIPTIONS do distinguish them** — fundamental → intermediate → advanced diagnostics
+in non-traditional/home settings → advanced diagnostics in specialty areas. **So the descriptions are the
+only discriminator, which is a strong argument for reading them rather than matching on titles.**
+
+⚠⚠⚠ **But UWF's content order differs from the state's in the later two:**
+
+| | Statewide | UWF |
+|---|---|---|
+| Practicum III (`RET4886`) | ⚠ **home and non-traditional care**; epidemiological, psychosocial, environmental, economic | ⚠ **neonatal and paediatric**; labour and delivery, resuscitation |
+| Practicum IV (`RET4887`) | specialty areas | adult/paediatric/neonatal **plus extended care** (sub-acute, sleep, home health, rehab) |
+
+**Both cover the ground by the end; they arrive in a different order.** ⚠⚠ **The consequence is
+specific: a student transferring MID-SEQUENCE may have covered different material than a receiving
+programme assumes at that point.** **Handling: the guides tell the reader to transfer on COMPETENCY
+RECORDS and clinical hour logs, not course numbers** — records describe what was actually done.
+
+### ⚠⚠⚠ A NEW configuration of the title/description test: the DESCRIPTION is the stale element
+
+**The batch-208 rule says: title and description AGREE → the state is the reference and a deviating
+carrier is misfiling; they DISAGREE → "the title is the stale element."** ⚠ **`RET4277` produces a third
+configuration the rule did not anticipate.**
+
+| Source | Says |
+|---|---|
+| Statewide **title** | *Adult Critical Care* |
+| ⚠ Statewide **description** | *"will examine the different specialty areas available in respiratory therapy as a working practitioner"* — a **specialty survey**, not critical care |
+| UWF | Critical Care Management — **critical care** |
+| Seminole State | Adult Critical Care — **critical care** |
+
+⚠⚠⚠ **Title and description disagree, and BOTH CARRIERS SIDE WITH THE TITLE — so here the DESCRIPTION is
+stale, not the title.** Three of four sources agree against it.
+
+**The rule needs restating: when title and description disagree, WHICH ELEMENT IS STALE IS SETTLED BY THE
+CARRIERS — not by assuming the title is always the stale one.** `TRA3153` and `SPM3104` both happened to
+have stale titles; that was the evidence in those cases, not a general property of titles.
+
+### ⚠⚠ Clinical practicum contact hours: the classroom convention is simply wrong
+
+**A three-credit clinical rotation is not 45 hours.** ⚠ Clinical practicum credit is conventionally
+computed at roughly **three contact hours per credit per week**, so 3 credits ≈ **135 hours** and 4
+credits ≈ **180 hours** across a term.
+
+**This batch publishes the clinical figures and labels the derivation**, on the batch-200 principle that
+where a real measurement governs a course, it beats the credit convention. ⚠ **The validator WARNS on the
+3-credit ones (135 against an expected ~45) and the warning is correct to keep** — the same situation as
+batch 212's flight hours. ⚠ Interestingly it does **not** warn on the 4-credit/180 pair, so its
+credit-to-hour band widens at 4 credits.
+
+**Generalise: practicum, clinical, field-placement and studio courses should get an hours figure that
+reflects the actual time commitment**, because that is the number a student needs in order to plan a term.
+
+### ⚠⚠ Reciprocal corequisites: "the pair is the course", twice over
+
+**`RET3028`/`RET3028L` and `RET3493`/`RET3493L` each list the other as a corequisite** — enforced in both
+directions, exactly the batch-183 split-family diagnostic. **3 credits + 1 credit = 4 credits and two
+grades**, and ⚠ **failing either normally means repeating BOTH.**
+
+⚠⚠ **In a COHORT-SEQUENCED programme that is not a one-term setback — it is about a YEAR**, because
+courses run annually in a fixed order and may require re-application. **Every guide in the batch states
+it**, because the arithmetic of a marginal grade is genuinely different in a health-professions cohort
+from the rest of the university, and students do not know that in their first term.
+
+### ⚠ Three UWF titles worth recording
+
+- **`RET3493`** — statewide *Respiratory Disease Assessment*, UWF *Patient Assessment*, ⚠ FAMU
+  *Health Assessments **and Interventions***. The first two are one course; **FAMU's may add therapy
+  selection.** Flagged rather than resolved — FAMU was unreachable.
+- **`RET4616`** — ⚠⚠ a **terminology-era shift**: statewide *General Department Management* (budgets,
+  supplies, spatial arrangements, medical-legal, in-service) against UWF's *Professional Healthcare
+  Presence: Leadership, Administration & Education*. **Same ground, a generation apart** — the field now
+  frames leadership as distributed rather than positional. ⚠ **FAMU's *Advanced Seminar in Respiratory
+  Therapy* describes a FORMAT, not a subject**, and is the hardest kind of title to transfer; the guide
+  tells students to keep the syllabus.
+- **`RET4050`** — ⚠ **the prerequisite explains an apparent credit divergence.** UWF requires
+  `HSC 4050` first and teaches a **2-credit applied follow-on**; Florida SouthWestern's **3-credit
+  *Research Methods*** is the standalone version. **Same destination, work divided differently** — and a
+  receiving programme needs to know which. **Prerequisite-as-signal (batch 185/187) firing on SCOPE
+  rather than depth or subject.**
+
+⚠ `RET4050`'s statewide prerequisite is **"admission to the cardiopulmonary sciences program"** — a
+programme-admission gate (batch 188 restricted enrolment), so a student may be unable to register at all
+regardless of coursework held.
+
+### ⚠ Prefix and field notes
+
+- ⚠⚠ **`RET` is the FIRST prefix measured BELOW the single-carrier band: 281 live ids, 167
+  single-carrier (59%)**, against the 64–85% range that had held across eighteen prefixes. Max 15
+  carriers. **A licensed-profession prefix with a defined curriculum is more widely shared than a general
+  academic one — which is a sensible reason for the exception rather than a measurement artefact.**
+- `hs_credit`, `transferable` and `dual_enrollment` are **all uniform across `RET`** — boilerplate, so the
+  guides say so rather than presenting it as a finding (the batch-207 test, and the opposite result from
+  `BOT`/`BSC` last batch).
+- ⚠ **`RET3028`'s statewide DESCRIPTION is a placeholder that merely repeats the course title.** UWF's
+  description is the only substantive source for that number.
+- ⚠ **The `(U)` marker appears on `RET3028` and `RET4050` with NO "must choose" sentence anywhere in the
+  prefix** — consistent with batch 213's bounding, and a third prefix confirming it.
+
+### Source register
+
+- ⚠⚠ **FAMU** (`catalog.famu.edu`) — **acalog (Modern Campus), CONTENT-BLOCKED.** Root answers 200
+  (56 KB); `content.php` and `search_advanced.php` both return **empty 202s**. Not a Coursedog school
+  (bootstrap: *"does not exists"*). **Same pattern as FSW, TSC, CF, Polk State and Santa Fe.**
+  ⚠ **Note FAMU ≠ FAU** — different institutions, both unreachable, for different reasons.
+- ⚠ **Seminole State (`SSCF`) and Florida SouthWestern (`FSWSC`)** were not separately probed this batch
+  but are FCS acalog institutions; their descriptions were not retrieved. **Named as gaps in the guides.**
+- ⚠⚠⚠ **The acalog content-block list is now SIX institutions** — FSW, TSC, CF, **Polk State**,
+  **Santa Fe**, **FAMU**. **This is a platform-level pattern, not six coincidences**, and it is worth
+  treating acalog as presumptively unreachable rather than probing each school hopefully.
+- ✅ **UWF's prefix PDF carried all twelve courses** — the workhorse route holding up again.
+- ⚠⚠⚠ **A PDF-PARSING BUG THAT PRODUCED THREE WRONG DESCRIPTIONS, and it was subtle.** UWF's CourseLeaf
+  layout is `HEADER … Co-requisite: RET <other> | DESCRIPTION-of-the-header-course | NEXT HEADER`, so
+  **splitting the extracted text on `/RET \d{4}/` cuts at the COREQUISITE REFERENCE and attaches each
+  description to the wrong course.** The first extraction confidently reported mechanical-ventilation
+  text as `RET3884` "Clinical Practicum I".
+  ⚠ **The second attempt failed differently**: a lazy `(.*?)` title pattern spanned an entire description
+  to reach the next entry's "College of". **Fixed by constraining the title to ≤90 characters with no
+  sentence period.** Tooling: **`scratchpad/uwf_pdf.py`**, which anchors on the full header signature and
+  takes everything to the next header as the body.
+  ⚠⚠ **The lesson generalises: a text-extraction bug does not error — it silently returns plausible
+  content for the wrong record.** **It was caught only because "Clinical Practicum I" described
+  ventilator theory**, which is implausible on its face. **Sanity-check extracted text against what the
+  title claims, the same way the batch-207 flag scan was caught.**
+- ✅ **Regulatory facts verified rather than recalled**: NBRC credentials (CRT, RRT; specialty ACCS, NPS,
+  SDS, AE-C; CPFT/RPFT) from the NBRC, and CoARC's two accreditation types from CoARC. ⚠ **Neither source
+  page stated the CoARC-to-NBRC eligibility link explicitly**, so the guides say *"runs through completing
+  an appropriate accredited programme — verify with CoARC, the NBRC and the Florida Board"* rather than
+  asserting a specific requirement. **Honest and still actionable.**
+- ⚠⚠ **Prerequisites: THREE shared blocks, and the budget arithmetic bit hard.** 11 of 12 exceeded 1000 on
+  first assembly. **The batch-212 lesson was applied but under-applied**: with a credential warning, a
+  placement warning and a sequence warning all in play, the shared text alone consumed ~1,100 characters
+  before any course-specific content. **Trimming the three blocks fixed 9 of 11; the three practica needed
+  individual trims.** ⚠ **Revised rule: budget the SUM of all shared blocks against ~400 characters, not
+  each block individually.**
+- **Batch average draft size 19.4 KB** — the two 1-credit laboratories at 16.7 and 17.3 KB are
+  appropriately the shortest, per the batch-189 rule.
