@@ -2456,6 +2456,82 @@ risks silently shifting every field after the edit, and no guide currently depen
 from the flat file. **If a future task needs them at scale, fix it then and re-validate against the CSV
 for a whole prefix before trusting it.**
 
+
+## 98. ⚠⚠⚠ `HFT3271` — FOUR subjects on one number, and NO carrier teaches the statewide one (batch 218)
+
+**PULLED from batch 218 and marked `skipped` pending your decision. This is the most severe collision the
+project has found — worse than `TPA3230C` (item 25), which was also pulled.**
+
+| Source | Subject |
+|---|---|
+| **Statewide title AND description** | **Condo/Resort Management** — *"operation of condominium/resort properties&hellip; planning, development, financial investment and marketing&hellip; the condominium hotel concept, time sharing"* |
+| **FIU** | ⚠ **Nightclub Management** |
+| **FGCU** | ⚠ **Club Management** |
+| **UWF** | ⚠ **Spa Management** — *"facial therapies, massage therapies, water therapies, face and body services, salon services, exercise, personal training"* |
+
+⚠⚠⚠ **Four subjects, and the statewide reading has NO carrier at all.** Writing the statewide subject
+would describe a course nobody teaches; writing any carrier's subject would misdescribe the number for the
+other two.
+
+**The misfiling diagnostic fires hard — Florida numbers every one of these separately:**
+
+| Subject | Dedicated statewide numbers |
+|---|---|
+| Spa | `HFT2204` Spa Operations and Management, `HFT2209` International Spa Management, `HFT4854` Spa Client Wellness |
+| Club | `HFT2100` Introduction to Global Club Management, `HFT4434` Club Management, `HFT2277` Resort and Club Management |
+| Condo/resort | `HFT2271` **itself**, plus `HFT2273` Principles of Resort Timesharing, `HFT2276` Resort Management, `HFT2278` Residential Hospitality-Condominium Management |
+
+**So all three carriers are misfiling, in three different directions, onto a number whose own subject is
+separately and thoroughly numbered.**
+
+⚠⚠ **The student-facing consequence is concrete and not merely a cataloguing curiosity.** Spa management,
+club management and condominium/resort management are **different professional specialisms with different
+employers and different career structures** — private club management in particular is a distinct
+profession with its own association (CMAA) and certification. **A student transferring this credit, or an
+adviser matching it against a degree requirement, cannot tell from the number which of four subjects it
+represents.**
+
+**Decision wanted from Ron.** Options as I see them:
+
+1. ⚠ **Leave it skipped** (current state) — honest, and the course simply has no guide.
+2. **Write a disambiguation page at the bare number** naming all four subjects and pointing at the
+   dedicated numbers above, with no attempt to describe a single course. **This is my recommendation** —
+   it is the most useful thing a reader can be given, and it is what the bare-number page in the
+   `-SCNS`/`-<INST>` rule is for.
+3. **Full split** — `-SCNS` (condo/resort), `-UWF` (spa), `-FGCU` (club), `-FIU` (nightclub) plus a
+   disambiguation page. ⚠ **Five pages, and three of the four halves are sourceable** (UWF via its
+   catalogue, FIU and FGCU only by title), so this is not currently well-founded.
+
+## 99. ⚠⚠⚠ `HFT4252` — the statewide TITLE and DESCRIPTION contradict each other, and the CARRIERS SPLIT (batch 218)
+
+**A FOURTH configuration of the title/description test, and it defeats the rule as corrected in batch 215.**
+
+| Source | Says the subject is |
+|---|---|
+| **Statewide TITLE** | *Employees Wellbeing in Hospitality and Tourism* |
+| ⚠ **Statewide DESCRIPTION** | *"managerial functions, operating procedures, and competencies [of] hotel and resorts&hellip; management, ownership, franchising"* — **hotel and resort management** |
+| **UCF** | *Employees Wellbeing in Hospitality and Tourism* — **backs the TITLE** |
+| **Pensacola State** | *Hotel and Resort Management* — **backs the DESCRIPTION** |
+
+**Batch 215 corrected the batch-208 rule to say that when title and description disagree, THE CARRIERS
+decide which element is stale.** ⚠⚠⚠ **Here the carriers split one on each side, so the test returns no
+answer.** That is a genuinely new outcome and I have recorded it in `CLAUDE.md` as a fourth branch.
+
+⚠ **Both subjects are numbered elsewhere in the prefix** — wellbeing at `HFT2014` *Wellness Management in
+Hospitality and Tourism* and `HFT4793`; hotel/resort at `HFT2250`, `HFT2256`, `HFT2276`, `HFT2004`. **So
+neither carrier needed this number for what they are teaching.**
+
+**What was done.** The guide was **published covering BOTH readings, each clearly labelled**, with a
+two-column syllabus diagnostic, the alternative numbers, and an explicit warning that the course number
+does not identify the subject and that transfer must go on the syllabus. **That follows the `CLP4302` and
+`APK4200` precedent** for a number carrying two genuinely different subjects where a full split is not
+soundly sourceable — Pensacola State's catalogue is unreachable, so a `-PESC` half could only be written
+from a title.
+
+**Decision wanted from Ron:** whether to leave the combined guide or split it once Pensacola State becomes
+reachable. ⚠ **Recommend leaving it.** The combined guide serves a student at either institution, and a
+split would currently rest on one title.
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

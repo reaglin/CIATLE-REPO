@@ -22447,3 +22447,77 @@ structured data, and it is worth querying whenever lab hours matter.**
   shared block. **The batch-215 rule — budget the SUM of shared blocks first — worked exactly as
   intended.** Batch 217 had two blocks totalling 369 characters and needed one trim on one course.
 - **Batch average draft size: EME 18.4 KB, GIS 18.2 KB.**
+
+---
+
+## Batch 218 — HFT (2026-09-15)
+
+**Six guides live** of seven queued; ⚠⚠ **`HFT3271` PULLED** to `REVIEW_QUEUE` (item 98). Six of six
+clean, zero warnings, **0 of 6 prerequisites over the limit on first assembly.** `HFT`'s 477 catalog rows
+were already complete on the site.
+
+Sources: **UWF** (prefix PDF — five of the six), **UCF** (Kuali), Florida's statewide record. ⚠ FAU and
+Pensacola State both unreachable.
+
+### ⚠⚠⚠ Two collisions in one prefix, and one of them defeats a rule I corrected three batches ago
+
+**`HFT3271` — FOUR subjects, and no carrier teaches the statewide one.** Statewide title *and* description
+agree on **Condo/Resort Management**; FIU teaches **Nightclub Management**, FGCU **Club Management**, UWF
+**Spa Management** (facial, massage and water therapies, salon services). ⚠ Florida numbers spa, club and
+condo/resort **separately and thoroughly**, so all three carriers are misfiling in three different
+directions. **Pulled** — the `TPA3230C` precedent, and worse than it. `REVIEW_QUEUE` 98.
+
+**`HFT4252` — a FOURTH branch of the title/description test.** Batch 215 corrected the rule to say the
+CARRIERS decide which element is stale when title and description disagree. ⚠⚠⚠ **Here they split one on
+each side**: statewide title says *Employees Wellbeing*, statewide description is entirely *hotel and
+resort management*, **UCF backs the title and Pensacola State backs the description.** The test returns no
+answer, and the number is carrying two subjects. **Published as one guide covering both readings, each
+labelled, with a two-column syllabus diagnostic** — the `CLP4302` precedent, since a full split would rest
+on one unreachable carrier's title. `REVIEW_QUEUE` 99.
+
+⚠ **Both findings share a diagnostic worth noting: in each case BOTH readings were already numbered
+elsewhere in the prefix.** **Checking whether a carrier's subject has its own dedicated number is the
+cheapest and most decisive test available**, and it fired twice in one batch.
+
+### ⚠ Scope findings on the writable four
+
+- **`HFT4753`** — statewide *Convention &amp; Trade Show Management*; UWF *Special Event Management*, and
+  UWF's description **contains** the statewide subject (CVBs, venues, trade show and meeting management)
+  and adds event design, evaluation, legal issues and destination economic impact. ⚠ **An EXPANSION, not
+  a divergence** — the guide says so and reassures rather than warning, while telling exhibition-focused
+  students to ask how much trade show detail survives the broadening.
+- **`HFT4503`** — ⚠ genuine scope spread: statewide is broad (research, positioning, ethics,
+  multicultural), **FAU adds TOURISM** (destination and visitor economies), **UWF narrows to marketing and
+  sales for HOTELS**. Three different widths; the guide gives the practical question to ask.
+- **`HFT3214`** — ⚠⚠ **the most concretely valuable finding in the batch for a student: ServSafe.** The
+  statewide description says students *"may obtain NRA ServSafe Food Safety and ServSafe Alcohol
+  certifications"*, and **Florida requires licensed food establishments to have certified food protection
+  managers** — so ServSafe Manager is close to a condition of employment in restaurant management, is
+  valid five years, and is far cheaper obtained inside a course than afterwards. **The guide tells students
+  to ask in week one whether it is included and whether the exam fee is covered.**
+- **`HFT2000`** — ⚠ the statewide description's segment list is the course's real contribution
+  (**cruise, gaming, clubs, transportation** alongside lodging and food service), and the guide uses it to
+  tell students to pick a segment deliberately, naming revenue management and private club management as
+  better-paid or less crowded than students expect.
+- **`HFT3814C`** — ⚠ the statewide description says the class is for *"future managers who will have to
+  help out in the [operation]"*. **Taken literally in the guide**, because it is an accurate and
+  unglamorous description of the job and of the hours.
+
+### ⚠ Carrier and register notes
+
+- ⚠⚠ **Three of the seven queued numbers have only ONE public carrier**, with the second being private and
+  therefore out of scope under the 2026-09-11 rule (`HFT2000`, `HFT3214`, `HFT4753`). **The guides say so
+  explicitly** rather than silently listing one institution — worth continuing, since a reader otherwise
+  cannot tell a single-carrier course from an incompletely researched one.
+- **Pensacola State (`PESC`)** — unreachable, consistent with the standing retry list. ⚠ It is the carrier
+  of the contested half of `HFT4252`, so Reading B in that guide comes from the statewide description.
+- **FAU** — unreachable again, as recorded: no public catalogue at its catalogue host.
+- ✅ **UWF's prefix PDF and `uwf_pdf.py` worked cleanly on `hft`** with no further parser gaps.
+- ⚠ **Prefix fragmentation**: `HFT` 502 live ids, 351 single-carrier (**70%**), max **24** carriers.
+  `hs_credit` and `transferable` uniform; `dual_enrollment` discriminating (833 `Y`, 34 `N`) ⚠ **but all
+  seven batch courses are `Y`**, so the guides call it prefix-wide boilerplate — the same honest handling
+  as `EME` last batch.
+- ⚠ **Spotted in the prefix sweep and worth noting for the AI-attribute thread**: `HFT4442` *Artificial
+  Intelligence Revolutions and Applications in Tourism* — **a dedicated AI course inside a hospitality
+  prefix.** Not queued, but it confirms that AI is entering course catalogues as subject matter and not
+  only as an attribute (see `GIS4102C`, batch 217).

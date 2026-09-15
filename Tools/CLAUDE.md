@@ -2103,9 +2103,41 @@ the stale element.** Three of four sources agree against it.
    (`TPA3223C`).
 2. **They DISAGREE and the carriers back the description** → the **TITLE** is stale (`TRA3153`, `SPM3104`).
 3. ⚠ **They DISAGREE and the carriers back the title** → the **DESCRIPTION** is stale (`RET4277`).
+4. ⚠⚠⚠ **They DISAGREE and the CARRIERS SPLIT, one on each side** → **the test returns NO ANSWER, and the
+   number is carrying TWO SUBJECTS** (`HFT4252`, batch 218).
 
 ⚠⚠ **Always check which element the CARRIERS agree with before deciding.** Never assume the title is the
 stale half just because it usually has been.
+
+**Branch 4 handling — `HFT4252` is the worked case.** Statewide title *Employees Wellbeing in Hospitality
+and Tourism*; statewide description entirely *hotel and resort management*; **UCF backs the title, Pensacola
+State backs the description.** ⚠ Both subjects were **numbered elsewhere in the prefix** (`HFT2014`,
+`HFT4793` for wellbeing; `HFT2250`, `HFT2276` for hotel/resort), so neither carrier needed this number.
+**Published as ONE guide covering BOTH readings, each labelled, with a two-column syllabus diagnostic and
+an explicit warning that the course number does not identify the subject** — the `CLP4302`/`APK4200`
+precedent. ⚠ **A full split was not sound because one carrier's catalogue is unreachable, and a `-INST`
+half cannot be written from a title alone.**
+
+### ⚠⚠⚠ FOUR subjects on one number — pull it, do not write it (batch 218)
+
+**`HFT3271` is the most severe collision found to date and it is the pattern for when to STOP.**
+
+| Source | Subject |
+|---|---|
+| statewide title **and** description | **Condo/Resort Management** |
+| FIU | Nightclub Management |
+| FGCU | Club Management |
+| UWF | Spa Management |
+
+⚠⚠⚠ **Four subjects, and NO carrier teaches the statewide one.** Writing the statewide subject would
+describe a course nobody teaches; writing any carrier's would misdescribe it for the other two.
+
+⚠ **The misfiling diagnostic fires on all three carriers**: Florida numbers spa (`HFT2204`, `HFT2209`),
+club (`HFT2100`, `HFT4434`) and condo/resort (`HFT2273`, `HFT2276`, `HFT2278`) **separately**.
+
+**Rule: where a number carries FOUR readings, or where NO carrier teaches the statewide subject, PULL it to
+`REVIEW_QUEUE` rather than writing.** Precedents: `TPA3230C` (three subjects, pulled), `HFT3271` (four,
+pulled). **A disambiguation page at the bare number is the likely resolution, but that is Ron's call.**
 
 #### ⚠⚠ The same one-row check settles a narrow-looking title (batch 208)
 
