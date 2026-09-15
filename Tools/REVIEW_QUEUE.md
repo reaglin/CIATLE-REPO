@@ -2285,6 +2285,43 @@ the real commitment is higher. **But the validator's warning currently cannot me
 corpus does not follow the convention the validator encodes. **A decision either way would make it a useful
 check again.** Verification-pass item.
 
+### ✅ QUESTION 1 ANSWERED by Ron, 2026-09-15 (batch 219): the SUFFIX convention governs, not the prefix
+
+**Ron's decision, given as the contact-hour rule for the whole TPA batch: `C` suffix = 60 contact hours,
+no suffix = 45.** ⚠⚠ **So a studio/production prefix does NOT get its own credit-to-hour
+convention** — the `C`-suffix convention wins regardless of prefix, and the batch-189 rule stands
+unchanged.
+
+⚠ **Supporting evidence found the same batch:** **UCF's Kuali records publish weekly lab/studio hours,
+and its 3-credit `C` courses carry 2 lab hours a week while its plain 3-credit courses carry none.**
+`TPA3601C` is the worked case. **Two lab hours a week on top of three lecture-equivalent hours is
+consistent with ~60 total contact hours, not ~90** — so the validator's ~90 studio expectation is not
+what UCF actually schedules.
+
+**Batch 219 published all seven TPA guides on this rule** (`TPA3022` 45, `TPA3064C` 60, `TPA3601C` 60,
+`TPA4021C` 60, `TPA4045C` 60, `TPA4061` 45, `TPA4077C` 60), each stating the derivation and saying the
+real commitment runs higher.
+
+### ⚠ What REMAINS open — two live guides are out of line with the settled rule
+
+**Bounded, and now a short list rather than an open question:**
+
+| Live guide | Published | Settled rule says | Action |
+|---|---|---|---|
+| **`TPA2000C`** | 3cr / **45h** | 60 | ⚠ republish with a version bump |
+| **`TPA2200C`** | 3cr / **64h** | 60 | ⚠ republish with a version bump |
+| `TPA2232C` | 3cr / 60h | 60 | ✅ already correct |
+| `TPA3223C` | 3cr / 60h | 60 | ✅ already correct |
+| `TPA2248C` | 2cr / 45h | ⚠ **the rule is stated for 3-credit courses; a 2-credit `C` is not covered** | leave; raise only if a 2-credit `C` recurs |
+| `TPA2290L` | 1cr / 45h | ⚠ `L`, not `C` — outside the rule as stated | leave |
+
+⚠ **The validator's studio warning still fires on every TPA guide** (it expects ~90). **Now that the
+convention is settled, the warning is the thing that is wrong, not the corpus** — `validate_drafts.py`'s
+studio-prefix expectation should be changed or removed. **That is a tooling change, not a content one.**
+
+⚠ **Same question is now settled for `MUS`/`MVK`/`ART`/`DAA` studio numbers too**, since the decision
+was about the convention rather than about TPA.
+
 ---
 
 ## 92. ⚠⚠ New evidence on held item 25 (`TPA3230C`, costume) — two of its stated facts are wrong (batch 208)

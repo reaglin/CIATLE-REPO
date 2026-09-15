@@ -640,13 +640,27 @@ carries no laboratory and may satisfy only part of a general-education science r
 guide AND in the prerequisite string, which is what a queue reader sees first. Instances: `AST2037`
 (batch 180), `BSC1050` (batch 182).
 
-### ⚠⚠ Three DIFFERENT shapes behind a `C` suffix — do not conflate them (batch 183)
+### ⚠⚠ FOUR different shapes behind a `C` suffix — do not conflate them (batch 183, extended 219)
 
 | Shape | Example | What it means | What transfers |
 |---|---|---|---|
 | **Split family** | `CGN3501C` (UF) vs `CGN3501` + `CGN3501L` (UWF); `EEE3308C` vs `EEE3308` + `EEE3308L` | one course, packaged as one enrolment or two | same content, **3 cr vs 4 cr**, one grade vs two |
 | **Suffix divergence** | `BCN3224C` (UF, integrated) vs bare `BCN3224` (UWF, lecture only, no lab partner) | ⚠ **genuinely different courses** — one has laboratory hours the other does not | content differs |
 | **`C` nobody carries** | `TPA3230C`, `COP3014C`, `INP3004C`, `CJE3674C`, `CTS4348C`, `DAA2204C`, `EEE3396C` | the queued id may not exist at any institution | see `REVIEW_QUEUE.md` item 28 |
+| ⚠⚠⚠ **Institutional signature** (batch 219) | `TPA3064C` (FAU) vs `TPA3064` (UWF); `TPA3601C` (UCF) vs `TPA3601` (USF, UWF); `TPA4021C` (UWF) vs `TPA4021` (FSU, UF); `TPA4045C` (USF) vs `TPA4045` (UWF, FSU); `TPA4077C` (UWF) vs `TPA4077` (FSU, USF) | ⚠⚠ **the SAME course, filed differently by different schools** — both ids are real, no institution carries both | content is the same; **an evaluator matching on the identifier sees a mismatch where there is none** |
+
+⚠⚠⚠ **The batch-219 shape is the one most likely to be misread, because it looks like "a `C`
+nobody carries" from whichever side you are standing on.** **Five of seven queued `TPA` `C` ids had a bare
+twin at DIFFERENT institutions, and every one of the seven `C` ids was real.**
+
+⚠⚠ **Diagnostic, and it is one flat-file pass — BEFORE WRITING ANY `C` ID, LOOK UP THE BARE
+NUMBER, and read the answer from the carrier lists:**
+
+| What you find | What it means |
+|---|---|
+| **the SAME institution carries both forms** | a course run in **two shapes** — lecture section and integrated section (batch 184, `PET3640C`). State the contact-hour difference. |
+| ⚠⚠ **DIFFERENT institutions carry the two forms** | **one course filed two ways** (batch 219). Name the twin and who carries it; do not write a divergence block. |
+| **no institution carries the bare form, or the `C` form** | the queued id may not exist — check before writing at all |
 
 ⚠⚠ **Diagnostic for the split family: RECIPROCAL concurrent prerequisites.** `EEE 3308` lists
 `EEE 3308L*` and `EEE 3308L` lists `EEE 3308*` — **neither can be taken alone, so the pair IS the `C`
@@ -1145,6 +1159,60 @@ guide as though it named a real course.**
 `^[A-Z]{3}\s?\d{4}[A-Z]?$`.** A token that fails is a data defect, not a course. **Say so in the guide
 and send the reader to the institution's catalog** — which is what `ADV4802`'s guide does.
 
+#### ⚠⚠⚠ And it can DANGLE — a well-formed token naming a course the CARRIER does not offer (batch 219)
+
+**A second, commoner defect, and the syntax check above does NOT catch it.** **`TPA4021C`'s statewide
+prerequisite reads `TPA 4020 LIGHTING DESIGN I` — a valid identifier naming a real, active course.**
+⚠⚠ **But UWF, the ONLY carrier of `TPA4021C`, does not offer `TPA4020`** (FSU and UF do). **So the
+state describes a prerequisite chain that does not exist at the institution teaching the course.**
+
+⚠⚠⚠ **And UWF's own alternative, `TPA 3020`, is carried by NO Florida public institution at
+all** — so of the three numbers naming that gate, one belongs to other schools and one belongs to
+nobody. **The real gate is `TPA3022`.**
+
+**Standing check, cheap once the flat file is loaded: for every course-looking token in
+`DS_Prerequisites1`, ask whether the CARRIER OF THE COURSE YOU ARE WRITING actually offers it.**
+⚠ **Where it does not, name the dangling reference in the guide and put the REAL gate beside it** —
+a student reading the state record would otherwise go looking for a course their institution does not have.
+
+⚠ **Expect it wherever a prefix runs PARALLEL NUMBERING FAMILIES** (below): the statewide prerequisite
+was written against one family and the carrier uses the other.
+
+#### ⚠⚠⚠ PARALLEL NUMBERING FAMILIES — fragmentation running through a whole SEQUENCE (batch 219)
+
+**Batch 207 measured number fragmentation on one LEVEL of Spanish. `TPA` shows it running through an
+entire two-course sequence, so it compounds:**
+
+| | Family A | Family B |
+|---|---|---|
+| **Lighting Design I** | **`TPA3022`** — FAU, UWF | **`TPA4020`** — FSU, UF |
+| **Lighting Design II** | **`TPA4021C`** — UWF | **`TPA4021`** — FSU, UF |
+| **Scene Design I** | **`TPA3064`** (UWF) / **`TPA3064C`** (FAU) | **`TPA3060`** — FIU, UF |
+| **Scene Design II** | **`TPA4061`** — FIU, UWF | (none — FIU crosses families) |
+
+⚠⚠ **Two anomalies worth noting because they defeat the obvious simplification.** The second
+lighting course is **ONE number with TWO suffixes across the two families** — so the suffix, not the
+number, separates them. And **`TPA4061` is carried by FIU, whose first course comes from the OTHER
+family** — so the families are not clean institutional blocs.
+
+⚠⚠⚠ **THE STRONGEST EVIDENCE THAT TWO FAMILIES ARE THE SAME COURSE IS AN INSTITUTION HEDGING
+ITS OWN PREREQUISITE ACROSS THEM.** UWF requires *"TPA 3020 OR TPA 3022"* for `TPA4021C` and
+*"TPA 3060 OR TPA 3064"* for `TPA4061`. **That is a department telling you, in its own catalogue, that it
+treats the two numbers as interchangeable — and it beats any title comparison.** **Read institution
+prerequisites for `OR` lists spanning statewide families; they are a free equivalence table.**
+
+#### ⚠⚠ A statewide DESCRIPTION can be COPIED between numbers — diff the siblings (batch 219)
+
+**`TPA4045` (Styles in Costume DESIGN) and `TPA3230` (Theatre Costuming I, a CONSTRUCTION course) share
+EIGHT of their TEN statewide competency items verbatim.** ⚠⚠ **So the design number's competency
+list carries CONSTRUCTION competencies** — *"costume cutting skills"*, *"high level skills in
+development of patterns"* — **because they were carried across from the construction course.**
+
+⚠ **Consequence: an item in a statewide competency list is NOT necessarily evidence about that specific
+course.** **Drill: when a statewide description is a NUMBERED COMPETENCY LIST in the 1980s all-capitals
+register, diff it against the sibling numbers in the family before quoting any item as a finding.** In
+`TPA`, `TPA3601`, `TPA4020`, `TPA4045`, `TPA3060` and `TPA3230` are visibly one drafting exercise.
+
 ### ⚠⚠ SURVEY THE PREFIX FAMILY from the statewide CSV before writing — a standing move (batch 200)
 
 **One already-downloaded CSV and one filter on `ID_Century` paid three times in a single batch:**
@@ -1312,6 +1380,13 @@ stale statewide title, because **the title/description test above comes out "agr
 *Lighting Technology* and its description says *"equipment, dimmers, control and other electronics."*
 And the batch-203 tell is decisive — **Florida numbers lighting design separately and the number is IN
 USE**: `TPA4020` *Lighting Design I* is carried by FSU and UF.
+
+⚠⚠ **CORRECTED, batch 219: `TPA4020` is not THE lighting-design number, it is ONE OF TWO.**
+**`TPA3022` *Lighting Design 1* is a second, equally active statewide number, carried by FAU and UWF.**
+⚠ **This STRENGTHENS the misfiling conclusion rather than weakening it** — there are now two
+dedicated design numbers in use, so `TPA3223C`'s deviating carriers had two places to put a design course
+and used neither. **But do not write that `TPA4020` is where Florida numbers lighting design; write that
+Florida numbers it in two parallel families** (see PARALLEL NUMBERING FAMILIES above).
 
 ⚠⚠ **What makes this worth a guide's strongest warning is that the two readings are different
 PROFESSIONS** — electrician and designer are different jobs, different unions (IATSE vs USA Local 829) and
