@@ -1427,6 +1427,64 @@ not include the checkride; it is at the student's discretion to schedule and com
 correct to keep** — the 1:15 classroom convention does not apply to flight training, per the `ATF1100L`
 precedent. State the derivation in the guide and label the figure a floor.
 
+### ⚠⚠⚠ The SAME `L` id as a 1-credit lab AND a full 3-credit course (batch 214)
+
+**`BSC4401L` is the worst transfer trap found so far, because the split-family shape lands on the `L` id
+itself:**
+
+| | **UWF** | **FIU** |
+|---|---|---|
+| `BSC4401L` | *Forensic Biology*, **3 credits** — the COMPLETE course, standing alone | *Forensic Biology Lab*, **1 credit** — the LABORATORY only |
+| companion | none | ⚠ **`BSC4401`** lecture, 3 cr, **corequisite** |
+| total | 3 credits, one grade | 4 credits, two grades |
+
+⚠⚠⚠ **Transfer matches on the NUMBER and fails on the CONTENT in both directions.** Tell the reader to
+send the syllabus and the credit value, never the number. ⚠ **And note the suffix is doing both jobs at
+once** — conventional at FIU, a full course at UWF — so the `L` warning below is not just "sometimes
+bigger", it is **unreliable in both directions on the same id.**
+
+### ⚠⚠ Read `hs_credit` from the CSV, and run the distribution test EVERY prefix (batch 214)
+
+**The same field means opposite things in different prefixes, so the one-`Counter` test (batch 207) is the
+gate before writing anything about it:**
+
+| Prefix | `DS_High_School_Credit1` | Verdict |
+|---|---|---|
+| `ATF` / `ATT` | uniform | boilerplate — say so, or say nothing |
+| `BOT` | 116 ELECTIVE, **6 SCIENCE** | discriminating |
+| `BSC` | 248 ELECTIVE, **24 SCIENCE** | discriminating |
+
+⚠⚠ **`BSC2311` is one of the 24**: a dual-enrolled student earns **high-school SCIENCE credit**, not
+elective — it fills a science graduation requirement *and* earns college credit. **Lead with it where it
+appears; nothing a student normally reads says it.**
+
+⚠⚠⚠ **TOOLING CORRECTION: read these two fields from the statewide CSV, NOT the flat file.** The flat
+file's `transferable` slot actually holds the **high-school-credit code** (`'EL'`/`'SC'`), so
+`scns.FIELDS`' offsets for that pair are shifted. The flat file stays authoritative for carriers, credits,
+titles and the Gordon Rule / gen-ed flags. See `REVIEW_QUEUE.md` item 97.
+
+### ⚠⚠ Dual-listing is a DEPARTMENTAL pattern — probe for it, do not wait to meet it (batch 214)
+
+**The batch-186 rule came from one instance. Three of four UWF Biology courses in one batch were dual
+-listed** — `BOT4850`/`BOT 5852`, `BSC4303`/`BSC 5305`, `BSC4401L`/`BSC 5406L`.
+
+⚠ **Standing practice: on any UWF Biology 4000-level course, look for "offered concurrently with".** It is
+easy to read past, and **both consequences must be stated**: the pace sits above a typical undergraduate
+course (a benefit), and **taking the undergraduate version may BLOCK taking the graduate one for credit
+later** — which has to be known before registering, not after.
+
+### ⚠ A prerequisite token that fails the id pattern is a DEFECT *or* NOTATION — they differ (batch 214)
+
+**The batch-209 test** (`^[A-Z]{3}\s?\d{4}[A-Z]?$`) **correctly flags both, but the handling differs:**
+
+| | Example | Handling |
+|---|---|---|
+| **Defect** | `ADV4802`'s `"ADV U101C"` — a single malformed token | say so, send the reader to the catalogue |
+| **Notation** | `BOT4734C`'s `"BOT L010 OR BSC L010, CO: BOT U734L"` — ⚠ a consistent `L`/`U` scheme marking LOWER and UPPER division | ⚠ **decode and explain it** — here it means a lower-division biology prerequisite with an upper-division lab corequisite |
+
+⚠ **The tell is systematic structure.** One bad token is a defect; a repeated prefixing convention is
+notation, and decoding it serves the reader better than a warning does.
+
 ### ⚠ An `L` suffix does NOT reliably mean "1-credit lab partner" (batch 203)
 
 **`OCB3108L`** — *Study Abroad in Florida: Marine Field Studies* — runs **3–4 credits** at UNF
@@ -1568,7 +1626,8 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **⚠ FSU entry vs requirement text** | `registrar.fsu.edu/bulletin/...` | ⚠ A number followed by a period is **not** enough to locate a catalog entry — it also matches requirement prose (*"a grade of C or higher in COP 3014 or COP 3363."*). **Verify that a TITLE and a parenthesised credit value follow** (`COP 3014. Algorithm… (3).`). Cost a wrong result in batch 176. |
 | **FSCJ** | Coursedog — `scratchpad/coursedog.py fscj` (school `fscj_peoplesoft`, catalog `sGHd4uJQXFdgDUaffhTv`) | ✅ **SOLVED 2026-09-07 (batch 173).** Was "platform unidentified". ⚠ **22,693 courses — the largest Florida catalog found so far**, and `fetch()` caps at limit=5000, so a single call silently returns a PARTIAL result. **Page it** (`scratchpad/fscj_dump.py`) and cache to `scratchpad/fscj_courses.json`. |
 | **NWFSC** | Coursedog — `scratchpad/coursedog.py nwfsc` (school `nwfsc_banner_sql`, catalog `DGLrTHoh5uNIMFsdbzWf`) | ✅ **NEW 2026-09-07 (batch 173).** 1,781 courses, single page, cached in `scratchpad/nwfsc_courses.json`. Full descriptions and credits. Found because a 404 from `catalog.nwfsc.edu` returned a 1.1 MB body — **the body size was the tell.** |
-| **Santa Fe** | `catalog.sfcollege.edu` | ⚠ Answers; not Coursedog (bootstrap 404s). Platform still unidentified. |
+| **Santa Fe** | `catalog.sfcollege.edu` | ⚠ **PLATFORM IDENTIFIED 2026-09-15 (batch 214): acalog (Modern Campus), and CONTENT-BLOCKED.** Root answers 200 (30 KB) but `content.php` and `search_advanced.php` both return **empty 202s** — the same pattern as FSW, TSC, CF and Polk State. Not Coursedog. **Root-reachable, content-blocked; treat as unavailable rather than unidentified.** |
+| **UCF (confirmed route)** | Kuali — `ucf.kuali.co` | ✅✅ **RE-CONFIRMED 2026-09-15 (batch 214).** `/api/v1/catalog/public/catalogs/` → pick by `_id` (2026-27 undergraduate = `688b8960ddeb091644d2b1ca`) → `/api/v1/catalog/courses/<catalogId>` (3,676 courses) → detail at `/api/v1/catalog/course/<catalogId>/<pid>`. ⚠ **The detail endpoint needs `pid`, not `id`.** ⚠⚠ **It is the ONLY Florida source reporting laboratory hours as a structured field (`labStudioFieldWorkHours`)** — which settled whether `BOT4850` has a lab. Go here whenever a lab component is in doubt. |
 | **CF (Central Florida)** | `catalog.cf.edu` | ⚠ Root 200 (26 KB), **acalog** — so likely the same content-blocked pattern as FSW and TSC. Not exercised. |
 | **MDC** | `mdc.curricunet.com/catalog/iq/3279` | ⚠ CurricUNET; 200 but ~10 KB (SPA shell). Lead, not a route. |
 | **State colleges (standing retry list)** | SPC, HCC, PESC, PHSC, Palm Beach State, Chipola | ❌ **curl 000 / 404.** With TSC, FSW and **Polk State** content-blocked and MDC an SPA, **this is what still blocks `MUG2101`.** ⚠ **Corrected 2026-09-15:** this row previously read "PSC", which is **Polk State's** code — Polk State is content-blocked rather than unreachable and now has its own row above. The school meant here is **Pensacola State (`PESC`)**. |

@@ -2406,6 +2406,56 @@ whose `DS_Course_Intent1` reads `UPPER` against the same subject.
 direction) or leave it. **Recommend deferring** — the affected guides are not wrong, and the three numbers
 most likely have no alternate at all.
 
+
+## 96. ⚠⚠ `BOT4850` — the statewide TITLE says "w/Lab" and the statewide DESCRIPTION says "LECTURE ONLY" (batch 214)
+
+**What was found.** Florida's statewide title for `BOT4850` is **"MEDICAL BOTANY W/LAB"**. The statewide
+description of the same record ends with the words **"LECTURE ONLY."** The record contradicts itself in a
+single row.
+
+**The evidence is one-sided as to which half is wrong** — four independent signals all say there is no
+laboratory:
+
+1. the statewide description itself (*"LECTURE ONLY"*);
+2. the number carries **no `C` and no `L` suffix**, which is how Florida marks laboratory content;
+3. **UCF's Kuali record reports `labStudioFieldWorkHours: 0`** — a structured data point, not an inference;
+4. **neither carrier's title mentions a lab** (UCF *Medical Botany*, UWF *Medicinal Botany*).
+
+**Why it is worth your attention rather than just a guide footnote.** ⚠⚠ **This one can cost a student a
+graduation requirement.** Many degree programmes require a general-education science course **with a
+laboratory**. A student — or an adviser — reading the statewide title would reasonably conclude this
+course satisfies that requirement. It does not, and the error is discovered at a degree audit.
+
+**What was done.** The guide states the contradiction prominently, gives all four signals, and tells the
+reader the course has no laboratory and will not satisfy a science-with-lab requirement. No content was
+taken from the title.
+
+**Decision wanted from Ron:** whether a statewide-record defect of this kind is worth reporting to SCNS.
+⚠ **This is the second title/description contradiction the project has found in the state file**
+(`SPM3104` was the first, batch 207) and the first where the consequence is a concrete student-facing
+error rather than a scope question. **No action needed on the site** — the guide handles it.
+
+## 97. ⚠ The flat file's `transferable` field holds the HIGH-SCHOOL-CREDIT code — batch 212's note corrected (batch 214)
+
+**Batch 212 recorded** that `scns.FIELDS`' `hs_credit` read blank while `transferable` read `'EL'`, against
+a statewide CSV saying HS *ELECTIVE* and transferable *"GUARANTEED TRANSFER…"* — and concluded that both
+fields were uniform across `ATF`/`ATT` and therefore carried no information.
+
+**`BOT` and `BSC` resolve it.** The flat-file `transferable` field splits **`'EL'` / `'SC'`**, which maps
+exactly onto the statewide CSV's **ELECTIVE / SCIENCE** high-school-credit values (`BOT` 116/6, `BSC`
+248/24). ⚠ **So the two-character code sitting in the `transferable` slot IS the high-school credit code**,
+and the byte offsets for that field pair in `scns.FIELDS` are shifted.
+
+**Practical rule, now recorded in `SOURCES.md`:** read `DS_High_School_Credit1` and `DS_Transferable1`
+from the **statewide CSV**, not from the flat file's `hs_credit` / `transferable` fields. The flat file
+remains authoritative for carriers, credits, titles and the Gordon Rule / general-education flags.
+
+**Decision wanted from Ron:** whether to **fix the offsets in `scratchpad/scns.py`** or leave the note.
+⚠ **Recommend leaving them and relying on the CSV.** Correcting byte offsets on an 80 MB fixed-width file
+risks silently shifting every field after the edit, and no guide currently depends on those two fields
+from the flat file. **If a future task needs them at scale, fix it then and re-validate against the CSV
+for a whole prefix before trusting it.**
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*

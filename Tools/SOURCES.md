@@ -21889,3 +21889,175 @@ recorded for nursing (CCNE/ACEN) and medical laboratory science (NAACLS) in the 
 - ⚠ **UF's CourseLeaf department slug is `construction_management`, not `building_construction`**
   (the latter 404s). **Slugs are descriptive and not guessable from the prefix** — the 404-with-body
   confirmed the host was answering.
+
+---
+
+## Batch 214 — BOT / BSC (2026-09-15)
+
+Five guides, all live: **BOT4734C**, **BOT4850**, **BSC2311**, **BSC4303**, **BSC4401L**. Five of five
+validated clean, zero warnings, **zero prerequisite trim rounds** — second consecutive batch on both
+counts. Sources: statewide record, **UWF** (prefix PDFs), **FIU** (Coursedog cache), **UCF** (Kuali,
+re-established this batch). ⚠⚠ **608 courses newly LISTED** on the site from the two prefixes (641 rows
+sent, 608 created, 33 updated, 0 failed) — much the largest listing yield of any batch so far.
+
+### ⚠⚠⚠ `BSC4401L` — SPLIT FAMILY, and the worst transfer trap in this catalogue so far
+
+| | **UWF** | **FIU** |
+|---|---|---|
+| `BSC4401L` | *Forensic Biology* — **3 credits** | *Forensic Biology Lab* — **1 credit** |
+| what it is | the **complete course** | the **laboratory only** |
+| companion | none, it stands alone | ⚠ **`BSC4401`** *Principles of Forensic Biology*, 3 cr, **corequisite** |
+| total | **3 credits, one grade** | **4 credits, two grades** |
+
+**The split-family shape (batch 183) is familiar. What makes this one worse than any previous instance is
+that the `L` id itself carries the two different meanings.** ⚠⚠⚠ **Transfer matches on the number and
+fails on the content in BOTH directions**: a UWF student arrives at FIU holding a 3-credit whole-subject
+course under a number FIU defines as a 1-credit lab; an FIU student arrives at UWF holding a 1-credit
+practical half under a number UWF uses for the complete course.
+
+⚠ **And it is a fresh counterexample to the `L`-suffix assumption** (batch 203, `OCB3108L`): at FIU the
+`L` behaves exactly as the convention says — 1 credit, corequisite lecture — while at UWF it sits on a
+full 3-credit course. **The same suffix, on the same number, doing both jobs.** Do not infer credit value
+from the suffix.
+
+**Handling: the guide leads with a comparison table and tells the reader to send the syllabus and the
+credit value rather than the number.**
+
+### ⚠⚠⚠ `BOT4850` — the statewide TITLE says "w/Lab" and the statewide DESCRIPTION says "LECTURE ONLY"
+
+**A title/description contradiction inside one statewide record (the batch-207 `SPM3104` shape), and this
+one is unusually well evidenced — FOUR independent signals, all agreeing against the title:**
+
+1. the statewide **description** ends *"LECTURE ONLY"*;
+2. the number carries **no `C` and no `L` suffix**, which is how Florida marks laboratory content;
+3. ⚠⚠ **UCF's Kuali record gives `labStudioFieldWorkHours: 0`** — a hard data point, not an inference;
+4. **neither carrier's title mentions a lab** (UCF *Medical Botany*, UWF *Medicinal Botany*).
+
+⚠⚠ **Why this one matters more than an ordinary stale title: it can cost a student a requirement.** Many
+programmes require a science course **with a laboratory**, and a student or adviser reading the statewide
+title would reasonably conclude this satisfies it. **It does not.** The guide states so prominently and
+tells the reader to confirm with an adviser. Recorded in `REVIEW_QUEUE.md`.
+
+### ⚠⚠⚠ `hs_credit` is DISCRIMINATING in `BOT` and `BSC` — and the batch-207 test is what proved it
+
+**Batch 212 found the field uniform across `ATF`/`ATT` and correctly called it boilerplate. It is not
+boilerplate here**, and the distribution test caught the difference immediately:
+
+| Prefix | `DS_High_School_Credit1` | Verdict |
+|---|---|---|
+| `ATF` / `ATT` (batch 212) | 100% blank / uniform | boilerplate |
+| `BOT` | 116 ELECTIVE, ⚠ **6 SCIENCE** | discriminating |
+| `BSC` | 248 ELECTIVE, ⚠ **24 SCIENCE** | discriminating |
+
+⚠⚠ **`BSC2311` is one of the 24.** A dual-enrolled high-school student taking it earns **SCIENCE** credit
+rather than elective — so it can fill a high-school science graduation requirement *and* earn transferable
+college credit. **That is a materially better outcome than most college courses give a dual-enrolled
+student, and nothing a student normally reads says it.** The guide leads with it and tells the reader to
+confirm with a counsellor and the district articulation agreement.
+
+⚠ **`BOT4850` and `BSC4303` carry ELECTIVE — and because the field discriminates in these prefixes, that
+is a real classification worth stating rather than a default to ignore.** The same fact means opposite
+things in different prefixes, which is exactly why the one-`Counter` test runs first.
+
+#### ⚠⚠ Tooling correction to a batch-212 note: the flat file's `transferable` slot holds the HS-CREDIT code
+
+Batch 212 recorded that the flat file's `hs_credit` read blank while `transferable` read `'EL'`, against a
+CSV saying HS *ELECTIVE* and transferable *GUARANTEED…* — and concluded both were uniform and
+uninformative. ⚠ **`BOT`/`BSC` resolve it: the flat-file `transferable` field splits `'EL'`/`'SC'`, which
+maps exactly onto the CSV's ELECTIVE/SCIENCE high-school credit values.** **So the two-character code in
+the `transferable` slot IS the high-school credit code**, and the field offsets for that pair are shifted.
+
+**Practical rule: read `DS_High_School_Credit1` and `DS_Transferable1` from the statewide CSV, not from
+the flat file's `hs_credit`/`transferable` fields.** The flat file is authoritative for carriers, credits
+and titles; for these two fields it is not.
+
+### ⚠⚠ DUAL-LISTING is a DEPARTMENTAL pattern at UWF Biology, not a per-course quirk
+
+**Three of the four UWF courses in this batch are dual-listed with graduate counterparts:**
+
+| Undergraduate | Graduate counterpart |
+|---|---|
+| `BOT4850` Medicinal Botany | `BOT 5852` |
+| `BSC4303` Biogeography | `BSC 5305` |
+| `BSC4401L` Forensic Biology | `BSC 5406L` |
+
+**The batch-186 rule was written from a single instance (`SOW4700`). Three in one department in one batch
+makes it a pattern worth probing deliberately.** ⚠ **Standing practice: on any UWF Biology 4000-level
+course, look for the "offered concurrently with" clause** — it is easy to read past, and both consequences
+matter (pace pitched above undergraduate, which is a benefit; and **taking the undergraduate version may
+block taking the graduate one for credit later**, which is not, and which must be known *before*
+registering). All three guides state it.
+
+### ⚠⚠ `BSC2311` — an explicit NON-MAJORS marker, and the lab-suffix rule firing again
+
+**UWF states two things outright that most catalogues leave implicit:** *"Credit not granted toward a
+major in Biology"* and *"Meets General Education requirement in Natural Sciences."*
+
+⚠ **The first is the clearest non-majors marker this project has met** — better evidence than the
+batch-182 tells (level, "students across disciplines" phrasing, writing designation), because it states
+the consequence rather than implying it. **Where a catalogue says it, quote it**: a biology major taking
+this course gets nothing toward the major.
+
+⚠ **The lab-suffix standing practice (batch 182) applies and the guide carries it**: no `C`, no `L`, so
+the course satisfies a general-education science requirement but **not the laboratory half of one**.
+**Two courses in this batch (`BSC2311` and `BOT4850`) turn on the same point**, which is a good argument
+for the rule being standing rather than occasional.
+
+⚠ **Also: UWF's longer title is the ACCURATE one.** Statewide says *Introduction to Marine Biology*; the
+statewide **description** leads with *"the chemical, physical and geological features of the world
+oceans"*. **UWF's *Introduction to Oceanography and Marine Biology* matches the description; the statewide
+title under-describes it.** Handling: reassure, do not warn — same subject, and the longer title is the
+better one. ⚠ Gulf Coast State College carries **both a standard and an honours section** under the number.
+
+### ⚠ `BOT4734C` — the prerequisite field is INTERNAL NOTATION, not a corrupt value
+
+**`"BOT L010 OR BSC L010, CO: BOT U734L"`.** ⚠ Batch 209's rule (test course-looking tokens against
+`^[A-Z]{3}\s?\d{4}[A-Z]?$`) flags all three as invalid — correctly. **But this is not the `ADV4802`
+corruption case: it is systematic notation in which `L` and `U` mark LOWER and UPPER division**, so the
+entry reads *"a lower-division botany or general biology course, with an upper-division lab corequisite."*
+
+⚠ **Refinement to the batch-209 rule: a token that fails the id pattern is a data DEFECT or a NOTATION
+convention, and the two need different handling.** A defect sends the reader to the catalogue; **notation
+can be decoded and explained**, which is more useful. **The tell is systematic structure** — a single
+malformed token is a defect, a consistent `L`/`U` prefixing scheme is notation.
+
+⚠ **A genuine question survives and the guide raises it: a corequisite laboratory identifier sits oddly
+with a number that already carries a `C` suffix.** Readers are told to confirm whether they register for
+one course or two.
+
+### ⚠ A Florida College System institution teaching a 4000-level course
+
+**Santa Fe College carries `BOT4734C`.** ⚠ Not an anomaly — **FCS institutions may offer baccalaureate
+degrees and carry upper-division coursework where they do.** Two consequences the guide states:
+**enrolment may be restricted to students admitted to that programme**, and **transfer into a university
+biology major is worth a written evaluation** even though the upper-division credit itself transfers.
+
+### Source register
+
+- ✅✅ **UCF Kuali re-established and confirmed working.** `ucf.kuali.co/api/v1/catalog/public/catalogs/`
+  → pick the catalogue by `_id` (the 2026-2027 undergraduate catalogue is `688b8960ddeb091644d2b1ca`) →
+  `/api/v1/catalog/courses/<catalogId>` returns **3,676 courses** → detail at
+  `/api/v1/catalog/course/<catalogId>/<pid>`. ⚠ **The register's warning is correct: the detail endpoint
+  needs `pid`, not `id`.** ⚠⚠ **`labStudioFieldWorkHours` was decisive in this batch** — it is the only
+  Florida source that reports laboratory hours as a structured field, and it settled `BOT4850`.
+- ⚠ **Santa Fe College** (`catalog.sfcollege.edu`) — **acalog (Modern Campus). Root answers 200 (30 KB);
+  `content.php` and `search_advanced.php` both return empty 202s.** Same content-blocked pattern as FSW,
+  TSC, CF and Polk State. **Platform now identified**, which the register previously listed as unknown.
+- ⚠ **FAU confirmed closed again** — `catalog.fau.edu` returns **404** and the body references Coursedog,
+  consistent with the batch-167 finding that the host is registered with no catalog assigned. **Stop
+  attempting it.**
+- ⚠ **UWF prefix PDFs worked for `bot` and `bsc`** — so the batch-212 finding stands as *the PDF route has
+  gaps*, not that it is unreliable. **Try the PDF first.**
+- ✅ **`survey.py` earned its keep on its first real batch.** It flagged the `BSC4401L` credit divergence
+  and the title divergences on three numbers, and its live-guide check confirmed all five were unwritten.
+  ⚠ **Its "N distinct public institution titles — run the title/description test" prompt fired on
+  `BSC2311`, where the description then showed UWF's longer title to be the BETTER one** — the same
+  inversion as `BCN3281C` in batch 213. **The prompt is doing its job precisely by being resolved against
+  the reader's first instinct.**
+- ⚠ **Prefix fragmentation**: `BOT` 183 live ids, 147 single-carrier (**80%**), max 7; `BSC` 479 live ids,
+  313 single-carrier (**65%**), max **39**. **Nineteen prefixes measured, still inside the 64–85% band.**
+  ⚠ `BSC`'s max of 39 carriers is the highest recorded — a lower-division general-education number, which
+  is where the TITLE FRAGMENTATION shape lives.
+- ✅ **Zero trim rounds and zero warnings, five of five** (prerequisites 758–996). **Third consecutive
+  batch without a blocking length failure.**
+- **Batch average draft size 19.7 KB.**
