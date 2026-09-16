@@ -801,6 +801,21 @@ Seven consecutive queued `C` rows turned out to be carried by no institution, wh
 section and an integrated section with a scheduled practicum or laboratory. **Write the `C` id, state the
 contact-hour difference (60 vs 45), and tell the student to check which section they are in.**
 
+#### ⚠⚠ CHECK THE CREDITS FIRST — same-institution-both-forms does NOT always mean two shapes (batch 228)
+
+**Valencia College carries `BSC1010` AND `BSC1010C`, which fires the diagnostic above. ⚠⚠ But BOTH
+are 4 credits** — *Fundamentals of Biology Honors* on the bare number and *General Biology I* on the
+`C`. **Four credits means both already include the laboratory, so the suffix is not separating
+lecture from integrated at all: it is separating HONOURS from standard.**
+
+⚠⚠⚠ **The diagnostic depends on a CREDIT DIFFERENCE, and it is not safe without one.** A lecture
+and its integrated twin differ by the lab's credit (3 against 4, or 3 against 60 hours). **Two forms
+at the SAME credit value are two versions of the same packaging** — honours, or a delivery-mode
+split — **and describing them as lecture-versus-integrated would be simply wrong.**
+
+**So the check runs: same institution carries both → compare the CREDITS → equal means look for
+another explanation (honours, campus, delivery mode) before writing the two-shapes note.**
+
 ### ⚠⚠ Chronological divergence — write the whole span and label the halves (batch 184)
 
 **`EUH3570`**: statewide **"Modern Russia"**; **UWF teaches "Russia to 1917"** (its Soviet material is
@@ -1071,6 +1086,28 @@ free-body diagrams in week two, and conclude the course is impossible.**
 **Name exactly what is needed and say to prepare it** — for that course, trigonometry, algebra, units and
 rates, **not** calculus. ⚠ **This is the counterpart to the prerequisite-as-signal diagnostic: read the
 description for disciplines the gate omits.**
+
+### ⚠⚠⚠ A 1-CREDIT `L` LAB IS NOT UNIFORMLY 45 HOURS — the majors/non-majors split is worth 15 (batch 228)
+
+**The project has been publishing 1-credit laboratories at 45 contact hours by convention.
+Gulf Coast State College publishes the real figures, and they are not the same:**
+
+| Course | Published |
+|---|---|
+| `BSC2010L` — **majors** general biology lab | **3 lab hours** weekly → 45 |
+| ⚠ `BSC1020L` — **non-majors** human biology lab | ⚠⚠ **2 lab hours** weekly → **30** |
+
+⚠⚠ **Same college, same credit value, same prefix, and a 50% difference in scheduled time.**
+**So "1 credit `L` = 45" is a ceiling rather than a default**, and the majors/non-majors distinction
+is the thing that moves it.
+
+**Handling: prefer a published figure, and where none exists ANCHOR the derivation on the closest
+published comparator rather than on the bare convention.** `BSC1010L` was published at 45 because
+Gulf Coast publishes 3 hours for the equivalent *majors* lab in the other numbering family — which is
+a far better justification than "1:45 is the convention", and the guide says so.
+
+⚠ **Check Broward and Gulf Coast before deriving any laboratory's hours.** Between them they cover a
+large share of the high-enrolment lower-division laboratories.
 
 ### ⚠ Writing 1-credit LABORATORY guides (batch 189)
 
@@ -2066,17 +2103,17 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **UNF** | live catalogue + `digitalcommons.unf.edu/course_catalogs/` | ⚠⚠ **LEAD CHASED AND CLOSED 2026-09-15 (batch 216).** The live catalogue (`catalog.unf.edu`, `www.unf.edu/catalog/courses/`) answers with a large page but is **client-rendered** — the course index contains **no course content**. The archived-PDF lead is **REAL**: the DigitalCommons page lists catalogue PDFs by year and the article ids map cleanly (2025-26 = `article=1071`, counting down by year). ⚠⚠⚠ **But the PDF download returns 403 with or without a Referer** — bepress bot-blocks it. **So the archive exists, the ids are known, and the download is blocked. Do not re-attempt; write UNF courses from the statewide record and another carrier, and say so in the guide.** |
 | **FSW** | `catalog.fsw.edu` (acalog, `catoid=27`, Course Descriptions `navoid=5491`) | ⚠ **PARTIAL BLOCK** — root returns 200 (26 KB) but **`content.php` and `search_advanced.php` both return empty 202s.** Root-reachable, content-blocked. |
 | **FIU** | Coursedog API — `scratchpad/coursedog.py` | ✅ **SOLVED 2026-09-06 (batch 167). 27,923 courses, cached in `scratchpad/fiu_courses.json`.** ⚠⚠ **The gate is one header: `Referer: https://catalog.fiu.edu/`** — without it every endpoint returns `{"error":"Unauthenticated"}`. Richest Florida source: code, name, credits, college, description, cipCode, and per-component **contactHours**. ⚠ Duplicate rows per code — prefer the one with a real college name and a description. Full paging takes 2-3 min; **use the cache**. |
-| **FAU** | `catalog.fau.edu` — Coursedog SPA | ❌ **ANSWERED 2026-09-07: no public Coursedog catalog at that host.** The discovery endpoint returns *"does not have entity assigned"* — the host is registered but no catalog is attached, which is why every schoolId guess failed. **Stop attempting FAU via Coursedog.** |
+| **FAU** | Coursedog — `scratchpad/coursedog.py fau` (school `fau_banner_ethos`, catalog `Zm7WidFIJix2TYXQumos`) | ✅✅ **REOPENED 2026-09-16 (batch 228). 7,127 courses, cached in `scratchpad/fau_courses.json`.** ⚠⚠⚠ **This row previously read "no public Coursedog catalog at that host… Stop attempting FAU." That was TRUE when written (batch 173) and is now STALE — FAU has since attached a catalog.** Full descriptions, credits, college and department, and **explicit corequisite text** (it is what showed `BSC1010`/`BSC1010L` to be reciprocal). Honors College versions appear under the same number. **FAU is a large SUS institution that the project had written off; it is now a first-class source.** |
 | **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. ⚠⚠ **It still accepts `Referer` alone, but the COURSE-SEARCH endpoint no longer does** — see the row below. **Discovery succeeding tells you nothing about whether a fetch will.** |
 | **⚠⚠ Coursedog auth (changed)** | `Referer:` **and** `Origin:` | ⚠⚠⚠ **CHANGED 2026-09-15 (batch 212).** Batch 167 recorded the gate as ONE header. **`Referer` alone now returns `401 Unauthorized`** on `/api/v1/cm/<school>/courses/search/$filters`; adding **`Origin: https://<catalog host>`** returns 200. Both are in the rebuilt `scratchpad/coursedog.py`. **If Coursedog 401s again, suspect another header before concluding the route is closed.** |
 | **⚠⚠⚠ acalog = presumptively UNREACHABLE** | **EIGHT** institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not seven coincidences (batch 215, confirmed 220).** **FSW, TSC, CF, Polk State, Santa Fe, FAMU, St. Johns River State and Florida Polytechnic** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
 | **FAMU** | `catalog.famu.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15.** Root 200 (56 KB); `content.php` and `search_advanced.php` empty 202s. Not Coursedog (bootstrap: *"does not exists"*). ⚠⚠ **FAMU ≠ FAU** — different institutions, both unreachable for different reasons. FAMU is a main carrier of the `RET` professional sequence, so eight batch-215 guides name the gap. |
 | **Polk State (PSC)** | `catalog.polk.edu` — **acalog (Modern Campus), `catoid=55`** | ⚠ **PARTIAL BLOCK, probed 2026-09-15.** Root answers 200 (53 KB) but **`content.php` and `search_advanced.php` both return empty 202s** — the same content-blocked pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). ⚠⚠ **Note the code: `PSC` is POLK STATE. Pensacola State is `PESC`** — a previous session probed `pensacolastate.edu` as "psc" and was reading the wrong school. **Check `inst_map.json` before trusting an obvious-looking three-letter code.** |
 | **USF** | `catalog.usf.edu` | ⚠ root 200 (75 KB) but **no course-description path exposed**; its only course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a route. |
-| Gulf Coast | `gulfcoast.edu/catalog/current/courses/<prefix>/index.html` | was the highest-value pattern in the DSC build; **re-probe before use** |
+| **Gulf Coast (GCSC)** | `www.gulfcoast.edu/catalog/current/courses/<prefix>/index.html` | ✅✅ **RE-PROBED AND WORKING 2026-09-16 (batch 228)** — one fetch per prefix, 131 KB on `bsc`. ⚠⚠ **It is the SECOND Florida source that publishes CONTACT HOURS explicitly** (after Broward): every entry carries `Credit hours: N` plus `Lecture hours: N` and/or `Lab hours: N`. **It also publishes LAB FEES in dollars, term availability, and degree-exclusion rules** (*"cannot be used to satisfy degree requirements by students who already have credit in…"*), none of which any other routine source gives. **Go here whenever a contact-hour or fee figure is in doubt.** |
 | **EFSC** | `catalog.easternflorida.edu/course-descriptions-information/<prefix>/` (and `/<prefix>.pdf`) | ✅ **NEW 2026-09-07 — CourseLeaf, same as UWF/FGCU/Broward/Valencia, existing tooling works unchanged.** Recovered `ADV2000C` and `COP3813C`. On CourseLeaf a prefix the college does not carry returns **202** — probe a prefix it definitely has. |
 | **Tallahassee (TSC)** | `catalog.tsc.fl.edu` | ⚠ **CORRECTION: never blocked — the college RENAMED.** TCC → Tallahassee State College; `catalog.tcc.fl.edu` 000 was a dead host, not a block. New host is live (386 KB) but acalog `content.php` returns empty 202s. **Lesson: follow redirects on the main domain before recording a block.** |
-| **IRSC** | `irsc.smartcatalogiq.com` | ⚠ **Live lead — SmartCatalogIQ, the same platform as the DSC build**, `/en/<year>/catalog/…`. Not yet exercised. |
+| **IRSC** | **`irsc.smartcatalogiq.com/-/media/institution/irsc/pdf-catalogs-2011-12-through-2024-25/Indian%20River%20State%20College%20<YEAR>.pdf`** | ✅✅ **EXERCISED AND WORKING 2026-09-16 (batch 228) — but NOT the way the lead assumed.** The `/en/<year>/catalog/…` SmartCatalogIQ path **404s**; the root page instead links **whole-catalogue PDFs by year**, and the 2024-2025 file downloads clean (**3.2 MB, 303 pages**). Full course descriptions with prerequisites AND corequisites, and — because it is the whole catalogue — **programme prerequisite tables too**, which is how `MCB2010`'s gate was found. ⚠ Parse with `pypdf`; it emits "Ignoring wrong pointing object" warnings that are harmless. **Contrast UNF, where the archived-PDF route is the same idea and is 403-blocked: here it is simply open.** |
 | **⚠ Inventory reliability** | `courses_2plus_institutions.csv` | ⚠⚠ **The institution list is a HYPOTHESIS, not evidence — five confirmed errors in four batches** (`MUG2101`, `TPA3230C`, `BOT4404C`, `ATT1120`, `COP3014C`, all wrongly listing UWF or a suffix nobody uses). Two patterns: an institution listed that carries the subject under a **different number**, and a **suffix** in the inventory that no institution actually uses — both consistent with the file recording the SCNS catalog rather than current offerings. **Verify against a live catalog before treating an institution as a source or asserting a count in a guide.** ⚠⚠ **AND IT CAN CARRY A *PRIVATE* CARRIER'S TITLE AS THE COURSE NAME** — `COM2713` reads *"Writing for Strategic Communication"* (batch 222), `CNT3112` reads *"Advanced Network Administration"* (batch 226) and `GRA4882C` reads *"Analysis of Trends and Styles"* (batch 227) — **the statewide title, which in Florida only a PRIVATE institution actually uses.** ⚠⚠ **THREE instances now; treat it as expected rather than notable, and tell the reader to register by NUMBER.** ⚠ **`GRA2508` adds the mirror case: the BARE form is private-only while the `C` form is the public one** (the `PET3344` shape inverted) — **so check the sector of every carrier before describing a bare/`C` pair.** |
 | **⚠ FSU entry vs requirement text** | `registrar.fsu.edu/bulletin/...` | ⚠ A number followed by a period is **not** enough to locate a catalog entry — it also matches requirement prose (*"a grade of C or higher in COP 3014 or COP 3363."*). **Verify that a TITLE and a parenthesised credit value follow** (`COP 3014. Algorithm… (3).`). Cost a wrong result in batch 176. ⚠⚠ **AND THE IDENTIFIER MAY NOT BE CONTIGUOUS IN THE HTML (batch 223):** FSU splits it across tags — `<strong>INR </strong><strong>4124. </strong>` — **so a grep for `INR 4124` finds nothing although the entry is there.** **Strip tags and collapse whitespace BEFORE searching.** |
 | **FSCJ** | Coursedog — `scratchpad/coursedog.py fscj` (school `fscj_peoplesoft`, catalog `sGHd4uJQXFdgDUaffhTv`) | ✅ **SOLVED 2026-09-07 (batch 173).** Was "platform unidentified". ⚠ **22,693 courses — the largest Florida catalog found so far**, and `fetch()` caps at limit=5000, so a single call silently returns a PARTIAL result. **Page it** (`scratchpad/fscj_dump.py`) and cache to `scratchpad/fscj_courses.json`. |
@@ -2089,6 +2126,28 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **MDC** | `mdc.curricunet.com/catalog/iq/3279` | ⚠ CurricUNET; 200 but ~10 KB (SPA shell). Lead, not a route. |
 | **State colleges (standing retry list)** | SPC, HCC, PESC, PHSC, Palm Beach State, Chipola | ❌ **curl 000 / 404.** With TSC, FSW and **Polk State** content-blocked and MDC an SPA, **this is what still blocks `MUG2101`.** ⚠ **Corrected 2026-09-15:** this row previously read "PSC", which is **Polk State's** code — Polk State is content-blocked rather than unreachable and now has its own row above. The school meant here is **Pensacola State (`PESC`)**. |
 | **Coursedog in Florida** | bootstrap endpoint, then `scratchpad/coursedog.py` | ✅ **REOPENED 2026-09-07 (batch 173) — the earlier "only FIU" conclusion was WRONG.** Three Florida Coursedog schools are now known: **FIU**, **NWFSC** and **FSCJ**. The earlier sweep missed them because it tested a guessed host list rather than the hosts the register already recorded as answering. ⚠ **Re-sweep the bootstrap endpoint against any host that answers before recording it as an unknown platform.** |
+
+### ⚠⚠⚠ A "CLOSED" REGISTER ENTRY GOES STALE — re-probe before trusting a negative (batch 228)
+
+**The register is full of confident negatives, and at least one was wrong by the time it was
+being relied on.** `catalog.fau.edu` was recorded in batch 173 as a registered host with **no
+catalog attached**, ending *"Stop attempting FAU via Coursedog."* ⚠⚠ **In batch 228 the same
+one-line bootstrap returned `fau_banner_ethos` and a live catalog id, and a full dump produced
+7,127 courses.** The institution attached a catalog in the interval.
+
+⚠ **The distinction that matters: a negative about a SERVER'S CONFIGURATION is perishable; a
+negative about a PLATFORM'S BEHAVIOUR is not.** "acalog blocks `content.php`" is a property of the
+platform and holds. "This host has no catalog attached" is a property of one institution's setup on
+one day and can change without notice.
+
+**Standing practice:**
+
+- **Re-run `coursedog.py discover` on any host recorded as unattached** before writing a guide that
+  names it as unreachable. It is one request.
+- ⚠ **Do the same for the SmartCatalogIQ and CourseLeaf leads recorded as "not yet exercised"** —
+  batch 228 exercised the IRSC one and it worked (below).
+- **When a negative turns out to be stale, replace the row and say when it changed**, rather than
+  softening it — the next session needs to know the entry is now positive, not hedged.
 
 ### ⚠ How to probe a block correctly (learned batch 164)
 
@@ -2756,6 +2815,17 @@ When starting a fresh session in this project:
 
    ⚠ **A guide request closes itself when the guide publishes** — no manual step. Verify by
    re-reading the queue after a push.
+
+   ⚠⚠⚠ **SHARPENED (batch 228): requests cluster on SPLIT FAMILIES, and the tell is that the
+   OTHER half already has a guide.** Both requests received on 2026-09-16 were the **`L` halves**
+   of numbers whose **integrated `C` twins were already published** — `BSC1010L` against a live
+   `BSC1010C`, `BSC1020L` against a live `BSC1020C`. **The requester found the site's page for the
+   packaging their institution does not use, and needed the other one.**
+
+   ⚠⚠ **So a published `C` guide with no `L` guide (or the reverse) is a PREDICTOR of a future
+   request, and it is a one-line check**: before closing a batch on a split-family number, look up
+   whether the site holds the sibling. **Writing both halves at once costs far less than meeting the
+   request later**, and the second guide reuses the whole survey.
 
    ⚠ **Two requests in a row (`CET1112`, `CET2127C`) landed on numbers with a divergence.** A request
    appears to be a signal that the number confuses people, so **check the number's whole family

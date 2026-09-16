@@ -12,8 +12,12 @@ Known Florida Coursedog schools (SOURCES.md batches 167 and 173):
     fscj   catalog.fscj.edu   fscj_peoplesoft    sGHd4uJQXFdgDUaffhTv   ~22,700 courses
     nwfsc  catalog.nwfsc.edu  nwfsc_banner_sql   DGLrTHoh5uNIMFsdbzWf    ~1,780 courses
 
-FAU is NOT a Coursedog school at catalog.fau.edu -- the host is registered but has no
-catalog assigned. Do not retry it.
+    fau    catalog.fau.edu    fau_banner_ethos   Zm7WidFIJix2TYXQumos
+
+CORRECTION 2026-09-16 (batch 228): FAU IS now a Coursedog school. The batch-173
+finding ("host registered but no catalog assigned") was TRUE THEN and is STALE --
+FAU has since attached a catalog. Re-run `discover` on a host recorded as
+unattached before trusting that record; the answer can change.
 
 Usage:
     python coursedog.py discover catalog.somewhere.edu   # bootstrap a new school
@@ -40,6 +44,12 @@ SCHOOLS = {
         "school": "fiu_peoplesoft",
         "catalog": "g6m34J5gUCpRQCPvL0tJ",
         "cache": "fiu_courses.json",
+    },
+    "fau": {
+        "host": "catalog.fau.edu",
+        "school": "fau_banner_ethos",
+        "catalog": "Zm7WidFIJix2TYXQumos",
+        "cache": "fau_courses.json",
     },
     "fscj": {
         "host": "catalog.fscj.edu",
