@@ -2687,6 +2687,52 @@ asked, moving each carrier onto its correct number would dissolve the problem en
 because it is the kind of thing a state articulation officer can actually act on, unlike most findings
 in this file.
 
+## 102. The STUDIO contact-hour convention contradicts itself — and `GRA` now holds three answers
+
+**Raised batch 227 (2026-09-16). Needs one decision for the prefix, not five.**
+
+`validate_drafts.py` carries a **studio-prefix rule** (added 2026-09-11) expecting a 3-credit studio
+course to run **~90 contact hours** — six hours a week, "because the work is made in the room." It was
+added after `GRA3112C` and `GRA4154C` tripped the lecture heuristic at 90, "which was the correct figure
+for a studio."
+
+⚠⚠ **That rule now contradicts your 2026-09-15 ruling** (`C` suffix = 60, no suffix = 45), and the
+published data shows the collision inside a single prefix:
+
+| Figure | Courses |
+|---|---|
+| **90** | `GRA3112C`, `GRA4154C` |
+| **72** | `GRA2111C`, `GRA2134C`, `GRA2208C`, `GRA3102C` |
+| **60** | `GRA2144C`, this batch's five, **and 25+ `ART` studio `C` guides** |
+
+⚠ **No Florida institution publishes contact hours for ANY `GRA` course**, so all three figures are
+derived by convention and none is sourced. The prefixes the validator treats as studio are `ART ARE GRA
+PGY CRW DAA DAN THE TPA TPP MUS IND INT` — so this reaches well beyond `GRA`.
+
+**What I did in batch 227, and why:** published all five at **60**, following your explicit and more
+recent ruling, with the derivation stated in every guide and labelled as derived. **I did not want to
+invent a third convention silently**, and the warning is non-blocking.
+
+**The decision I need:**
+
+1. ⚠ **`C` = 60 everywhere, including studio prefixes** — consistent with your ruling and with the large
+   majority of published studio guides. **Then the validator's studio rule should be removed or lowered**,
+   because it will warn on every studio guide from here on, and a warning that always fires stops being
+   read. `GRA3112C` and `GRA4154C` would be the outliers to revisit.
+2. **Studio prefixes get 90** — defensible on national studio-accreditation practice (a 3-credit studio
+   commonly meets six hours weekly), and it is what the two existing `GRA` guides say. ⚠ **But it would
+   make ~30 already-published `ART`/`GRA` guides wrong**, and it contradicts the `C` = 60 ruling.
+3. **Something in between** (the 72 figure already in four guides) — I would not recommend this; it has no
+   stated basis I can find and would be a third convention.
+
+**My recommendation: option 1**, with the validator rule retired. It matches your ruling, matches most of
+what is published, and the honest position is that **none of these numbers is sourced** — every guide says
+so, which is the part that actually protects the reader.
+
+⚠ **Whichever you pick, it is a small mechanical sweep**, not a rewrite: the figure lives in one field and
+in one sentence of the Special Information section.
+
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
