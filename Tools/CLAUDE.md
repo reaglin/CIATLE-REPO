@@ -733,6 +733,13 @@ NUMBER, and read the answer from the carrier lists:**
 | **no institution carries the bare form, or the `C` form** | the queued id may not exist — check before writing at all |
 | ⚠⚠⚠ **only a PRIVATE institution carries one form** (batch 222) | **the id is REAL but has no carrier in scope.** Write the form a PUBLIC institution carries, mark the other `skipped` with its reason, and tell the reader in the guide not to register for it |
 
+⚠⚠⚠ **AND IT RUNS IN BOTH DIRECTIONS (batch 225).** `COM4564C` was a private-only **`C`** form
+with a public bare twin. **`PET3344` is the mirror: the BARE number is carried only by a private
+institution and the `C` form, `PET3344C`, is the public one.** ⚠ **So state the check symmetrically:
+look up which FORM the PUBLIC carrier uses, in either direction.** **The instinct that an unsuffixed
+number is the "default" is wrong as often as it is right** — on `PET3344C` no substitution was needed
+because the queued `C` id was already the public one.
+
 ⚠⚠ **The batch-222 row is a SCOPE fact, not a catalogue fact, and it needs the opposite handling
 from "a `C` nobody carries."** **`COM4564C`'s only carrier is Keiser (private); `COM4564` is carried by
 UWF.** Same statewide title, same statewide description. **The queued `C` id was unwritable under the
@@ -1339,6 +1346,19 @@ course.** **Drill: when a statewide description is a NUMBERED COMPETENCY LIST in
 register, diff it against the sibling numbers in the family before quoting any item as a finding.** In
 `TPA`, `TPA3601`, `TPA4020`, `TPA4045`, `TPA3060` and `TPA3230` are visibly one drafting exercise.
 
+⚠⚠⚠ **AND READ ONE INSTITUTION'S DESCRIPTIONS AGAINST EACH OTHER, not only against the state (batch 225)**
+
+**Every test in this file compares a CARRIER to the STATE.** ⚠⚠ **Batch 225's headline finding was
+invisible to all of them:** UWF's `PET4434` and `PET4820` descriptions are identical but for four
+words, **and their statewide titles are completely different**, so no title-comparison or
+title/description test would ever fire.
+
+⚠ **It was found by reading the UWF PDF output directly and noticing two entries several lines
+apart.** **Standing move: when one institution carries several courses in a prefix, diff its
+descriptions against EACH OTHER.** **An institution's internal coherence is evidence in its own right
+— a matched pair, a deliberate sequence, or a copied description all show up this way and nowhere
+else.**
+
 ### ⚠⚠ SURVEY THE PREFIX FAMILY from the statewide CSV before writing — a standing move (batch 200)
 
 **One already-downloaded CSV and one filter on `ID_Century` paid three times in a single batch:**
@@ -1531,6 +1551,23 @@ exists and nobody carries it — **so UF took an available number for a genuine 
 |---|---|
 | **`INR3503`** | FAMU carries BOTH numbers and files them correctly → ✅ **CONVICTS** |
 | **`JOU4306`** | UF files everything else correctly and deviates on one number → ⚠ **EXONERATES** |
+
+⚠⚠⚠ **THIRD INSTANCE, and the pattern is now established: MISFILING BY NECESSITY (batch 225).**
+**UWF's `PET4434` and `PET4820` carry WORD-FOR-WORD IDENTICAL descriptions differing only in the age
+band** — *"developmentally appropriate sport and physical activities for [children and young
+adolescents | adolescents]"* — **a deliberate two-course sequence.** ⚠ **Neither statewide number
+means anything like it** (*Curriculum Integration Through Movement* and *Teaching Team Sports I*),
+**and Florida provides NO undergraduate number for sport pedagogy by age band** — the nearest,
+`PET6206`, is graduate.
+
+| Case | The gap the carrier was working around |
+|---|---|
+| `JOU4306` (UF) | no ADVANCED data journalism number exists |
+| `PET4434` + `PET4820` (UWF) | no sport-pedagogy-by-age-band number exists at undergraduate level |
+
+⚠⚠ **Settled handling for this shape: say there is NO "correct" number to go looking for, and lead
+with the transfer advice rather than the adjudication.** **The student's problem is real whoever is at
+fault, and "send the syllabus" is actionable where "your institution is misfiling" is not.**
 
 ⚠⚠ **So the control is not a misfiling detector; it tests whether the carrier is WORKING the
 state's scheme.** **A carrier that files everything else correctly and deviates on one number is
@@ -2141,6 +2178,18 @@ TRANSFERABLE"** — a deliberate classification of support and study-skills cour
 **Where it appears, the guide must say: do not count the credit toward a requirement at another institution,
 and ask an adviser how it counts toward degree progress, financial-aid satisfactory academic progress and
 Florida excess hours.** ⚠ **Read the field rather than assuming the boilerplate.**
+
+⚠⚠⚠ **AND IN SOME PREFIXES IT IS A COHERENT CLUSTER, not scattered exceptions (batch 225).**
+**`PET` has 13 NOT-AUTOMATICALLY-TRANSFERABLE rows among 122 active undergraduate numbers — about
+11%, against 2/171 in `CCJ` and 5/124 in `INR`.** ⚠⚠ **And they group:** athletic training clinical
+courses (`PET4672`, `PET4673`, `PET4624`, `PET4625`, `PET4627`), exercise testing and fitness
+assessment (`PET4550`, `PET4551`, `PET3385`), and `PET4765`.
+
+⚠ **That is the batch-215 licensed-profession logic surfacing in the transferability field:
+hands-on clinical and assessment coursework where a receiving programme must attest to competence
+ITSELF and cannot do so on another institution's credit.** **Where the stratified count is well above
+the ~2% norm, look for the cluster before calling it noise — and tell the reader which KIND of course
+is affected rather than listing numbers.**
 
 ⚠⚠⚠ **Strengthened (batch 204): it is NOT a support-coursework flag.** `CHM1024` was a
 1-credit study-skills corequisite, where the classification explained itself. **`PET4765` Theory and Methods
