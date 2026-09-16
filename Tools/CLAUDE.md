@@ -1201,6 +1201,34 @@ the embedded-date test (batch 208) because it needs no inference.
 curricula, apprenticeship-linked coursework, and anywhere a national body **issues** the syllabus rather
 than approving one.
 
+#### ⚠⚠⚠ THE COMMERCIAL-VENDOR VARIANT — and how to DETECT it (batch 226)
+
+**`CNT3112` is the same shape with a VENDOR in place of a national body, and it is probably the
+commoner form.** Convergent evidence:
+
+| Evidence | Detail |
+|---|---|
+| Statewide title | *Routing and Switching Essentials* — ⚠ the EARLIER Cisco CCNA module 2 name |
+| UWF title | *Switching, Routing and Wireless Essentials* — ⚠ the CURRENT module 2 name |
+| Description delta | UWF's is the statewide text **plus wireless** — ⚠⚠ **exactly the documented v6→v7 restructure** |
+| ⚠⚠⚠ The prerequisite course | **UWF titles `CNT3004` *"Introduction to Networks"*** — **the module 1 name**, and NOT the statewide title |
+
+**Two consecutive courses named after two consecutive vendor modules is not coincidence.**
+
+⚠⚠ **THE DETECTION METHOD, and it is cheap: when a course TITLE reads like a product or module
+name rather than a subject, check whether it matches a vendor certification track.** *"Routing and
+Switching Essentials"* is not how a university names a subject; it is how a vendor names a module.
+**Expect it in `CNT`, `CTS`, `CIS` and the Engineering Technology networking numbers.**
+
+⚠ **Write it as an INFERENCE with the evidence shown unless you have seen a syllabus**, and give the
+student a question rather than a claim — for `CNT3112`, *"ask which CCNA revision this course
+follows"*, which also tells them which exam to sit.
+
+⚠⚠⚠ **And the consequence INVERTS the usual transfer advice: what transfers is the
+CERTIFICATION, not the number.** With one public carrier the "same course offered" condition bites
+hard, **but a current vendor certification is recognised by every institution and employer in the
+field.** **Say so.**
+
 #### ⚠⚠ And check the CREDIT arrangement, because an external curriculum does not standardise credits (batch 209)
 
 **The national programme fixes the content; each institution still decides what to award for it.**
@@ -1294,7 +1322,7 @@ course-looking token against all five before quoting the field.**
 | Shape | Worked example | Tell | Handling |
 |---|---|---|---|
 | **Corrupt token** (209) | `ADV4802` — *"ADV U101C"* | fails `^[A-Z]{3}\s?\d{4}[A-Z]?$` | call it a data defect; send the reader to the catalogue |
-| ⚠⚠ **PLACEHOLDER** (222) | **`COM4301` — *"COM 2XXX Introduction to Communication Studies"*** | ⚠ **`2XXX` is a wildcard nobody filled in** | **the INTENT is legible and usually sound — state the intent, say the number does not exist** |
+| ⚠⚠ **PLACEHOLDER** (222, 226) | **`COM4301` — *"COM 2XXX"*; `CNT3004` — *"CSG X060"*** | ⚠ **a wildcard nobody filled in.** ⚠⚠ **TWO conventions: `2XXX` masks the century and keeps the level; `X060` masks the LEVEL and keeps the century — so look for `X` ANYWHERE in the numeric portion, not only as a trailing mask** | **the INTENT is legible and usually sound — state the intent, say the number does not exist** |
 | **Dangling: sector split** (221) | `PLA4554` — names two FCS-only numbers; UCF carries neither | the prefix splits FCS/SUS | name the REAL gate; expect it across the whole prefix |
 | ⚠⚠ **Dangling: single-carrier contribution** (222) | **`COM4120` — names `COM 3311`, carried by UCF ALONE, and UCF does not require it** | ⚠ **both carriers SUS; NO sector split** | same handling, but expect it ANYWHERE, not only in split prefixes |
 | **Local title in a statewide field** (200) | `COM4564` — *"COM4561 Social Media Content Development"* | the quoted title is not the statewide title | ⚠ **search by NUMBER**; and read it in reverse — it names the CONTRIBUTING institution |
@@ -1327,6 +1355,12 @@ entire two-course sequence, so it compounds:**
 lighting course is **ONE number with TWO suffixes across the two families** — so the suffix, not the
 number, separates them. And **`TPA4061` is carried by FIU, whose first course comes from the OTHER
 family** — so the families are not clean institutional blocs.
+
+⚠⚠ **GENERALISED (batch 226): an `OR` in a carrier's OWN prerequisite is a positive tell that the
+statewide numbering does not line up at that campus.** `CNT4416`'s statewide gate names `CNT4403`,
+`CIS4385` AND `CDA3101`; **UWF does not carry `CIS4385`, so its own prerequisite reads
+`(CIS 4385 OR CIS 4221) AND CNT 4403`.** ⚠ **Read these `OR` lists as free evidence — they mark
+exactly the points where a department has had to work around the state's numbering.**
 
 ⚠⚠⚠ **THE STRONGEST EVIDENCE THAT TWO FAMILIES ARE THE SAME COURSE IS AN INSTITUTION HEDGING
 ITS OWN PREREQUISITE ACROSS THEM.** UWF requires *"TPA 3020 OR TPA 3022"* for `TPA4021C` and
@@ -2001,7 +2035,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **FAU** | `catalog.fau.edu` — Coursedog SPA | ❌ **ANSWERED 2026-09-07: no public Coursedog catalog at that host.** The discovery endpoint returns *"does not have entity assigned"* — the host is registered but no catalog is attached, which is why every schoolId guess failed. **Stop attempting FAU via Coursedog.** |
 | **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. ⚠⚠ **It still accepts `Referer` alone, but the COURSE-SEARCH endpoint no longer does** — see the row below. **Discovery succeeding tells you nothing about whether a fetch will.** |
 | **⚠⚠ Coursedog auth (changed)** | `Referer:` **and** `Origin:` | ⚠⚠⚠ **CHANGED 2026-09-15 (batch 212).** Batch 167 recorded the gate as ONE header. **`Referer` alone now returns `401 Unauthorized`** on `/api/v1/cm/<school>/courses/search/$filters`; adding **`Origin: https://<catalog host>`** returns 200. Both are in the rebuilt `scratchpad/coursedog.py`. **If Coursedog 401s again, suspect another header before concluding the route is closed.** |
-| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | **SEVEN** institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not seven coincidences (batch 215, confirmed 220).** **FSW, TSC, CF, Polk State, Santa Fe, FAMU and St. Johns River State** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
+| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | **EIGHT** institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not seven coincidences (batch 215, confirmed 220).** **FSW, TSC, CF, Polk State, Santa Fe, FAMU, St. Johns River State and Florida Polytechnic** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
 | **FAMU** | `catalog.famu.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15.** Root 200 (56 KB); `content.php` and `search_advanced.php` empty 202s. Not Coursedog (bootstrap: *"does not exists"*). ⚠⚠ **FAMU ≠ FAU** — different institutions, both unreachable for different reasons. FAMU is a main carrier of the `RET` professional sequence, so eight batch-215 guides name the gap. |
 | **Polk State (PSC)** | `catalog.polk.edu` — **acalog (Modern Campus), `catoid=55`** | ⚠ **PARTIAL BLOCK, probed 2026-09-15.** Root answers 200 (53 KB) but **`content.php` and `search_advanced.php` both return empty 202s** — the same content-blocked pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). ⚠⚠ **Note the code: `PSC` is POLK STATE. Pensacola State is `PESC`** — a previous session probed `pensacolastate.edu` as "psc" and was reading the wrong school. **Check `inst_map.json` before trusting an obvious-looking three-letter code.** |
 | **USF** | `catalog.usf.edu` | ⚠ root 200 (75 KB) but **no course-description path exposed**; its only course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a route. |
@@ -2009,10 +2043,11 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **EFSC** | `catalog.easternflorida.edu/course-descriptions-information/<prefix>/` (and `/<prefix>.pdf`) | ✅ **NEW 2026-09-07 — CourseLeaf, same as UWF/FGCU/Broward/Valencia, existing tooling works unchanged.** Recovered `ADV2000C` and `COP3813C`. On CourseLeaf a prefix the college does not carry returns **202** — probe a prefix it definitely has. |
 | **Tallahassee (TSC)** | `catalog.tsc.fl.edu` | ⚠ **CORRECTION: never blocked — the college RENAMED.** TCC → Tallahassee State College; `catalog.tcc.fl.edu` 000 was a dead host, not a block. New host is live (386 KB) but acalog `content.php` returns empty 202s. **Lesson: follow redirects on the main domain before recording a block.** |
 | **IRSC** | `irsc.smartcatalogiq.com` | ⚠ **Live lead — SmartCatalogIQ, the same platform as the DSC build**, `/en/<year>/catalog/…`. Not yet exercised. |
-| **⚠ Inventory reliability** | `courses_2plus_institutions.csv` | ⚠⚠ **The institution list is a HYPOTHESIS, not evidence — five confirmed errors in four batches** (`MUG2101`, `TPA3230C`, `BOT4404C`, `ATT1120`, `COP3014C`, all wrongly listing UWF or a suffix nobody uses). Two patterns: an institution listed that carries the subject under a **different number**, and a **suffix** in the inventory that no institution actually uses — both consistent with the file recording the SCNS catalog rather than current offerings. **Verify against a live catalog before treating an institution as a source or asserting a count in a guide.** |
+| **⚠ Inventory reliability** | `courses_2plus_institutions.csv` | ⚠⚠ **The institution list is a HYPOTHESIS, not evidence — five confirmed errors in four batches** (`MUG2101`, `TPA3230C`, `BOT4404C`, `ATT1120`, `COP3014C`, all wrongly listing UWF or a suffix nobody uses). Two patterns: an institution listed that carries the subject under a **different number**, and a **suffix** in the inventory that no institution actually uses — both consistent with the file recording the SCNS catalog rather than current offerings. **Verify against a live catalog before treating an institution as a source or asserting a count in a guide.** ⚠⚠ **AND IT CAN CARRY A *PRIVATE* CARRIER'S TITLE AS THE COURSE NAME** — `COM2713` reads *"Writing for Strategic Communication"* (batch 222) and `CNT3112` reads *"Advanced Network Administration"* (batch 226), **both the private carrier's title rather than the statewide or public one.** **Two instances make it a recurring failure mode; tell the reader to register by NUMBER.** |
 | **⚠ FSU entry vs requirement text** | `registrar.fsu.edu/bulletin/...` | ⚠ A number followed by a period is **not** enough to locate a catalog entry — it also matches requirement prose (*"a grade of C or higher in COP 3014 or COP 3363."*). **Verify that a TITLE and a parenthesised credit value follow** (`COP 3014. Algorithm… (3).`). Cost a wrong result in batch 176. ⚠⚠ **AND THE IDENTIFIER MAY NOT BE CONTIGUOUS IN THE HTML (batch 223):** FSU splits it across tags — `<strong>INR </strong><strong>4124. </strong>` — **so a grep for `INR 4124` finds nothing although the entry is there.** **Strip tags and collapse whitespace BEFORE searching.** |
 | **FSCJ** | Coursedog — `scratchpad/coursedog.py fscj` (school `fscj_peoplesoft`, catalog `sGHd4uJQXFdgDUaffhTv`) | ✅ **SOLVED 2026-09-07 (batch 173).** Was "platform unidentified". ⚠ **22,693 courses — the largest Florida catalog found so far**, and `fetch()` caps at limit=5000, so a single call silently returns a PARTIAL result. **Page it** (`scratchpad/fscj_dump.py`) and cache to `scratchpad/fscj_courses.json`. |
 | **NWFSC** | Coursedog — `scratchpad/coursedog.py nwfsc` (school `nwfsc_banner_sql`, catalog `DGLrTHoh5uNIMFsdbzWf`) | ✅ **NEW 2026-09-07 (batch 173).** 1,781 courses, single page, cached in `scratchpad/nwfsc_courses.json`. Full descriptions and credits. Found because a 404 from `catalog.nwfsc.edu` returned a 1.1 MB body — **the body size was the tell.** |
+| **Florida Polytechnic (FLPOLY)** | `catalog.floridapoly.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-16 (batch 226).** Root 200 (63 KB), **55 acalog references**, `content.php` empty 202. ⚠⚠ **Florida's newest public university and exclusively STEM** — engineering and computing only — **so it will recur as a carrier across the computing and engineering prefixes, and it is unreadable.** Carrier of `CNT3004C` and `CNT4526`. |
 | **St. Johns River State (SJRSC)** | `catalog.sjrstate.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15 (batch 220).** Root answers 200 (49 KB) and the markup carries 33 acalog references and 21 `content.php` links; a `content.php` probe returns an **empty 202**. ✅ **The batch-215 presumption held exactly — identifying the platform answered it in TWO requests instead of a probing session.** Carrier of `CCJ3691`, so that guide names the gap. |
 | **Santa Fe** | `catalog.sfcollege.edu` | ⚠ **PLATFORM IDENTIFIED 2026-09-15 (batch 214): acalog (Modern Campus), and CONTENT-BLOCKED.** Root answers 200 (30 KB) but `content.php` and `search_advanced.php` both return **empty 202s** — the same pattern as FSW, TSC, CF and Polk State. Not Coursedog. **Root-reachable, content-blocked; treat as unavailable rather than unidentified.** |
 | **UCF (confirmed route)** | Kuali — `ucf.kuali.co` | ✅✅ **RE-CONFIRMED 2026-09-15 (batch 214).** `/api/v1/catalog/public/catalogs/` → pick by `_id` (2026-27 undergraduate = `688b8960ddeb091644d2b1ca`) → `/api/v1/catalog/courses/<catalogId>` (3,676 courses) → detail at `/api/v1/catalog/course/<catalogId>/<pid>`. ⚠ **The detail endpoint needs `pid`, not `id`.** ⚠⚠ **It is the ONLY Florida source reporting laboratory hours as a structured field (`labStudioFieldWorkHours`)** — which settled whether `BOT4850` has a lab. Go here whenever a lab component is in doubt. |
