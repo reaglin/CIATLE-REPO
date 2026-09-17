@@ -3090,9 +3090,14 @@ NOT hold for the anatomy sequence, and the credit column says so:**
 | `BSC2085C` | **4** | 7 | both, integrated |
 
 ⚠⚠⚠ **19 institutions carry the bare id AND the `L`; SEVEN carry the `C`; and NO institution
-carries both forms.** That is the split-family shape at its cleanest — perfectly disjoint carrier
-sets. **`BSC2085` alone does not satisfy a nursing prerequisite, because nursing requires the
-laboratory.** Both career-path variant notes now say so.
+carries both forms.** That is the split-family shape at its cleanest — perfectly disjoint carrier sets.
+
+✅✅ **RESOLVED BY RON, 2026-09-17, and the first framing of this was WRONG:** *"In both cases the
+outcomes are the same… For transfer Classroom + Lab (L) = completed just as completing as combined."*
+**So this is not a defect and not a transfer risk.** I had written that `BSC2085` alone does not
+satisfy a nursing prerequisite; **that overstated it and is corrected on the live path.** The notes now
+say the two packagings are equivalent and tell the reader to register for whichever pair their own
+catalogue lists. See the PACKAGING IS NOT DIVERGENCE rule in `CLAUDE.md`.
 
 ⚠ **So "the bare and the C id are the same course" must be checked against the CREDITS before it is
 asserted** — it is true for MAC2311 and false for BSC2085.

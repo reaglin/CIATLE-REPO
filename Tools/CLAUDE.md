@@ -998,6 +998,60 @@ carries no laboratory and may satisfy only part of a general-education science r
 guide AND in the prerequisite string, which is what a queue reader sees first. Instances: `AST2037`
 (batch 180), `BSC1050` (batch 182).
 
+### ✅✅✅ PACKAGING IS NOT DIVERGENCE — lecture+lab EQUALS the combined course (Ron, 2026-09-17)
+
+**Read this BEFORE writing any warning about a bare/`C`/`L` family.** Ron's words:
+
+> *"Some institutions use just a classroom delivery, others break these up into classroom + lab. **In
+> both cases the outcomes are the same.** Other than a notation of the approach used, the distinction
+> of the approach is not important and **transferability still works. For transfer Classroom + Lab (L)
+> = completed just as completing as combined.** … There are very few fixed rules, colleges and
+> universities are given leeway in how they approach the courses. **This is by design as it allows for
+> innovation in approaches** (even though most simply copy the approaches previously used)."*
+
+⚠⚠⚠ **This corrects a bias this file has carried for a long time.** The `C`-suffix section
+below catalogues four shapes and reads, cumulatively, as though a suffix difference were usually a
+problem. **For the split-family shape it is NOT a problem at all** — it is two deliveries of one
+course, and the state's articulation treats them as equivalent.
+
+**Worked case, and it is the cleanest in the catalogue — `BSC2085` (batch 235):**
+
+| | credits | carriers |
+|---|---|---|
+| `BSC2085` + `BSC2085L` | 3 + 1 | **19 institutions** |
+| `BSC2085C` | 4 | **7 institutions** |
+
+**No institution carries both forms** — perfectly disjoint. ✅ **A student who completes the lecture
+and the lab has completed the same thing as a student who completed the `C` course**, and transfers
+as such.
+
+**What a guide should therefore say:**
+
+| ❌ Do NOT write | ✅ Write |
+|---|---|
+| *"`BSC2085` alone does not satisfy the prerequisite"* | *"two equivalent packagings; register for whichever pair your catalogue lists"* |
+| a divergence block | **a notation of the approach**, one sentence |
+| *"check before you register or you may not qualify"* | *"lecture + lab completes exactly as the combined form does"* |
+
+⚠ **The ONE thing still worth saying** is the practical one: **where your institution splits the
+course, enrol in BOTH halves** — they are usually corequisites and the registration is the only thing
+the student has to get right.
+
+⚠⚠ **And the general principle, which governs more than suffixes:** **Florida gives institutions
+LEEWAY BY DESIGN.** Credit values, packaging, delivery mode and sequencing vary because the system
+intends them to, so that departments can innovate. **So before writing any variation up as a defect,
+ask whether it is simply a permitted choice.** The genuine problems in this file — one number carrying
+two SUBJECTS, misfiling, a prerequisite that resolves nowhere — are of a different kind: they mislead
+about CONTENT. **Packaging does not.**
+
+#### ⚠ And fix errors as you find them (same instruction)
+
+> *"Also simply fix errors as you spot them."*
+
+**Do not queue a factual error behind a decision.** Where something the site states is wrong — a
+carrier count, a stale note, a warning that overstates — **correct it and say so in the report.**
+`REVIEW_QUEUE.md` is for things that need Ron's JUDGEMENT, not for things that are simply wrong.
+
 ### ⚠⚠ FOUR different shapes behind a `C` suffix — do not conflate them (batch 183, extended 219)
 
 | Shape | Example | What it means | What transfers |
