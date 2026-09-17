@@ -51,14 +51,28 @@ UA = {'User-Agent': 'Mozilla/5.0'}
 # IPEDS AWLEVEL -> the award a student actually receives. This is the "major"
 # level in Ron's terms; the CIP above it is the "programme".
 AWARD = {
-    '1': 'Certificate (<1 year)', '2': 'Certificate (1-2 years)',
-    '3': 'Associate', '4': 'Post-baccalaureate certificate',
-    '5': "Bachelor's", '6': "Post-master's certificate", '7': "Master's",
-    '17': 'Doctorate (research/scholarship)',
-    '18': 'Doctorate (professional practice)', '19': 'Doctorate (other)',
-    '20': 'Certificate (2-4 years)', '21': 'Certificate (<12 weeks)',
-    '22': 'Certificate (12 weeks-1 year)',
+    # ⚠ Verified against the official C2023_A dictionary (Frequencies sheet), NOT guessed.
+    # An earlier hand-written map had 20 and 21 SWAPPED and mislabelled 4, 6 and 8.
+    '1':  'Certificate (<1 year)',
+    '2':  'Certificate (1-2 years)',
+    '3':  "Associate",
+    '4':  'Certificate (2-4 years)',
+    '5':  "Bachelor's",
+    '6':  'Postbaccalaureate certificate',
+    '7':  "Master's",
+    '8':  "Post-master's certificate",
+    '17': "Doctorate (research/scholarship)",
+    '18': 'Doctorate (professional practice)',
+    '19': 'Doctorate (other)',
+    '20': 'Certificate (<12 weeks)',
+    '21': 'Certificate (12 weeks-1 year)',
 }
+# ⚠⚠ AGGREGATE rows. 12 "Degrees total", 13 "Certificates below the baccalaureate total",
+# 14 "Certificates above the baccalaureate total", 15 "Degrees/certificates total" are SUMS
+# of the rows above. They are absent from the 2023 file, but including one would double-count
+# every completion at that institution, so they are refused explicitly rather than trusted.
+AGGREGATE = {'12', '13', '14', '15'}
+
 # CONTROL: 1 public, 2 private not-for-profit, 3 private for-profit.
 # ⚠ The project's scope rule is PUBLIC INSTITUTIONS ONLY (Ron, 2026-09-11).
 PUBLIC = '1'
@@ -106,7 +120,7 @@ def completions(fl):
     out = collections.defaultdict(list)
     for r in _rows(COMP, 'C%d_a.csv' % YEAR):
         u = r['UNITID']
-        if u in fl and r.get('MAJORNUM') == '1':
+        if u in fl and r.get('MAJORNUM') == '1' and r['AWLEVEL'] not in AGGREGATE:
             out[r['CIPCODE']].append(
                 (u, AWARD.get(r['AWLEVEL'], 'level ' + r['AWLEVEL']),
                  int(r.get('CTOTALT') or 0)))

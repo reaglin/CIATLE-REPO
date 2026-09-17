@@ -8,6 +8,26 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⚠⚠ REDEPLOY NEEDED — PROGRAMS (2026-09-17)
+
+**Migration `AddPrograms`** (four tables: `Programs`, `ProgramCips`, `CareerPathPrograms`,
+`InstitutionAwards`), a new seed, two pages, and Programs coming off "Coming soon" in the section
+nav. **Deploy without `-SkipMigrations`.**
+
+| | |
+|---|---|
+| Seed files | `Data/Seed/programs.json` and `Data/Seed/institution_awards.json`, both shipped with the build like `cip.json` — no `/etc` step |
+| Data | 3 programmes; **6,427 IPEDS award rows** across 613 CIP codes, Florida public institutions, 2023 |
+| Pages | `/programs`, `/programs/{slug}` — both added to the static export |
+
+✅ Verified on the dev database: migration applies, seed runs and is idempotent, all pages 200,
+unknown slug 404, and the Nursing page correctly lists **78** institutions including every
+technical college.
+
+⚠ This deploy also carries the **career-page "Where you can take these courses"** section from
+earlier today.
+
+
 ### ⚠ REDEPLOY NEEDED for the career-page "Where you can take these courses" section (2026-09-17)
 
 **New on the path page:** the Florida institutions that teach a path's courses, computed live from

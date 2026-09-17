@@ -1,0 +1,52 @@
+{
+ "note": "Programmes are curated. CIP codes are PREFIXES and are matched as such; many CIP codes are supported by more than one programme.",
+ "programs": [
+  {
+   "slug": "nursing",
+   "name": "Nursing",
+   "description": "Nursing programmes prepare people to care for patients across every setting Florida has, from a practical-nursing certificate at a technical college through an associate degree leading to RN licensure to a baccalaureate and beyond. One programme, several entry points.",
+   "degreesNote": "Nursing encompasses several degrees, and the level you enter at is the real decision. A PRACTICAL NURSING certificate leads to LPN licensure and is the fastest route into paid clinical work. An ASSOCIATE degree leads to RN licensure through NCLEX-RN. A BACCALAUREATE (BSN) leads to the same licence by a longer route, and is what many hospitals prefer and what graduate study requires. ⚠ An RN-to-BSN programme is for nurses who are ALREADY licensed and does not lead to initial licensure. Many Florida institutions offer more than one of these.",
+   "sortOrder": 10,
+   "cips": [
+    {
+     "cipCode": "51.38",
+     "note": "Registered nursing, nursing administration, research and clinical nursing — the A.S. and BSN routes to RN licensure."
+    },
+    {
+     "cipCode": "51.39",
+     "note": "Practical and vocational nursing, and nursing assistants — the LPN and CNA routes. ⚠ Included deliberately: a school with only an LPN programme has a nursing programme."
+    }
+   ]
+  },
+  {
+   "slug": "engineering-technology",
+   "name": "Engineering Technology",
+   "description": "Engineering technology programmes prepare technicians and technologists who build, install, test and maintain what engineers design — electronics, mechanical systems, industrial automation, quality, drafting and civil works. It is the largest applied-technical family in the Florida College System.",
+   "degreesNote": "Engineering Technology is mostly an ASSOCIATE-level family in Florida, with a smaller number of BACHELOR degrees and a large number of short certificates that stack toward them. ⚠⚠ It is NOT the same as an ENGINEERING degree, and the difference is worth two years: under s. 471.013(1)(a), Florida Statutes, a graduate of an approved engineering curriculum needs four years of experience before the PE examination, while a graduate of an approved engineering technology curriculum needs six. If a PE licence is your goal, read the Mechanical Engineer career path first.",
+   "sortOrder": 20,
+   "cips": [
+    {
+     "cipCode": "15.",
+     "note": "The whole Engineering Technologies series — 32 CIP codes are awarded in Florida, from sub-year certificates to master’s degrees."
+    }
+   ]
+  },
+  {
+   "slug": "mechanical-engineering",
+   "name": "Mechanical Engineering",
+   "description": "Mechanical engineering programmes teach the analysis of forces, motion, energy and materials, and the design of the machines and systems that use them. It is the broadest engineering discipline and the one that closes the fewest doors.",
+   "degreesNote": "Here the programme and the major are the same thing: a Bachelor of Science in Mechanical Engineering, with master’s and doctoral degrees above it. ⚠ For Professional Engineer licensure the degree must come from a programme accredited by ABET’s ENGINEERING commission — check before enrolling, because an engineering TECHNOLOGY accreditation adds two years to the experience requirement.",
+   "sortOrder": 30,
+   "cips": [
+    {
+     "cipCode": "14.19",
+     "note": "Mechanical Engineering — the degree itself."
+    },
+    {
+     "cipCode": "14.01",
+     "note": "General engineering, where several Florida institutions place a first year common to all engineering majors."
+    }
+   ]
+  }
+ ]
+}

@@ -90,6 +90,7 @@ public sealed class StaticSiteExporter
         // front door needs seeding -- but a path with no published content still leaves
         // /careers itself worth exporting.
         Enqueue("/careers");
+        Enqueue("/programs");
         foreach (var (id, hasGuide) in courseScope.OrderBy(kv => kv.Key))
         {
             Enqueue($"/courses/{id}");
@@ -251,6 +252,7 @@ public sealed class StaticSiteExporter
     {
         if (path == "/" || path == "/browse" || path.StartsWith("/browse/")) return true;
         if (path == "/careers" || path.StartsWith("/careers/")) return true;
+        if (path == "/programs" || path.StartsWith("/programs/")) return true;
         var segs = path.Trim('/').Split('/');
         if (segs.Length >= 2 && segs[0] == "courses")
         {

@@ -9,6 +9,8 @@
     <Content Update="Data\Seed\edu_institutions.json" CopyToOutputDirectory="PreserveNewest" />
     <Content Update="Data\Seed\taxonomy.json" CopyToOutputDirectory="PreserveNewest" />
     <Content Update="Data\Seed\cip.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Update="Data\Seed\programs.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Update="Data\Seed\institution_awards.json" CopyToOutputDirectory="PreserveNewest" />
     <Content Update="EmailTemplates\*.html" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 

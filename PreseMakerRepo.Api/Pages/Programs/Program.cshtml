@@ -1,0 +1,58 @@
+@page "/programs/{slug}"
+@model PreseMakerRepo.Api.Pages.Programs.ProgramModel
+@{ ViewData["Title"] = Model.Program.Name; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Programs/Index">Programs</a></li>
+        <li class="breadcrumb-item active">@Model.Program.Name</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-2">@Model.Program.Name</h1>
+<p class="lead" style="max-width: 60rem;">@Model.Program.Description</p>
+
+@if (!string.IsNullOrWhiteSpace(Model.Program.DegreesNote))
+{
+    @* The degrees inside the program. This is the decision a student actually faces,
+       so it sits above the school list rather than below it. *@
+    <div class="alert alert-light border" style="max-width: 60rem;">
+        <div class="fw-semibold mb-1">The degrees this program covers</div>
+        @Model.Program.DegreesNote
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Program.BodyHtml))
+{
+    <div class="mb-4" style="max-width: 60rem;">@Html.Raw(Model.Program.BodyHtml)</div>
+}
+
+@if (Model.Schools.Any())
+{
+    <h2 class="h5 mt-4 mb-1">Florida public institutions offering this program</h2>
+    <p class="text-muted small mb-3" style="max-width: 60rem;">
+        @Model.Schools.Count institutions awarded a credential in this field in @Model.AwardYear,
+        at these levels: <strong>@string.Join(", ", Model.AwardLevels)</strong>.
+        <strong>A school appears here if it awards anything in the field</strong>, however limited
+        its offering &mdash; a technical college teaching only practical nursing has a nursing
+        program. Listed alphabetically, not ranked.
+    </p>
+    <div class="row row-cols-1 row-cols-md-2 g-2 mb-3">
+        @foreach (var s in Model.Schools)
+        {
+            <div class="col">
+                <div class="border rounded py-2 px-3 h-100">
+                    <div class="fw-semibold">@s.Name</div>
+                    <div class="small text-muted">@string.Join(" · ", s.Awards)</div>
+                </div>
+            </div>
+        }
+    </div>
+    <p class="text-muted small">
+        Source: federal IPEDS completions data for @Model.AwardYear, first majors only.
+        &#9888; It records what was <em>awarded</em>, which is strong evidence of what is offered
+        but can lag a newly launched program by a year or two. Check the institution&rsquo;s own
+        catalog before applying.
+    </p>
+}

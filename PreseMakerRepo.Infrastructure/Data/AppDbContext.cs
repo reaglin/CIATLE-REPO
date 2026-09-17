@@ -31,6 +31,10 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<CipNode> CipNodes => Set<CipNode>();
     public DbSet<CareerPath> CareerPaths => Set<CareerPath>();
     public DbSet<CareerPathCip> CareerPathCips => Set<CareerPathCip>();
+    public DbSet<Core.Models.Program> Programs => Set<Core.Models.Program>();
+    public DbSet<ProgramCip> ProgramCips => Set<ProgramCip>();
+    public DbSet<CareerPathProgram> CareerPathPrograms => Set<CareerPathProgram>();
+    public DbSet<InstitutionAward> InstitutionAwards => Set<InstitutionAward>();
     public DbSet<CareerPathCourse> CareerPathCourses => Set<CareerPathCourse>();
     public DbSet<CareerPathSource> CareerPathSources => Set<CareerPathSource>();
 

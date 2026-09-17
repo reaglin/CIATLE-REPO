@@ -1,22 +1,54 @@
 @page "/programs"
+@model PreseMakerRepo.Api.Pages.Programs.IndexModel
 @{
     ViewData["Title"] = "Programs";
-    ViewData["NoIndex"] = true;
+    ViewData["NoIndex"] = Model.Programs.Count == 0;
 }
 
 <partial name="_SectionNav" model='"programs"' />
 
-<div class="mx-auto" style="max-width: 720px;">
-    <span class="badge text-bg-secondary mb-2">Coming soon</span>
-    <h1 class="h3">Programs</h1>
-    <p class="lead">
-        Associate and bachelor's degrees and certificates at Florida colleges and universities — with the courses
-        each program requires, linked to their curriculum guides.
-    </p>
-    <p>
-        Program information will come from each school's own catalog, so a program page will show what that
-        institution actually requires: general education, core courses and electives.
-    </p>
-    <p class="mb-4">In the meantime, every course is listed under Courses.</p>
-    <a class="btn btn-primary" asp-page="/Browse/Index">Browse courses</a>
-</div>
+<h1 class="h4 mb-1">Programs</h1>
+<p class="text-muted mb-4" style="max-width: 60rem;">
+    A <strong>program</strong> is a field of study that leads somewhere and is offered by Florida
+    schools. It sits one level above a degree: <em>Nursing</em> is one program covering the practical
+    nursing certificate, the associate degree and the BSN. Each page says which degrees it covers and
+    which Florida public institutions award them.
+</p>
+
+@if (!Model.Programs.Any())
+{
+    <div class="alert alert-info">
+        <span class="badge text-bg-secondary">In progress</span>
+        <span class="ms-1">No programs are published yet.</span>
+    </div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
+        @foreach (var p in Model.Programs)
+        {
+            <div class="col">
+                <a asp-page="/Programs/Program" asp-route-slug="@p.Slug" class="card h-100 text-decoration-none">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <span class="fw-semibold">@p.Name</span>
+                            @if (p.SchoolCount > 0)
+                            {
+                                <span class="badge text-bg-light text-muted ms-2 text-nowrap">@p.SchoolCount schools</span>
+                            }
+                        </div>
+                        <p class="small text-body mb-0 mt-2">@p.Description</p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+    @if (Model.AwardYear > 0)
+    {
+        <p class="text-muted small">
+            School counts are Florida public institutions that awarded a credential in the program&rsquo;s
+            fields in @Model.AwardYear (federal IPEDS completions data). A school that awards any
+            credential in the field is counted, however limited its offering.
+        </p>
+    }
+}
