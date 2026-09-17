@@ -369,7 +369,7 @@
    "title": "ENGINEERING",
    "definition": "Instructional programs that prepare individuals to apply mathematical and     scientific principles to the solution of practical problems.",
    "parent": null,
-   "childCount": 14
+   "childCount": 16
   },
   {
    "code": "14.01",
@@ -381,9 +381,27 @@
    "childCount": 0
   },
   {
+   "code": "14.02",
+   "level": 4,
+   "title": "Aerospace, Aeronautical, and Astronautical/Space Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
    "code": "14.05",
    "level": 4,
    "title": "Biomedical/Medical Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.07",
+   "level": 4,
+   "title": "Chemical Engineering",
    "definition": "",
    "examples": "",
    "parent": "14",
@@ -503,7 +521,7 @@
    "title": "ENGINEERING/ENGINEERING-RELATED TECHNOLOGIES/TECHNICIANS",
    "definition": "Instructional programs that prepare individuals to apply basic engineering principles and technical skills in support of engineering and related projects or to prepare for engineering-related fields.",
    "parent": null,
-   "childCount": 9
+   "childCount": 11
   },
   {
    "code": "15.00",
@@ -533,6 +551,15 @@
    "childCount": 0
   },
   {
+   "code": "15.03",
+   "level": 4,
+   "title": "Electrical/Electronic Engineering Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
    "code": "15.04",
    "level": 4,
    "title": "Electromechanical Technologies/Technicians",
@@ -545,6 +572,15 @@
    "code": "15.06",
    "level": 4,
    "title": "Industrial Production Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.07",
+   "level": 4,
+   "title": "Quality Control and Safety Technologies/Technicians",
    "definition": "",
    "examples": "",
    "parent": "15",
@@ -1337,7 +1373,16 @@
    "title": "CONSTRUCTION TRADES",
    "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills in the building, inspecting, and maintaining of structures and related properties.",
    "parent": null,
-   "childCount": 1
+   "childCount": 2
+  },
+  {
+   "code": "46.03",
+   "level": 4,
+   "title": "Electrical and Power Transmission Installers",
+   "definition": "",
+   "examples": "",
+   "parent": "46",
+   "childCount": 0
   },
   {
    "code": "46.04",
@@ -1354,12 +1399,30 @@
    "title": "MECHANIC AND REPAIR TECHNOLOGIES/TECHNICIANS",
    "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills in the adjustment, maintenance, part replacement, and repair of tools, equipment, and machines.",
    "parent": null,
-   "childCount": 1
+   "childCount": 3
   },
   {
    "code": "47.02",
    "level": 4,
    "title": "Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR)",
+   "definition": "",
+   "examples": "",
+   "parent": "47",
+   "childCount": 0
+  },
+  {
+   "code": "47.03",
+   "level": 4,
+   "title": "Heavy/Industrial Equipment Maintenance Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "47",
+   "childCount": 0
+  },
+  {
+   "code": "47.06",
+   "level": 4,
+   "title": "Vehicle Maintenance and Repair Technologies/Technicians",
    "definition": "",
    "examples": "",
    "parent": "47",
@@ -1467,7 +1530,7 @@
    "title": "HEALTH PROFESSIONS AND RELATED PROGRAMS",
    "definition": "Instructional programs that prepare individuals to practice as licensed professionals and assistants in the health care professions and related clinical sciences and administrative and support services.",
    "parent": null,
-   "childCount": 14
+   "childCount": 15
   },
   {
    "code": "51.00",
@@ -1482,6 +1545,15 @@
    "code": "51.02",
    "level": 4,
    "title": "Communication Disorders Sciences and Services",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.06",
+   "level": 4,
+   "title": "Dental Support Services and Allied Professions",
    "definition": "",
    "examples": "",
    "parent": "51",
@@ -1601,7 +1673,7 @@
    "title": "BUSINESS, MANAGEMENT, MARKETING, AND RELATED SUPPORT SERVICES",
    "definition": "Instructional programs that prepare individuals to perform managerial, technical support, and applied research functions related to the operation of commercial and non-profit enterprises and the buying and selling of goods and services.",
    "parent": null,
-   "childCount": 14
+   "childCount": 15
   },
   {
    "code": "52.01",
@@ -1724,6 +1796,15 @@
    "code": "52.17",
    "level": 4,
    "title": "Insurance",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.20",
+   "level": 4,
+   "title": "Construction Management",
    "definition": "",
    "examples": "",
    "parent": "52",

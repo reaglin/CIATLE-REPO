@@ -8,6 +8,29 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⚠⚠ REDEPLOY NEEDED BEFORE THE MANUFACTURING/ENGINEERING PATHS CAN PUBLISH (2026-09-17)
+
+**`cip.json` grew from 198 to 207 nodes** when the top-50 career-path queue was built: nine
+4-digit CIP groups were added that the evidence rule had missed — electrical/electronic
+engineering technology, quality control, industrial maintenance, vehicle and aviation
+maintenance, electrical installers, construction management, aerospace engineering, chemical
+engineering and dental support services.
+
+⚠ **The live site has the 198-node version.** The seed file ships inside the build, so a path
+filed on any of the nine will be **rejected 422 (`CIP_NODE_NOT_FOUND`)** until the site is
+redeployed. **The two published paths are unaffected** — they use nodes that are already live.
+
+**So: redeploy before pushing the first manufacturing or engineering path.** Ordinary
+`.\Deployment\deploy-update.ps1`; the migrations are already applied, and `CipSeed` will add the
+nine on startup and report them.
+
+⚠ **Why the nine were missing is worth knowing, because it will recur:** the course-CIP evidence
+comes from FIU, FAU and NWFSC, and the first two are universities. Universities do not teach
+machining, welding, HVAC or industrial maintenance — the state colleges do, and they publish no
+CIP codes at all. **The evidence rule is therefore blind to the whole career-and-technical
+education space**, which is exactly the sponsor emphasis.
+
+
 ### ⚠⚠ WRITTEN AND AWAITING DEPLOY — Career Paths and the CIP tree (2026-09-17)
 
 **TWO migrations — `AddCipAndCareerPaths`** (four tables: `CipNodes`, `CareerPaths`,

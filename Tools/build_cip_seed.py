@@ -81,11 +81,39 @@ OUT = os.path.join(HERE, '..', 'PreseMakerRepo.Api', 'Data', 'Seed', 'cip.json')
 # carry -- it would be unreachable by browsing -- so these are added DELIBERATELY,
 # with the reason on the record, rather than by loosening the evidence rule.
 EXTRA_GROUPS = {
+    # Lawyer path (2026-09-17)
     '22.00': 'Non-Professional Legal Studies -- the undergraduate legal-studies '
              'major; 1.4% of law-school applicants (LSAC). Florida public '
              'institutions run it, but no CIP-publishing catalogue tags its courses.',
     '45.04': 'Criminology -- 1.3% of law-school applicants (LSAC), and a major '
              'Florida discipline in its own right.',
+
+    # ⚠⚠⚠ The top-50 career-path queue (2026-09-17), and the nine of them that
+    # were missing expose a BIAS in the evidence rule rather than a gap in
+    # Florida. The course-CIP evidence comes from FIU, FAU and NWFSC -- and the
+    # first two are UNIVERSITIES. Universities do not teach machining, welding,
+    # HVAC, auto or industrial maintenance; the STATE COLLEGES do, and they
+    # publish no CIP codes at all. So the whole career-and-technical education
+    # space is invisible to a rule built on those tags -- which is precisely the
+    # manufacturing emphasis the site's sponsors care about.
+    '15.03': 'Electrical/Electronic Engineering Technologies -- the EET/ETI '
+             'prefixes, among the largest guide-less blocks on the site.',
+    '15.07': 'Quality Control and Safety Technologies -- quality inspection is a '
+             'core manufacturing occupation.',
+    '47.03': 'Heavy/Industrial Equipment Maintenance -- industrial maintenance '
+             'technician, taught at state colleges statewide.',
+    '47.06': 'Vehicle Maintenance and Repair -- automotive and AVIATION '
+             'maintenance, the latter a major Florida employer.',
+    '46.03': 'Electrical and Power Transmission Installers -- the electrician '
+             'apprenticeship route.',
+    '52.20': 'Construction Management -- a large Florida baccalaureate field.',
+    # Two engineering fields the university evidence still missed:
+    '14.02': 'Aerospace Engineering -- ⚠ absent from the evidence despite the '
+             'Space Coast being the signature Florida engineering employer.',
+    '14.07': 'Chemical Engineering -- a standard Florida SUS engineering major.',
+    # Health:
+    '51.06': 'Dental Support Services -- dental hygiene, an A.S. programme at '
+             'state colleges across Florida.',
 }
 
 

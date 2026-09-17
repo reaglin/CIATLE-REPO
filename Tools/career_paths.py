@@ -31,6 +31,7 @@ qualify -- NCLEX-RN eligibility runs through an APPROVED PROGRAMME, not through
 accumulated transferable credit. Where that is true, say it there.
 """
 import argparse
+import csv
 import io
 import json
 import os
@@ -302,6 +303,49 @@ def cmd_push(args):
     return 0
 
 
+def cmd_queue(args):
+    """The top-50 queue with, per row, whether it is authored and whether it is live."""
+    qp = os.path.join(PATHS_DIR, "QUEUE.csv")
+    if not os.path.exists(qp):
+        print("no queue at %s" % os.path.relpath(qp, HERE))
+        return 1
+    rows = list(csv.DictReader(io.open(qp, encoding="utf-8-sig")))
+
+    have = set(authored())
+    live = set()
+    try:
+        r = requests.get("%s/api/v1/career-paths" % BASE_URL, timeout=30)
+        if r.status_code == 200:
+            live = {i["slug"] for i in r.json()["data"]}
+    except requests.exceptions.RequestException:
+        print("(could not reach %s -- showing authored state only)" % BASE_URL)
+
+    want = (args.cluster or "").upper()
+    shown = 0
+    for row in rows:
+        if want and row["cluster"] != want:
+            continue
+        slug = row["slug"]
+        state = "LIVE" if slug in live else ("drafted" if slug in have else "")
+        flag = "" if row["cip_seeded"] == "yes" else "  ⚠ CIP not seeded"
+        print("%3s %-4s %-36s %-7s %-9s %-8s%s"
+              % (row["rank"], row["cluster"], row["name"][:36], row["cip"], row["soc"],
+                 state, flag))
+        shown += 1
+
+    done = sum(1 for r in rows if r["slug"] in live)
+    print()
+    print("%d of %d shown. %d live, %d drafted, %d not started."
+          % (shown, len(rows), done,
+             sum(1 for r in rows if r["slug"] in have and r["slug"] not in live),
+             sum(1 for r in rows if r["slug"] not in have)))
+    # The emphasis Ron set, kept visible so it does not quietly erode.
+    me = [r for r in rows if r["cluster"] in ("ENG", "MFG")]
+    print("manufacturing + engineering: %d of %d queued, %d live."
+          % (len(me), len(rows), sum(1 for r in me if r["slug"] in live)))
+    return 0
+
+
 def cmd_list(args):
     try:
         r = requests.get("%s/api/v1/career-paths" % BASE_URL, timeout=30)
@@ -336,6 +380,10 @@ def main():
 
     l = sub.add_parser("list", help="what is published now")
     l.set_defaults(func=cmd_list)
+
+    q = sub.add_parser("queue", help="the top-50 queue and how far through it we are")
+    q.add_argument("--cluster", help="ENG MFG HLT CMP BUS LAW EDU PUB")
+    q.set_defaults(func=cmd_queue)
 
     args = ap.parse_args()
     if not getattr(args, "func", None):
