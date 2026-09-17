@@ -3037,9 +3037,43 @@ paths.
 where the harm concentrates, and ten republishes is a small, checkable batch. **The `FFP2120C`
 row needs its own answer** — a guide on an id no institution carries.
 
-⚠ **Cause, for the record:** the queue was built from `courses_2plus_institutions.csv`, which
-records the SCNS catalogue rather than current offerings, and `CLAUDE.md` already warns that its
-suffixes are unreliable. **This is that warning showing up at scale.**
+### ⚠⚠⚠ ROOT CAUSE FOUND (2026-09-17) — the master inventory carries the WRONG FORM
+
+**`courses_2plus_institutions.csv` contains `MAC2311C` and does NOT contain `MAC2311`.** Same for
+`STA2023`/`STA2023C`, `ENC1101`/`ENC1101C`, `BSC2085`/`BSC2085C`.
+
+```
+  MAC2311    0 rows in the inventory        MAC2311C   1 row
+  STA2023    0 rows                          STA2023C   1 row
+  ENC1101    0 rows                          ENC1101C   1 row
+```
+
+⚠⚠ **So the queue could NEVER have produced a guide on the right id.** Every guide in this item
+was written correctly from a defective worklist. **3,571 inventory ids have no bare twin in the
+inventory at all** — most legitimately (`C`-only courses), but the subset measured above is not.
+
+⚠ **And it blocks the fix through the normal route:** `queue_mgr.py add` refuses any course absent
+from that inventory, so `MAC2311` **cannot be queued** by the standard command. That is why
+path-derived demand now comes from `career_paths.py needs` instead, which reads the ids the paths
+actually name.
+
+⚠⚠ **Regenerating the inventory from the SCNS flat file is the real repair** and would
+prevent recurrence across the remaining ~800 queued rows. **That is a separate decision** — it
+changes the worklist the whole project has been running on.
+
+### ✅ PROGRESS (2026-09-17)
+
+- **Ron's ruling:** *"MAC2311 and MAC2311C are the same. MAC2311(C) should have a guide. If you run
+  into a course that spans a major associated to the career path the rule is to complete the
+  guide."*
+- ✅ **909 courses LISTED** across `MAC MAP MAT STA ENC` from the flat file (0 failed), so
+  `MAC2311`, `MAC2312`, `MAC2313`, `MAP2302`, `STA2023`, `ENC1101`, `MAC1105`, `MAC2233` and
+  `MAT1033` now exist as pages with real titles and full offering lists. **Both live career paths
+  re-pushed with no unlisted courses remaining.**
+- ⏳ **Guides still owed on the four courses published paths name:** `ENC1101` and `STA2023` (each
+  on TWO paths), `BSC2085`, `BSC2086`. Run `python career_paths.py needs`.
+- ⏳ **Still open:** what happens to the 81 guides sitting on minority ids, and the `FFP2120C`
+  guide on an id no institution carries.
 
 ## Resolved
 

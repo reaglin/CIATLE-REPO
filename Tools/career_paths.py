@@ -351,6 +351,64 @@ def cmd_queue(args):
     return 0
 
 
+def cmd_needs(args):
+    """Courses a published path names that have NO guide -- the work paths generate.
+
+    Ron, 2026-09-17: "If you run into a course that spans a major associated to
+    the career path the rule is to complete the guide... they will be queued and
+    generated as part of the career path process. You will find more courses this
+    way to queue for guides."
+
+    ⚠ This does NOT go through queue_mgr.py, and deliberately. `queue_mgr add`
+    refuses any course absent from courses_2plus_institutions.csv, and that
+    inventory is exactly what caused REVIEW_QUEUE item 106 -- it carries MAC2311C
+    and not MAC2311, STA2023C and not STA2023. Path-derived demand has to come
+    from the paths, which name the id a student actually uses.
+    """
+    try:
+        r = requests.get("%s/api/v1/career-paths" % BASE_URL, timeout=30)
+        r.raise_for_status()
+        paths = r.json()["data"]
+    except requests.exceptions.RequestException as e:
+        print("cannot reach %s: %s" % (BASE_URL, e))
+        return 1
+
+    need = {}
+    for p in paths:
+        d = requests.get("%s/api/v1/career-paths/%s" % (BASE_URL, p["slug"]),
+                         timeout=30).json()["data"]
+        for c in d.get("courses") or []:
+            cid = c["courseId"]
+            need.setdefault(cid, {"paths": [], "reason": c.get("reason", "")})
+            need[cid]["paths"].append(p["slug"])
+
+    print("checking %d course(s) named across %d published path(s)..."
+          % (len(need), len(paths)))
+    rows = []
+    for cid, info in sorted(need.items()):
+        g = requests.get("%s/api/v1/courses/%s/guide" % (BASE_URL, cid), timeout=25)
+        has = g.status_code == 200 and g.json().get("success")
+        listed = requests.get("%s/api/v1/courses/%s" % (BASE_URL, cid),
+                              timeout=25).json().get("success")
+        if not has:
+            rows.append((len(info["paths"]), cid, listed, info["paths"], info["reason"]))
+
+    # ⚠ Most paths first: a course on two paths is twice the demand.
+    rows.sort(key=lambda r: (-r[0], r[1]))
+    print()
+    if not rows:
+        print("every course named by a published path already has a guide.")
+        return 0
+    for n, cid, listed, slugs, reason in rows:
+        print("%-10s %s  on %d path(s): %-28s %s"
+              % (cid, "listed " if listed else "\u26a0 UNLISTED", n,
+                 ",".join(slugs)[:28], reason[:52]))
+    print()
+    print("%d course(s) on published paths have no guide." % len(rows))
+    print("\u26a0 Ron's rule: a course that spans a major on a career path gets a guide.")
+    return 0
+
+
 def cmd_list(args):
     try:
         r = requests.get("%s/api/v1/career-paths" % BASE_URL, timeout=30)
@@ -385,6 +443,9 @@ def main():
 
     l = sub.add_parser("list", help="what is published now")
     l.set_defaults(func=cmd_list)
+
+    n = sub.add_parser("needs", help="courses on published paths that lack a guide")
+    n.set_defaults(func=cmd_needs)
 
     q = sub.add_parser("queue", help="the top-50 queue and how far through it we are")
     q.add_argument("--cluster", help="ENG MFG HLT CMP BUS LAW EDU PUB")
