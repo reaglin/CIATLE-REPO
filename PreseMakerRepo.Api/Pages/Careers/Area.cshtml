@@ -1,0 +1,93 @@
+@page "/careers/area/{code}"
+@model PreseMakerRepo.Api.Pages.Careers.AreaModel
+@{
+    ViewData["Title"] = Model.Node.Code + " " + Model.Node.Title;
+    ViewData["NoIndex"] = Model.Paths.Count == 0;
+}
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Careers/Index">Career Paths</a></li>
+        @if (Model.Parent is not null)
+        {
+            <li class="breadcrumb-item">
+                <a asp-page="/Careers/Area" asp-route-code="@Model.Parent.Code">@Model.Parent.Code @Model.Parent.Title</a>
+            </li>
+        }
+        <li class="breadcrumb-item active">@Model.Node.Code</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-1"><span class="text-muted me-2">@Model.Node.Code</span>@Model.Node.Title</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.Node.Definition))
+{
+    @* NCES's own words. Kept verbatim and attributed, never paraphrased. *@
+    <p class="text-body mb-2" style="max-width: 60rem;">@Model.Node.Definition</p>
+    <p class="small text-muted">Definition: U.S. Department of Education, CIP 2020.</p>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Node.Examples))
+{
+    <p class="small text-muted mb-3" style="max-width: 60rem;">
+        <strong>Examples:</strong> @Model.Node.Examples
+    </p>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Node.EditorialNote))
+{
+    <div class="alert alert-light border" style="max-width: 60rem;">@Html.Raw(Model.Node.EditorialNote)</div>
+}
+
+@if (Model.Paths.Any())
+{
+    <h2 class="h6 text-uppercase text-muted mt-4 mb-2">Career paths in this area</h2>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var p in Model.Paths)
+        {
+            <a asp-page="/Careers/Path" asp-route-slug="@p.Slug" class="list-group-item list-group-item-action py-2">
+                <div class="fw-semibold">
+                    @p.Name
+                    @if (!string.IsNullOrWhiteSpace(p.SocCode))
+                    {
+                        <span class="badge text-bg-light text-muted ms-1">SOC @p.SocCode</span>
+                    }
+                </div>
+                <div class="small text-muted">@p.Description</div>
+            </a>
+        }
+    </div>
+}
+
+@if (Model.Children.Any())
+{
+    <h2 class="h6 text-uppercase text-muted mt-4 mb-2">Fields of study</h2>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var c in Model.Children)
+        {
+            <a asp-page="/Careers/Area" asp-route-code="@c.Code"
+               class="list-group-item list-group-item-action py-2">
+                <div class="d-flex justify-content-between align-items-start">
+                    <span><span class="fw-bold text-muted me-2">@c.Code</span>@c.Title</span>
+                    @if (c.PathCount > 0)
+                    {
+                        <span class="badge text-bg-primary ms-3">@c.PathCount path@(c.PathCount == 1 ? "" : "s")</span>
+                    }
+                </div>
+                @if (!string.IsNullOrWhiteSpace(c.Examples))
+                {
+                    <div class="small text-muted mt-1">@c.Examples</div>
+                }
+            </a>
+        }
+    </div>
+}
+else if (!Model.Paths.Any())
+{
+    <div class="alert alert-info">
+        Nothing is published in this area yet. Browse the
+        <a asp-page="/Browse/Index">course catalog</a> in the meantime, or
+        <a asp-page="/Careers/Index">return to Career Paths</a>.
+    </div>
+}

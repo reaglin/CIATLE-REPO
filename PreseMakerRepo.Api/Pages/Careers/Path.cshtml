@@ -1,0 +1,123 @@
+@page "/careers/{slug}"
+@model PreseMakerRepo.Api.Pages.Careers.PathModel
+@{ ViewData["Title"] = Model.Path.Name; }
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-page="/Careers/Index">Career Paths</a></li>
+        @if (Model.Series is not null)
+        {
+            <li class="breadcrumb-item">
+                <a asp-page="/Careers/Area" asp-route-code="@Model.Series.Code">@Model.Series.Title</a>
+            </li>
+        }
+        @if (Model.Cip is not null)
+        {
+            <li class="breadcrumb-item">
+                <a asp-page="/Careers/Area" asp-route-code="@Model.Cip.Code">@Model.Cip.Title</a>
+            </li>
+        }
+        <li class="breadcrumb-item active">@Model.Path.Name</li>
+    </ol>
+</nav>
+
+<h1 class="h4 mb-1">@Model.Path.Name</h1>
+<p class="text-muted small mb-3">
+    @Model.Path.CipCode @Model.Cip?.Title
+    @if (!string.IsNullOrWhiteSpace(Model.Path.SocCode))
+    {
+        <span class="ms-2">· SOC @Model.Path.SocCode</span>
+    }
+</p>
+
+<p class="lead" style="max-width: 60rem;">@Model.Path.Description</p>
+
+@if (!string.IsNullOrWhiteSpace(Model.Path.CredentialNote))
+{
+    @* Deliberately above the course list: accreditation outranks credit, and a reader who
+       stops after the courses has read the less important half. *@
+    <div class="alert alert-warning" style="max-width: 60rem;">
+        <div class="fw-semibold mb-1">Licensure and accreditation</div>
+        @Model.Path.CredentialNote
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Path.BodyHtml))
+{
+    <div class="mb-4" style="max-width: 60rem;">@Html.Raw(Model.Path.BodyHtml)</div>
+}
+
+@if (Model.Courses.Any())
+{
+    <h2 class="h5 mt-4 mb-1">Courses along this path</h2>
+    <p class="text-muted small mb-3" style="max-width: 60rem;">
+        Selected, not exhaustive — the courses specific to this path plus the foundations it is built on.
+        <strong>A course number does not identify a course</strong> in Florida: always check your own
+        institution's catalog and take a syllabus to an adviser.
+    </p>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var c in Model.Courses)
+        {
+            <div class="list-group-item py-2">
+                <div class="d-flex justify-content-between align-items-start">
+                    <span>
+                        @if (c.IsListed)
+                        {
+                            <a asp-page="/Browse/Course" asp-route-courseId="@c.CourseId" class="fw-bold">@c.CourseId</a>
+                        }
+                        else
+                        {
+                            <span class="fw-bold">@c.CourseId</span>
+                        }
+                        <span class="text-muted mx-1">—</span>@c.Title
+                    </span>
+                    <span class="text-nowrap ms-3">
+                        @if (c.HasGuide)
+                        {
+                            <a asp-page="/Browse/Guide" asp-route-courseId="@c.CourseId" class="badge text-bg-primary text-decoration-none">Guide</a>
+                        }
+                        else if (c.IsListed)
+                        {
+                            <a asp-page="/Browse/RequestGuide" asp-route-course="@c.CourseId" rel="nofollow" class="badge text-bg-light text-muted text-decoration-none">Request a guide</a>
+                        }
+                        else
+                        {
+                            <span class="badge text-bg-light text-muted">not listed yet</span>
+                        }
+                    </span>
+                </div>
+                <div class="small text-muted mt-1">@c.Reason</div>
+                @if (!string.IsNullOrWhiteSpace(c.VariantNote))
+                {
+                    <div class="small mt-1"><span class="text-warning-emphasis">⚠</span> @c.VariantNote</div>
+                }
+            </div>
+        }
+    </div>
+}
+
+@if (Model.Sources.Any())
+{
+    <h2 class="h5 mt-4 mb-1">Sources</h2>
+    <p class="text-muted small mb-2" style="max-width: 60rem;">
+        Requirements change. These are the authorities that decide them — check them directly before
+        committing to a route.
+    </p>
+    <ul class="mb-4">
+        @foreach (var s in Model.Sources)
+        {
+            <li>
+                <a href="@s.Url" rel="noopener nofollow" target="_blank">@s.Label</a>
+                @if (!string.IsNullOrWhiteSpace(s.Note))
+                {
+                    <span class="text-muted small"> — @s.Note</span>
+                }
+            </li>
+        }
+    </ul>
+}
+
+<p class="text-muted small">
+    Last updated @Model.Path.UpdatedUtc.ToString("d MMMM yyyy").
+</p>

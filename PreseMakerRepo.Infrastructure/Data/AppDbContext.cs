@@ -26,6 +26,13 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<ResourceSubmission> ResourceSubmissions => Set<ResourceSubmission>();
     public DbSet<CourseResourceVote> CourseResourceVotes => Set<CourseResourceVote>();
 
+    // CIP taxonomy + Career Paths (2026-09-17). The CIP tree is the browse framework for
+    // both Career Paths and, later, Programs -- one tree, both hang off it (Ron's call).
+    public DbSet<CipNode> CipNodes => Set<CipNode>();
+    public DbSet<CareerPath> CareerPaths => Set<CareerPath>();
+    public DbSet<CareerPathCourse> CareerPathCourses => Set<CareerPathCourse>();
+    public DbSet<CareerPathSource> CareerPathSources => Set<CareerPathSource>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

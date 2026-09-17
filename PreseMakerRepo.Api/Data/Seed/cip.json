@@ -1,0 +1,1732 @@
+{
+ "source": "NCES CIP 2020 (CIPCode2020.csv); titles and definitions verbatim",
+ "scope": "statewide (SCNS flat file prefixes x prefix->CIP map)",
+ "note": "4-digit groups are limited to those Florida public institutions have course evidence for. Course-to-CIP association is NOT published: paths and programmes attach courses by curation only.",
+ "nodes": [
+  {
+   "code": "01",
+   "level": 2,
+   "title": "AGRICULTURAL/ANIMAL/PLANT/VETERINARY SCIENCE AND RELATED FIELDS",
+   "definition": "Instructional programs that focus on agriculture, animal, plant, veterinary, and related sciences and that prepares individuals to apply specific knowledge, methods, and techniques to the management and performance of agricultural and veterinary operations.",
+   "parent": null,
+   "childCount": 3
+  },
+  {
+   "code": "01.00",
+   "level": 4,
+   "title": "Agriculture, General",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.01",
+   "level": 4,
+   "title": "Agricultural Business and Management",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.10",
+   "level": 4,
+   "title": "Food Science and Technology",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "03",
+   "level": 2,
+   "title": "NATURAL RESOURCES AND CONSERVATION",
+   "definition": "Instructional programs that focus on the various natural resources and conservation fields and prepare individuals for related occupations.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "03.01",
+   "level": 4,
+   "title": "Natural Resources Conservation and Research",
+   "definition": "",
+   "examples": "",
+   "parent": "03",
+   "childCount": 0
+  },
+  {
+   "code": "04",
+   "level": 2,
+   "title": "ARCHITECTURE AND RELATED SERVICES",
+   "definition": "Instructional programs that prepare individuals for professional practice in the various architecture-related fields and focus on the study of related aesthetic and socioeconomic aspects of the built environment.",
+   "parent": null,
+   "childCount": 4
+  },
+  {
+   "code": "04.02",
+   "level": 4,
+   "title": "Architecture",
+   "definition": "",
+   "examples": "",
+   "parent": "04",
+   "childCount": 0
+  },
+  {
+   "code": "04.03",
+   "level": 4,
+   "title": "City/Urban, Community, and Regional Planning",
+   "definition": "",
+   "examples": "",
+   "parent": "04",
+   "childCount": 0
+  },
+  {
+   "code": "04.06",
+   "level": 4,
+   "title": "Landscape Architecture",
+   "definition": "",
+   "examples": "",
+   "parent": "04",
+   "childCount": 0
+  },
+  {
+   "code": "04.09",
+   "level": 4,
+   "title": "Architectural Sciences and Technology",
+   "definition": "",
+   "examples": "",
+   "parent": "04",
+   "childCount": 0
+  },
+  {
+   "code": "05",
+   "level": 2,
+   "title": "AREA, ETHNIC, CULTURAL, GENDER, AND GROUP STUDIES",
+   "definition": "Instructional programs that focus on the defined areas, regions, and countries of the world; defined minority groups within and across societies; and issues relevant to collective gender and group experience.",
+   "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "05.01",
+   "level": 4,
+   "title": "Area Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "05",
+   "childCount": 0
+  },
+  {
+   "code": "05.02",
+   "level": 4,
+   "title": "Ethnic, Cultural Minority, Gender, and Group Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "05",
+   "childCount": 0
+  },
+  {
+   "code": "09",
+   "level": 2,
+   "title": "COMMUNICATION, JOURNALISM, AND RELATED PROGRAMS",
+   "definition": "Instructional programs that focus on how messages in various media are produced, used, and interpreted within and across different contexts, channels, and cultures, and that prepare individuals to apply communication knowledge and skills professionally.",
+   "parent": null,
+   "childCount": 4
+  },
+  {
+   "code": "09.01",
+   "level": 4,
+   "title": "Communication and Media Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "09",
+   "childCount": 0
+  },
+  {
+   "code": "09.04",
+   "level": 4,
+   "title": "Journalism",
+   "definition": "",
+   "examples": "",
+   "parent": "09",
+   "childCount": 0
+  },
+  {
+   "code": "09.07",
+   "level": 4,
+   "title": "Radio, Television, and Digital Communication",
+   "definition": "",
+   "examples": "",
+   "parent": "09",
+   "childCount": 0
+  },
+  {
+   "code": "09.09",
+   "level": 4,
+   "title": "Public Relations, Advertising, and Applied Communication",
+   "definition": "",
+   "examples": "",
+   "parent": "09",
+   "childCount": 0
+  },
+  {
+   "code": "10",
+   "level": 2,
+   "title": "COMMUNICATIONS TECHNOLOGIES/TECHNICIANS AND SUPPORT SERVICES",
+   "definition": "Instructional programs that prepare individuals to function as equipment operators, support technicians, and operations managers in the film/video, recording, and graphic communications industries.",
+   "parent": null,
+   "childCount": 0
+  },
+  {
+   "code": "11",
+   "level": 2,
+   "title": "COMPUTER AND INFORMATION SCIENCES AND SUPPORT SERVICES",
+   "definition": "Instructional programs that focus on the computer and information sciences and prepare individuals for various occupations in information technology and computer operations fields.",
+   "parent": null,
+   "childCount": 7
+  },
+  {
+   "code": "11.01",
+   "level": 4,
+   "title": "Computer and Information Sciences, General",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "11.02",
+   "level": 4,
+   "title": "Computer Programming",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "11.04",
+   "level": 4,
+   "title": "Information Science/Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "11.07",
+   "level": 4,
+   "title": "Computer Science",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "11.08",
+   "level": 4,
+   "title": "Computer Software and Media Applications",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "11.09",
+   "level": 4,
+   "title": "Computer Systems Networking and Telecommunications",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "11.10",
+   "level": 4,
+   "title": "Computer/Information Technology Administration and Management",
+   "definition": "",
+   "examples": "",
+   "parent": "11",
+   "childCount": 0
+  },
+  {
+   "code": "12",
+   "level": 2,
+   "title": "CULINARY, ENTERTAINMENT, AND PERSONAL SERVICES",
+   "definition": "Instructional programs that prepare individuals to provide professional services related to cosmetology, funeral services, entertainment, and food preparation and service.",
+   "parent": null,
+   "childCount": 0
+  },
+  {
+   "code": "13",
+   "level": 2,
+   "title": "EDUCATION",
+   "definition": "Instructional programs that focus on the theory and practice of learning and teaching, and related research, administrative and support services.",
+   "parent": null,
+   "childCount": 11
+  },
+  {
+   "code": "13.01",
+   "level": 4,
+   "title": "Education, General",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.03",
+   "level": 4,
+   "title": "Curriculum and Instruction",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.04",
+   "level": 4,
+   "title": "Educational Administration and Supervision",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.05",
+   "level": 4,
+   "title": "Educational/Instructional Media Design",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.06",
+   "level": 4,
+   "title": "Educational Assessment, Evaluation, and Research",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.09",
+   "level": 4,
+   "title": "Social and Philosophical Foundations of Education",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.10",
+   "level": 4,
+   "title": "Special Education and Teaching",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.11",
+   "level": 4,
+   "title": "Student Counseling and Personnel Services",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.12",
+   "level": 4,
+   "title": "Teacher Education and Professional Development, Specific Levels and Methods",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.13",
+   "level": 4,
+   "title": "Teacher Education and Professional Development, Specific Subject Areas",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "13.14",
+   "level": 4,
+   "title": "Teaching English or French as a Second or Foreign Language",
+   "definition": "",
+   "examples": "",
+   "parent": "13",
+   "childCount": 0
+  },
+  {
+   "code": "14",
+   "level": 2,
+   "title": "ENGINEERING",
+   "definition": "Instructional programs that prepare individuals to apply mathematical and     scientific principles to the solution of practical problems.",
+   "parent": null,
+   "childCount": 14
+  },
+  {
+   "code": "14.01",
+   "level": 4,
+   "title": "Engineering, General",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.05",
+   "level": 4,
+   "title": "Biomedical/Medical Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.08",
+   "level": 4,
+   "title": "Civil Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.09",
+   "level": 4,
+   "title": "Computer Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.10",
+   "level": 4,
+   "title": "Electrical, Electronics, and Communications Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.11",
+   "level": 4,
+   "title": "Engineering Mechanics",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.14",
+   "level": 4,
+   "title": "Environmental/Environmental Health Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.18",
+   "level": 4,
+   "title": "Materials Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.19",
+   "level": 4,
+   "title": "Mechanical Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.24",
+   "level": 4,
+   "title": "Ocean Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.27",
+   "level": 4,
+   "title": "Systems Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.35",
+   "level": 4,
+   "title": "Industrial Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.38",
+   "level": 4,
+   "title": "Surveying Engineering",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "14.99",
+   "level": 4,
+   "title": "Engineering, Other",
+   "definition": "",
+   "examples": "",
+   "parent": "14",
+   "childCount": 0
+  },
+  {
+   "code": "15",
+   "level": 2,
+   "title": "ENGINEERING/ENGINEERING-RELATED TECHNOLOGIES/TECHNICIANS",
+   "definition": "Instructional programs that prepare individuals to apply basic engineering principles and technical skills in support of engineering and related projects or to prepare for engineering-related fields.",
+   "parent": null,
+   "childCount": 9
+  },
+  {
+   "code": "15.00",
+   "level": 4,
+   "title": "Engineering Technologies/Technicians, General",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.01",
+   "level": 4,
+   "title": "Architectural Engineering Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.02",
+   "level": 4,
+   "title": "Civil Engineering Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.04",
+   "level": 4,
+   "title": "Electromechanical Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.06",
+   "level": 4,
+   "title": "Industrial Production Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.08",
+   "level": 4,
+   "title": "Mechanical Engineering Related Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.10",
+   "level": 4,
+   "title": "Construction Engineering Technology/Technician",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.13",
+   "level": 4,
+   "title": "Drafting/Design Engineering Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.99",
+   "level": 4,
+   "title": "Engineering/Engineering-Related Technologies/Technicians, Other",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "16",
+   "level": 2,
+   "title": "FOREIGN LANGUAGES, LITERATURES, AND LINGUISTICS",
+   "definition": "Instructional programs that focus on foreign languages and literatures, the humanistic and scientific study of linguistics, and the provision of professional interpretation and translation services.",
+   "parent": null,
+   "childCount": 13
+  },
+  {
+   "code": "16.01",
+   "level": 4,
+   "title": "Linguistic, Comparative, and Related Language Studies and Services",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.02",
+   "level": 4,
+   "title": "African Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.03",
+   "level": 4,
+   "title": "East Asian Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.04",
+   "level": 4,
+   "title": "Slavic, Baltic and Albanian Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.05",
+   "level": 4,
+   "title": "Germanic Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.06",
+   "level": 4,
+   "title": "Modern Greek Language and Literature",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.07",
+   "level": 4,
+   "title": "South Asian Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.08",
+   "level": 4,
+   "title": "Iranian/Persian Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.09",
+   "level": 4,
+   "title": "Romance Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.11",
+   "level": 4,
+   "title": "Middle/Near Eastern and Semitic Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.12",
+   "level": 4,
+   "title": "Classics and Classical Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.15",
+   "level": 4,
+   "title": "Turkic, Uralic-Altaic, Caucasian, and Central Asian Languages, Literatures, and Linguistics",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "16.16",
+   "level": 4,
+   "title": "American Sign Language",
+   "definition": "",
+   "examples": "",
+   "parent": "16",
+   "childCount": 0
+  },
+  {
+   "code": "19",
+   "level": 2,
+   "title": "FAMILY AND CONSUMER SCIENCES/HUMAN SCIENCES",
+   "definition": "Instructional programs that focus on the human interface with the physical, social, emotional, and intellectual environments and the developmental stages and needs of individuals in the interrelated spheres of family, workplace, and community.",
+   "parent": null,
+   "childCount": 5
+  },
+  {
+   "code": "19.01",
+   "level": 4,
+   "title": "Family and Consumer Sciences/Human Sciences, General",
+   "definition": "",
+   "examples": "",
+   "parent": "19",
+   "childCount": 0
+  },
+  {
+   "code": "19.04",
+   "level": 4,
+   "title": "Family and Consumer Economics and Related Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "19",
+   "childCount": 0
+  },
+  {
+   "code": "19.06",
+   "level": 4,
+   "title": "Housing and Human Environments",
+   "definition": "",
+   "examples": "",
+   "parent": "19",
+   "childCount": 0
+  },
+  {
+   "code": "19.07",
+   "level": 4,
+   "title": "Human Development, Family Studies, and Related Services",
+   "definition": "",
+   "examples": "",
+   "parent": "19",
+   "childCount": 0
+  },
+  {
+   "code": "19.09",
+   "level": 4,
+   "title": "Apparel and Textiles",
+   "definition": "",
+   "examples": "",
+   "parent": "19",
+   "childCount": 0
+  },
+  {
+   "code": "22",
+   "level": 2,
+   "title": "LEGAL PROFESSIONS AND STUDIES",
+   "definition": "Instructional programs that prepare individuals for the legal profession, for related support professions and professional legal research, and focus on the study of legal issues in non-professional programs.",
+   "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "22.01",
+   "level": 4,
+   "title": "Law",
+   "definition": "",
+   "examples": "",
+   "parent": "22",
+   "childCount": 0
+  },
+  {
+   "code": "22.03",
+   "level": 4,
+   "title": "Legal Support Services",
+   "definition": "",
+   "examples": "",
+   "parent": "22",
+   "childCount": 0
+  },
+  {
+   "code": "23",
+   "level": 2,
+   "title": "ENGLISH LANGUAGE AND LITERATURE/LETTERS",
+   "definition": "Instructional programs that focus on the structure and use of the English language and dialects, speech, writing, and various aspects of the literatures and cultures of the English-speaking peoples.",
+   "parent": null,
+   "childCount": 3
+  },
+  {
+   "code": "23.01",
+   "level": 4,
+   "title": "English Language and Literature, General",
+   "definition": "",
+   "examples": "",
+   "parent": "23",
+   "childCount": 0
+  },
+  {
+   "code": "23.13",
+   "level": 4,
+   "title": "Rhetoric and Composition/Writing Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "23",
+   "childCount": 0
+  },
+  {
+   "code": "23.14",
+   "level": 4,
+   "title": "Literature",
+   "definition": "",
+   "examples": "",
+   "parent": "23",
+   "childCount": 0
+  },
+  {
+   "code": "24",
+   "level": 2,
+   "title": "LIBERAL ARTS AND SCIENCES, GENERAL STUDIES AND HUMANITIES",
+   "definition": "General instructional programs and independent or individualized studies in the liberal arts subjects, the humanities disciplines and the general curriculum.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "24.01",
+   "level": 4,
+   "title": "Liberal Arts and Sciences, General Studies and Humanities",
+   "definition": "",
+   "examples": "",
+   "parent": "24",
+   "childCount": 0
+  },
+  {
+   "code": "25",
+   "level": 2,
+   "title": "LIBRARY SCIENCE",
+   "definition": "Instructional programs that focus on the knowledge and skills required for managing and/or maintaining libraries and related information and record systems,  collections and facilities for research and general use.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "25.01",
+   "level": 4,
+   "title": "Library Science and Administration",
+   "definition": "",
+   "examples": "",
+   "parent": "25",
+   "childCount": 0
+  },
+  {
+   "code": "26",
+   "level": 2,
+   "title": "BIOLOGICAL AND BIOMEDICAL SCIENCES",
+   "definition": "Instructional programs that focus on the biological sciences and the non-clinical biomedical sciences, and that prepare individuals for research and professional careers as biologists and biomedical scientists.",
+   "parent": null,
+   "childCount": 3
+  },
+  {
+   "code": "26.01",
+   "level": 4,
+   "title": "Biology, General",
+   "definition": "",
+   "examples": "",
+   "parent": "26",
+   "childCount": 0
+  },
+  {
+   "code": "26.13",
+   "level": 4,
+   "title": "Ecology, Evolution, Systematics, and Population Biology",
+   "definition": "",
+   "examples": "",
+   "parent": "26",
+   "childCount": 0
+  },
+  {
+   "code": "26.15",
+   "level": 4,
+   "title": "Neurobiology and Neurosciences",
+   "definition": "",
+   "examples": "",
+   "parent": "26",
+   "childCount": 0
+  },
+  {
+   "code": "27",
+   "level": 2,
+   "title": "MATHEMATICS AND STATISTICS",
+   "definition": "Instructional programs that focus on the systematic study of logical symbolic language and its applications.",
+   "parent": null,
+   "childCount": 3
+  },
+  {
+   "code": "27.01",
+   "level": 4,
+   "title": "Mathematics",
+   "definition": "",
+   "examples": "",
+   "parent": "27",
+   "childCount": 0
+  },
+  {
+   "code": "27.03",
+   "level": 4,
+   "title": "Applied Mathematics",
+   "definition": "",
+   "examples": "",
+   "parent": "27",
+   "childCount": 0
+  },
+  {
+   "code": "27.05",
+   "level": 4,
+   "title": "Statistics",
+   "definition": "",
+   "examples": "",
+   "parent": "27",
+   "childCount": 0
+  },
+  {
+   "code": "28",
+   "level": 2,
+   "title": "MILITARY SCIENCE, LEADERSHIP AND OPERATIONAL ART",
+   "definition": "Instructional programs that provide professional education and training of military officers in leadership, military science and operational studies, security policy and strategy, military economics and management, and pre-officer training. These CIP codes are not valid for IPEDS reporting.",
+   "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "28.01",
+   "level": 4,
+   "title": "Air Force ROTC, Air Science and Operations",
+   "definition": "",
+   "examples": "",
+   "parent": "28",
+   "childCount": 0
+  },
+  {
+   "code": "28.03",
+   "level": 4,
+   "title": "Army ROTC, Military Science and Operations",
+   "definition": "",
+   "examples": "",
+   "parent": "28",
+   "childCount": 0
+  },
+  {
+   "code": "29",
+   "level": 2,
+   "title": "MILITARY TECHNOLOGIES AND APPLIED SCIENCES",
+   "definition": "Instructional programs that prepare individuals in specialized and advanced subject matter for the armed services and related national security organizations, including intelligence operations, military applied sciences, and military technologies.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "29.99",
+   "level": 4,
+   "title": "Military Technologies and Applied Sciences, Other",
+   "definition": "",
+   "examples": "",
+   "parent": "29",
+   "childCount": 0
+  },
+  {
+   "code": "30",
+   "level": 2,
+   "title": "MULTI/INTERDISCIPLINARY STUDIES",
+   "definition": "Instructional programs that derive from two or more distinct programs to provide a cross-cutting focus on a subject concentration that is not subsumed under a single discipline or occupational field.",
+   "parent": null,
+   "childCount": 4
+  },
+  {
+   "code": "30.11",
+   "level": 4,
+   "title": "Gerontology",
+   "definition": "",
+   "examples": "",
+   "parent": "30",
+   "childCount": 0
+  },
+  {
+   "code": "30.32",
+   "level": 4,
+   "title": "Marine Sciences",
+   "definition": "",
+   "examples": "",
+   "parent": "30",
+   "childCount": 0
+  },
+  {
+   "code": "30.70",
+   "level": 4,
+   "title": "Data Science",
+   "definition": "",
+   "examples": "",
+   "parent": "30",
+   "childCount": 0
+  },
+  {
+   "code": "30.99",
+   "level": 4,
+   "title": "Multi/Interdisciplinary Studies, Other",
+   "definition": "",
+   "examples": "",
+   "parent": "30",
+   "childCount": 0
+  },
+  {
+   "code": "31",
+   "level": 2,
+   "title": "PARKS, RECREATION, LEISURE, FITNESS, AND KINESIOLOGY",
+   "definition": "Instructional programs that focus on the principles and practices of managing parks and other recreational and fitness facilities; providing recreational, leisure and fitness services; and the study of human kinesiology and fitness.",
+   "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "31.01",
+   "level": 4,
+   "title": "Parks, Recreation, and Leisure Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "31",
+   "childCount": 0
+  },
+  {
+   "code": "31.05",
+   "level": 4,
+   "title": "Sports, Kinesiology, and Physical Education/Fitness",
+   "definition": "",
+   "examples": "",
+   "parent": "31",
+   "childCount": 0
+  },
+  {
+   "code": "38",
+   "level": 2,
+   "title": "PHILOSOPHY AND RELIGIOUS STUDIES",
+   "definition": "Instructional programs that focus on logical inquiry, philosophical analysis, and the academic study of organized systems of belief and religious practices.",
+   "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "38.01",
+   "level": 4,
+   "title": "Philosophy",
+   "definition": "",
+   "examples": "",
+   "parent": "38",
+   "childCount": 0
+  },
+  {
+   "code": "38.02",
+   "level": 4,
+   "title": "Religion/Religious Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "38",
+   "childCount": 0
+  },
+  {
+   "code": "39",
+   "level": 2,
+   "title": "THEOLOGY AND RELIGIOUS VOCATIONS",
+   "definition": "Instructional programs that focus on the intramural study of theology and that prepare individuals for the professional practice of religious vocations.",
+   "parent": null,
+   "childCount": 0
+  },
+  {
+   "code": "40",
+   "level": 2,
+   "title": "PHYSICAL SCIENCES",
+   "definition": "Instructional programs that focus on the scientific study of inanimate objects, processes of matter and energy, and associated phenomena.",
+   "parent": null,
+   "childCount": 5
+  },
+  {
+   "code": "40.01",
+   "level": 4,
+   "title": "Physical Sciences, General",
+   "definition": "",
+   "examples": "",
+   "parent": "40",
+   "childCount": 0
+  },
+  {
+   "code": "40.02",
+   "level": 4,
+   "title": "Astronomy and Astrophysics",
+   "definition": "",
+   "examples": "",
+   "parent": "40",
+   "childCount": 0
+  },
+  {
+   "code": "40.05",
+   "level": 4,
+   "title": "Chemistry",
+   "definition": "",
+   "examples": "",
+   "parent": "40",
+   "childCount": 0
+  },
+  {
+   "code": "40.06",
+   "level": 4,
+   "title": "Geological and Earth Sciences/Geosciences",
+   "definition": "",
+   "examples": "",
+   "parent": "40",
+   "childCount": 0
+  },
+  {
+   "code": "40.08",
+   "level": 4,
+   "title": "Physics",
+   "definition": "",
+   "examples": "",
+   "parent": "40",
+   "childCount": 0
+  },
+  {
+   "code": "41",
+   "level": 2,
+   "title": "SCIENCE TECHNOLOGIES/TECHNICIANS",
+   "definition": "Instructional programs that prepare individuals to apply scientific principles and technical skills in support of scientific research and development.",
+   "parent": null,
+   "childCount": 0
+  },
+  {
+   "code": "42",
+   "level": 2,
+   "title": "PSYCHOLOGY",
+   "definition": "Instructional programs that focus on the scientific study of the behavior of individuals, independently or collectively, and the physical and environmental bases of mental, emotional, and neurological activity.",
+   "parent": null,
+   "childCount": 3
+  },
+  {
+   "code": "42.01",
+   "level": 4,
+   "title": "Psychology, General",
+   "definition": "",
+   "examples": "",
+   "parent": "42",
+   "childCount": 0
+  },
+  {
+   "code": "42.27",
+   "level": 4,
+   "title": "Research and Experimental Psychology",
+   "definition": "",
+   "examples": "",
+   "parent": "42",
+   "childCount": 0
+  },
+  {
+   "code": "42.28",
+   "level": 4,
+   "title": "Clinical, Counseling and Applied Psychology",
+   "definition": "",
+   "examples": "",
+   "parent": "42",
+   "childCount": 0
+  },
+  {
+   "code": "43",
+   "level": 2,
+   "title": "HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING AND RELATED PROTECTIVE SERVICES",
+   "definition": "Instructional programs that focus on the principles and procedures for providing homeland security, police, fire, and other safety services and managing penal institutions. Note: this series is titled Security and Protective Services\" in the Canadian CIP.\"",
+   "parent": null,
+   "childCount": 3
+  },
+  {
+   "code": "43.01",
+   "level": 4,
+   "title": "Criminal Justice and Corrections",
+   "definition": "",
+   "examples": "",
+   "parent": "43",
+   "childCount": 0
+  },
+  {
+   "code": "43.02",
+   "level": 4,
+   "title": "Fire Protection",
+   "definition": "",
+   "examples": "",
+   "parent": "43",
+   "childCount": 0
+  },
+  {
+   "code": "43.03",
+   "level": 4,
+   "title": "Homeland Security",
+   "definition": "",
+   "examples": "",
+   "parent": "43",
+   "childCount": 0
+  },
+  {
+   "code": "44",
+   "level": 2,
+   "title": "PUBLIC ADMINISTRATION AND SOCIAL SERVICE PROFESSIONS",
+   "definition": "Instructional programs that prepare individuals to analyze, manage, and deliver public programs and services.",
+   "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "44.04",
+   "level": 4,
+   "title": "Public Administration",
+   "definition": "",
+   "examples": "",
+   "parent": "44",
+   "childCount": 0
+  },
+  {
+   "code": "44.07",
+   "level": 4,
+   "title": "Social Work",
+   "definition": "",
+   "examples": "",
+   "parent": "44",
+   "childCount": 0
+  },
+  {
+   "code": "45",
+   "level": 2,
+   "title": "SOCIAL SCIENCES",
+   "definition": "Instructional programs that focus on the systematic study of social systems, social institutions, and social behavior.",
+   "parent": null,
+   "childCount": 8
+  },
+  {
+   "code": "45.01",
+   "level": 4,
+   "title": "Social Sciences, General",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.02",
+   "level": 4,
+   "title": "Anthropology",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.05",
+   "level": 4,
+   "title": "Demography",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.06",
+   "level": 4,
+   "title": "Economics",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.07",
+   "level": 4,
+   "title": "Geography and Cartography",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.09",
+   "level": 4,
+   "title": "International Relations and National Security Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.10",
+   "level": 4,
+   "title": "Political Science and Government",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.11",
+   "level": 4,
+   "title": "Sociology",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "46",
+   "level": 2,
+   "title": "CONSTRUCTION TRADES",
+   "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills in the building, inspecting, and maintaining of structures and related properties.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "46.04",
+   "level": 4,
+   "title": "Building/Construction Finishing, Management, and Inspection",
+   "definition": "",
+   "examples": "",
+   "parent": "46",
+   "childCount": 0
+  },
+  {
+   "code": "47",
+   "level": 2,
+   "title": "MECHANIC AND REPAIR TECHNOLOGIES/TECHNICIANS",
+   "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills in the adjustment, maintenance, part replacement, and repair of tools, equipment, and machines.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "47.02",
+   "level": 4,
+   "title": "Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR)",
+   "definition": "",
+   "examples": "",
+   "parent": "47",
+   "childCount": 0
+  },
+  {
+   "code": "48",
+   "level": 2,
+   "title": "PRECISION PRODUCTION",
+   "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills to create products using techniques of precision craftsmanship or technical illustration.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "48.05",
+   "level": 4,
+   "title": "Precision Metal Working",
+   "definition": "",
+   "examples": "",
+   "parent": "48",
+   "childCount": 0
+  },
+  {
+   "code": "49",
+   "level": 2,
+   "title": "TRANSPORTATION AND MATERIALS MOVING",
+   "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills to perform tasks and services that facilitate the movement of people or materials.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "49.01",
+   "level": 4,
+   "title": "Air Transportation",
+   "definition": "",
+   "examples": "",
+   "parent": "49",
+   "childCount": 0
+  },
+  {
+   "code": "50",
+   "level": 2,
+   "title": "VISUAL AND PERFORMING ARTS",
+   "definition": "Instructional programs that focus on the creation and interpretation of works and performances that use auditory, kinesthetic, and visual phenomena to express ideas and emotions in various forms, subject to aesthetic criteria.",
+   "parent": null,
+   "childCount": 6
+  },
+  {
+   "code": "50.03",
+   "level": 4,
+   "title": "Dance",
+   "definition": "",
+   "examples": "",
+   "parent": "50",
+   "childCount": 0
+  },
+  {
+   "code": "50.04",
+   "level": 4,
+   "title": "Design and Applied Arts",
+   "definition": "",
+   "examples": "",
+   "parent": "50",
+   "childCount": 0
+  },
+  {
+   "code": "50.05",
+   "level": 4,
+   "title": "Drama/Theatre Arts and Stagecraft",
+   "definition": "",
+   "examples": "",
+   "parent": "50",
+   "childCount": 0
+  },
+  {
+   "code": "50.06",
+   "level": 4,
+   "title": "Film/Video and Photographic Arts",
+   "definition": "",
+   "examples": "",
+   "parent": "50",
+   "childCount": 0
+  },
+  {
+   "code": "50.07",
+   "level": 4,
+   "title": "Fine and Studio Arts",
+   "definition": "",
+   "examples": "",
+   "parent": "50",
+   "childCount": 0
+  },
+  {
+   "code": "50.09",
+   "level": 4,
+   "title": "Music",
+   "definition": "",
+   "examples": "",
+   "parent": "50",
+   "childCount": 0
+  },
+  {
+   "code": "51",
+   "level": 2,
+   "title": "HEALTH PROFESSIONS AND RELATED PROGRAMS",
+   "definition": "Instructional programs that prepare individuals to practice as licensed professionals and assistants in the health care professions and related clinical sciences and administrative and support services.",
+   "parent": null,
+   "childCount": 14
+  },
+  {
+   "code": "51.00",
+   "level": 4,
+   "title": "Health Services/Allied Health/Health Sciences, General",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.02",
+   "level": 4,
+   "title": "Communication Disorders Sciences and Services",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.07",
+   "level": 4,
+   "title": "Health and Medical Administrative Services",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.08",
+   "level": 4,
+   "title": "Allied Health and Medical Assisting Services",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.09",
+   "level": 4,
+   "title": "Allied Health Diagnostic, Intervention, and Treatment Professions",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.10",
+   "level": 4,
+   "title": "Clinical/Medical Laboratory Science/Research and Allied Professions",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.12",
+   "level": 4,
+   "title": "Medicine",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.22",
+   "level": 4,
+   "title": "Public Health",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.23",
+   "level": 4,
+   "title": "Rehabilitation and Therapeutic Professions",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.27",
+   "level": 4,
+   "title": "Medical Illustration and Informatics",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.31",
+   "level": 4,
+   "title": "Dietetics and Clinical Nutrition Services",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.38",
+   "level": 4,
+   "title": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.39",
+   "level": 4,
+   "title": "Practical Nursing, Vocational Nursing and Nursing Assistants",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.99",
+   "level": 4,
+   "title": "Health Professions and Related Clinical Sciences, Other",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "52",
+   "level": 2,
+   "title": "BUSINESS, MANAGEMENT, MARKETING, AND RELATED SUPPORT SERVICES",
+   "definition": "Instructional programs that prepare individuals to perform managerial, technical support, and applied research functions related to the operation of commercial and non-profit enterprises and the buying and selling of goods and services.",
+   "parent": null,
+   "childCount": 14
+  },
+  {
+   "code": "52.01",
+   "level": 4,
+   "title": "Business/Commerce, General",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.02",
+   "level": 4,
+   "title": "Business Administration, Management and Operations",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.03",
+   "level": 4,
+   "title": "Accounting and Related Services",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.07",
+   "level": 4,
+   "title": "Entrepreneurial and Small Business Operations",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.08",
+   "level": 4,
+   "title": "Finance and Financial Management Services",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.09",
+   "level": 4,
+   "title": "Hospitality Administration/Management",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.10",
+   "level": 4,
+   "title": "Human Resources Management and Services",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.11",
+   "level": 4,
+   "title": "International Business",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.12",
+   "level": 4,
+   "title": "Management Information Systems and Services",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.13",
+   "level": 4,
+   "title": "Management Sciences and Quantitative Methods",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.14",
+   "level": 4,
+   "title": "Marketing",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.15",
+   "level": 4,
+   "title": "Real Estate",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.16",
+   "level": 4,
+   "title": "Taxation",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "52.17",
+   "level": 4,
+   "title": "Insurance",
+   "definition": "",
+   "examples": "",
+   "parent": "52",
+   "childCount": 0
+  },
+  {
+   "code": "54",
+   "level": 2,
+   "title": "HISTORY",
+   "definition": "Instructional programs that focus on the study and interpretation of past events, institutions, issues, and cultures.",
+   "parent": null,
+   "childCount": 1
+  },
+  {
+   "code": "54.01",
+   "level": 4,
+   "title": "History",
+   "definition": "",
+   "examples": "",
+   "parent": "54",
+   "childCount": 0
+  }
+ ]
+}
