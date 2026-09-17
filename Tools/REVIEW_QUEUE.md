@@ -16,40 +16,140 @@ Two kinds of item live here:
 
 ## ⭐ DECISION LIST — everything awaiting Ron, in one pass
 
-Ron asked (2026-09-05) for the open items collected so they can be reviewed together. **This is the index;
-the detail is in the numbered sections below.** Items are ordered by how much they unblock.
+⚠⚠ **This index is GENERATED — do not hand-edit it.** Add your item as a numbered
+section below, then run `python review_index.py`. The index that used to live here was
+maintained by hand and fell 30 batches behind, which defeated the point of the file.
 
-### A. Blocking work right now
+**Ron, 2026-09-16:** *"Keep all unresolved in a file. Once we complete the queue I will be
+looking at them."* — that is this table. **Nothing here blocks the batch loop**; the loop
+continues around every one of them.
 
-| # | Item | The ask | What it unblocks |
-|---|---|---|---|
-| **13** | **Four taxonomy nodes missing** (`CES`, `CEG`, `CWR`, `ENV`) | Add four leaf nodes under the existing `CIVIL_ENVIRONMENTAL_` parent — via the admin taxonomy editor (no redeploy) and/or `taxonomy.json` + deploy. Copy-paste JSON is in `Deployment/PENDING_SERVER_CHANGES.md`. | **`CES4702C` (written, validated, sitting at `status=error`) plus 13 more queued rows.** Nothing else in the pipeline is blocked. |
-
-### B. Scope calls — whole course families, cheap to decide, large effect on the queue
-
-| # | Item | The ask | Notes |
-|---|---|---|---|
-| **15** | **`MUN` ensembles** (`MUN3313 Concert Choir`, 9 inst, + siblings) | In scope or skip? | Audition-based participation; repertoire set per term by the director. **But** batch 148 established that ensemble credit is *not* interchangeable with methods-course credit, so these are genuinely distinct from the `MV*` applied instruction already skipped. |
-| **16** | **`PEL`/`PEM`/`PEN` activity courses** (`PEL1341 Beginning Tennis`, 9 inst, + siblings) | In scope or skip? | Physical activity instruction. Unlike applied music these have defined statewide skill outcomes, so a guide is writable — the question is whether it is worth writing. |
-| **17** | **`MVV4640 Vocal Pedagogy`** | Confirm it stays in scope. | Held back deliberately when the 40 applied-music rows were skipped (batch 144): it carries the voice prefix but is a **classroom course about teaching singing**, not studio instruction. Currently still `queued`. |
-| **5, 6, 8** | The pre-existing scope items (`PHT2931`; re-screen the skipped 9xx rows; six requirement-placeholder shells) | Unchanged from before this session. | **Item 6 remains the highest-value item on this page.** |
-
-### C. Correction candidates — live guides, need a go-ahead before republishing
-
-| # | Item | The ask |
-|---|---|---|
-| **10** | `MAN4350` / `MAN4320` number collision | Two-number treatment — how? |
-| **11** | `MAN4720` missing UWF residency/permission requirement | Which of three options; and whether to sweep other live capstone guides |
-| **14** | **`PUR3000`** split candidate | Split into `-SCNS` / `-UWF` / bare, or leave as one guide? **Better evidenced than the other candidates** — UF *and* FGCU confirm the majority reading from their own catalogs, so unlike the NUR cases this does not need the SCNS catalog to proceed. |
-| **1, 2, 3, 4** | `ETI4448`, `RTE2563C`, `EET1025C`, `TPP2118`/`TPP2119` | Unchanged from before this session. |
-
-### Closed since this list was started
-
-**12** `BCN2405C` — resolved without needing a decision (title drift, not a subject split; published as one
-guide, batch 141). **7** `PHT1006C` and **9** split-family `C`-suffix rows — closed earlier.
+| | Count |
+|---|---|
+| ⏳ **Awaiting a decision from Ron** | **74** |
+| Informational — recorded, no decision needed | 19 |
+| ✅ Resolved | 10 |
+| **Total items** | **103** |
 
 ---
 
+### ⏳ Awaiting a decision (74)
+
+| # | Item |
+|---|---|
+| **1** | `ETI4448` — scope gap on a capstone (correction candidate) |
+| **2** | `RTE2563C` — credit mismatch and a missing sequence partner (correction candidate) |
+| **3** | `EET1025C` — contact hours outside the family (correction candidate) |
+| **4** | `TPP2118` / `TPP2119` — catalog prerequisites name a course DSC does not offer (verification candidate) |
+| **5** | `PHT2931` — probably not a shell (scope decision) |
+| **6** | Re-screen the skipped 9xx rows (scope decision) — ⬆ **the highest-value item here** |
+| **8** | Six requirement-placeholder shells skipped (scope decision — bundle with the 9xx re-screen) |
+| **10** | `MAN4350` / `MAN4320` — a number COLLISION needing a decision (batch 138) |
+| **11** | `MAN4720` — live guide missing UWF's residency and permission requirement (batch 138) |
+| **13** | BLOCKED - four civil/environmental prefixes are missing from the taxonomy (batch 142) |
+| **14** | `PUR3000` — a split candidate with an unusually clear majority (batch 144) |
+| **15** | `MUN` ensemble numbers — scope decision (batch 147) |
+| **16** | `PEL` / `PEM` / `PEN` activity courses — scope decision (batch 147) |
+| **17** | `MVV4640 Vocal Pedagogy` — confirm scope (batch 144) |
+| **20** | `LAE3314` — a split candidate where UWF holds the MINORITY reading (batch 156) |
+| **21** | Two documented sources DISAGREE on credits — confirm the tie-break rule (batch 163) |
+| **25** | `TPA3230C` — THREE subjects under one number, and nobody uses the suffix (batch 173) — **NEEDS A DECISION** |
+| **26** | `PUR4801` — pulled from batch 173; the collision CLAUDE.md predicted, now confirmed from the other side |
+| **27** | `MMC4601` — statewide says "Video Game Analysis", UWF teaches minorities and mass media (batch 177) |
+| **28** | A CLASS of held rows: `C`-suffixed ids that no reachable institution carries — **ONE DECISION COVERS THREE (batches 173–178)** |
+| **29** | Retro-sweep candidate: ~a dozen live guides record UWF's Gordon Rule labels without explaining them (batch 179) — *low urgency, your call* |
+| **30** | Ten queue rows are blocked by MISSING TAXONOMY NODES, not by content (batch 182) — *needs a server change* |
+| **31** | `CJE3674C` joins the C-suffix class decision (item 28) (batch 182) |
+| **33** | The C-suffix class (item 28) now has SEVEN members — it is systematic, not anomalous (batch 183) |
+| **34** | `DAA2204C` also carries a SEQUENCE-POSITION divergence (batch 183) — needs a decision beyond the suffix |
+| **37** | Gordon Rule retro-sweep (item 29) — the case has strengthened (batch 184) — *no new decision needed* |
+| **38** | `SPC4680` — split candidate: UWF holds the MINORITY reading again (batch 185) |
+| **43** | `TTE3004C` — ninth member of the C-suffix class, with sourcing already done (batch 187) |
+| **45** | `APK4200` — a full one-number-two-subjects case; strongest split candidate since `CLP4302` (batch 188) |
+| **49** | SCNS is now scriptable — this **retires several open items and enables a retro-sweep** (EEE sweep, 2026-09-09) |
+| **50** | `courses_2plus_institutions.csv` overstates institution counts systematically — **retro-sweep candidate** (EEE sweep, 2026-09-09) |
+| **54** | Thirteen published guides are for courses SCNS marks DISCONTINUED (2026-09-09) — *needs Ron's view* |
+| **55** | `CET2620` — **FIVE different subjects under one number**, and the cause is a vendor curriculum change (batch 190) |
+| **56** | `CET1600` — a **VENDOR** divergence: five colleges teach Cisco, one teaches CompTIA (batch 190) |
+| **57** | `CET1112C` — republished as v1.1; **contact hours corrected 75 → 60** (batch 190) — *correction candidate, already acted on* |
+| **58** | The site holds **133 courses whose `creditHours` are CLOCK HOURS** (batch 190) — *passed to the site session* |
+| **59** | The queue holds the MINORITY form of several engineering courses — **needs Ron to queue the majority forms** (batch 191) |
+| **60** | LEVEL divergence — a new category of number divergence (batch 191) |
+| **61** | The prerequisite ceiling is now the normal failure, not an occasional one (batch 191) |
+| **62** | `MUN3323` — the statewide title uses retired vocabulary; **a retro-sweep candidate for the MUN prefix** (batch 192) |
+| **63** | `MUN3713` / `MUN4714` — UWF appears to use the two numbers in REVERSE (batch 192) |
+| **65** | `ENV3001` / `ENV4001` — SCNS itself carries the same course at two levels (batch 193) |
+| **68** | `CET2127C` — a VISITOR-REQUESTED course whose number names a different subject than the college teaches (batch 194) |
+| **69** | `EGM3401` — a statewide qualifier that both institutions drop (batch 194) |
+| **70** | Palm Beach State and Hillsborough: answering servers, unknown paths (batch 194) |
+| **72** | `GRA4154C` — "Introduction" at one institution, "Advanced" at three, on a 4000-level number (batch 196) |
+| **73** | `EVR4023` — the statewide definition names a METHOD, and one of two carriers has left it (batch 199) |
+| **75** | `EDG4442` — a FIELD EXPERIENCE and a METHODS COURSE on one number (batch 200) — **split candidate, and a new shape** |
+| **76** | `ATF1100L` — the statewide TITLE states a credit range and two of three carriers fall outside it (batch 200) |
+| **77** | A title inside an SCNS prerequisite string can be an INSTITUTION's title, not the state's (batch 200) |
+| **78** | `HFT3271` — FOUR subjects, and the statewide title matches NONE of them (batch 201) — **HELD** |
+| **79** | COURSE-TYPE divergence fired again in the very next batch — `JOU4201` (batch 201) |
+| **80** | The Gordon Rule designation is now MACHINE-READABLE — and a retro-sweep candidate just got cheap (batch 201) |
+| **81** | `CHM1020C` republished at v1.1 over a live May guide — and the process gap that let it happen (batch 202) |
+| **82** | The old inventory AGGREGATED suffixed variants — which sent early work to the wrong member of each family (batch 202) |
+| **83** | `MUN3483` — three carriers, three ensembles, and the state has dedicated numbers for two of them (batch 203) |
+| **86** | `PSY3215` — a misfiling, a sequence-position problem and a credit divergence on one number (batch 205) |
+| **87** | An undergraduate title that is the state's GRADUATE title — now twice in two batches (batch 205) |
+| **88** | DEPARTMENTAL divergence invisible in the statewide record — `POS3625` (batch 205) |
+| **89** | `SPN3400` has a LIVE guide, and UWF appears to teach something else under that number (batch 207) |
+| **90** | `SPM4505` Sport Finance (live guide) and `SPM4503` Economic Issues in Sport — a cross-reference worth adding (batch 207) |
+| **91** | The studio-prefix contact-hour convention is unsettled — five live `TPA` guides use three conventions (batch 208) |
+| **92** | New evidence on held item 25 (`TPA3230C`, costume) — two of its stated facts are wrong (batch 208) |
+| **93** | `AMH2010` and `AMH2020` carry ELECTIVE high-school credit, not AMERICAN HISTORY — and both have live guides (batch 210) |
+| **94** | NWFSC's `ATF2530L` catalogue entry carries the WRONG course description (batch 212) |
+| **95** | Nine live guides in the `ATF`/`ATT` family may now be incomplete — the alternate-level pair (batch 212) |
+| **96** | `BOT4850` — the statewide TITLE says "w/Lab" and the statewide DESCRIPTION says "LECTURE ONLY" (batch 214) |
+| **97** | The flat file's `transferable` field holds the HIGH-SCHOOL-CREDIT code — batch 212's note corrected (batch 214) |
+| **98** | `HFT3271` — FOUR subjects on one number, and NO carrier teaches the statewide one (batch 218) |
+| **99** | `HFT4252` — the statewide TITLE and DESCRIPTION contradict each other, and the CARRIERS SPLIT (batch 218) |
+| **100** | `CCJ` splits courses by SECTOR across two numbers — two confirmed, and the prefix should be swept (batch 220) |
+| **101** | `JOU4306` — two unrelated subjects on one number, and a SPLIT is soundly sourceable (batch 224) |
+| **102** | The STUDIO contact-hour convention contradicts itself — and `GRA` now holds three answers |
+| **103** | CIP codes are the career-path anchor — and institutions disagree on 7% of them (batch 230) |
+
+### Informational — no decision needed (19)
+
+| # | Item |
+|---|---|
+| 18 | `ASC1610C` — cannot be sourced, not a decision (batch 154) |
+| 19 | Should the C-suffix contact-hour rule be restated? (batch 154) — *low priority* |
+| 22 | `MUT4311` / `MUT3311` — a NUMBER divergence, which defeats articulation (batch 163) |
+| 23 | "Tradition divergence" — a new drift category, two instances in consecutive batches |
+| 24 | `PHI3500` / `PHI4500` — another number divergence, and this one is deliberate (batch 172) |
+| 32 | `BSC1050` published from the only reachable catalog, which holds the NARROWER subject (batch 182) — *informational, no action needed* |
+| 35 | `EUH3570` — chronological divergence found, sourcing done, row deferred (batch 183) |
+| 39 | `RTV3511` — THREE production courses under one number; craft divergence (batch 185) — *informational, published with a warning* |
+| 40 | `PHY3220` — credit-count divergence, a shape with no identifier signal (batch 185) |
+| 41 | `SCE4320` — scope divergence against a BANDED certification (batch 186) |
+| 42 | Prerequisite strings are approaching the 500-character server limit (batch 186) — *process, no decision needed* |
+| 44 | `PHZ3151C` — sourcing failure, left queued (batch 187) |
+| 46 | `APK2105C` — the BSC/APK prefix divergence, now evidenced from a catalog line (batch 188) — *informational, but the highest-stakes row written* |
+| 48 | `APK3220C`, `APK4114C`, `APK4600C` — sourcing failures, left queued (batch 189) |
+| 51 | `EEE4306C` and `EEE4309C` — statewide records that contradict what is taught (EEE sweep) — *informational, published with warnings* |
+| 66 | `ENV4351` — credits of 2, 3 AND 4 on one number (batch 193) — *informational, published with the table* |
+| 71 | A third contact-hour shape: the STUDIO course (batch 196) — *tooling fixed, no decision needed* |
+| 74 | Say so when a number is CLEAN — new handling applied in batch 199 (informational) |
+| 84 | NEW SHAPES from batch 203 — recorded for awareness, no decision needed |
+
+### ✅ Resolved (10)
+
+| # | Item |
+|---|---|
+| 7 | `PHT1006C` — CLOSED 2026-09-03: resolved and published (informational) |
+| 9 | Split-family `C`-suffix rows with no UWF coverage — **RESOLVED 2026-09-04 (batch 124)** |
+| 12 | `BCN2405C` - RESOLVED 2026-09-04 (batch 141): title drift, not a subject split |
+| 36 | RESOLVED — `GRA3112C` and `GRA4154C` are written; SCNS answered what no catalog would (2026-09-11) |
+| 47 | The APK anatomy-and-physiology family is COMPLETE (batch 189) — *informational, closes part of item 46* |
+| 52 | Item 30 RESOLVED — the seven missing taxonomy prefixes are added (2026-09-09) — *needs a deploy* |
+| 53 | Item 50 RESOLVED — inventory counts regenerated from SCNS; **the C-suffix mechanism is proven** (2026-09-09) |
+| 64 | RESOLVED — the prerequisite ceiling was raised to 1000 and deployed (2026-09-11) |
+| 67 | The 1000-character prerequisite ceiling is doing exactly what it was raised to do (batch 193) |
+| 85 | `OCB3108C` — the C-nobody-carries class gains its cleanest case, and this one resolved itself (batch 203) |
 ## Open — awaiting decision
 ### 1. `ETI4448` — scope gap on a capstone (correction candidate)
 
@@ -2731,6 +2831,69 @@ so, which is the part that actually protects the reader.
 
 ⚠ **Whichever you pick, it is a small mechanical sweep**, not a rewrite: the figure lives in one field and
 in one sentence of the Special Information section.
+
+
+## 103. ⚠⚠⚠ CIP codes are the career-path anchor — and institutions disagree on 7% of them (batch 230)
+
+**Raised 2026-09-16, ahead of the career-paths phase. Not blocking; it is a DESIGN input for that build.**
+
+You settled that careers will be bound to CIP codes
+(`https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55`). **Anchoring the CAREER on a CIP is sound** —
+that is the end of the mapping where CIP is authoritative. **This item is about the other end: binding
+COURSES to it.**
+
+### What is already banked, at no cost
+
+`cip_map.py` (new) harvests course → CIP from the Coursedog caches, the only Florida source that
+exposes a per-course `cipCode`. **25,412 courses mapped today** — FIU 25,188, FAU 7,120, NWFSC 708.
+⚠ **FSCJ contributes nothing**: 2 rows out of 22,698, both the placeholder `9999999999`.
+
+### ⚠⚠ The measurement you will want before designing the mapping
+
+Over the **1,500 courses carried by two or more of those institutions**:
+
+| | Count | Share |
+|---|---|---|
+| Institutions **agree** exactly | 763 | 51% |
+| Disagree **within the same 2-digit family** | 631 | 42% — benign granularity |
+| ⚠⚠ **Disagree across DIFFERENT families** | **106** | **7%** |
+
+**Read it as 93% agreement at family level, not 49% disagreement** — most of the noise is one
+institution choosing a finer sub-code.
+
+**But the 7% is severe, and it is the same class of problem this project has spent 200 batches
+documenting for course numbers:**
+
+| Course | Classified as |
+|---|---|
+| ⚠⚠⚠ **`ART1300C`** (Drawing) | FAU **50.0701 Fine Arts** · NWFSC **13.1302 Art Teacher Education** |
+| ⚠⚠⚠ **`ART2501C`** | FAU **50.0701 Fine Arts** · NWFSC **36.1096 Leisure and Recreational Activities** |
+| `ANT2100` | FAU **45.0201 Anthropology** · NWFSC **30.0000 Multi/Interdisciplinary** |
+| `ADV3008` | FAU **52.0101 Business** · FIU **09.0101 Communication** |
+
+**The same drawing course is fine art at one school, teacher education at another and a recreational
+activity at a third.** A pathway routing students by course CIP alone would send three students with
+identical coursework to three different careers.
+
+### What I would recommend, for your decision
+
+1. **Anchor careers on CIP** — as you specified. No change.
+2. ⚠⚠ **Do not derive a COURSE's pathway membership from its institution-assigned CIP alone.** Use
+   it as one signal beside the statewide subject and the prerequisite graph, which is what the guides
+   already capture.
+3. **Where institutions disagree, store BOTH.** The disagreement is a real fact about how the course
+   is used, and hiding it would reintroduce exactly the trap the `-SCNS`/`-INST` split exists to avoid.
+4. ⚠ **Compare at the 2-digit family first.** Comparing 6-digit codes reports 42% of benign
+   granularity as conflict.
+
+⚠ **One thing worth your steer now rather than later:** whether the career-paths data model should
+carry a course→CIP edge **per institution** (which the data supports and which is honest) or a single
+canonical CIP per course (simpler, and wrong 7% of the time). **That choice is cheap now and expensive
+after the schema is built.**
+
+⚠ **This is cross-session:** the career-paths build lives in the root session
+(`CAREER_PATHS_PLAN.md`), and this finding comes from the `Tools/` side. **Worth carrying across
+before that build starts.**
 
 
 ## Resolved
