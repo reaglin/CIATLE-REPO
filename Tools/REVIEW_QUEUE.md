@@ -3002,7 +3002,7 @@ college uses finds nothing.
 | `MAC1140C` / `MAC1114C` | 1 / 1 | `MAC1140` / `MAC1114` | 31 / 33 | ❌ **NO** |
 | `MAT1033C` Intermediate Algebra | 4 | `MAT1033` | 30 | ❌ **NO** |
 | `ENC1101C` Composition I | 3 | **`ENC1101`** | **39** | ❌ **NO** |
-| `STA2023C` Statistics | 1 | **`STA2023`** | **52** | ❌ **NO** |
+| `STA2023C` Statistics | 1 | **`STA2023`** | **39** | ❌ **NO** |
 
 **Also affected:** `AST1002`, `OCE1001`, the `MUT` music-theory sequence, `CJK0096`/`CJK0340`
 (law-enforcement academy), `FRE1120`, `MVK1111`, `MVS2326`. ⚠ **`FFP2120C` has ZERO public
@@ -3060,6 +3060,42 @@ actually name.
 ⚠⚠ **Regenerating the inventory from the SCNS flat file is the real repair** and would
 prevent recurrence across the remaining ~800 queued rows. **That is a separate decision** — it
 changes the worklist the whole project has been running on.
+
+### ⚠ CORRECTION (2026-09-17): the first counts I published were ROWS, not INSTITUTIONS
+
+**The early ad-hoc checks counted flat-file ROWS. An institution can hold several active rows for one
+id** — honors sections, campuses — **so the figures overstated by roughly a third.** `suffix_audit.py`
+counts distinct institutions and was right; the hand checks that fed this item and two live career
+paths were not.
+
+| id | rows | **distinct institutions** |
+|---|---|---|
+| `STA2023` | 52 | **39** |
+| `ENC1101` | 51 | **39** |
+| `MAC2311` | 49 | **39** |
+| `BSC2085` | 25 | **20** |
+
+✅ **Corrected in `REVIEW_QUEUE`, and both live career paths were re-pushed with the right numbers.**
+⚠ **Standing check: count DISTINCT institution codes, never rows.**
+
+### ✅✅ AND A SHAPE THE COUNTS HID: `BSC2085` IS NOT THE SAME COURSE AS `BSC2085C`
+
+**Ron's ruling that `MAC2311` and `MAC2311C` are the same holds for MAC — both are 4 credits. It does
+NOT hold for the anatomy sequence, and the credit column says so:**
+
+| | credits | carriers | |
+|---|---|---|---|
+| `BSC2085` | **3** | 20 | the LECTURE only |
+| `BSC2085L` | **1** | 19 | the LABORATORY |
+| `BSC2085C` | **4** | 7 | both, integrated |
+
+⚠⚠⚠ **19 institutions carry the bare id AND the `L`; SEVEN carry the `C`; and NO institution
+carries both forms.** That is the split-family shape at its cleanest — perfectly disjoint carrier
+sets. **`BSC2085` alone does not satisfy a nursing prerequisite, because nursing requires the
+laboratory.** Both career-path variant notes now say so.
+
+⚠ **So "the bare and the C id are the same course" must be checked against the CREDITS before it is
+asserted** — it is true for MAC2311 and false for BSC2085.
 
 ### ✅ PROGRESS (2026-09-17)
 

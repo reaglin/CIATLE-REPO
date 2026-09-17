@@ -15,12 +15,12 @@
     {
       "courseId": "BSC2085",
       "reason": "Anatomy and Physiology I — the single most commonly named nursing prerequisite in Florida, and the usual gate on competitive admission.",
-      "variantNote": "Florida carries this subject under two prefix families. BSC2085 has 25 public carriers and BSC2085C has 7; the same subject is also numbered APK2100C. BSC is what health-professions prerequisite lists name. Check your target programme’s exact number before registering."
+      "variantNote": "⚠⚠ BSC2085 is the 3-credit LECTURE and does NOT include the laboratory — 19 institutions pair it with BSC2085L (1 credit), while 7 others run BSC2085C, a single 4-credit integrated course. NO institution carries both forms. Nursing programmes require the laboratory, so BSC2085 alone does not satisfy the prerequisite. The subject is also numbered APK2100C, but BSC is what health-professions prerequisite lists name."
     },
     {
       "courseId": "BSC2086",
       "reason": "Anatomy and Physiology II — the second half; nursing programmes require the pair, not one of them.",
-      "variantNote": "As above: BSC2086 (19 public carriers) and BSC2086C (7) coexist, alongside APK2105C. Take both halves in the same family where you can."
+      "variantNote": "⚠⚠ Same shape as BSC2085: BSC2086 is the 3-credit lecture, paired with BSC2086L (1 credit) at 19 institutions, against BSC2086C (4 credits, integrated) at 7. Take the lecture AND the lab, or the C form. Also numbered APK2105C."
     },
     {
       "courseId": "MCB2010",
@@ -42,12 +42,12 @@
     {
       "courseId": "STA2023",
       "reason": "Statistics — required by baccalaureate programmes and the reason evidence-based practice coursework is readable rather than recited.",
-      "variantNote": "Not listed on this site yet. STA2023 is carried by 52 Florida public institutions; the site currently lists only STA2023C, which one institution carries."
+      "variantNote": "⚠ Two ids carry this course. STA2023 is the form 39 Florida public institutions use; STA2023C is used by one. The guide currently sits on STA2023C. Register by the number your own catalogue prints."
     },
     {
       "courseId": "ENC1101",
       "reason": "Freshman composition — a general-education requirement everywhere, and a Gordon Rule course where a C-minus does not count.",
-      "variantNote": "Not listed on this site yet. ENC1101 is carried by 51 Florida public institutions; the site currently lists only ENC1101C, which three carry."
+      "variantNote": "⚠ Two ids carry this course. ENC1101 is the form 39 Florida public institutions use; ENC1101C is used by three, at 4 credits rather than 3. The guide currently sits on ENC1101C."
     },
 
     {
