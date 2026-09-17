@@ -273,6 +273,12 @@ students to three different careers on identical coursework.**
 4. ⚠ **Compare at the 2-digit family before the 6-digit code**, or 42% of benign granularity will be
    reported as conflict.
 
+⚠⚠ **AND THE DISAGREEMENT IS NOT ONLY BETWEEN INSTITUTIONS — IT HAPPENS INSIDE ONE (batch 230).**
+FAU tags `FIL4036`, `FIL4037`, `FIL4364` and `FIL4106` as **50.0602 Film/Cinema/Video Studies** and
+`FIL3803` *Film Theory* as **09.0702 Digital Communication/Media** — **same department, same prefix,
+two CIP families.** ⚠ **So a single institution's CIP assignment is not internally consistent either,
+which strengthens the case against treating any one course→CIP edge as authoritative.**
+
 ⚠ **Standing practice from now on: when a batch touches a Coursedog school, the CIP data comes for
 free — `cip_map.py` re-runs in seconds off the caches.** Keep the caches current and the anchor
 builds itself. See `REVIEW_QUEUE.md` item 103.
@@ -924,6 +930,30 @@ The strongest AI sections are the ones where the failure mode and the course's o
 
 ⚠ **Where this holds, it is a far better argument than a generic integrity warning** — it tells the student
 something about their own field.
+
+### ⚠⚠ CHECK WHETHER A CREDIT DIVERGENCE IS A PREFIX-WIDE INSTITUTIONAL PATTERN (batch 230)
+
+**Before writing a credit divergence up as a fact about the course, count the institution's WHOLE
+prefix.** Two `FIL` courses showed FAU at 4 credits against UWF's 3, which reads as two separate
+findings. **It is one:**
+
+| Institution | Undergraduate `FIL` credit profile |
+|---|---|
+| ⚠ **FAU** | **11 of 21 at 4 credits** |
+| UCF | 78 of 103 at 3 |
+| USF | 25 of 25 at 3 |
+| UNF | 24 of 25 at 3 |
+
+⚠⚠ **FAU runs the prefix at 4 credits; every other institution runs it at 3.** **So the sentence to
+write is "FAU carries this prefix at 4 credits", once, and not "this course diverges" on every course
+in the batch** — which would report one institutional choice as N separate divergences.
+
+⚠ **It is one `Counter` over the flat file, and it also gives the reader something more useful: an FAU
+film student accumulates credit faster per course than a comparison of course counts suggests.**
+
+⚠ **The same pass surfaces other institutional signatures worth a line** — FSU's `FIL` offering is
+dominated by VARIABLE credit (`1-6` on 28 rows) and UCF carries 22 `VAR` rows, which is the shape of a
+production school rather than a studies department.
 
 ### ⚠ CREDIT-COUNT divergence — a fourth shape, and invisible from the identifier (batch 185)
 
@@ -1621,6 +1651,35 @@ read from the data.** For `POS3625`: **look for the religion clauses on the read
 ⚠⚠ **Expect this wherever a subject has two departmental homes**: media law, statistics, technical
 writing, ethics, research methods, nutrition, and public speaking. **The flat file will look clean and the
 course will not be.** See `REVIEW_QUEUE.md` item 88.
+
+### ⚠⚠⚠ A SEQUENCE CAN DIVERGE ON THE BOUNDARY *AND* ON THE ORDERING (batch 230)
+
+**Sequence-length divergence (below) asks whether a field is one course or two. `FIL4036` adds two
+further axes, and all three are live on one number:**
+
+| | Statewide | Florida Atlantic | UWF |
+|---|---|---|---|
+| **Span of part 1** | 1890s → **1959** | ⚠ 1890s → **the 1940s** | ⚠⚠ **no boundary at all** |
+| **Structure** | two courses | two courses | ⚠⚠ **one course; no part 2 exists** |
+| **Ordering** | part 2 **requires** part 1 | ⚠ *"May be taken BEFORE"* — **either order** | n/a |
+
+⚠⚠⚠ **So roughly two decades sit inside the course at one institution and outside it at another** —
+for film history, that is noir, neorealism, the blacklist, the studio break-up and the arrival of
+television. **A student can complete "Film History 1" at either and have covered materially different
+material.**
+
+**Handling: do not describe the span in the guide as though it were settled. Give the three readings in
+a table and tell the reader to send a TOPIC or SCREENING LIST on transfer, not the course title** —
+departments place by coverage, and a week-by-week list settles in seconds what a title cannot.
+
+⚠ **Drill: where a numbered sequence exists (`I`/`II`, `1`/`2`), check THREE things, not one — where
+each carrier draws the boundary, whether a part 2 exists at all, and whether the halves are ordered.**
+Any of the three can diverge independently.
+
+⚠⚠ **And run the batch-181 partner check regardless of what you find.** On `FIL4036` it paid: the
+partner number `FIL4037` is *Film History 2* statewide and at FAU, **but USF carries it as *History of
+Video Art*** — an unrelated subject. **So a student cannot simply enrol in the partner number wherever
+they find it, and the guide has to say so.**
 
 ### ⚠⚠⚠ SEQUENCE-LENGTH divergence — the same field as ONE course or as TWO (batch 204)
 
@@ -2712,6 +2771,13 @@ graduates actually start work.** The guide says so and tells the reader to close
 
 ⚠ **The drill: when a statewide title contains a conjunction ("X and Y"), check that the statewide
 DESCRIPTION delivers both halves, and check whether Y has its own number that nobody carries.**
+
+⚠⚠ **AND RECORD IT WHEN THE TEST PASSES (batch 230).** Every instance above is a failure, which
+makes the test look like a detector for a defect. **`FIL4102` is the clean case: the statewide title
+promises *"Screenwriting AND Storyboarding"*, the sole carrier's TITLE drops storyboarding — and its
+DESCRIPTION delivers it** (*"script formats, storyboarding, and story pitches"*). **A title that names
+only the larger half is not a missing half.** ⚠ **Check the description before writing a gap warning,
+and say so in the guide when both halves are there** — that is a reassurance a student can use.
 
 ##### ⚠⚠ SECOND INSTANCE, with a twist: the missing half's number is GRADUATE (batch 223)
 
