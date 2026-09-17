@@ -2318,7 +2318,7 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **UWF** | `catalog.uwf.edu/courseinformation/courses/<prefix>/<prefix>.pdf` (**lowercase**) | ✅ **working** — one fetch per prefix, full descriptions. The workhorse. ⚠⚠ **But it does NOT cover every prefix UWF carries** (found batch 212): `atf` **404s** and `att` is a **title-only stub**, though UWF is an active SCNS carrier of both. The course-information index simply does not list them. **A 404 here is not proof UWF lacks the prefix — fall through to the search route below.** |
 | **⚠⚠ UWF PDF parsing** | `scratchpad/uwf_pdf.py` | ⚠⚠⚠ **USE THE PARSER, NOT A NAIVE SPLIT (batch 215).** CourseLeaf lays each entry out as `HEADER … Co-requisite: RET <other>` **then** the description, **then** the next header — so **splitting extracted text on `/ABC \d{4}/` cuts at the COREQUISITE REFERENCE and attaches every description to the WRONG course.** It produced three confidently wrong descriptions before being caught. ⚠ A second attempt failed differently: a lazy `(.*?)` title pattern spanned a whole description to reach the next entry's "College of" — **constrain the title to ≤90 chars with no sentence period.** ⚠⚠ **The general lesson: an extraction bug does not error, it returns plausible text for the wrong record.** It was caught only because "Clinical Practicum I" described ventilator theory. **Sanity-check extracted text against what the title claims.** |
 | **UWF (search route)** | **`catalog.uwf.edu/search/?P=<PREFIX>%20<NUMBER>`** — `scratchpad/uwf_search.py` | ✅✅ **TOOLED AND RECORDED 2026-09-15 (batch 212). Use whenever the prefix PDF 404s or comes back empty.** ⚠ The session before had already found this route by hand and left cached results but **no register entry**, so batch 212 rediscovered it from scratch — **record a route here the moment it works, not at the end of the batch.** Returns the full course block: description, credits, prerequisites **and the college and department** (a batch-187 departmental signal the PDFs never carry — it is how UWF's aviation programme was found to sit in the College of Business). ⚠ The element is `<article class="searchresult search-courseresult">`, **not a `<div>`**. |
-| **FGCU** | `catalog.fgcu.edu/courses/<prefix>/<prefix>.pdf` (**the `.pdf`, not the directory**) | ✅ **working.** ⚠ The old directory URL is what was bot-blocked; the PDF answers. **Now the single most productive cross-check source in the project** — it documents credits explicitly and has produced the divergence a guide turned on in three consecutive batches. |
+| **FGCU** | `catalog.fgcu.edu/courses/<prefix>/<prefix>.pdf` | ⚠⚠⚠ **BLOCKED as of 2026-09-17 (batch 231) — RE-PROBE BEFORE ASSUMING IT IS GONE.** Returns an **empty 202** on `phi`, `mue`, `bsc`, `egn` and `eng` — **6 requests across 2 days and 5 prefixes**, which is past what the batch-183 rate-trigger caution covers but is NOT proof of a permanent block. **This was the single most productive cross-check source in the project**, so the loss is significant: it documented credits explicitly and produced the divergence a guide turned on in three consecutive batches. **Probe it at the start of every session** (a prefix FGCU certainly carries — `bsc` or `eng`); a full body means it is back. See `REVIEW_QUEUE.md` item 104. |
 | **FSU** | `registrar.fsu.edu/bulletin/undergraduate-departments/<department>` | ✅ **working, and general-purpose.** Previously recorded here as useful only for the FAMU-FSU joint engineering college — **it is not.** Clean HTML with full descriptions, credits and prerequisites for `psychology`, `philosophy`, `social-work` and others. **Use it as the third vote when UWF and FGCU disagree.** |
 | **⚠⚠ SCNS (statewide)** | `scratchpad/scns.py` — `flscns.fldoe.org` | ✅✅ **SOLVED 2026-09-09 (EEE sweep). CHECK THIS FIRST, BEFORE ANY INSTITUTION CATALOG.** `flatfile` downloads the whole SCNS database (~80 MB) carrying, per course, **both the institution's title AND the statewide title**, the authoritative institution list for the **exact** id, per-institution credits, and Gordon Rule + gen-ed flags. `statewide <PREFIX>` returns full descriptions, prerequisites and transferability as CSV. ⚠ Routes are **extensionless**; you must **accept the terms modal** first or reports return 0 rows silently; the report is an async SSRS viewer. All three handled in `scns.py`. See `SOURCES.md` Tier 3. |
 | **UF** | **`catalog.ufl.edu/UGRD/courses/<department>/`** — plain CourseLeaf page | ✅ **UPGRADED 2026-09-09.** The department page returns **full descriptions, credits and prerequisites** for every course in the department — far better than the POST API below, which gives title and existence only. Department slugs are descriptive (`electrical_and_computer_engineering`). |
@@ -2466,6 +2466,38 @@ cleared it.
 **The middle row cannot be reconciled with the batch-202 reading** — a course cannot be the writing half
 without being Gordon Rule designated at all. **The flags are two independent institution-entered fields,
 not a two-bit code.**
+
+#### ⚠⚠⚠ HOW OFTEN AN INSTITUTION DESIGNATES VARIES BY A FACTOR OF THIRTEEN (batch 231)
+
+**The rule above says designation is institution-specific. `PHI` quantifies it, and the spread is far
+wider than "varies" suggests.** One `Counter` over the prefix — 464 public undergraduate rows, 132
+designated, 28% overall:
+
+| Institution | Designated | | Institution | Designated |
+|---|---|---|---|---|
+| **IRSC** | **11/12 — 92%** | | FAU | 8/44 — 18% |
+| **GCSC** | 6/8 — 75% | | UNF | 4/39 — 10% |
+| **UWF** | 14/24 — 58% | | UCF | 6/68 — 9% |
+| **USF** | 10/20 — 50% | | FIU | 3/40 — 7.5% |
+| FGCU | 5/17 — 29% | | **FSU** | **2/29 — 7%** |
+
+⚠⚠ **So the Gordon Rule designation is INSTITUTIONAL POLICY showing through, not a property of any
+course.** All four `PHI` courses in batch 231 had **exactly one of their two carriers** designating
+them — four for four — which looks like four findings and is one.
+
+⚠⚠⚠ **This is the batch-230 pattern rule applied to DESIGNATIONS: before writing a designation
+difference up per-course, count the institution's whole prefix.** Otherwise one policy is reported as
+N separate divergences.
+
+⚠ **But the rate predicts the TENDENCY, not the course — and `PHI3200` is the counter-case.** UWF
+designates 58% of its philosophy courses and FGCU 29%, **yet on that number it is FGCU that designates
+and UWF that does not.** **So never infer an individual course's designation from the institution's
+habit; look it up, and tell the student to check their own list.**
+
+✅ **A validation worth recording: the flat-file flags matched the catalogue 4 for 4.** UWF's PDF
+carries *"Meets College-Level Communication Skills Requirement"* on exactly the three courses the flat
+file flags and not on the fourth. **The batch-179 label rule and the flag data corroborate each other
+independently, which is good reason to trust both.**
 
 ⚠⚠ **So the honest statement a guide should make: the flags reliably tell you that SOME designation is
 recorded; they are NOT a safe guide to WHICH.** **Write "a designation is recorded — check your

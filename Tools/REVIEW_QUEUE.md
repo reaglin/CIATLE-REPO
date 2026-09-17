@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **74** |
+| ⏳ **Awaiting a decision from Ron** | **75** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **103** |
+| **Total items** | **104** |
 
 ---
 
-### ⏳ Awaiting a decision (74)
+### ⏳ Awaiting a decision (75)
 
 | # | Item |
 |---|---|
@@ -111,6 +111,7 @@ continues around every one of them.
 | **101** | `JOU4306` — two unrelated subjects on one number, and a SPLIT is soundly sourceable (batch 224) |
 | **102** | The STUDIO contact-hour convention contradicts itself — and `GRA` now holds three answers |
 | **103** | CIP codes are the career-path anchor — and institutions disagree on 7% of them (batch 230) |
+| **104** | FGCU's catalogue has stopped returning course content (batch 231) |
 
 ### Informational — no decision needed (19)
 
@@ -2894,6 +2895,40 @@ after the schema is built.**
 ⚠ **This is cross-session:** the career-paths build lives in the root session
 (`CAREER_PATHS_PLAN.md`), and this finding comes from the `Tools/` side. **Worth carrying across
 before that build starts.**
+
+
+## 104. ⚠⚠⚠ FGCU's catalogue has stopped returning course content (batch 231)
+
+**Raised 2026-09-17. Not blocking — but it is the loss of the project's best cross-check source, and
+you may have a route to it that I do not.**
+
+`catalog.fgcu.edu/courses/<prefix>/<prefix>.pdf` now returns an **empty 202** on every prefix tried:
+**`phi`, `mue`, `bsc`, `egn`, `eng` — 6 requests across 2 days.**
+
+⚠ **Why this matters more than an ordinary block.** The source register describes FGCU as *"the single
+most productive cross-check source in the project"*: it documents credits explicitly and produced the
+divergence a guide turned on in three consecutive batches. **It is also frequently the SECOND carrier
+on a two-carrier course**, which is exactly where a guide most needs independent corroboration. Two
+guides in the last two batches say so explicitly — `MUE4344` (the misfiling case, where FGCU is the
+ONLY carrier) and `PHI3200`.
+
+⚠⚠ **I have NOT recorded it as permanent, deliberately.** The batch-183 rule says state-college
+blocks are rate-triggered and warns against concluding from a burst. **Six requests over two days on
+five prefixes is past that**, but Broward and Valencia have both gone blocked → recovered → blocked
+before. **The register row now says "blocked as of 2026-09-17 — re-probe", and I probe it at session
+start.**
+
+**What I would like from you, if either is easy:**
+
+1. **Whether FGCU has another public route** — a Coursedog or Kuali instance, or a catalogue PDF served
+   from a different host. I have not found one, but I have only probed the CourseLeaf pattern.
+2. ⚠ **Whether it is worth asking FGCU directly.** This is a public state university catalogue and the
+   project is building a public student resource for Florida; **a request for access is the kind of
+   thing that sometimes simply works**, and it would also settle UNF, which has been blocked at the
+   host for longer.
+
+**No decision is needed to keep working** — guides name the gap where FGCU could not be read, which is
+the honest handling. This is about recovering a source, not unblocking the queue.
 
 
 ## Resolved
