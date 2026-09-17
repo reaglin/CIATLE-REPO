@@ -15,6 +15,7 @@ public record UpsertCareerPathRequest(
     bool? IsPublished,
     int? SortOrder,
     List<CareerPathCipInput>? CipCodes,
+    List<CareerPathProgramInput>? Programs,
     List<CareerPathCourseInput>? Courses,
     List<CareerPathSourceInput>? Sources);
 
@@ -23,6 +24,14 @@ public record UpsertCareerPathRequest(
 /// should carry the EVIDENCE that students actually come from this programme, with its source
 /// — not a judgement that the subject looks related.
 /// </summary>
+/// <summary>
+/// A programme that leads to this career. ⚠ <see cref="Slug"/> must name a seeded programme;
+/// the schools offering it are derived from the programme, never listed here.
+/// </summary>
+public record CareerPathProgramInput(
+    string? Slug,
+    string? Note);
+
 public record CareerPathCipInput(
     string? CipCode,
     string? Note);

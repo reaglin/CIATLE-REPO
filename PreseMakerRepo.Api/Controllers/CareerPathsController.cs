@@ -70,6 +70,7 @@ public class CareerPathsController : ControllerBase
         var path = await _db.CareerPaths.AsNoTracking()
             .Include(p => p.Cip)
             .Include(p => p.Cips).ThenInclude(c => c.Cip)
+            .Include(p => p.ProgramLinks!).ThenInclude(l => l.Program)
             .Include(p => p.Courses)
             .Include(p => p.Sources)
             .FirstOrDefaultAsync(p => p.Slug == slug && p.IsPublished);
@@ -120,6 +121,7 @@ public class CareerPathsController : ControllerBase
                 "Widen the seed (Tools/build_cip_seed.py, EXTRA_GROUPS) or file the path elsewhere."));
 
         var now = DateTime.UtcNow;
+        var links = await _db.CareerPathPrograms.ToListAsync();
         var path = await _db.CareerPaths
             .Include(p => p.Cips)
             .Include(p => p.Courses)
@@ -135,6 +137,7 @@ public class CareerPathsController : ControllerBase
         else
         {
             _db.CareerPathCips.RemoveRange(path.Cips);
+            _db.CareerPathPrograms.RemoveRange(links.Where(l => l.CareerPathId == path.Id));
             _db.CareerPathCourses.RemoveRange(path.Courses);
             _db.CareerPathSources.RemoveRange(path.Sources);
         }
@@ -148,6 +151,29 @@ public class CareerPathsController : ControllerBase
         path.IsPublished = request.IsPublished ?? false;
         path.SortOrder = request.SortOrder ?? 0;
         path.UpdatedUtc = now;
+
+        // ⚠ A programme must already be seeded. A link to a slug that does not exist would
+        // render as a dead reference on the career page.
+        var wantProgs = (request.Programs ?? []).Select(x => x.Slug!.Trim()).Distinct().ToList();
+        var progs = await _db.Programs.Where(p => wantProgs.Contains(p.Slug))
+                                      .ToDictionaryAsync(p => p.Slug, p => p.Id);
+        var missingProgs = wantProgs.Except(progs.Keys).ToList();
+        if (missingProgs.Count > 0)
+            return UnprocessableEntity(ApiResponse<object?>.Fail(ErrorCodes.ValidationError,
+                $"Unknown programme slug(s): {string.Join(", ", missingProgs)}."));
+
+        int porder = 0;
+        foreach (var pr in request.Programs ?? [])
+        {
+            _db.CareerPathPrograms.Add(new CareerPathProgram
+            {
+                Id = Guid.NewGuid(),
+                CareerPathId = path.Id,
+                ProgramId = progs[pr.Slug!.Trim()],
+                Note = Blank(pr.Note),
+                SortOrder = porder++
+            });
+        }
 
         int order = 0;
         // ⚠ The primary is NOT duplicated here -- it lives on the path itself, and the
@@ -230,6 +256,8 @@ public class CareerPathsController : ControllerBase
         p.BodyHtml, p.SortOrder, p.CreatedUtc, p.UpdatedUtc,
         p.Cips.OrderBy(c => c.SortOrder)
               .Select(c => new CareerPathCipDto(c.CipCode, c.Cip?.Title, c.Note)).ToList(),
+        (p.ProgramLinks ?? []).OrderBy(l => l.SortOrder)
+              .Select(l => new CareerPathProgramDto(l.Program!.Slug, l.Program.Name, l.Note, 0)).ToList(),
         p.Courses.OrderBy(c => c.SortOrder)
                  .Select(c => new CareerPathCourseDto(c.CourseId, c.Reason, c.VariantNote)).ToList(),
         p.Sources.OrderBy(s => s.SortOrder)

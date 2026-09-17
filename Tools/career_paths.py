@@ -147,6 +147,15 @@ def check(slug, doc):
             warn.append("cipCodes[%d] (%s): no note -- say what the evidence is that "
                         "students actually come from this programme" % (i, code))
 
+    # ⚠ Programmes are named by SLUG and must already be seeded; the server rejects
+    # an unknown one rather than rendering a dead link.
+    for i, pr in enumerate(doc.get("programs") or []):
+        if not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", (pr.get("slug") or "")):
+            err.append("programs[%d]: %r is not a slug" % (i, pr.get("slug")))
+        if pr.get("note") and len(pr["note"]) > LIMITS["note"]:
+            err.append("programs[%d]: note is %d chars, limit %d"
+                       % (i, len(pr["note"]), LIMITS["note"]))
+
     courses = doc.get("courses") or []
     if len(courses) > MAX_COURSES:
         err.append("%d courses, limit %d" % (len(courses), MAX_COURSES))
@@ -281,7 +290,8 @@ def cmd_push(args):
     for slug, doc in docs.items():
         body = {k: doc.get(k) for k in
                 ("name", "cipCode", "description", "socCode", "credentialNote",
-                 "bodyHtml", "isPublished", "sortOrder", "cipCodes", "courses", "sources")}
+                 "bodyHtml", "isPublished", "sortOrder", "cipCodes", "programs",
+                 "courses", "sources")}
         r = s.put("%s/api/v1/career-paths/%s" % (BASE_URL, slug), json=body,
                   headers={"Authorization": "Bearer %s" % tok}, timeout=60)
         if r.status_code != 200:

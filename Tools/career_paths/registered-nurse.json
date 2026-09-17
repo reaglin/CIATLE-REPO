@@ -4,13 +4,9 @@
   "socCode": "29-1141",
   "isPublished": true,
   "sortOrder": 10,
-
   "description": "Registered nurses assess patients, plan and deliver care, administer medication and treatments, and coordinate with the rest of the clinical team. In Florida the licence is issued by the Florida Board of Nursing, and eligibility runs through a Board-approved nursing programme and the NCLEX-RN examination — not through accumulated coursework.",
-
   "credentialNote": "Read this before planning a route. Eligibility to sit NCLEX-RN depends on GRADUATING FROM A NURSING PROGRAMME THE FLORIDA BOARD OF NURSING HAS APPROVED. A student can hold transferable credit for every course on this page and still not be eligible, because the credential runs through the programme rather than through the credits. Two consequences follow. First, confirm a programme is Board-approved and accredited (ACEN or CCNE) BEFORE enrolling, not after. Second, an RN-to-BSN degree-completion programme is for people who are ALREADY licensed — it does not lead to initial licensure, and its name does not say so.",
-
   "bodyHtml": "<h2>Three routes, and they are not interchangeable</h2><p>Florida runs three distinct routes to and through RN licensure, and the difference matters more than the course list does.</p><ul><li><strong>Associate degree (A.S.) in Nursing</strong>, usually at a Florida College System institution. The shortest route to initial licensure. Graduates sit NCLEX-RN.</li><li><strong>Baccalaureate (BSN)</strong>, pre-licensure, usually at a state university. Four years including the general-education and science prerequisites below. Graduates sit NCLEX-RN.</li><li><strong>RN-to-BSN degree completion</strong>. For nurses who <em>already hold the licence</em>. <strong>It does not lead to initial licensure.</strong> Many of the upper-division courses listed here appear in both a pre-licensure BSN and an RN-to-BSN programme, under the same numbers — so the course list cannot tell you which kind of programme you are looking at. The programme description can.</li></ul><h2>The prerequisites are where most people are actually stopped</h2><p>Admission to a nursing programme is competitive and is decided largely on the science prerequisites below, taken before the nursing sequence begins. They are ordinary college courses, open to anyone, and they are the part of the route a student controls.</p><p><strong>Watch the anatomy and physiology numbering.</strong> Florida teaches the same subject under two prefix families — <code>BSC2085C</code>/<code>BSC2086C</code> and <code>APK2100C</code>/<code>APK2105C</code>. <strong>BSC is what nearly every health-professions prerequisite list actually names.</strong> The credit articulates either way; a requirement stated by course number may not. Check the exact numbers your target programme lists, in writing, before you register.</p><h2>The nursing sequence is cohort-locked</h2><p>Once a nursing programme begins, the courses run in a fixed, gated order with clinical placements arranged around them, and most run <strong>once a year</strong>. A failed course does not cost a term — it costs until the course runs again, typically a year, and may require re-application. Where a lecture and its clinical laboratory each list the other as a corequisite, failing either means repeating both.</p><h2>Before the first clinical day</h2><p>Clinical placement requires <strong>Level 2 fingerprint background screening</strong>, immunisation and TB records, drug screening, health insurance and <strong>BLS certification</strong>, and the clearances take weeks. Start them the week you are admitted, not the week before the rotation. A placement a hospital declines cannot be solved by working harder.</p><h2>What to keep</h2><p>Keep every clinical hour log and competency evaluation. A receiving programme or another state’s board must attest to your clinical competence under its own accreditation, so it may accept the credit and still require its own practicum. Course numbers do not carry that record; your own file does.</p>",
-
   "courses": [
     {
       "courseId": "BSC2085",
@@ -49,7 +45,6 @@
       "reason": "Freshman composition — a general-education requirement everywhere, and a Gordon Rule course where a C-minus does not count.",
       "variantNote": "⚠ Two ids carry this course. ENC1101 is the form 39 Florida public institutions use; ENC1101C is used by three, at 4 credits rather than 3. The guide currently sits on ENC1101C."
     },
-
     {
       "courseId": "NUR3805C",
       "reason": "Nursing role and scope — the entry course to the professional sequence: what a registered nurse is licensed to do and answerable for."
@@ -112,7 +107,6 @@
       "variantNote": "⚠ The bare number NUR4286 carries TWO DIFFERENT SUBJECTS in Florida: the statewide record defines it as Gerontological Nursing, while UWF teaches quality and safety on it. This page names the UWF reading deliberately. A transfer evaluator matching on the number alone cannot tell the two apart — send the syllabus."
     }
   ],
-
   "sources": [
     {
       "label": "Florida Board of Nursing — Registered Nurse licensure",
@@ -153,6 +147,12 @@
       "label": "NCES — Classification of Instructional Programs (CIP 2020)",
       "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
       "note": "The federal taxonomy this path is filed under, at 51.38 Registered Nursing."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "nursing",
+      "note": "Every route to RN licensure runs through a Board-approved nursing programme. The programme page lists the Florida public institutions that award nursing credentials, at every level from practical nursing to the BSN."
     }
   ]
 }

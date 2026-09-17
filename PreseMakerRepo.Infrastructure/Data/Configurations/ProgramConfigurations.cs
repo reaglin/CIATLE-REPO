@@ -50,7 +50,7 @@ public class CareerPathProgramConfiguration : IEntityTypeConfiguration<CareerPat
         b.Property(x => x.Note).HasMaxLength(500);
 
         b.HasOne(x => x.CareerPath)
-         .WithMany()
+         .WithMany(p => p.ProgramLinks)
          .HasForeignKey(x => x.CareerPathId)
          .OnDelete(DeleteBehavior.Cascade);
 

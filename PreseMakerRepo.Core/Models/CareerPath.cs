@@ -71,6 +71,8 @@ public class CareerPath
     public CipNode? Cip { get; set; }
     /// <summary>Additional CIP groups this path is filed under — see <see cref="CareerPathCip"/>.</summary>
     public ICollection<CareerPathCip> Cips { get; set; } = new List<CareerPathCip>();
+    /// <summary>Programmes that lead to this career — see <see cref="CareerPathProgram"/>.</summary>
+    public ICollection<CareerPathProgram>? ProgramLinks { get; set; }
     public ICollection<CareerPathCourse> Courses { get; set; } = new List<CareerPathCourse>();
     public ICollection<CareerPathSource> Sources { get; set; } = new List<CareerPathSource>();
 }

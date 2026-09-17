@@ -8,6 +8,24 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⚠ REDEPLOY NEEDED — careers linked to programmes (2026-09-17, after the Programs deploy)
+
+**Code only, NO migration** — the `CareerPathPrograms` table shipped with `AddPrograms`.
+
+A career path can now name the programmes that lead to it (`programs: [{slug, note}]` in the path
+JSON), and the path page gains a **"Programs that lead here"** section showing each programme with
+**how many Florida schools offer it** — Ron's "note schools that offer the program in the career".
+⚠ The count is derived from the programme's CIP prefixes against the award table; the career path
+stores nothing about schools.
+
+✅ Verified on the dev database: Mechanical Engineer → Mechanical Engineering renders "offered by 13
+Florida schools" with its note, and an unknown programme slug is refused **422**.
+
+⚠ **The two path documents already carry their `programs` link and have been pushed to
+production**, where the server ignores the unknown field until this deploys — so nothing is broken
+meanwhile, the section simply does not appear.
+
+
 ### ⚠⚠ REDEPLOY NEEDED — PROGRAMS (2026-09-17)
 
 **Migration `AddPrograms`** (four tables: `Programs`, `ProgramCips`, `CareerPathPrograms`,

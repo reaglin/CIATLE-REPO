@@ -121,6 +121,34 @@
     </div>
 }
 
+@if (Model.ProgramsForPath.Any())
+{
+    @* Ron: note, on the career page, the schools that offer the associated program.
+       The count is derived from the program, which owns no school list itself. *@
+    <h2 class="h5 mt-4 mb-1">Programs that lead here</h2>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var p in Model.ProgramsForPath)
+        {
+            <a asp-page="/Programs/Program" asp-route-slug="@p.Slug"
+               class="list-group-item list-group-item-action py-2">
+                <div class="d-flex justify-content-between align-items-start">
+                    <span class="fw-semibold">@p.Name</span>
+                    @if (p.Schools > 0)
+                    {
+                        <span class="badge text-bg-light text-muted ms-2 text-nowrap">
+                            offered by @p.Schools Florida schools
+                        </span>
+                    }
+                </div>
+                @if (!string.IsNullOrWhiteSpace(p.Note))
+                {
+                    <div class="small text-muted mt-1">@p.Note</div>
+                }
+            </a>
+        }
+    </div>
+}
+
 @if (Model.Schools.Any())
 {
     @* Derived from course offerings, so the claim stays true: these schools teach the

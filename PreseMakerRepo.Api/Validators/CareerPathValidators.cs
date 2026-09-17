@@ -31,8 +31,19 @@ public class UpsertCareerPathRequestValidator : AbstractValidator<UpsertCareerPa
             .When(x => x.CipCodes is not null).WithName("cipCodes");
 
         RuleForEach(x => x.CipCodes).SetValidator(new CareerPathCipInputValidator());
+        RuleForEach(x => x.Programs).SetValidator(new CareerPathProgramInputValidator());
         RuleForEach(x => x.Courses).SetValidator(new CareerPathCourseInputValidator());
         RuleForEach(x => x.Sources).SetValidator(new CareerPathSourceInputValidator());
+    }
+}
+
+public class CareerPathProgramInputValidator : AbstractValidator<CareerPathProgramInput>
+{
+    public CareerPathProgramInputValidator()
+    {
+        RuleFor(x => x.Slug).NotEmpty().Matches(@"^[a-z0-9]+(-[a-z0-9]+)*$")
+            .WithMessage("Each programme is named by its slug, e.g. nursing.");
+        RuleFor(x => x.Note).MaximumLength(500).When(x => x.Note is not null);
     }
 }
 

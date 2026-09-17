@@ -24,6 +24,8 @@ public class PathModel : PageModel
     public sealed record AnchorView(string Code, string Title, string? Note);
     /// <param name="Offered">How many of this path's courses the institution offers.</param>
     public sealed record SchoolView(string Code, string? Name, string? Sector, int Offered);
+    /// <param name="Schools">Institutions awarding a credential in the programme's CIP fields.</param>
+    public sealed record ProgramView(string Slug, string Name, string? Note, int Schools);
 
     public CareerPath Path { get; set; } = null!;
     public CipNode? Cip { get; set; }
@@ -36,6 +38,12 @@ public class PathModel : PageModel
     /// which is true, and never "this school offers this degree", which we do not know.
     /// </summary>
     public IReadOnlyList<SchoolView> Schools { get; set; } = [];
+    /// <summary>
+    /// Programmes that lead to this career. ⚠ Ron, 2026-09-17: "For programs associated with
+    /// careers we want to note schools that offer the program in the career (that will be a note)."
+    /// The school COUNT is derived from the programme's CIP prefixes against the award table.
+    /// </summary>
+    public IReadOnlyList<ProgramView> ProgramsForPath { get; set; } = [];
     /// <summary>Courses on the path the catalog actually carries — the denominator for Schools.</summary>
     public int CoursesListed { get; set; }
     public IReadOnlyList<CourseView> Courses { get; set; } = [];
@@ -78,6 +86,24 @@ public class PathModel : PageModel
             .Where(g => ids.Contains(g.CourseId) && g.Title != CurriculumGuide.StubTitle)
             .Select(g => new { g.CourseId, g.Title })
             .ToDictionaryAsync(g => g.CourseId, g => g.Title);
+
+        var progLinks = await _db.CareerPathPrograms.AsNoTracking()
+            .Where(l => l.CareerPathId == path.Id)
+            .Include(l => l.Program).ThenInclude(p => p!.Cips)
+            .OrderBy(l => l.SortOrder)
+            .ToListAsync();
+        if (progLinks.Count > 0)
+        {
+            var awards = await _db.InstitutionAwards.AsNoTracking()
+                .Select(a => new { a.UnitId, a.CipCode }).ToListAsync();
+            ProgramsForPath = progLinks.Select(l =>
+            {
+                var pre = l.Program!.Cips.Select(c => c.CipCode).ToList();
+                var n = awards.Where(a => pre.Any(x => a.CipCode.StartsWith(x)))
+                              .Select(a => a.UnitId).Distinct().Count();
+                return new ProgramView(l.Program.Slug, l.Program.Name, l.Note, n);
+            }).ToList();
+        }
 
         // ⚠ Ron, 2026-09-17, on what a career page should carry: "Schools represented in repo
         // offering this path (note the path may or may not be a specific degree)." Derived live
