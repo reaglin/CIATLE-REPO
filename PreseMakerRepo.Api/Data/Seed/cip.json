@@ -1023,7 +1023,7 @@
    "title": "MULTI/INTERDISCIPLINARY STUDIES",
    "definition": "Instructional programs that derive from two or more distinct programs to provide a cross-cutting focus on a subject concentration that is not subsumed under a single discipline or occupational field.",
    "parent": null,
-   "childCount": 4
+   "childCount": 5
   },
   {
    "code": "30.11",
@@ -1047,6 +1047,15 @@
    "code": "30.70",
    "level": 4,
    "title": "Data Science",
+   "definition": "",
+   "examples": "",
+   "parent": "30",
+   "childCount": 0
+  },
+  {
+   "code": "30.71",
+   "level": 4,
+   "title": "Data Analytics",
    "definition": "",
    "examples": "",
    "parent": "30",

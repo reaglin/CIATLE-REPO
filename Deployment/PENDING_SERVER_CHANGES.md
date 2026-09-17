@@ -8,6 +8,26 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⚠ SEED-ONLY REDEPLOY — one CIP node for the Data Scientist path (2026-09-17)
+
+**`cip.json` is now 208 nodes**, having gained **`30.71` Data Analytics** — the sibling of Data
+Science, awarded by 10 Florida public institutions and at more baccalaureate level than Data Science
+itself. **Production has the 207-node version**, so the Data Scientist path cannot publish until
+this ships: filing on `30.71` returns **422**.
+
+**No migration and no code change** — `cip.json` ships with the build, so this is exactly the case
+`-CodeOnly` was added for:
+
+```powershell
+.\Deployment\deploy-update.ps1 -CodeOnly
+```
+
+✅ Verified on the dev database: seed reports "1 added, 1 updated, 208 nodes", the path pushes with
+13 CIP anchors, and `/careers/data-scientist` returns 200 with all its sections.
+
+⚠ **After the deploy, push the path**: `python career_paths.py push data-scientist`.
+
+
 ### ⚠ REDEPLOY NEEDED — careers linked to programmes (2026-09-17, after the Programs deploy)
 
 ✅ **This is the first deploy that can use the new flag:**

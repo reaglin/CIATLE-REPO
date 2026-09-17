@@ -111,6 +111,10 @@ EXTRA_GROUPS = {
     '14.02': 'Aerospace Engineering -- ⚠ absent from the evidence despite the '
              'Space Coast being the signature Florida engineering employer.',
     '14.07': 'Chemical Engineering -- a standard Florida SUS engineering major.',
+    # Data Scientist path (2026-09-17): the sibling of Data Science, and larger.
+    '30.71': 'Data Analytics -- 10 Florida public institutions award it, more at '
+             'baccalaureate level than Data Science itself. The two are a pair and a '
+             'career path filed on one must reach the other.',
     # Health:
     '51.06': 'Dental Support Services -- dental hygiene, an A.S. programme at '
              'state colleges across Florida.',
