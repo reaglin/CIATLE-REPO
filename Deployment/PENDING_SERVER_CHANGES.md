@@ -10,9 +10,10 @@ Bundle these into the next deploy, then delete the entry.
 
 ### ⚠⚠ WRITTEN AND AWAITING DEPLOY — Career Paths and the CIP tree (2026-09-17)
 
-**Migration `AddCipAndCareerPaths`** (four tables: `CipNodes`, `CareerPaths`, `CareerPathCourses`,
-`CareerPathSources`) plus a new startup seed, three pages and a controller. **Deploy without
-`-SkipMigrations`.**
+**TWO migrations — `AddCipAndCareerPaths`** (four tables: `CipNodes`, `CareerPaths`,
+`CareerPathCourses`, `CareerPathSources`) **and `AddCareerPathCips`** (a fifth, `CareerPathCips`,
+letting one path be filed under several CIP groups) — plus a new startup seed, three pages and a
+controller. **Deploy without `-SkipMigrations`.**
 
 | What | Note |
 |---|---|
@@ -26,9 +27,13 @@ Bundle these into the next deploy, then delete the entry.
 (second run: 0 added, 0 updated, 196 nodes), all three pages return 200, unknown CIP code and unknown
 slug return 404, and a full path push round-trips through `Tools/career_paths.py`.
 
-⚠ **After deploying, the content is a separate step and needs Ron’s go-ahead**: the first path
-(`Tools/career_paths/registered-nurse.json`) is authored but **has not been pushed to production**.
-`python career_paths.py push registered-nurse`.
+⚠ **After deploying, the content is a separate step and needs Ron’s go-ahead**: two paths are
+authored (`Tools/career_paths/registered-nurse.json`, `lawyer.json`) and **neither has been pushed to
+production**. `python career_paths.py push --all`.
+
+⚠ **The seed file changed after the first commit** — `cip.json` is now **198 nodes** (159 groups),
+having gained `22.00` and `45.04` for the Lawyer path. It ships with the build, so the redeploy carries
+it and `CipSeed` adds the two nodes on startup (verified: *"2 added, 2 updated, 198 nodes"*).
 
 
 The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below.

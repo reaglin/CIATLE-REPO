@@ -73,6 +73,22 @@ CIP_MAP = os.path.join(SCRATCH, 'cip_map.json')
 FLAT = os.path.join(SCRATCH, 'crslist.txt')
 OUT = os.path.join(HERE, '..', 'PreseMakerRepo.Api', 'Data', 'Seed', 'cip.json')
 
+# ⚠⚠ Groups a CURATED CAREER PATH needs that the course evidence does not reach.
+# The 4-digit level is scoped by what three institutions have classified (see the
+# docstring), and the Lawyer path was the first to hit the edge of that: it is
+# anchored on the majors law-school applicants actually hold, and two of them have
+# no course-CIP evidence at all. A path cannot be filed on a code the tree does not
+# carry -- it would be unreachable by browsing -- so these are added DELIBERATELY,
+# with the reason on the record, rather than by loosening the evidence rule.
+EXTRA_GROUPS = {
+    '22.00': 'Non-Professional Legal Studies -- the undergraduate legal-studies '
+             'major; 1.4% of law-school applicants (LSAC). Florida public '
+             'institutions run it, but no CIP-publishing catalogue tags its courses.',
+    '45.04': 'Criminology -- 1.3% of law-school applicants (LSAC), and a major '
+             'Florida discipline in its own right.',
+}
+
+
 # A dominant CIP below this share of a prefix's votes is too mixed to trust even
 # for scoping, so the prefix contributes ALL its observed CIP groups instead of
 # just the winner. Broad prefixes genuinely span several groups.
@@ -163,6 +179,7 @@ def build():
             groups |= s
         scope = 'three-institution CIP evidence only (flat file not found)'
 
+    groups |= set(EXTRA_GROUPS)
     groups = {g for g in groups if g in cip and g[:2] not in EXCLUDE_SERIES}
     # ⚠ Level 2 is the COMPLETE taxonomy minus the deliberately excluded
     # non-programme series -- not merely the series we have evidence for. Ron
@@ -211,7 +228,8 @@ def main():
     empty = sorted(s for s in series if not any(n['parent'] == s for n in nodes))
     print('CIP series       : %d of 50 (%d excluded by policy as non-programme)'
           % (len(series), len(EXCLUDE_SERIES)))
-    print('4-digit groups   : %d of 473 (evidence-scoped)' % len(groups))
+    print('4-digit groups   : %d of 473 (evidence-scoped + %d added for curated paths)'
+          % (len(groups), len(EXTRA_GROUPS)))
     print('total seed nodes : %d' % len(nodes))
     if empty:
         print('series with no evidenced groups yet: %s' % ', '.join(empty))

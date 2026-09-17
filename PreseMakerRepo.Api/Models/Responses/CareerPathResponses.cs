@@ -35,8 +35,12 @@ public record CareerPathDto(
     int SortOrder,
     DateTime CreatedUtc,
     DateTime UpdatedUtc,
+    IReadOnlyList<CareerPathCipDto> CipCodes,
     IReadOnlyList<CareerPathCourseDto> Courses,
     IReadOnlyList<CareerPathSourceDto> Sources);
+
+/// <summary>A further CIP group the path is filed under, with the evidence for it.</summary>
+public record CareerPathCipDto(string CipCode, string? CipTitle, string? Note);
 
 /// <summary><see cref="Reason"/> is never null: a course with no stated reason is not published.</summary>
 public record CareerPathCourseDto(string CourseId, string Reason, string? VariantNote);
@@ -51,6 +55,7 @@ public record CareerPathSourceDto(string Label, string Url, string? Note);
 public record UpsertCareerPathResponse(
     string Slug,
     string Outcome,
+    int CipCount,
     int CourseCount,
     int SourceCount,
     IReadOnlyList<string> UnlistedCourses);

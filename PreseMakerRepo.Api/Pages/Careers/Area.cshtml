@@ -55,6 +55,11 @@
                     }
                 </div>
                 <div class="small text-muted">@p.Description</div>
+                @if (!p.IsPrimary && !string.IsNullOrWhiteSpace(p.Note))
+                {
+                    @* Why this path appears under a node that is not its home. *@
+                    <div class="small text-body-secondary mt-1"><em>@p.Note</em></div>
+                }
             </a>
         }
     </div>

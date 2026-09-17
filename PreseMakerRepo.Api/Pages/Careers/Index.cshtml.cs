@@ -26,17 +26,19 @@ public class IndexModel : PageModel
 
     public async Task OnGetAsync()
     {
-        // One grouped read rather than a count per series.
-        var pathsByCip = await _db.CareerPaths.AsNoTracking()
+        // Every (series, path) pair, from the primary node AND the additional anchors.
+        // ⚠ Counted as DISTINCT paths per series: a path anchored to two groups in the
+        // same series (Lawyer sits on both 45.10 and 45.11) is one path there, not two.
+        var primary = await _db.CareerPaths.AsNoTracking()
             .Where(p => p.IsPublished)
-            .GroupBy(p => p.CipCode)
-            .Select(g => new { CipCode = g.Key, Count = g.Count() })
-            .ToListAsync();
+            .Select(p => new { p.CipCode, p.Slug }).ToListAsync();
+        var linked = await _db.CareerPathCips.AsNoTracking()
+            .Where(c => c.CareerPath!.IsPublished)
+            .Select(c => new { c.CipCode, c.CareerPath!.Slug }).ToListAsync();
 
-        // A path is filed on a 4-digit group, so its series is the first two digits.
-        var bySeries = pathsByCip
+        var bySeries = primary.Concat(linked)
             .GroupBy(x => x.CipCode.Length >= 2 ? x.CipCode[..2] : x.CipCode)
-            .ToDictionary(g => g.Key, g => g.Sum(x => x.Count));
+            .ToDictionary(g => g.Key, g => g.Select(x => x.Slug).Distinct().Count());
 
         Series = await _db.CipNodes.AsNoTracking()
             .Where(n => n.Level == 2 && n.IsActive)

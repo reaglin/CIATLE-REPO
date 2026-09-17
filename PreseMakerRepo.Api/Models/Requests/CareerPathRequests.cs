@@ -14,8 +14,18 @@ public record UpsertCareerPathRequest(
     string? BodyHtml,
     bool? IsPublished,
     int? SortOrder,
+    List<CareerPathCipInput>? CipCodes,
     List<CareerPathCourseInput>? Courses,
     List<CareerPathSourceInput>? Sources);
+
+/// <summary>
+/// A further CIP group the path is filed under, beyond <c>CipCode</c>. ⚠ <see cref="Note"/>
+/// should carry the EVIDENCE that students actually come from this programme, with its source
+/// — not a judgement that the subject looks related.
+/// </summary>
+public record CareerPathCipInput(
+    string? CipCode,
+    string? Note);
 
 /// <summary><see cref="Reason"/> is required: an unjustified course does not belong on a path.</summary>
 public record CareerPathCourseInput(

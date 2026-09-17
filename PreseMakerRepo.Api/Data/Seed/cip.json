@@ -770,7 +770,16 @@
    "title": "LEGAL PROFESSIONS AND STUDIES",
    "definition": "Instructional programs that prepare individuals for the legal profession, for related support professions and professional legal research, and focus on the study of legal issues in non-professional programs.",
    "parent": null,
-   "childCount": 2
+   "childCount": 3
+  },
+  {
+   "code": "22.00",
+   "level": 4,
+   "title": "Non-Professional Legal Studies",
+   "definition": "",
+   "examples": "",
+   "parent": "22",
+   "childCount": 0
   },
   {
    "code": "22.01",
@@ -1239,7 +1248,7 @@
    "title": "SOCIAL SCIENCES",
    "definition": "Instructional programs that focus on the systematic study of social systems, social institutions, and social behavior.",
    "parent": null,
-   "childCount": 8
+   "childCount": 9
   },
   {
    "code": "45.01",
@@ -1254,6 +1263,15 @@
    "code": "45.02",
    "level": 4,
    "title": "Anthropology",
+   "definition": "",
+   "examples": "",
+   "parent": "45",
+   "childCount": 0
+  },
+  {
+   "code": "45.04",
+   "level": 4,
+   "title": "Criminology",
    "definition": "",
    "examples": "",
    "parent": "45",

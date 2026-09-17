@@ -30,11 +30,12 @@ at all:
 |---|---|
 | CIP seed builder | `Tools/build_cip_seed.py` → `PreseMakerRepo.Api/Data/Seed/cip.json` (39 series, 157 groups, 196 nodes) |
 | Course→CIP harvest (authoring aid only) | `Tools/cip_map.py` → `scratchpad/cip_map.json` (25,412 courses) |
-| Entities | `Core/Models/CipNode.cs`, `Core/Models/CareerPath.cs` (+ `CareerPathCourse`, `CareerPathSource`) |
+| Entities | `Core/Models/CipNode.cs`, `Core/Models/CareerPath.cs` (+ `CareerPathCip`, `CareerPathCourse`, `CareerPathSource`) |
 | Config + seed | `Infrastructure/Data/Configurations/CareerPathConfigurations.cs`, `Data/Seed/CipSeed.cs`, migration `AddCipAndCareerPaths` |
 | Pages | `/careers`, `/careers/area/{code}`, `/careers/{slug}` |
 | API | `GET /api/v1/cip`, `GET|PUT|DELETE /api/v1/career-paths[/{slug}]` |
 | Pipeline | `Tools/career_paths.py` (`validate` / `push` / `list`), documents in `Tools/career_paths/*.json` |
+| Content | `Tools/career_paths/registered-nurse.json`, `Tools/career_paths/lawyer.json` |
 
 ### What survives from the design below, and what does not
 
@@ -48,9 +49,48 @@ at all:
   puts the three routes in `bodyHtml` prose instead**, which says the same thing and needs no schema.
 - ❌ **"Institution codes per course row" was NOT built.** The course catalog already carries
   offerings per course; a path links to the course page rather than duplicating the institution list.
-- ⚠ **The first-release set (§1) is not settled.** `Registered Nurse` is authored. **Lawyer has no
-  undergraduate CIP code to hang off** — pre-law is not an instructional programme — so it needs a
-  decision from Ron about where, or whether, it is filed.
+- ✅ **Lawyer is authored, and the "no CIP to hang off" problem is ANSWERED.** Ron, 2026-09-17:
+  *"Search on the top academic programs that people that go into law get and use those as the CIP
+  codes that would go with the career path of lawyer."* — see §0.1. `Registered Nurse` and
+  `Lawyer` are both written; `Mechanical Engineer` and `Accountant / CPA` remain.
+
+### §0.1 ⚠⚠⚠ A PATH CAN HAVE MANY CIP CODES — and Lawyer is why (2026-09-17)
+
+**The first design gave a path ONE CIP code. Lawyer broke it, and Ron settled it by saying what the
+codes should be:**
+
+> *"Search on the top academic programs that people that go into law get and use those as the CIP
+> codes that would go with the career path of lawyer."*
+
+**The answer, from LSAC's own *Applicants by Major* report, is that there is no single feeder.** The
+largest — political science — is **17.5%** of law-school applicants; the rest arrive from psychology,
+criminal justice, English, economics, history, philosophy, sociology, communications, finance,
+business, international relations, liberal arts, legal studies, accounting and criminology, none above
+5.2%. **Filing that path under one code would assert a route that does not exist.**
+
+**So the model gained `CareerPathCip`** (migration `AddCareerPathCips`): a path keeps ONE primary
+`CipCode` — its home, its breadcrumb — and carries any number of additional anchors, each with a
+`Note` holding **the evidence**, not an opinion. Lawyer's primary is **22.01 Law** (the destination
+credential, the J.D.) and its sixteen feeders are every LSAC major at **≥1% of applicants**.
+
+| | |
+|---|---|
+| Browse | a path is found under its primary **or** any anchor — Lawyer appears on 11 CIP series and 17 groups |
+| The path page | a **"Where people come from"** section, each anchor linking back into the tree with its share |
+| Counting | **distinct paths per node**, so a path anchored twice in one series is listed once |
+| Validation | **every** code must be in the seeded tree, not just the primary |
+
+⚠⚠ **And it forced the first deliberate widening of the seed.** Two of the sixteen — **22.00**
+Non-Professional Legal Studies and **45.04** Criminology — had **no course-CIP evidence at all**, because
+the 4-digit level is scoped by what three institutions have tagged. They are now in
+`build_cip_seed.py`'s **`EXTRA_GROUPS`** with the reason recorded. **This is the documented coverage
+limitation biting for the first time, and the fix is an explicit exception rather than a looser rule.**
+
+⚠ **The content finding worth keeping.** LSAC's data shows the most law-SOUNDING majors posting the
+**lowest** mean LSAT scores — Criminal Justice 146.6, Pre-Law 148.5, Legal Studies 149.8 — against
+Economics 159.7 and Philosophy 157.9. **LSAC prints a caution against causal inference and the guide
+quotes it verbatim**, but the descriptive fact still answers the question a student actually asks, and
+it answers it against the intuitive choice.
 
 ### ⚠⚠ The measurement that forced "curated only"
 

@@ -69,6 +69,7 @@ public class CareerPathsController : ControllerBase
     {
         var path = await _db.CareerPaths.AsNoTracking()
             .Include(p => p.Cip)
+            .Include(p => p.Cips).ThenInclude(c => c.Cip)
             .Include(p => p.Courses)
             .Include(p => p.Sources)
             .FirstOrDefaultAsync(p => p.Slug == slug && p.IsPublished);
@@ -103,15 +104,24 @@ public class CareerPathsController : ControllerBase
                 "One or more validation errors occurred.",
                 vResult.Errors.Select(e => new FieldError(e.PropertyName, e.ErrorMessage)).ToList()));
 
-        // ⚠ The CIP node must already exist. A path filed on a code the tree does not carry
-        // would be unreachable by browsing, which is the only way anyone finds one.
-        if (!await _db.CipNodes.AnyAsync(n => n.Code == request.CipCode))
+        // ⚠ Every CIP node must already exist. A path filed on a code the tree does not
+        // carry would be unreachable by browsing, which is the only way anyone finds one.
+        var wanted = new List<string> { request.CipCode! };
+        wanted.AddRange((request.CipCodes ?? []).Select(c => c.CipCode!.Trim()));
+        // The primary may legitimately repeat in the list; file it once.
+        var distinctCips = wanted.Select(c => c.Trim()).Distinct().ToList();
+
+        var known = await _db.CipNodes.Where(n => distinctCips.Contains(n.Code))
+                                      .Select(n => n.Code).ToListAsync();
+        var unknown = distinctCips.Except(known).ToList();
+        if (unknown.Count > 0)
             return UnprocessableEntity(ApiResponse<object?>.Fail(ErrorCodes.CipNodeNotFound,
-                $"CIP code '{request.CipCode}' is not in the seeded tree. " +
-                "Widen the seed (Tools/build_cip_seed.py) or file the path elsewhere."));
+                $"CIP code(s) not in the seeded tree: {string.Join(", ", unknown)}. " +
+                "Widen the seed (Tools/build_cip_seed.py, EXTRA_GROUPS) or file the path elsewhere."));
 
         var now = DateTime.UtcNow;
         var path = await _db.CareerPaths
+            .Include(p => p.Cips)
             .Include(p => p.Courses)
             .Include(p => p.Sources)
             .FirstOrDefaultAsync(p => p.Slug == slug);
@@ -124,6 +134,7 @@ public class CareerPathsController : ControllerBase
         }
         else
         {
+            _db.CareerPathCips.RemoveRange(path.Cips);
             _db.CareerPathCourses.RemoveRange(path.Courses);
             _db.CareerPathSources.RemoveRange(path.Sources);
         }
@@ -139,6 +150,21 @@ public class CareerPathsController : ControllerBase
         path.UpdatedUtc = now;
 
         int order = 0;
+        // ⚠ The primary is NOT duplicated here -- it lives on the path itself, and the
+        // browse pages union the two, so filing it twice would list the path twice.
+        foreach (var c in (request.CipCodes ?? []).Where(c => c.CipCode!.Trim() != path.CipCode))
+        {
+            _db.CareerPathCips.Add(new CareerPathCip
+            {
+                Id = Guid.NewGuid(),
+                CareerPathId = path.Id,
+                CipCode = c.CipCode!.Trim(),
+                Note = Blank(c.Note),
+                SortOrder = order++
+            });
+        }
+
+        order = 0;
         foreach (var c in request.Courses ?? [])
         {
             _db.CareerPathCourses.Add(new CareerPathCourse
@@ -176,7 +202,8 @@ public class CareerPathsController : ControllerBase
         var missing = ids.Except(listed).OrderBy(x => x).ToList();
 
         return Ok(ApiResponse<UpsertCareerPathResponse>.Ok(new UpsertCareerPathResponse(
-            slug, created ? "created" : "updated", ids.Count, (request.Sources ?? []).Count, missing)));
+            slug, created ? "created" : "updated", distinctCips.Count, ids.Count,
+            (request.Sources ?? []).Count, missing)));
     }
 
     /// <summary>DELETE /api/v1/career-paths/{slug} — removes the path and its rows.</summary>
@@ -201,6 +228,8 @@ public class CareerPathsController : ControllerBase
     private static CareerPathDto ToDto(CareerPath p) => new(
         p.Slug, p.Name, p.CipCode, p.Cip?.Title, p.Description, p.SocCode, p.CredentialNote,
         p.BodyHtml, p.SortOrder, p.CreatedUtc, p.UpdatedUtc,
+        p.Cips.OrderBy(c => c.SortOrder)
+              .Select(c => new CareerPathCipDto(c.CipCode, c.Cip?.Title, c.Note)).ToList(),
         p.Courses.OrderBy(c => c.SortOrder)
                  .Select(c => new CareerPathCourseDto(c.CourseId, c.Reason, c.VariantNote)).ToList(),
         p.Sources.OrderBy(s => s.SortOrder)

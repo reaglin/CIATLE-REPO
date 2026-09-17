@@ -100,6 +100,50 @@ identifiers **52 and 51 public institutions carry** — and the site lists only 
 and `ENC1101C` (3). **`REVIEW_QUEUE.md` item 106**, and it needs Ron because two live guides sit on
 the minority ids.
 
+### ⚠⚠⚠ A PATH CAN HAVE MANY CIP CODES — use the programmes people ACTUALLY come from
+
+**Ron settled this on the Lawyer path (2026-09-17):**
+
+> *"Search on the top academic programs that people that go into law get and use those as the CIP
+> codes that would go with the career path of lawyer."*
+
+**So `cipCode` is the PRIMARY anchor — the destination — and `cipCodes[]` carries the rest, each with
+a `note` holding the EVIDENCE.** A path is then found by browsing ANY of them.
+
+```json
+"cipCode": "22.01",
+"cipCodes": [
+  { "cipCode": "45.10", "note": "Political Science — 12,967 applicants, 17.5% … (LSAC, 2018–19)." },
+  { "cipCode": "42.01", "note": "Psychology — 3,850 applicants, 5.2% (LSAC, 2018–19)." }
+]
+```
+
+⚠⚠ **THE NOTE IS THE EVIDENCE, NOT A JUDGEMENT.** A code goes on a path because **a source says
+students actually come from it** — for Lawyer, LSAC's own applicant counts. **Never because the
+subject sounds related.** `career_paths.py validate` warns on a code with no note for exactly this
+reason.
+
+⚠ **Pick the cut from the data and say what it is.** Lawyer takes every LSAC major at **≥1% of
+applicants** — sixteen of them — which is a stated rule rather than a feel.
+
+⚠⚠ **A code must be in the SEEDED TREE or the push returns 422.** Two of Lawyer's sixteen
+(`22.00` Legal Studies, `45.04` Criminology) had no course-CIP evidence, so they were added to
+**`build_cip_seed.py`'s `EXTRA_GROUPS`** with the reason on the record, and `cip.json` regenerated.
+**That is the documented 4-digit coverage limit biting — widen it deliberately, never by loosening
+the evidence rule.**
+
+#### ⚠⚠ And the finding that came out of it, which generalises
+
+**The most OCCUPATION-SOUNDING major is frequently not the best preparation, and the data says so.**
+LSAC's mean highest LSAT by major: **Criminal Justice 146.6, Pre-Law 148.5, Legal Studies 149.8**
+against **Economics 159.7, Philosophy 157.9, History 156.8**.
+
+⚠ **Quote the source's own caution when it prints one.** LSAC's report says it *"would be a mistake
+to infer… that any one major is better than another"*, and the path quotes that verbatim before
+drawing any conclusion. **The honest claim is narrow: it gives no support to choosing a major BECAUSE
+its title contains the profession's name.** ⚠ **Expect the same shape on other paths** — the
+"pre-med", "pre-law", "criminal justice" style of major exists across the catalogue.
+
 ### ⚠ Where a path’s content comes from
 
 **The guides already wrote it.** A path is assembled from what the batches accumulated — SOC codes,

@@ -57,6 +57,34 @@ public class CareerPathConfiguration : IEntityTypeConfiguration<CareerPath>
     }
 }
 
+public class CareerPathCipConfiguration : IEntityTypeConfiguration<CareerPathCip>
+{
+    public void Configure(EntityTypeBuilder<CareerPathCip> b)
+    {
+        b.ToTable("CareerPathCips");
+        b.HasKey(c => c.Id);
+        b.Property(c => c.CipCode).IsRequired().HasMaxLength(10);
+        b.Property(c => c.Note).HasMaxLength(500);
+
+        b.HasOne(c => c.CareerPath)
+         .WithMany(p => p.Cips)
+         .HasForeignKey(c => c.CareerPathId)
+         .OnDelete(DeleteBehavior.Cascade);
+
+        // Restricted like the primary: reseeding the taxonomy must never quietly
+        // unfile a path that an author deliberately hung on a node.
+        b.HasOne(c => c.Cip)
+         .WithMany()
+         .HasForeignKey(c => c.CipCode)
+         .OnDelete(DeleteBehavior.Restrict);
+
+        // A path is filed under a given code at most once.
+        b.HasIndex(c => new { c.CareerPathId, c.CipCode }).IsUnique();
+        // The area page asks "which paths are filed here" -- this is that lookup.
+        b.HasIndex(c => c.CipCode);
+    }
+}
+
 public class CareerPathCourseConfiguration : IEntityTypeConfiguration<CareerPathCourse>
 {
     public void Configure(EntityTypeBuilder<CareerPathCourse> b)

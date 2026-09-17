@@ -78,6 +78,7 @@ LIMITS = {
 }
 MAX_COURSES = 120
 MAX_SOURCES = 40
+MAX_CIPS = 30
 
 
 def load(slug):
@@ -119,6 +120,31 @@ def check(slug, doc):
     soc = (doc.get("socCode") or "").strip()
     if soc and not SOC_RE.match(soc):
         err.append("socCode %r must look like 29-1141, or be omitted" % soc)
+
+    # ⚠ A path may be filed under several CIP groups. Ron, 2026-09-17, on Lawyer:
+    # "use those as the CIP codes that would go with the career path". Some
+    # destinations have no single feeder programme, and filing them under one code
+    # would assert a route that does not exist.
+    cips = doc.get("cipCodes") or []
+    if len(cips) > MAX_CIPS:
+        err.append("%d cipCodes, limit %d" % (len(cips), MAX_CIPS))
+    seen_cip = set()
+    for i, c in enumerate(cips):
+        code = (c.get("cipCode") or "").strip()
+        if not CIP_RE.match(code):
+            err.append("cipCodes[%d]: %r must be a 4-digit CIP group, e.g. 45.10" % (i, code))
+        if code in seen_cip:
+            err.append("cipCodes[%d]: %s appears twice" % (i, code))
+        seen_cip.add(code)
+        note = c.get("note")
+        if note and len(note) > LIMITS["note"]:
+            err.append("cipCodes[%d] (%s): note is %d chars, limit %d"
+                       % (i, code, len(note), LIMITS["note"]))
+        elif not note:
+            # Not fatal, but the note is where the EVIDENCE lives. A code with no
+            # note is a code somebody thought looked related.
+            warn.append("cipCodes[%d] (%s): no note -- say what the evidence is that "
+                        "students actually come from this programme" % (i, code))
 
     courses = doc.get("courses") or []
     if len(courses) > MAX_COURSES:
@@ -190,8 +216,9 @@ def cmd_validate(args):
             continue
         err, warn = check(slug, doc)
         status = "FAIL" if err else "ok  "
-        print("%s %-28s %d course(s), %d source(s)"
-              % (status, slug, len(doc.get("courses") or []), len(doc.get("sources") or [])))
+        print("%s %-28s %d cip(s), %d course(s), %d source(s)"
+              % (status, slug, 1 + len(doc.get("cipCodes") or []),
+                 len(doc.get("courses") or []), len(doc.get("sources") or [])))
         for m in err:
             print("       ERROR   %s" % m)
         for m in warn:
@@ -253,15 +280,15 @@ def cmd_push(args):
     for slug, doc in docs.items():
         body = {k: doc.get(k) for k in
                 ("name", "cipCode", "description", "socCode", "credentialNote",
-                 "bodyHtml", "isPublished", "sortOrder", "courses", "sources")}
+                 "bodyHtml", "isPublished", "sortOrder", "cipCodes", "courses", "sources")}
         r = s.put("%s/api/v1/career-paths/%s" % (BASE_URL, slug), json=body,
                   headers={"Authorization": "Bearer %s" % tok}, timeout=60)
         if r.status_code != 200:
             print("FAIL %-28s HTTP %s %s" % (slug, r.status_code, r.text[:400]))
             return 1
         d = r.json()["data"]
-        print("%-4s %-28s %d course(s), %d source(s)"
-              % (d["outcome"], slug, d["courseCount"], d["sourceCount"]))
+        print("%-4s %-28s %d cip(s), %d course(s), %d source(s)"
+              % (d["outcome"], slug, d["cipCount"], d["courseCount"], d["sourceCount"]))
         for c in d.get("unlistedCourses") or []:
             unlisted.add(c)
 

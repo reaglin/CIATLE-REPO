@@ -29,9 +29,15 @@ public class CareerPath
     public string Name { get; set; } = string.Empty;
 
     /// <summary>
-    /// The CIP group this path sits under, e.g. "51.38". ⚠ A CIP code classifies a
-    /// <i>programme of instruction</i>, not an occupation, so this is where the path is
-    /// filed for browsing — it is not a claim that the code means the job.
+    /// The path's PRIMARY CIP group, e.g. "51.38" — its home in the tree, and the one the
+    /// breadcrumb shows. ⚠ A CIP code classifies a <i>programme of instruction</i>, not an
+    /// occupation, so this is where the path is filed for browsing — it is not a claim that
+    /// the code means the job.
+    /// <para>
+    /// For a path whose study route is settled this is the programme itself (Registered Nurse
+    /// → 51.38). For one entered from many directions it is the DESTINATION credential
+    /// (Lawyer → 22.01 Law, the J.D.), with the routes in <see cref="Cips"/>.
+    /// </para>
     /// </summary>
     public string CipCode { get; set; } = string.Empty;
 
@@ -63,8 +69,47 @@ public class CareerPath
     public DateTime UpdatedUtc { get; set; } = DateTime.UtcNow;
 
     public CipNode? Cip { get; set; }
+    /// <summary>Additional CIP groups this path is filed under — see <see cref="CareerPathCip"/>.</summary>
+    public ICollection<CareerPathCip> Cips { get; set; } = new List<CareerPathCip>();
     public ICollection<CareerPathCourse> Courses { get; set; } = new List<CareerPathCourse>();
     public ICollection<CareerPathSource> Sources { get; set; } = new List<CareerPathSource>();
+}
+
+/// <summary>
+/// One further CIP group a path is filed under, beyond its primary.
+/// <para>
+/// ⚠⚠ <b>Why a path needs more than one.</b> Ron, 2026-09-17, on the Lawyer path:
+/// <i>"Search on the top academic programs that people that go into law get and use those as
+/// the CIP codes that would go with the career path."</i> Some destinations are not reached
+/// through one programme. Law is the clearest: the ABA requires no particular major, and
+/// law-school applicants arrive from political science, psychology, criminal justice, English,
+/// economics, history, philosophy and a dozen more. Filing that path under one code would
+/// assert a route that does not exist.
+/// </para>
+/// <para>
+/// ⚠ <b><see cref="Note"/> carries the evidence, not an opinion.</b> A CIP is listed here
+/// because a source says students actually come from it — for Lawyer, LSAC's own applicant
+/// counts. It is never listed because the subject sounds related.
+/// </para>
+/// </summary>
+public class CareerPathCip
+{
+    public Guid Id { get; set; }
+    public Guid CareerPathId { get; set; }
+
+    /// <summary>The 4-digit CIP group, e.g. "45.10".</summary>
+    public string CipCode { get; set; } = string.Empty;
+
+    /// <summary>
+    /// What this code is to the path, with its source — "17.5% of law-school applicants
+    /// (LSAC, 2018-19), the single largest feeder". Shown beside the link.
+    /// </summary>
+    public string? Note { get; set; }
+
+    public int SortOrder { get; set; }
+
+    public CareerPath? CareerPath { get; set; }
+    public CipNode? Cip { get; set; }
 }
 
 /// <summary>

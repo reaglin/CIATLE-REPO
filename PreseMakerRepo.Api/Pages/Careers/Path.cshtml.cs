@@ -21,9 +21,13 @@ public class PathModel : PageModel
         string CourseId, string Title, string Reason, string? VariantNote,
         bool IsListed, bool HasGuide);
 
+    public sealed record AnchorView(string Code, string Title, string? Note);
+
     public CareerPath Path { get; set; } = null!;
     public CipNode? Cip { get; set; }
     public CipNode? Series { get; set; }
+    /// <summary>The additional CIP groups this path is filed under, with the evidence.</summary>
+    public IReadOnlyList<AnchorView> Anchors { get; set; } = [];
     public IReadOnlyList<CourseView> Courses { get; set; } = [];
     public IReadOnlyList<CareerPathSource> Sources { get; set; } = [];
 
@@ -39,6 +43,12 @@ public class PathModel : PageModel
         Cip = await _db.CipNodes.AsNoTracking().FirstOrDefaultAsync(n => n.Code == path.CipCode);
         if (Cip?.ParentCode is not null)
             Series = await _db.CipNodes.AsNoTracking().FirstOrDefaultAsync(n => n.Code == Cip.ParentCode);
+
+        Anchors = await _db.CareerPathCips.AsNoTracking()
+            .Where(c => c.CareerPathId == path.Id)
+            .OrderBy(c => c.SortOrder)
+            .Select(c => new AnchorView(c.CipCode, c.Cip!.Title, c.Note))
+            .ToListAsync();
 
         var placed = await _db.CareerPathCourses.AsNoTracking()
             .Where(c => c.CareerPathId == path.Id)

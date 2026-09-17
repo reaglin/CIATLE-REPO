@@ -5,6 +5,7 @@ namespace PreseMakerRepo.Api.Validators;
 
 public class UpsertCareerPathRequestValidator : AbstractValidator<UpsertCareerPathRequest>
 {
+    public const int MaxCipsPerPath = 30;
     public const int MaxCoursesPerPath = 120;
     public const int MaxSourcesPerPath = 40;
 
@@ -26,8 +27,22 @@ public class UpsertCareerPathRequestValidator : AbstractValidator<UpsertCareerPa
         RuleFor(x => x.Sources!.Count).LessThanOrEqualTo(MaxSourcesPerPath)
             .When(x => x.Sources is not null).WithName("sources");
 
+        RuleFor(x => x.CipCodes!.Count).LessThanOrEqualTo(MaxCipsPerPath)
+            .When(x => x.CipCodes is not null).WithName("cipCodes");
+
+        RuleForEach(x => x.CipCodes).SetValidator(new CareerPathCipInputValidator());
         RuleForEach(x => x.Courses).SetValidator(new CareerPathCourseInputValidator());
         RuleForEach(x => x.Sources).SetValidator(new CareerPathSourceInputValidator());
+    }
+}
+
+public class CareerPathCipInputValidator : AbstractValidator<CareerPathCipInput>
+{
+    public CareerPathCipInputValidator()
+    {
+        RuleFor(x => x.CipCode).NotEmpty().Matches(@"^\d{2}\.\d{2}$")
+            .WithMessage("Each entry in cipCodes must be a 4-digit CIP group, e.g. 45.10.");
+        RuleFor(x => x.Note).MaximumLength(500).When(x => x.Note is not null);
     }
 }
 

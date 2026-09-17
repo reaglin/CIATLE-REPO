@@ -48,6 +48,30 @@
     <div class="mb-4" style="max-width: 60rem;">@Html.Raw(Model.Path.BodyHtml)</div>
 }
 
+@if (Model.Anchors.Any())
+{
+    @* A destination reached from many programmes rather than one. Shown as a section
+       rather than a line, because WHICH subjects feed it is the substance here. *@
+    <h2 class="h5 mt-4 mb-1">Where people come from</h2>
+    <p class="text-muted small mb-3" style="max-width: 60rem;">
+        There is no single required programme for this path. These are the fields students
+        actually arrive from &mdash; each is a place in the catalog you can browse.
+    </p>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var a in Model.Anchors)
+        {
+            <a asp-page="/Careers/Area" asp-route-code="@a.Code"
+               class="list-group-item list-group-item-action py-2">
+                <span class="fw-bold text-muted me-2">@a.Code</span>@a.Title
+                @if (!string.IsNullOrWhiteSpace(a.Note))
+                {
+                    <div class="small text-muted mt-1">@a.Note</div>
+                }
+            </a>
+        }
+    </div>
+}
+
 @if (Model.Courses.Any())
 {
     <h2 class="h5 mt-4 mb-1">Courses along this path</h2>
