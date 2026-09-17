@@ -2,6 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Development plan
+
+Planning and status for this repo follow the portfolio rules for `docs/DEVELOPMENT-PLAN.md` —
+see **"Every project: `docs/DEVELOPMENT-PLAN.md`"** in the parent `repos/CLAUDE.md`
+(model: `LMS-2-Website/docs/DEVELOPMENT-PLAN.md`). If this repo has no plan yet, the next round of
+updates or new development starts by creating one: phases of numbered tasks; no icon/⬜ = to do,
+⚠️ = action needed (awaiting Ron's verification or returned with a comment), ✅ = verified by Ron;
+referenced documents listed at the end.
+
 ## Project Overview
 
 **PreseMaker Community Repository** — a publicly browsable, contributor-maintained library of course materials organized by a configurable hierarchical taxonomy (Florida SCNS by default). It exposes a REST API for the PreseMaker desktop client, a Razor Pages web frontend for browsing, and an admin console for moderation.
