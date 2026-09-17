@@ -8,6 +8,19 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⚠ REDEPLOY NEEDED for the career-page "Where you can take these courses" section (2026-09-17)
+
+**New on the path page:** the Florida institutions that teach a path's courses, computed live from
+`CourseOffering` and ranked by **how many of the path's courses each one carries**. Ron asked for
+"schools represented in repo offering this path"; ⚠ the wording is deliberately narrower than
+that, because the data supports *these schools teach the courses* and not *this school offers the
+degree*.
+
+Code only — `Pages/Careers/Path.cshtml{,.cs}`. **No migration.** ✅ Verified against the dev
+database with seeded offerings (UCF 3, FIU 2, DSC 1, correctly ranked). Until the redeploy the
+section simply does not render; the three live paths are otherwise unaffected.
+
+
 ### ⚠⚠ REDEPLOY NEEDED BEFORE THE MANUFACTURING/ENGINEERING PATHS CAN PUBLISH (2026-09-17)
 
 **`cip.json` grew from 198 to 207 nodes** when the top-50 career-path queue was built: nine

@@ -22,12 +22,22 @@ public class PathModel : PageModel
         bool IsListed, bool HasGuide);
 
     public sealed record AnchorView(string Code, string Title, string? Note);
+    /// <param name="Offered">How many of this path's courses the institution offers.</param>
+    public sealed record SchoolView(string Code, string? Name, string? Sector, int Offered);
 
     public CareerPath Path { get; set; } = null!;
     public CipNode? Cip { get; set; }
     public CipNode? Series { get; set; }
     /// <summary>The additional CIP groups this path is filed under, with the evidence.</summary>
     public IReadOnlyList<AnchorView> Anchors { get; set; } = [];
+    /// <summary>
+    /// Institutions that teach the courses on this path, most coverage first. ⚠ Derived from
+    /// COURSE OFFERINGS, not from programme data — so it says "you can take these courses here",
+    /// which is true, and never "this school offers this degree", which we do not know.
+    /// </summary>
+    public IReadOnlyList<SchoolView> Schools { get; set; } = [];
+    /// <summary>Courses on the path the catalog actually carries — the denominator for Schools.</summary>
+    public int CoursesListed { get; set; }
     public IReadOnlyList<CourseView> Courses { get; set; } = [];
     public IReadOnlyList<CareerPathSource> Sources { get; set; } = [];
 
@@ -68,6 +78,23 @@ public class PathModel : PageModel
             .Where(g => ids.Contains(g.CourseId) && g.Title != CurriculumGuide.StubTitle)
             .Select(g => new { g.CourseId, g.Title })
             .ToDictionaryAsync(g => g.CourseId, g => g.Title);
+
+        // ⚠ Ron, 2026-09-17, on what a career page should carry: "Schools represented in repo
+        // offering this path (note the path may or may not be a specific degree)." Derived live
+        // from offerings so it cannot go stale, and counted per institution so the reader can see
+        // WHO COVERS MOST OF THE PATH rather than a flat list.
+        var offerings = await _db.CourseOfferings.AsNoTracking()
+            .Where(o => ids.Contains(o.CourseId) && o.IsActive)
+            .Select(o => new { o.CourseId, o.InstitutionCode, o.Institution.Name, o.Institution.Sector })
+            .ToListAsync();
+
+        CoursesListed = offerings.Select(o => o.CourseId).Distinct().Count();
+        Schools = offerings
+            .GroupBy(o => o.InstitutionCode)
+            .Select(g => new SchoolView(g.Key, g.First().Name, g.First().Sector,
+                                        g.Select(x => x.CourseId).Distinct().Count()))
+            .OrderByDescending(s => s.Offered).ThenBy(s => s.Name ?? s.Code)
+            .ToList();
 
         Courses = placed.Select(c =>
         {

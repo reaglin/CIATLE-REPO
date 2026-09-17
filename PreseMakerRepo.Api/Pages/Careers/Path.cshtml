@@ -121,6 +121,36 @@
     </div>
 }
 
+@if (Model.Schools.Any())
+{
+    @* Derived from course offerings, so the claim stays true: these schools teach the
+       courses, which is not the same as offering a degree. The heading says so. *@
+    <h2 class="h5 mt-4 mb-1">Where you can take these courses in Florida</h2>
+    <p class="text-muted small mb-3" style="max-width: 60rem;">
+        @Model.Schools.Count Florida public institutions teach courses on this path. The count is
+        how many of the @Model.CoursesListed listed courses each one carries &mdash; it shows where
+        the path is best covered. <strong>It is not a statement that a school offers this as a
+        degree</strong>; for that, check the institution&rsquo;s own programme list.
+    </p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 mb-4">
+        @foreach (var s in Model.Schools)
+        {
+            <div class="col">
+                <div class="border rounded py-2 px-3 h-100 d-flex justify-content-between align-items-start">
+                    <span>
+                        <span class="fw-semibold">@s.Code</span>
+                        @if (!string.IsNullOrWhiteSpace(s.Name))
+                        {
+                            <div class="small text-muted">@s.Name</div>
+                        }
+                    </span>
+                    <span class="badge text-bg-light text-muted ms-2 text-nowrap">@s.Offered</span>
+                </div>
+            </div>
+        }
+    </div>
+}
+
 @if (Model.Sources.Any())
 {
     <h2 class="h5 mt-4 mb-1">Sources</h2>
