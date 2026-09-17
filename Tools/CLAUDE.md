@@ -100,6 +100,66 @@ identifiers **52 and 51 public institutions carry** — and the site lists only 
 and `ENC1101C` (3). **`REVIEW_QUEUE.md` item 106**, and it needs Ron because two live guides sit on
 the minority ids.
 
+### ⚠⚠⚠ TWO KINDS OF CAREER PATH, AND THE SECOND IS WHERE THE VALUE IS
+
+**Ron, 2026-09-17, and this governs how every path in `QUEUE.csv` is researched:**
+
+> *"Other than the career and technical education (including curriculum frameworks) that are
+> specifically tied to CIP codes, most college level programs will not explicitly list CIP codes.
+> In researching career paths that are not specifically tied to a program, you will need to do the
+> same thing we did with Lawyer and search for the common majors that lead to that specific career
+> path. **This is actually the most valuable of the documentation we do.** The reason is that
+> careers that have specific programs are easy to develop a career path, you start the major, you
+> are on that path. In the case of careers that do not have a specific associated major, **the
+> student must make decisions on major.** The data you presented for law (success of students in
+> various majors) is very valuable to those students."*
+
+| | **DIRECT** — 40 of the 50 | **CHOICE** — 10 of the 50 |
+|---|---|---|
+| What it is | one programme; enrolling in it puts you on the path | ⚠ **no single required major — the student must decide** |
+| Examples | Registered Nurse, Welder, Mechanical Engineer, Dental Hygienist | **Lawyer**, Financial Analyst, Data Scientist, HR Specialist, Construction Manager |
+| The CIP code | **IS the programme**, and for CTE it is published | a **destination**; the feeders are researched |
+| Research | the programme, its accreditor, its licensure, its clock hours | ⚠⚠ **the majors people who reach it ACTUALLY HOLD, with outcome data wherever any exists** |
+| Cost to write | fast | slow |
+| ⚠ Value to a student | tells them what the programme involves | ⚠⚠⚠ **answers a decision they are actually facing, and nothing else answers it** |
+
+⚠⚠⚠ **So do NOT let the DIRECT ones crowd out the CHOICE ones because they are quicker.**
+A DIRECT path largely restates what the programme already tells a student. **A CHOICE path tells
+them something no catalogue, adviser sheet or programme page will.**
+
+#### The CHOICE method — what `Lawyer` established
+
+1. **Find the body that collects entrant data** and read its own numbers, not a summary of them.
+   For law that is LSAC's *Applicants by Major*. **Prefer a count over an opinion piece.**
+2. **Take a stated cut** — Lawyer used *every major at ≥1% of applicants*, which is a rule rather
+   than a feel — and file the path under each as a `cipCodes[]` anchor with the share in the note.
+3. ⚠⚠ **Look for the OUTCOME data, not just the counts.** The counts say where students come
+   from; the outcomes say how they fare. On Lawyer this produced the finding that mattered: the
+   most law-SOUNDING majors post the LOWEST mean LSAT.
+4. ⚠ **Quote the source's own caution when it prints one**, and keep the claim narrow. LSAC warns
+   against causal inference, so the path claims only that the data gives no support to picking a
+   major *because its title contains the profession's name*.
+5. **Then give the skills** the destination actually tests, and choose courses for those.
+
+⚠ **Where no entrant-major dataset exists**, say so plainly and fall back to what employers and
+professional bodies state they look for — **but look first.** Accrediting bodies, licensing boards,
+professional associations and federal surveys collect more of this than is generally realised.
+
+#### ⚠⚠ For the DIRECT ones, the CIP code is PUBLISHED — do not infer it
+
+**Florida CTE programmes are tied to CIP codes explicitly in the FLDOE curriculum frameworks**
+(`fldoe.org/academics/career-adult-edu/career-tech-edu/program-resources.stml`), which also carry
+the occupational completion points and clock hours. **That is the authority for every `MFG` row in
+the queue** — and `SOURCES.md` already ranks the frameworks Tier 1 for PSAV guides.
+
+⚠⚠⚠ **BUT `fldoe.org` HAS RETURNED 403 TO THIS PROJECT SINCE 2026-09-02**, re-probed and
+still 403 on 2026-09-17 with a browser user-agent, on the `.stml` pages AND on
+`core/fileparse.php/….pdf` documents. **CPALMS-CTE now mirrors the frameworks (`cpalms.org`,
+`cte.cpalms.org`) and answers 200, but is client-rendered — the course content is not in the
+HTML.** **So the single best source for the sponsor-emphasis half of the queue is currently
+unreadable by tooling.** Ask Ron to supply the framework PDFs rather than inferring CTE CIP codes
+from course prefixes — inferring is exactly what the "curated only" rule forbids.
+
 ### ⚠⚠⚠ A PATH CAN HAVE MANY CIP CODES — use the programmes people ACTUALLY come from
 
 **Ron settled this on the Lawyer path (2026-09-17):**

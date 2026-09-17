@@ -325,12 +325,14 @@ def cmd_queue(args):
     for row in rows:
         if want and row["cluster"] != want:
             continue
+        if args.ptype and row.get("type", "").upper() != args.ptype.upper():
+            continue
         slug = row["slug"]
         state = "LIVE" if slug in live else ("drafted" if slug in have else "")
         flag = "" if row["cip_seeded"] == "yes" else "  ⚠ CIP not seeded"
-        print("%3s %-4s %-36s %-7s %-9s %-8s%s"
-              % (row["rank"], row["cluster"], row["name"][:36], row["cip"], row["soc"],
-                 state, flag))
+        print("%3s %-4s %-7s %-34s %-7s %-9s %-8s%s"
+              % (row["rank"], row["cluster"], row.get("type", ""), row["name"][:34],
+                 row["cip"], row["soc"], state, flag))
         shown += 1
 
     done = sum(1 for r in rows if r["slug"] in live)
@@ -343,6 +345,9 @@ def cmd_queue(args):
     me = [r for r in rows if r["cluster"] in ("ENG", "MFG")]
     print("manufacturing + engineering: %d of %d queued, %d live."
           % (len(me), len(rows), sum(1 for r in me if r["slug"] in live)))
+    ch = [r for r in rows if r.get("type") == "CHOICE"]
+    print("CHOICE paths (no single major -- the high-value research): %d queued, %d live."
+          % (len(ch), sum(1 for r in ch if r["slug"] in live)))
     return 0
 
 
@@ -383,6 +388,7 @@ def main():
 
     q = sub.add_parser("queue", help="the top-50 queue and how far through it we are")
     q.add_argument("--cluster", help="ENG MFG HLT CMP BUS LAW EDU PUB")
+    q.add_argument("--type", dest="ptype", help="DIRECT or CHOICE")
     q.set_defaults(func=cmd_queue)
 
     args = ap.parse_args()
