@@ -397,3 +397,7 @@ Tools/scratchpad/*.html
 Tools/scratchpad/*.bin
 Tools/scratchpad/crslist.txt
 Tools/scratchpad/*_courses.json
+
+# SQLite dev-database sidecars (the .db itself is tracked)
+*.db-shm
+*.db-wal
