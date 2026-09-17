@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **76** |
+| ⏳ **Awaiting a decision from Ron** | **77** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **105** |
+| **Total items** | **106** |
 
 ---
 
-### ⏳ Awaiting a decision (76)
+### ⏳ Awaiting a decision (77)
 
 | # | Item |
 |---|---|
@@ -113,6 +113,7 @@ continues around every one of them.
 | **103** | CIP codes are the career-path anchor — and institutions disagree on 7% of them (batch 230) |
 | **104** | FGCU's catalogue has stopped returning course content (batch 231) |
 | **105** | `PHC4109` (live) tells the reader a masked course number cannot be looked up — it can (batch 234) |
+| **106** | The site lists `STA2023C` and `ENC1101C` — and NOT the numbers 52 and 51 institutions actually carry (career-path build, 2026-09-17) |
 
 ### Informational — no decision needed (19)
 
@@ -2969,6 +2970,45 @@ numbers inside "offered concurrently with" notes are a recurring shape (`GEO 5XX
 turned up). **Any already-published guide that quoted a masked number may have the same understatement.**
 **That is a cheap grep over `drafts/` if you want it done as part of the verification pass** rather than
 one guide at a time.
+
+
+## 106. ⚠⚠⚠ The site lists `STA2023C` and `ENC1101C` — and NOT the numbers 52 and 51 institutions actually carry (career-path build, 2026-09-17)
+
+**Found while placing prerequisites on the Registered Nurse career path**, which needs the number a
+student will actually find in their own catalogue.
+
+| Id | Public carriers (SCNS flat file, ACTIVE) | Listed on the site? |
+|---|---|---|
+| **`STA2023`** | ⚠⚠ **52** | ❌ **NOT LISTED** |
+| `STA2023C` | **1** (UNF) | ✅ listed, **with a guide** |
+| **`ENC1101`** | ⚠⚠ **51** | ❌ **NOT LISTED** |
+| `ENC1101C` | **3** (FAMU, FSCJ, GCSC) | ✅ listed, **with a guide** |
+
+⚠⚠⚠ **These are the two highest-enrolment courses in the Florida system** — freshman
+composition and introductory statistics — **and the site shows a visitor the minority identifier while
+the one their college uses returns nothing.** A student searching `STA2023` finds no page at all.
+
+⚠ **This is the batch-219 INSTITUTIONAL SIGNATURE shape** (the same course filed with and without a
+`C` at different schools) **occurring at the largest scale the project has met.** The queue presumably
+inherited the `C` id from the inventory and the bare id was never listed, so the guide was written
+against the identifier nobody uses.
+
+**The contrast shows it is not a general problem**: `BSC2085`/`BSC2086`, `MCB2010`, `HUN2201`,
+`DEP2004` and `PSY2012` are all listed at the bare number, correctly.
+
+### What needs deciding
+
+1. **List `STA2023` and `ENC1101`** with their full offerings — straightforward pipeline work.
+2. ⚠ **What happens to the two live guides?** They are attached to the `C` ids. Options: move them
+   to the bare id, publish at the bare id and leave the `C` id pointing at its single/three carriers, or
+   publish at both. **Republishing a live guide needs Ron’s go-ahead**, which is why this is here.
+3. ⚠ **Is this systematic?** One flat-file pass would list every id on the site whose carrier count
+   is far below that of its bare/`C` twin. **Worth running before the answer to 2 is chosen**, because
+   the same decision would then apply to the whole set rather than to two courses.
+
+⚠ **The Registered Nurse path names `STA2023` and `ENC1101`** — the real ids — so both currently
+render as “not listed yet” rather than as links. That is correct behaviour and it is also the visible
+symptom; it resolves itself the moment they are listed.
 
 
 ## Resolved

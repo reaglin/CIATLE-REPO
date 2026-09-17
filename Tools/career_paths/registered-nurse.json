@@ -1,0 +1,158 @@
+{
+  "name": "Registered Nurse",
+  "cipCode": "51.38",
+  "socCode": "29-1141",
+  "isPublished": true,
+  "sortOrder": 10,
+
+  "description": "Registered nurses assess patients, plan and deliver care, administer medication and treatments, and coordinate with the rest of the clinical team. In Florida the licence is issued by the Florida Board of Nursing, and eligibility runs through a Board-approved nursing programme and the NCLEX-RN examination — not through accumulated coursework.",
+
+  "credentialNote": "Read this before planning a route. Eligibility to sit NCLEX-RN depends on GRADUATING FROM A NURSING PROGRAMME THE FLORIDA BOARD OF NURSING HAS APPROVED. A student can hold transferable credit for every course on this page and still not be eligible, because the credential runs through the programme rather than through the credits. Two consequences follow. First, confirm a programme is Board-approved and accredited (ACEN or CCNE) BEFORE enrolling, not after. Second, an RN-to-BSN degree-completion programme is for people who are ALREADY licensed — it does not lead to initial licensure, and its name does not say so.",
+
+  "bodyHtml": "<h2>Three routes, and they are not interchangeable</h2><p>Florida runs three distinct routes to and through RN licensure, and the difference matters more than the course list does.</p><ul><li><strong>Associate degree (A.S.) in Nursing</strong>, usually at a Florida College System institution. The shortest route to initial licensure. Graduates sit NCLEX-RN.</li><li><strong>Baccalaureate (BSN)</strong>, pre-licensure, usually at a state university. Four years including the general-education and science prerequisites below. Graduates sit NCLEX-RN.</li><li><strong>RN-to-BSN degree completion</strong>. For nurses who <em>already hold the licence</em>. <strong>It does not lead to initial licensure.</strong> Many of the upper-division courses listed here appear in both a pre-licensure BSN and an RN-to-BSN programme, under the same numbers — so the course list cannot tell you which kind of programme you are looking at. The programme description can.</li></ul><h2>The prerequisites are where most people are actually stopped</h2><p>Admission to a nursing programme is competitive and is decided largely on the science prerequisites below, taken before the nursing sequence begins. They are ordinary college courses, open to anyone, and they are the part of the route a student controls.</p><p><strong>Watch the anatomy and physiology numbering.</strong> Florida teaches the same subject under two prefix families — <code>BSC2085C</code>/<code>BSC2086C</code> and <code>APK2100C</code>/<code>APK2105C</code>. <strong>BSC is what nearly every health-professions prerequisite list actually names.</strong> The credit articulates either way; a requirement stated by course number may not. Check the exact numbers your target programme lists, in writing, before you register.</p><h2>The nursing sequence is cohort-locked</h2><p>Once a nursing programme begins, the courses run in a fixed, gated order with clinical placements arranged around them, and most run <strong>once a year</strong>. A failed course does not cost a term — it costs until the course runs again, typically a year, and may require re-application. Where a lecture and its clinical laboratory each list the other as a corequisite, failing either means repeating both.</p><h2>Before the first clinical day</h2><p>Clinical placement requires <strong>Level 2 fingerprint background screening</strong>, immunisation and TB records, drug screening, health insurance and <strong>BLS certification</strong>, and the clearances take weeks. Start them the week you are admitted, not the week before the rotation. A placement a hospital declines cannot be solved by working harder.</p><h2>What to keep</h2><p>Keep every clinical hour log and competency evaluation. A receiving programme or another state’s board must attest to your clinical competence under its own accreditation, so it may accept the credit and still require its own practicum. Course numbers do not carry that record; your own file does.</p>",
+
+  "courses": [
+    {
+      "courseId": "BSC2085",
+      "reason": "Anatomy and Physiology I — the single most commonly named nursing prerequisite in Florida, and the usual gate on competitive admission.",
+      "variantNote": "Florida carries this subject under two prefix families. BSC2085 has 25 public carriers and BSC2085C has 7; the same subject is also numbered APK2100C. BSC is what health-professions prerequisite lists name. Check your target programme’s exact number before registering."
+    },
+    {
+      "courseId": "BSC2086",
+      "reason": "Anatomy and Physiology II — the second half; nursing programmes require the pair, not one of them.",
+      "variantNote": "As above: BSC2086 (19 public carriers) and BSC2086C (7) coexist, alongside APK2105C. Take both halves in the same family where you can."
+    },
+    {
+      "courseId": "MCB2010",
+      "reason": "Microbiology — infection, transmission and control, which underpins every aseptic procedure in the clinical sequence.",
+      "variantNote": "MCB2010 (16 public carriers) and MCB2010C (12) are both widely carried. Most nursing programmes require the version WITH a laboratory; confirm which your programme accepts."
+    },
+    {
+      "courseId": "HUN2201",
+      "reason": "Human nutrition — required by most Florida nursing programmes and directly applied in patient teaching and care planning."
+    },
+    {
+      "courseId": "DEP2004",
+      "reason": "Human growth and development across the lifespan — the developmental frame that the paediatric, adult and gerontological rotations all assume."
+    },
+    {
+      "courseId": "PSY2012",
+      "reason": "General psychology — a common prerequisite and the groundwork for mental health nursing."
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Statistics — required by baccalaureate programmes and the reason evidence-based practice coursework is readable rather than recited.",
+      "variantNote": "Not listed on this site yet. STA2023 is carried by 52 Florida public institutions; the site currently lists only STA2023C, which one institution carries."
+    },
+    {
+      "courseId": "ENC1101",
+      "reason": "Freshman composition — a general-education requirement everywhere, and a Gordon Rule course where a C-minus does not count.",
+      "variantNote": "Not listed on this site yet. ENC1101 is carried by 51 Florida public institutions; the site currently lists only ENC1101C, which three carry."
+    },
+
+    {
+      "courseId": "NUR3805C",
+      "reason": "Nursing role and scope — the entry course to the professional sequence: what a registered nurse is licensed to do and answerable for."
+    },
+    {
+      "courseId": "NUR3065C",
+      "reason": "Health assessment — the physical assessment skills every later clinical course assumes you already have."
+    },
+    {
+      "courseId": "NUR3125",
+      "reason": "Pathophysiology — disease mechanism, and the course pharmacology and the medical-surgical sequence are both built on."
+    },
+    {
+      "courseId": "NUR3145",
+      "reason": "Pharmacology — drug action, dosage and administration; the highest-consequence knowledge on the path."
+    },
+    {
+      "courseId": "NUR3026",
+      "reason": "Person Centered Care I — the first clinical course of the medical-surgical sequence."
+    },
+    {
+      "courseId": "NUR3215",
+      "reason": "Person Centered Care II — the second; the sequence is gated, so this follows NUR3026 by design."
+    },
+    {
+      "courseId": "NUR4216",
+      "reason": "Person Centered Care III — the third, at increasing acuity."
+    },
+    {
+      "courseId": "NUR4257",
+      "reason": "Person Centered Care IV — the fourth and most acute; typically the last clinical course before the terminal practicum."
+    },
+    {
+      "courseId": "NUR3505",
+      "reason": "Mental health nursing — a required clinical rotation in its own right, not an elective."
+    },
+    {
+      "courseId": "NUR4445",
+      "reason": "Person centered care of families — the maternal, newborn and paediatric material, usually with its own rotation."
+    },
+    {
+      "courseId": "NUR3826",
+      "reason": "Legal and ethical aspects of nursing — scope of practice, consent, documentation and mandatory reporting, all of which the licence turns on."
+    },
+    {
+      "courseId": "NUR4165",
+      "reason": "Evidence-based practice — reading the research literature well enough to change what you do; this is what the statistics prerequisite was for."
+    },
+    {
+      "courseId": "NUR4615",
+      "reason": "Population health — community and public health nursing, a required component of a baccalaureate curriculum."
+    },
+    {
+      "courseId": "NUR4827C",
+      "reason": "Nursing leadership and management — delegation, supervision and care coordination, which a new graduate does from the first shift."
+    },
+    {
+      "courseId": "NUR4286-UWF",
+      "reason": "Quality and safety in nursing — error, reporting culture and improvement method, taught as its own course at UWF.",
+      "variantNote": "⚠ The bare number NUR4286 carries TWO DIFFERENT SUBJECTS in Florida: the statewide record defines it as Gerontological Nursing, while UWF teaches quality and safety on it. This page names the UWF reading deliberately. A transfer evaluator matching on the number alone cannot tell the two apart — send the syllabus."
+    }
+  ],
+
+  "sources": [
+    {
+      "label": "Florida Board of Nursing — Registered Nurse licensure",
+      "url": "https://floridasnursing.gov/licensing/registered-nurse/",
+      "note": "The licensing authority. Requirements, application and the examination route."
+    },
+    {
+      "label": "Florida Board of Nursing — Education and training",
+      "url": "https://floridasnursing.gov/education-and-training/",
+      "note": "Board-approved nursing programmes. Check a programme here BEFORE enrolling."
+    },
+    {
+      "label": "NCSBN — NCLEX examination",
+      "url": "https://www.ncsbn.org/nclex.htm",
+      "note": "The national licensure examination: test plan, eligibility and registration."
+    },
+    {
+      "label": "ACEN — Accreditation Commission for Education in Nursing",
+      "url": "https://www.acenursing.org/",
+      "note": "Programmatic accreditor. Accredits associate and baccalaureate nursing programmes."
+    },
+    {
+      "label": "CCNE — Commission on Collegiate Nursing Education",
+      "url": "https://www.aacnnursing.org/ccne-accreditation",
+      "note": "Programmatic accreditor for baccalaureate and graduate nursing programmes."
+    },
+    {
+      "label": "U.S. Bureau of Labor Statistics — Registered Nurses",
+      "url": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+      "note": "Federal wage, employment and outlook data for SOC 29-1141."
+    },
+    {
+      "label": "O*NET — Registered Nurses (29-1141.00)",
+      "url": "https://www.onetonline.org/link/summary/29-1141.00",
+      "note": "Tasks, skills and work context for the occupation."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "The federal taxonomy this path is filed under, at 51.38 Registered Nursing."
+    }
+  ]
+}

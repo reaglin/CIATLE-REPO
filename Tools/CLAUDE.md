@@ -55,6 +55,62 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
+## ⚠⚠⚠ CAREER PATHS ARE BUILT (2026-09-17) — and they are a THIRD demand signal
+
+**Ron shifted the project to the development side and the feature is in.** His words:
+
+> *"We are going to shift to the development side and create the career paths. These are all centered
+> on CIP codes and the CIP codes become the framework for that page."*
+
+**Read [`CAREER_PATHS_PLAN.md`](../CAREER_PATHS_PLAN.md) §0** for what was built. What a *content*
+session needs to know is short:
+
+| | |
+|---|---|
+| **Author a path** | write `Tools/career_paths/<slug>.json`, then `python career_paths.py validate` |
+| **Push it** | `python career_paths.py push <slug>` — ⚠ **a write to production, confirm with Ron** |
+| **See what is live** | `python career_paths.py list` |
+| **Browse the framework** | `/careers` → `/careers/area/{cip}` → `/careers/{slug}` |
+
+⚠⚠⚠ **THE ONE RULE: A PATH IS CURATED, NEVER DERIVED.** Every course is placed by an author
+with a **required** stated reason. **Do not** build a course list by parsing prerequisites, by
+course-code arithmetic, or from the institution CIP data. Two hundred batches established that a
+course number does not identify a course; a mechanically assembled path would be confidently wrong on
+exactly the cases this file spends 3,000 lines documenting.
+
+⚠⚠ **The institution CIP data is an AUTHORING AID and is never published as fact.** 25,412
+course→CIP assignments were harvested, and **7% of multi-carrier courses are classified into
+DIFFERENT CIP FAMILIES by different institutions** — worst in the broadest subjects (`PHC` 27%
+dominant, `FIL` 32%, `NUR` 49%). It decides which branches of the tree to show. Nothing else.
+
+### ⚠⚠ What this means for guide work: paths GENERATE demand
+
+**The 2026-09-12 note predicted this and it is now real.** A path names courses; courses a path names
+and the catalog does not carry come back in the push response as `unlistedCourses`, and **a path that
+links to a page that is not there is a broken promise to the reader.**
+
+- ⚠ **Listing those courses is work the path creates**, and it ranks with a visitor request — a named
+  page depends on it.
+- ⚠ **A guide-less course on a path is NOT automatically guide work.** It renders a **Request Guide**
+  link, and the request queue stays the demand signal. **Do not treat a path’s course list as a
+  writing queue.**
+
+⚠ **First instance, already open:** the Registered Nurse path names `STA2023` and `ENC1101` — the
+identifiers **52 and 51 public institutions carry** — and the site lists only `STA2023C` (1 carrier)
+and `ENC1101C` (3). **`REVIEW_QUEUE.md` item 106**, and it needs Ron because two live guides sit on
+the minority ids.
+
+### ⚠ Where a path’s content comes from
+
+**The guides already wrote it.** A path is assembled from what the batches accumulated — SOC codes,
+licensure and accreditation findings, the divergence notes, the sector and ladder rules. The Registered
+Nurse path is the worked example: its `credentialNote` is the batch-215 rule (**accreditation outranks
+credit**), its prerequisite warnings are the `BSC`/`APK` prefix divergence, its `NUR4286-UWF` entry is
+a published one-number-two-subjects split. ⚠ **`variantNote` is where a divergence finding reaches a
+path page** — use it.
+
+---
+
 ## ⚠⚠⚠ CURRENT DIRECTION (Ron, 2026-09-17): REQUESTED COURSES ONLY
 
 **This supersedes the "finish `queue.csv` first" half of the 2026-09-11 direction below.** Ron's words:

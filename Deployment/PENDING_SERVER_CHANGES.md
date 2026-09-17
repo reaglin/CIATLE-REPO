@@ -8,6 +8,29 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⚠⚠ WRITTEN AND AWAITING DEPLOY — Career Paths and the CIP tree (2026-09-17)
+
+**Migration `AddCipAndCareerPaths`** (four tables: `CipNodes`, `CareerPaths`, `CareerPathCourses`,
+`CareerPathSources`) plus a new startup seed, three pages and a controller. **Deploy without
+`-SkipMigrations`.**
+
+| What | Note |
+|---|---|
+| **Seed file** | `PreseMakerRepo.Api/Data/Seed/cip.json` — ⚠ **ships with the build** (`Content CopyToOutputDirectory`), unlike `taxonomy.json` which the deploy script copies to `/etc`. `Cip:ConfigPath` defaults to `Data/Seed/cip.json`; **no `/etc` file and no deploy-script change is needed.** |
+| **Startup** | `CipSeed` runs after `TaxonomySeed` in `Program.cs`. Idempotent; logs and skips if the file is missing, so a bad deploy degrades rather than failing to start. |
+| **Nav** | **Career Paths comes off "Coming soon"** in `_SectionNav`. Programs stays on it. |
+| **Static export** | `/careers` is seeded and `/careers/*` allowed in `StaticSiteExporter`. |
+| **API** | `GET /api/v1/cip`, `GET /api/v1/career-paths[/{slug}]` public; `PUT`/`DELETE` admin-only. |
+
+✅ **Verified against the dev database before commit:** migration applies, seed is idempotent
+(second run: 0 added, 0 updated, 196 nodes), all three pages return 200, unknown CIP code and unknown
+slug return 404, and a full path push round-trips through `Tools/career_paths.py`.
+
+⚠ **After deploying, the content is a separate step and needs Ron’s go-ahead**: the first path
+(`Tools/career_paths/registered-nurse.json`) is authored but **has not been pushed to production**.
+`python career_paths.py push registered-nurse`.
+
+
 The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below.
 
 **⚠ WRITTEN AND AWAITING DEPLOY — the `Prerequisites` ceiling raise (500 → 1000).** Ron, 2026-09-11: *"The

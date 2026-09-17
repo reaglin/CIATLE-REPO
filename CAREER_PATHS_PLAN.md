@@ -1,6 +1,70 @@
 # Career Paths — implementation plan
 
-**Status:** plan approved for build 2026-09-04 (Ron's decisions in §1). Nothing built yet.
+**Status:** ✅ **BUILT 2026-09-17** — the CIP framework, the data model, the browse pages, the
+authoring API and the pipeline are in, and the first path (Registered Nurse) is authored. See
+§0 for what was built and how the 2026-09-04 design below was superseded by it.
+
+---
+
+## 0. What was actually built (2026-09-17) — read this first
+
+**Ron re-anchored the whole feature on CIP codes**, which the 2026-09-04 design below does not mention
+at all:
+
+> *"We are going to shift to the development side and create the career paths. These are all centered
+> on CIP codes and the CIP codes become the framework for that page. These are laid out nicely at
+> https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55 and that can drive the main page design."*
+
+**Four decisions taken with him the same day:**
+
+| Question | Ron’s answer |
+|---|---|
+| Where to build | **"Everything here, end to end"** — C#/Razor, data model, migration, CIP pipeline and content |
+| Tree depth | **Down to 4-digit where we have courses** |
+| Course link | ⚠⚠⚠ **"Curated only — CIP is navigation."** Institution CIP data is an authoring aid, **never published as fact** |
+| Programs | **One CIP tree; Programs and Career Paths both hang off it** |
+
+### The pieces
+
+| Piece | Where |
+|---|---|
+| CIP seed builder | `Tools/build_cip_seed.py` → `PreseMakerRepo.Api/Data/Seed/cip.json` (39 series, 157 groups, 196 nodes) |
+| Course→CIP harvest (authoring aid only) | `Tools/cip_map.py` → `scratchpad/cip_map.json` (25,412 courses) |
+| Entities | `Core/Models/CipNode.cs`, `Core/Models/CareerPath.cs` (+ `CareerPathCourse`, `CareerPathSource`) |
+| Config + seed | `Infrastructure/Data/Configurations/CareerPathConfigurations.cs`, `Data/Seed/CipSeed.cs`, migration `AddCipAndCareerPaths` |
+| Pages | `/careers`, `/careers/area/{code}`, `/careers/{slug}` |
+| API | `GET /api/v1/cip`, `GET|PUT|DELETE /api/v1/career-paths[/{slug}]` |
+| Pipeline | `Tools/career_paths.py` (`validate` / `push` / `list`), documents in `Tools/career_paths/*.json` |
+
+### What survives from the design below, and what does not
+
+- ✅ **§3 Principles stand entirely**, and are quoted in the entity XML docs. *Paths are curated
+  content, not derived data* is the load-bearing one.
+- ✅ **§5 disclaimer wording**, the SOC-code material, and the licensure/accreditation handling
+  survive and are used.
+- ❌ **Named routes with ordered stages (§1) were NOT built.** The 2026-09-11 re-scope already
+  lightened the shape, and Ron’s CIP direction settles it: a path is a description, a selective course
+  list with a stated reason per course, a credential note, and sources. **The Registered Nurse path
+  puts the three routes in `bodyHtml` prose instead**, which says the same thing and needs no schema.
+- ❌ **"Institution codes per course row" was NOT built.** The course catalog already carries
+  offerings per course; a path links to the course page rather than duplicating the institution list.
+- ⚠ **The first-release set (§1) is not settled.** `Registered Nurse` is authored. **Lawyer has no
+  undergraduate CIP code to hang off** — pre-law is not an instructional programme — so it needs a
+  decision from Ron about where, or whether, it is filed.
+
+### ⚠⚠ The measurement that forced "curated only"
+
+Of 1,500 courses carried at two or more of the three institutions publishing CIP codes, **763 agree
+exactly, 631 disagree within the same 2-digit family (benign), and 106 (7%) are classified into
+DIFFERENT CIP FAMILIES.** Severe cases: `ART1300C` is Fine Arts at FAU and **Art Teacher Education**
+at NWFSC; `ART2501C` is Fine Arts against **Leisure and Recreational Activities**. And a prefix-level
+dominant CIP reaches 60% in only 337 of 417 prefixes — excellent for narrow prefixes (ACG 100%,
+PHY 100%) and poor for exactly the broad, high-enrolment ones (**PHC 27%, FIL 32%, NUR 49%**).
+**Good enough to decide which branches of the tree to show; nowhere near good enough to tell a
+student a course belongs to a programme.** See `REVIEW_QUEUE.md` item 103.
+
+---
+
 
 > ⚠ **Superseded in part — Ron re-scoped this 2026-09-11 (see `COURSE_CATALOG_PLAN.md` §14 and phases 5–6).**
 > Career paths now follow **Programs**, and their shape is lighter than the design below: a documented path

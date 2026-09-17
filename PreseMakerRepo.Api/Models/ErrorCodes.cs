@@ -38,4 +38,6 @@ public static class ErrorCodes
     public const string SubmissionNotPending = "SUBMISSION_NOT_PENDING";
     public const string InternalServerError = "INTERNAL_SERVER_ERROR";
     public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";
+    public const string CareerPathNotFound = "CAREER_PATH_NOT_FOUND";
+    public const string CipNodeNotFound = "CIP_NODE_NOT_FOUND";
 }
