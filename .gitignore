@@ -401,3 +401,7 @@ Tools/scratchpad/*_courses.json
 # SQLite dev-database sidecars (the .db itself is tracked)
 *.db-shm
 *.db-wal
+
+# IPEDS bulk files (re-downloadable; Tools/scratchpad/ipeds.py fetch)
+Tools/scratchpad/C20*_A.zip
+Tools/scratchpad/HD20*.zip
