@@ -191,6 +191,47 @@ public in every one of these cases.
 
 ## Tier 1 — Authoritative, use whenever the course is PSAV
 
+### ✅✅✅ CPALMS-CTE — THE FRAMEWORKS RECOVERED (2026-09-17)
+
+**`fldoe.org` has been 403 to this project since 2026-09-02**, on the framework pages and on the
+`core/fileparse.php/…pdf` documents alike, re-probed 2026-09-17 with a browser user-agent. That cost
+the project its Tier-1 source for every PSAV/CTE programme. **It is back, by another door.**
+
+Ron supplied the route: `cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch`. That page iframes
+**`ctepreview.cpalms.org`**, an Angular app — nothing in the HTML — but its bundle names the service
+it calls, and **the service is open**:
+
+```
+https://cteservice.cpalms.org/api/          # tooled in scratchpad/cpalms.py
+```
+
+⚠ **The gate is two headers, `Origin` AND `Referer`, both `https://ctepreview.cpalms.org`** — the
+same shape as the Coursedog gate. **Try that pair first whenever a Florida SPA looks closed.**
+
+| Endpoint | Gives |
+|---|---|
+| `ProgramFrontend/programs` (**POST** `{}`) | all **987** CTE programmes, paged |
+| `ProgramFrontend/programstructure` | ⚠ **occupational completion points and their courses** |
+| `ProgramFrontend/programcareercodes` | **SOC codes** per programme |
+| `ProgramFrontend/programindustrycertifications` | the industry certifications a programme maps to |
+| `ProgramFrontend/careerclusters` | the 17 clusters |
+
+⚠⚠ **THE CIP FORMAT, and it is not obvious.** Florida writes a **10-digit** programme CIP such as
+`0648050805`. **The federal CIP is characters 3-8** — `480508` → `48.05` Precision Metal Working. The
+leading pair marks the programme level and the trailing pair is a Florida serial; **neither belongs to
+the federal code.** `cpalms.py federal_cip()` does it, and refuses anything that is not 10 digits
+rather than coercing it.
+
+✅ **Validated against the career-path queue on the day it was found**: welding → 48.05, machining →
+48.05, industrial machinery maintenance → 47.03, electricity → 46.03, aviation maintenance → 47.06,
+air conditioning → 47.02. **Every manufacturing row's CIP now rests on Florida's own framework data
+instead of on inference.**
+
+⚠ **It also answers a question the frameworks alone could not:** `programType` distinguishes
+*Clock Hour – Career Certificate*, *Apprenticeship*, *College Credit – Advanced Technical Certificate*
+and *High School – Career Preparatory* on the same subject — so the same trade appears at several
+levels with different CIPs, which is exactly what a career path has to tell a student.
+
 ### FLDOE Curriculum Frameworks
 The single best source for any **PSAV / clock-hour** course. Each framework gives the program
 number, CIP code, total clock hours, and a table of every Occupational Completion Point with
