@@ -55,7 +55,52 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
-## ⚠⚠⚠ Direction (Ron, 2026-09-11): LIST courses as you go; guides follow the queue and then requests
+## ⚠⚠⚠ CURRENT DIRECTION (Ron, 2026-09-17): REQUESTED COURSES ONLY
+
+**This supersedes the "finish `queue.csv` first" half of the 2026-09-11 direction below.** Ron's words:
+
+> *"the plan is to keep track of the items (mark them) that need my attention, but our main focus is
+> going to be on **requested curriculum guides and we will only tackle those courses that have been
+> requested**. We will still need those notes to handle the situation of one of the marked courses
+> being requested."*
+
+**Three things follow.**
+
+1. ⚠⚠⚠ **`queue.csv` is no longer the work list.** It stands at 108 `queued` rows and they stay
+   there. **Do not pick a prefix off it and start writing.** The work is
+   `GET /api/v1/queue/guides?status=waiting`, and **when that queue is empty there is no guide work** —
+   say so plainly rather than finding something to do.
+2. **`REVIEW_QUEUE.md` keeps growing and keeps being marked.** It is no longer a side-channel: under
+   request-driven working it is **the only warning you get** that a requested course is already known to
+   be a problem.
+3. ⚠⚠ **A flagged course now arrives WITHOUT WARNING.** In queue-driven mode you met a held course by
+   working steadily toward it and the note turned up in passing. **A public request arrives out of
+   order, on any number, at any time.**
+
+### ⚠⚠⚠ So the FIRST command of every session is now this one
+
+```bash
+python review_lookup.py --requests
+```
+
+**It reads the live request queue and cross-references every waiting course against all 105
+`REVIEW_QUEUE` items** — 361 courses are named across them. It separates items **ABOUT** a course from
+items that merely **mention** it, follows **bare/`C`/`L` twins and sequence partners**, and prints
+**⚠⚠ HELD — ASK RON BEFORE WRITING** where an open item says the course was pulled, held, or needs a
+decision.
+
+⚠ **A HELD course that has been REQUESTED is exactly the case Ron's instruction anticipates, and it is
+not a blocker — it is a question for him.** **Report the request, name the item, say what the block is,
+and ask.** A visitor request is the strongest demand signal the project has; it may well be the reason
+to resolve a long-held item. **Do not write it silently, and do not silently skip it either.**
+
+Other tools for the same file: `review_index.py` regenerates the decision index at the top of
+`REVIEW_QUEUE.md` (run it after adding an item), and `review_lookup.py --all` lists every course the
+file mentions.
+
+---
+
+## ⚠⚠ Superseded in part — Direction (Ron, 2026-09-11): LIST courses as you go; guides follow the queue and then requests
 
 Ron's words:
 
@@ -67,7 +112,9 @@ Ron's words:
 
 1. **A course without a guide is a finished outcome, not a backlog.** The ~800 guide-less Engineering
    Technology courses stay as they are. **Do not treat `hasGuide=false` as a work list.**
-2. **Finish `queue.csv`**, then **shift to visitor requests** as the main source of guide work.
+2. ⚠⚠⚠ **SUPERSEDED 2026-09-17 — see the section above.** This read *"Finish `queue.csv`, then shift
+   to visitor requests."* **The shift has now happened: requests are the ONLY source of guide work, and
+   `queue.csv` is not to be worked through.** The rest of this section still stands.
    ⚠⚠ **Update (Ron, 2026-09-12): the next major phase is CAREER PATHS, and courses
    identified as important to a career path but lacking a guide will land in the queue
    AUTOMATICALLY.** So the queue stops being purely catalog-derived and becomes partly
@@ -3214,7 +3261,9 @@ When starting a fresh session in this project:
 
    **Resource suggestions are cleared first** — they are quick, a person is waiting on each one, and
    the rules are in `resources/APPROVAL_RULES.md` (the `/resources` skill drives the loop). **Then
-   guide requests**, which outrank the local queue. **Only then** work `queue.csv`.
+   guide requests**. ⚠⚠⚠ **As of 2026-09-17 requests are the ONLY source of guide work — do NOT fall
+   through to `queue.csv`.** And run **`python review_lookup.py --requests`** before writing anything:
+   it flags any requested course that already carries a `REVIEW_QUEUE` note.
 
    ⚠ **A guide request closes itself when the guide publishes** — no manual step. Verify by
    re-reading the queue after a push.
