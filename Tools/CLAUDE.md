@@ -2333,10 +2333,10 @@ prefix is now the goal, and a prefix extraction already in hand is exactly what 
 | **FAU** | Coursedog — `scratchpad/coursedog.py fau` (school `fau_banner_ethos`, catalog `Zm7WidFIJix2TYXQumos`) | ✅✅ **REOPENED 2026-09-16 (batch 228). 7,127 courses, cached in `scratchpad/fau_courses.json`.** ⚠⚠⚠ **This row previously read "no public Coursedog catalog at that host… Stop attempting FAU." That was TRUE when written (batch 173) and is now STALE — FAU has since attached a catalog.** Full descriptions, credits, college and department, and **explicit corequisite text** (it is what showed `BSC1010`/`BSC1010L` to be reciprocal). Honors College versions appear under the same number. **FAU is a large SUS institution that the project had written off; it is now a first-class source.** |
 | **Coursedog discovery** | `app.coursedog.com/api/v1/catalogs/urls?url=<host>` (+ Referer) | ✅ **The portable bootstrap.** Returns `school` and `catalog.id` in one call — use it instead of scraping the page for ids. Works for any Coursedog school. ⚠⚠ **It still accepts `Referer` alone, but the COURSE-SEARCH endpoint no longer does** — see the row below. **Discovery succeeding tells you nothing about whether a fetch will.** |
 | **⚠⚠ Coursedog auth (changed)** | `Referer:` **and** `Origin:` | ⚠⚠⚠ **CHANGED 2026-09-15 (batch 212).** Batch 167 recorded the gate as ONE header. **`Referer` alone now returns `401 Unauthorized`** on `/api/v1/cm/<school>/courses/search/$filters`; adding **`Origin: https://<catalog host>`** returns 200. Both are in the rebuilt `scratchpad/coursedog.py`. **If Coursedog 401s again, suspect another header before concluding the route is closed.** |
-| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | **EIGHT** institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not seven coincidences (batch 215, confirmed 220).** **FSW, TSC, CF, Polk State, Santa Fe, FAMU, St. Johns River State and Florida Polytechnic** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
+| **⚠⚠⚠ acalog = presumptively UNREACHABLE** | **NINE** institutions and counting | ⚠⚠⚠ **PLATFORM-LEVEL PATTERN, not seven coincidences (batch 215, confirmed 220).** **FSW, TSC, CF, Polk State, Santa Fe, FAMU, St. Johns River State, Florida Polytechnic and ⚠ USF** all serve an acalog (Modern Campus) root that answers 200 while `content.php` and `search_advanced.php` return **empty 202s**. **Treat an acalog host as content-blocked unless proven otherwise** rather than probing each school hopefully — identify the platform first, and if it is acalog, plan to write from the statewide record and another carrier. |
 | **FAMU** | `catalog.famu.edu` — acalog (Modern Campus) | ⚠ **CONTENT-BLOCKED, probed 2026-09-15.** Root 200 (56 KB); `content.php` and `search_advanced.php` empty 202s. Not Coursedog (bootstrap: *"does not exists"*). ⚠⚠ **FAMU ≠ FAU** — different institutions, both unreachable for different reasons. FAMU is a main carrier of the `RET` professional sequence, so eight batch-215 guides name the gap. |
 | **Polk State (PSC)** | `catalog.polk.edu` — **acalog (Modern Campus), `catoid=55`** | ⚠ **PARTIAL BLOCK, probed 2026-09-15.** Root answers 200 (53 KB) but **`content.php` and `search_advanced.php` both return empty 202s** — the same content-blocked pattern as FSW, TSC and CF. Not a Coursedog school (bootstrap: *"does not exists"*). ⚠⚠ **Note the code: `PSC` is POLK STATE. Pensacola State is `PESC`** — a previous session probed `pensacolastate.edu` as "psc" and was reading the wrong school. **Check `inst_map.json` before trusting an obvious-looking three-letter code.** |
-| **USF** | `catalog.usf.edu` | ⚠ root 200 (75 KB) but **no course-description path exposed**; its only course link goes to `usf.edu/academics/courses-calendar.aspx`. Not yet a route. |
+| **USF** | `catalog.usf.edu` — **acalog (Modern Campus)** | ⚠⚠ **IDENTIFIED AND CONTENT-BLOCKED 2026-09-17 (batch 232).** Root answers 200 (75 KB) **with acalog markers**; `content.php` returns an **empty 202**; the Coursedog bootstrap says the host *"does not exists"*. **NINTH institution in the acalog pattern.** ⚠ This row previously read "no course-description path exposed — not yet a route", which invited re-probing; **it is now a settled negative.** USF is a frequent carrier on health-sciences and communication prefixes, so expect to write its courses from the statewide record and another carrier. |
 | **Gulf Coast (GCSC)** | `www.gulfcoast.edu/catalog/current/courses/<prefix>/index.html` | ✅✅ **RE-PROBED AND WORKING 2026-09-16 (batch 228)** — one fetch per prefix, 131 KB on `bsc`. ⚠⚠ **It is the SECOND Florida source that publishes CONTACT HOURS explicitly** (after Broward): every entry carries `Credit hours: N` plus `Lecture hours: N` and/or `Lab hours: N`. **It also publishes LAB FEES in dollars, term availability, and degree-exclusion rules** (*"cannot be used to satisfy degree requirements by students who already have credit in…"*), none of which any other routine source gives. **Go here whenever a contact-hour or fee figure is in doubt.** |
 | **EFSC** | `catalog.easternflorida.edu/course-descriptions-information/<prefix>/` (and `/<prefix>.pdf`) | ✅ **NEW 2026-09-07 — CourseLeaf, same as UWF/FGCU/Broward/Valencia, existing tooling works unchanged.** Recovered `ADV2000C` and `COP3813C`. On CourseLeaf a prefix the college does not carry returns **202** — probe a prefix it definitely has. |
 | **Tallahassee (TSC)** | `catalog.tsc.fl.edu` | ⚠ **CORRECTION: never blocked — the college RENAMED.** TCC → Tallahassee State College; `catalog.tcc.fl.edu` 000 was a dead host, not a block. New host is live (386 KB) but acalog `content.php` returns empty 202s. **Lesson: follow redirects on the main domain before recording a block.** |
@@ -2944,6 +2944,39 @@ version, gated on nothing means criticism.
 
 ⚠⚠ **Always check which element the CARRIERS agree with before deciding.** Never assume the title is the
 stale half just because it usually has been.
+
+#### ⚠⚠⚠ THE MECHANISM BEHIND BRANCH 4, and the tell that reveals it (batch 232)
+
+**On `HFT4252` the title/description contradiction was visible and unexplained. `PHC4140` shows how one
+gets made, because the statewide description NAMES ITS OWN AUTHOR.**
+
+| | |
+|---|---|
+| statewide **TITLE** | *Public Health Planning and Analysis* |
+| statewide **DESCRIPTION** | ⚠⚠ entirely **GIS** — *"an introduction to Geographic Information Systems (GIS)… buffering, layering, and spatial queries"* |
+| **UWF** | *Public Health Planning and Analysis* — planning, implementation, evaluation, needs assessment. **No GIS.** Backs the **title**. |
+| **USF** | *Introduction to Public Health Geographic Information Systems*. Backs the **description**. |
+
+⚠⚠⚠ **The tell: the description ends by calling the course *"a required course in the PROPOSED
+public health major in the Bachelor of Science in Health Sciences [BSHS] degree program"* — one
+specific institution's degree, described while it was still being proposed.**
+
+**So the likeliest history is that a carrier contributed a description of ITS OWN course onto a number
+whose TITLE already belonged to a different subject, and nobody reconciled the two.** That is a
+*mechanism*, not just a state of affairs: **the record is internally contradictory because it was
+assembled from two sources, not because either half went stale.**
+
+⚠⚠ **The drill: when title and description disagree, read the DESCRIPTION for signs of a single
+author** — a named degree programme, a delivery mode (*"this online course"*), a word like
+*"proposed"*, or an institution code. **Where you find one, you have identified which carrier the
+description belongs to, and the other carrier's reading is what the title preserves.** That converts an
+unexplained contradiction into a legible one, and the guide can say so.
+
+⚠ **And check whether the displaced subject had anywhere to go.** Here it did not: Florida provides
+**three** upper-division planning numbers (`PHC?140`, `?142`, `?143`) and its only GIS-in-public-health
+number, **`PHC?194`, is GRADUATE** — so an undergraduate GIS course had no correct home. **Misfiling by
+necessity underneath a branch-4 collision**, and the guide says plainly that there is no right number to
+go looking for.
 
 **Branch 4 handling — `HFT4252` is the worked case.** Statewide title *Employees Wellbeing in Hospitality
 and Tourism*; statewide description entirely *hotel and resort management*; **UCF backs the title, Pensacola
