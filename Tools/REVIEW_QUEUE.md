@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **75** |
+| ⏳ **Awaiting a decision from Ron** | **76** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **104** |
+| **Total items** | **105** |
 
 ---
 
-### ⏳ Awaiting a decision (75)
+### ⏳ Awaiting a decision (76)
 
 | # | Item |
 |---|---|
@@ -112,6 +112,7 @@ continues around every one of them.
 | **102** | The STUDIO contact-hour convention contradicts itself — and `GRA` now holds three answers |
 | **103** | CIP codes are the career-path anchor — and institutions disagree on 7% of them (batch 230) |
 | **104** | FGCU's catalogue has stopped returning course content (batch 231) |
+| **105** | `PHC4109` (live) tells the reader a masked course number cannot be looked up — it can (batch 234) |
 
 ### Informational — no decision needed (19)
 
@@ -2929,6 +2930,45 @@ start.**
 
 **No decision is needed to keep working** — guides name the gap where FGCU could not be read, which is
 the honest handling. This is about recovering a source, not unblocking the queue.
+
+
+## 105. ⚠⚠ `PHC4109` (live) tells the reader a masked course number cannot be looked up — it can (batch 234)
+
+**Raised 2026-09-17. A correction candidate on a guide I published two batches ago. Small, and mine.**
+
+**What the live guide says.** `PHC4109`, published in batch 232, states that the statewide description's
+*"offered concurrently with `PHC 5XX3`"* names a number that is **"not a real course number — the `XX`
+is a placeholder that was never filled in, so there is nothing to go and look up."**
+
+⚠ **The first half is right and the second half is wrong.** Batch 234 established that a masked number
+in a dual-listing note is usually recoverable, because **the masked number is followed by the course's
+actual title.** Searching statewide titles in the same prefix finds it: **`PHC 5XX3 (Scientific Basis of
+Public Health)` → `PHC?123`, GRADUATE.**
+
+**Why it matters rather than being a nicety.** The guide also carries the dual-listing warning — that
+taking the undergraduate version may block taking the graduate one for credit later. ⚠⚠ **That warning
+is much less useful if the student cannot identify which graduate course it applies to**, and the whole
+point of the warning is that they should ask before registering.
+
+### The exact fix
+
+Replace the sentence saying there is nothing to look up with one naming the graduate partner:
+
+> *"The statewide record masks the graduate partner's number as `PHC 5XX3`, which is not a real
+> identifier — but the course it names is findable: Florida carries **Scientific Basis of Public
+> Health** at graduate level under `PHC?123`. Ask your department whether taking this course affects
+> your ability to take the graduate version for credit."*
+
+⚠ **I have not republished.** Republishing overwrites live content and bumps the version, which waits
+for your go-ahead (the item 81 precedent). **Say the word and it is a one-line edit and a v1.1 push.**
+
+### ⚠ And the same check is worth running across the back catalogue
+
+The scan that produced this found **220 wildcard tokens across 41 statewide prefixes**, and masked
+numbers inside "offered concurrently with" notes are a recurring shape (`GEO 5XX3` and `PHC 5XX3` both
+turned up). **Any already-published guide that quoted a masked number may have the same understatement.**
+**That is a cheap grep over `drafts/` if you want it done as part of the verification pass** rather than
+one guide at a time.
 
 
 ## Resolved

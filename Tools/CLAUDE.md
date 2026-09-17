@@ -1557,7 +1557,39 @@ course-looking token against all five before quoting the field.**
 | Shape | Worked example | Tell | Handling |
 |---|---|---|---|
 | **Corrupt token** (209) | `ADV4802` — *"ADV U101C"* | fails `^[A-Z]{3}\s?\d{4}[A-Z]?$` | call it a data defect; send the reader to the catalogue |
-| ⚠⚠ **PLACEHOLDER** (222, 226) | **`COM4301` — *"COM 2XXX"*; `CNT3004` — *"CSG X060"*** | ⚠ **a wildcard nobody filled in.** ⚠⚠ **TWO conventions: `2XXX` masks the century and keeps the level; `X060` masks the LEVEL and keeps the century — so look for `X` ANYWHERE in the numeric portion, not only as a trailing mask** | **the INTENT is legible and usually sound — state the intent, say the number does not exist** |
+| ⚠⚠ **PLACEHOLDER** (222, 226, ⚠ **corrected 234**) | **`COM4301` — *"COM 2XXX"*; `CNT3004` — *"CSG X060"*; `GEO4251` — *"GEO 5XX3"*** | ⚠ **a masked number.** ⚠⚠ **Look for `X` ANYWHERE in the numeric portion, not only as a trailing mask** | ⚠⚠⚠ **RECOVER THE REAL NUMBER — see below. Do NOT stop at "the number does not exist".** |
+
+##### ⚠⚠⚠ CORRECTED (batch 234): a masked number is usually RECOVERABLE, and two of these are not placeholders at all
+
+**Batch 222 recorded the handling as *"state the intent, say the number does not exist."* That is too
+weak, and a scan of all 41 statewide CSVs on disk — 220 wildcard tokens — shows why.**
+
+**First, two different things are wearing the same shape, and the discriminator is in the surrounding
+text:**
+
+| What you see | What it is | Handling |
+|---|---|---|
+| ✅ *"**ANY** 1XXX OR 2XXX COURSE WITH PREFIX CCJ, CJC, CJE, CJL, CJJ, PLA"* (`CCJ2453`) | **genuine LEVEL NOTATION** — any course at that level. The word **ANY**, or a prefix list, is the tell | **decode and explain it** (the batch-214 notation rule) |
+| ⚠⚠ *"HFT 3XXX **GOLF PLANNING & OPERATIONS II**"*, *"BCN 3XXX **INTRODUCTION TO THE CONCRETE INDUSTRY**"*, *"GEO 5XX3 **(ADVANCED CLIMATOLOGY AND CLIMATE CHANGE)**"* | ⚠⚠⚠ **a PLACEHOLDER — and the masked number is FOLLOWED BY THE COURSE'S ACTUAL TITLE** | **use the title to find the real number** |
+
+⚠⚠⚠ **In every placeholder case the writer knew exactly which course they meant and named it. So
+the title recovers the number, and there are TWO routes:**
+
+1. **Search the statewide TITLES in the same prefix for the quoted title.** Tested on four cases,
+   **three recovered**: `GEO 5XX3 (Advanced Climatology and Climate Change)` → **`GEO?256`, graduate**;
+   `PHC 5XX3 (Scientific Basis of Public Health)` → **`PHC?123`, graduate**; `BCN 3XXX (Introduction to
+   the Concrete Industry)` → **`BCN?443`**. (`HFT 3XXX Golf Planning & Operations II` was not found —
+   so some genuinely do not resolve.)
+2. ⚠⚠ **Easier and more reliable: READ THE CARRIER'S OWN CATALOGUE ENTRY.** UWF's `GEO4251` says
+   *"Offered concurrently with **GEO 5256** Advanced Climatology and Climate Change"* — **the exact
+   number the state masked, published in full by the institution.** **The state record masks what the
+   carrier prints.**
+
+⚠ **And note where these cluster: `<PFX> 5XX3` appeared twice, in `GEO` and `PHC`, both inside
+"offered concurrently with" DUAL-LISTING notes.** **So when a dual-listing note carries a masked
+number, expect the graduate partner to be findable and give the reader its real number** — which
+matters, because the repeat-restriction warning is useless if the student cannot identify the course
+it applies to.
 | **Dangling: sector split** (221) | `PLA4554` — names two FCS-only numbers; UCF carries neither | the prefix splits FCS/SUS | name the REAL gate; expect it across the whole prefix |
 | ⚠⚠ **Dangling: single-carrier contribution** (222) | **`COM4120` — names `COM 3311`, carried by UCF ALONE, and UCF does not require it** | ⚠ **both carriers SUS; NO sector split** | same handling, but expect it ANYWHERE, not only in split prefixes |
 | **Local title in a statewide field** (200) | `COM4564` — *"COM4561 Social Media Content Development"* | the quoted title is not the statewide title | ⚠ **search by NUMBER**; and read it in reverse — it names the CONTRIBUTING institution |
