@@ -10,6 +10,9 @@ Bundle these into the next deploy, then delete the entry.
 
 ### ⚠ REDEPLOY NEEDED — careers linked to programmes (2026-09-17, after the Programs deploy)
 
+✅ **This is the first deploy that can use the new flag:**
+`.\Deployment\deploy-update.ps1 -CodeOnly`
+
 **Code only, NO migration** — the `CareerPathPrograms` table shipped with `AddPrograms`.
 
 A career path can now name the programmes that lead to it (`programs: [{slug, note}]` in the path
