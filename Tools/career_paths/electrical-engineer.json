@@ -1,0 +1,94 @@
+{
+  "name": "Electrical Engineer",
+  "cipCode": "14.10",
+  "socCode": "17-2071",
+  "isPublished": true,
+  "sortOrder": 40,
+
+  "description": "Electrical engineers design, develop and test electrical and electronic systems — power generation and distribution, control systems, communications, embedded computing, instrumentation and the electronics inside almost everything else. In Florida the work concentrates in aerospace and space launch, defence and simulation, utilities and grid modernisation, semiconductors and medical devices.",
+
+  "credentialNote": "Most electrical engineers work without a licence, and in electronics, embedded systems and semiconductors a PE is uncommon. ⚠ But you cannot offer engineering services to the public, seal drawings or take responsible charge without one — which is why it matters most in POWER, utilities, building systems and consulting. THE DEGREE YOU CHOOSE CHANGES THE TIMELINE: under s. 471.013(1)(a), Florida Statutes, a graduate of an approved ENGINEERING curriculum needs FOUR years of active engineering experience; a graduate of an approved ENGINEERING TECHNOLOGY curriculum needs SIX. The route is an ABET-accredited degree, the Fundamentals of Engineering (FE) exam — sittable in your final year — certification as an Engineer Intern, the experience, then the Principles and Practice of Engineering (PE) exam. Governed by Chapter 471, F.S. and Chapter 61G15, F.A.C. ⚠ Even if you do not expect to need a licence, SIT THE FE IN YOUR FINAL YEAR: it is cheap, you will never know the material better, and it keeps the option open.",
+
+  "bodyHtml": "<h2>What the work actually is</h2><p>Electrical engineering splits into families that share a foundation and then diverge hard. O*NET&rsquo;s task statements for the occupation describe designing and maintaining electrical equipment and systems, overseeing project timelines and budgets, directing manufacturing and installation, performing calculations to manufacturing standards, operating engineering software, testing vendors&rsquo; products, inspecting installations for compliance, and preparing technical drawings and documentation.</p><p>In practice you will end up in one of these, and the choice is usually made by which courses you enjoyed:</p><ul><li><strong>Power and energy</strong> &mdash; generation, transmission, distribution, grid modernisation, renewables. &#9888; This is where the PE licence genuinely matters, and where Florida&rsquo;s utilities hire.</li><li><strong>Electronics and circuits</strong> &mdash; analogue and digital design, semiconductors, instrumentation.</li><li><strong>Embedded and computer engineering</strong> &mdash; microprocessors, FPGAs, firmware. Overlaps heavily with computer engineering.</li><li><strong>Signals, communications and control</strong> &mdash; wireless, radar, signal processing, control systems. Strong demand from Florida&rsquo;s defence and simulation sector.</li><li><strong>Electromagnetics and photonics</strong> &mdash; antennas, RF, optics.</li></ul><h2>Projected need</h2><p>O*NET, drawing on federal projections, reports <strong>192,000 electrical engineers employed</strong> (2024), growth projected <strong>&ldquo;much faster than average&rdquo; (7% or higher) through 2034</strong>, and about <strong>11,700 openings a year</strong>. Median pay is <strong>$120,630 a year</strong> ($58.00 an hour), 2025 figures — among the higher medians in engineering. <strong>82%</strong> of survey respondents reported a bachelor&rsquo;s degree as the requirement for new hires, a notably firmer figure than for mechanical engineering.</p><p>&#9888; Those are national numbers. Florida&rsquo;s demand is concentrated: space launch and aerospace on the Space Coast, defence and simulation around Orlando, utilities and grid work statewide, semiconductors, and medical devices.</p><h2>Necessary skills</h2><ul><li><strong>Mathematics you can use, not just pass.</strong> Differential equations and linear algebra are not background here — circuits, signals and control are written in them. Complex numbers become routine arithmetic.</li><li><strong>Comfort with abstraction.</strong> &#9888; This is the honest difference from mechanical engineering: you cannot see a field, a phasor or a transfer function. Students who need to picture the mechanism sometimes find the transition to signals and electromagnetics hard, and it is worth knowing that before year three.</li><li><strong>Laboratory and instrumentation skill</strong> — oscilloscope, function generator, spectrum analyser — and the habit of measuring rather than assuming.</li><li><strong>Programming.</strong> Nearly every branch now needs C for embedded work and Python or MATLAB for analysis.</li><li><strong>Debugging temperament.</strong> A great deal of the job is finding why a circuit that should work does not.</li></ul><h2>&#9888;&#9888; Electrical engineering, computer engineering, or engineering technology?</h2><p>Three nearby degrees, and the differences are consequential:</p><table class=\"table table-sm\"><thead><tr><th>Degree</th><th>Centre of gravity</th><th>PE experience required</th></tr></thead><tbody><tr><td><strong>Electrical Engineering</strong> (CIP 14.10)</td><td>the full breadth: power, electronics, signals, fields</td><td>4 years</td></tr><tr><td><strong>Computer Engineering</strong> (CIP 14.09)</td><td>digital systems, architecture, embedded; less power and fields</td><td>4 years</td></tr><tr><td><strong>Electrical/Electronics Engineering Technology</strong> (CIP 15.03)</td><td>applied and hands-on; installation, test, maintenance</td><td>&#9888; <strong>6 years</strong></td></tr></tbody></table><p>&#9888; <strong>The technology route also uses its own mathematics sequence</strong>, which frequently does not satisfy the calculus requirement for an engineering degree — so transferring into engineering later can mean repeating mathematics on top of the extra two years. All three are real careers; only the first two are engineering for licensure purposes.</p><h2>Advice</h2><ul><li><strong>Check ABET accreditation and the commission</strong> at <em>amspub.abet.org</em> before you enrol. An <em>Engineering</em> accreditation is what gives the four-year route.</li><li><strong>Treat Physics II as a major course.</strong> Electricity and magnetism is the direct foundation of circuits, electronics and electromagnetics — more so here than in any other engineering discipline. Do not treat it as a general-education box.</li><li><strong>Get to a circuits course early</strong> and see whether you like it. It is the cheapest honest test of whether this discipline suits you.</li><li><strong>Build something outside coursework.</strong> A microcontroller project, a robot, amateur radio, a competition team. Employers ask, and it is the most common differentiator between graduates with identical transcripts.</li><li><strong>Sit the FE in your final year</strong> even if you expect to go into electronics. Options are cheap to keep and expensive to recreate.</li><li><strong>If you are starting at a state college</strong>, follow the published engineering transfer track and confirm the receiving university&rsquo;s exact course numbers in writing — engineering has little elective slack, so a mis-substituted course costs a term.</li></ul>",
+
+  "programs": [
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ A related but DIFFERENT route. Electrical/electronics engineering technology leads to technician and technologist work and, if you later pursue a PE, requires six years of experience rather than four. Worth reading before choosing between them."
+    }
+  ],
+
+  "courses": [
+    {
+      "courseId": "MAC2311",
+      "reason": "Calculus I — the gate on the whole degree.",
+      "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence, because institutions order topics differently. Finish the sequence at one institution where you can."
+    },
+    { "courseId": "MAC2312", "reason": "Calculus II — integration technique and series, both used constantly in signals and circuits analysis." },
+    { "courseId": "MAC2313", "reason": "Calculus III — vector calculus, which is the mathematics electromagnetics is written in." },
+    { "courseId": "MAP2302", "reason": "Differential Equations — the behaviour of circuits and control systems over time. Arguably the single most used mathematics course in the major." },
+    { "courseId": "PHY2048", "reason": "Physics with Calculus I — mechanics; the groundwork, and a prerequisite for the second course that matters far more here." },
+    {
+      "courseId": "PHY2049",
+      "reason": "Physics with Calculus II — electricity and magnetism. ⚠ For this discipline it is not a general-education requirement but the direct foundation of circuits, electronics and fields. Treat it as a major course.",
+      "variantNote": "Two equivalent packagings: a lecture with PHY2049L, or the integrated PHY2049C. Enrol in both halves where your institution splits them."
+    },
+    { "courseId": "CHM2045", "reason": "General Chemistry I — required by most ABET electrical programmes, and the basis for semiconductor and materials work." },
+
+    { "courseId": "EEL3111", "reason": "Circuits I — the first true electrical engineering course: nodal and mesh analysis, transients, AC steady state. The course that tells you whether this discipline suits you." },
+    { "courseId": "EEL3112", "reason": "Circuits II — frequency response, resonance, transformers, two-port networks and the transition to phasor and Laplace methods." },
+    { "courseId": "EEL3701", "reason": "Digital Logic and Computer Systems — Boolean algebra, combinational and sequential design, state machines. The entry point to everything digital." },
+    { "courseId": "EEL3135", "reason": "Discrete-Time Signals and Systems — sampling, convolution, the z-transform and the DFT; the foundation of all modern signal processing." },
+    { "courseId": "EEL3472", "reason": "Electromagnetic Fields — Maxwell's equations applied to transmission lines, waves and radiation. The most mathematically demanding course in the degree for most students." },
+    { "courseId": "EEL3211", "reason": "Basic Electric Energy Engineering — three-phase power, transformers and machines; the power-systems foundation and where the PE licence leads." },
+    { "courseId": "EEL4657", "reason": "Linear Control Systems — feedback, stability and compensator design. Where differential equations and signals analysis pay off together." },
+    { "courseId": "EEL4744", "reason": "Microprocessor Applications — embedded programming and interfacing; the most directly employable single course in the degree for many graduates." },
+    { "courseId": "EEL4712", "reason": "Digital Design — HDL-based design and FPGA implementation, the modern practice of digital hardware." },
+    { "courseId": "EEL4713", "reason": "Digital Computer Architecture — pipelines, memory hierarchy and instruction sets; the bridge to computer engineering." },
+    { "courseId": "EGN3420", "reason": "Engineering Analysis — numerical methods and linear algebra, which underpin simulation and signal processing alike." },
+    { "courseId": "EGN3613", "reason": "Engineering Economic Analysis — the economic justification of engineering decisions, and an FE exam topic." }
+  ],
+
+  "sources": [
+    {
+      "label": "Florida Board of Professional Engineers — Licensure",
+      "url": "https://fbpe.org/licensure/",
+      "note": "The licensing authority: the route from degree to PE, and Engineer Intern certification."
+    },
+    {
+      "label": "Chapter 471, Florida Statutes — Engineering",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
+      "note": "s. 471.013(1)(a) sets the four-year and six-year experience requirements."
+    },
+    {
+      "label": "ABET — Accredited Program Search",
+      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+      "note": "Check the programme and its accrediting commission before enrolling."
+    },
+    {
+      "label": "NCEES — Fundamentals of Engineering (FE) exam",
+      "url": "https://ncees.org/engineering/fe/",
+      "note": "Specifications, registration and the reference handbook. There is an Electrical and Computer discipline version."
+    },
+    {
+      "label": "O*NET — Electrical Engineers (17-2071.00)",
+      "url": "https://www.onetonline.org/link/summary/17-2071.00",
+      "note": "Tasks, skills, wages and the employment projections quoted on this page."
+    },
+    {
+      "label": "U.S. Bureau of Labor Statistics — Electrical and Electronics Engineers",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
+      "note": "Federal wage, employment and outlook detail for SOC 17-2071."
+    },
+    {
+      "label": "IEEE",
+      "url": "https://www.ieee.org/",
+      "note": "The professional society: standards, student membership and the technical societies worth joining early."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "The federal taxonomy this path is filed under, at 14.10 Electrical, Electronics and Communications Engineering."
+    }
+  ]
+}
