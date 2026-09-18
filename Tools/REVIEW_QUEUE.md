@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **77** |
+| ⏳ **Awaiting a decision from Ron** | **79** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **106** |
+| **Total items** | **108** |
 
 ---
 
-### ⏳ Awaiting a decision (77)
+### ⏳ Awaiting a decision (79)
 
 | # | Item |
 |---|---|
@@ -114,6 +114,8 @@ continues around every one of them.
 | **104** | FGCU's catalogue has stopped returning course content (batch 231) |
 | **105** | `PHC4109` (live) tells the reader a masked course number cannot be looked up — it can (batch 234) |
 | **106** | 81 PUBLISHED GUIDES SIT ON MINORITY COURSE IDS — including the ENTIRE Florida math gateway (measured 2026-09-17) |
+| **107** | FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS — and 35 live guides name only one of them (found 2026-09-18) |
+| **108** | `ECH3854`'s statewide prerequisite resolves for NOBODY — recorded, not blocking (found 2026-09-18) |
 
 ### Informational — no decision needed (19)
 
@@ -3115,6 +3117,94 @@ asserted** — it is true for MAC2311 and false for BSC2085.
   on TWO paths), `BSC2085`, `BSC2086`. Run `python career_paths.py needs`.
 - ⏳ **Still open:** what happens to the 81 guides sitting on minority ids, and the `FFP2120C`
   guide on an id no institution carries.
+
+## 107. ⚠⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS — and 35 live guides name only one of them (found 2026-09-18)
+
+**The most-taken college science course in Florida is carried under two parallel numbering families,
+split almost evenly across the system, and NO institution carries both.**
+
+| Family | Institutions | Who |
+|---|---|---|
+| `CHM1045`/`CHM1046` (or the `C` forms) | **19** | Broward, Daytona State, EFSC, **FAMU**, **FGCU**, Florida Keys, **FSU**, **FIU**, Gulf Coast, IRSC, **Miami Dade**, North Florida, NWFSC, Palm Beach State, Pensacola State, Polk State, SJRSC, Tallahassee State, **Valencia** |
+| `CHM2045`/`CHM2046` (or the `C` forms) | **20** | CF, FAU, Florida Gateway, Florida Poly, FSCJ, FSW, Hillsborough, Lake-Sumter, New College, Pasco-Hernando, SCF, Santa Fe, South Florida State, St. Petersburg, Seminole State, **UCF**, **UF**, **UNF**, **USF**, UWF |
+| **both** | **0** | — |
+
+⚠ **The one anomaly: Santa Fe College uses `CHM2045` for the first course and carries BOTH
+`CHM1046` and `CHM2046` for the second.**
+
+⚠⚠ **FOUR public universities are in the 1000 family — Florida State, Florida A&M, FIU and FGCU —
+along with the three largest state colleges.** This is PARALLEL NUMBERING FAMILIES (batch 219) on the
+highest-enrolment science course in the state.
+
+**It is benign for TRANSFER** — both families are lower division and the sequences articulate — **and it
+is a guaranteed FAILED SEARCH**, the `SPN3410` ordinal-base shape (batch 203). A student who does not
+know two families exist cannot know they are looking in the wrong one.
+
+⚠⚠⚠ **And it collides with a warning the state prints on the SECOND course of the sequence:**
+*"a sequence once started should be taken entirely at one institution … only the COMPLETED sequence at
+one institution is equivalent to a completed sequence at another."* **Crossing families mid-sequence is
+exactly what the state tells students not to do.**
+
+### ✅ Already done — no decision needed on these
+
+- **Six live career paths corrected and re-pushed** (aerospace, chemical, civil, electrical,
+  industrial, mechanical engineer) with a `variantNote` naming both families, the packaging axis, and
+  the sequence warning.
+- **`CHM2045` republished at v1.1**, additively: the verified v1.0 content was pulled from the live
+  API and kept, with the two-family and dual-enrolment blocks spliced into Special Information.
+- **`CHM2046`, `CHM2210`, `CHM2211` written** (batch 239) carrying the finding.
+
+### ⚠ WHAT NEEDS RON — the retro-sweep, and it is one decision, not 35
+
+**35 already-published guides name `CHM2045` or `CHM2046` and never mention the 1000-numbered
+family.** They are not WRONG; they are incomplete in the way `CHM2045` v1.0 was, and a reader at Florida
+State, FIU, Broward or Miami Dade would not learn that their own course is the one being described.
+
+```
+ANT2511L ANT4180L BSC1010C CHM1015 CHM1020 CHM1020C CHM1020L CHM1024 CHM1025
+CHM2210C CHM4130C EEE3394 EEE4330 EGN1001C EGN3343C EGN3365 ENV4102 GEO4280C
+HUN2201 MCB1000 MCB1000L MCB2010 MCB2010L MCB3020 MCB3020L MCB4203 MCB4276
+MLS3194 OCB3108L PCB3103L RET3028 RET3028L RET3493 RET3493L RET3884
+```
+
+**The options, cheapest first:**
+
+1. **Do nothing.** The paths and the four chemistry guides now carry the finding, and most of these 35
+   mention the prerequisite only in passing.
+2. ⚠ **Sweep only where it is load-bearing** — the ones where general chemistry is a stated
+   PREREQUISITE rather than a mention. `MCB`, `BSC`, `RET`, `HUN` and `MLS` feed health-professions
+   programmes whose students are disproportionately at Miami Dade, Broward and Valencia — **all three
+   in the 1000 family** — so those are where the omission actually costs someone.
+3. **Sweep all 35** with the same additive splice used on `CHM2045`, which is now tooled
+   (`scratchpad/chm2045_fix.py`) and mechanical: pull live, splice, bump version, push.
+
+⚠ **Recommendation: option 2.** ⚠⚠ **`CHM2210C` should be fixed regardless of the decision** — it is
+the integrated twin of `CHM2210`, which was published in batch 239 carrying the finding, so the two
+halves of one split family now disagree with each other.
+
+---
+
+## 108. ⚠⚠ `ECH3854`'s statewide prerequisite resolves for NOBODY — recorded, not blocking (found 2026-09-18)
+
+**Documented here because it is the clearest instance of a general rule and worth citing, not because
+anything is blocked.** The guide published in batch 240 states it fully.
+
+`ECH3854` Chemical Engineering Computations is carried by **FAMU, Florida State and USF**. Its
+statewide prerequisite names three courses:
+
+| Named | Who carries it | Resolves for a carrier? |
+|---|---|---|
+| `ECH3264` | **University of Florida alone** | ⚠ **no — and UF does not carry `ECH3854`** |
+| `CGS3460` | ⚠⚠ **no Florida public institution at all** | **no, for anybody in the state** |
+| `MAP3305` | FAMU, FAU, Florida Poly, FSU | not at USF |
+
+⚠⚠⚠ **Both dangling numbers are University of Florida numbering, and UF does not teach the
+course** — the `JOU3342` shape (batch 224): a prerequisite contributed by a department that does not
+teach the course. **Two of the five documented defect shapes in one field.**
+
+⚠ **It is the best available teaching example of the standing rule: a statewide prerequisite is
+contributed by ONE institution and is not a promise about yours.** No action needed.
+
 
 ## Resolved
 
