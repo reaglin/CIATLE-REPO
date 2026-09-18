@@ -1762,6 +1762,7 @@ MVS4343,APP MUS PRIN CELLO,6,skipped,994,2026-09-04T01:12:11Z,,,Applied music: i
 NUR3065L,HEALTH ASSESSMENT,6,skipped,994,2026-09-04T01:12:11Z,,,No UWF equivalent; UWF publishes NUR3067 Health Assessment and Promotion instead (published batch 128). Batch 129.
 NUR4828C,PROFESSIONAL NURSING III,6,skipped,994,2026-09-04T01:12:11Z,,,UWF publishes lecture-only NUR4828; covered by NUR4828 (published batch 128). Batch 129.
 PGY2905C,INDEPENDENT STUDY,6,skipped,994,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
+ESI4523,SYSTEMS SIMULATION,5,pushed,995,2026-09-18T11:00:38Z,2026-09-18T10:58:43Z,2026-09-18T11:00:53Z,(added by reconcile from orphan draft)
 ADV2000C,ADVERTISING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T15:04:22Z,2026-09-07T15:04:35Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH4575,THE CIVIL RIGHTS MOVEMENT,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:08:06Z,2026-09-07T01:08:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMS2010,CIVIL DISCOURSE AND THE AMERICAN POLITICAL ORDER,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:57Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2780,13 +2781,11 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-CHM2045,General Chemistry I,,pushed,1000,2026-09-17T20:10:47Z,2026-09-17T20:10:32Z,2026-09-17T20:11:09Z,(added by reconcile from orphan draft)
-MAC2311,Calculus I,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:09Z,(added by reconcile from orphan draft)
-MAC2312,Calculus II,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
-MAC2313,Calculus III,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
-MAP2302,Differential Equations,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
-PHY2048,General Physics with Calculus I,,pushed,1000,2026-09-17T20:11:00Z,2026-09-17T20:10:32Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
-PHY2049,General Physics with Calculus II,,pushed,1000,2026-09-17T20:11:00Z,2026-09-17T20:10:32Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
+EIN3000,Introduction to Industrial and Systems Engineering,,pushed,1000,2026-09-18T11:00:38Z,2026-09-18T11:00:22Z,2026-09-18T11:00:53Z,(added by reconcile from orphan draft)
+EIN3240,Human Factors and Ergonomics,,pushed,1000,2026-09-18T11:00:38Z,2026-09-18T11:00:22Z,2026-09-18T11:00:53Z,(added by reconcile from orphan draft)
+ESI3215,Evaluation of Engineering Data,,pushed,1000,2026-09-18T11:00:38Z,2026-09-18T11:00:22Z,2026-09-18T11:00:53Z,(added by reconcile from orphan draft)
+ESI3312,Deterministic Operations Research,,pushed,1000,2026-09-18T11:00:38Z,2026-09-18T10:58:43Z,2026-09-18T11:00:54Z,(added by reconcile from orphan draft)
+ESI4221,Industrial Quality Control,,pushed,1000,2026-09-18T11:00:38Z,2026-09-18T10:58:43Z,2026-09-18T11:00:54Z,(added by reconcile from orphan draft)
 ANT2100,Introduction to Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
 ANT2511,Biological Anthropology,,pushed,1000,2026-09-04T03:07:50Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,(added by reconcile from orphan draft)
 ANT3137,Shipwreck Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
@@ -2823,6 +2822,7 @@ CET2793,Windows Server Administration,,pushed,1000,2026-05-04T00:32:59Z,2026-05-
 CHM1020,CHM1020 General Chemistry for Liberal Studies I - Curriculum Guide,,pushed,1000,2026-09-12T16:52:52Z,2026-09-12T16:51:21Z,2026-09-12T16:52:55Z,(added by reconcile from orphan draft)
 CHM1024,CHM1024 Chemistry Study Skills - Curriculum Guide,,pushed,1000,2026-09-12T16:52:52Z,2026-09-12T16:51:21Z,2026-09-12T16:52:55Z,(added by reconcile from orphan draft)
 CHM1025,CHM1025 Introduction to General Chemistry - Curriculum Guide,,pushed,1000,2026-09-12T16:52:52Z,2026-09-12T16:51:41Z,2026-09-12T16:52:55Z,(added by reconcile from orphan draft)
+CHM2045,General Chemistry I,,pushed,1000,2026-09-17T20:10:47Z,2026-09-17T20:10:32Z,2026-09-17T20:11:09Z,(added by reconcile from orphan draft)
 CJK0420,Criminal Justice Corrections (Defensive Tactics),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:21Z,(added by reconcile from orphan draft)
 CJK0570,Criminal Justice Corrections (Firearms),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:21Z,(added by reconcile from orphan draft)
 CJK0590,Criminal Justice Corrections (Emergency Response and First Aid),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:22Z,(added by reconcile from orphan draft)
@@ -2881,6 +2881,10 @@ GRA3887C,Traditional Methods in Cartoon Design,,pushed,1000,2026-09-16T15:06:38Z
 HSC3555,Pathophysiology,,pushed,1000,2026-09-04T15:43:04Z,2026-09-04T15:41:48Z,2026-09-04T15:43:06Z,(added by reconcile from orphan draft)
 HSC4143,Drugs in Society,,pushed,1000,2026-09-04T15:43:04Z,2026-09-04T15:41:48Z,2026-09-04T15:43:06Z,(added by reconcile from orphan draft)
 ISM3011,e-Business Systems Fundamentals,,pushed,1000,2026-09-04T16:23:54Z,2026-09-04T16:23:48Z,2026-09-04T16:23:57Z,(added by reconcile from orphan draft)
+MAC2311,Calculus I,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:09Z,(added by reconcile from orphan draft)
+MAC2312,Calculus II,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
+MAC2313,Calculus III,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
+MAP2302,Differential Equations,,pushed,1000,2026-09-17T20:10:56Z,2026-09-17T20:08:56Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
 MCB1000,Fundamentals of Microbiology,,pushed,1000,2026-09-04T16:12:57Z,2026-09-04T16:08:56Z,2026-09-04T16:13:00Z,(added by reconcile from orphan draft)
 MCB2010,Microbiology for Health Sciences,,pushed,1000,2026-09-04T16:12:57Z,2026-09-04T16:10:11Z,2026-09-04T16:13:00Z,(added by reconcile from orphan draft)
 MCB3020,Microbiology,,pushed,1000,2026-09-04T16:12:57Z,2026-09-04T16:11:46Z,2026-09-04T16:13:00Z,(added by reconcile from orphan draft)
@@ -2915,6 +2919,8 @@ PHT1128,Kinesiology for the PTA,,pushed,1000,2026-09-03T03:22:31Z,2026-09-03T03:
 PHT1251,Patient Care Skills,,pushed,1000,2026-09-03T03:22:31Z,2026-09-03T03:18:19Z,2026-09-03T03:24:56Z,(added by reconcile from orphan draft)
 PHT2220,Therapeutic Exercise I,,pushed,1000,2026-09-03T03:22:31Z,2026-09-03T03:22:22Z,2026-09-03T03:24:56Z,(added by reconcile from orphan draft)
 PHT2221,Therapeutic Exercise II,,pushed,1000,2026-09-03T03:22:31Z,2026-09-03T03:22:22Z,2026-09-03T03:24:56Z,(added by reconcile from orphan draft)
+PHY2048,General Physics with Calculus I,,pushed,1000,2026-09-17T20:11:00Z,2026-09-17T20:10:32Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
+PHY2049,General Physics with Calculus II,,pushed,1000,2026-09-17T20:11:00Z,2026-09-17T20:10:32Z,2026-09-17T20:11:10Z,(added by reconcile from orphan draft)
 STA2023,Statistical Methods I,,pushed,1000,2026-09-17T16:20:15Z,2026-09-17T16:19:46Z,2026-09-17T16:20:27Z,(added by reconcile from orphan draft)
 TPP2110,Acting I,,pushed,1000,2026-09-04T17:58:34Z,2026-09-04T17:58:26Z,2026-09-04T17:58:36Z,(added by reconcile from orphan draft)
 TPP2500,Movement for the Actor,,pushed,1000,2026-09-04T19:01:38Z,2026-09-04T18:58:45Z,2026-09-04T19:01:41Z,(added by reconcile from orphan draft)
