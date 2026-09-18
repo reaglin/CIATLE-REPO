@@ -1,163 +1,164 @@
 {
-  "name": "Aerospace Engineer",
-  "cipCode": "14.02",
-  "socCode": "17-2011",
-  "isPublished": true,
-  "sortOrder": 80,
-  "description": "Aerospace engineers design, analyse and test aircraft and spacecraft — aerodynamics, structures, propulsion, flight dynamics and the mission design that ties them together. ⚠ Florida is one of the few places in the world where the whole industry is present at once: launch, satellites, aviation, simulation and defence, concentrated on the Space Coast and around Orlando.",
-  "credentialNote": "A Professional Engineer licence is uncommon in aerospace — much of the work falls under the industrial exemption, and employers hire on degree and clearance rather than licensure. ⚠⚠ WHAT REPLACES IT IS SECURITY CLEARANCE AND EXPORT CONTROL, and that is a real planning consideration in Florida. A great deal of aerospace work is subject to ITAR and EAR, which in practice restrict many roles to U.S. persons, and defence work often requires a clearance that takes months and depends on a background investigation. ⚠ If a clearance is likely to matter to you, the time to think about it is before graduation, not after an offer. On licensure, if you do want the PE: under s. 471.013(1)(a), Florida Statutes, an approved ENGINEERING curriculum requires four years of experience, an approved ENGINEERING TECHNOLOGY curriculum six. Sit the FE in your final year — it is cheap insurance for a career that may later move into consulting or civil-adjacent work.",
-  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET's task statements: <em>formulate the conceptual design of aeronautical or aerospace products or systems to meet customer requirements; evaluate product data and designs from inspections or reports for conformance to engineering principles; plan and conduct experimental, environmental, operational or stress tests on models and prototypes; design and analyse aircraft and spacecraft systems using mathematical modelling and computer analysis; write technical reports and documentation; and investigate and resolve technical problems reported by customers.</em></p><p>&#9888; <strong>Notice how much of that is testing and documentation.</strong> Aerospace is a discipline where things cannot be quietly fixed after delivery, so verification, analysis and the paper trail behind them are a much larger fraction of the job than students expect.</p><h2>Projected need — and an honest caution</h2><p>O*NET, on federal projections: <strong>71,600 aerospace engineers employed</strong> (2024), growth projected <strong>&ldquo;faster than average&rdquo; (5&ndash;6%) through 2034</strong>, about <strong>4,500 openings a year</strong>, median pay <strong>$134,960</strong> ($64.89 an hour, 2025) — <strong>the highest median of any path on this site</strong>.</p><p>&#9888;&#9888; <strong>But read the openings figure carefully.</strong> 4,500 a year nationally is the smallest number on this site by a wide margin — mechanical engineering has 18,100, civil 23,600, industrial 25,200. <strong>Aerospace pays the most and hires the fewest.</strong> It is a specialised field with concentrated employers, and that combination means geography matters more than in any other engineering discipline: you generally move to the work.</p><h3>Which is why Florida is unusual</h3><p>Florida is one of the places the work is. The <strong>Space Coast</strong> around Cape Canaveral and Kennedy Space Center hosts launch operations, vehicle integration and a supplier base that has grown substantially with commercial launch. Orlando is a centre for <strong>simulation and training</strong> and for defence electronics; there is fixed-wing and rotorcraft <strong>aviation maintenance and manufacturing</strong> across the state, and a significant satellite and defence presence. <strong>A Florida aerospace graduate is unusually likely to be able to stay in Florida</strong>, which is not true of most states.</p><h2>Necessary skills</h2><ul><li><strong>Fluid mechanics and thermodynamics, at depth.</strong> Aerodynamics and propulsion are both applied fluid mechanics, and this is where the discipline is mathematically hardest.</li><li><strong>Structures and materials under extreme constraint.</strong> Everything is weight-limited; aerospace structures is the study of doing more with less material and knowing exactly how much margin remains.</li><li><strong>Dynamics and control.</strong> Flight dynamics, attitude control and orbital mechanics are all differential equations with unforgiving consequences.</li><li><strong>Computational method</strong> — CFD and finite-element analysis. &#9888; And the standing caution applies with force here: a simulation returns a confident number whether or not the model was sound, and in this field the verification culture exists precisely because of that.</li><li><strong>Precision in communication.</strong> Test reports, analysis memos and design reviews are how decisions get made and how they get audited afterwards.</li></ul><h2>&#9888; Aerospace, or mechanical with an aerospace interest?</h2><p>This is the question most worth thinking about before you commit, because the two degrees overlap heavily and the trade-off is real:</p><table class=\"table table-sm\"><thead><tr><th>Aerospace Engineering (14.02)</th><th>Mechanical Engineering (14.19)</th></tr></thead><tbody><tr><td>Deeper in aerodynamics, propulsion, orbital mechanics, aerospace structures</td><td>Broader: thermal, manufacturing, design, materials</td></tr><tr><td>&#9888; Fewer employers, concentrated geographically</td><td>Employable in almost any industry</td></tr><tr><td>Strongest signal for launch, airframe and spacecraft roles</td><td>Hired into aerospace routinely — much of the industry's work is mechanical</td></tr></tbody></table><p><strong>Aerospace firms hire a great many mechanical engineers.</strong> The aerospace degree is the better preparation for the specialised roles; the mechanical degree carries less risk if you change your mind. &#9888; A common and sensible route is mechanical engineering with aerospace electives and an aerospace internship.</p><h2>Advice</h2><ul><li><strong>Confirm ABET accreditation and the commission</strong> at <em>amspub.abet.org</em> before you enrol.</li><li><strong>Get an internship on the Space Coast early.</strong> In a field with 4,500 openings a year, the internship is not a bonus — it is frequently how people enter at all, and Florida students have an access advantage most do not.</li><li><strong>Join a design competition team</strong> — rocketry, design-build-fly, CubeSat. Aerospace employers read these seriously because they demonstrate the test-and-document discipline the job runs on.</li><li><strong>Think about citizenship and clearance early</strong> if the defence or launch side interests you; ITAR restrictions shape which roles are open to whom.</li><li><strong>Take the fluids and dynamics courses seriously.</strong> They are the discipline's spine, and the aerospace-specific courses assume genuine fluency rather than a pass.</li><li><strong>If you are starting at a Florida state college</strong>, follow the engineering transfer track and confirm exact numbers in writing — the aerospace sequence is tightly chained and largely upper-division.</li></ul>",
-  "programs": [
-    {
-      "slug": "mechanical-engineering",
-      "note": "⚠ The serious alternative, not a fallback. Aerospace employers hire large numbers of mechanical engineers, and the mechanical degree keeps far more industries open. Worth reading before you choose between them."
-    }
-  ],
-  "courses": [
-    {
-      "courseId": "MAC2311",
-      "reason": "Calculus I — the gate on the degree.",
-      "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence. Finish it at one institution where you can."
-    },
-    {
-      "courseId": "MAC2312",
-      "reason": "Calculus II — integration and series, used throughout aerodynamics and structures."
-    },
-    {
-      "courseId": "MAC2313",
-      "reason": "Calculus III — vector calculus, the mathematics of flow fields and of orbital motion."
-    },
-    {
-      "courseId": "MAP2302",
-      "reason": "Differential Equations — flight dynamics, vibration and control are all differential equations. Arguably the most used mathematics course in the major."
-    },
-    {
-      "courseId": "PHY2048",
-      "reason": "Physics with Calculus I — mechanics, and the direct foundation of statics, dynamics and orbital mechanics."
-    },
-    {
-      "courseId": "PHY2049",
-      "reason": "Physics with Calculus II — required by ABET aerospace programmes; avionics and instrumentation build on it."
-    },
-    {
-      "courseId": "CHM2045",
-      "reason": "General Chemistry I — required by most programmes and the basis of propellant chemistry and materials behaviour."
-    },
-    {
-      "courseId": "EGN3311",
-      "reason": "Statics — forces in equilibrium; the foundation of all structural work."
-    },
-    {
-      "courseId": "EGN3321",
-      "reason": "Dynamics — bodies in motion. ⚠ More central here than in most disciplines: flight and orbital mechanics are dynamics under other names."
-    },
-    {
-      "courseId": "EGN3331C",
-      "reason": "Strength of Materials — stress, strain and failure, which in a weight-limited vehicle is the governing constraint."
-    },
-    {
-      "courseId": "EGN3365",
-      "reason": "Structure and Properties of Materials — alloys and composites, and why aerospace uses what it uses."
-    },
-    {
-      "courseId": "EGN3353C",
-      "reason": "Fluid Mechanics — the direct prerequisite for aerodynamics and propulsion, and the hardest course in the sequence for most students."
-    },
-    {
-      "courseId": "EML3015",
-      "reason": "Thermodynamics — cycles and energy conversion; the basis of propulsion analysis."
-    },
-    {
-      "courseId": "EML3016",
-      "reason": "Heat Transfer — thermal protection, engine cooling and spacecraft thermal control all rest on it."
-    },
-    {
-      "courseId": "EGN3420",
-      "reason": "Engineering Analysis — numerical methods and linear algebra, which is what makes CFD and finite-element results checkable rather than mysterious."
-    },
-    {
-      "courseId": "EAS4020",
-      "reason": "Introduction to Flight — the discipline survey: how aircraft and spacecraft actually work, taken early."
-    },
-    {
-      "courseId": "EAS4101",
-      "reason": "Aerodynamics — the central aerospace course, carried by six Florida public institutions: lift, drag, airfoils and wing theory.",
-      "variantNote": "Titled Fundamentals of Aerodynamics at FAMU, Florida Poly, FSU and USF, and Aerodynamics at FAU and UF. Same course — register by number."
-    },
-    {
-      "courseId": "EAS4105",
-      "reason": "Flight Dynamics — aircraft performance, stability and control; where dynamics meets the vehicle.",
-      "variantNote": "⚠ The statewide TITLE is stale: it reads 'Aerodynamics II', but the statewide DESCRIPTION is aircraft performance and stability and control, and all four carriers name it flight dynamics or flight mechanics (FAU Flight Dynamics, FIU Introduction to Flight Mechanics, Florida Poly Introduction to Aircraft Dynamics, UCF Flight Mechanics). It is not a second aerodynamics course."
-    },
-    {
-      "courseId": "EAS4200",
-      "reason": "Aerospace Structures — thin-walled structures, buckling and fatigue under the weight constraint that defines the field."
-    },
-    {
-      "courseId": "EAS4300",
-      "reason": "Aerospace Propulsion — gas turbines and rocket propulsion; applied thermodynamics and fluid mechanics together."
-    },
-    {
-      "courseId": "EAS4505",
-      "reason": "Astrodynamics — orbital mechanics: the two-body problem, transfers and manoeuvres. ⚠ The course that most distinguishes the space side of the field.",
-      "variantNote": "Called Orbital Mechanics at Florida Poly and UCF, Astrodynamics at USF and Introduction to Astrodynamics at FIU. ✅ Same subject under two names."
-    },
-    {
-      "courseId": "EAS4400",
-      "reason": "Stability and Control of Aircraft — how an aircraft responds and how it is kept controllable; where dynamics and control meet the vehicle.",
-      "variantNote": "⚠⚠ ONE NUMBER, TWO VEHICLES. The statewide definition and two of three carriers (UF, USF) use this for AIRCRAFT stability and control. UCF uses it for SPACECRAFT ATTITUDE DYNAMICS. ⚠ Florida provides NO undergraduate number for spacecraft attitude — the dedicated numbers (EAS6403, EAS6413C) are all graduate — so UCF had nowhere else to put it. Check which vehicle your section covers; they are different material."
-    },
-    {
-      "courseId": "EAS4950",
-      "reason": "Aerospace Capstone Design — the integrative design project, and the piece of work employers ask about at interview.",
-      "variantNote": "⚠ The statewide prerequisite names EML4703 and EAS4251 as well as EAS4101 — but Florida Polytechnic, one of the two carriers, offers NEITHER of the first two. The prerequisite was contributed by USF, which carries all three. Read your own institution's requirement, not the state's."
-    }
-  ],
-  "sources": [
-    {
-      "label": "O*NET — Aerospace Engineers (17-2011.00)",
-      "url": "https://www.onetonline.org/link/summary/17-2011.00",
-      "note": "Tasks, skills, wages and the employment projections quoted on this page."
-    },
-    {
-      "label": "U.S. Bureau of Labor Statistics — Aerospace Engineers",
-      "url": "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm",
-      "note": "Federal wage, employment and outlook detail for SOC 17-2011."
-    },
-    {
-      "label": "ABET — Accredited Program Search",
-      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
-      "note": "Check the programme and its accrediting commission before enrolling."
-    },
-    {
-      "label": "AIAA — American Institute of Aeronautics and Astronautics",
-      "url": "https://www.aiaa.org/",
-      "note": "The professional society: student branches, design competitions and conferences that matter for entry to a small field."
-    },
-    {
-      "label": "NASA Kennedy Space Center",
-      "url": "https://www.nasa.gov/kennedy/",
-      "note": "The anchor of Florida's Space Coast, and a major source of internships and co-operative education placements."
-    },
-    {
-      "label": "Space Florida",
-      "url": "https://www.spaceflorida.gov/",
-      "note": "The state's aerospace development authority — useful for seeing which companies are actually operating in Florida."
-    },
-    {
-      "label": "U.S. Department of State — Directorate of Defense Trade Controls (ITAR)",
-      "url": "https://www.pmddtc.state.gov/",
-      "note": "⚠ The export-control regime that restricts many aerospace roles to U.S. persons. Worth understanding before you plan a career here."
-    },
-    {
-      "label": "Florida Board of Professional Engineers — Licensure",
-      "url": "https://fbpe.org/licensure/",
-      "note": "For those who pursue the PE, which is uncommon but not unheard of in aerospace."
-    },
-    {
-      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
-      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
-      "note": "The federal taxonomy this path is filed under, at 14.02 Aerospace, Aeronautical and Astronautical Engineering."
-    }
-  ]
+ "name": "Aerospace Engineer",
+ "cipCode": "14.02",
+ "socCode": "17-2011",
+ "isPublished": true,
+ "sortOrder": 80,
+ "description": "Aerospace engineers design, analyse and test aircraft and spacecraft — aerodynamics, structures, propulsion, flight dynamics and the mission design that ties them together. ⚠ Florida is one of the few places in the world where the whole industry is present at once: launch, satellites, aviation, simulation and defence, concentrated on the Space Coast and around Orlando.",
+ "credentialNote": "A Professional Engineer licence is uncommon in aerospace — much of the work falls under the industrial exemption, and employers hire on degree and clearance rather than licensure. ⚠⚠ WHAT REPLACES IT IS SECURITY CLEARANCE AND EXPORT CONTROL, and that is a real planning consideration in Florida. A great deal of aerospace work is subject to ITAR and EAR, which in practice restrict many roles to U.S. persons, and defence work often requires a clearance that takes months and depends on a background investigation. ⚠ If a clearance is likely to matter to you, the time to think about it is before graduation, not after an offer. On licensure, if you do want the PE: under s. 471.013(1)(a), Florida Statutes, an approved ENGINEERING curriculum requires four years of experience, an approved ENGINEERING TECHNOLOGY curriculum six. Sit the FE in your final year — it is cheap insurance for a career that may later move into consulting or civil-adjacent work.",
+ "bodyHtml": "<h2>What the work actually is</h2><p>O*NET's task statements: <em>formulate the conceptual design of aeronautical or aerospace products or systems to meet customer requirements; evaluate product data and designs from inspections or reports for conformance to engineering principles; plan and conduct experimental, environmental, operational or stress tests on models and prototypes; design and analyse aircraft and spacecraft systems using mathematical modelling and computer analysis; write technical reports and documentation; and investigate and resolve technical problems reported by customers.</em></p><p>&#9888; <strong>Notice how much of that is testing and documentation.</strong> Aerospace is a discipline where things cannot be quietly fixed after delivery, so verification, analysis and the paper trail behind them are a much larger fraction of the job than students expect.</p><h2>Projected need — and an honest caution</h2><p>O*NET, on federal projections: <strong>71,600 aerospace engineers employed</strong> (2024), growth projected <strong>&ldquo;faster than average&rdquo; (5&ndash;6%) through 2034</strong>, about <strong>4,500 openings a year</strong>, median pay <strong>$134,960</strong> ($64.89 an hour, 2025) — <strong>the highest median of any path on this site</strong>.</p><p>&#9888;&#9888; <strong>But read the openings figure carefully.</strong> 4,500 a year nationally is the smallest number on this site by a wide margin — mechanical engineering has 18,100, civil 23,600, industrial 25,200. <strong>Aerospace pays the most and hires the fewest.</strong> It is a specialised field with concentrated employers, and that combination means geography matters more than in any other engineering discipline: you generally move to the work.</p><h3>Which is why Florida is unusual</h3><p>Florida is one of the places the work is. The <strong>Space Coast</strong> around Cape Canaveral and Kennedy Space Center hosts launch operations, vehicle integration and a supplier base that has grown substantially with commercial launch. Orlando is a centre for <strong>simulation and training</strong> and for defence electronics; there is fixed-wing and rotorcraft <strong>aviation maintenance and manufacturing</strong> across the state, and a significant satellite and defence presence. <strong>A Florida aerospace graduate is unusually likely to be able to stay in Florida</strong>, which is not true of most states.</p><h2>Necessary skills</h2><ul><li><strong>Fluid mechanics and thermodynamics, at depth.</strong> Aerodynamics and propulsion are both applied fluid mechanics, and this is where the discipline is mathematically hardest.</li><li><strong>Structures and materials under extreme constraint.</strong> Everything is weight-limited; aerospace structures is the study of doing more with less material and knowing exactly how much margin remains.</li><li><strong>Dynamics and control.</strong> Flight dynamics, attitude control and orbital mechanics are all differential equations with unforgiving consequences.</li><li><strong>Computational method</strong> — CFD and finite-element analysis. &#9888; And the standing caution applies with force here: a simulation returns a confident number whether or not the model was sound, and in this field the verification culture exists precisely because of that.</li><li><strong>Precision in communication.</strong> Test reports, analysis memos and design reviews are how decisions get made and how they get audited afterwards.</li></ul><h2>&#9888; Aerospace, or mechanical with an aerospace interest?</h2><p>This is the question most worth thinking about before you commit, because the two degrees overlap heavily and the trade-off is real:</p><table class=\"table table-sm\"><thead><tr><th>Aerospace Engineering (14.02)</th><th>Mechanical Engineering (14.19)</th></tr></thead><tbody><tr><td>Deeper in aerodynamics, propulsion, orbital mechanics, aerospace structures</td><td>Broader: thermal, manufacturing, design, materials</td></tr><tr><td>&#9888; Fewer employers, concentrated geographically</td><td>Employable in almost any industry</td></tr><tr><td>Strongest signal for launch, airframe and spacecraft roles</td><td>Hired into aerospace routinely — much of the industry's work is mechanical</td></tr></tbody></table><p><strong>Aerospace firms hire a great many mechanical engineers.</strong> The aerospace degree is the better preparation for the specialised roles; the mechanical degree carries less risk if you change your mind. &#9888; A common and sensible route is mechanical engineering with aerospace electives and an aerospace internship.</p><h2>Advice</h2><ul><li><strong>Confirm ABET accreditation and the commission</strong> at <em>amspub.abet.org</em> before you enrol.</li><li><strong>Get an internship on the Space Coast early.</strong> In a field with 4,500 openings a year, the internship is not a bonus — it is frequently how people enter at all, and Florida students have an access advantage most do not.</li><li><strong>Join a design competition team</strong> — rocketry, design-build-fly, CubeSat. Aerospace employers read these seriously because they demonstrate the test-and-document discipline the job runs on.</li><li><strong>Think about citizenship and clearance early</strong> if the defence or launch side interests you; ITAR restrictions shape which roles are open to whom.</li><li><strong>Take the fluids and dynamics courses seriously.</strong> They are the discipline's spine, and the aerospace-specific courses assume genuine fluency rather than a pass.</li><li><strong>If you are starting at a Florida state college</strong>, follow the engineering transfer track and confirm exact numbers in writing — the aerospace sequence is tightly chained and largely upper-division.</li></ul>",
+ "programs": [
+  {
+   "slug": "mechanical-engineering",
+   "note": "⚠ The serious alternative, not a fallback. Aerospace employers hire large numbers of mechanical engineers, and the mechanical degree keeps far more industries open. Worth reading before you choose between them."
+  }
+ ],
+ "courses": [
+  {
+   "courseId": "MAC2311",
+   "reason": "Calculus I — the gate on the degree.",
+   "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence. Finish it at one institution where you can."
+  },
+  {
+   "courseId": "MAC2312",
+   "reason": "Calculus II — integration and series, used throughout aerodynamics and structures."
+  },
+  {
+   "courseId": "MAC2313",
+   "reason": "Calculus III — vector calculus, the mathematics of flow fields and of orbital motion."
+  },
+  {
+   "courseId": "MAP2302",
+   "reason": "Differential Equations — flight dynamics, vibration and control are all differential equations. Arguably the most used mathematics course in the major."
+  },
+  {
+   "courseId": "PHY2048",
+   "reason": "Physics with Calculus I — mechanics, and the direct foundation of statics, dynamics and orbital mechanics."
+  },
+  {
+   "courseId": "PHY2049",
+   "reason": "Physics with Calculus II — required by ABET aerospace programmes; avionics and instrumentation build on it."
+  },
+  {
+   "courseId": "CHM2045",
+   "reason": "General Chemistry I — required by most programmes and the basis of propellant chemistry and materials behaviour.",
+   "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS, AND NO INSTITUTION CARRIES BOTH. Twenty public institutions use CHM2045 (or the integrated CHM2045C); nineteen use CHM1045 (or CHM1045C) — among them Florida State, Florida A&M, FIU, FGCU, Broward, Miami Dade, Valencia, Daytona State, Eastern Florida State, Gulf Coast, Indian River State, Northwest Florida State, Palm Beach State, Pensacola State, Polk State, St. Johns River State, Tallahassee State, North Florida and Florida Keys. Same course, same lower-division level, and the credit articulates either way — but ⚠⚠ LOOK UP WHICH FAMILY YOUR INSTITUTION USES BEFORE YOU GO SEARCHING, because the other number simply does not exist there. ⚠ Also check the packaging: the bare number is a 3-credit lecture needing a separate CHM2045L (or CHM1045L) laboratory, while the C form is the integrated lecture-plus-lab at 4 credits and is one registration."
+  },
+  {
+   "courseId": "EGN3311",
+   "reason": "Statics — forces in equilibrium; the foundation of all structural work."
+  },
+  {
+   "courseId": "EGN3321",
+   "reason": "Dynamics — bodies in motion. ⚠ More central here than in most disciplines: flight and orbital mechanics are dynamics under other names."
+  },
+  {
+   "courseId": "EGN3331C",
+   "reason": "Strength of Materials — stress, strain and failure, which in a weight-limited vehicle is the governing constraint."
+  },
+  {
+   "courseId": "EGN3365",
+   "reason": "Structure and Properties of Materials — alloys and composites, and why aerospace uses what it uses."
+  },
+  {
+   "courseId": "EGN3353C",
+   "reason": "Fluid Mechanics — the direct prerequisite for aerodynamics and propulsion, and the hardest course in the sequence for most students."
+  },
+  {
+   "courseId": "EML3015",
+   "reason": "Thermodynamics — cycles and energy conversion; the basis of propulsion analysis."
+  },
+  {
+   "courseId": "EML3016",
+   "reason": "Heat Transfer — thermal protection, engine cooling and spacecraft thermal control all rest on it."
+  },
+  {
+   "courseId": "EGN3420",
+   "reason": "Engineering Analysis — numerical methods and linear algebra, which is what makes CFD and finite-element results checkable rather than mysterious."
+  },
+  {
+   "courseId": "EAS4020",
+   "reason": "Introduction to Flight — the discipline survey: how aircraft and spacecraft actually work, taken early."
+  },
+  {
+   "courseId": "EAS4101",
+   "reason": "Aerodynamics — the central aerospace course, carried by six Florida public institutions: lift, drag, airfoils and wing theory.",
+   "variantNote": "Titled Fundamentals of Aerodynamics at FAMU, Florida Poly, FSU and USF, and Aerodynamics at FAU and UF. Same course — register by number."
+  },
+  {
+   "courseId": "EAS4105",
+   "reason": "Flight Dynamics — aircraft performance, stability and control; where dynamics meets the vehicle.",
+   "variantNote": "⚠ The statewide TITLE is stale: it reads 'Aerodynamics II', but the statewide DESCRIPTION is aircraft performance and stability and control, and all four carriers name it flight dynamics or flight mechanics (FAU Flight Dynamics, FIU Introduction to Flight Mechanics, Florida Poly Introduction to Aircraft Dynamics, UCF Flight Mechanics). It is not a second aerodynamics course."
+  },
+  {
+   "courseId": "EAS4200",
+   "reason": "Aerospace Structures — thin-walled structures, buckling and fatigue under the weight constraint that defines the field."
+  },
+  {
+   "courseId": "EAS4300",
+   "reason": "Aerospace Propulsion — gas turbines and rocket propulsion; applied thermodynamics and fluid mechanics together."
+  },
+  {
+   "courseId": "EAS4505",
+   "reason": "Astrodynamics — orbital mechanics: the two-body problem, transfers and manoeuvres. ⚠ The course that most distinguishes the space side of the field.",
+   "variantNote": "Called Orbital Mechanics at Florida Poly and UCF, Astrodynamics at USF and Introduction to Astrodynamics at FIU. ✅ Same subject under two names."
+  },
+  {
+   "courseId": "EAS4400",
+   "reason": "Stability and Control of Aircraft — how an aircraft responds and how it is kept controllable; where dynamics and control meet the vehicle.",
+   "variantNote": "⚠⚠ ONE NUMBER, TWO VEHICLES. The statewide definition and two of three carriers (UF, USF) use this for AIRCRAFT stability and control. UCF uses it for SPACECRAFT ATTITUDE DYNAMICS. ⚠ Florida provides NO undergraduate number for spacecraft attitude — the dedicated numbers (EAS6403, EAS6413C) are all graduate — so UCF had nowhere else to put it. Check which vehicle your section covers; they are different material."
+  },
+  {
+   "courseId": "EAS4950",
+   "reason": "Aerospace Capstone Design — the integrative design project, and the piece of work employers ask about at interview.",
+   "variantNote": "⚠ The statewide prerequisite names EML4703 and EAS4251 as well as EAS4101 — but Florida Polytechnic, one of the two carriers, offers NEITHER of the first two. The prerequisite was contributed by USF, which carries all three. Read your own institution's requirement, not the state's."
+  }
+ ],
+ "sources": [
+  {
+   "label": "O*NET — Aerospace Engineers (17-2011.00)",
+   "url": "https://www.onetonline.org/link/summary/17-2011.00",
+   "note": "Tasks, skills, wages and the employment projections quoted on this page."
+  },
+  {
+   "label": "U.S. Bureau of Labor Statistics — Aerospace Engineers",
+   "url": "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm",
+   "note": "Federal wage, employment and outlook detail for SOC 17-2011."
+  },
+  {
+   "label": "ABET — Accredited Program Search",
+   "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+   "note": "Check the programme and its accrediting commission before enrolling."
+  },
+  {
+   "label": "AIAA — American Institute of Aeronautics and Astronautics",
+   "url": "https://www.aiaa.org/",
+   "note": "The professional society: student branches, design competitions and conferences that matter for entry to a small field."
+  },
+  {
+   "label": "NASA Kennedy Space Center",
+   "url": "https://www.nasa.gov/kennedy/",
+   "note": "The anchor of Florida's Space Coast, and a major source of internships and co-operative education placements."
+  },
+  {
+   "label": "Space Florida",
+   "url": "https://www.spaceflorida.gov/",
+   "note": "The state's aerospace development authority — useful for seeing which companies are actually operating in Florida."
+  },
+  {
+   "label": "U.S. Department of State — Directorate of Defense Trade Controls (ITAR)",
+   "url": "https://www.pmddtc.state.gov/",
+   "note": "⚠ The export-control regime that restricts many aerospace roles to U.S. persons. Worth understanding before you plan a career here."
+  },
+  {
+   "label": "Florida Board of Professional Engineers — Licensure",
+   "url": "https://fbpe.org/licensure/",
+   "note": "For those who pursue the PE, which is uncommon but not unheard of in aerospace."
+  },
+  {
+   "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+   "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+   "note": "The federal taxonomy this path is filed under, at 14.02 Aerospace, Aeronautical and Astronautical Engineering."
+  }
+ ]
 }

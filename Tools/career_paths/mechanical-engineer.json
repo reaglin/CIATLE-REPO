@@ -1,138 +1,139 @@
 {
-  "name": "Mechanical Engineer",
-  "cipCode": "14.19",
-  "socCode": "17-2141",
-  "isPublished": true,
-  "sortOrder": 30,
-  "description": "Mechanical engineers design, analyse and test things that move, carry load, or move heat and fluid — engines, machines, HVAC and energy systems, vehicles, robots, medical devices, manufacturing plant. It is the broadest of the engineering disciplines, and in Florida it feeds aerospace on the Space Coast, defence, marine, power generation, theme-park ride engineering and a large and growing manufacturing sector.",
-  "credentialNote": "You can work as a mechanical engineer without a licence, and most do — but you cannot offer engineering services to the public, seal drawings, or take responsible charge without being a licensed Professional Engineer. ⚠⚠ THE DEGREE YOU CHOOSE CHANGES HOW LONG THAT TAKES. Under s. 471.013(1)(a), Florida Statutes: a graduate of an approved ENGINEERING curriculum needs FOUR years of active engineering experience; a graduate of an approved ENGINEERING TECHNOLOGY curriculum needs SIX. That is a two-year difference in a career, decided before you start. The route is: an ABET-accredited degree, then the Fundamentals of Engineering (FE) exam — which you can sit in your final year — then certification as an Engineer Intern, then the experience, then the Principles and Practice of Engineering (PE) exam. Governed by Chapter 471, F.S. and Chapter 61G15, F.A.C.; administered by the Florida Board of Professional Engineers.",
-  "bodyHtml": "<h2>What the work actually is</h2><p>Mechanical engineering is the discipline of forces, motion, energy and materials. In practice that means: <em>read and interpret drawings and schematics; research, design, evaluate, install, operate and maintain mechanical products; specify components and direct modifications to ensure conformance; investigate equipment failures to diagnose faults; and recommend design changes to eliminate malfunctions.</em> Those are O*NET&rsquo;s task statements for the occupation, and they describe the job better than a course catalogue does.</p><p>&#9888; <strong>It is the broadest engineering discipline</strong>, which is its main practical advantage: a mechanical engineer can work in aerospace, energy, manufacturing, automotive, marine, biomedical, HVAC or construction without retraining. If you are not yet sure which industry you want, this degree closes the fewest doors.</p><h2>Projected need</h2><p>O*NET, drawing on federal projections, reports <strong>293,100 mechanical engineers employed</strong> nationally, growth projected <strong>“much faster than average” (7% or higher) for 2024–2034</strong>, and about <strong>18,100 openings a year</strong>. Median pay is <strong>$104,110 a year</strong> ($50.05 an hour), 2025 figures. Fifty-two per cent of survey respondents reported a bachelor&rsquo;s degree as the requirement.</p><p>&#9888; Those are national numbers. Florida&rsquo;s demand is concentrated and identifiable: aerospace and space launch on the Space Coast, defence contractors, marine and boatbuilding, power generation and utilities, theme-park ride engineering in Orlando, and a manufacturing base that state workforce programmes actively fund.</p><h2>Necessary skills</h2><p>The degree teaches the technical core. These are the things that decide whether you are any good at the job:</p><ul><li><strong>Mathematical fluency, not just mathematical credit.</strong> Calculus and differential equations are the language the rest of the curriculum is written in. Students who scrape through Calculus II meet it again in dynamics, fluids and heat transfer, and the second meeting is harder.</li><li><strong>Physical intuition</strong> &mdash; being able to see where the load goes and sanity-check a result. An answer three orders of magnitude out should feel wrong before you check it.</li><li><strong>CAD and simulation</strong> (SolidWorks, CATIA, NX; ANSYS or similar FEA/CFD). &#9888; Learn to distrust simulation output: a finite-element model gives a beautiful coloured picture of a wrong answer just as readily as a right one.</li><li><strong>Technical writing.</strong> Engineers write far more than students expect — specifications, test reports, failure analyses, and the drawings other people build from.</li><li><strong>Teamwork across disciplines</strong>, because almost nothing is built by mechanical engineers alone.</li></ul><h2>&#9888;&#9888; The choice that costs two years: engineering vs engineering technology</h2><p>Florida runs both <strong>Mechanical Engineering</strong> (CIP 14.19) and <strong>Mechanical Engineering Technology</strong> (CIP 15.08) degrees, and their names are close enough to be mistaken for each other. <strong>They are not interchangeable for licensure.</strong></p><table class=\"table table-sm\"><thead><tr><th></th><th>Engineering curriculum</th><th>Engineering technology curriculum</th></tr></thead><tbody><tr><td>Statute</td><td>s. 471.013(1)(a)1</td><td>s. 471.013(1)(a)2</td></tr><tr><td>Experience before the PE exam</td><td><strong>4 years</strong></td><td>&#9888; <strong>6 years</strong></td></tr><tr><td>Emphasis</td><td>analysis, derivation, design from first principles</td><td>application, implementation, hands-on practice</td></tr></tbody></table><p>&#9888; <strong>And the mathematics does not transfer the way students assume.</strong> Engineering technology programmes commonly use their own calculus sequence, which frequently does <em>not</em> satisfy the calculus requirement for an engineering degree. Transferring from technology into engineering can therefore mean repeating mathematics. <strong>If a PE licence is the goal, start in the engineering curriculum.</strong> Engineering technology is a good degree and a good career &mdash; it is simply a different one.</p><h2>Advice</h2><ul><li><strong>Confirm ABET accreditation before you enrol</strong>, at <em>amspub.abet.org</em>, and confirm it is accredited under the <em>Engineering</em> commission if you want the four-year route.</li><li><strong>Sit the FE exam in your final year</strong>, while the material is still fresh. Passing it and certifying as an Engineer Intern is the cheapest, easiest step on the whole route, and people who defer it often never take it.</li><li><strong>Take the mathematics seriously in year one.</strong> More students leave engineering over Calculus II than over anything in the major.</li><li><strong>Get an internship or co-op.</strong> It is the strongest predictor of a graduate offer, and in Florida the aerospace and defence employers recruit heavily from them.</li><li><strong>If you are starting at a state college</strong>, follow the published engineering transfer track and confirm the receiving university&rsquo;s exact course numbers in writing &mdash; engineering has less elective slack than most degrees, so a mis-substituted course costs a term.</li><li><strong>Plan 8&ndash;12 hours a week outside class</strong> for statics, dynamics, thermodynamics, fluids and mechanics of materials. That estimate is not padding.</li></ul>",
-  "courses": [
-    {
-      "courseId": "MAC2311",
-      "reason": "Calculus I — the gateway to the entire curriculum, and the course that ends more engineering ambitions than any other. Everything after it assumes fluency, not just a pass.",
-      "variantNote": "⚠ Credit values differ: 31 Florida public institutions carry it at 4 credits and 16 at 5. Check what your degree audit expects."
-    },
-    {
-      "courseId": "MAC2312",
-      "reason": "Calculus II — series, techniques of integration and the applications that dynamics and fluids are built on."
-    },
-    {
-      "courseId": "MAC2313",
-      "reason": "Calculus III — multivariable and vector calculus; the mathematics of fields, flux and three-dimensional loading."
-    },
-    {
-      "courseId": "MAP2302",
-      "reason": "Differential Equations — how a mechanical system behaves over time. Vibration, control and transient heat transfer are all differential equations wearing different clothes."
-    },
-    {
-      "courseId": "PHY2048",
-      "reason": "Physics with Calculus I — mechanics, and the direct foundation of statics and dynamics. Take the calculus-based version, not the algebra-based one."
-    },
-    {
-      "courseId": "PHY2049",
-      "reason": "Physics with Calculus II — electricity and magnetism, needed for instrumentation, sensors and mechatronics."
-    },
-    {
-      "courseId": "CHM2045",
-      "reason": "General Chemistry I — required by most ABET mechanical programmes and the basis of the materials sequence: corrosion, bonding, phase behaviour."
-    },
-    {
-      "courseId": "EGN3311",
-      "reason": "Statics — forces in equilibrium. The first true engineering course and the foundation of everything structural."
-    },
-    {
-      "courseId": "EGN3321",
-      "reason": "Dynamics — bodies in motion: kinematics, kinetics, work and energy, momentum. Statics with the accelerations left in."
-    },
-    {
-      "courseId": "EGN3331C",
-      "reason": "Strength of Materials — stress, strain, deflection and failure. Where design stops being a sketch and becomes a calculation that has to hold."
-    },
-    {
-      "courseId": "EGN3365",
-      "reason": "Structure and Properties of Materials — why metals, polymers and composites behave as they do, and how to choose between them."
-    },
-    {
-      "courseId": "EML3015",
-      "reason": "Thermodynamics — energy, entropy and the cycles behind engines, refrigeration and power generation. One of the two hardest conceptual courses in the degree."
-    },
-    {
-      "courseId": "EGN3353C",
-      "reason": "Fluid Mechanics — pressure, flow, drag and lift; the basis of hydraulics, aerodynamics and piping design."
-    },
-    {
-      "courseId": "EML3016",
-      "reason": "Heat Transfer — conduction, convection and radiation. The course that decides whether a design cooks itself, and the one thermal-systems roles hire for."
-    },
-    {
-      "courseId": "EML3500",
-      "reason": "Machine Design — synthesising the analysis courses into components that work: shafts, bearings, gears, fasteners, and design against fatigue."
-    },
-    {
-      "courseId": "EGN3420",
-      "reason": "Engineering Analysis — numerical methods and the linear algebra behind simulation. What lets you check whether a computed answer is plausible."
-    },
-    {
-      "courseId": "EGN3613",
-      "reason": "Engineering Economic Analysis — time value of money and alternative comparison. Engineering decisions are justified economically, and the FE exam tests this."
-    },
-    {
-      "courseId": "EGN1006C",
-      "reason": "Introduction to Engineering — the discipline survey and design-project course most Florida programmes open with; the cheapest way to find out early whether the field suits you."
-    }
-  ],
-  "sources": [
-    {
-      "label": "Florida Board of Professional Engineers — Licensure",
-      "url": "https://fbpe.org/licensure/",
-      "note": "The licensing authority. The five steps from degree to PE, and the Engineer Intern certification."
-    },
-    {
-      "label": "Chapter 471, Florida Statutes — Engineering",
-      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
-      "note": "s. 471.013(1)(a) is where the four-year and six-year experience requirements are set."
-    },
-    {
-      "label": "ABET — Accredited Program Search",
-      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
-      "note": "Check a programme here BEFORE enrolling, and check which commission accredits it."
-    },
-    {
-      "label": "NCEES — Fundamentals of Engineering (FE) exam",
-      "url": "https://ncees.org/engineering/fe/",
-      "note": "The first examination, sittable in your final year. Specifications, registration and reference handbook."
-    },
-    {
-      "label": "NCEES — Principles and Practice of Engineering (PE) exam",
-      "url": "https://ncees.org/",
-      "note": "The second examination, after the required experience."
-    },
-    {
-      "label": "O*NET — Mechanical Engineers (17-2141.00)",
-      "url": "https://www.onetonline.org/link/summary/17-2141.00",
-      "note": "Tasks, skills, wages and the employment projections quoted on this page."
-    },
-    {
-      "label": "U.S. Bureau of Labor Statistics — Mechanical Engineers",
-      "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
-      "note": "Federal wage, employment and outlook detail for SOC 17-2141."
-    },
-    {
-      "label": "ASME — American Society of Mechanical Engineers",
-      "url": "https://www.asme.org/",
-      "note": "The professional society: codes and standards, student membership, and the conferences worth attending as a student."
-    },
-    {
-      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
-      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
-      "note": "The federal taxonomy this path is filed under, at 14.19 Mechanical Engineering."
-    }
-  ],
-  "programs": [
-    {
-      "slug": "mechanical-engineering",
-      "note": "The degree itself. ⚠ For PE licensure it must be accredited by ABET’s ENGINEERING commission — an engineering TECHNOLOGY accreditation adds two years to the experience requirement."
-    }
-  ]
+ "name": "Mechanical Engineer",
+ "cipCode": "14.19",
+ "socCode": "17-2141",
+ "isPublished": true,
+ "sortOrder": 30,
+ "description": "Mechanical engineers design, analyse and test things that move, carry load, or move heat and fluid — engines, machines, HVAC and energy systems, vehicles, robots, medical devices, manufacturing plant. It is the broadest of the engineering disciplines, and in Florida it feeds aerospace on the Space Coast, defence, marine, power generation, theme-park ride engineering and a large and growing manufacturing sector.",
+ "credentialNote": "You can work as a mechanical engineer without a licence, and most do — but you cannot offer engineering services to the public, seal drawings, or take responsible charge without being a licensed Professional Engineer. ⚠⚠ THE DEGREE YOU CHOOSE CHANGES HOW LONG THAT TAKES. Under s. 471.013(1)(a), Florida Statutes: a graduate of an approved ENGINEERING curriculum needs FOUR years of active engineering experience; a graduate of an approved ENGINEERING TECHNOLOGY curriculum needs SIX. That is a two-year difference in a career, decided before you start. The route is: an ABET-accredited degree, then the Fundamentals of Engineering (FE) exam — which you can sit in your final year — then certification as an Engineer Intern, then the experience, then the Principles and Practice of Engineering (PE) exam. Governed by Chapter 471, F.S. and Chapter 61G15, F.A.C.; administered by the Florida Board of Professional Engineers.",
+ "bodyHtml": "<h2>What the work actually is</h2><p>Mechanical engineering is the discipline of forces, motion, energy and materials. In practice that means: <em>read and interpret drawings and schematics; research, design, evaluate, install, operate and maintain mechanical products; specify components and direct modifications to ensure conformance; investigate equipment failures to diagnose faults; and recommend design changes to eliminate malfunctions.</em> Those are O*NET&rsquo;s task statements for the occupation, and they describe the job better than a course catalogue does.</p><p>&#9888; <strong>It is the broadest engineering discipline</strong>, which is its main practical advantage: a mechanical engineer can work in aerospace, energy, manufacturing, automotive, marine, biomedical, HVAC or construction without retraining. If you are not yet sure which industry you want, this degree closes the fewest doors.</p><h2>Projected need</h2><p>O*NET, drawing on federal projections, reports <strong>293,100 mechanical engineers employed</strong> nationally, growth projected <strong>“much faster than average” (7% or higher) for 2024–2034</strong>, and about <strong>18,100 openings a year</strong>. Median pay is <strong>$104,110 a year</strong> ($50.05 an hour), 2025 figures. Fifty-two per cent of survey respondents reported a bachelor&rsquo;s degree as the requirement.</p><p>&#9888; Those are national numbers. Florida&rsquo;s demand is concentrated and identifiable: aerospace and space launch on the Space Coast, defence contractors, marine and boatbuilding, power generation and utilities, theme-park ride engineering in Orlando, and a manufacturing base that state workforce programmes actively fund.</p><h2>Necessary skills</h2><p>The degree teaches the technical core. These are the things that decide whether you are any good at the job:</p><ul><li><strong>Mathematical fluency, not just mathematical credit.</strong> Calculus and differential equations are the language the rest of the curriculum is written in. Students who scrape through Calculus II meet it again in dynamics, fluids and heat transfer, and the second meeting is harder.</li><li><strong>Physical intuition</strong> &mdash; being able to see where the load goes and sanity-check a result. An answer three orders of magnitude out should feel wrong before you check it.</li><li><strong>CAD and simulation</strong> (SolidWorks, CATIA, NX; ANSYS or similar FEA/CFD). &#9888; Learn to distrust simulation output: a finite-element model gives a beautiful coloured picture of a wrong answer just as readily as a right one.</li><li><strong>Technical writing.</strong> Engineers write far more than students expect — specifications, test reports, failure analyses, and the drawings other people build from.</li><li><strong>Teamwork across disciplines</strong>, because almost nothing is built by mechanical engineers alone.</li></ul><h2>&#9888;&#9888; The choice that costs two years: engineering vs engineering technology</h2><p>Florida runs both <strong>Mechanical Engineering</strong> (CIP 14.19) and <strong>Mechanical Engineering Technology</strong> (CIP 15.08) degrees, and their names are close enough to be mistaken for each other. <strong>They are not interchangeable for licensure.</strong></p><table class=\"table table-sm\"><thead><tr><th></th><th>Engineering curriculum</th><th>Engineering technology curriculum</th></tr></thead><tbody><tr><td>Statute</td><td>s. 471.013(1)(a)1</td><td>s. 471.013(1)(a)2</td></tr><tr><td>Experience before the PE exam</td><td><strong>4 years</strong></td><td>&#9888; <strong>6 years</strong></td></tr><tr><td>Emphasis</td><td>analysis, derivation, design from first principles</td><td>application, implementation, hands-on practice</td></tr></tbody></table><p>&#9888; <strong>And the mathematics does not transfer the way students assume.</strong> Engineering technology programmes commonly use their own calculus sequence, which frequently does <em>not</em> satisfy the calculus requirement for an engineering degree. Transferring from technology into engineering can therefore mean repeating mathematics. <strong>If a PE licence is the goal, start in the engineering curriculum.</strong> Engineering technology is a good degree and a good career &mdash; it is simply a different one.</p><h2>Advice</h2><ul><li><strong>Confirm ABET accreditation before you enrol</strong>, at <em>amspub.abet.org</em>, and confirm it is accredited under the <em>Engineering</em> commission if you want the four-year route.</li><li><strong>Sit the FE exam in your final year</strong>, while the material is still fresh. Passing it and certifying as an Engineer Intern is the cheapest, easiest step on the whole route, and people who defer it often never take it.</li><li><strong>Take the mathematics seriously in year one.</strong> More students leave engineering over Calculus II than over anything in the major.</li><li><strong>Get an internship or co-op.</strong> It is the strongest predictor of a graduate offer, and in Florida the aerospace and defence employers recruit heavily from them.</li><li><strong>If you are starting at a state college</strong>, follow the published engineering transfer track and confirm the receiving university&rsquo;s exact course numbers in writing &mdash; engineering has less elective slack than most degrees, so a mis-substituted course costs a term.</li><li><strong>Plan 8&ndash;12 hours a week outside class</strong> for statics, dynamics, thermodynamics, fluids and mechanics of materials. That estimate is not padding.</li></ul>",
+ "courses": [
+  {
+   "courseId": "MAC2311",
+   "reason": "Calculus I — the gateway to the entire curriculum, and the course that ends more engineering ambitions than any other. Everything after it assumes fluency, not just a pass.",
+   "variantNote": "⚠ Credit values differ: 31 Florida public institutions carry it at 4 credits and 16 at 5. Check what your degree audit expects."
+  },
+  {
+   "courseId": "MAC2312",
+   "reason": "Calculus II — series, techniques of integration and the applications that dynamics and fluids are built on."
+  },
+  {
+   "courseId": "MAC2313",
+   "reason": "Calculus III — multivariable and vector calculus; the mathematics of fields, flux and three-dimensional loading."
+  },
+  {
+   "courseId": "MAP2302",
+   "reason": "Differential Equations — how a mechanical system behaves over time. Vibration, control and transient heat transfer are all differential equations wearing different clothes."
+  },
+  {
+   "courseId": "PHY2048",
+   "reason": "Physics with Calculus I — mechanics, and the direct foundation of statics and dynamics. Take the calculus-based version, not the algebra-based one."
+  },
+  {
+   "courseId": "PHY2049",
+   "reason": "Physics with Calculus II — electricity and magnetism, needed for instrumentation, sensors and mechatronics."
+  },
+  {
+   "courseId": "CHM2045",
+   "reason": "General Chemistry I — required by most ABET mechanical programmes and the basis of the materials sequence: corrosion, bonding, phase behaviour.",
+   "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS, AND NO INSTITUTION CARRIES BOTH. Twenty public institutions use CHM2045 (or the integrated CHM2045C); nineteen use CHM1045 (or CHM1045C) — among them Florida State, Florida A&M, FIU, FGCU, Broward, Miami Dade, Valencia, Daytona State, Eastern Florida State, Gulf Coast, Indian River State, Northwest Florida State, Palm Beach State, Pensacola State, Polk State, St. Johns River State, Tallahassee State, North Florida and Florida Keys. Same course, same lower-division level, and the credit articulates either way — but ⚠⚠ LOOK UP WHICH FAMILY YOUR INSTITUTION USES BEFORE YOU GO SEARCHING, because the other number simply does not exist there. ⚠ Also check the packaging: the bare number is a 3-credit lecture needing a separate CHM2045L (or CHM1045L) laboratory, while the C form is the integrated lecture-plus-lab at 4 credits and is one registration."
+  },
+  {
+   "courseId": "EGN3311",
+   "reason": "Statics — forces in equilibrium. The first true engineering course and the foundation of everything structural."
+  },
+  {
+   "courseId": "EGN3321",
+   "reason": "Dynamics — bodies in motion: kinematics, kinetics, work and energy, momentum. Statics with the accelerations left in."
+  },
+  {
+   "courseId": "EGN3331C",
+   "reason": "Strength of Materials — stress, strain, deflection and failure. Where design stops being a sketch and becomes a calculation that has to hold."
+  },
+  {
+   "courseId": "EGN3365",
+   "reason": "Structure and Properties of Materials — why metals, polymers and composites behave as they do, and how to choose between them."
+  },
+  {
+   "courseId": "EML3015",
+   "reason": "Thermodynamics — energy, entropy and the cycles behind engines, refrigeration and power generation. One of the two hardest conceptual courses in the degree."
+  },
+  {
+   "courseId": "EGN3353C",
+   "reason": "Fluid Mechanics — pressure, flow, drag and lift; the basis of hydraulics, aerodynamics and piping design."
+  },
+  {
+   "courseId": "EML3016",
+   "reason": "Heat Transfer — conduction, convection and radiation. The course that decides whether a design cooks itself, and the one thermal-systems roles hire for."
+  },
+  {
+   "courseId": "EML3500",
+   "reason": "Machine Design — synthesising the analysis courses into components that work: shafts, bearings, gears, fasteners, and design against fatigue."
+  },
+  {
+   "courseId": "EGN3420",
+   "reason": "Engineering Analysis — numerical methods and the linear algebra behind simulation. What lets you check whether a computed answer is plausible."
+  },
+  {
+   "courseId": "EGN3613",
+   "reason": "Engineering Economic Analysis — time value of money and alternative comparison. Engineering decisions are justified economically, and the FE exam tests this."
+  },
+  {
+   "courseId": "EGN1006C",
+   "reason": "Introduction to Engineering — the discipline survey and design-project course most Florida programmes open with; the cheapest way to find out early whether the field suits you."
+  }
+ ],
+ "sources": [
+  {
+   "label": "Florida Board of Professional Engineers — Licensure",
+   "url": "https://fbpe.org/licensure/",
+   "note": "The licensing authority. The five steps from degree to PE, and the Engineer Intern certification."
+  },
+  {
+   "label": "Chapter 471, Florida Statutes — Engineering",
+   "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
+   "note": "s. 471.013(1)(a) is where the four-year and six-year experience requirements are set."
+  },
+  {
+   "label": "ABET — Accredited Program Search",
+   "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+   "note": "Check a programme here BEFORE enrolling, and check which commission accredits it."
+  },
+  {
+   "label": "NCEES — Fundamentals of Engineering (FE) exam",
+   "url": "https://ncees.org/engineering/fe/",
+   "note": "The first examination, sittable in your final year. Specifications, registration and reference handbook."
+  },
+  {
+   "label": "NCEES — Principles and Practice of Engineering (PE) exam",
+   "url": "https://ncees.org/",
+   "note": "The second examination, after the required experience."
+  },
+  {
+   "label": "O*NET — Mechanical Engineers (17-2141.00)",
+   "url": "https://www.onetonline.org/link/summary/17-2141.00",
+   "note": "Tasks, skills, wages and the employment projections quoted on this page."
+  },
+  {
+   "label": "U.S. Bureau of Labor Statistics — Mechanical Engineers",
+   "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+   "note": "Federal wage, employment and outlook detail for SOC 17-2141."
+  },
+  {
+   "label": "ASME — American Society of Mechanical Engineers",
+   "url": "https://www.asme.org/",
+   "note": "The professional society: codes and standards, student membership, and the conferences worth attending as a student."
+  },
+  {
+   "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+   "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+   "note": "The federal taxonomy this path is filed under, at 14.19 Mechanical Engineering."
+  }
+ ],
+ "programs": [
+  {
+   "slug": "mechanical-engineering",
+   "note": "The degree itself. ⚠ For PE licensure it must be accredited by ABET’s ENGINEERING commission — an engineering TECHNOLOGY accreditation adds two years to the experience requirement."
+  }
+ ]
 }

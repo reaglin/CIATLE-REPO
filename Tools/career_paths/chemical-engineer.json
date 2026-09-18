@@ -42,11 +42,12 @@
   {
    "courseId": "CHM2045",
    "reason": "General Chemistry I — and for this degree it is a major course, not a service course.",
-   "variantNote": "⚠ Register by the right identifier: sixteen institutions carry CHM2045 with a separate CHM2045L laboratory, and four (UCF, FSCJ, Lake-Sumter, Seminole State) carry the integrated CHM2045C instead. Both are complete; they are packaged differently."
+   "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS, AND NO INSTITUTION CARRIES BOTH. Twenty public institutions use CHM2045 (or the integrated CHM2045C); nineteen use CHM1045 (or CHM1045C) — among them Florida State, Florida A&M, FIU, FGCU, Broward, Miami Dade, Valencia, Daytona State, Eastern Florida State, Gulf Coast, Indian River State, Northwest Florida State, Palm Beach State, Pensacola State, Polk State, St. Johns River State, Tallahassee State, North Florida and Florida Keys. Same course, same lower-division level, and the credit articulates either way — but ⚠⚠ LOOK UP WHICH FAMILY YOUR INSTITUTION USES BEFORE YOU GO SEARCHING, because the other number simply does not exist there. ⚠ Also check the packaging: the bare number is a 3-credit lecture needing a separate CHM2045L (or CHM1045L) laboratory, while the C form is the integrated lecture-plus-lab at 4 credits and is one registration."
   },
   {
    "courseId": "CHM2046",
-   "reason": "General Chemistry II — equilibrium, kinetics and thermodynamics, which is where chemical engineering starts."
+   "reason": "General Chemistry II — equilibrium, kinetics and thermodynamics, which is where chemical engineering starts.",
+   "variantNote": "⚠⚠ THE SAME TWO-FAMILY SPLIT AS GENERAL CHEMISTRY I — twenty institutions use CHM2046 or CHM2046C, nineteen use CHM1046 or CHM1046C, and no institution carries both. ⚠⚠ AND HERE THE STATE ITSELF ADDS A WARNING: the statewide record for this course reads \"a sequence once started should be taken entirely at one institution ... only the completed sequence at one institution is equivalent to a completed sequence at another.\" So the ordinary transfer guarantee is weaker than usual on the second half of a sequence. ⚠⚠ Finish general chemistry where you started it. ⚠ One more thing worth knowing if you are dual-enrolled: SCNS records ELECTIVE high-school credit for general chemistry I and SCIENCE credit for general chemistry II — two halves of one sequence, two different high-school outcomes."
   },
   {
    "courseId": "CHM2210",

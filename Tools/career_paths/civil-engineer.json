@@ -1,74 +1,164 @@
 {
-  "name": "Civil Engineer",
-  "cipCode": "14.08",
-  "socCode": "17-2051",
-  "isPublished": true,
-  "sortOrder": 60,
-
-  "description": "Civil engineers design, build and maintain the built environment — bridges, buildings, roads, water and wastewater systems, ports, drainage and coastal works. ⚠ It is the engineering discipline where a Professional Engineer licence matters most: much of the work legally requires one, because civil engineers sign off on things that fail publicly.",
-
-  "credentialNote": "⚠⚠ READ THIS FIRST — for civil engineering the PE licence is not optional in the way it is elsewhere. Structural, site, water and transportation work is generally sealed by a licensed engineer, so a PE is a normal condition of advancement rather than a nice extra. Under s. 471.013(1)(a), Florida Statutes: a graduate of an approved ENGINEERING curriculum needs FOUR years of active engineering experience; a graduate of an approved ENGINEERING TECHNOLOGY curriculum needs SIX. The route is an ABET-accredited degree, the Fundamentals of Engineering (FE) exam — sit it in your final year — certification as an Engineer Intern, the experience under a PE, then the Principles and Practice of Engineering exam. Governed by Chapter 471, F.S. and Chapter 61G15, F.A.C.; administered by the Florida Board of Professional Engineers. ⚠ Because the licence is close to mandatory here, the four-versus-six-year difference costs more in this discipline than in any other — choose the ENGINEERING curriculum.",
-
-  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET&rsquo;s task statements describe it plainly: <em>direct engineering activities ensuring compliance with environmental, safety and other governmental regulations; manage construction, operations and maintenance at the project site; inspect sites to monitor progress and conformance to design specifications; compute load and grade requirements, water flow rates and material stress factors; plan and design transportation or hydraulic systems using computer-aided design; and test soils and materials to determine the adequacy and strength of foundations, concrete, asphalt and steel.</em></p><p>&#9888; Note how much of that is <strong>regulation, inspection and site work</strong> rather than calculation. Civil engineering is the discipline most bound up with codes, permits and public accountability, and students who expect pure design are often surprised by how much of it is negotiating with the physical world and with authorities.</p><h2>Projected need</h2><p>O*NET, on federal projections: <strong>368,900 civil engineers employed</strong> (2024) — the largest of the engineering disciplines on this site — growth projected <strong>&ldquo;faster than average&rdquo; (5&ndash;6%) through 2034</strong>, and about <strong>23,600 openings a year</strong>. Median pay <strong>$100,840</strong> ($48.48 an hour), 2025.</p><p>&#9888; <strong>86% of survey respondents reported a bachelor&rsquo;s degree as the requirement</strong> — the firmest of any path on this site, and consistent with a discipline whose entry is governed by accreditation and licensure rather than by portfolio.</p><h3>Why Florida is a particular case</h3><p>Florida concentrates civil engineering demand in ways few states do: sustained population growth and construction; a transportation programme run by the Florida Department of Transportation and its districts; <strong>coastal and storm-surge work</strong>; water supply, drainage and wastewater in a state that is flat, porous and low-lying; and building design governed by the <strong>Florida Building Code</strong>, whose wind-load provisions are among the most demanding in the country. <strong>Structural and coastal work in Florida is not generic structural work</strong> — hurricane loading and flood elevation are design drivers here in a way they are not in most of the United States.</p><h2>Necessary skills</h2><ul><li><strong>Mechanics you can trust.</strong> Statics, strength of materials and structural analysis are the spine. Unlike some disciplines, the calculations are directly load-bearing: a mistake shows up in the world.</li><li><strong>Judgement about materials and ground.</strong> Soil is variable, concrete is not uniform, and the site is never quite the drawing. Geotechnical work is the discipline&rsquo;s standing lesson in uncertainty.</li><li><strong>Codes and standards as working tools</strong> — ACI, AISC, AASHTO, ASCE 7 and the Florida Building Code. Learning to <em>use</em> a code, not memorise it, is a distinct skill.</li><li><strong>CAD and civil software</strong>: AutoCAD Civil 3D, Revit, and structural analysis packages. &#9888; The same caution as everywhere — a model returns a confident number whether or not the input made sense.</li><li><strong>Writing and negotiation.</strong> Reports, permits, and explaining a constraint to a client or a board. Civil engineers spend more time in public meetings than most engineers expect.</li></ul><h2>Advice</h2><ul><li><strong>Confirm ABET accreditation and the commission</strong> at <em>amspub.abet.org</em>. Given how central the licence is here, the <em>Engineering</em> accreditation is effectively a requirement rather than a preference.</li><li><strong>Sit the FE in your final year.</strong> In civil engineering this is not optional advice — deferring it is the single most common way people slow their own careers.</li><li><strong>Get site experience</strong>, not only office experience. An internship where you have walked a site, seen a pour and watched a survey crew teaches things no course does.</li><li><strong>Choose a sub-discipline late, not early.</strong> Structural, geotechnical, water resources, transportation, construction and coastal all share the first two years. Use the intervening courses to find out which one you actually like.</li><li><strong>If you are starting at a Florida state college</strong>, follow the published engineering transfer track and confirm exact course numbers in writing — the civil sequence is tightly chained, so a mis-substituted course costs a term.</li></ul>",
-
-  "programs": [
-    {
-      "slug": "engineering-technology",
-      "note": "⚠ A different route with a real cost here. Civil engineering technology leads to technician and inspection work; because the PE licence is close to mandatory in civil practice, the six-year experience requirement it carries bites harder in this discipline than in any other."
-    }
-  ],
-
-  "courses": [
-    { "courseId": "MAC2311", "reason": "Calculus I — the gate on the degree.",
-      "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence. Finish it at one institution where you can." },
-    { "courseId": "MAC2312", "reason": "Calculus II — integration and series, used throughout structural and hydraulic analysis." },
-    { "courseId": "MAC2313", "reason": "Calculus III — multivariable methods; distributed loads, moments of inertia and flow fields." },
-    { "courseId": "MAP2302", "reason": "Differential Equations — beam deflection, groundwater flow and dynamic response are all differential equations." },
-    { "courseId": "PHY2048", "reason": "Physics with Calculus I — mechanics, and the direct foundation of statics." },
-    { "courseId": "PHY2049", "reason": "Physics with Calculus II — required by most programmes; electrical systems appear in building and treatment-plant work." },
-    { "courseId": "CHM2045", "reason": "General Chemistry I — the basis of concrete chemistry, corrosion, water treatment and environmental work." },
-    { "courseId": "STA2023", "reason": "Statistics — materials testing, quality control and risk are statistical; hydrology is explicitly probabilistic." },
-
-    { "courseId": "EGN3311", "reason": "Statics — forces in equilibrium. The first true civil engineering course and the foundation of everything structural." },
-    { "courseId": "EGN3331C", "reason": "Strength of Materials — stress, strain, deflection and failure; where a member is sized and checked." },
-    { "courseId": "EGN3365", "reason": "Structure and Properties of Materials — why steel, concrete and soil behave as they do." },
-    { "courseId": "EGN3353C", "reason": "Fluid Mechanics — pressure and flow, the basis of hydraulics, drainage and coastal work." },
-    { "courseId": "EGN3613", "reason": "Engineering Economic Analysis — life-cycle cost and alternative comparison, which is how public infrastructure decisions are justified. An FE exam topic." },
-    { "courseId": "CGN2328C", "reason": "Technical Drawing and Visualization — reading and producing the drawings that construction is actually built from." },
-    { "courseId": "CGN3501C", "reason": "Civil Engineering Materials — concrete, asphalt, steel and aggregates, with the laboratory testing that goes with them." },
-    { "courseId": "CES3100C", "reason": "Determinate Structural Analysis — trusses, beams and frames; the analysis every structural course after it assumes." },
-    { "courseId": "CES4605C", "reason": "Structural Steel Design — designing members and connections to the AISC specification." },
-    { "courseId": "CES4702C", "reason": "Reinforced Concrete Design — designing to ACI 318. ⚠ In Florida this is where wind and coastal exposure become design drivers." },
-    { "courseId": "CEG3011C", "reason": "Soil Mechanics — the geotechnical foundation course. ⚠ Florida's sand, limestone and high water table make this less theoretical here than almost anywhere." },
-    { "courseId": "CWR3201C", "reason": "Hydraulics — engineering fluid mechanics applied to pipes, channels and pumps." },
-    { "courseId": "CWR4202C", "reason": "Hydraulics Engineering — open-channel flow, drainage and stormwater design, which is a central and constant Florida problem." },
-    { "courseId": "TTE3004C", "reason": "Transportation Engineering — traffic, geometry and planning; the gateway to FDOT and consultancy work." },
-    { "courseId": "TTE4804", "reason": "Highway Geometric Design — alignment and cross-section design to AASHTO standards." }
-  ],
-
-  "sources": [
-    { "label": "Florida Board of Professional Engineers — Licensure", "url": "https://fbpe.org/licensure/",
-      "note": "The licensing authority. In civil practice this is the central document rather than a formality." },
-    { "label": "Chapter 471, Florida Statutes — Engineering",
-      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
-      "note": "s. 471.013(1)(a) sets the four-year and six-year experience requirements." },
-    { "label": "ABET — Accredited Program Search", "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
-      "note": "Check the programme and its accrediting commission before enrolling." },
-    { "label": "NCEES — Fundamentals of Engineering (FE) exam", "url": "https://ncees.org/engineering/fe/",
-      "note": "There is an FE Civil discipline version; sit it in your final year." },
-    { "label": "O*NET — Civil Engineers (17-2051.00)", "url": "https://www.onetonline.org/link/summary/17-2051.00",
-      "note": "Tasks, skills, wages and the employment projections quoted on this page." },
-    { "label": "U.S. Bureau of Labor Statistics — Civil Engineers",
-      "url": "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
-      "note": "Federal wage, employment and outlook detail for SOC 17-2051." },
-    { "label": "ASCE — American Society of Civil Engineers", "url": "https://www.asce.org/",
-      "note": "The professional society. ASCE 7, the loading standard, is one of the documents the work runs on." },
-    { "label": "Florida Department of Transportation", "url": "https://www.fdot.gov/",
-      "note": "A major employer and the source of Florida's design standards for transportation work." },
-    { "label": "Florida Building Code", "url": "https://floridabuilding.org/",
-      "note": "⚠ The code that governs building design in Florida, including its wind-load provisions." },
-    { "label": "NCES — Classification of Instructional Programs (CIP 2020)",
-      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
-      "note": "The federal taxonomy this path is filed under, at 14.08 Civil Engineering." }
-  ]
+ "name": "Civil Engineer",
+ "cipCode": "14.08",
+ "socCode": "17-2051",
+ "isPublished": true,
+ "sortOrder": 60,
+ "description": "Civil engineers design, build and maintain the built environment — bridges, buildings, roads, water and wastewater systems, ports, drainage and coastal works. ⚠ It is the engineering discipline where a Professional Engineer licence matters most: much of the work legally requires one, because civil engineers sign off on things that fail publicly.",
+ "credentialNote": "⚠⚠ READ THIS FIRST — for civil engineering the PE licence is not optional in the way it is elsewhere. Structural, site, water and transportation work is generally sealed by a licensed engineer, so a PE is a normal condition of advancement rather than a nice extra. Under s. 471.013(1)(a), Florida Statutes: a graduate of an approved ENGINEERING curriculum needs FOUR years of active engineering experience; a graduate of an approved ENGINEERING TECHNOLOGY curriculum needs SIX. The route is an ABET-accredited degree, the Fundamentals of Engineering (FE) exam — sit it in your final year — certification as an Engineer Intern, the experience under a PE, then the Principles and Practice of Engineering exam. Governed by Chapter 471, F.S. and Chapter 61G15, F.A.C.; administered by the Florida Board of Professional Engineers. ⚠ Because the licence is close to mandatory here, the four-versus-six-year difference costs more in this discipline than in any other — choose the ENGINEERING curriculum.",
+ "bodyHtml": "<h2>What the work actually is</h2><p>O*NET&rsquo;s task statements describe it plainly: <em>direct engineering activities ensuring compliance with environmental, safety and other governmental regulations; manage construction, operations and maintenance at the project site; inspect sites to monitor progress and conformance to design specifications; compute load and grade requirements, water flow rates and material stress factors; plan and design transportation or hydraulic systems using computer-aided design; and test soils and materials to determine the adequacy and strength of foundations, concrete, asphalt and steel.</em></p><p>&#9888; Note how much of that is <strong>regulation, inspection and site work</strong> rather than calculation. Civil engineering is the discipline most bound up with codes, permits and public accountability, and students who expect pure design are often surprised by how much of it is negotiating with the physical world and with authorities.</p><h2>Projected need</h2><p>O*NET, on federal projections: <strong>368,900 civil engineers employed</strong> (2024) — the largest of the engineering disciplines on this site — growth projected <strong>&ldquo;faster than average&rdquo; (5&ndash;6%) through 2034</strong>, and about <strong>23,600 openings a year</strong>. Median pay <strong>$100,840</strong> ($48.48 an hour), 2025.</p><p>&#9888; <strong>86% of survey respondents reported a bachelor&rsquo;s degree as the requirement</strong> — the firmest of any path on this site, and consistent with a discipline whose entry is governed by accreditation and licensure rather than by portfolio.</p><h3>Why Florida is a particular case</h3><p>Florida concentrates civil engineering demand in ways few states do: sustained population growth and construction; a transportation programme run by the Florida Department of Transportation and its districts; <strong>coastal and storm-surge work</strong>; water supply, drainage and wastewater in a state that is flat, porous and low-lying; and building design governed by the <strong>Florida Building Code</strong>, whose wind-load provisions are among the most demanding in the country. <strong>Structural and coastal work in Florida is not generic structural work</strong> — hurricane loading and flood elevation are design drivers here in a way they are not in most of the United States.</p><h2>Necessary skills</h2><ul><li><strong>Mechanics you can trust.</strong> Statics, strength of materials and structural analysis are the spine. Unlike some disciplines, the calculations are directly load-bearing: a mistake shows up in the world.</li><li><strong>Judgement about materials and ground.</strong> Soil is variable, concrete is not uniform, and the site is never quite the drawing. Geotechnical work is the discipline&rsquo;s standing lesson in uncertainty.</li><li><strong>Codes and standards as working tools</strong> — ACI, AISC, AASHTO, ASCE 7 and the Florida Building Code. Learning to <em>use</em> a code, not memorise it, is a distinct skill.</li><li><strong>CAD and civil software</strong>: AutoCAD Civil 3D, Revit, and structural analysis packages. &#9888; The same caution as everywhere — a model returns a confident number whether or not the input made sense.</li><li><strong>Writing and negotiation.</strong> Reports, permits, and explaining a constraint to a client or a board. Civil engineers spend more time in public meetings than most engineers expect.</li></ul><h2>Advice</h2><ul><li><strong>Confirm ABET accreditation and the commission</strong> at <em>amspub.abet.org</em>. Given how central the licence is here, the <em>Engineering</em> accreditation is effectively a requirement rather than a preference.</li><li><strong>Sit the FE in your final year.</strong> In civil engineering this is not optional advice — deferring it is the single most common way people slow their own careers.</li><li><strong>Get site experience</strong>, not only office experience. An internship where you have walked a site, seen a pour and watched a survey crew teaches things no course does.</li><li><strong>Choose a sub-discipline late, not early.</strong> Structural, geotechnical, water resources, transportation, construction and coastal all share the first two years. Use the intervening courses to find out which one you actually like.</li><li><strong>If you are starting at a Florida state college</strong>, follow the published engineering transfer track and confirm exact course numbers in writing — the civil sequence is tightly chained, so a mis-substituted course costs a term.</li></ul>",
+ "programs": [
+  {
+   "slug": "engineering-technology",
+   "note": "⚠ A different route with a real cost here. Civil engineering technology leads to technician and inspection work; because the PE licence is close to mandatory in civil practice, the six-year experience requirement it carries bites harder in this discipline than in any other."
+  }
+ ],
+ "courses": [
+  {
+   "courseId": "MAC2311",
+   "reason": "Calculus I — the gate on the degree.",
+   "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence. Finish it at one institution where you can."
+  },
+  {
+   "courseId": "MAC2312",
+   "reason": "Calculus II — integration and series, used throughout structural and hydraulic analysis."
+  },
+  {
+   "courseId": "MAC2313",
+   "reason": "Calculus III — multivariable methods; distributed loads, moments of inertia and flow fields."
+  },
+  {
+   "courseId": "MAP2302",
+   "reason": "Differential Equations — beam deflection, groundwater flow and dynamic response are all differential equations."
+  },
+  {
+   "courseId": "PHY2048",
+   "reason": "Physics with Calculus I — mechanics, and the direct foundation of statics."
+  },
+  {
+   "courseId": "PHY2049",
+   "reason": "Physics with Calculus II — required by most programmes; electrical systems appear in building and treatment-plant work."
+  },
+  {
+   "courseId": "CHM2045",
+   "reason": "General Chemistry I — the basis of concrete chemistry, corrosion, water treatment and environmental work.",
+   "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS, AND NO INSTITUTION CARRIES BOTH. Twenty public institutions use CHM2045 (or the integrated CHM2045C); nineteen use CHM1045 (or CHM1045C) — among them Florida State, Florida A&M, FIU, FGCU, Broward, Miami Dade, Valencia, Daytona State, Eastern Florida State, Gulf Coast, Indian River State, Northwest Florida State, Palm Beach State, Pensacola State, Polk State, St. Johns River State, Tallahassee State, North Florida and Florida Keys. Same course, same lower-division level, and the credit articulates either way — but ⚠⚠ LOOK UP WHICH FAMILY YOUR INSTITUTION USES BEFORE YOU GO SEARCHING, because the other number simply does not exist there. ⚠ Also check the packaging: the bare number is a 3-credit lecture needing a separate CHM2045L (or CHM1045L) laboratory, while the C form is the integrated lecture-plus-lab at 4 credits and is one registration."
+  },
+  {
+   "courseId": "STA2023",
+   "reason": "Statistics — materials testing, quality control and risk are statistical; hydrology is explicitly probabilistic."
+  },
+  {
+   "courseId": "EGN3311",
+   "reason": "Statics — forces in equilibrium. The first true civil engineering course and the foundation of everything structural."
+  },
+  {
+   "courseId": "EGN3331C",
+   "reason": "Strength of Materials — stress, strain, deflection and failure; where a member is sized and checked."
+  },
+  {
+   "courseId": "EGN3365",
+   "reason": "Structure and Properties of Materials — why steel, concrete and soil behave as they do."
+  },
+  {
+   "courseId": "EGN3353C",
+   "reason": "Fluid Mechanics — pressure and flow, the basis of hydraulics, drainage and coastal work."
+  },
+  {
+   "courseId": "EGN3613",
+   "reason": "Engineering Economic Analysis — life-cycle cost and alternative comparison, which is how public infrastructure decisions are justified. An FE exam topic."
+  },
+  {
+   "courseId": "CGN2328C",
+   "reason": "Technical Drawing and Visualization — reading and producing the drawings that construction is actually built from."
+  },
+  {
+   "courseId": "CGN3501C",
+   "reason": "Civil Engineering Materials — concrete, asphalt, steel and aggregates, with the laboratory testing that goes with them."
+  },
+  {
+   "courseId": "CES3100C",
+   "reason": "Determinate Structural Analysis — trusses, beams and frames; the analysis every structural course after it assumes."
+  },
+  {
+   "courseId": "CES4605C",
+   "reason": "Structural Steel Design — designing members and connections to the AISC specification."
+  },
+  {
+   "courseId": "CES4702C",
+   "reason": "Reinforced Concrete Design — designing to ACI 318. ⚠ In Florida this is where wind and coastal exposure become design drivers."
+  },
+  {
+   "courseId": "CEG3011C",
+   "reason": "Soil Mechanics — the geotechnical foundation course. ⚠ Florida's sand, limestone and high water table make this less theoretical here than almost anywhere."
+  },
+  {
+   "courseId": "CWR3201C",
+   "reason": "Hydraulics — engineering fluid mechanics applied to pipes, channels and pumps."
+  },
+  {
+   "courseId": "CWR4202C",
+   "reason": "Hydraulics Engineering — open-channel flow, drainage and stormwater design, which is a central and constant Florida problem."
+  },
+  {
+   "courseId": "TTE3004C",
+   "reason": "Transportation Engineering — traffic, geometry and planning; the gateway to FDOT and consultancy work."
+  },
+  {
+   "courseId": "TTE4804",
+   "reason": "Highway Geometric Design — alignment and cross-section design to AASHTO standards."
+  }
+ ],
+ "sources": [
+  {
+   "label": "Florida Board of Professional Engineers — Licensure",
+   "url": "https://fbpe.org/licensure/",
+   "note": "The licensing authority. In civil practice this is the central document rather than a formality."
+  },
+  {
+   "label": "Chapter 471, Florida Statutes — Engineering",
+   "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
+   "note": "s. 471.013(1)(a) sets the four-year and six-year experience requirements."
+  },
+  {
+   "label": "ABET — Accredited Program Search",
+   "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+   "note": "Check the programme and its accrediting commission before enrolling."
+  },
+  {
+   "label": "NCEES — Fundamentals of Engineering (FE) exam",
+   "url": "https://ncees.org/engineering/fe/",
+   "note": "There is an FE Civil discipline version; sit it in your final year."
+  },
+  {
+   "label": "O*NET — Civil Engineers (17-2051.00)",
+   "url": "https://www.onetonline.org/link/summary/17-2051.00",
+   "note": "Tasks, skills, wages and the employment projections quoted on this page."
+  },
+  {
+   "label": "U.S. Bureau of Labor Statistics — Civil Engineers",
+   "url": "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
+   "note": "Federal wage, employment and outlook detail for SOC 17-2051."
+  },
+  {
+   "label": "ASCE — American Society of Civil Engineers",
+   "url": "https://www.asce.org/",
+   "note": "The professional society. ASCE 7, the loading standard, is one of the documents the work runs on."
+  },
+  {
+   "label": "Florida Department of Transportation",
+   "url": "https://www.fdot.gov/",
+   "note": "A major employer and the source of Florida's design standards for transportation work."
+  },
+  {
+   "label": "Florida Building Code",
+   "url": "https://floridabuilding.org/",
+   "note": "⚠ The code that governs building design in Florida, including its wind-load provisions."
+  },
+  {
+   "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+   "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+   "note": "The federal taxonomy this path is filed under, at 14.08 Civil Engineering."
+  }
+ ]
 }
