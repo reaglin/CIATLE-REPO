@@ -62,7 +62,8 @@
   },
   {
    "courseId": "EGN3353C",
-   "reason": "Fluid Mechanics — the direct prerequisite for aerodynamics and propulsion, and the hardest course in the sequence for most students."
+   "reason": "Fluid Mechanics — the direct prerequisite for aerodynamics and propulsion, and the hardest course in the sequence for most students.",
+   "variantNote": "⚠⚠ FLUID MECHANICS IS THE MOST FRAGMENTED NUMBER IN FLORIDA ENGINEERING, and this identifier is carried by ONE institution. The same course runs under five numbers across two prefixes: EGN3353C (UF), EGN3353 (USF), CWR3201 (FAMU, FIU, Florida State, UCF, UF, UNF, UWF), CWR3201C (FAU, Florida Gulf Coast) and EML3701 (FAU, UCF, USF). ⚠ Broadly, CWR is the civil and environmental route, EML the mechanical route and EGN the general-engineering one — but several institutions carry more than one, and UF carries both EGN3353C and CWR3201. The C suffix marks the integrated lecture-plus-laboratory form; it is the same course, packaged as one registration instead of two. LOOK UP WHICH NUMBER YOUR PROGRAMME USES rather than searching for this one, and on transfer send the syllabus, because an evaluator matching identifiers across these five will find nothing to match."
   },
   {
    "courseId": "EML3015",

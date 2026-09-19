@@ -62,7 +62,8 @@
   },
   {
    "courseId": "EGN3353C",
-   "reason": "Fluid Mechanics — pressure and flow, the basis of hydraulics, drainage and coastal work."
+   "reason": "Fluid Mechanics — pressure and flow, the basis of hydraulics, drainage and coastal work.",
+   "variantNote": "⚠⚠ FLUID MECHANICS IS THE MOST FRAGMENTED NUMBER IN FLORIDA ENGINEERING, and this identifier is carried by ONE institution. The same course runs under five numbers across two prefixes: EGN3353C (UF), EGN3353 (USF), CWR3201 (FAMU, FIU, Florida State, UCF, UF, UNF, UWF), CWR3201C (FAU, Florida Gulf Coast) and EML3701 (FAU, UCF, USF). ⚠ Broadly, CWR is the civil and environmental route, EML the mechanical route and EGN the general-engineering one — but several institutions carry more than one, and UF carries both EGN3353C and CWR3201. The C suffix marks the integrated lecture-plus-laboratory form; it is the same course, packaged as one registration instead of two. LOOK UP WHICH NUMBER YOUR PROGRAMME USES rather than searching for this one, and on transfer send the syllabus, because an evaluator matching identifiers across these five will find nothing to match."
   },
   {
    "courseId": "EGN3613",
@@ -93,12 +94,14 @@
    "reason": "Soil Mechanics — the geotechnical foundation course. ⚠ Florida's sand, limestone and high water table make this less theoretical here than almost anywhere."
   },
   {
-   "courseId": "CWR3201C",
-   "reason": "Hydraulics — engineering fluid mechanics applied to pipes, channels and pumps."
+   "courseId": "CWR3201",
+   "reason": "Hydraulics — engineering fluid mechanics applied to pipes, channels and pumps.",
+   "variantNote": "⚠⚠ FIVE NUMBERS FOR THIS SUBJECT ACROSS FLORIDA, and this is the one seven institutions use: CWR3201 at FAMU, FIU, Florida State, UCF, UF, UNF and UWF. FAU and Florida Gulf Coast carry the integrated CWR3201C; UF also carries EGN3353C, USF carries EGN3353, and FAU, UCF and USF carry EML3701 on the mechanical side. ⚠ The titles vary as much as the numbers — Hydraulics at Florida State, Fluid Mechanics at FIU and UNF, Engineering Fluid Mechanics at UCF, Hydrodynamics at UF, Water Resource Engineering at UWF — and the statewide description is plain fluid mechanics throughout. Register by the number your own programme names."
   },
   {
-   "courseId": "CWR4202C",
-   "reason": "Hydraulics Engineering — open-channel flow, drainage and stormwater design, which is a central and constant Florida problem."
+   "courseId": "CWR4202",
+   "reason": "Hydraulics Engineering — open-channel flow, drainage and stormwater design, which is a central and constant Florida problem.",
+   "variantNote": "⚠⚠ TWO NUMBERS, AND THIS IS THE ONE SEVEN INSTITUTIONS USE. CWR4202 is carried by FAMU, FAU, Florida Polytechnic, Florida State, UF, USF and UWF; UCF and UNF carry the integrated CWR4202C instead, and no institution carries both. Same course — the C form simply packages the laboratory into one registration — so the credit articulates either way. ⚠ But an evaluator or degree audit matching on the identifier reads the two as different courses, so say which form you took and send the syllabus."
   },
   {
    "courseId": "TTE3004C",
