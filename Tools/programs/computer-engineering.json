@@ -1,0 +1,24 @@
+{
+  "name": "Computer Engineering",
+  "description": "Computer engineering programmes teach the boundary between hardware and software — digital logic, processor architecture, embedded systems, and the code that runs close to the metal. It sits deliberately between electrical engineering and computer science, and takes most of its first two years from the electrical side.",
+  "degreesNote": "A Bachelor of Science in Computer Engineering, with master’s and doctoral degrees above it, awarded by ten Florida public institutions — the same footprint as electrical engineering. ⚠ The first two years usually match the electrical engineering degree almost exactly, so switching between them is cheap in year one and expensive in year three. ⚠ Accreditation matters and the commission depends on the degree: computer ENGINEERING is normally accredited by ABET’s engineering commission, computer SCIENCE by its computing commission. If a PE licence is a possibility, check which one your programme holds before enrolling.",
+  "sortOrder": 36,
+  "cips": [
+    {
+      "cipCode": "14.09",
+      "note": "Computer Engineering — the degree itself, awarded by ten Florida public institutions from bachelor’s through doctorate."
+    }
+  ],
+  "related": [
+    {
+      "slug": "electrical-engineering",
+      "note": "The nearer of its two neighbours, and usually the same department. The first two years overlap heavily, so if you are unsure which you want, start where your institution advises and decide by the end of year two — not later."
+    },
+    {
+      "slug": "computer-science",
+      "note": "The software side of the same boundary. ⚠ The difference that matters for jobs: computer engineering owns the hardware, the embedded system and the device; computer science owns the algorithm, the application and the data. Firms hire from both for firmware and systems work."
+    }
+  ],
+  "bodyHtml": null,
+  "isPublished": true
+}

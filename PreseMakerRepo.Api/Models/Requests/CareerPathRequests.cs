@@ -30,7 +30,14 @@ public record UpsertCareerPathRequest(
 /// </summary>
 public record CareerPathProgramInput(
     string? Slug,
-    string? Note);
+    string? Note,
+    /// <summary>
+    /// Defaults to TRUE. Set it false for a programme named as a NEIGHBOUR rather than a route —
+    /// Data Scientist names Mechanical Engineering, and the note says plainly that it is not a
+    /// route into data science. ⚠ The pages group the two separately, because a heading is read
+    /// and a grey note under it is not.
+    /// </summary>
+    bool? IsRoute = true);
 
 public record CareerPathCipInput(
     string? CipCode,

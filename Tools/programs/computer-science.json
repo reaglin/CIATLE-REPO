@@ -14,5 +14,19 @@
       "cipCode": "11.01",
       "note": "Computer and Information Sciences, General — where Florida actually files most of its computing awards: 41 public institutions, including essentially every state college that teaches computing. ⚠ Included deliberately. Defining this programme by 11.07 alone would list four institutions and hide the ones where most Florida students begin."
     }
+  ],
+  "related": [
+    {
+      "slug": "computer-engineering",
+      "note": "⚠ The hardware side of the same boundary, and usually an engineering degree rather than a computing one — which changes the accrediting body and the mathematics. If embedded systems, chips or robotics are the draw, compare the two directly."
+    },
+    {
+      "slug": "data-science",
+      "note": "The overlap is large and growing: both teach programming and algorithms, but data science adds statistics, machine learning and study design. ⚠ Read both if analytics is the goal — at many institutions the difference is four or five courses."
+    },
+    {
+      "slug": "statistics",
+      "note": "The inference half of data work, and the part a computing degree covers least. A statistics minor or double major on a computing degree is the combination most data job adverts are describing."
+    }
   ]
 }

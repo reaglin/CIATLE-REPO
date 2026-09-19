@@ -25,7 +25,8 @@ public class PathModel : PageModel
     /// <param name="Offered">How many of this path's courses the institution offers.</param>
     public sealed record SchoolView(string Code, string? Name, string? Sector, int Offered);
     /// <param name="Schools">Institutions awarding a credential in the programme's CIP fields.</param>
-    public sealed record ProgramView(string Slug, string Name, string? Note, int Schools);
+    /// <param name="IsRoute">False when the programme is a neighbour rather than a way in.</param>
+    public sealed record ProgramView(string Slug, string Name, string? Note, bool IsRoute, int Schools);
 
     public CareerPath Path { get; set; } = null!;
     public CipNode? Cip { get; set; }
@@ -44,6 +45,25 @@ public class PathModel : PageModel
     /// The school COUNT is derived from the programme's CIP prefixes against the award table.
     /// </summary>
     public IReadOnlyList<ProgramView> ProgramsForPath { get; set; } = [];
+
+    /// <param name="CipTitle">The CIP group it is filed on, which is what makes it a neighbour.</param>
+    public sealed record NeighbourView(string Slug, string Name, string Description, string CipTitle);
+
+    /// <summary>The award year behind the programme school counts, so the page can say which it is.</summary>
+    public int AwardYear { get; set; }
+
+    /// <summary>
+    /// Careers filed in the same CIP series as this one. ⚠ Ron, 2026-09-19: a student looking at
+    /// one career does not know which others are next door — "the similarities between mechanical
+    /// engineering and aerospace engineering (any similar program) should be noted as these are
+    /// things students would not normally know".
+    /// <para>
+    /// ⚠ Matched on the PRIMARY code only. A path like Lawyer carries sixteen anchors across
+    /// eleven series because that is where its applicants come FROM; matching on those would make
+    /// half the site a neighbour of law.
+    /// </para>
+    /// </summary>
+    public IReadOnlyList<NeighbourView> NearbyPaths { get; set; } = [];
     /// <summary>Courses on the path the catalog actually carries — the denominator for Schools.</summary>
     public int CoursesListed { get; set; }
     public IReadOnlyList<CourseView> Courses { get; set; } = [];
@@ -73,7 +93,9 @@ public class PathModel : PageModel
             .OrderBy(c => c.SortOrder)
             .ToListAsync();
 
-        if (placed.Count == 0) return Page();
+        // ⚠ No early return here. A path with no courses placed yet still has programmes and
+        // neighbours, and returning early rendered exactly the dead-end page this feature exists
+        // to remove. Each block below guards itself instead.
 
         var ids = placed.Select(c => c.CourseId).ToList();
 
@@ -95,14 +117,29 @@ public class PathModel : PageModel
         if (progLinks.Count > 0)
         {
             var awards = await _db.InstitutionAwards.AsNoTracking()
-                .Select(a => new { a.UnitId, a.CipCode }).ToListAsync();
+                .Select(a => new { a.UnitId, a.CipCode, a.Year }).ToListAsync();
+            AwardYear = awards.Count > 0 ? awards.Max(a => a.Year) : 0;
             ProgramsForPath = progLinks.Select(l =>
             {
                 var pre = l.Program!.Cips.Select(c => c.CipCode).ToList();
                 var n = awards.Where(a => pre.Any(x => a.CipCode.StartsWith(x)))
                               .Select(a => a.UnitId).Distinct().Count();
-                return new ProgramView(l.Program.Slug, l.Program.Name, l.Note, n);
+                return new ProgramView(l.Program.Slug, l.Program.Name, l.Note, l.IsRoute, n);
             }).ToList();
+        }
+
+        // Neighbours: same CIP series, published, this one excluded. Two digits is the right
+        // width — series 14 is engineering, so mechanical finds aerospace, materials and civil.
+        var series = path.CipCode.Length >= 2 ? path.CipCode[..2] + "." : null;
+        if (series is not null)
+        {
+            NearbyPaths = await _db.CareerPaths.AsNoTracking()
+                .Where(x => x.IsPublished && x.Id != path.Id && x.CipCode.StartsWith(series))
+                .OrderBy(x => x.Name)
+                .Select(x => new NeighbourView(x.Slug, x.Name, x.Description,
+                                               x.Cip!.Title))
+                .Take(12)
+                .ToListAsync();
         }
 
         // ⚠ Ron, 2026-09-17, on what a career page should carry: "Schools represented in repo

@@ -1,0 +1,24 @@
+{
+  "name": "Paralegal and Legal Support Studies",
+  "description": "Paralegal programmes prepare people to do substantive legal work under a lawyer’s supervision — research, drafting, discovery, case management and client contact — in firms, corporate legal departments and government offices. It is the most widely available legal programme in Florida by a wide margin.",
+  "degreesNote": "⚠ This programme has the widest spread of entry points on the site: 31 Florida public institutions award in it, most at ASSOCIATE or CERTIFICATE level at state and technical colleges, with bachelor’s degrees at Florida Gulf Coast, St Petersburg College and the University of West Florida. ⚠ It is NOT a shortened route to becoming a lawyer — a paralegal does not practise law, and the J.D. is a separate graduate degree that this neither replaces nor abbreviates. What it is: paid legal work in about two years, and a close view of the profession before committing three more years and a bar examination to it. ⚠ Florida does not license paralegals; the voluntary Florida Registered Paralegal designation and the national NALA and NFPA certifications are what employers look at, so ask a programme which examinations its graduates sit.",
+  "sortOrder": 61,
+  "cips": [
+    {
+      "cipCode": "22.03",
+      "note": "Legal support services — the paralegal certificates, associate degrees and three bachelor’s degrees. 31 Florida public institutions, including the technical colleges, which is what makes this the most available legal programme in the state."
+    },
+    {
+      "cipCode": "22.00",
+      "note": "Non-professional legal studies — the undergraduate legal studies major, awarded by one Florida public institution. ⚠ Included because a student searching for “legal studies” means this or the paralegal degrees, and separating them would hide one behind the other."
+    }
+  ],
+  "related": [
+    {
+      "slug": "law",
+      "note": "The professional degree, and the distinction to be clear about before choosing: a paralegal works under a lawyer’s supervision and may not give legal advice or appear in court. ⚠ Nothing here shortens a J.D. — but the experience is genuinely useful evidence about whether you want one."
+    }
+  ],
+  "bodyHtml": null,
+  "isPublished": true
+}

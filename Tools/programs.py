@@ -86,9 +86,10 @@ CIP_RE = re.compile(r"^\d{2}\.?$|^\d{2}\.\d{2}$|^\d{2}\.\d{4}$")
 # an unknown code either.
 LIMITS = {"name": 200, "description": 2000, "degreesNote": 2000, "note": 500}
 MAX_CIPS = 40
+MAX_RELATED = 20
 
 FIELDS = ("name", "description", "degreesNote", "bodyHtml",
-          "isPublished", "sortOrder", "cips")
+          "isPublished", "sortOrder", "cips", "related")
 
 # What to do next, per server error code. The code alone tells a first-time
 # user nothing; these say where the fix lives and whether it needs a deploy.
@@ -244,6 +245,39 @@ def check(slug, doc, tree=None):
             warn.append("cips[%d] (%s): no note -- say why this code belongs to the "
                         "programme, since it decides which schools appear" % (i, code))
 
+    # ⚠⚠ Ron, 2026-09-19: "the similarities between mechanical engineering and aerospace
+    # engineering (any similar program) should be noted as these are things students would not
+    # normally know when looking at a career." The LINK is not the content; the NOTE is.
+    rel = doc.get("related") or []
+    if len(rel) > MAX_RELATED:
+        err.append("%d related, limit %d" % (len(rel), MAX_RELATED))
+    known = set(authored())
+    seen_rel = set()
+    for i, r in enumerate(rel):
+        rs = (r.get("slug") or "").strip()
+        if not SLUG_RE.match(rs):
+            err.append("related[%d]: %r is not a slug" % (i, rs))
+        if rs == slug:
+            err.append("related[%d]: a programme cannot be related to itself" % i)
+        if rs in seen_rel:
+            err.append("related[%d]: %s appears twice" % (i, rs))
+        seen_rel.add(rs)
+        note = (r.get("note") or "").strip()
+        if not note:
+            # The server refuses this too: a bare link says only "these are near each other",
+            # which the reader can already see.
+            err.append("related[%d] (%s): note is required -- say WHY a student reading this "
+                       "programme should look at that one" % (i, rs))
+        elif len(note) > LIMITS["note"]:
+            err.append("related[%d] (%s): note is %d chars, limit %d"
+                       % (i, rs, len(note), LIMITS["note"]))
+        if rs and rs not in known:
+            warn.append("related[%d] (%s): no local document -- it must already exist on the "
+                        "server or the push is refused 422" % (i, rs))
+    if not rel:
+        warn.append("no related programmes -- a student choosing a major cannot see which "
+                    "neighbouring degree keeps which doors open, and nothing else tells them")
+
     if not (doc.get("degreesNote") or "").strip():
         warn.append("no degreesNote -- the level a student enters at (certificate, A.S., "
                     "bachelor's) is the decision they actually face")
@@ -271,8 +305,9 @@ def cmd_validate(args):
             bad += 1
             continue
         err, warn = check(slug, doc, tree)
-        print("%s %-28s %d cip(s)"
-              % ("FAIL" if err else "ok  ", slug, len(doc.get("cips") or [])))
+        print("%s %-28s %d cip(s), %d related"
+              % ("FAIL" if err else "ok  ", slug, len(doc.get("cips") or []),
+                 len(doc.get("related") or [])))
         for m in err:
             print("       ERROR   %s" % m)
         for m in warn:
@@ -377,24 +412,66 @@ def cmd_push(args):
 
     s = requests.Session()
     tok = token(s)
+    H = {"Authorization": "Bearer %s" % tok}
+
+    # ⚠⚠ A relation needs BOTH ends to exist, and a push is alphabetical -- so a programme
+    # naming one that is not live yet would be refused 422 through no fault of the author.
+    # Where that would happen, send the documents WITHOUT their relations first and link them
+    # in a second pass. Two requests per programme is cheap; a failed batch is not.
+    live = set()
+    try:
+        lr = requests.get("%s/api/v1/programs" % BASE_URL, timeout=30)
+        if lr.status_code == 200:
+            live = {i["slug"] for i in lr.json()["data"]}
+    except requests.exceptions.RequestException:
+        pass
+
+    wanted_targets = {r.get("slug") for d in docs.values() for r in (d.get("related") or [])}
+    unknown_targets = sorted(t for t in wanted_targets if t and t not in live and t not in docs)
+    if unknown_targets:
+        print("FAIL -- related programme(s) that neither exist on the site nor are in this push:")
+        print("     %s" % " ".join(unknown_targets))
+        print("     Push those first, or correct the slug. Nothing was sent.")
+        return 1
+
+    two_pass = any(t and t not in live for t in wanted_targets)
+    if two_pass:
+        print("linking pass needed: some related programmes are new, so each document is sent "
+              "once to create it and once to link it.")
 
     unmatched = {}
     for slug, doc in docs.items():
         body = {k: doc.get(k) for k in FIELDS}
+        if two_pass:
+            body["related"] = []
         try:
             r = s.put("%s/api/v1/programs/%s" % (BASE_URL, slug), json=body,
-                      headers={"Authorization": "Bearer %s" % tok}, timeout=60)
+                      headers=H, timeout=60)
         except requests.exceptions.ConnectionError:
             return unreachable()
         if r.status_code != 200:
             return fail(r, "push %s" % slug)
         d = r.json()["data"]
-        print("%-8s %-24s %d cip(s), %d school(s)   %s/programs/%s"
-              % (d["outcome"], slug, d["cipCount"], d["schoolCount"], BASE_URL, slug))
+        print("%-8s %-24s %d cip(s), %d school(s), %d related   %s/programs/%s"
+              % (d["outcome"], slug, d["cipCount"], d["schoolCount"],
+                 d.get("relatedCount", 0), BASE_URL, slug))
         if not doc.get("isPublished"):
             print("         ⚠ not visible to readers -- isPublished is false.")
         if d.get("unmatchedCips"):
             unmatched[slug] = d["unmatchedCips"]
+
+    if two_pass:
+        linked = 0
+        for slug, doc in docs.items():
+            if not (doc.get("related") or []):
+                continue
+            body = {k: doc.get(k) for k in FIELDS}
+            r = s.put("%s/api/v1/programs/%s" % (BASE_URL, slug), json=body,
+                      headers=H, timeout=60)
+            if r.status_code != 200:
+                return fail(r, "link %s" % slug)
+            linked += r.json()["data"].get("relatedCount", 0)
+        print("linked %d related programme(s) across %d document(s)." % (linked, len(docs)))
 
     if unmatched:
         # ⚠ Not an error: a code can be real and have no Florida completions in the
@@ -478,6 +555,12 @@ def cmd_show(args):
             print("   (add --schools to name them)")
     if d["careerPaths"]:
         print("career paths: %s" % " ".join(p["slug"] for p in d["careerPaths"]))
+    else:
+        print("⚠ no career path names this programme -- the page cannot say what it leads to")
+    for r in d.get("related") or []:
+        print("   close: %-24s %-40s%s"
+              % (r["slug"], ell(r["note"] or "", 40),
+                 "" if r["mutual"] else "   (from its side)"))
     return 0
 
 

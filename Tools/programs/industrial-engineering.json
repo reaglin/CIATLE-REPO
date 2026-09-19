@@ -14,5 +14,15 @@
       "cipCode": "14.27",
       "note": "Systems Engineering — filed separately by five Florida institutions and awarded mostly at master’s and certificate level. ⚠ Included deliberately: Florida departments routinely teach the two as one programme (\"Industrial and Systems Engineering\"), and filing under 14.35 alone would hide institutions that teach the subject."
     }
+  ],
+  "related": [
+    {
+      "slug": "mechanical-engineering",
+      "note": "⚠ The realistic alternative where no industrial degree is nearby — it is awarded at eleven institutions against four — and manufacturing, ergonomics and operations work is open to both. Mechanical designs the machine; industrial designs the system around it."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "The adjacent route, and relevant here because a sizeable share of people enter this occupation from the floor rather than from a degree. Engineering technology programmes are how many of them formalise what they already do."
+    }
   ]
 }

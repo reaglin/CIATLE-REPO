@@ -10,5 +10,15 @@
       "cipCode": "14.02",
       "note": "Aerospace, aeronautical and astronautical engineering — the degree itself. ⚠ Three Florida public institutions award it, which is the smallest footprint of any engineering programme on this site."
     }
+  ],
+  "related": [
+    {
+      "slug": "mechanical-engineering",
+      "note": "⚠ The serious alternative, not a fallback — and the one to read before you commit to relocating. It is offered at eleven Florida institutions against three, aerospace firms hire its graduates in large numbers, and it keeps far more industries open if your plans change."
+    },
+    {
+      "slug": "materials-engineering",
+      "note": "The aerospace industry is the biggest consumer of materials expertise there is — composites, high-temperature alloys, fatigue and fracture. A materials master’s after an aerospace bachelor’s is a well-worn route into structures and propulsion work."
+    }
   ]
 }

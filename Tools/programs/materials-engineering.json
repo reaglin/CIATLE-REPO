@@ -1,0 +1,28 @@
+{
+  "name": "Materials Science and Engineering",
+  "description": "Materials engineering programmes teach why materials behave as they do and how to choose or design them — metals, polymers, ceramics, composites and semiconductors — which makes it the discipline sitting underneath every other engineering field’s failures.",
+  "degreesNote": "⚠ In Florida this is largely a GRADUATE programme: four public institutions award in it, but only the University of Florida and UCF award a bachelor’s, while FIU and USF are master’s and doctoral only. ⚠ That shapes the realistic route — many people enter materials through a mechanical, chemical or physics bachelor’s and specialise at master’s level. If materials is the goal and you cannot relocate, read those degrees first rather than treating this as a closed door.",
+  "sortOrder": 38,
+  "cips": [
+    {
+      "cipCode": "14.18",
+      "note": "Materials Engineering — four Florida public institutions, and ⚠ only two of them at bachelor’s level, which is the most important fact on this page."
+    }
+  ],
+  "related": [
+    {
+      "slug": "mechanical-engineering",
+      "note": "The commonest way into materials work in Florida: offered at eleven institutions, it covers mechanics of materials and manufacturing and is accepted for materials master’s admission. ⚠ Where there is no materials bachelor’s near you, this is the practical answer."
+    },
+    {
+      "slug": "chemical-engineering",
+      "note": "The other standard entry, and the better one if polymers, coatings, electrochemistry or semiconductor processing are what draw you."
+    },
+    {
+      "slug": "aerospace-engineering",
+      "note": "The largest single consumer of materials expertise in Florida — composites, high-temperature alloys and fatigue. The two fields hire each other’s graduates constantly."
+    }
+  ],
+  "bodyHtml": null,
+  "isPublished": true
+}

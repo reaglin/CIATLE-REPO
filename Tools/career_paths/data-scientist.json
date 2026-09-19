@@ -67,8 +67,13 @@
       "note": "The largest feeder by volume, and the one that carries the programming and systems half of this work. ⚠ 41 Florida public institutions award computing credentials, including every state college that teaches the subject — but ask about transfer early, because a computing A.S. is a career degree and does not always articulate into a university computer science bachelor’s."
     },
     {
+      "slug": "statistics",
+      "note": "The inference half of this work, and the degree that carries it deepest — six Florida public institutions award it. ⚠ Statistics plus real programming ability is the combination most data-scientist job adverts are actually describing."
+    },
+    {
       "slug": "mechanical-engineering",
-      "note": "⚠ Not a route into data science. Listed only because engineering degrees carry the mathematics and computing this work needs — if you are already in engineering and drawn to data, you are closer than you think."
+      "note": "⚠ Not a route into data science. Listed only because engineering degrees carry the mathematics and computing this work needs — if you are already in engineering and drawn to data, you are closer than you think.",
+      "isRoute": false
     }
   ],
   "courses": [

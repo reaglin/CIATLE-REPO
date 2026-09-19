@@ -190,6 +190,11 @@
     {
       "slug": "law",
       "note": "The destination degree: the Juris Doctor, which four Florida PUBLIC institutions award and which bar admission runs through. ⚠ It is a GRADUATE programme — no undergraduate major is required or preferred, which is exactly what the sixteen feeder fields above are showing."
+    },
+    {
+      "slug": "paralegal-studies",
+      "note": "⚠ NOT a route to practising law, and listed here because it is the other degree in this field and by far the most available: 31 Florida public institutions, mostly a two-year associate degree or a certificate. A paralegal works under a lawyer’s supervision and may not give legal advice — but it is paid legal work in about two years, and the closest look at the profession available before committing to the J.D.",
+      "isRoute": false
     }
   ]
 }

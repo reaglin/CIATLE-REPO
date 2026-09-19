@@ -72,6 +72,121 @@
     </div>
 }
 
+@if (Model.ProgramsForPath.Any())
+{
+    @* Ron: note, on the career page, the schools that offer the associated program.
+       ⚠ Split by IsRoute: a heading is read and the grey note under it is not, so
+       "leads here" must not be asserted over a note that denies it. *@
+    <h2 class="h5 mt-4 mb-1">Programs that lead here</h2>
+    <p class="text-muted small mb-2" style="max-width: 60rem;">
+        A program is a field of study, one level above a degree — each page says which degrees it
+        covers and which Florida institutions award them. &#9888; The count is institutions that
+        <strong>awarded a credential in the field</strong> in @(Model.AwardYear > 0 ? Model.AwardYear.ToString() : "the latest federal data");
+        it is not a promise that a school runs this exact degree, and it counts something different
+        from the course-based list further down.
+    </p>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var p in Model.ProgramsForPath.Where(x => x.IsRoute))
+        {
+            <a asp-page="/Programs/Program" asp-route-slug="@p.Slug"
+               class="list-group-item list-group-item-action py-2">
+                <div class="d-flex justify-content-between align-items-start">
+                    <span class="fw-semibold">@p.Name</span>
+                    @if (p.Schools > 0)
+                    {
+                        <span class="badge text-bg-light text-muted ms-2 text-nowrap">
+                            @p.Schools Florida schools
+                        </span>
+                    }
+                </div>
+                @if (!string.IsNullOrWhiteSpace(p.Note))
+                {
+                    <div class="small text-muted mt-1">@p.Note</div>
+                }
+            </a>
+        }
+    </div>
+
+    @if (Model.ProgramsForPath.Any(x => !x.IsRoute))
+    {
+        <h2 class="h5 mt-4 mb-1">Related, but not a route in</h2>
+        <p class="text-muted small mb-2" style="max-width: 60rem;">
+            Programs worth knowing about if you are considering this career &mdash; &#9888; they do
+            <strong>not</strong> lead to it. Each row says what it is and is not.
+        </p>
+        <div class="list-group list-group-flush mb-4">
+            @foreach (var p in Model.ProgramsForPath.Where(x => !x.IsRoute))
+            {
+                <a asp-page="/Programs/Program" asp-route-slug="@p.Slug"
+                   class="list-group-item list-group-item-action py-2">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <span class="fw-semibold">@p.Name</span>
+                        @if (p.Schools > 0)
+                        {
+                            <span class="badge text-bg-light text-muted ms-2 text-nowrap">
+                                @p.Schools Florida schools
+                            </span>
+                        }
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(p.Note))
+                    {
+                        <div class="small text-muted mt-1">@p.Note</div>
+                    }
+                </a>
+            }
+        </div>
+    }
+}
+
+@* ⚠⚠ Ron, 2026-09-19: a student looking at one career cannot see which others sit next
+   to it, and that is exactly what they need before choosing a major. ⚠ These are DERIVED
+   from the federal classification, not curated like the rest of the page, and the intro
+   says so. *@
+<h2 class="h5 mt-4 mb-1">Careers similar to this one</h2>
+@if (Model.NearbyPaths.Any())
+{
+    <p class="text-muted small mb-2" style="max-width: 60rem;">
+        Careers filed under the same broad field in the federal classification
+        @if (Model.Series is not null)
+        {
+            <text>(<strong>@Model.Series.Title</strong>)</text>
+        }
+        &mdash; often they share early coursework, and each row says which group it is filed in.
+        &#9888; Worth reading BEFORE you commit: switching between neighbours is cheap early and
+        expensive late.
+    </p>
+    <div class="list-group list-group-flush mb-2">
+        @foreach (var n in Model.NearbyPaths)
+        {
+            <a asp-page="/Careers/Path" asp-route-slug="@n.Slug"
+               class="list-group-item list-group-item-action py-2">
+                <div class="d-flex justify-content-between align-items-start">
+                    <span class="fw-semibold">@n.Name</span>
+                    <span class="badge text-bg-light text-muted ms-2 text-nowrap d-none d-md-inline">@n.CipTitle</span>
+                </div>
+                <div class="small text-muted mt-1">@n.Description</div>
+            </a>
+        }
+    </div>
+    @if (Model.Series is not null)
+    {
+        <p class="small mb-4">
+            <a asp-page="/Careers/Area" asp-route-code="@Model.Series.Code">
+                See every career in @Model.Series.Title &rarr;
+            </a>
+        </p>
+    }
+}
+else
+{
+    <p class="text-muted small mb-4" style="max-width: 60rem;">
+        No other career on this site is filed in the same field yet &mdash; which says nothing
+        about the career, only that we have not written its neighbours.
+        <a asp-page="/Careers/Index">Browse all career paths</a>@if (Model.Series is not null)
+        {<text>, or <a asp-page="/Careers/Area" asp-route-code="@Model.Series.Code">see what else is filed under @Model.Series.Title</a></text>}.
+    </p>
+}
+
 @if (Model.Courses.Any())
 {
     <h2 class="h5 mt-4 mb-1">Courses along this path</h2>
@@ -121,34 +236,6 @@
     </div>
 }
 
-@if (Model.ProgramsForPath.Any())
-{
-    @* Ron: note, on the career page, the schools that offer the associated program.
-       The count is derived from the program, which owns no school list itself. *@
-    <h2 class="h5 mt-4 mb-1">Programs that lead here</h2>
-    <div class="list-group list-group-flush mb-4">
-        @foreach (var p in Model.ProgramsForPath)
-        {
-            <a asp-page="/Programs/Program" asp-route-slug="@p.Slug"
-               class="list-group-item list-group-item-action py-2">
-                <div class="d-flex justify-content-between align-items-start">
-                    <span class="fw-semibold">@p.Name</span>
-                    @if (p.Schools > 0)
-                    {
-                        <span class="badge text-bg-light text-muted ms-2 text-nowrap">
-                            offered by @p.Schools Florida schools
-                        </span>
-                    }
-                </div>
-                @if (!string.IsNullOrWhiteSpace(p.Note))
-                {
-                    <div class="small text-muted mt-1">@p.Note</div>
-                }
-            </a>
-        }
-    </div>
-}
-
 @if (Model.Schools.Any())
 {
     @* Derived from course offerings, so the claim stays true: these schools teach the
@@ -172,7 +259,7 @@
                             <div class="small text-muted">@s.Name</div>
                         }
                     </span>
-                    <span class="badge text-bg-light text-muted ms-2 text-nowrap">@s.Offered</span>
+                    <span class="badge text-bg-light text-muted ms-2 text-nowrap">@s.Offered of @Model.CoursesListed</span>
                 </div>
             </div>
         }

@@ -72,6 +72,12 @@ session needs to know is short:
 | **See what is live** | `python career_paths.py list` |
 | **Browse the framework** | `/careers` → `/careers/area/{cip}` → `/careers/{slug}` |
 
+⚠⚠ **A PROGRAMME LINK MUST SAY WHETHER IT IS A ROUTE (2026-09-19).** `programs: [{slug, note,
+isRoute}]`, and `isRoute` defaults to true. **Set it FALSE when the programme does not lead to the
+career** — Data Scientist names Mechanical Engineering *"Not a route into data science"*, and
+under the heading *"Programs that lead here"* that contradicted itself. `career_paths.py validate`
+now FAILS a row whose note says "not a route" while `isRoute` is still true.
+
 ### ⚠⚠ PROGRAMMES ARE NOW PUSHABLE CONTENT TOO (2026-09-19) — and they come FIRST
 
 **Until 2026-09-19 a programme could only be added by REDEPLOYING the site**, because
@@ -95,10 +101,18 @@ excluded from being listed because their offerings are limited."* **Put the evid
 `note`**, and claim WHOLE LEVELS only (`15.`, `51.38`, `14.1901`) — a part-code like `14.1` would
 sweep in 14.10 through 14.19 and is refused.
 
-⚠ **Only 5 programmes exist** (nursing, engineering technology, mechanical / chemical / biomedical
-engineering) **against ten published paths**, which is why Data Scientist's only programme is
-Mechanical Engineering with a note saying it is not a route in. **Authoring programmes is now
-ordinary content work, not a deploy.**
+⚠⚠ **A PROGRAMME ALSO CARRIES `related` (2026-09-19), AND THE NOTE IS THE CONTENT.** Ron:
+*"the similarities between mechanical engineering and aerospace engineering (any similar program)
+should be noted as these are things students would not normally know when looking at a career…
+Just like civil, structural, transportation, etc… are all very similar to civil."* A bare link
+says only what the CIP tree already shows, so **the server refuses an empty note** — write the
+thing the student could not know (*aerospace employers hire mechanical graduates in large numbers,
+and mechanical is offered at eleven institutions against three*). Links are read in BOTH
+directions, and a related slug must already exist or the push is refused 422.
+
+✅ **18 programmes now exist** (2026-09-19), and every published path names one that actually leads
+there. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
+`cip.json` still is.
 
 ⚠⚠⚠ **THE ONE RULE: A PATH IS CURATED, NEVER DERIVED.** Every course is placed by an author
 with a **required** stated reason. **Do not** build a course list by parsing prerequisites, by

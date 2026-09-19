@@ -83,6 +83,9 @@ token. All responses use the site envelope: `{ "success": true, "data": …, "er
   "cips": [
     { "cipCode": "51.38", "note": "Registered nursing — the A.S. and BSN routes to RN licensure." },
     { "cipCode": "51.39", "note": "Practical nursing. ⚠ Included deliberately: a school with only an LPN programme has a nursing programme." }
+  ],
+  "related": [
+    { "slug": "paralegal-studies", "note": "Why a student reading THIS programme should look at that one." }
   ]
 }
 ```
@@ -102,7 +105,9 @@ document stops counting schools.
 | `cips` | **required, ≥ 1**, ≤ 40, no duplicates |
 | `cipCode` shape | a **whole level only**: a series (`15` or `15.`), a group (`51.38`), or one 6-digit code (`14.1901`) |
 | `cipCode` existence | must be in the seeded CIP tree; a 6-digit code is checked against its 4-digit group |
-| `note` | optional, ≤ 500 — but write it: it is the evidence for claiming the code |
+| `note` (on a cip) | optional, ≤ 500 — but write it: it is the evidence for claiming the code |
+| `related` | optional, ≤ 20, no duplicates, **cannot name the programme itself**, and every slug must already exist on the server |
+| `note` (on a related) | **required**, ≤ 500 — see below |
 
 ⚠⚠ **Why part-codes are refused.** Codes are matched with `StartsWith`, so `14.1` would sweep in
 14.10 through 14.19 — electrical engineering along with mechanical. Anything that is not a whole
@@ -122,6 +127,32 @@ level of the tree comes back 400.
 completions in the award year. But a code matching nothing usually means the wrong code — check it,
 because the page will show it finding no schools.
 
+## `related` — the programmes next door, and why
+
+⚠⚠ **Ron, 2026-09-19:** *"the similarities between mechanical engineering and aerospace
+engineering (any similar program) should be noted as these are things students would not normally
+know when looking at a career… Just like civil, structural, transportation, etc… are all very
+similar to civil."*
+
+**The link is not the content — the NOTE is**, which is why the server refuses an empty one. The
+CIP tree already puts these programmes side by side; what it cannot say is *aerospace employers
+hire mechanical graduates in large numbers, and mechanical is offered at eleven institutions
+against three*. Write the note **for the reader of THIS page**, and say the thing they could not
+have known:
+
+| ❌ Not this | ✅ This |
+|---|---|
+| "A related engineering programme." | "⚠ Closer than the names suggest: aerospace employers hire mechanical graduates in large numbers, because aerodynamics, propulsion and structures are mechanical subjects." |
+| "See also environmental engineering." | "Usually the same department and often the same first two years — if water and stormwater are the part of civil that interests you, check whether your school awards the separate degree or an emphasis inside civil." |
+
+**Read in BOTH directions.** A relation authored on one programme is shown on the other as well, so
+a missing back-link never hides a connection. Authoring both sides is still better, because each
+note can then speak to that page's reader; a reverse-only entry is marked `mutual: false` in the API.
+
+⚠⚠ **A relation needs both ends to exist**, so `push --all` sends every document twice when any
+target is new — once to create it, once to link it. It says so when it does. A slug that is neither
+live nor in the push is refused **before anything is sent**.
+
 ## `GET /api/v1/programs` — published programmes
 
 `?includeUnpublished=true` adds drafts and requires an admin token (403 otherwise). Each row:
@@ -130,14 +161,18 @@ because the page will show it finding no schools.
 ## `GET /api/v1/programs/{slug}` — one programme
 
 Adds `cips` (each with its CIP title and its own school count), `schools` (unit id, name, our
-institution code where we know it, award levels, completions), `awardLevels`, `awardYear`, and the
-`careerPaths` that name it. ⚠ Schools are ordered **by name, never by completions** — the counts are
+institution code where we know it, award levels, completions), `awardLevels`, `awardYear`, the
+`careerPaths` that name it, and `related` (both directions, each with `mutual`). ⚠ Schools are ordered **by name, never by completions** — the counts are
 shown but must not rank one school above another.
 
 ## `DELETE /api/v1/programs/{slug}` (admin)
 
 **409 `PROGRAM_IN_USE`** while a career path names the programme — the message lists the paths.
 Remove it from their documents, push those, then delete. 404 if there is no such programme.
+
+⚠ Relations pointing AT the programme are cleared first, so a delete is never blocked by a link
+the caller cannot see — but those other programmes lose that connection, which is one more reason
+the CLI shows what is about to go.
 
 ⚠ **This removes a live public page.** `programs.py delete` shows what is about to go (name, CIP
 count, school count, the paths that name it) and asks before sending; `--yes` skips the question.

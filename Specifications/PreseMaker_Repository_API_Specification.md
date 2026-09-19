@@ -1566,7 +1566,7 @@ from the IPEDS award table by CIP prefix at read time and is stored nowhere.
 | DELETE | `/career-paths/{slug}` | Admin | Remove a path and its rows |
 | GET | `/programs` | Public | Published programmes with derived school counts. `?includeUnpublished=true` requires an admin token (403 otherwise) |
 | GET | `/programs/{slug}` | Public | One programme: its CIP codes, the schools its codes find, award levels and year, and the paths it leads to |
-| PUT | `/programs/{slug}` | Admin | Upsert. CIP codes are replaced wholesale |
+| PUT | `/programs/{slug}` | Admin | Upsert. CIP codes **and related-programme links** are replaced wholesale |
 | DELETE | `/programs/{slug}` | Admin | Remove a programme — **409 `PROGRAM_IN_USE`** while a career path names it |
 
 **CIP codes.** A career path is filed on a 4-digit group (`51.38`) and may carry further anchors,
@@ -1575,6 +1575,23 @@ series (`15` or `15.`), a group (`51.38`) or one 6-digit code (`14.1901`). A par
 `14.1` is refused 400: codes are matched with `StartsWith`, so it would sweep in 14.10 through
 14.19. Every code must exist in the seeded tree, or the request comes back **422
 `CIP_NODE_NOT_FOUND`** — widening the tree is a deploy.
+
+**A programme link says whether it is a ROUTE (added 2026-09-19).** `programs: [{slug, note,
+isRoute}]` on a career path, `isRoute` defaulting to **true**. ⚠ It exists because the pages were
+asserting something their own notes denied: Data Scientist names Mechanical Engineering with the
+note *"Not a route into data science"*, under a heading reading *"Programs that lead here"*. A
+heading is read and a grey note under it is not, so the claim lives in the structure: `false` moves
+the row to **"Related, but not a route in"** on the career page and to **"Careers that name this
+program, but not as a route"** on the programme page.
+
+**Related programmes (added 2026-09-19).** A programme may name others a student should read
+beside it (`related: [{slug, note}]`, ≤ 20). ⚠ The **note is required**: the CIP tree already
+shows which programmes are near each other, so the row exists to say the thing a student cannot
+know — that aerospace employers hire mechanical graduates, or that civil and environmental share a
+department and a first two years. Links are **read in both directions**, so a connection authored
+on one programme appears on the other with `mutual: false`. A related slug must already exist
+(**422 `PROGRAM_NOT_FOUND`**) and cannot be the programme itself. The programme page also lists the
+**career paths that name it**, which is the reverse of the path page's "Programs that lead here".
 
 **Push responses carry the work still owed.** A career-path push returns `unlistedCourses` (courses
 the path names that the catalog does not carry, so the page would link to nothing); a programme push

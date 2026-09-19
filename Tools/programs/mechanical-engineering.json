@@ -10,5 +10,23 @@
       "cipCode": "14.19",
       "note": "Mechanical Engineering — the degree itself."
     }
+  ],
+  "related": [
+    {
+      "slug": "aerospace-engineering",
+      "note": "⚠ Closer than the names suggest, and the thing nobody tells you: aerospace employers hire mechanical graduates in large numbers, because aerodynamics, propulsion and structures are mechanical subjects. Aerospace is awarded at three Florida institutions against eleven for mechanical — so if the Space Coast is the goal but the degree is not near you, this is the route."
+    },
+    {
+      "slug": "materials-engineering",
+      "note": "What sits underneath mechanical failure: fatigue, fracture, composites and high-temperature alloys. ⚠ Florida awards the materials bachelor’s at only two institutions, so the usual route into materials work is exactly this degree plus a materials master’s."
+    },
+    {
+      "slug": "industrial-engineering",
+      "note": "The same factory seen from the other side: mechanical designs the machine, industrial designs the system it runs in. ⚠ Worth reading if what interests you about manufacturing is throughput, quality and logistics rather than the hardware itself."
+    },
+    {
+      "slug": "ocean-engineering",
+      "note": "Marine vehicles, underwater systems and offshore machinery are mechanical engineering in salt water. With ocean engineering awarded at two institutions, a mechanical degree plus a marine specialisation is how most people get there."
+    }
   ]
 }

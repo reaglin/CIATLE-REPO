@@ -14,5 +14,15 @@
       "cipCode": "30.71",
       "note": "Data Analytics — the sibling code, also ten institutions and more of it at baccalaureate and master’s level. ⚠ Included because Florida institutions use the two names interchangeably; a student searching only for \"data science\" would miss half the state’s provision."
     }
+  ],
+  "related": [
+    {
+      "slug": "computer-science",
+      "note": "The larger and older programme, available at far more institutions — 41 award computing credentials against thirteen here. ⚠ If no data degree is near you, a computing degree with statistics coursework is the standard route into this work, and it is more portable."
+    },
+    {
+      "slug": "statistics",
+      "note": "⚠ The foundation this programme is built on. Statistics goes deeper into inference and study design and travels further into research, biostatistics and government; data science trades some of that for programming and machine learning."
+    }
   ]
 }

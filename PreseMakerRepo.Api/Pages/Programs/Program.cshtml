@@ -28,6 +28,98 @@
     <div class="mb-4" style="max-width: 60rem;">@Html.Raw(Model.Program.BodyHtml)</div>
 }
 
+@* ⚠ Ron, 2026-09-19: a program page has to say what the degree is FOR, and link there.
+   It sits above the school list because "where can I study this" is the second question.
+   ⚠⚠ The heading renders even when empty: a silent absence reads as "this degree leads
+   nowhere", which is the dead end this section exists to remove. *@
+<h2 class="h5 mt-4 mb-1">Careers this program leads to</h2>
+@if (Model.Paths.Any(p => p.IsRoute))
+{
+    <p class="text-muted small mb-2" style="max-width: 60rem;">
+        Each one sets out the courses along the way, the licence or certification at the end,
+        and the sources behind it.
+    </p>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var c in Model.Paths.Where(p => p.IsRoute))
+        {
+            <a asp-page="/Careers/Path" asp-route-slug="@c.Slug"
+               class="list-group-item list-group-item-action py-2">
+                <span class="fw-semibold">@c.Name</span>
+                @* ⚠ The CAREER's own description, not the path's note about this program: that
+                   note is written for a reader standing on the career page ("mechanical is the
+                   serious alternative to aerospace"), and read from here it is about the wrong
+                   subject. *@
+                <div class="small text-muted mt-1">@c.Description</div>
+            </a>
+        }
+    </div>
+}
+else
+{
+    <p class="text-muted small mb-4" style="max-width: 60rem;">
+        No career path has been written for this program yet &mdash; which says nothing about the
+        program, only that we have not got to it.
+        <a asp-page="/Careers/Index">Browse all career paths</a>, or look at the programs similar to
+        this one below.
+    </p>
+}
+
+@if (Model.Paths.Any(p => !p.IsRoute))
+{
+    @* Named by a career as a neighbour rather than a way in. Kept separate for the same reason
+       the career page keeps it separate: the heading is the part that gets read. *@
+    <h2 class="h5 mt-4 mb-1">Careers that name this program, but not as a route</h2>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var c in Model.Paths.Where(p => !p.IsRoute))
+        {
+            <a asp-page="/Careers/Path" asp-route-slug="@c.Slug"
+               class="list-group-item list-group-item-action py-2">
+                <span class="fw-semibold">@c.Name</span>
+                @if (!string.IsNullOrWhiteSpace(c.Note))
+                {
+                    <div class="small text-muted mt-1">@c.Note</div>
+                }
+            </a>
+        }
+    </div>
+}
+
+@if (Model.Related.Any())
+{
+    @* ⚠⚠ Ron, 2026-09-19: "the similarities between mechanical engineering and aerospace
+       engineering (any similar program) should be noted as these are things students would not
+       normally know when looking at a career". The note is the point; the link is just how you
+       get there. Shown in BOTH directions, so a connection authored on one program appears on
+       the other too. *@
+    <h2 class="h5 mt-4 mb-1">Programs similar to this one</h2>
+    <p class="text-muted small mb-2" style="max-width: 60rem;">
+        Neighbouring fields that share much of the same coursework, and often the same employers.
+        &#9888; Read these before you commit to a major &mdash; which doors a neighbouring degree
+        keeps open is the part no catalog tells you, and it is far cheaper to change now than later.
+    </p>
+    <div class="list-group list-group-flush mb-4">
+        @foreach (var r in Model.Related)
+        {
+            <a asp-page="/Programs/Program" asp-route-slug="@r.Slug"
+               class="list-group-item list-group-item-action py-2">
+                <div class="d-flex justify-content-between align-items-start">
+                    <span class="fw-semibold">@r.Name</span>
+                    @if (r.Schools > 0)
+                    {
+                        <span class="badge text-bg-light text-muted ms-2 text-nowrap">
+                            @r.Schools Florida schools
+                        </span>
+                    }
+                </div>
+                @if (!string.IsNullOrWhiteSpace(r.Note))
+                {
+                    <div class="small text-muted mt-1">@r.Note</div>
+                }
+            </a>
+        }
+    </div>
+}
+
 @if (Model.Schools.Any())
 {
     <h2 class="h5 mt-4 mb-1">Florida public institutions offering this program</h2>
@@ -50,9 +142,15 @@
         }
     </div>
     <p class="text-muted small">
-        Source: federal IPEDS completions data for @Model.AwardYear, first majors only.
-        &#9888; It records what was <em>awarded</em>, which is strong evidence of what is offered
-        but can lag a newly launched program by a year or two. Check the institution&rsquo;s own
-        catalog before applying.
+        Source: federal IPEDS completions data for @Model.AwardYear, first majors only &mdash;
+        the most recent year published. &#9888; It records what was <em>awarded</em>, which is
+        strong evidence of what is offered, but <strong>a program launched since @Model.AwardYear
+        will not appear here</strong>. Check the institution&rsquo;s own catalog before applying.
     </p>
 }
+
+<p class="text-muted small mt-4">
+    Updated @Model.Program.UpdatedUtc.ToString("d MMMM yyyy").
+    &#9888; Program pages describe a field of study, not one school&rsquo;s degree &mdash; always
+    read the catalog of the institution you are applying to.
+</p>

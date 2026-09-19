@@ -6,6 +6,7 @@ namespace PreseMakerRepo.Api.Validators;
 public class UpsertProgramRequestValidator : AbstractValidator<UpsertProgramRequest>
 {
     public const int MaxCipsPerProgram = 40;
+    public const int MaxRelatedPerProgram = 20;
 
     public UpsertProgramRequestValidator()
     {
@@ -20,7 +21,24 @@ public class UpsertProgramRequestValidator : AbstractValidator<UpsertProgramRequ
         RuleFor(x => x.Cips!.Count).LessThanOrEqualTo(MaxCipsPerProgram)
             .When(x => x.Cips is not null).WithName("cips");
 
+        RuleFor(x => x.Related!.Count).LessThanOrEqualTo(MaxRelatedPerProgram)
+            .When(x => x.Related is not null).WithName("related");
+
         RuleForEach(x => x.Cips).SetValidator(new ProgramCipInputValidator());
+        RuleForEach(x => x.Related).SetValidator(new ProgramRelatedInputValidator());
+    }
+}
+
+public class ProgramRelatedInputValidator : AbstractValidator<ProgramRelatedInput>
+{
+    public ProgramRelatedInputValidator()
+    {
+        RuleFor(x => x.Slug).NotEmpty().Matches(@"^[a-z0-9]+(-[a-z0-9]+)*$")
+            .WithMessage("Each related programme is named by its slug, e.g. mechanical-engineering.");
+        // ⚠ Required, unlike a CIP note: a bare link says "these are near each other", which the
+        // reader can already see. The note is the thing they cannot know.
+        RuleFor(x => x.Note).NotEmpty().MaximumLength(500)
+            .WithMessage("Say WHY a student reading this programme should look at that one.");
     }
 }
 

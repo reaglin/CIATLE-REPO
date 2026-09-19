@@ -1,0 +1,24 @@
+{
+  "name": "Environmental Engineering",
+  "description": "Environmental engineering programmes teach the systems that keep water, air and land usable — drinking water and wastewater treatment, stormwater, air quality, contaminated-site remediation, and the regulations that govern them. In Florida it is an unusually applied field: water supply, nutrient loading, coastal flooding and hurricane recovery are live problems rather than case studies.",
+  "degreesNote": "A Bachelor of Science in Environmental Engineering, with master’s and doctoral degrees above it, at seven Florida public institutions. ⚠ At several schools it is a degree option INSIDE the civil engineering department rather than a department of its own, so the first two years are usually the civil sequence. ⚠ It is a licensable discipline and the Professional Engineer route matters, because designs and permits filed with the Department of Environmental Protection and the water management districts are sealed by a PE. ⚠ Do not confuse it with environmental SCIENCE or environmental STUDIES: those are science degrees, they are not accredited as engineering, and they do not lead to the PE.",
+  "sortOrder": 37,
+  "cips": [
+    {
+      "cipCode": "14.14",
+      "note": "Environmental and environmental health engineering — the degree itself, at seven Florida public institutions. ⚠ It does not capture an environmental option taken inside a civil engineering degree, which is filed under civil."
+    }
+  ],
+  "related": [
+    {
+      "slug": "civil-engineering",
+      "note": "The parent discipline at most Florida schools, and often the same first two years. ⚠ If you want water resources, coastal work or stormwater and your institution has no environmental degree, the civil degree with a water-resources emphasis is the route — and it keeps structural and transportation open as well."
+    },
+    {
+      "slug": "chemical-engineering",
+      "note": "The overlap is real and under-advertised: treatment processes, reaction kinetics and mass transfer are chemical engineering subjects. Chemical graduates work in remediation and process-water treatment, and the degree opens industries environmental engineering does not."
+    }
+  ],
+  "bodyHtml": null,
+  "isPublished": true
+}

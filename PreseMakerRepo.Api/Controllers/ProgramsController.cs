@@ -68,6 +68,8 @@ public class ProgramsController : ControllerBase
         var p = await _db.Programs.AsNoTracking()
             .Include(x => x.Cips)
             .Include(x => x.CareerPaths).ThenInclude(l => l.CareerPath)
+            .Include(x => x.Related).ThenInclude(r => r.RelatedProgram!).ThenInclude(rp => rp.Cips)
+            .Include(x => x.RelatedFrom).ThenInclude(r => r.Program!).ThenInclude(op => op.Cips)
             .FirstOrDefaultAsync(x => x.Slug == slug);
 
         if (p is null || (!p.IsPublished && !User.IsInRole("Administrator")))
@@ -105,9 +107,10 @@ public class ProgramsController : ControllerBase
             schools,
             mine.Select(a => a.AwardLevel).Distinct().OrderBy(x => x).ToList(),
             mine.Count > 0 ? mine.Max(a => a.Year) : 0,
-            p.CareerPaths.OrderBy(l => l.SortOrder)
+            p.CareerPaths.Where(l => l.CareerPath!.IsPublished).OrderBy(l => l.SortOrder)
                          .Select(l => new ProgramCareerPathDto(
-                             l.CareerPath!.Slug, l.CareerPath.Name, l.Note)).ToList());
+                             l.CareerPath!.Slug, l.CareerPath.Name, l.Note, l.IsRoute)).ToList(),
+            RelatedOf(p, LoadAwardKeys(awards)));
 
         return Ok(ApiResponse<ProgramDto>.Ok(dto));
     }
@@ -154,7 +157,7 @@ public class ProgramsController : ControllerBase
                 "checked against its 4-digit group."));
 
         var now = DateTime.UtcNow;
-        var program = await _db.Programs.Include(p => p.Cips)
+        var program = await _db.Programs.Include(p => p.Cips).Include(p => p.Related)
                                         .FirstOrDefaultAsync(p => p.Slug == slug);
 
         bool created = program is null;
@@ -166,6 +169,7 @@ public class ProgramsController : ControllerBase
         else
         {
             _db.ProgramCips.RemoveRange(program.Cips);
+            _db.ProgramRelations.RemoveRange(program.Related);
         }
 
         program.Name = request.Name!.Trim();
@@ -190,6 +194,38 @@ public class ProgramsController : ControllerBase
             });
         }
 
+        // ⚠ A related programme must already exist, and must not be the programme itself:
+        // a dead link on a page whose whole job is to show a student their options is worse
+        // than a refusal.
+        var wantRel = (request.Related ?? []).Select(r => r.Slug!.Trim().ToLowerInvariant())
+                                             .Distinct().ToList();
+        if (wantRel.Contains(slug))
+            return UnprocessableEntity(ApiResponse<object?>.Fail(ErrorCodes.ValidationError,
+                "A programme cannot be related to itself."));
+
+        var relIds = await _db.Programs.Where(x => wantRel.Contains(x.Slug))
+                                       .ToDictionaryAsync(x => x.Slug, x => x.Id);
+        var missingRel = wantRel.Except(relIds.Keys).ToList();
+        if (missingRel.Count > 0)
+            return UnprocessableEntity(ApiResponse<object?>.Fail(ErrorCodes.ProgramNotFound,
+                $"Unknown related programme slug(s): {string.Join(", ", missingRel)}. " +
+                "Push that programme first, or correct the slug."));
+
+        int rorder = 0;
+        foreach (var r in request.Related ?? [])
+        {
+            var target = r.Slug!.Trim().ToLowerInvariant();
+            if (target == slug) continue;
+            _db.ProgramRelations.Add(new ProgramRelation
+            {
+                Id = Guid.NewGuid(),
+                ProgramId = program.Id,
+                RelatedProgramId = relIds[target],
+                Note = Blank(r.Note),
+                SortOrder = rorder++
+            });
+        }
+
         await _db.SaveChangesAsync();
 
         // A code matching no award at all is reported, not refused: a code can be real and
@@ -200,7 +236,7 @@ public class ProgramsController : ControllerBase
 
         return Ok(ApiResponse<UpsertProgramResponse>.Ok(new UpsertProgramResponse(
             slug, created ? "created" : "updated", codes.Count,
-            CountSchools(awards, codes), unmatched)));
+            CountSchools(awards, codes), wantRel.Count, unmatched)));
     }
 
     /// <summary>
@@ -215,6 +251,8 @@ public class ProgramsController : ControllerBase
     {
         var program = await _db.Programs
             .Include(p => p.CareerPaths).ThenInclude(l => l.CareerPath)
+            .Include(p => p.Related)
+            .Include(p => p.RelatedFrom)
             .FirstOrDefaultAsync(p => p.Slug == slug);
 
         if (program is null)
@@ -229,6 +267,10 @@ public class ProgramsController : ControllerBase
                 "Remove it from their documents and push them before deleting it."));
         }
 
+        // Relations pointing AT this programme are RESTRICT, so clear them explicitly rather
+        // than letting the delete fail on a foreign key the caller cannot see.
+        _db.ProgramRelations.RemoveRange(program.Related);
+        _db.ProgramRelations.RemoveRange(program.RelatedFrom);
         _db.Programs.Remove(program);   // CIP rows cascade
         await _db.SaveChangesAsync();
         return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse("Programme deleted.")));
@@ -245,6 +287,39 @@ public class ProgramsController : ControllerBase
     private async Task<List<AwardKey>> LoadAwardKeysAsync() =>
         await _db.InstitutionAwards.AsNoTracking()
             .Select(a => new AwardKey(a.UnitId, a.CipCode)).ToListAsync();
+
+    private static List<AwardKey> LoadAwardKeys(List<InstitutionAward> awards) =>
+        awards.Select(a => new AwardKey(a.UnitId, a.CipCode)).ToList();
+
+    /// <summary>
+    /// Neighbouring programmes, read in BOTH directions: the ones this programme names, then the
+    /// ones that name it. ⚠ A connection authored on only one side still shows on both, because a
+    /// student who lands on the other page needs it just as much — the reverse entry carries the
+    /// other programme's note and is flagged <c>mutual: false</c>.
+    /// </summary>
+    private static List<ProgramRelatedDto> RelatedOf(ProgramEntity p, List<AwardKey> awards)
+    {
+        var seen = new HashSet<string>();
+        var list = new List<ProgramRelatedDto>();
+
+        foreach (var r in p.Related.OrderBy(r => r.SortOrder))
+        {
+            var t = r.RelatedProgram;
+            if (t is null || !t.IsPublished || !seen.Add(t.Slug)) continue;
+            list.Add(new ProgramRelatedDto(t.Slug, t.Name, r.Note,
+                CountSchools(awards, t.Cips.Select(c => c.CipCode)), true));
+        }
+
+        foreach (var r in p.RelatedFrom.OrderBy(r => r.SortOrder))
+        {
+            var o = r.Program;
+            if (o is null || !o.IsPublished || !seen.Add(o.Slug)) continue;
+            list.Add(new ProgramRelatedDto(o.Slug, o.Name, r.Note,
+                CountSchools(awards, o.Cips.Select(c => c.CipCode)), false));
+        }
+
+        return list;
+    }
 
     private static int CountSchools(List<AwardKey> awards, IEnumerable<string> prefixes)
     {

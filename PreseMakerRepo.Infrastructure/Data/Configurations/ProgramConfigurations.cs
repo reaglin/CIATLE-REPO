@@ -41,6 +41,31 @@ public class ProgramCipConfiguration : IEntityTypeConfiguration<ProgramCip>
     }
 }
 
+public class ProgramRelationConfiguration : IEntityTypeConfiguration<ProgramRelation>
+{
+    public void Configure(EntityTypeBuilder<ProgramRelation> b)
+    {
+        b.ToTable("ProgramRelations");
+        b.HasKey(r => r.Id);
+        b.Property(r => r.Note).HasMaxLength(500);
+
+        b.HasOne(r => r.Program)
+         .WithMany(p => p.Related)
+         .HasForeignKey(r => r.ProgramId)
+         .OnDelete(DeleteBehavior.Cascade);
+
+        // ⚠ RESTRICT, not cascade: deleting a programme that another one POINTS AT must not
+        // silently remove that other programme's row. The controller clears inbound relations
+        // first, so a delete still succeeds -- deliberately, and where it can be seen.
+        b.HasOne(r => r.RelatedProgram)
+         .WithMany(p => p.RelatedFrom)
+         .HasForeignKey(r => r.RelatedProgramId)
+         .OnDelete(DeleteBehavior.Restrict);
+
+        b.HasIndex(r => new { r.ProgramId, r.RelatedProgramId }).IsUnique();
+    }
+}
+
 public class CareerPathProgramConfiguration : IEntityTypeConfiguration<CareerPathProgram>
 {
     public void Configure(EntityTypeBuilder<CareerPathProgram> b)
@@ -48,6 +73,10 @@ public class CareerPathProgramConfiguration : IEntityTypeConfiguration<CareerPat
         b.ToTable("CareerPathPrograms");
         b.HasKey(x => x.Id);
         b.Property(x => x.Note).HasMaxLength(500);
+
+        // ⚠ Defaults TRUE, and the default matters: every link that existed before this column
+        // was added IS a route, and a false default would silently reclassify all of them.
+        b.Property(x => x.IsRoute).HasDefaultValue(true);
 
         b.HasOne(x => x.CareerPath)
          .WithMany(p => p.ProgramLinks)

@@ -152,9 +152,17 @@ def check(slug, doc):
     for i, pr in enumerate(doc.get("programs") or []):
         if not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", (pr.get("slug") or "")):
             err.append("programs[%d]: %r is not a slug" % (i, pr.get("slug")))
-        if pr.get("note") and len(pr["note"]) > LIMITS["note"]:
+        note = pr.get("note") or ""
+        if note and len(note) > LIMITS["note"]:
             err.append("programs[%d]: note is %d chars, limit %d"
-                       % (i, len(pr["note"]), LIMITS["note"]))
+                       % (i, len(note), LIMITS["note"]))
+        # ⚠⚠ The page HEADS the list "Programs that lead here", so a note opening by denying
+        # that contradicts the heading -- which is the half a reader actually reads.
+        # `"isRoute": false` moves the row under "Related, but not a route in".
+        if pr.get("isRoute", True) and re.search(r"not a route", note, re.I):
+            err.append('programs[%d] (%s): the note says it is not a route, so set '
+                       '"isRoute": false -- otherwise the heading claims the opposite'
+                       % (i, pr.get("slug")))
 
     courses = doc.get("courses") or []
     if len(courses) > MAX_COURSES:

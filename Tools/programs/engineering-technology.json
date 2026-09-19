@@ -10,5 +10,19 @@
       "cipCode": "15.",
       "note": "The whole Engineering Technologies series — 32 CIP codes are awarded in Florida, from sub-year certificates to master’s degrees."
     }
+  ],
+  "related": [
+    {
+      "slug": "mechanical-engineering",
+      "note": "⚠ The difference that decides careers, and it is worth understanding before enrolling: an ENGINEERING degree is accredited by ABET’s engineering commission and leads to the PE licence on the standard timetable; engineering TECHNOLOGY prepares you to build, test and maintain, and carries a longer experience requirement if you later pursue licensure. Neither is lesser — they lead to different work."
+    },
+    {
+      "slug": "electrical-engineering",
+      "note": "The engineering counterpart on the electrical side. Many technology graduates later complete an engineering degree; ask the receiving department which courses transfer BEFORE you start, because the mathematics and science sequences differ."
+    },
+    {
+      "slug": "civil-engineering",
+      "note": "The engineering counterpart on the civil side, where the licence matters most — civil technology leads to surveying, inspection and construction management rather than to sealed design."
+    }
   ]
 }

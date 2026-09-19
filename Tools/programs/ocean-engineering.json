@@ -1,0 +1,24 @@
+{
+  "name": "Ocean Engineering",
+  "description": "Ocean engineering programmes teach engineering in and around sea water — coastal structures, ports, marine vehicles and underwater systems, wave and current loading, and the corrosion and fouling that make the ocean a hostile design environment. Florida has more coastline than any state but Alaska, and the work follows it.",
+  "degreesNote": "⚠ Two Florida public institutions award in this field, and only Florida Atlantic awards the BACHELOR’S — the University of Florida is master’s and doctoral only. ⚠ So for most students the realistic route is a civil or mechanical bachelor’s followed by coastal or ocean specialisation at master’s level, which is also how most practising coastal engineers in Florida got there. The Professional Engineer licence applies exactly as in civil practice: coastal structures and port works are sealed designs.",
+  "sortOrder": 39,
+  "cips": [
+    {
+      "cipCode": "14.24",
+      "note": "Ocean Engineering — Florida Atlantic (bachelor’s through doctorate) and the University of Florida (graduate only). ⚠ The smallest engineering footprint in the state."
+    }
+  ],
+  "related": [
+    {
+      "slug": "civil-engineering",
+      "note": "The route most Florida coastal engineers actually take: a civil degree, then coastal and water-resources work. It is offered at nine institutions instead of two, and it carries the PE licence that coastal design requires."
+    },
+    {
+      "slug": "mechanical-engineering",
+      "note": "The route into marine vehicles, underwater systems and offshore machinery — fluids, structures and dynamics are the same subjects, and the degree is available statewide."
+    }
+  ],
+  "bodyHtml": null,
+  "isPublished": true
+}

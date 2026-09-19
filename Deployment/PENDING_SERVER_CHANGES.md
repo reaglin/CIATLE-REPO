@@ -8,7 +8,60 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-**Nothing is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
+### ⚠⚠ REDEPLOY NEEDED — the connections between careers, programmes and neighbours (2026-09-19)
+
+**TWO migrations — `AddProgramRelations`** (the `ProgramRelations` table) **and
+`AddProgramConnections`** (an `IsRoute` column on `CareerPathPrograms`, ⚠ defaulting to **true**
+so existing links keep their meaning) — plus page and API changes.
+**Deploy WITHOUT `-SkipMigrations`.**
+
+**Ron, 2026-09-19, is the whole specification:** *"Programs/law lacks a link to the career path
+that leads to it… we want to make sure that the students can easily find any information about
+options and the connections between the career paths, the options along a path, and the programs
+offering the final degree… the similarities between mechanical engineering and aerospace
+engineering (any similar program) should be noted as these are things students would not normally
+know when looking at a career. (Also materials engineering). Just like civil, structural,
+transportation, etc… are all very similar to civil."*
+
+| What | Where |
+|---|---|
+| **"Careers this program leads to"** on a programme page — the reverse of the path page's "Programs that lead here", which existed with nothing rendering it | `Pages/Programs/Program.cshtml{,.cs}` |
+| **"Programs close to this one"** — curated neighbours, each with the reason. ⚠ Read in BOTH directions, so a link authored on one programme shows on the other | new `ProgramRelation` entity, `ProgramsController`, same page |
+| **"Careers next to this one"** — paths filed in the same CIP series. ⚠ Matched on the PRIMARY code only, or Lawyer's sixteen feeder anchors would make half the site a neighbour of law | `Pages/Careers/Path.cshtml{,.cs}` |
+| API + pipeline | `related: [{slug, note}]` on the programme upsert — **the note is required**, since the link alone says only what the CIP tree already shows; `Tools/programs.py` gained a two-pass push so a new pair of programmes can link each other |
+
+**⚠⚠ The UX review of the two pages found the one thing that mattered most, and it is fixed:**
+the flagship page asserted a claim its own content denied. Mechanical Engineering was headed
+*"Careers this program leads to → Data Scientist"* while the note underneath read *"Not a route
+into data science"*. A heading is read; grey sub-text is not. So a programme link now carries
+**`isRoute`**, and the two pages group the rows separately (*"Related, but not a route in"* /
+*"Careers that name this program, but not as a route"*). `career_paths.py validate` FAILS a row
+whose note says "not a route" while the flag is still true.
+
+**Five more review findings fixed in the same pass:**
+
+| Was | Now |
+|---|---|
+| `offered by N Florida schools` on the career page — the claim the rest of the site carefully disclaims | `N Florida schools`, with an intro saying it counts institutions that AWARDED in the field, in which year, and that it counts something different from the course-based list below |
+| A programme with no linked career rendered **nothing** — and four of the new ones are in that state | The heading always renders, with an honest empty state and a link to `/careers` |
+| A career alone in its CIP series showed no neighbours (Nurse, Lawyer, Data Scientist) | Same treatment, plus a *"see every career in …"* link to the CIP area page |
+| The neighbour block dropped `CipTitle`, the one datum saying WHY it is a neighbour | Rendered as a badge, and the intro states the mechanism (federal classification) rather than inferring shared coursework |
+| ⚠ A path with no courses placed returned early and lost its programmes, neighbours and schools | Guard removed; each block guards itself |
+
+Also: cross-link sections now sit **above** the long course list and the 78-row school grid, since
+they are what a student needs *before* committing; the programme page gained an "Updated …" line.
+
+✅ Verified on the dev database: both migrations apply; 18 programmes push with **46 relations**; the
+programme page shows its careers and its neighbours; `/careers/mechanical-engineer` lists Aerospace,
+Biomedical, Chemical, Civil and Industrial Engineer as neighbours; a relation naming a programme
+that does not exist is refused **422** before anything is sent; deleting a programme clears the
+links pointing at it rather than failing on a hidden foreign key.
+
+⚠ **After the deploy:** `cd Tools && python programs.py push --all` (18 programmes, six of them
+new — computer, environmental, materials and ocean engineering, statistics, and paralegal studies)
+then `python career_paths.py push data-scientist`.
+
+**Nothing else is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
 on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items
 the `Tools/` session raised, which are still unwritten.
 

@@ -171,6 +171,7 @@ public class CareerPathsController : ControllerBase
                 CareerPathId = path.Id,
                 ProgramId = progs[pr.Slug!.Trim()],
                 Note = Blank(pr.Note),
+                IsRoute = pr.IsRoute ?? true,
                 SortOrder = porder++
             });
         }
@@ -257,7 +258,8 @@ public class CareerPathsController : ControllerBase
         p.Cips.OrderBy(c => c.SortOrder)
               .Select(c => new CareerPathCipDto(c.CipCode, c.Cip?.Title, c.Note)).ToList(),
         (p.ProgramLinks ?? []).OrderBy(l => l.SortOrder)
-              .Select(l => new CareerPathProgramDto(l.Program!.Slug, l.Program.Name, l.Note, 0)).ToList(),
+              .Select(l => new CareerPathProgramDto(l.Program!.Slug, l.Program.Name, l.Note,
+                                                    l.IsRoute, 0)).ToList(),
         p.Courses.OrderBy(c => c.SortOrder)
                  .Select(c => new CareerPathCourseDto(c.CourseId, c.Reason, c.VariantNote)).ToList(),
         p.Sources.OrderBy(s => s.SortOrder)

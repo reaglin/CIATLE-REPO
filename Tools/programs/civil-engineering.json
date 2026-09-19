@@ -10,5 +10,19 @@
       "cipCode": "14.08",
       "note": "Civil Engineering — the degree itself. Nine Florida public institutions award it, from bachelor’s through doctorate, with post-baccalaureate certificates at three of them for practising engineers adding a speciality."
     }
+  ],
+  "related": [
+    {
+      "slug": "environmental-engineering",
+      "note": "⚠ Usually the same department and often the same first two years. Water and wastewater, stormwater and remediation sit on the environmental side; if that is the part of civil that interests you, check whether your institution awards the separate degree or an emphasis inside civil."
+    },
+    {
+      "slug": "ocean-engineering",
+      "note": "Coastal structures, ports, beach nourishment and storm surge — which in Florida is a large share of the civil work there is. ⚠ Only one public institution awards the ocean bachelor’s, so the normal route is a civil degree followed by coastal specialisation."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ The adjacent route, and the one to understand clearly here: civil engineering TECHNOLOGY leads to surveying, inspection and construction work rather than to sealed design. Because the PE licence is close to mandatory in civil practice, the longer experience requirement it carries bites harder in this discipline than in any other."
+    }
   ]
 }

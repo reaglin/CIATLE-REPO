@@ -58,6 +58,48 @@ public class Program
 
     public ICollection<ProgramCip> Cips { get; set; } = new List<ProgramCip>();
     public ICollection<CareerPathProgram> CareerPaths { get; set; } = new List<CareerPathProgram>();
+
+    /// <summary>Programmes this one names as close to it.</summary>
+    public ICollection<ProgramRelation> Related { get; set; } = new List<ProgramRelation>();
+
+    /// <summary>Programmes that name THIS one as close to them — the inverse of <see cref="Related"/>.</summary>
+    public ICollection<ProgramRelation> RelatedFrom { get; set; } = new List<ProgramRelation>();
+}
+
+/// <summary>
+/// A programme a student looking at this one should also read — with the reason, because the
+/// reason is the part they do not already know.
+/// <para>
+/// ⚠⚠ Ron, 2026-09-19: <i>"the similarities between mechanical engineering and aerospace
+/// engineering (any similar program) should be noted as these are things students would not
+/// normally know when looking at a career… Just like civil, structural, transportation, etc… are
+/// all very similar to civil."</i> A student choosing a major cannot see which doors a neighbouring
+/// degree keeps open, and no catalogue tells them.
+/// </para>
+/// <para>
+/// ⚠ CURATED, like everything else that makes a claim. The CIP tree already puts these
+/// programmes near each other; what it cannot say is <i>aerospace employers hire large numbers of
+/// mechanical engineers</i>. That sentence is the whole point of the row.
+/// </para>
+/// <para>
+/// ⚠ Read in BOTH directions. A relation authored on one programme is shown on the other as
+/// well, so a missing back-link never hides a connection — but a relation authored explicitly on
+/// each side carries a note written for that side's reader, which is better.
+/// </para>
+/// </summary>
+public class ProgramRelation
+{
+    public Guid Id { get; set; }
+    public Guid ProgramId { get; set; }
+    public Guid RelatedProgramId { get; set; }
+
+    /// <summary>Why a student reading about this programme should look at that one.</summary>
+    public string? Note { get; set; }
+
+    public int SortOrder { get; set; }
+
+    public Program? Program { get; set; }
+    public Program? RelatedProgram { get; set; }
 }
 
 /// <summary>
@@ -94,8 +136,21 @@ public class CareerPathProgram
     public Guid CareerPathId { get; set; }
     public Guid ProgramId { get; set; }
 
-    /// <summary>How this programme leads to the career, in one line.</summary>
+    /// <summary>How this programme relates to the career, in one line.</summary>
     public string? Note { get; set; }
+
+    /// <summary>
+    /// True when the programme is a ROUTE to the career; false when it is named as a neighbour
+    /// a reader should know about but which does not lead there.
+    /// <para>
+    /// ⚠⚠ Added 2026-09-19 because the pages were asserting something their own notes denied:
+    /// the Data Scientist path names Mechanical Engineering with the note <i>"Not a route into
+    /// data science"</i>, and the programme page then headed it <i>"Careers this program leads
+    /// to"</i>. A heading is read and small grey text is not, so the claim has to live in the
+    /// structure rather than in the note.
+    /// </para>
+    /// </summary>
+    public bool IsRoute { get; set; } = true;
 
     public int SortOrder { get; set; }
     public CareerPath? CareerPath { get; set; }

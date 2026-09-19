@@ -10,5 +10,19 @@
       "cipCode": "14.05",
       "note": "Biomedical/Medical Engineering — the degree itself. All Florida awards fall under 14.0501."
     }
+  ],
+  "related": [
+    {
+      "slug": "mechanical-engineering",
+      "note": "⚠ Read this before you choose, and not as a consolation: mechanical is offered at every Florida public university, the occupation is far larger, and it feeds the orthopaedic and device industry heavily. Many biomedical roles at bachelor’s level are filled by mechanical graduates."
+    },
+    {
+      "slug": "electrical-engineering",
+      "note": "The other half of the device industry — instrumentation, imaging, signal processing and the electronics inside anything implanted or monitored. A strong route into medical devices, and available at ten institutions."
+    },
+    {
+      "slug": "chemical-engineering",
+      "note": "Where biomaterials, drug delivery and bioprocessing are taught in depth, and a more transferable bachelor’s if you later move out of the medical sector."
+    }
   ]
 }

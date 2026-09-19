@@ -1,0 +1,24 @@
+{
+  "name": "Statistics",
+  "description": "Statistics programmes teach how to reason from data that is incomplete, noisy and imperfectly collected — study design, estimation, inference, regression, and the judgement about when a number means anything at all. It is the discipline the newer data programmes are built on top of.",
+  "degreesNote": "A Bachelor of Science in Statistics, with master’s and doctoral degrees above it, at six Florida public institutions — every one of them awarding the bachelor’s. ⚠ At several schools it sits inside the mathematics department rather than standing alone, so look for a statistics TRACK as well as a named degree. There is no licence in this field.",
+  "sortOrder": 56,
+  "cips": [
+    {
+      "cipCode": "27.05",
+      "note": "Statistics — six Florida public institutions, all awarding a bachelor’s and several through to the doctorate."
+    }
+  ],
+  "related": [
+    {
+      "slug": "data-science",
+      "note": "The newer programme built on the same foundation. ⚠ The honest difference: data science adds programming, machine learning and data engineering; statistics goes deeper into inference and study design, and travels further into research, biostatistics and government work."
+    },
+    {
+      "slug": "computer-science",
+      "note": "The other half of most data work. A statistics degree plus real programming ability is a stronger combination than either alone, and it is what most job adverts are actually describing."
+    }
+  ],
+  "bodyHtml": null,
+  "isPublished": true
+}

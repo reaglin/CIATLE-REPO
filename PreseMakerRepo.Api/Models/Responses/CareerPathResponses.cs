@@ -41,7 +41,8 @@ public record CareerPathDto(
     IReadOnlyList<CareerPathSourceDto> Sources);
 
 /// <summary>A programme that leads to this career.</summary>
-public record CareerPathProgramDto(string Slug, string Name, string? Note, int SchoolCount);
+public record CareerPathProgramDto(string Slug, string Name, string? Note, bool IsRoute,
+                                   int SchoolCount);
 
 /// <summary>A further CIP group the path is filed under, with the evidence for it.</summary>
 public record CareerPathCipDto(string CipCode, string? CipTitle, string? Note);

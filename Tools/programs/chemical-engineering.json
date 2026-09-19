@@ -10,5 +10,19 @@
       "cipCode": "14.07",
       "note": "Chemical Engineering — the degree itself. All Florida awards fall under 14.0701."
     }
+  ],
+  "related": [
+    {
+      "slug": "environmental-engineering",
+      "note": "Treatment processes, reaction kinetics and mass transfer are chemical engineering subjects, which is why chemical graduates are hired into remediation and water treatment. ⚠ It is also the nearer degree geographically for many students: seven institutions award it against four for chemical."
+    },
+    {
+      "slug": "materials-engineering",
+      "note": "Polymers, coatings, electrochemistry and semiconductor processing are the shared ground, and a materials master’s on a chemical bachelor’s is a standard combination."
+    },
+    {
+      "slug": "biomedical-engineering",
+      "note": "Drug delivery, biomaterials and bioprocessing sit between the two. ⚠ If the pharmaceutical or device industry is the goal, read both before choosing — the chemical degree is the more transferable of the two at bachelor’s level."
+    }
   ]
 }

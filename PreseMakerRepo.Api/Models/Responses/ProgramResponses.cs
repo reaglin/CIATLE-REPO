@@ -29,7 +29,19 @@ public record ProgramDto(
     IReadOnlyList<ProgramSchoolDto> Schools,
     IReadOnlyList<string> AwardLevels,
     int AwardYear,
-    IReadOnlyList<ProgramCareerPathDto> CareerPaths);
+    IReadOnlyList<ProgramCareerPathDto> CareerPaths,
+    IReadOnlyList<ProgramRelatedDto> Related);
+
+/// <summary>
+/// A neighbouring programme. <see cref="Mutual"/> is false when the relation was authored on the
+/// OTHER programme and is being shown here in reverse — the note then speaks from its side.
+/// </summary>
+public record ProgramRelatedDto(
+    string Slug,
+    string Name,
+    string? Note,
+    int SchoolCount,
+    bool Mutual);
 
 /// <summary>One CIP code the programme covers, with the evidence for claiming it.</summary>
 public record ProgramCipDto(string CipCode, string? CipTitle, string? Note, int SchoolCount);
@@ -47,7 +59,7 @@ public record ProgramSchoolDto(
     int Completions);
 
 /// <summary>A career path this programme leads to.</summary>
-public record ProgramCareerPathDto(string Slug, string Name, string? Note);
+public record ProgramCareerPathDto(string Slug, string Name, string? Note, bool IsRoute);
 
 /// <summary>
 /// Outcome of a programme push. <see cref="UnmatchedCips"/> names codes that match no award
@@ -59,4 +71,5 @@ public record UpsertProgramResponse(
     string Outcome,
     int CipCount,
     int SchoolCount,
+    int RelatedCount,
     IReadOnlyList<string> UnmatchedCips);

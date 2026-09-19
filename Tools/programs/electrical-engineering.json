@@ -10,5 +10,15 @@
       "cipCode": "14.10",
       "note": "Electrical, electronics and communications engineering — the degree itself. Ten Florida public institutions award it, at every level from bachelor’s to doctorate, which makes it the second most widely offered engineering programme in the state after mechanical."
     }
+  ],
+  "related": [
+    {
+      "slug": "computer-engineering",
+      "note": "⚠ Usually the same department and nearly the same first two years, so this is a decision you can defer to the end of year two — but not past it. Computer engineering leans to processors, embedded systems and digital design; electrical keeps power, communications, control and analogue open."
+    },
+    {
+      "slug": "computer-science",
+      "note": "Where the software half of embedded and systems work is taught. ⚠ Many electrical graduates end up writing firmware; if that is the work you want, compare the two degrees rather than assuming electrical covers it."
+    }
   ]
 }
