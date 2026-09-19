@@ -8,38 +8,7 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⚠ REDEPLOY NEEDED — programmes over the API (2026-09-19)
-
-**Code only, NO migration** — nothing about the schema changes.
-
-```powershell
-.\Deployment\deploy-update.ps1 -CodeOnly
-```
-
-**Adding a programme stopped needing a deploy.** `ProgramsController` gives programmes the same
-contract paths and guides have — `GET /api/v1/programs[/{slug}]` public, `PUT`/`DELETE` admin — and
-`Tools/programs.py` is the pipeline (`validate` · `push` · `list` · `show` · `delete`), with the five
-existing programmes exported to `Tools/programs/*.json` and the contract in `Tools/PROGRAM_API.md`.
-
-⚠⚠ **`ProgramSeed` is now CREATE-ONLY**, and that is the part to understand before deploying: the
-build-shipped `programs.json` creates programmes a database does not have and **leaves every
-existing one alone**. Re-asserting the file on each start would silently undo a push made between
-deploys, which is the friction the API was added to remove. The startup log now reads
-*"Program seed complete. 0 added, 5 left to the API (already present)."*
-
-✅ Verified on the dev database: create and update round-trip; unpublishing hides a programme from
-the public list and GET (404) while an admin still sees it; `?includeUnpublished=true` without an
-admin token is **403**; deleting a programme a career path names is **409 `PROGRAM_IN_USE`** naming
-the paths; an unseeded CIP code is **422**; a part-code like `14.1` is **400** (codes are matched
-with `StartsWith`, so `14.1` would sweep in 14.10–14.19); and an API edit survives a restart. The
-five documents push clean, reproducing the documented counts — Nursing 78 schools, Mechanical
-Engineering 13.
-
-⚠ **After the deploy:** `cd Tools && python programs.py push --all` against production, to confirm
-the round trip live and leave the documents and the database in step.
-
-
-**Nothing else is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
+**Nothing is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
 on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items
 the `Tools/` session raised, which are still unwritten.
 
@@ -59,6 +28,25 @@ against the live site the same day:**
 | **"Programs that lead here"** on a path page | renders on `/careers/mechanical-engineer` |
 | **"Where you can take these courses in Florida"** on a path page | renders on all ten path pages |
 | **Guide `Prerequisites` ceiling 500 → 1000** (migration `WidenGuidePrerequisites`, validator + EF column + `validate_drafts.py` mirror) | migration is in the deployed build; ⚠ **the end-to-end check still belongs to the `Tools/` session** — push a guide whose `prerequisites` runs past 500 characters (`SCE4320` is the known case) and confirm it is not refused 400 |
+
+### ✅ DEPLOYED 2026-09-19 (second deploy) — programmes over the API
+
+`ProgramsController` (GET public, PUT/DELETE admin), `Tools/programs.py`, `Tools/programs/*.json`,
+`Tools/PROGRAM_API.md`, API spec §16, and a **create-only `ProgramSeed`** so the build-shipped file
+bootstraps a fresh database without overwriting a pushed edit. Code only, no migration.
+
+✅ Verified live: `PUT /api/v1/programs/__probe` returns **401** (deployed, auth required), the five
+existing programmes round-tripped unchanged, and **seven new programmes were authored and pushed
+without a deploy** — which was the point.
+
+⚠⚠ **The first push found a real defect in the seeded programmes.** Every engineering programme
+claimed CIP **14.01 General Engineering** "where several Florida institutions place a first year common
+to all engineering majors" — but IPEDS counts *awarded degrees*, not first years, so 14.01 added six
+institutions that award an engineering-SCIENCE or general-engineering degree and not the named one.
+On Aerospace it took the school list from **3 to 9**, so two thirds of the list would have been wrong,
+and USF appeared on it with **zero completions**. **14.01 was dropped from all seven engineering
+programmes and the corrected counts pushed** (mechanical 13→11, aerospace 9→3, industrial 10→6).
+✅ The CLI's new "THIS PUSH REMOVES" warning is what made the change legible while doing it.
 
 ⚠ **The content step that the deploy unblocked is done:** `data-scientist` was pushed
 2026-09-19 (13 CIP anchors, 17 courses, 7 sources) and `/careers/data-scientist` returns 200 with
@@ -112,7 +100,11 @@ push immediately, but **`taxonomy.json` must be updated too**, or the seed file 
 
 ---
 
-## ⚠ WRITTEN 2026-09-11, AWAITING DEPLOY — raise the guide `Prerequisites` ceiling from 500 to 1000
+## ✅ DEPLOYED 2026-09-19 — the guide `Prerequisites` ceiling, 500 → 1000
+
+⚠ **Still owed: the end-to-end check by the `Tools/` session** — push a guide whose
+`prerequisites` runs past 500 characters (`SCE4320` is the known case) and confirm it is not
+refused 400. The write-up below is kept for the reasoning.
 
 **Ron's note, 2026-09-08: raise the validation ceiling in the next site publish.** Escalated 2026-09-11: the
 ceiling is blocking guides, so this was written and is ready to deploy on its own.

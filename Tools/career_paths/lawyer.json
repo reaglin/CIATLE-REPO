@@ -4,32 +4,75 @@
   "socCode": "23-1011",
   "isPublished": true,
   "sortOrder": 20,
-
   "description": "Lawyers advise and represent clients in courts, before agencies and in private dealings — researching the law, drafting documents, negotiating, and arguing cases. In Florida the route runs through a Juris Doctor from an ABA-accredited law school, the Florida Bar Examination and the Multistate Professional Responsibility Examination. ⚠ There is no required or preferred undergraduate major: law-school applicants arrive from every field listed below.",
-
   "credentialNote": "The Florida Bar states the requirements as: a Juris Doctor degree from an AMERICAN BAR ASSOCIATION-ACCREDITED law school, passing the Florida Bar Examination, passing the Multistate Professional Responsibility Examination (MPRE), producing satisfactory evidence of good moral character and fitness, and filing the applications and fees. Educational eligibility sits in Rule 4-13.1 of the Rules of the Supreme Court Relating to Admissions to the Bar. ⚠⚠ NOTHING BEFORE LAW SCHOOL IS A CREDENTIAL. No undergraduate major, minor, certificate or paralegal qualification shortens this route or substitutes for any part of it — which is why the courses below are chosen for the skills they build, not for sounding legal. ⚠ One thing to do EARLY: the Board of Bar Examiners recommends filing a student registration application in your FIRST YEAR of law school — the fee is lower, and you get a preliminary decision on character and fitness while there is still time to deal with anything it raises.",
-
   "bodyHtml": "<h2>There is no pre-law major, and the data is blunt about it</h2><p>Law schools do not require or prefer a particular undergraduate degree, and the Law School Admission Council&rsquo;s own applicant figures show it: the fields below account for law-school applicants in wildly different numbers, and the single largest &mdash; political science &mdash; is still only about <strong>one applicant in six</strong>. The rest arrive from psychology, criminal justice, English, economics, history, philosophy, sociology, communications, business, accounting and dozens of smaller fields.</p><h2>&#9888;&#9888; The law-sounding majors are not the advantage they sound like</h2><p>This is the part worth reading twice. Ranked by <strong>mean highest LSAT score</strong>, LSAC&rsquo;s 2018&ndash;19 applicant data puts the most obviously legal majors at the <em>bottom</em> and the abstract, reading-and-argument majors at the top:</p><table class=\"table table-sm\"><thead><tr><th>Highest mean LSAT</th><th>Lowest mean LSAT</th></tr></thead><tbody><tr><td>Economics 159.7</td><td>Criminal Justice 146.6</td></tr><tr><td>Philosophy 157.9</td><td>Pre-Law 148.5</td></tr><tr><td>International Relations 157.4</td><td>Law 149.2</td></tr><tr><td>History 156.8</td><td>Criminology 149.4</td></tr><tr><td>English 155.7</td><td>Legal Studies 149.8</td></tr></tbody></table><p>&#9888; <strong>LSAC prints a caution with this data, and it is right:</strong> <em>&ldquo;It would be a mistake to infer from them that any one major is better than another in preparing students for the LSAT or, indeed, for law school itself. It is not possible to know whether or not the students whose data are captured here would have performed equally well on the LSAT regardless of their selected major.&rdquo;</em> The students, not the syllabus, may be what differs.</p><p><strong>So do not read the table as a ranking of majors. Read it as a warning against one specific mistake:</strong> choosing a major <em>because it has &ldquo;law&rdquo; or &ldquo;justice&rdquo; in the title</em>, on the assumption that it is the preparation admissions wants. It is not, and the numbers give no support at all to the idea that it helps.</p><h2>What actually prepares you</h2><p>The LSAT tests reading comprehension, logical reasoning and argumentative writing, and law school tests the same things harder. That points at coursework rather than at a subject:</p><ul><li><strong>Formal logic</strong> &mdash; the one course on this page whose content maps directly onto a section of the admission test.</li><li><strong>Heavy reading in dense prose</strong>, with an argument to reconstruct &mdash; philosophy, history, literature, theory-led social science.</li><li><strong>Writing that takes a position and defends it</strong> against the strongest objection, repeatedly, with feedback. Volume matters more than the department.</li><li><strong>Quantitative literacy.</strong> Statistics and economics turn up constantly in modern practice &mdash; damages, antitrust, employment discrimination, regulatory work.</li></ul><p><strong>Choose the major you will do best in.</strong> Law-school admission weighs undergraduate GPA and LSAT heavily, so a subject that holds your attention for four years serves you better than one picked for its name.</p><h2>&#9888; Paralegal studies is a different credential, not a step toward this one</h2><p>Florida runs a substantial paralegal route &mdash; an A.S. at the state colleges using <code>PLA1xxx</code>/<code>PLA2xxx</code> numbers and a BS in Legal Studies at the universities using <code>PLA3xxx</code>/<code>PLA4xxx</code>. <strong>It is a real profession and a good one, and it is not a partial law degree.</strong> No part of it reduces what Rule 4-13.1 requires. Take paralegal coursework because you want to understand legal work from the inside or want the qualification itself &mdash; not on the belief that it counts toward becoming a lawyer.</p><h2>Timing, which catches people out</h2><p>Most law schools admit on a <strong>rolling</strong> basis, so applying early is a real advantage rather than a tidy habit. The Florida Bar&rsquo;s own guidance is to begin the application process about a year ahead and to submit applications by <strong>November or December</strong>, ahead of the stated deadlines. Then, once you are in law school, file the student registration in your first year for the reasons in the licensure note above.</p>",
-
   "cipCodes": [
-    { "cipCode": "45.10", "note": "Political Science and Government — 12,967 applicants, 17.5% of the total and by far the largest single feeder (LSAC, 2018–19)." },
-    { "cipCode": "42.01", "note": "Psychology — 3,850 applicants, 5.2% (LSAC, 2018–19). The second-largest single major." },
-    { "cipCode": "43.01", "note": "Criminal Justice — 3,673 applicants, 5.0% (LSAC, 2018–19). ⚠ Also the lowest mean LSAT of any major in the table; see the note on law-sounding majors." },
-    { "cipCode": "23.01", "note": "English — 3,402 applicants, 4.6% (LSAC, 2018–19), and among the stronger performers on the admission test." },
-    { "cipCode": "45.06", "note": "Economics — 3,235 applicants, 4.4% (LSAC, 2018–19), and the HIGHEST mean LSAT of the large majors at 159.7." },
-    { "cipCode": "54.01", "note": "History — 3,192 applicants, 4.3% (LSAC, 2018–19). Sustained reading and evidence-based argument." },
-    { "cipCode": "38.01", "note": "Philosophy — 2,300 applicants, 3.1% (LSAC, 2018–19), second-highest mean LSAT at 157.9." },
-    { "cipCode": "45.11", "note": "Sociology — 1,992 applicants, 2.7% (LSAC, 2018–19)." },
-    { "cipCode": "09.01", "note": "Communications — 1,930 applicants, 2.6% (LSAC, 2018–19)." },
-    { "cipCode": "52.08", "note": "Finance — 1,683 applicants, 2.3% (LSAC, 2018–19). Common among those heading for corporate, tax and securities practice." },
-    { "cipCode": "52.02", "note": "Business Administration — 1,559 applicants, 2.1% (LSAC, 2018–19)." },
-    { "cipCode": "45.09", "note": "International Relations — 1,223 applicants, 1.7% (LSAC, 2018–19), with a high mean LSAT at 157.4." },
-    { "cipCode": "24.01", "note": "Liberal Arts and Sciences — 1,180 applicants, 1.6% (LSAC, 2018–19)." },
-    { "cipCode": "22.00", "note": "Legal Studies (undergraduate, non-professional) — 1,031 applicants, 1.4% (LSAC, 2018–19). ⚠ It is NOT a partial law degree and its mean LSAT is among the lowest." },
-    { "cipCode": "52.03", "note": "Accounting — 1,005 applicants, 1.4% (LSAC, 2018–19). The usual route into tax practice." },
-    { "cipCode": "45.04", "note": "Criminology — 950 applicants, 1.3% (LSAC, 2018–19)." }
+    {
+      "cipCode": "45.10",
+      "note": "Political Science and Government — 12,967 applicants, 17.5% of the total and by far the largest single feeder (LSAC, 2018–19)."
+    },
+    {
+      "cipCode": "42.01",
+      "note": "Psychology — 3,850 applicants, 5.2% (LSAC, 2018–19). The second-largest single major."
+    },
+    {
+      "cipCode": "43.01",
+      "note": "Criminal Justice — 3,673 applicants, 5.0% (LSAC, 2018–19). ⚠ Also the lowest mean LSAT of any major in the table; see the note on law-sounding majors."
+    },
+    {
+      "cipCode": "23.01",
+      "note": "English — 3,402 applicants, 4.6% (LSAC, 2018–19), and among the stronger performers on the admission test."
+    },
+    {
+      "cipCode": "45.06",
+      "note": "Economics — 3,235 applicants, 4.4% (LSAC, 2018–19), and the HIGHEST mean LSAT of the large majors at 159.7."
+    },
+    {
+      "cipCode": "54.01",
+      "note": "History — 3,192 applicants, 4.3% (LSAC, 2018–19). Sustained reading and evidence-based argument."
+    },
+    {
+      "cipCode": "38.01",
+      "note": "Philosophy — 2,300 applicants, 3.1% (LSAC, 2018–19), second-highest mean LSAT at 157.9."
+    },
+    {
+      "cipCode": "45.11",
+      "note": "Sociology — 1,992 applicants, 2.7% (LSAC, 2018–19)."
+    },
+    {
+      "cipCode": "09.01",
+      "note": "Communications — 1,930 applicants, 2.6% (LSAC, 2018–19)."
+    },
+    {
+      "cipCode": "52.08",
+      "note": "Finance — 1,683 applicants, 2.3% (LSAC, 2018–19). Common among those heading for corporate, tax and securities practice."
+    },
+    {
+      "cipCode": "52.02",
+      "note": "Business Administration — 1,559 applicants, 2.1% (LSAC, 2018–19)."
+    },
+    {
+      "cipCode": "45.09",
+      "note": "International Relations — 1,223 applicants, 1.7% (LSAC, 2018–19), with a high mean LSAT at 157.4."
+    },
+    {
+      "cipCode": "24.01",
+      "note": "Liberal Arts and Sciences — 1,180 applicants, 1.6% (LSAC, 2018–19)."
+    },
+    {
+      "cipCode": "22.00",
+      "note": "Legal Studies (undergraduate, non-professional) — 1,031 applicants, 1.4% (LSAC, 2018–19). ⚠ It is NOT a partial law degree and its mean LSAT is among the lowest."
+    },
+    {
+      "cipCode": "52.03",
+      "note": "Accounting — 1,005 applicants, 1.4% (LSAC, 2018–19). The usual route into tax practice."
+    },
+    {
+      "cipCode": "45.04",
+      "note": "Criminology — 950 applicants, 1.3% (LSAC, 2018–19)."
+    }
   ],
-
   "courses": [
     {
       "courseId": "PHI2100",
@@ -96,7 +139,6 @@
       "variantNote": "⚠⚠ A DIFFERENT CREDENTIAL, not a step toward this one. Paralegal studies is its own profession with its own qualification; no part of it reduces what Rule 4-13.1 requires for bar admission. Florida also splits the subject by sector — PLA1xxx/PLA2xxx at the state colleges, PLA3xxx/PLA4xxx at the universities — so the same subject is renumbered at upper division and the content is met twice."
     }
   ],
-
   "sources": [
     {
       "label": "LSAC — Applicants by Major",
@@ -142,6 +184,12 @@
       "label": "NCES — Classification of Instructional Programs (CIP 2020)",
       "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
       "note": "The federal taxonomy this path and its feeder programmes are filed under."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "law",
+      "note": "The destination degree: the Juris Doctor, which four Florida PUBLIC institutions award and which bar admission runs through. ⚠ It is a GRADUATE programme — no undergraduate major is required or preferred, which is exactly what the sixteen feeder fields above are showing."
     }
   ]
 }

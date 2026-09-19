@@ -1,0 +1,14 @@
+{
+  "name": "Aerospace Engineering",
+  "description": "Aerospace engineering programmes teach flight — aerodynamics, propulsion, structures, control and orbital mechanics — and the design of the aircraft and spacecraft built from them. In Florida the industry is unusually close: the Space Coast launch complex, and the defence, avionics and simulation firms around Orlando.",
+  "degreesNote": "A Bachelor of Science in Aerospace Engineering, with master’s and doctoral degrees above it. ⚠ Only three Florida public institutions award it, so for much of the state this is a relocation decision rather than a choice of major — read the school list below before you commit. ⚠ And read MECHANICAL engineering beside it, honestly: aerospace employers hire mechanical graduates in large numbers, and the mechanical degree keeps far more industries open if your plans change. Aerospace work runs largely under the industry exemption, so a Professional Engineer licence is required less often than in civil or structural practice, but the degree should still come from a programme accredited by ABET’s ENGINEERING commission. ⚠ Several institutions that do NOT award an aerospace degree run a first year common to all engineering majors, or an engineering-science degree of their own — a real way in, but confirm the transfer agreement with the receiving department before you rely on it.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 33,
+  "cips": [
+    {
+      "cipCode": "14.02",
+      "note": "Aerospace, aeronautical and astronautical engineering — the degree itself. ⚠ Three Florida public institutions award it, which is the smallest footprint of any engineering programme on this site."
+    }
+  ]
+}

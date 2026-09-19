@@ -1,162 +1,166 @@
 {
- "name": "Industrial Engineer",
- "cipCode": "14.35",
- "socCode": "17-2112",
- "isPublished": true,
- "sortOrder": 70,
- "description": "Industrial engineers design the systems that produce things — people, machines, materials, information and money working together. They lay out factories, set quality standards, schedule production, measure and improve work, and cut cost and waste out of processes. ⚠ It is the engineering discipline that most often leads into operations management, and the one least confined to manufacturing.",
- "credentialNote": "Most industrial engineers work without a licence, and in manufacturing, logistics and healthcare operations a PE is uncommon. ⚠ Note the education figures, which are unusual: O*NET's respondents report 59% bachelor's degree required, 11% master's — but 16% report SOME COLLEGE, NO DEGREE, the highest such figure of any engineering path on this site. That reflects a real route in which people move up from technician, production or quality roles rather than in through a degree. Both routes are genuine; the degree route is the faster one to engineering titles and to the PE option. If you do want the licence: under s. 471.013(1)(a), Florida Statutes, an approved ENGINEERING curriculum requires four years of experience and an approved ENGINEERING TECHNOLOGY curriculum six. Sit the FE in your final year to keep the option open, even if you never expect to need it.",
- "bodyHtml": "<h2>What the work actually is</h2><p>O*NET's task statements are unusually concrete for this occupation: <em>estimate production cost and the effect of product design changes; plan and establish the sequence of operations; analyse statistical data to set quality and reliability standards; develop manufacturing methods and labour utilisation standards; coordinate quality control procedures; design equipment layouts using computer tools; oversee inspection and testing; implement process improvements; and schedule deliveries based on forecasts.</em></p><p>&#9888; <strong>Read that list again and notice what is missing:</strong> there is no single physical artefact. Mechanical engineers design a part, civil engineers design a structure, electrical engineers design a circuit. <strong>Industrial engineers design the process</strong> — which is why the discipline transfers so readily out of manufacturing into hospitals, airlines, distribution centres, theme parks and banks.</p><h2>Projected need</h2><p>O*NET, on federal projections: <strong>351,100 industrial engineers employed</strong> (2024), growth projected <strong>&ldquo;much faster than average&rdquo; (7% or higher) through 2034</strong>, and about <strong>25,200 openings a year</strong> — the highest annual openings of any engineering path on this site. Median pay <strong>$102,440</strong> ($49.25 an hour), 2025.</p><h3>Florida in particular</h3><p>Florida's manufacturing base is growing and is actively supported by state workforce programmes, and the state adds several industrial-engineering employers most states do not have at this scale: <strong>theme-park and attraction operations</strong>, which are queueing-theory and throughput problems at enormous scale; <strong>cruise and port logistics</strong>; <strong>aerospace and space-launch production</strong> on the Space Coast; distribution and third-party logistics along the I-4 and I-95 corridors; and a very large <strong>healthcare</strong> sector where process improvement is now a standing function.</p><h2>Necessary skills</h2><ul><li><strong>Statistics, used constantly.</strong> &#9888; More than any other engineering discipline on this site, this one runs on statistics — quality control, reliability, design of experiments, forecasting. If you like the statistics courses, that is a strong signal for this field.</li><li><strong>Optimisation and operations research</strong> — linear programming, scheduling, queueing, inventory. The mathematics of doing more with less.</li><li><strong>Simulation.</strong> Modelling a system before you rebuild it, because you rarely get to experiment on a live factory or hospital.</li><li><strong>Data and databases.</strong> The work is increasingly analytical; SQL and a scripting language are now close to assumed.</li><li><strong>People skills, and this is not a platitude.</strong> Work measurement, layout changes and process improvement all change how people do their jobs. <strong>An industrial engineer who cannot persuade the people doing the work will not implement anything</strong>, however good the analysis.</li></ul><h2>&#9888; The comparison worth making before you choose</h2><table class=\"table table-sm\"><thead><tr><th></th><th>Industrial Engineering</th><th>Engineering Technology</th><th>Business / operations management</th></tr></thead><tbody><tr><td>Centre</td><td>modelling and optimising systems</td><td>applying and maintaining the technology</td><td>managing the organisation</td></tr><tr><td>Mathematics</td><td>heavy: statistics, optimisation</td><td>applied</td><td>light</td></tr><tr><td>PE route</td><td>4 years' experience</td><td>&#9888; 6 years</td><td>not applicable</td></tr></tbody></table><p>All three end up in overlapping jobs. <strong>The difference is what you can be asked to do</strong>: an industrial engineer is expected to build the model, not only to run the process.</p><h2>Advice</h2><ul><li><strong>Take the statistics sequence seriously</strong>, beyond the first course. It is the discipline's real language and the thing that distinguishes an industrial engineer from a well-organised manager.</li><li><strong>Get inside a real operation early.</strong> An internship in a plant, a distribution centre or a hospital teaches the constraints that make textbook solutions unimplementable — and Florida has all three within reach.</li><li><strong>Learn a simulation package and SQL.</strong> They are the two most immediately employable skills in the degree.</li><li><strong>Sit the FE in your final year</strong> even though most industrial engineers never license. It is cheap now and expensive to recreate later.</li><li><strong>If you are coming up from a technician or production role</strong> — the 16% route — look at the Engineering Technology programme page as well: an A.S. that articulates into a baccalaureate is often the practical path, and it keeps you earning.</li></ul>",
- "programs": [
-  {
-   "slug": "engineering-technology",
-   "note": "⚠ The adjacent route, and the relevant one here because 16% of respondents report entering this occupation with some college and no degree. Engineering technology programmes are how many of those people formalise what they already do — but note the six-year PE experience requirement if licensure is ever the goal."
-  }
- ],
- "courses": [
-  {
-   "courseId": "MAC2311",
-   "reason": "Calculus I — the gate on the degree.",
-   "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence. Finish it at one institution where you can."
-  },
-  {
-   "courseId": "MAC2312",
-   "reason": "Calculus II — integration and series, needed for probability and for continuous optimisation."
-  },
-  {
-   "courseId": "MAC2313",
-   "reason": "Calculus III — multivariable methods, used in optimisation over several decision variables."
-  },
-  {
-   "courseId": "MAP2302",
-   "reason": "Differential Equations — required by most programmes; the mathematics of systems changing over time."
-  },
-  {
-   "courseId": "PHY2048",
-   "reason": "Physics with Calculus I — mechanics; the engineering foundation shared across disciplines."
-  },
-  {
-   "courseId": "PHY2049",
-   "reason": "Physics with Calculus II — required by most ABET industrial programmes."
-  },
-  {
-   "courseId": "CHM2045",
-   "reason": "General Chemistry I — required by most ABET programmes and directly relevant to process and materials industries.",
-   "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS, AND NO INSTITUTION CARRIES BOTH. Twenty public institutions use CHM2045 (or the integrated CHM2045C); nineteen use CHM1045 (or CHM1045C) — among them Florida State, Florida A&M, FIU, FGCU, Broward, Miami Dade, Valencia, Daytona State, Eastern Florida State, Gulf Coast, Indian River State, Northwest Florida State, Palm Beach State, Pensacola State, Polk State, St. Johns River State, Tallahassee State, North Florida and Florida Keys. Same course, same lower-division level, and the credit articulates either way — but ⚠⚠ LOOK UP WHICH FAMILY YOUR INSTITUTION USES BEFORE YOU GO SEARCHING, because the other number simply does not exist there. ⚠ Also check the packaging: the bare number is a 3-credit lecture needing a separate CHM2045L (or CHM1045L) laboratory, while the C form is the integrated lecture-plus-lab at 4 credits and is one registration."
-  },
-  {
-   "courseId": "STA2023",
-   "reason": "Statistics — ⚠ for this discipline the single most important course on the list. Quality control, reliability and forecasting are all applications of it, and everything later assumes fluency rather than a pass."
-  },
-  {
-   "courseId": "STA4321",
-   "reason": "Mathematical Statistics — probability and inference derived rather than recited; the basis of reliability and quality theory."
-  },
-  {
-   "courseId": "STA4234",
-   "reason": "Regression Analysis — the workhorse of process data and forecasting."
-  },
-  {
-   "courseId": "EGN3311",
-   "reason": "Statics — the shared engineering foundation, and relevant wherever material handling and layout involve real loads."
-  },
-  {
-   "courseId": "EGN3613",
-   "reason": "Engineering Economic Analysis — ⚠ central here rather than peripheral: industrial engineering decisions are almost always justified on cost, and this is an FE exam topic.",
-   "variantNote": "⚠ Industrial engineering programmes often use their own number for this: UF and FSCJ carry EIN3354 Engineering Economy. Same subject; check which your programme names."
-  },
-  {
-   "courseId": "EGN3420",
-   "reason": "Engineering Analysis — numerical methods and linear algebra, which underpin optimisation and simulation."
-  },
-  {
-   "courseId": "EIN3000",
-   "reason": "Introduction to Industrial and Systems Engineering — the discipline survey; the cheapest way to find out early whether systems thinking suits you.",
-   "variantNote": "⚠ Carried by FIU alone, and at ONE credit rather than three — it is a short orientation course, not a survey of the discipline's content."
-  },
-  {
-   "courseId": "EIN3240",
-   "reason": "Human Factors and Ergonomics — designing work around people rather than the reverse; safety, usability and injury prevention.",
-   "variantNote": "⚠ Carried by Florida Polytechnic alone."
-  },
-  {
-   "courseId": "EIN3314",
-   "reason": "Work Design and Measurement — method study and time standards, the classical core of the discipline and still how labour standards are set."
-  },
-  {
-   "courseId": "ESI3215",
-   "reason": "Evaluation of Engineering Data — applied statistical methods on engineering data, which is where the statistics becomes practice.",
-   "variantNote": "⚠ UF carries the integrated ESI3215C (Data Analysis for Industrial Applications); FIU carries the bare ESI3215. ⚠ The prerequisite also differs — the statewide record says MAC2312, FIU's own catalogue says MAC2311 or MAC2281, or instructor permission."
-  },
-  {
-   "courseId": "ESI4221",
-   "reason": "Quality Control — control charts, process capability and acceptance sampling. ⚠ The most directly employable single course in the degree for manufacturing work.",
-   "variantNote": "⚠⚠ Florida numbers this subject at TWO LEVELS. ESI4221 is carried by Florida Polytechnic, UCF and USF; ESI4221C by UF and UNF; and ESI3221, at 3000 level, by FIU alone. Same subject, five institutions on the 4000-level forms against one on the 3000-level. Register by the number YOUR catalogue prints, and expect a transfer evaluator matching on the number to need the syllabus."
-  },
-  {
-   "courseId": "ESI3312",
-   "reason": "Deterministic Operations Research — linear and integer programming; the optimisation half of the discipline.",
-   "variantNote": "⚠ Also numbered ESI4312 at Daytona State, UCF and USF. ESI3312 is carried by FIU, Florida Polytechnic and UF. Same subject, two levels."
-  },
-  {
-   "courseId": "ESI4312",
-   "reason": "Operations Research — the fuller treatment: allocation, scheduling, networks and the modelling behind them."
-  },
-  {
-   "courseId": "ESI4523",
-   "reason": "Industrial Systems Simulation — modelling a system before you rebuild it, which is how most real recommendations are justified.",
-   "variantNote": "⚠ Same two-level split: ESI4523 is carried by FAMU, FSU, UCF, UF and USF; ESI3523 by FIU alone. ⚠ Catalogue descriptions still name GPSS, a simulation language from 1961 — ask which software the section actually uses (Arena, Simio, AnyLogic, FlexSim and SimPy are the current ones)."
-  },
-  {
-   "courseId": "COP2071C",
-   "reason": "Querying Databases with SQL — process data lives in databases, and this is now close to an assumed skill rather than an extra."
-  }
- ],
- "sources": [
-  {
-   "label": "O*NET — Industrial Engineers (17-2112.00)",
-   "url": "https://www.onetonline.org/link/summary/17-2112.00",
-   "note": "Tasks, skills, wages and the employment and education figures quoted on this page."
-  },
-  {
-   "label": "U.S. Bureau of Labor Statistics — Industrial Engineers",
-   "url": "https://www.bls.gov/ooh/architecture-and-engineering/industrial-engineers.htm",
-   "note": "Federal wage, employment and outlook detail for SOC 17-2112."
-  },
-  {
-   "label": "Florida Board of Professional Engineers — Licensure",
-   "url": "https://fbpe.org/licensure/",
-   "note": "The licensing authority, for those who pursue the PE."
-  },
-  {
-   "label": "Chapter 471, Florida Statutes — Engineering",
-   "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
-   "note": "s. 471.013(1)(a) sets the four-year and six-year experience requirements."
-  },
-  {
-   "label": "ABET — Accredited Program Search",
-   "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
-   "note": "Check the programme and its accrediting commission before enrolling."
-  },
-  {
-   "label": "NCEES — Fundamentals of Engineering (FE) exam",
-   "url": "https://ncees.org/engineering/fe/",
-   "note": "There is an FE Industrial and Systems discipline version."
-  },
-  {
-   "label": "IISE — Institute of Industrial and Systems Engineers",
-   "url": "https://www.iise.org/",
-   "note": "The professional society: student chapters, certification and the body of knowledge."
-  },
-  {
-   "label": "ASQ — American Society for Quality",
-   "url": "https://asq.org/",
-   "note": "Certifications that carry real weight in manufacturing, including Certified Quality Engineer and the Six Sigma belts."
-  },
-  {
-   "label": "NCES — Classification of Instructional Programs (CIP 2020)",
-   "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
-   "note": "The federal taxonomy this path is filed under, at 14.35 Industrial Engineering."
-  }
- ]
+  "name": "Industrial Engineer",
+  "cipCode": "14.35",
+  "socCode": "17-2112",
+  "isPublished": true,
+  "sortOrder": 70,
+  "description": "Industrial engineers design the systems that produce things — people, machines, materials, information and money working together. They lay out factories, set quality standards, schedule production, measure and improve work, and cut cost and waste out of processes. ⚠ It is the engineering discipline that most often leads into operations management, and the one least confined to manufacturing.",
+  "credentialNote": "Most industrial engineers work without a licence, and in manufacturing, logistics and healthcare operations a PE is uncommon. ⚠ Note the education figures, which are unusual: O*NET's respondents report 59% bachelor's degree required, 11% master's — but 16% report SOME COLLEGE, NO DEGREE, the highest such figure of any engineering path on this site. That reflects a real route in which people move up from technician, production or quality roles rather than in through a degree. Both routes are genuine; the degree route is the faster one to engineering titles and to the PE option. If you do want the licence: under s. 471.013(1)(a), Florida Statutes, an approved ENGINEERING curriculum requires four years of experience and an approved ENGINEERING TECHNOLOGY curriculum six. Sit the FE in your final year to keep the option open, even if you never expect to need it.",
+  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET's task statements are unusually concrete for this occupation: <em>estimate production cost and the effect of product design changes; plan and establish the sequence of operations; analyse statistical data to set quality and reliability standards; develop manufacturing methods and labour utilisation standards; coordinate quality control procedures; design equipment layouts using computer tools; oversee inspection and testing; implement process improvements; and schedule deliveries based on forecasts.</em></p><p>&#9888; <strong>Read that list again and notice what is missing:</strong> there is no single physical artefact. Mechanical engineers design a part, civil engineers design a structure, electrical engineers design a circuit. <strong>Industrial engineers design the process</strong> — which is why the discipline transfers so readily out of manufacturing into hospitals, airlines, distribution centres, theme parks and banks.</p><h2>Projected need</h2><p>O*NET, on federal projections: <strong>351,100 industrial engineers employed</strong> (2024), growth projected <strong>&ldquo;much faster than average&rdquo; (7% or higher) through 2034</strong>, and about <strong>25,200 openings a year</strong> — the highest annual openings of any engineering path on this site. Median pay <strong>$102,440</strong> ($49.25 an hour), 2025.</p><h3>Florida in particular</h3><p>Florida's manufacturing base is growing and is actively supported by state workforce programmes, and the state adds several industrial-engineering employers most states do not have at this scale: <strong>theme-park and attraction operations</strong>, which are queueing-theory and throughput problems at enormous scale; <strong>cruise and port logistics</strong>; <strong>aerospace and space-launch production</strong> on the Space Coast; distribution and third-party logistics along the I-4 and I-95 corridors; and a very large <strong>healthcare</strong> sector where process improvement is now a standing function.</p><h2>Necessary skills</h2><ul><li><strong>Statistics, used constantly.</strong> &#9888; More than any other engineering discipline on this site, this one runs on statistics — quality control, reliability, design of experiments, forecasting. If you like the statistics courses, that is a strong signal for this field.</li><li><strong>Optimisation and operations research</strong> — linear programming, scheduling, queueing, inventory. The mathematics of doing more with less.</li><li><strong>Simulation.</strong> Modelling a system before you rebuild it, because you rarely get to experiment on a live factory or hospital.</li><li><strong>Data and databases.</strong> The work is increasingly analytical; SQL and a scripting language are now close to assumed.</li><li><strong>People skills, and this is not a platitude.</strong> Work measurement, layout changes and process improvement all change how people do their jobs. <strong>An industrial engineer who cannot persuade the people doing the work will not implement anything</strong>, however good the analysis.</li></ul><h2>&#9888; The comparison worth making before you choose</h2><table class=\"table table-sm\"><thead><tr><th></th><th>Industrial Engineering</th><th>Engineering Technology</th><th>Business / operations management</th></tr></thead><tbody><tr><td>Centre</td><td>modelling and optimising systems</td><td>applying and maintaining the technology</td><td>managing the organisation</td></tr><tr><td>Mathematics</td><td>heavy: statistics, optimisation</td><td>applied</td><td>light</td></tr><tr><td>PE route</td><td>4 years' experience</td><td>&#9888; 6 years</td><td>not applicable</td></tr></tbody></table><p>All three end up in overlapping jobs. <strong>The difference is what you can be asked to do</strong>: an industrial engineer is expected to build the model, not only to run the process.</p><h2>Advice</h2><ul><li><strong>Take the statistics sequence seriously</strong>, beyond the first course. It is the discipline's real language and the thing that distinguishes an industrial engineer from a well-organised manager.</li><li><strong>Get inside a real operation early.</strong> An internship in a plant, a distribution centre or a hospital teaches the constraints that make textbook solutions unimplementable — and Florida has all three within reach.</li><li><strong>Learn a simulation package and SQL.</strong> They are the two most immediately employable skills in the degree.</li><li><strong>Sit the FE in your final year</strong> even though most industrial engineers never license. It is cheap now and expensive to recreate later.</li><li><strong>If you are coming up from a technician or production role</strong> — the 16% route — look at the Engineering Technology programme page as well: an A.S. that articulates into a baccalaureate is often the practical path, and it keeps you earning.</li></ul>",
+  "programs": [
+    {
+      "slug": "industrial-engineering",
+      "note": "The degree itself. ⚠ Only four Florida public institutions award the bachelor’s, which is a small footprint for an occupation this broad — check the school list before assuming it is available near you. Systems engineering is counted with it, since Florida departments usually teach them as one programme."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ The adjacent route, and the relevant one here because 16% of respondents report entering this occupation with some college and no degree. Engineering technology programmes are how many of those people formalise what they already do — but note the six-year PE experience requirement if licensure is ever the goal."
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "MAC2311",
+      "reason": "Calculus I — the gate on the degree.",
+      "variantNote": "⚠ Transfer is guaranteed only on the COMPLETED calculus sequence. Finish it at one institution where you can."
+    },
+    {
+      "courseId": "MAC2312",
+      "reason": "Calculus II — integration and series, needed for probability and for continuous optimisation."
+    },
+    {
+      "courseId": "MAC2313",
+      "reason": "Calculus III — multivariable methods, used in optimisation over several decision variables."
+    },
+    {
+      "courseId": "MAP2302",
+      "reason": "Differential Equations — required by most programmes; the mathematics of systems changing over time."
+    },
+    {
+      "courseId": "PHY2048",
+      "reason": "Physics with Calculus I — mechanics; the engineering foundation shared across disciplines."
+    },
+    {
+      "courseId": "PHY2049",
+      "reason": "Physics with Calculus II — required by most ABET industrial programmes."
+    },
+    {
+      "courseId": "CHM2045",
+      "reason": "General Chemistry I — required by most ABET programmes and directly relevant to process and materials industries.",
+      "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS, AND NO INSTITUTION CARRIES BOTH. Twenty public institutions use CHM2045 (or the integrated CHM2045C); nineteen use CHM1045 (or CHM1045C) — among them Florida State, Florida A&M, FIU, FGCU, Broward, Miami Dade, Valencia, Daytona State, Eastern Florida State, Gulf Coast, Indian River State, Northwest Florida State, Palm Beach State, Pensacola State, Polk State, St. Johns River State, Tallahassee State, North Florida and Florida Keys. Same course, same lower-division level, and the credit articulates either way — but ⚠⚠ LOOK UP WHICH FAMILY YOUR INSTITUTION USES BEFORE YOU GO SEARCHING, because the other number simply does not exist there. ⚠ Also check the packaging: the bare number is a 3-credit lecture needing a separate CHM2045L (or CHM1045L) laboratory, while the C form is the integrated lecture-plus-lab at 4 credits and is one registration."
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Statistics — ⚠ for this discipline the single most important course on the list. Quality control, reliability and forecasting are all applications of it, and everything later assumes fluency rather than a pass."
+    },
+    {
+      "courseId": "STA4321",
+      "reason": "Mathematical Statistics — probability and inference derived rather than recited; the basis of reliability and quality theory."
+    },
+    {
+      "courseId": "STA4234",
+      "reason": "Regression Analysis — the workhorse of process data and forecasting."
+    },
+    {
+      "courseId": "EGN3311",
+      "reason": "Statics — the shared engineering foundation, and relevant wherever material handling and layout involve real loads."
+    },
+    {
+      "courseId": "EGN3613",
+      "reason": "Engineering Economic Analysis — ⚠ central here rather than peripheral: industrial engineering decisions are almost always justified on cost, and this is an FE exam topic.",
+      "variantNote": "⚠ Industrial engineering programmes often use their own number for this: UF and FSCJ carry EIN3354 Engineering Economy. Same subject; check which your programme names."
+    },
+    {
+      "courseId": "EGN3420",
+      "reason": "Engineering Analysis — numerical methods and linear algebra, which underpin optimisation and simulation."
+    },
+    {
+      "courseId": "EIN3000",
+      "reason": "Introduction to Industrial and Systems Engineering — the discipline survey; the cheapest way to find out early whether systems thinking suits you.",
+      "variantNote": "⚠ Carried by FIU alone, and at ONE credit rather than three — it is a short orientation course, not a survey of the discipline's content."
+    },
+    {
+      "courseId": "EIN3240",
+      "reason": "Human Factors and Ergonomics — designing work around people rather than the reverse; safety, usability and injury prevention.",
+      "variantNote": "⚠ Carried by Florida Polytechnic alone."
+    },
+    {
+      "courseId": "EIN3314",
+      "reason": "Work Design and Measurement — method study and time standards, the classical core of the discipline and still how labour standards are set."
+    },
+    {
+      "courseId": "ESI3215",
+      "reason": "Evaluation of Engineering Data — applied statistical methods on engineering data, which is where the statistics becomes practice.",
+      "variantNote": "⚠ UF carries the integrated ESI3215C (Data Analysis for Industrial Applications); FIU carries the bare ESI3215. ⚠ The prerequisite also differs — the statewide record says MAC2312, FIU's own catalogue says MAC2311 or MAC2281, or instructor permission."
+    },
+    {
+      "courseId": "ESI4221",
+      "reason": "Quality Control — control charts, process capability and acceptance sampling. ⚠ The most directly employable single course in the degree for manufacturing work.",
+      "variantNote": "⚠⚠ Florida numbers this subject at TWO LEVELS. ESI4221 is carried by Florida Polytechnic, UCF and USF; ESI4221C by UF and UNF; and ESI3221, at 3000 level, by FIU alone. Same subject, five institutions on the 4000-level forms against one on the 3000-level. Register by the number YOUR catalogue prints, and expect a transfer evaluator matching on the number to need the syllabus."
+    },
+    {
+      "courseId": "ESI3312",
+      "reason": "Deterministic Operations Research — linear and integer programming; the optimisation half of the discipline.",
+      "variantNote": "⚠ Also numbered ESI4312 at Daytona State, UCF and USF. ESI3312 is carried by FIU, Florida Polytechnic and UF. Same subject, two levels."
+    },
+    {
+      "courseId": "ESI4312",
+      "reason": "Operations Research — the fuller treatment: allocation, scheduling, networks and the modelling behind them."
+    },
+    {
+      "courseId": "ESI4523",
+      "reason": "Industrial Systems Simulation — modelling a system before you rebuild it, which is how most real recommendations are justified.",
+      "variantNote": "⚠ Same two-level split: ESI4523 is carried by FAMU, FSU, UCF, UF and USF; ESI3523 by FIU alone. ⚠ Catalogue descriptions still name GPSS, a simulation language from 1961 — ask which software the section actually uses (Arena, Simio, AnyLogic, FlexSim and SimPy are the current ones)."
+    },
+    {
+      "courseId": "COP2071C",
+      "reason": "Querying Databases with SQL — process data lives in databases, and this is now close to an assumed skill rather than an extra."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Industrial Engineers (17-2112.00)",
+      "url": "https://www.onetonline.org/link/summary/17-2112.00",
+      "note": "Tasks, skills, wages and the employment and education figures quoted on this page."
+    },
+    {
+      "label": "U.S. Bureau of Labor Statistics — Industrial Engineers",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/industrial-engineers.htm",
+      "note": "Federal wage, employment and outlook detail for SOC 17-2112."
+    },
+    {
+      "label": "Florida Board of Professional Engineers — Licensure",
+      "url": "https://fbpe.org/licensure/",
+      "note": "The licensing authority, for those who pursue the PE."
+    },
+    {
+      "label": "Chapter 471, Florida Statutes — Engineering",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
+      "note": "s. 471.013(1)(a) sets the four-year and six-year experience requirements."
+    },
+    {
+      "label": "ABET — Accredited Program Search",
+      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+      "note": "Check the programme and its accrediting commission before enrolling."
+    },
+    {
+      "label": "NCEES — Fundamentals of Engineering (FE) exam",
+      "url": "https://ncees.org/engineering/fe/",
+      "note": "There is an FE Industrial and Systems discipline version."
+    },
+    {
+      "label": "IISE — Institute of Industrial and Systems Engineers",
+      "url": "https://www.iise.org/",
+      "note": "The professional society: student chapters, certification and the body of knowledge."
+    },
+    {
+      "label": "ASQ — American Society for Quality",
+      "url": "https://asq.org/",
+      "note": "Certifications that carry real weight in manufacturing, including Certified Quality Engineer and the Six Sigma belts."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "The federal taxonomy this path is filed under, at 14.35 Industrial Engineering."
+    }
+  ]
 }

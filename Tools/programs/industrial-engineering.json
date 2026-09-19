@@ -1,0 +1,18 @@
+{
+  "name": "Industrial and Systems Engineering",
+  "description": "Industrial engineering programmes teach the design and improvement of systems that combine people, machines, materials and information — production lines, supply chains, hospitals, airports and theme parks. It is the engineering discipline least tied to one industry, and the one whose graduates most often end up running operations.",
+  "degreesNote": "A Bachelor of Science in Industrial Engineering — often titled Industrial and Systems Engineering — with master’s and doctoral degrees above it. ⚠ Four Florida public institutions award the bachelor’s, so the undergraduate footprint is small; systems engineering is filed under its own code and is largely a master’s and certificate offering for people already working. The degree should come from a programme accredited by ABET’s ENGINEERING commission if a Professional Engineer licence is ever the goal, though industrial engineers are licensed less often than civil engineers because most of the work falls under the industry exemption.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 34,
+  "cips": [
+    {
+      "cipCode": "14.35",
+      "note": "Industrial Engineering — the degree itself. Four Florida public institutions award it, at every level from bachelor’s through doctorate."
+    },
+    {
+      "cipCode": "14.27",
+      "note": "Systems Engineering — filed separately by five Florida institutions and awarded mostly at master’s and certificate level. ⚠ Included deliberately: Florida departments routinely teach the two as one programme (\"Industrial and Systems Engineering\"), and filing under 14.35 alone would hide institutions that teach the subject."
+    }
+  ]
+}

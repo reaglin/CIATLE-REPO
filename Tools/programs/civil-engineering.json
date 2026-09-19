@@ -1,0 +1,14 @@
+{
+  "name": "Civil Engineering",
+  "description": "Civil engineering programmes teach the analysis and design of the built environment — structures, foundations, transportation, water supply, drainage and coastal works — together with the public responsibility that comes with putting a seal on the drawings.",
+  "degreesNote": "A Bachelor of Science in Civil Engineering, with master’s and doctoral degrees above it; at several Florida institutions the same department also awards an environmental engineering degree. ⚠ This is the discipline where the PROFESSIONAL ENGINEER licence matters most: public works and most structural design must be sealed by a licensed engineer, so the degree needs to come from a programme accredited by ABET’s ENGINEERING commission. A civil engineering TECHNOLOGY degree leads to technician, surveying and inspection work and carries a longer experience requirement before licensure — which bites harder here than in any other discipline, because in civil practice the licence is close to mandatory rather than optional.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 32,
+  "cips": [
+    {
+      "cipCode": "14.08",
+      "note": "Civil Engineering — the degree itself. Nine Florida public institutions award it, from bachelor’s through doctorate, with post-baccalaureate certificates at three of them for practising engineers adding a speciality."
+    }
+  ]
+}

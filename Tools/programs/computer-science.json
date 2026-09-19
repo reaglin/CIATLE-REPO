@@ -1,0 +1,18 @@
+{
+  "name": "Computer Science",
+  "description": "Computer science programmes teach how computation works and how to build software that is correct, efficient and maintainable — algorithms, data structures, operating systems, networks, languages and the discrete mathematics underneath them. It is the largest computing programme in Florida by any measure, and the one with the widest spread of entry points.",
+  "degreesNote": "Florida awards computing credentials at every level: short state-college certificates, an A.S. or A.A., the bachelor’s degree that most software work expects, and master’s and doctoral degrees above it. ⚠ Ask the transfer question early, because it is the one that costs people a year: an A.S. in a computing field is a CAREER degree built to lead to work, and it does not always transfer into a university computer science bachelor’s — the A.A. route normally does. ⚠ Accreditation for computing comes from ABET’s COMPUTING commission, not its engineering commission, and nothing in software employment requires it; there is no licence in this field.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 50,
+  "cips": [
+    {
+      "cipCode": "11.07",
+      "note": "Computer Science — the specific federal code, and ⚠ only four Florida public institutions file under it, which is why it cannot be the whole of this programme."
+    },
+    {
+      "cipCode": "11.01",
+      "note": "Computer and Information Sciences, General — where Florida actually files most of its computing awards: 41 public institutions, including essentially every state college that teaches computing. ⚠ Included deliberately. Defining this programme by 11.07 alone would list four institutions and hide the ones where most Florida students begin."
+    }
+  ]
+}

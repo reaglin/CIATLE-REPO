@@ -4,55 +4,143 @@
   "socCode": "15-2051",
   "isPublished": true,
   "sortOrder": 50,
-
   "description": "Data scientists turn messy data into decisions — cleaning and preparing it, building and validating statistical and machine-learning models, and explaining the result to people who will act on it. ⚠ There is no licence, no entrance examination and, for most people now working in the field, no data science degree: the occupation is older than the major.",
-
   "credentialNote": "There is no licence and no gatekeeper, which cuts both ways. Nothing stops you entering from any field — and nothing certifies that you can do the work, so employers judge demonstrated skill instead of credentials. ⚠⚠ WATCH THE DEGREE LEVEL. O*NET's survey respondents split 48% bachelor's degree required against 44% MASTER'S, which is close to an even division and far higher than mechanical engineering (52% bachelor's) or electrical engineering (82%). Plan on the likelihood that a master's is expected for the research-heavy roles, while analyst and data-engineering roles are reachable with a bachelor's and a portfolio. ⚠ Certificates from cloud vendors and course platforms are common and are worth something for specific tools; they do not substitute for the statistics.",
-
   "bodyHtml": "<h2>&#9888;&#9888;&#9888; There is no entrance data for this path, and that is the finding</h2><p>On the <a href=\"/careers/lawyer\">Lawyer</a> page this section reports exactly what law-school applicants majored in, because the Law School Admission Council counts every applicant and publishes it. <strong>Nothing equivalent exists for data science, because nothing equivalent can: there is no admissions body, no licensing board and no examination.</strong> Anyone who tells you that a particular major is <em>the</em> route into data science is guessing.</p><p><strong>And the degree is newer than the job.</strong> Florida&rsquo;s public institutions awarded <strong>84 data science credentials in 2023</strong> across ten schools, and 104 in data analytics. For comparison, in the same year they awarded <strong>6,122</strong> in computer and information sciences, <strong>1,111</strong> in economics, <strong>735</strong> in management information systems and <strong>467</strong> in mathematics. <strong>Practically nobody now working as a data scientist holds a data science degree</strong> — they could not have.</p><p>So the fields listed below are not a survey of where data scientists came from. <strong>They are the Florida programmes whose curricula actually deliver the skills the work requires</strong>, with the number of graduates each produces so you can see the scale. That is a weaker claim than the Lawyer page makes, and it is the honest one.</p><h2>Projected need</h2><p>O*NET, on federal projections: <strong>245,900 data scientists employed</strong> (2024), growth projected <strong>&ldquo;much faster than average&rdquo; (7% or higher) through 2034</strong>, and about <strong>23,400 openings a year</strong>. Median pay <strong>$120,230</strong> ($57.80 an hour), 2025.</p><p>&#9888; Note the ratio: <strong>23,400 annual openings against 245,900 employed</strong> is a far higher churn-and-growth rate than mechanical engineering (18,100 against 293,100) or electrical (11,700 against 192,000). It is a genuinely expanding field — and one where job titles shift under you, so read the duties rather than the title.</p><h2>Necessary skills</h2><p>O*NET lists the tools as Python, R, Java and Scala; SQL and databases including PostgreSQL and MongoDB; AWS and Azure; SAS, TensorFlow and MATLAB; Power BI, Tableau and Looker. <strong>Tools change; the four things underneath them do not:</strong></p><ul><li><strong>Statistics you actually understand.</strong> &#9888; This is the part people skip and the part that separates a data scientist from someone who can call a library. If you cannot say what a p-value is the probability <em>of</em>, or why a model that fits the training data beautifully may be worthless, the rest is decoration.</li><li><strong>Programming that survives contact with real data.</strong> Not a first course — the ability to write code someone else can read, test and rerun. Python and SQL are the working minimum.</li><li><strong>Data wrangling.</strong> Practitioners consistently report that most of the job is finding, cleaning and reconciling data. Coursework rarely reflects that ratio; a real project will.</li><li><strong>Communication.</strong> The deliverable is a decision someone else makes. A correct analysis nobody acts on has failed.</li><li><strong>Domain understanding.</strong> &#9888; This is why entering from economics, biology, psychology or engineering is a genuine advantage rather than a handicap — you already know what the numbers mean.</li></ul><h2>&#9888; The mistake to avoid</h2><p>The visible part of data science is modelling, so the temptation is to collect machine-learning courses and certificates and skip the statistics and the data handling. <strong>That produces someone who can fit a model and cannot tell whether it means anything</strong> — the most common failure employers describe. Take the statistics sequence properly, and prefer one substantial project you can explain end to end over five short courses you cannot.</p><h2>Advice</h2><ul><li><strong>Choose a major you will do well in, then add the quantitative spine.</strong> Statistics, programming, databases and linear algebra can be added to almost any degree; genuine domain knowledge is much harder to bolt on afterwards.</li><li><strong>Build a portfolio, because there is no credential.</strong> Two or three projects using real, messy public data — documented, reproducible, with the reasoning visible — do more than any certificate. This field hires on evidence.</li><li><strong>Plan for the master&rsquo;s question early.</strong> With 44% of respondents reporting a master&rsquo;s requirement, check the job adverts for the roles you actually want before you finish year two.</li><li><strong>If you are starting at a Florida state college</strong>, the associate-level data science and data analytics programmes exist at ten institutions each and articulate into baccalaureate work — but confirm the receiving university&rsquo;s requirements in writing, because this is a new and fast-moving area where transfer agreements lag.</li><li><strong>Learn SQL earlier than feels necessary.</strong> It is the least glamorous item on the list and the one used every day.</li></ul>",
-
   "cipCodes": [
-    { "cipCode": "30.71", "note": "Data Analytics — the sibling degree, and slightly larger: 10 Florida public institutions, 104 completions in 2023, more of them at baccalaureate level than Data Science itself." },
-    { "cipCode": "11.01", "note": "Computer and Information Sciences — by far the largest feeder by volume: 41 Florida public institutions, 6,122 completions in 2023. Supplies the programming and systems half." },
-    { "cipCode": "27.05", "note": "Statistics — 6 institutions, 317 completions. The smallest of the core feeders and the one that supplies what employers most often find missing." },
-    { "cipCode": "27.01", "note": "Mathematics — 10 institutions, 467 completions. Linear algebra and probability are the mathematics the models are built from." },
-    { "cipCode": "11.07", "note": "Computer Science — 265 completions across 4 institutions under this specific code; algorithms and data structures at depth." },
-    { "cipCode": "45.06", "note": "Economics — 10 institutions, 1,111 completions, the second-largest field here. Econometrics is applied statistics under another name, and economics graduates arrive knowing what a causal claim costs." },
-    { "cipCode": "52.12", "note": "Management Information Systems — 13 institutions, 735 completions. The database and business-problem half, and the commonest route into analyst roles." },
-    { "cipCode": "52.13", "note": "Management Sciences and Quantitative Methods — 9 institutions, 420 completions. Operations research and optimisation." },
-    { "cipCode": "11.04", "note": "Information Science — 5 institutions, 404 completions. Data management, retrieval and governance." },
-    { "cipCode": "14.35", "note": "Industrial Engineering — 4 institutions, 364 completions. Statistics, optimisation and process data are its core, and it transfers directly." },
-    { "cipCode": "40.08", "note": "Physics — 9 institutions, 329 completions. A common and well-regarded entry route: modelling, computation and comfort with uncertainty." },
-    { "cipCode": "42.01", "note": "Psychology — 10 institutions, 6,549 completions. ⚠ Listed because experimental design and inferential statistics are its methods core; the quantitative track is the part that transfers, not the degree as such." }
+    {
+      "cipCode": "30.71",
+      "note": "Data Analytics — the sibling degree, and slightly larger: 10 Florida public institutions, 104 completions in 2023, more of them at baccalaureate level than Data Science itself."
+    },
+    {
+      "cipCode": "11.01",
+      "note": "Computer and Information Sciences — by far the largest feeder by volume: 41 Florida public institutions, 6,122 completions in 2023. Supplies the programming and systems half."
+    },
+    {
+      "cipCode": "27.05",
+      "note": "Statistics — 6 institutions, 317 completions. The smallest of the core feeders and the one that supplies what employers most often find missing."
+    },
+    {
+      "cipCode": "27.01",
+      "note": "Mathematics — 10 institutions, 467 completions. Linear algebra and probability are the mathematics the models are built from."
+    },
+    {
+      "cipCode": "11.07",
+      "note": "Computer Science — 265 completions across 4 institutions under this specific code; algorithms and data structures at depth."
+    },
+    {
+      "cipCode": "45.06",
+      "note": "Economics — 10 institutions, 1,111 completions, the second-largest field here. Econometrics is applied statistics under another name, and economics graduates arrive knowing what a causal claim costs."
+    },
+    {
+      "cipCode": "52.12",
+      "note": "Management Information Systems — 13 institutions, 735 completions. The database and business-problem half, and the commonest route into analyst roles."
+    },
+    {
+      "cipCode": "52.13",
+      "note": "Management Sciences and Quantitative Methods — 9 institutions, 420 completions. Operations research and optimisation."
+    },
+    {
+      "cipCode": "11.04",
+      "note": "Information Science — 5 institutions, 404 completions. Data management, retrieval and governance."
+    },
+    {
+      "cipCode": "14.35",
+      "note": "Industrial Engineering — 4 institutions, 364 completions. Statistics, optimisation and process data are its core, and it transfers directly."
+    },
+    {
+      "cipCode": "40.08",
+      "note": "Physics — 9 institutions, 329 completions. A common and well-regarded entry route: modelling, computation and comfort with uncertainty."
+    },
+    {
+      "cipCode": "42.01",
+      "note": "Psychology — 10 institutions, 6,549 completions. ⚠ Listed because experimental design and inferential statistics are its methods core; the quantitative track is the part that transfers, not the degree as such."
+    }
   ],
-
   "programs": [
-    { "slug": "mechanical-engineering", "note": "⚠ Not a route into data science. Listed only because engineering degrees carry the mathematics and computing this work needs — if you are already in engineering and drawn to data, you are closer than you think." }
+    {
+      "slug": "data-science",
+      "note": "The closest thing to a direct route, and ⚠ still a young programme: thirteen Florida public institutions award something under the data science or data analytics codes, much of it at associate or master’s level rather than bachelor’s. The two names are used interchangeably — read both catalogues."
+    },
+    {
+      "slug": "computer-science",
+      "note": "The largest feeder by volume, and the one that carries the programming and systems half of this work. ⚠ 41 Florida public institutions award computing credentials, including every state college that teaches the subject — but ask about transfer early, because a computing A.S. is a career degree and does not always articulate into a university computer science bachelor’s."
+    },
+    {
+      "slug": "mechanical-engineering",
+      "note": "⚠ Not a route into data science. Listed only because engineering degrees carry the mathematics and computing this work needs — if you are already in engineering and drawn to data, you are closer than you think."
+    }
   ],
-
   "courses": [
     {
       "courseId": "STA2023",
       "reason": "Statistics — the foundation of everything on this page, and the course whose absence employers notice. Take it seriously rather than clearing it."
     },
-    { "courseId": "MAC2311", "reason": "Calculus I — required by the statistics and machine-learning sequences that follow, and by most quantitative majors." },
-    { "courseId": "MAC2312", "reason": "Calculus II — integration and series, used throughout probability theory." },
-    { "courseId": "MAD2104", "reason": "Discrete Mathematics — logic, sets, combinatorics and graphs: the mathematics of algorithms and of relational data." },
-    { "courseId": "COP2071C", "reason": "Querying Databases with SQL — the least glamorous skill on the path and the one used every single day. Learn it earlier than feels necessary." },
-    { "courseId": "COP2700", "reason": "Introduction to Database — relational design and modelling; why data is shaped the way you find it." },
-    { "courseId": "COP3530C", "reason": "Data Structures — how to handle data at a scale where the naive approach stops working. The dividing line between scripting and engineering." },
-    { "courseId": "STA4321", "reason": "Introduction to Mathematical Statistics — probability and inference derived rather than recited. ⚠ This is the course that makes you able to judge a model instead of just fitting one." },
-    { "courseId": "STA4234", "reason": "Regression Analysis — the workhorse method of applied data science, and the one most often misused." },
-    { "courseId": "STA4024", "reason": "Statistics II — the applied second course: inference, ANOVA and modelling beyond the introduction." },
-    { "courseId": "STA4222", "reason": "Sample Survey Design — how data is gathered, and therefore what it can and cannot support. Underrated for anyone who will work with survey or observational data." },
-    { "courseId": "CAP4770", "reason": "Data Mining — pattern discovery, classification and clustering; the closest undergraduate course to the modelling half of the job." },
-    { "courseId": "CAP4786", "reason": "Big Data Analytics — distributed processing and the tooling for data that will not fit on one machine." },
-    { "courseId": "CAP4774", "reason": "Data Warehousing — how analytical data is organised in practice, which is where most working data actually lives." },
-    { "courseId": "COP4710", "reason": "Database Systems — the internals: indexing, query planning and transactions. Why a query is slow, and what to do about it." },
-    { "courseId": "CDA3101", "reason": "Computer Organization — what the machine is doing underneath, which is what makes performance problems tractable rather than mysterious." },
-    { "courseId": "ENC1101", "reason": "Composition I — the deliverable is a decision someone else makes on your explanation. Writing is not a soft extra in this field." }
+    {
+      "courseId": "MAC2311",
+      "reason": "Calculus I — required by the statistics and machine-learning sequences that follow, and by most quantitative majors."
+    },
+    {
+      "courseId": "MAC2312",
+      "reason": "Calculus II — integration and series, used throughout probability theory."
+    },
+    {
+      "courseId": "MAD2104",
+      "reason": "Discrete Mathematics — logic, sets, combinatorics and graphs: the mathematics of algorithms and of relational data."
+    },
+    {
+      "courseId": "COP2071C",
+      "reason": "Querying Databases with SQL — the least glamorous skill on the path and the one used every single day. Learn it earlier than feels necessary."
+    },
+    {
+      "courseId": "COP2700",
+      "reason": "Introduction to Database — relational design and modelling; why data is shaped the way you find it."
+    },
+    {
+      "courseId": "COP3530C",
+      "reason": "Data Structures — how to handle data at a scale where the naive approach stops working. The dividing line between scripting and engineering."
+    },
+    {
+      "courseId": "STA4321",
+      "reason": "Introduction to Mathematical Statistics — probability and inference derived rather than recited. ⚠ This is the course that makes you able to judge a model instead of just fitting one."
+    },
+    {
+      "courseId": "STA4234",
+      "reason": "Regression Analysis — the workhorse method of applied data science, and the one most often misused."
+    },
+    {
+      "courseId": "STA4024",
+      "reason": "Statistics II — the applied second course: inference, ANOVA and modelling beyond the introduction."
+    },
+    {
+      "courseId": "STA4222",
+      "reason": "Sample Survey Design — how data is gathered, and therefore what it can and cannot support. Underrated for anyone who will work with survey or observational data."
+    },
+    {
+      "courseId": "CAP4770",
+      "reason": "Data Mining — pattern discovery, classification and clustering; the closest undergraduate course to the modelling half of the job."
+    },
+    {
+      "courseId": "CAP4786",
+      "reason": "Big Data Analytics — distributed processing and the tooling for data that will not fit on one machine."
+    },
+    {
+      "courseId": "CAP4774",
+      "reason": "Data Warehousing — how analytical data is organised in practice, which is where most working data actually lives."
+    },
+    {
+      "courseId": "COP4710",
+      "reason": "Database Systems — the internals: indexing, query planning and transactions. Why a query is slow, and what to do about it."
+    },
+    {
+      "courseId": "CDA3101",
+      "reason": "Computer Organization — what the machine is doing underneath, which is what makes performance problems tractable rather than mysterious."
+    },
+    {
+      "courseId": "ENC1101",
+      "reason": "Composition I — the deliverable is a decision someone else makes on your explanation. Writing is not a soft extra in this field."
+    }
   ],
-
   "sources": [
     {
       "label": "O*NET — Data Scientists (15-2051.00)",

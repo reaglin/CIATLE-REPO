@@ -1,0 +1,18 @@
+{
+  "name": "Data Science and Analytics",
+  "description": "Data science programmes teach how to get a defensible answer out of data — statistics and study design, programming, machine learning, and handling data at a scale that breaks a spreadsheet. It is among the newest programmes in the Florida catalogue, and it is still settling: the same subject is awarded under two federal codes and a range of names.",
+  "degreesNote": "Florida awards these credentials at associate, bachelor’s and master’s level, plus short certificates, and the level varies between institutions far more than in older programmes — several state colleges award an associate degree in it while several universities start at master’s. ⚠ Two codes share the field, Data Science and Data Analytics, each awarded by ten Florida public institutions; the names are not a reliable guide to what is taught, so read both catalogues. There is no licence and no accreditation requirement here — what an employer looks at is the work you can show.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 55,
+  "cips": [
+    {
+      "cipCode": "30.70",
+      "note": "Data Science — ten Florida public institutions, weighted toward associate degrees at state colleges with three bachelor’s and three master’s programmes above them."
+    },
+    {
+      "cipCode": "30.71",
+      "note": "Data Analytics — the sibling code, also ten institutions and more of it at baccalaureate and master’s level. ⚠ Included because Florida institutions use the two names interchangeably; a student searching only for \"data science\" would miss half the state’s provision."
+    }
+  ]
+}

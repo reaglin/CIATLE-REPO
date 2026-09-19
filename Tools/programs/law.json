@@ -1,0 +1,14 @@
+{
+  "name": "Law (Juris Doctor)",
+  "description": "Law programmes lead to the Juris Doctor, the professional degree behind admission to the Florida Bar. It is a graduate programme: you arrive holding a bachelor’s degree in whatever subject you chose, and the J.D. takes three years of full-time study after it.",
+  "degreesNote": "The J.D. is a professional doctorate and it is the degree the licence runs through — eligibility to sit the Florida Bar examination requires it from an ABA-approved law school. ⚠ No undergraduate major is required, preferred, or shortens the J.D., including Florida’s own pre-law and legal studies bachelor’s degrees; the Lawyer career path sets out what admitted applicants actually studied, and what the entrance-exam data says about it. ⚠ Admission runs on the LSAT and the school’s own process rather than on a state articulation pathway, so the transfer protections that govern the rest of this site do not apply. ⚠ The list below covers Florida PUBLIC institutions only, which is four of the state’s ABA-approved law schools; Florida also has several private ones that federal public-institution data does not show here.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 60,
+  "cips": [
+    {
+      "cipCode": "22.01",
+      "note": "Law — the J.D. itself. Four Florida public institutions award it, all at professional-doctorate level and nothing below: Florida A&M, Florida International, Florida State and the University of Florida."
+    }
+  ]
+}

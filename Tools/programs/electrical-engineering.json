@@ -1,0 +1,14 @@
+{
+  "name": "Electrical Engineering",
+  "description": "Electrical engineering programmes teach the behaviour of electricity, electronics, signals and computing hardware, and the design of the systems built from them — power generation and distribution, communications, control, and the embedded computers inside almost everything else.",
+  "degreesNote": "Here the programme and the major are the same thing: a Bachelor of Science in Electrical Engineering, with master’s and doctoral degrees above it. Several Florida institutions split COMPUTER ENGINEERING off as a separate degree — if hardware and embedded systems are what you want, read both catalogues, because the first two years are often identical and the choice is reversible early and expensive late. ⚠ For Professional Engineer licensure the degree must come from a programme accredited by ABET’s ENGINEERING commission; an engineering TECHNOLOGY accreditation carries a longer experience requirement. ⚠ Much electrical work is done under the industry exemption, so many electrical engineers never licence — that should be a decision, not an oversight.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 31,
+  "cips": [
+    {
+      "cipCode": "14.10",
+      "note": "Electrical, electronics and communications engineering — the degree itself. Ten Florida public institutions award it, at every level from bachelor’s to doctorate, which makes it the second most widely offered engineering programme in the state after mechanical."
+    }
+  ]
+}
