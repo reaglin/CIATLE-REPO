@@ -3145,6 +3145,28 @@ know two families exist cannot know they are looking in the wrong one.
 one institution is equivalent to a completed sequence at another."* **Crossing families mid-sequence is
 exactly what the state tells students not to do.**
 
+### ⚠⚠⚠ CONFIRMED AS A PATTERN, NOT A CHM QUIRK (2026-09-18, batch 241)
+
+**The same split exists in majors biology, measured the same way:**
+
+| Family | Institutions |
+|---|---|
+| `BSC1010`/`BSC1011` (or the `C` forms) | **16** |
+| `BSC2010`/`BSC2011` (or the `C` forms) | **23** |
+| **both** | **0** |
+
+⚠⚠ **Two of two.** Both of Florida's gateway science sequences run under parallel 1000- and
+2000-level families with no institution in both. **So this is a property of the gateway sciences,
+and any future path or guide naming a gateway science course should give both numbers.**
+
+⚠⚠ **And the SIBLING BEHAVIOUR is identical too:** in both sequences the FIRST course carries the
+**`(GE CORE)`** marker and returns **ELECTIVE** high-school credit, and the SECOND carries neither
+marker and returns **SCIENCE** credit. **A dual-enrolled student taking the first half of both
+gateway sequences may earn no high-school science credit from either.**
+
+✅ `BSC2010` and `BSC2011` were written in batch 241 carrying the finding, so the biology half needs
+no sweep. **The open question below is unchanged and still concerns the CHEMISTRY half only.**
+
 ### ✅ Already done — no decision needed on these
 
 - **Six live career paths corrected and re-pushed** (aerospace, chemical, civil, electrical,
