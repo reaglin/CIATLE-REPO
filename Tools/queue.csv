@@ -1763,7 +1763,7 @@ MVS4343,APP MUS PRIN CELLO,6,skipped,994,2026-09-04T01:12:11Z,,,Applied music: i
 NUR3065L,HEALTH ASSESSMENT,6,skipped,994,2026-09-04T01:12:11Z,,,No UWF equivalent; UWF publishes NUR3067 Health Assessment and Promotion instead (published batch 128). Batch 129.
 NUR4828C,PROFESSIONAL NURSING III,6,skipped,994,2026-09-04T01:12:11Z,,,UWF publishes lecture-only NUR4828; covered by NUR4828 (published batch 128). Batch 129.
 PGY2905C,INDEPENDENT STUDY,6,skipped,994,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
-ECH4504,KINETICS AND REACTOR DESIGN,5,pushed,995,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:04Z,(added by reconcile from orphan draft)
+BME4531,MEDICAL IMAGING,5,pushed,995,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 ADV2000C,ADVERTISING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T15:04:22Z,2026-09-07T15:04:35Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH4575,THE CIVIL RIGHTS MOVEMENT,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:08:06Z,2026-09-07T01:08:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMS2010,CIVIL DISCOURSE AND THE AMERICAN POLITICAL ORDER,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:57Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1792,6 +1792,7 @@ COT4210,DISCRETE STRUCTURES II,5,pushed,995,2026-05-05T22:11:59Z,2026-05-05T23:4
 COT4400,DESIGN AND ANALYSIS OF ALGORITHMS,5,pushed,995,2026-05-05T22:11:59Z,2026-05-05T23:41:06Z,2026-05-05T22:12:21Z,(added by reconcile from orphan draft)
 COT5405,DESIGN AND ANALYSIS OF ALGORITHMS,5,pushed,995,2026-05-05T22:11:59Z,2026-05-05T23:41:06Z,2026-05-05T22:12:21Z,(added by reconcile from orphan draft)
 CRW3110,FICTION WRITING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T02:21:29Z,2026-09-07T02:21:40Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+ECH4504,KINETICS AND REACTOR DESIGN,5,pushed,995,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:04Z,(added by reconcile from orphan draft)
 EET2325C,RF COMMUNICATION,5,pushed,995,2026-05-04T00:32:59Z,2026-05-02T10:27:56Z,2026-05-02T10:27:56.881415+00:00,(added by reconcile from orphan draft)
 EGN3613,ENGINEERING ECONOMIC ANALYSIS,5,pushed,995,2026-05-04T13:16:05Z,2026-05-04T19:36:22Z,2026-05-04T15:36:38Z,EGN remaining (all 55)
 EME3410,INTEGRATING TECHNOLOGY IN THE CLASSROOM,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T17:08:27Z,2026-09-07T17:09:00Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1861,9 +1862,8 @@ PGY2930C,SELECTED TOPICS IN PHOTOGRAPHY,5,skipped,995,2026-08-31T00:09:01Z,,,Day
 THE2905,DIRECTED STUDY,5,skipped,995,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 TPP2500C,MOVEMENT FOR THE ACTOR,5,skipped,995,2026-09-04T01:12:12Z,,,UWF publishes this number without a C suffix; both forms are studio-format and the suffix difference is a filing decision. The UWF form is live. Standing split-family rule.
 TPP3310C,DIRECTING I,5,skipped,995,2026-09-04T01:12:12Z,,,UWF publishes this number without a C suffix; both forms are studio-format and the suffix difference is a filing decision. The UWF form is live. Standing split-family rule.
-ECH3023,MASS AND ENERGY BALANCES I,4,pushed,996,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:04Z,(added by reconcile from orphan draft)
-ECH3101,CHEMICAL ENGINEERING THERMODYNAMICS,4,pushed,996,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
-ECH4323,PROCESS CONTROL,4,pushed,996,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
+BME4361,NEURAL ENGINEERING,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4581,INTRODUCTION TO BIOMEMS,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 ACG3343,COST ACCOUNTING,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T21:58:07Z,2026-09-07T21:58:18Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ADV3300,MEDIA PLANNING,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T21:58:07Z,2026-09-07T21:58:18Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR1101L,HERITAGE AND VALUES I LAB,4,pushed,996,2026-09-04T01:12:12Z,2026-09-05T19:16:15Z,2026-09-05T19:16:25Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1906,6 +1906,9 @@ EAS4105,FLIGHT DYNAMICS,4,pushed,996,2026-09-18T11:33:35Z,2026-09-18T11:33:19Z,2
 EAS4200,AEROSPACE STRUCTURES,4,pushed,996,2026-09-18T11:33:35Z,2026-09-18T11:33:03Z,2026-09-18T11:33:43Z,(added by reconcile from orphan draft)
 EAS4300,JET PROPULSION,4,pushed,996,2026-09-18T11:33:35Z,2026-09-18T11:33:03Z,2026-09-18T11:33:43Z,(added by reconcile from orphan draft)
 EAS4505,ORBITAL MECHANICS,4,pushed,996,2026-09-18T11:33:35Z,2026-09-18T11:33:03Z,2026-09-18T11:33:43Z,(added by reconcile from orphan draft)
+ECH3023,MASS AND ENERGY BALANCES I,4,pushed,996,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:04Z,(added by reconcile from orphan draft)
+ECH3101,CHEMICAL ENGINEERING THERMODYNAMICS,4,pushed,996,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
+ECH4323,PROCESS CONTROL,4,pushed,996,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
 ECO3303,HISTORY OF ECONOMIC THOUGHT,4,pushed,996,2026-09-04T01:12:12Z,2026-09-08T12:17:56Z,2026-09-08T12:18:04Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EEC4301,EARLY CHILDHOOD EDUCATION FOUNDATIONS,4,pushed,996,2026-09-04T01:12:12Z,2026-09-08T14:36:51Z,2026-09-08T14:37:01Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EEE3308C,ELECTRONIC CIRCUITS 1,4,pushed,996,2026-09-04T01:12:12Z,2026-09-08T14:36:51Z,2026-09-08T14:37:02Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2030,12 +2033,8 @@ SPN2949,COOPERATIVE EDUCATION,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State
 STS1931,SURGICAL TECHNOLOGY SPECIAL TOPICS SEMINAR,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 THE2949,THEATRE INTERNSHIP,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 OCB3108C,MARINE FIELD STUDIES,3,queued,997,2026-09-04T01:12:12Z,,,"HELD for Ron - batch 203. NO institution carries the C suffix, and this is CONFIRMED ABSENT from the SCNS flat file rather than merely unreachable - a stronger finding than COP3014C or INP3004C. The real ids both exist and are carried: OCB3108 (USF, 'Marine Field Studies', 4 cr) and OCB3108L (UNF 'Field Studies in Marine Science' and UWF 'Study Abroad in Florida - Marine Field Studies', both 3-4 cr). Subject is NOT in doubt - statewide title is 'Study Abroad in Florida - Marine Field Studies' - only the suffix. Note the L form runs 3-4 credits, not the usual 1: it is a full field/study-abroad course numbered L because it is all fieldwork, not a lab attached to a lecture. RESOLUTION: OCB3108L promoted to this row's priority (997) so the real course gets written here. See REVIEW_QUEUE item 28, which asks for one decision covering the whole C-nobody-carries class."
-ECH3266,TRANSPORT PHENOMENA I,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
-ECH3854,CHEMICAL ENGINEERING COMPUTATIONS,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
-ECH4267,TRANSPORT PHENOMENA II,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
-ECH4323L,PROCESS CONTROL LAB,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
-ECH4404L,UNIT OPERATIONS LAB,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
-ECH4604,CHEMICAL ENGINEERING PROCESS DESIGN I,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
+BME3009,INTRODUCTION TO BIOMEDICAL ENGINEERING,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4508,BIOSIGNALS & SYSTEMS,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 ACG4180,FINANCIAL STATEMENT ANALYSIS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-08T20:29:23Z,2026-09-08T20:29:34Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR4211L,PROFESSIONAL OFFICER COURSE LABORATORY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-06T03:42:25Z,2026-09-06T03:42:53Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH3540,AMERICAN MILITARY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-09T00:54:21Z,2026-09-09T00:54:45Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2097,6 +2096,12 @@ COT2104C,MATHEMATICS FOR COMPUTING,3,pushed,997,2026-05-05T22:12:03Z,2026-05-06T
 COT5310,THEORY OF COMPUTATION I,3,pushed,997,2026-05-05T22:12:03Z,2026-05-06T00:02:00Z,2026-05-05T22:12:22Z,(added by reconcile from orphan draft)
 CTS4457,DATA VISUALIZATION AND COMMUNICATION,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:36:32Z,2026-09-12T03:37:04Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EAS4400,SPACECRAFT ATTITUDE DYNAMICS,3,pushed,997,2026-09-18T11:33:35Z,2026-09-18T11:33:19Z,2026-09-18T11:33:43Z,(added by reconcile from orphan draft)
+ECH3266,TRANSPORT PHENOMENA I,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
+ECH3854,CHEMICAL ENGINEERING COMPUTATIONS,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
+ECH4267,TRANSPORT PHENOMENA II,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
+ECH4323L,PROCESS CONTROL LAB,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:05Z,(added by reconcile from orphan draft)
+ECH4404L,UNIT OPERATIONS LAB,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
+ECH4604,CHEMICAL ENGINEERING PROCESS DESIGN I,3,pushed,997,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
 ECP4703,MANAGERIAL ECONOMICS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T14:06:51Z,2026-09-12T14:07:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EDG4442,EFFECTIVE LEARNING ENVIRONMENTS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T14:07:02Z,2026-09-12T14:07:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EEL4287,FUTURE ENERGY SYSTEMS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-04T10:13:05Z,2026-09-04T10:18:20Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2359,8 +2364,8 @@ THE3112,THEATRE HISTORY I,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09
 THE3113,THEATRE HISTORY II,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 THE3243,MUSICAL THEATRE HISTORY,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TRA4155,SUPPLY CHAIN MANAGEMENT,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-ECH3418,SEPARATIONS PROCESSES,2,pushed,998,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
-ECH4123,PHASE AND CHEMICAL EQUILIBRIA,2,pushed,998,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
+BME4409,ENGINEERING PHYSIOLOGY,2,pushed,998,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4801,BIOMEDICAL ENGINEERING PROCESS DESIGN I,2,pushed,998,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
 ACG4151,ACCOUNTING THEORY,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ADV4802,ADVERTISING CAMPAIGNS,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR1112,HERITAGE AND VALUES II,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2457,6 +2462,8 @@ CWR3201C,FLUID MECHANICS,2,pushed,998,2026-09-04T01:12:11Z,2026-09-12T00:45:00Z,
 CWR4202C,HYDRAULICS,2,pushed,998,2026-09-04T01:12:11Z,2026-09-12T00:45:00Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EAS4020,INTRODUCTION TO FLIGHT,2,pushed,998,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:50Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EAS4950,AEROSPACE CAPSTONE DESIGN I,2,pushed,998,2026-09-18T11:33:35Z,2026-09-18T11:33:03Z,2026-09-18T11:33:43Z,(added by reconcile from orphan draft)
+ECH3418,SEPARATIONS PROCESSES,2,pushed,998,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
+ECH4123,PHASE AND CHEMICAL EQUILIBRIA,2,pushed,998,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
 EEL3111L,CIRCUITS 1 LAB,2,pushed,998,2026-09-04T01:12:12Z,2026-09-04T10:16:53Z,2026-09-04T10:18:20Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EEL3701L,INTRODUCTION TO DIGITAL SYSTEMS LAB,2,pushed,998,2026-09-04T01:12:12Z,2026-09-04T10:04:23Z,2026-09-04T10:18:21Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 EEL4252,POWER SYSTEMS II,2,pushed,998,2026-09-04T01:12:12Z,2026-09-04T10:18:12Z,2026-09-04T10:18:21Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2800,7 +2807,12 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-ECH4714,Chemical Process Safety,,pushed,1000,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
+BME3100,Biomaterials,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BME4211,Biomechanics,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BME4332,Cell and Tissue Engineering,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BME4503,Biomedical Instrumentation,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BSC2010,General Biology I (Majors),,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:26:32Z,2026-09-19T01:33:26Z,(added by reconcile from orphan draft)
+BSC2011,General Biology II (Majors),,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:26:32Z,2026-09-19T01:33:26Z,(added by reconcile from orphan draft)
 ANT2100,Introduction to Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
 ANT2511,Biological Anthropology,,pushed,1000,2026-09-04T03:07:50Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,(added by reconcile from orphan draft)
 ANT3137,Shipwreck Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
@@ -2847,6 +2859,7 @@ CJK0590,Criminal Justice Corrections (Emergency Response and First Aid),,pushed,
 COM3003-SCNS,COM3003: Human Communication (statewide subject),,pushed,1000,2026-09-07T23:26:01Z,2026-09-07T23:25:52Z,2026-09-07T23:26:05Z,(added by reconcile from orphan draft)
 COM3003-UWF,COM3003: Integrated Advertising and Public Relations Concepts (UWF subject),,pushed,1000,2026-09-07T23:26:01Z,2026-09-07T23:25:52Z,2026-09-07T23:26:06Z,(added by reconcile from orphan draft)
 COM4564,Social Media Management,,pushed,1000,2026-09-16T07:40:45Z,2026-09-16T07:40:33Z,2026-09-16T07:41:16Z,(added by reconcile from orphan draft)
+ECH4714,Chemical Process Safety,,pushed,1000,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
 EEE3342C,EEE3342C: Digital Systems,,pushed,1000,2026-09-09T20:40:51Z,2026-09-09T20:40:18Z,2026-09-09T20:49:40Z,(added by reconcile from orphan draft)
 EEE4775-SCNS,EEE4775-SCNS: Massive Storage and I/O for Big Data Computing,,pushed,1000,2026-09-09T20:40:51Z,2026-09-09T20:40:18Z,2026-09-09T20:49:40Z,(added by reconcile from orphan draft)
 EEE4775-UCF,EEE4775-UCF: Real-Time Systems,,pushed,1000,2026-09-09T20:40:51Z,2026-09-09T20:40:18Z,2026-09-09T20:49:41Z,(added by reconcile from orphan draft)
