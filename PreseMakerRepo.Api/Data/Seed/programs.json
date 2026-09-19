@@ -64,6 +64,23 @@
           "note": "General engineering, where several Florida institutions place a first year common to all engineering majors."
         }
       ]
+    },
+    {
+      "slug": "biomedical-engineering",
+      "name": "Biomedical Engineering",
+      "description": "Biomedical engineering programmes apply engineering to medicine — instrumentation and imaging, biomaterials and implants, biomechanics, and tissue and neural engineering. It is Florida’s newest and fastest-growing engineering discipline. ⚠⚠ It is also the one where the bachelor’s degree is least often the end of the story: fewer than half of employers treat it as sufficient, and two Florida universities award the degree at graduate level only.",
+      "degreesNote": "The programme and the major are the same thing: a Bachelor of Science in Biomedical Engineering, with master’s and doctoral degrees above it. Some programmes brand it bioengineering, which is the same degree. ⚠⚠ UNLIKE MOST PROGRAMMES IN THIS REPOSITORY, THE GRADUATE DEGREES ARE NOT OPTIONAL EXTRAS — UCF and FAU offer them without any bachelor’s, and O*NET reports 26% of employers requiring a master’s and 13% a doctorate. ⚠ Check ABET accreditation under the ENGINEERING commission, not engineering technology.",
+      "sortOrder": 40,
+      "cips": [
+        {
+          "cipCode": "14.05",
+          "note": "Biomedical/Medical Engineering — the degree itself. All Florida awards fall under 14.0501."
+        },
+        {
+          "cipCode": "14.01",
+          "note": "General engineering, where several Florida institutions place a first year common to all engineering majors."
+        }
+      ]
     }
   ]
 }
