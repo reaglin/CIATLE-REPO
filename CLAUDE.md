@@ -62,6 +62,26 @@ queue); the main page offers Courses · Programs (soon) · Career Paths (soon). 
 (root) session builds the site and the course API; the `Tools/` session adds courses — with or without
 guides — by Ron's rules, over that API. Start there when building.
 
+## Career paths and programmes — also content, also over the API
+
+Three content pipelines now publish to the live site over the REST API, and **none of them needs a
+redeploy**:
+
+| Content | Documents | Pipeline | Contract |
+|---|---|---|---|
+| Curriculum guides | `Tools/drafts/` | `generate_guide.py` | `Tools/Generate_Guides_and_Push_Process.md` |
+| Career paths | `Tools/career_paths/*.json` | `Tools/career_paths.py` | `CAREER_PATHS_PLAN.md` §0 |
+| Programmes | `Tools/programs/*.json` | `Tools/programs.py` | `Tools/PROGRAM_API.md` |
+
+⚠ **Order matters:** a career path names its programmes by slug and is refused 422 for an unknown
+one, so **push the programme first**. A path is also refused if its CIP code is not in the seeded
+tree — and widening `Data/Seed/cip.json` **is** a deploy.
+
+⚠⚠ **`Data/Seed/programs.json` bootstraps a fresh database and nothing more** (2026-09-19). A
+programme that already exists is left alone at startup, so editing the seed file changes nothing
+live; to correct a programme, push it. Which schools offer a programme is never stored — it is
+derived from the IPEDS award table by CIP prefix at read time.
+
 **Static site export:** `/admin/static-export` builds a self-contained static zip of the public
 site (browse tree, courses, guides) by fetching the live pages over loopback and rewriting links
 (`Api/Services/StaticSiteExporter.cs`, background `StaticExportJobService`); the zips stay in

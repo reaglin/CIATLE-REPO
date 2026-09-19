@@ -8,7 +8,38 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-**Nothing is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
+### ⚠ REDEPLOY NEEDED — programmes over the API (2026-09-19)
+
+**Code only, NO migration** — nothing about the schema changes.
+
+```powershell
+.\Deployment\deploy-update.ps1 -CodeOnly
+```
+
+**Adding a programme stopped needing a deploy.** `ProgramsController` gives programmes the same
+contract paths and guides have — `GET /api/v1/programs[/{slug}]` public, `PUT`/`DELETE` admin — and
+`Tools/programs.py` is the pipeline (`validate` · `push` · `list` · `show` · `delete`), with the five
+existing programmes exported to `Tools/programs/*.json` and the contract in `Tools/PROGRAM_API.md`.
+
+⚠⚠ **`ProgramSeed` is now CREATE-ONLY**, and that is the part to understand before deploying: the
+build-shipped `programs.json` creates programmes a database does not have and **leaves every
+existing one alone**. Re-asserting the file on each start would silently undo a push made between
+deploys, which is the friction the API was added to remove. The startup log now reads
+*"Program seed complete. 0 added, 5 left to the API (already present)."*
+
+✅ Verified on the dev database: create and update round-trip; unpublishing hides a programme from
+the public list and GET (404) while an admin still sees it; `?includeUnpublished=true` without an
+admin token is **403**; deleting a programme a career path names is **409 `PROGRAM_IN_USE`** naming
+the paths; an unseeded CIP code is **422**; a part-code like `14.1` is **400** (codes are matched
+with `StartsWith`, so `14.1` would sweep in 14.10–14.19); and an API edit survives a restart. The
+five documents push clean, reproducing the documented counts — Nursing 78 schools, Mechanical
+Engineering 13.
+
+⚠ **After the deploy:** `cd Tools && python programs.py push --all` against production, to confirm
+the round trip live and leave the documents and the database in step.
+
+
+**Nothing else is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
 on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items
 the `Tools/` session raised, which are still unwritten.
 

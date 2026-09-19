@@ -72,6 +72,34 @@ session needs to know is short:
 | **See what is live** | `python career_paths.py list` |
 | **Browse the framework** | `/careers` → `/careers/area/{cip}` → `/careers/{slug}` |
 
+### ⚠⚠ PROGRAMMES ARE NOW PUSHABLE CONTENT TOO (2026-09-19) — and they come FIRST
+
+**Until 2026-09-19 a programme could only be added by REDEPLOYING the site**, because
+`Data/Seed/programs.json` ships inside the build. **It has an admin API now**, so a programme is
+authored and pushed exactly like a guide or a path. **Contract: [`PROGRAM_API.md`](PROGRAM_API.md).**
+
+| | |
+|---|---|
+| **Author a programme** | write `Tools/programs/<slug>.json`, then `python programs.py validate` |
+| **Push it** | `python programs.py push <slug>` — ⚠ **a write to production; it shows what changes and asks** |
+| **See what is live** | `python programs.py list` · `python programs.py show <slug> --schools` |
+
+⚠⚠⚠ **ORDER: PROGRAMME BEFORE PATH.** A career path names its programmes by slug
+(`programs: [{slug, note}]`) and **the path push is refused 422 for an unknown one.**
+
+⚠⚠ **A PROGRAMME OWNS NO SCHOOL LIST, so the CIP CODES YOU CLAIM *ARE* THE SCHOOL LIST.**
+Which institutions offer it is derived from the IPEDS award table by CIP prefix at read time.
+**Nursing as `51.38` alone finds 39 Florida institutions; adding `51.39` (practical nursing) finds
+78 — and all 39 it was missing are technical colleges.** Ron: *"I do not want a school to be
+excluded from being listed because their offerings are limited."* **Put the evidence in each code's
+`note`**, and claim WHOLE LEVELS only (`15.`, `51.38`, `14.1901`) — a part-code like `14.1` would
+sweep in 14.10 through 14.19 and is refused.
+
+⚠ **Only 5 programmes exist** (nursing, engineering technology, mechanical / chemical / biomedical
+engineering) **against ten published paths**, which is why Data Scientist's only programme is
+Mechanical Engineering with a note saying it is not a route in. **Authoring programmes is now
+ordinary content work, not a deploy.**
+
 ⚠⚠⚠ **THE ONE RULE: A PATH IS CURATED, NEVER DERIVED.** Every course is placed by an author
 with a **required** stated reason. **Do not** build a course list by parsing prerequisites, by
 course-code arithmetic, or from the institution CIP data. Two hundred batches established that a

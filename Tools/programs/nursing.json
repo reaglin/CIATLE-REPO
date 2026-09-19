@@ -1,0 +1,18 @@
+{
+  "name": "Nursing",
+  "description": "Nursing programmes prepare people to care for patients across every setting Florida has, from a practical-nursing certificate at a technical college through an associate degree leading to RN licensure to a baccalaureate and beyond. One programme, several entry points.",
+  "degreesNote": "Nursing encompasses several degrees, and the level you enter at is the real decision. A PRACTICAL NURSING certificate leads to LPN licensure and is the fastest route into paid clinical work. An ASSOCIATE degree leads to RN licensure through NCLEX-RN. A BACCALAUREATE (BSN) leads to the same licence by a longer route, and is what many hospitals prefer and what graduate study requires. ⚠ An RN-to-BSN programme is for nurses who are ALREADY licensed and does not lead to initial licensure. Many Florida institutions offer more than one of these.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 10,
+  "cips": [
+    {
+      "cipCode": "51.38",
+      "note": "Registered nursing, nursing administration, research and clinical nursing — the A.S. and BSN routes to RN licensure."
+    },
+    {
+      "cipCode": "51.39",
+      "note": "Practical and vocational nursing, and nursing assistants — the LPN and CNA routes. ⚠ Included deliberately: a school with only an LPN programme has a nursing programme."
+    }
+  ]
+}

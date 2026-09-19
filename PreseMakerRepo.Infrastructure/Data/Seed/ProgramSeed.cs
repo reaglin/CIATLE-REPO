@@ -17,6 +17,14 @@ namespace PreseMakerRepo.Infrastructure.Seed;
 /// programme is computed from the two at read time and is stored nowhere — Ron, 2026-09-17:
 /// "I am going to decouple programs from schools."
 /// </para>
+/// <para>
+/// ⚠⚠ <b>The programme file BOOTSTRAPS, it does not govern (2026-09-19).</b> Since
+/// programmes gained an admin API (<c>PUT /api/v1/programs/{slug}</c>), a programme that already
+/// exists is LEFT ALONE here: the file creates what is missing — so a fresh database comes up
+/// usable — and the API owns every programme from then on. Re-asserting the file on each start
+/// would silently undo an edit pushed between deploys, which is exactly the friction the API was
+/// added to remove. To correct a seeded programme, push it; to reset one, delete it and restart.
+/// </para>
 /// </summary>
 public class ProgramSeed
 {
@@ -51,23 +59,20 @@ public class ProgramSeed
         await using var stream = File.OpenRead(path);
         var file = await JsonSerializer.DeserializeAsync<ProgramFileJson>(stream, JsonOptions, ct);
         var items = file?.Programs ?? [];
-        int added = 0, updated = 0;
+        int added = 0, kept = 0;
 
         foreach (var j in items)
         {
             var p = await _db.Programs.Include(x => x.Cips)
                         .FirstOrDefaultAsync(x => x.Slug == j.Slug, ct);
-            if (p is null)
-            {
-                p = new ProgramEntity { Id = Guid.NewGuid(), Slug = j.Slug, CreatedUtc = DateTime.UtcNow };
-                _db.Programs.Add(p);
-                added++;
-            }
-            else
-            {
-                updated++;
-                _db.ProgramCips.RemoveRange(p.Cips);
-            }
+
+            // ⚠ Create-only. An existing programme belongs to the API now (see the class
+            // note); overwriting it here would throw away a push made since the last deploy.
+            if (p is not null) { kept++; continue; }
+
+            p = new ProgramEntity { Id = Guid.NewGuid(), Slug = j.Slug, CreatedUtc = DateTime.UtcNow };
+            _db.Programs.Add(p);
+            added++;
 
             p.Name = j.Name;
             p.Description = j.Description ?? string.Empty;
@@ -92,7 +97,9 @@ public class ProgramSeed
         }
 
         await _db.SaveChangesAsync(ct);
-        _logger.LogInformation("Program seed complete. {Added} added, {Updated} updated.", added, updated);
+        _logger.LogInformation(
+            "Program seed complete. {Added} added, {Kept} left to the API (already present).",
+            added, kept);
     }
 
     private async Task SeedAwardsAsync(CancellationToken ct)

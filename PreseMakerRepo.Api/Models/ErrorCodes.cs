@@ -40,4 +40,7 @@ public static class ErrorCodes
     public const string ContributorNotFound = "CONTRIBUTOR_NOT_FOUND";
     public const string CareerPathNotFound = "CAREER_PATH_NOT_FOUND";
     public const string CipNodeNotFound = "CIP_NODE_NOT_FOUND";
+    public const string ProgramNotFound = "PROGRAM_NOT_FOUND";
+    /// <summary>A programme cannot be deleted while a career path names it.</summary>
+    public const string ProgramInUse = "PROGRAM_IN_USE";
 }

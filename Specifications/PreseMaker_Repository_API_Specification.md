@@ -1260,6 +1260,10 @@ For `resultType: "material"`, the object additionally includes `materialType`, `
 | 404 | `GUIDE_REQUEST_NOT_FOUND` | No guide requests exist for the course |
 | 409 | `COURSE_HAS_CONTENT` | Course cannot be deleted: it has a curriculum guide, modules or guide requests |
 | 400 | `BATCH_TOO_LARGE` | A batch exceeds its item limit (500 courses, 1000 institutions) |
+| 404 | `CAREER_PATH_NOT_FOUND` | No published career path with that slug |
+| 404 | `PROGRAM_NOT_FOUND` | No published programme with that slug |
+| 409 | `PROGRAM_IN_USE` | Programme cannot be deleted: a career path names it |
+| 422 | `CIP_NODE_NOT_FOUND` | A CIP code is not in the seeded tree (`Data/Seed/cip.json`) |
 | 500 | `INTERNAL_SERVER_ERROR` | Unhandled server error |
 
 **Validation error detail shape** (used when `code` is `VALIDATION_ERROR`):
@@ -1538,3 +1542,43 @@ listing the link has its listing updated and restored. **Response 200:** `{ url,
 `{ "title"?, "summary"?, "status"?: "active" | "removed" }` edits one course's listing; DELETE removes it
 permanently. **404:** `RESOURCE_NOT_FOUND`.
 **Response 404:** `GUIDE_REQUEST_NOT_FOUND`
+
+
+---
+
+## 16. Programmes and Career Paths
+
+The CIP tree, the programmes filed on it, and the career paths that point at them. Built 2026-09-17,
+programmes gained their write API 2026-09-19. **The full contracts for the content session are
+`Tools/PROGRAM_API.md` and `CAREER_PATHS_PLAN.md` §0;** this section summarises the endpoints.
+
+⚠⚠ **Two rules govern everything here.** A **career path is curated** — every course on one is
+placed by an author with a stated reason, never derived from classification data or course-code
+arithmetic. A **programme owns no school list** — which Florida institutions offer it is derived
+from the IPEDS award table by CIP prefix at read time and is stored nowhere.
+
+| Verb | Route | Auth | Purpose |
+|---|---|---|---|
+| GET | `/cip` | Public | The CIP browse tree. `?parent=51` narrows to one series; `?level=` to one depth |
+| GET | `/career-paths` | Public | Published paths. `?cip=51.38` narrows to one branch |
+| GET | `/career-paths/{slug}` | Public | One path: CIP anchors, programmes, courses with their reasons, sources |
+| PUT | `/career-paths/{slug}` | Admin | Upsert. Courses, sources and CIP anchors are replaced wholesale |
+| DELETE | `/career-paths/{slug}` | Admin | Remove a path and its rows |
+| GET | `/programs` | Public | Published programmes with derived school counts. `?includeUnpublished=true` requires an admin token (403 otherwise) |
+| GET | `/programs/{slug}` | Public | One programme: its CIP codes, the schools its codes find, award levels and year, and the paths it leads to |
+| PUT | `/programs/{slug}` | Admin | Upsert. CIP codes are replaced wholesale |
+| DELETE | `/programs/{slug}` | Admin | Remove a programme — **409 `PROGRAM_IN_USE`** while a career path names it |
+
+**CIP codes.** A career path is filed on a 4-digit group (`51.38`) and may carry further anchors,
+each with the evidence for it. A programme's codes are **prefixes** and must be whole levels — a
+series (`15` or `15.`), a group (`51.38`) or one 6-digit code (`14.1901`). A part-code such as
+`14.1` is refused 400: codes are matched with `StartsWith`, so it would sweep in 14.10 through
+14.19. Every code must exist in the seeded tree, or the request comes back **422
+`CIP_NODE_NOT_FOUND`** — widening the tree is a deploy.
+
+**Push responses carry the work still owed.** A career-path push returns `unlistedCourses` (courses
+the path names that the catalog does not carry, so the page would link to nothing); a programme push
+returns `unmatchedCips` (codes matching no award record, which is usually the wrong code).
+
+⚠ `Data/Seed/programs.json` **bootstraps** a database that has no programmes and never overwrites an
+existing one, so a programme corrected over the API survives every redeploy.

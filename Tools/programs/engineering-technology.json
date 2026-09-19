@@ -1,0 +1,14 @@
+{
+  "name": "Engineering Technology",
+  "description": "Engineering technology programmes prepare technicians and technologists who build, install, test and maintain what engineers design — electronics, mechanical systems, industrial automation, quality, drafting and civil works. It is the largest applied-technical family in the Florida College System.",
+  "degreesNote": "Engineering Technology is mostly an ASSOCIATE-level family in Florida, with a smaller number of BACHELOR degrees and a large number of short certificates that stack toward them. ⚠⚠ It is NOT the same as an ENGINEERING degree, and the difference is worth two years: under s. 471.013(1)(a), Florida Statutes, a graduate of an approved engineering curriculum needs four years of experience before the PE examination, while a graduate of an approved engineering technology curriculum needs six. If a PE licence is your goal, read the Mechanical Engineer career path first.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 20,
+  "cips": [
+    {
+      "cipCode": "15.",
+      "note": "The whole Engineering Technologies series — 32 CIP codes are awarded in Florida, from sub-year certificates to master’s degrees."
+    }
+  ]
+}

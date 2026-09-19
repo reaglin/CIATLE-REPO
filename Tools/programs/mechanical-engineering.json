@@ -1,0 +1,18 @@
+{
+  "name": "Mechanical Engineering",
+  "description": "Mechanical engineering programmes teach the analysis of forces, motion, energy and materials, and the design of the machines and systems that use them. It is the broadest engineering discipline and the one that closes the fewest doors.",
+  "degreesNote": "Here the programme and the major are the same thing: a Bachelor of Science in Mechanical Engineering, with master’s and doctoral degrees above it. ⚠ For Professional Engineer licensure the degree must come from a programme accredited by ABET’s ENGINEERING commission — check before enrolling, because an engineering TECHNOLOGY accreditation adds two years to the experience requirement.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 30,
+  "cips": [
+    {
+      "cipCode": "14.19",
+      "note": "Mechanical Engineering — the degree itself."
+    },
+    {
+      "cipCode": "14.01",
+      "note": "General engineering, where several Florida institutions place a first year common to all engineering majors."
+    }
+  ]
+}

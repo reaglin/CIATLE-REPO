@@ -53,9 +53,10 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 |---|---|---|
 | 3.1 ⚠️ | `Programs`, `ProgramCips`, `CareerPathPrograms`, `InstitutionAwards` + `/programs`, `/programs/{slug}` | Nursing lists 78 institutions including every technical college. **Live** |
 | 3.2 ⚠️ | "Programs that lead here" on a path page, with how many Florida schools offer each | Renders on Mechanical Engineer. **Live** |
-| 3.3 | **Only 5 programmes exist** (nursing, engineering technology, mechanical / chemical / biomedical engineering) against 10 published paths and a 50-path queue | Every published path names at least one programme. ⚠ Held up by 3.4 |
-| 3.4 | ⚠⚠ **Adding a programme needs a redeploy.** `programs.json` and `institution_awards.json` are build-shipped seeds and there is no `ProgramsController`, so programme content cannot be pushed over the API the way paths and guides are | `PUT /api/v1/programs/{slug}` (AdminOnly) plus a `Tools/` pusher exist, and a programme can be added without deploying. See **Open question 1** |
+| 3.3 | **Only 5 programmes exist** (nursing, engineering technology, mechanical / chemical / biomedical engineering) against 10 published paths and a 50-path queue. ⚠ It shows: **Data Scientist's only programme is Mechanical Engineering**, with a note saying it is not a route in — there is no computing programme to name | Every published path names a programme that actually leads there. No longer blocked: 3.4 makes a programme ordinary pushable content, so this is now authoring work — computer science, civil / electrical / industrial / aerospace engineering, and law next |
+| 3.4 ⚠️ | **Programmes over the API** — built 2026-09-19 (Ron chose this over more path content). `ProgramsController` (GET list/one, PUT, DELETE), `Tools/programs.py` (validate · push · list · show · delete), `Tools/programs/*.json` for the five existing programmes, `Tools/PROGRAM_API.md`. ⚠⚠ **`ProgramSeed` is now create-only**, so the build-shipped file bootstraps a fresh database and never overwrites a pushed edit | ⚠ **Needs a code-only deploy**, then `python programs.py push --all` against production to confirm the round trip. Verified on the dev database: create, update, unpublish/visibility, 403 on `?includeUnpublished` without admin, 409 when a path names the programme, 422 on an unseeded CIP code, 400 on a part-code like `14.1`, and a pushed edit surviving a restart. **UX: cognitive walkthrough + heuristic evaluation run on the CLI — 1 critical (unguarded `delete` against production) and 6 major findings fixed**, including server errors printed as prose with a next step, and `validate` now checking CIP codes against `cip.json` so the one failure that needs a redeploy is caught locally |
 | 3.5 | The IPEDS award data is **2023** and neither the year nor the CIP edition is shown to the reader | The programme page states the award year and CIP edition it is counting |
+| 3.6 | Part-codes are refused and whole levels required (`15.`, `51.38`, `14.1901`) because codes are matched with `StartsWith` — but the **five existing programmes were written before that rule** | A sweep confirms every live programme's codes are whole levels (they are, as exported) and the rule is in `Tools/PROGRAM_API.md` |
 
 ## Phase 4 — Career path content (the 50-path queue) ⚠️
 
@@ -84,11 +85,9 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 
 ## Open questions for Ron
 
-1. **(asked 2026-09-19) Programmes need a redeploy for every addition — should they move to the API?**
-   Career paths and guides publish over the REST API; programmes are a build-shipped seed file, so
-   each of the five cost a deploy. A programmes controller plus a `Tools/` pusher would make
-   programme content work like everything else — roughly half a session. Worth doing before the
-   programme count grows, or keep redeploying?
+1. ~~**(asked 2026-09-19) Programmes need a redeploy for every addition — should they move to the
+   API?**~~ **Answered the same day: yes, build it.** Done — item 3.4; it awaits a deploy and Ron's
+   verification.
 2. **(asked 2026-09-19) Which cluster of the 50-path queue comes next?** Rank order says the three
    remaining engineering paths (environmental, computer hardware, materials). The manufacturing and
    CTE cluster (11–27) is where the sponsor emphasis points, is the thinnest part of the site today,
@@ -103,6 +102,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 - `COURSE_CATALOG_PLAN.md` — the course catalog, the programme ruling, and §14's direction for paths
 - `Deployment/PENDING_SERVER_CHANGES.md` — what needs a redeploy, and the record of what each deploy carried
 - `FEATURE_BACKLOG.md` — captured ideas; nothing there is started or scheduled
+- `Tools/PROGRAM_API.md` — the programme contract: what a programme is, the CIP rules, and the push loop
 - `Tools/career_paths/QUEUE.csv` — the 50 ranked paths with their CIP and SOC anchors, and publish status
 - `Tools/Generate_Guides_and_Push_Process.md` — the guide pipeline end to end (the `Tools/` session)
 - `Tools/REVIEW_QUEUE.md` — content decisions waiting on Ron (the `Tools/` session)

@@ -245,10 +245,19 @@ def token(session):
     password = os.environ.get("REPO_ADMIN_PASSWORD")
     if not email or not password:
         print("REPO_ADMIN_EMAIL and REPO_ADMIN_PASSWORD are required to push.")
+        print("   Set them in Tools/.env (this script loads it automatically).")
         sys.exit(1)
-    r = session.post("%s/api/v1/auth/login" % BASE_URL,
-                     json={"email": email, "password": password}, timeout=20)
-    r.raise_for_status()
+    try:
+        r = session.post("%s/api/v1/auth/login" % BASE_URL,
+                         json={"email": email, "password": password}, timeout=20)
+    except requests.exceptions.ConnectionError:
+        print("cannot reach %s -- is the site up, and is REPO_BASE_URL right?" % BASE_URL)
+        sys.exit(1)
+    if r.status_code != 200:
+        # A raise_for_status here printed a traceback at the commonest first-run failure.
+        print("login to %s was refused (HTTP %s)." % (BASE_URL, r.status_code))
+        print("   Check REPO_ADMIN_EMAIL / REPO_ADMIN_PASSWORD in Tools/.env.")
+        sys.exit(1)
     return r.json()["data"]["accessToken"]
 
 
