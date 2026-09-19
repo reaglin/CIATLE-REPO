@@ -1,8 +1,13 @@
 # Career Paths — implementation plan
 
-**Status:** ✅ **BUILT 2026-09-17** — the CIP framework, the data model, the browse pages, the
-authoring API and the pipeline are in, and the first path (Registered Nurse) is authored. See
-§0 for what was built and how the 2026-09-04 design below was superseded by it.
+**Status:** **BUILT 2026-09-17, DEPLOYED AND LIVE 2026-09-19** — the CIP framework (208 nodes), the
+data model, the browse pages, the authoring API and the pipeline are in, and **ten paths are
+published**: the seven engineering paths, Registered Nurse, Lawyer and Data Scientist. See §0 for
+what was built and how the 2026-09-04 design below was superseded by it.
+
+⚠ **Status and the remaining work now live in [`docs/DEVELOPMENT-PLAN.md`](docs/DEVELOPMENT-PLAN.md)**
+(phases 2–4). **This file stays as the design and the reasoning** — the principles, the CIP
+decisions, the measurements that forced them — and is not the place to look for what is done.
 
 ---
 

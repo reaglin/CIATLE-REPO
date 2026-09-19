@@ -8,142 +8,32 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⚠ SEED-ONLY REDEPLOY — one CIP node for the Data Scientist path (2026-09-17)
+**Nothing is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
+on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items
+the `Tools/` session raised, which are still unwritten.
 
-**`cip.json` is now 208 nodes**, having gained **`30.71` Data Analytics** — the sibling of Data
-Science, awarded by 10 Florida public institutions and at more baccalaureate level than Data Science
-itself. **Production has the 207-node version**, so the Data Scientist path cannot publish until
-this ships: filing on `30.71` returns **422**.
+**Still open, not written yet:** the **`offering_notes`** field on guides and the **field sizing**
+items from 2026-09-11 (both below). They touch the same validator, so they should ship together.
 
-**No migration and no code change** — `cip.json` ships with the build, so this is exactly the case
-`-CodeOnly` was added for:
+## ✅ DEPLOYED 2026-09-19 — Career Paths, the CIP tree, Programs, and the guide prerequisite ceiling
 
-```powershell
-.\Deployment\deploy-update.ps1 -CodeOnly
-```
+One deploy carried everything written on 2026-09-17 plus the 2026-09-12 field raise. **Verified
+against the live site the same day:**
 
-✅ Verified on the dev database: seed reports "1 added, 1 updated, 208 nodes", the path pushes with
-13 CIP anchors, and `/careers/data-scientist` returns 200 with all its sections.
-
-⚠ **After the deploy, push the path**: `python career_paths.py push data-scientist`.
-
-
-### ⚠ REDEPLOY NEEDED — careers linked to programmes (2026-09-17, after the Programs deploy)
-
-✅ **This is the first deploy that can use the new flag:**
-`.\Deployment\deploy-update.ps1 -CodeOnly`
-
-**Code only, NO migration** — the `CareerPathPrograms` table shipped with `AddPrograms`.
-
-A career path can now name the programmes that lead to it (`programs: [{slug, note}]` in the path
-JSON), and the path page gains a **"Programs that lead here"** section showing each programme with
-**how many Florida schools offer it** — Ron's "note schools that offer the program in the career".
-⚠ The count is derived from the programme's CIP prefixes against the award table; the career path
-stores nothing about schools.
-
-✅ Verified on the dev database: Mechanical Engineer → Mechanical Engineering renders "offered by 13
-Florida schools" with its note, and an unknown programme slug is refused **422**.
-
-⚠ **The two path documents already carry their `programs` link and have been pushed to
-production**, where the server ignores the unknown field until this deploys — so nothing is broken
-meanwhile, the section simply does not appear.
-
-
-### ⚠⚠ REDEPLOY NEEDED — PROGRAMS (2026-09-17)
-
-**Migration `AddPrograms`** (four tables: `Programs`, `ProgramCips`, `CareerPathPrograms`,
-`InstitutionAwards`), a new seed, two pages, and Programs coming off "Coming soon" in the section
-nav. **Deploy without `-SkipMigrations`.**
-
-| | |
+| What shipped | Verified live |
 |---|---|
-| Seed files | `Data/Seed/programs.json` and `Data/Seed/institution_awards.json`, both shipped with the build like `cip.json` — no `/etc` step |
-| Data | 3 programmes; **6,427 IPEDS award rows** across 613 CIP codes, Florida public institutions, 2023 |
-| Pages | `/programs`, `/programs/{slug}` — both added to the static export |
+| **Career Paths + the CIP tree** (migrations `AddCipAndCareerPaths`, `AddCareerPathCips`; `CipSeed`; `/careers`, `/careers/area/{code}`, `/careers/{slug}`; `GET /api/v1/cip`, career-path API; Career Paths off "Coming soon"; static export) | `GET /api/v1/cip` returns **208 nodes**; `/careers` 200; ten paths published |
+| **The widened CIP seed** — the nine career-and-technical 4-digit groups the evidence rule missed, then `30.71` Data Analytics for Data Scientist | `30.71`, `15.07`, `47.03`, `46.03`, `51.06`, `14.02`, `14.07` all present live |
+| **Programs** (migration `AddPrograms`; `programs.json` + 6,427 IPEDS award rows; `/programs`, `/programs/{slug}`) | `/programs` and `/programs/mechanical-engineering` both 200 |
+| **"Programs that lead here"** on a path page | renders on `/careers/mechanical-engineer` |
+| **"Where you can take these courses in Florida"** on a path page | renders on all ten path pages |
+| **Guide `Prerequisites` ceiling 500 → 1000** (migration `WidenGuidePrerequisites`, validator + EF column + `validate_drafts.py` mirror) | migration is in the deployed build; ⚠ **the end-to-end check still belongs to the `Tools/` session** — push a guide whose `prerequisites` runs past 500 characters (`SCE4320` is the known case) and confirm it is not refused 400 |
 
-✅ Verified on the dev database: migration applies, seed runs and is idempotent, all pages 200,
-unknown slug 404, and the Nursing page correctly lists **78** institutions including every
-technical college.
+⚠ **The content step that the deploy unblocked is done:** `data-scientist` was pushed
+2026-09-19 (13 CIP anchors, 17 courses, 7 sources) and `/careers/data-scientist` returns 200 with
+every section. **Ten paths are now live** — the seven engineering paths, Registered Nurse, Lawyer
+and Data Scientist — and `Tools/career_paths/QUEUE.csv` carries `published` on those ten rows.
 
-⚠ This deploy also carries the **career-page "Where you can take these courses"** section from
-earlier today.
-
-
-### ⚠ REDEPLOY NEEDED for the career-page "Where you can take these courses" section (2026-09-17)
-
-**New on the path page:** the Florida institutions that teach a path's courses, computed live from
-`CourseOffering` and ranked by **how many of the path's courses each one carries**. Ron asked for
-"schools represented in repo offering this path"; ⚠ the wording is deliberately narrower than
-that, because the data supports *these schools teach the courses* and not *this school offers the
-degree*.
-
-Code only — `Pages/Careers/Path.cshtml{,.cs}`. **No migration.** ✅ Verified against the dev
-database with seeded offerings (UCF 3, FIU 2, DSC 1, correctly ranked). Until the redeploy the
-section simply does not render; the three live paths are otherwise unaffected.
-
-
-### ⚠⚠ REDEPLOY NEEDED BEFORE THE MANUFACTURING/ENGINEERING PATHS CAN PUBLISH (2026-09-17)
-
-**`cip.json` grew from 198 to 207 nodes** when the top-50 career-path queue was built: nine
-4-digit CIP groups were added that the evidence rule had missed — electrical/electronic
-engineering technology, quality control, industrial maintenance, vehicle and aviation
-maintenance, electrical installers, construction management, aerospace engineering, chemical
-engineering and dental support services.
-
-⚠ **The live site has the 198-node version.** The seed file ships inside the build, so a path
-filed on any of the nine will be **rejected 422 (`CIP_NODE_NOT_FOUND`)** until the site is
-redeployed. **The two published paths are unaffected** — they use nodes that are already live.
-
-**So: redeploy before pushing the first manufacturing or engineering path.** Ordinary
-`.\Deployment\deploy-update.ps1`; the migrations are already applied, and `CipSeed` will add the
-nine on startup and report them.
-
-⚠ **Why the nine were missing is worth knowing, because it will recur:** the course-CIP evidence
-comes from FIU, FAU and NWFSC, and the first two are universities. Universities do not teach
-machining, welding, HVAC or industrial maintenance — the state colleges do, and they publish no
-CIP codes at all. **The evidence rule is therefore blind to the whole career-and-technical
-education space**, which is exactly the sponsor emphasis.
-
-
-### ⚠⚠ WRITTEN AND AWAITING DEPLOY — Career Paths and the CIP tree (2026-09-17)
-
-**TWO migrations — `AddCipAndCareerPaths`** (four tables: `CipNodes`, `CareerPaths`,
-`CareerPathCourses`, `CareerPathSources`) **and `AddCareerPathCips`** (a fifth, `CareerPathCips`,
-letting one path be filed under several CIP groups) — plus a new startup seed, three pages and a
-controller. **Deploy without `-SkipMigrations`.**
-
-| What | Note |
-|---|---|
-| **Seed file** | `PreseMakerRepo.Api/Data/Seed/cip.json` — ⚠ **ships with the build** (`Content CopyToOutputDirectory`), unlike `taxonomy.json` which the deploy script copies to `/etc`. `Cip:ConfigPath` defaults to `Data/Seed/cip.json`; **no `/etc` file and no deploy-script change is needed.** |
-| **Startup** | `CipSeed` runs after `TaxonomySeed` in `Program.cs`. Idempotent; logs and skips if the file is missing, so a bad deploy degrades rather than failing to start. |
-| **Nav** | **Career Paths comes off "Coming soon"** in `_SectionNav`. Programs stays on it. |
-| **Static export** | `/careers` is seeded and `/careers/*` allowed in `StaticSiteExporter`. |
-| **API** | `GET /api/v1/cip`, `GET /api/v1/career-paths[/{slug}]` public; `PUT`/`DELETE` admin-only. |
-
-✅ **Verified against the dev database before commit:** migration applies, seed is idempotent
-(second run: 0 added, 0 updated, 196 nodes), all three pages return 200, unknown CIP code and unknown
-slug return 404, and a full path push round-trips through `Tools/career_paths.py`.
-
-⚠ **After deploying, the content is a separate step and needs Ron’s go-ahead**: two paths are
-authored (`Tools/career_paths/registered-nurse.json`, `lawyer.json`) and **neither has been pushed to
-production**. `python career_paths.py push --all`.
-
-⚠ **The seed file changed after the first commit** — `cip.json` is now **198 nodes** (159 groups),
-having gained `22.00` and `45.04` for the Lawyer path. It ships with the build, so the redeploy carries
-it and `CipSeed` adds the two nodes on startup (verified: *"2 added, 2 updated, 198 nodes"*).
-
-
-The course catalog work (`COURSE_CATALOG_PLAN.md` phases 1–4b) is live — see the record below.
-
-**⚠ WRITTEN AND AWAITING DEPLOY — the `Prerequisites` ceiling raise (500 → 1000).** Ron, 2026-09-11: *"The
-500 character prerequisite ceiling is blocking a lot of the guides."* Validator, EF column and the
-`Tools/validate_drafts.py` mirror all moved to 1000, with migration `WidenGuidePrerequisites`. **Deploy
-without `-SkipMigrations`** (the migration is empty on SQLite — see the comment in it — but must be applied
-so the recorded schema stays honest). Details in the entry below.
-
-**Still open, not written yet:** the **`offering_notes`** field on guides and the **field sizing** items the
-`Tools/` session raised on 2026-09-11 (both below). They touch the same validator, so they should ship
-together — after tonight's deploy.
 
 ## ✅ DEPLOYED 2026-09-11 — course catalog phases 1–4b, in two releases, both verified live
 

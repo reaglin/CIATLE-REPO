@@ -4,12 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development plan
 
-Planning and status for this repo follow the portfolio rules for `docs/DEVELOPMENT-PLAN.md` —
-see **"Every project: `docs/DEVELOPMENT-PLAN.md`"** in the parent `repos/CLAUDE.md`
-(model: `LMS-2-Website/docs/DEVELOPMENT-PLAN.md`). If this repo has no plan yet, the next round of
-updates or new development starts by creating one: phases of numbered tasks; no icon/⬜ = to do,
-⚠️ = action needed (awaiting Ron's verification or returned with a comment), ✅ = verified by Ron;
-referenced documents listed at the end.
+**[`docs/DEVELOPMENT-PLAN.md`](docs/DEVELOPMENT-PLAN.md) is the plan — start there.** It carries the
+phases, what is done, what is waiting on Ron, and the open questions, following the portfolio rules
+in the parent `repos/CLAUDE.md` (**"Every project: `docs/DEVELOPMENT-PLAN.md`"**): phases of numbered
+tasks; no icon/⬜ = to do, ⚠️ = action needed (awaiting Ron's verification, or returned with a
+comment), ✅ = verified by Ron — never marked by Claude. Update it in the same commit as the work.
+
+The plan covers **the site and its APIs**. Guide *content* status stays with the `Tools/` session
+(`Tools/NEXT_SESSION.md`, `Tools/SOURCES.md`, `Tools/REVIEW_QUEUE.md`); the design documents it
+draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its References section.
 
 ## Project Overview
 
@@ -17,7 +20,8 @@ referenced documents listed at the end.
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed; 643 curriculum guides are published.
+three-project solution exists and is deployed: **24,415 courses, 2,504 curriculum guides, 10 career
+paths and 5 programmes** are live as of 2026-09-19.
 
 ## Solution Structure
 
