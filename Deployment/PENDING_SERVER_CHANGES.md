@@ -57,9 +57,23 @@ Biomedical, Chemical, Civil and Industrial Engineer as neighbours; a relation na
 that does not exist is refused **422** before anything is sent; deleting a programme clears the
 links pointing at it rather than failing on a hidden foreign key.
 
-⚠ **After the deploy:** `cd Tools && python programs.py push --all` (18 programmes, six of them
-new — computer, environmental, materials and ocean engineering, statistics, and paralegal studies)
-then `python career_paths.py push data-scientist`.
+⚠ **After the deploy, in this order** (a path is refused if its programme is not live yet):
+
+```powershell
+cd Tools
+python programs.py push --all          # 18 programmes, six of them new
+python career_paths.py push --all      # 13 paths, three of them new
+```
+
+The six new programmes are computer, environmental, materials and ocean engineering, statistics,
+and paralegal and legal support studies. The three new paths are **Environmental Engineer**,
+**Computer Hardware Engineer** and **Materials Engineer** (queue ranks 8–10), which close the
+programme pages that could not say what they led to.
+
+✅ **Their courses are already on the live site.** Thirteen course records the paths name were
+missing from the catalog and were sent ahead of the deploy over `POST /api/v1/courses/batch`, with
+per-institution offerings from the SCNS flat file — COP3530, CDA4102, CDA4210, COP4600, EEE3308,
+EEE4351, and the seven EMA materials courses. **No path links to a page that is not there.**
 
 **Nothing else is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
 on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items

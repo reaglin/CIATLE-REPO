@@ -1,0 +1,191 @@
+{
+  "name": "Materials Engineer",
+  "cipCode": "14.18",
+  "socCode": "17-2131",
+  "isPublished": true,
+  "sortOrder": 100,
+  "description": "Materials engineers work out why materials behave as they do and choose or design them to meet a requirement — metals, ceramics, polymers, composites and semiconductors — and they are who finds out why something broke. ⚠ It is the smallest engineering occupation on this site, and in Florida it is mostly a graduate degree.",
+  "credentialNote": "⚠ No licence stands between you and this work: materials engineering runs almost entirely under the industry exemption and few of these engineers hold a PE. ⚠⚠ What does stand in the way is the shape of Florida's provision — FOUR public institutions award in this field and only the University of Florida and UCF award a BACHELOR'S, so for most students the route is a mechanical, chemical or physics bachelor's followed by a materials master's. Plan for that from the first year rather than discovering it in the third. If licensure might ever matter, the degree should still come from a programme accredited by ABET's ENGINEERING commission (s. 471.013, Florida Statutes: four years of experience after an approved engineering curriculum, six after engineering technology).",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: materials engineers <em>evaluate materials and develop machinery and processes to manufacture materials meeting specialized design and performance specifications</em>, working with <em>composites, metals, ceramics, plastics and polymers</em>. The tasks are concrete — <em>conduct or supervise tests on raw materials or finished products to ensure their quality; review new product plans and make recommendations for material selection, based on design objectives; analyze product failure data and laboratory test results to determine causes of problems; determine appropriate methods for fabricating and joining materials</em>.</p> <p>&#9888; Read the third one again: <strong>failure analysis is a large part of this job</strong>. When something breaks — a weld, a turbine blade, an implant, a circuit board — a materials engineer is who finds out why. It is forensic work, and it is the part of the discipline other engineers call on most.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>23,000 materials engineers employed</strong> (2024), growth <strong>&ldquo;faster than average (5% to 6%)&rdquo;</strong>, <strong>1,500 openings a year</strong>, <strong>median wages $112,860 (2025)</strong>, and <strong>80% of respondents said a bachelor&rsquo;s degree is required</strong>.</p> <p>⚠ This is the <strong>smallest engineering occupation on this site</strong> — 23,000 nationally, against 369,000 civil engineers. It is a good field and a narrow one: choose it because the work interests you, and expect to move for the job rather than to find one down the road.</p>  <h2>⚠⚠⚠ In Florida this is mostly a GRADUATE degree, and that changes the plan</h2> <p>Four Florida public institutions award in materials engineering, and <strong>only the University of Florida and UCF award a bachelor&rsquo;s</strong> — FIU and USF are master&rsquo;s and doctoral only. The undergraduate course catalogue says the same thing from the other direction: of the <em>EMA</em> materials courses taught in Florida, <strong>the best-carried undergraduate one reaches three institutions</strong>, while the graduate ones reach as many.</p> <p><strong>So the realistic route for most Florida students is not a materials bachelor&rsquo;s.</strong> It is a <strong>mechanical, chemical or physics degree with every materials elective you can take</strong>, then a materials master&rsquo;s — which is how a large share of practising materials engineers got there anyway. &#9888; If you are at an institution with no materials degree, that is not a closed door; it is the normal door.</p> <p>⚠ One course makes the difference early: <strong>EGN3365 Materials in Engineering</strong>, the survey that six institutions carry. It is the standard first exposure, it is usually required for mechanical and civil students anyway, and how much you enjoy it is the honest test of whether this path is for you.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Structure-property thinking.</strong> The discipline's one big idea: what a material does follows from how it is arranged, at scales from the atom to the grain. Everything else is detail on top of it.</li> <li><strong>Chemistry and modern physics together.</strong> ⚠ Materials sits where the two meet — bonding, crystal structure, phase diagrams, electronic properties — and students who like only one of them find the middle uncomfortable.</li> <li><strong>Laboratory technique and characterisation.</strong> Microscopy, diffraction, mechanical testing and thermal analysis. The instruments are the profession's working vocabulary, and hands-on time with them is the most transferable thing a degree gives you.</li> <li><strong>Statistics and failure data.</strong> Materials fail probabilistically; fatigue and fracture are statistical subjects, and a single test result rarely settles anything.</li> <li><strong>Writing a findings report.</strong> A failure analysis ends in a document that engineers, lawyers and managers all read. &#9888; The technical work is wasted if the report cannot carry it.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Decide early whether you are aiming at the bachelor&rsquo;s or the master&rsquo;s route</strong>, because they need different undergraduate choices. If the master's, take the mechanical or chemical degree and load it with materials, thermodynamics and chemistry electives.</li> <li><strong>Get into a laboratory as an undergraduate.</strong> In a small, research-heavy field, the professor who knows your work is a larger factor in admission and hiring than the transcript.</li> <li><strong>Follow the industry, not the title.</strong> Florida's materials work sits inside aerospace and space systems, medical devices, semiconductors and marine corrosion — so read the aerospace, biomedical and chemical paths beside this one.</li> <li><strong>Corrosion is Florida's speciality whether or not anyone advertises it.</strong> Salt air, humidity and a coastline make it a standing problem for every structure and vehicle in the state, and it is a durable niche.</li> <li><strong>Take the FE in your final year</strong> if licensure might matter. Most materials work runs under the industry exemption and few of these engineers licence — but the exam is far easier while the coursework is fresh.</li> </ul>",
+  "programs": [
+    {
+      "slug": "materials-engineering",
+      "note": "The degree itself — and ⚠ read the school list before planning on it: four institutions award in the field and only two at bachelor's level. The programme page sets out which."
+    },
+    {
+      "slug": "mechanical-engineering",
+      "note": "⚠ The commonest route into materials work in Florida, and not a compromise: eleven institutions award it, it covers mechanics of materials and manufacturing, and it is accepted for materials master's admission. If no materials bachelor's is near you, this is the answer."
+    },
+    {
+      "slug": "chemical-engineering",
+      "note": "The other standard entry, and the better one for polymers, coatings, electrochemistry and semiconductor processing."
+    },
+    {
+      "slug": "aerospace-engineering",
+      "note": "The largest consumer of materials expertise in the state — composites, high-temperature alloys and fatigue — and a common destination for materials graduates rather than a route in."
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "MAC2311",
+      "reason": "Calculus I — the gate on the degree.",
+      "variantNote": "⚠ Transfer is guaranteed on the COMPLETED sequence; finish calculus at one institution if you can."
+    },
+    {
+      "courseId": "MAC2312",
+      "reason": "Calculus II — integration and series, used throughout kinetics and diffusion."
+    },
+    {
+      "courseId": "MAC2313",
+      "reason": "Calculus III — multivariable methods; stress, diffusion and heat flow are all fields."
+    },
+    {
+      "courseId": "MAP2302",
+      "reason": "Differential Equations — diffusion, heat treatment and phase transformation are rate problems."
+    },
+    {
+      "courseId": "PHY2048",
+      "reason": "Physics with Calculus I — mechanics, and the basis of how a material carries load."
+    },
+    {
+      "courseId": "PHY2049",
+      "reason": "Physics with Calculus II — electricity and magnetism, which the electronic-properties half of the discipline rests on."
+    },
+    {
+      "courseId": "PHY3101",
+      "reason": "Modern Physics — ⚠ the course that separates materials engineering from mechanical: quantum behaviour, bonding and band structure are why a semiconductor is not a metal.",
+      "variantNote": "⚠ Ten public institutions carry it (DSC, FAMU, FGCU, Florida Poly, Florida State, Miami Dade, UCF, UF, UNF, USF). Where a programme does not require it, take it anyway if solid-state or electronic materials interest you."
+    },
+    {
+      "courseId": "CHM2045",
+      "reason": "General Chemistry I — bonding and structure, the first half of the discipline's other parent science.",
+      "variantNote": "⚠⚠ FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS AND NO INSTITUTION CARRIES BOTH — twenty institutions use the CHM2045 family and nineteen the CHM1045 family. Same course, credit articulates either way, but the other number does not exist at your institution. ⚠ The C form packages the laboratory into one 4-credit registration."
+    },
+    {
+      "courseId": "CHM2046",
+      "reason": "General Chemistry II — equilibrium, thermodynamics and electrochemistry. ⚠ Electrochemistry is corrosion, which in Florida is a career of its own.",
+      "variantNote": "⚠ Numbered CHM1046 at the institutions using the CHM1045 family."
+    },
+    {
+      "courseId": "CHM2210",
+      "reason": "Organic Chemistry I — ⚠ required where polymers are emphasised, and polymers are half of modern materials engineering. Check your programme before skipping it.",
+      "variantNote": "⚠ Twenty-nine public institutions carry it — among the most widely offered courses in Florida, and easy to complete before transferring."
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Statistics — fatigue life, fracture and quality control are distributions rather than single numbers."
+    },
+    {
+      "courseId": "EGN3365",
+      "reason": "Materials in Engineering — the survey course: crystal structure, phase diagrams, heat treatment, mechanical behaviour. ⚠ The honest test of whether this discipline is for you, and it is available at six institutions whether or not yours awards the degree.",
+      "variantNote": "⚠ FAU, FIU, Florida Poly, UCF, USF and UWF under this number; other programmes teach the same survey as EMA3010 Introduction to Materials Science and Engineering (UF, UNF). Same course, two prefixes."
+    },
+    {
+      "courseId": "EGN3311",
+      "reason": "Statics — forces in equilibrium, and the vocabulary of stress that mechanical behaviour needs.",
+      "variantNote": "⚠ Seven institutions: DSC, FAMU, FAU, FIU, Florida Poly, UNF, USF."
+    },
+    {
+      "courseId": "EGN3331",
+      "reason": "Strength of Materials — stress, strain, deflection and failure. ⚠ Where 'the material broke' becomes a calculation you can check.",
+      "variantNote": "⚠ FOUR NUMBERS FOR THIS SUBJECT: EGN3331 (FAMU, FAU, Florida Poly, Florida State, UNF, USF), EGN3331C (FGCU, UCF), EGM3520 (FIU, UF) and departmental variants elsewhere. Match the subject, not the number."
+    },
+    {
+      "courseId": "EGN3343",
+      "reason": "Thermodynamics — energy, entropy and equilibrium: the framework phase diagrams and heat treatment are drawn from.",
+      "variantNote": "⚠ EGN3343 at DSC, FAU, FIU, Florida Poly, UCF and USF; EML3100 at FAMU, Florida Poly, Florida State, UF and UNF. The mechanical and the general-engineering numbering of one subject."
+    },
+    {
+      "courseId": "EMA3010",
+      "reason": "Introduction to Materials Science and Engineering — the discipline's own first course where a department exists, and deeper than the survey above.",
+      "variantNote": "⚠ Carried by UF and UNF only — which is what a two-institution bachelor's footprint looks like in the course catalogue. Elsewhere, EGN3365 is the equivalent."
+    },
+    {
+      "courseId": "EMA4121",
+      "reason": "Physical Metallurgy — phase transformation, heat treatment and microstructure control in metals: the classical core of the field.",
+      "variantNote": "⚠ FIU and UF. FAMU and Florida State approach the same ground through EMA4223 Mechanical Metallurgy (also at FIU and UCF)."
+    },
+    {
+      "courseId": "EMA4223",
+      "reason": "Mechanical Metallurgy — deformation, strengthening mechanisms and fracture: why a metal yields where and when it does.",
+      "variantNote": "⚠ FIU, UCF and UF — three institutions, which is the widest reach of any upper-division materials course in the state."
+    },
+    {
+      "courseId": "EMA3066",
+      "reason": "Polymer Science and Engineering — chains, glass transition, processing and the reasons a plastic part fails in sunlight. ⚠ Half of modern materials work is polymers and composites.",
+      "variantNote": "⚠ FIU, Florida Poly and UF. Where no polymer course exists, organic chemistry plus a composites elective is the usual substitute."
+    },
+    {
+      "courseId": "EMA4513",
+      "reason": "Microstructural Characterisation — microscopy, diffraction and spectroscopy: learning to SEE the structure rather than infer it. ⚠ The most employable laboratory skill in the discipline.",
+      "variantNote": "⚠ FAMU, Florida State and UCF. Instrument time is the thing that transfers — if your programme has no characterisation course, look for a research group that will train you on the equipment."
+    },
+    {
+      "courseId": "EMA3413",
+      "reason": "Electronic Properties of Materials — conduction, band structure and the semiconductor behaviour behind every device. The route from materials into microelectronics.",
+      "variantNote": "⚠ Florida Poly and UF. Elsewhere the material appears in a solid-state devices course on the electrical side (EEE4351)."
+    },
+    {
+      "courseId": "EMA4714",
+      "reason": "Materials Selection and Failure Analysis — the capstone skill: choosing a material against competing requirements, and working out afterwards why the choice failed.",
+      "variantNote": "⚠ Carried by UF alone under this number, which is the clearest single sign of how thin the undergraduate provision is. ⚠ Where it does not exist, a mechanical design or capstone course is where selection gets taught — ask before you assume it is covered."
+    },
+    {
+      "courseId": "EGN3613",
+      "reason": "Engineering Economic Analysis — material selection is a cost decision as often as a technical one, and the trade-off is the job.",
+      "variantNote": "⚠ DSC, FAMU, FIU, Florida State and UCF; elsewhere it is taught under a departmental number."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Materials Engineers (17-2131.00)",
+      "url": "https://www.onetonline.org/link/summary/17-2131.00",
+      "note": "Task statements, 23,000 employed (2024), growth “faster than average (5% to 6%)”, 1,500 annual openings, median wages $112,860 (2025), and 80% reporting a bachelor's degree is required."
+    },
+    {
+      "label": "U.S. Bureau of Labor Statistics — Materials Engineers",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/materials-engineers.htm",
+      "note": "The federal occupational profile: pay, entry-level education and work environment."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "⚠ The evidence for the central caution on this page: four Florida public institutions award in CIP 14.18, and only UF and UCF award a bachelor's."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Every carrier count quoted here, and the evidence that the undergraduate materials catalogue is thin."
+    },
+    {
+      "label": "ASM International",
+      "url": "https://www.asminternational.org/",
+      "note": "The metals and materials society: handbooks, failure-analysis practice and certification."
+    },
+    {
+      "label": "TMS — The Minerals, Metals and Materials Society",
+      "url": "https://www.tms.org/",
+      "note": "The other main professional body, and a good map of where the research is."
+    },
+    {
+      "label": "NACE / AMPP — corrosion practice",
+      "url": "https://www.ampp.org/",
+      "note": "Corrosion certification — ⚠ a durable niche in a salt-air state."
+    },
+    {
+      "label": "ABET — Accredited Program Search",
+      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+      "note": "Check the ENGINEERING commission against the specific degree."
+    },
+    {
+      "label": "Florida Board of Professional Engineers — Licensure",
+      "url": "https://fbpe.org/licensure/",
+      "note": "The FE, Engineer Intern certification and the PE examination."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 14.18 Materials Engineering, the code this path is filed under."
+    }
+  ]
+}

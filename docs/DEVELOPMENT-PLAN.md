@@ -1,7 +1,7 @@
 # Development plan — Florida Course Repository (CIATLE-REPO)
 
 The live site is **[floridacourserepo.com](https://floridacourserepo.com)** — 24,415 courses,
-2,504 curriculum guides, 10 career paths and 18 programmes as of 2026-09-19. This file is where
+2,504 curriculum guides, 10 career paths and 18 programmes as of 2026-09-19 (three more paths and six more programmes are written and waiting on a deploy). This file is where
 planning and status live for **the site and its APIs** (the root session). Guide *content* is
 planned and tracked by the `Tools/` session in `Tools/NEXT_SESSION.md`, `Tools/SOURCES.md` and
 `Tools/REVIEW_QUEUE.md`; only the items that need site code or a deploy appear here.
@@ -61,23 +61,24 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 3.8 | The home page tile says Programs are **"degrees and certificates, with the courses each one requires"**, but a programme carries no course list — the model has no `ProgramCourse` | Either the copy stops promising courses, or programmes gain a course list (`COURSE_CATALOG_PLAN.md` §14 sketched one). ⚠ Needs Ron's call on which |
 | 3.9 ⚠️ | **The connections, built 2026-09-19 on Ron's note** — *"students can easily find … the connections between the career paths, the options along a path, and the programs offering the final degree"*. A programme page now lists **the careers it leads to** (the data existed and nothing rendered it) and **the programmes closest to it**, each with the reason; a path page lists **the careers next to it** in the same CIP series. Migration `AddProgramRelations`; `related` on the programme API, read in both directions | ⚠ **Needs a deploy with migrations**, then `programs.py push --all`. Ron then walks one chain: `/careers/aerospace-engineer` → `/programs/aerospace-engineering` → `/programs/mechanical-engineering` → back to a career. **UX: cognitive walkthrough + heuristics run on both pages — 6 major findings, all fixed**, the load-bearing one being that a heading asserted a route its own note denied (now `isRoute`, with the rows grouped separately) | ⚠ **Needs a deploy with migrations** (`AddProgramRelations`, `AddProgramConnections`), then `programs.py push --all` and `career_paths.py push --all`. Ron then walks one chain: `/careers/aerospace-engineer` → `/programs/aerospace-engineering` → `/programs/mechanical-engineering` → back to a career |
 | 3.10 ⚠️ | **Six more programmes so the field has its options** — computer, environmental, materials and ocean engineering; statistics; paralegal and legal support studies. ⚠ Materials and ocean are mostly GRADUATE in Florida (materials: 4 institutions, 2 at bachelor's; ocean: 2, one at bachelor's), which the pages say plainly, and paralegal is the widest-reach legal programme in the state at 31 institutions | ⚠ Ron reads `/programs/materials-engineering` and `/programs/paralegal-studies` — both make a claim about the ROUTE rather than the degree |
-| 3.11 | Four of the six new programmes have no career path yet (computer, environmental, materials and ocean engineering), so their pages cannot say what they lead to | The queued paths at ranks 8–10 (environmental, computer hardware, materials engineer) are authored, which closes three of the four |
+| 3.11 ⚠️ | Four of the six new programmes had no career path, so their pages could not say what they led to | ✅ Three are written (below); **ocean engineering still has none** — no ocean engineer path is in the 50-path queue, and with one bachelor's programme in the state it may belong as a note on Civil Engineer instead. Ron's call |
 | 3.12 | ⚠ Every programme and career page loads the whole 6,427-row award table to count schools, and rescans it per related programme. Correct and stale-proof, but it is a full table read per page view | A cached CIP-prefix → institution-count lookup, invalidated when the awards seed changes. Only worth doing if the table grows or the pages feel slow |
 
 ## Phase 4 — Career path content (the 50-path queue) ⚠️
 
 `Tools/career_paths/QUEUE.csv` — 50 paths ranked, each with its CIP anchor, SOC code and cluster.
-**10 published, 40 to go.**
+**10 published, 3 written and waiting on a deploy, 37 to go.**
 
 | # | Task | Done when |
 |---|---|---|
 | 4.1 ⚠️ | **Engineering (ranks 1–7)** — mechanical, electrical, civil, industrial, aerospace, chemical, biomedical | All seven live. **Awaiting Ron's read of at least one** |
 | 4.2 ⚠️ | **Registered Nurse (28)**, **Lawyer (45)**, **Data Scientist (40)** | Live. Data Scientist pushed 2026-09-19, once the 208-node CIP seed had deployed |
-| 4.3 | Engineering remainder — environmental (8), computer hardware (9), materials (10) | Authored, validated, pushed, and each names a programme |
+| 4.3 ⚠️ | **Engineering remainder — environmental (8), computer hardware (9), materials (10)** — written 2026-09-19, validated clean, and rendered locally. Each carries O*NET and BLS figures, a Florida-specific section, and carrier counts taken from the SCNS flat file for every course | ⚠ **Waiting on the deploy** (their programmes are not live yet), then `career_paths.py push --all`. Ron reads one of the three — Materials Engineer is the one with the sharpest finding: Florida awards it at only two institutions at bachelor's level, so the honest route is mechanical or chemical first |
 | 4.4 | **Manufacturing / CTE cluster (11–27)** — technicians, machining, welding, HVAC, electrician, aviation and automotive maintenance, logistics | Pushed and live. ⚠ This is the cluster the course-CIP evidence rule was blind to (universities publish CIP codes, state and technical colleges do not) — expect more `EXTRA_GROUPS` additions, each with its reason recorded, and each needing a deploy before the path can publish |
 | 4.5 | **Health (29–36)** — LPN, radiologic technologist, respiratory therapist, dental hygienist, MLS, PTA, paramedic, surgical technologist | Pushed and live, each with its accreditation/licensure note above the course list |
 | 4.6 | **Computing (37–39)**, **business (41–44)**, **law (46)**, **education (47–48)**, **public safety (49–50)** | Pushed and live |
 | 4.7 | Every path's courses exist in the catalog (`unlistedCourses` empty on push) | No path links through to a page that is not there |
+| 4.8 ⚠️ | **13 courses the new paths name were missing from the catalog** and were sent ahead of the deploy (`POST /api/v1/courses/batch`) with per-institution offerings from the SCNS flat file | ✅ Live: COP3530, CDA4102, CDA4210, COP4600, EEE3308, EEE4351 and the seven EMA materials courses. ⚠ The pattern will repeat on every new path — `scratchpad/list_missing.py` in `Tools/` builds and sends them |
 
 ## Phase 5 — Guide-field changes still owed to the `Tools/` session
 

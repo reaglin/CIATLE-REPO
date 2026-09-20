@@ -1,0 +1,187 @@
+{
+  "name": "Computer Hardware Engineer",
+  "cipCode": "14.09",
+  "socCode": "17-2061",
+  "isPublished": true,
+  "sortOrder": 90,
+  "description": "Computer hardware engineers design and test the physical machine — processors, boards, memory systems, embedded controllers and the peripherals around them. ⚠ It pays better than any other career on this site and it is small: about 76,800 people nationally, and a third of the occupation expects a master's degree.",
+  "credentialNote": "⚠ There is no licence in the way of this work: computer hardware engineering runs almost entirely under the industry exemption, and few of these engineers hold a PE. What matters instead is ACCREDITATION and DEGREE TYPE. ⚠⚠ Computer ENGINEERING is normally accredited by ABET's ENGINEERING commission and computer SCIENCE by its COMPUTING commission — different accreditations, different degrees, and only the engineering one keeps the PE route open should you later want it (s. 471.013, Florida Statutes: four years of experience after an approved engineering curriculum, six after engineering technology). ⚠ Check the commission against the specific degree at amspub.abet.org before enrolling, because the two degrees frequently sit in the same department and sound interchangeable.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>research, design, develop or test computer or computer-related equipment for commercial, industrial, military or scientific use</em>. The task statements are specific about what that means — <em>design and develop computer hardware and support peripherals, including central processing units, support logic, microprocessors, custom integrated circuits, and printers and disk drives; build, test and modify product prototypes using working models or theoretical models constructed with computer simulation; write detailed functional specifications that document the hardware development process; test and verify hardware to ensure that it meets specifications, by recording and analyzing test data</em>.</p> <p>&#9888; Notice how much of that is <strong>specification, prototype and test</strong> rather than invention. Hardware work is slow and expensive to get wrong — a silicon respin or a board revision costs months — so the discipline puts far more weight on verification than software does, and students who enjoy the design half often underestimate the other.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>76,800 computer hardware engineers employed</strong> (2024), growth <strong>&ldquo;much faster than average (7% or higher)&rdquo;</strong>, with <strong>4,700 openings a year</strong>. <strong>Median wages $161,740 (2025)</strong> — the highest of any career on this site. On education, 48% of respondents said a bachelor&rsquo;s degree is required and <strong>34% said a master&rsquo;s</strong>.</p> <p>⚠ That second figure is the one to plan around. This is a research-and-development occupation, and a third of it expects a graduate degree — so treat the bachelor&rsquo;s as the qualifying step rather than necessarily the last one, and keep your grades in a state that leaves the option open.</p>  <h2>⚠⚠ The choice that defines this path: computer engineering, electrical, or computer science</h2> <p>Three degrees lead into this work and they are not interchangeable. <strong>Computer engineering</strong> is the middle of the three and the most direct: ten Florida public institutions award it, and it takes most of its first two years from the electrical side. <strong>Electrical engineering</strong> is broader and keeps power, communications and analogue open. <strong>Computer science</strong> owns the algorithm and the operating system, not the board.</p> <p>&#9888; The practical test, and it is worth asking yourself honestly before year two: <strong>do you want to know what the transistor is doing?</strong> If the answer is yes, computer or electrical engineering. If what draws you is what the program is doing, computer science is the better degree and the larger job market.</p> <p>⚠ The first two years of computer and electrical engineering usually match almost exactly at the same institution, so the decision is cheap in year one and expensive in year three. Ask the department which courses differ before you declare.</p>  <h2>⚠⚠⚠ Florida numbers these courses more inconsistently than any other engineering field</h2> <p>The environmental path on this site carries a warning about fragmented numbering. Computing is worse, because <strong>two prefixes compete for the same subjects</strong>: the electrical engineering family (<em>EEL</em>, <em>EEE</em>) and the computing family (<em>CDA</em>, <em>COP</em>, <em>CNT</em>). Digital logic runs under at least four numbers across two prefixes; computer architecture under five; the introductory programming course under a dozen.</p> <p>&#9888; So do not try to match the numbers below against your own catalogue. <strong>Match the SUBJECT</strong>, and when you transfer send a syllabus and a topic list rather than a course number — an evaluator comparing identifiers across these families will find nothing to match.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Digital logic, until it is automatic.</strong> Boolean algebra, state machines, timing and hazards. Everything above it — architecture, microprocessors, VLSI — assumes you can read a timing diagram without thinking about it.</li> <li><strong>Programming that reaches the hardware.</strong> C above all, and assembly enough to read it. ⚠ A computer engineer who cannot program is at a serious disadvantage: firmware, test benches and simulation are all code.</li> <li><strong>Circuits and electronics.</strong> The board is analogue whether or not the signal is: signal integrity, power delivery and noise are where hardware actually fails.</li> <li><strong>Hardware description languages</strong> — Verilog or VHDL, and an FPGA you have actually put a design on. This is the single most portable evidence of ability in an interview.</li> <li><strong>Measurement and patience.</strong> Oscilloscope, logic analyser, and the discipline to change one thing at a time. &#9888; Debugging hardware is slower than debugging software and rewards method over inspiration.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>Check ABET&rsquo;s commission, not just its accreditation.</strong> Computer ENGINEERING is normally accredited by the engineering commission and computer SCIENCE by the computing commission; they are different, and only the first keeps the PE route open.</li> <li><strong>Build something that boots.</strong> An FPGA project, a microcontroller board you laid out, a design you simulated and then measured. In this field a portfolio is more convincing than a transcript.</li> <li><strong>⚠ Plan for the master&rsquo;s even if you never take it.</strong> A third of this occupation expects one, and the ordinary way in is research with a professor during the bachelor&rsquo;s — which has to be started early, not in the final term.</li> <li><strong>Florida employers are concentrated:</strong> defence and simulation around Orlando, avionics and space systems on the coast, and semiconductor and device work around the university research centres. ⚠ A security clearance is a genuine asset in this state and is worth understanding before you apply.</li> <li><strong>Take the FE in your final year</strong> if licensure might ever matter. Most computer hardware work runs under the industry exemption and few of these engineers licence — but the exam is far easier while the coursework is fresh.</li> </ul>",
+  "programs": [
+    {
+      "slug": "computer-engineering",
+      "note": "The degree itself, at ten Florida public institutions — the same footprint as electrical engineering, so this is rarely a relocation decision. ⚠ Its first two years usually match the electrical degree almost exactly at the same school."
+    },
+    {
+      "slug": "electrical-engineering",
+      "note": "⚠ The broader alternative, and the one to read beside it: same early courses, and it keeps power, communications, control and analogue open if hardware turns out not to be the part you enjoy."
+    },
+    {
+      "slug": "computer-science",
+      "note": "The software side of the same boundary, and by far the larger job market: 41 Florida public institutions award computing credentials against ten for computer engineering. ⚠ If what draws you is what the program does rather than what the transistor does, this is the better degree."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ A different route: electronics engineering technology leads to test, integration and field engineering work rather than to design, and carries the six-year experience requirement if you later pursue a PE."
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "MAC2311",
+      "reason": "Calculus I — the gate on the degree.",
+      "variantNote": "⚠ Transfer is guaranteed on the COMPLETED sequence; finish calculus at one institution if you can."
+    },
+    {
+      "courseId": "MAC2312",
+      "reason": "Calculus II — series and integration, which signal processing later takes for granted."
+    },
+    {
+      "courseId": "MAC2313",
+      "reason": "Calculus III — multivariable methods; electromagnetics is written in them."
+    },
+    {
+      "courseId": "MAP2302",
+      "reason": "Differential Equations — circuit transients and system response are differential equations."
+    },
+    {
+      "courseId": "PHY2048",
+      "reason": "Physics with Calculus I — mechanics, and the prerequisite habit of modelling before measuring."
+    },
+    {
+      "courseId": "PHY2049",
+      "reason": "Physics with Calculus II — ⚠ the important one here: electricity and magnetism is the physics the whole degree is built on."
+    },
+    {
+      "courseId": "MAD2104",
+      "reason": "Discrete Mathematics — Boolean algebra, logic, sets and proof. ⚠ The mathematics that actually appears in digital design, and the one students are most surprised to need.",
+      "variantNote": "⚠ Carried by seventeen public institutions, most of them state colleges — a good course to have finished before transferring. Some programmes meet the requirement with COT3100 Computational Structures (DSC, FAMU, FIU, UCF, UF, UNF, USF, UWF) instead."
+    },
+    {
+      "courseId": "COP3530",
+      "reason": "Data Structures — the second programming course, and the one employers assume. ⚠ Hardware engineers write more code than the job title suggests: firmware, test benches and simulation are all software.",
+      "variantNote": "⚠⚠ THE FIRST PROGRAMMING COURSE IS THE MOST FRAGMENTED NUMBER IN FLORIDA COMPUTING — COP2271 (Florida Poly, UF), COP3502C (UCF, UF), COP3014 (FAU, Florida State, UWF), COP2220 (eight institutions) and more besides. This second course is the stable one, carried by eleven: DSC, Eastern Florida State, FAMU, FGCU, FIU, Florida Poly, Miami Dade, Palm Beach State, UF, UNF and UWF."
+    },
+    {
+      "courseId": "EEL3111",
+      "reason": "Circuit Analysis I — the first real electrical engineering course: nodes, meshes, transients and the habit of solving a network rather than memorising one.",
+      "variantNote": "⚠ Six institutions use EEL3111 (FAMU, FAU, Florida Poly, Florida State, UNF, UWF); UF carries the integrated EEL3111C. Several programmes put a broader EEL3003 Introduction to Electrical Engineering (FAMU, Florida State, UF) ahead of it."
+    },
+    {
+      "courseId": "EEL3112",
+      "reason": "Circuit Analysis II — frequency response, resonance and two-port networks; where the vocabulary of filters and impedance becomes usable.",
+      "variantNote": "⚠ FAMU, Florida Poly, Florida State, UF, UNF and UWF."
+    },
+    {
+      "courseId": "EEL3135",
+      "reason": "Signals and Systems — convolution, Fourier and sampling. ⚠ The bridge between the analogue world and everything digital, and the course most students find hardest.",
+      "variantNote": "⚠ Seven institutions: FAMU, FIU, Florida Poly, Florida State, UF, UNF, UWF. Elsewhere it appears under departmental numbers — match the subject, not the number."
+    },
+    {
+      "courseId": "EEL3472",
+      "reason": "Electromagnetic Fields — transmission lines, propagation and why a fast signal on a long trace stops behaving like a wire. Signal integrity starts here.",
+      "variantNote": "⚠ FAMU, FIU, Florida Poly, Florida State, UF, UNF and UWF."
+    },
+    {
+      "courseId": "EEL3701",
+      "reason": "Digital Logic and Systems — gates, state machines, timing. The foundation course of this whole path, and the one to take seriously first.",
+      "variantNote": "⚠⚠ AT LEAST FOUR NUMBERS ACROSS TWO PREFIXES for this subject: EEL3701 (UNF, UWF, with a separate EEL3701L laboratory), EEL3701C (UF, integrated), CDA3201 (USF) and CDA3201C (FAU). ⚠ The EEL and CDA prefixes are the electrical and the computing families respectively — which one your institution uses usually says which department owns the computer engineering degree."
+    },
+    {
+      "courseId": "CDA4102",
+      "reason": "Computer Architecture — instruction sets, pipelines, caches and memory hierarchy: how the machine actually executes what the compiler emitted.",
+      "variantNote": "⚠⚠ FIVE NUMBERS FOR THIS SUBJECT. CDA4102 at FAMU, FAU, UF, UNF and USF; CDA3101 at FAMU, Florida State, UF and UWF; CDA3100 at Florida Poly, Florida State, Seminole State and UNF; CDA4150 at FGCU and Florida State; CDA4101 at DSC and FIU. ⚠ Several institutions carry two of them at different levels — a first course and a second — so read the prerequisite, not the number."
+    },
+    {
+      "courseId": "EEE3308",
+      "reason": "Microelectronics — diodes, transistors and amplifier stages: what the logic gate is made of, and why it has a speed and a power budget.",
+      "variantNote": "⚠ EEE3308 at Florida Poly, UNF and UWF; the integrated EEE3308C at UF. Other programmes number it in the EEL family."
+    },
+    {
+      "courseId": "EEL4712",
+      "reason": "Digital Design — register-transfer design in Verilog or VHDL, synthesised onto an FPGA. ⚠ If one course on this path gets you hired, it is this one.",
+      "variantNote": "⚠ EEL4712 at UNF and UWF, EEL4712C at UF. Elsewhere the material appears as an advanced digital design or embedded systems course — look for the FPGA project in the syllabus."
+    },
+    {
+      "courseId": "EEL4744",
+      "reason": "Microprocessor Applications — embedded programming against real peripherals: interrupts, timers, buses and the debugging that goes with them.",
+      "variantNote": "⚠ A four-institution split across two forms: EEL4744 at USF and UWF, EEL4744C at UF and UNF. FIU approaches the same ground through EEL2880 C Programming for Embedded Systems."
+    },
+    {
+      "courseId": "EEE4351",
+      "reason": "Solid State Electronic Devices — semiconductor physics: carriers, junctions and the MOSFET. ⚠ The course that separates people who use devices from people who can design with them.",
+      "variantNote": "⚠ EEE4351 at FAMU and Florida State; EEE4351C at USF. Not every programme requires it — if yours does not and device work interests you, take it as an elective."
+    },
+    {
+      "courseId": "CDA4210",
+      "reason": "Introduction to VLSI — designing at the transistor and layout level, where architecture meets silicon.",
+      "variantNote": "⚠ CDA4210 at FAU and Florida Poly; EEE4310 VLSI Circuit Design at UF and UWF. Two prefixes, one subject, four institutions — and at most schools it is a graduate course, which is one reason a third of this occupation holds a master's."
+    },
+    {
+      "courseId": "CNT4504",
+      "reason": "Computer Networks — protocols, layering and the hardware that moves packets. ⚠ Hardware engineers build the interfaces; knowing what runs over them is not optional.",
+      "variantNote": "⚠ CNT4504 at FAMU, FIU, Florida Poly, Florida State, Seminole State and UNF; CNT4007 Data and Computer Communications at DSC, FAU, UF and UWF."
+    },
+    {
+      "courseId": "COP4600",
+      "reason": "Operating Systems — the software that actually drives the hardware: scheduling, memory management, drivers and interrupts from the other side.",
+      "variantNote": "⚠ COP4600 at UCF, UF and USF; most other programmes carry an operating systems course under a departmental number. Worth taking even where it is optional — it is where hardware and software meet."
+    },
+    {
+      "courseId": "EGN3613",
+      "reason": "Engineering Economic Analysis — a hardware decision is a cost decision: unit cost, tooling, volume and the price of a respin.",
+      "variantNote": "⚠ DSC, FAMU, FIU, Florida State and UCF; elsewhere it is taught under a departmental number."
+    },
+    {
+      "courseId": "EEL4924C",
+      "reason": "Senior Design — a real project, built and demonstrated. ⚠ In hardware this is the strongest interview material you will have; choose a project you can show working.",
+      "variantNote": "⚠ Carried under this number by UF alone. Every programme has a capstone — the numbers vary widely, and at several institutions it runs over two terms."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Computer Hardware Engineers (17-2061.00)",
+      "url": "https://www.onetonline.org/link/summary/17-2061.00",
+      "note": "Task statements, 76,800 employed (2024), growth “much faster than average (7% or higher)”, 4,700 annual openings, median wages $161,740 (2025), and the education split — 48% bachelor's, ⚠ 34% master's."
+    },
+    {
+      "label": "U.S. Bureau of Labor Statistics — Computer Hardware Engineers",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/computer-hardware-engineers.htm",
+      "note": "The federal occupational profile: pay, entry-level education and work environment."
+    },
+    {
+      "label": "ABET — Accredited Program Search",
+      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+      "note": "⚠ Check WHICH commission accredits the degree: computer engineering is normally engineering, computer science is computing, and only the first keeps the PE route open."
+    },
+    {
+      "label": "IEEE Computer Society",
+      "url": "https://www.computer.org/",
+      "note": "The professional body for this field: standards, conferences and the curricula the degrees follow."
+    },
+    {
+      "label": "Florida Board of Professional Engineers — Licensure",
+      "url": "https://fbpe.org/licensure/",
+      "note": "The FE, Engineer Intern certification and the PE examination — relevant even though most hardware work runs under the industry exemption."
+    },
+    {
+      "label": "NCEES — FE Electrical and Computer exam",
+      "url": "https://ncees.org/engineering/fe/",
+      "note": "The paper computer engineering graduates sit if they take the FE."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "The award data behind “ten Florida public institutions” for CIP 14.09."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠ The source for every carrier count on this page, and the evidence that these subjects run under several numbers each."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 14.09 Computer Engineering, the code this path is filed under."
+    }
+  ]
+}
