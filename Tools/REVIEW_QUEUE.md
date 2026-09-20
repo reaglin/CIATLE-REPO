@@ -3228,6 +3228,52 @@ teach the course. **Two of the five documented defect shapes in one field.**
 contributed by ONE institution and is not a promise about yours.** No action needed.
 
 
+## 109. ⚠⚠⚠ `scns.is_public()` EXCLUDES DISTRICT TECHNICAL COLLEGES — which is the whole CTE sector (found 2026-09-20, automotive path)
+
+**`sector_of()` answers `SUS`, `FCS` or `other`, and every district technical college answers
+`other`.** Every tool in this repo filters on `is_public()`, and Ron's 2026-09-11 scope rule —
+*"we will only do public institutions"* — has therefore been applied as *state colleges and
+universities only*. ⚠ **District technical colleges are PUBLIC**: they are operated by school
+districts, they teach the state's own CTE frameworks, and they are where Florida actually trains
+technicians.
+
+**The measurement, from the automotive frameworks:**
+
+| | |
+|---|---|
+| Institutions carrying the nine `AER` automotive courses in SCNS | **~40** |
+| Of those, FCS state colleges | **2** (Hillsborough, Indian River State) |
+| Of those, district technical colleges | **~37** — Atlantic, Lake, Sheridan, Traviss, Lindsey Hopkins, Erwin, McFatter, Withlacoochee and thirty more |
+| Institutions on the SITE before 2026-09-20 | **39, every one FCS or SUS** |
+| IPEDS: institutions awarding in CIP 47.06 | **56**, overwhelmingly technical colleges |
+
+⚠⚠ **So the filter that protects the site from private institutions also deletes the sponsor
+emphasis.** The whole career-and-technical space — automotive, welding, HVAC, industrial
+maintenance, aviation maintenance, practical nursing, paralegal certificates — lives at these
+institutions, and ranks 11–27 of the career-path queue are exactly that space.
+
+### What was done on 2026-09-20, and what needs Ron
+
+✅ **Done, because the automotive path could not be honest without it:** 35 district technical
+colleges were sent to the site with `sector: "TECH"` (`POST /api/v1/institutions/batch`), and the
+twelve `AER` automotive courses with their clock hours and per-institution offerings. The path page
+now reads *"38 Florida public institutions teach courses on this path"* instead of two.
+
+⚠ **What needs a decision:**
+
+1. **Should `scns.is_public()` include district technical colleges?** It is a one-line change with a
+   wide blast radius — every offering list, every carrier count and every "public institutions
+   only" judgement in the guide pipeline shifts. **Recommended: yes, with a separate `TECH` sector
+   so the three can still be told apart.**
+2. **Should the back catalogue be swept?** Guides and courses published under the old filter list
+   FCS/SUS carriers only. ⚠ Not urgent for university-level courses, which technical colleges do
+   not teach anyway — but for any PSAV or clock-hour course already on the site, the offering list
+   is wrong by omission.
+3. **Institution names come from SCNS and are sometimes poor** — `HC - HILLSBOROUGH COLLEGE`,
+   `HBTC - BREWSTER TECHNICAL COLLEGE`. The 2026-09-20 load deliberately did **not** overwrite
+   names the site already had. A better name source would be IPEDS.
+
+
 ## Resolved
 
 *(Nothing yet — items move here with the date and what was decided.)*
