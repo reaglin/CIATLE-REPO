@@ -70,6 +70,12 @@ and paralegal and legal support studies. The three new paths are **Environmental
 **Computer Hardware Engineer** and **Materials Engineer** (queue ranks 8–10), which close the
 programme pages that could not say what they led to.
 
+⚠ **Civil Engineer changed too, and it is the last piece of that:** Ron, 2026-09-20 — *"Use civil
+for ocean."* Rather than inventing a one-institution Ocean Engineer path, the civil path gained a
+**coastal and ocean section**, links to the ocean and environmental programmes, CWR4001 Coastal and
+Port Engineering, and two coastal sources. So `/programs/ocean-engineering` now has a career to
+point at, and every one of the 18 programmes does.
+
 ✅ **Their courses are already on the live site.** Thirteen course records the paths name were
 missing from the catalog and were sent ahead of the deploy over `POST /api/v1/courses/batch`, with
 per-institution offerings from the SCNS flat file — COP3530, CDA4102, CDA4210, COP4600, EEE3308,

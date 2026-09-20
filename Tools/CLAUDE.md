@@ -169,6 +169,36 @@ the minority ids.
 A DIRECT path largely restates what the programme already tells a student. **A CHOICE path tells
 them something no catalogue, adviser sheet or programme page will.**
 
+#### ⚠⚠ THE RESEARCH IS THE COST OF A PATH — the writing is not (2026-09-19/20)
+
+**Three paths were authored on 2026-09-19 (Environmental, Computer Hardware and Materials Engineer)
+and the work that made them worth publishing was the evidence pass, not the prose.** Ron, 2026-09-20:
+**more research is needed for additional paths.** Reckon on roughly a session each, and run these
+six steps before writing a word:
+
+1. **O*NET and BLS for the SOC code** — and ⚠ check whether they DISAGREE. On environmental
+   engineering O*NET says *"average (3% to 4%)"* on the 2024–34 projections and BLS says *6%,
+   faster than average* on the 2025–35 ones. **Quote both and say they differ.**
+2. **The programme footprint from IPEDS by CIP** — how many Florida public institutions, and
+   ⚠ at which LEVEL. Materials engineering has four institutions and only TWO at bachelor's, which
+   changed the whole shape of that path: the honest route is mechanical or chemical first.
+3. **A carrier count from the SCNS flat file for EVERY course named** —
+   `python scratchpad/carriers.py ENV4001 CWR4202 …` or `--prefix ENV`. This is where the variant
+   notes come from, and it produced the finding that **no environmental engineering course is
+   carried by more than four of the nine institutions awarding the degree.**
+4. **The licensure and accreditation reality**, cited to statute where there is one (s. 471.013,
+   F.S. for the four-versus-six-year PE experience rule).
+5. **For a CHOICE path, the entrant-major dataset** by the Lawyer method below — and ⚠ where none
+   exists, say so plainly rather than inferring one.
+6. **Any course the catalog does not carry, LISTED FIRST** — `python scratchpad/list_missing.py
+   COP3530 … --push` builds each from the flat file (modal title, modal credit, every public
+   carrier as an offering) and sends it. **Thirteen courses needed this for the three new paths.**
+
+⚠ **And a path is not always the right answer.** Ocean engineering was dropped as a path on
+2026-09-20 — *"Use civil for ocean"* — because two institutions award in it, only one at
+bachelor's, and FAU's ocean courses are carried by FAU alone. **A one-institution path would have
+misdescribed the field; a coastal section inside Civil Engineer describes it correctly.**
+
 #### The CHOICE method — what `Lawyer` established
 
 1. **Find the body that collects entrant data** and read its own numbers, not a summary of them.
