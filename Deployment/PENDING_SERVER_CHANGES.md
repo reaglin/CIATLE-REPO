@@ -61,9 +61,16 @@ links pointing at it rather than failing on a hidden foreign key.
 
 ```powershell
 cd Tools
-python programs.py push --all          # 18 programmes, six of them new
-python career_paths.py push --all      # 13 paths, three of them new
+python programs.py push --all          # 21 programmes
+python career_paths.py push --all      # 16 paths
 ```
+
+⚠⚠ **The deploy also carries `cip.json` at 209 nodes** — it gained **`15.05` Heating/Air
+Conditioning/Refrigeration Engineering Technology** on 2026-09-20, and **the HVAC programme and path
+are BLOCKED until it ships** (the push is refused 422 `CIP_NODE_NOT_FOUND`, verified). The reason is
+worth keeping: the 50-path queue filed HVAC under **47.02**, which IPEDS shows at 31 institutions
+and 111 credentials — but Florida's own frameworks file the programme under **15.0501**, at **45
+institutions and 891 credentials**. The bigger and more accurate home was missing from the tree.
 
 The six new programmes are computer, environmental, materials and ocean engineering, statistics,
 and paralegal and legal support studies. The three new paths are **Environmental Engineer**,

@@ -29,7 +29,8 @@ SMALL = {'and', 'or', 'of', 'the', 'for', 'to', 'in', 'with', 'a', 'an', 'on', '
 ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC', 'AC', 'IT',
             'II', 'III', 'IV', 'I', 'V', 'VI',
             # welding and metalwork processes -- they are initialisms, not words
-            'SMAW', 'GMAW', 'FCAW', 'GTAW', 'GTA', 'MIG', 'TIG', 'CNC', 'NDT', 'EV', 'CNG', 'LPG'}
+            'SMAW', 'GMAW', 'FCAW', 'GTAW', 'GTA', 'MIG', 'TIG', 'CNC', 'NDT', 'EV', 'CNG', 'LPG',
+            'HVAC', 'R', 'AC', 'EPA', 'ASE', 'OSHA'}
 
 
 def _word(w, edge):
@@ -44,11 +45,15 @@ def _word(w, edge):
     return w.capitalize()
 
 
+def _part(w, edge):
+    # ⚠ Split on the hyphen AND the slash: "GAS-METAL ARC" and "HVAC/R" are each
+    # several tokens to a reader, and "Hvac/r" is how it looks when they are not.
+    return '/'.join('-'.join(_word(q, edge) for q in p.split('-')) for p in w.split('/'))
+
+
 def titlecase(s):
     ws = s.split()
-    # ⚠ Capitalise after a hyphen too: "GAS-METAL ARC" is two words to a reader.
-    return ' '.join('-'.join(_word(p, i in (0, len(ws) - 1)) for p in w.split('-'))
-                    for i, w in enumerate(ws))
+    return ' '.join(_part(w, i in (0, len(ws) - 1)) for i, w in enumerate(ws))
 
 
 def cid_of(r):

@@ -111,6 +111,18 @@ EXTRA_GROUPS = {
     '14.02': 'Aerospace Engineering -- ⚠ absent from the evidence despite the '
              'Space Coast being the signature Florida engineering employer.',
     '14.07': 'Chemical Engineering -- a standard Florida SUS engineering major.',
+
+    # ⚠⚠⚠ HVAC, found 2026-09-20 while writing the HVAC path, and it is the
+    # clearest case yet of the evidence rule's blind spot. The 50-path queue filed
+    # HVAC under 47.02 (HVAC MAINTENANCE technology) -- 31 Florida institutions,
+    # 111 completions. But Florida's own frameworks put the programme under
+    # 15.0501: the 1,350-hour HVAC/R career certificate and its two halves are all
+    # filed there, and IPEDS shows 45 institutions and 891 completions. So the
+    # bigger, more accurate home was missing from the tree entirely.
+    '15.05': 'Heating/Air Conditioning/Refrigeration Engineering Technology -- ⚠ where '
+             'Florida actually files HVAC: 45 public institutions and 891 completions '
+             '(2023), against 31 and 111 under 47.02. The state framework 0615050110 '
+             '(1,350 hours, five OCPs) and its 750- and 600-hour halves are all 15.0501.',
     # Data Scientist path (2026-09-17): the sibling of Data Science, and larger.
     '30.71': 'Data Analytics -- 10 Florida public institutions award it, more at '
              'baccalaureate level than Data Science itself. The two are a pair and a '

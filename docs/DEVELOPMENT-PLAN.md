@@ -67,7 +67,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 ## Phase 4 — Career path content (the 50-path queue) ⚠️
 
 `Tools/career_paths/QUEUE.csv` — 50 paths ranked, each with its CIP anchor, SOC code and cluster.
-**12 published — Automotive Service Technician and Welder went live 2026-09-20 — 3 written and waiting on a deploy, 35 to go.**
+**12 published — Automotive Service Technician and Welder went live 2026-09-20 — 4 written and waiting on a deploy (HVAC blocked on a CIP seed node), 34 to go.**
 
 | # | Task | Done when |
 |---|---|---|
@@ -86,6 +86,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 4.13 | ⚠ `Tools/scratchpad/cpalms_programs.json` (987 programmes) does **not** contain the main clock-hour automotive frameworks — they came back from the live service when queried by CIP directly | The cache is a partial listing, not the catalogue. Query `ProgramFrontend/programsummary?ProgramCIP=…` by CIP when a framework is missing, and re-dump the cache |
 | 4.14 ⚠️ | **Welder — LIVE 2026-09-20** (queue rank 19), with a **Welding Technology** programme (CIP 48.0508, 47 institutions, 1,082 credentials in 2023). Second path from the CTE cluster, written from the FLDOE framework: 1,050 hours, three completion points, plus a 750-hour Advanced pipe certificate at 16 colleges | ⚠ Ron reads `/careers/welder`. Two findings lead it: **qualification is by TEST, not transcript** — a coupon under an AWS code or ASME Section IX, covering a range, lapsing if unused — and ⚠⚠ **Florida renumbered welding in 2025 and both families are live**: PMT0070–0074 at 30 institutions, PMT0011–0016 at 19, **16 carrying both** |
 | 4.15 | ✅ `scratchpad/list_missing.py` now sends **clock hours** and handles trade acronyms (SMAW, GMAW, TIG) and hyphenated titles — it was built for credit courses and would have published the whole CTE catalogue with no measure of length at all | Used for the 13 welding courses; it is the tool every CTE path will need |
+| 4.16 ⚠️ | **HVAC Technician — written 2026-09-20, BLOCKED on the deploy** (queue rank 23), with an **HVAC/R Technology** programme. ⚠⚠ The queue filed HVAC under CIP 47.02 (31 institutions, 111 credentials); **Florida files it under 15.0501 — 45 institutions, 891 credentials** — and 15.05 was missing from the seeded tree, so both documents are refused 422 until `cip.json` (now 209 nodes) ships | ⚠ **Deploy, then `programs.py push hvac-technology` and `career_paths.py push hvac-technician`.** The page's own findings: EPA Section 608 is federal law, Florida LICENSES the contractor under Chapter 489 (Class A unlimited, Class B capped at 25 tons), and ⚠⚠ **the framework moved ahead of the colleges** — the current courses are at 4–6 institutions, the predecessor family at 22–25, and no institution carries both |
 
 ## Phase 5 — Guide-field changes still owed to the `Tools/` session
 

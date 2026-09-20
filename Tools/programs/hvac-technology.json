@@ -1,0 +1,28 @@
+{
+  "name": "HVAC/R Technology",
+  "description": "HVAC/R programmes train the people who install, service and repair heating, ventilation, air conditioning and refrigeration systems — in a state where air conditioning is not a comfort but the thing that makes buildings usable. ⚠ It is electrical work, mechanical work and refrigerant handling at once, and the last of those is federally regulated.",
+  "degreesNote": "Florida's framework is a **1,350-hour clock-hour certificate** with **five occupational completion points**, and ⚠ it is also published as two halves — a 750-hour first part and a 600-hour second — so a student can finish the first, go to work, and return. Several state colleges run a college-credit version instead, and a few add an associate degree or an advanced technical certificate above it. ⚠⚠ **Certification is separate from the certificate and is not optional**: EPA Section 608 is required by federal law to work on equipment containing refrigerant. ⚠⚠⚠ And unlike welding or automotive, **the trade above this one is LICENSED** — Florida licenses air-conditioning contractors through the Construction Industry Licensing Board (Class A unlimited, Class B up to 25 tons of cooling), so the career has a statutory ceiling that only a licence lifts.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 72,
+  "cips": [
+    {
+      "cipCode": "15.0501",
+      "note": "⚠ **Where Florida actually files HVAC**: 45 public institutions and 891 credentials in 2023. The state's own frameworks — the 1,350-hour certificate and both halves — are filed here, under engineering technology rather than under maintenance."
+    },
+    {
+      "cipCode": "47.0201",
+      "note": "HVAC maintenance technology — 31 institutions and 111 credentials. ⚠ Included because it is the other code Florida institutions use for the same training, and a student searching one would miss the other."
+    }
+  ],
+  "related": [
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ The step up: an associate degree in engineering or building-systems technology leads to design, controls, energy management and the contractor's licence route — which is where the money stops being hourly."
+    },
+    {
+      "slug": "welding-technology",
+      "note": "The other large clock-hour trade at the same technical colleges. ⚠ Sheet-metal and pipe skills overlap enough that some HVAC technicians add a welding certificate for commercial and industrial work."
+    }
+  ]
+}

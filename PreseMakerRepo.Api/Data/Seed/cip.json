@@ -521,7 +521,7 @@
    "title": "ENGINEERING/ENGINEERING-RELATED TECHNOLOGIES/TECHNICIANS",
    "definition": "Instructional programs that prepare individuals to apply basic engineering principles and technical skills in support of engineering and related projects or to prepare for engineering-related fields.",
    "parent": null,
-   "childCount": 11
+   "childCount": 12
   },
   {
    "code": "15.00",
@@ -563,6 +563,15 @@
    "code": "15.04",
    "level": 4,
    "title": "Electromechanical Technologies/Technicians",
+   "definition": "",
+   "examples": "",
+   "parent": "15",
+   "childCount": 0
+  },
+  {
+   "code": "15.05",
+   "level": 4,
+   "title": "Environmental Control Technologies/Technicians",
    "definition": "",
    "examples": "",
    "parent": "15",
