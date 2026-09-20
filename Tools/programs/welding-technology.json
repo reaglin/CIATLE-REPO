@@ -1,0 +1,24 @@
+{
+  "name": "Welding Technology",
+  "description": "Welding programmes teach people to join metal to a code standard — shielded metal arc, gas metal arc, flux-cored and gas tungsten arc welding, on plate and on pipe, in every position. ⚠ It is a test-based trade: what you can weld is decided by a test coupon, not by a transcript.",
+  "degreesNote": "Florida teaches this as CLOCK-HOUR career certificates. The state framework **Welding Technology** runs **1,050 hours across three occupational completion points** — welder assistant, shielded metal arc welder, then welder — and each is a hireable exit on its own. An **Advanced Welding Technology** certificate (750 hours, two more completion points) adds pipe and career preparation. ⚠⚠ **Florida renumbered these courses in 2025 and BOTH families are still being taught**: the new staged sequence (PMT0070–0074) at 30 institutions and the older process-by-process one (PMT0011–0016 — SMAW, GMAW, FCAW, GTAW, pipe) at 19, with **16 colleges carrying both**. Register by the PROGRAMME, not the course number. ⚠ A few state colleges add an associate degree above the certificates, usually in welding or manufacturing technology.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 71,
+  "cips": [
+    {
+      "cipCode": "48.0508",
+      "note": "Welding technology/welder — the programme itself. **47 Florida public institutions** award in it and 1,082 credentials were awarded in 2023, which makes it one of the largest career certificates in the state. Most of those institutions are district technical colleges."
+    }
+  ],
+  "related": [
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ Where the step up lives: manufacturing and engineering technology associate degrees take welders into inspection, fabrication supervision and quality — the usual route out of the booth without leaving the industry."
+    },
+    {
+      "slug": "automotive-technology",
+      "note": "The other large clock-hour trade taught at the same technical colleges, and a common second choice for students deciding between the two. Both are test-and-certification trades; the difference is diagnosis versus fabrication."
+    }
+  ]
+}

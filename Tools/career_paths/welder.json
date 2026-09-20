@@ -1,0 +1,134 @@
+{
+  "name": "Welder",
+  "cipCode": "48.05",
+  "socCode": "51-4121",
+  "isPublished": true,
+  "sortOrder": 120,
+  "description": "Welders join metal to a code standard — on plate and pipe, in every position, under codes that decide what you are qualified to touch. ⚠ 457,300 people do it nationally with about 45,600 openings a year, and what moves you up the very wide pay range is certifications and positions rather than years served.",
+  "credentialNote": "⚠ Florida does not licence welders, and that is the point to understand: **qualification is by TEST, not by transcript.** An employer or a third party watches you weld a coupon in a given process, position, material and thickness, and then bends or X-rays it — normally under an American Welding Society structural code or ASME Section IX for pressure work. ⚠⚠ The qualification covers a RANGE, it belongs to the procedure rather than to you as a person, and it LAPSES if you stop using the process. So keep your paperwork, keep your certifications current, and judge a programme by the tests its graduates pass and who administers them — an AWS Accredited Test Facility on site is a strong signal.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>use hand-welding, flame-cutting, hand-soldering or brazing equipment to weld or join metal components</em>. Its task statements are the day — <em>weld components in flat, vertical or overhead positions; examine workpieces for defects and measure against specifications; prepare material surfaces to be welded, removing scale, slag, rust and contaminants; determine required equipment and methods using knowledge of metallurgy and geometry; monitor fitting and welding processes to prevent overheating or material distortion</em>.</p> <p>&#9888; Two of those are the ones people underestimate. <strong>Preparation decides the weld</strong> — most bad welds were bad before the arc was struck. And <strong>position is the difficulty</strong>: the same joint flat, vertical and overhead is three different skills, which is exactly why certification is written by position.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>457,300 welders, cutters, solderers and brazers employed</strong> (2024), growth <strong>&ldquo;slower than average (1% to 2%)&rdquo;</strong> — and ⚠ <strong>45,600 openings a year</strong>. <strong>Median wages $53,750 (2025)</strong> ($25.84 an hour). On education, <strong>54% high school diploma, 21% less than high school, 12% a post-secondary certificate</strong>.</p> <p>⚠ The growth figure and the openings figure point in different directions, and the openings figure is the one that matters: this is a large, ageing workforce that replaces itself constantly. ⚠⚠ <strong>And the wage spread is enormous.</strong> The median is a shop welder; certified pipe welders, code welders on pressure work, and travelling rig welders earn multiples of it. What moves you up that spread is <strong>certifications and positions</strong>, not years served.</p>  <h2>⚠⚠ A test-based trade — which changes how you should think about the certificate</h2> <p><strong>What you are allowed to weld is decided by a test coupon.</strong> An employer, or a third party, watches you weld a joint in a given process, position, material and thickness; the coupon is then bent or X-rayed. Pass, and you are <em>qualified</em> for that range — typically under an <strong>AWS</strong> structural code or <strong>ASME Section IX</strong> for pressure work. &#9888; The qualification belongs to the procedure and the range, not to you as a person, and it lapses if you stop using it.</p> <p>⚠ <strong>So the certificate is not the goal — arc time is.</strong> Choose a programme by how much time you will spend welding rather than watching, ask how many booths there are per student, and ask what tests its graduates pass and who administers them. An <strong>AWS Accredited Test Facility</strong> on site is a strong signal.</p>  <h2>⚠⚠⚠ Florida renumbered welding in 2025, and both numbering families are live</h2> <p>This site's standing warning is that a course number does not identify a course. Welding gives the cleanest example yet, because the state is <strong>mid-transition between two families</strong>:</p> <ul> <li><strong>The 2025 sequence</strong> — Welder Assistant 1 and 2, Welder SMAW 1 and 2, then Welder (<em>PMT0070–0074</em>). <strong>30 institutions.</strong> Staged by level.</li> <li><strong>The older family</strong> — Welder Helper, then one course per process: shielded metal arc, gas metal arc, flux-cored arc, gas tungsten arc, and pipe (<em>PMT0011–0016</em>). <strong>19 institutions.</strong> Staged by process.</li> </ul> <p>&#9888; <strong>Sixteen colleges carry BOTH</strong>, fourteen only the new, three only the old. So the number on your transcript may not exist at the college you move to, while the skill plainly does. <strong>Register by the programme; and when it matters, show the weld test rather than the transcript.</strong></p>  <h2>Necessary skills</h2> <ul> <li><strong>Steady hands and repeatable technique.</strong> The trade rewards doing the same thing the same way a thousand times — travel speed, angle, arc length.</li> <li><strong>Reading a drawing and a weld symbol.</strong> ⚠ The symbol tells you process, size, length and where the weld goes; misreading it wastes a day and sometimes a part.</li> <li><strong>Enough metallurgy to stay out of trouble</strong> — preheat, distortion, heat-affected zones, and why a strong weld can still crack.</li> <li><strong>Fit-up and fabrication.</strong> Cutting, grinding and getting the joint right before welding it is most of the work and most of the quality.</li> <li><strong>Safety as a habit</strong> — fume extraction, eye protection, hot work, confined spaces. The hazards are routine, which is exactly why people get hurt by them.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Ask how much arc time you get</strong>, and how many students share a booth. It is the single most useful question on a tour, and the answers differ enormously.</li> <li><strong>Get pipe.</strong> Plate work is where you start; <strong>pipe welding, and 6G position in particular, is where the money is</strong>, and the Advanced certificate exists for it — though only 16 Florida colleges carry it.</li> <li><strong>Collect certifications deliberately.</strong> Know which process, position and thickness range each test qualifies you for, keep the paperwork, and keep them current: an unused qualification expires.</li> <li><strong>Florida's demand is specific</strong> — shipyards and marine repair, aerospace and launch infrastructure, power and process plants, structural steel for construction, and the hurricane rebuild that follows every bad season.</li> <li><strong>⚠ Plan for the body.</strong> It is physical work in heat and in awkward positions, and the people who last either move into inspection, supervision or fabrication management, or they look after themselves early. Certified welding inspector is the usual next step, and it needs documented experience — so keep records from your first job.</li> </ul>",
+  "programs": [
+    {
+      "slug": "welding-technology",
+      "note": "The programme itself — 47 Florida public institutions award in it, mostly district technical colleges, and 1,082 credentials were awarded in 2023. The programme page lists them."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ The step out of the booth rather than a route into it: manufacturing and engineering technology degrees lead to inspection, quality and fabrication supervision — which is where welders go when the physical work stops being sustainable.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "PMT0070",
+      "reason": "OCP A, part 1 — Welder Assistant: safety, cutting, fit-up, and the shop habits everything else rests on. 150 hours.",
+      "variantNote": "⚠⚠ THE 2025 FAMILY. Carried by 30 institutions, nearly all district technical colleges. ⚠ Sixteen of them ALSO carry the older process-by-process family (PMT0011–0016), so the same skill appears on transcripts under two sets of numbers. Register by the programme."
+    },
+    {
+      "courseId": "PMT0071",
+      "reason": "OCP A, part 2 — Welder Assistant 2. ⚠ Completing OCP A is a hireable exit in its own right; helpers and fitters are paid positions. 150 hours.",
+      "variantNote": "⚠⚠ THE 2025 FAMILY. Carried by 30 institutions, nearly all district technical colleges. ⚠ Sixteen of them ALSO carry the older process-by-process family (PMT0011–0016), so the same skill appears on transcripts under two sets of numbers. Register by the programme."
+    },
+    {
+      "courseId": "PMT0072",
+      "reason": "OCP B, part 1 — Shielded metal arc welding (stick), the process most structural work is still tested on. 150 hours.",
+      "variantNote": "⚠⚠ THE 2025 FAMILY. Carried by 30 institutions, nearly all district technical colleges. ⚠ Sixteen of them ALSO carry the older process-by-process family (PMT0011–0016), so the same skill appears on transcripts under two sets of numbers. Register by the programme."
+    },
+    {
+      "courseId": "PMT0073",
+      "reason": "OCP B, part 2 — SMAW in position. ⚠ Position is the difficulty and the pay: flat, vertical and overhead are three different skills. 150 hours.",
+      "variantNote": "⚠⚠ THE 2025 FAMILY. Carried by 30 institutions, nearly all district technical colleges. ⚠ Sixteen of them ALSO carry the older process-by-process family (PMT0011–0016), so the same skill appears on transcripts under two sets of numbers. Register by the programme."
+    },
+    {
+      "courseId": "PMT0074",
+      "reason": "OCP C — Welder: the full certificate, adding the other processes and the test coupons that qualify you. 450 hours.",
+      "variantNote": "⚠⚠ THE 2025 FAMILY. Carried by 30 institutions, nearly all district technical colleges. ⚠ Sixteen of them ALSO carry the older process-by-process family (PMT0011–0016), so the same skill appears on transcripts under two sets of numbers. Register by the programme."
+    },
+    {
+      "courseId": "PMT0075",
+      "reason": "Advanced OCP A — SMAW pipe. ⚠⚠ Pipe is where the money is, and only 16 Florida colleges carry this course. 375 hours.",
+      "variantNote": "⚠ The Advanced Welding Technology certificate (750 hours) is a separate framework from the 1,050-hour main one, and it is carried by half as many institutions: ECTC, FCTC, GSTC, Hillsborough, Lively, Lake, Marion, North Florida College, North Florida TC, Pasco-Hernando, both Pinellas campuses, Locklin, Haney, Tallahassee State and Florida Panhandle."
+    },
+    {
+      "courseId": "PMT0076",
+      "reason": "Advanced OCP B — advanced welding and career preparation: certification testing, documentation and the job search that goes with a qualified welder's paperwork. 375 hours."
+    },
+    {
+      "courseId": "PMT0011",
+      "reason": "Welder Helper — the older family's entry point, 250 hours. Same ground as the 2025 Welder Assistant courses.",
+      "variantNote": "⚠⚠ THE OLDER FAMILY, staged by PROCESS rather than by level, and still carried by 19 institutions — three of which do not carry the 2025 numbers at all. ⚠ Neither family is wrong; they are the same trade counted differently."
+    },
+    {
+      "courseId": "PMT0012",
+      "reason": "Shielded Metal Arc — stick welding as its own course, 300 hours.",
+      "variantNote": "⚠⚠ THE OLDER FAMILY, staged by PROCESS rather than by level, and still carried by 19 institutions — three of which do not carry the 2025 numbers at all. ⚠ Neither family is wrong; they are the same trade counted differently."
+    },
+    {
+      "courseId": "PMT0013",
+      "reason": "Gas-Metal Arc (MIG) — the production process: fast, clean, and what most fabrication shops run. 125 hours.",
+      "variantNote": "⚠⚠ THE OLDER FAMILY, staged by PROCESS rather than by level, and still carried by 19 institutions — three of which do not carry the 2025 numbers at all. ⚠ Neither family is wrong; they are the same trade counted differently."
+    },
+    {
+      "courseId": "PMT0014",
+      "reason": "Flux-Cored Arc — the outdoor and heavy-plate process, 100 hours.",
+      "variantNote": "⚠⚠ THE OLDER FAMILY, staged by PROCESS rather than by level, and still carried by 19 institutions — three of which do not carry the 2025 numbers at all. ⚠ Neither family is wrong; they are the same trade counted differently."
+    },
+    {
+      "courseId": "PMT0015",
+      "reason": "Gas-Tungsten Arc (TIG) — the precision process: thin material, stainless, aluminium, aerospace and food-grade work. 125 hours.",
+      "variantNote": "⚠⚠ THE OLDER FAMILY, staged by PROCESS rather than by level, and still carried by 19 institutions — three of which do not carry the 2025 numbers at all. ⚠ Neither family is wrong; they are the same trade counted differently."
+    },
+    {
+      "courseId": "PMT0016",
+      "reason": "Pipe — 270 hours, and ⚠ the highest-value skill in the older family, exactly as in the new one.",
+      "variantNote": "⚠⚠ THE OLDER FAMILY, staged by PROCESS rather than by level, and still carried by 19 institutions — three of which do not carry the 2025 numbers at all. ⚠ Neither family is wrong; they are the same trade counted differently."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Welders, Cutters, Solderers and Brazers (51-4121.00)",
+      "url": "https://www.onetonline.org/link/summary/51-4121.00",
+      "note": "Task statements, 457,300 employed (2024), growth “slower than average (1% to 2%)”, ⚠ 45,600 annual openings, median wages $53,750 (2025), and the education split — 54% high school diploma, 12% a post-secondary certificate."
+    },
+    {
+      "label": "Florida CTE framework — Welding Technology (CIP 0648050805)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "⚠ The authority for the structure on this page: 1,050 hours, three occupational completion points, and the SCNS course numbers for each."
+    },
+    {
+      "label": "Florida CTE framework — Welding Technology Advanced (CIP 0648050806)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "The 750-hour pipe and career-preparation certificate, two completion points."
+    },
+    {
+      "label": "American Welding Society",
+      "url": "https://www.aws.org/",
+      "note": "Certification, the structural welding codes, the Certified Welder and Certified Welding Inspector programmes, and the Accredited Test Facility list — ⚠ worth checking against any college you are considering."
+    },
+    {
+      "label": "ASME Boiler and Pressure Vessel Code, Section IX",
+      "url": "https://www.asme.org/codes-standards",
+      "note": "Welder and procedure qualification for pressure work — the other code a Florida welder is most likely to be tested under."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "47 Florida public institutions award in welding technology (CIP 48.0508); 1,082 credentials in 2023, and 51 institutions across the whole 48.05 precision metal working series."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠ The evidence for the two live numbering families: PMT0070–0074 at 30 institutions, PMT0011–0016 at 19, and 16 institutions carrying both."
+    },
+    {
+      "label": "OSHA — Welding, cutting and brazing",
+      "url": "https://www.osha.gov/welding-cutting-brazing",
+      "note": "Fume, hot work, confined spaces and eye protection — the hazards that are routine enough to be taken lightly."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 48.05 Precision Metal Working, the group this path is filed under."
+    }
+  ]
+}

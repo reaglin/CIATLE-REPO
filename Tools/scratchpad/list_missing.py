@@ -27,21 +27,28 @@ SMALL = {'and', 'or', 'of', 'the', 'for', 'to', 'in', 'with', 'a', 'an', 'on', '
 # ⚠ An ALL-CAPS source carries no case signal, so an "is it upper?" acronym heuristic
 # fires on every word. Use an explicit list instead, and keep it short.
 ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC', 'AC', 'IT',
-            'II', 'III', 'IV', 'I', 'V', 'VI'}
+            'II', 'III', 'IV', 'I', 'V', 'VI',
+            # welding and metalwork processes -- they are initialisms, not words
+            'SMAW', 'GMAW', 'FCAW', 'GTAW', 'GTA', 'MIG', 'TIG', 'CNC', 'NDT', 'EV', 'CNG', 'LPG'}
+
+
+def _word(w, edge):
+    if w.upper().strip(',') in ACRONYMS:
+        return w.upper()
+    if '.' in w and len(w) <= 5:
+        return w.upper()
+    if w.lower() in SMALL and not edge:
+        return w.lower()
+    if w.upper().startswith('MC') and len(w) > 2:
+        return 'Mc' + w[2:].capitalize()
+    return w.capitalize()
 
 
 def titlecase(s):
-    words = s.split()
-    out = []
-    for i, w in enumerate(words):
-        low = w.lower()
-        if w.upper() in ACRONYMS:
-            out.append(w.upper())
-        elif low in SMALL and i not in (0, len(words) - 1):
-            out.append(low)
-        else:
-            out.append(w.capitalize())
-    return ' '.join(out)
+    ws = s.split()
+    # ⚠ Capitalise after a hyphen too: "GAS-METAL ARC" is two words to a reader.
+    return ' '.join('-'.join(_word(p, i in (0, len(ws) - 1)) for p in w.split('-'))
+                    for i, w in enumerate(ws))
 
 
 def cid_of(r):
@@ -58,7 +65,8 @@ def build(ids):
         if c in ids:
             inst = imap.get(r['institution'].lstrip('0'))
             if inst and scns.is_public(inst):
-                rows[c].append((inst, (r.get('inst_title') or '').strip(), r.get('credit')))
+                rows[c].append((inst, (r.get('inst_title') or '').strip(),
+                                r.get('credit'), r.get('clock_hours')))
 
     courses = []
     for cid in ids:
@@ -66,18 +74,19 @@ def build(ids):
         if not rs:
             print('%-10s NO PUBLIC CARRIER -- not sending' % cid)
             continue
-        titles = collections.Counter(t for _, t, _ in rs if t)
-        creds = collections.Counter()
-        for _, _, cr in rs:
-            try:
-                creds[int(float(cr))] += 1
-            except (TypeError, ValueError):
-                pass
+        titles = collections.Counter(t for _, t, _, _ in rs if t)
+        creds, hours = collections.Counter(), collections.Counter()
         offerings = []
-        for inst, t, cr in sorted(set(rs)):
+        for inst, t, cr, ch in sorted(set(rs)):
             o = {"institution": inst, "title": t or None}
             try:
-                o["credits"] = int(float(cr))
+                o["credits"] = int(float(cr)); creds[o["credits"]] += 1
+            except (TypeError, ValueError):
+                pass
+            # ⚠ A PSAV course is measured in CLOCK HOURS, not credits, and the whole CTE
+            # catalogue is PSAV. Dropping them publishes a course with no measure at all.
+            try:
+                o["clockHours"] = int(float(ch)); hours[o["clockHours"]] += 1
             except (TypeError, ValueError):
                 pass
             offerings.append(o)
@@ -85,13 +94,14 @@ def build(ids):
             "courseId": cid,
             "title": titlecase(titles.most_common(1)[0][0]),
             "stateTitle": titles.most_common(1)[0][0],
-            "creditHours": creds.most_common(1)[0][0] if creds else None,
+            "creditHours": creds.most_common(1)[0][0] if creds else 0,
+            "contactHours": hours.most_common(1)[0][0] if hours else None,
             "offerings": offerings,
             "replaceOfferings": True,
         })
-        print('%-10s %-44s %d cr, %d carrier(s): %s'
-              % (cid, courses[-1]['title'][:44], courses[-1]['creditHours'] or 0,
-                 len(offerings), ' '.join(o['institution'] for o in offerings)))
+        print('%-10s %-44s %s cr / %s hrs, %d carrier(s)'
+              % (cid, courses[-1]['title'][:44], courses[-1]['creditHours'],
+                 courses[-1]['contactHours'], len(offerings)))
     return courses
 
 
