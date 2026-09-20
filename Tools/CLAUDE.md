@@ -371,7 +371,7 @@ whole prefix once you have fetched it is close to zero.** Standing practice:
 1. **Institutions first**, with names and sectors: `POST /api/v1/institutions/batch`. Send once; repeats are
    `unchanged`.
 2. **Build course rows for every prefix the batch touched** — not only the courses you wrote guides for.
-3. **Public institutions only** (`scns.is_public`), per the 2026-09-11 scope rule.
+3. **Public institutions only** (`scns.is_public`), per the 2026-09-11 scope rule — ⚠⚠ which **INCLUDES DISTRICT TECHNICAL COLLEGES since 2026-09-20** (`sector_of` now answers `TECH`). They were excluded by accident, not by decision, and with them the whole CTE sector.
 4. `title` = the most common institution title, title-cased; `stateTitle` = the SCNS statewide title;
    `creditHours` = the modal integer credit; `offerings[]` = every public institution with its own title and
    credits.
@@ -617,8 +617,16 @@ describes where it is actually taught.
 ```
 
 - ⚠⚠ **PUBLIC institutions only** (Ron, 2026-09-11, superseding his earlier answer): list the Florida
-  College System and State University System offerings. **A private, career or out-of-state institution
-  carrying the SCNS number is not added.** Filter with `scns.is_public(code)`.
+  College System, State University System **and DISTRICT TECHNICAL COLLEGE** offerings. **A private,
+  for-profit or out-of-state institution carrying the SCNS number is not added.** Filter with
+  `scns.is_public(code)`.
+- ⚠⚠⚠ **THE TECHNICAL COLLEGES WERE MISSING UNTIL 2026-09-20** (`REVIEW_QUEUE` item 109, Ron's
+  decision the same day). `is_public()` answered SUS or FCS only, so **every offering list this project
+  has ever built dropped them** — and they are where Florida teaches automotive, welding, HVAC,
+  industrial maintenance and practical nursing. The measurement: the nine `AER` automotive courses are
+  carried by ~40 institutions and **only two are state colleges**. `sector_of()` now answers
+  **`TECH`** as a third public sector, kept separate because a technical college awards clock-hour
+  certificates rather than degrees and sits outside the A.A. transfer machinery.
 - ⚠ **No `sector` field.** `Institution.Sector` on the site is the owner of that fact (Ron, 2026-09-11) —
   the guide JSON carries the institution code and the site joins. `scns.sector_of()` still exists for
   filtering and for checking a code, but its value does not go in the draft.

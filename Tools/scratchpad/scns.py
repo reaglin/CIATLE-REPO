@@ -262,23 +262,100 @@ FCS_CODES = {
 }
 
 
+# ⚠⚠⚠ DISTRICT TECHNICAL COLLEGES — added 2026-09-20 on Ron's decision (REVIEW_QUEUE item 109).
+#
+# These are PUBLIC: district-operated career centres teaching Florida's own CTE frameworks. They
+# were invisible to this module until now, and with them the entire career-and-technical education
+# sector — automotive, welding, HVAC, industrial maintenance, practical nursing, paralegal. The
+# measurement that forced it: the nine AER automotive courses are carried by ~40 institutions and
+# only TWO are state colleges.
+#
+# ⚠ Derived with evidence, not by pattern-matching a name (scratchpad/derive_tech.py): a code is
+# here only where the SCNS name reads as a district technical college AND IPEDS lists an
+# institution of that name in its Florida PUBLIC completions file. Two were added by hand after
+# review — THTC, which IPEDS spells "Tom P. Haney", and FLTC, absent from the 2023 completions
+# file but a Hillsborough district college. NPTI (New Professions Technical Institute) was
+# REJECTED: technical-sounding name, private school.
+TECH_CODES = {
+    'ALTC',        # Aparicio-Levy Technical College
+    'ATC',         # Atlantic Technical College
+    'BBTC',        # Big Bend Technical College
+    'CCTC',        # Cape Coral Technical College
+    'CTC',         # Charlotte Technical College
+    'DADEC',       # D.A. Dorsey Technical College
+    'ECTC',        # Emerald Coast Technical College
+    'ETC',         # Erwin Technical College
+    'FCTC',        # First Coast Technical College
+    'FLAGTC',      # Flagler Technical College
+    'FLTC',        # Learey Technical College (Hillsborough; No 2023 Completions Row)
+    'FMTC',        # Fort Myers Technical College
+    'GSTC',        # George Stone Technical College
+    'GTBA',        # George T. Baker Aviation Technical College
+    'GTC',         # Gadsden Technical College
+    'HBTC',        # Brewster Technical College
+    'ITECH',       # Immokalee Technical College
+    'LHTEC',       # Lindsey Hopkins Technical College
+    'LMLTC',       # Lively Technical College
+    'LTC',         # Lake Technical College
+    'LWTC',        # Lorenzo Walker Technical College
+    'MLEC',        # Miami Lakes Educational Center & Technical College
+    'MTC',         # Marion Technical College
+    'MTCC',        # Traviss Technical College
+    'MTEC',        # Fred K. Marchman Technical College
+    'MTI',         # Manatee Technical College
+    'NFTC',        # North Florida Technical College
+    'OTCMC',       # Orange Technical College-Main Campus
+    'OTCSC',       # Orange Technical College-South Campus
+    'OTCWC',       # Orange Technical College-West Campus
+    'OTCWP',       # Orange Technical College-Winter Park
+    'PTCC',        # Pinellas Technical College-Clearwater
+    'PTCSP',       # Pinellas Technical College-St Petersburg
+    'RLTC',        # Locklin Technical College
+    'RTC',         # Ridge Technical College
+    'SCTI',        # Suncoast Technical College
+    'SDTC',        # South Dade Technical College
+    'SHTC',        # Riveroak Technical College
+    'STC',         # Sheridan Technical College
+    'TECO',        # Osceola Technical College
+    'THTC',        # Thomas P. Haney Technical College (Ipeds: "Tom P. Haney")
+    'WHTC',        # Florida Panhandle Technical College
+    'WMTC',        # Mcfatter Technical College
+    'WTI',         # Withlacoochee Technical College
+}
+
+
 def sector_of(code):
-    """Institution short code -> 'SUS' | 'FCS' | 'other'.
+    """Institution short code -> 'SUS' | 'FCS' | 'TECH' | 'other'.
 
     'other' means the institution is not part of Florida's public system, so its
     credit is evaluated by the receiving institution rather than guaranteed by
     statewide numbering. Say so in a guide rather than implying equivalence.
+
+    ⚠ 'TECH' is a district technical college — PUBLIC, and in scope since
+    2026-09-20. It is kept separate from FCS rather than folded into it because
+    the three sectors behave differently: a technical college awards clock-hour
+    certificates, not degrees, and does not participate in the A.A. transfer
+    machinery the rest of this file assumes.
     """
     code = (code or '').upper()
     if code in SUS_CODES:
         return 'SUS'
     if code in FCS_CODES:
         return 'FCS'
+    if code in TECH_CODES:
+        return 'TECH'
     return 'other'
 
 
 def is_public(code):
-    return sector_of(code) in ('SUS', 'FCS')
+    """⚠ TRUE for district technical colleges since 2026-09-20 (Ron's decision).
+
+    The old answer — SUS or FCS only — silently excluded the whole CTE sector from
+    every offering list and carrier count this repo produces. Use sector_of() where
+    the DIFFERENCE matters; use is_public() for the scope question it answers:
+    is this a Florida public institution?
+    """
+    return sector_of(code) in ('SUS', 'FCS', 'TECH')
 
 
 if __name__ == '__main__':

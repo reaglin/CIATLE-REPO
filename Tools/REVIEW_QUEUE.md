@@ -3252,7 +3252,39 @@ emphasis.** The whole career-and-technical space — automotive, welding, HVAC, 
 maintenance, aviation maintenance, practical nursing, paralegal certificates — lives at these
 institutions, and ranks 11–27 of the career-path queue are exactly that space.
 
-### What was done on 2026-09-20, and what needs Ron
+### ✅✅ ANSWERED BY RON, 2026-09-20 — **“Yes to 1 and 2”** — and both are done
+
+**1. `is_public()` now includes district technical colleges.** `sector_of()` answers a third public
+sector, **`TECH`**, kept separate from FCS because a technical college awards clock-hour certificates
+rather than degrees and sits outside the A.A. transfer machinery. **44 codes**, derived with evidence
+rather than by matching a name (`scratchpad/derive_tech.py`): the SCNS name must read as a district
+technical college **and** IPEDS must list an institution of that name in its Florida public file. Two
+were added by hand after review — **THTC**, which IPEDS spells *Tom P. Haney*, and **FLTC**, absent
+from the 2023 completions file but a Hillsborough district college. **NPTI (New Professions Technical
+Institute) was rejected: technical-sounding name, private school.**
+⚠ Every tool here inherits the change, `list_courses.py` included, so future offering loads carry
+technical colleges without further work.
+
+**2. The back-catalogue sweep is done** (`scratchpad/tech_sweep.py`, scoped to courses that actually
+GAIN a technical-college carrier, so the university catalogue could not be disturbed):
+
+| | |
+|---|---|
+| Courses whose offering list was wrong by omission | **117** |
+| Technical-college offerings restored | **1,296** |
+| Technical colleges involved | **44** |
+| Institutions on the site | **39 → 83** |
+| Prefixes affected | EEV 18, CJK 15, ETI 15, TDR 13, AER 9, CTS 9, EER 8, ACR 5, HEV 4, HMV 4, AVS 3, ETC 3 |
+
+⚠ **CJK is the one to notice**: fifteen law-enforcement academy courses had **no offerings at all**
+and now carry 13–16 each. The same for EEV electronics. **Those pages told a reader the course was
+taught nowhere.**
+
+⚠ **Still open:** institution NAMES come from SCNS and are sometimes poor (`HC - HILLSBOROUGH
+COLLEGE`, `HBTC - BREWSTER TECHNICAL COLLEGE`). The load did not overwrite names the site already
+had. IPEDS would be a better source if it ever matters.
+
+### The original write-up: what was done on 2026-09-20, and what needed Ron
 
 ✅ **Done, because the automotive path could not be honest without it:** 35 district technical
 colleges were sent to the site with `sector: "TECH"` (`POST /api/v1/institutions/batch`), and the
