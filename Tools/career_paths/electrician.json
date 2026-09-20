@@ -1,0 +1,140 @@
+{
+  "name": "Electrician",
+  "cipCode": "46.03",
+  "socCode": "47-2111",
+  "isPublished": true,
+  "sortOrder": 140,
+  "description": "Electricians install, maintain and repair the wiring and equipment a building runs on, to a code an inspector will check. ⚠ 818,700 people do it nationally with about 81,000 openings a year — the largest figure on this site — and Florida offers two ways in, one of which pays you while you train.",
+  "credentialNote": "⚠⚠⚠ FLORIDA LICENSES THE CONTRACTOR, NOT THE ELECTRICIAN, and this is the thing most people planning this career get wrong. The Electrical Contractors' Licensing Board (Chapter 489, Part II) licenses the person or business that CONTRACTS for electrical work and pulls permits — **certified** to work anywhere in the state, or **registered** to work only where local competency was accepted. ⚠⚠ There is no statewide journeyman licence: **journeyman requirements are set by counties and municipalities**, and they differ. So the question to ask before enrolling is what YOUR county requires. ⚠ Both the local card and the state licence are evidence-based, so keep dated records of your hours and your work from the first day — on either route.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>install, maintain and repair electrical wiring, equipment and fixtures</em>, ensuring compliance with the code. The tasks are specific — <em>prepare sketches or follow blueprints to determine the location of wiring or equipment; place conduit, pipes or tubing inside designated partitions, walls or other concealed areas; work from ladders, scaffolds or roofs; test electrical systems or continuity of circuits; diagnose malfunctions using test equipment and hand tools to locate breakdowns</em>.</p> <p>&#9888; Two things follow from that list. <strong>Much of the work is installation, not repair</strong> — bending conduit, pulling wire, mounting boxes, on new construction. And <strong>everything is inspected</strong>: the National Electrical Code decides what is acceptable, and an inspector decides whether you met it.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>818,700 electricians employed</strong> (2024), growth <strong>&ldquo;much faster than average (7% or higher)&rdquo;</strong>, and ⚠ <strong>81,000 openings a year</strong> — the largest figure on this site. <strong>Median wages $63,190 (2025)</strong>, $30.38 an hour.</p> <p>⚠ The education split is worth reading against the other trades: <strong>62% of O*NET's respondents said a post-secondary certificate is required</strong>, against 31% a high school diploma. This is a trained trade in a way automotive and welding are not — and the training is also, unusually, something you can be PAID to do.</p>  <h2>⚠⚠ Two routes in, and the second one pays you while you learn</h2> <p><strong>The school route</strong> is the 1,200-hour Electricity certificate, or the 1,500-hour Electrician certificate with industrial work added; a 750-hour half exists for the first two completion points. <strong>26 Florida institutions</strong> carry those courses, almost all district technical colleges.</p> <p><strong>⚠ The apprenticeship route</strong> is the traditional one in this trade, and the numbers make it easy to miss on a site like this one: the classroom half runs as <em>Electrical Wiring I to VIII</em> at six to eight <strong>state colleges</strong>, in 72- to 90-hour blocks, while you work for an employer for pay. A registered apprenticeship in Florida is typically <strong>four years, several thousand hours of supervised work plus the classroom</strong>, and it ends with a recognised completion certificate.</p> <p>&#9888; <strong>They are not competitors so much as different orders.</strong> The certificate gets you hireable quickly and is paid for by you; the apprenticeship pays you from the start but requires an employer to take you on. Many people do the helper certificate first and use it to get the apprenticeship.</p>  <h2>⚠⚠⚠ Florida licenses the CONTRACTOR, not the electrician</h2> <p>This is the fact most likely to surprise someone planning a career here. <strong>Florida issues no statewide journeyman electrician licence.</strong> What the state licenses, through the <strong>Electrical Contractors' Licensing Board</strong> under Chapter 489 Part II, is the <em>contractor</em> — the person or business that contracts for electrical work and pulls the permits. A <strong>certified</strong> contractor may work anywhere in Florida; a <strong>registered</strong> one only in the jurisdictions that accepted their local competency.</p> <p>⚠ <strong>Journeyman requirements are LOCAL.</strong> Counties and municipalities set their own journeyman competency cards and rules, and they differ — so the question to ask, early, is what YOUR county requires, not what Florida requires. &#9888; Ask the county building department directly; it is a five-minute call that shapes a career.</p> <p>⚠ And whichever route you take, <strong>keep dated records of your hours and the work you did</strong>. Both the local journeyman card and the state contractor licence are evidence-based, and reconstructing four years of experience afterwards is miserable.</p>  <h2>Necessary skills</h2> <ul> <li><strong>The code, as a working document.</strong> The NEC is not memorised, it is used — and knowing how to find and read the article that governs what you are doing is the skill.</li> <li><strong>Bending conduit and planning a run.</strong> ⚠ The craft half of the trade, and the part that separates fast work from slow work.</li> <li><strong>Diagnosis with a meter</strong> — continuity, voltage drop, grounding and the discipline to isolate before assuming.</li> <li><strong>Blueprints and layout.</strong> Reading a drawing and setting out a building's electrical work before any wire is pulled.</li> <li><strong>Safety that is habitual</strong> — lockout/tagout, arc flash, ladders and heights. The hazards here are lethal rather than merely painful, which is why the trade is procedural.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Call your county building department before you enrol</strong> and ask what its journeyman requirements are. Florida has no state answer to that question, and the local one determines what your hours need to look like.</li> <li><strong>Ask about the apprenticeship</strong> at the same time. If a registered programme in your area is taking applications, it may be the better financial route — you earn while you learn — and the helper certificate is a common way to qualify for one.</li> <li><strong>Industrial is where the ceiling is highest</strong>: motors, three-phase, controls and PLCs. Only four Florida institutions carry the industrial course, so if that is the goal, choose the programme accordingly or plan to learn it on the job.</li> <li><strong>⚠ Florida-specific demand:</strong> new construction, hurricane rebuild, solar and battery installation, and the electrical service upgrades that go with both. The state's growth is the reason the projection is what it is.</li> <li><strong>Look at HVAC beside this</strong> — most air-conditioning faults are electrical, the two trades share technical colleges, and holding both certificates makes a technician unusually employable in Florida.</li> </ul>",
+  "programs": [
+    {
+      "slug": "electrical-technology",
+      "note": "The programme itself — 41 Florida public institutions and 741 credentials in 2023, mostly district technical colleges. The programme page lists them."
+    },
+    {
+      "slug": "hvac-technology",
+      "note": "⚠ Worth reading beside this one rather than instead of it: most air-conditioning faults are electrical, the two trades share the same colleges, and holding both certificates makes a technician unusually employable in Florida.",
+      "isRoute": false
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ The step past the tools: electrical and electronics engineering technology degrees lead to controls, automation and estimating, and pair with the contractor's licence.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BCV0603",
+      "reason": "OCP A — Electrician Helper, 300 hours: safety, tools, the code, and the basic wiring that everything else is built on. ⚠ A hireable exit on its own, and a common way to qualify for an apprenticeship.",
+      "variantNote": "⚠ The school route: 25–26 Florida institutions carry this course, almost all district technical colleges. ⚠ The apprenticeship route uses an entirely different set of course numbers (BCA0350–0357, Electrical Wiring I–VIII) at six to eight STATE colleges — same trade, different institutions, different transcript."
+    },
+    {
+      "courseId": "BCV0640",
+      "reason": "OCP B — Residential Electrician, 450 hours: houses, services, branch circuits and the inspections that go with them.",
+      "variantNote": "⚠ The school route: 25–26 Florida institutions carry this course, almost all district technical colleges. ⚠ The apprenticeship route uses an entirely different set of course numbers (BCA0350–0357, Electrical Wiring I–VIII) at six to eight STATE colleges — same trade, different institutions, different transcript."
+    },
+    {
+      "courseId": "BCV0652",
+      "reason": "OCP C — Commercial Electrician, 450 hours: three-phase, larger services, conduit and commercial systems. ⚠ Completing A–C is the 1,200-hour Electricity certificate.",
+      "variantNote": "⚠ The school route: 25–26 Florida institutions carry this course, almost all district technical colleges. ⚠ The apprenticeship route uses an entirely different set of course numbers (BCA0350–0357, Electrical Wiring I–VIII) at six to eight STATE colleges — same trade, different institutions, different transcript."
+    },
+    {
+      "courseId": "BCV0667",
+      "reason": "OCP D — Industrial Electrician, the fourth point of the 1,500-hour certificate: motors, controls and industrial power. ⚠⚠ Only FOUR Florida institutions carry it (Manatee, Locklin, Haney and Florida Panhandle), so check before assuming your programme includes it — it is where the pay ceiling is highest.",
+      "variantNote": "⚠ Four carriers against 25 for the commercial course. If industrial work is the goal and it is not offered near you, the usual answer is to learn it on the job or through an apprenticeship with an industrial employer."
+    },
+    {
+      "courseId": "BCA0350",
+      "reason": "Electrical Wiring I — the first classroom block of a registered apprenticeship, typically 72 hours taken while you work for pay.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0351",
+      "reason": "Electrical Wiring II — the second block. ⚠ The sequence runs to VIII over about four years, alongside several thousand hours of supervised work.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0352",
+      "reason": "Electrical Wiring III.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0353",
+      "reason": "Electrical Wiring IV — roughly the halfway point of the classroom sequence.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0354",
+      "reason": "Electrical Wiring V — 90 hours, where the blocks lengthen as the content gets harder.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0355",
+      "reason": "Electrical Wiring VI.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0356",
+      "reason": "Electrical Wiring VII.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    },
+    {
+      "courseId": "BCA0357",
+      "reason": "Electrical Wiring VIII — the last classroom block before completion. ⚠ Completing a registered apprenticeship is recognised evidence of experience; keep the paperwork for the local journeyman card and, later, the contractor's licence.",
+      "variantNote": "⚠⚠ THE APPRENTICESHIP ROUTE, and it is a different shape: 72–90 hours of classroom at a time, taken at a state college alongside PAID work with an employer, rather than a full-time certificate. Carried by the College of the Florida Keys, Daytona State, Indian River State, Miami Dade, Palm Beach State, Santa Fe, South Florida State and Tallahassee State."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Electricians (47-2111.00)",
+      "url": "https://www.onetonline.org/link/summary/47-2111.00",
+      "note": "Task statements, 818,700 employed (2024), growth “much faster than average (7% or higher)”, ⚠ 81,000 annual openings — the largest on this site — median wages $63,190 (2025), and 62% reporting that a post-secondary certificate is required."
+    },
+    {
+      "label": "Florida CTE framework — Electricity (CIP 0646030202)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "1,200 hours, three occupational completion points, with the SCNS course numbers for each."
+    },
+    {
+      "label": "Florida CTE framework — Electrician (CIP 0646030204)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "The 1,500-hour version, which adds the industrial electrician completion point; a 750-hour half (0646030208) covers the first two."
+    },
+    {
+      "label": "Florida DBPR — Electrical Contractors' Licensing Board",
+      "url": "https://www2.myfloridalicense.com/electrical-contractors/",
+      "note": "⚠⚠ What Florida actually licenses: electrical CONTRACTORS, certified (statewide) or registered (only where local competency was accepted). ⚠ There is no statewide journeyman licence — journeyman requirements are local."
+    },
+    {
+      "label": "Chapter 489, Florida Statutes — Contracting (Part II, Electrical and Alarm System Contracting)",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0489%2F0489.html",
+      "note": "The statute behind the contractor licence and the certified/registered distinction."
+    },
+    {
+      "label": "Florida Department of Education — Apprenticeship",
+      "url": "https://www.fldoe.org/academics/career-adult-edu/apprenticeship-programs/",
+      "note": "⚠ The registered apprenticeship route: paid work with an employer plus the classroom hours the BCA courses carry. ⚠ fldoe.org has returned 403 to this project's tooling since 2026-09-02, so this link is for the reader rather than for automated checking."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "41 Florida public institutions award in CIP 46.0302 with 741 credentials in 2023; 44 across the whole 46.03 series."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠ The carrier counts behind the two-route finding: the BCV certificate courses at 25–26 technical colleges, the BCA apprenticeship courses at six to eight state colleges, and the industrial course at just four institutions."
+    },
+    {
+      "label": "NFPA 70 — National Electrical Code",
+      "url": "https://www.nfpa.org/codes-and-standards",
+      "note": "The code the work is inspected against, and the document the trade is built around."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 46.03 Electrical and Power Transmission Installers, the group this path is filed under."
+    }
+  ]
+}

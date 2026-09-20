@@ -61,9 +61,20 @@ links pointing at it rather than failing on a hidden foreign key.
 
 ```powershell
 cd Tools
-python programs.py push --all          # 21 programmes
-python career_paths.py push --all      # 16 paths
+python programs.py push --all          # 22 programmes, EIGHT of them waiting on this deploy
+python career_paths.py push --all      # 17 paths, FIVE of them waiting on this deploy
 ```
+
+**What the deploy unblocks, exactly:**
+
+| Waiting | Why |
+|---|---|
+| Programmes: computer, environmental, materials and ocean engineering; statistics; paralegal studies | written before the relations feature; they push as soon as the code ships |
+| Programme: **hvac-technology** | claims `15.0501`, and **`15.05` is new in `cip.json`** — refused 422 until the seed ships |
+| Programme: **electrical-technology** | names hvac-technology as a related programme, and a relation needs both ends to exist |
+| Paths: environmental-engineer, computer-hardware-engineer, materials-engineer | their programmes are among the six above |
+| Path: **hvac-technician** | anchors `15.05` |
+| Path: **electrician** | names both hvac-technology and electrical-technology |
 
 ⚠⚠ **The deploy also carries `cip.json` at 209 nodes** — it gained **`15.05` Heating/Air
 Conditioning/Refrigeration Engineering Technology** on 2026-09-20, and **the HVAC programme and path
