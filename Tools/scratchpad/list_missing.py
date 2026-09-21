@@ -30,7 +30,10 @@ ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC',
             'II', 'III', 'IV', 'I', 'V', 'VI',
             # welding and metalwork processes -- they are initialisms, not words
             'SMAW', 'GMAW', 'FCAW', 'GTAW', 'GTA', 'MIG', 'TIG', 'CNC', 'NDT', 'EV', 'CNG', 'LPG',
-            'HVAC', 'R', 'AC', 'EPA', 'ASE', 'OSHA', 'FAA', 'A&P', 'NEC', 'MSSC', 'CPT', 'PLC'}
+            'HVAC', 'R', 'AC', 'EPA', 'ASE', 'OSHA', 'FAA', 'A&P', 'NEC', 'MSSC', 'CPT', 'PLC',
+            # health professions -- credentials and modalities that are initialisms
+            'PTA', 'OTA', 'RDH', 'MLS', 'MLT', 'RRT', 'CRT', 'EKG', 'ECG', 'EEG', 'IV', 'CPR',
+            'ACLS', 'BLS', 'PALS', 'NRP', 'ABG', 'PT', 'OT', 'ADL', 'ROM', 'TENS', 'PPE'}
 
 
 def _word(w, edge):
@@ -125,10 +128,26 @@ def main():
                        'password': os.environ['REPO_ADMIN_PASSWORD']}, timeout=20)
     tok.raise_for_status()
     h = {'Authorization': 'Bearer %s' % tok.json()['data']['accessToken']}
-    r = s.post('%s/api/v1/courses/batch' % BASE, json={'courses': courses}, headers=h, timeout=120)
-    print('HTTP', r.status_code)
-    print(json.dumps(r.json(), ensure_ascii=False)[:1500])
-    return 0 if r.status_code == 200 else 1
+    # ⚠ The server refuses a batch over 500 (BATCH_TOO_LARGE) and rejects the WHOLE thing,
+    # so chunk here rather than making the caller remember. Hit on PHT, 601 courses, 2026-09-21.
+    CHUNK = 500
+    rc, total = 0, {'created': 0, 'updated': 0, 'unchanged': 0, 'failed': 0}
+    for i in range(0, len(courses), CHUNK):
+        part = courses[i:i + CHUNK]
+        r = s.post('%s/api/v1/courses/batch' % BASE, json={'courses': part}, headers=h, timeout=300)
+        print('HTTP %s  (courses %d-%d of %d)' % (r.status_code, i + 1, i + len(part), len(courses)))
+        body = r.json()
+        if r.status_code == 200 and body.get('success'):
+            for k in total:
+                total[k] += body['data'].get(k, 0)
+            for res in body['data'].get('results', []):
+                if res.get('outcome') == 'failed':
+                    print('  FAILED %s: %s' % (res['courseId'], res.get('message')))
+        else:
+            rc = 1
+            print(json.dumps(body, ensure_ascii=False)[:800])
+    print(json.dumps(total))
+    return rc
 
 
 if __name__ == '__main__':

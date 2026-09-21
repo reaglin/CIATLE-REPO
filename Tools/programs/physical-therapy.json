@@ -1,0 +1,32 @@
+{
+  "name": "Physical Therapy",
+  "description": "Physical therapy programmes train the people who restore movement after injury, surgery, stroke or long illness — assessing what a body can do, designing the exercise and manual treatment that widens it, and coaching a patient through the months of work that actually produces the change. Florida teaches it at two levels that work side by side in the same clinic: a two-year assistant degree and a three-year clinical doctorate.",
+  "degreesNote": "Two credentials, one practice act, and the gap between them is bigger than the names suggest. The ASSOCIATE degree makes you a PHYSICAL THERAPIST ASSISTANT: 17 Florida public institutions, 267 graduates in the 2023 federal award year, and a licence to deliver treatment under a physical therapist's supervision. The DOCTOR OF PHYSICAL THERAPY is the entry credential for the therapist who evaluates and writes the plan of care: 7 Florida public institutions and 350 graduates. ⚠⚠ Florida produces MORE therapists than assistants, which is unusual and worth knowing if you assumed the assistant route was the common one. ⚠⚠⚠ And the associate degree is NOT advanced standing toward the doctorate — a PTA who wants to become a PT completes a bachelor's degree and then applies to a DPT programme like any other candidate. Choose the level deliberately; do not treat the assistant degree as a first instalment.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 89,
+  "cips": [
+    {
+      "cipCode": "51.0806",
+      "note": "Physical therapy technician / assistant — the ASSOCIATE degree and the PTA licence. 17 Florida public institutions and 267 credentials in the 2023 federal award year, all but one an associate degree: Miami Dade 35, Broward 32, St Petersburg 25, FSCJ 24, Seminole State 21, State College of Florida 20."
+    },
+    {
+      "cipCode": "51.2308",
+      "note": "Physical therapy / therapist — the DOCTOR OF PHYSICAL THERAPY, the entry credential for the therapist. 7 Florida public institutions and 350 doctorates: USF 96, UF 75, FIU 60, UCF 38, UNF 30, FGCU 30, FAMU 21. ⚠ Included because Chapter 486 licenses both levels under one practice act and CAPTE accredits both — but it is a separate application, not a continuation of the associate degree."
+    }
+  ],
+  "related": [
+    {
+      "slug": "radiologic-technology",
+      "note": "⚠ The comparison worth running, because the two-year programmes look alike from outside and the days do not. Radiography is procedural and largely scheduled; a PTA spends the day coaching people through effort, repetition and discouragement. ⚠⚠ Radiography also pays more at entry ($80,110 against $68,380) on the same two years, so if the money is the deciding factor it points the other way."
+    },
+    {
+      "slug": "nursing",
+      "note": "⚠ Named because both are at most of the same colleges and both are limited-access, but the work is unalike: nursing manages a patient's whole condition on a shift, physical therapy works one problem across weeks or months with the same person. ⚠⚠ Nursing is far more widely taught — 78 Florida institutions against 17 — so for many students it is simply the one that exists nearby."
+    },
+    {
+      "slug": "respiratory-therapy",
+      "note": "The other therapy programme in the same colleges. ⚠ Respiratory therapy is acute and unpredictable, largely inside the hospital, and pays more at entry ($82,280 against $68,380); physical therapy is longitudinal and mostly outpatient. ⚠⚠ The hours differ as much as the work — respiratory laboratories staff nights and weekends, outpatient physical therapy usually does not."
+    }
+  ]
+}

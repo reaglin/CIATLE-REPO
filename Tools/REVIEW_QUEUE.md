@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **84** |
+| ⏳ **Awaiting a decision from Ron** | **85** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **113** |
+| **Total items** | **114** |
 
 ---
 
-### ⏳ Awaiting a decision (84)
+### ⏳ Awaiting a decision (85)
 
 | # | Item |
 |---|---|
@@ -121,6 +121,7 @@ continues around every one of them.
 | **111** | Five widely-carried gen-ed courses still show the COURSE ID as their title (found 2026-09-21) |
 | **112** | Should PHLEBOTOMY be its own programme? (raised 2026-09-21, medical laboratory scientist path) |
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
+| **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 
 ### Informational — no decision needed (19)
 
@@ -3405,6 +3406,30 @@ simply not closed to a traditional student**, who does the practicum sequence in
 stronger claim. `SOURCES.md` and `NEXT_SESSION.md` are corrected; **the published guides are not.**
 Same shape as item 81 (replacing a live guide) — worth folding into that decision rather than
 treating separately.
+
+
+## 114. ⚠ Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21)
+
+After listing all 601 public `PHT` course numbers, **two courses on the site still show the course id
+as their title and ZERO offerings — and both carry a published guide:**
+
+| Course | Only carrier in the flat file | Sector |
+|---|---|---|
+| `PHT1006C` *Role of PTA with Lab* | **CBT** | ⚠ private |
+| `PHT1251C` *Patient Care Procedures* | **KU** (Keiser) | ⚠ private |
+
+**This is the batch-222 shape** — *the id is REAL but has no carrier in scope* — with the added
+wrinkle that **a guide was already published on each**. Under the 2026-09-11 public-institution rule
+their offerings cannot be filled in, so **both pages will show "offered at 0 institutions" permanently.**
+
+⚠ **For Ron, and it is the same decision as item 81 rather than a new one:**
+1. **Leave them**, and accept two guide pages with no offerings; or
+2. **Add a line to each guide** saying the number is carried only by a private institution and naming
+   the public equivalent (`PHT1000`/`PHT1200` for the first, `PHT1200`/`PHT1200L` for the second); or
+3. **Retire them** — but `DELETE` returns 409 while a guide exists, so this means unpublishing content.
+
+⚠ **Option 2 is cheap and is what the batch-222 precedent did for new guides.** Recorded rather than
+acted on because it edits published guides.
 
 
 ## Resolved
