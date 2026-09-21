@@ -1,0 +1,114 @@
+{
+  "name": "Manufacturing Production Supervisor",
+  "cipCode": "15.06",
+  "socCode": "51-1011",
+  "isPublished": true,
+  "sortOrder": 240,
+  "description": "First-line supervisors run a production crew — scheduling, training, safety, quality and the paperwork behind all of it. ⚠ It is the largest source of annual openings on this site (67,700 a year) at a median of $74,450, and it has no degree behind it: nearly two thirds of entrants report no degree at all. This page is about how the promotion is actually reached.",
+  "credentialNote": "⚠ Nothing licenses this work, and the credentials that carry weight are the plant's own language rather than a diploma: OSHA 30, a lean or six sigma green belt, and MSSC's Certified Production Technician. ⚠⚠ Be careful with the word supervisor in a programme title — a supervision certificate does not get an outsider hired into a crew. It is what makes an existing production worker the obvious candidate, which is a different and much more reliable thing.",
+  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET, on first-line supervisors of production and operating workers: <em>direct and coordinate the activities of employees engaged in the production or processing of goods; enforce safety and sanitation regulations; inspect materials, products, or equipment to detect defects or malfunctions; conduct employee training in equipment operations or work and safety procedures; keep records of employees' attendance and hours worked; evaluate employee performance; confer with management or subordinates to resolve worker problems, complaints, or grievances; recommend or implement measures to motivate employees and to improve production methods</em>.</p><p>&#9888; <strong>Read that list again and notice how little of it is about machines.</strong> Training, evaluating, scheduling, hearing grievances, enforcing safety — this is a people job done by someone who knows the process. The technical knowledge is the entry ticket; the reason people succeed or fail in it is the other half.</p><h2>⚠⚠ The number that should decide whether you read the rest of this page</h2><p>O*NET, on the federal projections: <strong>698,600 employed</strong> (2024), growth <strong>slower than average (1&ndash;2%)</strong>, <strong>median wages $74,450 (2025)</strong> — and <strong>67,700 openings a year</strong>.</p><p>⚠ <strong>That is the largest number of annual openings of any occupation on this site</strong>, in a job that barely grows. Both things are true because the occupation is enormous and it turns over: supervisors retire, get promoted into management, or move to another plant. <strong>The work is there. It is just not created by expansion.</strong></p><h2>⚠⚠⚠ There is no programme in this, and that is the finding</h2><p>Here is how the people in this occupation say they got in:</p><table class=\"table table-sm\" style=\"max-width: 38rem;\"><thead><tr><th>Usual entry, per O*NET respondents</th><th>Share</th></tr></thead><tbody><tr><td>High school diploma or equivalent</td><td><strong>33%</strong></td></tr><tr><td>Some college, no degree</td><td>15%</td></tr><tr><td>Less than a high school diploma</td><td>14%</td></tr></tbody></table><p><strong>Nearly two thirds report entering with no degree at all.</strong> And Florida's matching programme code (industrial production technologies, CIP 15.06) awarded <strong>89 credentials in 2023</strong> across 19 institutions — 86 of them short certificates, two associate degrees, none higher — against an occupation with 67,700 openings a year nationally.</p><p>&#9888; <strong>So do not go looking for a supervision degree. This job is reached from the floor.</strong> The usual sequence is: get hired into production through a trade or a manufacturing certificate, become the person who is reliably good at the process, and then be promoted — at which point the things you have never been taught (documenting a discipline conversation, running a safety programme, holding a schedule) become the whole job overnight.</p><p>⚠⚠ <strong>That is precisely where the courses below earn their place.</strong> They are not a route into the occupation; they are what makes the promotion survivable, and what distinguishes the person who gets offered it. Taking principles of supervision, quality assurance and lean before anybody offers you the job is the cheapest career move in this whole cluster.</p><h2>⚠ What an employer is actually looking at</h2><ul><li><strong>Whether you already do the job informally.</strong> Supervisors are nearly always chosen from among people who were already training others and already being asked what went wrong.</li><li><strong>Safety.</strong> An OSHA 30 card and a demonstrated safety record are worth more here than most coursework; a supervisor is legally and practically the person responsible for a crew going home intact.</li><li><strong>Quality and lean vocabulary.</strong> Control charts, root cause, 5S, standard work, kanban — plants run on this language and a supervisor who cannot speak it cannot take part in the decisions.</li><li><strong>Numbers.</strong> Takt time, yield, scrap rate, overtime cost, schedule attainment. The reporting is daily and it is the part new supervisors most often underestimate.</li><li><strong>⚠ Documentation.</strong> Attendance, performance, incidents, corrective action. It is tedious, it is what protects both you and the employee, and nobody on the floor was ever taught it.</li></ul><h2>Advice</h2><ul><li><strong>⚠ Get good at the process first.</strong> Supervisors promoted from a trade carry authority that no course supplies. Welding, machining, industrial maintenance and advanced manufacturing all lead here, and the trade pays while you learn.</li><li><strong>Take the supervision course before you need it</strong> — principles of supervision is a single 3-credit course at nine Florida colleges, and it is the difference between being promoted and being promoted successfully.</li><li><strong>Collect the certifications the plant already believes in</strong>: OSHA 30, lean and six sigma (a green belt is a common and realistic target), and MSSC's Certified Production Technician where a programme offers it.</li><li><strong>⚠⚠ Do not stop at supervisor if you do not want to.</strong> This is the rung from which plant management is reached, and that is where an A.S. or a bachelor's in operations or industrial engineering technology starts to pay — taken part-time, after the job, which is how most people in the occupation do it.</li><li><strong>Florida's employers are specific</strong>: aerospace and space-launch suppliers on the Space Coast, medical devices, boat building along both coasts, food and beverage processing, and building products. ⚠ Shift work is the norm and the premium for nights is real — ask what shift the opening is for before you accept it.</li></ul>",
+  "programs": [
+    {
+      "slug": "industrial-production-technology",
+      "note": "The closest matching programme — process, quality, lean and production control. ⚠ Read the size of it honestly: 19 Florida institutions and 89 credentials a year, almost all short certificates. It is a set of useful courses more than it is a degree."
+    },
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "⚠ The likeliest actual route: get hired into production or maintenance here, be good at it, and be promoted. Much more widely taught than the production-technology programme, and it pays while you learn."
+    },
+    {
+      "slug": "machining-technology",
+      "note": "⚠ One of the trades supervisors are most often promoted out of — a machinist who can read a process and train others is exactly who a shop puts in charge of a cell.",
+      "isRoute": false
+    },
+    {
+      "slug": "welding-technology",
+      "note": "⚠ The same logic and the widest footprint of any trade in Florida at 47 institutions: fabrication shops promote their supervisors from the bench, not from outside.",
+      "isRoute": false
+    },
+    {
+      "slug": "industrial-engineering",
+      "note": "⚠ Not a route into first-line supervision — an industrial engineering degree leads to engineering work. It appears here because the subjects overlap almost completely (quality, lean, production control), and because it is where a supervisor who wants plant management eventually goes.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "MNA2345",
+      "reason": "Principles of Supervision — the single most useful course on this page, and the one to take before anybody offers you the job: delegation, performance conversations, discipline, documentation. 5 institutions.",
+      "variantNote": "⚠⚠ Florida numbers this course TWICE, and the two sets of colleges do not overlap: MNA2345 at Broward, Daytona State, Indian River, Palm Beach State and Santa Fe; MNA1345 at Miami Dade, Northwest Florida, Pasco-Hernando and State College of Florida. Same subject, nine institutions, two numbers — and one of them is 1000-level and the other 2000-level, which matters if the credit has to count toward something. Register by the number your own college lists."
+    },
+    {
+      "courseId": "MNA1345",
+      "reason": "Principles of Supervision — the same course under the other Florida number, at a different four colleges. 4 institutions.",
+      "variantNote": "⚠⚠ Florida numbers this course TWICE, and the two sets of colleges do not overlap: MNA2345 at Broward, Daytona State, Indian River, Palm Beach State and Santa Fe; MNA1345 at Miami Dade, Northwest Florida, Pasco-Hernando and State College of Florida. Same subject, nine institutions, two numbers — and one of them is 1000-level and the other 2000-level, which matters if the credit has to count toward something. Register by the number your own college lists."
+    },
+    {
+      "courseId": "ETI1701",
+      "reason": "Industrial Safety (OSHA) — 20 institutions, the most widely carried manufacturing course in the state. ⚠ A supervisor is the person responsible when it goes wrong; take this one first if you take only one.",
+      "variantNote": "Carried as Industrial Safety or Environmental Health and Safety — the same course."
+    },
+    {
+      "courseId": "ETI1110",
+      "reason": "Introduction to Quality Assurance — measurement, sampling, control charts and the documentation a quality system runs on. 15 institutions, and the vocabulary a supervisor is expected to already have.",
+      "variantNote": null
+    },
+    {
+      "courseId": "ETI1622",
+      "reason": "Concepts of Lean and Six Sigma — 12 institutions. ⚠ This is how continuous-improvement projects are framed in almost every plant, and supervisors are the ones asked to run them.",
+      "variantNote": null
+    },
+    {
+      "courseId": "ETI1644",
+      "reason": "Production and Inventory Control — scheduling, materials and what it actually costs to run behind. 6 institutions, and the subject new supervisors most often underestimate.",
+      "variantNote": "⚠ Carried as Production and Inventory Control at some colleges and Advanced Manufacturing Supply Chain at others."
+    },
+    {
+      "courseId": "ETI1420",
+      "reason": "Manufacturing Processes and Materials — 12 institutions. ⚠ Worth taking if you are supervising a process you did not come up through; you cannot judge what you do not understand.",
+      "variantNote": "Also carried as ETI1420C (integrated lecture and laboratory) at 7 further institutions — the same subject in the other packaging."
+    },
+    {
+      "courseId": "MNA0080",
+      "reason": "Supervisor / Manager Trainee — the clock-hour route, 300 hours at Atlantic, Sarasota County and Suwannee-Hamilton technical colleges. ⚠ Only three carriers, but it is the version that fits alongside a full-time production job.",
+      "variantNote": "⚠ Clock-hour (PSAV) course — hours rather than credits, and the hours do not transfer as college credit."
+    },
+    {
+      "courseId": "MNA0082",
+      "reason": "Supervisor — the 450-hour second half of the same clock-hour programme, at the same three technical colleges.",
+      "variantNote": "⚠ Clock-hour (PSAV) course — hours rather than credits, and the hours do not transfer as college credit."
+    },
+    {
+      "courseId": "MAN3025",
+      "reason": "Principles of Management — 18 institutions and the widest business course in the state. ⚠ The degree-level version of the supervision course, and the one that counts toward a bachelor's if plant management is the destination.",
+      "variantNote": null
+    },
+    {
+      "courseId": "MAN4504",
+      "reason": "Operational Decision Making — 17 institutions: capacity, scheduling, queueing and the quantitative side of running a line.",
+      "variantNote": null
+    },
+    {
+      "courseId": "MAN3504",
+      "reason": "Operations Management — 10 institutions, including the universities. The full treatment of the subject a supervisor practises daily by instinct.",
+      "variantNote": null
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — First-Line Supervisors of Production and Operating Workers (51-1011.00)",
+      "url": "https://www.onetonline.org/link/summary/51-1011.00",
+      "note": "Task statements, 698,600 employed (2024), growth slower than average (1–2%), 67,700 annual openings, median wages $74,450 (2025), and the education split: 33% high school diploma, 15% some college, 14% less than high school."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — CIP 15.06",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "19 Florida public institutions, 89 credentials: 86 short certificates, 3 longer, 2 associate degrees, no bachelor's. FSCJ 30, Hillsborough 12, Valencia 11. ⚠ Set that against 67,700 annual openings nationally."
+    },
+    {
+      "label": "SCNS statewide course file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Carrier counts for every course here — including the finding that principles of supervision is numbered twice (MNA2345 at five colleges, MNA1345 at four) with no institution carrying both."
+    }
+  ]
+}

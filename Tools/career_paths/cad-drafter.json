@@ -1,0 +1,123 @@
+{
+  "name": "CAD Drafter",
+  "cipCode": "15.13",
+  "socCode": "17-3011",
+  "isPublished": true,
+  "sortOrder": 230,
+  "description": "Drafters turn an engineer's or architect's decision into the drawings and models a building or a part is built from. ⚠ The pay is good for a certificate — a median of $66,150 — and the trap is real: Florida teaches this almost entirely as a short certificate, while 42% of employers say they want a bachelor's degree.",
+  "credentialNote": "⚠ No licence governs drafting, and the credential employers actually test is the software itself — Autodesk and Dassault (SolidWorks) both run certification exams, and several Florida programmes build them in. Ask which ones a programme's students sit and pass. ⚠⚠ The second thing to ask about is the degree: the drafting series awards no bachelor's anywhere in Florida, so if you want one, the question is which engineering technology, construction management or architecture programme will accept what you are about to take.",
+  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET, on architectural and civil drafters: <em>produce drawings, using computer-assisted drafting systems (CAD) or drafting machines, or by hand; analyze building codes, by-laws, space and site requirements, and other technical documents; draw rough and detailed scale plans for foundations, buildings, and structures; coordinate structural, electrical, and mechanical designs and determine presentation methods; explain drawings to production or construction teams and provide adjustments; draw maps, diagrams, and profiles using cross-sections and surveys; prepare cost estimates, contracts, bidding documents, and technical reports</em>.</p><p>&#9888; <strong>Two of those tasks are the ones people do not expect, and they are where the job gets interesting.</strong> <em>Analyze building codes</em> means the drawing has to be legal, not just neat — setbacks, egress, accessibility, wind load. And <em>explain drawings to construction teams</em> means the drafter is the person who gets the telephone call from the site at seven in the morning. A drafter who can answer that call is worth a great deal more than one who only draws.</p><h2>Projected need</h2><p>O*NET, on the federal projections: <strong>110,500 architectural and civil drafters employed</strong> (2024), growth <strong>average (3&ndash;4%)</strong> to 2034, <strong>10,000 openings a year</strong>, <strong>median wages $66,150 (2025)</strong>.</p><p>That median is worth pausing on: it is above every other certificate-entry occupation on this site apart from the licensed trades at the top of their scale, and in most cases it is reached without a degree. ⚠ But the growth figure is honest too — this is a steady occupation rather than an expanding one, and the openings come from people leaving rather than from new positions.</p><h2>⚠⚠ The gap this page exists to warn you about</h2><p><strong>Florida teaches drafting as a certificate. Four employers in ten say they want a degree.</strong></p><p>The IPEDS award data for the drafting series (CIP 15.13) across 25 Florida public institutions, 2023:</p><table class=\"table table-sm\" style=\"max-width: 40rem;\"><thead><tr><th>Credential</th><th>Institutions</th><th>Awarded</th></tr></thead><tbody><tr><td>Certificate, under a year</td><td>15</td><td><strong>323</strong></td></tr><tr><td>Certificate, one to two years</td><td>10</td><td>97</td></tr><tr><td>Associate degree</td><td>9</td><td>39</td></tr><tr><td>⚠ Bachelor's degree</td><td>⚠⚠ <strong>none</strong></td><td>⚠⚠ <strong>none</strong></td></tr></tbody></table><p>Against that, <strong>42% of O*NET's respondents said a bachelor's degree is required</strong> for this occupation. &#9888; <strong>Both facts are true and they do not contradict each other</strong> — a short certificate is how you learn to draft and how most people get their first drafting job, and a degree is what a large minority of employers ask for by the time you are being considered for the better ones.</p><p>⚠ <strong>The practical answer is not to skip the certificate.</strong> It is to know from the start which of three routes you are on: the certificate as a fast entry, with the associate degree added while working; the certificate as a skill carried into a civil, mechanical or construction-management degree; or the certificate as a complete answer, which it genuinely is for plenty of people at plenty of firms — just not at all of them.</p><h2>⚠ Two course families teach this, and they are different programmes</h2><p>Florida teaches drafting twice over, and which one is near you decides what your credential looks like:</p><ul><li><strong>The clock-hour ladder (TDR numbers)</strong> — the state's 1,500-hour Drafting framework, carried by <strong>11 technical colleges</strong>, every one of which runs the complete sequence. It is a ladder with seven hireable exits, ending in named specialisms: architectural, civil, mechanical and structural drafter.</li><li><strong>The college-credit courses (ETD and BCN numbers)</strong> — AutoCAD and SolidWorks courses at the state colleges, carried more widely (SolidWorks at 12 institutions, AutoCAD at 9), and the ones that count toward an associate or a bachelor's degree later.</li></ul><p>&#9888; <strong>Only the second kind transfers.</strong> Clock hours do not become college credit, so if a degree is anywhere in your plan, ask the technical college what articulation agreement it holds before you start — several have one, and it is worth choosing a campus over.</p><h2>Necessary skills</h2><ul><li><strong>The software, to a working standard</strong> — AutoCAD and Revit for buildings, SolidWorks or Inventor for parts, Civil 3D where the work is sites and roads. ⚠ Employers test this; a certificate is not taken on trust.</li><li><strong>Drawing conventions and tolerancing.</strong> Line weights, sections, schedules, and GD&amp;T on the mechanical side. This is what separates a drafter from someone who owns the software.</li><li><strong>Codes and standards</strong> — the Florida Building Code, ADA, and whatever standard the discipline works to. The drawing has to be buildable and legal.</li><li><strong>Arithmetic you use constantly</strong> — scales, areas, slopes and grades, trigonometry for angles.</li><li><strong>⚠ Communication.</strong> The job sits between the engineer or architect who decided and the crew who builds. Being the person who explains the drawing clearly is most of the career progression.</li></ul><h2>Advice</h2><ul><li><strong>Pick a discipline and go deep.</strong> Architectural, civil, mechanical and structural drafting are different jobs with different software and different employers. The framework's later courses are named for exactly these, and a portfolio in one beats a survey of all four.</li><li><strong>⚠ Build a portfolio from the first term.</strong> Nobody hires a drafter on a transcript; they hire on drawings. Keep every sheet you produce, redraw real projects, and be ready to show them.</li><li><strong>Learn BIM, not only CAD.</strong> Revit and model-based delivery are how large building projects are now run, and a drafter who knows 2D AutoCAD alone is competing for a shrinking share of the work.</li><li><strong>⚠⚠ Add the degree if you can.</strong> Given that 42% figure, an associate degree taken while working — or a transfer into civil engineering technology or construction management — is the single thing most likely to change what you are offered five years in.</li><li><strong>Florida's work is specific</strong>: civil and site drafting for the engineering firms serving a state that builds constantly, structural drafting under Florida's wind-load requirements, and mechanical drafting for the aerospace and medical-device suppliers on the Space Coast and in Tampa Bay.</li></ul>",
+  "programs": [
+    {
+      "slug": "drafting-and-design-technology",
+      "note": "The programme itself — the 1,500-hour clock-hour ladder at 11 technical colleges, and the college-credit CAD certificates at the state colleges. ⚠ Check which of the two is near you; they lead to the same first job and to different second ones."
+    },
+    {
+      "slug": "civil-engineering-technology",
+      "note": "⚠ The real route into civil and site drafting. Florida's civil drafting code awards 12 credentials a year across three institutions, so the people drawing site plans and roadways mostly arrived through civil engineering technology instead."
+    },
+    {
+      "slug": "mechanical-engineering-technology",
+      "note": "The mechanical half: SolidWorks and Inventor taught alongside the statics and materials that decide whether the part survives. ⚠ A degree route, and the one that leads to designing rather than documenting."
+    },
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "⚠ Not a drafting programme, but the adjacent skill worth the most: a drafter who can also program the CNC machine or run the 3D printer that makes the model is a different hire entirely.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "TDR0070",
+      "reason": "OCP A — Blueprint Reader / Introduction to Drafting. The first hireable exit, and the course anyone working in construction benefits from whether or not they go on.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "TDR0370",
+      "reason": "OCP B — Drafting Assistant: producing and revising drawings to someone else's direction. This is the first job the certificate actually gets you.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "TDR0775",
+      "reason": "OCP C — Drafting Detailer 1: the detail sheets and schedules that make a drawing set buildable rather than merely correct.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "TDR0570",
+      "reason": "OCP D — Architectural Drafter. ⚠ From here the ladder splits into named specialisms, and this is the decision that shapes the career: buildings, infrastructure, or parts.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "TDR0874",
+      "reason": "OCP E — Civil Drafter: site plans, grading, utilities and roadway drawings. ⚠ Florida's engineering firms hire steadily here, and the state's drafting programmes produce very few civil specialists.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "TDR0777",
+      "reason": "OCP F — Mechanical Drafter: parts and assemblies, tolerancing, and the drawings a machinist works from.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "TDR0875",
+      "reason": "OCP G — Structural Drafter: steel, concrete and connections. ⚠ In Florida that means wind load, and the detailing that satisfies it.",
+      "variantNote": "⚠ The state's 1,500-hour Drafting framework is carried by 11 Florida technical colleges — Atlantic, Erwin, George Stone, iTech, Lake Wales, Miami Lakes, Orange Technical College South, Ridge, Sarasota County, Withlacoochee and William T. McFatter. All eleven carry every course in the ladder, so where one is near you the whole sequence is available."
+    },
+    {
+      "courseId": "ETD1320C",
+      "reason": "AutoCAD I — the college-credit entry to the same skill, and the one that counts toward a degree. 9 institutions.",
+      "variantNote": "⚠ College-credit route. Titles differ by college (AutoCAD I, Introduction to AutoCAD); it is the same course."
+    },
+    {
+      "courseId": "ETD1340C",
+      "reason": "AutoCAD II — the second term, where the drawing becomes a set rather than a sheet. 6 institutions.",
+      "variantNote": "⚠ Carried as AutoCAD II at some colleges and Advanced CADD at others — register by the number, not the title."
+    },
+    {
+      "courseId": "ETD2364C",
+      "reason": "Introduction to SolidWorks — 3D solid modelling, and the most widely carried drafting course in the state at 12 institutions. ⚠ Mechanical employers ask for this one by name.",
+      "variantNote": "12 public institutions, the widest footprint of any course on this page."
+    },
+    {
+      "courseId": "ETD2368C",
+      "reason": "Advanced SolidWorks — assemblies, sheet metal and the modelling that supports real manufacture. 6 institutions.",
+      "variantNote": null
+    },
+    {
+      "courseId": "ETD2371C",
+      "reason": "Introduction to 3D printing and additive manufacturing — the model you drew, made. 6 institutions, and the clearest bridge from drafting into manufacturing work.",
+      "variantNote": null
+    },
+    {
+      "courseId": "BCN1251C",
+      "reason": "Construction Drafting — the building-trades version, taught in construction programmes at 8 institutions including UF and FGCU. ⚠ Worth taking if buildings rather than parts are the destination.",
+      "variantNote": null
+    },
+    {
+      "courseId": "BCN1272",
+      "reason": "Blueprint Reading — reading a set rather than producing one, at 8 institutions. ⚠ The cheapest and most useful single course for anyone working on a construction site.",
+      "variantNote": null
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Architectural and Civil Drafters (17-3011.00)",
+      "url": "https://www.onetonline.org/link/summary/17-3011.00",
+      "note": "Task statements, 110,500 employed (2024), growth average 3–4%, 10,000 annual openings, median wages $66,150 (2025), and the 42% of respondents naming a bachelor's degree as the usual entry."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — CIP 15.13",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "25 Florida public institutions, 459 credentials: 323 certificates under a year, 97 one-to-two-year certificates, 39 associate degrees, no bachelor's. Valencia 159, Seminole State 50, Eastern Florida 31."
+    },
+    {
+      "label": "Florida CTE curriculum framework — Drafting (CIP 0615130100)",
+      "url": "https://www.fldoe.org/academics/career-adult-edu/career-tech-edu/program-resources.stml",
+      "note": "The 1,500-hour clock-hour programme and its seven occupational completion points, read through the CPALMS-CTE mirror. ⚠ fldoe.org itself has returned 403 to this project since 2026-09-02."
+    },
+    {
+      "label": "SCNS statewide course file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Carrier counts for every course on this page: the TDR ladder at 11 technical colleges, SolidWorks at 12 state colleges, AutoCAD at 9."
+    }
+  ]
+}

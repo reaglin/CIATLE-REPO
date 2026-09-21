@@ -1,0 +1,28 @@
+{
+  "name": "Drafting and Design Technology",
+  "description": "Drafting programmes teach you to turn a design into the drawings and models a building or a part is actually built from — AutoCAD, Revit, SolidWorks and Inventor, plus the dimensioning conventions, building codes and drawing standards that let a contractor or a machinist read what you drew without asking you.",
+  "degreesNote": "⚠ In Florida this is a certificate field, not a degree field. Of the 459 credentials awarded across 25 public institutions in 2023, 323 were certificates of under a year, 97 were one-to-two-year certificates and only 39 were associate degrees — and no Florida public institution awards a bachelor's anywhere in the series. ⚠⚠ Read that against the occupation before you plan on it: 42% of O*NET's respondents for architectural and civil drafters said a bachelor's degree is what the job asks for. The certificate gets you drawing and gets you hired; it does not by itself answer what four employers in ten say they want. The usual answers are to add the associate degree, or to carry the drafting skill into an engineering technology, construction management or architecture degree — which is why the neighbouring programmes below matter more here than on most pages.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 82,
+  "cips": [
+    {
+      "cipCode": "15.13",
+      "note": "Drafting and design engineering technologies — 25 Florida public institutions and 459 credentials in 2023. Most of it is computer-aided design (15.1302: 16 institutions, 377 credentials); general drafting (15.1301) is carried by 20 institutions but produces only 70 credentials, and civil drafting (15.1303) by 3. Largest producers: Valencia 159, Seminole State 50, Eastern Florida 31, Hillsborough 26, Manatee Technical College 21."
+    }
+  ],
+  "related": [
+    {
+      "slug": "civil-engineering-technology",
+      "note": "⚠ Where the civil and site drafting work actually sits. Florida's civil-drafting code awards 12 credentials a year across three institutions, so almost nobody enters civil drafting through a drafting programme — they come through civil engineering technology, which also teaches the surveying and the roadway standards the drawings have to follow."
+    },
+    {
+      "slug": "mechanical-engineering-technology",
+      "note": "SolidWorks and Inventor are the mechanical half of this field, and mechanical engineering technology teaches them next to the statics and materials the parts have to survive. ⚠ The difference in the job is whether you document someone else's design or size the part yourself — and that is the difference in the pay too."
+    },
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "⚠ 3D printing and CNC programming both begin from the model you build in a drafting course, which is why the additive manufacturing course appears in both programmes. A drafter who can also set up the machine that makes the part is a different hire."
+    }
+  ]
+}

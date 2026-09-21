@@ -1,0 +1,139 @@
+{
+  "name": "Logistics and Supply Chain Analyst",
+  "cipCode": "52.02",
+  "socCode": "13-1081",
+  "isPublished": true,
+  "sortOrder": 250,
+  "description": "Logisticians decide where goods sit, how they move and what it costs — purchasing, inventory, transportation and network design. ⚠ It is the fastest-growing and best-paid occupation in this cluster (a median of $82,320, growth of 18% on the latest federal projection), and there is no single required major: 75% hold a bachelor's, and business, supply chain and engineering all lead here. So does the military.",
+  "credentialNote": "⚠ No licence governs this work. The credentials employers name are ASCM's (formerly APICS) CPIM for production and inventory management and CSCP for the whole supply chain — neither required, both recognised nationally, and both especially useful to someone whose degree is in something else. ⚠⚠ A note for anyone leaving the service: the federal handbook names military experience as a route into this occupation, and Florida's defence and port employers read it fluently.",
+  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET, on logisticians: <em>direct availability and allocation of materials, supplies, and finished products; redesign the movement of goods to maximize value and minimize costs; plan, organize, and execute logistics support activities, such as maintenance planning and repair analysis; manage the logistical aspects of product life cycles; direct team activities, establishing task priorities, scheduling and tracking work assignments; develop an understanding of customers' needs and take actions to ensure that such needs are met; develop proposals that include documentation for estimates</em>.</p><p>&#9888; <strong>The phrase to notice is redesign the movement of goods.</strong> A logistician is not the person moving the pallet — that is a different and also real job, with its own courses below. The analyst decides where inventory sits, which mode carries it, which supplier is failing and what the alternative costs. The tools are spreadsheets, an ERP system (SAP or Oracle), warehouse management software, and increasingly SQL.</p><h2>Projected need — and the two federal sources disagree, so here are both</h2><table class=\"table table-sm\" style=\"max-width: 44rem;\"><thead><tr><th></th><th>O*NET (2024&ndash;2034)</th><th>BLS Occupational Outlook (2025&ndash;2035)</th></tr></thead><tbody><tr><td>Employed</td><td>241,000 (2024)</td><td>255,100 (2025)</td></tr><tr><td>Growth</td><td>much faster than average, <strong>7% or higher</strong></td><td>⚠ <strong>18%</strong>, much faster than average</td></tr><tr><td>Openings a year</td><td>26,400</td><td>26,600</td></tr><tr><td>Median wage</td><td colspan=\"2\"><strong>$82,320</strong> (May 2025)</td></tr></tbody></table><p>⚠ <strong>They are measuring different decades and O*NET reports its growth as a band</strong>, so 18% is not a contradiction of 7%-or-higher — it is a sharper number from the later projection. Either way this is the fastest-growing occupation in the manufacturing and logistics cluster on this site, and the best paid of them at the median.</p><h2>⚠⚠⚠ There is no single major, and that is the decision this page exists for</h2><p>The federal handbook is explicit: <em>logisticians typically need a bachelor's degree, although less education may be sufficient for some jobs</em>, in <em>logistics and supply chain management, business, or related disciplines</em>. O*NET's respondents put it at <strong>75% bachelor's</strong>, 8% a post-secondary certificate and 8% a high school diploma.</p><p>⚠ <strong>No body collects the entrant-major counts for this occupation the way LSAC does for law</strong>, so nothing here can tell you which major performs best — and this page will not invent one. What the sources do support is that three routes are real:</p><ul><li><strong>The named degree.</strong> Supply chain management, at nine Florida public universities. It is the most direct answer and the one that needs least explaining to a recruiter.</li><li><strong>Business, with the logistics courses inside it.</strong> The commonest route by sheer volume — general business administration produced 14,198 credentials in Florida in 2023 — and it works, provided the electives are actually operations, transportation and analytics rather than whatever fits the timetable.</li><li><strong>⚠ Industrial or systems engineering.</strong> The handbook names systems engineering explicitly. This is the quantitative route: inventory policy, network design and queueing are engineering subjects, and the people who hold them are the ones doing the optimisation rather than the reporting.</li></ul><p>&#9888;&#9888; <strong>And a fourth route that no catalogue mentions: the military.</strong> The handbook says so directly — some logisticians gain their experience <em>while serving in the military</em>. Military logistics experience translates into this occupation more cleanly than into almost any other, and in Florida, with its concentration of installations and defence contractors, it is a well-worn path. If that is your background, the degree completion is the missing piece rather than the starting point.</p><h2>⚠ Two different Florida programmes, two different jobs</h2><p>The state's institutions teach this at two levels and they do not lead to the same place:</p><ul><li><strong>The bachelor's</strong> (CIP 52.0203) — nine public universities, 241 degrees in 2023, of which FIU alone awarded 192. This is the analyst occupation described above.</li><li><strong>The certificate and associate degree</strong> (CIP 52.0209) — thirteen colleges, 91 certificates and 57 associate degrees, and <em>nothing higher awarded anywhere in the state</em>. This leads to shipping, receiving, purchasing, inventory and warehouse coordination: real jobs, entered quickly, with a genuine ladder above them — but not, on their own, this occupation.</li></ul><p>&#9888; <strong>The honest way to use the certificate is as a paid start rather than a finish.</strong> Get hired into a distribution centre or a purchasing office, then finish the bachelor's part-time with the employer's help — which is exactly what the A.S.-to-bachelor's articulation exists for. Ask which university accepts the A.S., in writing, before enrolling.</p><h2>⚠⚠ A warning about Florida's course numbers in this subject</h2><p>This is the most fragmented subject on the site. <strong>Warehouse management is numbered twice</strong> (TRA2098 and TRA2230) across eight colleges with no overlap; <strong>the introductory supply chain course is numbered twice</strong> (TRA1154 and TRA2154), at two different levels; and the same subjects reappear at upper division under yet more numbers for the bachelor's. On top of that, the subject is taught under <strong>three different prefixes</strong> — TRA (transportation), MAN (management) and MAR (marketing) — depending on which department owns it.</p><p>&#9888; <strong>Two practical consequences.</strong> Search your college's catalogue by SUBJECT, not by course number, or you will conclude it is not taught when it is. And when you transfer, send the syllabus rather than the number — an evaluator matching identifiers will not find the equivalence, because in this subject the identifiers genuinely do not line up.</p><h2>Necessary skills</h2><ul><li><strong>Spreadsheets, seriously.</strong> Not formatting — lookups, pivot tables, scenario comparison, and knowing when the spreadsheet has stopped being the right tool.</li><li><strong>An ERP system.</strong> SAP and Oracle are named by O*NET's own technology list; any hands-on exposure is worth putting on a CV.</li><li><strong>⚠ Data, increasingly.</strong> SQL and a reporting tool separate the analyst who answers questions from the one who circulates a report somebody else built.</li><li><strong>The physical reality.</strong> Modes, transit times, customs, incoterms, dock capacity, what a trailer holds. Analysts who have never stood in a warehouse propose things warehouses cannot do.</li><li><strong>Negotiation and supplier relationships.</strong> Half of O*NET's task list is about customers and counterparties, not about goods.</li></ul><h2>Advice</h2><ul><li><strong>⚠ Take the certification the industry names.</strong> ASCM (formerly APICS) runs CPIM for production and inventory and CSCP for the whole chain; they are recognised nationally, they are not required, and they are the cheapest credible signal available to someone whose degree is in something else.</li><li><strong>Get inside a real operation early</strong> — a distribution centre, a port, a hospital supply department, a manufacturer's materials office. This occupation hires on experience far more than on coursework, and internships are the ordinary route.</li><li><strong>Florida is unusually good ground for this</strong>: PortMiami, Port Everglades, JAXPORT and Port Tampa Bay, the third-party logistics corridor along I-4, cruise-line provisioning, aerospace supply chains on the Space Coast, and agriculture moving north out of the state daily.</li><li><strong>⚠⚠ If you are leaving the service, do not start over.</strong> Military logistics experience is directly relevant; what employers want alongside it is the degree finished and the civilian vocabulary, not a different career.</li></ul>",
+  "cipCodes": [
+    {
+      "cipCode": "14.35",
+      "note": "Industrial engineering — filed here because the federal handbook names systems engineering among the degrees logisticians hold, and because inventory policy, facility location and network design are taught as industrial engineering subjects. ⚠ Four Florida public institutions award it, against nine for the supply chain bachelor's."
+    },
+    {
+      "cipCode": "15.06",
+      "note": "Industrial production technologies — the plant-floor entry to the same material (production and inventory control, scheduling, lean). ⚠ Filed here because manufacturers routinely fill supply chain roles from inside the plant, not because the programme is a logistics degree; it awards 89 short certificates a year across 19 Florida institutions."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "The programme itself, in both of its forms: the bachelor's at nine universities and the certificate or A.S. at thirteen colleges. ⚠ They lead to different jobs — read the degrees note on that page before choosing."
+    },
+    {
+      "slug": "industrial-engineering",
+      "note": "⚠ The quantitative route, and a real one: the federal handbook names systems engineering explicitly. An IE graduate reaches this work doing the optimisation rather than the reporting — and can go back to engineering, which a supply chain degree cannot."
+    },
+    {
+      "slug": "industrial-production-technology",
+      "note": "⚠ Not a route to the analyst job by itself, but the commonest way people already working in a plant move into materials and scheduling — and its courses (production and inventory control, lean) are the same ones.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "TRA2010",
+      "reason": "Transportation — modes, costs, regulation and what actually determines transit time. 8 institutions, the widest carrier count in the prefix and the sensible first course.",
+      "variantNote": null
+    },
+    {
+      "courseId": "TRA1154",
+      "reason": "Supply Chain Management — the introductory survey: sourcing, flow, inventory and the trade-offs between them. 3 institutions.",
+      "variantNote": "⚠⚠ The introductory supply chain course is also numbered twice, and at two different LEVELS: TRA1154 (1000-level) at Miami Dade, Palm Beach State and Valencia; TRA2154 (2000-level) at College of Central Florida, Eastern Florida and St. Johns River State. Same subject. ⚠ The level matters if the credit has to count toward a specific requirement later."
+    },
+    {
+      "courseId": "TRA2154",
+      "reason": "Introduction to Supply Chain Management — the same introductory course under Florida's other number, at three different colleges.",
+      "variantNote": "⚠⚠ The introductory supply chain course is also numbered twice, and at two different LEVELS: TRA1154 (1000-level) at Miami Dade, Palm Beach State and Valencia; TRA2154 (2000-level) at College of Central Florida, Eastern Florida and St. Johns River State. Same subject. ⚠ The level matters if the credit has to count toward a specific requirement later."
+    },
+    {
+      "courseId": "TRA2131",
+      "reason": "Purchasing and Inventory Management — 5 institutions. ⚠ Purchasing is where a great many people actually enter this field, and the inventory half is the subject the analyst job turns on.",
+      "variantNote": null
+    },
+    {
+      "courseId": "TRA2098",
+      "reason": "Warehouse Management — layout, receiving, picking, slotting and the systems that run it. 4 institutions.",
+      "variantNote": "⚠⚠ Warehouse Management is numbered TWICE in Florida and no institution carries both: TRA2098 at Eastern Florida, FSCJ, Palm Beach State and Tallahassee State; TRA2230 at College of Central Florida, Polk State, St. Johns River State and Seminole State. Eight colleges, one subject, two numbers — so a transfer evaluator matching on the number sees a mismatch where there is none. Send the syllabus."
+    },
+    {
+      "courseId": "TRA2230",
+      "reason": "Warehouse Management — the same subject under Florida's other number, at four different colleges.",
+      "variantNote": "⚠⚠ Warehouse Management is numbered TWICE in Florida and no institution carries both: TRA2098 at Eastern Florida, FSCJ, Palm Beach State and Tallahassee State; TRA2230 at College of Central Florida, Polk State, St. Johns River State and Seminole State. Eight colleges, one subject, two numbers — so a transfer evaluator matching on the number sees a mismatch where there is none. Send the syllabus."
+    },
+    {
+      "courseId": "TRA4202",
+      "reason": "Logistics Systems Management — the upper-division treatment at College of Central Florida, FSCJ, UNF and UWF. ⚠ Upper-division hours, which a bachelor's requires and a 2000-level course cannot supply.",
+      "variantNote": null
+    },
+    {
+      "courseId": "TRA4155",
+      "reason": "Supply Chain Management — the upper-division version of the survey course above, at 2 institutions. ⚠ Expect familiar ground treated at greater depth; ask whether your college will count both.",
+      "variantNote": "⚠ The A.S.-to-bachelor's ladder in action: the same subject is numbered at 1000/2000 level for the associate degree and at 4000 level for the bachelor's. Taking both may not earn credit twice."
+    },
+    {
+      "courseId": "TRA4721",
+      "reason": "International Logistics — customs, incoterms, documentation and cross-border movement, at College of Central Florida, FAMU and UNF. ⚠ In a state whose ports are its economy, this is not an elective.",
+      "variantNote": null
+    },
+    {
+      "courseId": "TRA4234",
+      "reason": "Warehouse Management — the upper-division version, at 3 institutions. Distribution-centre design and network decisions rather than daily operations.",
+      "variantNote": null
+    },
+    {
+      "courseId": "MNA2216",
+      "reason": "Inventory Management — 4 institutions. ⚠ Under the MNA prefix rather than TRA, which is exactly the fragmentation this page warns about; search by subject.",
+      "variantNote": null
+    },
+    {
+      "courseId": "MAN3504",
+      "reason": "Operations Management — 10 institutions including the universities: capacity, scheduling, quality and the production side of the chain.",
+      "variantNote": null
+    },
+    {
+      "courseId": "MAN4504",
+      "reason": "Operational Decision Making — 17 institutions, the quantitative methods course: forecasting, linear programming, queueing. ⚠ This is the coursework that separates the analyst from the coordinator.",
+      "variantNote": null
+    },
+    {
+      "courseId": "MAN4583",
+      "reason": "Project Management — 10 institutions. Implementations, facility moves and supplier transitions are projects, and running one is how logistics people get promoted.",
+      "variantNote": null
+    },
+    {
+      "courseId": "TRA0183",
+      "reason": "Logistics Technician — the final 150-hour step of Florida's 600-hour Global Logistics and Supply Chain Technology clock-hour programme. ⚠⚠ Read the carrier count before planning on it: exactly ONE Florida institution runs this framework.",
+      "variantNote": "⚠⚠ Carried by Emerald Coast Technical College alone. Palm Beach State runs its own clock-hour logistics numbers (TRA0011, TRA0030) and no other institution carries either family — so the clock-hour route into logistics barely exists in Florida. The college-credit courses above are the realistic option."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Logisticians (13-1081.00)",
+      "url": "https://www.onetonline.org/link/summary/13-1081.00",
+      "note": "Task statements, 241,000 employed (2024), growth much faster than average (7% or higher), 26,400 annual openings, median $82,320 (2025), education 75% bachelor's / 8% certificate / 8% high school, and the technology list naming SAP, Oracle, SQL and warehouse management systems."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Logisticians",
+      "url": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm",
+      "note": "⚠ The later projection and it differs: 255,100 jobs (2025), growth 18% from 2025 to 2035, 26,600 annual openings. Also the source for the entry routes quoted on this page — a bachelor's in logistics and supply chain management, business or related disciplines, and experience gained while serving in the military."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — CIP 52.0203 and 52.0209",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "52.0203: 14 Florida public institutions, 417 credentials, 241 of them bachelor's degrees at 9 institutions (FIU 192). 52.0209: 13 institutions, 148 credentials, all certificates or associate degrees. ⚠ General business administration, by contrast, produced 14,198."
+    },
+    {
+      "label": "Florida CTE curriculum framework — Global Logistics and Supply Chain Technology (CIP 0652020300)",
+      "url": "https://www.fldoe.org/academics/career-adult-edu/career-tech-edu/program-resources.stml",
+      "note": "The 600-hour clock-hour programme: Packer, Material Handler, Shipping/Receiving and Traffic Clerk, Logistics Technician. ⚠ Read through the CPALMS-CTE mirror; one Florida institution carries it."
+    },
+    {
+      "label": "SCNS statewide course file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Carrier counts, and the number fragmentation this page warns about: warehouse management under TRA2098 and TRA2230 with no institution carrying both, and the introductory supply chain course under TRA1154 and TRA2154 at two different levels."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Logistics and Supply Chain Management",
+  "description": "Logistics programmes teach how goods move and where they sit — purchasing, inventory, warehousing, transportation modes, customs and the software that tracks all of it — from the loading dock up to designing a distribution network.",
+  "degreesNote": "⚠⚠ Two quite different programmes wear this name in Florida and they lead to different jobs. The bachelor's side (CIP 52.0203) is nine public universities, 241 degrees in 2023, with FIU alone awarding 192 — and a bachelor's is what 75% of working logisticians report holding. The certificate and associate side (CIP 52.0209) is thirteen colleges producing 91 certificates and 57 associate degrees, and it leads to warehouse, shipping, purchasing and coordinator roles: real jobs, entered quickly, but not the analyst occupation this page's career path describes. ⚠ The A.S. is built to ladder into the bachelor's. Ask which university accepts it, in writing, before you enrol rather than after.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 83,
+  "cips": [
+    {
+      "cipCode": "52.0203",
+      "note": "Logistics, materials and supply chain management — 14 Florida public institutions, 417 credentials in 2023, and the only code here with a bachelor's behind it (9 institutions, 241 degrees; 5 also award a master's). FIU 192, UNF 46, USF 42, Miami Dade 36, FSCJ 32. ⚠ The rest of the 52.02 business series is deliberately not claimed: general business administration alone produced 14,198 Florida credentials in 2023, and claiming it would list every business school in the state here."
+    },
+    {
+      "cipCode": "52.0209",
+      "note": "Transportation and logistics certificates — 13 institutions and 148 credentials, every one of them a certificate (91) or an associate degree (57), none higher. FSCJ 40, Broward 36, Miami Dade 26, College of Central Florida 13. ⚠ Claimed deliberately so the colleges that teach this to certificate students are not left off the school list."
+    }
+  ],
+  "related": [
+    {
+      "slug": "industrial-engineering",
+      "note": "⚠ The same problems from the mathematics side — inventory policy, facility location, queueing, network design are core industrial engineering subjects, and the federal handbook names systems engineering as one of the degrees logisticians hold. Four Florida institutions award it, against nine for the supply chain bachelor's."
+    },
+    {
+      "slug": "industrial-production-technology",
+      "note": "The plant-floor end of the same material: production and inventory control, scheduling and lean methods. ⚠ Worth knowing because a manufacturer's supply chain jobs are frequently filled from inside the plant rather than from a logistics degree."
+    }
+  ]
+}
