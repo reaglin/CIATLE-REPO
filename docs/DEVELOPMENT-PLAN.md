@@ -1,7 +1,7 @@
 # Development plan — Florida Course Repository (CIATLE-REPO)
 
 The live site is **[floridacourserepo.com](https://floridacourserepo.com)** — 24,415 courses,
-2,504 curriculum guides, **19 career paths and 24 programmes** as of 2026-09-20, with 60 curated links between them and no programme left without a career. This file is where
+2,504 curriculum guides, **21 career paths and 26 programmes** as of 2026-09-20, with 60 curated links between them and no programme left without a career. This file is where
 planning and status live for **the site and its APIs** (the root session). Guide *content* is
 planned and tracked by the `Tools/` session in `Tools/NEXT_SESSION.md`, `Tools/SOURCES.md` and
 `Tools/REVIEW_QUEUE.md`; only the items that need site code or a deploy appear here.
@@ -67,7 +67,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 ## Phase 4 — Career path content (the 50-path queue) ⚠️
 
 `Tools/career_paths/QUEUE.csv` — 50 paths ranked, each with its CIP anchor, SOC code and cluster.
-**19 published as of 2026-09-20** — the seven engineering paths, Registered Nurse, Lawyer, Data Scientist, environmental/computer-hardware/materials engineer, and the four CTE paths (automotive, welder, HVAC, electrician), plus aviation maintenance and manufacturing/mechatronics. **31 to go.**
+**19 published as of 2026-09-20** — the seven engineering paths, Registered Nurse, Lawyer, Data Scientist, environmental/computer-hardware/materials engineer, and the four CTE paths (automotive, welder, HVAC, electrician), plus aviation maintenance, manufacturing/mechatronics, machinist and industrial maintenance. **29 to go, 8 of the 17 CTE rows done.**
 
 | # | Task | Done when |
 |---|---|---|
@@ -90,6 +90,9 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 4.17 ⚠️ | **Electrician — LIVE 2026-09-20** (queue rank 24), with an **Electrical Technology** programme (CIP 46.0302, 41 institutions, 741 credentials). It is held only because it links to the HVAC programme, which is itself held by the CIP seed | ⚠ The page's findings: **81,000 openings a year — the largest on this site**; ⚠⚠ **Florida licenses the CONTRACTOR, not the electrician** (Chapter 489 Part II) and there is **no statewide journeyman licence** — counties and municipalities set those, so the advice is to ring the county building department before enrolling; and **two routes in**, the 1,200/1,500-hour certificate at 26 technical colleges, or a registered apprenticeship whose classroom half (Electrical Wiring I–VIII) runs at six to eight STATE colleges while you are paid to work |
 | 4.18 ⚠️ | **Aviation Maintenance Technician — LIVE 2026-09-20** (rank 25), with an **Aviation Maintenance Technology** programme (CIP 47.0607/47.0608, 16 institutions) | ⚠ **$79,870 median — the highest-paid trade on the site.** The finding: ⚠⚠ **the FAA writes the curriculum, not Florida.** 14 CFR 65.77 gives two routes — an FAA-certificated Part 147 school, or 18 months of documented experience for one rating and 30 for both — so the first question to any programme is whether it holds Part 147 and for which ratings |
 | 4.19 ⚠️ | **Manufacturing and Mechatronics Technician — LIVE 2026-09-20** (rank 15), with an **Advanced Manufacturing Technology** programme (CIP 15.04, 28 institutions) | ⚠ Two findings: Florida's **300-hour Certified Production Technology certificate is the shortest credential on the site** and maps to the national MSSC assessments; and ⚠⚠ **the 2025 Industrial Machinery and Controls framework has NO carriers yet** — its four course numbers are taught nowhere, so the page lists what colleges actually deliver and says which is which. ⚠ The page also warns that the SOC code (15,000 jobs) badly understates where this training leads |
+| 4.20 ⚠️ | **Machinist — LIVE 2026-09-20** (rank 17), with a **Machining Technology** programme | ⚠ The page's argument: the 1,500-hour framework is **a four-rung ladder** — helper, operator, setup operator, machinist — and **the operator rung is the one to pass through, not settle on**: CNC tool operator is the only occupation on this site with a projected DECLINE, and it pays about $8,000 below the machinist median. ⚠⚠ It also substantially covers **queue rank 18 (CNC machine operator)** — Ron's call whether that still needs its own page |
+| 4.21 ⚠️ | **Industrial Maintenance Technician — LIVE 2026-09-20** (rank 20), with an **Industrial Machinery Maintenance** programme | ⚠⚠ The finding is a mismatch: **439,600 employed, growing much faster than average, 45,700 openings a year — against four or five Florida colleges carrying the course numbers.** So the page says plainly that the practical route is often to get inside a plant first (the 300-hour production certificate) and let the employer fund the maintenance training |
+| 4.22 ✅ | A programme claiming a CIP SERIES inherits everything under it — machining first published claiming `48.05` and read **51 institutions**, because welding lives in the same series | Corrected the same day to `48.0503`/`48.0510`/`48.0511` → **18 institutions**. ⚠ Same shape as the 14.01 general-engineering correction: **claim the codes the programme IS, not the series it sits in**, unless the series really is the programme (Engineering Technology's `15.` is the deliberate exception) |
 
 ## Phase 5 — Guide-field changes still owed to the `Tools/` session
 

@@ -1,0 +1,95 @@
+{
+  "name": "Machinist",
+  "cipCode": "48.05",
+  "socCode": "51-4041",
+  "isPublished": true,
+  "sortOrder": 170,
+  "description": "Machinists cut metal to a tolerance — setting up lathes, mills, grinders and CNC machines, and deciding how a part on a drawing actually gets made. ⚠ The occupation is flat but replaces about 29,500 people a year, and the money is in setup and programming rather than in running the machine.",
+  "credentialNote": "⚠ No licence governs machining, and the credential that matters is **NIMS** — the National Institute for Metalworking Skills — whose certifications are awarded skill by skill rather than course by course, which is why shops trust them. Ask a programme which NIMS credentials its students earn. ⚠⚠ The other thing to ask about is INSPECTION: aerospace and medical work carries documentation and quality-system requirements that ordinary job-shop work does not, and those are the sectors in Florida that pay best.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: machinists <em>set up and operate a variety of machine tools to produce precision parts and instruments out of metal</em>, including fabricating, modifying or repairing mechanical instruments and machine tools. The tasks name the craft — <em>calculate dimensions using micrometers or vernier calipers; machine parts to specifications on lathes, milling machines, shapers or grinders; measure and test completed units for defects and conformance to specifications; set up, adjust or operate specialized machine tools; program computerized or numerically controlled machine tools</em>.</p> <p>&#9888; <strong>Measurement is the job as much as cutting is.</strong> A machinist who cannot measure reliably produces scrap confidently, and the inspection habit — check, record, check again — is what separates the trade from machine operation.</p>  <h2>Projected need — and the honest version of it</h2> <p>O*NET, on federal projections: <strong>299,500 machinists employed</strong> (2024), growth <strong>&ldquo;little or no change&rdquo;</strong>, <strong>29,500 openings a year</strong>, <strong>median wages $58,750 (2025)</strong>. For CNC tool operators the picture is similar and slightly lower: <strong>177,100 employed</strong>, a projected <strong>decline of 1% or lower</strong>, <strong>13,500 openings a year</strong>, <strong>median $50,690</strong>.</p> <p>⚠ <strong>Neither occupation is growing, and both replace people steadily.</strong> Around 43,000 openings a year between them, in a trade with an ageing workforce — so the jobs are real while the headcount is flat. ⚠⚠ What that means for a student is specific: <strong>do not enter this trade to be an operator.</strong> Machine operation is the part most exposed to automation and the lowest paid; setup, programming and inspection are where the work holds.</p>  <h2>⚠⚠ Operator, setup, machinist — the ladder is the point of the programme</h2> <p>Florida's 1,500-hour framework is deliberately a ladder with four hireable exits, and the distinction between them is the career:</p> <ul> <li><strong>Machinist Helper</strong> (300 hours) — shop safety, measurement, hand skills, material handling.</li> <li><strong>Machinist Operator</strong> (300 hours) — running machines that someone else has set up. ⚠ This is the rung the CNC-operator occupation sits on, and the one to pass through rather than settle on.</li> <li><strong>Machinist Setup Operator</strong> (600 hours) — work-holding, tooling, offsets and first-article inspection. The first genuinely skilled rung.</li> <li><strong>Machinist</strong> (300 hours) — reading a drawing and deciding how the part gets made: process, sequence, fixturing and tolerance.</li> </ul> <p>&#9888; <strong>Every rung above the operator is a judgement job</strong>, and judgement is what the automation has not taken. A shop can buy a machine; it cannot buy someone who knows why the part is out of round.</p>  <h2>⚠⚠⚠ A small footprint for a fundamental trade</h2> <p><strong>Eighteen Florida public institutions award a machining credential</strong> of some kind — machine shop technology, machine tool technology or CNC machining — but the state framework's own courses are carried by only <strong>five to seven</strong>: Atlantic Technical College, Immokalee, Manatee, Orange Technical College South, Palm Beach State, Pinellas Technical College and Suncoast. ⚠ The gap is colleges teaching the subject under their own college-credit numbers rather than the clock-hour framework. Compare welding, in the same CIP series: <strong>47 institutions</strong>.</p> <p>⚠ <strong>So this is a relocation or commute decision for much of the state</strong>, and it is worth knowing before you plan on it. Where no programme is nearby, the realistic routes are an apprenticeship with a machine shop, the college CNC certificate added to existing shop experience, or the welding and manufacturing programmes that are far more widely available.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Measurement, obsessively.</strong> Micrometers, calipers, indicators, gauge blocks — and knowing the difference between a measurement and a reading.</li> <li><strong>Blueprint reading and GD&amp;T.</strong> ⚠ Geometric dimensioning and tolerancing is the language a drawing actually speaks, and it is where beginners lose parts.</li> <li><strong>Mathematics you use every hour</strong> — trigonometry for angles and hole patterns, speeds and feeds, offsets.</li> <li><strong>CNC programming and editing.</strong> G-code, conversational control, CAM output — and the ability to read a program rather than only to run it.</li> <li><strong>Patience with setup.</strong> Most of the time is spent preparing, not cutting; the people who rush setup make scrap.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Aim past the operator rung from the start.</strong> The pay, and the protection from automation, are in setup, programming and inspection.</li> <li><strong>Get NIMS certifications if the programme offers them</strong> — they are the credential shops recognise, and they are awarded per skill rather than per course.</li> <li><strong>Learn to inspect.</strong> Quality inspection is the adjacent occupation, it pays comparably, and it is far less physically demanding late in a career.</li> <li><strong>Florida's work is specific</strong>: aerospace and space-launch suppliers, medical devices, marine, and the job shops that serve them. ⚠ Aerospace and medical work means tighter tolerances, real documentation and better pay — ask a programme whether its graduates go there.</li> <li><strong>If no programme is near you</strong>, ask local machine shops about apprenticeship directly. This trade still trains people that way, and a helper certificate plus a willing shop is a legitimate route.</li> </ul>",
+  "programs": [
+    {
+      "slug": "machining-technology",
+      "note": "The programme itself — 1,500 hours and four hireable exits. ⚠ Check the school list first: it is taught at only six or seven institutions statewide."
+    },
+    {
+      "slug": "welding-technology",
+      "note": "⚠ The realistic alternative if machining is not taught near you, and a common second certificate anyway: 47 institutions against 18, in the same CIP series and often the same building.",
+      "isRoute": false
+    },
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "⚠ Where the machines themselves are kept running. A machinist who moves into automation and controls leaves the production wage behind.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "PMT0020",
+      "reason": "OCP A — Machinist Helper, 300 hours: shop safety, measurement, hand tools and material. ⚠ A hireable exit, and the rung an apprenticeship usually starts from.",
+      "variantNote": "⚠ The Machining Technologies framework's courses are carried by five to seven Florida institutions — Atlantic Technical College, Immokalee, Manatee, Orange Technical College South, Palm Beach State, Pinellas Technical College and Suncoast. ⚠ Eighteen institutions award a machining credential in total; the others teach it under their own college-credit numbers. Compare welding, in the same CIP series, at 47."
+    },
+    {
+      "courseId": "PMT0022",
+      "reason": "OCP B — Machinist Operator, 300 hours: running lathes, mills and CNC machines that someone else has set up. ⚠⚠ This is where the CNC-operator occupation sits — the lowest-paid rung and the one most exposed to automation. Pass through it.",
+      "variantNote": "⚠ The Machining Technologies framework's courses are carried by five to seven Florida institutions — Atlantic Technical College, Immokalee, Manatee, Orange Technical College South, Palm Beach State, Pinellas Technical College and Suncoast. ⚠ Eighteen institutions award a machining credential in total; the others teach it under their own college-credit numbers. Compare welding, in the same CIP series, at 47."
+    },
+    {
+      "courseId": "PMT0024",
+      "reason": "OCP C — Machinist Setup Operator, 600 hours: work-holding, tooling, offsets and first-article inspection. ⚠ The longest course in the programme, and the first genuinely skilled rung.",
+      "variantNote": "⚠ The Machining Technologies framework's courses are carried by five to seven Florida institutions — Atlantic Technical College, Immokalee, Manatee, Orange Technical College South, Palm Beach State, Pinellas Technical College and Suncoast. ⚠ Eighteen institutions award a machining credential in total; the others teach it under their own college-credit numbers. Compare welding, in the same CIP series, at 47."
+    },
+    {
+      "courseId": "PMT0025",
+      "reason": "OCP D — Machinist, 300 hours: reading the drawing and deciding how the part gets made. ⚠ The judgement job, and the one automation has not taken.",
+      "variantNote": "⚠ Seven carriers — the most widely taught course in this family, which is itself a comment on how small the footprint is."
+    },
+    {
+      "courseId": "PMT0021",
+      "reason": "Machine Operator — 450 hours, a separate operator-focused course carried by four institutions. ⚠ Useful as a first job, but read the projection above before treating it as a destination: CNC operation is the one occupation on this site with a projected DECLINE.",
+      "variantNote": "⚠ Four carriers, and not part of the four-point ladder — a parallel entry course rather than a step in the sequence."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Machinists (51-4041.00)",
+      "url": "https://www.onetonline.org/link/summary/51-4041.00",
+      "note": "Task statements, 299,500 employed (2024), growth “little or no change”, 29,500 annual openings, median wages $58,750 (2025)."
+    },
+    {
+      "label": "O*NET — Computer Numerically Controlled Tool Operators (51-9161.00)",
+      "url": "https://www.onetonline.org/link/summary/51-9161.00",
+      "note": "⚠ The operator occupation, quoted for the contrast: 177,100 employed, a projected DECLINE of 1% or lower, 13,500 annual openings, median $50,690 — about $8,000 below the machinist median."
+    },
+    {
+      "label": "Florida CTE framework — Machining Technologies, 2025 (CIP 0648050305)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "1,500 hours and the four-point ladder — helper, operator, setup operator, machinist — with the SCNS course number for each."
+    },
+    {
+      "label": "Florida CTE framework — CNC Machinist/Fabricator, 2025 (CIP 0648051002)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "A 12-credit college-credit certificate for adding computer control to existing shop skills."
+    },
+    {
+      "label": "NIMS — National Institute for Metalworking Skills",
+      "url": "https://www.nims-skills.org/",
+      "note": "The skill-by-skill certifications machine shops recognise, and the credential to ask a programme about by name."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "⚠ The footprint problem: 11 Florida public institutions award in machine shop technology (48.0503) with 86 credentials, against 47 institutions and 1,082 credentials for welding in the same series."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Carrier counts and clock hours for every course on this page."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 48.05 Precision Metal Working, the group this path is filed under."
+    }
+  ]
+}

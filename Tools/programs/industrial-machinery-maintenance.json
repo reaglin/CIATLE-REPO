@@ -1,0 +1,28 @@
+{
+  "name": "Industrial Machinery Maintenance",
+  "description": "Industrial maintenance programmes train the people who keep production machinery running — mechanical drives, hydraulics, pneumatics, welding repairs and the electrical controls that tie them together. ⚠ When a line stops, this is who the plant calls, and the pay reflects what a stopped line costs.",
+  "degreesNote": "The Florida framework is **Industrial Machinery Maintenance and Repair, 1,350 hours across three occupational completion points** — maintenance assistant, then mechanic and technician, then maintenance specialist. ⚠ It is also published as two halves, **750 hours and 600 hours**, so a student can complete the first, go to work, and return for the second. A registered apprenticeship route exists as well, and manufacturers frequently pay for it. ⚠⚠ The programme is taught at only a handful of Florida institutions under the state course numbers — four or five — which is small for an occupation with 45,700 openings a year nationally.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 77,
+  "cips": [
+    {
+      "cipCode": "47.03",
+      "note": "Heavy/industrial equipment maintenance technologies — seven Florida public institutions across the series, with industrial machinery maintenance and millwright training the two codes inside it. ⚠ A small recorded footprint for a trade this much in demand, partly because much of the training happens inside employers rather than colleges."
+    }
+  ],
+  "related": [
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "⚠ The closest neighbour and an overlapping one: automation and controls is where industrial maintenance is going, and the same colleges teach both. If you enjoy the electrical and control side more than the mechanical, read that one."
+    },
+    {
+      "slug": "electrical-technology",
+      "note": "Much of a modern breakdown is electrical, and maintenance technicians who can work confidently on controls and motors are the ones plants keep."
+    },
+    {
+      "slug": "welding-technology",
+      "note": "⚠ A maintenance technician who can weld is markedly more useful in a breakdown — repair, fabrication and improvisation at three in the morning — and welding is taught at 47 institutions against a handful for this."
+    }
+  ]
+}
