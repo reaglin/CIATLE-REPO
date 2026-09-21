@@ -47,8 +47,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 46,paralegal,Paralegal,22.03,Legal Support Services,23-2011,Paralegals and Legal Assistants,LAW,DIRECT,yes,published
 47,elementary-school-teacher,Elementary School Teacher,13.12,"Teacher Education and Professional Development, Specific Levels and Methods",25-2021,"Elementary School Teachers, Except Special Education",EDU,DIRECT,yes,section:school-teacher
 48,secondary-school-teacher,Secondary School Teacher,13.13,"Teacher Education and Professional Development, Specific Subject Areas",25-2031,"Secondary School Teachers, Except Special and Career/Technical Education",EDU,DIRECT,yes,section:school-teacher
-49,police-officer,Police Officer,43.01,Criminal Justice and Corrections,33-3051,Police and Sheriff's Patrol Officers,PUB,DIRECT,yes,
-50,firefighter,Firefighter,43.02,Fire Protection,33-2011,Firefighters,PUB,DIRECT,yes,
+49,police-officer,Police Officer,43.01,Criminal Justice and Corrections,33-3051,Police and Sheriff's Patrol Officers,PUB,DIRECT,yes,published
+50,firefighter,Firefighter,43.02,Fire Protection,33-2011,Firefighters,PUB,DIRECT,yes,published
 51,penetration-tester,Penetration Tester,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
 52,information-security-engineer,Information Security Engineer,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
 53,digital-forensics-analyst,Digital Forensics Analyst,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
@@ -67,3 +67,6 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 66,title-examiner,Title Examiner and Abstractor,22.03,Legal Support Services,23-2093,"Title Examiners, Abstractors, and Searchers",LAW,DIRECT,yes,section:paralegal
 67,school-teacher,School Teacher (K-12),13.12,"Teacher Education and Professional Development, Specific Levels and Methods",25-2021,"Elementary School Teachers, Except Special Education",EDU,DIRECT,yes,published
 68,special-education-teacher,Special Education Teacher,13.10,Special Education and Teaching,25-2052,Special Education Teachers,EDU,DIRECT,yes,section:school-teacher
+69,detective,Detective and Criminal Investigator,43.01,Criminal Justice and Corrections,33-3021,Detectives and Criminal Investigators,PUB,DIRECT,yes,section:police-officer
+70,correctional-officer,Correctional Officer,43.01,Criminal Justice and Corrections,33-3012,Correctional Officers and Jailers,PUB,DIRECT,yes,section:police-officer
+71,fire-inspector,Fire Inspector and Investigator,43.02,Fire Protection,33-2021,Fire Inspectors and Investigators,PUB,DIRECT,yes,section:firefighter

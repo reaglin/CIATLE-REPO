@@ -1,0 +1,28 @@
+{
+  "name": "Criminal Justice",
+  "description": "Criminal justice programmes cover policing, corrections, courts and the law that governs them — investigation, criminal procedure, constitutional limits on searches and arrests, ethics and the use of force. In Florida the subject is taught two quite different ways: as a short certified ACADEMY that qualifies you to be sworn, and as an academic degree that does not.",
+  "degreesNote": "46 Florida public institutions and 6,939 credentials in the 2023 federal award year — one of the largest footprints in the state. ⚠⚠ But look at the split, because it is the whole decision: 3,677 of those were CERTIFICATES of under a year, which is the basic recruit academy, against 2,229 bachelor's degrees, 437 associate degrees and 335 master's. ⚠⚠⚠ The academy is what makes you eligible to be sworn as an officer; the degree is not, and no degree substitutes for it. Conversely the academy is not a degree and carries no college credit at some institutions. ⚠ So the honest framing is that these are two separate purchases that happen to share a subject: buy the academy to get hired, and buy the degree for promotion, federal agencies, or a move into administration, analysis or law. Corrections is a substantial part of this footprint in its own right, with its own shorter academy. ⚠ Note that private and corporate security (CIP 43.04, 15 Florida institutions and 533 credentials) recruits from the same students but is not counted here — that code is not yet in the site's CIP tree.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 59,
+  "cips": [
+    {
+      "cipCode": "43.01",
+      "note": "Criminal justice and corrections — 46 Florida public institutions and 6,939 credentials in the 2023 federal award year. ⚠ Dominated by short certificates (3,677), which are the basic recruit academies, with 2,229 bachelor's degrees alongside. Criminal justice and police science alone runs at 34 institutions, corrections at 30."
+    },
+    {
+      "cipCode": "43.03",
+      "note": "Homeland security and related protective services — 11 Florida public institutions and 272 credentials, weighted to bachelor's and master's degrees. The analytic and federal end of this field rather than the patrol end."
+    }
+  ],
+  "related": [
+    {
+      "slug": "fire-science",
+      "note": "⚠ The other public-safety academy, taught at many of the same colleges and often in the same division. ⚠⚠ The pay comparison is worth making before you choose: Florida police officers have a median of $74,470 against firefighters' $58,550, but firefighting has the dual-certification route with paramedic that carries substantial hiring bonuses. Both are academy-first careers where the degree is for promotion."
+    },
+    {
+      "slug": "paralegal-studies",
+      "note": "⚠ A quieter alternative for someone drawn to the legal side of criminal justice rather than the enforcement side — and one worth knowing about, because criminal justice graduates frequently discover that the courtroom interested them more than the patrol car."
+    }
+  ]
+}

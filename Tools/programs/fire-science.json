@@ -1,0 +1,15 @@
+{
+  "name": "Fire Science and Emergency Services",
+  "description": "Fire science programmes cover fire behaviour and suppression, building construction and codes, hazardous materials, rescue technique, incident command and fire prevention. In Florida the field runs on a state certification system rather than on degrees, and the academy is the credential that gets you hired.",
+  "degreesNote": "36 Florida public institutions and 1,955 credentials in the 2023 federal award year — and the shape is even more certificate-weighted than criminal justice: 1,714 short certificates against 156 associate degrees and 43 bachelor's. ⚠⚠ That is the Minimum Standards academy, and it is what Florida requires to be certified as a firefighter. The degree is not a substitute and is not required to be hired. ⚠⚠⚠ What the degree is for is PROMOTION — lieutenant, captain, battalion chief, fire marshal and inspector roles increasingly expect an associate or bachelor's, and departments often pay for it once you are employed. ⚠ The other credential that matters far more than a degree is EMS: most Florida departments hire dual-certified Firefighter/EMTs or Firefighter/Paramedics, several pay for the paramedic programme, and at least one pays a five-figure bonus for arriving with both.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 60,
+  "cips": [
+    { "cipCode": "43.02", "note": "Fire protection — 36 Florida public institutions and 1,955 credentials in the 2023 federal award year, of which 1,714 are short certificates: the Minimum Standards academy. Fire science and firefighting runs at 32 institutions, fire prevention and safety technology at 19." }
+  ],
+  "related": [
+    { "slug": "emergency-medical-services", "note": "⚠⚠ Not an adjacent field here — effectively a requirement. Most Florida fire departments hire dual-certified Firefighter/EMTs or Firefighter/Paramedics, Brevard County requires its Firefighter/EMTs to become paramedics and pays the tuition, and Dunedin pays a $10,000 certification bonus to a candidate arriving with Firefighter II plus Paramedic. ⚠ Plan the EMS credential alongside the fire academy, not after it." },
+    { "slug": "criminal-justice", "note": "⚠ The other public-safety academy, frequently in the same college division, and the alternative most candidates consider. Policing pays a higher median in Florida ($74,470 against $58,550) and has no equivalent of the paramedic supplement; firefighting works a different schedule and a different kind of risk." }
+  ]
+}

@@ -74,7 +74,7 @@ path) as each lands.
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
 | **HLT** health | 28–36 | ✅ **all 9 published** |
 | **CMP** computing | 37–40 | ✅ **all 4 published**, and security/networking each absorb 2–3 related occupations as SECTIONS |
-| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ⚠ **8 of 10** — BUS, LAW and EDU clusters COMPLETE (the two teacher rows merged into one K–12 guide); police and firefighter (PUB) remain |
+| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ✅ **ALL COMPLETE** — BUS, LAW, EDU and PUB |
 
 ⚠⚠⚠ **ONE PATH CAN COVER SEVERAL OCCUPATIONS — lump the family (Ron, 2026-09-21).** His words:
 *"you may want to research and lump cybersecurity career paths into the same guide. Same with
@@ -146,7 +146,7 @@ thing the student could not know (*aerospace employers hire mechanical graduates
 and mechanical is offered at eleven institutions against three*). Links are read in BOTH
 directions, and a related slug must already exist or the push is refused 422.
 
-✅ **48 programmes now exist** (2026-09-21), and every published path names one that actually leads
+✅ **50 programmes now exist** (2026-09-21), and every published path names one that actually leads
 there — and no programme is left without a career. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
 `cip.json` still is.
 
@@ -171,6 +171,33 @@ about to contradict:**
 ```bash
 python -c "import json,glob,re;[print(f,m) for f in glob.glob('career_paths/*.json') for m in re.findall(r'median wages?[^<]{0,40}', json.load(open(f,encoding='utf-8')).get('bodyHtml') or '')]"
 ```
+
+✅✅✅ **A CROSS-PATH FINDING WORTH REUSING: FLORIDA PUBLIC-SECTOR PAY IS COMPRESSED, AND
+IT IS MEASURABLE (established across four occupations, 2026-09-21).**
+
+**Compare a Florida occupation's 10th and 90th percentiles against the national ones on
+`onetonline.org/link/localwages/<soc>?st=FL`. In Florida PUBLIC SERVICE the floor beats the national
+floor and the ceiling falls well short of it:**
+
+| Occupation | FL 10th vs US | FL 90th vs US |
+|---|---|---|
+| Elementary teacher | **+$720** | ⚠ **−$28,560** |
+| Secondary teacher | **+$430** | ⚠ **−$30,500** |
+| Police officer | **+$3,820** | ⚠ **−$16,930** |
+| Firefighter | **+$2,350** | −$7,730 |
+| ✅ *control:* software developer | −$2,410 | −$10,270 |
+
+⚠⚠ **The control row is what makes it a finding rather than a platitude.** Florida software
+developers are below the national figure at BOTH ends — an ordinary discount. **The public-service
+occupations show something different: a raised floor and a lowered ceiling.** Florida starts public
+servants well and tops them out early.
+
+⚠⚠⚠ **So on any PUBLIC-SECTOR path, quote the PERCENTILES, not the median**, and tell the
+reader to look up the employer's pay schedule at step 1, step 10 and step 20. **The median hides the
+entire story here**, and the starting salary that recruits someone at 22 is not the number that
+matters at 37. ⚠ The NEA teacher rankings corroborate it independently — Florida 19th on starting
+pay and 50th on average pay — which is why the schoolteacher page can state it as fact rather than
+as a reading of one dataset.
 
 ⚠⚠⚠ **THE ONE RULE: A PATH IS CURATED, NEVER DERIVED.** Every course is placed by an author
 with a **required** stated reason. **Do not** build a course list by parsing prerequisites, by
@@ -3693,7 +3720,7 @@ When starting a fresh session in this project:
 
    ```bash
    python career_paths.py list                 # what is live
-   python programs.py list                     # 48 programmes; a path's programmes must exist FIRST
+   python programs.py list                     # 50 programmes; a path's programmes must exist FIRST
    head -1 career_paths/QUEUE.csv; awk -F, 'NR>1 && $NF==""' career_paths/QUEUE.csv | head -5
    ```
 
