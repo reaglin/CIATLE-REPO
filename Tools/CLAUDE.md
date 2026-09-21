@@ -55,12 +55,30 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
-## ⚠⚠⚠ CAREER PATHS ARE BUILT (2026-09-17) — and they are a THIRD demand signal
+## ⚠⚠⚠ CAREER PATHS ARE THE WORK (Ron, 2026-09-17; still current 2026-09-21)
 
 **Ron shifted the project to the development side and the feature is in.** His words:
 
 > *"We are going to shift to the development side and create the career paths. These are all centered
 > on CIP codes and the CIP codes become the framework for that page."*
+
+⚠⚠⚠ **THIS — NOT GUIDE WRITING — IS WHAT A `Tools/` SESSION PICKS UP BY DEFAULT.**
+**The work list is [`career_paths/QUEUE.csv`](career_paths/QUEUE.csv): 50 rows, ranked, each with its
+CIP code, SOC code, cluster and `DIRECT`/`CHOICE` type.** Work it in rank order unless Ron says
+otherwise, and set `status` to `published` (or `section:<slug>` where the row folded into another
+path) as each lands.
+
+| Cluster | Rows | State (2026-09-21) |
+|---|---|---|
+| **ENG** engineering | 1–10 | ✅ all published |
+| **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
+| **HLT** health | 28–36 | ⚠ **4 of 9 — in progress, and this is the head of the queue** |
+| **CMP** computing | 37–40 | 1 of 4 (Data Scientist) |
+| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | 1 of 10 (Lawyer) |
+
+⚠⚠ **Guide work has not stopped — it is just request-driven and usually empty.** Check the
+request queue every session (below); when it holds something, it outranks a path row, because a named
+person is waiting. When it is empty, author the next path.
 
 **Read [`CAREER_PATHS_PLAN.md`](../CAREER_PATHS_PLAN.md) §0** for what was built. What a *content*
 session needs to know is short:
@@ -110,8 +128,8 @@ thing the student could not know (*aerospace employers hire mechanical graduates
 and mechanical is offered at eleven institutions against three*). Links are read in BOTH
 directions, and a related slug must already exist or the push is refused 422.
 
-✅ **18 programmes now exist** (2026-09-19), and every published path names one that actually leads
-there. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
+✅ **34 programmes now exist** (2026-09-21), and every published path names one that actually leads
+there — and no programme is left without a career. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
 `cip.json` still is.
 
 ⚠⚠⚠ **THE ONE RULE: A PATH IS CURATED, NEVER DERIVED.** Every course is placed by an author
@@ -287,7 +305,11 @@ path page** — use it.
 
 ---
 
-## ⚠⚠⚠ CURRENT DIRECTION (Ron, 2026-09-17): REQUESTED COURSES ONLY
+## ⚠⚠⚠ GUIDE DIRECTION (Ron, 2026-09-17): REQUESTED COURSES ONLY
+
+⚠ **Scope note (2026-09-21): this section governs GUIDE WRITING, not the session.** The session's
+default work is **career paths** (section above). Read "there is no guide work" as "go author the next
+path", never as "there is nothing to do".
 
 **This supersedes the "finish `queue.csv` first" half of the 2026-09-11 direction below.** Ron's words:
 
@@ -301,7 +323,7 @@ path page** — use it.
 1. ⚠⚠⚠ **`queue.csv` is no longer the work list.** It stands at 108 `queued` rows and they stay
    there. **Do not pick a prefix off it and start writing.** The work is
    `GET /api/v1/queue/guides?status=waiting`, and **when that queue is empty there is no guide work** —
-   say so plainly rather than finding something to do.
+   say so plainly, then move to the career-path queue rather than finding guide work that nobody asked for.
 2. **`REVIEW_QUEUE.md` keeps growing and keeps being marked.** It is no longer a side-channel: under
    request-driven working it is **the only warning you get** that a requested course is already known to
    be a problem.
@@ -3602,7 +3624,19 @@ When starting a fresh session in this project:
    `courses_2plus_institutions.csv` is the old ≥2-institution inventory; the SCNS flat file is authoritative.
 6. Run `python validate_drafts.py --quiet` if the queue shows `error` rows, to see what is
    blocking them.
-7. Confirm with the user what they want to work on before generating anything.
+7. ⚠⚠ **If both queues are empty — which is the normal case — the work is the NEXT CAREER PATH.**
+
+   ```bash
+   python career_paths.py list                 # what is live
+   python programs.py list                     # 34 programmes; a path's programmes must exist FIRST
+   head -1 career_paths/QUEUE.csv; awk -F, 'NR>1 && $NF==""' career_paths/QUEUE.csv | head -5
+   ```
+
+   Take the top-ranked row with an empty `status`, and run the six-step research pass in
+   **"THE RESEARCH IS THE COST OF A PATH"** above before writing a word. ⚠ Reckon on roughly a
+   session per path; two rushed paths are worth less than one researched one.
+
+8. Confirm with the user what they want to work on before generating anything.
 
 Pushing to the live site runs from this repo (`generate_guide.py --push-from-queue`), using
 the `REPO_ADMIN_*` credentials in `Tools/.env`. It is a write to production — confirm the

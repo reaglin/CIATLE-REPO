@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **79** |
+| ⏳ **Awaiting a decision from Ron** | **82** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **108** |
+| **Total items** | **111** |
 
 ---
 
-### ⏳ Awaiting a decision (79)
+### ⏳ Awaiting a decision (82)
 
 | # | Item |
 |---|---|
@@ -116,6 +116,9 @@ continues around every one of them.
 | **106** | 81 PUBLISHED GUIDES SIT ON MINORITY COURSE IDS — including the ENTIRE Florida math gateway (measured 2026-09-17) |
 | **107** | FLORIDA NUMBERS GENERAL CHEMISTRY TWO WAYS — and 35 live guides name only one of them (found 2026-09-18) |
 | **108** | `ECH3854`'s statewide prerequisite resolves for NOBODY — recorded, not blocking (found 2026-09-18) |
+| **109** | `scns.is_public()` EXCLUDES DISTRICT TECHNICAL COLLEGES — which is the whole CTE sector (found 2026-09-20, automotive path) |
+| **110** | The CIP tree shows the 4-DIGIT group title where a 6-digit code is claimed (found 2026-09-21, respiratory therapy path) |
+| **111** | Five widely-carried gen-ed courses still show the COURSE ID as their title (found 2026-09-21) |
 
 ### Informational — no decision needed (19)
 
@@ -3304,6 +3307,43 @@ now reads *"38 Florida public institutions teach courses on this path"* instead 
 3. **Institution names come from SCNS and are sometimes poor** — `HC - HILLSBOROUGH COLLEGE`,
    `HBTC - BREWSTER TECHNICAL COLLEGE`. The 2026-09-20 load deliberately did **not** overwrite
    names the site already had. A better name source would be IPEDS.
+
+
+## 110. ⚠ The CIP tree shows the 4-DIGIT group title where a 6-digit code is claimed (found 2026-09-21, respiratory therapy path)
+
+**`programs.py show respiratory-therapy` and the live programme page both render CIP `51.0908` as
+*"Allied Health Diagnostic, Intervention, and Treatment Professions"* — which is the title of the
+**4-digit group `51.09`**, not of the 6-digit code.** The correct title is *Respiratory Care
+Therapy/Therapist*.
+
+- **Where it bites:** the programme page's CIP line tells a reader the code means something much
+  broader than it does, on any programme claiming a 6-digit code rather than a group.
+- **Why it happens:** `Data/Seed/cip.json` is seeded to 4-digit coverage (the documented limit —
+  see the Lawyer `EXTRA_GROUPS` note in `Tools/CLAUDE.md`), so a 6-digit code resolves to its parent
+  for display.
+- ⚠ **This is a DEPLOY, not content** — `build_cip_seed.py` plus a redeploy. Recorded here rather
+  than fixed.
+- **For Ron:** is it worth carrying 6-digit titles for the codes programmes actually claim, or is
+  the group title good enough? Only a handful of programmes claim a 6-digit code today.
+
+## 111. ⚠ Five widely-carried gen-ed courses still show the COURSE ID as their title (found 2026-09-21)
+
+Checked while building the respiratory therapy path's prerequisite list:
+
+| Course | Carriers | Title on the site |
+|---|---|---|
+| `MCB2010` | 16 | **`MCB2010`** |
+| `MCB2010L` | 15 | **`MCB2010L`** |
+| `HUN1201` | 21 | **`HUN1201`** |
+| `DEP2004` | 29 | **`DEP2004`** |
+| `SPC1017` | 16 | **`SPC1017`** |
+
+These are the placeholder titles a guide push creates (`Tools/CLAUDE.md`, *Send the course's base
+data with every guide*). ⚠ **They are all high-carrier general-education courses that health and
+technical paths route through**, so they are seen. **One `list_missing.py`-style pass over the
+flat file fixes all five** — it was left undone here only because none of them is named on the
+respiratory therapy path itself. ⚠ **A wider sweep is the real answer:** count every listed
+course whose title equals its id.
 
 
 ## Resolved

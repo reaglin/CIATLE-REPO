@@ -1,0 +1,24 @@
+{
+  "name": "Respiratory Therapy",
+  "description": "Respiratory therapy programmes train the clinicians who manage breathing — setting up and running mechanical ventilators, interpreting arterial blood gases, giving aerosolised drugs, clearing airways, and responding to every code and rapid response in the building. Two years, heavily clinical, cohort-based and selective, and the work starts in intensive care rather than working up to it.",
+  "degreesNote": "The entry credential is the ASSOCIATE degree and the data is emphatic: of 313 Florida completions in the 2023 federal award year, 271 were associate degrees, and 99% of employers surveyed by O*NET name an associate degree as the usual entry. ⚠ But read the bachelor's rows carefully, because two completely different degrees hide behind the same level. An ENTRY-LEVEL bachelor's admits a student with no credential and leads to the same NBRC examinations the associate degree does — Florida A&M's B.S. in Cardiopulmonary Science is one (CoARC #200321, accredited through October 2034) and the University of West Florida opened a second, which UWF describes as only the third of its kind in the state. A DEGREE-ADVANCEMENT bachelor's is for therapists who are already credentialed and does NOT lead to initial licensure; the three colleges awarding both an associate and a bachelor's in this programme are running that ladder, and the state's own course record gives it away by gating one upper-division number on admission to the AS to BS in cardiopulmonary sciences. ⚠⚠ Ask which kind a bachelor's programme is before you apply. And budget more than 60 credits: Indian River State College's A.S. is 76 credits, because the clinical hours are on top of a full general-education core.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 85,
+  "cips": [
+    {
+      "cipCode": "51.0908",
+      "note": "Respiratory care therapy — 18 Florida public institutions, 313 credentials in the 2023 federal award year: 271 associate degrees and 40 bachelor's at three institutions. Seminole State 49, Miami Dade 26, Valencia 26, Florida SouthWestern 20, FSCJ 18. ⚠ This list is the 2023 award data and misses newer programmes: UWF, College of Central Florida, Lake-Sumter and Pensacola State all teach respiratory care and awarded nothing under the code that year."
+    }
+  ],
+  "related": [
+    {
+      "slug": "nursing",
+      "note": "⚠ The comparison worth making: both are cohort programmes at the same colleges, competitive to enter, heavy on clinical placement. Nursing is far likelier to be near you — 78 Florida institutions against 18 — and has a long degree ladder above it. Respiratory therapy pays more at entry than an LPN on the same two years ($82,280 against $64,400). ⚠⚠ And a respiratory therapist works the whole hospital, starting in intensive care rather than working up to it."
+    },
+    {
+      "slug": "radiologic-technology",
+      "note": "The other two-year hospital programme at the same colleges, with nearly the same median wage ($80,110 against $82,280) and the same competitive cohort admission. ⚠ The honest split is what the day looks like: radiography is procedural and largely scheduled, respiratory therapy is on call to whatever is deteriorating. ⚠⚠ Radiography also stops at the associate degree for most people, while respiratory therapy has entry-level baccalaureate routes and a professional push toward them."
+    }
+  ]
+}

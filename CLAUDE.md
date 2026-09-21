@@ -20,8 +20,13 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed: **24,415 courses, 2,504 curriculum guides, 10 career
-paths and 5 programmes** are live as of 2026-09-19.
+three-project solution exists and is deployed: **24,416 courses, 2,504 curriculum guides, 31 career
+paths and 34 programmes** are live as of 2026-09-21.
+
+**What is being worked on now:** **career paths** — authoring them as content over the API, working
+`Tools/career_paths/QUEUE.csv` (50 rows; engineering, manufacturing/CTE and the first four health
+rows are published). Guide writing is **request-only** and the request queue is nearly always empty.
+Both loops run from the `Tools/` session; neither needs a deploy.
 
 ## Solution Structure
 
@@ -126,14 +131,15 @@ dotnet ef database update --project PreseMakerRepo.Infrastructure --startup-proj
 direction is to take a profession — law, nursing, engineering, accounting — and trace an educational
 path to it: which courses, in what order, at which institutions.**
 
-**This is a later development effort. It is recorded now so that current work is built in a direction
-that supports it**, not to schedule it. The concrete feature entry lives in `FEATURE_BACKLOG.md`.
-**Implementation plan (2026-09-04): [`CAREER_PATHS_PLAN.md`](CAREER_PATHS_PLAN.md)** — data model
-(`CareerPath` + routes JSON + link table, `Institution`/`CourseOffering` seed), `/careers` pages, API,
-`Tools/career_paths/` pipeline, four phases. Start there when building.
+**✅ BUILT AND LIVE since 2026-09-17, and it is the ACTIVE WORK.** The platform (`CareerPath`,
+routes JSON, the programme link table, `/careers` pages, the admin API and the `Tools/career_paths/`
+pipeline) is in production; what remains is **content** — authoring the remaining paths in
+`Tools/career_paths/QUEUE.csv`, which is the `Tools/` session's job and needs no deploy.
+**[`CAREER_PATHS_PLAN.md`](CAREER_PATHS_PLAN.md) §0** is the contract; phases and status are in
+[`docs/DEVELOPMENT-PLAN.md`](docs/DEVELOPMENT-PLAN.md).
 
-**⚠ The project is already useful and is not waiting on this.** 1,749 guides are live and serving
-students today; career pathways is the next layer of value, not a precondition for the current one.
+**⚠ The guides did not stop being the foundation.** 2,504 of them are live and serving students
+today, and every path is assembled out of what they established.
 
 ### What the guides are already accumulating toward it
 
