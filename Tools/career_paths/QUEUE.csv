@@ -36,8 +36,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 35,paramedic,Paramedic,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2043,Paramedics,HLT,DIRECT,yes,published
 36,surgical-technologist,Surgical Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2055,Surgical Technologists,HLT,DIRECT,yes,published
 37,software-developer,Software Developer,11.07,Computer Science,15-1252,Software Developers,CMP,CHOICE,yes,published
-38,cybersecurity-analyst,Cybersecurity Analyst,11.10,Computer/Information Technology Administration and Management,15-1212,Information Security Analysts,CMP,CHOICE,yes,
-39,network-administrator,Network Administrator,11.09,Computer Systems Networking and Telecommunications,15-1244,Network and Computer Systems Administrators,CMP,CHOICE,yes,
+38,cybersecurity-analyst,Cybersecurity Analyst,11.10,Computer/Information Technology Administration and Management,15-1212,Information Security Analysts,CMP,CHOICE,yes,published
+39,network-administrator,Network Administrator,11.09,Computer Systems Networking and Telecommunications,15-1244,Network and Computer Systems Administrators,CMP,CHOICE,yes,published
 40,data-scientist,Data Scientist,30.70,Data Science,15-2051,Data Scientists,CMP,CHOICE,yes,published
 41,accountant,Accountant / CPA,52.03,Accounting and Related Services,13-2011,Accountants and Auditors,BUS,DIRECT,yes,
 42,financial-analyst,Financial Analyst,52.08,Finance and Financial Management Services,13-2051,Financial and Investment Analysts,BUS,CHOICE,yes,
@@ -49,3 +49,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 48,secondary-school-teacher,Secondary School Teacher,13.13,"Teacher Education and Professional Development, Specific Subject Areas",25-2031,"Secondary School Teachers, Except Special and Career/Technical Education",EDU,DIRECT,yes,
 49,police-officer,Police Officer,43.01,Criminal Justice and Corrections,33-3051,Police and Sheriff's Patrol Officers,PUB,DIRECT,yes,
 50,firefighter,Firefighter,43.02,Fire Protection,33-2011,Firefighters,PUB,DIRECT,yes,
+51,penetration-tester,Penetration Tester,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
+52,information-security-engineer,Information Security Engineer,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
+53,digital-forensics-analyst,Digital Forensics Analyst,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
+54,computer-network-architect,Computer Network Architect,11.09,Computer Systems Networking and Telecommunications,15-1241,Computer Network Architects,CMP,DIRECT,yes,section:network-administrator
+55,computer-support-specialist,Computer Support Specialist,11.09,Computer Systems Networking and Telecommunications,15-1232,Computer User Support Specialists,CMP,DIRECT,yes,section:network-administrator

@@ -73,8 +73,26 @@ path) as each lands.
 | **ENG** engineering | 1–10 | ✅ all published |
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
 | **HLT** health | 28–36 | ✅ **all 9 published** |
-| **CMP** computing | 37–40 | ⚠ **2 of 4 — cybersecurity analyst and network administrator remain, both CHOICE** |
+| **CMP** computing | 37–40 | ✅ **all 4 published**, and security/networking each absorb 2–3 related occupations as SECTIONS |
 | **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | 1 of 10 (Lawyer) |
+
+⚠⚠⚠ **ONE PATH CAN COVER SEVERAL OCCUPATIONS — lump the family (Ron, 2026-09-21).** His words:
+*"you may want to research and lump cybersecurity career paths into the same guide. Same with
+Network admin and other networking careers."*
+
+**So research the whole occupational family before writing, and give related SOC codes SECTIONS of
+one page rather than pages of their own.** Precedents: `machinist` absorbed CNC operator,
+`industrial-engineering-technician` absorbed quality-control inspector, and on 2026-09-21
+`cybersecurity-analyst` absorbed penetration tester, information security engineer and digital
+forensics analyst, while `network-administrator` absorbed computer network architect and computer
+support specialist.
+
+| Do | Why |
+|---|---|
+| **Record the absorbed role in `QUEUE.csv`** with `status = section:<slug>` | so coverage is visible and nobody writes it twice |
+| **Give the family a TABLE at the top of the page** — role, SOC, wage, outlook | it is the comparison the reader came for |
+| ⚠⚠ **Check whether the sub-roles are O*NET DETAIL occupations under one SOC aggregate** | penetration tester, security engineer and digital forensics analyst are all `15-1299.xx`, so they report the SAME employment, openings and wage — **those are the aggregate's figures and must be labelled as such, never quoted as the specialism's** |
+| ⚠ **Say where the family is GROWING and SHRINKING** | networking's ladder is the worked case: support −3%, sysadmin −4%, architect +7%, security +21%. **One page can say "enter here, aim there"; five pages cannot.** |
 
 ⚠⚠ **Guide work has not stopped — it is just request-driven and usually empty.** Check the
 request queue every session (below); when it holds something, it outranks a path row, because a named

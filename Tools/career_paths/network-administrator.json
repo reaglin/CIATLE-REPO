@@ -1,0 +1,138 @@
+{
+  "name": "Network and Systems Administrator",
+  "cipCode": "11.09",
+  "socCode": "15-1244",
+  "isPublished": true,
+  "sortOrder": 360,
+  "description": "Network and systems administrators build and run the infrastructure everything else sits on — switches, routers and wireless, servers and virtualisation, directory services, cloud platforms, backup and monitoring. ⚠ A median of $99,130, reachable from an associate degree, at 56 Florida institutions — the widest computing footprint in the state. ⚠⚠⚠ But read the outlook honestly: this occupation is projected to DECLINE, and so is the support work below it. The growth is in the two rungs above. This page covers the whole ladder and says where to aim.",
+  "credentialNote": "⚠ No licence and no board. What governs this field is VENDOR CERTIFICATION, more than any other computing path: the BLS notes that employers may require administrators to be certified in the products they use, from vendor programmes or vendor-neutral providers. ⚠⚠ Education is unusually open. O*NET respondents name an ASSOCIATE degree most often at 30%, a bachelor's at 27% and a postsecondary certificate at 20% — the only computing path on this site where the two-year degree leads. The BLS lists a bachelor's as typical entry, so read the two together as: a bachelor's helps, an associate plus certifications works, and the certifications are what get screened. ⚠⚠⚠ The single most consequential choice is the DELIVERY FORM, not the credential level: Florida teaches much of this as clock-hour PSAV certificates that carry no college credit, and much of it as A.S. coursework that does. Both reach the same vendor examinations. Only one counts if you later want a degree — and given where this ladder is heading, you are likely to want one.",
+  "bodyHtml": "<h2>One ladder, four rungs, and only the top two are growing</h2><p>This page covers a family, because in Florida they are taught together and people move up through them. <strong>The honest picture is a shrinking bottom and a growing top.</strong></p><table><thead><tr><th>Rung</th><th>SOC</th><th>2025 median</th><th>Outlook 2025&ndash;35</th></tr></thead><tbody><tr><td>Computer user support specialist (help desk)</td><td>15-1232</td><td>$61,860</td><td>&#9888; <strong>&minus;3% decline</strong></td></tr><tr><td>Computer network support specialist</td><td>15-1231</td><td>$76,220</td><td>&#9888; <strong>&minus;3% decline</strong></td></tr><tr><td><strong>Network and systems administrator</strong></td><td><strong>15-1244</strong></td><td><strong>$99,130</strong></td><td>&#9888;&#9888; <strong>&minus;4% decline</strong></td></tr><tr><td><strong>Computer network architect</strong></td><td>15-1241</td><td><strong>$134,050</strong></td><td>&#9989; <strong>7% or higher</strong></td></tr><tr><td><em>and sideways:</em> information security analyst</td><td>15-1212</td><td>$129,180</td><td>&#9989;&#9989; <strong>21%</strong></td></tr></tbody></table><p>&#9888;&#9888;&#9888; <strong>This is the only path on this site whose anchor occupation is projected to shrink</strong> &mdash; 323,600 jobs falling by 13,200 over the decade. <strong>That is not a reason to avoid it. It is a reason to enter it with a plan to move.</strong></p><p>&#9888; <strong>O*NET and the BLS agree on direction and differ on size:</strong> O*NET puts administrators at a <em>decline of 1% or lower</em> on the 2024&ndash;34 projections; the BLS puts it at <strong>&minus;4%</strong> on 2025&ndash;35. <strong>Both say down.</strong> There are still <strong>14,300 openings a year</strong>, because replacement demand does not stop when growth does &mdash; so the jobs exist; the number of them is not increasing.</p><h2>What the work actually is</h2><p>O*NET, on network and computer systems administrators: installing, configuring and maintaining an organisation's networks and servers; <em>planning and implementing network security measures</em>; performing data backups and disaster recovery; diagnosing and resolving hardware and software problems; monitoring network performance and user access.</p><p>&#9888; <strong>It is the most hands-on computing job on this site</strong>, and the one where a home lab teaches you most of what the course does. It is also the one most exposed to being on call: when the network is down, nobody else can work.</p><h2>&#9888;&#9888; Why the middle is shrinking, and what to do about it</h2><p>The BLS names the two advancement routes explicitly: administrators <em>&ldquo;may advance to become computer network architects&rdquo;</em> and <em>&ldquo;also may advance to managerial jobs in IT departments, such as computer and information systems managers&rdquo;</em>. Separately, the support-specialist handbook says support staff <em>&ldquo;advance to other information technology positions, such as information security analysts, network and computer systems administrators and software developers&rdquo;</em>.</p><p>&#9888;&#9888;&#9888; <strong>Read those two statements together and the strategy writes itself.</strong> The federal projections show the routine administration and support work contracting while design (architect, +7%) and defence (security, +21%) expand. <strong>The rung is a good place to stand and a poor place to stay.</strong></p><ul><li><strong>Aim at architect</strong> if the infrastructure itself is what interests you: $134,050, growing, and the natural promotion from this job.</li><li><strong>Aim at security</strong> if incidents and defence interest you: $129,180, growing fastest of any computing path here, and the federal handbook says this administration job is the usual place analysts come from.</li><li><strong>Aim at IT management</strong> if the organisational side appeals &mdash; the other route the handbook names.</li><li>&#9888; <strong>Learn cloud deliberately</strong>, whatever your programme teaches. The shrinkage is in on-premises administration; the same skills applied to cloud platforms are not shrinking.</li></ul><h2>&#9888;&#9888; Florida teaches this more widely than any other computing subject &mdash; mostly in clock hours</h2><p><strong>56 Florida public institutions</strong> award in this family, producing <strong>1,733 credentials</strong> in the 2023 award year. <strong>It is where the technical colleges dominate:</strong> on the networking code, Sheridan 59, FSCJ 38, Atlantic Technical 23, Immokalee Technical 22, Tom P. Haney 21, Traviss 19, Emerald Coast 19, Radford Locklin 18. On the systems-administration code the balance flips to the state colleges: Valencia 414, Miami Dade 205, Broward 106.</p><table><thead><tr><th>Course</th><th>Institutions</th><th>Form</th></tr></thead><tbody><tr><td>CTS&nbsp;0083 Computer Network Technician</td><td><strong>25</strong></td><td>&#9888; PSAV, 150 clock hours</td></tr><tr><td>CTS&nbsp;0084 Computer Networking Specialist</td><td><strong>25</strong></td><td>&#9888; PSAV, 150 hours</td></tr><tr><td>CTS&nbsp;0022 / 0023 / 0024 help desk &rarr; senior admin</td><td>14 each</td><td>&#9888; PSAV, stacked completion points</td></tr><tr><td><strong>CET&nbsp;1600 Networking Hardware</strong></td><td>6</td><td>&#9989; college credit</td></tr><tr><td><strong>CNT&nbsp;4603 Network System Administration</strong></td><td>6</td><td>&#9989; college credit, upper division</td></tr></tbody></table><p>&#9888;&#9888;&#9888; <strong>The clock-hour courses reach four times as many institutions as the credit-bearing ones.</strong> The PSAV stack is genuinely well designed &mdash; CTS&nbsp;0022 help-desk assistant, CTS&nbsp;0023 network support administrator, CTS&nbsp;0024 senior network administrator, each 150 hours, each an exit point you can work from. <strong>It is a real and sensible route into the work.</strong></p><p>&#9888;&#9888; <strong>But look again at the ladder table at the top of this page.</strong> The rungs those certificates reach are the ones projected to decline; the rungs that are growing &mdash; architect, security, management &mdash; expect a degree. <strong>So the clock-hour route gets you working fastest and positions you worst for the direction this field is moving.</strong> If you take it, take it knowingly, and plan how you will add the credit later.</p><h2>Necessary skills</h2><ul><li><strong>TCP/IP and routing, properly.</strong> Not memorised for an examination &mdash; understood well enough to diagnose from a packet capture.</li><li><strong>Linux and Windows server administration.</strong> Both. Programmes that teach only one leave a gap employers notice.</li><li><strong>Scripting and automation.</strong> PowerShell, Bash, Python. This is the difference between an administrator who scales and one who is replaced by the automation.</li><li><strong>Cloud platforms.</strong> The part of this job that is growing, and the part many Florida programmes still treat as an elective.</li><li><strong>Methodical troubleshooting under pressure</strong>, with people waiting and a manager asking for an estimate.</li><li><strong>Documentation.</strong> The network you cannot hand over is the network you can never leave.</li></ul><h2>Advice</h2><p>&#9888;&#9888; <strong>Enter here, but do not plan to retire here.</strong> The jobs are real and there are 14,300 openings a year, but the occupation is contracting. Pick your next rung &mdash; architect, security or management &mdash; in your first year, not your fifth, because it determines whether you need the degree.</p><p>&#9888; <strong>Get certified, and get certified early.</strong> Employers in this field screen on vendor certifications more than on the degree. Ask a programme which examinations it prepares you for, whether the fee is included, and what its pass rate is.</p><p>&#9888; <strong>Decide the credit question with the ladder in front of you.</strong> The clock-hour route is faster to a first job and does not transfer. If architect or security is the destination, the credit route is worth the extra time.</p><p><strong>And build a home lab.</strong> Second-hand switches, a virtualisation host, a few virtual machines. Nothing else in computing rewards it as directly: this is a field where employers will happily hire someone who can clearly demonstrate that they have broken and fixed the thing already.</p>",
+  "cipCodes": [
+    {
+      "cipCode": "11.10",
+      "note": "Computer and information technology administration and management — the systems-administration side, 28 Florida public institutions and 1,292 credentials, taught mostly for college credit at the state colleges (Valencia 414, Miami Dade 205, Broward 106)."
+    },
+    {
+      "cipCode": "11.01",
+      "note": "Computer and information sciences, including information technology — the broader foundation, 39 institutions on the IT code, and 25 of them also teach networking. The usual alternative degree for someone heading into this work."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "network-administration",
+      "note": "The programme itself — 56 Florida public institutions, the widest computing footprint in the state, and the one where technical colleges matter most. ⚠ Read its degrees note before enrolling: much of Florida's delivery is clock-hour PSAV carrying no college credit, and the rungs of this ladder that are GROWING expect a degree."
+    },
+    {
+      "slug": "cybersecurity",
+      "note": "⚠⚠ The growing move sideways, and the federal handbook says this administration job is where analysts usually come from. Security is projected at 21% against a decline here, at a similar wage ($129,180 against $99,130). ⚠ 27 of the 35 institutions teaching security also teach networking, so it is usually an added emphasis rather than a new school."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ The broader degree covering systems, support, databases and cloud as well as the network — 39 Florida public institutions, 25 of which also teach networking. ⚠⚠ Worth choosing over the specialist programme if you may want to move into management or development later, because it keeps more of the ladder open."
+    },
+    {
+      "slug": "computer-science",
+      "note": "⚠ Not the usual route into this job and a poor fit for it — computer science is theory and software construction, where this work is operations. Named because it is the degree that most easily reaches the roles this ladder leads AWAY to, and because 4 of its 16 institutions also teach networking.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "CTS1131",
+      "reason": "A+ Hardware — 7 institutions. The standard first credential for support and infrastructure work, and the cheapest test of whether the hands-on side suits you.",
+      "variantNote": "⚠ Also carried as CET1178C A+ Hardware Certification (5 institutions), with CTS1133 A+ Software (3) and CET2179C A+ Software Preparation (3) as the paired half. Register by the certification it prepares you for, not the number."
+    },
+    {
+      "courseId": "CET1600",
+      "reason": "Networking Hardware — 6 institutions. Switches, routers, addressing, cabling and the first serious look at how traffic actually moves. The foundation course of the whole ladder.",
+      "variantNote": "⚠ Also carried as the integrated CET1600C at 6 institutions. ⚠⚠ Usually follows a Cisco or CompTIA track — ask which revision, because what transfers to an employer is the certification, not the course number."
+    },
+    {
+      "courseId": "CET2620",
+      "reason": "Network Systems Applications — 5 institutions. The second networking course: services, protocols and the applications that run across the infrastructure.",
+      "variantNote": null
+    },
+    {
+      "courseId": "CGS1700",
+      "reason": "Introduction to Operating Systems — 4 institutions. Windows and Linux fundamentals, permissions and processes — and the Linux half is the commonest gap in graduates of Windows-only programmes.",
+      "variantNote": "⚠ If your programme teaches only one operating system, close the other gap yourself. Employers in this field assume both."
+    },
+    {
+      "courseId": "CNT4603",
+      "reason": "Computer and Network System Administration — 6 institutions, upper division. Servers, directory services, virtualisation and the administration work the job title names.",
+      "variantNote": "⚠ Upper division, so it generally requires admission to a bachelor's programme — one of the concrete things the clock-hour route does not reach."
+    },
+    {
+      "courseId": "CTS2314",
+      "reason": "Network Defense and Countermeasures — 5 institutions. Firewalls, segmentation, intrusion detection and monitoring: the bridge from this job into the security role that pays more and is growing.",
+      "variantNote": "⚠ Worth taking even if security is not the plan. Defending the network is now part of administering it, and O*NET lists planning and implementing security measures among this job's own tasks."
+    },
+    {
+      "courseId": "CIS2321",
+      "reason": "Systems Analysis and Design — 12 institutions. How a business system is supposed to work, which is what separates an administrator who executes tickets from one who can design an improvement.",
+      "variantNote": "⚠ The course most directly relevant to the architect role, which is the growing rung above this one."
+    },
+    {
+      "courseId": "COP1000",
+      "reason": "Introduction to Computer Programming — 15 institutions. Automation is what keeps an administrator ahead of the work rather than buried in it, and the ones who script are the ones who get promoted.",
+      "variantNote": "⚠ PowerShell, Bash and Python are the languages that matter here. Whatever your college teaches first, add Python."
+    },
+    {
+      "courseId": "CTS0083",
+      "reason": "Computer Network Technician — 25 institutions, 150 clock hours. Tied for the most widely available computing course in Florida, and how much of the state actually teaches networking.",
+      "variantNote": "⚠⚠⚠ PSAV clock hours, NO college credit. It reaches the same vendor examinations and is faster and cheaper. ⚠ But the rungs above this job — architect and security — expect a degree, so taking this route means planning how you will add credit later."
+    },
+    {
+      "courseId": "CTS0022",
+      "reason": "Network Support Help Desk Assistant — 14 institutions, 150 clock hours. The entry rung, and a real job: the support role most people in this field actually start in.",
+      "variantNote": "⚠⚠ It stacks: CTS0022 help desk, then CTS0023 Network Support Administrator, then CTS0024 Senior Network Administrator, 14 institutions each, every one an exit point you can work from. ⚠ Genuinely well designed for someone earning while studying — and the support occupations it leads to are themselves projected to decline 3%, so treat it as a start rather than a destination."
+    },
+    {
+      "courseId": "CTS0029",
+      "reason": "Wireless Network Administrator — 17 institutions, 150 clock hours. Wireless is where most user-facing network problems now live, and it is a distinct skill from wired infrastructure.",
+      "variantNote": null
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Elementary Statistics — 39 institutions. Capacity planning, performance baselines and knowing whether last night's spike meant anything.",
+      "variantNote": null
+    },
+    {
+      "courseId": "ENC1101",
+      "reason": "English Composition I — 39 institutions. Runbooks, change records and incident write-ups are what make a network maintainable by anyone other than you — and undocumented infrastructure is how administrators get stuck.",
+      "variantNote": null
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Network and Computer Systems Administrators (15-1244.00)",
+      "url": "https://www.onetonline.org/link/summary/15-1244.00",
+      "note": "Task statements, 331,500 employed (2024), ⚠ growth a DECLINE of 1% or lower on the 2024–34 projections, 14,300 annual openings, median $99,130 (2025). ⚠⚠ Education is unusually open and the associate degree LEADS: 30% associate, 27% bachelor's, 20% postsecondary certificate."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Network and Computer Systems Administrators",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm",
+      "note": "⚠⚠⚠ 323,600 jobs (2025), −4% decline 2025–35, −13,200. Entry a bachelor's degree; employers may require certification in the products they use. ⚠ The two advancement routes named: computer network architects, and managerial jobs such as computer and information systems managers."
+    },
+    {
+      "label": "O*NET — Computer Network Architects (15-1241.00)",
+      "url": "https://www.onetonline.org/link/summary/15-1241.00",
+      "note": "✅ The growing rung above: 179,200 employed, growth much faster than average (7% or higher) through 2034, 11,200 annual openings, median $134,050 (2025). Education 55% bachelor's — which is why the credit route matters if this is the destination."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Computer Support Specialists",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+      "note": "The entry rungs, and both are contracting: 903,100 jobs (2025), −3% decline 2025–35, −24,300. Network support specialists $76,220, user support specialists $61,860. ⚠ Network support typically needs an associate degree, user support some college, and candidates may qualify with a high school diploma plus IT certifications. Support staff advance to security analysts, systems administrators and software developers."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — CIP 11.0901 and 11.1001",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "56 Florida public institutions and 1,733 credentials — the widest computing footprint in the state. ⚠ The networking code is dominated by TECHNICAL COLLEGES (Sheridan 59, Atlantic 23, Immokalee 22, Tom P. Haney 21, Traviss 19); the systems-administration code by state colleges (Valencia 414, Miami Dade 205, Broward 106)."
+    },
+    {
+      "label": "SCNS statewide course file and flat file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠⚠ The delivery split: CTS0083 and CTS0084 reach 25 institutions each at 150 clock hours, and the stacked CTS0022/0023/0024 help-desk-to-senior-administrator sequence reaches 14 each — while the college-credit courses CET1600 Networking Hardware and CNT4603 Network System Administration reach only 6 apiece."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "name": "Cybersecurity Analyst",
+  "cipCode": "11.10",
+  "socCode": "15-1212",
+  "isPublished": true,
+  "sortOrder": 350,
+  "description": "Cybersecurity analysts defend an organisation's systems and data — hardening configurations, monitoring for intrusion, responding to incidents, testing defences by attacking them, and investigating breaches after the fact. ⚠ A median of $129,180 and 21% projected growth, the fastest of any computing path on this site. ⚠⚠⚠ And the thing nobody says in the advertising: this is NOT an entry-level field. The federal handbook is explicit that analysts typically arrive from systems administration, and a security credential with no operational experience behind it is the commonest disappointment in this job market. This page covers four related roles.",
+  "credentialNote": "⚠⚠ There is no licence and no board — security is governed by employers and by certification bodies, not by the state. ⚠ What the data says about education: O*NET respondents name a bachelor's at 53%, a POST-BACCALAUREATE CERTIFICATE at 23% and an associate degree at 13%, and that 23% is unusually high — it reflects how many people arrive here as career-changers from elsewhere in IT rather than straight from a degree. The BLS puts entry at a bachelor's in a computer science field or a related area such as engineering or mathematics, while noting that some enter with a high school diploma plus industry training and certifications. ⚠⚠⚠ The requirement that actually binds is EXPERIENCE. The handbook states that many analysts come from IT departments having worked as network and computer systems administrators, with typically less than five years of related experience expected before the security role. ⚠ Certifications carry more weight here than in most of computing — employers frequently prefer certified candidates, and the ladder runs from entry-level certificates through experienced-professional and specialist ones such as systems auditing. Ask any programme which certifications it prepares you for, and at whose cost.",
+  "bodyHtml": "<h2>Four roles under one heading</h2><p>This page covers a family rather than a single job, because Florida teaches them together and people move between them.</p><table><thead><tr><th>Role</th><th>SOC</th><th>What it is</th></tr></thead><tbody><tr><td><strong>Information security analyst</strong></td><td>15-1212</td><td>the core job: monitoring, hardening, incident response, policy and risk assessment</td></tr><tr><td><strong>Penetration tester</strong></td><td>15-1299.04</td><td><em>&ldquo;test the security of systems by attempting to gain access to networks, Web-based applications, or computers&rdquo;</em></td></tr><tr><td><strong>Information security engineer</strong></td><td>15-1299.05</td><td>builds the defences rather than watching them &mdash; firewalls, encryption, security tooling</td></tr><tr><td><strong>Digital forensics analyst</strong></td><td>15-1299.06</td><td>investigates after the fact; <em>&ldquo;write reports, sign affidavits, or give depositions for legal proceedings&rdquo;</em></td></tr></tbody></table><p>&#9888;&#9888; <strong>A caveat about the last three, and it matters if you go looking for their numbers.</strong> Penetration testing, security engineering and digital forensics are O*NET <em>detail</em> occupations sitting under the federal aggregate <strong>15-1299 Computer Occupations, All Other</strong>. All three therefore report the identical employment (472,000), openings (31,300) and median wage ($116,580) &mdash; <strong>those are the aggregate's figures, not the specialism's.</strong> Do not read $116,580 as &ldquo;the penetration tester wage&rdquo;; the federal system simply does not count them separately.</p><h2>What the core job actually is</h2><p>O*NET, on information security analysts: <em>develop plans to safeguard computer files against accidental or unauthorized modification, destruction, or disclosure; monitor current reports of computer viruses to determine when to update virus protection systems; encrypt data transmissions and erect firewalls to conceal confidential information; perform risk assessments and execute tests of data processing system; modify computer security files to incorporate new software, correct errors, or change individual access status</em>.</p><p>&#9888; <strong>Notice how much of that is administration and documentation.</strong> Security work in practice is policy, patching discipline, access reviews, audit evidence and arguing for budget &mdash; punctuated by incidents. The version in the advertising is the incident; the job is mostly the rest.</p><h2>The numbers, and they are good</h2><ul><li><strong>O*NET</strong> (2024&ndash;34): <strong>182,800 employed</strong>, growth <strong>much faster than average (7% or higher)</strong>, <strong>16,000 openings a year</strong>, median <strong>$129,180</strong> (2025).</li><li><strong>BLS OOH</strong> (2025&ndash;35): <strong>192,900 jobs</strong>, growth <strong>21%, much faster than average</strong>, employment change <strong>+40,600</strong>, entry a bachelor's degree.</li></ul><p>&#9989; <strong>21% is the highest growth rate of any computing path on this site</strong> &mdash; against 10% for software development and a projected <em>decline</em> for network and systems administration. <strong>And the pay is close to software development's</strong> ($129,180 against $135,980) for a job with a shorter and cheaper route in.</p><h2>&#9888;&#9888;&#9888; But it is not a starting point, and this is the most important thing on the page</h2><p>Security is marketed to beginners harder than almost any other technical field, and the federal handbook quietly contradicts the marketing: <strong>many analysts come from IT departments, having worked as network and computer systems administrators</strong>, with <strong>less than five years</strong> of related experience typical before the security role.</p><p>&#9888;&#9888; <strong>The reason is not gatekeeping.</strong> You cannot defend infrastructure you have never operated: you will not spot anomalous traffic on a network whose normal you have never watched, you will not scope an incident on systems you cannot administer, and you will not write a workable policy for an environment you have not run. <strong>Every credible route into this field passes through operations.</strong></p><p>&#9888; <strong>What that means in practice, for a Florida student:</strong></p><ul><li><strong>Do not take a security certificate as a first credential and expect an analyst job.</strong> It happens, but it is the exception and it usually happens to people who already had a technical job.</li><li><strong>Do take the operations route deliberately</strong> &mdash; networking or IT, then a support or administration job, then security. It feels slower and it is substantially faster to an actual security role.</li><li><strong>Or do the security degree and get your hands on systems alongside it</strong> &mdash; a campus help-desk job, a home lab, a volunteer sysadmin role for a small nonprofit. <strong>The degree plus nothing is the combination that disappoints.</strong></li></ul><h2>&#9888;&#9888; Florida teaches this mostly in CLOCK HOURS</h2><p>35 Florida public institutions award security credentials and produced 1,063 in the 2023 award year &mdash; St Petersburg College alone accounts for 359. <strong>But look at how it is actually delivered.</strong></p><table><thead><tr><th>Course</th><th>Institutions</th><th>Form</th></tr></thead><tbody><tr><td>CTS&nbsp;0069 Computer Security Technician</td><td><strong>25</strong></td><td>&#9888; PSAV, 300 clock hours</td></tr><tr><td>CTS&nbsp;0019 Information Security Manager</td><td>14</td><td>&#9888; PSAV, 150 hours</td></tr><tr><td>CTS&nbsp;0018 Cybersecurity Associate</td><td>13</td><td>&#9888; PSAV, 600 hours</td></tr><tr><td><strong>CIS&nbsp;2352 Ethical Hacking I</strong></td><td><strong>9</strong></td><td>&#9989; college credit</td></tr><tr><td>CIS&nbsp;4361 IT Security Management</td><td>7</td><td>&#9989; college credit, upper division</td></tr></tbody></table><p>&#9888;&#9888;&#9888; <strong>The clock-hour courses reach two to three times as many institutions as the credit-bearing ones.</strong> They stack into occupational completion points, they prepare you for the same vendor examinations, and they are faster and cheaper. <strong>They carry no college credit.</strong> If a bachelor's is anywhere in your plan &mdash; and for security management and government work it usually is &mdash; that difference is the whole decision, and no one raises it at enrolment.</p><h2>Necessary skills</h2><ul><li><strong>Systems and networking, operationally.</strong> Not as theory &mdash; as things you have configured, broken and fixed.</li><li><strong>Reading logs and spotting the anomaly.</strong> The core analytical skill, and it depends entirely on knowing what normal looks like.</li><li><strong>Scripting.</strong> Python or PowerShell, for the automation that makes monitoring and response tractable.</li><li><strong>Writing for non-technical readers.</strong> Risk assessments, incident reports and the case for spending money are most of what a senior analyst produces.</li><li><strong>Legal and evidentiary care</strong>, especially for forensics: evidence handling, chain of custody, and the fact that you may be deposed on it.</li><li><strong>Ethical discipline.</strong> Penetration testing is authorised intrusion, and the authorisation is what separates it from a felony. Programmes that are casual about scope and written permission are teaching you a dangerous habit.</li></ul><h2>Advice</h2><p>&#9888;&#9888; <strong>Sequence operations first, or alongside.</strong> If you are starting from nothing, the networking and systems administration programme is the more reliable first step &mdash; 56 Florida institutions teach it, and 27 of the 35 that teach security also teach it, so at most colleges you are choosing an order rather than a school.</p><p>&#9888; <strong>Decide the credit question before you enrol</strong>, because Florida's security instruction skews heavily to clock hours and the two forms look identical from the outside.</p><p>&#9888; <strong>Plan the certifications, and plan them in order.</strong> Employers in this field screen on them more than on the degree. Ask any programme which examinations it prepares you for, whether the examination fee is included, and what its pass rate is.</p><p><strong>And get something real to defend.</strong> A home lab, a small nonprofit's network, a capture-the-flag team, a campus security club. In a field where the credential is easy to buy and experience is the actual gate, demonstrable hands-on work is what distinguishes an application &mdash; and it is the one thing you can start this week.</p>",
+  "cipCodes": [
+    {
+      "cipCode": "11.09",
+      "note": "Computer systems networking and telecommunications — included because the federal handbook states that analysts typically arrive from network and systems administration, so this is the commonest actual feeder into the security job rather than a neighbouring subject."
+    },
+    {
+      "cipCode": "11.01",
+      "note": "Computer and information sciences, including information technology — 39 Florida public institutions on the IT code alone, and the broader foundation that 20 of the 35 security-teaching institutions also offer."
+    },
+    {
+      "cipCode": "43.01",
+      "note": "⚠ Criminal justice — a genuine and under-recognised feeder into DIGITAL FORENSICS specifically, where the work ends in affidavits, depositions and evidence handling rather than in system hardening. A criminal justice degree plus technical certification is a real route into that half of this family."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "cybersecurity",
+      "note": "The programme itself — 35 Florida public institutions and 1,063 credentials, with St Petersburg College producing a third of them. ⚠ Read its degrees note before enrolling: security is taught here as a specialisation on top of systems administration, and much of Florida's delivery is clock-hour rather than college credit."
+    },
+    {
+      "slug": "network-administration",
+      "note": "⚠⚠ The route the federal handbook actually describes, and a real one rather than a neighbour: analysts typically arrive having worked as network and systems administrators. 27 of the 35 institutions teaching security also teach this. ⚠ If you are starting from nothing, this first is the more reliable order."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ The broadest foundation and the widest door — 39 Florida public institutions, and 20 of them also teach security, so at most colleges this is an emphasis decision rather than a different school. Take it if you are not yet certain which part of computing you want."
+    },
+    {
+      "slug": "computer-science",
+      "note": "⚠ A route, but a less direct one than its reputation suggests. Computer science supplies the programming and systems depth that security engineering and tooling work need, and it is the better degree if you want to BUILD defences rather than operate them. ⚠⚠ It teaches least about the operations experience this field actually screens for."
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "CTS1131",
+      "reason": "A+ Hardware — 7 institutions. The foundation credential most support and security careers still start from, and the cheapest way to find out whether the practical side suits you.",
+      "variantNote": "⚠ Also carried as CET1178C A+ Hardware Certification (5 institutions) and paired with CTS1133 A+ Software (3) or CET2179C (3). ⚠⚠ Florida numbers the same vendor-certification preparation several ways; register by what the course prepares you for, not by the number."
+    },
+    {
+      "courseId": "CET1600",
+      "reason": "Networking Hardware — 6 institutions. Switches, routers, addressing and cabling: the operational knowledge security work is built on, and the thing the federal handbook says analysts arrive with.",
+      "variantNote": "⚠ Also carried as the integrated CET1600C at 6 institutions. ⚠⚠ Both forms commonly follow a Cisco or CompTIA track — ask which revision, because the certification is what transfers, not the course number."
+    },
+    {
+      "courseId": "CNT4603",
+      "reason": "Computer and Network System Administration — 6 institutions, upper division. Running servers, directory services and the infrastructure you will later be asked to defend.",
+      "variantNote": null
+    },
+    {
+      "courseId": "CTS2314",
+      "reason": "Network Defense and Countermeasures — 5 institutions. Firewalls, intrusion detection, segmentation and monitoring: the defensive core of the analyst job.",
+      "variantNote": null
+    },
+    {
+      "courseId": "CIS2352",
+      "reason": "Ethical Hacking I — 9 institutions, the most widely carried COLLEGE-CREDIT security course in the state. Reconnaissance, scanning, exploitation and reporting, done under authorisation.",
+      "variantNote": "⚠⚠ Authorisation is the whole subject, not a footnote: the same actions without written permission and an agreed scope are criminal. A programme that is casual about that is teaching a habit that will end a career."
+    },
+    {
+      "courseId": "CIS4361",
+      "reason": "Information Technology Security Management — 7 institutions, upper division. Risk assessment, policy, compliance and audit — the part of the job that occupies most of a senior analyst's week and that hands-on training covers least.",
+      "variantNote": "⚠ Upper division, so it usually requires admission to a bachelor's programme. It is also the course that distinguishes an analyst from a technician, and the one clock-hour routes do not reach."
+    },
+    {
+      "courseId": "CTS0069",
+      "reason": "Computer Security Technician — 25 institutions, 300 clock hours. The most widely available security course in Florida by a wide margin, and how most of the state actually teaches the subject.",
+      "variantNote": "⚠⚠⚠ PSAV clock hours, carrying NO college credit. It reaches the same vendor examinations as the credit route and is faster and cheaper — but if a bachelor's is anywhere in your plan, none of these hours transfer. ⚠ Decide that before enrolling, because the two forms are indistinguishable from the outside."
+    },
+    {
+      "courseId": "CTS0018",
+      "reason": "Cybersecurity Associate — 13 institutions, 600 clock hours. The substantial PSAV security programme, stacking with CTS0015, CTS0016 and CTS0017 through further occupational completion points.",
+      "variantNote": "⚠ The occupational-completion-point structure means you can exit with a credential partway through, which is genuinely useful if you are working while studying. ⚠⚠ Still no college credit."
+    },
+    {
+      "courseId": "COP1000",
+      "reason": "Introduction to Computer Programming — 15 institutions. Scripting is what makes monitoring, log analysis and response tractable at any scale, and the analysts who can automate are the ones who get promoted.",
+      "variantNote": "⚠ Python is the usual language in security work. Where your college teaches this in something else, learn Python alongside it — it is the one language security tooling assumes."
+    },
+    {
+      "courseId": "CGS1700",
+      "reason": "Introduction to Operating Systems — 4 institutions. Windows and Linux internals, permissions and process management: where attacks actually land and where evidence actually lives.",
+      "variantNote": "⚠ Linux competence is assumed by most security tooling and is the commonest gap in graduates from Windows-only programmes."
+    },
+    {
+      "courseId": "CIS2321",
+      "reason": "Systems Analysis and Design — 12 institutions. Understanding how a business system is meant to work, which is a prerequisite for judging what an attacker could do to it.",
+      "variantNote": null
+    },
+    {
+      "courseId": "ENC1101",
+      "reason": "English Composition I — 39 institutions. Incident reports, risk assessments and forensic affidavits are the output of this job, and in forensics the writing is evidence that will be examined in court.",
+      "variantNote": null
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Elementary Statistics — 39 institutions. Base rates, false positives and detection thresholds: the reason an alerting system that fires constantly is worse than none.",
+      "variantNote": null
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Information Security Analysts (15-1212.00)",
+      "url": "https://www.onetonline.org/link/summary/15-1212.00",
+      "note": "Task statements, 182,800 employed (2024), growth much faster than average (7% or higher) on the 2024–34 projections, 16,000 annual openings, median wages $129,180 (2025). ⚠ Education: 53% bachelor's, 23% POST-BACCALAUREATE CERTIFICATE, 13% associate — an unusually high certificate share, reflecting career-changers."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Information Security Analysts",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm",
+      "note": "⚠⚠⚠ 192,900 jobs (2025), 21% growth 2025–35, +40,600 — the fastest of any computing path here. And the finding this page leads with: many analysts come from IT departments having worked as NETWORK AND COMPUTER SYSTEMS ADMINISTRATORS, with less than five years of related experience typical. Employers frequently prefer certified candidates."
+    },
+    {
+      "label": "O*NET — Penetration Testers (15-1299.04), Information Security Engineers (15-1299.05), Digital Forensics Analysts (15-1299.06)",
+      "url": "https://www.onetonline.org/link/summary/15-1299.04",
+      "note": "⚠⚠ The three specialisms this page covers as sections. All three are DETAIL occupations under the federal aggregate 15-1299 Computer Occupations, All Other, and therefore report identical figures — 472,000 employed, 31,300 annual openings, $116,580 median (2025). Those are the aggregate's numbers, not the specialism's."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — CIP 11.1003",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "35 Florida public institutions and 1,063 security credentials: St Petersburg College 359, USF 92, Miami Dade 88, Pensacola State 82, UWF 78, Broward 53, FIU 47, FSCJ 41. ⚠ St Petersburg alone produces a third of the state's output."
+    },
+    {
+      "label": "SCNS statewide course file and flat file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠⚠⚠ The delivery finding: Florida's security instruction is overwhelmingly CLOCK-HOUR. CTS0069 reaches 25 institutions at 300 hours, CTS0019 14, CTS0018 13 at 600 hours — while the most widely carried college-CREDIT security course, CIS2352 Ethical Hacking I, reaches only 9, and CIS4361 IT Security Management only 7."
+    }
+  ]
+}
