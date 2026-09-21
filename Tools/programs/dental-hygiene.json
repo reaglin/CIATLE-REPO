@@ -1,0 +1,24 @@
+{
+  "name": "Dental Hygiene",
+  "description": "Dental hygiene programmes train the licensed clinicians who do most of the preventive work in a dental office — assessing and charting periodontal health, removing calculus and stains, taking and reading radiographs, applying preventive agents, and teaching patients how to keep their own teeth. Two years, entirely cohort-based, and among the most competitive admissions in a Florida college.",
+  "degreesNote": "This is an associate-degree field and the data leaves no room for doubt: all 342 Florida completions in the 2023 federal award year were ASSOCIATE degrees, across 18 public institutions. One bachelor's programme exists (St Petersburg College) and awarded nobody that year — it is a completion degree for licensed hygienists moving into education, public health or research, not a route in. ⚠ Two things surprise applicants. FIRST, the associate degree is much bigger than 60 credits: Indian River State College's is 88, because the clinical hours and the dental science sequence sit on top of a full general-education core. SECOND, the sciences are unusually heavy for a two-year programme — chemistry, anatomy and physiology, microbiology and nutrition are all required, with a grade of C or higher, and several must be finished by fixed points in the first year. ⚠⚠ Admission is limited-access and decided largely on those grades.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 86,
+  "cips": [
+    {
+      "cipCode": "51.0602",
+      "note": "Dental hygiene / hygienist — 18 Florida public institutions and 342 credentials in the 2023 federal award year, every one of them an associate degree. Miami Dade 48, Valencia 42, Tallahassee 28, Pensacola State 24, Santa Fe 23, St Petersburg 21, Broward 20. ⚠ St Petersburg also lists a bachelor's, which awarded nobody that year — it is a completion degree for licensed hygienists, not an entry route."
+    }
+  ],
+  "related": [
+    {
+      "slug": "dental-assisting",
+      "note": "⚠⚠ The programme people most often confuse with this one, and the difference decides a career. Dental assisting is a certificate, taught mostly at technical colleges on clock hours, and it is NOT advanced standing toward hygiene — a dental assistant who wants to be a hygienist starts the two-year programme at the beginning. ⚠ It is still the commonest way people discover the field, and it is far easier to get into: 28 Florida institutions against 18, and no competitive science sequence."
+    },
+    {
+      "slug": "radiologic-technology",
+      "note": "The closest comparison on structure: a two-year, limited-access, cohort clinical programme at the same colleges, with a similar science load and the same competitive-admission arithmetic. ⚠ The differences are the setting and the hours — a hygienist works in a dental practice, usually on a predictable weekday schedule, while a radiographer works a hospital rota. Both take radiographs; the training and the credentials do not transfer between them."
+    }
+  ]
+}

@@ -3338,6 +3338,18 @@ Checked while building the respiratory therapy path's prerequisite list:
 | `DEP2004` | 29 | **`DEP2004`** |
 | `SPC1017` | 16 | **`SPC1017`** |
 
+✅ **SEVEN OF THESE ARE FIXED (2026-09-21, dental hygiene path):** `MCB2010`, `MCB2010L`,
+`HUN1201`, `DEP2004`, `SPC1017`, `MGF1130` and `SPC1608` were rebuilt from the flat file and
+re-pushed, along with the 26 dental courses that had the same defect. ⚠ **`HUM1020` was
+deliberately LEFT OUT**: the modal-clock-hours rule in `list_missing.py` gives it
+`contactHours: 2` for a 3-credit lecture, because only one carrier populates the field and it
+populates it wrongly. **A single bad `clock_hours` value becomes the modal value when every other
+carrier is null** — worth a guard in the tool (ignore a clock-hour figure that is implausible
+against the credit value), and worth checking on any other course where one carrier of many
+reports hours.
+
+⚠ **The wider sweep is still open**: count every listed course whose title equals its id.
+
 These are the placeholder titles a guide push creates (`Tools/CLAUDE.md`, *Send the course's base
 data with every guide*). ⚠ **They are all high-carrier general-education courses that health and
 technical paths route through**, so they are seen. **One `list_missing.py`-style pass over the

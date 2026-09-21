@@ -1,0 +1,20 @@
+{
+  "name": "Dental Assisting",
+  "description": "Dental assisting programmes train the person working chairside beside the dentist — preparing the patient and the operatory, passing and caring for instruments, mixing materials, taking radiographs where the state permits it, and running the sterilisation and the records. It is the fastest way into a dental practice: most Florida programmes are a certificate of a year or less, and most are taught at technical colleges.",
+  "degreesNote": "Almost all of this is a CERTIFICATE rather than a degree: of 420 Florida completions in the 2023 federal award year, 410 were one-to-two-year certificates and only 10 were associate degrees, at three colleges. ⚠⚠ The most important thing to understand before enrolling is what it is NOT. Dental assisting is not a shortened dental hygiene programme and does not give advanced standing toward one — an assistant who later wants to be a hygienist enters that two-year programme at the beginning and competes for a place like anyone else. ⚠ What it does do is get you working in a dental practice quickly, at far lower cost, with a clear view of whether the field suits you. ⚠ Florida also regulates specific duties separately, notably dental radiography, so ask any programme which state-recognised certifications its curriculum actually qualifies you for.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 87,
+  "cips": [
+    {
+      "cipCode": "51.0601",
+      "note": "Dental assisting / assistant — 28 Florida public institutions and 420 credentials in the 2023 federal award year: 410 certificates of one to two years and 10 associate degrees. ⚠ The list is dominated by TECHNICAL COLLEGES: Lorenzo Walker 35, Broward 30, First Coast 27, Manatee 24, Orange Technical East 22, Atlantic Technical 20. Only Broward, Indian River and Eastern Florida award the associate degree."
+    }
+  ],
+  "related": [
+    {
+      "slug": "dental-hygiene",
+      "note": "⚠⚠ The programme this one is most often mistaken for, and the gap is larger than the names suggest: hygiene is a licensed 88-credit associate degree with chemistry, anatomy, microbiology and nutrition, a limited-access cohort, and three licensing examinations. ⚠ Assisting confers NO advanced standing toward it. If hygiene is the goal, find out now whether the college you are attending also runs the hygiene programme and what its admission actually requires."
+    }
+  ]
+}

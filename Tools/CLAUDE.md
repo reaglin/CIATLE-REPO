@@ -72,7 +72,7 @@ path) as each lands.
 |---|---|---|
 | **ENG** engineering | 1–10 | ✅ all published |
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
-| **HLT** health | 28–36 | ⚠ **4 of 9 — in progress, and this is the head of the queue** |
+| **HLT** health | 28–36 | ⚠ **5 of 9 — in progress, and this is the head of the queue** |
 | **CMP** computing | 37–40 | 1 of 4 (Data Scientist) |
 | **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | 1 of 10 (Lawyer) |
 
@@ -128,9 +128,31 @@ thing the student could not know (*aerospace employers hire mechanical graduates
 and mechanical is offered at eleven institutions against three*). Links are read in BOTH
 directions, and a related slug must already exist or the push is refused 422.
 
-✅ **34 programmes now exist** (2026-09-21), and every published path names one that actually leads
+✅ **36 programmes now exist** (2026-09-21), and every published path names one that actually leads
 there — and no programme is left without a career. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
 `cip.json` still is.
+
+⚠⚠⚠ **A CROSS-PATH SUPERLATIVE GOES STALE THE NEXT TIME A PATH LANDS — do not write one
+(learned twice, 2026-09-21).** Respiratory therapy was drafted claiming *"the fastest-growing
+occupation on this site"* (data science is faster) and *"the worst course numbering on the site"*
+(nursing and several engineering prefixes are more fragmented); both were caught by measuring
+before publishing. **Then dental hygiene landed at $98,100 and invalidated the wage superlative on
+TWO already-published paths at once**, which cost two extra pushes to reconcile.
+
+| ❌ Do not write | ✅ Write |
+|---|---|
+| "the highest wage-to-training ratio anywhere on this site" | "the highest median of any TWO-YEAR route on this site" — a bounded class you can re-check in one command |
+| "the worst numbering on the site" | the measurement, plus two or three named comparators |
+| "the fastest-growing occupation here" | the federal figure and its projection decade |
+
+⚠⚠ **If a comparative is worth making, BOUND IT and NAME THE COMPARATORS in the same
+sentence** — a bounded claim can be re-verified, and a reader can see what it is being compared
+against. ⚠ **And before publishing any comparative, grep the other paths for the claim you are
+about to contradict:**
+
+```bash
+python -c "import json,glob,re;[print(f,m) for f in glob.glob('career_paths/*.json') for m in re.findall(r'median wages?[^<]{0,40}', json.load(open(f,encoding='utf-8')).get('bodyHtml') or '')]"
+```
 
 ⚠⚠⚠ **THE ONE RULE: A PATH IS CURATED, NEVER DERIVED.** Every course is placed by an author
 with a **required** stated reason. **Do not** build a course list by parsing prerequisites, by
@@ -3628,7 +3650,7 @@ When starting a fresh session in this project:
 
    ```bash
    python career_paths.py list                 # what is live
-   python programs.py list                     # 34 programmes; a path's programmes must exist FIRST
+   python programs.py list                     # 36 programmes; a path's programmes must exist FIRST
    head -1 career_paths/QUEUE.csv; awk -F, 'NR>1 && $NF==""' career_paths/QUEUE.csv | head -5
    ```
 
