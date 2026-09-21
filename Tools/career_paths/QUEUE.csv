@@ -72,7 +72,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 71,fire-inspector,Fire Inspector and Investigator,43.02,Fire Protection,33-2021,Fire Inspectors and Investigators,PUB,DIRECT,yes,section:firefighter
 101,registered-dietitian,Registered Dietitian Nutritionist,51.31,Dietetics and Clinical Nutrition Services,29-1031,Dietitians and Nutritionists,HLT,DIRECT,yes,published
 102,speech-language-pathologist,Speech-Language Pathologist,51.02,Communication Disorders Sciences and Services,29-1127,Speech-Language Pathologists,HLT,DIRECT,yes,published
-103,occupational-therapy-assistant,Occupational Therapy Assistant,51.08,Allied Health and Medical Assisting Services,31-2011,Occupational Therapy Assistants,HLT,DIRECT,yes,
+103,occupational-therapy-assistant,Occupational Therapy Assistant,51.08,Allied Health and Medical Assisting Services,31-2011,Occupational Therapy Assistants,HLT,DIRECT,yes,published
 104,diagnostic-medical-sonographer,Diagnostic Medical Sonographer,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2032,Diagnostic Medical Sonographers,HLT,DIRECT,yes,
 105,veterinary-technician,Veterinary Technician,51.08,Allied Health and Medical Assisting Services,29-2056,Veterinary Technologists and Technicians,HLT,DIRECT,yes,
 106,medical-assistant,Medical Assistant,51.08,Allied Health and Medical Assisting Services,31-9092,Medical Assistants,HLT,DIRECT,yes,
@@ -122,3 +122,5 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 150,urban-planner,Urban and Regional Planner,04.03,"City/Urban, Community, and Regional Planning",19-3051,Urban and Regional Planners,PUB,DIRECT,yes,
 151,audiologist,Audiologist,51.02,Communication Disorders Sciences and Services,29-1181,Audiologists,HLT,DIRECT,yes,section:speech-language-pathologist
 152,slp-assistant,Speech-Language Pathology Assistant,51.02,Communication Disorders Sciences and Services,31-9099,"Healthcare Support Workers, All Other",HLT,DIRECT,yes,section:speech-language-pathologist
+153,occupational-therapist,Occupational Therapist,51.23,Rehabilitation and Therapeutic Professions,29-1122,Occupational Therapists,HLT,DIRECT,yes,section:occupational-therapy-assistant
+154,occupational-therapy-aide,Occupational Therapy Aide,51.08,Allied Health and Medical Assisting Services,31-2012,Occupational Therapy Aides,HLT,DIRECT,yes,section:occupational-therapy-assistant

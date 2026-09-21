@@ -1,0 +1,16 @@
+{
+  "name": "Occupational Therapy",
+  "description": "Occupational therapy programmes train the people who restore the ability to do everyday things — dressing, cooking, writing, working, playing — after injury, stroke, developmental delay or mental illness. Where physical therapy works on movement, occupational therapy works on function and participation, and it reaches further into paediatrics, mental health and adaptation of the home and workplace.",
+  "degreesNote": "⚠⚠ Florida teaches this on a much smaller scale than its physical therapy sibling, and the numbers are worth seeing side by side. The ASSISTANT associate degree runs at just 4 Florida public institutions producing 57 graduates a year — Daytona State 21, FSCJ 13, Polk State 13, State College of Florida 10 — against 17 institutions and 267 graduates for the physical therapist assistant. ⚠ The professional tier is 4 institutions and 111 credentials, and unlike physical therapy it is not yet all doctoral: 62 master's against 47 professional doctorates. ⚠⚠⚠ Read the scarcity carefully rather than as a warning. The assistant role pays MORE than the physical therapist assistant ($72,300 against $68,380) and grows FASTER (21% against 17%), and Florida trains a quarter as many. Both levels are licensed under Chapter 468 Part III and accredited through the same body, so the two tiers are one system.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 63,
+  "cips": [
+    { "cipCode": "51.0803", "note": "Occupational therapist assistant — ⚠ only 4 Florida public institutions and 57 associate degrees in the 2023 federal award year: Daytona State 21, FSCJ 13, Polk State 13, State College of Florida–Manatee-Sarasota 10. The smallest assistant-level health footprint on this site." },
+    { "cipCode": "51.2306", "note": "Occupational therapy — the professional tier, 4 Florida public institutions and 111 credentials: FIU 47 master's, UF 47 professional doctorates, FAMU 15 master's. ⚠ Unlike physical therapy, this profession has not moved entirely to the doctorate in Florida, so the master's route is still real here." }
+  ],
+  "related": [
+    { "slug": "physical-therapy", "note": "⚠⚠ The sibling profession, and the comparison every applicant should run. Physical therapy is far more widely taught in Florida — 17 assistant programmes against 4, and 7 doctoral programmes against 4 — so it is much easier to find nearby. ⚠ But the occupational therapy assistant pays more ($72,300 against $68,380) and grows faster (21% against 17%). Movement against function is the real difference; availability against pay is the practical one." },
+    { "slug": "communication-sciences-and-disorders", "note": "⚠ The third rehabilitation profession, and the one with the same shape: a graduate-entry clinician above a licensed assistant tier. All three work the same caseloads in schools, hospitals and skilled nursing, and students who like one usually should look at all three." }
+  ]
+}
