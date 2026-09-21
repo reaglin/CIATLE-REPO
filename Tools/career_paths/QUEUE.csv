@@ -16,10 +16,10 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 15,mechatronics-technician,Mechatronics and Automation Technician,15.04,Electromechanical Technologies/Technicians,17-3024,Electro-Mechanical and Mechatronics Technologists and Technicians,MFG,DIRECT,yes,published
 16,cad-drafter,CAD Drafter,15.13,Drafting/Design Engineering Technologies/Technicians,17-3011,Architectural and Civil Drafters,MFG,DIRECT,yes,
 17,machinist,Machinist,48.05,Precision Metal Working,51-4041,Machinists,MFG,DIRECT,yes,published
-18,cnc-operator,CNC Machine Operator,48.05,Precision Metal Working,51-9161,Computer Numerically Controlled Tool Operators,MFG,DIRECT,yes,
+18,cnc-operator,CNC Machine Operator,48.05,Precision Metal Working,51-9161,Computer Numerically Controlled Tool Operators,MFG,DIRECT,yes,section:machinist
 19,welder,Welder,48.05,Precision Metal Working,51-4121,"Welders, Cutters, Solderers, and Brazers",MFG,DIRECT,yes,published
 20,industrial-maintenance-technician,Industrial Maintenance Technician,47.03,Heavy/Industrial Equipment Maintenance Technologies/Technicians,49-9041,Industrial Machinery Mechanics,MFG,DIRECT,yes,published
-21,quality-control-inspector,Quality Control Inspector,15.07,Quality Control and Safety Technologies/Technicians,51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",MFG,DIRECT,yes,
+21,quality-control-inspector,Quality Control Inspector,15.07,Quality Control and Safety Technologies/Technicians,51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",MFG,DIRECT,yes,section:industrial-engineering-technician
 22,production-supervisor,Manufacturing Production Supervisor,15.06,Industrial Production Technologies/Technicians,51-1011,First-Line Supervisors of Production and Operating Workers,MFG,CHOICE,yes,
 23,hvac-technician,HVAC Technician,47.02,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR)",49-9021,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",MFG,DIRECT,yes,published
 24,electrician,Electrician,46.03,Electrical and Power Transmission Installers,47-2111,Electricians,MFG,DIRECT,yes,published

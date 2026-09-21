@@ -127,6 +127,22 @@ level of the tree comes back 400.
 completions in the award year. But a code matching nothing usually means the wrong code — check it,
 because the page will show it finding no schools.
 
+## ⚠⚠ Plain text versus HTML — and the markdown trap
+
+**`bodyHtml` is rendered as HTML. Everything else is rendered as TEXT.** `description`,
+`degreesNote`, `credentialNote` and every `note` are encoded by Razor, so any markup in them
+reaches the reader literally.
+
+⚠ **Found the hard way on 2026-09-21:** `**NIMS**` printed on the live page with its asterisks,
+across **22 documents**. They were stripped and re-pushed.
+
+| Field | Rendered as | Emphasis by |
+|---|---|---|
+| `bodyHtml` | HTML (sanitized allow-list) | `<strong>`, `<em>`, lists, tables |
+| `description`, `degreesNote`, `credentialNote`, every `note` | plain text | ⚠ the words, or the ⚠ marker |
+
+**So in a note, write the important thing first and let the ⚠ carry the weight.** Never markdown.
+
 ## `related` — the programmes next door, and why
 
 ⚠⚠ **Ron, 2026-09-19:** *"the similarities between mechanical engineering and aerospace

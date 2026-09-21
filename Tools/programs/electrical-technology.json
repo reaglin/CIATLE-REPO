@@ -1,14 +1,14 @@
 {
   "name": "Electrical Technology",
   "description": "Electrical programmes train the people who install, maintain and repair the wiring, panels, circuits and fixtures a building runs on — residential, commercial and industrial — to the National Electrical Code and to the inspector's satisfaction.",
-  "degreesNote": "Florida publishes this as clock-hour career certificates that stack: **Electricity, 1,200 hours** in three occupational completion points — electrician helper, residential electrician, commercial electrician — and **Electrician, 1,500 hours**, which adds industrial. A **750-hour half** covers the first two points for students who need to start earning sooner. ⚠ A second route exists and is the traditional one: a **registered apprenticeship**, where the classroom half runs as Electrical Wiring I–VIII at state colleges while you work for pay. ⚠⚠ Neither route licenses you: Florida licenses the CONTRACTOR, and journeyman requirements are set by counties and municipalities rather than by the state.",
+  "degreesNote": "Florida publishes this as clock-hour career certificates that stack: Electricity, 1,200 hours in three occupational completion points — electrician helper, residential electrician, commercial electrician — and Electrician, 1,500 hours, which adds industrial. A 750-hour half covers the first two points for students who need to start earning sooner. ⚠ A second route exists and is the traditional one: a registered apprenticeship, where the classroom half runs as Electrical Wiring I–VIII at state colleges while you work for pay. ⚠⚠ Neither route licenses you: Florida licenses the CONTRACTOR, and journeyman requirements are set by counties and municipalities rather than by the state.",
   "bodyHtml": null,
   "isPublished": true,
   "sortOrder": 73,
   "cips": [
     {
       "cipCode": "46.0302",
-      "note": "Electrician — the programme itself: **41 Florida public institutions** and 741 credentials in 2023, one of the largest career certificates in the state and taught mostly at district technical colleges."
+      "note": "Electrician — the programme itself: 41 Florida public institutions and 741 credentials in 2023, one of the largest career certificates in the state and taught mostly at district technical colleges."
     }
   ],
   "related": [

@@ -1,18 +1,18 @@
 {
   "name": "Aviation Maintenance Technology",
   "description": "Aviation maintenance programmes prepare people to inspect, repair and sign off aircraft — airframes, engines, hydraulics, electrical and the inspections that keep an aircraft legal to fly. ⚠ Unlike every other trade programme on this site, the curriculum is set by the FEDERAL AVIATION ADMINISTRATION rather than by Florida.",
-  "degreesNote": "The destination is the **FAA mechanic certificate with Airframe and Powerplant ratings** — the “A&P” — and a programme exists to get you there. ⚠⚠ The school itself must be **certificated by the FAA under 14 CFR Part 147**; graduating from one is what lets you sit the tests without the alternative route of 18 months of documented experience for a single rating, or 30 months for both. ⚠ Florida institutions deliver it two ways: as clock-hour career certificates (general, airframe and powerplant blocks of 450–480 hours each) and, at a few colleges, as college-credit courses inside an associate degree. Both lead to the same federal certificate; the difference is the transcript and what else it counts toward.",
+  "degreesNote": "The destination is the FAA mechanic certificate with Airframe and Powerplant ratings — the “A&P” — and a programme exists to get you there. ⚠⚠ The school itself must be certificated by the FAA under 14 CFR Part 147; graduating from one is what lets you sit the tests without the alternative route of 18 months of documented experience for a single rating, or 30 months for both. ⚠ Florida institutions deliver it two ways: as clock-hour career certificates (general, airframe and powerplant blocks of 450–480 hours each) and, at a few colleges, as college-credit courses inside an associate degree. Both lead to the same federal certificate; the difference is the transcript and what else it counts toward.",
   "bodyHtml": null,
   "isPublished": true,
   "sortOrder": 74,
   "cips": [
     {
       "cipCode": "47.0607",
-      "note": "Airframe mechanics and aircraft maintenance technology — **13 Florida public institutions**, 297 credentials in 2023."
+      "note": "Airframe mechanics and aircraft maintenance technology — 13 Florida public institutions, 297 credentials in 2023."
     },
     {
       "cipCode": "47.0608",
-      "note": "Aircraft powerplant technology — **11 institutions**, 178 credentials. ⚠ Filed separately from airframe because the FAA rates them separately, and a student can hold one without the other."
+      "note": "Aircraft powerplant technology — 11 institutions, 178 credentials. ⚠ Filed separately from airframe because the FAA rates them separately, and a student can hold one without the other."
     }
   ],
   "related": [

@@ -1,14 +1,14 @@
 {
   "name": "Machining Technology",
   "description": "Machining programmes train the people who cut metal to a tolerance — on lathes, mills and grinders, and on the computer-controlled machines that have largely replaced turning handwheels by hand. ⚠ The trade is measured in thousandths, and the part is either in tolerance or it is scrap.",
-  "degreesNote": "Florida's framework is **Machining Technologies, 1,500 hours across four occupational completion points** — machinist helper, machinist operator, machinist setup operator, machinist — and the ladder inside it is the career: an OPERATOR runs a machine someone else set up, a SETUP operator prepares it, and a MACHINIST decides how the part will be made. ⚠ A separate 12-credit **CNC Machinist/Fabricator** college certificate exists for people adding computer control to existing skills. ⚠⚠ The whole programme is taught at only eleven Florida institutions — a small footprint for a trade this fundamental, and worth checking against where you live before you plan on it.",
+  "degreesNote": "Florida's framework is Machining Technologies, 1,500 hours across four occupational completion points — machinist helper, machinist operator, machinist setup operator, machinist — and the ladder inside it is the career: an OPERATOR runs a machine someone else set up, a SETUP operator prepares it, and a MACHINIST decides how the part will be made. ⚠ A separate 12-credit CNC Machinist/Fabricator college certificate exists for people adding computer control to existing skills. ⚠⚠ The whole programme is taught at only eleven Florida institutions — a small footprint for a trade this fundamental, and worth checking against where you live before you plan on it.",
   "bodyHtml": null,
   "isPublished": true,
   "sortOrder": 76,
   "cips": [
     {
       "cipCode": "48.0503",
-      "note": "Machine shop technology — the programme itself: **11 Florida public institutions** and 86 credentials in 2023. ⚠ A small footprint for a fundamental trade, and the reason this page tells you to check the school list before planning on it."
+      "note": "Machine shop technology — the programme itself: 11 Florida public institutions and 86 credentials in 2023. ⚠ A small footprint for a fundamental trade, and the reason this page tells you to check the school list before planning on it."
     },
     {
       "cipCode": "48.0510",

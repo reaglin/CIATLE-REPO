@@ -1,14 +1,14 @@
 {
   "name": "Electronics Engineering Technology",
   "description": "Electronics engineering technology programmes train the people who build, test and keep electronic systems working — circuits, instrumentation, microcontrollers, programmable controllers and the equipment they sit in. ⚠ It is the applied half of electrical engineering: an associate degree, not a four-year one, and aimed at the bench rather than the design office.",
-  "degreesNote": "This is an **associate degree** programme (A.S. or A.A.S.), usually two years, and at several Florida colleges it continues into a **bachelor's in engineering technology** — which is the reason to check articulation before you enrol. ⚠⚠ Do not confuse it with electrical ENGINEERING: the technology degree is accredited by ABET's ENGINEERING TECHNOLOGY commission, and under Florida law it carries a SIX-year experience requirement for a PE licence against four for an engineering degree. That matters only if licensure is your goal — most electronics technicians never licence — but it is not reversible late.",
+  "degreesNote": "This is an associate degree programme (A.S. or A.A.S.), usually two years, and at several Florida colleges it continues into a bachelor's in engineering technology — which is the reason to check articulation before you enrol. ⚠⚠ Do not confuse it with electrical ENGINEERING: the technology degree is accredited by ABET's ENGINEERING TECHNOLOGY commission, and under Florida law it carries a SIX-year experience requirement for a PE licence against four for an engineering degree. That matters only if licensure is your goal — most electronics technicians never licence — but it is not reversible late.",
   "bodyHtml": null,
   "isPublished": true,
   "sortOrder": 78,
   "cips": [
     {
       "cipCode": "15.03",
-      "note": "Electrical and electronic engineering technologies — **20 Florida public institutions**, with 15.0303 (electrical/electronics technology) the main code at 19 of them and 264 credentials in 2023."
+      "note": "Electrical and electronic engineering technologies — 20 Florida public institutions, with 15.0303 (electrical/electronics technology) the main code at 19 of them and 264 credentials in 2023."
     }
   ],
   "related": [
