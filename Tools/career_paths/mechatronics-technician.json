@@ -1,0 +1,120 @@
+{
+  "name": "Manufacturing and Mechatronics Technician",
+  "cipCode": "15.04",
+  "socCode": "17-3024",
+  "isPublished": true,
+  "sortOrder": 160,
+  "description": "Manufacturing technicians keep automated production running — controls, robotics, instrumentation and the mechanical systems underneath — by following a fault across electrical, mechanical and software boundaries. ⚠ Florida's entry certificate is 300 hours, the shortest on this site, and the training travels much further than the job title suggests.",
+  "credentialNote": "⚠ No licence governs this work, and the certifications are the currency instead. The usual first one is the **MSSC Certified Production Technician**, which Florida's 300-hour Certified Production Technology certificate is built against — four assessments covering safety, quality practices and measurement, manufacturing processes and production, and maintenance awareness. ⚠⚠ After that the certifications that matter are the ones the plants near you run: the control-platform certificates (Allen-Bradley, Siemens) and, in regulated industries, the quality-system training that goes with medical devices or aerospace. **Ask a programme which certifications its graduates hold and which local employers hire them** — in this field that answer is the qualification.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>operate, test, maintain or adjust unmanned, automated, servomechanical or electromechanical equipment</em>. The tasks span three trades at once — <em>test electromechanical assemblies using instruments such as oscilloscopes and voltmeters; install or program computer hardware and microprocessor-based system software; read blueprints and technical documents to determine assembly methods; modify and repair electrical, electronic or mechanical components; inspect parts for surface defects and verify dimensions against specifications</em>.</p> <p>&#9888; <strong>That combination is the whole point of the job.</strong> A plant has electricians, mechanics and programmers; the technician who can follow a fault across all three — sensor to controller to actuator — is the one who gets a line running again, and is paid accordingly.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections for electro-mechanical and mechatronics technicians: <strong>15,000 employed</strong> (2024), growth <strong>&ldquo;slower than average (1% to 2%)&rdquo;</strong>, <strong>1,300 openings a year</strong>, <strong>median wages $73,900 (2025)</strong>. Education: <strong>32% a post-secondary certificate, 30% an associate degree, 11% a bachelor&rsquo;s</strong>.</p> <p>⚠ <strong>Read that occupation code carefully — it is narrow, and the training is not.</strong> 15,000 people nationally is a small occupation, and if you judge this path by that number alone you will misjudge it. The same certificates feed <em>industrial machinery mechanics</em>, <em>electrical and electronics repairers</em>, <em>quality inspectors</em>, <em>process operators</em> and <em>production supervisors</em> — occupations with hundreds of thousands of jobs between them. The narrow title pays well; the training travels much further than the title does.</p>  <h2>⚠⚠ The fastest credential on this site, and what it is for</h2> <p><strong>Certified Production Technology is 300 hours</strong> — a single completion point, and by some distance the shortest programme here. It exists to get someone hireable in a plant quickly, and it is built against the <strong>MSSC Certified Production Technician</strong> assessments: safety, quality practices and measurement, manufacturing processes and production, and maintenance awareness.</p> <p>&#9888; <strong>Treat it as a door rather than a destination.</strong> It gets you inside a manufacturer, where the ladder — and frequently the tuition assistance — is. The 1,200-hour industrial machinery and controls route is where the technician wage actually sits.</p>  <h2>⚠⚠⚠ The 2025 framework exists; the courses do not yet</h2> <p>Florida published <strong>Industrial Machinery and Controls Technician</strong> in 2025 — 1,200 hours, four completion points from assistant through technician II. ⚠ <strong>Its four course numbers are carried by NO Florida institution in the statewide numbering system.</strong> The framework is ahead of the colleges; what they are still teaching is the predecessor set:</p> <ul> <li><strong>Production technology</strong> — production worker, assembler, process assistant and automation and production technology, four institutions each, 150 hours apiece.</li> <li><strong>Industrial machinery maintenance</strong> — assistant, mechanic, technician and specialist, four to five institutions, 150–450 hours.</li> <li><strong>Mechatronics and electronics technician</strong> courses at three to eight institutions.</li> </ul> <p>&#9888; <strong>So do not go looking for the 2025 course numbers.</strong> Ask a programme what it delivers, how many hours, and which certifications it prepares you for — and expect the answer to name the older courses for a while yet. This site lists both, and says which is which.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Electrical diagnosis with instruments</strong> — meters, oscilloscopes, and the discipline to test rather than guess.</li> <li><strong>Controls and PLC logic.</strong> ⚠ The skill that separates this trade from general maintenance: reading ladder logic, tracing an I/O fault, and knowing what the program is asking the machine to do.</li> <li><strong>Mechanical fundamentals</strong> — bearings, drives, alignment, hydraulics and pneumatics. Half of an automation fault is mechanical.</li> <li><strong>Measurement and quality</strong> — calipers, micrometers, tolerance and the reason a part is rejected.</li> <li><strong>Working under a line stoppage.</strong> ⚠ Methodical diagnosis while a plant loses money by the minute is the real test, and it is a temperament as much as a skill.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>Start with the 300-hour certificate if you need income sooner</strong>, then let an employer help with the rest. Manufacturers with hard-to-fill technician roles frequently pay for further training, and being inside is the qualification for that.</li> <li><strong>⚠ Ask specifically about PLCs and robotics.</strong> Programmes differ enormously here — some teach a current Allen-Bradley or Siemens platform on real hardware, others cover controls in principle. It is the difference in employability.</li> <li><strong>Chase the certifications employers name</strong> — MSSC CPT to start, and whatever platform certification the plants near you run.</li> <li><strong>Florida's manufacturing is specific</strong>: aerospace and space-launch suppliers, medical devices, food and beverage, boat building, and building products. ⚠ The plants are regional, so ask a programme which local employers hire its graduates — the good ones answer with names.</li> <li><strong>⚠ Read the electrician path beside this one.</strong> The first year overlaps heavily, the licensing story is completely different, and people regularly discover in year two that they wanted the other one.</li> </ul>",
+  "programs": [
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "The programme itself — 28 Florida public institutions across the electromechanical and instrumentation codes, from a 300-hour entry certificate to the 1,200-hour technician sequence."
+    },
+    {
+      "slug": "electrical-technology",
+      "note": "⚠ The fork worth understanding early: much of the first year is shared, but an electrician wires buildings under a licensing regime while a manufacturing technician keeps machines running inside one. People discover in year two that they wanted the other.",
+      "isRoute": false
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ The degree route above the certificates — automation engineering, maintenance planning and supervision — and the usual way a technician's pay stops being hourly.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "EEV0210",
+      "reason": "Certified Production Technician — the 300-hour entry certificate, mapped to the national MSSC assessments: safety, quality and measurement, manufacturing processes, maintenance awareness. ⚠ The shortest credential on this site and the usual way in.",
+      "variantNote": "⚠ Carried by two institutions under this number (North Florida College and Santa Fe), though the MSSC certification itself is taught far more widely under local course titles. Ask for the CERTIFICATION by name."
+    },
+    {
+      "courseId": "ETI0481",
+      "reason": "Production Worker — 150 hours: the plant floor, safety, measurement and the production process as a system.",
+      "variantNote": "⚠ The production-technology family that colleges actually teach, at four institutions each. ⚠⚠ Florida's 2025 Industrial Machinery and Controls framework replaces this set with four new courses — which NO institution carries yet. Ask what a programme delivers, not which framework it cites."
+    },
+    {
+      "courseId": "ETI0482",
+      "reason": "Assembler — 150 hours: assembly methods, blueprints and work instructions.",
+      "variantNote": "⚠ The production-technology family that colleges actually teach, at four institutions each. ⚠⚠ Florida's 2025 Industrial Machinery and Controls framework replaces this set with four new courses — which NO institution carries yet. Ask what a programme delivers, not which framework it cites."
+    },
+    {
+      "courseId": "ETI0484",
+      "reason": "Process Assistant — 150 hours: process control, documentation and quality checks.",
+      "variantNote": "⚠ The production-technology family that colleges actually teach, at four institutions each. ⚠⚠ Florida's 2025 Industrial Machinery and Controls framework replaces this set with four new courses — which NO institution carries yet. Ask what a programme delivers, not which framework it cites."
+    },
+    {
+      "courseId": "ETI0485",
+      "reason": "Automation and Production Technology — 150 hours. ⚠ The course that matters most on this list: automated systems, sensors and controls, which is where the technician wage separates from the operator wage.",
+      "variantNote": "⚠ The production-technology family that colleges actually teach, at four institutions each. ⚠⚠ Florida's 2025 Industrial Machinery and Controls framework replaces this set with four new courses — which NO institution carries yet. Ask what a programme delivers, not which framework it cites."
+    },
+    {
+      "courseId": "EEV0753",
+      "reason": "Mechatronic Technician — 400 hours combining electrical, mechanical and control systems. ⚠ The closest single course to the occupation this path is named for.",
+      "variantNote": "⚠ Three institutions carry it. Where it is not offered, the combination of the automation course above and the electronics technician course below is the usual substitute."
+    },
+    {
+      "courseId": "EEV0616",
+      "reason": "Electronics Technician — 375 hours: circuits, instruments and troubleshooting, at eight institutions and the widest-carried electronics course of its kind here.",
+      "variantNote": "⚠ Eight carriers — more than any other course on this path, and a good fallback where mechatronics is not taught nearby."
+    },
+    {
+      "courseId": "ETI0450",
+      "reason": "Industrial Machinery Maintenance Assistant — 450 hours: the maintenance route's entry point, and a hireable exit.",
+      "variantNote": "⚠ The industrial machinery maintenance family — four to five institutions. It overlaps the production family above and leads toward the industrial machinery mechanic occupation, which is far larger than the mechatronics title this path is filed under."
+    },
+    {
+      "courseId": "ETI0456",
+      "reason": "Machinery Maintenance Mechanic — 300 hours: bearings, drives, alignment, hydraulics and pneumatics.",
+      "variantNote": "⚠ The industrial machinery maintenance family — four to five institutions. It overlaps the production family above and leads toward the industrial machinery mechanic occupation, which is far larger than the mechatronics title this path is filed under."
+    },
+    {
+      "courseId": "ETI0457",
+      "reason": "Machinery Maintenance Technician — 150 hours: the diagnostic end of the maintenance sequence.",
+      "variantNote": "⚠ The industrial machinery maintenance family — four to five institutions. It overlaps the production family above and leads toward the industrial machinery mechanic occupation, which is far larger than the mechatronics title this path is filed under."
+    },
+    {
+      "courseId": "ETI0458",
+      "reason": "Industrial Maintenance Specialist — 450 hours. ⚠ The longest course in this family and the closest to a full plant-maintenance qualification.",
+      "variantNote": "⚠ The industrial machinery maintenance family — four to five institutions. It overlaps the production family above and leads toward the industrial machinery mechanic occupation, which is far larger than the mechatronics title this path is filed under."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Electro-Mechanical and Mechatronics Technologists and Technicians (17-3024.00)",
+      "url": "https://www.onetonline.org/link/summary/17-3024.00",
+      "note": "Task statements, 15,000 employed (2024), growth “slower than average (1% to 2%)”, 1,300 annual openings, median wages $73,900 (2025). ⚠ A narrow occupation code for training that travels much further — the page says so plainly."
+    },
+    {
+      "label": "Florida CTE framework — Industrial Machinery and Controls Technician, 2025 (CIP 0615040607)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "⚠ 1,200 hours, four occupational completion points — and its four course numbers have no carriers in SCNS yet, which is the finding this page leads with."
+    },
+    {
+      "label": "Florida CTE framework — Certified Production Technology, 2025 (CIP 0615049905)",
+      "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+      "note": "300 hours, one completion point — the shortest programme on this site, built against the MSSC assessments."
+    },
+    {
+      "label": "MSSC — Manufacturing Skill Standards Council",
+      "url": "https://www.msscusa.org/",
+      "note": "The Certified Production Technician credential the 300-hour certificate maps to: safety, quality practices and measurement, manufacturing processes and production, maintenance awareness."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "28 Florida public institutions award in CIP 15.04, with electromechanical technology (15.0406) the largest single code at 16 institutions and 87 credentials."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠ The evidence that the 2025 framework's courses are not yet carried, and the carrier counts for the production, mechatronics and maintenance courses that are."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 15.04 Electromechanical and Instrumentation and Maintenance Technologies, the group this path is filed under."
+    }
+  ]
+}

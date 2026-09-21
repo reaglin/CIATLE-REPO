@@ -30,7 +30,7 @@ ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC',
             'II', 'III', 'IV', 'I', 'V', 'VI',
             # welding and metalwork processes -- they are initialisms, not words
             'SMAW', 'GMAW', 'FCAW', 'GTAW', 'GTA', 'MIG', 'TIG', 'CNC', 'NDT', 'EV', 'CNG', 'LPG',
-            'HVAC', 'R', 'AC', 'EPA', 'ASE', 'OSHA'}
+            'HVAC', 'R', 'AC', 'EPA', 'ASE', 'OSHA', 'FAA', 'A&P', 'NEC', 'MSSC', 'CPT', 'PLC'}
 
 
 def _word(w, edge):

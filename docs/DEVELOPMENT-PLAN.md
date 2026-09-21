@@ -1,7 +1,7 @@
 # Development plan — Florida Course Repository (CIATLE-REPO)
 
 The live site is **[floridacourserepo.com](https://floridacourserepo.com)** — 24,415 courses,
-2,504 curriculum guides, **17 career paths and 22 programmes** as of 2026-09-20, with 60 curated links between them and no programme left without a career. This file is where
+2,504 curriculum guides, **19 career paths and 24 programmes** as of 2026-09-20, with 60 curated links between them and no programme left without a career. This file is where
 planning and status live for **the site and its APIs** (the root session). Guide *content* is
 planned and tracked by the `Tools/` session in `Tools/NEXT_SESSION.md`, `Tools/SOURCES.md` and
 `Tools/REVIEW_QUEUE.md`; only the items that need site code or a deploy appear here.
@@ -67,7 +67,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 ## Phase 4 — Career path content (the 50-path queue) ⚠️
 
 `Tools/career_paths/QUEUE.csv` — 50 paths ranked, each with its CIP anchor, SOC code and cluster.
-**17 published as of 2026-09-20** — the seven engineering paths, Registered Nurse, Lawyer, Data Scientist, environmental/computer-hardware/materials engineer, and the four CTE paths (automotive, welder, HVAC, electrician). **33 to go.**
+**19 published as of 2026-09-20** — the seven engineering paths, Registered Nurse, Lawyer, Data Scientist, environmental/computer-hardware/materials engineer, and the four CTE paths (automotive, welder, HVAC, electrician), plus aviation maintenance and manufacturing/mechatronics. **31 to go.**
 
 | # | Task | Done when |
 |---|---|---|
@@ -88,6 +88,8 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 4.15 | ✅ `scratchpad/list_missing.py` now sends **clock hours** and handles trade acronyms (SMAW, GMAW, TIG) and hyphenated titles — it was built for credit courses and would have published the whole CTE catalogue with no measure of length at all | Used for the 13 welding courses; it is the tool every CTE path will need |
 | 4.16 ⚠️ | **HVAC Technician — LIVE 2026-09-20** (queue rank 23), with an **HVAC/R Technology** programme. ⚠⚠ The queue filed HVAC under CIP 47.02 (31 institutions, 111 credentials); **Florida files it under 15.0501 — 45 institutions, 891 credentials** — and 15.05 was missing from the seeded tree, so both documents are refused 422 until `cip.json` (now 209 nodes) ships | ⚠ **Deploy, then `programs.py push hvac-technology` and `career_paths.py push hvac-technician`.** The page's own findings: EPA Section 608 is federal law, Florida LICENSES the contractor under Chapter 489 (Class A unlimited, Class B capped at 25 tons), and ⚠⚠ **the framework moved ahead of the colleges** — the current courses are at 4–6 institutions, the predecessor family at 22–25, and no institution carries both |
 | 4.17 ⚠️ | **Electrician — LIVE 2026-09-20** (queue rank 24), with an **Electrical Technology** programme (CIP 46.0302, 41 institutions, 741 credentials). It is held only because it links to the HVAC programme, which is itself held by the CIP seed | ⚠ The page's findings: **81,000 openings a year — the largest on this site**; ⚠⚠ **Florida licenses the CONTRACTOR, not the electrician** (Chapter 489 Part II) and there is **no statewide journeyman licence** — counties and municipalities set those, so the advice is to ring the county building department before enrolling; and **two routes in**, the 1,200/1,500-hour certificate at 26 technical colleges, or a registered apprenticeship whose classroom half (Electrical Wiring I–VIII) runs at six to eight STATE colleges while you are paid to work |
+| 4.18 ⚠️ | **Aviation Maintenance Technician — LIVE 2026-09-20** (rank 25), with an **Aviation Maintenance Technology** programme (CIP 47.0607/47.0608, 16 institutions) | ⚠ **$79,870 median — the highest-paid trade on the site.** The finding: ⚠⚠ **the FAA writes the curriculum, not Florida.** 14 CFR 65.77 gives two routes — an FAA-certificated Part 147 school, or 18 months of documented experience for one rating and 30 for both — so the first question to any programme is whether it holds Part 147 and for which ratings |
+| 4.19 ⚠️ | **Manufacturing and Mechatronics Technician — LIVE 2026-09-20** (rank 15), with an **Advanced Manufacturing Technology** programme (CIP 15.04, 28 institutions) | ⚠ Two findings: Florida's **300-hour Certified Production Technology certificate is the shortest credential on the site** and maps to the national MSSC assessments; and ⚠⚠ **the 2025 Industrial Machinery and Controls framework has NO carriers yet** — its four course numbers are taught nowhere, so the page lists what colleges actually deliver and says which is which. ⚠ The page also warns that the SOC code (15,000 jobs) badly understates where this training leads |
 
 ## Phase 5 — Guide-field changes still owed to the `Tools/` session
 

@@ -1,0 +1,110 @@
+{
+  "name": "Aviation Maintenance Technician",
+  "cipCode": "47.06",
+  "socCode": "49-3011",
+  "isPublished": true,
+  "sortOrder": 150,
+  "description": "Aviation maintenance technicians inspect, repair and sign off aircraft — and the signature is the job: a mechanic returning an aircraft to service puts their federal certificate behind the entry. ⚠ It is the highest-paid trade on this site ($79,870 median) and the only one whose curriculum the FAA writes.",
+  "credentialNote": "⚠⚠⚠ THE CREDENTIAL IS FEDERAL, NOT STATE. The destination is the FAA mechanic certificate with **Airframe and Powerplant ratings**, awarded by the FAA after a written, an oral and a practical test for each rating. Under 14 CFR 65.77 there are two ways to become eligible: **graduate from an FAA-certificated Part 147 school**, which issues an authenticated document, or **document practical experience — at least 18 months for one rating, at least 30 months concurrently for both**. ⚠⚠ So the first question to ask a programme is whether it holds a Part 147 certificate and for which ratings; a programme without one is not a shorter route, it is the experience route with coursework attached. ⚠ Airframe and powerplant are SEPARATE ratings and can be earned separately — most employers advertise for both.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>diagnose, adjust, repair or overhaul aircraft engines and assemblies, such as hydraulic and pneumatic systems</em>. The tasks are exacting — <em>inspect completed work to certify that maintenance meets standards and that the aircraft is ready for operation; read and interpret maintenance manuals, service bulletins and specifications to determine the feasibility and method of repairing or replacing malfunctioning or damaged components; maintain repair logs documenting all preventive and corrective aircraft maintenance; inspect airframes for wear or other defects</em>.</p> <p>&#9888; <strong>The logbook is part of the job, not paperwork around it.</strong> A repair that is not documented did not legally happen, and a mechanic who signs a return to service is putting their certificate behind that entry. People who enjoy the mechanical work and resent the recording find this trade harder than they expected.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>139,400 aircraft mechanics and service technicians employed</strong> (2024), growth <strong>&ldquo;average (3% to 4%)&rdquo;</strong>, <strong>11,300 openings a year</strong>, and <strong>median wages $79,870 (2025)</strong> — $38.40 an hour.</p> <p>⚠ <strong>That is the highest-paid trade on this site by a wide margin</strong> — about $17,000 above HVAC and $26,000 above welding at the median. The education profile explains part of it: <strong>66% of respondents said a post-secondary certificate is required and 15% an associate degree</strong>, against 10% a high school diploma. This is a licensed, federally examined occupation, and the barrier to entry is what holds the wage up.</p>  <h2>⚠⚠⚠ The FAA sets the curriculum, not Florida — and it changes what to ask a school</h2> <p>Every other trade on this site is governed by a Florida framework. This one is not. The qualification is the <strong>FAA mechanic certificate with Airframe and Powerplant ratings</strong>, and 14 CFR 65.77 gives two ways to become eligible for the tests:</p> <ul> <li><strong>Graduate from a certificated aviation maintenance technician school</strong> — a school approved by the FAA under Part 147 — which produces <em>an authenticated document</em> establishing your eligibility; or</li> <li><strong>Document practical experience</strong>: <em>at least 18 months</em> for a single rating, or <em>at least 30 months concurrently performing the duties appropriate to both</em> for the pair.</li> </ul> <p>&#9888; <strong>So the first question to ask any programme is whether it holds an FAA Part 147 certificate</strong>, and for which ratings. A programme without it is not a shorter route — it is a different route, and the clock on your 18 or 30 months only counts supervised work.</p> <p>⚠ Then three tests per rating: <strong>written, oral and practical</strong>. The A&P is awarded by the FAA, not by the college.</p>  <h2>⚠⚠ Where it is taught in Florida, and the two shapes it comes in</h2> <p><strong>Sixteen Florida public institutions</strong> award in this field — 13 in airframe, 11 in powerplant — including George T. Baker Aviation Technical College, Lindsey Hopkins, Lorenzo Walker, Traviss, Haney and George Stone among the technical colleges, and Broward, Miami Dade, Eastern Florida State, FSCJ, Indian River State, Northwest Florida State, Pasco-Hernando and Polk State among the colleges.</p> <p>⚠ In the course catalogue it appears as <strong>two different course families</strong>: blocks of <strong>480 hours</strong> paired as airframe 1/2 and powerplant 1/2 at five institutions, and blocks of <strong>450 hours</strong> with a separate general-technician course at three. ⚠ Both add up to a Part 147 programme; the split differs because the FAA sets the content and the college sets the packaging. <strong>Ask how many hours in total, and which ratings the programme covers.</strong></p> <p>⚠⚠ <strong>Airframe and powerplant are separate ratings and can be earned separately.</strong> Holding one is employable; holding both is what most employers advertise for, and the difference in the experience route is 18 months against 30.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Precision and procedure.</strong> Torque values, safety wire, inspection intervals — the work is done to a manual, and deviation is a finding rather than a shortcut.</li> <li><strong>Reading maintenance documentation</strong> — manuals, service bulletins, airworthiness directives. ⚠ A large part of the skill is knowing which document governs.</li> <li><strong>Systems diagnosis</strong> across hydraulics, pneumatics, electrical and engines, often with the aircraft out of service and a schedule pressing.</li> <li><strong>Record-keeping you can defend.</strong> Your logbook entries are legal statements.</li> <li><strong>Composure about consequences.</strong> ⚠ The work is safety-critical in a way most jobs are not, and the culture — checklists, sign-offs, independent inspection — exists for that reason.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Confirm the FAA Part 147 certificate before anything else</strong>, and confirm which ratings it covers. It is the single fact that determines how you become eligible for the tests.</li> <li><strong>Take both ratings if you can.</strong> A&P together is what job adverts ask for, and doing them in one programme is far cheaper than adding the second later through experience.</li> <li><strong>Florida is unusually good ground for this trade</strong> — major airline maintenance bases, a large general-aviation fleet, corporate and charter operators, and space-coast contractors. The work is where the aircraft are, and they are here.</li> <li><strong>Keep every logbook and employment record from day one</strong>, whichever route you take. The experience route is entirely documentary, and the certificate route still expects you to evidence work later for inspection authorisations.</li> <li><strong>Look at avionics beside this</strong> — aircraft electrical and electronic systems is a separate, growing specialism with its own 1,200-hour Florida certificate, and it pairs well with an A&P.</li> </ul>",
+  "programs": [
+    {
+      "slug": "aviation-maintenance-technology",
+      "note": "The programme itself — 16 Florida public institutions across the airframe and powerplant codes. ⚠ The programme page lists them; check each one's FAA Part 147 status and ratings before applying."
+    },
+    {
+      "slug": "automotive-technology",
+      "note": "⚠ Named for comparison rather than as a route: both are diagnostic mechanical trades at the same technical colleges, but aviation is federally certificated, pays about half again as much at the median, and lives on documentation.",
+      "isRoute": false
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "⚠ Where an A&P goes next without leaving aviation — avionics, non-destructive testing and aviation maintenance management are all filed in the engineering-technology series.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "AMT0705",
+      "reason": "General — the shared foundation both ratings require: basic electricity, materials, weight and balance, mathematics, regulations and the maintenance forms. 450 hours.",
+      "variantNote": "⚠ The 450-hour family, carried by George Stone, George T. Baker Aviation and Haney. The same Part 147 content as the 480-hour pairing above, divided differently."
+    },
+    {
+      "courseId": "AMT0765",
+      "reason": "Airframe 1 — structures, sheet metal, assembly and rigging. 450 hours.",
+      "variantNote": "⚠ The 450-hour family, carried by George Stone, George T. Baker Aviation and Haney. The same Part 147 content as the 480-hour pairing above, divided differently."
+    },
+    {
+      "courseId": "AMT0766",
+      "reason": "Airframe 2 — airframe systems: hydraulics, landing gear, fuel, environmental and instruments. 450 hours.",
+      "variantNote": "⚠ The 450-hour family, carried by George Stone, George T. Baker Aviation and Haney. The same Part 147 content as the 480-hour pairing above, divided differently."
+    },
+    {
+      "courseId": "AMT0775",
+      "reason": "Powerplant 1 — reciprocating and turbine engine theory, overhaul and inspection. 450 hours.",
+      "variantNote": "⚠ The 450-hour family, carried by George Stone, George T. Baker Aviation and Haney. The same Part 147 content as the 480-hour pairing above, divided differently."
+    },
+    {
+      "courseId": "AMT0776",
+      "reason": "Powerplant 2 — engine systems: ignition, fuel metering, lubrication, propellers and engine instruments. 450 hours.",
+      "variantNote": "⚠ The 450-hour family, carried by George Stone, George T. Baker Aviation and Haney. The same Part 147 content as the 480-hour pairing above, divided differently."
+    },
+    {
+      "courseId": "AMT0710",
+      "reason": "Airframe, first 480-hour block — the same FAA airframe content in the other packaging.",
+      "variantNote": "⚠ One of TWO course families for the same FAA content. This 480-hour pairing is carried by five institutions (George T. Baker Aviation, Lindsey Hopkins, Lorenzo Walker, Traviss and Haney); three others use 450-hour blocks with a separate general course. ⚠ The FAA sets the content, the college sets the packaging — ask for total hours and ratings, not for a course number."
+    },
+    {
+      "courseId": "AMT0711",
+      "reason": "Airframe, second 480-hour block. ⚠ Completing the airframe sequence qualifies you for that RATING; the powerplant rating is separate.",
+      "variantNote": "⚠ One of TWO course families for the same FAA content. This 480-hour pairing is carried by five institutions (George T. Baker Aviation, Lindsey Hopkins, Lorenzo Walker, Traviss and Haney); three others use 450-hour blocks with a separate general course. ⚠ The FAA sets the content, the college sets the packaging — ask for total hours and ratings, not for a course number."
+    },
+    {
+      "courseId": "AMT0720",
+      "reason": "Powerplant, first 480-hour block.",
+      "variantNote": "⚠ One of TWO course families for the same FAA content. This 480-hour pairing is carried by five institutions (George T. Baker Aviation, Lindsey Hopkins, Lorenzo Walker, Traviss and Haney); three others use 450-hour blocks with a separate general course. ⚠ The FAA sets the content, the college sets the packaging — ask for total hours and ratings, not for a course number."
+    },
+    {
+      "courseId": "AMT0721",
+      "reason": "Powerplant, second 480-hour block. ⚠ Both ratings together are what most employers advertise for — and doing them in one programme is far cheaper than adding the second later through 30 months of documented experience.",
+      "variantNote": "⚠ One of TWO course families for the same FAA content. This 480-hour pairing is carried by five institutions (George T. Baker Aviation, Lindsey Hopkins, Lorenzo Walker, Traviss and Haney); three others use 450-hour blocks with a separate general course. ⚠ The FAA sets the content, the college sets the packaging — ask for total hours and ratings, not for a course number."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Aircraft Mechanics and Service Technicians (49-3011.00)",
+      "url": "https://www.onetonline.org/link/summary/49-3011.00",
+      "note": "Task statements, 139,400 employed (2024), growth “average (3% to 4%)”, 11,300 annual openings, median wages $79,870 (2025) — ⚠ the highest-paid trade on this site — and the education split: 66% a post-secondary certificate, 15% an associate degree."
+    },
+    {
+      "label": "14 CFR 65.77 — Mechanic certificate: experience requirements",
+      "url": "https://www.law.cornell.edu/cfr/text/14/65.77",
+      "note": "⚠⚠ The two routes, quoted on this page: an authenticated document from a certificated aviation maintenance technician school under § 147.21, OR at least 18 months of practical experience for a single rating and 30 months concurrently for both."
+    },
+    {
+      "label": "14 CFR Part 147 — Aviation Maintenance Technician Schools",
+      "url": "https://www.law.cornell.edu/cfr/text/14/part-147",
+      "note": "⚠ The FAA certification a school must hold. Ask any programme for it, and for the ratings it covers, before enrolling."
+    },
+    {
+      "label": "FAA — Become a mechanic",
+      "url": "https://www.faa.gov/mechanics/become",
+      "note": "The federal authority's own summary of eligibility, the written/oral/practical tests and the certificate itself. ⚠ faa.gov refused this project's tooling on 2026-09-20 (HTTP 403), so the regulation links above carry the citations instead."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "13 Florida public institutions award in airframe (47.0607) with 297 credentials and 11 in powerplant (47.0608) with 178 — 16 institutions in total across the two."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠ The evidence for the two course families: 480-hour airframe/powerplant pairs at five institutions, 450-hour blocks with a separate general course at three."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 47.06 Vehicle Maintenance and Repair Technologies, the group this path is filed under."
+    }
+  ]
+}

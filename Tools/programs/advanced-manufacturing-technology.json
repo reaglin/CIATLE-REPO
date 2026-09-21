@@ -1,0 +1,28 @@
+{
+  "name": "Advanced Manufacturing Technology",
+  "description": "Advanced manufacturing programmes train the people who keep a modern production line running — automation, controls, robotics, instrumentation and the mechanical systems underneath them. ⚠ It is the trade that sits where electrical work, mechanical work and programming meet, which is exactly why it is hard to fill.",
+  "degreesNote": "Florida stacks this one from a very short entry point upward. The **Certified Production Technology** certificate is **300 hours** and a single completion point — the fastest credential on this site — and it maps to the national MSSC Certified Production Technician assessments. Above it, **Industrial Machinery and Controls Technician** runs **1,200 hours across four completion points**, from assistant to technician II. ⚠⚠ That second framework is **new in 2025 and its course numbers have no carriers yet**: colleges are still teaching the predecessor courses — production technology, automation, mechatronics and industrial machinery maintenance — so ask what a programme actually delivers rather than which framework it names. An associate degree in engineering technology sits above both.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 75,
+  "cips": [
+    {
+      "cipCode": "15.04",
+      "note": "Electromechanical and instrumentation technologies — the whole family: **28 Florida public institutions**, with 15.0406 (electromechanical technology) the largest single code at 16 institutions. ⚠ Claimed at series level deliberately, because Florida spreads this training across instrumentation, automation and electromechanical codes and a student searching one would miss the others."
+    }
+  ],
+  "related": [
+    {
+      "slug": "electrical-technology",
+      "note": "⚠ The nearest neighbour, and a genuine fork: an electrician wires buildings to the code, a manufacturing technician keeps machines and controls running inside one. Much of the first year is shared, and the two trades poach each other constantly."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "The degree route above the certificates — and the usual next step for a technician moving toward automation engineering, maintenance planning or supervision."
+    },
+    {
+      "slug": "welding-technology",
+      "note": "The fabrication side of the same plant. Maintenance technicians who can weld are markedly more useful in a breakdown, and both certificates are taught at the same technical colleges."
+    }
+  ]
+}
