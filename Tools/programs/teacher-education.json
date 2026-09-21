@@ -1,0 +1,37 @@
+{
+  "name": "Teacher Education",
+  "description": "Teacher education programmes prepare people to be certified classroom teachers — the subject content, how children learn it, how to plan and assess, how to manage a room, and a supervised internship in a real school. Florida structures them around its own certification requirements, so the degree and the licence are designed together rather than sequentially.",
+  "degreesNote": "Taught at 35 Florida public institutions across the levels-and-methods codes, with 2,282 credentials in the 2023 federal award year, plus 877 in specific subject areas and 936 in special education. UCF is the largest producer in the state at 1,164 across all education codes, then UF 906, FSU 741, FIU 706, UWF 624. ⚠ Elementary education (1,188 credentials at 21 institutions) and early childhood (842 at 31) dominate the volume. ⚠⚠ The important structural point: a Florida teacher preparation programme is built to deliver the STATE CERTIFICATE, not just a degree, so it embeds the required reading, ESOL and exceptional-student-education content and the supervised internship. ⚠⚠⚠ That matters because Florida also permits an ALTERNATIVE route — any bachelor's degree plus a subject-area examination gets you a temporary certificate and a classroom — so the degree competes with a cheaper path. What the degree buys is the preparation, the internship and a professional certificate without the clock running."
+  ,
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 58,
+  "cips": [
+    {
+      "cipCode": "13.12",
+      "note": "Teacher education, specific levels and methods — 35 Florida public institutions and 2,282 credentials in the 2023 federal award year. Elementary education alone is 1,188 at 21 institutions and early childhood 842 at 31, so this is where most Florida teachers are trained."
+    },
+    {
+      "cipCode": "13.13",
+      "note": "Teacher education, specific subject areas — 19 Florida public institutions and 877 credentials. The secondary route: mathematics, science, social studies, English and the rest, each tied to its own subject-area certification examination."
+    },
+    {
+      "cipCode": "13.10",
+      "note": "Special education and teaching — 19 Florida public institutions and 936 credentials. ⚠ A distinct certification area with its own examinations, and one Florida treats as a critical-shortage field."
+    },
+    {
+      "cipCode": "13.01",
+      "note": "Education, general — 6 Florida public institutions and 301 credentials. Included so that programmes filed under the general code are not lost from the school list."
+    }
+  ],
+  "related": [
+    {
+      "slug": "business-administration",
+      "note": "⚠ Named because Florida's alternative certification route accepts ANY bachelor's degree plus a subject-area examination, so a business degree can lead to a classroom. ⚠⚠ What it does not give you is the supervised internship or the reading, ESOL and exceptional-student-education preparation Florida requires, which you would then complete while already teaching on a temporary certificate."
+    },
+    {
+      "slug": "computer-science",
+      "note": "⚠ Named for the same reason and with a sharper edge: Florida treats mathematics, science and computer science as shortage areas, so a subject degree plus the subject-area examination is a genuinely open door into teaching. ⚠⚠ It is also the door most often taken in the other direction — subject graduates who try teaching and leave, because the pay ceiling in Florida is far below what those degrees earn elsewhere."
+    }
+  ]
+}

@@ -8,7 +8,7 @@ Builds each course from the SCNS flat file: the modal institution title (title-c
 the modal integer credit, and every PUBLIC carrier as an offering with its own title and
 credits. ⚠ Public institutions only, per Ron's 2026-09-11 scope rule.
 """
-import sys, os, collections, json
+import sys, os, collections, json, io
 sys.path.insert(0, 'scratchpad')
 import scns, requests
 
@@ -34,7 +34,9 @@ ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC',
             # health professions -- credentials and modalities that are initialisms
             'PTA', 'OTA', 'RDH', 'MLS', 'MLT', 'RRT', 'CRT', 'EKG', 'ECG', 'EEG', 'IV', 'CPR',
             'ACLS', 'BLS', 'PALS', 'NRP', 'ABG', 'PT', 'OT', 'ADL', 'ROM', 'TENS', 'PPE',
-            'EMT', 'EMR', 'AEMT', 'EMS', 'ALS', 'NREMT', 'CPAT', 'ARRT', 'NBRC'}
+            'EMT', 'EMR', 'AEMT', 'EMS', 'ALS', 'NREMT', 'CPAT', 'ARRT', 'NBRC',
+            # education
+            'ESOL', 'ESE', 'IEP', 'FTCE', 'TESOL', 'ELL', 'STEM', 'K-12', 'GED'}
 
 
 def _word(w, edge):
@@ -131,7 +133,16 @@ def build(ids):
 def main():
     args = sys.argv[1:]
     push = '--push' in args
-    ids = [a.upper() for a in args if not a.startswith('--')]
+    # ⚠ A whole-prefix sweep can exceed the OS command-line limit (hit at 4,706 ids
+    # on the education prefixes, 2026-09-21), so accept a file of ids as well.
+    ids = []
+    rest = [a for a in args if not a.startswith('--')]
+    if '--file' in args:
+        path = args[args.index('--file') + 1]
+        rest = [a for a in rest if a != path]
+        ids += io.open(path, encoding='utf-8').read().split()
+    ids += rest
+    ids = [a.upper() for a in ids]
     courses = build(set(ids))
     if not push:
         print('\ndry run -- pass --push to send %d course(s) to %s' % (len(courses), BASE))
