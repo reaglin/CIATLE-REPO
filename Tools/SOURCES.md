@@ -7897,15 +7897,29 @@ is for**, and it changes the advice a student needs.
 
 1. **Every Professional Track course states that "students will perform *virtual* laboratory activities."**
    There is no bench component anywhere in the track.
-2. **The track contains no hospital rotations.** `MLS4820L`–`4825L` belong to the standard track only.
+2. ~~**The track contains no hospital rotations.** `MLS4820L`–`4825L` belong to the standard track only.~~
+   ❌ **CORRECTED 2026-09-21 (medical laboratory scientist career path).** This was wrong in two ways.
+   **`MLS4820L`–`4825L` are SANTA FE COLLEGE's discipline internships, not UWF's at all.** UWF's rotations
+   are **`MLS4944`–`MLS4947` Clinical Practicum I–IV**, *"supervised practice in an affiliated hospital
+   laboratory&hellip; this course is a clinical internship and will count toward the students' clinical
+   hours"* — and **they list the Professional Track `C` courses as CO-REQUISITES** (`MLS4945`:
+   *Co-requisite: MLS 4306C, MLS 4461C, MLS 4506C*; `MLS4947` requires all ten plus `MLS4944`–`4946`).
+   ⚠⚠ **So the rotations exist and are taken alongside the track.** The virtual laboratories replace
+   CAMPUS bench teaching, not hospital practice.
 3. **⚠⚠⚠ `MLS4704`, the track capstone, requires the student to *"provide evidence of adequate training or
    work experience in Hematology, Clinical Chemistry, Microbiology, and Blood Bank **equivalent to an MLS
    clinical internship**"* and present it as a portfolio.**
 
-**Read together: the portfolio stands in place of the clinical rotations, and the virtual laboratories
-replace bench teaching — because the track assumes the bench competence already exists and needs
-evidencing rather than building.** That is a degree-completion pathway for a working technician or
-experienced laboratorian.
+**Read together (as revised 2026-09-21): the virtual laboratories replace CAMPUS bench teaching, and
+`MLS4704`'s portfolio is an ALTERNATIVE way to satisfy the clinical requirement for someone who already
+has the experience — while `MLS4944`–`4947` remain available as the hospital route.** So the track
+serves degree completion for a working laboratorian **without being closed to a traditional student**,
+which is the part the original reading got wrong.
+
+⚠ **What still stands, and it is the consequential half:** a student with no laboratory work experience
+**cannot satisfy `MLS4704` by portfolio** and must do the practicum sequence. **The question to ask is
+therefore "does the version I am registering for include supervised hospital practice, or assume I
+already have it?"** — not "is this track closed to me?".
 
 **⚠ This is an inference from the catalog text, not a quotation, and every guide labels it as such.**
 It is stated anyway because the consequence is large: **a student with no laboratory work experience

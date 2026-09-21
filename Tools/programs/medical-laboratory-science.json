@@ -1,0 +1,32 @@
+{
+  "name": "Medical Laboratory Science",
+  "description": "Medical laboratory programmes train the people who actually produce the test results a diagnosis is made from — running and validating assays in haematology, clinical chemistry, microbiology, immunology and the blood bank, spotting the result that is wrong before it reaches a physician, and keeping the instruments and the quality control honest. It is hospital work with almost no patient contact, and it runs at two levels: a two-year technician degree and a four-year scientist degree.",
+  "degreesNote": "This programme spans a genuine LADDER, and knowing which rung you are on matters more here than in most fields. The ASSOCIATE degree (medical laboratory TECHNICIAN, MLT) is offered at 9 Florida public institutions and produced 126 credentials in the 2023 federal award year. The BACHELOR'S (medical laboratory SCIENTIST, MLS, historically medical technologist) is offered at only 5 — the University of West Florida, UCF, Santa Fe College, FGCU and USF — and produced 107. ⚠ Santa Fe is a state college awarding a baccalaureate, so do not assume the bachelor's means a university. ⚠⚠ The ladder is real and is built into the courses: Florida carries a statewide course titled Diagnostic Microbiology for the MLT to MLS Track. A technician can bridge to scientist, which is not true of most certificate-to-degree pairs on this site. ⚠⚠⚠ But read a bachelor's curriculum carefully before enrolling: UWF runs every core subject twice, once as a lecture-plus-laboratory pair and once as a Professional Track course using VIRTUAL laboratories and requiring permission, and the Professional Track capstone asks for evidence of work experience equivalent to a clinical internship.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 88,
+  "cips": [
+    {
+      "cipCode": "51.1005",
+      "note": "Clinical laboratory science / medical technology — the BACHELOR'S and the route to the technologist licence. Only 5 Florida public institutions and 107 credentials in the 2023 federal award year: UWF 34, UCF 28, Santa Fe College 26, FGCU 11, USF 8. ⚠ Santa Fe is a state college holding baccalaureate authority, and it is the third largest producer in the state."
+    },
+    {
+      "cipCode": "51.1004",
+      "note": "Clinical / medical laboratory technician — the ASSOCIATE degree, 9 Florida public institutions and 126 credentials: Miami Dade 47, Eastern Florida 22, Hillsborough 18 by certificate, FSCJ 13, Indian River 13. ⚠ Included deliberately: a school with only the MLT degree has a medical laboratory programme, and the MLT-to-MLS bridge is a real route rather than a courtesy."
+    }
+  ],
+  "related": [
+    {
+      "slug": "radiologic-technology",
+      "note": "⚠ The comparison that decides it for many people, and it is not about the science. Both are hospital diagnostic programmes at overlapping colleges — but a radiographer spends the day with patients and a laboratory scientist spends it with specimens and instruments. ⚠⚠ Radiography also pays substantially more at entry ($80,110 against $62,930) on a two-year degree rather than a four-year one, which is worth knowing before you commit four years."
+    },
+    {
+      "slug": "respiratory-therapy",
+      "note": "The other hospital programme students weigh against this one. ⚠ Respiratory therapy is two years to a median of $82,280 and is intensely patient-facing and unpredictable; laboratory science is four years to $62,930 and is bench work on a schedule. ⚠⚠ Neither is the better programme — they suit opposite temperaments, and the money runs the other way from the training time."
+    },
+    {
+      "slug": "nursing",
+      "note": "⚠ Worth naming because medical laboratory science is often discovered by people who started toward nursing and found they preferred the science to the bedside. Nursing is at 78 Florida institutions against 14 here, so it is far easier to find locally, and it has a long degree ladder. ⚠⚠ The laboratory has the opposite profile: few programmes, little patient contact, and specialisation by discipline rather than by unit."
+    }
+  ]
+}

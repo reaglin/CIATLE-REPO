@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **82** |
+| ⏳ **Awaiting a decision from Ron** | **84** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **111** |
+| **Total items** | **113** |
 
 ---
 
-### ⏳ Awaiting a decision (82)
+### ⏳ Awaiting a decision (84)
 
 | # | Item |
 |---|---|
@@ -119,6 +119,8 @@ continues around every one of them.
 | **109** | `scns.is_public()` EXCLUDES DISTRICT TECHNICAL COLLEGES — which is the whole CTE sector (found 2026-09-20, automotive path) |
 | **110** | The CIP tree shows the 4-DIGIT group title where a 6-digit code is claimed (found 2026-09-21, respiratory therapy path) |
 | **111** | Five widely-carried gen-ed courses still show the COURSE ID as their title (found 2026-09-21) |
+| **112** | Should PHLEBOTOMY be its own programme? (raised 2026-09-21, medical laboratory scientist path) |
+| **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 
 ### Informational — no decision needed (19)
 
@@ -3356,6 +3358,53 @@ technical paths route through**, so they are seen. **One `list_missing.py`-style
 flat file fixes all five** — it was left undone here only because none of them is named on the
 respiratory therapy path itself. ⚠ **A wider sweep is the real answer:** count every listed
 course whose title equals its id.
+
+
+## 112. ⚠ Should PHLEBOTOMY be its own programme? (raised 2026-09-21, medical laboratory scientist path)
+
+**CIP `51.1009` is the largest allied-health training footprint in the state that the site does not
+represent: 29 Florida public institutions and 772 credentials in the 2023 award year**, nearly all
+certificates of under twelve weeks, and **mostly at TECHNICAL COLLEGES** — Osceola 82, Traviss 72,
+Miami Dade 68, Lake Tech 54.
+
+**What I did:** the `medical-laboratory-science` programme claims `51.1005` (bachelor's) and `51.1004`
+(technician associate) only, so **those 29 institutions are not listed**. Phlebotomy is covered in the
+career path's prose as the cheap entry rung, with its numbers.
+
+**Why I did not claim it:** phlebotomy is a separate occupation (SOC 31-9097), a separate Florida
+licence category, and drawing blood is not laboratory testing — so *"a school with a phlebotomy
+certificate has a medical laboratory programme"* is a stretch in a way that *"a school with an LPN
+programme has a nursing programme"* was not.
+
+⚠ **For Ron — two defensible answers and it is your call:**
+1. **A `phlebotomy` programme of its own** on `51.1009`, linked to the medical laboratory scientist
+   path as a non-route feeder (the `dental-assisting` pattern from earlier the same day). It would put
+   29 technical colleges on the site.
+2. **Leave it.** It is a short certificate rather than a programme in the sense the layer uses.
+
+⚠ There is no phlebotomy row in `career_paths/QUEUE.csv`, so option 1 adds a programme whose only
+career link is a non-route one.
+
+## 113. ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21)
+
+**Recorded here so the correction is visible, since the original is quoted in several live guides.**
+`SOURCES.md` batch 127 concluded that UWF's MLS **Professional Track** *"contains no hospital
+rotations"* and cited `MLS4820L`–`4825L` as belonging to the standard track only.
+
+**Both halves were wrong.** `MLS4820L`–`4825L` are **SANTA FE COLLEGE's** discipline internships and
+are not UWF courses at all. UWF's rotations are **`MLS4944`–`MLS4947` Clinical Practicum I–IV**, which
+the current catalogue describes as *"supervised practice in an affiliated hospital laboratory&hellip;
+this course is a clinical internship and will count toward the students' clinical hours"* — and which
+**list the Professional Track `C` courses as CO-REQUISITES.**
+
+✅ **What survives:** `MLS4704`'s portfolio of *"work experience&hellip; equivalent to an MLS clinical
+internship"* is real, so the track does serve degree completion for a working laboratorian. **It is
+simply not closed to a traditional student**, who does the practicum sequence instead.
+
+⚠ **What needs Ron:** roughly a dozen `MLS` guides written in batches 125–127 carry the
+stronger claim. `SOURCES.md` and `NEXT_SESSION.md` are corrected; **the published guides are not.**
+Same shape as item 81 (replacing a live guide) — worth folding into that decision rather than
+treating separately.
 
 
 ## Resolved

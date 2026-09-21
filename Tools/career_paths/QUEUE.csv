@@ -31,7 +31,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 30,radiologic-technologist,Radiologic Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2034,Radiologic Technologists and Technicians,HLT,DIRECT,yes,published
 31,respiratory-therapist,Respiratory Therapist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-1126,Respiratory Therapists,HLT,DIRECT,yes,published
 32,dental-hygienist,Dental Hygienist,51.06,Dental Support Services and Allied Professions,29-1292,Dental Hygienists,HLT,DIRECT,yes,published
-33,medical-laboratory-scientist,Medical Laboratory Scientist,51.10,Clinical/Medical Laboratory Science/Research and Allied Professions,29-2011,Medical and Clinical Laboratory Technologists,HLT,DIRECT,yes,
+33,medical-laboratory-scientist,Medical Laboratory Scientist,51.10,Clinical/Medical Laboratory Science/Research and Allied Professions,29-2011,Medical and Clinical Laboratory Technologists,HLT,DIRECT,yes,published
 34,physical-therapist-assistant,Physical Therapist Assistant,51.08,Allied Health and Medical Assisting Services,31-2021,Physical Therapist Assistants,HLT,DIRECT,yes,
 35,paramedic,Paramedic,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2043,Paramedics,HLT,DIRECT,yes,
 36,surgical-technologist,Surgical Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2055,Surgical Technologists,HLT,DIRECT,yes,

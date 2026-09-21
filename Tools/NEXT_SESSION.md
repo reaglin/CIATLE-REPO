@@ -77,7 +77,9 @@ directions when writing a split pair.**
 **3f. ⚠⚠⚠ THE `C` SUFFIX DOES NOT ALWAYS MEAN "INTEGRATED LECTURE+LAB" — check per prefix.**
 In **MLS** the C-suffix courses are a **separate "Professional Track"** with different prerequisites
 (`MLS3194` AND `MLS3621`). **Batch 127 established what it is for:** every course uses *virtual*
-laboratories, the track has **no hospital rotations**, and its capstone `MLS4704` requires a portfolio
+laboratories (❌ **but "no hospital rotations" was CORRECTED 2026-09-21 — UWF's `MLS4944`–`4947`
+Clinical Practicum I–IV are hospital rotations and list the track's `C` courses as COREQUISITES; see
+`SOURCES.md` batch 127**), and its capstone `MLS4704` requires a portfolio
 evidencing work experience *"equivalent to an MLS clinical internship."* → **It is a degree-completion
 route for people already working in laboratories.** A student with no lab experience cannot complete it.
 ⚠ The batch-124 split-family rule does NOT apply mechanically to such a track.

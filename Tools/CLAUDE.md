@@ -72,7 +72,7 @@ path) as each lands.
 |---|---|---|
 | **ENG** engineering | 1–10 | ✅ all published |
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
-| **HLT** health | 28–36 | ⚠ **5 of 9 — in progress, and this is the head of the queue** |
+| **HLT** health | 28–36 | ⚠ **6 of 9 — in progress, and this is the head of the queue** |
 | **CMP** computing | 37–40 | 1 of 4 (Data Scientist) |
 | **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | 1 of 10 (Lawyer) |
 
@@ -128,7 +128,7 @@ thing the student could not know (*aerospace employers hire mechanical graduates
 and mechanical is offered at eleven institutions against three*). Links are read in BOTH
 directions, and a related slug must already exist or the push is refused 422.
 
-✅ **36 programmes now exist** (2026-09-21), and every published path names one that actually leads
+✅ **37 programmes now exist** (2026-09-21), and every published path names one that actually leads
 there — and no programme is left without a career. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
 `cip.json` still is.
 
@@ -1167,6 +1167,31 @@ intends them to, so that departments can innovate. **So before writing any varia
 ask whether it is simply a permitted choice.** The genuine problems in this file — one number carrying
 two SUBJECTS, misfiling, a prerequisite that resolves nowhere — are of a different kind: they mislead
 about CONTENT. **Packaging does not.**
+
+#### ⚠⚠⚠ THE ONE DOCUMENTED EXCEPTION: a `C` that is a SEPARATE PROGRAMME TRACK (`MLS`, re-confirmed 2026-09-21)
+
+**The rule above is right about PACKAGING. It does not reach the case where a `C` id is a different
+ROUTE through the same subject**, and `MLS` at UWF is that case at scale — so check before applying
+the rule to a professional prefix.
+
+| At UWF | What it is |
+|---|---|
+| `MLS4305` Hematology I (3 sh) + `MLS4305L` Lab (1 sh) | the standard route, with a real bench laboratory |
+| ⚠⚠ `MLS4306C` Hematology **Professional Track** (4 sh) | *"students will perform **VIRTUAL** laboratory activities&hellip; **Permission is required**"* |
+
+⚠⚠ **Same credit total, and NOT interchangeable.** UWF duplicates **ten** subjects this way
+(`4193C`, `4221C`, `4306C`, `4335C`, `4461C`, `4463C`, `4506C`, `4552C`, `4626C`, `4631C`), and the
+track's capstone `MLS4704` asks for *"evidence of&hellip; work experience&hellip; equivalent to an MLS clinical
+internship"*.
+
+⚠ **The tell, and it is cheap: read the DESCRIPTION for "virtual", "permission is required", or a
+track name in the TITLE.** A packaging difference never says any of those. ✅ **Where the two forms
+differ only in how the hours are sold, the 2026-09-17 rule stands and you write a one-sentence
+notation — not a divergence block.**
+
+⚠ **And note `C` means different things inside ONE prefix**: at FGCU the `MLS48xxC` ids are hospital
+PRACTICUMS, at UWF the `C` ids are the virtual-lab track. **Judge by the description, never the suffix**
+— which is Ron's batch-126 rule (*a suffix is a filing decision, not a description*) doing the work.
 
 #### ⚠ And fix errors as you find them (same instruction)
 
@@ -3650,7 +3675,7 @@ When starting a fresh session in this project:
 
    ```bash
    python career_paths.py list                 # what is live
-   python programs.py list                     # 36 programmes; a path's programmes must exist FIRST
+   python programs.py list                     # 37 programmes; a path's programmes must exist FIRST
    head -1 career_paths/QUEUE.csv; awk -F, 'NR>1 && $NF==""' career_paths/QUEUE.csv | head -5
    ```
 
