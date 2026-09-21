@@ -1,0 +1,25 @@
+{
+  "name": "Emergency Medical Services",
+  "description": "EMS programmes train the people who reach a patient before anyone else does — assessing and stabilising at the roadside or in a living room, deciding what has to happen in the next four minutes, and delivering care on the way to hospital. Florida teaches it as a stacked pair: a short EMT certificate that gets you onto an ambulance, and a paramedic programme on top of it that adds drugs, advanced airways and cardiac care.",
+  "degreesNote": "This is the largest health training footprint in the state — 39 Florida public institutions and 3,661 credentials in the 2023 federal award year — and almost all of it is CERTIFICATES rather than degrees: 2,415 short certificates of 12 weeks to a year (the EMT level), 961 certificates of one to two years (the paramedic level) and 285 associate degrees. ⚠⚠ The EMT certificate is a genuine prerequisite rung, not a parallel option: paramedic programmes admit certified EMTs, so almost everyone does the short one first. ⚠⚠⚠ But check HOW your EMT course is delivered, because Florida runs it two ways. As a college-credit course (EMS1119, 19 institutions) it counts toward the associate degree; as a 300-hour clock-hour PSAV course (EMS0110, also 19 institutions) it does not. The training is the same and only one of them builds toward a degree. ⚠ Paramedic programmes must be CAAHEP-accredited or hold a CoAEMSP letter of review — a student in a programme that is neither cannot be certified in Florida at all."
+  ,
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 90,
+  "cips": [
+    {
+      "cipCode": "51.0904",
+      "note": "Emergency medical technology / EMT and paramedic — 39 Florida public institutions and 3,661 credentials in the 2023 federal award year, the largest health training footprint in the state: 2,415 short certificates, 961 one-to-two-year certificates and 285 associate degrees. Hillsborough 369, Broward 332, Seminole State 276, Miami Dade 271, Palm Beach State 224. ⚠ Technical colleges are well represented — Aparicio-Levy 115, Lake Technical 84."
+    }
+  ],
+  "related": [
+    {
+      "slug": "nursing",
+      "note": "⚠ The move a large number of paramedics eventually make, and worth knowing about at the start. Prehospital work is physically hard and hard on sleep, and nursing pays more with far more settings to move between — 78 Florida institutions against 39 here. ⚠⚠ But the paramedic credential gives NO advanced standing in nursing: some colleges run a paramedic-to-RN bridge, and where they do not, you start the nursing programme from the beginning."
+    },
+    {
+      "slug": "respiratory-therapy",
+      "note": "⚠ A less obvious neighbour that suits some of the same people: airway management and ventilation are central to both, and respiratory therapy is the hospital-side version of the acute work. It pays more at entry ($82,280 against $60,600 for a paramedic) on a two-year degree, and the hours are inside a building."
+    }
+  ]
+}

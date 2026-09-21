@@ -20,11 +20,11 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed: **25,826 courses, 2,504 curriculum guides, 34 career
-paths and 38 programmes** are live as of 2026-09-21.
+three-project solution exists and is deployed: **26,047 courses, 2,504 curriculum guides, 35 career
+paths and 39 programmes** are live as of 2026-09-21.
 
 **What is being worked on now:** **career paths** — authoring them as content over the API, working
-`Tools/career_paths/QUEUE.csv` (50 rows; engineering, manufacturing/CTE and the first seven health
+`Tools/career_paths/QUEUE.csv` (50 rows; engineering, manufacturing/CTE and eight of the nine health
 rows are published). Guide writing is **request-only** and the request queue is nearly always empty.
 Both loops run from the `Tools/` session; neither needs a deploy.
 

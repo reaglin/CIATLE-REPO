@@ -33,10 +33,16 @@ ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC',
             'HVAC', 'R', 'AC', 'EPA', 'ASE', 'OSHA', 'FAA', 'A&P', 'NEC', 'MSSC', 'CPT', 'PLC',
             # health professions -- credentials and modalities that are initialisms
             'PTA', 'OTA', 'RDH', 'MLS', 'MLT', 'RRT', 'CRT', 'EKG', 'ECG', 'EEG', 'IV', 'CPR',
-            'ACLS', 'BLS', 'PALS', 'NRP', 'ABG', 'PT', 'OT', 'ADL', 'ROM', 'TENS', 'PPE'}
+            'ACLS', 'BLS', 'PALS', 'NRP', 'ABG', 'PT', 'OT', 'ADL', 'ROM', 'TENS', 'PPE',
+            'EMT', 'EMR', 'AEMT', 'EMS', 'ALS', 'NREMT', 'CPAT', 'ARRT', 'NBRC'}
 
 
 def _word(w, edge):
+    # ⚠ Strip surrounding punctuation before the acronym test: the source writes
+    # "(EMT)" and "(A&P)", and a bare `in ACRONYMS` misses them -> "(emt)".
+    bare = w.strip('(),.:;/-').upper()
+    if bare in ACRONYMS:
+        return w.replace(bare.lower(), bare).replace(bare.capitalize(), bare) if bare.lower() in w.lower() else w.upper()
     if w.upper().strip(',') in ACRONYMS:
         return w.upper()
     if '.' in w and len(w) <= 5:
@@ -45,7 +51,16 @@ def _word(w, edge):
         return w.lower()
     if w.upper().startswith('MC') and len(w) > 2:
         return 'Mc' + w[2:].capitalize()
-    return w.capitalize()
+    return _cap(w)
+
+
+def _cap(w):
+    # ⚠ str.capitalize() uppercases the FIRST CHARACTER, so "(PROVISIONAL" becomes
+    # "(provisional". Capitalise the first LETTER instead.
+    for i, ch in enumerate(w):
+        if ch.isalpha():
+            return w[:i] + ch.upper() + w[i + 1:].lower()
+    return w
 
 
 def _part(w, edge):
