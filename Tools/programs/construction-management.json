@@ -1,0 +1,36 @@
+{
+  "name": "Construction Management",
+  "description": "Construction management programmes teach how a building project is planned, priced, scheduled, staffed and delivered — reading and producing drawings, estimating cost, sequencing trades, managing contracts and safety, and keeping a site on programme and on budget. It sits between the design professions and the trades, and in Florida it is taught as an engineering technology rather than a business subject.",
+  "degreesNote": "⚠ Florida does not file this where you would expect. There is no Florida public institution awarding under the federal Construction Management code at all; the state teaches it as CONSTRUCTION ENGINEERING TECHNOLOGY — 16 public institutions and 521 credentials in the 2023 federal award year, weighted to the bachelor's degree (305) with a master's tier above it (79) and associate and certificate routes below (60 and 73). UF 128, FIU 120, Seminole State 71, UNF 58, Valencia 40. ⚠⚠ The degree is worth more than a credential here, because Florida counts it toward a LICENCE: under s. 489.111(2)(c), a baccalaureate in engineering, architecture or building construction plus ONE year of proven experience qualifies you to sit for contractor certification, where the trade route requires four years including one as a foreman. ⚠⚠⚠ So the degree is, in effect, worth three years of site experience toward becoming a licensed contractor — which is the single strongest financial argument for taking it.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 57,
+  "cips": [
+    {
+      "cipCode": "15.1001",
+      "note": "Construction engineering technology — 16 Florida public institutions and 521 credentials in the 2023 federal award year: 305 bachelor's, 79 master's, 73 short certificates, 60 associate degrees. UF 128, FIU 120, Seminole State 71, UNF 58, Valencia 40. ⚠ This is where Florida files construction management; the federal Construction Management code has no Florida public institutions at all."
+    },
+    {
+      "cipCode": "46.0412",
+      "note": "Building and construction site management — 3 Florida public institutions and 27 credentials. Small, and directly on point: the site-superintendent side of the same work."
+    },
+    {
+      "cipCode": "46.0415",
+      "note": "Building and construction inspection — 15 Florida public institutions and 97 credentials. ⚠ Included because it is a substantial separate footprint in the same family, but note it leads to a different job: inspectors verify code compliance rather than deliver projects, and Florida licenses them separately."
+    }
+  ],
+  "related": [
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ The design side of the same projects, and the comparison worth making before committing. Civil engineering is more mathematical, leads toward the PE licence, and designs what gets built; construction management delivers it. ⚠⚠ A civil engineering degree also satisfies Florida's contractor-licence education route under s. 489.111, so it keeps both doors open — at the cost of a harder degree."
+    },
+    {
+      "slug": "civil-engineering-technology",
+      "note": "⚠ The closest sibling and often the same department. Civil engineering technology leans toward materials, testing and infrastructure; construction management leans toward cost, schedule and contracts. ⚠⚠ If you are unsure which, look at whether the programme's capstone is a design problem or a bid and schedule — that is the real difference."
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠ A genuine alternative route, because the federal handbook names business as an acceptable degree field for construction managers. ⚠⚠ But it does NOT satisfy Florida's contractor-licence education pathway, which names engineering, architecture and building construction specifically — so a business degree leaves you on the four-year experience route to a licence."
+    }
+  ]
+}

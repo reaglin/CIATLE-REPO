@@ -42,7 +42,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 41,accountant,Accountant / CPA,52.03,Accounting and Related Services,13-2011,Accountants and Auditors,BUS,DIRECT,yes,published
 42,financial-analyst,Financial Analyst,52.08,Finance and Financial Management Services,13-2051,Financial and Investment Analysts,BUS,CHOICE,yes,published
 43,human-resources-specialist,Human Resources Specialist,52.10,Human Resources Management and Services,13-1071,Human Resources Specialists,BUS,CHOICE,yes,published
-44,construction-manager,Construction Manager,52.20,Construction Management,11-9021,Construction Managers,BUS,CHOICE,yes,
+44,construction-manager,Construction Manager,52.20,Construction Management,11-9021,Construction Managers,BUS,CHOICE,yes,published
 45,lawyer,Lawyer,22.01,Law,23-1011,Lawyers,LAW,CHOICE,yes,published
 46,paralegal,Paralegal,22.03,Legal Support Services,23-2011,Paralegals and Legal Assistants,LAW,DIRECT,yes,
 47,elementary-school-teacher,Elementary School Teacher,13.12,"Teacher Education and Professional Development, Specific Levels and Methods",25-2021,"Elementary School Teachers, Except Special Education",EDU,DIRECT,yes,
@@ -62,3 +62,5 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 61,human-resources-manager,Human Resources Manager,52.10,Human Resources Management and Services,11-3121,Human Resources Managers,BUS,CHOICE,yes,section:human-resources-specialist
 62,training-development-specialist,Training and Development Specialist,52.10,Human Resources Management and Services,13-1151,Training and Development Specialists,BUS,CHOICE,yes,section:human-resources-specialist
 63,compensation-benefits-specialist,Compensation and Benefits Specialist,52.10,Human Resources Management and Services,13-1141,"Compensation, Benefits, and Job Analysis Specialists",BUS,CHOICE,yes,section:human-resources-specialist
+64,construction-supervisor,Construction Supervisor and Superintendent,52.20,Construction Management,47-1011,First-Line Supervisors of Construction Trades and Extraction Workers,BUS,DIRECT,yes,section:construction-manager
+65,cost-estimator,Cost Estimator,52.20,Construction Management,13-1051,Cost Estimators,BUS,CHOICE,yes,section:construction-manager
