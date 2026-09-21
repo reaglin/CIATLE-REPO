@@ -76,8 +76,9 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 104,diagnostic-medical-sonographer,Diagnostic Medical Sonographer,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2032,Diagnostic Medical Sonographers,HLT,DIRECT,yes,published
 104,nuclear-medicine-technologist,Nuclear Medicine Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2033,Nuclear Medicine Technologists,HLT,DIRECT,yes,section:diagnostic-medical-sonographer
 104,cardiovascular-technologist,Cardiovascular Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2031,Cardiovascular Technologists and Technicians,HLT,DIRECT,yes,section:diagnostic-medical-sonographer
-105,veterinary-technician,Veterinary Technician,51.08,Allied Health and Medical Assisting Services,29-2056,Veterinary Technologists and Technicians,HLT,DIRECT,yes,
-106,medical-assistant,Medical Assistant,51.08,Allied Health and Medical Assisting Services,31-9092,Medical Assistants,HLT,DIRECT,yes,
+105,veterinary-technician,Veterinary Technician,01.83,Veterinary/Animal Health Technologies/Technicians,29-2056,Veterinary Technologists and Technicians,HLT,DIRECT,no,blocked:cip-seed
+106,medical-assistant,Medical Assistant,51.08,Allied Health and Medical Assisting Services,31-9092,Medical Assistants,HLT,DIRECT,yes,published
+106,pharmacy-technician,Pharmacy Technician,51.08,Allied Health and Medical Assisting Services,29-2052,Pharmacy Technicians,HLT,DIRECT,yes,section:medical-assistant
 107,phlebotomist,Phlebotomist,51.10,Clinical/Medical Laboratory Science/Research and Allied Professions,31-9097,Phlebotomists,HLT,DIRECT,yes,
 108,health-information-technician,Health Information Technician,51.07,Health and Medical Administrative Services,29-2072,Medical Records Specialists,HLT,DIRECT,yes,
 109,healthcare-administrator,Healthcare Administrator,51.07,Health and Medical Administrative Services,11-9111,Medical and Health Services Managers,HLT,CHOICE,yes,
