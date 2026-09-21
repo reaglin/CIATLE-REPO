@@ -1,0 +1,15 @@
+{
+  "name": "Communication Sciences and Disorders",
+  "description": "Communication sciences and disorders programmes study how speech, language, swallowing and hearing work and how they fail — the anatomy and neurology behind them, the disorders that affect children and adults, and the assessment and therapy used to treat them. In Florida it is a university subject with almost no presence below the third year, and the professions it leads to are graduate-entry.",
+  "degreesNote": "⚠⚠⚠ The most important thing about this programme is that the BACHELOR'S IS NOT A TERMINAL DEGREE for the profession it is named after. Florida awards 513 bachelor's degrees a year in this field and only 298 master's places, and 89% of working speech-language pathologists hold a master's while essentially none practise on a bachelor's. ⚠ There IS a real bachelor's-level destination — the licensed speech-language pathology ASSISTANT, which Florida regulates under the same board — and anyone taking this degree should know about it before they graduate rather than after. ⚠⚠ Access is the other constraint: 7 Florida public institutions award the degree (UCF, USF, FSU, UF, FIU, FAU and Santa Fe), audiology's doctorate is awarded at only TWO (USF and UF, 18 a year between them), and of 315 course numbers in the prefix only ONE below the 3000 level is a real course rather than a special-topics or internship shell. You cannot begin this major at a state college.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 62,
+  "cips": [
+    { "cipCode": "51.02", "note": "Communication disorders sciences and services — 7 Florida public institutions and 847 credentials in the 2023 federal award year. ⚠ The split matters: 513 bachelor's against 298 master's. UCF 213 bachelor's and 83 master's, USF 155 and 61, FSU 88 and 56, FIU 43 master's, UF 41 and 32, FAU 23 master's. Audiology's professional doctorate is awarded only by USF (10) and UF (8)." }
+  ],
+  "related": [
+    { "slug": "teacher-education", "note": "⚠ A closer neighbour than it looks, and a genuine alternative destination: a great many speech-language pathologists work in schools, and exceptional student education is where the same interest in children's communication and learning goes if the master's route does not work out. ⚠⚠ Teacher education runs at 35 Florida institutions against 7 here, so it is far more accessible." },
+    { "slug": "physical-therapy", "note": "⚠ The comparison worth making across the therapy professions: both are graduate-entry, both are small and competitive in Florida, and both have a licensed ASSISTANT tier reachable from a shorter credential. ⚠⚠ Physical therapy's assistant route is a two-year associate degree at 17 institutions; speech-language pathology's requires a bachelor's plus specified coursework." }
+  ]
+}
