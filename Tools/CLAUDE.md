@@ -63,10 +63,10 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 > on CIP codes and the CIP codes become the framework for that page."*
 
 ⚠⚠⚠ **THIS — NOT GUIDE WRITING — IS WHAT A `Tools/` SESSION PICKS UP BY DEFAULT.**
-**The work list is [`career_paths/QUEUE.csv`](career_paths/QUEUE.csv): 50 rows, ranked, each with its
-CIP code, SOC code, cluster and `DIRECT`/`CHOICE` type.** Work it in rank order unless Ron says
-otherwise, and set `status` to `published` (or `section:<slug>` where the row folded into another
-path) as each lands.
+**The work list is [`career_paths/QUEUE.csv`](career_paths/QUEUE.csv) — 121 rows, ranked, each with
+its CIP code, SOC code, cluster and `DIRECT`/`CHOICE` type. Ranks 1–50 are DONE; ranks 101–150 are
+the current work.** Work it in rank order unless Ron says otherwise, and set `status` to `published`
+(or `section:<slug>` where the row folded into another path) as each lands.
 
 **✅ The original 50 rows (1–50) are COMPLETE** — 47 published paths covering 71 occupations,
 with 24 related occupations folded in as `section:` rows rather than given pages of their own.
