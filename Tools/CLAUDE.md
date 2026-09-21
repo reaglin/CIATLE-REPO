@@ -68,13 +68,33 @@ CIP code, SOC code, cluster and `DIRECT`/`CHOICE` type.** Work it in rank order 
 otherwise, and set `status` to `published` (or `section:<slug>` where the row folded into another
 path) as each lands.
 
-| Cluster | Rows | State (2026-09-21) |
+**✅ The original 50 rows (1–50) are COMPLETE** — 47 published paths covering 71 occupations,
+with 24 related occupations folded in as `section:` rows rather than given pages of their own.
+
+⚠⚠ **A SECOND 50 rows were added 2026-09-21 (ranks 101–150), and they are the current work.**
+They were chosen from the largest Florida IPEDS footprints the site did not cover, not by intuition
+— `scratchpad/build_queue2.py` assembles them and validates every CIP against the seeded tree and
+the Florida completions data. Re-run it to see the report.
+
+| Cluster | Rows to do | What it covers |
 |---|---|---|
-| **ENG** engineering | 1–10 | ✅ all published |
-| **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
-| **HLT** health | 28–36 | ✅ **all 9 published** |
-| **CMP** computing | 37–40 | ✅ **all 4 published**, and security/networking each absorb 2–3 related occupations as SECTIONS |
-| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ✅ **ALL COMPLETE** — BUS, LAW, EDU and PUB |
+| **HLT** health | **16** | the largest remaining footprint: sonographer, PA, nurse practitioner, OTA, vet tech, medical assistant, phlebotomist, health information, healthcare admin, public health, dietitian, SLP, athletic trainer, fitness, physician, pharmacist |
+| **BUS** business | 8 | marketing, sales, hospitality, restaurant, events, MIS, entrepreneurship, real estate |
+| ✨ **ART** creative and media | 7 | **an entire cluster the first queue never touched** — graphic design, UX, film, journalism, PR, architecture, interior design |
+| **SCI** science | 4 | environmental scientist, chemist, biologist, marine biologist |
+| **SOC** social services | 3 | social worker, mental health counselor, school counselor |
+| **CMP** · **EDU** · **TRN** · **SRV** · **MFG** · **AGR** · **PUB** | 12 | database admin, web developer, early childhood, instructional design, pilot, truck driver, chef, cosmetologist, plumber, carpenter, agriculture, urban planner |
+
+**23 of the 50 are CHOICE paths**, which is deliberate — Ron's 2026-09-17 note says those are the
+valuable ones and the slow ones.
+
+⚠⚠⚠ **SIX ROWS ARE BLOCKED ON A CIP SEED WIDENING (a deploy)** — cosmetology (44 Florida
+institutions), culinary arts (46), truck driving (20), pharmacy, plumbing and carpentry.
+**`REVIEW_QUEUE.md` item 116**, and it does not block anything: work the other 44 first.
+
+⚠⚠ **AFTER THIS QUEUE, CAREER PATHS GO REQUEST-DRIVEN** — the same shift courses made on
+2026-09-17. Ron, 2026-09-21: *"Lets continue with 50 more before we start requiring request (the
+same as courses)."*
 
 ⚠⚠⚠ **ONE PATH CAN COVER SEVERAL OCCUPATIONS — lump the family (Ron, 2026-09-21).** His words:
 *"you may want to research and lump cybersecurity career paths into the same guide. Same with

@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **86** |
+| ⏳ **Awaiting a decision from Ron** | **87** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **115** |
+| **Total items** | **116** |
 
 ---
 
-### ⏳ Awaiting a decision (86)
+### ⏳ Awaiting a decision (87)
 
 | # | Item |
 |---|---|
@@ -123,6 +123,7 @@ continues around every one of them.
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 | **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
+| **116** | SIX CAREER-PATH ROWS NEED A CIP SEED WIDENING — and two of them are the biggest technical-college footprints in Florida (raised 2026-09-21) |
 
 ### Informational — no decision needed (19)
 
@@ -3507,6 +3508,40 @@ institutions"* for computing, which was the old broad `11.01` figure — `softwa
 ⚠ **`cybersecurity` and `network-administration` have 0 career paths until rows 38 and 39 land**,
 which temporarily breaks the *no programme without a career* property. That is the immediate next
 work, not an open question.
+
+
+## 116. ⚠⚠⚠ SIX CAREER-PATH ROWS NEED A CIP SEED WIDENING — and two of them are the biggest technical-college footprints in Florida (raised 2026-09-21)
+
+**The second 50-row career-path queue is in (`career_paths/QUEUE.csv`, ranks 101–150). Forty-four of
+the fifty can be pushed today. Six cannot, because their CIP group is not in `Data/Seed/cip.json`
+and the push returns 422.**
+
+| CIP | Row | Florida public institutions | Completions (2023) |
+|---|---|---|---|
+| ⚠⚠ **12.04** Cosmetology | `cosmetologist` | **44** | **3,146** |
+| ⚠⚠ **12.05** Culinary Arts | `chef` | **46** | **1,255** |
+| ⚠ **49.02** Ground Transportation | `truck-driver` | 20 | 1,040 |
+| **51.20** Pharmacy | `pharmacist` | 3 | 939 |
+| **46.05** Plumbing | `plumber` | 22 | 189 |
+| **46.02** Carpentry | `carpenter` | 15 | 57 |
+
+⚠⚠⚠ **The first two are the point.** Culinary arts is taught at **46** Florida public
+institutions and cosmetology at **44** — larger footprints than nursing's 78-institution programme
+in school count terms for CTE, and larger than anything else the site cannot currently represent.
+**They are also overwhelmingly TECHNICAL COLLEGE programmes**, which is the sector Ron's 2026-09-20
+decision deliberately brought into scope.
+
+**What it takes:** add the six groups to `EXTRA_GROUPS` in `Tools/build_cip_seed.py` with the reason
+recorded, regenerate `cip.json`, and **redeploy** — the documented procedure, last used for the
+Lawyer path's `22.00` and `45.04`.
+
+⚠ **For Ron — this is a deploy decision, not a content one:**
+1. **Widen all six** and unblock the rows; or
+2. **Widen only 12.04 and 12.05**, the two large ones, and drop or re-anchor the other four; or
+3. **Leave it** and work the 44 seeded rows, revisiting when another deploy happens anyway.
+
+⚠⚠ **Option 3 costs nothing now** — there are 44 rows of work ahead of these six — so this does
+not block anything. It should be folded into the next deploy rather than triggering one.
 
 
 ## Resolved

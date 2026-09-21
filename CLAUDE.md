@@ -23,12 +23,16 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 three-project solution exists and is deployed: **32,961 courses, 2,504 curriculum guides, 47 career
 paths and 50 programmes** are live as of 2026-09-21.
 
-**✅ The original 50-row career-path queue is COMPLETE (2026-09-21).** All fifty rows are published or
-folded into another page as a section: **47 published paths covering 71 occupations**, across engineering,
-manufacturing/CTE, health, computing, business, law, education and public service. `Tools/career_paths/QUEUE.csv`
-is the record. **Next work is Ron's call** — new rows, a verification pass over what is published, or the
-open `REVIEW_QUEUE.md` items. Guide writing remains **request-only**; both loops run from the `Tools/`
-session and neither needs a deploy.
+**What is being worked on now: career paths, second queue.** The original 50 rows are complete —
+**47 published paths covering 71 occupations** across engineering, manufacturing/CTE, health,
+computing, business, law, education and public service. A **second 50 rows** were added on
+2026-09-21 (`Tools/career_paths/QUEUE.csv`, ranks 101–150), chosen from the largest Florida
+IPEDS footprints the site does not yet cover: health (16), business (8), a new creative and
+media cluster (7), science (4), social services (3), and the service and transport careers the
+first queue missed. **23 of the 50 are CHOICE paths.** ⚠ Six rows are blocked on a CIP seed
+widening (a deploy) — `REVIEW_QUEUE.md` item 116; the other 44 can be worked today.
+**After this queue, career paths move to REQUEST-DRIVEN, the same as courses.** Guide writing is
+already request-only. Both loops run from the `Tools/` session; neither needs a deploy.
 
 ## Solution Structure
 
