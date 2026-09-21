@@ -3431,6 +3431,25 @@ their offerings cannot be filled in, so **both pages will show "offered at 0 ins
 ⚠ **Option 2 is cheap and is what the batch-222 precedent did for new guides.** Recorded rather than
 acted on because it edits published guides.
 
+### ⚠⚠⚠ WORSE, found 2026-09-21 on `STS`: EIGHT guides on ids with NO STATE RECORD AT ALL
+
+Listing all 96 public surgical technology numbers left **eight courses on the site with a published
+guide, zero offerings, and the course id as the title**: `STS0120`, `STS0121`, `STS0122`, `STS0155`,
+`STS0155L`, `STS0255L`, `STS0256L`, `STS0257L`.
+
+⚠⚠ **These are not the private-carrier shape above.** A flat-file scan with NO status and NO
+sector filter finds **no record of any of them, at any institution, active or inactive**. They are not
+in the state course inventory.
+
+**So the eight pages assert the existence of courses that the state does not list.** Likeliest cause is
+a guide push that created the course from a mistyped or retired identifier — the push endpoint creates
+a course on demand, which is what makes this possible.
+
+⚠ **For Ron, same decision as the two above but with a stronger case for acting:** a page for a course
+nobody offers and the state does not list is worse than a page with no offerings. **Suggested check to
+run across the WHOLE catalog, not just these prefixes: every listed course with `offeringCount: 0`,
+cross-referenced against the flat file.** That is one pass and it would size the problem.
+
 
 ## Resolved
 

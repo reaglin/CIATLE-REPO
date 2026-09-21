@@ -1,0 +1,25 @@
+{
+  "name": "Surgical Technology",
+  "description": "Surgical technology programmes train the person who sets up and guards the sterile field in an operating theatre — preparing instruments and equipment before the case, scrubbing in alongside the surgeon, passing instruments through the procedure, and counting every sponge and needle before the patient is closed. It is a short, intensely practical credential, taught mostly as a certificate and mostly at technical colleges.",
+  "degreesNote": "Predominantly a CERTIFICATE field: of 326 Florida completions in the 2023 federal award year, 208 were certificates of one to two years and 114 were associate degrees, across 25 public institutions. ⚠ Technical colleges carry a large share of it — Sheridan, Orange, Lorenzo Walker, Erwin, Traviss, Lindsey Hopkins and Suncoast between them produce roughly a third of the state's graduates. ⚠⚠ The delivery split matters more here than the credential name: the same training exists as college-credit courses and as a clock-hour PSAV programme of about 1,030 hours divided into three occupational completion points, and only the first counts toward a degree. ⚠⚠⚠ And unlike every other health programme on this site, FLORIDA DOES NOT LICENSE THIS OCCUPATION — there is no state board and no state credential, so the accreditation of the programme you choose is the only thing standing between you and an unusable qualification. Check CAAHEP or ABHES accreditation yourself before enrolling. ⚠ A much shorter related credential exists: the central service (sterile processing) technician, about 210 clock hours."
+  ,
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 91,
+  "cips": [
+    {
+      "cipCode": "51.0909",
+      "note": "Surgical technology / technologist — 25 Florida public institutions and 326 credentials in the 2023 federal award year: 208 certificates of one to two years, 114 associate degrees. Gulf Coast State 43, Santa Fe 37, FSCJ 26, Sheridan Technical 24, Orange Technical 20, Indian River 18. ⚠ Technical colleges are a large part of this list, which is why the clock-hour route is so common."
+    }
+  ],
+  "related": [
+    {
+      "slug": "nursing",
+      "note": "⚠ The level above in the same room, and the move many surgical technologists eventually make: a perioperative RN circulates the case, assesses the patient and can progress into charge and management roles that are closed to a technologist. ⚠⚠ The surgical technology credential gives NO advanced standing toward nursing — you start the nursing programme from the beginning. Nursing is also at 78 Florida institutions against 25."
+    },
+    {
+      "slug": "emergency-medical-services",
+      "note": "⚠ The closest structural comparison on this site: both are certificate-first acute-care credentials taught heavily at technical colleges, both stack short exit points, and both pay in the low-to-mid sixties. ⚠⚠ The difference is the environment — EMS is unscheduled, outdoors and unpredictable, surgical technology is a scheduled list in one controlled room. People who want the acute work without the chaos usually mean this one."
+    }
+  ]
+}

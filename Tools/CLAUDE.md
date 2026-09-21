@@ -72,8 +72,8 @@ path) as each lands.
 |---|---|---|
 | **ENG** engineering | 1–10 | ✅ all published |
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
-| **HLT** health | 28–36 | ⚠ **8 of 9 — surgical technologist is the last one** |
-| **CMP** computing | 37–40 | 1 of 4 (Data Scientist) |
+| **HLT** health | 28–36 | ✅ **all 9 published** |
+| **CMP** computing | 37–40 | ⚠ **1 of 4 (Data Scientist) — now the head of the queue, and all three remaining are CHOICE paths** |
 | **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | 1 of 10 (Lawyer) |
 
 ⚠⚠ **Guide work has not stopped — it is just request-driven and usually empty.** Check the
@@ -128,7 +128,7 @@ thing the student could not know (*aerospace employers hire mechanical graduates
 and mechanical is offered at eleven institutions against three*). Links are read in BOTH
 directions, and a related slug must already exist or the push is refused 422.
 
-✅ **39 programmes now exist** (2026-09-21), and every published path names one that actually leads
+✅ **40 programmes now exist** (2026-09-21), and every published path names one that actually leads
 there — and no programme is left without a career. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
 `cip.json` still is.
 
@@ -3675,7 +3675,7 @@ When starting a fresh session in this project:
 
    ```bash
    python career_paths.py list                 # what is live
-   python programs.py list                     # 39 programmes; a path's programmes must exist FIRST
+   python programs.py list                     # 40 programmes; a path's programmes must exist FIRST
    head -1 career_paths/QUEUE.csv; awk -F, 'NR>1 && $NF==""' career_paths/QUEUE.csv | head -5
    ```
 
