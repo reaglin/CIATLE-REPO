@@ -44,7 +44,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 43,human-resources-specialist,Human Resources Specialist,52.10,Human Resources Management and Services,13-1071,Human Resources Specialists,BUS,CHOICE,yes,published
 44,construction-manager,Construction Manager,52.20,Construction Management,11-9021,Construction Managers,BUS,CHOICE,yes,published
 45,lawyer,Lawyer,22.01,Law,23-1011,Lawyers,LAW,CHOICE,yes,published
-46,paralegal,Paralegal,22.03,Legal Support Services,23-2011,Paralegals and Legal Assistants,LAW,DIRECT,yes,
+46,paralegal,Paralegal,22.03,Legal Support Services,23-2011,Paralegals and Legal Assistants,LAW,DIRECT,yes,published
 47,elementary-school-teacher,Elementary School Teacher,13.12,"Teacher Education and Professional Development, Specific Levels and Methods",25-2021,"Elementary School Teachers, Except Special Education",EDU,DIRECT,yes,
 48,secondary-school-teacher,Secondary School Teacher,13.13,"Teacher Education and Professional Development, Specific Subject Areas",25-2031,"Secondary School Teachers, Except Special and Career/Technical Education",EDU,DIRECT,yes,
 49,police-officer,Police Officer,43.01,Criminal Justice and Corrections,33-3051,Police and Sheriff's Patrol Officers,PUB,DIRECT,yes,
@@ -64,3 +64,4 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 63,compensation-benefits-specialist,Compensation and Benefits Specialist,52.10,Human Resources Management and Services,13-1141,"Compensation, Benefits, and Job Analysis Specialists",BUS,CHOICE,yes,section:human-resources-specialist
 64,construction-supervisor,Construction Supervisor and Superintendent,52.20,Construction Management,47-1011,First-Line Supervisors of Construction Trades and Extraction Workers,BUS,DIRECT,yes,section:construction-manager
 65,cost-estimator,Cost Estimator,52.20,Construction Management,13-1051,Cost Estimators,BUS,CHOICE,yes,section:construction-manager
+66,title-examiner,Title Examiner and Abstractor,22.03,Legal Support Services,23-2093,"Title Examiners, Abstractors, and Searchers",LAW,DIRECT,yes,section:paralegal

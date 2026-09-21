@@ -74,7 +74,7 @@ path) as each lands.
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
 | **HLT** health | 28–36 | ✅ **all 9 published** |
 | **CMP** computing | 37–40 | ✅ **all 4 published**, and security/networking each absorb 2–3 related occupations as SECTIONS |
-| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ⚠ **5 of 10** — BUS cluster COMPLETE (Accountant, Financial Analyst, HR, Construction Manager) plus Lawyer; paralegal, two teacher rows, police and firefighter remain |
+| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ⚠ **6 of 10** — BUS and LAW clusters COMPLETE; two teacher rows (EDU), police and firefighter (PUB) remain |
 
 ⚠⚠⚠ **ONE PATH CAN COVER SEVERAL OCCUPATIONS — lump the family (Ron, 2026-09-21).** His words:
 *"you may want to research and lump cybersecurity career paths into the same guide. Same with
