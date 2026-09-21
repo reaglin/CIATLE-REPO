@@ -1,0 +1,32 @@
+{
+  "name": "Information Technology",
+  "description": "Information technology programmes teach how to run the systems an organisation depends on — installing and integrating hardware and software, managing databases and cloud services, supporting users, and keeping it all available and secure. Where computer science asks how computation works, IT asks how to make working systems do what a business needs. It is the most widely taught computing programme in Florida.",
+  "degreesNote": "This is the broadest computing footprint in the state: 39 Florida public institutions and 3,375 credentials in the 2023 federal award year, at every level from a short certificate to a bachelor's degree. ⚠ That breadth is the point — IT is taught at state colleges and technical colleges as well as universities, so for most Florida students it is the computing programme that actually exists nearby. ⚠⚠ It is also the faster route to employment: an A.S. plus vendor certifications gets people working, and many employers treat demonstrated skill and certifications as equivalent to the degree. ⚠⚠⚠ The trade-off is worth stating plainly: an A.S. in information technology is a CAREER degree, and it does not always transfer into a university computer science bachelor's. If a bachelor's in computer science is the eventual goal, take the A.A. route and ask the receiving department in writing which of your courses count.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 51,
+  "cips": [
+    {
+      "cipCode": "11.0103",
+      "note": "Information technology — 36 Florida public institutions and 2,924 credentials in the 2023 federal award year, the second largest computing code in the state. Broward 630, UCF 299, Florida State 261, Valencia 235, FIU 225, Indian River 141, Miami Dade 138, Santa Fe 116."
+    },
+    {
+      "cipCode": "11.0104",
+      "note": "Informatics — 4 Florida public institutions and 47 graduates. The applied, domain-facing side of computing (health informatics and similar), which sits closer to IT than to computer science."
+    },
+    {
+      "cipCode": "11.0401",
+      "note": "Information science and studies — 5 Florida public institutions and 404 graduates. Information organisation, retrieval and management rather than systems administration, but the same family of work."
+    }
+  ],
+  "related": [
+    {
+      "slug": "cybersecurity",
+      "note": "⚠ The most common specialisation out of IT, and 20 of the 35 institutions teaching security also teach IT — so at most colleges the two share a first year. ⚠⚠ Security is not an entry-level field despite how it is marketed: employers overwhelmingly want people who have already administered systems, which is what an IT degree gives you. Read the security programme, then decide whether to specialise now or work first."
+    },
+    {
+      "slug": "network-administration",
+      "note": "⚠ The closest sibling, and 25 institutions teach both. Networking is the infrastructure half of what IT covers more broadly — if routers, switches and connectivity are the part that interests you, the dedicated programme goes deeper and is available at 56 institutions including many technical colleges. ⚠⚠ If you are unsure, IT is the wider door and networking is a specialisation inside it."
+    }
+  ]
+}

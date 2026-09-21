@@ -3485,8 +3485,28 @@ or four computing programmes, and a reader browsing will not be able to tell the
 3. **One `information-technology` programme** alongside computer science, with security and
    networking as CIPs inside it.
 
-⚠ **I have not changed anything** — the software developer path names `computer-science` as it
-stands. **Ron's answer decides how rows 38 and 39 are built.**
+✅✅ **ANSWERED AND DONE, 2026-09-21. Ron: *"Based on number of schools and that they are separate
+degrees, give them their own guide so it looks like 4 related career paths will have guides."*** —
+option 2, split by CIP. Built and pushed the same day:
+
+| Programme | CIP codes | FL public institutions | Career path |
+|---|---|---|---|
+| `computer-science` **(narrowed)** | `11.0701` `11.0101` `11.0102` `11.0199` | **16** | software developer |
+| `information-technology` **(new)** | `11.0103` `11.0104` `11.0401` | **39** | — supports all four |
+| `cybersecurity` **(new)** | `11.1003` | **35** | cybersecurity analyst (row 38) |
+| `network-administration` **(new)** | `11.0901` `11.1001` | **56** | network administrator (row 39) |
+
+✅ **All four cross-linked**, each note written for that page's reader: computer science against IT
+(*how computation works* against *running systems that exist*), security against networking (*27 of
+the 35 institutions teaching security also teach networking, and the order matters*).
+
+⚠ **Knock-on corrections made at the same time:** three published paths cited *"41 Florida public
+institutions"* for computing, which was the old broad `11.01` figure — `software-developer`,
+`data-scientist` and `computer-hardware-engineer` were corrected and re-pushed.
+
+⚠ **`cybersecurity` and `network-administration` have 0 career paths until rows 38 and 39 land**,
+which temporarily breaks the *no programme without a career* property. That is the immediate next
+work, not an open question.
 
 
 ## Resolved

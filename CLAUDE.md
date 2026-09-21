@@ -21,7 +21,7 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
 three-project solution exists and is deployed: **26,901 courses, 2,504 curriculum guides, 37 career
-paths and 40 programmes** are live as of 2026-09-21.
+paths and 43 programmes** are live as of 2026-09-21.
 
 **What is being worked on now:** **career paths** — authoring them as content over the API, working
 `Tools/career_paths/QUEUE.csv` (50 rows; engineering, manufacturing/CTE and all nine health

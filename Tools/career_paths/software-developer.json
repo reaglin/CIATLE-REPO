@@ -28,7 +28,11 @@
   "programs": [
     {
       "slug": "computer-science",
-      "note": "The plurality route and the one most employers picture — 41 Florida public institutions once information-technology and computer-and-information-sciences degrees are counted with it. ⚠ It is the default rather than the requirement: counted degrees put computing majors at under a third of working developers."
+      "note": "The route most employers picture — 16 Florida public institutions now that computer science is separated from information technology. ⚠ It is the default rather than the requirement: counted degrees put computing majors at under a third of working developers. ⚠⚠ Check its degrees note on the SECOND programming course, which is where a state-college sequence most often fails to transfer."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ A real route and a much wider door: 39 Florida public institutions against 16 for computer science, and at most state and technical colleges it is the computing programme that actually exists nearby. ⚠⚠ It is lighter on algorithms and theory, which is what technical interviews test — so if you take this route, close that gap deliberately with data structures and your own projects."
     },
     {
       "slug": "computer-engineering",

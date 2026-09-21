@@ -1,0 +1,24 @@
+{
+  "name": "Cybersecurity",
+  "description": "Cybersecurity programmes teach how to defend systems and the data on them — hardening configurations, monitoring for intrusion, responding to incidents, testing defences by attacking them, and meeting the audit and compliance requirements organisations are held to. It is taught in Florida as a specialisation on top of systems administration rather than as a starting point, and that ordering is the most important thing to understand about it.",
+  "degreesNote": "35 Florida public institutions and 1,063 credentials in the 2023 federal award year, from short certificates to master's degrees — St Petersburg College alone awards 359. ⚠⚠⚠ The single most important thing to know before enrolling: SECURITY IS NOT AN ENTRY-LEVEL FIELD, whatever the marketing says. Employers hiring analysts overwhelmingly want people who have already run networks or systems, because you cannot defend infrastructure you have never operated. A security credential with no operational experience behind it is the commonest disappointment in this part of the job market. ⚠ The honest sequence is usually: an IT or networking foundation, a help-desk or administration job, vendor certifications, and then security — or a security degree taken WITH deliberate hands-on experience alongside it. ⚠⚠ Florida also teaches a large amount of this as clock-hour PSAV certificates at technical colleges, which reach the same vendor examinations but carry no college credit.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 52,
+  "cips": [
+    {
+      "cipCode": "11.1003",
+      "note": "Computer and information systems security, auditing and information assurance — 35 Florida public institutions and 1,063 credentials in the 2023 federal award year. St Petersburg College 359, USF 92, Miami Dade 88, Pensacola State 82, UWF 78, Broward 53, FIU 47, FSCJ 41. ⚠ St Petersburg alone produces a third of the state's output."
+    }
+  ],
+  "related": [
+    {
+      "slug": "network-administration",
+      "note": "⚠⚠ The programme most security employers actually want you to have done first, and 27 of the 35 institutions teaching security also teach networking. You cannot monitor traffic you do not understand or segment a network you have never configured. ⚠ If you are choosing between them at the start, networking first is the more reliable order — security is easier to add later than operations experience is."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ The broader foundation, taught at 39 institutions against 35 here, and the one that keeps more options open. ⚠⚠ Twenty institutions teach both, so at most colleges you are choosing an emphasis rather than a different school. Take IT if you are not yet sure which part of computing you want; take security if you already know and can get hands on systems alongside it."
+    }
+  ]
+}

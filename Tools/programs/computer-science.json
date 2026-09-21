@@ -1,24 +1,36 @@
 {
   "name": "Computer Science",
-  "description": "Computer science programmes teach how computation works and how to build software that is correct, efficient and maintainable — algorithms, data structures, operating systems, networks, languages and the discrete mathematics underneath them. It is the largest computing programme in Florida by any measure, and the one with the widest spread of entry points.",
-  "degreesNote": "Florida awards computing credentials at every level: short state-college certificates, an A.S. or A.A., the bachelor’s degree that most software work expects, and master’s and doctoral degrees above it. ⚠ Ask the transfer question early, because it is the one that costs people a year: an A.S. in a computing field is a CAREER degree built to lead to work, and it does not always transfer into a university computer science bachelor’s — the A.A. route normally does. ⚠ Accreditation for computing comes from ABET’s COMPUTING commission, not its engineering commission, and nothing in software employment requires it; there is no licence in this field.",
+  "description": "Computer science programmes teach how computation works and how to build software that is correct, efficient and maintainable — algorithms, data structures, operating systems, networks, languages and the discrete mathematics underneath them. It is the most theoretical of Florida's four computing programmes, and the usual route into software development.",
+  "degreesNote": "Florida awards this at every level: state-college certificates, an A.S. or A.A., the bachelor's degree most software work expects, and master's and doctoral degrees above it. ⚠ Ask the transfer question early, because it is the one that costs people a year: an A.S. in a computing field is a CAREER degree built to lead to work and does not always transfer into a university computer science bachelor's, where the A.A. route normally does. ⚠⚠ And check the SECOND programming course specifically — Florida numbers it five different ways, all at upper division, and it is the commonest point at which a state-college sequence fails to substitute. ⚠ Accreditation comes from ABET's COMPUTING commission, not its engineering commission, and nothing in software employment requires it; there is no licence.",
   "bodyHtml": null,
   "isPublished": true,
   "sortOrder": 50,
   "cips": [
     {
-      "cipCode": "11.07",
-      "note": "Computer Science — the specific federal code, and ⚠ only four Florida public institutions file under it, which is why it cannot be the whole of this programme."
+      "cipCode": "11.0701",
+      "note": "Computer science proper. ⚠ Only four Florida public institutions file under it — Florida Poly 111, UNF 67, USF 54, UWF 33, 265 graduates in 2023 — which is why it cannot be the whole of this programme."
     },
     {
-      "cipCode": "11.01",
-      "note": "Computer and Information Sciences, General — where Florida actually files most of its computing awards: 41 public institutions, including essentially every state college that teaches computing. ⚠ Included deliberately. Defining this programme by 11.07 alone would list four institutions and hide the ones where most Florida students begin."
+      "cipCode": "11.0101",
+      "note": "Computer and information sciences, general — where Florida actually files most of its computer science degrees: 15 public institutions and 3,047 graduates in 2023, the largest computing code in the state."
+    },
+    {
+      "cipCode": "11.0102",
+      "note": "Artificial intelligence — 4 Florida public institutions, 41 graduates. A new and fast-growing code, and squarely a computer science degree rather than an applied one."
+    },
+    {
+      "cipCode": "11.0199",
+      "note": "Computer and information sciences, other — 1 institution, 63 graduates. Included so a programme filed under the residual code is not lost."
     }
   ],
   "related": [
     {
+      "slug": "information-technology",
+      "note": "⚠⚠ The distinction that matters most and is least obvious from the names. Computer science is about how computation WORKS — algorithms, theory, building systems from scratch. Information technology is about running and integrating systems that exist. ⚠ IT is far more widely taught in Florida (39 public institutions against 16) and is the faster route to a job; computer science is the one most software-developer job adverts name and the one that transfers into graduate study."
+    },
+    {
       "slug": "computer-engineering",
-      "note": "⚠ The hardware side of the same boundary, and usually an engineering degree rather than a computing one — which changes the accrediting body and the mathematics. If embedded systems, chips or robotics are the draw, compare the two directly."
+      "note": "⚠ The hardware side of the same boundary, and usually an ENGINEERING degree rather than a computing one — which changes the accrediting body and the mathematics. If embedded systems, chips or robotics are the draw, compare the two directly; it is much easier to move from computer engineering into software than the reverse."
     },
     {
       "slug": "data-science",

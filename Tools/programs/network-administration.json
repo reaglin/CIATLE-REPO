@@ -1,0 +1,28 @@
+{
+  "name": "Networking and Systems Administration",
+  "description": "Networking and systems administration programmes teach how to build and run the infrastructure everything else sits on — switches, routers and wireless, servers and virtualisation, directory services, cloud platforms, backup and monitoring. It is the most hands-on of Florida's four computing programmes and the most widely available: more institutions teach it than teach any other computing subject in the state.",
+  "degreesNote": "56 Florida public institutions and 1,733 credentials in the 2023 federal award year — the widest computing footprint in the state, and the one where TECHNICAL COLLEGES matter most. Sheridan, Atlantic, Immokalee, Tom P. Haney, Traviss, Emerald Coast and Radford Locklin are among the leading producers on the networking code, alongside Valencia's 414 and Miami Dade's 205 on the systems-administration code. ⚠⚠ The delivery split is the decision to get right: much of this is taught as clock-hour PSAV certificates (150 to 600 hours, in stacked occupational completion points) that carry NO COLLEGE CREDIT, and much of it is taught as A.S. coursework that does. Both prepare you for the same vendor examinations. ⚠ Only one of them counts if you later want a degree, and nobody points that out at enrolment. ⚠⚠⚠ Vendor certifications do a great deal of the work employers actually screen on in this field — more than in any other computing programme — so ask what certifications a programme prepares you for and at whose cost.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 53,
+  "cips": [
+    {
+      "cipCode": "11.0901",
+      "note": "Computer systems networking and telecommunications — 35 Florida public institutions and 441 credentials in the 2023 federal award year. ⚠ Dominated by TECHNICAL COLLEGES: Sheridan 59, FSCJ 38, Atlantic Technical 23, Immokalee Technical 22, Tom P. Haney 21, Traviss 19, Emerald Coast 19, Radford Locklin 18. This is largely clock-hour instruction."
+    },
+    {
+      "cipCode": "11.1001",
+      "note": "Network and system administration — 28 Florida public institutions and 1,292 credentials, and mostly college-credit rather than clock-hour: Valencia 414, Miami Dade 205, Broward 106, FSCJ 89, Seminole State 85, Hillsborough 54, Palm Beach State 46, Tallahassee 38."
+    }
+  ],
+  "related": [
+    {
+      "slug": "cybersecurity",
+      "note": "⚠⚠ The usual next step, and the order matters: 27 of the 35 institutions teaching security also teach networking, and security employers want people who have already operated infrastructure. ⚠ Doing this programme first and adding security later is the more reliable sequence, and it is the one that produces employable analysts rather than credentialed ones."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ The broader version of the same territory — IT covers systems, support, databases and cloud as well as the network. Twenty-five institutions teach both. ⚠⚠ Choose this programme if the infrastructure itself is what interests you and you want depth; choose IT if you would rather keep the door open to databases, support management or development."
+    }
+  ]
+}
