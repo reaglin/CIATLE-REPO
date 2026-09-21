@@ -1,0 +1,166 @@
+{
+  "name": "Financial Analyst",
+  "cipCode": "52.08",
+  "socCode": "13-2051",
+  "isPublished": true,
+  "sortOrder": 380,
+  "description": "Financial analysts value companies and securities, build the models firms decide by, and measure the risk of being wrong. ⚠ A median of $103,570 with 7% growth. ⚠⚠ It is a CHOICE path, but a concentrated one: counted degrees put business at about half of working analysts, with the social sciences — economics among them — the next largest block. ⚠⚠⚠ And the finding that should redirect some readers: the ANALYTICAL roles in this family are growing at 7% while the ADVISORY ones grow at 1%, despite paying the same or more. This page covers four roles.",
+  "credentialNote": "⚠ No degree-level licence, no board, and no equivalent of accounting's 150-hour rule. What governs this field is examinations and registration obtained AFTER you are hired, and one voluntary credential that matters before. ⚠⚠ The most useful correction the federal handbook offers: some analyst positions require licensure, but MOST OF THOSE LICENCES REQUIRE SPONSORSHIP BY AN EMPLOYER, and companies do not expect individuals to hold them before starting a job. Students routinely believe they must arrive with a Series 7; they must not, and generally cannot. ⚠ Where registration does bite is on the ADVISORY side. Florida registers investment adviser representatives under Chapter 517: you file a Form U4 through FINRA's Central Registration Depository and must have passed the Series 65, or both the Series 7 and Series 66, within two years, plus the Securities Industry Essentials examination within four. ⚠⚠ Florida does NOT require the Series 63. Advisers at small firms register with the state; those at large firms register with the SEC. ⚠⚠⚠ The credential that distinguishes candidates before hiring is the CFA charter — a multi-year, three-examination commitment taken alongside full-time work, not during a degree. Decide about it after you are employed, not instead of being employed.",
+  "bodyHtml": "<h2>Four roles, and the growth is not where people expect</h2><p>This page covers the financial analysis family, because the degrees and the first jobs are shared. <strong>The pattern in the outlook column is the most useful thing on this page.</strong></p><table><thead><tr><th>Role</th><th>SOC</th><th>2025 median</th><th>Jobs</th><th>Outlook 2025&ndash;35</th></tr></thead><tbody><tr><td>Budget analyst</td><td>13-2031</td><td>$91,640</td><td>50,400</td><td>&#9888; <strong>2% slower than average</strong></td></tr><tr><td><strong>Financial and investment analyst</strong></td><td><strong>13-2051</strong></td><td><strong>$103,570</strong></td><td><strong>443,100</strong></td><td>&#9989; <strong>7% much faster</strong></td></tr><tr><td>Personal financial advisor</td><td>13-2052</td><td>$105,070</td><td>299,400</td><td>&#9888;&#9888; <strong>1% slower than average</strong></td></tr><tr><td><strong>Financial risk specialist</strong></td><td>13-2054</td><td><strong>$117,330</strong></td><td>60,500</td><td>&#9989; <strong>7% or higher</strong></td></tr></tbody></table><p>&#9888;&#9888;&#9888; <strong>The two ANALYTICAL roles are growing and the two ADVISORY and BUDGET roles are almost flat &mdash; and the flat ones pay as much or more.</strong> That is the opposite of the common assumption, which is that an ageing population must mean rapid growth in financial advice. It does not, on the federal projections: personal financial advising adds <strong>4,100 jobs over a decade</strong> against financial analysis adding <strong>32,000</strong>.</p><p>&#9888; <strong>Read it as a steer, not a prohibition.</strong> Advising is a relationship business where earnings depend far more on the book you build than on the median, and $105,070 is the middle of a very wide distribution. But if you are choosing where to aim and the wage is similar, <strong>the analytical side is where the hiring is.</strong></p><h2>What the work actually is</h2><p>O*NET, on financial and investment analysts: <em>advise clients on aspects of capitalization, such as amounts, sources, or timing; analyze financial or operational performance of companies facing financial difficulties; assess companies as investments for clients by examining company facilities; employ financial models to develop solutions to financial problems; recommend investments and investment timing to companies, investment firm staff</em>.</p><p>&#9888; <strong>Most of it is building and defending a model.</strong> The model is a set of assumptions about a future nobody knows, and the skill being paid for is judgement about which assumptions matter &mdash; not spreadsheet mechanics, which are assumed.</p><p>&#9888;&#9888; <strong>O*NET and the BLS differ mildly and both are positive:</strong> O*NET puts growth at <em>faster than average (5% to 6%)</em> on 2024&ndash;34 with 368,500 employed and 25,100 annual openings; the BLS at <strong>7%, much faster than average</strong> on 2025&ndash;35 with 443,100 jobs. <strong>Different decades and different bands; the direction agrees.</strong></p><h2>&#9888;&#9888; The major question, and this is a narrower CHOICE than most</h2><p>Census American Community Survey microdata, reported through Data USA for 2024, counts degrees held by people employed as financial analysts &mdash; <strong>346,451 of them</strong>:</p><table><thead><tr><th>Field of degree</th><th>People</th><th>Roughly</th></tr></thead><tbody><tr><td><strong>Business</strong></td><td><strong>170,562</strong></td><td>49%</td></tr><tr><td>Social sciences <em>(economics is classified here)</em></td><td>41,484</td><td>12%</td></tr><tr><td>Engineering</td><td>14,327</td><td>4%</td></tr></tbody></table><p>&#9888; <strong>Compare that with software development, where computing supplied under a third.</strong> Here one field supplies about half, so the &ldquo;any major can do this&rdquo; framing is weaker: <strong>a business degree is close to the default, and finance or accounting within it is the straight line.</strong></p><p>&#9888;&#9888; <strong>But note what the second row means.</strong> Economics sits inside the social-sciences category in this classification, so a substantial part of that 12% is economists &mdash; and an economics degree is a genuinely strong route into analysis, often stronger than a general business degree for the quantitative roles. <strong>Engineering and mathematics appear too, in the modelling and risk corners.</strong></p><p>&#9888; <strong>The source's own caution:</strong> Data USA notes these count all academic degrees rather than one per person, and ACS records a field of degree only for bachelor's holders. <strong>Read the proportions, not the head counts.</strong></p><p>&#9888;&#9888; <strong>And the graduate share is high:</strong> of the same population, <strong>189,508 hold a bachelor's as their highest degree and 116,146 hold a graduate degree</strong> &mdash; about a third. This is a field where a master's is common and is often taken after several years of work.</p><h2>&#9888;&#9888; What to do about licences, which students consistently get wrong</h2><p><strong>You do not need a Series 7 to apply for an analyst job.</strong> The BLS is explicit that most of these licences require employer sponsorship and that <em>&ldquo;companies do not expect individuals to have these licenses before starting a job&rdquo;</em>. Spending money on examination preparation before you are hired is, for most people, the wrong purchase.</p><p>&#9888; <strong>Where registration genuinely applies is advising.</strong> To be an investment adviser representative in Florida you register under Chapter 517 by filing Form U4 through FINRA's Central Registration Depository, having passed <strong>either the Series 65, or both the Series 7 and the Series 66</strong>, within two years &mdash; plus the <strong>Securities Industry Essentials</strong> examination within four. &#9888;&#9888; <strong>Florida does not require the Series 63</strong>, which a good deal of national advice assumes it does. Small-firm advisers register with the state; large-firm advisers register with the SEC.</p><p>&#9888;&#9888;&#9888; <strong>The credential worth planning for is the CFA</strong> &mdash; three examinations and several years, taken alongside full-time work. It is the closest thing this field has to a professional licence and it is what distinguishes candidates in investment roles. <strong>It is not a student credential; the sensible order is job first, charter second.</strong></p><h2>&#9888; Two Florida course traps</h2><p><strong>The good news first:</strong> the lower-division business core travels as well here as it does for accounting &mdash; <strong>ECO&nbsp;2023 at 39 of 39 institutions</strong>, ECO&nbsp;2013 at 38 (with the <strong>GE CORE</strong> marker), ACG&nbsp;2021 at 32, ACG&nbsp;2071 at 37, STA&nbsp;2023 at 39, and <strong>MAC&nbsp;2233 Calculus for Business at 36</strong>.</p><p>&#9888;&#9888; <strong>Trap one: the core finance course has two numbers, split by sector.</strong> <strong>FIN&nbsp;3403 Financial Management</strong> is carried by 19 institutions, predominantly the universities; <strong>FIN&nbsp;3400 Financial Management</strong> by 14, almost entirely state colleges. Same subject, both upper division, and only three institutions carry both. <strong>Ask your target university which one it accepts before you take the college version.</strong></p><p>&#9888; <strong>Trap two: the intermediate economics wall.</strong> <strong>ECO&nbsp;3101 and ECO&nbsp;3203</strong> are each carried by exactly <strong>11 institutions &mdash; all universities</strong>. Principles of micro and macro are everywhere; the intermediate versions that a finance or economics degree requires exist nowhere in the state-college system. <strong>Plan to take them after transfer, and expect a step change in mathematical content.</strong></p><p>&#9888; <strong>Worth knowing:</strong> Florida now carries <strong>QMB&nbsp;3250 AI-Enhanced Business Statistics and Analysis</strong> at 8 institutions &mdash; a statewide course number, which means the state has formally recognised this as part of the business curriculum. <strong>If your programme offers it, take it.</strong></p><h2>Necessary skills</h2><ul><li><strong>Financial modelling.</strong> Building a three-statement model from scratch, and knowing which line items the answer is actually sensitive to.</li><li><strong>Accounting, read sceptically.</strong> You cannot value a company whose statements you cannot interrogate, which is why finance degrees require accounting.</li><li><strong>Statistics and probability</strong>, increasingly with code. The risk specialist role is statistics applied to money, and it pays the most in this family.</li><li><strong>Writing a recommendation.</strong> An analyst's output is a view, argued in a page, with the reasoning visible enough to be attacked.</li><li><strong>Comfort with being wrong in public.</strong> Forecasts are checkable, and the job involves defending judgement that events will sometimes disprove.</li></ul><h2>Advice</h2><p>&#9888;&#9888; <strong>Do not buy licence preparation before you are hired.</strong> The federal handbook says employers sponsor these and do not expect them in advance. Put that money and time into modelling skill and internships, which are what actually get the first job.</p><p>&#9888; <strong>If the quantitative side appeals, aim at risk rather than advising.</strong> Financial risk specialists have the highest median in this family ($117,330) and the strongest growth, and statistics plus finance is the combination those roles describe.</p><p>&#9888; <strong>Plan for transfer around intermediate economics and FIN 3403.</strong> The lower division is safe at any Florida state college; the two upper-division pinch points are not, and one of them has two competing numbers.</p><p><strong>And treat internships as the real credential.</strong> Finance recruits early and heavily from internships, more so than any other path on this site. A relevant summer in your penultimate year is worth more than any certificate you can buy as a student.</p>",
+  "cipCodes": [
+    {
+      "cipCode": "52.03",
+      "note": "Accounting — the sibling degree, and a genuine feeder: the two share most of a first two years, and the counted degree data puts business fields at about half of working financial analysts. 50 Florida public institutions once bookkeeping certificates are counted."
+    },
+    {
+      "cipCode": "45.06",
+      "note": "⚠ Economics. The counted data places social sciences second among financial analysts' degree fields at about 12%, and economics is classified within that category — so this is the largest non-business feeder and a strong route into the quantitative roles."
+    },
+    {
+      "cipCode": "27.05",
+      "note": "Statistics — the smallest of the named feeders but the best-aimed at the highest-paid role in this family. Financial risk specialists earn a median of $117,330 and the work is statistical modelling."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "finance",
+      "note": "The straight line into this work, and the degree the job titles describe — but note it is taught at only 12 Florida public institutions and almost entirely at universities, so a state-college start means transferring in. ⚠ Read its degrees note on licences: they come after hiring, with employer sponsorship."
+    },
+    {
+      "slug": "accounting",
+      "note": "⚠ A real route rather than a near-miss: the degrees share most of a first two years, and you cannot value a company whose statements you cannot interrogate. ⚠⚠ Accounting is also available at far more Florida institutions and starts cleanly at a state college, so for many students it is the more practical way into financial analysis — and it keeps the CPA option open."
+    },
+    {
+      "slug": "statistics",
+      "note": "⚠ The route aimed at the best-paid corner of this family. Financial risk specialists have the highest median here ($117,330) and the strongest growth, and the work is statistical modelling rather than company analysis. ⚠⚠ Statistics plus finance coursework beats either alone for those roles."
+    },
+    {
+      "slug": "data-science",
+      "note": "⚠ A route into the modelling and quantitative side rather than the whole field. Pricing, risk and portfolio analytics are data work, and Florida now carries a statewide course number for AI-enhanced business statistics. ⚠⚠ Narrower than finance — if you are unsure, the business degree keeps more of this family open."
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "ECO2023",
+      "reason": "Principles of Microeconomics — 39 of 39 institutions. Universal in Florida, required by every business degree, and the foundation for how prices and markets are reasoned about.",
+      "variantNote": "✅ Carried by every single Florida public institution offering the prefix. Take it anywhere."
+    },
+    {
+      "courseId": "ECO2013",
+      "reason": "Principles of Macroeconomics — 38 institutions, and it carries the (GE CORE) marker, so it satisfies its general-education area at every Florida public college and university.",
+      "variantNote": "✅ GE Core status means the AREA credit travels, not just the hours."
+    },
+    {
+      "courseId": "ACG2021",
+      "reason": "Financial Accounting — 32 institutions. You cannot analyse a company whose statements you cannot read, which is why every finance degree requires this.",
+      "variantNote": "⚠ Nine colleges instead run ACG2001 and ACG2011 as a two-course sequence. Check which your target university expects."
+    },
+    {
+      "courseId": "ACG2071",
+      "reason": "Managerial Accounting — 37 of its prefix's 38 carriers (97%), one of the best-travelling courses in Florida. Costing and internal reporting, which is what corporate financial analysis actually works with.",
+      "variantNote": "✅ Take at a state college with complete confidence."
+    },
+    {
+      "courseId": "MAC2233",
+      "reason": "Calculus for Business and Social Science — 36 institutions. The mathematics requirement of most Florida business degrees, and enough calculus for the finance sequence.",
+      "variantNote": "⚠⚠ If you may go toward risk, quantitative finance or a master's, take MAC2311 Calculus I (39 institutions) instead — the business calculus often does not substitute for it, and that closes doors quietly."
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Elementary Statistics — 39 institutions. The basis of everything in risk, and the course the highest-paid role in this family is built on.",
+      "variantNote": null
+    },
+    {
+      "courseId": "FIN3403",
+      "reason": "Financial Management — 19 institutions, predominantly the universities. The core finance course: time value of money, valuation, capital budgeting and cost of capital.",
+      "variantNote": "⚠⚠ Florida numbers this subject TWICE, split by sector: FIN3403 at 19 institutions (mostly universities) and FIN3400 at 14 (almost entirely state colleges), with only three carrying both. Same subject, both upper division. ⚠ Ask your target university which it accepts BEFORE taking the college version."
+    },
+    {
+      "courseId": "FIN3400",
+      "reason": "Financial Management — 14 institutions, almost all state colleges. The same core subject under the number the college sector uses.",
+      "variantNote": "⚠ Listed so the sector split is visible from both sides. It is not a lesser course; it is a different number, and requirement checks match on numbers."
+    },
+    {
+      "courseId": "FIN4504",
+      "reason": "Investments — 9 institutions. Securities, portfolio theory, risk and return: the course closest to what an investment analyst does daily, and the foundation of CFA Level I material.",
+      "variantNote": null
+    },
+    {
+      "courseId": "FIN4414",
+      "reason": "Financial Management II — 7 institutions. Advanced corporate finance: capital structure, dividend policy, valuation of the firm and merger analysis.",
+      "variantNote": null
+    },
+    {
+      "courseId": "ECO3101",
+      "reason": "Intermediate Microeconomics — 11 institutions, ⚠ all universities. Where economics becomes mathematical, and a requirement of both finance and economics degrees.",
+      "variantNote": "⚠⚠ Carried by NO Florida state college. Principles of micro is everywhere and its intermediate version is nowhere below the university level, so plan to take it after transfer and expect a step change in mathematical content."
+    },
+    {
+      "courseId": "ECO3203",
+      "reason": "Intermediate Macroeconomics — 11 institutions, also all universities. Growth, monetary policy and the models used to reason about the environment firms operate in.",
+      "variantNote": "⚠ Same pinch point as intermediate micro: university-only, and it lands immediately after transfer."
+    },
+    {
+      "courseId": "QMB3250",
+      "reason": "AI-Enhanced Business Statistics and Analysis — 8 institutions. ⚠ Notable in itself: Florida has created a statewide course number for this, which means the state has formally recognised it as part of the business curriculum.",
+      "variantNote": "⚠⚠ If your programme offers it, take it. The analytical roles in this family are the ones growing, and this is the course aimed squarely at them."
+    },
+    {
+      "courseId": "BUL2241",
+      "reason": "Business Law I — 25 institutions. Contracts, agency and securities regulation touch everything in this field, and the advisory side is registration-governed.",
+      "variantNote": null
+    },
+    {
+      "courseId": "GEB3213",
+      "reason": "Advanced Business Communication — 28 institutions. An analyst's output is a written recommendation that has to survive being argued with; this is the only course in the degree that teaches it.",
+      "variantNote": null
+    },
+    {
+      "courseId": "FIN2100",
+      "reason": "Personal Finance — 15 institutions. Not a major requirement, but the closest course to what a personal financial advisor actually does, and a cheap way to test whether the advisory side of this family appeals.",
+      "variantNote": "⚠ Also carried as FIN1100 at 13 institutions. ⚠⚠ Usually a general-education elective rather than part of the finance major — check before assuming it counts."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Financial and Investment Analysts (13-2051.00)",
+      "url": "https://www.onetonline.org/link/summary/13-2051.00",
+      "note": "Task statements, 368,500 employed (2024), growth faster than average (5% to 6%) on the 2024–34 projections, 25,100 annual openings, median wages $102,740 (2025). Job Zone Four — most positions need a four-year degree."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Financial Analysts",
+      "url": "https://www.bls.gov/ooh/business-and-financial/financial-analysts.htm",
+      "note": "443,100 jobs (2025), 7% growth 2025–35 (much faster than average), +32,000, median $103,570, entry a bachelor's in finance or a related field. ⚠⚠ The correction this page leads with on licences: most require sponsorship by an employer, and companies do not expect individuals to have them before starting a job."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Personal Financial Advisors",
+      "url": "https://www.bls.gov/ooh/business-and-financial/personal-financial-advisors.htm",
+      "note": "⚠⚠ The contrast that shapes this page: $105,070 median — slightly ABOVE analysts — but 299,400 jobs growing only 1% (slower than average), +4,100 over the decade. Small-firm advisers register with state regulators; large-firm advisers with the SEC."
+    },
+    {
+      "label": "O*NET — Financial Risk Specialists (13-2054.00) and BLS — Budget Analysts",
+      "url": "https://www.onetonline.org/link/summary/13-2054.00",
+      "note": "The other two roles covered here. Risk specialists: 60,500 employed, growth 7% or higher through 2034, 4,800 annual openings, median $117,330 — ✅ the highest in this family. Budget analysts: 50,400 jobs, 2% growth (slower than average), +1,000, median $91,640, with 26% in federal government."
+    },
+    {
+      "label": "Data USA — Financial Analysts, degree fields (US Census ACS PUMS, 2024)",
+      "url": "https://datausa.io/profile/soc/financial-analysts",
+      "note": "⚠⚠ The counted entrant-major evidence: of 346,451 employed, business 170,562 (about 49%), social sciences 41,484 (about 12%, economics classified within it), engineering 14,327. By highest degree: bachelor's 189,508, graduate 116,146 — about a third hold a graduate degree. ⚠ The source's caution: all academic degrees are counted, not one per person, and ACS records a field only for bachelor's holders."
+    },
+    {
+      "label": "Chapter 517, Florida Statutes, and Fla. Admin. Code 69W-600.0024 — investment adviser representatives",
+      "url": "https://www.flsenate.gov/laws/statutes/2023/517.12",
+      "note": "⚠ Florida registration for the advisory side: Form U4 through FINRA's Central Registration Depository, with the Series 65 OR both the Series 7 and Series 66 passed within two years, plus the Securities Industry Essentials examination within four. ⚠⚠ Florida does NOT require the Series 63, which national advice frequently assumes."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — CIP 52.08",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "Finance and financial management: 2,968 credentials at 12 Florida public institutions on the general finance code, plus small programmes in banking and financial support services and financial planning. ⚠ Unlike accounting, finance is taught almost entirely at the universities."
+    },
+    {
+      "label": "SCNS statewide course file and flat file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "✅ The lower division travels: ECO2023 at 39 of 39, ECO2013 at 38, ACG2071 at 37, MAC2233 at 36, STA2023 at 39. ⚠⚠ Two upper-division pinch points: FIN3403 (19 institutions, mostly universities) and FIN3400 (14, almost all state colleges) are the same subject under two numbers with only three carrying both; and ECO3101 and ECO3203 are carried by exactly 11 institutions each, ALL universities."
+    }
+  ]
+}

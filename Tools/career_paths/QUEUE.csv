@@ -40,7 +40,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 39,network-administrator,Network Administrator,11.09,Computer Systems Networking and Telecommunications,15-1244,Network and Computer Systems Administrators,CMP,CHOICE,yes,published
 40,data-scientist,Data Scientist,30.70,Data Science,15-2051,Data Scientists,CMP,CHOICE,yes,published
 41,accountant,Accountant / CPA,52.03,Accounting and Related Services,13-2011,Accountants and Auditors,BUS,DIRECT,yes,published
-42,financial-analyst,Financial Analyst,52.08,Finance and Financial Management Services,13-2051,Financial and Investment Analysts,BUS,CHOICE,yes,
+42,financial-analyst,Financial Analyst,52.08,Finance and Financial Management Services,13-2051,Financial and Investment Analysts,BUS,CHOICE,yes,published
 43,human-resources-specialist,Human Resources Specialist,52.10,Human Resources Management and Services,13-1071,Human Resources Specialists,BUS,CHOICE,yes,
 44,construction-manager,Construction Manager,52.20,Construction Management,11-9021,Construction Managers,BUS,CHOICE,yes,
 45,lawyer,Lawyer,22.01,Law,23-1011,Lawyers,LAW,CHOICE,yes,published
@@ -56,3 +56,6 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 55,computer-support-specialist,Computer Support Specialist,11.09,Computer Systems Networking and Telecommunications,15-1232,Computer User Support Specialists,CMP,DIRECT,yes,section:network-administrator
 56,bookkeeping-clerk,Bookkeeping and Accounting Clerk,52.03,Accounting and Related Services,43-3031,"Bookkeeping, Accounting, and Auditing Clerks",BUS,DIRECT,yes,section:accountant
 57,tax-preparer,Tax Preparer,52.03,Accounting and Related Services,13-2082,Tax Preparers,BUS,DIRECT,yes,section:accountant
+58,personal-financial-advisor,Personal Financial Advisor,52.08,Finance and Financial Management Services,13-2052,Personal Financial Advisors,BUS,CHOICE,yes,section:financial-analyst
+59,financial-risk-specialist,Financial Risk Specialist,52.08,Finance and Financial Management Services,13-2054,Financial Risk Specialists,BUS,CHOICE,yes,section:financial-analyst
+60,budget-analyst,Budget Analyst,52.08,Finance and Financial Management Services,13-2031,Budget Analysts,BUS,CHOICE,yes,section:financial-analyst

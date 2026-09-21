@@ -1,0 +1,29 @@
+{
+  "name": "Finance",
+  "description": "Finance programmes teach how money is valued, raised, allocated and risked — the time value of money, how securities and companies are priced, how firms decide what to invest in, how portfolios are built, and how risk is measured and hedged. It is the most quantitative of the business degrees and the usual route into analyst, advisory and risk work.",
+  "degreesNote": "One of the largest business footprints in the state: 2,968 credentials in finance and financial management in the 2023 federal award year, concentrated at 12 Florida public institutions — this is a university degree, not a state-college one, and that is the main practical difference from accounting. ⚠ Two smaller specialisms sit alongside it: banking and financial support services, and financial planning, the latter being the academic route toward advising individuals rather than analysing companies. ⚠⚠ There is no equivalent of the CPA's 150-hour rule here. What governs entry instead is EXAMINATIONS AND REGISTRATION obtained after you are hired — and the federal handbook makes the useful point that most of those licences require employer sponsorship, so companies do not expect applicants to arrive holding them. ⚠⚠⚠ The credential that does distinguish candidates before hiring is the CFA, and it is a multi-year commitment taken alongside work rather than during a degree."
+  ,
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 55,
+  "cips": [
+    {
+      "cipCode": "52.08",
+      "note": "Finance and financial management services — 2,968 credentials in the 2023 federal award year across 12 Florida public institutions on the general finance code, plus small programmes in banking and financial support services and in financial planning. ⚠ Unlike accounting, this is taught almost entirely at the universities."
+    }
+  ],
+  "related": [
+    {
+      "slug": "accounting",
+      "note": "⚠ The closest sibling and the commonest alternative — the two share most of a first two years, and 49% of working financial analysts hold a business degree of some kind. ⚠⚠ The practical differences: accounting has a licence worth having (the CPA) and a 150-hour rule to plan around; finance has neither, and is taught at 12 Florida institutions against accounting's 50 once bookkeeping certificates are counted. Accounting also starts cleanly at a state college; finance mostly does not."
+    },
+    {
+      "slug": "statistics",
+      "note": "⚠ Worth considering seriously if the risk and quantitative side of finance is the draw. Financial risk specialists earn a higher median than analysts ($117,330 against $103,570) and the work is statistical modelling. ⚠⚠ A finance degree with a statistics minor is a stronger quantitative position than either alone, and it is the combination risk and quant job adverts describe."
+    },
+    {
+      "slug": "data-science",
+      "note": "⚠ The overlap with modern finance is large and growing — pricing, risk models and portfolio analytics are data work. Florida even carries a statewide course number for AI-enhanced business statistics. ⚠⚠ If you find the modelling more interesting than the markets, read this programme before committing to finance."
+    }
+  ]
+}

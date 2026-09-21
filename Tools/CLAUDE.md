@@ -74,7 +74,7 @@ path) as each lands.
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
 | **HLT** health | 28–36 | ✅ **all 9 published** |
 | **CMP** computing | 37–40 | ✅ **all 4 published**, and security/networking each absorb 2–3 related occupations as SECTIONS |
-| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ⚠ **2 of 10** — Lawyer and Accountant; financial analyst, HR, construction manager, paralegal, two teacher rows, police and firefighter remain |
+| **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | ⚠ **3 of 10** — Lawyer, Accountant, Financial Analyst; HR, construction manager, paralegal, two teacher rows, police and firefighter remain |
 
 ⚠⚠⚠ **ONE PATH CAN COVER SEVERAL OCCUPATIONS — lump the family (Ron, 2026-09-21).** His words:
 *"you may want to research and lump cybersecurity career paths into the same guide. Same with
@@ -146,7 +146,7 @@ thing the student could not know (*aerospace employers hire mechanical graduates
 and mechanical is offered at eleven institutions against three*). Links are read in BOTH
 directions, and a related slug must already exist or the push is refused 422.
 
-✅ **44 programmes now exist** (2026-09-21), and every published path names one that actually leads
+✅ **45 programmes now exist** (2026-09-21), and every published path names one that actually leads
 there — and no programme is left without a career. **Authoring programmes is ordinary content work, not a deploy** — but ⚠ widening
 `cip.json` still is.
 
@@ -3693,7 +3693,7 @@ When starting a fresh session in this project:
 
    ```bash
    python career_paths.py list                 # what is live
-   python programs.py list                     # 44 programmes; a path's programmes must exist FIRST
+   python programs.py list                     # 45 programmes; a path's programmes must exist FIRST
    head -1 career_paths/QUEUE.csv; awk -F, 'NR>1 && $NF==""' career_paths/QUEUE.csv | head -5
    ```
 
