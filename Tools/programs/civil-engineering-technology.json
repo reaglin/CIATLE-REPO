@@ -1,0 +1,28 @@
+{
+  "name": "Civil Engineering Technology",
+  "description": "Civil engineering technology programmes train the people who support civil design and construction — drafting and quantities, surveying, materials testing, inspection and the documentation a project runs on.",
+  "degreesNote": "⚠⚠ **This is the smallest programme on the site: eight Florida public institutions and 16 credentials in 2023.** Read that before planning on it. The work exists — 64,900 civil engineering technicians nationally, 5,500 openings a year — but Florida trains for it mostly through **construction technology, drafting and surveying programmes** rather than under this name, which is why this page's course list is drawn from those. ⚠ An associate degree here articulates into construction management and engineering technology bachelor's degrees at several colleges; ask before enrolling.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 81,
+  "cips": [
+    {
+      "cipCode": "15.02",
+      "note": "Civil engineering technologies — **eight Florida public institutions** and 16 credentials in 2023. ⚠ The smallest footprint of any programme on this site, which is the central fact a student needs about it."
+    }
+  ],
+  "related": [
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ The four-year degree, at nine institutions — more than award the technology programme. Where a technician degree is not available near you, this is worth comparing directly rather than assuming it is out of reach."
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "The umbrella series, and where the construction and drafting programmes that actually teach most of this work are filed."
+    },
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "A different industry using much of the same technician skill set — measurement, drawings, quality — and far more widely taught, if the construction sector is not the attraction."
+    }
+  ]
+}

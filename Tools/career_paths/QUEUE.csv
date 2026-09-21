@@ -11,8 +11,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 10,materials-engineer,Materials Engineer,14.18,Materials Engineering,17-2131,Materials Engineers,ENG,DIRECT,yes,published
 11,electronics-engineering-technician,Electronics Engineering Technician,15.03,Electrical/Electronic Engineering Technologies/Technicians,17-3023,Electrical and Electronic Engineering Technologists and Technicians,MFG,DIRECT,yes,published
 12,mechanical-engineering-technician,Mechanical Engineering Technician,15.08,Mechanical Engineering Related Technologies/Technicians,17-3027,Mechanical Engineering Technologists and Technicians,MFG,DIRECT,yes,published
-13,industrial-engineering-technician,Industrial Engineering Technician,15.06,Industrial Production Technologies/Technicians,17-3026,Industrial Engineering Technologists and Technicians,MFG,DIRECT,yes,
-14,civil-engineering-technician,Civil Engineering Technician,15.02,Civil Engineering Technologies/Technicians,17-3022,Civil Engineering Technologists and Technicians,MFG,DIRECT,yes,
+13,industrial-engineering-technician,Industrial Engineering Technician,15.06,Industrial Production Technologies/Technicians,17-3026,Industrial Engineering Technologists and Technicians,MFG,DIRECT,yes,published
+14,civil-engineering-technician,Civil Engineering Technician,15.02,Civil Engineering Technologies/Technicians,17-3022,Civil Engineering Technologists and Technicians,MFG,DIRECT,yes,published
 15,mechatronics-technician,Mechatronics and Automation Technician,15.04,Electromechanical Technologies/Technicians,17-3024,Electro-Mechanical and Mechatronics Technologists and Technicians,MFG,DIRECT,yes,published
 16,cad-drafter,CAD Drafter,15.13,Drafting/Design Engineering Technologies/Technicians,17-3011,Architectural and Civil Drafters,MFG,DIRECT,yes,
 17,machinist,Machinist,48.05,Precision Metal Working,51-4041,Machinists,MFG,DIRECT,yes,published

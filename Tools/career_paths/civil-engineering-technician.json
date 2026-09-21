@@ -1,0 +1,100 @@
+{
+  "name": "Civil Engineering Technician",
+  "cipCode": "15.02",
+  "socCode": "17-3022",
+  "isPublished": true,
+  "sortOrder": 220,
+  "description": "Civil engineering technicians support design and construction — drawings and quantities, surveying, materials testing and the site inspection that catches what was built wrong. ⚠ 64,900 employed nationally, and the Florida programme that carries its name is the smallest on this site: eight institutions, 16 credentials.",
+  "credentialNote": "⚠ No licence governs technician work, and the education bar is lower than in the other technician occupations here — 30% a post-secondary certificate, 28% some college, 21% an associate degree. ⚠⚠ What matters more is WHERE the training is: only eight Florida institutions award the named degree, so the practical route is construction technology, drafting and surveying courses, plus the short **materials-testing certifications** (concrete, soils, asphalt) that inspection work actually requires. ⚠ And compare the civil ENGINEERING degree deliberately: it is offered at nine institutions — more than this programme — and under s. 471.013 it reaches a PE in four years of experience rather than six, which matters in civil practice more than in any other discipline.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>apply theory and principles of civil engineering in planning, designing and overseeing construction and maintenance of structures and facilities under the direction of engineering staff or physical scientists</em>. The tasks are the project's paperwork and its checking — <em>calculate dimensions, square footage, profile and component specifications and material quantities; read and review project blueprints and structural specifications; draft detailed dimensional drawings and design layouts; inspect project site and evaluate contractor work to detect design malfunctions and ensure conformance to design specifications and applicable codes</em>.</p> <p>&#9888; <strong>Inspection is the part that carries responsibility.</strong> A civil technician on site is often the person who notices that what is being built is not what was drawn — and saying so early is the whole value of the role.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>64,900 employed</strong> (2024), growth <strong>&ldquo;slower than average (1% to 2%)&rdquo;</strong>, <strong>5,500 openings a year</strong>, <strong>median wages $64,950 (2025)</strong>. Education: <strong>30% a post-secondary certificate, 28% some college, 21% an associate degree</strong> — notably lower expectations than the industrial or mechanical technician occupations.</p>  <h2>⚠⚠⚠ The smallest programme on this site — and what to do about it</h2> <p><strong>Eight Florida public institutions award in civil engineering technology, and they awarded 16 credentials in 2023.</strong> For an occupation with 5,500 openings a year nationally, that is close to nothing.</p> <p>&#9888; <strong>The work is real; the programme name is not where Florida trains for it.</strong> The courses that actually prepare people are filed under <strong>construction technology, drafting and surveying</strong>, and they are widely available: introduction to structures at <strong>nine</strong> institutions, construction estimating at <strong>nine</strong>, blueprint reading and construction drafting at <strong>eight</strong>, AutoCAD at <strong>nine</strong>.</p> <p>⚠ <strong>So build the qualification from those</strong>, and ask two questions of any college: which of these courses it carries, and what they articulate into. ⚠⚠ And compare the civil ENGINEERING degree honestly — nine institutions award it, which is more than award this technology programme, and it opens the PE route that a technology degree lengthens by two years.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Drawings, in both directions</strong> — reading a construction set properly, and producing clean drafted work in AutoCAD or Civil 3D.</li> <li><strong>Quantities and estimating.</strong> Calculating material and cost from a drawing is a daily task and a hireable skill on its own.</li> <li><strong>Surveying fundamentals</strong> — levels, layout and coordinates. ⚠ Only two or three Florida institutions carry the surveying courses, so this is often learned on the job.</li> <li><strong>Materials and testing</strong> — concrete, asphalt, soils, and the inspection routines that go with them.</li> <li><strong>Documentation and site communication.</strong> Daily reports, RFIs, and telling a contractor that something is wrong in a way that gets it fixed.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Do not plan on the named degree without checking it is near you</strong> — eight institutions statewide. Build from construction technology, drafting and surveying courses instead if it is not.</li> <li><strong>Learn Civil 3D as well as AutoCAD</strong> if you can. It is what Florida civil consultancies run on, and it is frequently the thing that gets a technician hired.</li> <li><strong>Get on a site.</strong> Inspection and materials-testing work is where technicians are genuinely needed, and testing certifications (concrete, soils, asphalt) are short, cheap and respected.</li> <li><strong>Florida's work is specific</strong> — transportation for FDOT and its consultants, stormwater and drainage, coastal and port projects, and the inspection load that follows every hurricane season.</li> <li><strong>⚠ Compare the civil engineering degree deliberately.</strong> It is offered more widely than this programme, and the licence timetable is four years rather than six — which matters in civil practice more than in any other discipline.</li> </ul>",
+  "programs": [
+    {
+      "slug": "civil-engineering-technology",
+      "note": "The named degree — ⚠ eight institutions and 16 credentials in 2023. Check whether it exists near you before planning on it; the programme page lists them."
+    },
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ Offered more widely than the technology degree (nine institutions), with a shorter licence timetable. In this discipline that comparison deserves real thought rather than a glance.",
+      "isRoute": false
+    },
+    {
+      "slug": "engineering-technology",
+      "note": "Where the construction, drafting and surveying programmes that actually teach this work are filed — 76 institutions across the series.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BCN2405",
+      "reason": "Introduction to Structures / Statics and Strength of Materials — nine institutions: forces, members and why a structure stands up. The technical foundation of the role.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    },
+    {
+      "courseId": "BCN1272",
+      "reason": "Blueprint Reading — eight institutions. ⚠ The single most immediately useful course on this path: everything on a site refers back to the drawing set.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    },
+    {
+      "courseId": "BCN1251C",
+      "reason": "Construction Drafting — eight institutions: producing the drawings, not only reading them.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    },
+    {
+      "courseId": "BCT2770",
+      "reason": "Construction Estimating — nine institutions: quantities, materials and cost from a drawing. ⚠ A hireable skill on its own, and the one contractors test for.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    },
+    {
+      "courseId": "BCN1001",
+      "reason": "Building Construction — seven institutions: methods, sequence and the vocabulary of how a project is actually put together.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    },
+    {
+      "courseId": "ETD1320C",
+      "reason": "Introduction to AutoCAD — nine institutions. ⚠ Ask whether the programme also teaches CIVIL 3D: it is what Florida civil consultancies run on and it is often the hiring difference.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    },
+    {
+      "courseId": "SUR2101C",
+      "reason": "Topographic Drafting and Surveying — ⚠ only three Florida institutions carry it (FIU, State College of Florida, USF), which is why surveying is so often learned on the job in this state.",
+      "variantNote": "⚠ Surveying is the thinnest part of the civil technician curriculum in Florida: SUR1101C is carried by two institutions and this one by three. If it is not available near you, look for a survey crew that trains — the entry route there is still apprenticeship in practice."
+    },
+    {
+      "courseId": "EGS1006",
+      "reason": "Introduction to Engineering — seven institutions: what engineers do, how projects are organised, and where a technician fits into them.",
+      "variantNote": "⚠ A college-credit course in an associate-degree programme rather than a clock-hour certificate course — it transfers differently, and the carrier count below is how many Florida public institutions teach it."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Civil Engineering Technologists and Technicians (17-3022.00)",
+      "url": "https://www.onetonline.org/link/summary/17-3022.00",
+      "note": "Task statements, 64,900 employed (2024), growth “slower than average (1% to 2%)”, 5,500 annual openings, median wages $64,950 (2025), and a lower education bar than the other technician occupations here — 30% a post-secondary certificate."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "⚠⚠ Eight Florida public institutions award in CIP 15.02 and they awarded 16 credentials in 2023 — the smallest programme footprint on this site, and the finding this page is built around."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠ The evidence that the training exists under other names: structures and estimating at nine institutions, blueprint reading and drafting at eight, AutoCAD at nine — against two or three for surveying."
+    },
+    {
+      "label": "Florida Department of Transportation",
+      "url": "https://www.fdot.gov/",
+      "note": "The state's largest single employer of civil technicians and the consultancies around it — and the source of the materials-testing and inspection qualifications that matter on its projects."
+    },
+    {
+      "label": "Chapter 471, Florida Statutes — Engineering",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
+      "note": "⚠ s. 471.013 — four years of experience after an engineering curriculum, six after engineering technology. It matters more in civil practice than anywhere else, because the licence is close to mandatory there."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 15.02, the group this path is filed under."
+    }
+  ]
+}
