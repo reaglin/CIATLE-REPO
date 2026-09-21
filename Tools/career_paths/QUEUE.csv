@@ -27,8 +27,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 26,automotive-service-technician,Automotive Service Technician,47.06,Vehicle Maintenance and Repair Technologies/Technicians,49-3023,Automotive Service Technicians and Mechanics,MFG,DIRECT,yes,published
 27,logistics-analyst,Logistics and Supply Chain Analyst,52.02,"Business Administration, Management and Operations",13-1081,Logisticians,MFG,CHOICE,yes,published
 28,registered-nurse,Registered Nurse,51.38,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",29-1141,Registered Nurses,HLT,DIRECT,yes,published
-29,licensed-practical-nurse,Licensed Practical Nurse,51.39,"Practical Nursing, Vocational Nursing and Nursing Assistants",29-2061,Licensed Practical and Licensed Vocational Nurses,HLT,DIRECT,yes,
-30,radiologic-technologist,Radiologic Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2034,Radiologic Technologists and Technicians,HLT,DIRECT,yes,
+29,licensed-practical-nurse,Licensed Practical Nurse,51.39,"Practical Nursing, Vocational Nursing and Nursing Assistants",29-2061,Licensed Practical and Licensed Vocational Nurses,HLT,DIRECT,yes,published
+30,radiologic-technologist,Radiologic Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2034,Radiologic Technologists and Technicians,HLT,DIRECT,yes,published
 31,respiratory-therapist,Respiratory Therapist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-1126,Respiratory Therapists,HLT,DIRECT,yes,
 32,dental-hygienist,Dental Hygienist,51.06,Dental Support Services and Allied Professions,29-1292,Dental Hygienists,HLT,DIRECT,yes,
 33,medical-laboratory-scientist,Medical Laboratory Scientist,51.10,Clinical/Medical Laboratory Science/Research and Allied Professions,29-2011,Medical and Clinical Laboratory Technologists,HLT,DIRECT,yes,

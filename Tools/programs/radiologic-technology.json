@@ -1,0 +1,20 @@
+{
+  "name": "Radiologic Technology",
+  "description": "Radiography programmes train the people who produce medical images — positioning patients, setting exposures, protecting everyone in the room from unnecessary radiation, and knowing when an image is good enough for a radiologist to read. Two years, heavily clinical, and selective to get into.",
+  "degreesNote": "⚠ This is an associate-degree field and the data says so on both sides: 22 of the 23 Florida institutions awarding in it award the associate degree (349 of 425 credentials in 2023), and 61% of employers name an associate degree as the usual entry. ⚠⚠ But read the certificate rows carefully before choosing one. A short certificate in this series is usually an ADVANCED modality — computed tomography, mammography, interventional — taken by someone who is already a registered technologist, not a route in. The one bachelor's programme in the state is likewise a completion degree for people already working. ⚠ The entry credential is the two-year degree, and admission to it is competitive and cohort-based: applications open once a year, the prerequisites are taken first, and a place is not guaranteed by enrolling at the college.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 84,
+  "cips": [
+    {
+      "cipCode": "51.0911",
+      "note": "Radiologic technology / radiographer — 23 Florida public institutions and 425 credentials in 2023: 349 associate degrees at 22 institutions, 46 certificates at 4, and a single bachelor's programme (30 graduates). Valencia 65, Miami Dade 39, Palm Beach State 32, FSCJ 24, Hillsborough 24, Broward 22."
+    }
+  ],
+  "related": [
+    {
+      "slug": "nursing",
+      "note": "⚠ The comparison most students in a health-science first year are actually making. Both are cohort programmes with clinical placements and competitive admission; nursing is far larger (78 Florida institutions against 23) and has a clear degree ladder above it, while radiography pays more at entry on the same two years and stops at the associate degree for most people."
+    }
+  ]
+}

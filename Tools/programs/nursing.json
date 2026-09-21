@@ -15,5 +15,10 @@
       "note": "Practical and vocational nursing, and nursing assistants — the LPN and CNA routes. ⚠ Included deliberately: a school with only an LPN programme has a nursing programme."
     }
   ],
-  "related": []
+  "related": [
+    {
+      "slug": "radiologic-technology",
+      "note": "⚠ The other large cohort-based clinical programme at the same colleges, and the one nursing applicants most often consider alongside it. It takes two years like the A.S. in nursing, pays a higher median at entry ($80,110 against $64,400 for an LPN), and has almost no degree ladder above it — which is the opposite trade-off from nursing."
+    }
+  ]
 }
