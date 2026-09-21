@@ -41,7 +41,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 40,data-scientist,Data Scientist,30.70,Data Science,15-2051,Data Scientists,CMP,CHOICE,yes,published
 41,accountant,Accountant / CPA,52.03,Accounting and Related Services,13-2011,Accountants and Auditors,BUS,DIRECT,yes,published
 42,financial-analyst,Financial Analyst,52.08,Finance and Financial Management Services,13-2051,Financial and Investment Analysts,BUS,CHOICE,yes,published
-43,human-resources-specialist,Human Resources Specialist,52.10,Human Resources Management and Services,13-1071,Human Resources Specialists,BUS,CHOICE,yes,
+43,human-resources-specialist,Human Resources Specialist,52.10,Human Resources Management and Services,13-1071,Human Resources Specialists,BUS,CHOICE,yes,published
 44,construction-manager,Construction Manager,52.20,Construction Management,11-9021,Construction Managers,BUS,CHOICE,yes,
 45,lawyer,Lawyer,22.01,Law,23-1011,Lawyers,LAW,CHOICE,yes,published
 46,paralegal,Paralegal,22.03,Legal Support Services,23-2011,Paralegals and Legal Assistants,LAW,DIRECT,yes,
@@ -59,3 +59,6 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 58,personal-financial-advisor,Personal Financial Advisor,52.08,Finance and Financial Management Services,13-2052,Personal Financial Advisors,BUS,CHOICE,yes,section:financial-analyst
 59,financial-risk-specialist,Financial Risk Specialist,52.08,Finance and Financial Management Services,13-2054,Financial Risk Specialists,BUS,CHOICE,yes,section:financial-analyst
 60,budget-analyst,Budget Analyst,52.08,Finance and Financial Management Services,13-2031,Budget Analysts,BUS,CHOICE,yes,section:financial-analyst
+61,human-resources-manager,Human Resources Manager,52.10,Human Resources Management and Services,11-3121,Human Resources Managers,BUS,CHOICE,yes,section:human-resources-specialist
+62,training-development-specialist,Training and Development Specialist,52.10,Human Resources Management and Services,13-1151,Training and Development Specialists,BUS,CHOICE,yes,section:human-resources-specialist
+63,compensation-benefits-specialist,Compensation and Benefits Specialist,52.10,Human Resources Management and Services,13-1141,"Compensation, Benefits, and Job Analysis Specialists",BUS,CHOICE,yes,section:human-resources-specialist

@@ -1,0 +1,40 @@
+{
+  "name": "Business Administration and Management",
+  "description": "Business administration is the general management degree — accounting, economics, finance, marketing, operations, organisational behaviour and law, taken broadly rather than as a specialism, usually with a concentration chosen in the final two years. It is by a wide margin the most awarded programme in Florida, and it is how the state teaches most of the business careers on this site, including human resources.",
+  "degreesNote": "⚠⚠ This is the largest programme on this site by any measure: 46 Florida public institutions and roughly 19,500 credentials in the 2023 federal award year, at every level from a short certificate through the A.A. and A.S. to bachelor's and master's degrees. Valencia alone awards 2,799, Miami Dade 2,408, Broward 1,592, UF 1,590. ⚠ The breadth is the point and the caution: a business administration degree is the most available and most flexible credential in the state, and it is also the least differentiating. What distinguishes graduates is the CONCENTRATION, the internships and the quantitative courses taken inside it. ⚠⚠⚠ It is also where Florida teaches human resources. Only one public institution in the state awards a degree under the human resources CIP code, so for practically everybody, HR is a concentration inside this programme rather than a degree of its own — which is worth knowing before searching fruitlessly for an HR major.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 56,
+  "cips": [
+    {
+      "cipCode": "52.0201",
+      "note": "Business administration and management, general — 45 Florida public institutions and 14,198 credentials in the 2023 federal award year, the largest single code in the state. Valencia 2,799, Miami Dade 2,408, Broward 1,592, UF 1,590, FIU 863, FAU 678."
+    },
+    {
+      "cipCode": "52.0299",
+      "note": "Business administration, management and operations, other — 20 Florida public institutions and 2,720 credentials, covering the programmes that do not fit a named specialism."
+    },
+    {
+      "cipCode": "52.0205",
+      "note": "Operations management and supervision — 16 Florida public institutions and 1,506 credentials. The production and process side of management, and a common concentration rather than a separate department."
+    },
+    {
+      "cipCode": "52.0206",
+      "note": "Non-profit and public organisation management — 4 Florida public institutions and 152 credentials. Small, but a genuinely different destination from the corporate route and worth showing separately."
+    }
+  ],
+  "related": [
+    {
+      "slug": "accounting",
+      "note": "⚠ The specialised alternative, and the most common decision a Florida business student faces. Accounting is narrower, harder to walk away from, and has a licence worth having; business administration is broader and more available. ⚠⚠ They share most of a first two years, so the choice can be deferred — but the CPA's 150-hour rule means an accounting student should decide by the end of the first year."
+    },
+    {
+      "slug": "finance",
+      "note": "⚠ The quantitative specialisation, taught at only 12 Florida public institutions and almost entirely at universities — against 46 here. ⚠⚠ If the analytical side of business is the draw, finance is the sharper credential; if you are not sure yet, business administration keeps finance open as a concentration at far more colleges."
+    },
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "⚠ A specialisation that has separated out into its own degree, and one of the few business concentrations where the specialist credential clearly beats the general one. Worth reading before settling for a general management degree if operations and supply chain are what interest you."
+    }
+  ]
+}
