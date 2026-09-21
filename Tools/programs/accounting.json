@@ -1,0 +1,28 @@
+{
+  "name": "Accounting",
+  "description": "Accounting programmes teach how organisations measure and report what they own, owe and earn — recording transactions, preparing and auditing financial statements, computing tax, and building the systems and controls that make the numbers trustworthy. Florida teaches it at two quite separate levels: a short bookkeeping certificate that leads to clerical work, and the degree sequence that leads to accountant, auditor and CPA.",
+  "degreesNote": "⚠⚠ Read the two codes below as two different products, because they are. BOOKKEEPING AND ACCOUNTING TECHNOLOGY is taught at 40 Florida public institutions and is overwhelmingly short certificates — 1,477 of the state's accounting credentials in the 2023 award year were certificates of under a year. ACCOUNTING proper is taught at 13 institutions and produced 1,419 bachelor's degrees and 549 master's. ⚠⚠⚠ The clerical tier is projected to DECLINE by 6% nationally as software absorbs the data entry; the accountant tier is projected to grow 5%. A bookkeeping certificate is a genuine job and a poor destination. ⚠ For the CPA, the number that governs everything is 150 SEMESTER HOURS — thirty more than a bachelor's — which is why the master's row above is so large. Florida requires 120 hours to SIT the examination (s. 473.306) and 150 to be licensed, so most students plan a fifth year from the start.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 54,
+  "cips": [
+    {
+      "cipCode": "52.0301",
+      "note": "Accounting — the degree route, at 13 Florida public institutions and 1,968 credentials in the 2023 federal award year, weighted to bachelor's and master's degrees. Florida Atlantic 338, USF 316, FIU 285, UCF 276, UF 213, FSU 135."
+    },
+    {
+      "cipCode": "52.0302",
+      "note": "Accounting technology, bookkeeping and clerical — 40 Florida public institutions and 1,872 credentials, overwhelmingly short certificates, and heavily taught at state and technical colleges. ⚠ Included deliberately: a school teaching only bookkeeping has an accounting programme, and it is where a large number of students actually start."
+    }
+  ],
+  "related": [
+    {
+      "slug": "paralegal-studies",
+      "note": "⚠ A closer neighbour than it looks. Both are document-and-rules disciplines taught heavily at Florida state colleges, both lead to licensed or credentialled work, and both sit alongside the legal and regulatory side of business. ⚠⚠ Accounting pays better at the degree level and has a clearer ladder; paralegal studies is quicker to a first job."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ Worth naming because accounting information systems is where a growing share of the work now sits, and the clerical tier is shrinking precisely because software absorbed it. ⚠⚠ An accounting degree with real systems and data skills is a materially different proposition from one without — several Florida programmes now carry an accounting information systems course, and it is the one to take."
+    }
+  ]
+}

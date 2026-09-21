@@ -39,7 +39,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 38,cybersecurity-analyst,Cybersecurity Analyst,11.10,Computer/Information Technology Administration and Management,15-1212,Information Security Analysts,CMP,CHOICE,yes,published
 39,network-administrator,Network Administrator,11.09,Computer Systems Networking and Telecommunications,15-1244,Network and Computer Systems Administrators,CMP,CHOICE,yes,published
 40,data-scientist,Data Scientist,30.70,Data Science,15-2051,Data Scientists,CMP,CHOICE,yes,published
-41,accountant,Accountant / CPA,52.03,Accounting and Related Services,13-2011,Accountants and Auditors,BUS,DIRECT,yes,
+41,accountant,Accountant / CPA,52.03,Accounting and Related Services,13-2011,Accountants and Auditors,BUS,DIRECT,yes,published
 42,financial-analyst,Financial Analyst,52.08,Finance and Financial Management Services,13-2051,Financial and Investment Analysts,BUS,CHOICE,yes,
 43,human-resources-specialist,Human Resources Specialist,52.10,Human Resources Management and Services,13-1071,Human Resources Specialists,BUS,CHOICE,yes,
 44,construction-manager,Construction Manager,52.20,Construction Management,11-9021,Construction Managers,BUS,CHOICE,yes,
@@ -54,3 +54,5 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 53,digital-forensics-analyst,Digital Forensics Analyst,11.10,Computer/Information Technology Administration and Management,15-1299,"Computer Occupations, All Other",CMP,DIRECT,yes,section:cybersecurity-analyst
 54,computer-network-architect,Computer Network Architect,11.09,Computer Systems Networking and Telecommunications,15-1241,Computer Network Architects,CMP,DIRECT,yes,section:network-administrator
 55,computer-support-specialist,Computer Support Specialist,11.09,Computer Systems Networking and Telecommunications,15-1232,Computer User Support Specialists,CMP,DIRECT,yes,section:network-administrator
+56,bookkeeping-clerk,Bookkeeping and Accounting Clerk,52.03,Accounting and Related Services,43-3031,"Bookkeeping, Accounting, and Auditing Clerks",BUS,DIRECT,yes,section:accountant
+57,tax-preparer,Tax Preparer,52.03,Accounting and Related Services,13-2082,Tax Preparers,BUS,DIRECT,yes,section:accountant
