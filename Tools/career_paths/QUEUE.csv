@@ -35,7 +35,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 34,physical-therapist-assistant,Physical Therapist Assistant,51.08,Allied Health and Medical Assisting Services,31-2021,Physical Therapist Assistants,HLT,DIRECT,yes,published
 35,paramedic,Paramedic,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2043,Paramedics,HLT,DIRECT,yes,published
 36,surgical-technologist,Surgical Technologist,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2055,Surgical Technologists,HLT,DIRECT,yes,published
-37,software-developer,Software Developer,11.07,Computer Science,15-1252,Software Developers,CMP,CHOICE,yes,
+37,software-developer,Software Developer,11.07,Computer Science,15-1252,Software Developers,CMP,CHOICE,yes,published
 38,cybersecurity-analyst,Cybersecurity Analyst,11.10,Computer/Information Technology Administration and Management,15-1212,Information Security Analysts,CMP,CHOICE,yes,
 39,network-administrator,Network Administrator,11.09,Computer Systems Networking and Telecommunications,15-1244,Network and Computer Systems Administrators,CMP,CHOICE,yes,
 40,data-scientist,Data Scientist,30.70,Data Science,15-2051,Data Scientists,CMP,CHOICE,yes,published

@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **85** |
+| ⏳ **Awaiting a decision from Ron** | **86** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 10 |
-| **Total items** | **114** |
+| **Total items** | **115** |
 
 ---
 
-### ⏳ Awaiting a decision (85)
+### ⏳ Awaiting a decision (86)
 
 | # | Item |
 |---|---|
@@ -122,6 +122,7 @@ continues around every one of them.
 | **112** | Should PHLEBOTOMY be its own programme? (raised 2026-09-21, medical laboratory scientist path) |
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
+| **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
 
 ### Informational — no decision needed (19)
 
@@ -3449,6 +3450,43 @@ a course on demand, which is what makes this possible.
 nobody offers and the state does not list is worse than a page with no offerings. **Suggested check to
 run across the WHOLE catalog, not just these prefixes: every listed course with `offeringCount: 0`,
 cross-referenced against the flat file.** That is one pass and it would size the problem.
+
+
+## 115. ⚠⚠ `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path)
+
+The live `computer-science` programme claims **`11.07` and `11.01`**, and reports **41 Florida
+institutions**. ⚠ Most of those are not computer science programmes:
+
+| CIP | What it is | FL public institutions | Completions (2023) |
+|---|---|---|---|
+| `11.0101` | Computer and Information Sciences, General | 15 | 3,047 |
+| ⚠ `11.0103` | **Information Technology** | **36** | **2,924** |
+| `11.0701` | **Computer Science proper** | ⚠ **4** | 265 |
+
+**`11.01` as a group matches `11.0101`, `11.0102`, `11.0103`, `11.0104` and `11.0199`** — so the
+36 institutions awarding Information Technology degrees are all listed under *Computer Science*.
+
+⚠ **It is not simply wrong.** Florida files most of its computer science degrees under `11.0101`,
+not `11.0701` (only Florida Poly, UNF, USF and UWF use the proper code), so dropping `11.01` would
+leave the programme with four schools. **The breadth is buying real coverage at the cost of
+precision.**
+
+⚠⚠ **Why it needs deciding NOW rather than later:** the next two queue rows are
+**cybersecurity analyst** (`11.1003`, 35 institutions) and **network administrator** (`11.0901`
+/ `11.1001`, 35 and 28). If each gets its own programme, the same colleges will appear under three
+or four computing programmes, and a reader browsing will not be able to tell them apart.
+
+**Three options, and this is a structural call:**
+1. **Leave it.** One broad Computer Science programme, and the networking and security paths point
+   at it rather than getting their own.
+2. **Split by CIP**: `computer-science` narrowed to `11.0101` + `11.0701`, plus new
+   `information-technology` (`11.0103`), `cybersecurity` (`11.1003`) and `networking`
+   (`11.0901`/`11.1001`) programmes. Most precise, most pages, most overlap to explain.
+3. **One `information-technology` programme** alongside computer science, with security and
+   networking as CIPs inside it.
+
+⚠ **I have not changed anything** — the software developer path names `computer-science` as it
+stands. **Ron's answer decides how rows 38 and 39 are built.**
 
 
 ## Resolved

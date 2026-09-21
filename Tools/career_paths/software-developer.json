@@ -1,0 +1,151 @@
+{
+  "name": "Software Developer",
+  "cipCode": "11.01",
+  "socCode": "15-1252",
+  "isPublished": true,
+  "sortOrder": 340,
+  "description": "Software developers design, build and maintain the systems everything else runs on. ⚠ A median of $135,980 nationally and $130,980 in Florida, on a bachelor's degree, and among the highest-paid on this site — above every two-year route and behind only computer hardware engineering. ⚠⚠ It is a CHOICE path: no single major owns it. Counted degrees show computing majors supplying under a third of working developers and ENGINEERING supplying nearly as many. ⚠⚠⚠ And it is the only career here you can enter with no degree at all — about one developer in five has none.",
+  "credentialNote": "⚠⚠ There is no licence, no board, no examination and no accreditation gate. Nothing in Florida law restricts who may call themselves a software developer or write software for money, and no certification is required by any employer as a matter of law. ⚠ That makes this the opposite of every health path on this site: the credential does not open the door, the demonstrated ability does. What employers actually screen on is a portfolio of working code, a technical interview, and increasingly a public repository history. ⚠⚠ A degree still matters, and the data says how: 85% of O*NET respondents name a bachelor's as the education required, and among professional developers surveyed by Stack Overflow 45.9% hold a bachelor's and 28.0% a master's. But 11.5% have some college and no degree and 5.1% finished at secondary school — so the degree is the usual route and demonstrably not the only one. ⚠⚠⚠ Read that as freedom with a catch: without the credential you must produce the evidence yourself, and the people who do it successfully are almost never the people who simply skipped the work.",
+  "bodyHtml": "<h2>What the work actually is</h2><p>O*NET, on software developers: <em>analyze user needs and software requirements to determine feasibility of design within time and cost constraints; develop or direct software system testing or validation procedures, programming, or documentation; design, develop and modify software systems, using scientific analysis and mathematical models; modify existing software to correct errors, adapt it to new hardware, or upgrade interfaces and improve performance</em>.</p><p>&#9888; <strong>Notice how little of that is typing code.</strong> Most of a developer's working life is reading code somebody else wrote, deciding what a half-specified request actually means, and changing a running system without breaking it. <strong>The degree teaches you to write programs; the job is mostly about changing them.</strong></p><h2>Pay, and the Florida discount</h2><ul><li><strong>O*NET</strong> (2024&ndash;34): <strong>1,693,800 employed</strong>, growth <strong>much faster than average (7% or higher)</strong>, <strong>115,200 openings a year</strong>, median <strong>$135,980</strong> (2025).</li><li><strong>BLS OOH</strong> (2025&ndash;35, with QA analysts and testers): <strong>1,905,400 jobs</strong>, <strong>10% growth</strong>, <strong>+185,400</strong>. Developers <strong>$135,980</strong>; quality assurance analysts and testers <strong>$104,300</strong>.</li></ul><p>&#9888;&#9888; <strong>Florida pays less than the national figure, and the gap widens at the top.</strong> Florida's median is <strong>$130,980</strong> against $135,980 nationally; the 10th percentile is <strong>$80,050</strong> against $82,460; the 90th is <strong>$204,400</strong> against $214,670. <strong>The spread matters more than the median here</strong> &mdash; the distance between the 10th and 90th percentile is about $124,000, far wider than any licensed path on this site, because nothing standardises what a developer is.</p><h2>&#9888;&#9888;&#9888; The major question, and what the counted data says</h2><p>This is a <strong>CHOICE</strong> path: no programme admits you to it and no programme is required. So the useful question is what working developers actually studied. Census American Community Survey microdata, reported through Data USA for 2024, counts degrees held by people employed as software developers:</p><table><thead><tr><th>Field of degree</th><th>People</th><th>Share of the 2,019,249 employed</th></tr></thead><tbody><tr><td>Computer and information sciences and support services</td><td><strong>628,261</strong></td><td>31%</td></tr><tr><td>&#9888; <strong>Engineering</strong></td><td><strong>484,509</strong></td><td><strong>24%</strong></td></tr><tr><td>Business</td><td>155,971</td><td>8%</td></tr></tbody></table><p>&#9888;&#9888;&#9888; <strong>Computing majors supply under a third of working software developers, and engineering supplies nearly as many.</strong> Those three fields together account for about 63% &mdash; the remaining third studied something else or did not finish a degree.</p><p>&#9888; <strong>The source's own caution, and it matters:</strong> Data USA notes that this counts <em>all academic degrees</em> rather than one per person, so somebody with a computing bachelor's and an engineering master's appears in both rows, and ACS records a field of degree only for bachelor's holders. <strong>Treat these as the shape of the distribution, not as exact head counts.</strong> The shape is the finding: this occupation draws broadly, and it does not punish you for having studied engineering, mathematics or physics.</p><h2>&#9888;&#9888; And the thing that makes this path unlike every other on this site</h2><p>Stack Overflow's 2025 survey of <strong>36,705 professional developers</strong> reports formal education as follows: <strong>bachelor's 45.9%</strong>, <strong>master's 28.0%</strong>, <strong>some college with no degree 11.5%</strong>, <strong>professional degree 4.5%</strong>, <strong>secondary school 5.1%</strong>, <strong>associate degree 3.2%</strong>, primary school 0.8%.</p><p>&#9888;&#9888;&#9888; <strong>Roughly one working developer in five holds no degree at all.</strong> There is no other career on this site where that is true &mdash; every health path ends at a licence, the trades end at a certificate, and law ends at a bar examination. <strong>Here the only gate is whether you can do the work.</strong></p><p>&#9888; <strong>Do not read that as &ldquo;the degree is optional&rdquo;.</strong> Three quarters of professional developers hold one, and it is what gets an interview when you have no track record. The honest framing is that <strong>the degree is a strong default and a poor excuse</strong>: it opens the first door, and after the first job nobody asks again.</p><p>&#9888; On how developers actually learn, the same survey found <strong>technical documentation (67.8%)</strong> and <strong>other online resources (58.7%)</strong> ahead of <strong>online courses or certification (32.7%)</strong> and <strong>school (16.6%)</strong>, with <strong>coding bootcamps at 5.2%</strong>. <strong>Bootcamps are a much smaller share of how people learn than their marketing suggests.</strong></p><h2>&#9888;&#9888;&#9888; The Florida transfer trap: it is the SECOND programming course</h2><p>If you start at a Florida state college and intend to finish a bachelor's, <strong>this is the single most important thing on this page.</strong></p><p>The first programming course is widely and consistently carried at the 2000 level: <strong>COP&nbsp;1000</strong> (15 institutions), <strong>COP&nbsp;2800 Java</strong> (15), <strong>COP&nbsp;2360 C#</strong> (12), <strong>COP&nbsp;2224 C++</strong> (10). <strong>Data structures recovers</strong> at <strong>COP&nbsp;3530</strong> (11 institutions, colleges and universities alike).</p><p>&#9888;&#9888; <strong>Between them is a hole.</strong> The second programming course &mdash; the one that takes you from syntax to objects, memory and program design &mdash; is carried under at least five different numbers, none of them by more than three institutions:</p><table><thead><tr><th>Number</th><th>Title</th><th>Carriers</th></tr></thead><tbody><tr><td>COP&nbsp;3014</td><td>Programming 2</td><td>3 &mdash; FAU, FSU, UWF</td></tr><tr><td>COP&nbsp;3337</td><td>Computer Programming II</td><td>3 &mdash; FIU, Florida Poly, Santa Fe</td></tr><tr><td>COP&nbsp;2510</td><td>Programming Concepts</td><td>2 &mdash; State College of Florida, USF</td></tr><tr><td>COP&nbsp;4530</td><td>Data Structures</td><td>2 &mdash; FSU, USF</td></tr><tr><td>COP&nbsp;3502</td><td>Computer Science I</td><td>1 &mdash; UCF</td></tr></tbody></table><p>&#9888;&#9888;&#9888; <strong>Every one of those is a 3000- or 4000-level number, and the college courses feeding them are at 2000 level.</strong> A Florida state-college student can complete two solid programming courses and arrive at a university that numbers its own second course upper-division &mdash; which a 2000-level course cannot substitute for. <strong>Ask your target university, in writing and before you register, which of its programming courses your college sequence satisfies.</strong> This is the question, and almost nobody asks it in time.</p><p>&#9888; <strong>One piece of good news:</strong> <strong>MAD&nbsp;2104 Discrete Mathematics</strong> is carried by <strong>17 institutions</strong> &mdash; 71% of the carriers of its prefix, one of the best-travelling numbers in Florida computing. <strong>Take it at a college with confidence.</strong> So do <strong>MAC&nbsp;2311 Calculus I</strong> and <strong>STA&nbsp;2023 Statistics</strong>, at 39 institutions each.</p><h2>&#9888; What the destination actually tests</h2><p>Because there is no licence, the hiring process is the gate, and it tests a narrow and predictable set of things:</p><ul><li><strong>Data structures and algorithms</strong>, under time pressure, out loud. This is what technical interviews are, and it is why COP&nbsp;3530 is the most important course on this page.</li><li><strong>One language, deeply</strong>, rather than six shallowly. Java, Python, C# and JavaScript all appear in Florida catalogues; the choice matters far less than the depth.</li><li><strong>Version control and collaborative workflow.</strong> Often taught nowhere in a degree and assumed by every employer.</li><li><strong>Reading a large unfamiliar codebase.</strong> The single biggest gap between graduates and the job, and the reason a contribution to an existing open-source project is worth more on a CV than another personal project.</li><li><strong>Writing plainly.</strong> Design documents, incident notes and code review comments are most of a senior developer's output.</li></ul><h2>Advice</h2><p>&#9888;&#9888; <strong>If you are at a state college, resolve the second-course question now.</strong> Name your target university, get its computer science flowchart, and ask the department &mdash; not the general admissions office &mdash; which of its courses your COP sequence satisfies. Get the answer in writing.</p><p>&#9888; <strong>If you are choosing a major, the counted data says you have room.</strong> Computing is the plurality, not the requirement, and engineering, mathematics and physics all supply large numbers of working developers. <strong>What none of them substitutes for is building things</strong> &mdash; the portfolio is what converts any major into this job.</p><p>&#9888; <strong>If you are considering skipping the degree, be honest about the trade.</strong> One in five developers has no degree, so it is genuinely possible; it is also the harder road, and it is hardest at the very start, when you have neither a credential nor a track record. <strong>The people who do it have usually produced more visible work than the graduates have, not less.</strong></p><p><strong>And treat Florida's wage discount as a real number.</strong> $130,980 against $135,980 at the median is modest; the $10,000 gap at the 90th percentile is not, and it reflects where the highest-paying employers are. Remote work changes that calculation, and it is worth asking about explicitly rather than assuming.</p>",
+  "cipCodes": [
+    {
+      "cipCode": "11.07",
+      "note": "Computer science proper. ⚠ In Florida this code is thinly used — only 4 public institutions award under it (Florida Poly 111, UNF 67, USF 54, UWF 33, 265 graduates in 2023). Most Florida computer science degrees are filed under 11.01 instead, which is why that is this path's primary anchor."
+    },
+    {
+      "cipCode": "14.09",
+      "note": "Computer engineering — 9 Florida public institutions and 639 graduates. Included because the counted degree data puts ENGINEERING at 484,509 working software developers against computing's 628,261, and computer engineering is the closest of the engineering fields to this destination."
+    },
+    {
+      "cipCode": "11.02",
+      "note": "Computer programming — 26 Florida public institutions and 742 credentials, largely at state and technical colleges. Included because it is where much of the state's applied programming instruction actually sits, and because it is a realistic entry point rather than a lesser one."
+    },
+    {
+      "cipCode": "27.05",
+      "note": "Statistics. ⚠ A smaller but real feeder: mathematics and statistics graduates enter software development in numbers, and the Data USA counts place fields outside computing and engineering at roughly a third of the occupation."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "computer-science",
+      "note": "The plurality route and the one most employers picture — 41 Florida public institutions once information-technology and computer-and-information-sciences degrees are counted with it. ⚠ It is the default rather than the requirement: counted degrees put computing majors at under a third of working developers."
+    },
+    {
+      "slug": "computer-engineering",
+      "note": "⚠ A genuine route, not an approximation. Engineering supplies nearly as many working software developers as computing does, and computer engineering is the closest fit — the same data structures and systems courses, plus the hardware side. ⚠⚠ Worth choosing deliberately if embedded systems, firmware or hardware-adjacent work appeals; it is harder to move the other way later."
+    },
+    {
+      "slug": "data-science",
+      "note": "⚠ A route into a specific part of this work rather than the whole of it — machine-learning and data-platform engineering roles are software development jobs, and this programme reaches them. ⚠⚠ It is a narrower entry than computer science: if you are unsure which kind of developer you want to be, the broader degree keeps more doors open."
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "COP1000",
+      "reason": "Introduction to Computer Programming — 15 institutions, the most widely carried first programming course in the state. Where you find out whether you like this at all, which is worth knowing cheaply.",
+      "variantNote": "⚠ Language varies by college and matters less than you think. What matters is that this is a genuine programming course rather than CGS1100 Applications for Business (14 institutions), which teaches spreadsheets and word processing and is not a step toward this career."
+    },
+    {
+      "courseId": "COP2800",
+      "reason": "Programming with Java — 15 institutions, tied for the most widely carried. Java remains the language most Florida colleges teach the first serious course in, and it is well represented in Florida employers.",
+      "variantNote": "⚠ Also carried as COP2250 Java Programming at 8 institutions — the same subject under a second number. ⚠⚠ Check which one your target university's articulation names, because they are not interchangeable in a requirement check."
+    },
+    {
+      "courseId": "COP2224",
+      "reason": "Introduction to C++ Programming — 10 institutions. The alternative first-language route, and the better one if you are heading toward systems, embedded or games work.",
+      "variantNote": "⚠ C++ is harder as a first language and teaches memory management that Java and Python hide. That is a real advantage later and a real cost now."
+    },
+    {
+      "courseId": "COP2360",
+      "reason": "C# Programming — 12 institutions. Widely taught in Florida and heavily used by the state's enterprise, defence and simulation employers.",
+      "variantNote": null
+    },
+    {
+      "courseId": "COP3014",
+      "reason": "Programming 2 — 3 institutions. ⚠⚠⚠ Listed to make the transfer trap visible: this is FAU's, FSU's and UWF's second programming course, it is at 3000 level, and a 2000-level college course cannot supply upper-division credit for it.",
+      "variantNote": "⚠⚠⚠ The second programming course is the fracture point in Florida computing. It runs as COP3014 (3 institutions), COP3337 (3), COP2510 (2), COP4530 (2) and COP3502 (1) — five numbers, none carried by more than three. ⚠ Ask your target university's DEPARTMENT, in writing, which of its courses your college sequence satisfies, before you register for the college one."
+    },
+    {
+      "courseId": "COP3337",
+      "reason": "Computer Programming II — 3 institutions (FIU, Florida Poly, Santa Fe). The same second course under a different number, and evidence that the fragmentation is real rather than an artefact.",
+      "variantNote": "⚠ Santa Fe College carries this 3000-level number as a state college with baccalaureate authority — so the sector does not reliably predict the level here."
+    },
+    {
+      "courseId": "COP3530",
+      "reason": "Data Structures and Algorithm Analysis — 11 institutions, colleges and universities alike. ⚠⚠ The single most important course on this page: it is what technical interviews test, and it is the best-travelling upper-division computing number in the state.",
+      "variantNote": "⚠ Also carried as COP4530 at FSU and USF. ⚠⚠ Do not treat this as a box to tick — the material is the hiring filter for this occupation, and it rewards being learned properly rather than passed."
+    },
+    {
+      "courseId": "MAD2104",
+      "reason": "Discrete Mathematics — 17 institutions, and 71% of its prefix's carriers: one of the best-travelling numbers in Florida computing. Logic, proof, sets, graphs and combinatorics, which is the mathematics computer science actually uses.",
+      "variantNote": "✅ Take this at a state college with confidence — it transfers more reliably than almost anything else in this discipline."
+    },
+    {
+      "courseId": "MAC2311",
+      "reason": "Calculus I with Analytic Geometry — 39 institutions. Required by essentially every Florida computer science and computer engineering bachelor's, and the usual gate on admission to the major.",
+      "variantNote": "⚠ Required for the degree rather than used daily in the job. It is nonetheless the prerequisite most likely to delay a computing student, so take it early and take it seriously."
+    },
+    {
+      "courseId": "STA2023",
+      "reason": "Elementary Statistics — 39 institutions. Increasingly not optional: testing, experimentation, performance measurement and anything touching machine learning all rest on it.",
+      "variantNote": null
+    },
+    {
+      "courseId": "CDA3103",
+      "reason": "Fundamentals of Computer Systems — 2 institutions. Machine representation, assembly and how a processor actually executes your code — the layer beneath the language, and a common gap in self-taught developers.",
+      "variantNote": "⚠ Carried under this number at only FIU and USF, but taught at every computer science programme under some number. ⚠⚠ Universities rarely accept a college substitute for this one; expect to take it after transfer."
+    },
+    {
+      "courseId": "CEN3031",
+      "reason": "Software Engineering Fundamentals — 3 institutions (FGCU, UF, UWF). Requirements, design, testing and working in a team on a codebase you did not write — which is what the job is, and what most programming courses never cover.",
+      "variantNote": "⚠ The team project in this course is often the closest thing a degree contains to actual professional practice. Where your programme offers one, weight it heavily."
+    },
+    {
+      "courseId": "CIS2321",
+      "reason": "Systems Analysis and Design — 12 institutions. Turning a half-stated business problem into a specification, which O*NET lists first among a developer's tasks and which most graduates have never practised.",
+      "variantNote": "⚠ Common in information-technology and information-systems degrees and often absent from computer science ones. If your programme does not require it, it is a good elective."
+    },
+    {
+      "courseId": "ENC1101",
+      "reason": "English Composition I — 39 institutions. Design documents, incident reports and code review comments are most of a senior developer's written output, and the ones who write clearly get promoted.",
+      "variantNote": null
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Software Developers (15-1252.00)",
+      "url": "https://www.onetonline.org/link/summary/15-1252.00",
+      "note": "Task statements, 1,693,800 employed, growth much faster than average (7% or higher) on the 2024–34 projections, 115,200 annual openings, median wages $135,980 (2025), and the education split: 85% bachelor's, 5% associate, 5% master's."
+    },
+    {
+      "label": "O*NET — Florida wages, Software Developers",
+      "url": "https://www.onetonline.org/link/localwages/15-1252.00?st=FL",
+      "note": "⚠ Florida pays below the national figure and the gap widens at the top: Florida median $130,980 against $135,980, 10th percentile $80,050 against $82,460, 90th percentile $204,400 against $214,670."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Software Developers, QA Analysts and Testers",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+      "note": "1,905,400 jobs (2025), 10% growth 2025–35, +185,400, entry a bachelor's degree. ⚠ It separates the two occupations the page covers: developers $135,980, quality assurance analysts and testers $104,300. It says a degree in computer and information technology 'or a related field, such as engineering or mathematics'."
+    },
+    {
+      "label": "Data USA — Software Developers, degree fields (US Census ACS PUMS, 2024)",
+      "url": "https://datausa.io/profile/soc/software-developers",
+      "note": "⚠⚠⚠ The counted entrant-major evidence this page turns on: of 2,019,249 employed, computer and information sciences 628,261, ENGINEERING 484,509, business 155,971. ⚠ The source's own caution: this counts all academic degrees rather than one per person, and ACS records a field of degree only for bachelor's holders — so read the shape, not the head count."
+    },
+    {
+      "label": "Stack Overflow Developer Survey 2025 — education and learning",
+      "url": "https://survey.stackoverflow.co/2025/developers",
+      "note": "⚠⚠ Formal education among 36,705 professional developers: bachelor's 45.9%, master's 28.0%, some college with no degree 11.5%, secondary school 5.1%, associate 3.2%, professional degree 4.5% — so roughly one in five holds no degree. Learning methods: technical documentation 67.8%, online resources 58.7%, online courses 32.7%, school 16.6%, coding bootcamp 5.2%."
+    },
+    {
+      "label": "IPEDS Completions 2023 (C2023_A) — Florida computing CIPs",
+      "url": "https://nces.ed.gov/ipeds/use-the-data",
+      "note": "⚠ Where Florida actually files these degrees: computer and information sciences general (11.0101) 15 institutions and 3,047 graduates, information technology (11.0103) 36 and 2,924, computer programming (11.02) 26 and 742 — against computer science proper (11.0701) at only 4 institutions and 265. Computer engineering (14.0901) 9 institutions, 639."
+    },
+    {
+      "label": "SCNS statewide course file and flat file",
+      "url": "https://flscns.fldoe.org/",
+      "note": "⚠⚠⚠ The transfer trap measured: the first programming course is well carried at 2000 level (COP1000 and COP2800 at 15 institutions each), data structures recovers at COP3530 (11), but the SECOND programming course runs as COP3014 (3), COP3337 (3), COP2510 (2), COP4530 (2) and COP3502 (1) — all upper-division numbers. ✅ MAD2104 Discrete Mathematics is the exception at 17 institutions, 71% of its prefix's carriers."
+    }
+  ]
+}

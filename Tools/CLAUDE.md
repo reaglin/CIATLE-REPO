@@ -73,7 +73,7 @@ path) as each lands.
 | **ENG** engineering | 1–10 | ✅ all published |
 | **MFG** manufacturing / CTE | 11–27 | ✅ all published (2 became sections of another path) |
 | **HLT** health | 28–36 | ✅ **all 9 published** |
-| **CMP** computing | 37–40 | ⚠ **1 of 4 (Data Scientist) — now the head of the queue, and all three remaining are CHOICE paths** |
+| **CMP** computing | 37–40 | ⚠ **2 of 4 — cybersecurity analyst and network administrator remain, both CHOICE** |
 | **BUS** business · **LAW** · **EDU** · **PUB** | 41–50 | 1 of 10 (Lawyer) |
 
 ⚠⚠ **Guide work has not stopped — it is just request-driven and usually empty.** Check the
