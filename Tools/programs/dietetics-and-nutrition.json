@@ -1,0 +1,24 @@
+{
+  "name": "Dietetics and Nutrition",
+  "description": "Dietetics programmes train the clinicians who translate nutrition science into what a patient actually eats — assessing nutritional status, designing medical nutrition therapy for kidney disease, diabetes, cancer and critical illness, counselling patients, and running food service for hospitals and schools. It is a science degree with a clinical internship attached, and as of 2024 it is a graduate-level profession.",
+  "degreesNote": "⚠⚠⚠ Read this before choosing a bachelor's: since 1 January 2024 the Commission on Dietetic Registration has required a GRADUATE DEGREE to sit the registration examination for dietitians. A bachelor's in dietetics is no longer sufficient on its own, and anyone establishing eligibility for the first time from that date needs a master's or doctorate. ⚠ Florida's public footprint is small and the change squeezes it: only 4 public institutions award the dietetics bachelor's (FIU 76, UNF 52, UF 33) and only THREE award the master's — FIU 41, UNF 28, FSU 12, about 81 a year for the whole state. ⚠⚠ A separate and much shorter rung exists at the technical-college level: the dietetic technician certificate, which is a real job and not a route to the RDN. ⚠ The graduate degree does NOT have to be in nutrition — any accredited master's or doctorate qualifies — but the ACEND-accredited coursework and the supervised practice hours are separate requirements that do not move.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 61,
+  "cips": [
+    {
+      "cipCode": "51.31",
+      "note": "Dietetics and clinical nutrition services — 6 Florida public institutions and 340 credentials in the 2023 federal award year. ⚠ Concentrated: FIU, UNF, UF and FSU award the degrees; only FIU, UNF and FSU award the master's that the 2024 credential change now requires. Lindsey Hopkins Technical College awards the dietetic technician certificate."
+    }
+  ],
+  "related": [
+    {
+      "slug": "nursing",
+      "note": "⚠ The comparison that decides it for many students, and it is stark on access: nursing runs at 78 Florida institutions against 6 here, and reaches licensure from an associate degree. ⚠⚠ Dietetics now requires a master's and is taught at three institutions at that level, so geography and the graduate requirement constrain this choice far more than grades do."
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠ Named as the other small, science-heavy clinical programme taught at only a handful of Florida institutions — both are laboratory-and-evidence disciplines with narrow footprints and long credential chains. ⚠⚠ Laboratory science reaches its credential from a bachelor's; dietetics now needs a master's, which is the practical difference between them."
+    }
+  ]
+}

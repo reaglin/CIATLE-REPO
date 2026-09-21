@@ -70,7 +70,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 69,detective,Detective and Criminal Investigator,43.01,Criminal Justice and Corrections,33-3021,Detectives and Criminal Investigators,PUB,DIRECT,yes,section:police-officer
 70,correctional-officer,Correctional Officer,43.01,Criminal Justice and Corrections,33-3012,Correctional Officers and Jailers,PUB,DIRECT,yes,section:police-officer
 71,fire-inspector,Fire Inspector and Investigator,43.02,Fire Protection,33-2021,Fire Inspectors and Investigators,PUB,DIRECT,yes,section:firefighter
-101,registered-dietitian,Registered Dietitian Nutritionist,51.31,Dietetics and Clinical Nutrition Services,29-1031,Dietitians and Nutritionists,HLT,DIRECT,yes,
+101,registered-dietitian,Registered Dietitian Nutritionist,51.31,Dietetics and Clinical Nutrition Services,29-1031,Dietitians and Nutritionists,HLT,DIRECT,yes,published
 102,speech-language-pathologist,Speech-Language Pathologist,51.02,Communication Disorders Sciences and Services,29-1127,Speech-Language Pathologists,HLT,DIRECT,yes,
 103,occupational-therapy-assistant,Occupational Therapy Assistant,51.08,Allied Health and Medical Assisting Services,31-2011,Occupational Therapy Assistants,HLT,DIRECT,yes,
 104,diagnostic-medical-sonographer,Diagnostic Medical Sonographer,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-2032,Diagnostic Medical Sonographers,HLT,DIRECT,yes,

@@ -1,7 +1,7 @@
 # Development plan — Florida Course Repository (CIATLE-REPO)
 
-The live site is **[floridacourserepo.com](https://floridacourserepo.com)** — 32,961 courses,
-2,504 curriculum guides, **47 career paths and 50 programmes** as of 2026-09-21, with 139 curated links between them and no programme left without a career. This file is where
+The live site is **[floridacourserepo.com](https://floridacourserepo.com)** — 33,570 courses,
+2,504 curriculum guides, **48 career paths and 51 programmes** as of 2026-09-21, with 142 curated links between them and no programme left without a career. This file is where
 planning and status live for **the site and its APIs** (the root session). Guide *content* is
 planned and tracked by the `Tools/` session in `Tools/NEXT_SESSION.md`, `Tools/SOURCES.md` and
 `Tools/REVIEW_QUEUE.md`; only the items that need site code or a deploy appear here.
