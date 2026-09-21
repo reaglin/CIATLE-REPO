@@ -1,0 +1,36 @@
+{
+  "name": "Diagnostic Imaging and Sonography",
+  "description": "Diagnostic imaging programmes beyond plain radiography train the people who produce the pictures physicians diagnose from using every modality except x-ray alone — ultrasound, echocardiography and vascular studies, nuclear medicine, computed tomography and magnetic resonance. Each modality has its own physics, its own certification and, in Florida, its own regulatory answer.",
+  "degreesNote": "Taught at 22 Florida public institutions across the modalities, and overwhelmingly as ASSOCIATE degrees: sonography at 11 institutions with 147 credentials, cardiovascular technology at 7 with 86, nuclear medicine at 5 with 44, and the advanced-modality certificates — computed tomography, magnetic resonance, mammography — at 21 with 69. ⚠⚠ Those certificate programmes are mostly NOT a way in: they are post-primary credentials for people who already hold a registry, which is the same pattern the radiologic technology programme warns about. ⚠⚠⚠ The most consequential thing to understand is that Florida's regulation follows RADIATION rather than imaging. Nuclear medicine uses ionizing radiation and requires a state certificate under Chapter 468 Part IV; ultrasound does not use ionizing radiation and Florida does not license it at all. Two people in the same imaging department, and only one of them needs the state's permission to work.",
+  "bodyHtml": null,
+  "isPublished": true,
+  "sortOrder": 64,
+  "cips": [
+    {
+      "cipCode": "51.0910",
+      "note": "Diagnostic medical sonography — 11 Florida public institutions and 147 credentials in the 2023 federal award year, 127 of them associate degrees. Miami Dade 26, Eastern Florida 15, Hillsborough 15, Pensacola State 13, Broward 12, Polk State 12."
+    },
+    {
+      "cipCode": "51.0901",
+      "note": "Cardiovascular technology — 7 Florida public institutions and 86 credentials, almost all associate degrees. Santa Fe 18, FSCJ 14, Hillsborough 14, Florida SouthWestern 12, Valencia 12, Polk State 11."
+    },
+    {
+      "cipCode": "51.0905",
+      "note": "Nuclear medical technology — ⚠ only 5 Florida public institutions and 44 credentials. Hillsborough 13, Broward 18 across an associate and a certificate, Santa Fe 7, Miami Dade 6. The narrowest imaging route in the state, and the best paid."
+    },
+    {
+      "cipCode": "51.0907",
+      "note": "Medical radiologic technology — 21 Florida public institutions and 69 credentials, mostly SHORT CERTIFICATES. ⚠ These are largely advanced-modality credentials (computed tomography, magnetic resonance, mammography) taken by people who are already registered technologists, not entry routes."
+    }
+  ],
+  "related": [
+    {
+      "slug": "radiologic-technology",
+      "note": "⚠⚠ The entry point for most of this field, and the one to read first: 23 Florida institutions and 425 credentials against this programme's scattered modalities. ⚠ A great many sonographers, nuclear medicine and CT/MRI technologists began as registered radiographers and added the modality afterwards — which is exactly what those short certificates are for."
+    },
+    {
+      "slug": "nursing",
+      "note": "⚠ The comparison students in a health-science first year actually make. Nursing is at 78 Florida institutions against 30 here and has a long degree ladder; imaging is narrower and, in sonography and nuclear medicine, better paid at entry on the same two years."
+    }
+  ]
+}

@@ -36,7 +36,10 @@ ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC',
             'ACLS', 'BLS', 'PALS', 'NRP', 'ABG', 'PT', 'OT', 'ADL', 'ROM', 'TENS', 'PPE',
             'EMT', 'EMR', 'AEMT', 'EMS', 'ALS', 'NREMT', 'CPAT', 'ARRT', 'NBRC',
             # education
-            'ESOL', 'ESE', 'IEP', 'FTCE', 'TESOL', 'ELL', 'STEM', 'K-12', 'GED'}
+            'ESOL', 'ESE', 'IEP', 'FTCE', 'TESOL', 'ELL', 'STEM', 'K-12', 'GED',
+            # medical imaging modalities and credentials
+            'CVT', 'NMT', 'MRI', 'CT', 'PET', 'SPECT', 'ARDMS', 'CAAHEP', 'NMTCB',
+            'OB', 'GYN', 'OB/GYN', 'SON', 'RDMS', 'RDCS', 'RVT', 'QA', 'QC'}
 
 
 def _word(w, edge):
