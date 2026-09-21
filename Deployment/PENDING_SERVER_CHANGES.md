@@ -8,96 +8,26 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⚠⚠ REDEPLOY NEEDED — the connections between careers, programmes and neighbours (2026-09-19)
+### ✅ DEPLOYED 2026-09-20 — the connections, the CIP seed at 209 nodes, and everything behind them
 
-**TWO migrations — `AddProgramRelations`** (the `ProgramRelations` table) **and
-`AddProgramConnections`** (an `IsRoute` column on `CareerPathPrograms`, ⚠ defaulting to **true**
-so existing links keep their meaning) — plus page and API changes.
-**Deploy WITHOUT `-SkipMigrations`.**
+Migrations `AddProgramRelations` and `AddProgramConnections`, the programme↔career sections, the
+curated *related programmes* web, `isRoute`, and `cip.json` at 209 nodes (gaining **15.05**, where
+Florida actually files HVAC).
 
-**Ron, 2026-09-19, is the whole specification:** *"Programs/law lacks a link to the career path
-that leads to it… we want to make sure that the students can easily find any information about
-options and the connections between the career paths, the options along a path, and the programs
-offering the final degree… the similarities between mechanical engineering and aerospace
-engineering (any similar program) should be noted as these are things students would not normally
-know when looking at a career. (Also materials engineering). Just like civil, structural,
-transportation, etc… are all very similar to civil."*
+✅ **Verified live the same day, and the content behind it pushed:**
 
-| What | Where |
+| | |
 |---|---|
-| **"Careers this program leads to"** on a programme page — the reverse of the path page's "Programs that lead here", which existed with nothing rendering it | `Pages/Programs/Program.cshtml{,.cs}` |
-| **"Programs close to this one"** — curated neighbours, each with the reason. ⚠ Read in BOTH directions, so a link authored on one programme shows on the other | new `ProgramRelation` entity, `ProgramsController`, same page |
-| **"Careers next to this one"** — paths filed in the same CIP series. ⚠ Matched on the PRIMARY code only, or Lawyer's sixteen feeder anchors would make half the site a neighbour of law | `Pages/Careers/Path.cshtml{,.cs}` |
-| API + pipeline | `related: [{slug, note}]` on the programme upsert — **the note is required**, since the link alone says only what the CIP tree already shows; `Tools/programs.py` gained a two-pass push so a new pair of programmes can link each other |
+| Programmes | **22 live** — eight created by this deploy: computer, electrical, environmental, materials and ocean engineering, HVAC/R, statistics, paralegal studies |
+| Career paths | **17 live** — five created: environmental, computer-hardware and materials engineer, HVAC technician, electrician |
+| Curated *programmes similar to this one* links | **60 edges**, read in both directions |
+| Programmes with no career path | **none** |
+| Courses listed to support the new paths | ~55, all with clock hours and per-institution offerings |
 
-**⚠⚠ The UX review of the two pages found the one thing that mattered most, and it is fixed:**
-the flagship page asserted a claim its own content denied. Mechanical Engineering was headed
-*"Careers this program leads to → Data Scientist"* while the note underneath read *"Not a route
-into data science"*. A heading is read; grey sub-text is not. So a programme link now carries
-**`isRoute`**, and the two pages group the rows separately (*"Related, but not a route in"* /
-*"Careers that name this program, but not as a route"*). `career_paths.py validate` FAILS a row
-whose note says "not a route" while the flag is still true.
-
-**Five more review findings fixed in the same pass:**
-
-| Was | Now |
-|---|---|
-| `offered by N Florida schools` on the career page — the claim the rest of the site carefully disclaims | `N Florida schools`, with an intro saying it counts institutions that AWARDED in the field, in which year, and that it counts something different from the course-based list below |
-| A programme with no linked career rendered **nothing** — and four of the new ones are in that state | The heading always renders, with an honest empty state and a link to `/careers` |
-| A career alone in its CIP series showed no neighbours (Nurse, Lawyer, Data Scientist) | Same treatment, plus a *"see every career in …"* link to the CIP area page |
-| The neighbour block dropped `CipTitle`, the one datum saying WHY it is a neighbour | Rendered as a badge, and the intro states the mechanism (federal classification) rather than inferring shared coursework |
-| ⚠ A path with no courses placed returned early and lost its programmes, neighbours and schools | Guard removed; each block guards itself |
-
-Also: cross-link sections now sit **above** the long course list and the 78-row school grid, since
-they are what a student needs *before* committing; the programme page gained an "Updated …" line.
-
-✅ Verified on the dev database: both migrations apply; 18 programmes push with **46 relations**; the
-programme page shows its careers and its neighbours; `/careers/mechanical-engineer` lists Aerospace,
-Biomedical, Chemical, Civil and Industrial Engineer as neighbours; a relation naming a programme
-that does not exist is refused **422** before anything is sent; deleting a programme clears the
-links pointing at it rather than failing on a hidden foreign key.
-
-⚠ **After the deploy, in this order** (a path is refused if its programme is not live yet):
-
-```powershell
-cd Tools
-python programs.py push --all          # 22 programmes, EIGHT of them waiting on this deploy
-python career_paths.py push --all      # 17 paths, FIVE of them waiting on this deploy
-```
-
-**What the deploy unblocks, exactly:**
-
-| Waiting | Why |
-|---|---|
-| Programmes: computer, environmental, materials and ocean engineering; statistics; paralegal studies | written before the relations feature; they push as soon as the code ships |
-| Programme: **hvac-technology** | claims `15.0501`, and **`15.05` is new in `cip.json`** — refused 422 until the seed ships |
-| Programme: **electrical-technology** | names hvac-technology as a related programme, and a relation needs both ends to exist |
-| Paths: environmental-engineer, computer-hardware-engineer, materials-engineer | their programmes are among the six above |
-| Path: **hvac-technician** | anchors `15.05` |
-| Path: **electrician** | names both hvac-technology and electrical-technology |
-
-⚠⚠ **The deploy also carries `cip.json` at 209 nodes** — it gained **`15.05` Heating/Air
-Conditioning/Refrigeration Engineering Technology** on 2026-09-20, and **the HVAC programme and path
-are BLOCKED until it ships** (the push is refused 422 `CIP_NODE_NOT_FOUND`, verified). The reason is
-worth keeping: the 50-path queue filed HVAC under **47.02**, which IPEDS shows at 31 institutions
-and 111 credentials — but Florida's own frameworks file the programme under **15.0501**, at **45
-institutions and 891 credentials**. The bigger and more accurate home was missing from the tree.
-
-The six new programmes are computer, environmental, materials and ocean engineering, statistics,
-and paralegal and legal support studies. The three new paths are **Environmental Engineer**,
-**Computer Hardware Engineer** and **Materials Engineer** (queue ranks 8–10), which close the
-programme pages that could not say what they led to.
-
-⚠ **Civil Engineer changed too, and it is the last piece of that:** Ron, 2026-09-20 — *"Use civil
-for ocean."* Rather than inventing a one-institution Ocean Engineer path, the civil path gained a
-**coastal and ocean section**, links to the ocean and environmental programmes, CWR4001 Coastal and
-Port Engineering, and two coastal sources. So `/programs/ocean-engineering` now has a career to
-point at, and every one of the 18 programmes does.
-
-✅ **Their courses are already on the live site.** Thirteen course records the paths name were
-missing from the catalog and were sent ahead of the deploy over `POST /api/v1/courses/batch`, with
-per-institution offerings from the SCNS flat file — COP3530, CDA4102, CDA4210, COP4600, EEE3308,
-EEE4351, and the seven EMA materials courses. **No path links to a page that is not there.**
+⚠ The push order matters and the pipeline enforces it: programmes first (`programs.py push --all`,
+which sends each document twice when a related programme is new), then paths
+(`career_paths.py push --all`). Two courses the electrician path names were still unlisted and were
+sent afterwards — the push response named them, which is what `unlistedCourses` is for.
 
 **Nothing else is waiting on a deploy for Career Paths, Programs or the CIP tree** — all of it went out
 on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items
