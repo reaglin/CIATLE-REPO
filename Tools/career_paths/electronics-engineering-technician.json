@@ -1,0 +1,105 @@
+{
+  "name": "Electronics Engineering Technician",
+  "cipCode": "15.03",
+  "socCode": "17-3023",
+  "isPublished": true,
+  "sortOrder": 190,
+  "description": "Electronics engineering technicians build, test, maintain and troubleshoot electronic systems beside engineers — circuits, instrumentation, controllers and the equipment they live in. ⚠ A two-year degree with a $78,190 median: the strongest wage-to-training ratio on this site.",
+  "credentialNote": "⚠ No licence governs this work — electronics technicians run under the industry exemption and few pursue a PE. What matters instead is the ACCREDITATION of the degree and what it articulates into. ⚠⚠ An engineering TECHNOLOGY degree is accredited by ABET's technology commission, and under s. 471.013, Florida Statutes, its graduates need SIX years of experience before the PE examination against FOUR for an engineering degree. ⚠ Irrelevant for most technicians, expensive for the few who change their minds — so decide deliberately, and check before enrolling whether the degree articulates into a bachelor's at that college.",
+  "bodyHtml": "<h2>What the work actually is</h2> <p>O*NET: <em>apply electrical and electronic theory and related knowledge, usually under the direction of engineering staff, to design, build, repair, adjust and modify electrical components, circuitry, controls and machinery</em>. The tasks are the bench — <em>read blueprints, wiring diagrams, schematic drawings or engineering instructions for assembling electronics units; assemble, test or maintain circuitry or electronic components; modify, maintain or repair electronics equipment or systems to ensure proper functioning; identify and resolve equipment malfunctions, working with manufacturers or field representatives</em>.</p> <p>&#9888; Note the phrase <em>under the direction of engineering staff</em>. <strong>This is a defined role beside engineers, not a lesser version of one</strong>: the technician builds, tests and proves what the engineer specified, and in most firms is the person who actually finds out whether it works.</p>  <h2>Projected need</h2> <p>O*NET, on federal projections: <strong>93,700 employed</strong> (2024), growth <strong>&ldquo;slower than average (1% to 2%)&rdquo;</strong>, <strong>8,400 openings a year</strong>, <strong>median wages $78,190 (2025)</strong>. On education: <strong>34% an associate degree, 21% some college, 16% a high school diploma</strong>.</p> <p>⚠ <strong>That is a strong wage for a two-year degree</strong> — above every clock-hour trade on this site and close to the aviation mechanic median — in an occupation that is flat rather than growing. The openings are replacement rather than expansion, which makes WHERE you are and WHAT you can prove matter more than the national number.</p>  <h2>⚠⚠ Technology or engineering — decide it deliberately, and early</h2> <p>An engineering TECHNOLOGY degree and an ENGINEERING degree are different qualifications with different accreditations. In Florida the practical difference is written into statute: under s. 471.013, a graduate of an approved <strong>engineering</strong> curriculum needs <strong>four years</strong> of experience before the PE examination; a graduate of an approved <strong>engineering technology</strong> curriculum needs <strong>six</strong>.</p> <p>&#9888; For most electronics technicians that is irrelevant — the work runs under the industry exemption and few licence. <strong>But it is not a decision you can revisit cheaply at year five</strong>, so make it on purpose: two years to a bench career that pays well, or four to an engineering degree that keeps design and licensure open.</p>  <h2>⚠ What the courses tell you about where this is taught</h2> <p>The technical core is widely available: introduction to electronics at <strong>16</strong> Florida institutions, DC and AC circuits and analog devices at <strong>10</strong>, programmable logic controllers and robotics at <strong>9</strong>, microprocessors at <strong>6</strong>. <strong>Twenty institutions award in the field.</strong></p> <p>⚠ The PLC and robotics courses are the ones to look for specifically. They are what separate an electronics technician from an electronics repairer in a plant, and they are the bridge to the automation work on the manufacturing path.</p>  <h2>Necessary skills</h2> <ul> <li><strong>Circuit analysis you can use</strong> — DC then AC, and the habit of predicting what a meter should read before you read it.</li> <li><strong>Test equipment.</strong> Oscilloscope, function generator, meters, and the discipline of a measurement you can repeat.</li> <li><strong>Schematic and datasheet literacy.</strong> ⚠ Reading a datasheet properly is an underrated professional skill and it is where self-taught people usually have the gap.</li> <li><strong>Digital and embedded work</strong> — microcontrollers, interfacing, and enough programming to test and troubleshoot.</li> <li><strong>Controls</strong> — PLCs, sensors, actuators. The most employable single addition in Florida's plants.</li> </ul>  <h2>Advice</h2> <ul> <li><strong>⚠ Check the articulation to a bachelor's before you enrol</strong>, even if you do not intend to use it. Several Florida colleges run a B.A.S. or B.S. in engineering technology above this degree, and knowing which courses carry over changes which ones you take.</li> <li><strong>Take the PLC and robotics courses</strong> whether or not they are required.</li> <li><strong>Build things and keep them.</strong> In this field a portfolio of working hardware does what a transcript cannot.</li> <li><strong>Florida's employers are specific</strong> — aerospace and launch, defence and simulation around Orlando, medical devices, marine electronics, utilities and the theme parks, which run enormous amounts of custom electronics and controls.</li> <li><strong>If you want the plant floor rather than the bench</strong>, read the manufacturing and mechatronics path beside this one — same skills, shorter route, different employers.</li> </ul>",
+  "programs": [
+    {
+      "slug": "electronics-engineering-technology",
+      "note": "The degree itself — 20 Florida public institutions, 264 credentials in 2023."
+    },
+    {
+      "slug": "electrical-engineering",
+      "note": "⚠ The four-year alternative: engineering designs, technology builds and maintains. Ten institutions, the shorter licensure timetable, and the route to design work — read it before committing to two years.",
+      "isRoute": false
+    },
+    {
+      "slug": "advanced-manufacturing-technology",
+      "note": "⚠ The same skills by the clock-hour route, aimed at the plant floor rather than the bench — shorter, cheaper, and hiring hard in Florida.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "EET1084C",
+      "reason": "Introduction to Electronics — the entry course, carried by 16 Florida institutions, more than any other course on this path.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "EET1015C",
+      "reason": "DC Circuits — the foundation: Ohm's law, networks, and the analysis habit the whole degree rests on.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "EET1025C",
+      "reason": "AC Circuits — reactance, phase and frequency response, and the point where the mathematics starts doing real work.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "EET1141C",
+      "reason": "Analog Devices — diodes, transistors and amplifiers: what the components actually do.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "CET2123C",
+      "reason": "Microprocessors — embedded computing, interfacing and the software side of modern electronics. ⚠ Six carriers, and worth seeking out.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "ETS1542C",
+      "reason": "Programmable Logic Controllers — ⚠ the single most employable course on this list in Florida: PLCs are what industrial electronics actually runs on. Nine institutions.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "ETS1603C",
+      "reason": "Fundamentals of Robotics and Simulation — nine institutions, and the natural pair to the PLC course for anyone heading toward automation.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "ETI1701",
+      "reason": "Industrial Safety — carried by 20 institutions, the most widely taught course in the whole engineering technology family. ⚠ Unglamorous and genuinely load-bearing: lockout/tagout, arc flash and the procedures that keep technicians alive.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    },
+    {
+      "courseId": "ETD1320C",
+      "reason": "Introduction to AutoCAD — drawings are how the work is specified and recorded; nine institutions.",
+      "variantNote": "⚠ A college-credit course in the engineering technology associate degree, not a clock-hour certificate course — a different kind of programme from the trades paths on this site, and it transfers differently."
+    }
+  ],
+  "sources": [
+    {
+      "label": "O*NET — Electrical and Electronic Engineering Technologists and Technicians (17-3023.00)",
+      "url": "https://www.onetonline.org/link/summary/17-3023.00",
+      "note": "Task statements, 93,700 employed (2024), growth “slower than average (1% to 2%)”, 8,400 annual openings, median wages $78,190 (2025), and the education split — 34% an associate degree."
+    },
+    {
+      "label": "ABET — Accredited Program Search",
+      "url": "https://amspub.abet.org/aps/name-search?searchType=institution",
+      "note": "⚠ Check WHICH commission accredits a programme: engineering technology is a different accreditation from engineering, and Florida writes the difference into its licensure timetable."
+    },
+    {
+      "label": "Chapter 471, Florida Statutes — Engineering",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499%2F0471%2F0471.html",
+      "note": "s. 471.013 — four years of experience after an approved ENGINEERING curriculum, six after ENGINEERING TECHNOLOGY."
+    },
+    {
+      "label": "IPEDS — Completions (C2023_A)",
+      "url": "https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx",
+      "note": "20 Florida public institutions award in CIP 15.03, with 264 credentials under 15.0303 in 2023."
+    },
+    {
+      "label": "SCNS — Florida Statewide Course Numbering System",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Carrier counts for every course on this page — the evidence that the technical core is widely available even where the degree is not."
+    },
+    {
+      "label": "NCES — Classification of Instructional Programs (CIP 2020)",
+      "url": "https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55",
+      "note": "CIP 15.03, the group this path is filed under."
+    }
+  ]
+}

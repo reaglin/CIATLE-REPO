@@ -1,7 +1,7 @@
 # Development plan — Florida Course Repository (CIATLE-REPO)
 
 The live site is **[floridacourserepo.com](https://floridacourserepo.com)** — 24,415 courses,
-2,504 curriculum guides, **21 career paths and 26 programmes** as of 2026-09-20, with 60 curated links between them and no programme left without a career. This file is where
+2,504 curriculum guides, **23 career paths and 28 programmes** as of 2026-09-21, with 60 curated links between them and no programme left without a career. This file is where
 planning and status live for **the site and its APIs** (the root session). Guide *content* is
 planned and tracked by the `Tools/` session in `Tools/NEXT_SESSION.md`, `Tools/SOURCES.md` and
 `Tools/REVIEW_QUEUE.md`; only the items that need site code or a deploy appear here.
@@ -67,7 +67,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 ## Phase 4 — Career path content (the 50-path queue) ⚠️
 
 `Tools/career_paths/QUEUE.csv` — 50 paths ranked, each with its CIP anchor, SOC code and cluster.
-**19 published as of 2026-09-20** — the seven engineering paths, Registered Nurse, Lawyer, Data Scientist, environmental/computer-hardware/materials engineer, and the four CTE paths (automotive, welder, HVAC, electrician), plus aviation maintenance, manufacturing/mechatronics, machinist and industrial maintenance. **29 to go, 8 of the 17 CTE rows done.**
+**19 published as of 2026-09-20** — the seven engineering paths, Registered Nurse, Lawyer, Data Scientist, environmental/computer-hardware/materials engineer, and the four CTE paths (automotive, welder, HVAC, electrician), plus aviation maintenance, manufacturing/mechatronics, machinist, industrial maintenance and the first two engineering-technician rows. **27 to go, 10 of the 17 CTE rows done.**
 
 | # | Task | Done when |
 |---|---|---|
@@ -93,6 +93,8 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 4.20 ⚠️ | **Machinist — LIVE 2026-09-20** (rank 17), with a **Machining Technology** programme | ⚠ The page's argument: the 1,500-hour framework is **a four-rung ladder** — helper, operator, setup operator, machinist — and **the operator rung is the one to pass through, not settle on**: CNC tool operator is the only occupation on this site with a projected DECLINE, and it pays about $8,000 below the machinist median. ⚠⚠ It also substantially covers **queue rank 18 (CNC machine operator)** — Ron's call whether that still needs its own page |
 | 4.21 ⚠️ | **Industrial Maintenance Technician — LIVE 2026-09-20** (rank 20), with an **Industrial Machinery Maintenance** programme | ⚠⚠ The finding is a mismatch: **439,600 employed, growing much faster than average, 45,700 openings a year — against four or five Florida colleges carrying the course numbers.** So the page says plainly that the practical route is often to get inside a plant first (the 300-hour production certificate) and let the employer fund the maintenance training |
 | 4.22 ✅ | A programme claiming a CIP SERIES inherits everything under it — machining first published claiming `48.05` and read **51 institutions**, because welding lives in the same series | Corrected the same day to `48.0503`/`48.0510`/`48.0511` → **18 institutions**. ⚠ Same shape as the 14.01 general-engineering correction: **claim the codes the programme IS, not the series it sits in**, unless the series really is the programme (Engineering Technology's `15.` is the deliberate exception) |
+| 4.23 ⚠️ | **Electronics Engineering Technician (11) and Mechanical Engineering Technician (12) — LIVE 2026-09-21**, with **Electronics Engineering Technology** (CIP 15.03, 20 institutions) and **Mechanical Engineering Technology** (15.08, 13) | ⚠ These are the first ASSOCIATE-DEGREE technician paths, and both carry the technology-versus-engineering decision explicitly (s. 471.013: six years to a PE against four). ⚠⚠ The mechanical page leads with a warning found in the data: **37% of employers in that occupation ask for a BACHELOR'S and only 14% an associate** — so it tells the reader to check local adverts and the articulation before treating the two-year degree as the destination. Electronics is the opposite story: **$78,190 median on a two-year degree**, the best wage-to-training ratio on the site |
+| 4.24 | Seven CTE rows remain: industrial and civil engineering technician, CAD drafter, CNC operator, quality-control inspector, production supervisor, logistics analyst | ⚠ Four of them (industrial, civil, CAD, quality) reuse the ETI/ETD/CET course families already loaded, so they are cheaper than the trades were. CNC operator is largely covered by Machinist (4.20) — Ron's call whether it needs its own page |
 
 ## Phase 5 — Guide-field changes still owed to the `Tools/` session
 

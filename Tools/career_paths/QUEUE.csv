@@ -9,8 +9,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 8,environmental-engineer,Environmental Engineer,14.14,Environmental/Environmental Health Engineering,17-2081,Environmental Engineers,ENG,DIRECT,yes,published
 9,computer-hardware-engineer,Computer Hardware Engineer,14.09,Computer Engineering,17-2061,Computer Hardware Engineers,ENG,DIRECT,yes,published
 10,materials-engineer,Materials Engineer,14.18,Materials Engineering,17-2131,Materials Engineers,ENG,DIRECT,yes,published
-11,electronics-engineering-technician,Electronics Engineering Technician,15.03,Electrical/Electronic Engineering Technologies/Technicians,17-3023,Electrical and Electronic Engineering Technologists and Technicians,MFG,DIRECT,yes,
-12,mechanical-engineering-technician,Mechanical Engineering Technician,15.08,Mechanical Engineering Related Technologies/Technicians,17-3027,Mechanical Engineering Technologists and Technicians,MFG,DIRECT,yes,
+11,electronics-engineering-technician,Electronics Engineering Technician,15.03,Electrical/Electronic Engineering Technologies/Technicians,17-3023,Electrical and Electronic Engineering Technologists and Technicians,MFG,DIRECT,yes,published
+12,mechanical-engineering-technician,Mechanical Engineering Technician,15.08,Mechanical Engineering Related Technologies/Technicians,17-3027,Mechanical Engineering Technologists and Technicians,MFG,DIRECT,yes,published
 13,industrial-engineering-technician,Industrial Engineering Technician,15.06,Industrial Production Technologies/Technicians,17-3026,Industrial Engineering Technologists and Technicians,MFG,DIRECT,yes,
 14,civil-engineering-technician,Civil Engineering Technician,15.02,Civil Engineering Technologies/Technicians,17-3022,Civil Engineering Technologists and Technicians,MFG,DIRECT,yes,
 15,mechatronics-technician,Mechatronics and Automation Technician,15.04,Electromechanical Technologies/Technicians,17-3024,Electro-Mechanical and Mechatronics Technologists and Technicians,MFG,DIRECT,yes,published
