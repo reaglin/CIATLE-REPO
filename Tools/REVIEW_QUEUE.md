@@ -3535,6 +3535,7 @@ and the push returns 422.**
 | **46.05** Plumbing | `plumber` | 22 | 189 |
 | **46.02** Carpentry | `carpenter` | 15 | 57 |
 | ⚠⚠ **01.83** Veterinary/Animal Health Technologies | `veterinary-technician` | **10** | **293** |
+| ⚠ **51.15** Mental and Social Health Services | *(no path blocked — see below)* | 9 | **1,164 MSW** |
 
 ⚠⚠⚠ **The first two are the point.** Culinary arts is taught at **46** Florida public
 institutions and cosmetology at **44** — larger footprints than nursing's 78-institution programme
@@ -3551,7 +3552,16 @@ lesson for the rest of the queue: a row's `cip` column was assigned by subject i
 evidence — check the occupation's real IPEDS footprint before writing.** A sweep of the remaining
 rows (`scratchpad/qcheck.py`) found this to be the only mis-anchored one.
 
-**What it takes:** add the seven groups to `EXTRA_GROUPS` in `Tools/build_cip_seed.py` with the reason
+⚠⚠ **`51.15` is a DIFFERENT KIND of entry and blocks no path** (added 2026-09-22). The
+`social-worker` path published normally on `44.07`. But **Florida's MSW output is SPLIT**: 368 master's
+under `44.0701` and **796 under `51.1503` Clinical/Medical Social Work** — FSU 431, FAU 143, UWF 120,
+FIU 74, UNF 28, four of which record NO master's under the social work code at all. ⚠ The
+`social-work` programme therefore claims `44.0701` only and states the split in its `degreesNote`.
+**Seeding `51.15` would let it claim both and would also open mental health counselling (`51.1508`) and
+the 10-institution state-college human services tier (`51.1599`) to the programme layer.** Low urgency;
+fold it in with the rest.
+
+**What it takes:** add the groups to `EXTRA_GROUPS` in `Tools/build_cip_seed.py` with the reason
 recorded, regenerate `cip.json`, and **redeploy** — the documented procedure, last used for the
 Lawyer path's `22.00` and `45.04`.
 

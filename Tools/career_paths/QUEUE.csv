@@ -93,7 +93,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 113,physician,Physician,51.12,Medicine,29-1210,Physicians,HLT,CHOICE,yes,published
 114,athletic-trainer,Athletic Trainer,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-9091,Athletic Trainers,HLT,DIRECT,yes,published
 115,pharmacist,Pharmacist,51.20,"Pharmacy, Pharmaceutical Sciences and Administration",29-1051,Pharmacists,HLT,DIRECT,no,
-116,social-worker,Social Worker,44.07,Social Work,21-1021,"Child, Family, and School Social Workers",SOC,DIRECT,yes,
+116,social-worker,Social Worker,44.07,Social Work,21-1021,"Child, Family, and School Social Workers",SOC,DIRECT,yes,published
 117,mental-health-counselor,Mental Health Counselor,42.01,"Psychology, General",21-1018,"Substance Abuse, Behavioral Disorder, and Mental Health Counselors",SOC,CHOICE,yes,
 118,school-counselor,School Counselor,13.11,Student Counseling and Personnel Services,21-1012,"Educational, Guidance, and Career Counselors and Advisors",SOC,DIRECT,yes,
 119,early-childhood-educator,Early Childhood Educator,19.07,"Human Development, Family Studies, and Related Services",25-2011,"Preschool Teachers, Except Special Education",EDU,DIRECT,yes,

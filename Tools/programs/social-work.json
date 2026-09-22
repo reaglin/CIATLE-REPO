@@ -1,0 +1,33 @@
+{
+  "slug": "social-work",
+  "name": "Social Work",
+  "isPublished": true,
+  "sortOrder": 579,
+  "description": "Casework, assessment, advocacy and clinical practice across child welfare, health care, mental health, schools, corrections and policy — a CSWE-accredited degree and, for clinical practice, a Florida licence. ⚠⚠ Taught at 9 Florida public institutions, all universities, awarding 712 bachelor's and ⚠⚠⚠ 1,164 MASTER'S degrees — one of only two programmes on this site where the graduate degree outnumbers the undergraduate.",
+  "degreesNote": "⚠⚠ THE MASTER'S IS THE DEGREE, BECAUSE THE LICENCE REQUIRES IT. Section 491.005, F.S. gives clinical social work licensure to holders of a master's degree in social work from a school accredited by the Council on Social Work Education (or a doctorate), plus at least 2 years of post-master's clinical experience supervised by a licensed clinical social worker, registered intern status, and an examination. ⚠ A BSW is a real qualification for case management, child welfare and community roles — it is not a route to the LCSW. ⚠⚠⚠ AND A CSWE-ACCREDITED BSW IS WORTH REAL GRADUATE CREDIT, WITH A TIME LIMIT NOBODY MENTIONS. Most Florida MSW programmes run an ADVANCED STANDING track for CSWE-accredited BSW holders. At Florida State, the state's largest producer, the traditional online MSW is 61 credit hours and advanced standing is 39 — a difference of 22 graduate credits, about a third of the degree. ⚠⚠ But eligibility runs out: FSU requires the BSW to have been earned within the past SEVEN YEARS, with a waiver route needing social work employment in that period. ⚠ The extent of advanced standing varies by programme — ask each one. ⚠⚠⚠ AND THE MSW OUTPUT IS SPLIT ACROSS TWO CIP CODES, WHICH MATTERS IF YOU ARE COUNTING SEATS. A further 796 master's are coded under CLINICAL/MEDICAL SOCIAL WORK (51.1503) — FSU 431, FAU 143, UWF 120, FIU 74, UNF 28 — and four of those record no master's under the social work code at all. ⚠ Florida's real MSW output is 1,164 a year, not 368. Same nine schools either way; only the counts differ. ⚠⚠⚠ WATCH THE PREFIX. Measured over the Florida course file, SOW is carried by all 9 public universities and 10 state colleges, while HUS — human services — is carried by 17 state colleges and 2 technical colleges and by NO university at all. A human services associate degree is a genuine credential for direct-service work and it earns no advanced standing and does not lead to the LCSW.",
+  "cips": [
+    {
+      "cipCode": "44.0701",
+      "note": "Social Work — 9 Florida public institutions and 1,134 credentials in 2023: 712 bachelor's, 368 master's, 29 postbaccalaureate certificates. Every carrier is a State University System institution. Largest bachelor's producers: FAU 160, UCF 130, FIU 93, USF 78, FSU 75."
+    }
+  ],
+  "related": [
+    {
+      "slug": "public-health",
+      "note": "⚠ The closest graduate neighbour and a common dual degree — the MSW/MPH. Both are population-facing, both sit at universities only, and both have a master's-weighted award profile. ⚠⚠ The difference worth knowing: social work has a state LICENCE at the end and public health has none."
+    },
+    {
+      "slug": "criminal-justice",
+      "note": "⚠⚠ A genuine overlap rather than a neighbour: child welfare, juvenile justice, probation and forensic social work sit between the two, and Florida teaches criminal justice at far more institutions. ⚠ But a criminal justice degree earns no advanced standing toward an MSW and does not reach the LCSW — if clinical practice is the goal, the CSWE-accredited route is the only one."
+    },
+    {
+      "slug": "nursing",
+      "note": "⚠ Named because hospital social work and case management are shared territory, and healthcare social workers are the best-paid of the social work specialties at $67,880. ⚠⚠ It is also the comparison a student should make on access: nursing is taught at 78 Florida institutions against social work's 9."
+    },
+    {
+      "slug": "health-care-administration",
+      "note": "⚠ Where the macro side of social work leads — programme management in behavioural health, child welfare agencies and non-profits. ⚠⚠ Named because BLS puts \"social workers, all other\" — largely policy and administration — at $71,900, the highest of the specialties, above both clinical mental health and child welfare.",
+      "isRoute": false
+    }
+  ]
+}
