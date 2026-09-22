@@ -386,6 +386,46 @@ migration rather than job loss, and it is a different warning with a different a
 job. **Position on the specification and judgement side of whatever the field is.** That advice is
 supportable from the data rather than from speculation, which is why it belongs on the page.
 
+#### ⚠⚠⚠ READ THE LICENSURE STATUTE'S **EXEMPTIONS**, NOT JUST ITS REQUIREMENTS (2026-09-22)
+
+**Every licensure section of this file says to find the statute and quote the requirement. Interior
+design shows that the EXEMPTIONS can matter more, and can invert the whole page.**
+
+Florida regulates interior design in the same chapter as architecture (ch. 481 Part I, one board) —
+so the obvious page is "here is the exam and the hours". ⚠⚠ **But s. 481.229(6)(a) exempts
+interior design services for *"any residential application… residence buildings, single-family homes,
+multifamily homes, townhouses, apartments, condominiums"*.** **The entire residential market needs no
+credential at all**, and the registration route exists for NONRESIDENTIAL work and for the title.
+
+⚠ **So the question the page had to answer was not "which major" but "which MARKET"**, and that is
+a decision a student is actually facing. **Grep the exemptions section before writing the credential
+note**; expect the same shape wherever a title is protected but the work is not.
+
+#### ⚠⚠⚠ A CERTIFICATION BOARD CAN PRICE THE DEGREE **LEVEL**, NOT THE ACCREDITATION (2026-09-22)
+
+**The instinct is that accreditation is what a board rewards. On NCIDQ it is not — the DEGREE LEVEL is:**
+
+| Education | Supervised hours to sit the exam |
+|---|---|
+| Bachelor's or master's in interior design, **CIDA-accredited** | **3,520** (2 years) |
+| Bachelor's or master's in interior design, **NOT accredited** | ✅ **3,520 — the same** |
+| ⚠⚠ **Associate degree, certificate or diploma** | ⚠⚠ **5,280 (THREE years)** |
+| NAAB architecture degree | 5,280 |
+
+⚠⚠ **Accreditation buys something different — it satisfies the 60-credit-hour requirement
+automatically, so the candidate never documents it course by course.** **Do not write "accredited
+programmes qualify faster"; check what each thing actually buys.**
+
+⚠⚠⚠ **And cross it against the IPEDS LEVEL MIX, because that is where it becomes a
+finding.** Florida awards 341 interior design credentials a year and **229 of them are certificates or
+associate degrees** — so **roughly seven in ten Florida graduates are on the three-year route**, and
+nothing they read says so. **On any licensed field, put the board's hour table beside the state's award
+mix; the two together say something neither says alone.**
+
+✅ **Also worth carrying: CIDQ counts up to 1,760 pre-graduation hours** — half a bachelor's
+requirement — **which turns an internship course from a nice-to-have into the highest-leverage row on
+the page.** Look for a pre-graduation allowance in every board's rules.
+
 #### ⚠⚠ THE RESEARCH IS THE COST OF A PATH — the writing is not (2026-09-19/20)
 
 **Three paths were authored on 2026-09-19 (Environmental, Computer Hardware and Materials Engineer)

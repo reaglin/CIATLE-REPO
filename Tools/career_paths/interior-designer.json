@@ -1,0 +1,173 @@
+{
+  "slug": "interior-designer",
+  "name": "Interior Designer",
+  "cipCode": "50.04",
+  "socCode": "27-1025",
+  "isPublished": true,
+  "sortOrder": 135,
+  "description": "Interior designers plan the inside of buildings — space, light, materials, furniture and the codes that govern all of it. ⚠⚠⚠ The decision this page exists to answer is not which major but WHICH MARKET: in Florida ALL RESIDENTIAL work is exempt from registration by statute, while nonresidential work runs through a 60-credit education floor, up to 5,280 supervised hours and a national exam. ⚠⚠ And the credential LEVEL is worth a year — an associate or certificate needs three years of work experience where a bachelor's needs two, for the identical exam.",
+  "credentialNote": "⚠⚠⚠ RESIDENTIAL WORK NEEDS NO CREDENTIAL IN FLORIDA. s. 481.229(6)(a) exempts interior design services for any residential application — houses, townhouses, apartments and condominiums alike. Registration exists for NONRESIDENTIAL work and for the protected title. ⚠⚠ The route: 60 semester hours of interior design credit, then supervised experience, then the NCIDQ examination (s. 481.209). The hours depend on your DEGREE LEVEL, not on accreditation — 3,520 (two years) for a bachelor's or master's in interior design, CIDA-accredited or not; ⚠ 5,280 (THREE years) for an associate degree, certificate or diploma, and the same for an NAAB architecture degree; 7,040 for a non-accredited architecture degree. ⚠ What CIDA accreditation does is satisfy the 60-credit requirement automatically. ⚠⚠⚠ Up to 1,760 hours earned BEFORE graduation may count — half a bachelor's requirement — so start logging supervised work as a student. ⚠ And know the limit of the seal: s. 481.2131 excludes structural, mechanical, plumbing, HVAC, electrical and vertical-transport systems and every life-safety element.",
+  "cipCodes": [
+    {
+      "cipCode": "04.09",
+      "note": "⚠⚠⚠ Architectural Sciences and Technology — claimed because FIU's CIDA-ACCREDITED Master of Interior Architecture is filed HERE, not under Interior Design. FIU awards nothing at all under 50.0408 despite running a Department of Interior Architecture, so a list built from the obvious code omits one of Florida's four accredited public programmes. ⚠ An NAAB architecture degree is also an NCIDQ education route, at 5,280 hours."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "interior-design",
+      "note": "The programme itself — 9 Florida public institutions, and the note there sets out which specific DEGREES are CIDA-accredited, because the college is not the credential."
+    },
+    {
+      "slug": "architecture",
+      "note": "⚠⚠ A genuine route, not a neighbour: an NAAB-accredited architecture degree qualifies you for the NCIDQ exam at 5,280 hours, and a registered architect may perform interior design and use the title with no separate registration at all (s. 481.229(5)(a))."
+    },
+    {
+      "slug": "graphic-and-digital-design",
+      "note": "⚠ Named because students weigh these against each other and the federal projections diverge sharply — graphic design −2% with AI named as a cause, interior design +3% with no AI claim made. Shared studio training, different exposure.",
+      "isRoute": false
+    },
+    {
+      "slug": "construction-management",
+      "note": "⚠ Named because the seal boundary in s. 481.2131 is a coordination problem on every real fit-out, and because construction management is offered at 30 Florida institutions against interior design's 9.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "IND1020",
+      "sortOrder": 1,
+      "reason": "Introduction to Interior Design — the first course, at Indian River State, Miami Dade and UF. Space, proportion, colour, light and the vocabulary of the field. Take it early: it is the course that tells you whether you actually want the work rather than the idea of it.",
+      "variantNote": "⚠⚠ FSCJ and Hillsborough carry the SAME statewide subject as ARC-style integrated IND1020C, and no institution carries both. Identical statewide title, two identifiers — name both when you transfer."
+    },
+    {
+      "courseId": "IND1020C",
+      "sortOrder": 2,
+      "reason": "The same introductory course under the integrated identifier FSCJ and Hillsborough use. Listed separately because no institution carries both forms, so a student will only ever find one of them.",
+      "variantNote": "⚠ Integrated lecture-and-studio packaging. Florida articulation treats it as equivalent to the bare IND1020; the cost is identifier matching, not content."
+    },
+    {
+      "courseId": "IND1233C",
+      "sortOrder": 3,
+      "reason": "Design Studio I — Palm Beach State and Seminole State. The first real studio: a brief, a plan, a critique. ⚠ Studio work is where your portfolio comes from, and the portfolio is what gets you the internship that starts your NCIDQ hours."
+    },
+    {
+      "courseId": "IND2100",
+      "sortOrder": 4,
+      "reason": "History of Interiors I — Indian River State, Palm Beach State and UF. Not decoration trivia: it is the shared reference every client conversation and every design rationale draws on.",
+      "variantNote": "⚠⚠ The SAME statewide title sits on IND1100 at FSCJ, Miami Dade and Seminole State, with NO institution carrying both. One subject, two numbers, one name — an automated transfer match finds nothing."
+    },
+    {
+      "courseId": "IND2130",
+      "sortOrder": 5,
+      "reason": "History of Interiors II — Palm Beach State, Seminole State and UF. The modern period, which is where a working designer's actual vocabulary comes from.",
+      "variantNote": "⚠ Its twin is IND1130 at FSCJ and Miami Dade. Same split as the first history course."
+    },
+    {
+      "courseId": "IND1420",
+      "sortOrder": 6,
+      "reason": "Materials and Sources — FSCJ, Hillsborough and Indian River State. What things are made of, how they wear, what they cost and where they come from. ⚠ Specification is the part of the job that gets audited, and it is where an inexperienced designer loses money.",
+      "variantNote": "⚠⚠ IND2420 Materials and Methods for Interior Architecture is the same statewide subject at FIU and Palm Beach State — again with no overlap. IND1423 Survey of Materials and Resources is a third variant at Indian River and Seminole State."
+    },
+    {
+      "courseId": "IND1429",
+      "sortOrder": 7,
+      "reason": "Textiles for Commercial and Residential Interiors — Daytona State and Indian River State. ⚠ More consequential than it sounds on the commercial side: flammability, abrasion ratings and cleanability are specification decisions with code and liability behind them, not taste."
+    },
+    {
+      "courseId": "IND2307C",
+      "sortOrder": 8,
+      "reason": "Visual Communications — FSCJ, Palm Beach State and Seminole State. Hand drawing, rendering and presentation. ⚠ The skill that survives the software changing, and the one a client actually watches you use in a meeting."
+    },
+    {
+      "courseId": "IND2460C",
+      "sortOrder": 9,
+      "reason": "Interior Design Computer-Aided Drafting and Design — FSCJ, Palm Beach State and UF. ⚠⚠ BLS says most interior designers use CAD for most of their drawings, so this is not an elective skill. Find out whether the course teaches AutoCAD, Revit or both, and learn Revit somewhere if it does not."
+    },
+    {
+      "courseId": "IND2461",
+      "sortOrder": 10,
+      "reason": "Building Systems — Palm Beach State and Seminole State. ⚠⚠⚠ This is the course that teaches the boundary in s. 481.2131: mechanical, plumbing, HVAC, electrical and vertical transport are OUTSIDE what a registered interior designer may seal. You have to coordinate with them without signing for them."
+    },
+    {
+      "courseId": "IND1935",
+      "sortOrder": 11,
+      "reason": "Building and Barrier-Free Codes — five public carriers, the joint-widest course in the prefix. Accessibility, egress and the Florida Building Code. ⚠⚠⚠ On the nonresidential side this is the most directly employable course on this list: code knowledge is what separates a decorator from a designer an architect will hire.",
+      "variantNote": "⚠ It carries a 9xx statewide number, which is normally the special-topics range, but it has a settled specific title at five institutions and is a real course. Register by number."
+    },
+    {
+      "courseId": "IND2500",
+      "sortOrder": 12,
+      "reason": "Professional Principles and Practices — five public carriers, tied for the widest in the prefix. Contracts, scope, fees and business practice. ⚠⚠ Section 481.2131 makes this legally loaded: you must disclose how ALL compensation is paid, including markups, and may not take supplier compensation without the client's knowledge. 26% of interior designers are self-employed and will need every hour of this."
+    },
+    {
+      "courseId": "IND2608",
+      "sortOrder": 13,
+      "reason": "Sustainable Design — Indian River State, Miami Dade, Palm Beach State and Seminole State. Materials, indoor air quality, daylight and the certification systems clients now ask about by name."
+    },
+    {
+      "courseId": "IND2210",
+      "sortOrder": 14,
+      "reason": "Interior Design 3 — Daytona State, Indian River State and Miami Dade. The upper studio in the associate sequence, and usually where a commercial project first appears in the brief. ⚠ Treat the output as portfolio, not coursework."
+    },
+    {
+      "courseId": "IND2941",
+      "sortOrder": 15,
+      "reason": "Interior Design Internship — Indian River State, Palm Beach State and Seminole State. ⚠⚠⚠ The single highest-leverage course on this page. CIDQ allows up to 1,760 hours of interior design work experience EARNED BEFORE GRADUATION to count toward the NCIDQ requirement — half the bachelor's total. ⚠ Take it, and make sure the supervision and the record-keeping are set up so the hours will actually count.",
+      "variantNote": "⚠ Confirm with your institution and with CIDQ what documentation is required BEFORE the placement starts. Hours that were not recorded properly at the time are very hard to reconstruct."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Florida Statutes s. 481.229 — exceptions and exemptions from licensure",
+      "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0481/Sections/0481.229.html",
+      "note": "Subsection (6)(a) exempts interior design and interior decorator services for ANY residential application, listing single-family homes, multifamily, townhouses, apartments and condominiums. (6)(b) exempts retail employees. (5)(a) lets a registered architect do interior design and use the title."
+    },
+    {
+      "label": "Florida Statutes s. 481.2131 — interior design practice and compensation",
+      "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0481/Sections/0481.2131.html",
+      "note": "Sets what a registered interior designer may seal and what is excluded — structural, mechanical, plumbing, HVAC, electrical, vertical transport, and life-safety elements. Also the compensation-disclosure duty and the bar on undisclosed supplier compensation."
+    },
+    {
+      "label": "Florida Statutes s. 481.209 — examinations",
+      "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0481/Sections/0481.209.html",
+      "note": "Requires an interior design applicant to show written proof of passing the qualification examination prescribed by the Council for Interior Design Qualification, or an equivalent the department accepts."
+    },
+    {
+      "label": "CIDQ — NCIDQ examination eligibility",
+      "url": "https://www.cidq.org/for-exam-candidates/eligibility/",
+      "note": "The eligibility table quoted on this page: 3,520 hours for a bachelor's or master's in interior design, 5,280 for an associate, certificate or diploma or for a NAAB architecture degree, 7,040 otherwise; 60 semester (90 quarter) interior design credit hours; up to 1,760 pre-graduation hours may count."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Interior Designers",
+      "url": "https://www.bls.gov/ooh/arts-and-design/interior-designers.htm",
+      "note": "$67,190 median, 97,100 jobs, +3% for 2025-35, about 7,700 annual openings, 26% self-employed. Discusses CAD and BIM and makes no AI claim about employment — the contrast with the graphic design page is drawn on this page."
+    },
+    {
+      "label": "O*NET — Interior Designers (27-1025.00), Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/27-1025.00?st=FL",
+      "note": "Florida against national at every percentile: $2,370 below at the 10th and $17,210 below at the 90th."
+    },
+    {
+      "label": "CIDA — Council for Interior Design Accreditation",
+      "url": "https://accredit-id.org/",
+      "note": "The accreditor. Florida public programmes accredited as of 2026: UF (Bachelor of Design, since 1974), Florida State (B.S.), Seminole State College (B.A.S.), Florida International (Master of Interior Architecture)."
+    },
+    {
+      "label": "University of Florida — Interior Design accreditation",
+      "url": "https://dcp.ufl.edu/interior/accreditation/",
+      "note": "Names the Bachelor of Design as the accredited degree and states the programme has been accredited since 1974, among the first to receive it."
+    },
+    {
+      "label": "Seminole State College — Interior Design B.A.S. earns CIDA accreditation",
+      "url": "https://www.seminolestate.edu/newsroom/article/5961/seminole-state-s-interior-design-program-earns-cida-accreditation",
+      "note": "The source for the claim that Seminole State is the only CIDA-accredited state college in Florida. Its B.A.S. is the accredited degree; its certificates and associate degrees are not the same credential."
+    },
+    {
+      "label": "FIU — CIDA accreditation, Department of Interior Architecture",
+      "url": "https://carta.fiu.edu/interiors/academics/cida-accreditation/",
+      "note": "Confirms the Master of Interior Architecture is CIDA-accredited — the programme that is invisible under the interior design CIP code because FIU's degrees are counted in the architecture family."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; Read this before you choose a programme: in Florida, residential work needs no credential at all</h2>\n<p>Interior design is regulated in Florida under chapter 481, Part I &mdash; the same statute and the same Board of Architecture and Interior Design that licenses architects. But the exemptions in s. 481.229 are unusually wide, and the first one decides most people&rsquo;s careers:</p>\n<blockquote><p>&ldquo;A person who performs interior design services or interior decorator services for <strong>any residential application</strong>. For purposes of this paragraph, &lsquo;residential applications&rsquo; includes all types of residences, including, but not limited to, residence buildings, single-family homes, <strong>multifamily homes, townhouses, apartments, condominiums</strong>, and domestic outbuildings appurtenant to one-family or two-family residences.&rdquo;</p></blockquote>\n<p>&#9888;&#9888;&#9888; <strong>That is the whole residential market, exempt.</strong> Houses, condominium towers, apartment blocks. A second exemption covers a retail employee doing decorator work on the shop floor, <em>&ldquo;provided that such employee does not advertise as, or represent himself or herself as, a registered interior designer.&rdquo;</em></p>\n<p><strong>So the real question this page answers is not &ldquo;which major?&rdquo; &mdash; it is &ldquo;which market?&rdquo;</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Residential</th><th>Nonresidential (commercial, hospitality, healthcare, institutional)</th></tr></thead>\n<tbody>\n<tr><td><strong>Registration</strong></td><td>&#9888; <strong>Not required</strong> &mdash; exempt by statute</td><td><strong>Required</strong> to call yourself a registered interior designer and to seal documents</td></tr>\n<tr><td><strong>What you need</strong></td><td>Skill, a portfolio, and clients</td><td>60 interior design credit hours &rarr; 3,520&ndash;5,280 supervised work hours &rarr; the NCIDQ exam</td></tr>\n<tr><td><strong>Time to get there</strong></td><td>As soon as you are good</td><td>Reckon on six to seven years from starting the degree</td></tr>\n<tr><td><strong>The catch</strong></td><td>No credential also means no barrier &mdash; you compete with everyone</td><td>The credential is the barrier, and it is why the work pays</td></tr>\n</tbody></table>\n<p>&#9888; <strong>Nothing stops you doing both</strong>, and most Florida designers start residential. But a programme chosen for residential work will not automatically carry you into the commercial one, because the commercial route is counted in credit hours and logged work hours from the beginning.</p>\n\n<h2>&#9888;&#9888;&#9888; The level of your credential is worth a year of your life</h2>\n<p>Florida registration runs through the <strong>NCIDQ examination</strong>, set by the Council for Interior Design Qualification &mdash; s. 481.209 requires <em>&ldquo;written proof that he or she has successfully passed the qualification examination prescribed by the Council for Interior Design Qualification.&rdquo;</em> CIDQ&rsquo;s own eligibility table is where the decision actually gets made:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Your education</th><th>Credit-hour condition</th><th>Supervised work hours required</th></tr></thead>\n<tbody>\n<tr><td><strong>Bachelor&rsquo;s or master&rsquo;s in interior design, CIDA-accredited</strong></td><td>&#9888; <strong>Satisfied automatically</strong></td><td><strong>3,520</strong> &mdash; two years full time</td></tr>\n<tr><td>Bachelor&rsquo;s or master&rsquo;s in interior design, <em>not</em> CIDA-accredited</td><td>must include 60 interior design credit hours</td><td><strong>3,520</strong> &mdash; two years full time</td></tr>\n<tr><td>Bachelor&rsquo;s or master&rsquo;s in <strong>another major</strong>, plus an interior design certificate, degree or diploma</td><td>must include 60 interior design credit hours</td><td>&#9888; <strong>5,280</strong> &mdash; three years</td></tr>\n<tr><td>&#9888;&#9888; <strong>Associate degree, certificate or diploma</strong></td><td>must include 60 interior design credit hours</td><td>&#9888;&#9888; <strong>5,280</strong> &mdash; three years</td></tr>\n<tr><td>Bachelor&rsquo;s or master&rsquo;s in architecture, <strong>NAAB</strong>-accredited</td><td>&mdash;</td><td><strong>5,280</strong> &mdash; three years</td></tr>\n<tr><td>Bachelor&rsquo;s or master&rsquo;s in architecture, not NAAB-accredited</td><td>&mdash;</td><td>&#9888; <strong>7,040</strong> &mdash; four years</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The same exam, and the associate route costs an extra full year of supervised work.</strong> And Florida&rsquo;s output is overwhelmingly that route: of <strong>341 interior design credentials</strong> a year, <strong>132 are certificates of twelve weeks to a year and 97 are associate degrees</strong> &mdash; against <strong>94 bachelor&rsquo;s and 9 master&rsquo;s</strong>. <strong>Roughly seven in ten Florida interior design graduates are on the three-year route, and it is not stated anywhere they are likely to read.</strong></p>\n<p>&#9888;&#9888; <strong>Note what CIDA accreditation does and does not do.</strong> It does <em>not</em> shorten the work requirement &mdash; a non-CIDA bachelor&rsquo;s is also 3,520 hours. What it does is <strong>satisfy the 60-credit requirement automatically</strong>, so you never have to document it course by course, and it is the safe assumption that a receiving programme or employer will recognise the degree. <strong>The degree LEVEL is what moves the hours.</strong></p>\n<p>&#9760; <strong>One thing that helps, and students routinely miss it:</strong> CIDQ allows <strong>up to 1,760 hours of interior design work experience earned BEFORE graduation</strong> to count toward the total. That is half the bachelor&rsquo;s requirement. <strong>Supervised internships and design-office work taken during the degree are worth real time later &mdash; if they are recorded properly at the time.</strong></p>\n\n<h2>Where the accredited programmes are &mdash; and the one the data hides</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>CIDA-accredited degree</th><th>Credentials/yr (all levels)</th></tr></thead>\n<tbody>\n<tr><td><strong>University of Florida</strong></td><td>Bachelor of Design &mdash; <em>&ldquo;accredited since 1974&hellip; among the first programs to receive this recognition&rdquo;</em></td><td>21</td></tr>\n<tr><td><strong>Florida State University</strong></td><td>B.S. in Interior Design (also NASAD-accredited)</td><td>37</td></tr>\n<tr><td><strong>Seminole State College</strong></td><td>B.A.S. &mdash; &#9888; <strong>the only CIDA-accredited STATE COLLEGE in Florida</strong></td><td><strong>187</strong></td></tr>\n<tr><td>&#9888;&#9888; <strong>Florida International University</strong></td><td>Master of Interior Architecture</td><td>&#9888;&#9888;&#9888; <strong>0 under the interior design code</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>FIU has a Department of Interior Architecture and a CIDA-accredited master&rsquo;s, and it awards nothing at all under Interior Design (50.0408)</strong> &mdash; its degrees are counted in the <strong>architecture</strong> family (04.09) instead. <strong>A programme list built from the obvious code would have left out one of Florida&rsquo;s four accredited public programmes.</strong> This is the second time in two days this site has met that shape; the architecture page carries the other half of it.</p>\n<p>&#9888;&#9888; <strong>And look hard at the Seminole State row.</strong> It is the largest interior design producer in the state by a factor of five &mdash; but 101 of its 187 credentials are short certificates and 41 are associate degrees. <strong>Only the 45 B.A.S. graduates are on the two-year NCIDQ route.</strong> Being at a CIDA-accredited college is not the same as holding its accredited degree.</p>\n\n<h2>&#9888;&#9888; What a registered interior designer may actually seal &mdash; and where the line is</h2>\n<p>Registration is not a licence to design buildings. Section 481.2131 draws the boundary explicitly: a registered interior designer may submit <strong>sealed documents for interior construction permits</strong>, but <strong>not</strong> for <em>&ldquo;structural, mechanical, plumbing, heating, air-conditioning, ventilating, electrical, or vertical transportation systems&rdquo;</em>, and <strong>not</strong> for elements affecting <strong>life safety</strong> &mdash; <em>&ldquo;fire-rated separations,&rdquo; &ldquo;smoke evacuation,&rdquo;</em> and emergency systems. Interior design documents must state on their face that they are <em>&ldquo;not an architectural or engineering study.&rdquo;</em></p>\n<p>&#9888; <strong>That boundary is most of the job on a real project</strong>, because it decides who signs what and when. A fit-out that moves a wall through a fire-rated separation, or relocates a sprinkler head, needs someone else&rsquo;s seal. <strong>Learning where your seal stops is not bureaucracy; it is the difference between a permit set that gets through and one that comes back.</strong></p>\n<p>&#9888; Note the reverse case too: under s. 481.229(5)(a) a <strong>registered architect may perform interior design and use the title</strong> without separate registration. The traffic runs one way.</p>\n\n<h2>&#9888;&#9888; The money rule nobody teaches, and 26% of you will need it</h2>\n<p><strong>26% of interior designers are self-employed.</strong> Section 481.2131 also sets out how you may be paid, and it is enforceable:</p>\n<ul>\n<li>Before contracting you must <em>&ldquo;clearly determine the scope and nature of the project and the method or methods of compensation.&rdquo;</em></li>\n<li>You may charge fees, percentages or <strong>markups on goods</strong> &mdash; but you must <em>&ldquo;fully disclose to the client the manner in which all compensation is to be paid.&rdquo;</em></li>\n<li>&#9888;&#9888; <em>&ldquo;Unless the client knows and agrees, the interior designer shall not accept any form of compensation from a supplier of goods and services in cash or in kind.&rdquo;</em></li>\n</ul>\n<p>&#9888;&#9888;&#9888; <strong>Trade discounts and supplier incentives are normal in this industry and are exactly what that last clause governs.</strong> Take the professional practice course seriously, and get your contract and your disclosure language right before your first paying client, not after.</p>\n\n<h2>&#9888;&#9888; Two statewide numbers, one course, and the state gives them the same title</h2>\n<p>The <code>IND</code> prefix is fragmented in a way that is easy to miss because <strong>the state uses the identical statewide title for both numbers</strong>. Measured across the flat file:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Subject (statewide title)</th><th>1000-level number</th><th>2000-level number</th><th>Overlap</th></tr></thead>\n<tbody>\n<tr><td>HISTORY OF INTERIORS I</td><td><strong>IND1100</strong> &mdash; FSCJ, Miami Dade, Seminole State</td><td><strong>IND2100</strong> &mdash; Indian River, Palm Beach State, UF</td><td><strong>none</strong></td></tr>\n<tr><td>HISTORY OF INTERIORS II</td><td><strong>IND1130</strong> &mdash; FSCJ, Miami Dade</td><td><strong>IND2130</strong> &mdash; Palm Beach State, Seminole State, UF</td><td><strong>none</strong></td></tr>\n<tr><td>MATERIALS AND METHODS</td><td><strong>IND1420</strong> &mdash; FSCJ, Hillsborough, Indian River</td><td><strong>IND2420</strong> &mdash; FIU, Palm Beach State</td><td><strong>none</strong></td></tr>\n<tr><td>INTRO TO INTERIOR DESIGN</td><td><strong>IND1020</strong> &mdash; Indian River, Miami Dade, UF</td><td><strong>IND1020C</strong> &mdash; FSCJ, Hillsborough</td><td><strong>none</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Four subjects, eight numbers, and not one institution carries both halves of any pair.</strong> Both halves are lower division, so no baccalaureate credit is at risk &mdash; <strong>but SCNS equivalency does not cross numbers</strong>, so an automated transfer match between FSCJ&rsquo;s <code>IND1100</code> and UF&rsquo;s <code>IND2100</code> finds nothing, on courses the state itself has given the same name.</p>\n<p>&#9888; <strong>73% of live undergraduate <code>IND</code> identifiers are carried by exactly one public institution</strong>, which is squarely inside the three-quarters baseline this site has measured across sixteen prefixes. <strong>Plan on sending syllabi, and name both numbers of a pair in the letter.</strong></p>\n<p>&#9888;&#9888; <strong>There is a second reason to keep every syllabus: the 60 interior design credit hours.</strong> If your degree is not CIDA-accredited you will have to prove those hours course by course to CIDQ, years later, possibly from an institution whose catalogue has changed. <strong>Keep the catalogue descriptions from the year you took each course.</strong></p>\n\n<h2>Money, and what Florida does to it</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$39,050</td><td>$41,420</td><td>&minus;$2,370</td></tr>\n<tr><td>25th</td><td>$47,270</td><td>$51,840</td><td>&minus;$4,570</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$60,860</strong></td><td><strong>$67,190</strong></td><td>&minus;$6,330</td></tr>\n<tr><td>75th</td><td>$79,300</td><td>$85,740</td><td>&minus;$6,440</td></tr>\n<tr><td>90th</td><td>$96,930</td><td>$114,140</td><td>&#9888;&#9888; <strong>&minus;$17,210</strong></td></tr>\n</tbody></table>\n<p>&#9888; Florida sits below the national figure at every percentile and the gap widens toward the top &mdash; the same private-sector shape the architecture page shows, not the raised-floor pattern this site has measured in Florida public service.</p>\n<p>&#9888;&#9888; <strong>One number on this page is worth more than the median: 7,700 annual openings against 97,100 jobs, on only 3% growth.</strong> That is roughly <strong>8% turnover a year</strong> in an occupation barely growing &mdash; churn, not expansion, and consistent with a quarter of the field being self-employed. <strong>Openings will exist; staying is the harder part, and it is why the registration and the commercial market matter.</strong></p>\n\n<h2>&#9888;&#9888; What BLS says about AI here &mdash; which is nothing, and that is the finding</h2>\n<p>This site tracks how the federal projections talk about AI, because the wording varies by occupation and the variation is informative. The interior designers handbook discusses CAD and BIM &mdash; <em>&ldquo;most interior designers use computer-aided design (CAD) software for most of their drawings&rdquo;</em> &mdash; and <strong>makes no AI claim about employment at all.</strong></p>\n<p>&#9888;&#9888;&#9888; <strong>Set that beside graphic design, which is the neighbour students most often weigh this against.</strong> There BLS says the technology is expected to <em>reduce the need for these workers</em> and projects a <strong>2% decline</strong>. Here, +3% and no such sentence. <strong>Both are &ldquo;design&rdquo;; the federal agency treats them completely differently.</strong></p>\n<p>&#9888; The plausible reason is worth saying to a student choosing between them: <strong>a graphic designer&rsquo;s deliverable is a file, and an interior designer&rsquo;s is an occupied room that has to pass inspection.</strong> A model can produce the image of a room. It cannot specify the fire-rated assembly, walk the site, resolve the clash with the sprinkler layout, or seal the permit set. <strong>Position yourself on that side of the work &mdash; codes, documentation, coordination, procurement &mdash; and the exposure is far lower than the rendering suggests.</strong></p>\n\n<h2>What to do first</h2>\n<ul>\n<li><strong>Decide residential or nonresidential before you choose a programme.</strong> Residential needs no registration in Florida; nonresidential needs all of it.</li>\n<li>&#9888;&#9888; <strong>If registration is the goal, get the bachelor&rsquo;s.</strong> An associate or certificate costs you a third year of supervised hours for the identical exam.</li>\n<li><strong>Start logging work experience while you are still a student</strong> &mdash; up to 1,760 hours before graduation can count.</li>\n<li><strong>Check CIDA accreditation for the specific DEGREE</strong>, not the college. Seminole State&rsquo;s B.A.S. is accredited; its certificates are a different thing.</li>\n<li><strong>Keep every syllabus and catalogue description.</strong> If your degree is not CIDA-accredited, the 60 credit hours are yours to prove.</li>\n<li><strong>Learn where your seal stops</strong> &mdash; s. 481.2131 &mdash; and get your compensation disclosure right before the first client.</li>\n</ul>\n"
+}

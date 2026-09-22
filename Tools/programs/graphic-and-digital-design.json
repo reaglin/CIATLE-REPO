@@ -11,10 +11,6 @@
       "note": "⚠ Graphic Design — only 4 Florida public institutions and 89 credentials, 79 of them bachelor's. UF 48, FAMU 21, USF 18, UNF 2. The code that carries the name carries under 5% of the field's output."
     },
     {
-      "cipCode": "50.0408",
-      "note": "Interior Design — 11 Florida public institutions and 341 credentials: 132 short certificates, 97 associate, 94 bachelor's. Seminole State College 187, FSCJ 43, Florida State 37. ⚠ A separate career with its own Florida registration under chapter 481 — claimed here because it shares the design CIP family."
-    },
-    {
       "cipCode": "50.0407",
       "note": "Fashion and Apparel Design — 2 institutions, 118 credentials, of which Miami Dade College awards 117. Effectively a single programme, and unsurprisingly it is in Miami."
     },
@@ -55,6 +51,11 @@
     {
       "slug": "entrepreneurship",
       "note": "⚠⚠ Named because 20% of graphic designers and 63% of animators are SELF-EMPLOYED. This is a freelance field for a large minority of the people in it, and nothing in a design degree teaches pricing, contracts or quarterly estimated tax. ⚠ Florida teaches short business certificates at 30 institutions.",
+      "isRoute": false
+    },
+    {
+      "slug": "interior-design",
+      "note": "⚠⚠ Interior Design (50.0408) was claimed on this page until 2026-09-22 and has been MOVED to its own programme, where it belongs — it is a separately REGISTERED profession under chapter 481 and four Florida public programmes are CIDA-accredited. ⚠ Named here because the two share studio training and software, and because Florida projects graphic design at −2% with AI named, and interior design at +3% with no AI claim made.",
       "isRoute": false
     }
   ]
