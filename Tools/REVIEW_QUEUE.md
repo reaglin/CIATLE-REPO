@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **87** |
+| ⏳ **Awaiting a decision from Ron** | **86** |
 | Informational — recorded, no decision needed | 19 |
-| ✅ Resolved | 10 |
+| ✅ Resolved | 11 |
 | **Total items** | **116** |
 
 ---
 
-### ⏳ Awaiting a decision (87)
+### ⏳ Awaiting a decision (86)
 
 | # | Item |
 |---|---|
@@ -119,7 +119,6 @@ continues around every one of them.
 | **109** | `scns.is_public()` EXCLUDES DISTRICT TECHNICAL COLLEGES — which is the whole CTE sector (found 2026-09-20, automotive path) |
 | **110** | The CIP tree shows the 4-DIGIT group title where a 6-digit code is claimed (found 2026-09-21, respiratory therapy path) |
 | **111** | Five widely-carried gen-ed courses still show the COURSE ID as their title (found 2026-09-21) |
-| **112** | Should PHLEBOTOMY be its own programme? (raised 2026-09-21, medical laboratory scientist path) |
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 | **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
@@ -149,7 +148,7 @@ continues around every one of them.
 | 74 | Say so when a number is CLEAN — new handling applied in batch 199 (informational) |
 | 84 | NEW SHAPES from batch 203 — recorded for awareness, no decision needed |
 
-### ✅ Resolved (10)
+### ✅ Resolved (11)
 
 | # | Item |
 |---|---|
@@ -163,6 +162,7 @@ continues around every one of them.
 | 64 | RESOLVED — the prerequisite ceiling was raised to 1000 and deployed (2026-09-11) |
 | 67 | The 1000-character prerequisite ceiling is doing exactly what it was raised to do (batch 193) |
 | 85 | `OCB3108C` — the C-nobody-carries class gains its cleanest case, and this one resolved itself (batch 203) |
+| 112 | RESOLVED 2026-09-21 — phlebotomy IS its own programme (raised the same day) |
 ## Open — awaiting decision
 ### 1. `ETI4448` — scope gap on a capstone (correction candidate)
 
@@ -3363,7 +3363,7 @@ respiratory therapy path itself. ⚠ **A wider sweep is the real answer:** count
 course whose title equals its id.
 
 
-## 112. ⚠ Should PHLEBOTOMY be its own programme? (raised 2026-09-21, medical laboratory scientist path)
+## 112. ✅ RESOLVED 2026-09-21 — phlebotomy IS its own programme (raised the same day)
 
 **CIP `51.1009` is the largest allied-health training footprint in the state that the site does not
 represent: 29 Florida public institutions and 772 credentials in the 2023 award year**, nearly all
@@ -3379,14 +3379,24 @@ licence category, and drawing blood is not laboratory testing — so *"a school 
 certificate has a medical laboratory programme"* is a stretch in a way that *"a school with an LPN
 programme has a nursing programme"* was not.
 
-⚠ **For Ron — two defensible answers and it is your call:**
-1. **A `phlebotomy` programme of its own** on `51.1009`, linked to the medical laboratory scientist
-   path as a non-route feeder (the `dental-assisting` pattern from earlier the same day). It would put
-   29 technical colleges on the site.
-2. **Leave it.** It is a short certificate rather than a programme in the sense the layer uses.
+✅ **RESOLVED by the second career-path queue, the same day.** The premise of the open question
+was that *"there is no phlebotomy row in `career_paths/QUEUE.csv`, so option 1 adds a programme whose
+only career link is a non-route one."* ⚠ **That was wrong — rank 107 IS Phlebotomist (SOC
+31-9097).** With a career path to attach to, option 1 became the only sensible answer.
 
-⚠ There is no phlebotomy row in `career_paths/QUEUE.csv`, so option 1 adds a programme whose only
-career link is a non-route one.
+**Done:** programme **`phlebotomy`** on `51.1009` (29 institutions), and the **`phlebotomist`** path.
+
+⚠⚠ **And the research answered the doubt that produced the question.** The worry was that
+*"a school with a phlebotomy certificate has a medical laboratory programme"* is a stretch. **It is —
+and the honest relationship turned out to be a different one entirely: `MEA0520` and `MEA0521` carry
+`OCP B` and `OCP C` IN THEIR STATEWIDE TITLES, so phlebotomy is formally part of Florida's MEDICAL
+ASSISTING programme, not the laboratory one.** The programme is linked to `medical-assisting` as the
+same framework and to `medical-laboratory-science` as the rung above.
+
+⚠⚠⚠ **The finding that came out of it, and it is the page's headline:** **s. 483.803,
+F.S. names phlebotomists in the EXCLUSION** from *clinical laboratory personnel*. **Florida licenses
+the technician and the technologist above and writes the bottom rung out of the statute by name** —
+while producing **772** phlebotomists a year against **126** technicians and **107** scientists.
 
 ## 113. ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21)
 
