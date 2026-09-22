@@ -87,7 +87,9 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 110,epidemiologist,Epidemiologist,51.22,Public Health,19-1041,Epidemiologists,HLT,CHOICE,yes,section:public-health-professional
 110,community-health-worker,Community Health Worker,51.22,Public Health,21-1094,Community Health Workers,HLT,DIRECT,yes,section:public-health-professional
 111,physician-assistant,Physician Assistant,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-1071,Physician Assistants,HLT,DIRECT,yes,published
-112,nurse-practitioner,Nurse Practitioner,51.38,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",29-1171,Nurse Practitioners,HLT,DIRECT,yes,
+112,nurse-practitioner,Nurse Practitioner,51.38,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",29-1171,Nurse Practitioners,HLT,DIRECT,yes,published
+112,nurse-anesthetist,Nurse Anesthetist,51.38,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",29-1151,Nurse Anesthetists,HLT,DIRECT,yes,section:nurse-practitioner
+112,nurse-midwife,Nurse Midwife,51.38,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",29-1161,Nurse Midwives,HLT,DIRECT,yes,section:nurse-practitioner
 113,physician,Physician,51.12,Medicine,29-1210,Physicians,HLT,CHOICE,yes,
 114,athletic-trainer,Athletic Trainer,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-9091,Athletic Trainers,HLT,DIRECT,yes,
 115,pharmacist,Pharmacist,51.20,"Pharmacy, Pharmaceutical Sciences and Administration",29-1051,Pharmacists,HLT,DIRECT,no,

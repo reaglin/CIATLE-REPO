@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 import json, io
-p='career_paths/physician-assistant.json'
+p='career_paths/nurse-practitioner.json'
 d=json.load(io.open(p,encoding='utf-8'))
 s=d['sources']
-s[1]['note']=("⚠⚠⚠ Licensure requires an ARC-PA accredited programme and a passing NCCPA score, "
- "and anyone MATRICULATING AFTER 31 DECEMBER 2020 must hold a master's. ⚠⚠ A physician may not "
- "supervise more than 10 currently licensed physician assistants at any one time. ⚠ Schedule II "
- "prescribing is limited to a 7-day supply, paediatric psychiatric medication to 14 days. ⚠ A PA may "
- "authenticate any document a physician may, including death certificates and DNR orders.")
-s[2]['note']=("⚠⚠⚠ What makes the PA-versus-nurse-practitioner comparison concrete. An APRN may "
- "register for AUTONOMOUS practice with an unencumbered licence, no discipline in five years, 3,000 "
- "clinical hours within five years under physician supervision, and 3 graduate semester hours each in "
- "differential diagnosis and pharmacology. ⚠ Scope is limited to PRIMARY CARE — family medicine, "
- "general paediatrics, general internal medicine — with no surgery except subcutaneous procedures.")
-for i in (1,2): print(i, len(s[i]['note']))
+s[4]['note']=("⚠⚠⚠ The source for the limit nobody reports: \"All APRN specialties are eligible "
+ "for autonomous practice, however, only certified midwives are currently authorized to practice any "
+ "specific functions related to their specialty area without an established physician protocol.\" Also the "
+ "uptake: 11,201 APRNs registered for autonomous practice, and 3,458 psychiatric nurses of whom 1,093 hold "
+ "primary-care autonomous registration. ⚠ The bill DIED in subcommittee on 8 March 2024.")
+s[5]['note']=("⚠⚠ NONPF committed on 20 April 2018 to move all entry-level NP education to the DNP by "
+ "2025 and reaffirmed it in 2023. Its trend data: DNP NP programmes 124 in 2014 to 254 in 2021; BSN-to-DNP "
+ "graduates 934 in 2015 to 3,327 in 2021; MSN NP entry has levelled. ⚠⚠⚠ But NONPF is an "
+ "association of FACULTIES — the commitment carries no regulatory force, AANP and ANCC still certify "
+ "master's-prepared NPs, and only state boards set the licensure degree.")
+for i in (4,5): print(i, len(s[i]['note']))
 io.open(p,'w',encoding='utf-8').write(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
