@@ -94,7 +94,9 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 114,athletic-trainer,Athletic Trainer,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-9091,Athletic Trainers,HLT,DIRECT,yes,published
 115,pharmacist,Pharmacist,51.20,"Pharmacy, Pharmaceutical Sciences and Administration",29-1051,Pharmacists,HLT,DIRECT,no,
 116,social-worker,Social Worker,44.07,Social Work,21-1021,"Child, Family, and School Social Workers",SOC,DIRECT,yes,published
-117,mental-health-counselor,Mental Health Counselor,42.01,"Psychology, General",21-1018,"Substance Abuse, Behavioral Disorder, and Mental Health Counselors",SOC,CHOICE,yes,
+117,mental-health-counselor,Mental Health Counselor,42.01,"Psychology, General",21-1018,"Substance Abuse, Behavioral Disorder, and Mental Health Counselors",SOC,CHOICE,yes,published
+117,marriage-and-family-therapist,Marriage and Family Therapist,42.01,"Psychology, General",21-1013,Marriage and Family Therapists,SOC,DIRECT,yes,section:mental-health-counselor
+117,clinical-psychologist,Clinical Psychologist,42.01,"Psychology, General",19-3033,Clinical and Counseling Psychologists,SOC,DIRECT,yes,section:mental-health-counselor
 118,school-counselor,School Counselor,13.11,Student Counseling and Personnel Services,21-1012,"Educational, Guidance, and Career Counselors and Advisors",SOC,DIRECT,yes,
 119,early-childhood-educator,Early Childhood Educator,19.07,"Human Development, Family Studies, and Related Services",25-2011,"Preschool Teachers, Except Special Education",EDU,DIRECT,yes,
 120,instructional-designer,Instructional Designer,13.03,Curriculum and Instruction,25-9031,Instructional Coordinators,EDU,CHOICE,yes,
