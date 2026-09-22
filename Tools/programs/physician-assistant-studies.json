@@ -1,0 +1,41 @@
+{
+  "slug": "physician-assistant-studies",
+  "name": "Physician Assistant Studies",
+  "isPublished": true,
+  "sortOrder": 575,
+  "description": "A graduate clinical programme leading to licensure as a physician assistant — diagnosis, management, prescribing and procedures, practised under a supervising physician across essentially every specialty. ⚠⚠ Master's only, and small: 6 Florida public institutions award 225 degrees a year, every one of them a master's. ⚠⚠⚠ Florida wrote the credential into statute with a date — anyone matriculating after 31 December 2020 must hold a master's.",
+  "degreesNote": "⚠⚠⚠ THE ADMISSION BARRIER IS A JOB, NOT A TRANSCRIPT. PAEA's Student Report puts the median matriculant at roughly 3,200 hours of direct patient contact, with the 25th percentile near 1,750 and the 75th near 5,600 — which is one to three years of full-time clinical work BEFORE the programme starts. ⚠ Grade point averages cluster around 3.6, so the GPA screens you out and the hours get you in. ⚠⚠ Verify the figures with PAEA directly; they are widely quoted second-hand and they move. ⚠⚠⚠ AND EACH PROGRAMME DEFINES THE HOURS ITSELF. Most distinguish direct PATIENT CARE experience — where you are hands-on and responsible — from general HEALTHCARE experience such as scribing or front-desk work, and count them differently or not at all. Get each programme's own definition in writing before you take a job to accumulate hours. ⚠ THE ACADEMIC SIDE: prerequisites are consistent across programmes — anatomy and physiology with laboratories, microbiology, general chemistry, organic chemistry or biochemistry, general biology, statistics, psychology, developmental psychology, medical terminology and composition. Florida's public colleges carry every one of them, most at 15 to 39 institutions, so the prerequisite year is cheap and near home even though the programme is not. ⚠⚠ Licensure requires a programme accredited by ARC-PA and a passing score on the NCCPA examination (s. 458.347, F.S.). ⚠ Check ARC-PA accreditation STATUS, not just its existence — programmes carry provisional, continued and probationary status, and it matters. ⚠ Note also that these six are Florida's PUBLIC programmes; this site does not list private institutions, and Florida has several large private PA programmes, so 225 is not the state's whole annual output.",
+  "cips": [
+    {
+      "cipCode": "51.0912",
+      "note": "Physician Assistant — 6 Florida public institutions and 225 credentials in 2023, ⚠ every single one a MASTER'S degree. University of Florida 58, Florida State 56, University of South Florida 47, Florida International 45, Florida Gulf Coast 19. ⚠ Public institutions only; Florida also has substantial private PA programmes this site does not list."
+    }
+  ],
+  "related": [
+    {
+      "slug": "nursing",
+      "note": "⚠⚠⚠ The real alternative, and the comparison to make on the STATUTE rather than the job description. An APRN meeting s. 464.0123 — 3,000 supervised clinical hours plus graduate credits in differential diagnosis and pharmacology — may practise AUTONOMOUSLY in Florida primary care. A physician assistant may not: s. 458.347 requires a supervising physician. ⚠ But the PA's scope is broader, reaching surgery and every specialty, where autonomous APRN practice is limited to primary care."
+    },
+    {
+      "slug": "emergency-medical-services",
+      "note": "⚠⚠ One of the standard routes to the patient care hours PA admission actually turns on, and among the fastest: EMT training is about a semester and paramedic an associate degree, and Florida teaches it at 39 public institutions — the widest clinical footprint in the state. ⚠ Confirm with each PA programme that it counts EMS hours; most do, and it is hands-on by definition."
+    },
+    {
+      "slug": "phlebotomy",
+      "note": "⚠⚠⚠ The fastest route to patient contact hours in Florida: every one of the 772 phlebotomy credentials awarded in 2023 was a certificate of UNDER TWELVE WEEKS, at 29 public institutions. ⚠ Whether it counts as direct patient care varies by programme — ask before enrolling — but as a way to be employed in a hospital within three months while taking prerequisites, nothing else comes close."
+    },
+    {
+      "slug": "medical-assisting",
+      "note": "⚠ Another common hours route, and a broader one than phlebotomy — vital signs, injections, specimen collection and patient preparation under s. 458.3485. 38 Florida public institutions. ⚠⚠ Note its occupational completion points: the phlebotomy exit comes first at 75 hours, so the two routes are the same programme at different lengths."
+    },
+    {
+      "slug": "respiratory-therapy",
+      "note": "⚠ A slower route to the hours — an associate degree or baccalaureate — but a licensed clinical one, so the hours are unambiguous and the pay while accumulating them is considerably better than an entry certificate. ⚠⚠ Named because applicants underestimate how much the QUALITY of the hours matters alongside the count."
+    },
+    {
+      "slug": "surgical-technology",
+      "note": "⚠ Named specifically for applicants aiming at surgical PA practice, which is a large share of the profession and the part autonomous APRN practice does not reach. Scrubbing cases is hands-on hours and it is directly relevant experience for a surgical programme.",
+      "isRoute": false
+    }
+  ]
+}
