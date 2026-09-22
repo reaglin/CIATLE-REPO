@@ -20,8 +20,8 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed: **36,183 courses, 2,504 curriculum guides, 65 career
-paths and 71 programmes** are live as of 2026-09-22.
+three-project solution exists and is deployed: **36,232 courses, 2,504 curriculum guides, 66 career
+paths and 72 programmes** are live as of 2026-09-22.
 
 **What is being worked on now: career paths, second queue.** The original 50 rows are complete —
 **47 published paths covering 71 occupations** across engineering, manufacturing/CTE, health,
