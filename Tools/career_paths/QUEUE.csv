@@ -111,7 +111,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 126,mis-analyst,Management Information Systems Analyst,52.12,Management Information Systems and Services,15-1211,Computer Systems Analysts,BUS,CHOICE,yes,published
 126,it-manager,Computer and Information Systems Manager,52.12,Management Information Systems and Services,11-3021,Computer and Information Systems Managers,BUS,CHOICE,yes,section:mis-analyst
 127,entrepreneur,Small Business Owner and Entrepreneur,52.07,Entrepreneurial and Small Business Operations,11-1021,General and Operations Managers,BUS,CHOICE,yes,published
-128,real-estate-agent,Real Estate Agent and Broker,52.15,Real Estate,41-9022,Real Estate Sales Agents,BUS,CHOICE,yes,
+128,real-estate-agent,Real Estate Agent and Broker,52.15,Real Estate,41-9022,Real Estate Sales Agents,BUS,CHOICE,yes,published
+128,real-estate-broker,Real Estate Broker,52.15,Real Estate,41-9021,Real Estate Brokers,BUS,DIRECT,yes,section:real-estate-agent
 129,graphic-designer,Graphic Designer,50.04,Design and Applied Arts,27-1024,Graphic Designers,ART,CHOICE,yes,
 130,ux-designer,UX and Product Designer,11.08,Computer Software and Media Applications,15-1255,Web and Digital Interface Designers,ART,CHOICE,yes,
 131,film-video-editor,Film and Video Editor,50.06,Film/Video and Photographic Arts,27-4032,Film and Video Editors and Camera Operators,ART,CHOICE,yes,
