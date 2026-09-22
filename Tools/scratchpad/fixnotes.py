@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
 import json, io
-p='career_paths/graphic-designer.json'
+p='career_paths/ux-designer.json'
 d=json.load(io.open(p,encoding='utf-8'))
-d['sources'][3]['note']=("⚠⚠⚠ The clock-hour route, printed in the statewide titles: GRA0026 "
- "GRAPHIC DESIGNER (300 HOURS) is carried by 11 Florida technical colleges, alongside GRA0024 PRODUCTION "
- "ASSISTANT (150 HOURS), GRA0025 DIGITAL ASSISTANT DESIGNER (300) and GRA0027 MEDIA DESIGNER (300). "
- "⚠ The OCP letters are inconsistent across them, so more than one framework uses the prefix. A "
- "parallel ladder runs DIG0081–DIG0084 at 8 technical colleges totalling 1,050 clock hours.")
-print(len(d['sources'][3]['note']))
+s=d['sources']
+s[0]['note']=("⚠⚠ Web and digital interface designers $104,000 and web developers $92,650 (2025), "
+ "132,700 jobs, about 8,000 annual openings, 13% of designers self-employed, typical entry a bachelor's. "
+ "Employment \"projected to grow 5 percent from 2025 to 2035, faster than the average\". "
+ "⚠⚠⚠ On AI: \"increasing use of artificial intelligence (AI) for web development may soften "
+ "the employment growth of these workers… it may also allow some workers in other occupations to do "
+ "basic web development tasks.\"")
+s[3]['note']=("⚠⚠⚠ Measured over the whole file: 181 distinct active course identifiers carry "
+ "\"web\", \"user interface\", \"user experience\" or \"human-computer\" in their statewide titles, across 25 "
+ "DIFFERENT PREFIXES — and none reaches more than 13 carriers. The widest is CTS0085 Web Security "
+ "Specialist (150 clock hours) at 13 technical colleges, then COP2830 and DIG0083 at 8. ⚠ Compare "
+ "HSC0003 at 55 carriers: this subject has no settled home in the catalogue.")
+for i in (0,3): print(i, len(s[i]['note']))
 io.open(p,'w',encoding='utf-8').write(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
