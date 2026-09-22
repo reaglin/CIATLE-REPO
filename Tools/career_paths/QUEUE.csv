@@ -113,7 +113,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 127,entrepreneur,Small Business Owner and Entrepreneur,52.07,Entrepreneurial and Small Business Operations,11-1021,General and Operations Managers,BUS,CHOICE,yes,published
 128,real-estate-agent,Real Estate Agent and Broker,52.15,Real Estate,41-9022,Real Estate Sales Agents,BUS,CHOICE,yes,published
 128,real-estate-broker,Real Estate Broker,52.15,Real Estate,41-9021,Real Estate Brokers,BUS,DIRECT,yes,section:real-estate-agent
-129,graphic-designer,Graphic Designer,50.04,Design and Applied Arts,27-1024,Graphic Designers,ART,CHOICE,yes,
+129,graphic-designer,Graphic Designer,50.04,Design and Applied Arts,27-1024,Graphic Designers,ART,CHOICE,yes,published
+129,animator,Special Effects Artist and Animator,50.04,Design and Applied Arts,27-1014,Special Effects Artists and Animators,ART,CHOICE,yes,section:graphic-designer
 130,ux-designer,UX and Product Designer,11.08,Computer Software and Media Applications,15-1255,Web and Digital Interface Designers,ART,CHOICE,yes,
 131,film-video-editor,Film and Video Editor,50.06,Film/Video and Photographic Arts,27-4032,Film and Video Editors and Camera Operators,ART,CHOICE,yes,
 132,journalist,Journalist and Reporter,09.04,Journalism,27-3023,"News Analysts, Reporters, and Journalists",ART,CHOICE,yes,

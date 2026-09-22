@@ -1,0 +1,61 @@
+{
+  "slug": "graphic-and-digital-design",
+  "name": "Graphic and Digital Design",
+  "isPublished": true,
+  "sortOrder": 589,
+  "description": "⚠⚠⚠ Searching Florida for \"graphic design\" finds four institutions and 89 credentials — and that is under 5% of the real picture. Around 1,900 people a year graduate into this field from codes called DIGITAL ARTS, DIGITAL COMMUNICATION AND MEDIA, WEB AND MULTIMEDIA and ANIMATION. ⚠⚠ Add the clock-hour route and Florida's technical colleges award an occupational completion point literally titled Graphic Designer.",
+  "degreesNote": "⚠⚠⚠ THIS FIELD IS SCATTERED ACROSS AT LEAST FOUR CIP FAMILIES AND THE OBVIOUS ONE IS THE SMALLEST. Graphic Design (50.0409) is 4 Florida public institutions and 89 credentials — UF 48, FAMU 21, USF 18, UNF 2. ⚠ Meanwhile Digital Arts (50.0102) is 16 institutions and 723 credentials with 596 bachelor's, UCF alone awarding 507 — this site's CIP tree does not yet carry 50.01, so that code is named here rather than claimed. Digital Communication and Media (09.0702) is 29 institutions and 797 credentials with 531 bachelor's — FSU 238, FAU 153, FIU 106. Web and Multimedia (11.0801) is 32 institutions and 269, mostly associate degrees. Animation and Special Effects (10.0304) adds 111 at 11. ⚠⚠ A student who searches the obvious term will conclude Florida barely teaches this. It teaches it everywhere, under other names. ⚠⚠⚠ AND THERE IS A CLOCK-HOUR ROUTE NOBODY MENTIONS. Florida's technical colleges carry GRA0026 GRAPHIC DESIGNER as an occupational completion point of 300 clock hours at 11 institutions, alongside GRA0024 Production Assistant (150 hours), GRA0025 Digital Assistant Designer and GRA0027 Media Designer. ⚠ The OCP letters are not consistent across them, which means more than one state framework uses this prefix — ask which programme you are enrolling in. A parallel digital design ladder runs DIG0081 to DIG0084 at 8 technical colleges, 150 + 300 + 300 + 300 = 1,050 clock hours. ⚠ Those are job titles you can be hired on, and they cost a fraction of a degree.",
+  "cips": [
+    {
+      "cipCode": "50.0409",
+      "note": "⚠ Graphic Design — only 4 Florida public institutions and 89 credentials, 79 of them bachelor's. UF 48, FAMU 21, USF 18, UNF 2. The code that carries the name carries under 5% of the field's output."
+    },
+    {
+      "cipCode": "50.0408",
+      "note": "Interior Design — 11 Florida public institutions and 341 credentials: 132 short certificates, 97 associate, 94 bachelor's. Seminole State College 187, FSCJ 43, Florida State 37. ⚠ A separate career with its own Florida registration under chapter 481 — claimed here because it shares the design CIP family."
+    },
+    {
+      "cipCode": "50.0407",
+      "note": "Fashion and Apparel Design — 2 institutions, 118 credentials, of which Miami Dade College awards 117. Effectively a single programme, and unsurprisingly it is in Miami."
+    },
+    {
+      "cipCode": "50.0411",
+      "note": "Game and Interactive Media Design — 5 Florida public institutions, 89 credentials, mostly at technical colleges: William T McFatter Technical College 68, Miami Dade 21."
+    },
+    {
+      "cipCode": "50.0402",
+      "note": "Commercial and Advertising Art — 4 Florida technical colleges, 18 one-to-two-year certificates. Small, and the clock-hour end of the same work."
+    },
+    {
+      "cipCode": "50.0406",
+      "note": "Commercial Photography — 2 Florida institutions, 7 certificates. Tiny; named so those carriers appear."
+    },
+    {
+      "cipCode": "50.0605",
+      "note": "Photography — 12 Florida public institutions and 51 credentials, mostly associate degrees and certificates. Daytona State 16, McFatter Technical 7."
+    },
+    {
+      "cipCode": "09.0702",
+      "note": "⚠⚠ Digital Communication and Media/Multimedia — 29 Florida public institutions and 797 credentials, 531 of them bachelor's. Florida State 238, FAU 153, FIU 106, Hillsborough 43, Seminole State 37. ⚠ The largest reachable piece of this field, and it is filed under COMMUNICATION rather than design."
+    }
+  ],
+  "related": [
+    {
+      "slug": "marketing",
+      "note": "⚠⚠ The commonest employer of this work and the commonest adjacent skill. Design that does not sell anything is a hobby, and the designers who understand the brief's commercial purpose are the ones who keep clients. ⚠ Marketing is taught at 21 Florida institutions with 2,302 bachelor's a year, far more than any design code."
+    },
+    {
+      "slug": "computer-science",
+      "note": "⚠⚠⚠ Named because of where BLS says this field is going. Graphic design is projected to DECLINE 2% to 2035 with AI named as a reason; web and digital interface work is not. ⚠ The designers least exposed are the ones who can build as well as draw."
+    },
+    {
+      "slug": "instructional-design",
+      "note": "⚠ A genuine and underadvertised destination for designers: EME6209 Digital Video and EME6208 Interactive Media are carried at five and three Florida universities, and instructional design screens on a portfolio exactly as design does. ⚠⚠ Training and development specialists number 452,300 with 43,900 annual openings and are growing much faster than average."
+    },
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠⚠ Named because 20% of graphic designers and 63% of animators are SELF-EMPLOYED. This is a freelance field for a large minority of the people in it, and nothing in a design degree teaches pricing, contracts or quarterly estimated tax. ⚠ Florida teaches short business certificates at 30 institutions.",
+      "isRoute": false
+    }
+  ]
+}
