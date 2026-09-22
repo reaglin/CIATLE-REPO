@@ -105,9 +105,9 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 121,marketing-manager,Marketing Manager,52.14,Marketing,11-2021,Marketing Managers,BUS,CHOICE,yes,published
 121,market-research-analyst,Market Research Analyst,52.14,Marketing,13-1161,Market Research Analysts and Marketing Specialists,BUS,CHOICE,yes,section:marketing-manager
 122,sales-representative,Sales Representative,52.14,Marketing,41-4012,"Sales Representatives, Wholesale and Manufacturing",BUS,CHOICE,yes,section:marketing-manager
-123,hospitality-manager,Hotel and Hospitality Manager,52.09,Hospitality Administration/Management,11-9081,Lodging Managers,BUS,DIRECT,yes,
-124,restaurant-manager,Restaurant and Food Service Manager,52.09,Hospitality Administration/Management,11-9051,Food Service Managers,BUS,DIRECT,yes,
-125,event-planner,Meeting and Event Planner,52.09,Hospitality Administration/Management,13-1121,"Meeting, Convention, and Event Planners",BUS,CHOICE,yes,
+123,hospitality-manager,Hotel and Hospitality Manager,52.09,Hospitality Administration/Management,11-9081,Lodging Managers,BUS,DIRECT,yes,published
+124,restaurant-manager,Restaurant and Food Service Manager,52.09,Hospitality Administration/Management,11-9051,Food Service Managers,BUS,DIRECT,yes,section:hospitality-manager
+125,event-planner,Meeting and Event Planner,52.09,Hospitality Administration/Management,13-1121,"Meeting, Convention, and Event Planners",BUS,CHOICE,yes,section:hospitality-manager
 126,mis-analyst,Management Information Systems Analyst,52.12,Management Information Systems and Services,15-1211,Computer Systems Analysts,BUS,CHOICE,yes,
 127,entrepreneur,Small Business Owner and Entrepreneur,52.07,Entrepreneurial and Small Business Operations,11-1021,General and Operations Managers,BUS,CHOICE,yes,
 128,real-estate-agent,Real Estate Agent and Broker,52.15,Real Estate,41-9022,Real Estate Sales Agents,BUS,CHOICE,yes,
