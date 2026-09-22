@@ -220,7 +220,7 @@
       ]
     },
     {
-      "key": "ART",
+      "key": "ART_AND_ART_HISTORY",
       "name": "Art",
       "children": [
         {
@@ -940,7 +940,7 @@
       ]
     },
     {
-      "key": "LAW",
+      "key": "LAW_AND_LEGAL_STUDIES",
       "name": "Law",
       "children": [
         {

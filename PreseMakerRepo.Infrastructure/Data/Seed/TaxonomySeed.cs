@@ -62,6 +62,18 @@ public class TaxonomySeed
 
     private async Task<int> UpsertNodeAsync(TaxonomyNodeJson json, string? parentKey, int level, CancellationToken ct)
     {
+        // Key is the primary key, so two nodes sharing one key are the SAME row. A child
+        // whose key equals its parent's silently re-parented the parent onto itself and
+        // dropped it out of the tree -- ART and LAW did exactly that, stranding 648 art
+        // courses in the catalog with no browsable path. Refuse it loudly instead.
+        if (parentKey is not null && string.Equals(parentKey, json.Key, StringComparison.OrdinalIgnoreCase))
+        {
+            _logger.LogError(
+                "Taxonomy node {Key} declares its own parent as {ParentKey}; keys must be unique across levels. Skipping.",
+                json.Key, parentKey);
+            return 0;
+        }
+
         var existing = await _db.TaxonomyNodes.FindAsync([json.Key], ct);
         if (existing is null)
         {
