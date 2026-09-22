@@ -82,7 +82,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 107,phlebotomist,Phlebotomist,51.10,Clinical/Medical Laboratory Science/Research and Allied Professions,31-9097,Phlebotomists,HLT,DIRECT,yes,published
 108,health-information-technician,Health Information Technician,51.07,Health and Medical Administrative Services,29-2072,Medical Records Specialists,HLT,DIRECT,yes,published
 108,medical-secretary,Medical Secretary and Administrative Assistant,51.07,Health and Medical Administrative Services,43-6013,Medical Secretaries and Administrative Assistants,HLT,DIRECT,yes,section:health-information-technician
-109,healthcare-administrator,Healthcare Administrator,51.07,Health and Medical Administrative Services,11-9111,Medical and Health Services Managers,HLT,CHOICE,yes,
+109,healthcare-administrator,Healthcare Administrator,51.07,Health and Medical Administrative Services,11-9111,Medical and Health Services Managers,HLT,CHOICE,yes,published
 110,public-health-professional,Public Health Professional,51.22,Public Health,21-1091,Health Education Specialists,HLT,CHOICE,yes,
 111,physician-assistant,Physician Assistant,51.09,"Allied Health Diagnostic, Intervention, and Treatment Professions",29-1071,Physician Assistants,HLT,DIRECT,yes,
 112,nurse-practitioner,Nurse Practitioner,51.38,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing",29-1171,Nurse Practitioners,HLT,DIRECT,yes,
