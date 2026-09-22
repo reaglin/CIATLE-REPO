@@ -97,7 +97,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 117,mental-health-counselor,Mental Health Counselor,42.01,"Psychology, General",21-1018,"Substance Abuse, Behavioral Disorder, and Mental Health Counselors",SOC,CHOICE,yes,published
 117,marriage-and-family-therapist,Marriage and Family Therapist,42.01,"Psychology, General",21-1013,Marriage and Family Therapists,SOC,DIRECT,yes,section:mental-health-counselor
 117,clinical-psychologist,Clinical Psychologist,42.01,"Psychology, General",19-3033,Clinical and Counseling Psychologists,SOC,DIRECT,yes,section:mental-health-counselor
-118,school-counselor,School Counselor,13.11,Student Counseling and Personnel Services,21-1012,"Educational, Guidance, and Career Counselors and Advisors",SOC,DIRECT,yes,
+118,school-counselor,School Counselor,13.11,Student Counseling and Personnel Services,21-1012,"Educational, Guidance, and Career Counselors and Advisors",SOC,DIRECT,yes,published
 119,early-childhood-educator,Early Childhood Educator,19.07,"Human Development, Family Studies, and Related Services",25-2011,"Preschool Teachers, Except Special Education",EDU,DIRECT,yes,
 120,instructional-designer,Instructional Designer,13.03,Curriculum and Instruction,25-9031,Instructional Coordinators,EDU,CHOICE,yes,
 121,marketing-manager,Marketing Manager,52.14,Marketing,11-2021,Marketing Managers,BUS,CHOICE,yes,
