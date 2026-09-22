@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import json, io
-p='career_paths/hospitality-manager.json'
+p='career_paths/mis-analyst.json'
 d=json.load(io.open(p,encoding='utf-8'))
-d['sources'][4]['note']=("⚠⚠⚠ This project's own catalogue work found HFT among Florida's most "
- "confused prefixes. HFT4274: statewide title Resort Management, but FGCU teaches Vacation Ownership and "
- "Timeshare and FIU Short-Term Rental — two carriers agreeing against the state label. HFT4252: title "
- "says employee wellbeing, description is hotel management, carriers split one each. ⚠ HFT3271: "
- "statewide Condo/Resort Management, carriers teach nightclub, club and spa management — four readings, "
- "none the statewide one.")
-print(len(d['sources'][4]['note']))
+d['sources'][3]['note']=("⚠⚠⚠ Measured over the whole file: ISM3011 is carried by 12 Florida "
+ "public institutions (7 state colleges, 5 universities) and ISM4011, the same subject, by 10 (9 state "
+ "colleges, 1 university) — with ZERO overlap. ⚠⚠ Both are upper division, so unlike the "
+ "MAR2011/MAR3023 pair no credit is lost; the risk is purely transfer matching. ⚠ The shape recurs on "
+ "systems analysis (ISM3113 at 7, ISM4113 at 6). Security sits inside the prefix too: ISM4323 at 10, "
+ "ISM4324 at 6.")
+print(len(d['sources'][3]['note']))
 io.open(p,'w',encoding='utf-8').write(json.dumps(d,indent=2,ensure_ascii=False)+'\n')

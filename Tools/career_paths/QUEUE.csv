@@ -108,7 +108,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 123,hospitality-manager,Hotel and Hospitality Manager,52.09,Hospitality Administration/Management,11-9081,Lodging Managers,BUS,DIRECT,yes,published
 124,restaurant-manager,Restaurant and Food Service Manager,52.09,Hospitality Administration/Management,11-9051,Food Service Managers,BUS,DIRECT,yes,section:hospitality-manager
 125,event-planner,Meeting and Event Planner,52.09,Hospitality Administration/Management,13-1121,"Meeting, Convention, and Event Planners",BUS,CHOICE,yes,section:hospitality-manager
-126,mis-analyst,Management Information Systems Analyst,52.12,Management Information Systems and Services,15-1211,Computer Systems Analysts,BUS,CHOICE,yes,
+126,mis-analyst,Management Information Systems Analyst,52.12,Management Information Systems and Services,15-1211,Computer Systems Analysts,BUS,CHOICE,yes,published
+126,it-manager,Computer and Information Systems Manager,52.12,Management Information Systems and Services,11-3021,Computer and Information Systems Managers,BUS,CHOICE,yes,section:mis-analyst
 127,entrepreneur,Small Business Owner and Entrepreneur,52.07,Entrepreneurial and Small Business Operations,11-1021,General and Operations Managers,BUS,CHOICE,yes,
 128,real-estate-agent,Real Estate Agent and Broker,52.15,Real Estate,41-9022,Real Estate Sales Agents,BUS,CHOICE,yes,
 129,graphic-designer,Graphic Designer,50.04,Design and Applied Arts,27-1024,Graphic Designers,ART,CHOICE,yes,
