@@ -1,0 +1,174 @@
+{
+  "slug": "database-administrator",
+  "name": "Database Administrator and Database Architect",
+  "cipCode": "11.08",
+  "socCode": "15-1242",
+  "isPublished": true,
+  "sortOrder": 136,
+  "description": "⚠⚠⚠ One job title and two occupations, moving in opposite directions. Database ADMINISTRATORS earn a $104,620 median and are projected at 0% growth over 2025-35; database ARCHITECTS earn $139,500 and are projected at +9% — with FEWER people and MORE annual openings. ⚠⚠ And Florida has no undergraduate database degree at all: the dedicated code produces 62 credentials a year and 61 are one UWF master's. So the specialism is assembled from courses, under seven competing statewide numbers in three different colleges.",
+  "credentialNote": "⚠⚠ NO LICENCE, NO ACCREDITED PROGRAMME, AND NO DEGREE IN THE SUBJECT. Nothing in Florida law regulates database work, and there is no accreditor standing between you and the job — which is genuinely good news, and it means the burden of choosing coursework falls entirely on you. ⚠ O*NET puts both halves in JOB ZONE FOUR: a four-year degree plus several years of experience. Neither is an entry-level role, so plan the first job as an on-ramp — support, development, reporting or analysis — and expect to arrive here after a few years. ⚠⚠ Reported education differs between the halves and it is the actionable difference: administrators 89% bachelor's with no master's figure recorded, architects 76% bachelor's and 14% MASTER'S. Graduate study shows up on the design side. ⚠⚠⚠ What substitutes for a credential here is demonstrable platform work plus SQL, and vendor certification is the currency — Florida's state colleges teach the Oracle and SQL Server certificate tier at four to six institutions each, and those courses are directly hireable.",
+  "cipCodes": [
+    {
+      "cipCode": "11.07",
+      "note": "⚠⚠ Computer Science — named because this is where the DESIGN courses live. COP3710 and COP4710 Database Design/Architecture are computer science numbers at nine institutions between them, and the architect half of the occupation is the one paying $139,500 and growing at 9%. 16 Florida institutions award computer science against one live database programme."
+    },
+    {
+      "cipCode": "52.12",
+      "note": "⚠ Management Information Systems — the business-school route, and a real one rather than a consolation. ISM3212 and ISM4212 carry the same subject at ten Florida institutions, taught as data an organisation decides with. ⚠⚠ FSU, FAU and USF each carry BOTH an ISM number and a COP number, which is the evidence they are different courses for different students."
+    },
+    {
+      "cipCode": "11.10",
+      "note": "⚠ Computer/Information Systems Security and Networking — named for the overlap that actually pays: CIS4368 Database Security and Audits runs at FAMU, FGCU, USF and UWF, and BLS names security among the things it expects database architects to be critical for."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "database-and-data-management",
+      "note": "The programme, such as it is — and the note there explains why 'such as it is' is the honest phrasing: 62 credentials a year at five institutions, 61 of them one UWF master's."
+    },
+    {
+      "slug": "computer-science",
+      "note": "⚠⚠ The route to the better-paid half. The design courses sit in this college, and the architect role reports 14% master's against the administrator role's none — so this is also the degree that leads somewhere afterwards."
+    },
+    {
+      "slug": "information-technology",
+      "note": "⚠ The widest route — 39 Florida institutions — and the one the Oracle and SQL Server certificate tier attaches to. Fastest way into a database job; slowest way to the growing half. Enter here, aim past it."
+    },
+    {
+      "slug": "management-information-systems",
+      "note": "⚠⚠ The third route and the one students overlook: the same subject from the business side, at ten Florida institutions, and the better preparation for analytics, reporting and governance work."
+    },
+    {
+      "slug": "data-science",
+      "note": "⚠ The adjacent destination rather than a route in. A data scientist builds models from the data; an architect builds what the data lives in. They share SQL, mining and warehousing, and diverge on statistics.",
+      "isRoute": false
+    },
+    {
+      "slug": "cybersecurity",
+      "note": "⚠ Named for the same reason as the CIS4368 course row — database security and audit is a genuine specialism, and it is where the two fields meet in Florida's course catalogue.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "COP2700",
+      "sortOrder": 1,
+      "reason": "Introduction to Database Management — NINE public carriers, the widest database course in Florida: Daytona State, Eastern Florida, Florida SouthWestern, Gulf Coast, Indian River, Lake-Sumter, Northwest Florida, Palm Beach State and USF. ⚠ Start here whatever degree you are in. It is the cheapest way to find out whether you actually like this work before you spend electives on it."
+    },
+    {
+      "courseId": "CGS1540",
+      "sortOrder": 2,
+      "reason": "Database Fundamentals — FIU, Hillsborough, Indian River, St Johns River and USF. The same entry point under a general-computing prefix. ⚠ Note the credit value moves: some carriers run it at 1 credit and others at 3, so check what you are registering for.",
+      "variantNote": "⚠ A one-credit version is an orientation, not the introductory course. If yours is 1 credit, plan on COP2700 or an equivalent as well."
+    },
+    {
+      "courseId": "CTS2445",
+      "sortOrder": 3,
+      "reason": "SQL Programming — six carriers: Florida Gateway, Hillsborough, Miami Dade, State College of Florida, Santa Fe and Seminole State. ⚠⚠ SQL is the one skill in this whole field that transfers between every employer, every platform and both halves of the occupation. Learn it properly and separately from any one vendor.",
+      "variantNote": "⚠ CTS2433 is the same subject at Miami Dade, Pensacola State, Polk State, State College of Florida, St Petersburg and Tallahassee State. Credits run 3 at some carriers and 4 at others."
+    },
+    {
+      "courseId": "CTS2441",
+      "sortOrder": 4,
+      "reason": "Oracle Database Administration I — Eastern Florida, Hillsborough, Miami Dade and Seminole State. The hands-on platform course: installation, storage, users, backup. ⚠ This is the fastest route in Florida to an actual paid database job, and it is the ADMINISTRATOR half — the one BLS projects at 0% growth. Take it for the job, then keep moving."
+    },
+    {
+      "courseId": "CTS2442",
+      "sortOrder": 5,
+      "reason": "Oracle Database Administration II — Hillsborough, Miami Dade, Polk State and Seminole State. Backup and recovery, performance, the things that get you called at 2am. ⚠⚠ Recovery is the skill employers actually test for in an interview, because it is the one that has consequences."
+    },
+    {
+      "courseId": "COP3703",
+      "sortOrder": 6,
+      "reason": "Database Concepts at upper division — EFSC, FAMU, St Johns River, Seminole State and UNF. The computer science treatment: the relational model, normalisation, query processing, transactions. ⚠⚠ This is the course that points at the ARCHITECT half of the occupation.",
+      "variantNote": "⚠⚠⚠ SEVEN statewide numbers carry this subject: COP3703, COP4703, COP3710, COP4710 (computer science), ISM3212, ISM4212 (business) and CTS4408 (applied). No institution carries all of them and seven carry more than one — so they are genuinely different courses, not one course filed seven ways. Check which your programme names."
+    },
+    {
+      "courseId": "COP4710",
+      "sortOrder": 7,
+      "reason": "Database Design and Architecture — FIU, FSU, UCF, USF and UWF. ⚠⚠⚠ If you are aiming at database architect, this is the course: schema design, physical design, distribution, the decisions the job consists of. Take it even if your degree does not require it. The architect half pays a $139,500 median against administration's $104,620 and is projected at +9% against 0%.",
+      "variantNote": "⚠ COP3710 is the same subject at FAMU, FGCU, Florida Polytechnic and Polk State — a 3000-level twin with no carrier overlap."
+    },
+    {
+      "courseId": "ISM4212",
+      "sortOrder": 8,
+      "reason": "Database Concepts and Administration — six carriers and the widest of the seven: Central Florida, FAU, FSU, State College of Florida, St Petersburg and USF. ⚠⚠ The BUSINESS-school treatment — data as something an organisation decides with rather than a system to be optimised. ⚠ Not a substitute for the computer science course, and better preparation than it for analytics and reporting work.",
+      "variantNote": "⚠ ISM3212 is the 3000-level twin at FGCU, Florida Polytechnic, Indian River and Palm Beach State. FSU, FAU and USF carry an ISM number AND a COP number — evidence these are different courses for different students."
+    },
+    {
+      "courseId": "CTS4408",
+      "sortOrder": 9,
+      "reason": "Database Administration at upper division — FIU, Florida SouthWestern and Santa Fe. The applied-technology version of the upper course, and the closest match to what a working administrator does day to day."
+    },
+    {
+      "courseId": "CAP4770",
+      "sortOrder": 10,
+      "reason": "Data Mining — NINE public carriers, the widest upper-division course in this family: EFSC, FAU, FGCU, FIU, Florida Polytechnic, St Petersburg, UF, UNF and UWF. ⚠⚠ It is the bridge to the analytics side and it is unusually well distributed for a 4000-level course — most subjects at this level reach three or four institutions.",
+      "variantNote": "⚠ CAP4767 (FGCU, Miami Dade, UNF) and CAP3770 (FAMU, Miami Dade, Polk State) are the same subject under two more numbers."
+    },
+    {
+      "courseId": "CAP4774",
+      "sortOrder": 11,
+      "reason": "Data Warehousing — Gulf Coast, Polk State and UWF. Dimensional modelling, ETL and the analytical store. ⚠ This is the named subject of Florida's only live database degree (UWF's master's, 11.0802), which tells you where the state thinks the specialism lives."
+    },
+    {
+      "courseId": "CIS4368",
+      "sortOrder": 12,
+      "reason": "Database Security and Audits — FAMU, FGCU, USF and UWF. ⚠⚠ Where database work meets the auditors, and a genuine differentiator: a database professional who can answer an auditor is paid differently from one who cannot. BLS names security explicitly in what it expects architects to be critical for."
+    },
+    {
+      "courseId": "CEN4083",
+      "sortOrder": 13,
+      "reason": "Introduction to Cloud Computing — FGCU, FIU, Florida Polytechnic, Santa Fe and UNF. ⚠⚠ Nearly every new database is somebody's managed service now, and the platform knowledge is no longer optional. Kubernetes is the single most-cited hot technology on the O*NET database administrator profile.",
+      "variantNote": "⚠ CTS2145 Cloud Essentials (Florida Gateway, Indian River, Lake-Sumter, Northwest Florida, Seminole State) and CTS2375 Cloud Infrastructure and Services are the state-college entry points to the same material."
+    },
+    {
+      "courseId": "COP3530",
+      "sortOrder": 14,
+      "reason": "Data Structures — the course the design half assumes you have had. ⚠ Indexes, trees and hashing are not database trivia; they are why one query plan is a thousand times faster than another. ⚠⚠ If your degree is information systems rather than computer science you will probably not be required to take this. Take it anyway if you are aiming at architect."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 15,
+      "reason": "Elementary Statistics — the most widely carried statistics course in Florida. ⚠ Named because the data-mining and warehousing courses assume it, and because the boundary between this path and data science is largely a statistics boundary. It is also a general-education course at most institutions, so it costs you nothing to have."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Database Administrators and Architects",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm",
+      "note": "The split this page is built on: administrators $104,620 and 0% growth, architects $139,500 and +9% with 6,500 new jobs; 144,500 jobs combined and about 7,300 annual openings. Source of the quoted sentence naming AI adoption as the reason architects will be critical."
+    },
+    {
+      "label": "O*NET — Database Administrators (15-1242.00)",
+      "url": "https://www.onetonline.org/link/summary/15-1242.00",
+      "note": "78,000 employed, 3,800 annual openings, outlook recorded as Decline (-1% or lower) for 2024-34. Education: 89% bachelor's, 4% post-baccalaureate certificate, 3% associate. Job Zone Four. Kubernetes, MongoDB, Oracle PL/SQL, MySQL and Snowflake lead the hot-technology list."
+    },
+    {
+      "label": "O*NET — Database Architects (15-1243.00)",
+      "url": "https://www.onetonline.org/link/summary/15-1243.00",
+      "note": "66,900 employed, 4,000 annual openings, outlook Much faster than average (7% or higher) for 2024-34. Education: 76% bachelor's and 14% MASTER'S — the graduate figure that does not appear on the administrator side. Job Zone Four."
+    },
+    {
+      "label": "O*NET — Database Administrators, Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/15-1242.00?st=FL",
+      "note": "Florida essentially at national parity: median $104,120 against $104,620, and the 75th percentile ABOVE national at $136,240 against $135,460."
+    },
+    {
+      "label": "O*NET — Database Architects, Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/15-1243.00?st=FL",
+      "note": "Florida median $138,320 against $139,500 national, and the 90th percentile $206,410 against $204,000 — above the national figure, which is rare in the Florida wage data this site has measured."
+    },
+    {
+      "label": "SCNS statewide course file — carrier counts for the database prefixes",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Source of the seven-number measurement: COP3703 5 carriers, COP4703 3, COP3710 4, COP4710 5, ISM3212 4, ISM4212 6, CTS4408 3 — 21 institutions in total, with FIU and USF each carrying three of the seven."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 11.0802",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "Data Modeling/Warehousing and Database Administration: 62 credentials at 5 Florida public institutions, of which UWF's master's is 61. Daytona State, Miami Dade and Florida Polytechnic record programmes that awarded nothing in the year measured."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; One job title, two occupations, and a $35,000 gap between them</h2>\n<p>The federal handbook covers database administrators and database architects on one page, and then splits them. <strong>The split is the most useful thing on this page:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Median</th><th>Employment</th><th>Outlook 2025&ndash;35</th><th>Annual openings</th></tr></thead>\n<tbody>\n<tr><td>Database <strong>administrator</strong></td><td>15-1242</td><td>$104,620</td><td>78,000</td><td>&#9888;&#9888; <strong>0%</strong> &mdash; no growth</td><td>3,800</td></tr>\n<tr><td>Database <strong>architect</strong></td><td>15-1243</td><td><strong>$139,500</strong></td><td>66,900</td><td><strong>+9%</strong> (+6,500 jobs)</td><td><strong>4,000</strong></td></tr>\n<tr><td><em>the two combined</em></td><td>&mdash;</td><td>$126,760</td><td>144,500</td><td>+4%</td><td>7,300</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Read the last two columns together.</strong> There are <strong>fewer</strong> database architects than administrators &mdash; and <strong>more</strong> architect openings every year. The smaller half of the occupation is hiring harder, paying about <strong>$35,000</strong> more, and growing at 9% while the larger half sits flat.</p>\n<p>&#9888; O*NET, working from the 2024&ndash;34 projections, says the same thing in its own words: database administrators <em>&ldquo;Decline (&minus;1% or lower)&rdquo;</em>, database architects <em>&ldquo;Much faster than average (7% or higher).&rdquo;</em> <strong>Two agencies, two projection rounds, same answer</strong> &mdash; which is not always how this comes out.</p>\n<p><strong>So the sentence this page exists to say is: enter through administration if you must, but aim at architecture, and know from day one that they are different jobs.</strong></p>\n\n<h2>&#9888;&#9888; What actually separates them</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Database administrator</th><th>Database architect</th></tr></thead>\n<tbody>\n<tr><td>The work</td><td>Keeping a running system healthy &mdash; performance, backups, recovery, patching, access, uptime</td><td>Deciding what the system should BE &mdash; the model, the schema, the platform, the migration</td></tr>\n<tr><td>Measured by</td><td>Nothing breaking</td><td>What gets built next working</td></tr>\n<tr><td>Reported education</td><td><strong>89% bachelor&rsquo;s</strong>, 4% post-baccalaureate certificate, 3% associate</td><td><strong>76% bachelor&rsquo;s, 14% master&rsquo;s</strong></td></tr>\n<tr><td>O*NET Job Zone</td><td colspan=\"2\">Both <strong>Zone Four</strong> &mdash; a four-year degree plus several years of experience</td></tr>\n</tbody></table>\n<p>&#9888; <strong>Neither is an entry-level job.</strong> Job Zone Four means people arrive here from somewhere else &mdash; support, development, analysis &mdash; after several years. <strong>Plan the first job as the on-ramp, not the destination.</strong></p>\n<p>&#9888;&#9888; The education rows are the actionable difference: <strong>the master&rsquo;s figure is 14% on the architect side and does not appear at all on the administrator side.</strong> Design work is where graduate study shows up in this family.</p>\n\n<h2>&#9888;&#9888;&#9888; There is no database degree in Florida &mdash; and that is not a gap in this page</h2>\n<p>The dedicated federal code for this field, <strong>Data Modeling/Warehousing and Database Administration (11.0802)</strong>, is recorded at five Florida public institutions and produces <strong>62 credentials a year</strong>:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>Level</th><th>Credentials</th></tr></thead>\n<tbody>\n<tr><td><strong>University of West Florida</strong></td><td>Master&rsquo;s</td><td><strong>61</strong></td></tr>\n<tr><td>Hillsborough Community College</td><td>Associate</td><td>1</td></tr>\n<tr><td>Daytona State, Miami Dade</td><td>Associate</td><td>&#9888; 0</td></tr>\n<tr><td>Florida Polytechnic University</td><td>&#9888; Bachelor&rsquo;s</td><td>&#9888; 0</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>One live programme in the state, and it is a graduate one.</strong> An eighteen-year-old cannot enrol in a Florida public bachelor&rsquo;s in database administration, because there is not one to enrol in.</p>\n<p><strong>This is what makes it a choice path rather than a programme path.</strong> Nobody hands you this career as a major. You take a computer science, information technology or information systems degree and assemble the database specialism out of courses &mdash; which means <strong>you have to know which courses, and that turns out to be the hard part.</strong></p>\n\n<h2>&#9888;&#9888;&#9888; Seven statewide numbers for &ldquo;the database course&rdquo;, in three different colleges</h2>\n<p>Measured across the statewide file, the upper-division database course exists under <strong>seven</strong> Florida numbers spanning <strong>21 public institutions</strong>:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Number</th><th>Statewide title</th><th>Carriers</th></tr></thead>\n<tbody>\n<tr><td><code>COP3703</code></td><td>Database Concepts</td><td>5 &mdash; EFSC, FAMU, St Johns River, Seminole State, UNF</td></tr>\n<tr><td><code>COP4703</code></td><td>Database Concepts</td><td>3 &mdash; FAU, FIU, USF</td></tr>\n<tr><td><code>COP3710</code></td><td>Database Design/Architecture</td><td>4 &mdash; FAMU, FGCU, Florida Poly, Polk State</td></tr>\n<tr><td><code>COP4710</code></td><td>Database Design/Architecture</td><td>5 &mdash; FIU, FSU, UCF, USF, UWF</td></tr>\n<tr><td><code>ISM3212</code></td><td>Database Concepts &amp; Administration</td><td>4 &mdash; FGCU, Florida Poly, Indian River, Palm Beach State</td></tr>\n<tr><td><code>ISM4212</code></td><td>Database Concepts &amp; Administration</td><td>6 &mdash; Central Florida, FAU, FSU, State College of Florida, St Petersburg, USF</td></tr>\n<tr><td><code>CTS4408</code></td><td>Database Administration</td><td>3 &mdash; FIU, Florida SouthWestern, Santa Fe</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>And this is NOT one course filed seven ways.</strong> The proof is in the carrier lists: <strong>seven institutions carry more than one of the seven, and FIU and USF each carry THREE.</strong> An institution running three of them is running three genuinely different courses.</p>\n<p><strong>The prefix tells you which college, and the college tells you what the course is about:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Prefix</th><th>College</th><th>What the course is</th><th>Points toward</th></tr></thead>\n<tbody>\n<tr><td><code>COP</code> / <code>CAP</code></td><td>Computer science / engineering</td><td>The relational model, normalisation, query processing, transactions, physical design</td><td>&#9888; <strong>Architect</strong> &mdash; the +9%, $139,500 half</td></tr>\n<tr><td><code>ISM</code></td><td>Business / information systems</td><td>Data as an organisational asset &mdash; modelling requirements, reporting, analytics, governance</td><td>Analytics, BI, systems analysis</td></tr>\n<tr><td><code>CTS</code></td><td>Applied computer technology, mostly state colleges</td><td>Hands-on platform work &mdash; Oracle, SQL Server, installation, tuning, backup</td><td>&#9888; <strong>Administrator</strong> &mdash; the 0%-growth half</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>That mapping is the whole strategy of this page.</strong> The <code>CTS</code> route is the fastest way into a paid database job in Florida and the slowest way to the half of the occupation that is growing. <strong>Take it if you need work soon &mdash; and then deliberately go and get the design course.</strong></p>\n<p>&#9888; <strong>Consequence for transfer:</strong> SCNS equivalency does not cross numbers, and a receiving programme names its prerequisite by number. A student who took <code>ISM4212</code> and transfers into a programme that requires <code>COP4710</code> has done a database course, not <em>the</em> database course. <strong>Send the syllabus, and expect to argue the case rather than assume the match.</strong></p>\n\n<h2>Where to start, whatever degree you are in</h2>\n<p><strong><code>COP2700</code> Introduction to Database Management is carried by nine Florida public institutions</strong> &mdash; Daytona State, Eastern Florida, Florida SouthWestern, Gulf Coast, Indian River, Lake-Sumter, Northwest Florida, Palm Beach State and USF &mdash; which makes it the widest entry point in the state. <strong><code>CGS1540</code></strong> is the same idea at five more.</p>\n<p>&#9888; Then the certificate tier, which is where Florida&rsquo;s state colleges are unusually strong: <strong><code>CTS2445</code> SQL Programming (6 carriers)</strong>, <strong><code>CTS2433</code> (6)</strong>, and the <strong><code>CTS2441</code>/<code>CTS2442</code> Oracle Database Administration pair (4 each)</strong>. These are short, vendor-shaped and directly hireable.</p>\n<p>&#9888;&#9888; <strong>Watch the credits on that tier: the <code>CTS</code> database courses run at 3 credits at some institutions and 4 at others.</strong> It is a small thing until you are counting hours against a degree plan.</p>\n\n<h2>&#9888;&#9888; What BLS says about AI here &mdash; and it is the opposite of a warning</h2>\n<p>This site tracks how the federal projections talk about AI, because the wording varies by occupation. Most of the registers this site has recorded are dampening ones. <strong>This page carries the other kind:</strong></p>\n<blockquote><p>&ldquo;As organizations continue to improve their systems and <strong>adopt artificial intelligence (AI) to process their data, database architects will be critical</strong> to ensuring proper database design, transition, backup, and security.&rdquo;</p></blockquote>\n<p>&#9888;&#9888;&#9888; <strong>AI adoption is named as a REASON THE ROLE GROWS</strong>, not as a reason it shrinks &mdash; and it attaches to the architect half, which is the half projected at +9%. The handbook also points at demand for <em>&ldquo;quality data infrastructure that can support high-tech innovation.&rdquo;</em></p>\n<p><strong>The logic is not mysterious and it is worth understanding rather than just quoting:</strong> every AI system an organisation deploys has to be fed from somewhere, and the feeding is a data-engineering problem &mdash; where the data lives, how it is modelled, how it moves, who may see it. <strong>More AI means more of that work, not less.</strong> Meanwhile the routine half &mdash; patching, monitoring, backup verification &mdash; is exactly what cloud platforms and automation have been absorbing for a decade, which is the 0%.</p>\n<p>&#9888; <strong>Same conclusion as every other page here, arrived at from the opposite direction: position on the specification and judgement side of the work.</strong> Here that side has a name, a separate SOC code and $35,000 attached to it.</p>\n\n<h2>Money, and a genuine Florida exception</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th colspan=\"2\">Database administrator</th><th colspan=\"2\">Database architect</th></tr>\n<tr><th></th><th>Florida</th><th>US</th><th>Florida</th><th>US</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$56,300</td><td>$60,230</td><td>$85,880</td><td>$86,240</td></tr>\n<tr><td>25th</td><td>$74,090</td><td>$79,610</td><td>$103,080</td><td>$109,370</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$104,120</strong></td><td>$104,620</td><td><strong>$138,320</strong></td><td>$139,500</td></tr>\n<tr><td>75th</td><td>$136,240</td><td>$135,460</td><td>$168,500</td><td>$169,290</td></tr>\n<tr><td>90th</td><td>$161,090</td><td>$163,320</td><td>&#9888; <strong>$206,410</strong></td><td>$204,000</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Florida pays essentially the national rate here, and that is unusual on this site.</strong> The administrator median is $500 below national and the 75th percentile is <em>above</em> it; the architect 90th percentile is <strong>$2,410 above</strong> the national figure. Compare three occupations measured the same way: <strong>architects &minus;$23,190 at the 90th, interior designers &minus;$17,210, software developers &minus;$10,270.</strong></p>\n<p>&#9888; The likeliest reason is that this work is priced in a national rather than a local market &mdash; it is done remotely as a matter of course, and the employer does not have to be in Florida. <strong>That is an argument for Florida students specifically: the ceiling on this career is not lowered by staying here.</strong></p>\n\n<h2>What to do first</h2>\n<ul>\n<li>&#9888;&#9888; <strong>Decide administrator or architect early, because the coursework diverges.</strong> Administration lives in <code>CTS</code>; design lives in <code>COP</code>.</li>\n<li><strong>Take the introductory course early</strong> (<code>COP2700</code> or <code>CGS1540</code>) and find out whether you like the work before committing electives to it.</li>\n<li><strong>Learn SQL properly and separately from any one vendor</strong>, then add a platform. The Oracle and SQL Server certificate courses are hireable; the SQL underneath them is what transfers.</li>\n<li>&#9888; <strong>If you are aiming at architect, get the design course</strong> &mdash; <code>COP4710</code> or <code>COP3710</code> &mdash; even if your degree does not require it, and add <code>CAP4770</code> Data Mining or <code>CAP4774</code> Data Warehousing.</li>\n<li><strong>Add the cloud.</strong> Nearly every new database is somebody&rsquo;s managed service now; <code>CEN4083</code> and the <code>CTS2145</code>/<code>CTS2375</code> cloud courses are the Florida route in.</li>\n<li>&#9888; <strong>Keep the syllabus for whichever database course you take.</strong> With seven competing numbers, a transfer or a graduate application will ask what was actually in it.</li>\n</ul>\n"
+}

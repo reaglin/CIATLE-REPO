@@ -342,10 +342,10 @@ are the risk: `51.` collects clinical versions of degrees that also live in `44.
 it — **so put the split and the real number in the `degreesNote` prose** rather than silently
 publishing the understated count.
 
-#### ⚠⚠⚠ BLS HAS FOUR REGISTERS FOR AI — quote the one it actually used (2026-09-22)
+#### ⚠⚠⚠ BLS HAS FIVE REGISTERS FOR AI — quote the one it actually used (2026-09-22)
 
 **Every path now gets asked "will AI take this job?", and the answer should be the federal agency's
-own wording rather than a guess.** Read four occupations against each other:
+own wording rather than a guess.** Read five occupations against each other:
 
 | Occupation | Projection | What the BLS handbook says |
 |---|---|---|
@@ -353,8 +353,9 @@ own wording rather than a guess.** Read four occupations against each other:
 | Web developer / digital interface designer | ✅ **+5%** | AI “may **soften the employment growth** of these workers” |
 | ⚠ Graphic designer | ⚠⚠ **−2%** | AI “projected to… **reduce the need** for these workers” |
 | ✨ **Architect** (batch: architect path) | ✅ **+4%** | ⚠⚠ AI and BIM named as making the work *“more efficient”* — **then explicitly counterweighted**: *“However, these productivity gains also allow architects to be more involved in the full building process and take on new roles and responsibilities.”* |
+| ✨✨ **Database ARCHITECT** (batch: database path) | ✅✅ **+9%** | ⚠⚠⚠ **AI adoption named as the REASON THE ROLE GROWS**: *“As organizations… adopt artificial intelligence (AI) to process their data, **database architects will be critical** to ensuring proper database design, transition, backup, and security.”* |
 
-⚠⚠⚠ **Four deliberately different phrasings from one agency, and they track HOW ROUTINE THE
+⚠⚠⚠ **Five deliberately different phrasings from one agency, and they track HOW ROUTINE THE
 OUTPUT IS.** Where the product is a finished artefact a tool can now generate — a layout, an image —
 the language is *reduce the need*. Where it is a working system somebody must specify, build and
 maintain, it is *soften the growth*. **Where the work is checking, auditing and defending a decision,
@@ -373,6 +374,30 @@ allow engineers and architects to perform many tasks that used to be done by dra
 overall **+1%**. **Where a path covers several rungs of one ladder, read EVERY rung's OOH page and
 put the contrast in the guide** — it is the most decision-relevant thing on the page, because it tells
 a reader which rung to aim for rather than whether the field is doomed.
+
+✨✨✨ **THE FIFTH REGISTER IS AI AS A GROWTH DRIVER, AND THE DATABASE PAGE IS THE SHARPEST
+CASE THIS SITE HAS FOUND — because BOTH halves are on ONE BLS page:**
+
+| | Database **administrator** (15-1242) | Database **architect** (15-1243) |
+|---|---|---|
+| Median | $104,620 | **$139,500** |
+| Employment | 78,000 | 66,900 |
+| Outlook 2025–35 | ⚠⚠ **0%** | ✅ **+9%** (+6,500) |
+| Annual openings | 3,800 | ⚠ **4,000** |
+| AI | not mentioned | **named as the reason the role is critical** |
+
+⚠⚠⚠ **The smaller half has MORE annual openings than the larger one.** That single comparison
+is worth more to a student than any projection percentage, and it is two numbers off one page.
+
+⚠⚠ **The generalisable claim, now supported from BOTH directions:** AI dampening language attaches
+to producing a routine artefact (a layout, an image, a patch cycle); AI **growth** language attaches to
+**specifying the thing the AI runs on**. Every AI system has to be fed, and the feeding is design work.
+**So "position on the specification side" is no longer an inference from the dampening cases — BLS
+states the positive half explicitly on at least one occupation.**
+
+⚠ **And check O*NET against BLS on any split like this.** Here they agree independently — O*NET
+2024–34 says administrators *“Decline (−1% or lower)”* and architects *“Much faster than average
+(7% or higher)”* — which is what makes the finding safe to lead with.
 
 ⚠⚠ **So the drill on any path where the question arises: go to the BLS OOH page and quote the
 sentence.** Do not paraphrase it into “AI may affect this field”, and do not omit it because it is
