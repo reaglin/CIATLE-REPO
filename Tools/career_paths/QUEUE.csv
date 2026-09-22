@@ -116,7 +116,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 129,graphic-designer,Graphic Designer,50.04,Design and Applied Arts,27-1024,Graphic Designers,ART,CHOICE,yes,published
 129,animator,Special Effects Artist and Animator,50.04,Design and Applied Arts,27-1014,Special Effects Artists and Animators,ART,CHOICE,yes,section:graphic-designer
 130,ux-designer,UX and Product Designer,11.08,Computer Software and Media Applications,15-1255,Web and Digital Interface Designers,ART,CHOICE,yes,published
-131,film-video-editor,Film and Video Editor,50.06,Film/Video and Photographic Arts,27-4032,Film and Video Editors and Camera Operators,ART,CHOICE,yes,
+131,film-video-editor,Film and Video Editor,50.06,Film/Video and Photographic Arts,27-4032,Film and Video Editors and Camera Operators,ART,CHOICE,yes,published
 132,journalist,Journalist and Reporter,09.04,Journalism,27-3023,"News Analysts, Reporters, and Journalists",ART,CHOICE,yes,
 133,public-relations-specialist,Public Relations Specialist,09.09,"Public Relations, Advertising, and Applied Communication",27-3031,Public Relations Specialists,ART,CHOICE,yes,
 134,architect,Architect,04.02,Architecture,17-1011,"Architects, Except Landscape and Naval",ART,DIRECT,yes,

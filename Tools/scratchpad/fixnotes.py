@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
 import json, io
-p='career_paths/ux-designer.json'
+p='career_paths/film-video-editor.json'
 d=json.load(io.open(p,encoding='utf-8'))
 s=d['sources']
-s[0]['note']=("⚠⚠ Web and digital interface designers $104,000 and web developers $92,650 (2025), "
- "132,700 jobs, about 8,000 annual openings, 13% of designers self-employed, typical entry a bachelor's. "
- "Employment \"projected to grow 5 percent from 2025 to 2035, faster than the average\". "
- "⚠⚠⚠ On AI: \"increasing use of artificial intelligence (AI) for web development may soften "
- "the employment growth of these workers… it may also allow some workers in other occupations to do "
- "basic web development tasks.\"")
-s[3]['note']=("⚠⚠⚠ Measured over the whole file: 181 distinct active course identifiers carry "
- "\"web\", \"user interface\", \"user experience\" or \"human-computer\" in their statewide titles, across 25 "
- "DIFFERENT PREFIXES — and none reaches more than 13 carriers. The widest is CTS0085 Web Security "
- "Specialist (150 clock hours) at 13 technical colleges, then COP2830 and DIG0083 at 8. ⚠ Compare "
- "HSC0003 at 55 carriers: this subject has no settled home in the catalogue.")
-for i in (0,3): print(i, len(s[i]['note']))
+s[0]['note']=("⚠⚠ Film and video editors $75,420 and camera operators $74,990 (2025), 72,000 jobs, "
+ "about 5,600 annual openings, 35% self-employed, typical entry a bachelor's in film, broadcasting, "
+ "communications or a related field. Employment \"projected to grow 3 percent from 2025 to 2035\". "
+ "⚠⚠⚠ The page discusses technology — digital cameras changing camera assistant work, "
+ "robotic cameras letting one operator control several — but makes NO claim about AI.")
+s[3]['note']=("⚠⚠ Two institutional signatures, measured over the whole file. FLORIDA ATLANTIC runs 11 "
+ "of its 21 undergraduate film courses at FOUR credits while UCF runs 78 of 103 at three, USF 25 of 25, UNF "
+ "24 of 25. ⚠⚠⚠ FLORIDA STATE runs 45 of its 70 at VARIABLE credit, UCF 22. ⚠ Numbering: "
+ "FIL2030 (4 carriers) and FIL1030 (3) share the title History of Motion Pictures with no overlap, and "
+ "FIL1420 and FIL1420C carry DIFFERENT titles.")
+s[4]['note']=("⚠⚠⚠ This project's own catalogue work. FIL4036 Film History 1 runs to 1959 "
+ "statewide, to the 1940s at Florida Atlantic, and has no boundary at all at UWF where no part 2 exists "
+ "— and FAU's catalogue says part 2 \"may be taken before\" part 1 while the state record requires the "
+ "order. ⚠ Two decades of film history sit inside the course at one institution and outside it at "
+ "another. ⚠⚠ FIL4037 is Film History 2 statewide but USF carries it as History of Video Art.")
+for i in (0,3,4): print(i, len(s[i]['note']))
 io.open(p,'w',encoding='utf-8').write(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
