@@ -1,12 +1,18 @@
 # -*- coding: utf-8 -*-
 import json, io
-p='career_paths/school-counselor.json'
+p='career_paths/early-childhood-educator.json'
 d=json.load(io.open(p,encoding='utf-8'))
-d['sources'][2]['note']=("⚠⚠⚠ A Department of EDUCATION certification, not a chapter 491 licence. "
- "Plan One: a master's or higher with a graduate major in guidance and counseling or school counseling, "
- "including a minimum of 600 CLOCK HOURS of supervised internship serving school-aged students. "
- "⚠⚠ Plan Three: 300 clock hours for a current full-time teacher with 5+ years and effective or "
- "highly effective ratings in the last 3. Plan Two substitutes two years of district mentoring. "
- "⚠ Amended effective 21 December 2025.")
-print(len(d['sources'][2]['note']))
+s=d['sources']
+s[3]['note']=("⚠⚠⚠ Subsection (3)(c)1. requires a prekindergarten instructor to hold at minimum a "
+ "child development associate credential issued by the National Credentialing Program of the Council for "
+ "Professional Recognition, or a credential the Department of Children and Families approves as equivalent "
+ "or greater. ⚠ A CDA is a CREDENTIAL, not a degree — which is why Florida's early childhood "
+ "training output is almost entirely certificates. Degrees in early childhood or elementary education may "
+ "substitute.")
+s[4]['note']=("⚠⚠⚠ Two certifications, nearly identical requirements, very different reach. "
+ "PRESCHOOL EDUCATION covers BIRTH to AGE 4; PREKINDERGARTEN/PRIMARY EDUCATION covers AGE 3 to GRADE 3. "
+ "Both require a bachelor's with 45 semester hours of specialisation — child growth and development, "
+ "developmentally appropriate curriculum, family and community involvement, health, nutrition and safety, "
+ "assessment, special needs. ⚠ Only the second reaches a public-school classroom.")
+for i in (3,4): print(i, len(s[i]['note']))
 io.open(p,'w',encoding='utf-8').write(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
