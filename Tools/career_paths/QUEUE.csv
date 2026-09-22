@@ -100,7 +100,8 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 118,school-counselor,School Counselor,13.11,Student Counseling and Personnel Services,21-1012,"Educational, Guidance, and Career Counselors and Advisors",SOC,DIRECT,yes,published
 119,early-childhood-educator,Early Childhood Educator,19.07,"Human Development, Family Studies, and Related Services",25-2011,"Preschool Teachers, Except Special Education",EDU,DIRECT,yes,published
 119,childcare-worker,Childcare Worker,19.07,"Human Development, Family Studies, and Related Services",39-9011,Childcare Workers,EDU,DIRECT,yes,section:early-childhood-educator
-120,instructional-designer,Instructional Designer,13.03,Curriculum and Instruction,25-9031,Instructional Coordinators,EDU,CHOICE,yes,
+120,instructional-designer,Instructional Designer,13.03,Curriculum and Instruction,25-9031,Instructional Coordinators,EDU,CHOICE,yes,published
+120,training-and-development-specialist,Training and Development Specialist,13.03,Curriculum and Instruction,13-1151,Training and Development Specialists,EDU,CHOICE,yes,section:instructional-designer
 121,marketing-manager,Marketing Manager,52.14,Marketing,11-2021,Marketing Managers,BUS,CHOICE,yes,
 122,sales-representative,Sales Representative,52.14,Marketing,41-4012,"Sales Representatives, Wholesale and Manufacturing",BUS,CHOICE,yes,
 123,hospitality-manager,Hotel and Hospitality Manager,52.09,Hospitality Administration/Management,11-9081,Lodging Managers,BUS,DIRECT,yes,
