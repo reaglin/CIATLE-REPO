@@ -119,7 +119,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 131,film-video-editor,Film and Video Editor,50.06,Film/Video and Photographic Arts,27-4032,Film and Video Editors and Camera Operators,ART,CHOICE,yes,published
 132,journalist,Journalist and Reporter,09.04,Journalism,27-3023,"News Analysts, Reporters, and Journalists",ART,CHOICE,yes,published
 133,public-relations-specialist,Public Relations Specialist,09.09,"Public Relations, Advertising, and Applied Communication",27-3031,Public Relations Specialists,ART,CHOICE,yes,section:journalist
-134,architect,Architect,04.02,Architecture,17-1011,"Architects, Except Landscape and Naval",ART,DIRECT,yes,
+134,architect,Architect,04.02,Architecture,17-1011,"Architects, Except Landscape and Naval",ART,DIRECT,yes,published
 135,interior-designer,Interior Designer,50.04,Design and Applied Arts,27-1025,Interior Designers,ART,CHOICE,yes,
 136,database-administrator,Database Administrator,11.08,Computer Software and Media Applications,15-1242,Database Administrators and Architects,CMP,CHOICE,yes,
 137,web-developer,Web Developer,11.08,Computer Software and Media Applications,15-1254,Web Developers,CMP,CHOICE,yes,section:ux-designer

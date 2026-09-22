@@ -1,0 +1,194 @@
+{
+  "slug": "architect",
+  "name": "Architect and Landscape Architect",
+  "cipCode": "04.02",
+  "socCode": "17-1011",
+  "isPublished": true,
+  "sortOrder": 134,
+  "description": "Architects design buildings and take legal responsibility for them. ⚠⚠⚠ The fact that governs everything else: Florida licenses architects BY STATUTE on a degree from an NAAB-accredited programme, and only five Florida public institutions hold one — FAMU, FAU, FIU, UF and USF. ⚠⚠ UCF is the state's second-largest producer of architecture bachelor's and is NOT on that list, because its degree is the middle third of a deliberate 2+2+2 with Valencia and UF. This page covers three roles in one family and the three different entry levels they take.",
+  "credentialNote": "⚠⚠⚠ THE ACCREDITED DEGREE IS THE WHOLE QUESTION. s. 481.209, F.S. requires a graduate of a programme accredited by the National Architectural Accrediting Board, with no experience-only alternative. NAAB accredits only the B.Arch, M.Arch and D.Arch — NOT the ordinary four-year B.A. or B.S. in architecture, which is a pre-professional degree. ⚠⚠ In Florida: FAMU holds B.Arch and M.Arch, FAU holds B.Arch, and FIU, UF and USF hold M.Arch only — so at three of the five the licence route runs through a master's. ⚠ Then s. 481.211 requires an approved internship of diversified experience: NCARB's 3,740-hour AXP, which candidates typically take four to five years to complete because the hours must fall in the right categories. Then the six-division Architect Registration Examination. ⚠⚠⚠ Reckon on five to eight years from starting the degree to holding the licence, and verify any programme at naab.org BEFORE enrolling.",
+  "cipCodes": [
+    {
+      "cipCode": "04.09",
+      "note": "⚠⚠⚠ Architectural Sciences and Technology — claimed because FAU's accredited B.Arch (61 bachelor's) and FIU's accredited M.Arch (152 master's) are FILED HERE, not under 04.02. A path anchored on the obvious code alone would miss two of Florida's five public architecture schools. ⚠ It also holds Architectural Technology (04.0901), the associate-level drafting route at 8 state colleges."
+    },
+    {
+      "cipCode": "04.06",
+      "note": "⚠ Landscape Architecture — a separately licensed profession under chapter 481 PART II, covered as a section of this page. Two Florida public institutions award it: UF (14 bachelor's, 3 master's) and FIU (19 master's). Median $79,870, 23,500 jobs, 1,700 annual openings."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "architecture",
+      "note": "The programme itself, covering all three routes: the accredited professional degrees, the architectural technology associate, and landscape architecture."
+    },
+    {
+      "slug": "construction-management",
+      "note": "⚠⚠ The honest alternative for someone who wants to make buildings happen rather than author them: 30 Florida institutions against architecture's 6, no accredited-degree statute, and a $114,990 median.",
+      "isRoute": false
+    },
+    {
+      "slug": "drafting-and-design-technology",
+      "note": "⚠ Where the architectural technology associate leads, and a common way to work in an architecture office while finishing a degree.",
+      "isRoute": false
+    },
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ Named for the mathematics comparison that changes who applies: civil engineering needs the calculus sequence, architecture at UF asks for precalculus.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "ARC1301",
+      "sortOrder": 1,
+      "reason": "The first design studio, and the gate to everything else. Carried by FAMU, FAU, FIU, Hillsborough, Miami Dade, UF and USF. Studio is where architecture is actually taught: you work at a desk in a shared room, you pin work on a wall, and strangers criticise it out loud. Expect far more hours than the credit value suggests.",
+      "variantNote": "⚠⚠⚠ TWO IDENTIFIERS, NO OVERLAP. The state colleges plus UCF and Valencia carry ARC1301C instead — same course, integrated packaging, and not one institution carries both. ⚠ Credits diverge too: 3 at FIU and State College of Florida, 4 at most, 6 at USF. Name both numbers when you transfer."
+    },
+    {
+      "courseId": "ARC1301C",
+      "sortOrder": 2,
+      "reason": "The same first studio under the identifier the state colleges, UCF and Valencia use. ⚠⚠ If you are on the Valencia–UCF–UF 2+2+2 route this is your number: UCF's own admission page selects students competitively before they may enrol in ARC1301C. ⚠ Listed separately from ARC1301 because no institution carries both and a student will only ever find one of them.",
+      "variantNote": "⚠ Carried by Broward, Gulf Coast, Palm Beach State, St Petersburg, State College of Florida, UCF and Valencia. Integrated lecture-and-studio packaging; Florida articulation treats it as equivalent to the bare form."
+    },
+    {
+      "courseId": "ARC1302",
+      "sortOrder": 3,
+      "reason": "Design 2 — the second studio, where the work moves from abstract composition toward building. Eight carriers, the widest of the sequence. Take it in the term immediately after Design 1: studios are gated and offered once a year in most programmes.",
+      "variantNote": "⚠ ARC1302C is the same course at Broward, Gulf Coast, Palm Beach State, UCF and Valencia."
+    },
+    {
+      "courseId": "ARC2303",
+      "sortOrder": 4,
+      "reason": "Design 3 — the first studio most programmes treat as evidence of whether you can do this. Portfolio pieces from here and Design 4 are what graduate architecture admission reads.",
+      "variantNote": "⚠ ARC2303C at Broward, Gulf Coast, Palm Beach State, St Petersburg, UCF and Valencia."
+    },
+    {
+      "courseId": "ARC2304",
+      "sortOrder": 5,
+      "reason": "Design 4 — the end of the lower-division sequence and the transfer point. ⚠⚠ This is the portfolio review that decides admission to an upper-division or graduate architecture programme, so treat the work as an application, not a course.",
+      "variantNote": "⚠ Credit divergence is largest here: 3 at FIU, 4 at FAU and Miami Dade, 5 at FAMU, Hillsborough and UF, 6 at USF. ARC2304C is the same course at six other institutions."
+    },
+    {
+      "courseId": "ARC2201",
+      "sortOrder": 6,
+      "reason": "Theory of Architecture — nine public carriers, the most widely carried course in the prefix. Why buildings are made the way they are: ideas, movements, and the arguments architects have with each other. It is also the course that teaches you to talk about your own work, which is what a critique demands."
+    },
+    {
+      "courseId": "ARC1701",
+      "sortOrder": 7,
+      "reason": "History of Architecture I — antiquity through the pre-modern world. Seven carriers: Broward, Hillsborough, Palm Beach State, St Petersburg, UCF, UF and Valencia.",
+      "variantNote": "⚠⚠ The SAME subject is numbered ARC2701 at FAMU, FIU, Miami Dade and USF, with NO overlap — a number split rather than a suffix split. Check which number your institution uses before assuming the course is missing."
+    },
+    {
+      "courseId": "ARC2702",
+      "sortOrder": 8,
+      "reason": "History of Architecture II — the modern period, which is where a practising architect's working vocabulary comes from. Six carriers: FAMU, FIU, Miami Dade, UCF, USF and Valencia.",
+      "variantNote": "⚠ Its twin is ARC1702, carried by Palm Beach State, St Petersburg and UF. Same split as the first history course, running the other way."
+    },
+    {
+      "courseId": "ARC2461",
+      "sortOrder": 9,
+      "reason": "Materials and Methods of Construction — eight carriers, and the course where design meets what a building is actually made of. ⚠ Architects who cannot describe an assembly cannot produce documents anyone can build from, and documentation is 1,520 of the 3,740 experience hours.",
+      "variantNote": "⚠ An upper-division version, ARC3463, runs at FAMU, FAU, UCF and UF. They are not substitutes — check which your programme requires."
+    },
+    {
+      "courseId": "ARC2180C",
+      "sortOrder": 10,
+      "reason": "Introduction to Digital Architecture — Revit, AutoCAD, Rhino and SketchUp, all named as in-demand technologies for this occupation. ⚠⚠ BIM is the tool BLS says is making the work more efficient, and the same paragraph says that efficiency is being absorbed into a wider role rather than fewer architects. Learn it early and deeply.",
+      "variantNote": "⚠ Carried as ARC2180C at Miami Dade, Palm Beach State, UCF and Valencia; as bare ARC2180 at Gulf Coast, UF and USF."
+    },
+    {
+      "courseId": "ARC2501",
+      "sortOrder": 11,
+      "reason": "Architectural Structures 1 — how a building stands up: loads, reactions, and the behaviour of beams and columns. Carried by FAMU, Hillsborough, Palm Beach State and St Petersburg.",
+      "variantNote": "⚠ A parallel number, ARC2580 Structures, runs at Broward, FAU and Miami Dade. Same subject, different identifier."
+    },
+    {
+      "courseId": "ARC3503",
+      "sortOrder": 12,
+      "reason": "Structures One at the upper-division level — FAU, UCF, UF and USF. ⚠ This is where the algebra-based physics from the lower division is actually used. It is demanding, and it is not calculus-based engineering mechanics."
+    },
+    {
+      "courseId": "ARC3610",
+      "sortOrder": 13,
+      "reason": "Environmental Technology 1 — climate, daylight, heat, ventilation and energy. ⚠⚠ In Florida this is not a general-education topic: humidity, hurricane loading, solar gain and the state energy code drive real design decisions, and this is the course that teaches them. FAU, UCF and UF.",
+      "variantNote": "⚠ Environmental Technology 2 (ARC4620) continues it at the same three institutions."
+    },
+    {
+      "courseId": "ARC3463",
+      "sortOrder": 14,
+      "reason": "Materials and Methods of Construction at upper division — FAMU, FAU, UCF and UF. Assemblies, detailing and specification, at the level a construction document needs."
+    },
+    {
+      "courseId": "ARC4220",
+      "sortOrder": 15,
+      "reason": "Architectural Theory 2 — FAMU, UCF and UF. The upper-division theory course, and usually where the thesis or capstone argument is formed."
+    },
+    {
+      "courseId": "MAC1147",
+      "sortOrder": 16,
+      "reason": "Precalculus Algebra and Trigonometry. ⚠⚠⚠ THIS, NOT CALCULUS, IS WHAT UF ASKS ARCHITECTURE TRANSFER APPLICANTS FOR — either MAC1147, or MAC1140 with MAC1114. Students who avoid architecture because of mathematics are usually thinking of the engineering requirement, which is a different and much heavier one.",
+      "variantNote": "⚠ MAC1140 Precalculus Algebra plus MAC1114 Trigonometry is the accepted alternative. Confirm your own institution's list."
+    },
+    {
+      "courseId": "PHY2053",
+      "sortOrder": 17,
+      "reason": "College Physics I — the ALGEBRA-BASED physics course, and the one UF names for architecture transfer applicants (PHY2004 Applied Physics is the alternative). It is the preparation the structures sequence assumes.",
+      "variantNote": "⚠⚠ Do NOT take the calculus-based PHY2048 unless your programme asks for it: it is a different and harder course built for engineering majors, and architecture does not require it."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Florida Statutes ch. 481 Part I — Architecture and Interior Design",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0481/0481PARTIContentsIndex.html",
+      "note": "The licensure chapter. s. 481.209 requires a degree from an NAAB-accredited programme; s. 481.211 requires an approved internship of diversified architectural experience. Architecture and interior design share one board; landscape architecture is Part II."
+    },
+    {
+      "label": "NAAB — accredited architecture programmes in the United States",
+      "url": "https://www.naab.org/accreditation/accredited-programs",
+      "note": "The authoritative list. Florida: FAMU (B.Arch, M.Arch), FAU (B.Arch), FIU (M.Arch), UF (M.Arch), USF (M.Arch), University of Miami (B.Arch, M.Arch). UCF does not appear."
+    },
+    {
+      "label": "NCARB — Architectural Experience Program requirements",
+      "url": "https://www.ncarb.org/gain-axp-experience/experience-requirements",
+      "note": "3,740 hours across six areas: Practice Management 160, Project Management 360, Programming and Analysis 260, Project Planning and Design 1,080, Project Development and Documentation 1,520, Construction and Evaluation 360. NCARB reports candidates take four to five years."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Architects",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/architects.htm",
+      "note": "$99,280 median, 124,600 jobs, +4% for 2025-35, about 6,900 annual openings. Source of the AI and BIM passage quoted on this page."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Drafters",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/drafters.htm",
+      "note": "Drafters overall +1%; architectural and civil drafters $66,150, 104,100 jobs, +5%. Source of the statement that CAD and BIM let engineers and architects do work drafters used to do."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Landscape Architects",
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/landscape-architects.htm",
+      "note": "$79,870 median, 23,500 jobs, +4% for 2025-35, about 1,700 annual openings."
+    },
+    {
+      "label": "O*NET — Architects (17-1011.00), Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/17-1011.00?st=FL",
+      "note": "Florida against national at every percentile. The gap is $2,310 at the 10th and $23,190 at the 90th."
+    },
+    {
+      "label": "UCF — Bachelor of Design in Architecture",
+      "url": "https://www.ucf.edu/degree/bachelor-of-design-in-architecture-bdes/",
+      "note": "The 2+2+2 with Valencia College and UF, the CityLab Orlando M.Arch endpoint, competitive selection into ARC1301C, and the joint-use University Center location."
+    },
+    {
+      "label": "University of Florida — architecture transfer prerequisites",
+      "url": "https://dcp.ufl.edu/architecture/undergraduate/",
+      "note": "Names PHY 2053 or PHY 2004, and MAC 1147 or MAC 1140 with MAC 1114. The evidence that architecture asks for precalculus and algebra-based physics."
+    },
+    {
+      "label": "FAMU School of Architecture and Engineering Technology — accreditation",
+      "url": "https://saet.famu.edu/about/accreditation.php",
+      "note": "Confirms the B.Arch (4+1) and both M.Arch tracks are NAAB-accredited, and carries NAAB's own statement that only three degree types are recognised."
+    }
+  ],
+  "bodyHtml": "<h2>Three occupations, one family, three different entry levels</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Entry</th><th>Median</th><th>Jobs</th><th>Openings/yr</th><th>Outlook 2025&ndash;35</th></tr></thead>\n<tbody>\n<tr><td><strong>Architect</strong></td><td>17-1011</td><td>Accredited degree + licence</td><td><strong>$99,280</strong></td><td>124,600</td><td>6,900</td><td>+4%</td></tr>\n<tr><td>Landscape architect</td><td>17-1012</td><td>Accredited degree + licence</td><td>$79,870</td><td>23,500</td><td>1,700</td><td>+4%</td></tr>\n<tr><td>Architectural / civil drafter</td><td>17-3011</td><td>Associate degree</td><td>$66,150</td><td>104,100</td><td>&mdash;</td><td>+5%</td></tr>\n</tbody></table>\n<p>All three figures are the federal 2025 medians. O*NET, working from the 2024&ndash;34 projections, puts architects at &ldquo;average (3% to 4%)&rdquo; with 7,800 annual openings; BLS, on the 2025&ndash;35 round, says 4% and 6,900. <strong>They agree in substance.</strong></p>\n<p>&#9888;&#9888; Note the bottom row. <strong>Drafting overall is projected at +1%, but the architectural and civil part of it is at +5%</strong> &mdash; the growing corner of a shrinking occupation, and the one this family feeds.</p>\n\n<h2>&#9888;&#9888;&#9888; The single fact that governs this whole page</h2>\n<p>Florida does not license architects on a degree in architecture. It licenses them, by statute, on a degree from a <strong>programme accredited by the National Architectural Accrediting Board</strong>. Section 481.209, F.S. requires an applicant to be a <em>&ldquo;graduate of a school or college of architecture with a program accredited by the National Architectural Accreditation Board&rdquo;</em>, and the statute offers <strong>no experience-only alternative</strong>.</p>\n<p>&#9888; NAAB accredits the <strong>professional</strong> degree &mdash; the Bachelor of Architecture, the Master of Architecture and the Doctor of Architecture. <strong>It does not accredit the ordinary four-year B.A. or B.S. in architecture.</strong> Those are <em>pre-professional</em> degrees: real, useful, and not a licence route on their own.</p>\n\n<h3>Where the accredited degrees actually are</h3>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>NAAB-accredited degree</th><th>What that means for you</th></tr></thead>\n<tbody>\n<tr><td><strong>Florida A&amp;M</strong></td><td><strong>B.Arch</strong> and <strong>M.Arch</strong></td><td>Both routes on one campus. The B.Arch is a 4+1: pre-professional degree plus 30 more undergraduate credits.</td></tr>\n<tr><td><strong>Florida Atlantic</strong></td><td><strong>B.Arch</strong></td><td>&#9888; The accredited degree is the bachelor&rsquo;s. You can finish and be exam-eligible without a master&rsquo;s.</td></tr>\n<tr><td>Florida International</td><td>M.Arch</td><td>The licence route runs through the graduate degree.</td></tr>\n<tr><td>University of Florida</td><td>M.Arch</td><td>Same &mdash; and UF runs it in Gainesville and at CityLab Orlando.</td></tr>\n<tr><td>University of South Florida</td><td>M.Arch</td><td>Same. USF awards 48 architecture master&rsquo;s a year and no architecture bachelor&rsquo;s.</td></tr>\n<tr><td><em>University of Miami</em> (private)</td><td>B.Arch and M.Arch</td><td>Outside this site&rsquo;s scope, listed so the state picture is complete.</td></tr>\n<tr><td>&#9888;&#9888;&#9888; <strong>University of Central Florida</strong></td><td>&#9888;&#9888; <strong>none</strong></td><td>See below &mdash; this is not what it looks like.</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>UCF awards 43 architecture bachelor&rsquo;s a year, the second-largest output in the state after UF&rsquo;s 88, and holds no NAAB accreditation.</strong> That is not an oversight. UCF&rsquo;s <strong>Bachelor of Design in Architecture</strong> is deliberately pre-professional and is the middle third of a <strong>2+2+2 partnership</strong>: an associate degree at <strong>Valencia College</strong>, the B.Des at <strong>UCF</strong> (taught at the joint-use University Center on Valencia&rsquo;s West Campus), then <strong>UF&rsquo;s accredited M.Arch</strong> at CityLab Orlando. Entry to the UCF studio sequence is competitive &mdash; a ranked combination of overall GPA, architecture GPA and a pin-up review score.</p>\n<p>&#9888;&#9888; <strong>So it is a real licence route, and it is six years by design.</strong> What a student must not do is treat the B.Des as a terminal degree and discover the accreditation rule afterwards.</p>\n\n<h2>&#9888;&#9888;&#9888; The degrees are split across two CIP codes, and half the state hides in the second one</h2>\n<p>Federal completions data files Florida&rsquo;s architecture degrees under <strong>two</strong> codes, and the obvious one is not enough:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Code</th><th>Florida public output</th></tr></thead>\n<tbody>\n<tr><td><strong>04.0201 Architecture</strong></td><td>273 credentials &mdash; UF 175, USF 48, UCF 43, FAMU 6, FIU 1</td></tr>\n<tr><td>&#9888;&#9888; <strong>04.0902 Architectural and Building Sciences/Technology</strong></td><td>277 credentials &mdash; <strong>FIU 152 master&rsquo;s</strong>, <strong>FAU 61 bachelor&rsquo;s</strong>, FAMU 40, UF 23 doctorates</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>FAU awards no bachelor&rsquo;s at all under 04.0201 and holds an accredited B.Arch; FIU awards no master&rsquo;s under it and holds an accredited M.Arch.</strong> Their accredited programmes are counted in the second code. A school list built from &ldquo;Architecture&rdquo; alone would have omitted two of Florida&rsquo;s five public architecture schools &mdash; including the only public one whose <em>bachelor&rsquo;s</em> is the licence route.</p>\n<p>&#9888; Practical consequence for anyone comparing programmes from published data: <strong>count both codes, or you will conclude a school has no architecture programme when it has an accredited one.</strong></p>\n\n<h2>Licensure: the degree is the first of three gates</h2>\n<ol>\n<li><strong>The accredited degree</strong> &mdash; s. 481.209, F.S., above.</li>\n<li><strong>Experience.</strong> Section 481.211, F.S. requires <em>&ldquo;an internship of diversified architectural experience approved by the board&rdquo;</em>. In practice that is NCARB&rsquo;s <strong>Architectural Experience Program: 3,740 hours</strong> across six areas &mdash; Practice Management 160, Project Management 360, Programming &amp; Analysis 260, <strong>Project Planning &amp; Design 1,080</strong>, <strong>Project Development &amp; Documentation 1,520</strong>, Construction &amp; Evaluation 360. &#9888; 3,740 hours is under two years of full-time work, but NCARB reports candidates take <strong>four to five years</strong> &mdash; because the hours must be the right hours, supervised, in the right categories.</li>\n<li><strong>The exam.</strong> The Architect Registration Examination, six divisions, each aligned to one of the six experience areas.</li>\n</ol>\n<p>&#9888;&#9888; <strong>Read the hour table again before choosing a first job.</strong> Two categories &mdash; planning and design, and development and documentation &mdash; are <strong>70% of the requirement</strong>. An office that keeps a graduate on renderings, models and marketing can leave them years short of the categories that matter. <strong>Ask in the interview which AXP categories the work will record.</strong></p>\n<p>&#9888; Florida regulates architecture and interior design in the <strong>same chapter</strong> &mdash; chapter 481, Part I, &ldquo;Architecture and Interior Design&rdquo; &mdash; under one Board of Architecture and Interior Design. <strong>Landscape architecture is Part II</strong>, a separate profession with its own accreditor and exam.</p>\n\n<h2>&#9888;&#9888; The first studio has two course numbers, and which one you take says which system you are in</h2>\n<p>Florida&rsquo;s four-semester architectural design sequence runs under <strong>two identifiers with no institution in common</strong>. Measured across the statewide file:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Course</th><th>Bare number</th><th>&ldquo;C&rdquo; number</th></tr></thead>\n<tbody>\n<tr><td>Design 1</td><td>ARC1301 &mdash; FAMU, FAU, FIU, Hillsborough, Miami Dade, UF, USF</td><td>ARC1301C &mdash; Broward, Gulf Coast, Palm Beach State, St Petersburg, State College of Florida, <strong>UCF</strong>, <strong>Valencia</strong></td></tr>\n<tr><td>Design 2</td><td>ARC1302 &mdash; 8 institutions</td><td>ARC1302C &mdash; 5</td></tr>\n<tr><td>Design 3</td><td>ARC2303 &mdash; 7</td><td>ARC2303C &mdash; 6</td></tr>\n<tr><td>Design 4</td><td>ARC2304 &mdash; 7</td><td>ARC2304C &mdash; 6</td></tr>\n</tbody></table>\n<p><strong>Zero overlap on all four.</strong> &#9888;&#9888;&#9888; And the two families are not random: the bare numbers are the institutions feeding the university architecture schools, and the &ldquo;C&rdquo; numbers are the state colleges <strong>plus UCF and Valencia</strong> &mdash; which is the 2+2+2 partnership showing up in the course numbering. UCF&rsquo;s own admission page names the id: students are selected before <em>&ldquo;enrolling in ARC1301C Design 1&rdquo;</em>.</p>\n<p>&#9888; The history sequence splits the same way but by <strong>number</strong> rather than suffix: History of Architecture I is <strong>ARC1701</strong> at seven institutions and <strong>ARC2701</strong> at four, again with no overlap.</p>\n<p>&#9888;&#9888; <strong>This is packaging, not a difference in what is taught</strong>, and Florida&rsquo;s articulation treats lecture-plus-lab and integrated forms as equivalent. The cost is <strong>matching</strong>: an evaluator comparing ARC1301 with ARC1301C sees two identifiers. <strong>Send the syllabus and the portfolio, and name both numbers in the letter.</strong></p>\n<p>&#9888; Watch the credit value too. The same first studio is <strong>3 credits at FIU and State College of Florida, 4 at most institutions, and 6 at USF</strong>; Design 4 runs 3 at FIU and 6 at USF. A studio is sold by the contact hour, and the hours in the room are closer than the credit values suggest.</p>\n\n<h2>&#9888;&#9888; Architecture does not require calculus &mdash; and this changes who applies</h2>\n<p>UF asks architecture transfer applicants for <strong>Physics I (PHY 2053) or Applied Physics (PHY 2004)</strong>, and <strong>Precalculus (MAC 1147), or Precalculus Algebra (MAC 1140) with Trigonometry (MAC 1114)</strong>. That is <strong>algebra-based physics and precalculus</strong> &mdash; not the calculus sequence and not calculus-based physics.</p>\n<p>&#9888;&#9888;&#9888; <strong>Students who rule themselves out of designing buildings because of the mathematics are usually thinking of the engineering requirement.</strong> Civil engineering needs Calculus I&ndash;III, differential equations and calculus-based physics. Architecture, at Florida&rsquo;s largest programme, asks for precalculus. <strong>The structures sequence is real work, but it is not an engineering mathematics load.</strong> &#9888; Confirm your own institution&rsquo;s list &mdash; this is UF&rsquo;s, and the accredited programmes set their own.</p>\n\n<h2>Money, and what Florida does to it</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$59,990</td><td>$62,300</td><td>&minus;$2,310</td></tr>\n<tr><td>25th</td><td>$76,550</td><td>$77,960</td><td>&minus;$1,410</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$96,240</strong></td><td><strong>$99,280</strong></td><td>&minus;$3,040</td></tr>\n<tr><td>75th</td><td>$122,940</td><td>$126,550</td><td>&minus;$3,610</td></tr>\n<tr><td>90th</td><td>$138,230</td><td>$161,420</td><td>&#9888;&#9888; <strong>&minus;$23,190</strong></td></tr>\n</tbody></table>\n<p>&#9888; Florida is a little below the national figure at the bottom and <strong>a long way below it at the top</strong>. This is the ordinary private-sector shape &mdash; not the raised-floor, lowered-ceiling pattern this site has measured in Florida public service &mdash; but the ceiling gap is large. <strong>The top of the profession is principals and firm owners, and Florida has fewer of the very large practices that pay it.</strong></p>\n\n<h2>&#9888;&#9888; What BLS actually says about AI here, and why it is different</h2>\n<p>This site tracks how the federal projections talk about AI, because the language varies and the variation is informative. For architects, BLS names it and then <strong>argues against the obvious conclusion</strong>:</p>\n<blockquote><p>&ldquo;Architectural design work is becoming more efficient due to improved building information modeling (BIM) software and measuring technology along with the integration of artificial intelligence (AI). <strong>However, these productivity gains also allow architects to be more involved in the full building process and take on new roles and responsibilities.</strong>&rdquo;</p></blockquote>\n<p>&#9888;&#9888;&#9888; <strong>That is a different register from the one on the design pages.</strong> For graphic designers BLS says the technology is expected to <em>reduce the need for these workers</em>, and projects a 2% decline. For web and digital interface designers it says AI may <em>soften the employment growth</em>. Here it says the gains are absorbed into <strong>scope</strong> &mdash; and the projection stays positive.</p>\n<p>&#9888;&#9888; <strong>The drafting row is where the same technology is projected to bite</strong>, and BLS says so plainly: CAD and BIM <em>&ldquo;increase drafter productivity and allow engineers and architects to perform many tasks that used to be done by drafters&rdquo;</em>. <strong>Within one family, the same tools are described as expanding the licensed role and absorbing the unlicensed one.</strong> That is worth knowing before choosing which of the three routes to take.</p>\n\n<h2>Landscape architecture, briefly</h2>\n<p>A separate licence under chapter 481 <strong>Part II</strong>, a separate accreditor, a separate exam. <strong>Two Florida public institutions</strong> award it &mdash; UF (14 bachelor&rsquo;s, 3 master&rsquo;s) and FIU (19 master&rsquo;s) &mdash; against 23,500 jobs nationally and 1,700 annual openings. &#9888; It is a small profession with a small programme footprint, and the wage is $79,870 against architecture&rsquo;s $99,280. It is named here because it is genuinely adjacent, it is licensed on the same statutory pattern, and Florida&rsquo;s water, coastal and stormwater rules give it more work than its size suggests.</p>\n\n<h2>What to do first</h2>\n<ul>\n<li><strong>Look up the programme on naab.org before you enrol, not after.</strong> The accreditation list is the whole question and it is published.</li>\n<li><strong>Decide the bachelor&rsquo;s or master&rsquo;s route deliberately.</strong> FAU and FAMU can make you exam-eligible with a bachelor&rsquo;s; UF, USF and FIU cannot.</li>\n<li><strong>Start the AXP record on day one of the first job</strong>, and ask which categories the work will fill.</li>\n<li><strong>If you are at a state college, find out which design-studio number your credits will land on</strong>, and get the receiving school&rsquo;s answer in writing.</li>\n<li><strong>Build the portfolio from the first studio.</strong> Admission to the studio sequence at UCF, and to graduate architecture generally, is decided on it.</li>\n</ul>\n"
+}

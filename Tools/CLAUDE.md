@@ -342,22 +342,37 @@ are the risk: `51.` collects clinical versions of degrees that also live in `44.
 it — **so put the split and the real number in the `degreesNote` prose** rather than silently
 publishing the understated count.
 
-#### ⚠⚠⚠ BLS HAS THREE REGISTERS FOR AI — quote the one it actually used (2026-09-22)
+#### ⚠⚠⚠ BLS HAS FOUR REGISTERS FOR AI — quote the one it actually used (2026-09-22)
 
 **Every path now gets asked "will AI take this job?", and the answer should be the federal agency's
-own wording rather than a guess.** Read three occupations against each other:
+own wording rather than a guess.** Read four occupations against each other:
 
 | Occupation | Projection | What the BLS handbook says |
 |---|---|---|
 | Medical records specialist | ✅ **+8%** | automation discussed; **no dampening claim at all** |
 | Web developer / digital interface designer | ✅ **+5%** | AI “may **soften the employment growth** of these workers” |
 | ⚠ Graphic designer | ⚠⚠ **−2%** | AI “projected to… **reduce the need** for these workers” |
+| ✨ **Architect** (batch: architect path) | ✅ **+4%** | ⚠⚠ AI and BIM named as making the work *“more efficient”* — **then explicitly counterweighted**: *“However, these productivity gains also allow architects to be more involved in the full building process and take on new roles and responsibilities.”* |
 
-⚠⚠⚠ **Three deliberately different phrasings from one agency, and they track HOW ROUTINE THE
+⚠⚠⚠ **Four deliberately different phrasings from one agency, and they track HOW ROUTINE THE
 OUTPUT IS.** Where the product is a finished artefact a tool can now generate — a layout, an image —
 the language is *reduce the need*. Where it is a working system somebody must specify, build and
 maintain, it is *soften the growth*. **Where the work is checking, auditing and defending a decision,
 there is no dampening claim.**
+
+✨⚠⚠⚠ **THE FOURTH REGISTER IS THE ONE TO WATCH FOR, BECAUSE IT ARGUES AGAINST ITSELF.**
+On architects BLS names the technology as an efficiency gain **and then says the gain is absorbed into
+SCOPE rather than into headcount** — architects *“take on new roles and responsibilities.”*
+⚠⚠ **Quote the SECOND sentence, not just the first**: stopping after “more efficient due to… AI”
+reverses the agency's meaning.
+
+⚠⚠⚠ **AND THE SHARPEST TEST IS INSIDE ONE OCCUPATIONAL FAMILY.** Architecture supplies it:
+the SAME two technologies (BIM and CAD) appear on the architects page as expanding the licensed role
+(+4%) and on the drafters page as absorbing the unlicensed one — *“increase drafter productivity and
+allow engineers and architects to perform many tasks that used to be done by drafters”*, drafting
+overall **+1%**. **Where a path covers several rungs of one ladder, read EVERY rung's OOH page and
+put the contrast in the guide** — it is the most decision-relevant thing on the page, because it tells
+a reader which rung to aim for rather than whether the field is doomed.
 
 ⚠⚠ **So the drill on any path where the question arises: go to the BLS OOH page and quote the
 sentence.** Do not paraphrase it into “AI may affect this field”, and do not omit it because it is

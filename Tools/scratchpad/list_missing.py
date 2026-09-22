@@ -26,7 +26,10 @@ SMALL = {'and', 'or', 'of', 'the', 'for', 'to', 'in', 'with', 'a', 'an', 'on', '
 
 # ⚠ An ALL-CAPS source carries no case signal, so an "is it upper?" acronym heuristic
 # fires on every word. Use an explicit list instead, and keep it short.
-ACRONYMS = {'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC', 'AC', 'IT',
+ACRONYMS = {
+            # architecture, design and building
+            'BIM', 'CADD', 'LEED', 'NAAB', 'ADA', 'HDR', '2D', '3D', 'VR', 'AR', 'GC', 'MEP',
+           'VLSI', 'CPU', 'GPU', 'GIS', 'CAD', 'CAM', 'AI', 'HVAC', 'RF', 'DC', 'AC', 'IT',
             'II', 'III', 'IV', 'I', 'V', 'VI',
             # welding and metalwork processes -- they are initialisms, not words
             'SMAW', 'GMAW', 'FCAW', 'GTAW', 'GTA', 'MIG', 'TIG', 'CNC', 'NDT', 'EV', 'CNG', 'LPG',
