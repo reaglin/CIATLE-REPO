@@ -208,6 +208,8 @@ re-deriving comparators each time:**
 | Architect | −$3,040 | but −$23,190 at the **90th** |
 | Database administrator | −$500 | ✅ and the 75th percentile is ABOVE national |
 | ✅ Database architect | −$1,180 | ✅✅ **90th percentile ABOVE national (+$2,410)** |
+| Commercial pilot | −$1,330 | floor ABOVE national (+$3,740 at the 10th) but ⚠ **−$37,510 at the 90th** |
+| Airline pilot | −$7,120 | ⚠⚠ **−$107,150 at the 90th** ($356,680 vs $463,830) |
 | ✅ Agricultural manager | −$2,820 | ✅✅ **75th +$22,510 and 90th +$26,920 ABOVE national** — ⚠ salaried managers only (see the self-employment rule) |
 
 ⚠⚠ **Two readings worth carrying forward.** The science paths cluster at the bad end and the

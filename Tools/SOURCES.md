@@ -576,6 +576,31 @@ before recording another one.
 
 ---
 
+## Career-path sources (added 2026-09-23)
+
+*Where a path's numbers came from, when the source is not already listed above.*
+
+### Federal occupation and wage data
+- **BLS Occupational Outlook Handbook** — `https://www.bls.gov/ooh/<group>/<occupation>.htm`; the tabs are
+  `#tab-4` (How to Become One) and `#tab-5` (Pay). ⚠ Read **Entry-level Education** and the
+  **self-employed %** on every path (see `Tools/CLAUDE.md`).
+- **O*NET Florida wages** — `https://www.onetonline.org/link/localwages/<soc>.00?st=FL`. ⚠ Ask WebFetch
+  to *reproduce the table rows exactly*, or it summarises and drops the 25th/75th percentiles.
+- **USDA 2022 Census of Agriculture, Florida state profile** —
+  `https://www.nass.usda.gov/Publications/AgCensus/2022/Online_Resources/County_Profiles/Florida/cp99012.pdf`
+  (WebFetch saves the PDF; read it with the Read tool).
+
+### Federal regulations (Cornell LII answers; eCFR redirects to a bot wall)
+- `https://www.law.cornell.edu/cfr/text/<title>/<section>` — used for 14 CFR 61.23, 61.129, 61.160 and
+  7 CFR 764.152. ⚠ `faa.gov` returned 403 on 2026-09-23 (the restricted-ATP institution list).
+
+### Programme costs published by Florida colleges
+- ✅ **Pasco-Hernando State, Professional Pilot** — `https://phsc.edu/academics/programs/transportation/pilot`:
+  flight fees by certificate ($64,579.80 total against $4,838.28 tuition). ⚠ The Northwest Florida
+  State pilot page's "$115,080" is a BLS **salary**, not a cost — a search summary misread it.
+
+---
+
 ## Contributed sources
 
 *Sources Ron has found and wants used. Add them here with a note on what they are good for.*

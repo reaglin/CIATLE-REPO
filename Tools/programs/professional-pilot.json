@@ -1,0 +1,35 @@
+{
+  "slug": "professional-pilot",
+  "name": "Professional Pilot and Aviation Science",
+  "isPublished": true,
+  "sortOrder": 620,
+  "description": "Flight training toward the FAA certificates a working pilot needs: private, instrument, commercial, multi-engine and flight instructor, taught at Florida state colleges as an associate degree, a certificate or an aviation-science bachelor's. ⚠⚠ The cost is flight time, not tuition: Pasco-Hernando State publishes $64,579.80 in flight fees against $4,838.28 in in-state tuition.",
+  "degreesNote": "⚠⚠ Small and entirely at the state colleges: about 140 credentials a year, and no Florida state university awards a pilot degree under these codes. Professional pilot (49.0102) produces 81 — Broward 45, Miami Dade 19, Polk State 14, FSCJ 3 — with Northwest Florida State, Palm Beach State, Pasco-Hernando and Santa Fe also offering it. The aviation-science bachelor's (49.0101) adds 57 at Broward (31) and Polk State (26). ⚠⚠⚠ THE QUESTION TO ASK EVERY PROGRAMME: does it hold an FAA letter of authorisation for the restricted-privileges ATP, and for which hour figure? An authorised associate degree with 30 aviation credits cuts the airline minimum from 1,500 hours to 1,250; an authorised bachelor's with 60 cuts it to 1,000 — but only when the flying was done in the institution's Part 141 curriculum. ⚠ Public colleges often contract the flying to a private Part 141 school (Broward uses Phoenix East Aviation), so ask who owns the aircraft and sets the schedule. ⚠ Get the FAA medical certificate before paying for any flight training.",
+  "cips": [
+    {
+      "cipCode": "49.0102",
+      "note": "Airline/Commercial/Professional Pilot and Flight Crew — 81 credentials in 2023: Broward 45 (associate and certificate), Miami Dade 19, Polk State 14, FSCJ 3; Northwest Florida State, Palm Beach State, Pasco-Hernando and Santa Fe offer it but recorded none that year."
+    },
+    {
+      "cipCode": "49.0101",
+      "note": "Aeronautics/Aviation/Aerospace Science and Technology — the bachelor's: Broward 31 and Polk State 26. ⚠ A bachelor's with 60 aviation credits at an FAA-authorised institution is what reaches the 1,000-hour restricted ATP."
+    }
+  ],
+  "related": [
+    {
+      "slug": "aviation-maintenance-technology",
+      "note": "⚠ The other federally certificated aviation career, taught at many of the same colleges. It costs a fraction of flight training because the student is not paying by the hour for an aircraft, and it is a common way into an airline for people who later learn to fly.",
+      "isRoute": false
+    },
+    {
+      "slug": "aerospace-engineering",
+      "note": "⚠ BLS says airlines want a bachelor's in any field and names engineering among them. An engineering degree plus separate flight training is a legitimate route, but it does not count toward the restricted ATP, which needs aviation coursework at an authorised institution.",
+      "isRoute": false
+    },
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "⚠ Where aviation management graduates often end up: air cargo, airport and airline operations. A route into aviation for someone who wants the industry without the flight-training bill.",
+      "isRoute": false
+    }
+  ]
+}

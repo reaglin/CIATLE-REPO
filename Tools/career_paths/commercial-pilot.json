@@ -1,0 +1,186 @@
+{
+  "slug": "commercial-pilot",
+  "name": "Commercial and Airline Pilot",
+  "cipCode": "49.01",
+  "socCode": "53-2012",
+  "isPublished": true,
+  "sortOrder": 144,
+  "description": "⚠⚠ The commercial certificate (250 hours) lets you be paid to fly, but airlines need 1,500, and nearly everyone fills the gap by working as a flight instructor or charter pilot. ⚠⚠⚠ The cost is flight time, not tuition: one Florida college publishes $64,579.80 in flight fees against $4,838.28 in tuition. A qualifying aviation degree cuts the airline minimum to 1,250 or 1,000 hours. Median pay: $123,220 for commercial pilots, $232,140 for airline pilots.",
+  "credentialNote": "⚠⚠⚠ THE CREDENTIALS ARE FAA CERTIFICATES, NOT DEGREES: private, instrument, commercial (250 hours, 14 CFR 61.129), multi-engine, flight instructor, then the airline transport pilot certificate at 1,500 hours. ⚠⚠ An aviation degree from an institution with an FAA letter of authorisation qualifies for the restricted ATP (14 CFR 61.160): 1,250 hours with an associate and 30 aviation credits, 1,000 with a bachelor's and 60 — but only if the flying was done in that institution's Part 141 curriculum. Ask for the letter before enrolling. ⚠⚠ A second-class FAA medical is needed to fly commercially and a first-class one to captain an airliner (14 CFR 61.23). Get it before paying for flight training. ⚠ What transfers between programmes is the certificate, not the course number, so finish a certificate before moving.",
+  "cipCodes": [
+    {
+      "cipCode": "52.02",
+      "note": "⚠ Business Administration — BLS: airline pilots \"typically need a bachelor's degree in any field, including transportation, engineering, or business.\" A business degree with separate flight training is a real route, though it does not reduce the ATP hours."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "professional-pilot",
+      "note": "The programme. ⚠⚠ Read its note first: ask every school for its FAA restricted-ATP letter of authorisation, and who actually runs the flying."
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠ BLS names business among the degrees airlines accept. It is the portable choice if flying does not work out, but it does not shorten the ATP hours and the flight training is paid for separately."
+    },
+    {
+      "slug": "aerospace-engineering",
+      "note": "⚠ Named by BLS among acceptable degrees. An engineering degree plus separate flight training is a legitimate route to an airline, but it does not count toward the restricted ATP.",
+      "isRoute": false
+    },
+    {
+      "slug": "aviation-maintenance-technology",
+      "note": "⚠ The other federally certificated aviation career, taught at many of the same colleges, without the per-hour flight bill.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "ATT1100",
+      "sortOrder": 1,
+      "reason": "Private Pilot Flight Theory — seven carriers, the widest course in aviation. The ground school for the FAA private pilot knowledge test: aerodynamics, weather, navigation, regulations. ⚠ Take it before or alongside the first flight course, since flight hours are cheaper when the theory is already done.",
+      "variantNote": "⚠ FSCJ splits it into ATT1102 and ATT1103; Gulf Coast teaches ATT1100C with an integrated lab."
+    },
+    {
+      "courseId": "ATF1100L",
+      "sortOrder": 2,
+      "reason": "Private Pilot Flight — Northwest Florida State, Polk State and UWF. The first certificate. ⚠⚠ The FAA minimum is 35 hours under Part 141 and 40 under Part 61, and most students fly more, paying by the hour.",
+      "variantNote": "⚠⚠ Florida numbers this five ways: ATF1100L here, ATF1100C at Broward, ATF1108L + ATF1109L as two phases at FSCJ, and ATF1114L accelerated at Miami Dade. The statewide title says 2-3 credits and most carriers award 1. Register by what the course delivers: does it end with the private pilot checkride?"
+    },
+    {
+      "courseId": "ASC1210",
+      "sortOrder": 3,
+      "reason": "Aviation Meteorology — seven carriers. ⚠ Weather decisions are among the hardest judgements in flying, and in Florida summer they mean afternoon thunderstorms that build faster than a training aircraft can climb over them."
+    },
+    {
+      "courseId": "ASC1610",
+      "sortOrder": 4,
+      "reason": "Aircraft Systems and Components — six carriers. Engines, electrical, hydraulic and flight-control systems. ⚠ The course that makes a checklist make sense rather than a list to be recited."
+    },
+    {
+      "courseId": "ATT1120",
+      "sortOrder": 5,
+      "reason": "Instrument Pilot Ground School — FSCJ, Northwest Florida State, Pasco-Hernando and UWF. Preparation for the FAA instrument rating knowledge test.",
+      "variantNote": "⚠ Broward, Miami Dade and Polk State carry the same statewide course as ATT2120. The level digit is the institution's choice; they are one course."
+    },
+    {
+      "courseId": "ATF2305",
+      "sortOrder": 6,
+      "reason": "Instrument Pilot Flight — Broward, FSCJ, Miami Dade and Pasco-Hernando. ⚠⚠ The rating that makes a pilot employable: no charter, air ambulance or airline job is flown without it.",
+      "variantNote": "⚠ Northwest Florida State and Polk State teach it as ATF2305L."
+    },
+    {
+      "courseId": "ATT2110",
+      "sortOrder": 7,
+      "reason": "Commercial Pilot Ground School — five carriers. Preparation for the FAA commercial knowledge test: performance, weight and balance, advanced navigation, physiology of flight.",
+      "variantNote": "⚠ FSCJ and UWF carry the same statewide course as ATT1110."
+    },
+    {
+      "courseId": "ATF2201",
+      "sortOrder": 8,
+      "reason": "Commercial Pilot I — FSCJ and Pasco-Hernando, the first of three. ⚠⚠ This is where the 250-hour commercial minimum is built, and where the programme's cost is concentrated: Pasco-Hernando prices its commercial flight courses at $23,273.90.",
+      "variantNote": "⚠⚠ Florida packages commercial flight four ways: ATF2201-2203 (FSCJ, Pasco-Hernando), ATF2201L-2203L (Northwest Florida State), ATF2204 (Broward) and ATF2204L (UWF). Finish the certificate before changing programme; partial Part 141 stages do not reliably carry over."
+    },
+    {
+      "courseId": "ATF2400",
+      "sortOrder": 9,
+      "reason": "Multi-Engine Flight — Broward, FSCJ, Miami Dade and Pasco-Hernando. ⚠ Every airline aircraft has more than one engine, and airlines look for multi-engine time in the logbook."
+    },
+    {
+      "courseId": "ATT2131",
+      "sortOrder": 10,
+      "reason": "Certified Flight Instructor Ground School — FSCJ, Miami Dade and Northwest Florida State. The fundamentals of instruction and the flight instructor knowledge tests. ⚠⚠ The instructor certificate is how most pilots are paid while building from 250 hours toward 1,500.",
+      "variantNote": "⚠ Polk State teaches the fundamentals as ATT2130, and Polk State and UWF offer an upper-division version, ATT3134, which adds the FAA Advanced Ground Instructor certificate. The state lets a student choose the lower or upper version, and the upper one counts toward a bachelor's."
+    },
+    {
+      "courseId": "ATF2500",
+      "sortOrder": 11,
+      "reason": "Certified Flight Instructor — Broward and FSCJ. The flight training for the CFI certificate. ⚠⚠ Most new commercial pilots' first paid flying job.",
+      "variantNote": "⚠⚠ Same FAA certificate, different credit values: ATF2500L is 1 credit at Northwest Florida State and Polk State, and the upper-division ATF3502L is 1 credit at Polk State and 3 at UWF. Because the restricted ATP counts aviation CREDIT HOURS, the lower credit values can leave a student short of the 30 or 60 needed."
+    },
+    {
+      "courseId": "ASC1310",
+      "sortOrder": 12,
+      "reason": "Aviation Regulations — FSCJ, Pasco-Hernando and Polk State. 14 CFR Parts 61, 91, 121 and 135: what a pilot may and may not do, and what an operator must. ⚠ The law is examined on every FAA knowledge test and checkride.",
+      "variantNote": "⚠ Broward and Miami Dade cover the subject as ASC2320 Aviation Law and Regulations."
+    },
+    {
+      "courseId": "ASC2870",
+      "sortOrder": 13,
+      "reason": "Aviation Safety — five carriers. Accident causation, safety management systems and reporting culture. ⚠ Federal rules already require a safety management system of airlines, and the same framework is being extended to charter operators."
+    },
+    {
+      "courseId": "ASC1550",
+      "sortOrder": 14,
+      "reason": "Aerodynamics — Broward, Miami Dade and Polk State. Lift, drag, stability and performance beyond what the private pilot course covers. ⚠ It explains the performance charts a commercial pilot is tested on."
+    },
+    {
+      "courseId": "ASC4460",
+      "sortOrder": 15,
+      "reason": "Crew Resource Management — Polk State and UWF. Communication, workload and decision-making on a two-pilot flight deck. ⚠⚠ Airline interviews test it directly, and it is the part of airline flying a single-pilot trainer never practises.",
+      "variantNote": "⚠ Northwest Florida State and Polk State teach a lower-division version as ASC2473 Human Factors and Resource Management."
+    },
+    {
+      "courseId": "ASC4671",
+      "sortOrder": 16,
+      "reason": "Transport Category Aircraft Operations — Broward and Polk State. Jet systems, high-altitude operations and airline procedures. ⚠ The bridge from training aircraft to the aircraft an airline flies."
+    },
+    {
+      "courseId": "ATT2640",
+      "sortOrder": 17,
+      "reason": "Advanced Aircraft: Turboprop and Turbine — FSCJ and Pasco-Hernando. ⚠ Turbine knowledge is what charter, cargo and regional operators look for in a low-time pilot."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Airline and Commercial Pilots",
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/airline-and-commercial-pilots.htm",
+      "note": "Airline pilots $232,140 and commercial pilots $123,220 median (2025); 154,900 jobs, +7% for 2025–35, about 16,400 openings a year; retirement at 65; the flight-instructor and charter route to building hours; commercial-pilot industries (nonscheduled 38%, schools 11%, health care 10%). No mention of automation or AI."
+    },
+    {
+      "label": "O*NET — Commercial Pilots (53-2012.00)",
+      "url": "https://www.onetonline.org/link/summary/53-2012.00",
+      "note": "Job Zone Three (vocational training or an associate degree); faster than average growth (5% to 6%) for 2024–34 and about 6,600 openings a year; Air Transport Pilot is a registered apprenticeship title."
+    },
+    {
+      "label": "O*NET — Florida wages, commercial pilots and airline pilots",
+      "url": "https://www.onetonline.org/link/localwages/53-2012.00?st=FL",
+      "note": "Commercial: Florida median $121,890 vs $123,220, 90th $229,110 vs $266,620. Airline (53-2011): Florida median $225,020 vs $232,140, 90th $356,680 vs $463,830."
+    },
+    {
+      "label": "14 CFR 61.160 — Restricted-privileges airline transport pilot",
+      "url": "https://www.law.cornell.edu/cfr/text/14/61.160",
+      "note": "750 hours for military pilots; 1,000 for a bachelor's with an aviation major and 60 aviation credits; 1,250 for an associate with 30, or a bachelor's with 30–59; only at institutions with a letter of authorisation under § 61.169, with the flying done in an approved Part 141 curriculum."
+    },
+    {
+      "label": "14 CFR 61.129 — Commercial pilot aeronautical experience",
+      "url": "https://www.law.cornell.edu/cfr/text/14/61.129",
+      "note": "250 hours of flight time, including 100 hours as pilot in command and 20 hours of training on the areas of operation."
+    },
+    {
+      "label": "14 CFR 61.23 — Medical certificates",
+      "url": "https://www.law.cornell.edu/cfr/text/14/61.23",
+      "note": "At least a second-class medical to exercise commercial pilot privileges; first-class for pilot-in-command privileges of an ATP certificate."
+    },
+    {
+      "label": "Pasco-Hernando State College — Professional Pilot Technology",
+      "url": "https://phsc.edu/academics/programs/transportation/pilot",
+      "note": "Total flight fees $64,579.80 against in-state tuition of $4,838.28, with per-certificate costs, and the warning that hours and prices could be more depending on how much training a student needs."
+    },
+    {
+      "label": "Broward College — Emil Buehler Aviation Institute",
+      "url": "https://www.broward.edu/academics/programs/aviation/index.html",
+      "note": "Part 141 Professional Pilot Technology, flight training in partnership with Phoenix East Aviation, and a $3,500 minimum flight-account deposit."
+    },
+    {
+      "label": "Polk State College — Aerospace",
+      "url": "https://www.polk.edu/aerospace/",
+      "note": "Professional Pilot Science A.S., Aerospace Sciences B.S. with a professional pilot concentration, and a Republic Airways cadet programme."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 49.01",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "49.0102 professional pilot: 81 credentials at Broward, Miami Dade, Polk State and FSCJ; 49.0101 aviation science bachelor's: 57 at Broward and Polk State."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; The commercial certificate is the middle of the ladder, not the top</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Step</th><th>FAA minimum</th><th>What it lets you do</th></tr></thead>\n<tbody>\n<tr><td>Private pilot</td><td>40 hours (35 under Part 141)</td><td>fly yourself and passengers, <strong>not for pay</strong></td></tr>\n<tr><td>Instrument rating</td><td>&mdash;</td><td>fly in cloud; required in practice for any paid flying</td></tr>\n<tr><td><strong>Commercial pilot</strong></td><td><strong>250 hours</strong> (14 CFR 61.129)</td><td>&#9888; <strong>be paid to fly</strong> &mdash; charter, air tours, banner towing, aerial survey, and instructing once you add the instructor certificate</td></tr>\n<tr><td>Multi-engine rating</td><td>&mdash;</td><td>twin-engine aircraft, which every airline flies</td></tr>\n<tr><td>Flight instructor (CFI)</td><td>&mdash;</td><td>&#9888;&#9888; <strong>teach, and be paid while you build hours</strong></td></tr>\n<tr><td>&#9888;&#9888;&#9888; <strong>Airline transport pilot (ATP)</strong></td><td><strong>1,500 hours</strong>, or <strong>1,000&ndash;1,250</strong> with a qualifying degree (below)</td><td>required to fly for an airline</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The gap between the commercial certificate and an airline job is about 1,250 hours of flying</strong>, and nearly everyone fills it by working. BLS: <em>&ldquo;Some pilots work as flight instructors or on-demand charter pilots, positions that usually require less experience than airline jobs require, to help build enough flying hours so that they can apply to the airlines.&rdquo;</em> That is why <strong>11% of commercial pilots work for technical and trade schools</strong> &mdash; they are instructors building time &mdash; and why the flight instructor certificate is on every programme below.</p>\n<p>&#9888; <strong>So this page covers both occupations</strong>, because the student deciding is really deciding about both: the commercial pilot job (53-2012) that most people hold <em>on the way</em>, and the airline job (53-2011) most of them are aiming at.</p>\n\n<h2>&#9888;&#9888; Two occupations, very different pay</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Commercial pilots (53-2012)</th><th>Airline pilots, copilots, flight engineers (53-2011)</th></tr></thead>\n<tbody>\n<tr><td>Median, 2025</td><td>$123,220</td><td><strong>$232,140</strong></td></tr>\n<tr><td>Jobs</td><td>50,400</td><td>104,600</td></tr>\n<tr><td>Where they work</td><td>nonscheduled air transport 38%, flight schools 11%, <strong>air ambulance</strong> (ambulatory health care) 10%</td><td>scheduled airlines</td></tr>\n<tr><td>Education BLS describes</td><td>&ldquo;typically complete flight training, and some employers require or prefer that they have a degree&rdquo;</td><td>&#9888; &ldquo;typically need a <strong>bachelor&rsquo;s degree in any field</strong>&rdquo;</td></tr>\n</tbody></table>\n<p>All pilots together: <strong>154,900 jobs, +7% for 2025&ndash;35</strong> (against 3% for all occupations), and about <strong>16,400 openings a year</strong>, many of them replacements. &#9888; <strong>Federal law requires airline pilots to retire at 65</strong>, which keeps the replacement flow steady. &#9888; BLS does not mention automation or AI anywhere on this page.</p>\n<p>&#9888;&#9888; <strong>Airline pay is set by seniority.</strong> BLS: pilots <em>&ldquo;usually begin their careers as first officers and receive wage increases as they accumulate experience and seniority.&rdquo;</em> The $232,140 median includes pilots well into their careers; a new first officer starts well below it, and seniority is held at one airline, so it does not come with you if you move.</p>\n\n<h2>What Florida pays</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Commercial &mdash; Florida</th><th>US</th><th>Airline &mdash; Florida</th><th>US</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$62,590</td><td>$58,850</td><td>$121,240</td><td>$106,710</td></tr>\n<tr><td>25th</td><td>$98,460</td><td>$84,540</td><td>$169,730</td><td>$182,280</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$121,890</strong></td><td><strong>$123,220</strong></td><td><strong>$225,020</strong></td><td><strong>$232,140</strong></td></tr>\n<tr><td>75th</td><td>$202,340</td><td>$190,440</td><td>$344,360</td><td>$384,440</td></tr>\n<tr><td>&#9888; 90th</td><td>&#9888; $229,110</td><td>$266,620</td><td>&#9888; <strong>$356,680</strong></td><td><strong>$463,830</strong></td></tr>\n</tbody></table>\n<p>&#9888; <strong>Florida is at or above the national figures at the bottom and well below them at the top</strong> &mdash; $37,510 short at the 90th percentile for commercial pilots and <strong>$107,150 short for airline pilots</strong>. Airline pay scales are set by each airline rather than by the state, so the gap plausibly reflects which airlines and aircraft types are based here rather than a Florida discount on the same seat.</p>\n\n<h2>&#9888;&#9888;&#9888; The cost is flight time, not tuition</h2>\n<p>Pasco-Hernando State College publishes its figures, and they show the shape of every programme on this page:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Pasco-Hernando State, Professional Pilot Technology</th><th></th></tr></thead>\n<tbody>\n<tr><td>In-state tuition, whole programme</td><td>$4,838.28</td></tr>\n<tr><td>&#9888;&#9888;&#9888; <strong>Flight fees, whole programme</strong></td><td><strong>$64,579.80</strong></td></tr>\n<tr><td>including private pilot</td><td>$13,969.00</td></tr>\n<tr><td>instrument rating</td><td>$10,154.30</td></tr>\n<tr><td>commercial (ATF2201 and ATF2203)</td><td>$14,160.50 + $9,113.40</td></tr>\n<tr><td>multi-engine rating</td><td>$10,468.80</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The flight fees are about thirteen times the tuition.</strong> And the college warns that the hours and prices <em>&ldquo;could be more depending on how much training an individual student requires to meet FAA standards.&rdquo;</em> Flight hours are sold by the hour, and the FAA figures in the table above are <strong>minimums</strong> most students exceed. &#9888; Ask any programme what its recent students <em>actually</em> spent, not what the syllabus minimum costs.</p>\n<p>&#9888;&#9888; <strong>Public colleges often contract the flying out.</strong> Broward&rsquo;s Part 141 programme is run <em>&ldquo;in partnership with Phoenix East Aviation&rdquo;</em> and asks for a $3,500 flight-account deposit to start; Pasco-Hernando uses contracted flight training too. That is normal, but it means the aircraft, instructors and scheduling belong to another company. Ask who they are.</p>\n<p>&#9888;&#9888;&#9888; <strong>Get the FAA medical certificate BEFORE paying for flight training.</strong> A commercial pilot needs at least a second-class medical and an airline captain a first-class one (14 CFR 61.23). A disqualifying condition found after tens of thousands of dollars of training is the most expensive way to find out.</p>\n\n<h2>&#9888;&#9888;&#9888; What the degree is worth: 250 or 500 fewer hours</h2>\n<p>BLS says airlines typically want a bachelor&rsquo;s in <em>any</em> field, so the degree does not have to be in aviation. <strong>But an aviation degree carries a specific federal benefit:</strong> the restricted-privileges ATP (14 CFR 61.160).</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Route</th><th>Hours for the ATP</th><th>Saved</th></tr></thead>\n<tbody>\n<tr><td>Standard</td><td>1,500</td><td>&mdash;</td></tr>\n<tr><td>Associate degree with an aviation major and <strong>at least 30</strong> semester hours of aviation coursework</td><td><strong>1,250</strong></td><td>250</td></tr>\n<tr><td>Bachelor&rsquo;s with 30&ndash;59 aviation credits</td><td>1,250</td><td>250</td></tr>\n<tr><td>&#9888;&#9888; Bachelor&rsquo;s with an aviation major and <strong>at least 60</strong> aviation credits</td><td><strong>1,000</strong></td><td><strong>500</strong></td></tr>\n<tr><td>Military pilot</td><td>750</td><td>750</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Two conditions that decide whether a programme qualifies</strong>: the institution must hold an FAA <strong>letter of authorisation</strong> under &sect; 61.169, and the flight training must be done <strong>as part of an approved Part 141 curriculum at that institution</strong> or at a Part 141 school with a training agreement with it. &#9888; <strong>Ask any programme for its letter of authorisation and which of the two hour figures it can certify, before enrolling.</strong> A degree from a programme without one does not reduce the hours.</p>\n<p>&#9888; <strong>This is why the credit value of an aviation course matters here.</strong> The rule counts <em>semester credit hours</em>, and Florida carries identical FAA training at different credit values (the flight-instructor course runs at 1, 2 or 3 credits depending on the college). Taking the 1-credit versions can leave a student short of 30 or 60. Count your aviation credits against the threshold, not your courses.</p>\n\n<h2>&#9888;&#9888; Where Florida&rsquo;s public colleges teach it</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Award (IPEDS, 2023)</th><th>Credentials/yr</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>Professional pilot (49.0102)</td><td><strong>81</strong></td><td>Broward 45 (associate and certificate), Miami Dade 19, Polk State 14, FSCJ 3; Northwest Florida State, Palm Beach State, Pasco-Hernando and Santa Fe offer it but recorded none that year</td></tr>\n<tr><td>Aviation science, bachelor&rsquo;s (49.0101)</td><td>57</td><td>Broward 31, Polk State 26</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Florida&rsquo;s public pilot programmes are small &mdash; about 140 credentials a year</strong> &mdash; and they are all at state colleges; no state university awards a pilot degree under these codes. &#9888; UWF runs flight courses (ATF1100L, ATT1100, the advanced flight-instructor courses) but records its aviation degree elsewhere. Most pilot training in Florida happens at private universities and private Part 141 and Part 61 schools, which this site does not list.</p>\n<p>&#9888; Polk State advertises a <strong>Republic Airways cadet programme</strong>. Airline &ldquo;pathway&rdquo; and cadet agreements are common; ask what the airline actually commits to (an interview, a conditional offer, tuition help) and what you commit to in return.</p>\n\n<h2>&#9888; The course numbers are fragmented &mdash; register by what the course does</h2>\n<p>The FAA defines the training, and Florida&rsquo;s colleges package it very differently. Private pilot flight alone runs as <strong>ATF1100L</strong> (Northwest Florida State, Polk State, UWF), <strong>ATF1100C</strong> (Broward), <strong>ATF1108L + ATF1109L</strong> in two phases (FSCJ) and <strong>ATF1114L</strong> accelerated (Miami Dade). Commercial flight is ATF2201&ndash;2203 at FSCJ and Pasco-Hernando, ATF2201L&ndash;2203L at Northwest Florida State, ATF2204 at Broward and ATF2204L at UWF.</p>\n<p>&#9888;&#9888; <strong>What transfers in aviation is the FAA certificate, not the course number.</strong> A student who moves between programmes with a private pilot certificate and an instrument rating in hand has something every school recognises; a student who moves with half a course has hours in a logbook that the new school&rsquo;s Part 141 syllabus may not credit. <strong>Finish a certificate before you move.</strong></p>\n"
+}
