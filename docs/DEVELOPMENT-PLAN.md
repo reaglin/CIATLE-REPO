@@ -107,6 +107,7 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 4.33 ⚠️ | **Second queue (ranks 101–150): Farmer, Rancher and Agricultural Manager is LIVE 2026-09-23** (rank 143), with an **Agricultural Business and Food and Resource Economics** programme (CIP 01.01 + 01.00, 5 institutions), plus 182 new `AEB`/`AOM` and agriculture courses listed. ⚠ **Commercial and Airline Pilot (144) LIVE 2026-09-23 too** (below). **Urban planner (150) LIVE 2026-09-23 as well. 7 rows remain, all blocked on the CIP seed** — vet tech, pharmacist, truck driver, chef, cosmetologist, plumber, carpenter (`REVIEW_QUEUE.md` item 116) | ⚠ Ron reads `/careers/agricultural-manager`. The page leads with a caveat about the wage figure: **67% of the occupation is self-employed, and BLS excludes them from its pay figures**, so the $89,900 median is the pay of hired managers only. BLS gives the entry education as a high school diploma, while O*NET puts it in Job Zone Four, and the self-employed share explains the gap. ⚠⚠ The most practical thing on the page: **7 CFR 764.152 counts 16 credit hours of agriculture coursework toward the experience requirement for a USDA farm ownership loan.** Also on the page: nursery and greenhouse production is 34% of Florida farm sales, and six production-agriculture CIP groups (657 credentials a year, mostly at UF and Valencia) cannot be listed as programmes until the seed widens |
 | 4.34 ⚠️ | **Commercial and Airline Pilot — LIVE 2026-09-23** (rank 144), with a **Professional Pilot and Aviation Science** programme (CIP 49.0102 + 49.0101, 8 state colleges, about 140 credentials a year and none at a state university), plus 79 new `ATF`/`ATT`/`ASC`/`AVM` courses listed. ⚠ `AVM2930`/`AVM2931` were refused at 33 credits (the server cap is 20); both are maintenance credit-by-certificate numbers and not on this path | ⚠ Ron reads `/careers/commercial-pilot`. The page covers both occupations, because the 250-hour commercial certificate is a waypoint and the airline job needs 1,500 hours; most pilots close the gap by working as flight instructors. ⚠⚠⚠ **The cost is flight time**: Pasco-Hernando publishes $64,579.80 in flight fees against $4,838.28 in tuition. ⚠⚠ **What an aviation degree buys**: under 14 CFR 61.160 it cuts the airline minimum to 1,250 or 1,000 hours, but only at an institution with an FAA letter of authorisation. The page tells readers to ask for it, because the FAA list returned 403 |
 | 4.35 ⚠️ | **Urban and Regional Planner — LIVE 2026-09-23** (rank 150), with an **Urban and Regional Planning** programme (CIP 04.03, 5 universities), plus 240 new `URP` and neighbouring courses listed. ⚠⚠ **Every workable row in the second queue is now published; the seven left all need the CIP-seed deploy** (`REVIEW_QUEUE.md` item 116, Ron's call) | ⚠ Ron reads `/careers/urban-planner`. It leads with the credential: **all five PAB-accredited Florida programmes are master's**, awarding 104 a year against 13 planning bachelor's (FAU only), so the undergraduate major is a choice. The page compares public administration, geography, sustainability, architecture and business, and says plainly that no entrant-major dataset was found. It cites ss. 163.3167/163.3191 (every local government must maintain a comprehensive plan and review it every 7 years). ⚠ Florida pay is $5,000–$9,000 below national at every percentile, a counter-case to the public-sector compression finding |
+| 4.36 ⚠️ | **CIP seed widened to 228 nodes** (item 116, **approved by Ron 2026-09-23**) — 19 groups added to `EXTRA_GROUPS`, `cip.json` regenerated, verified locally (`/api/v1/cip` 228 nodes). The same deploy carries the taxonomy key fix (item 1.5). ⚠ **Ron runs the deploy**: the server has no SSH key auth, so the script's password prompts need a person | ⚠ **Ron: `.\Deployment\deploy-update.ps1` from the repo root** (full deploy, not `-CodeOnly`, because `taxonomy.json` changed). **Then Claude:** (1) verify `/api/v1/cip` returns 228 nodes and `/browse` shows Art (closes 1.5); (2) research and write the seven unblocked paths — vet tech, pharmacist, truck driver, chef, cosmetologist, plumber, carpenter, each programme first; (3) widen existing programmes onto the new groups: `social-work` → 51.1503, `chemistry` → 26.02, `environmental-science` → 03.02/03.03/03.05/03.06, and decide whether the agriculture groups get their own programmes (horticulture at least) |
 
 ## Phase 5 — Guide-field changes still owed to the `Tools/` session
 
@@ -115,6 +116,25 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 5.1 ⚠️ | `Prerequisites` ceiling 500 → 1000 — written 2026-09-12, **deployed 2026-09-19** | ⚠ **The `Tools/` session pushes a guide with more than 500 characters of prerequisites** (`SCE4320` is the known case) and it is not refused 400 |
 | 5.2 | `offering_notes` on guides — asked for 2026-09-11, **not written** | The field validates, stores and renders, and `Tools/validate_drafts.py` mirrors the rule |
 | 5.3 | Field sizing — the 133 clock-hour rows, and the guide/course validators disagreeing on the same two fields | Both validators agree and no legitimate row is refused. Detail in `Deployment/PENDING_SERVER_CHANGES.md` |
+
+## Phase 6 — Request-driven career paths (specified by Ron 2026-09-23, not started)
+
+Ron, 2026-09-23: *"I will review all items live on the site and determine if it is a good time to move
+to request driven. The request driven will follow the same pattern as courses. The paths will be listed
+under the CIP code section with a 'Request' button. The queue of request will be available for view."*
+
+**The pattern to copy is guide requests** (`GuideRequestsController`, `Api/Services/GuideRequestService.cs`,
+`/request-guide`, public `/queue/guides`, admin `/admin/guide-requests`, `queue_mgr.py import-requests`).
+**Waiting on Ron's go-ahead (open question 4)** — nothing below is built.
+
+| # | Task | Done when |
+|---|---|---|
+| 6.1 | **What a reader can request.** Each CIP area page (`/careers/area/{code}`) lists the occupations that group leads to but that have no path yet, each with a **Request** button. ⚠ The occupation list needs a source — the NCES **CIP–SOC crosswalk** is the obvious one; it must be seeded (a deploy), the same as `cip.json` | A reader on any CIP area page sees the published paths and the unwritten occupations, and can request one |
+| 6.2 | **The request itself** — one click, the same anti-abuse as guide requests (rate limit, hashed IP, optional reason and email) | A request is stored against a SOC code (and the CIP page it came from) and counted |
+| 6.3 | **A public queue** at `/queue/careers`, most-requested first, as `/queue/guides` is | Anyone can see what has been asked for and how many times |
+| 6.4 | **Admin triage** at `/admin/career-requests` (rank, mark queued/declined) and a JSON endpoint the `Tools/` session reads | The `Tools/` session can pull waiting requests, and publishing a path closes its requests automatically |
+| 6.5 | **Tools side** — `career_paths.py requests` (list) and the queue rows it feeds; the session-start checklist reads it alongside the guide queue | A content session starts by reading the career-request queue |
+| 6.6 | **UX review** of the Request button, the queue page and the admin page (cognitive walkthrough + Nielsen heuristics) | Passed, fixes recorded here |
 
 ---
 
@@ -130,6 +150,11 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 3. **(asked 2026-09-19) Course pages do not say which paths or programmes name a course** (item 2.5).
    Both plans call for it, and it is the backlink that makes 24,415 course pages feed the career
    section. Build it now, or once more paths exist to point at?
+4. **(asked 2026-09-23) Build Phase 6 now, or after your review of the live paths?** Building it now
+   means it is ready to ship on the next deploy after this one. It needs one decision first: **which
+   occupations appear under each CIP code with a Request button.** The NCES CIP–SOC crosswalk would list
+   every occupation federally mapped to each programme. That is complete, but it is long and includes
+   some odd pairings. A curated list would be shorter and cleaner but would need maintaining.
 
 ## References
 

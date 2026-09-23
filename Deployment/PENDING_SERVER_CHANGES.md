@@ -8,6 +8,17 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⏳ READY TO DEPLOY 2026-09-23 — CIP seed at 228 nodes, and the taxonomy key fix
+
+Full deploy (**not** `-CodeOnly`: `taxonomy.json` changed). No migration.
+
+| What | Commit | Verify after the deploy |
+|---|---|---|
+| Taxonomy key collision fix — `ART`/`LAW` disciplines renamed, self-parent guard in `TaxonomySeed` (plan 1.5) | `502603a` | `/browse` shows an Art discipline; the tree total matches `/api/v1/courses/catalog` |
+| CIP seed 209 → 228 nodes, the 19 groups of `REVIEW_QUEUE` item 116 | this commit series | `GET /api/v1/cip` returns 228 nodes, including `12.04`, `12.05`, `49.02`, `01.83`, `01.06` |
+
+⚠ The server has no SSH key auth, so the script prompts for the password; Ron runs it.
+
 ### ✅ DEPLOYED 2026-09-20 — the connections, the CIP seed at 209 nodes, and everything behind them
 
 Migrations `AddProgramRelations` and `AddProgramConnections`, the programme↔career sections, the
