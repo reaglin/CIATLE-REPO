@@ -1,0 +1,163 @@
+{
+  "slug": "pharmacist",
+  "name": "Pharmacist",
+  "cipCode": "51.20",
+  "socCode": "29-1051",
+  "isPublished": true,
+  "sortOrder": 115,
+  "description": "⚠⚠ One route: the Doctor of Pharmacy, awarded in Florida's public system by UF, FAMU and USF (about 412 a year). ⚠⚠ Admission turns on two or more years of prerequisite science, not a bachelor's degree: UF's minimum is an associate degree, and more than half of Pharm.D. applications nationally come from people without a bachelor's. Median pay is $140,910 nationally and $135,970 in Florida. BLS expects retail demand to be limited as prescriptions move online and by mail.",
+  "credentialNote": "⚠⚠⚠ LICENSED IN FLORIDA (ch. 465, F.S.). Section 465.007 requires a degree from an accredited school or college of pharmacy (ACPE is the accreditor), a board-approved internship of no more than 2,080 hours, an age of 18 or over, and passing the board's examination, which is built on the National Association of Boards of Pharmacy's. BLS: \"must pass two exams to get a license.\" ⚠⚠ Only the Pharm.D. qualifies. A pharmaceutical sciences master's does not, and neither does the pharmacy technician credential, which is a separate registration.",
+  "cipCodes": [
+    {
+      "cipCode": "40.05",
+      "note": "⚠ Chemistry — general and organic chemistry make up the largest block of pre-pharmacy prerequisites on UF's critical-tracking list (CHM2045/2046, CHM2210/2211). AACP publishes no data on entrants' majors, so this records where the prerequisites sit, not a proven best major."
+    },
+    {
+      "cipCode": "26.01",
+      "note": "⚠ Biology — general biology and microbiology are on UF's critical-tracking list (BSC2010/2011, MCB3020), and BLS names anatomy and physiology. The same caution applies: AACP does not report majors."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "pharmacy",
+      "note": "The programme — the Pharm.D. at UF, FAMU and USF. Read its note on the pharmaceutical sciences master's, which is not a licence route."
+    },
+    {
+      "slug": "chemistry",
+      "note": "⚠ A major that contains most of the prerequisites. It is a route to applying, not a substitute for the Pharm.D.",
+      "isRoute": false
+    },
+    {
+      "slug": "biology",
+      "note": "⚠ The other major that contains most of the prerequisites.",
+      "isRoute": false
+    },
+    {
+      "slug": "pharmacy-technology",
+      "note": "⚠⚠ A different job. Technician work is useful experience for an application, but it earns no Pharm.D. credit. See the Medical Assistant and Pharmacy Technician path.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "CHM2045",
+      "sortOrder": 1,
+      "reason": "General Chemistry I — 16 carriers, including UF, USF, UNF, UWF and FAU. The first course on UF's pre-pharmacy critical-tracking list, and the start of the chemistry sequence the whole Pharm.D. builds on.",
+      "variantNote": "⚠⚠ Fifteen other institutions, including FAMU, Florida State, FIU and FGCU, number the same course CHM1045 (and CHM1046 for part II); the two families barely overlap. UF accepts state common-prerequisite equivalents for transfer students, but read your target school's list literally."
+    },
+    {
+      "courseId": "CHM2046",
+      "sortOrder": 2,
+      "reason": "General Chemistry II — 17 carriers. Equilibrium, kinetics, acids and bases: the chemistry behind how a drug dissolves, is absorbed and is stored.",
+      "variantNote": "⚠ CHM1046 at the CHM1045 institutions."
+    },
+    {
+      "courseId": "BSC2010",
+      "sortOrder": 3,
+      "reason": "General Biology I — 20 carriers, and on UF's pre-pharmacy list with its lab (BSC2010L).",
+      "variantNote": "⚠ BSC1010 at seven institutions, including FAMU and FAU. The subject is the same, but the numbers differ."
+    },
+    {
+      "courseId": "BSC2011",
+      "sortOrder": 4,
+      "reason": "General Biology II — 18 carriers, with its lab. Organisms and physiology: the ground that pharmacology and anatomy build on.",
+      "variantNote": "⚠ BSC1011 at nine institutions."
+    },
+    {
+      "courseId": "CHM2210",
+      "sortOrder": 5,
+      "reason": "Organic Chemistry I — 29 carriers under one number, the settled course in the sequence. ⚠⚠ Drug structure is organic chemistry. UF names it on its critical-tracking list."
+    },
+    {
+      "courseId": "CHM2211",
+      "sortOrder": 6,
+      "reason": "Organic Chemistry II — 29 carriers, with its lab (CHM2211L on UF's list). Reactions and synthesis, completing the chemistry that medicinal chemistry in the Pharm.D. assumes."
+    },
+    {
+      "courseId": "MCB3020",
+      "sortOrder": 7,
+      "reason": "Microbiology — eight carriers, mostly universities; UF names it. Pathogens and antimicrobials, the scientific ground for anti-infective therapy.",
+      "variantNote": "⚠⚠ The state and technical colleges teach microbiology as MCB2010 (16 carriers) or MCB2010C (12). UF's catalogue says equivalent courses under the State of Florida Common Course Prerequisites may be used by transfer students, so confirm which your target programme accepts."
+    },
+    {
+      "courseId": "BSC2085",
+      "sortOrder": 8,
+      "reason": "Human Anatomy and Physiology I — 20 carriers. BLS names anatomy and physiology among typical Pharm.D. prerequisites.",
+      "variantNote": "⚠ BSC2085C is the combined lecture-and-lab form at seven institutions and completes the course the same way. ⚠ The APK-numbered anatomy taught in kinesiology departments is not reliably accepted where BSC is named."
+    },
+    {
+      "courseId": "BSC2086",
+      "sortOrder": 9,
+      "reason": "Human Anatomy and Physiology II — 19 carriers: the cardiovascular, respiratory and renal systems, where most drug actions and dosing adjustments happen."
+    },
+    {
+      "courseId": "PHY2053",
+      "sortOrder": 10,
+      "reason": "General Physics I — 19 carriers. BLS names physics among typical Pharm.D. prerequisites. The algebra-based sequence is the usual pre-health choice.",
+      "variantNote": "⚠ PHY2053C is the combined form at ten institutions."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 11,
+      "reason": "Elementary Statistics — 39 carriers, and on UF's critical-tracking list. BLS names statistics among typical prerequisites. Reading a drug trial is statistics."
+    },
+    {
+      "courseId": "MAC2311",
+      "sortOrder": 12,
+      "reason": "Calculus I — 39 carriers. Some Pharm.D. programmes require calculus. ⚠ Check whether yours does, and whether it accepts business calculus (MAC2233) instead."
+    },
+    {
+      "courseId": "ECO2023",
+      "sortOrder": 13,
+      "reason": "Microeconomics — 39 carriers. Some programmes list an economics course among their prerequisites; confirm on your target programme's list. ⚠ Drug pricing, insurance formularies and pharmacy benefit management are daily economics in the profession."
+    },
+    {
+      "courseId": "PHA3003",
+      "sortOrder": 14,
+      "reason": "Pharmaceutical Science I — FAMU and Florida Polytechnic. ⚠ One of the few undergraduate PHA courses: a look at pharmaceutical science before committing to a four-year doctorate. The professional PHA courses are Pharm.D.-level and are taken after admission."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Pharmacists",
+      "url": "https://www.bls.gov/ooh/healthcare/pharmacists.htm",
+      "note": "$140,910 median (2025), 325,200 jobs, +5% for 2025–35, about 12,500 openings a year; doctoral or professional entry; 37% in pharmacies and drug retailers, 32% in hospitals. Retail demand \"expected to be limited\" as the industry consolidates and prescriptions move online or to mail. No mention of AI."
+    },
+    {
+      "label": "O*NET — Pharmacists (29-1051.00)",
+      "url": "https://www.onetonline.org/link/summary/29-1051.00",
+      "note": "Job Zone Five; 78% of respondents report a doctoral degree required; faster than average growth for 2024–34."
+    },
+    {
+      "label": "O*NET — Florida wages for 29-1051.00",
+      "url": "https://www.onetonline.org/link/localwages/29-1051.00?st=FL",
+      "note": "Florida median $135,970 against $140,910 national; Florida 10th percentile $56,000 against $99,290, which the source does not explain."
+    },
+    {
+      "label": "AACP — Profile of Pharmacy Students, Fall 2024",
+      "url": "https://www.aacp.org/node/3902",
+      "note": "36,833 applications for 2023-24; by applicants' previous college: 39% bachelor's, 31% three or more years with no degree, 8% associate, 12% no college. Pharm.D. degrees awarded fell to 11,386 in 2024 from 12,639; class-of-2024 attrition 19.7%. Florida application counts: UF 633, USF 349, FAMU 190."
+    },
+    {
+      "label": "UF Catalog — Pharmacy, preprofessional",
+      "url": "https://catalog.ufl.edu/UGRD/academic-programs/UGPHM/PHA_NOD/",
+      "note": "63–66 preprofessional credits; critical tracking includes CHM2045/2046, BSC2010/2011, STA2023, CHM2210/2211 and MCB3020; state common-prerequisite equivalents accepted for transfer students."
+    },
+    {
+      "label": "UF College of Pharmacy — Pharm.D. admission requirements",
+      "url": "https://admissions.pharmacy.ufl.edu/steps-to-apply/application-requirements/",
+      "note": "Minimum A.A. or A.S., or the preprofessional courses plus 36 hours of state general education; preferred minimum science GPA 2.5; prerequisites complete by the August before entry."
+    },
+    {
+      "label": "s. 465.007, Florida Statutes — licensure by examination",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/465.007",
+      "note": "Degree from an accredited school or college of pharmacy, a board-approved internship of no more than 2,080 hours, age 18 or over, and the board's examination."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 51.20",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "Pharm.D. (51.2001): UF 237, FAMU 100, USF 75 in 2023. Pharmaceutical sciences (51.2099): UF 301 master's, USF 26, FAMU 7."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; One degree leads here &mdash; the Doctor of Pharmacy &mdash; and three Florida public universities award it</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Pharmacists (29-1051)</th></tr></thead>\n<tbody>\n<tr><td>Entry-level education (BLS)</td><td>&#9888;&#9888; <strong>Doctoral or professional degree</strong> &mdash; the Pharm.D.</td></tr>\n<tr><td>Median, 2025</td><td>$140,910</td></tr>\n<tr><td>Jobs</td><td>325,200</td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>+5% (+17,100)</td></tr>\n<tr><td>Openings a year</td><td>about 12,500</td></tr>\n<tr><td>Where they work</td><td>pharmacies and drug retailers 37%, hospitals 32%, general merchandise retailers 6%</td></tr>\n</tbody></table>\n<table class=\"table table-sm\">\n<thead><tr><th>Florida public institution</th><th>Pharm.D. awarded, 2023 (IPEDS)</th></tr></thead>\n<tbody>\n<tr><td>University of Florida</td><td><strong>237</strong></td></tr>\n<tr><td>Florida A&amp;M University</td><td>100</td></tr>\n<tr><td>University of South Florida</td><td>75</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>About 412 Pharm.D. degrees a year from Florida&rsquo;s public universities.</strong> Florida also has private pharmacy schools &mdash; AACP&rsquo;s 2023&ndash;24 application table lists Nova Southeastern, Larkin and Palm Beach Atlantic &mdash; which this site does not list. &#9888; UF also awards about 300 master&rsquo;s a year in the pharmaceutical sciences (CIP 51.2099). <strong>Those are not a licence route</strong>: only the Pharm.D. leads to the pharmacist exams.</p>\n<p>&#9888; <strong>Pharmacy technician is a different job with a different route</strong> &mdash; a short Florida programme and board registration, not a doctorate. It is covered on the Medical Assistant and Pharmacy Technician page.</p>\n\n<h2>&#9888;&#9888;&#9888; You do not need a bachelor&rsquo;s degree &mdash; the prerequisites decide it</h2>\n<p>BLS: Pharm.D. programmes <em>&ldquo;typically require at least 2 years of prerequisite undergraduate courses,&rdquo;</em> and the programmes <em>&ldquo;usually take 4 years to finish, although some programs offer a 3-year option. Others admit high school graduates into a 6-year program.&rdquo;</em> The University of Florida&rsquo;s own minimum is an <strong>A.A. or A.S.</strong>, or the pre-professional courses plus 36 hours of state general education.</p>\n<p>AACP&rsquo;s national figures for applications to Pharm.D. programmes for fall 2024 show how mixed the backgrounds are:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Previous college of the applicant (2023&ndash;24)</th><th>Applications</th><th>Share</th></tr></thead>\n<tbody>\n<tr><td>Bachelor&rsquo;s degree</td><td>14,417</td><td>39%</td></tr>\n<tr><td>Three or more years, no degree</td><td>11,390</td><td>31%</td></tr>\n<tr><td>Associate degree</td><td>2,798</td><td>8%</td></tr>\n<tr><td>One to two years</td><td>2,478</td><td>7%</td></tr>\n<tr><td>No college (direct-entry programmes)</td><td>4,321</td><td>12%</td></tr>\n<tr><td>Master&rsquo;s or doctorate</td><td>1,429</td><td>4%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>More than half of applications come from people WITHOUT a bachelor&rsquo;s degree.</strong> AACP counts applications, not people, so one applicant can appear several times. &#9888; <strong>AACP does not publish entrants&rsquo; majors, and we found no source that does.</strong> So this page cannot say which major works best. What it can say: the courses decide admission, not the name of the major. Biology and chemistry majors cover most prerequisites inside the degree; anyone else can take them alongside.</p>\n\n<h2>&#9888;&#9888;&#9888; The prerequisite courses have competing numbers &mdash; read the target school&rsquo;s list literally</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Subject</th><th>Numbers in use in Florida</th></tr></thead>\n<tbody>\n<tr><td>General Chemistry I and II</td><td>&#9888;&#9888; <strong>CHM2045/2046</strong> (16&ndash;17 carriers, including UF, USF, UNF, UWF, FAU) against <strong>CHM1045/1046</strong> (15 carriers, including FAMU, FSU, FIU, FGCU) &mdash; the two families barely overlap</td></tr>\n<tr><td>General Biology I and II</td><td><strong>BSC2010/2011</strong> (18&ndash;20 carriers) against <strong>BSC1010/1011</strong> (7&ndash;9)</td></tr>\n<tr><td>Microbiology</td><td>&#9888; <strong>MCB3020</strong> at eight carriers, mostly universities (UF names it) against <strong>MCB2010</strong> (16) and <strong>MCB2010C</strong> (12) at the colleges</td></tr>\n<tr><td>Organic Chemistry I and II</td><td>&#10004; CHM2210/2211, 29 carriers each &mdash; settled</td></tr>\n<tr><td>Anatomy and Physiology</td><td>BSC2085/2086 (20 and 19); BSC2085C as the combined form at seven</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; UF&rsquo;s catalogue says <em>&ldquo;Equivalent critical-tracking courses as determined by the State of Florida Common Course Prerequisites may be used for transfer students.&rdquo;</em> So a state-college student is not stuck with UF&rsquo;s own numbers. <strong>But every school sets its own list:</strong> check the list of the programme you are aiming at, course by course, before you register.</p>\n\n<h2>&#9888;&#9888; BLS expects retail demand to be limited</h2>\n<p>BLS projects growth of 5%, but it also says: <em>&ldquo;demand for pharmacists is expected to be limited in retail settings as the industry consolidates and more people fill prescriptions online or by mail.&rdquo;</em> &#9888; Retail and drug stores employ the largest share of pharmacists (37%), and that is where BLS expects demand to be limited. Hospitals are close behind at 32%. BLS does not name AI in the pharmacist outlook.</p>\n<p>&#9888; <strong>So think past the counter when choosing a programme.</strong> If you want to work outside retail, in a hospital or clinic, ask each programme how many graduates go on to post-graduate residencies and where they place.</p>\n<p>&#9888; Nationally, AACP reports that the number of Pharm.D. degrees awarded <em>&ldquo;decreased to 11,386 in 2024 compared to 12,639 in 2023,&rdquo;</em> and that attrition for the class of 2024 rose to 19.7%, a class that started during the COVID-19 pandemic. <strong>Roughly one student in five did not finish with their class</strong>, so ask any programme for its own graduation and licensure-pass rates.</p>\n\n<h2>What Florida pays</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>&#9888; 10th</td><td>&#9888; <strong>$56,000</strong></td><td>$99,290</td><td>&minus;$43,290</td></tr>\n<tr><td>25th</td><td>$125,370</td><td>$129,380</td><td>&minus;$4,010</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$135,970</strong></td><td><strong>$140,910</strong></td><td>&minus;$4,940</td></tr>\n<tr><td>75th</td><td>$154,470</td><td>$161,840</td><td>&minus;$7,370</td></tr>\n<tr><td>90th</td><td>$166,310</td><td>$174,230</td><td>&minus;$7,920</td></tr>\n</tbody></table>\n<p>&#9888; <strong>The Florida 10th percentile is far below the national one</strong>, while the rest of the table is close. O*NET does not explain it. Annual figures include people working part-time or part of the year, which can pull the bottom of the range down. The median is the better guide to a full-time salary than the floor.</p>\n\n<h2>Florida licensure</h2>\n<p>Section 465.007, Florida Statutes, requires a degree from an accredited school or college of pharmacy (programmes are accredited by ACPE), <em>&ldquo;an internship program approved by the board&rdquo;</em> of no more than 2,080 hours, an age of at least 18, and passing the board&rsquo;s examination, built on the National Association of Boards of Pharmacy&rsquo;s. BLS: candidates <em>&ldquo;must pass two exams to get a license&rdquo;</em>.</p>\n"
+}

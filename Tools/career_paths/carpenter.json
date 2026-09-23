@@ -1,0 +1,171 @@
+{
+  "slug": "carpenter",
+  "name": "Carpenter",
+  "cipCode": "46.02",
+  "socCode": "47-2031",
+  "isPublished": true,
+  "sortOrder": 149,
+  "description": "⚠⚠⚠ Florida carpenters earn a median $49,870, $10,710 below the national figure, and the gap grows to $29,960 at the 90th percentile. The way up in Florida is to become the contractor. ⚠⚠ Florida licenses contractors, not carpenters: the contractor exam needs four years of experience including one as foreman, and college credit can replace up to three of them. Florida trains only about 150 carpenters a year in programmes; most learn on the job or through apprenticeship.",
+  "credentialNote": "⚠⚠ NO STATE LICENCE TO WORK AS A CARPENTER. An employee of a licensed contractor is exempt (s. 489.103(2), F.S.). Taking jobs yourself is contracting: the certified residential, building and general contractor licences cover it (s. 489.105), and the exam needs four years of experience, at least one as foreman. College credit can replace up to three of those years, and a bachelor's in building construction leaves one (s. 489.111). ⚠ Jobs under $2,500 are exempt unless part of a larger operation (s. 489.103(9)). ⚠⚠ Since 2021 local governments may not license job scopes outside the state categories, and the statute names cabinetry, flooring and painting among them (s. 489.117(4)). ⚠ BLS: all carpenters must pass the OSHA 10-hour safety course.",
+  "cipCodes": [
+    {
+      "cipCode": "46.04",
+      "note": "⚠ Building/Construction Finishing, Management and Inspection — where Florida files Building Construction Technology (46.0415, 97 certificates at 15 institutions), a ladder that teaches carpentry alongside the other building trades."
+    },
+    {
+      "cipCode": "52.20",
+      "note": "⚠⚠ Construction Management — the college route that shortens the way to a contractor's licence, since s. 489.111 lets college credit replace up to three of the four experience years."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "carpentry",
+      "note": "The programme. ⚠ Read its note: small, clock-hour, and assembled from job-titled courses that vary from college to college."
+    },
+    {
+      "slug": "construction-management",
+      "note": "⚠⚠ The step from carpenter to contractor. College credit in building construction counts toward the contractor exam's experience requirement."
+    },
+    {
+      "slug": "drafting-and-design-technology",
+      "note": "⚠ Construction drawings, the skill a lead carpenter needs.",
+      "isRoute": false
+    },
+    {
+      "slug": "electrical-technology",
+      "note": "⚠ The neighbouring building trade at the same technical colleges.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BCV0107",
+      "sortOrder": 1,
+      "reason": "Carpenter Helper — completion point A, 300 hours, at six technical colleges. Tools, safety, materials and measuring. ⚠ The first hireable exit."
+    },
+    {
+      "courseId": "BCV0122",
+      "sortOrder": 2,
+      "reason": "Carpenter Rough — 450 hours, eight carriers. Framing floors, walls and roofs: the structural half of the trade, and the half that falls under contractor licensing when you work for yourself."
+    },
+    {
+      "courseId": "BCV0111",
+      "sortOrder": 3,
+      "reason": "Trim and Finish Carpenter — completion point B, 300 hours, seven carriers. Doors, windows, trim, stairs and cabinets. ⚠ Since 2021, Florida bars local governments from licensing cabinetry and similar finish trades that have no state contractor category (s. 489.117(4)).",
+      "variantNote": "⚠ BCV0128 Carpenter is also labelled completion point B (150 hours) at six colleges, so ask which version your college teaches."
+    },
+    {
+      "courseId": "BCV0128",
+      "sortOrder": 4,
+      "reason": "Carpenter — 150 hours, six carriers, the course named after the occupation and the end of the ladder at the colleges that carry it."
+    },
+    {
+      "courseId": "BCV0123",
+      "sortOrder": 5,
+      "reason": "Foundations and Forms — Miami Dade and Palm Beach State, 150 hours. Trenching, excavation, footings and concrete forms. The statewide record says it prepares students for NCCER certification.",
+      "variantNote": "⚠ These two colleges run a separate 150-hour sequence that starts with BCV0112 Introduction to Carpentry, which the statewide file classifies not automatically transferable."
+    },
+    {
+      "courseId": "BCV0131",
+      "sortOrder": 6,
+      "reason": "Residential Carpentry I — Indian River and Santa Fe: safety, tools, materials, fasteners and construction math.",
+      "variantNote": "⚠ BCV0132 Residential Carpentry II follows it: windows, doors and stairs."
+    },
+    {
+      "courseId": "BCV0400",
+      "sortOrder": 7,
+      "reason": "Building Construction Helper — completion point A, 450 hours, seven carriers. The Building Construction Technology ladder covers carpentry alongside the other building trades.",
+      "variantNote": "⚠ BCV0401 and BCV0402 Building Construction Technician 1 and 2 (300 hours each) are its completion point B."
+    },
+    {
+      "courseId": "BCV0243",
+      "sortOrder": 8,
+      "reason": "Cabinetmaker — completion point D, 450 hours, at three technical colleges. ⚠ A specialism a finish carpenter can move into, and one no Florida local government may license (s. 489.117(4))."
+    },
+    {
+      "courseId": "BCN1272",
+      "sortOrder": 9,
+      "reason": "Blueprint Reading — eight carriers. ⚠⚠ Reading plans is a lead carpenter's skill. The course is also college credit, which counts toward the contractor exam's experience requirement (s. 489.111).",
+      "variantNote": "⚠ Hillsborough, Santa Fe, Seminole State and Tallahassee State teach BCN2272 Blueprint Reading."
+    },
+    {
+      "courseId": "BCN1001",
+      "sortOrder": 10,
+      "reason": "Building Construction — seven carriers. The survey of how buildings go together, and the usual first college-credit course in building construction."
+    },
+    {
+      "courseId": "BCN1210",
+      "sortOrder": 11,
+      "reason": "Building Construction Materials — Daytona State, Hillsborough, Santa Fe and UF. Wood, concrete, masonry and steel: what each is used for and why.",
+      "variantNote": "⚠ Broward, FGCU, FSCJ and UNF teach BCN1210C Construction Materials with an integrated lab; FAMU and others teach BCN2230 Materials and Methods."
+    },
+    {
+      "courseId": "BCN2280",
+      "sortOrder": 12,
+      "reason": "Surveying and Construction Layout — FIU, FSCJ and State College of Florida. ⚠ Layout decides whether everything framed after it is square and where the plans say."
+    },
+    {
+      "courseId": "BCN3730",
+      "sortOrder": 13,
+      "reason": "Construction Safety — FIU, St. Petersburg, Seminole State and UF. ⚠ BLS says every carpenter must pass the OSHA 10-hour course, and falls are among the injuries it names. A foreman is responsible for a crew's safety."
+    },
+    {
+      "courseId": "BCN4612C",
+      "sortOrder": 14,
+      "reason": "Advanced Construction Estimating — FGCU, St. Petersburg, Seminole State and UF. ⚠⚠ The skill a contractor needs and a carpenter usually lacks: pricing a job so that it makes money."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Carpenters",
+      "url": "https://www.bls.gov/ooh/construction-and-extraction/carpenters.htm",
+      "note": "$60,580 median (2025), 889,700 jobs, +4% for 2025–35, about 62,800 openings a year; entry with a high school diploma and apprenticeship; 25% self-employed, and the pay figures exclude them. Modular and prefabricated components reduce the need for carpenters; OSHA 10-hour course required."
+    },
+    {
+      "label": "O*NET — Carpenters (47-2031.00)",
+      "url": "https://www.onetonline.org/link/summary/47-2031.00",
+      "note": "Job Zone One to Two; 52% of respondents report a high school diploma and 21% a postsecondary certificate; faster than average growth (5% to 6%) for 2024–34 and about 74,100 openings a year."
+    },
+    {
+      "label": "O*NET — Florida wages for 47-2031.00",
+      "url": "https://www.onetonline.org/link/localwages/47-2031.00?st=FL",
+      "note": "Florida median $49,870 against $60,580 national; the gap grows from −$3,500 at the 10th percentile to −$29,960 at the 90th ($69,950 against $99,910)."
+    },
+    {
+      "label": "s. 489.111, Florida Statutes — contractor exam eligibility",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.111",
+      "note": "Four years of experience with at least one as foreman, or combinations replacing up to three years with college credits, or a bachelor's in engineering, architecture or building construction plus one year."
+    },
+    {
+      "label": "s. 489.105, Florida Statutes — contractor definitions",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.105",
+      "note": "Defines contractor, and general, building (up to three stories) and residential (up to two habitable stories) contractors."
+    },
+    {
+      "label": "s. 489.103, Florida Statutes — exemptions",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.103",
+      "note": "Employees working within a licensed contractor's scope are exempt; jobs under an aggregate $2,500 are exempt unless part of a larger operation or advertised as contracting."
+    },
+    {
+      "label": "s. 489.117, Florida Statutes — local licensing",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.117",
+      "note": "Local governments may not require a licence for a job scope that does not substantially correspond to a state contractor category; painting, flooring, cabinetry and handyman services are among those listed."
+    },
+    {
+      "label": "CPALMS-CTE — Florida carpentry programmes (CIP 46.02)",
+      "url": "https://ctepreview.cpalms.org/",
+      "note": "Carpentry clock-hour career certificate, a secondary Carpentry programme, and Carpentry - APPR, a registered apprenticeship."
+    },
+    {
+      "label": "SCNS statewide course file — BCV and BCN",
+      "url": "https://flscns.fldoe.org/",
+      "note": "BCV0107 Carpenter Helper OCP A (300 hours), BCV0111 Trim and Finish Carpenter OCP B (300), BCV0128 Carpenter OCP B (150), BCV0122 Carpenter Rough (450), BCV0400–0402 Building Construction Helper and Technician; carrier counts for every course named."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 46.0201 and 46.0415",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "Carpentry 57 certificates at 15 institutions; Building Construction Technology 97 at 15. No degrees."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; Florida pays carpenters well below the national figure, and furthest below at the top</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$36,910</td><td>$40,410</td><td>&minus;$3,500</td></tr>\n<tr><td>25th</td><td>$44,540</td><td>$48,510</td><td>&minus;$3,970</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$49,870</strong></td><td><strong>$60,580</strong></td><td><strong>&minus;$10,710</strong></td></tr>\n<tr><td>75th</td><td>$59,880</td><td>$76,830</td><td>&minus;$16,950</td></tr>\n<tr><td>&#9888;&#9888; 90th</td><td>&#9888; <strong>$69,950</strong></td><td>$99,910</td><td><strong>&minus;$29,960</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The Florida gap widens as pay rises:</strong> $3,500 below the national figure at the 10th percentile, <strong>$29,960 below at the 90th</strong>. A carpenter who becomes very good at the trade in Florida earns far less, relative to the country, than one who is just starting. So the way up in Florida is less about getting better with tools and more about <strong>becoming the contractor</strong>, which is the route this page lays out.</p>\n<p>&#9888;&#9888; <strong>Read the caveat too: 25% of carpenters are self-employed</strong> (BLS), and BLS states that its pay figures do <em>not</em> include self-employed workers. The table describes employees only.</p>\n\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Carpenters (47-2031)</th></tr></thead>\n<tbody>\n<tr><td>Entry-level education (BLS)</td><td>high school diploma</td></tr>\n<tr><td>Training (BLS)</td><td>&#9888; <strong>apprenticeship</strong></td></tr>\n<tr><td>Jobs, 2025</td><td>889,700</td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>+4%</td></tr>\n<tr><td>Openings a year</td><td>about 62,800</td></tr>\n<tr><td>Self-employed</td><td>25%</td></tr>\n</tbody></table>\n<p>&#9888; <strong>BLS names the technology pressure, and it is prefabrication, not AI:</strong> <em>&ldquo;the popularity of modular and prefabricated components for homes and businesses reduces the need for carpenters to build new structures. Roofs, insulation, walls, and other components, as well as entire buildings, may be manufactured in a separate facility and then assembled onsite.&rdquo;</em> BLS expects new-home construction to create some jobs at the same time.</p>\n\n<h2>&#9888;&#9888;&#9888; Florida licenses the CONTRACTOR, not the carpenter &mdash; and it has stopped local licensing of finish trades</h2>\n<ul>\n<li><strong>Working as a carpenter needs no state licence.</strong> An employee of a licensed contractor is exempt while <em>&ldquo;acting within the scope of the license held by that certificateholder or registrant and with the knowledge and permission of the licenseholder&rdquo;</em> (s. 489.103(2), F.S.).</li>\n<li><strong>Taking the job yourself is contracting.</strong> Under s. 489.105(3) a contractor is anyone who, for compensation, undertakes to <em>&ldquo;construct, repair, alter, remodel, add to, demolish, subtract from, or improve any building or structure.&rdquo;</em> The licences that cover carpentry are <strong>residential contractor</strong> (homes up to two habitable stories), <strong>building contractor</strong> (up to three stories) and <strong>general contractor</strong> (unlimited).</li>\n<li>&#9888; <strong>Small jobs are exempt</strong> below an aggregate contract price of <strong>$2,500</strong>, but not when the work is part of a larger operation or the person advertises as a contractor (s. 489.103(9)).</li>\n<li>&#9888;&#9888; <strong>Since 2021, a Florida county or city may not require a licence for a job scope that does not correspond to a state contractor category</strong> (s. 489.117(4)(a)). The statute lists painting, flooring, cabinetry and handyman services among them, so finish carpentry and cabinet work sit outside contractor licensing.</li>\n</ul>\n\n<h2>&#9888;&#9888;&#9888; What a programme or a degree buys: time off the road to the contractor&rsquo;s licence</h2>\n<p>The Florida exam for a certified residential, building or general contractor (s. 489.111) needs <strong>four years of experience, at least one of them as a foreman</strong>. &#9888;&#9888; <strong>College credit can replace up to three of the non-foreman years:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Route to sit the contractor exam</th><th>Experience</th><th>College</th></tr></thead>\n<tbody>\n<tr><td>Experience only</td><td>4 years, at least 1 as foreman</td><td>&mdash;</td></tr>\n<tr><td>Mixed</td><td>2 years skilled worker + 1 year foreman</td><td>1 year of college credits</td></tr>\n<tr><td>Mixed</td><td>1 year skilled worker + 1 year foreman</td><td>2 years of credits</td></tr>\n<tr><td>Mixed</td><td>1 year foreman</td><td>3 years of credits</td></tr>\n<tr><td>&#9888;&#9888; <strong>Degree</strong></td><td><strong>1 year</strong></td><td>a bachelor&rsquo;s in engineering, architecture or building construction</td></tr>\n</tbody></table>\n<p>&#9888; <strong>That is why the construction courses below mix clock-hour carpentry and college-credit building construction.</strong> The carpentry certificate gets you hired and building. College credit in building construction is what shortens the route to working for yourself legally. &#9888; The statute counts <em>&ldquo;credits for any accredited college-level courses,&rdquo;</em> so check with the Construction Industry Licensing Board how a clock-hour certificate is treated before counting on it.</p>\n\n<h2>&#9888;&#9888; Where Florida trains carpenters &mdash; very few, and at technical colleges</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Programme (CIP)</th><th>Credentials a year</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>Carpentry (46.0201)</td><td><strong>57</strong> at 15 institutions, all certificates</td><td>Atlantic Technical 12, Erwin Technical 12, Fort Myers Technical 10, Pensacola State 6, Suncoast Technical 5, Florida Panhandle Technical 5</td></tr>\n<tr><td>Building Construction Technology (46.0415)</td><td><strong>97</strong> at 15, all certificates</td><td>Manatee Technical 21, Pinellas Technical 12, Lively Technical 9, Okaloosa Technical 9</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>About 150 Florida credentials a year feed an occupation with about 62,800 openings a year nationally</strong>, so most carpenters are trained on the job or through apprenticeship, as BLS describes. Florida also runs a <strong>registered apprenticeship</strong> in carpentry (Carpentry - APPR), which combines paid work with technical training. For many people that is the better route, because they are paid while they learn.</p>\n\n<h2>&#9888; The course ladder, and why it looks different from college to college</h2>\n<p>Florida&rsquo;s clock-hour carpentry courses are titled after jobs, the pattern it uses for occupational completion points, but colleges carry different versions:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Course</th><th>State title</th><th>Carriers</th></tr></thead>\n<tbody>\n<tr><td>BCV0107</td><td>Carpenter Helper, OCP A (300 hours)</td><td>6</td></tr>\n<tr><td>BCV0122</td><td>Carpenter Rough (450 hours)</td><td>8</td></tr>\n<tr><td>BCV0111</td><td>Trim and Finish Carpenter, OCP B (300 hours)</td><td>7</td></tr>\n<tr><td>BCV0128</td><td>Carpenter, OCP B (150 hours)</td><td>6</td></tr>\n<tr><td>BCV0400&ndash;0402</td><td>Building Construction Helper (OCP A, 450) and Technician 1 and 2 (OCP B, 300 each)</td><td>7</td></tr>\n</tbody></table>\n<p>&#9888; <strong>Two different courses both carry the label OCP B</strong>, and Miami Dade and Palm Beach State teach a separate 150-hour sequence (Introduction to Carpentry, Foundations and Forms). The numbering shows more than one version of the programme is in use. <strong>Ask the college which courses make up its certificate, how many hours in total, and whether it awards a certificate at each completion point.</strong> &#9888; BCV0112 Introduction to Carpentry is classified <em>not automatically transferable</em> in the statewide file.</p>\n<p>&#9888; BLS: <em>&ldquo;All carpenters must pass the Occupational Safety and Health Administration (OSHA) 10-hour safety course.&rdquo;</em> Ask whether the programme includes it.</p>\n"
+}

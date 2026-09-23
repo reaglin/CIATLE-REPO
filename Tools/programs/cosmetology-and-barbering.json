@@ -1,0 +1,26 @@
+{
+  "slug": "cosmetology-and-barbering",
+  "name": "Cosmetology, Barbering, Nails and Skin Care",
+  "isPublished": true,
+  "sortOrder": 650,
+  "description": "The licensed personal-appearance trades: cosmetology, barbering, nail care and skin care, taught in Florida as clock-hour certificates whose length is set by statute. About 3,146 certificates a year at 44 public institutions, most of them technical colleges. There is no degree in this family.",
+  "degreesNote": "⚠⚠ Every award here is a certificate. Cosmetology (12.0401) is 1,212 a year at 42 institutions, led by Daytona State 86, Sheridan Technical 74 and Palm Beach State 64. Facial treatment and skin care (12.0408) is 1,256 short certificates at 24, and nail technician (12.0410) 456 at 20. ⚠⚠ Barbering (12.0402) is only 208 at 17, although an employed Florida barber's median wage ($49,410) is well above an employed hairdresser's ($29,530). ⚠⚠⚠ The hours are set in law: 1,200 for a cosmetologist licence (s. 477.019, F.S.), 900 for a barber licence (s. 476.114), and 180, 220 or 400 for the nail, facial or combined specialty registrations (s. 477.0201). The state's barbering programme runs 1,200 hours, 300 more than the statute requires, and its nail and facial courses also exceed the minimums. Ask each school which licence each completion point prepares you for, and when you can sit the exam. ⚠ Barbering has its own board and licence under chapter 476; a cosmetology licence does not make you a barber.",
+  "cips": [
+    {
+      "cipCode": "12.04",
+      "note": "Cosmetology and Related Personal Grooming Services — 3,146 Florida public certificates a year at 44 institutions: cosmetology (12.0401) 1,212 at 42, facial/skin care (12.0408) 1,256 at 24, nail technician (12.0410) 456 at 20, barbering (12.0402) 208 at 17, esthetician (12.0409) 14 at 3."
+    }
+  ],
+  "related": [
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠⚠ BLS reports 80% of barbers and 48% of hairdressers are self-employed, so most people in this trade run a small business: renting a chair or booth, pricing, booking and taxes. The licence teaches the craft; the entrepreneurship courses teach the business.",
+      "isRoute": false
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠ For the salon owner or manager. Most of the trade is self-employed, and the step from working a chair to running a shop is a business step.",
+      "isRoute": false
+    }
+  ]
+}

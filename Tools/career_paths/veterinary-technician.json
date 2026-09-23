@@ -1,0 +1,158 @@
+{
+  "slug": "veterinary-technician",
+  "name": "Veterinary Technician",
+  "cipCode": "01.83",
+  "socCode": "29-2056",
+  "additionalSocCodes": [
+    "31-9096"
+  ],
+  "isPublished": true,
+  "sortOrder": 105,
+  "description": "⚠⚠⚠ Two jobs share this field in Florida, and most of the state's certificates lead to the lower-paid one. Veterinary technicians need an associate degree from an AVMA-accredited programme (Florida median $46,380); veterinary assistants train on the job or in a short clock-hour certificate ($37,830). ⚠⚠ Florida does not license veterinary technicians, and bills to change that died in 2025 and 2026, so the accredited programme and the voluntary CVT are the credentials that count.",
+  "credentialNote": "⚠⚠⚠ FLORIDA DOES NOT LICENSE VETERINARY TECHNICIANS. Chapter 474, F.S. defines no technician; everyone but the veterinarian works as unlicensed personnel under the veterinarian's responsible supervision (s. 474.202). Bills to create licensure or registration died in 2025 (SB 898) and 2026 (SB 796, HB 805). ⚠⚠ What exists is the voluntary Florida Certified Veterinary Technician (CVT): graduation from an AVMA CVTEA-accredited programme plus the national exam (VTNE), renewed every two years with 15 continuing-education credits. ⚠ Because the exam and the CVT both require an accredited programme, a veterinary ASSISTING certificate does not lead to either. Check the programme on the AVMA's accredited list before enrolling.",
+  "cipCodes": [
+    {
+      "cipCode": "01.09",
+      "note": "⚠ Animal Sciences — the university animal science degree (UF 155 a year, Santa Fe 23) covers livestock and companion-animal biology, and is a route into research-animal and large-animal work, though not into the technician credential itself."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "veterinary-technology",
+      "note": "The programme. ⚠⚠ Read its note first: most Florida awards under this code are short veterinary ASSISTING certificates, not the technician degree."
+    },
+    {
+      "slug": "biology",
+      "note": "⚠ The route to veterinary SCHOOL, which this is not. A science degree's prerequisites lead to the DVM; technology courses do not.",
+      "isRoute": false
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠ The human-medicine counterpart of veterinary laboratory work, and licensed in Florida.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "ATE1001",
+      "sortOrder": 1,
+      "reason": "Introduction to Veterinary Technology — Eastern Florida State, FAMU and Hillsborough. The profession, its scope under supervision, and the path to the national exam. ⚠ Ask here whether the programme is AVMA CVTEA accredited, because the exam and the Florida CVT both require it."
+    },
+    {
+      "courseId": "ATE1741",
+      "sortOrder": 2,
+      "reason": "Veterinary Medical Terminology — FAMU, Hillsborough and St. Petersburg. The vocabulary of every chart, prescription and lab report."
+    },
+    {
+      "courseId": "ATE1110",
+      "sortOrder": 3,
+      "reason": "Animal Anatomy — five carriers, with its lab ATE1110L. The body systems of the species a Florida practice sees, from cats and dogs to horses and cattle.",
+      "variantNote": "⚠ Take the lab ATE1110L alongside; the two are corequisites at the carriers."
+    },
+    {
+      "courseId": "ATE1211",
+      "sortOrder": 4,
+      "reason": "Animal Physiology — Eastern Florida State, Hillsborough, Miami Dade and St. Petersburg. How the systems work, which is what anaesthesia monitoring and emergency care depend on."
+    },
+    {
+      "courseId": "ATE2638",
+      "sortOrder": 5,
+      "reason": "Veterinary Clinical Pathology — five carriers, with lab ATE2638L. Blood work, urinalysis, parasitology and cytology, the laboratory half of the job.",
+      "variantNote": "⚠ ATE2639/ATE2639L Animal Laboratory Procedures 2 continues the sequence at four carriers."
+    },
+    {
+      "courseId": "ATE2634",
+      "sortOrder": 6,
+      "reason": "Animal Pharmacology — Hillsborough, Pensacola State and St. Petersburg. ⚠⚠ Dosage calculation and drug handling. A technician prepares and gives medication a veterinarian has prescribed, and an error here is the most dangerous kind.",
+      "variantNote": "⚠ The bachelor's level has ATE3615 Veterinary Pharmacology at FAMU and St. Petersburg."
+    },
+    {
+      "courseId": "ATE2631",
+      "sortOrder": 7,
+      "reason": "Small Animal Nursing I — Hillsborough, Miami Dade and St. Petersburg. Restraint, patient assessment, fluid therapy and nursing care. ⚠ Nearly nine in ten technicians work in veterinary services, and most of that is companion-animal practice.",
+      "variantNote": "⚠ ATE2612 Small Animal Nursing 2 follows at Miami Dade and St. Petersburg."
+    },
+    {
+      "courseId": "ATE1652L",
+      "sortOrder": 8,
+      "reason": "Introduction to Anesthesia, Surgery and Dentistry — Eastern Florida State and Hillsborough. ⚠⚠ Anaesthesia monitoring and surgical assisting are the skills that most separate a credentialed technician from an assistant.",
+      "variantNote": "⚠ FAMU and St. Petersburg teach ATE3658 Anesthesia and Surgical Nursing at the bachelor's level."
+    },
+    {
+      "courseId": "ATE2710",
+      "sortOrder": 9,
+      "reason": "Animal Emergency Medicine — five carriers. Triage, shock, trauma and critical care. ⚠ Emergency and specialty hospitals are where technician work is most intensive; ask employers there how they pay credentialed technicians."
+    },
+    {
+      "courseId": "ATE1636",
+      "sortOrder": 10,
+      "reason": "Large Animal Clinical and Nursing Skills — Eastern Florida State, Pensacola State and St. Petersburg. Horses and livestock. ⚠ Florida has large equine and cattle industries, and large-animal practice is part of the technician's training.",
+      "variantNote": "⚠ ATE2661 Large Animal Diseases continues it at four carriers."
+    },
+    {
+      "courseId": "ATE1943",
+      "sortOrder": 11,
+      "reason": "Veterinary Work Practicum I — Eastern Florida State, Hillsborough and St. Petersburg, the first of four. ⚠⚠ Clinical hours in a working veterinary hospital. Ask how placements are arranged before enrolling, because the programme cannot be finished without them.",
+      "variantNote": "⚠ ATE1944, ATE2945 and ATE2946 are practicums II to IV at the same three colleges."
+    },
+    {
+      "courseId": "ATE4317",
+      "sortOrder": 12,
+      "reason": "Introduction to Veterinary Hospital Management — Eastern Florida State, FAMU and St. Petersburg. ⚠ The bachelor's-level route to practice manager, with ATE3344 Supervision and ATE3316 Finance for the Veterinary Manager."
+    },
+    {
+      "courseId": "ATE0006",
+      "sortOrder": 13,
+      "reason": "Veterinary Assistants and Laboratory Animal Caretakers 1 — 450 clock hours, a completion point at seven institutions, most of them technical colleges. ⚠⚠ This is the ASSISTING route. It leads to veterinary assistant work (Florida median $37,830), not to veterinary technician, and it does not qualify anyone for the national technician exam.",
+      "variantNote": "⚠ ATE0072 Veterinary Assistant (150 hours) is the next completion point, at the same seven institutions."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Veterinary Technologists and Technicians",
+      "url": "https://www.bls.gov/ooh/healthcare/veterinary-technologists-and-technicians.htm",
+      "note": "$47,380 median (2025), 131,400 jobs, +9% for 2025–35, about 13,400 openings a year. Entry: associate degree (technicians), usually a bachelor's (technologists); most states require registration, licensure or certification; 89% in veterinary services. No mention of AI or automation."
+    },
+    {
+      "label": "O*NET — Veterinary Assistants and Laboratory Animal Caretakers (31-9096.00)",
+      "url": "https://www.onetonline.org/link/summary/31-9096.00",
+      "note": "78% of respondents report a high school diploma; much faster than average growth for 2024–34 and about 22,200 openings a year."
+    },
+    {
+      "label": "O*NET — Florida wages for 29-2056 and 31-9096",
+      "url": "https://www.onetonline.org/link/localwages/29-2056.00?st=FL",
+      "note": "Veterinary technicians: Florida median $46,380 against $47,380 national, $8,050 below at the 75th percentile. Veterinary assistants: Florida median $37,830."
+    },
+    {
+      "label": "s. 474.202, Florida Statutes — definitions",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/474.202",
+      "note": "Defines responsible and immediate supervision of unlicensed personnel by a licensed veterinarian. It neither defines nor licenses veterinary technicians."
+    },
+    {
+      "label": "Florida Senate — SB 898 (2025) and SB 796 (2026), practice of veterinary medicine",
+      "url": "https://www.flsenate.gov/Session/Bill/2026/796",
+      "note": "Bills to require licensure or registration of veterinary technicians. SB 898 died in committee on 16 June 2025; SB 796 died on the calendar and its House companion HB 805 died in Rules on 13 March 2026."
+    },
+    {
+      "label": "Florida Veterinary Technician Association — certification",
+      "url": "https://thefvta.net/online-certification-application/",
+      "note": "The voluntary Florida CVT: graduation from an AVMA-accredited programme and the national examination; renewed every two years with 15 RACE-approved CE credits."
+    },
+    {
+      "label": "AVMA — veterinary technology programmes accredited by the CVTEA",
+      "url": "https://www.avma.org/education/center-for-veterinary-accreditation/veterinary-technology-programs-accredited-avma-cvtea",
+      "note": "The authoritative list of accredited programmes; check a programme's current status here before enrolling."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 01.8301",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "About 293 a year: associate degrees at St. Petersburg 50, Hillsborough 16, Miami Dade 12, Pensacola State 12, Eastern Florida State 8; 17 bachelor's at St. Petersburg; about 178 certificates of under a year, mostly at technical colleges."
+    },
+    {
+      "label": "SCNS statewide course file — ATE",
+      "url": "https://flscns.fldoe.org/",
+      "note": "ATE0006 (450 hours) and ATE0072 (150 hours) are occupational completion points of the veterinary assisting programme; every active undergraduate ATE course but one independent-study number is guaranteed transfer."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; Two jobs share this field, and most Florida certificates lead to the lower-paid one</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Entry</th><th>Florida median</th><th>Openings a year</th><th>Outlook</th></tr></thead>\n<tbody>\n<tr><td><strong>Veterinary technician</strong> (technologist with a bachelor&rsquo;s)</td><td>29-2056</td><td>&#9888; <strong>associate degree</strong> (BLS); technologists usually a bachelor&rsquo;s</td><td><strong>$46,380</strong></td><td>about 13,400</td><td>&#9888; <strong>+9%</strong>, 2025&ndash;35 (BLS)</td></tr>\n<tr><td>Veterinary assistant and laboratory animal caretaker</td><td>31-9096</td><td>high school diploma, trained on the job (78% of O*NET respondents)</td><td>$37,830</td><td>about 22,200 (O*NET)</td><td>much faster than average, 2024&ndash;34 (O*NET)</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Florida files both under the same classification (CIP 01.83), and the IPEDS numbers hide which one a student is training for.</strong> Of about 293 veterinary credentials Florida&rsquo;s public institutions award in a year, roughly <strong>178 are certificates of under a year</strong>, most from technical colleges &mdash; Aparicio-Levy 90, Orange Technical 27, Lake Technical 19, Lorenzo Walker 16, Cape Coral 15 &mdash; and the clock-hour programme Florida&rsquo;s technical colleges run under this code is <strong>Veterinary Assisting</strong> (the <code>ATE0006</code>/<code>ATE0072</code> ladder, 600 hours). Only about <strong>98 are associate degrees</strong>, the credential BLS gives as the way into veterinary technician work, plus <strong>17 bachelor&rsquo;s at St. Petersburg College</strong>.</p>\n<p>&#9888;&#9888; <strong>Know which one you are enrolling in.</strong> The assisting certificate is a real job and a quick start, but it does not make you a veterinary technician, and it does not qualify you for the national technician exam, which requires graduation from an AVMA-accredited programme.</p>\n\n<h2>&#9888;&#9888;&#9888; Florida does not license veterinary technicians</h2>\n<p>Florida&rsquo;s veterinary practice act, chapter 474, defines no veterinary technician and licenses none. Anyone who is not a veterinarian works as <em>&ldquo;unlicensed personnel&rdquo;</em> under a veterinarian&rsquo;s <em>&ldquo;responsible supervision&rdquo;</em> &mdash; <em>&ldquo;the control, direction, and regulation by a licensed doctor of veterinary medicine of the duties involving veterinary services&rdquo;</em> (s. 474.202, F.S.). BLS notes that in most states technicians must be <em>&ldquo;registered, licensed, or certified&rdquo;</em>; Florida is not one of them.</p>\n<p>&#9888;&#9888; <strong>The law may change.</strong> Bills to create state registration or licensure for veterinary technicians were filed in <strong>2025 (SB 898, which died in committee)</strong> and in <strong>2026 (SB 796 and HB 805, both of which died in March 2026)</strong>. Neither passed, so nothing changed, but the subject keeps coming back. If it passes, graduates of accredited programmes are the ones best placed.</p>\n<p><strong>What Florida has instead is a voluntary credential.</strong> The Florida Veterinary Technician Association certifies a <strong>Certified Veterinary Technician (CVT)</strong> who is a <em>&ldquo;graduate of an American Veterinary Medical Association (AVMA) accredited program&rdquo;</em> and has passed the national examination (the VTNE). It renews every two years with <strong>15 approved continuing-education credits</strong>. &#9888; Voluntary means an employer may still ask for it, and it is the credential that travels if you move to a state that does license.</p>\n\n<h2>&#9888;&#9888; What to check before you enrol</h2>\n<ol>\n<li><strong>Is the programme accredited by the AVMA&rsquo;s Committee on Veterinary Technician Education and Activities (CVTEA)?</strong> That is what the national exam and the Florida CVT both require. The AVMA publishes the current list of accredited programmes; check it rather than relying on a college&rsquo;s description.</li>\n<li><strong>Is it the technology programme or the assisting certificate?</strong> The course numbers tell you: the assisting ladder is <code>ATE0006</code>, <code>ATE0070</code> and <code>ATE0072</code> (measured in clock hours); the technician programme is the <code>ATE1xxx</code>/<code>ATE2xxx</code> college-credit sequence.</li>\n<li><strong>Where are the clinical hours?</strong> The technician programme runs practicums in working veterinary hospitals (<code>ATE1943</code>, <code>ATE1944</code>, <code>ATE2945</code>, <code>ATE2946</code> at Eastern Florida State, Hillsborough and St. Petersburg). Ask how placements are arranged.</li>\n</ol>\n\n<h2>What Florida pays</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Vet technician FL</th><th>US</th><th>Vet assistant FL</th><th>US</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$36,600</td><td>$35,710</td><td>$31,090</td><td>$30,120</td></tr>\n<tr><td>25th</td><td>$39,140</td><td>$38,910</td><td>$36,160</td><td>$35,660</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$46,380</strong></td><td><strong>$47,380</strong></td><td><strong>$37,830</strong></td><td>$38,150</td></tr>\n<tr><td>&#9888; 75th</td><td>&#9888; <strong>$49,600</strong></td><td>$57,650</td><td>$44,930</td><td>$45,710</td></tr>\n<tr><td>90th</td><td>$57,870</td><td>$63,180</td><td>$47,270</td><td>$49,150</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>In Florida the technician&rsquo;s median is only $8,550 above the assistant&rsquo;s</strong>, and the technician&rsquo;s upper range is well below the national one: <strong>$8,050 short at the 75th percentile</strong>. That may be what an unregulated field looks like, where the two jobs are not legally separated. Florida&rsquo;s law does not say, so treat it as a question for the employers you are considering: ask what they pay a credentialed technician compared with an assistant.</p>\n<p>&#9888; <strong>89% of veterinary technicians work in veterinary services</strong> (BLS). Growth, in BLS&rsquo;s words, comes from households with pets and spending on pets, and from <em>&ldquo;an aging pet population with more complex procedures.&rdquo;</em> BLS does not mention AI or automation for this occupation.</p>\n\n<h2>&#9888;&#9888; Where Florida trains veterinary technicians</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Credential (IPEDS 2023)</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td><strong>Associate degree</strong> &mdash; about 98 a year</td><td>St. Petersburg 50, Hillsborough 16, Miami Dade 12, Pensacola State 12, Eastern Florida State 8</td></tr>\n<tr><td><strong>Bachelor&rsquo;s</strong> &mdash; 17 a year</td><td>St. Petersburg College; FAMU also carries upper-division veterinary technology courses</td></tr>\n<tr><td>Certificates under a year &mdash; about 178</td><td>mostly veterinary assisting at technical colleges, plus a few at St. Petersburg and Eastern Florida State</td></tr>\n</tbody></table>\n<p>&#9888; <strong>St. Petersburg College awards over half of Florida&rsquo;s public associate degrees in the field.</strong> Outside it, the associate programmes are at four colleges, so ask about location and schedule early. &#9888; The bachelor&rsquo;s level adds hospital management (<code>ATE4317</code>, <code>ATE3344</code>, <code>ATE3316</code>) &mdash; the route to practice manager rather than a different clinical job.</p>\n<p>&#9888; <strong>This is not the route to becoming a veterinarian.</strong> The DVM, awarded in Florida at the University of Florida, is a separate professional degree with its own science prerequisites, and veterinary technology courses are not designed to meet them.</p>\n"
+}

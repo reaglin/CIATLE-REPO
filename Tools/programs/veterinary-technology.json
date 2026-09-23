@@ -1,0 +1,31 @@
+{
+  "slug": "veterinary-technology",
+  "name": "Veterinary Technology and Veterinary Assisting",
+  "isPublished": true,
+  "sortOrder": 650,
+  "description": "Animal nursing, anaesthesia, laboratory, imaging and dental work under a veterinarian's supervision. ⚠⚠ Florida files two different credentials under one code: the associate degree that leads to veterinary technician, and short clock-hour veterinary assisting certificates, which are the majority of awards.",
+  "degreesNote": "⚠⚠⚠ CHECK WHICH ONE YOU ARE ENROLLING IN. About 293 Florida public credentials a year sit under CIP 01.8301. Roughly 178 are certificates of under a year, mostly veterinary assisting at technical colleges (Aparicio-Levy 90, Orange Technical 27, Lake Technical 19, Lorenzo Walker 16, Cape Coral 15), on the ATE0006/ATE0072 clock-hour ladder. These lead to veterinary assistant work. About 98 are associate degrees, the credential BLS gives for veterinary technicians: St. Petersburg 50, Hillsborough 16, Miami Dade 12, Pensacola State 12, Eastern Florida State 8. St. Petersburg also awards 17 bachelor's. ⚠⚠ The national technician exam (VTNE) and Florida's voluntary Certified Veterinary Technician credential both require graduation from a programme accredited by the AVMA's CVTEA, so check the AVMA's current list. ⚠ Florida does not license veterinary technicians (ch. 474, F.S.); bills to do so died in 2025 and 2026. ⚠ This is not a pre-veterinary route: the DVM is a separate professional degree with its own science prerequisites.",
+  "cips": [
+    {
+      "cipCode": "01.83",
+      "note": "Veterinary/Animal Health Technologies — about 293 Florida public credentials a year, all under 01.8301. Roughly 98 associate degrees and 17 bachelor's (the veterinary technician route) and roughly 178 short certificates, mostly veterinary assisting at technical colleges. ⚠ Florida files this here, in agriculture; 51.0808 has no Florida rows."
+    }
+  ],
+  "related": [
+    {
+      "slug": "biology",
+      "note": "⚠ The usual undergraduate route to veterinary school, which veterinary technology is not. A student who wants to become a veterinarian needs a science degree's prerequisites, and technology courses are not designed to meet them.",
+      "isRoute": false
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠ The human-medicine counterpart of the veterinary clinical pathology work in this programme, with a state licence behind it in Florida, which veterinary technology does not have.",
+      "isRoute": false
+    },
+    {
+      "slug": "agricultural-business",
+      "note": "⚠ The large-animal side: Florida's cattle and equine operations employ technicians too, and the animal-science and agribusiness programmes share the agricultural classification.",
+      "isRoute": false
+    }
+  ]
+}

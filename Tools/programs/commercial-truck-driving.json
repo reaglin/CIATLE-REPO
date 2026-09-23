@@ -1,0 +1,21 @@
+{
+  "slug": "commercial-truck-driving",
+  "name": "Commercial Truck Driving (CDL)",
+  "isPublished": true,
+  "sortOrder": 650,
+  "description": "Training for a commercial driver's licence: tractor-trailer (Class A) and heavy straight truck (Class B), taught in Florida as short clock-hour certificates at technical and state colleges. ⚠⚠ Since 7 February 2022 federal law requires first-time Class A and B applicants to train with a provider on the FMCSA Training Provider Registry.",
+  "degreesNote": "⚠⚠ All short certificates: 1,038 credentials in 2023 at 19 Florida public institutions, 929 of them 12-week-to-one-year certificates. Sheridan Technical 198, Indian River State 149, FSCJ 107, Marion Technical 81, Orange Technical 80, Miami Lakes Technical 73, Pensacola State 63. ⚠⚠ The Class A course is TRA0080 Tractor Trailer Truck Driver, 320 clock hours at 12 institutions; Class B is TRA0084, 150 hours. FSCJ splits the 320 hours into four 80-hour courses. ⚠⚠⚠ Ask whether the programme is listed on the FMCSA Training Provider Registry, for which class, because training from an unlisted provider does not satisfy 49 CFR 380.609. ⚠ Get the DOT medical certificate before paying for training, and note that Florida restricts CDL holders under 21 to intrastate driving.",
+  "cips": [
+    {
+      "cipCode": "49.0205",
+      "note": "Truck and Bus Driver/Commercial Vehicle Operator and Instructor — 1,038 Florida public credentials in 2023 at 19 institutions, all certificates: Sheridan Technical 198, Indian River State 149, FSCJ 107, Marion Technical 81, Orange Technical 80."
+    }
+  ],
+  "related": [
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "⚠ Where a driver's career goes off the road: dispatch, fleet management and supply chain. Miami Dade's TRA1420 Introduction to Trucking Operations is a college-credit bridge from the cab to the office.",
+      "isRoute": false
+    }
+  ]
+}

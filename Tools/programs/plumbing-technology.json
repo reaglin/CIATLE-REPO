@@ -1,0 +1,29 @@
+{
+  "slug": "plumbing-technology",
+  "name": "Plumbing and Pipefitting Technology",
+  "isPublished": true,
+  "sortOrder": 650,
+  "description": "Plumbing, pipefitting and fire sprinkler fitting, taught in Florida as clock-hour certificates at technical and state colleges and as the classroom half of registered apprenticeships. ⚠⚠ About 189 credentials a year at 22 public institutions: most Florida plumbers learn through apprenticeships and on-the-job hours, which these counts do not include.",
+  "degreesNote": "⚠⚠ Plumbing Technology (46.0503) produces 144 credentials a year at 21 institutions, all certificates: Orange Technical West 25, Fort Myers Technical 19, Sheridan Technical 13, Hillsborough 12, Daytona State 12, Pinellas Technical 12. Pipefitting and Sprinkler Fitting (46.0502) adds 45 at five: Lively Technical 17, Seminole State 17, Hillsborough 7. ⚠⚠⚠ The clock-hour programme is four occupational completion points named after jobs, 960 hours in all: Helper, Plumber, Pipefitter (A, 360 hours), Residential Plumber (B, 240), Commercial Plumber (C, 240) and Plumber (D, 120). It is offered at about ten public institutions. ⚠ Apprenticeship classes run as Plumbing Apprenticeship I-VIII (BCA0450-BCA0457) at six state colleges, and fire sprinkler apprenticeships at Hillsborough, Miami Dade and Seminole State. ⚠ Florida's journeyman provision (s. 489.1455, F.S.) counts a registered and state-approved apprenticeship, or at least 12,000 hours of on-the-job training, so ask whether a programme is registered.",
+  "cips": [
+    {
+      "cipCode": "46.05",
+      "note": "Plumbing and Related Water Supply Services — 189 Florida public credentials a year at 22 institutions: Plumbing Technology (46.0503) 144 at 21, Pipefitting and Sprinkler Fitting (46.0502) 45 at 5. All certificates; no degrees."
+    }
+  ],
+  "related": [
+    {
+      "slug": "electrical-technology",
+      "note": "⚠ The sister trade, built the same way: a clock-hour certificate of completion points, or a paid apprenticeship. The electrician helper course is at 26 public institutions against about ten for plumbing. ⚠ Florida's journeyman reciprocity provision (s. 489.1455) names plumbing, pipe fitting, mechanical and HVAC, but not electrical."
+    },
+    {
+      "slug": "hvac-technology",
+      "note": "⚠ Shares the mechanical side of a building and the same journeyman reciprocity provision (s. 489.1455), which names HVAC alongside plumbing and pipe fitting. Pipefitting skills carry across."
+    },
+    {
+      "slug": "construction-management",
+      "note": "⚠ Where a plumber who wants to run jobs rather than work them goes. Florida's contractor exam can also be reached with college credit plus a year as a foreman (s. 489.111).",
+      "isRoute": false
+    }
+  ]
+}

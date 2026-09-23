@@ -1,0 +1,171 @@
+{
+  "slug": "plumber",
+  "name": "Plumber, Pipefitter and Sprinkler Fitter",
+  "cipCode": "46.05",
+  "socCode": "47-2152",
+  "isPublished": true,
+  "sortOrder": 148,
+  "description": "⚠⚠ A paid-apprenticeship trade: BLS describes 4 to 5 years of apprenticeship with about 2,000 paid hours a year, on a high school diploma. ⚠⚠⚠ Florida pays well below the national figure ($52,910 median against $63,800), and the gap widens to $34,810 at the 90th percentile. Florida's journeyman licence is issued locally but recognised in every county and city, and the contractor licence is the step that changes income.",
+  "credentialNote": "⚠⚠⚠ TWO LEVELS OF LICENCE. The JOURNEYMAN licence is issued by counties and municipalities, and under s. 489.1455, F.S. every other Florida county and municipality must recognise it. The conditions include a proctored journeyman examination, a registered and state-approved apprenticeship or at least 12,000 hours of on-the-job training, and Florida Building Commission coursework. ⚠ The CONTRACTOR licence is state-issued under chapter 489: certified (any Florida jurisdiction) or registered (only where registered). To sit the certification exam, one route is 4 years of experience through an apprenticeship with at least 1 year as a foreman (s. 489.111). ⚠ A school certificate does not replace the hours. Choose a registered apprenticeship if you can, because it counts directly toward the journeyman licence.",
+  "cipCodes": [
+    {
+      "cipCode": "46.03",
+      "note": "⚠ Electrical and Power Transmission Installers — the sister trade, built the same way (completion points or a paid apprenticeship), but outside Florida's plumbing and HVAC journeyman reciprocity provision (s. 489.1455)."
+    },
+    {
+      "cipCode": "15.05",
+      "note": "⚠ HVAC/R Engineering Technology — where Florida files HVAC; shares piping skills and the same journeyman reciprocity provision as plumbing (s. 489.1455)."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "plumbing-technology",
+      "note": "The programme — the four completion points, the apprenticeship classes, and where Florida teaches them."
+    },
+    {
+      "slug": "hvac-technology",
+      "note": "⚠ A neighbouring mechanical trade with the same journeyman reciprocity provision.",
+      "isRoute": false
+    },
+    {
+      "slug": "electrical-technology",
+      "note": "⚠ The sister trade, more widely taught in Florida, with its own licensing.",
+      "isRoute": false
+    },
+    {
+      "slug": "construction-management",
+      "note": "⚠ For a plumber heading toward running jobs or a contracting business.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BCV0508",
+      "sortOrder": 1,
+      "reason": "Helper, Plumber, Pipefitter — occupational completion point A, 360 hours, at ten public institutions. ⚠⚠ A hireable exit named after the job: a plumber's helper can start work here and continue into an apprenticeship.",
+      "variantNote": "⚠ Pensacola State teaches it as BCV0508C, the same completion point with the lab integrated."
+    },
+    {
+      "courseId": "BCV0540",
+      "sortOrder": 2,
+      "reason": "Residential Plumber — completion point B, 240 hours, at eleven institutions. Houses: water supply, drain-waste-vent systems, fixtures and water heaters.",
+      "variantNote": "⚠ Pensacola State: BCV0540C."
+    },
+    {
+      "courseId": "BCV0562",
+      "sortOrder": 3,
+      "reason": "Commercial Plumber — completion point C, 240 hours, at eleven institutions. Larger systems, commercial fixtures and code requirements for public buildings.",
+      "variantNote": "⚠ Pensacola State: BCV0562C."
+    },
+    {
+      "courseId": "BCV0592",
+      "sortOrder": 4,
+      "reason": "Plumber — completion point D, 120 hours, at eight institutions, and the end of the 960-hour ladder. ⚠ Ask whether the college awards a certificate at each point, since not every school issues the intermediate ones."
+    },
+    {
+      "courseId": "BCV0596",
+      "sortOrder": 5,
+      "reason": "Plumbing Applications — 240 hours at Miami Dade, Palm Beach State and Pinellas Technical. ⚠ Applied practice beyond the four completion points; check where it sits in your college's sequence.",
+      "variantNote": "⚠ Pensacola State: BCV0596C."
+    },
+    {
+      "courseId": "BCA0450",
+      "sortOrder": 6,
+      "reason": "Plumbing Apprenticeship I — the first of the classroom courses that run alongside a paid registered apprenticeship, at the College of the Florida Keys, Indian River, Miami Dade, Santa Fe and South Florida State. ⚠⚠ This is the route most plumbers take: BLS describes a 4- or 5-year apprenticeship with about 2,000 paid hours of work a year.",
+      "variantNote": "⚠ Hours per course differ widely between colleges (about 33 to 99 for the same number). Daytona State pairs each level with a separate on-the-job lab (BCA0450L onward)."
+    },
+    {
+      "courseId": "BCA0451",
+      "sortOrder": 7,
+      "reason": "Plumbing Apprenticeship II — six carriers, including Daytona State."
+    },
+    {
+      "courseId": "BCA0452",
+      "sortOrder": 8,
+      "reason": "Plumbing Apprenticeship III — six carriers."
+    },
+    {
+      "courseId": "BCA0453",
+      "sortOrder": 9,
+      "reason": "Plumbing Apprenticeship IV — five carriers. ⚠ Around the middle of the sequence. The journeyman provision in s. 489.1455 counts a completed registered apprenticeship, or at least 12,000 hours of on-the-job training."
+    },
+    {
+      "courseId": "BCA0454",
+      "sortOrder": 10,
+      "reason": "Plumbing Apprenticeship V — six carriers."
+    },
+    {
+      "courseId": "BCA0455",
+      "sortOrder": 11,
+      "reason": "Plumbing Apprenticeship VI — six carriers."
+    },
+    {
+      "courseId": "BCA0456",
+      "sortOrder": 12,
+      "reason": "Plumbing Apprenticeship VII — four carriers."
+    },
+    {
+      "courseId": "BCA0457",
+      "sortOrder": 13,
+      "reason": "Plumbing Apprenticeship VIII — five carriers, the last level in the common sequence. ⚠ Completing a registered and state-approved apprenticeship is one of the routes to a journeyman licence that other Florida counties and municipalities must recognise (s. 489.1455)."
+    },
+    {
+      "courseId": "BCV0568",
+      "sortOrder": 14,
+      "reason": "Industrial Pipefitter Helper — completion point A of the industrial pipefitter programme, 300 hours, at Hillsborough and Manatee Technical. ⚠ Process piping in plants and industrial sites, a branch of the same SOC occupation."
+    },
+    {
+      "courseId": "BCV0569",
+      "sortOrder": 15,
+      "reason": "Industrial Pipefitter — completion point B, 300 hours, at the same two institutions."
+    },
+    {
+      "courseId": "BCA0470",
+      "sortOrder": 16,
+      "reason": "Fire Sprinkler Apprenticeship I — Hillsborough, Miami Dade and Seminole State, the first of a sequence that continues through BCA0477 and advanced levels. ⚠⚠ Sprinklerfitters are part of this occupation, and BLS expects their employment to grow because of building codes in all states that require fire suppression systems."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Plumbers, Pipefitters, and Steamfitters",
+      "url": "https://www.bls.gov/ooh/construction-and-extraction/plumbers-pipefitters-and-steamfitters.htm",
+      "note": "$63,800 median (2025), 510,600 jobs, +7% for 2025–35, about 42,000 openings a year, 8% self-employed. Entry: high school diploma and an apprenticeship of 4 or 5 years with about 2,000 paid hours a year. No mention of automation or AI."
+    },
+    {
+      "label": "O*NET — Plumbers, Pipefitters, and Steamfitters (47-2152.00)",
+      "url": "https://www.onetonline.org/link/summary/47-2152.00",
+      "note": "43% of respondents report a postsecondary certificate, 35% a high school diploma, 9% an associate degree; faster than average growth (5% to 6%) for 2024–34."
+    },
+    {
+      "label": "O*NET — Florida wages for 47-2152.00",
+      "url": "https://www.onetonline.org/link/localwages/47-2152.00?st=FL",
+      "note": "Florida median $52,910 against $63,800 national; 75th percentile $62,820 against $85,110; 90th $73,610 against $108,420. Employees only."
+    },
+    {
+      "label": "s. 489.1455, Florida Statutes — journeyman reciprocity",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.1455",
+      "note": "Counties and municipalities issue journeyman licences, and must recognise a journeyman licence in plumbing, pipe fitting, mechanical or HVAC issued by another Florida county or municipality; conditions include a proctored examination, a registered apprenticeship or 12,000 hours of on-the-job training, and Florida Building Commission coursework."
+    },
+    {
+      "label": "s. 489.105, Florida Statutes — definitions",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.105",
+      "note": "Defines the plumbing contractor's scope and the difference between a certified contractor (any jurisdiction) and a registered contractor (only the jurisdictions of registration)."
+    },
+    {
+      "label": "s. 489.111, Florida Statutes — contractor examination eligibility",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.111",
+      "note": "Routes to the contractor exam, including 4 years of experience learned through an apprenticeship with at least 1 year as a foreman; 2,000 person-hours count as a full-time year."
+    },
+    {
+      "label": "SCNS statewide course file — BCV and BCA plumbing courses",
+      "url": "https://flscns.fldoe.org/",
+      "note": "BCV0508/0540/0562/0592 are plumbing completion points A-D (360, 240, 240 and 120 hours); BCA0450-0457 are Plumbing Apprenticeship I-VIII; BCA047x are fire sprinkler apprenticeship courses."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 46.05",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "46.0503 Plumbing Technology 144 at 21 institutions; 46.0502 Pipefitting and Sprinkler Fitting 45 at 5; 189 in total at 22, all certificates."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; An apprenticeship trade: you are paid while you learn</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Plumbers, pipefitters and steamfitters (47-2152)</th></tr></thead>\n<tbody>\n<tr><td>Entry-level education (BLS)</td><td>high school diploma</td></tr>\n<tr><td>Training (BLS)</td><td>&#9888;&#9888; <strong>apprenticeship</strong> &mdash; <em>&ldquo;a 4- or 5-year apprenticeship&rdquo;</em> with <em>&ldquo;2,000 hours of paid on-the-job training, as well as some technical instruction, each year&rdquo;</em></td></tr>\n<tr><td>Median, 2025</td><td>$63,800</td></tr>\n<tr><td>Jobs</td><td>510,600</td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>+7% (+34,500)</td></tr>\n<tr><td>Openings a year</td><td>about 42,000</td></tr>\n<tr><td>Self-employed</td><td>8%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>The normal route into plumbing is a job, not a classroom.</strong> An apprentice is hired, paid, and learns on site under a licensed plumber, with evening or block classes alongside. A school certificate can come first and shorten the start, but the licences that matter are earned with hours in the trade.</p>\n<p>&#9888; BLS gives two sources of demand: <em>&ldquo;new construction and &hellip; the need to maintain and repair plumbing systems in existing residences and other buildings,&rdquo;</em> and for sprinklerfitters, <em>&ldquo;building codes in all states that require the use of fire suppression systems.&rdquo;</em> BLS does not mention automation or AI for this occupation. The hazards it names are cuts, burns from hot pipes and soldering, and falls from ladders.</p>\n\n<h2>&#9888;&#9888;&#9888; Florida pays plumbers well below the national figure, and the gap widens at the top</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$38,940</td><td>$44,150</td><td>&minus;$5,210</td></tr>\n<tr><td>25th</td><td>$47,220</td><td>$50,190</td><td>&minus;$2,970</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$52,910</strong></td><td><strong>$63,800</strong></td><td><strong>&minus;$10,890</strong></td></tr>\n<tr><td>&#9888; 75th</td><td>$62,820</td><td>$85,110</td><td>&#9888; <strong>&minus;$22,290</strong></td></tr>\n<tr><td>&#9888;&#9888; 90th</td><td>$73,610</td><td>$108,420</td><td>&#9888;&#9888; <strong>&minus;$34,810</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>The national figures describe a trade where experienced plumbers reach six figures. In Florida&rsquo;s wage data the 90th percentile is $73,610.</strong> These figures cover employees only, so a Florida plumber who becomes a <strong>licensed contractor</strong> and runs a business is not measured here. That is the step that changes income, and it is licensed by the state (below). &#9888; When comparing job offers, ask about the pay scale for journeymen, not just for apprentices.</p>\n\n<h2>&#9888;&#9888;&#9888; Florida licenses at two levels, and the journeyman licence travels</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Level</th><th>Who issues it</th><th>What it takes</th></tr></thead>\n<tbody>\n<tr><td><strong>Journeyman plumber</strong></td><td>&#9888; <strong>counties and municipalities</strong> (s. 489.1455, F.S.)</td><td>a proctored journeyman examination, a registered and state-approved apprenticeship <em>or</em> at least 12,000 hours of on-the-job training, and coursework approved by the Florida Building Commission</td></tr>\n<tr><td><strong>Certified plumbing contractor</strong></td><td>the state (DBPR, Construction Industry Licensing Board) &mdash; valid in any Florida jurisdiction</td><td>an examination; to sit it, for example four years of experience learned through an apprenticeship, <em>&ldquo;at least 1 year of active experience shall be as a foreman&rdquo;</em> (s. 489.111)</td></tr>\n<tr><td>Registered plumbing contractor</td><td>the state, on the strength of a local competency licence</td><td><em>&ldquo;may contract only in such jurisdictions&rdquo;</em> (s. 489.105)</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The journeyman licence is local, but Florida makes it portable.</strong> Under s. 489.1455, <em>&ldquo;counties and municipalities must recognize a person as a journeyman in the plumbing, pipe fitting, mechanical, or HVAC trades if the person was issued a journeyman license in such trade by a county or municipality in the state.&rdquo;</em> &#9888; That section names plumbing, pipe fitting, mechanical and HVAC. It does not name electrical, so check whether a journeyman licence moves with you if you work in more than one trade.</p>\n<p>&#9888; <strong>12,000 hours is six years at the 2,000 hours a year BLS describes for an apprentice.</strong> The registered-apprenticeship route counts instead, which is one practical reason to choose a registered programme over an informal helper job.</p>\n<p>&#9888;&#9888; <strong>A plumbing contractor&rsquo;s licence is broad.</strong> Florida&rsquo;s definition covers water supply, sanitary drainage, septic tanks, swimming-pool piping, irrigation, solar water heating, medical gas, fire sprinklers and fuel-oil piping (s. 489.105).</p>\n\n<h2>&#9888;&#9888; Two ways in, and Florida teaches both</h2>\n<p><strong>1. The school certificate first.</strong> Florida&rsquo;s clock-hour plumbing programme is built from four occupational completion points named after jobs &mdash; each a place to stop, be hired and come back:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Course</th><th>Completion point</th><th>Hours</th><th>Public carriers</th></tr></thead>\n<tbody>\n<tr><td>BCV0508 Helper, Plumber, Pipefitter</td><td>A</td><td>360</td><td>10</td></tr>\n<tr><td>BCV0540 Residential Plumber</td><td>B</td><td>240</td><td>11</td></tr>\n<tr><td>BCV0562 Commercial Plumber</td><td>C</td><td>240</td><td>11</td></tr>\n<tr><td>BCV0592 Plumber</td><td>D</td><td>120</td><td>8</td></tr>\n</tbody></table>\n<p>That is 960 hours through completion point D. &#9888; <strong>The plumbing programme is at about ten public institutions; the equivalent electrician helper course (BCV0603) is at 26.</strong> A student outside the larger metro areas may find the plumbing certificate is not offered nearby, and should look at the apprenticeship route instead.</p>\n<p><strong>2. The registered apprenticeship.</strong> Several state colleges run the classroom half of plumbing apprenticeships as a numbered sequence, BCA0450&ndash;BCA0457 <em>Plumbing Apprenticeship I&ndash;VIII</em>, at Daytona State, the College of the Florida Keys, Indian River, Miami Dade, Santa Fe and South Florida State, while the apprentice works for a sponsoring employer. Fire sprinkler fitters have their own sequence (BCA0470 onward) at Hillsborough, Miami Dade and Seminole State. &#9888; The hours per course vary a great deal between colleges (from about 33 to 99 hours for the same number), so ask how many classroom hours your programme actually includes.</p>\n<p>&#9888; Ask any apprenticeship programme whether it is <strong>registered</strong> with the state. The journeyman provision above counts a <em>&ldquo;registered and state-approved apprenticeship program&rdquo;</em>; an informal helper job counts only through the 12,000 hours.</p>\n\n<h2>Where Florida trains plumbers</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Programme (CIP)</th><th>Credentials a year</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>Plumbing Technology (46.0503)</td><td><strong>144</strong> at 21 institutions</td><td>Orange Technical West 25, Fort Myers Technical 19, Sheridan Technical 13, Hillsborough 12, Daytona State 12, Pinellas Technical 12, Miami Lakes 11, Suncoast Technical 11, Erwin Technical 11 &hellip;</td></tr>\n<tr><td>Pipefitting and Sprinkler Fitting (46.0502)</td><td><strong>45</strong> at 5</td><td>Lively Technical 17, Seminole State 17, Hillsborough 7, Miami Dade 2, Orange Technical South 2</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>About 189 credentials a year at 22 institutions, against roughly 42,000 openings a year nationally.</strong> School certificates are a small part of how Florida produces plumbers. Most learn through apprenticeships and on-the-job training, which IPEDS does not count.</p>\n"
+}

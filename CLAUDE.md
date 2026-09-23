@@ -20,8 +20,8 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed: **40,902 courses, 2,504 curriculum guides, 86 career
-paths and 92 programmes** are live as of 2026-09-23. ✅ The browse tree now reaches every one of them (the art-course key collision was fixed and deployed
+three-project solution exists and is deployed: **41,337 courses, 2,504 curriculum guides, 92 career
+paths and 98 programmes** are live as of 2026-09-23. ✅ The browse tree now reaches every one of them (the art-course key collision was fixed and deployed
 2026-09-23, `docs/DEVELOPMENT-PLAN.md` item 1.5).
 
 **What is being worked on now: career paths, second queue.** The original 50 rows are complete —
@@ -30,9 +30,8 @@ computing, business, law, education and public service. A **second 50 rows** wer
 2026-09-21 (`Tools/career_paths/QUEUE.csv`, ranks 101–150), chosen from the largest Florida
 IPEDS footprints the site does not yet cover: health (16), business (8), a new creative and
 media cluster (7), science (4), social services (3), and the service and transport careers the
-first queue missed. **23 of the 50 are CHOICE paths.** ⚠ **As of 2026-09-23 every workable row is published; the seven that remain are blocked on a CIP seed
-widening (a deploy)** — `REVIEW_QUEUE.md` item 116 — vet tech, pharmacist, truck driver, chef, cosmetologist,
-plumber and carpenter.
+first queue missed. **23 of the 50 are CHOICE paths.** ✅ **As of 2026-09-23 BOTH authored queues are complete** — the seed deploy unblocked the last seven rows
+(vet tech, pharmacist, truck driver, chef, cosmetologist, plumber, carpenter) and all are published.
 **After this queue, career paths move to REQUEST-DRIVEN, the same as courses — built 2026-09-23 and
 shipping with the next deploy** (Request button on each CIP field page, public queue at `/queue/careers`,
 admin at `/admin/career-requests`; plan Phase 6, API spec §17). Guide writing is

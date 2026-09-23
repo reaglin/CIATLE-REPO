@@ -3520,7 +3520,7 @@ which temporarily breaks the *no programme without a career* property. That is t
 work, not an open question.
 
 
-## 116. ⚠⚠⚠ SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22)
+## 116. ✅ RESOLVED 2026-09-23 (Ron approved; deployed; all seven paths published) — SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22)
 
 **The second 50-row career-path queue is in (`career_paths/QUEUE.csv`, ranks 101–150). Forty-three of
 the fifty can be pushed today. Seven cannot, because their CIP group is not in `Data/Seed/cip.json`
@@ -3531,7 +3531,7 @@ and the push returns 422.**
 | ⚠⚠ **12.04** Cosmetology | `cosmetologist` | **44** | **3,146** |
 | ⚠⚠ **12.05** Culinary Arts | `chef` | **46** | **1,255** |
 | ⚠ **49.02** Ground Transportation | `truck-driver` | 20 | 1,040 |
-| **51.20** Pharmacy | `pharmacist` | 3 | 939 |
+| **51.20** Pharmacy | `pharmacist` | 3 | 939 ⚠ the whole group; the Pharm.D. (51.2001) is 412 — UF's ~300 are pharmaceutical-sciences master's |
 | **46.05** Plumbing | `plumber` | 22 | 189 |
 | **46.02** Carpentry | `carpenter` | 15 | 57 |
 | ⚠⚠ **01.83** Veterinary/Animal Health Technologies | `veterinary-technician` | **10** | **293** |

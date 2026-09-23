@@ -1,0 +1,36 @@
+{
+  "slug": "pharmacy",
+  "name": "Pharmacy (Doctor of Pharmacy)",
+  "isPublished": true,
+  "sortOrder": 650,
+  "description": "The Pharm.D., the professional doctorate that leads to licensure as a pharmacist. Three Florida public universities award it (UF, FAMU and USF), about 412 a year. ⚠⚠ Admission turns on two or more years of prerequisite science, not on a bachelor's degree: UF's minimum is an associate degree.",
+  "degreesNote": "⚠⚠ The Pharm.D. (CIP 51.2001) is the only degree that leads to the pharmacist licence exams. In 2023 UF awarded 237, FAMU 100 and USF 75. UF also awarded 25 post-master's certificates under the same code. ⚠⚠ Do not confuse it with the pharmaceutical sciences master's (51.2099), about 300 a year at UF, 26 at USF and 7 at FAMU. Those are research and industry degrees, not a licence route. ⚠ Pharmacy technician is a separate, short programme, covered by Pharmacy Technology. ⚠⚠ Admission: BLS says programmes typically require at least two years of prerequisite undergraduate courses, and UF's minimum is an A.A. or A.S. AACP's 2023-24 figures show that 39% of applications nationally came from bachelor's holders and more than half from people without one. ⚠ The prerequisite numbers compete in Florida: CHM2045 against CHM1045, BSC2010 against BSC1010, MCB3020 against MCB2010. UF accepts the state's common-prerequisite equivalents, but check each target school's list literally.",
+  "cips": [
+    {
+      "cipCode": "51.2001",
+      "note": "Pharmacy (Pharm.D.) — 412 first professional doctorates in 2023 at Florida's three public colleges of pharmacy: UF 237, FAMU 100, USF 75 (IPEDS). Claimed alone because the rest of 51.20 is pharmaceutical science research degrees, not a licence route."
+    }
+  ],
+  "related": [
+    {
+      "slug": "chemistry",
+      "note": "⚠ The prerequisite core — general and organic chemistry, often biochemistry — is chemistry, so a chemistry major covers most of it inside the degree. It also leads to the pharmaceutical-industry careers that the Pharm.D. does not require.",
+      "isRoute": false
+    },
+    {
+      "slug": "biology",
+      "note": "⚠ The other major that absorbs most pre-pharmacy prerequisites: general biology, microbiology, anatomy and physiology. ⚠ AACP publishes no data on entrants' majors, so neither is shown to be better.",
+      "isRoute": false
+    },
+    {
+      "slug": "pharmacy-technology",
+      "note": "⚠⚠ A different job, not a first step on the same ladder. The technician programme is short and leads to board registration; it earns no credit toward a Pharm.D., though pharmacy work experience helps an application.",
+      "isRoute": false
+    },
+    {
+      "slug": "medicine",
+      "note": "⚠ The other prescriber-side health doctorate. The science prerequisites overlap heavily.",
+      "isRoute": false
+    }
+  ]
+}

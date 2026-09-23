@@ -1,0 +1,155 @@
+{
+  "slug": "cosmetologist",
+  "name": "Cosmetologist, Barber, Nail and Skin Care Specialist",
+  "cipCode": "12.04",
+  "socCode": "39-5012",
+  "additionalSocCodes": [
+    "39-5011",
+    "39-5092",
+    "39-5094"
+  ],
+  "isPublished": true,
+  "sortOrder": 147,
+  "description": "⚠⚠ A licensed trade: Florida law sets the training hours, 1,200 for a cosmetologist and 900 for a barber, and both licences need an exam. ⚠⚠⚠ Most people in it work for themselves (BLS: 80% of barbers, 48% of hairdressers), and the wage figures leave them out. Among employees, a Florida hairdresser's median is $29,530 and a barber's $49,410, yet Florida trains six cosmetologists for every barber. This page compares the four licences and what the programmes actually run.",
+  "credentialNote": "⚠⚠⚠ LICENSED IN FLORIDA, AND TWO SEPARATE BOARDS. Cosmetologist: 1,200 hours and a passing examination, age 16 or a high school diploma (s. 477.019, F.S.). Barber: a separate licence under chapter 476, 900 hours, with the exam allowed after 600 school hours (s. 476.114). A cosmetology licence does not cover barbering. Nail and facial work need a specialty registration: 180 hours for manicuring and pedicuring, 220 for facials, 400 for all three (s. 477.0201); the statute names no exam for it. ⚠⚠ Florida's barbering programme runs 1,200 hours, 300 more than the statute requires, and its first 1,000-hour point is titled Restricted Barber, a licence the 2025 statute does not define. Ask the school what each completion point qualifies you for before you enrol.",
+  "cipCodes": [
+    {
+      "cipCode": "52.02",
+      "note": "⚠ Business Administration — named because BLS reports most barbers (80%) and nearly half of hairdressers (48%) are self-employed. The step from working a chair to running a shop is a business step, not more cosmetology."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "cosmetology-and-barbering",
+      "note": "The programme. Read its note first: the hours are set in statute, and the barbering programme runs longer than the law requires."
+    },
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠⚠ For the self-employed majority: booth rental, pricing, bookings and taxes.",
+      "isRoute": false
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠ For the salon owner or manager.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "CSP0009",
+      "sortOrder": 1,
+      "reason": "Grooming and Salon Services Core, Facials and Nails — 225 hours at 32 public institutions, the shared start of Florida's cosmetology programme. Sanitation, safety, Florida law and rules, and the basics of facials and nails."
+    },
+    {
+      "courseId": "COS0002",
+      "sortOrder": 2,
+      "reason": "Cosmetologist and Hairstylist 1 (1 of 3) — 300 hours at 31 institutions. Cutting, styling, shampooing and the chemistry of hair."
+    },
+    {
+      "courseId": "COS0003",
+      "sortOrder": 3,
+      "reason": "Cosmetologist and Hairstylist 2 (2 of 3) — 300 hours. Colour, permanent waving and chemical relaxing, the services where chemistry and client safety meet."
+    },
+    {
+      "courseId": "COS0009",
+      "sortOrder": 4,
+      "reason": "Cosmetologist and Hairstylist 3 (3 of 3) — 375 hours at 32 institutions. ⚠⚠ It completes the 1,200 hours s. 477.019, F.S. requires for the cosmetologist licence exam. The three hairstylist courses are parts of one course, so the licence comes at the end rather than at intermediate exits.",
+      "variantNote": "⚠ Several state colleges package the same hours differently: Daytona State, Eastern Florida and South Florida State as COS0080L–COS0084L salon labs, FSCJ as phases COS0001/COS0007/COS0008 with labs, Indian River and Pensacola State as COS0010 and COS0088. Register by the hours and the licence the sequence leads to."
+    },
+    {
+      "courseId": "COS0150",
+      "sortOrder": 5,
+      "reason": "Restricted Barber 1 (1 of 3) — 333 hours at 10 institutions, the start of the barbering programme. ⚠⚠ Barbering is a separate licence under chapter 476, F.S., with its own board: a cosmetology licence does not cover barbering."
+    },
+    {
+      "courseId": "COS0151",
+      "sortOrder": 6,
+      "reason": "Restricted Barber 2 (2 of 3) — 333 hours."
+    },
+    {
+      "courseId": "COS0152",
+      "sortOrder": 7,
+      "reason": "Restricted Barber 3 (3 of 3) — 334 hours; with parts 1 and 2 it makes the 1,000-hour completion point A. ⚠⚠ The 2025 statute requires 900 hours for a barber licence and defines no \"restricted barber\" licence, so ask the school what this point qualifies you for."
+    },
+    {
+      "courseId": "COS0671",
+      "sortOrder": 8,
+      "reason": "Barber — completion point B, a further 200 hours at 9 institutions, bringing the programme to 1,200 hours. ⚠ That is 300 hours beyond the statutory minimum (s. 476.114); ask what the extra hours add, and whether you can sit the exam earlier (the statute allows it after 600 school hours)."
+    },
+    {
+      "courseId": "CSP0015",
+      "sortOrder": 9,
+      "reason": "Manicurist and Pedicurist — completion point A, 240 hours at 17 institutions. ⚠ The statutory minimum for the manicuring and pedicuring registration is 180 hours (s. 477.0201), and the statute names no exam for it.",
+      "variantNote": "⚠ Some state colleges use their own numbers for the same subject: CSP0015C at Pensacola State, CSP0013/CSP0013C at Palm Beach State and Florida Gateway, CSP0016 at Pinellas Technical."
+    },
+    {
+      "courseId": "CSP0265",
+      "sortOrder": 10,
+      "reason": "Facials/Skin Care Specialist — completion point B, 260 hours at 14 institutions. ⚠ The statutory minimum for the facial specialty is 220 hours. ⚠ BLS: offices of physicians employ 6% of skincare specialists and pay the highest median hourly wage of any setting it lists, $24.81.",
+      "variantNote": "⚠ FSCJ and Pinellas Technical carry CSP0266 Facials Specialist; Eastern Florida and Pensacola State CSP0266C."
+    },
+    {
+      "courseId": "CSP0105",
+      "sortOrder": 11,
+      "reason": "Advanced Skin Care 1 — 150 hours at three technical colleges (Manatee Technical, Orange Technical, Suncoast Technical). Beyond the specialty registration: advanced treatments, and a step toward the physicians' offices BLS lists as the best-paid setting for skincare specialists."
+    },
+    {
+      "courseId": "CSP0106",
+      "sortOrder": 12,
+      "reason": "Advanced Skin Care 2 — 150 hours, the second half of the advanced sequence."
+    },
+    {
+      "courseId": "CSP0505",
+      "sortOrder": 13,
+      "reason": "Ethical Business Practices — four carriers. ⚠⚠ With 80% of barbers and 48% of hairdressers self-employed (BLS), pricing, booth rental, records and taxes are part of the job, and this course addresses them."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Barbers, Hairstylists, and Cosmetologists",
+      "url": "https://www.bls.gov/ooh/personal-care-and-service/barbers-hairstylists-and-cosmetologists.htm",
+      "note": "Median $18.37 an hour for barbers and $17.21 for hairdressers (2025); 670,800 jobs, +7% for 2025–35, about 80,300 openings a year; 80% of barbers and 48% of hairdressers self-employed; wage data exclude the self-employed and include tips; all states require a licence. No mention of automation or AI."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Manicurists and Pedicurists",
+      "url": "https://www.bls.gov/ooh/personal-care-and-service/manicurists-and-pedicurists.htm",
+      "note": "$35,760 median (2025), 201,800 jobs, +9%, about 21,900 openings a year, 23% self-employed; postsecondary nondegree award."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Skincare Specialists",
+      "url": "https://www.bls.gov/ooh/personal-care-and-service/skincare-specialists.htm",
+      "note": "$45,330 median (2025), 104,200 jobs, +9%, about 14,200 openings a year, 29% self-employed; offices of physicians employ 6% at a $24.81 median hourly wage."
+    },
+    {
+      "label": "O*NET — Florida wages for 39-5012, 39-5011, 39-5092 and 39-5094",
+      "url": "https://www.onetonline.org/link/localwages/39-5012.00?st=FL",
+      "note": "Florida medians: hairdressers $29,530 (US $35,790), barbers $49,410 (US $38,210), manicurists $37,840, skincare specialists $43,880. Employees only."
+    },
+    {
+      "label": "s. 477.019, Florida Statutes — cosmetologists",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/477.019",
+      "note": "A minimum of 1,200 hours of training and a passing grade on the examination; age 16 or a high school diploma; up to 10 hours of continuing education every two years."
+    },
+    {
+      "label": "s. 477.0201, Florida Statutes — specialty registration",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/477.0201",
+      "note": "180 hours for manicuring and pedicuring, 220 for facials, 400 for all three, focused primarily on sanitation and safety."
+    },
+    {
+      "label": "s. 476.114, Florida Statutes — barbers",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/476.114",
+      "note": "A minimum of 900 hours of training; the examination may be taken after 600 school hours. Chapter 476 is a separate board and licence from cosmetology."
+    },
+    {
+      "label": "SCNS statewide course file — COS and CSP",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Cosmetology: CSP0009 225 hours plus COS0002/0003/0009 at 300, 300 and 375. Barbering: COS0150–0152 (333/333/334, completion point A) and COS0671 (200, point B). Specialties: CSP0015 240 hours (A), CSP0265 260 hours (B)."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 12.04",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "3,146 certificates at 44 institutions: cosmetology 1,212, facial/skin care 1,256, nail technician 456, barbering 208, esthetician 14."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; One licensed trade, four jobs &mdash; and most of them are businesses</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Florida licence</th><th>Florida median</th><th>Self-employed (BLS)</th><th>Openings a year</th></tr></thead>\n<tbody>\n<tr><td><strong>Hairdresser, hairstylist, cosmetologist</strong></td><td>39-5012</td><td>cosmetologist licence, 1,200 hours + exam</td><td>$29,530</td><td>48%</td><td rowspan=\"2\">about 80,300 (barbers, hairstylists and cosmetologists together)</td></tr>\n<tr><td><strong>Barber</strong></td><td>39-5011</td><td>barber licence (separate board), 900 hours + exam</td><td><strong>$49,410</strong></td><td>&#9888;&#9888; <strong>80%</strong></td></tr>\n<tr><td><strong>Manicurist and pedicurist</strong></td><td>39-5092</td><td>specialty registration, 180 hours</td><td>$37,840</td><td>23%</td><td>about 21,900</td></tr>\n<tr><td><strong>Skincare specialist</strong></td><td>39-5094</td><td>specialty registration, 220 hours</td><td>$43,880</td><td>29%</td><td>about 14,200</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Read the wages with the self-employed column beside them.</strong> BLS states that its pay figures do <em>&ldquo;not include pay for self-employed workers&rdquo;</em> &mdash; so for barbers, <strong>80% of whom are self-employed</strong>, the $49,410 describes the one in five who is an employee, and says nothing about a barber who rents a chair or owns a shop. For barbers and cosmetologists BLS adds that tips <em>&ldquo;are included in the wage data shown.&rdquo;</em></p>\n<p>&#9888;&#9888; <strong>Unlike the kitchen and fitness careers on this site, this one DOES require the training.</strong> BLS: <em>&ldquo;All states require barbers, hairstylists, and cosmetologists to be licensed,&rdquo;</em> and entry is a postsecondary nondegree award. In Florida the programme is the route, and the hours are set in statute.</p>\n\n<h2>&#9888;&#9888;&#9888; What Florida law requires, and what the programmes actually run</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Credential</th><th>Florida Statutes</th><th>Minimum hours in law</th><th>Florida&rsquo;s programme</th></tr></thead>\n<tbody>\n<tr><td>Cosmetologist licence</td><td>s. 477.019 &mdash; &ldquo;a minimum of 1,200 hours of training&rdquo; and a passing grade on the examination; age 16 or a high school diploma</td><td><strong>1,200</strong></td><td>1,200: a 225-hour core plus three courses of 300, 300 and 375</td></tr>\n<tr><td>Barber licence</td><td>s. 476.114 &mdash; &ldquo;a minimum of 900 hours of training&rdquo;; the exam may be taken after 600 school hours</td><td>&#9888;&#9888; <strong>900</strong></td><td>&#9888;&#9888; <strong>1,200</strong>: 1,000 hours to completion point A, 200 more to B</td></tr>\n<tr><td>Manicuring and pedicuring</td><td>s. 477.0201 specialty registration</td><td>180</td><td>240 (CSP0015)</td></tr>\n<tr><td>Facials</td><td>s. 477.0201</td><td>220</td><td>260 (CSP0265)</td></tr>\n<tr><td>All three specialties</td><td>s. 477.0201</td><td>400</td><td>&mdash;</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The barbering programme runs 300 hours longer than the law requires.</strong> Florida&rsquo;s statute sets 900 hours for a barber licence; the state&rsquo;s framework is 1,200, split into a 1,000-hour completion point titled <em>Restricted Barber</em> and a 200-hour <em>Barber</em> point. &#9888; The 2025 statute defines no &ldquo;restricted barber&rdquo; licence, so the name appears to come from an older licensing scheme. <strong>Ask the school which licence each completion point prepares you for, and how many hours you must attend before you can sit the state exam.</strong> Hours cost time and, at some schools, money.</p>\n<p>&#9888;&#9888; The nail and facial courses also run longer than the statutory minimum (240 against 180, 260 against 220). &#9888; The statute states the hours for a specialty registration but names no examination for it, unlike the cosmetologist and barber licences.</p>\n<p>&#9888; Florida cosmetology licences also carry continuing education: s. 477.019 allows the board to require up to 10 hours every two years for renewal.</p>\n\n<h2>&#9888;&#9888; Florida builds the cosmetology programme out of hours</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Course</th><th>Hours</th><th>Carriers</th></tr></thead>\n<tbody>\n<tr><td>CSP0009 Grooming and Salon Services Core, Facials and Nails</td><td>225</td><td>32 public institutions</td></tr>\n<tr><td>COS0002 Cosmetologist and Hairstylist 1 (1 of 3)</td><td>300</td><td>31</td></tr>\n<tr><td>COS0003 Cosmetologist and Hairstylist 2 (2 of 3)</td><td>300</td><td>31</td></tr>\n<tr><td>COS0009 Cosmetologist and Hairstylist 3 (3 of 3)</td><td>375</td><td>32</td></tr>\n</tbody></table>\n<p>&#9888; The total is exactly the 1,200 hours the statute requires. Unlike the barbering, nail and facial courses, the three hairstylist courses carry no completion-point letter in their statewide titles &mdash; they are parts of one course &mdash; so the licence comes only at the end.</p>\n<p>The specialty courses are completion points that can be taken on their own: <strong>CSP0015 Manicurist and Pedicurist</strong> (point A, 240 hours, 17 carriers) and <strong>CSP0265 Facials/Skin Care Specialist</strong> (point B, 260 hours, 14). Three technical colleges add an advanced skin-care sequence (CSP0105, CSP0106, CSP0264).</p>\n\n<h2>What Florida pays &mdash; employees only</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Hairdresser FL / US</th><th>Barber FL / US</th><th>Manicurist FL / US</th><th>Skincare FL / US</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$27,450 / $27,040</td><td>$31,000 / $28,600</td><td>$28,730 / $28,920</td><td>$27,860 / $29,580</td></tr>\n<tr><td>25th</td><td>$28,340 / $30,120</td><td>$34,780 / $31,570</td><td>$29,710 / $34,010</td><td>$35,600 / $36,040</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$29,530</strong> / $35,790</td><td><strong>$49,410</strong> / $38,210</td><td><strong>$37,840</strong> / $35,760</td><td><strong>$43,880</strong> / $45,330</td></tr>\n<tr><td>75th</td><td>$35,090 / $48,830</td><td>$59,240 / $58,960</td><td>$48,260 / $41,650</td><td>$62,650 / $59,700</td></tr>\n<tr><td>90th</td><td>$58,320 / $71,190</td><td>$79,490 / $76,460</td><td>$59,940 / $50,140</td><td>$83,990 / $82,050</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>A Florida hairdresser on a payroll earns a median of $29,530 &mdash; $6,260 below the national figure &mdash; and the bottom half of the range is almost flat: the 10th percentile is only $2,080 below the median.</strong> An employed Florida barber&rsquo;s median is $49,410, <strong>$11,200 above the national barber figure and about $19,880 above the Florida hairdresser</strong>. &#9888; Treat that comparison with care: most barbers are not employees at all, and the figures leave them out.</p>\n<p>&#9888;&#9888; <strong>Florida trains far more cosmetologists than barbers</strong> &mdash; 1,212 cosmetology certificates a year against 208 in barbering (IPEDS) &mdash; while the employed-barber median is the higher of the two. A student choosing between the two licences should ask local shops what a chair rents for and what a booth renter actually takes home.</p>\n<p>&#9888; BLS does not mention automation or AI for these occupations. It expects demand to come from basic hair care and from &ldquo;hair coloring, hair straightening, and other advanced hair treatments.&rdquo; For skincare specialists, BLS notes that offices of physicians employ 6% and pay the highest median hourly wage of any setting it lists, $24.81.</p>\n\n<h2>&#9888;&#9888; Where Florida trains them</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Programme (CIP)</th><th>Credentials a year</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>Cosmetology (12.0401)</td><td><strong>1,212</strong> at 42</td><td>Daytona State 86, Sheridan Technical 74, Palm Beach State 64, Pensacola State 60, FSCJ 59, Indian River 57 &hellip;</td></tr>\n<tr><td>&#9888; Facial treatment / skin care (12.0408)</td><td><strong>1,256</strong> at 24</td><td>short certificates: Sheridan Technical 159, Palm Beach State 118, FSCJ 108, Indian River 88</td></tr>\n<tr><td>Nail technician (12.0410)</td><td>456 at 20</td><td>Palm Beach State 69, Manatee Technical 56 &hellip;</td></tr>\n<tr><td>Barbering (12.0402)</td><td>208 at 17</td><td>Daytona State 35, Lively Technical 26, Pinellas Technical 22 &hellip;</td></tr>\n<tr><td>Esthetician (12.0409)</td><td>14 at 3</td><td>Orange Technical 11</td></tr>\n</tbody></table>\n<p>&#9888; <strong>All of these are certificates; there is no degree in this family.</strong> IPEDS counts awards, not people, and a student can earn a short facial or nail certificate as well as the cosmetology certificate, so the rows should not be added up as a head count.</p>\n"
+}

@@ -472,6 +472,20 @@ interior design (the college is accredited, the individual is registered), chemi
 the department, the student earns the certified degree), and here (the certification is checked and the
 degree is not). **Look for the gap between what is accredited and what is checked.**
 
+#### ⚠⚠ A CLOCK-HOUR COURSE IS 0 CREDITS AT COURSE LEVEL — but "0-level" alone is not the test (2026-09-23)
+
+**South Florida State records 3 or 8 "credits" on clock-hour courses** that every other carrier lists in
+hours, and `list_missing.py`'s modal-credit rule copied them onto the course: BCA0352 went live at 8
+credits, and a catalog scan found **202** such courses (mostly `EEV`, `TDR`, `ETI`, `BCA`, `FSS`). All
+were set to 0 at course level with each carrier's offering left as recorded, and `list_missing.py` now
+does it itself. ⚠ **The test is: 0-level AND some carrier reports clock hours** (a range like `0-240`
+counts). Developmental `ENC0xxx`/`MAT0xxx` are 0-level and genuinely carry credit, so a plain 0-level rule
+would have zeroed 35 correct rows.
+
+⚠ **SCNS's live institution lookup returned HTTP 500 on 2026-09-23.** `scratchpad/cached_run.py` serves
+`scns.institution_map()` from `inst_map.json` so `carriers.py`/`list_missing.py` keep working; re-probe
+before assuming the live route is back.
+
 #### ⚠⚠⚠ CHECK THE **SELF-EMPLOYED** SHARE — the BLS wage figure leaves those workers out (2026-09-23)
 
 **The BLS median comes from the OEWS survey, and BLS says on the Pay tab that it does *"not include

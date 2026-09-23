@@ -1,0 +1,34 @@
+{
+  "slug": "carpentry",
+  "name": "Carpentry and Building Construction Technology",
+  "isPublished": true,
+  "sortOrder": 650,
+  "description": "Rough framing, forms, finish carpentry and building construction, taught in Florida as clock-hour career certificates at technical colleges. ⚠⚠ A small programme: about 150 credentials a year across two codes, for an occupation most people enter through a job or a registered apprenticeship.",
+  "degreesNote": "⚠⚠ Carpentry (46.0201) produces 57 certificates a year at 15 Florida public institutions: Atlantic Technical 12, Erwin Technical 12, Fort Myers Technical 10, Pensacola State 6. Building Construction Technology (46.0415) adds 97 certificates at 15, led by Manatee Technical 21 and Pinellas Technical 12. No associate or bachelor's degree is awarded in either code. ⚠ The clock-hour courses are titled after jobs (Carpenter Helper, Carpenter Rough, Trim and Finish Carpenter, Building Construction Technician), but colleges carry different versions of the ladder, so ask which courses and how many hours make up the certificate. ⚠⚠ Florida licenses the contractor, not the carpenter: the certified contractor exam needs four years of experience including one as foreman, and college credit in building construction can replace up to three of those years (s. 489.111, F.S.). A registered apprenticeship in carpentry also exists.",
+  "cips": [
+    {
+      "cipCode": "46.0201",
+      "note": "Carpentry/Carpenter — 57 certificates a year at 15 Florida public institutions (Atlantic Technical 12, Erwin Technical 12, Fort Myers Technical 10, Pensacola State 6, Suncoast Technical 5, Florida Panhandle Technical 5). The clock-hour Carpentry career certificate."
+    },
+    {
+      "cipCode": "46.0415",
+      "note": "Building Construction Technology — 97 certificates at 15 institutions (Manatee Technical 21, Pinellas Technical 12, Lively Technical 9, Okaloosa Technical 9). Claimed because its ladder (Building Construction Helper, then Technician 1 and 2) teaches carpentry alongside the other building trades."
+    }
+  ],
+  "related": [
+    {
+      "slug": "construction-management",
+      "note": "⚠⚠ The college route that shortens the way to a contractor's licence. Florida lets college credit replace up to three of the four experience years for the certified contractor exam, and a building construction bachelor's leaves one year (s. 489.111). The step a carpenter takes to work for themselves."
+    },
+    {
+      "slug": "drafting-and-design-technology",
+      "note": "⚠ Reading and producing construction drawings. Blueprint reading is part of a lead carpenter's job.",
+      "isRoute": false
+    },
+    {
+      "slug": "electrical-technology",
+      "note": "⚠ The neighbouring building trade, taught at many of the same technical colleges. Unlike carpentry, electrical work is licensed at the contractor level under a separate part of chapter 489.",
+      "isRoute": false
+    }
+  ]
+}

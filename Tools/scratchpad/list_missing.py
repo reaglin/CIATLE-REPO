@@ -127,7 +127,16 @@ def build(ids):
             "courseId": cid,
             "title": titlecase(titles.most_common(1)[0][0]),
             "stateTitle": titles.most_common(1)[0][0],
-            "creditHours": creds.most_common(1)[0][0] if creds else 0,
+            # ⚠ A CLOCK-HOUR course is 0 credits at COURSE level, whatever one carrier records:
+            # South Florida State enters 3 or 8 "credits" on clock-hour courses the other carriers
+            # list in hours only, and the modal-credit rule then published BCA0352 at 8 credits
+            # (found 2026-09-23). That carrier's value stays on its offering. ⚠ "0-level" alone is
+            # NOT the test -- developmental ENC0xxx/MAT0xxx courses are 0-level and do carry
+            # credit -- so the test is: 0-level AND some carrier reports clock hours (a range
+            # such as "0-240" counts).
+            "creditHours": 0 if (cid[3:4] == '0' and any(str(ch or '').strip() not in ('', '0')
+                                                         for _, _, _, ch in rs))
+                           else (creds.most_common(1)[0][0] if creds else 0),
             "contactHours": hours.most_common(1)[0][0] if hours else None,
             "offerings": offerings,
             "replaceOfferings": True,

@@ -1,0 +1,113 @@
+{
+  "slug": "truck-driver",
+  "name": "Commercial Truck Driver",
+  "cipCode": "49.02",
+  "socCode": "53-3032",
+  "isPublished": true,
+  "sortOrder": 145,
+  "description": "⚠⚠ A federally licensed job with about 214,500 openings a year and a training requirement that became federal law in 2022: first-time Class A and B CDL applicants must train with a provider on the FMCSA Training Provider Registry. Florida's public Class A course is 320 clock hours. ⚠ Florida pays $50,640 at the median against $58,640 nationally, and drivers under 21 may drive only within Florida.",
+  "credentialNote": "⚠⚠⚠ THE CDL IS FEDERAL. First-time Class A and B applicants must complete entry-level driver training from a provider on the FMCSA Training Provider Registry (49 CFR 380.609, from 7 February 2022), so ask any school whether it is listed and for which class. ⚠⚠ The steps: a DOT medical certificate (49 CFR 391, valid up to 24 months), a commercial learner's permit held at least 14 days (49 CFR 383.25), registry training, then the skills test. ⚠ Florida issues a CDL at 18 but restricts drivers under 21 to intrastate operation (FLHSMV); crossing state lines requires 21 (49 CFR 391.11). Drivers are subject to random drug and alcohol testing, and a hazardous materials endorsement adds a knowledge test and a background check.",
+  "cipCodes": [
+    {
+      "cipCode": "52.02",
+      "note": "⚠ Business Administration and Management — the route off the road into dispatch, fleet and transport management, which the logistics programmes also serve."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "commercial-truck-driving",
+      "note": "The programme — read its note for the Training Provider Registry question and where Florida's public programmes are."
+    },
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "⚠ Where a driver's career can go off the road: dispatch, fleet management and supply chain.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "TRA0080",
+      "sortOrder": 1,
+      "reason": "Tractor Trailer Truck Driver — occupational completion point A, 320 clock hours, at 12 Florida public institutions. ⚠⚠ The Class A course. Ask whether the programme is on the FMCSA Training Provider Registry, because 49 CFR 380.609 requires first-time Class A applicants to train with a listed provider.",
+      "variantNote": "⚠ Pensacola State carries it as TRA0080C, and FSCJ splits the same 320 hours into four 80-hour courses: TRA0081, TRA0082, TRA0083 and TRA0089."
+    },
+    {
+      "courseId": "TRA0084",
+      "sortOrder": 2,
+      "reason": "Truck Driver Heavy, Florida Class B — completion point A of the Class B route, 150 clock hours, at 8 institutions. ⚠ The shorter route, for straight trucks rather than tractor-trailers; Class B also requires registry training for first-time applicants."
+    },
+    {
+      "courseId": "TRA0086",
+      "sortOrder": 3,
+      "reason": "Tractor Operator — completion point B, 150 hours, at Miami Lakes Technical and Withlacoochee Technical. ⚠ Offered by two institutions only, so check before planning around it."
+    },
+    {
+      "courseId": "TRA0082",
+      "sortOrder": 4,
+      "reason": "Commercial Vehicle Driver Test Preparation — FSCJ, 80 hours. Preparation for the CDL knowledge and skills tests. ⚠ A learner's permit must be held 14 days before the skills test (49 CFR 383.25)."
+    },
+    {
+      "courseId": "TRA0083",
+      "sortOrder": 5,
+      "reason": "Commercial Vehicle Driving Training/Experiences — FSCJ, 80 hours: straight-line and offset backing, parallel parking and alley docking, the basic control skills the CDL skills test examines."
+    },
+    {
+      "courseId": "TRA0089",
+      "sortOrder": 6,
+      "reason": "Commercial Vehicle Driving IV — FSCJ, 80 hours: urban, rural and expressway driving on public roads, toward the standard the CDL skills test requires."
+    },
+    {
+      "courseId": "TRA1420",
+      "sortOrder": 7,
+      "reason": "Introduction to Trucking Operations — Miami Dade, 3 credits. ⚠ DOT requirements, shipping documents, tracking, scheduling and equipment management. The college-credit step toward dispatch, fleet management and logistics."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Heavy and Tractor-Trailer Truck Drivers",
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/heavy-and-tractor-trailer-truck-drivers.htm",
+      "note": "$58,640 median (2025), 2,221,200 jobs, +4% for 2025–35, about 214,500 openings a year; entry-level education postsecondary nondegree award; 7% self-employed; paid mostly by the mile. No mention of automation, self-driving trucks or AI."
+    },
+    {
+      "label": "O*NET — Heavy and Tractor-Trailer Truck Drivers (53-3032.00)",
+      "url": "https://www.onetonline.org/link/summary/53-3032.00",
+      "note": "Job Zone One to Two; 54% of respondents report a high school diploma; average growth (3% to 4%) for 2024–34 and about 237,600 openings a year."
+    },
+    {
+      "label": "O*NET — Florida wages for 53-3032.00",
+      "url": "https://www.onetonline.org/link/localwages/53-3032.00?st=FL",
+      "note": "Florida median $50,640 against $58,640 nationally, and below national at every percentile."
+    },
+    {
+      "label": "49 CFR 380.609 — Entry-level driver training",
+      "url": "https://www.law.cornell.edu/cfr/text/49/380.609",
+      "note": "First-time Class A or B CDL applicants, and upgrades, must complete training from a provider on the Training Provider Registry; applies from 7 February 2022."
+    },
+    {
+      "label": "49 CFR 383.25 — Commercial learner's permit",
+      "url": "https://www.law.cornell.edu/cfr/text/49/383.25",
+      "note": "A CLP holder may not take the CDL skills test in the first 14 days after the permit is issued; the permit is valid for up to one year."
+    },
+    {
+      "label": "49 CFR 391.11 and 391.45 — Driver qualification and medical certificates",
+      "url": "https://www.law.cornell.edu/cfr/text/49/391.11",
+      "note": "An interstate commercial driver must be at least 21 and physically qualified; the medical examiner's certificate lasts at most 24 months, less for some conditions."
+    },
+    {
+      "label": "FLHSMV — Commercial motor vehicle drivers",
+      "url": "https://www.flhsmv.gov/driver-licenses-id-cards/commercial-motor-vehicle-drivers/",
+      "note": "Florida CDL applicants must be at least 18; applicants under 21 are restricted to intrastate operation only."
+    },
+    {
+      "label": "SCNS statewide course file — TRA",
+      "url": "https://flscns.fldoe.org/",
+      "note": "TRA0080 Tractor Trailer Truck Driver OCP A (320 hours) at 12 public institutions; TRA0084 Class B OCP A (150) at 8; TRA0086 Tractor Operator OCP B (150) at 2; FSCJ's TRA0081–0089 at 80 hours each. All guaranteed transfer."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 49.0205",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "1,038 credentials in 2023 at 19 public institutions, all certificates, led by Sheridan Technical 198 and Indian River State 149."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; The job is licensed by the federal government, and the training is now a federal requirement too</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Heavy and tractor-trailer truck drivers (53-3032)</th></tr></thead>\n<tbody>\n<tr><td>Entry-level education (BLS)</td><td>&#9888; <strong>Postsecondary nondegree award</strong></td></tr>\n<tr><td>Median, 2025</td><td>$58,640 &mdash; &#9888; Florida <strong>$50,640</strong></td></tr>\n<tr><td>Jobs</td><td>2,221,200</td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>+4% (+83,800)</td></tr>\n<tr><td>&#9888;&#9888; Openings a year</td><td><strong>about 214,500</strong></td></tr>\n<tr><td>Self-employed</td><td>7%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Since 7 February 2022 there has been no way around the school.</strong> Federal rule 49 CFR 380.609: <em>&ldquo;An individual who applies, for the first time, for a Class A or Class B CDL, or who upgrades to a Class A or B CDL, must complete driver training from a provider listed on the Training Provider Registry (TPR).&rdquo;</em> The same applies the first time someone seeks the passenger, school bus or hazardous materials endorsement.</p>\n<p>&#9888;&#9888; <strong>So the first question to any programme &mdash; a public technical college or a private truck-driving school &mdash; is whether it is listed on the FMCSA Training Provider Registry, for which class.</strong> A course that is not listed does not count toward the CDL, however good it is.</p>\n\n<h2>&#9888;&#9888;&#9888; The steps to a Class A licence</h2>\n<ol>\n<li><strong>Age.</strong> Florida issues a CDL at 18, but <em>&ldquo;applicants under 21 will be restricted to intrastate operation only&rdquo;</em> (FLHSMV). Federal rule 49 CFR 391.11 requires a driver crossing state lines to be <em>&ldquo;at least 21 years old.&rdquo;</em> &#9888; So an 18-year-old can drive within Florida only, and any job that crosses a state line has to wait until 21.</li>\n<li><strong>A DOT medical certificate.</strong> A driver must be physically qualified under 49 CFR 391 Subpart E, and the certificate lasts at most <strong>24 months</strong> (49 CFR 391.45), less for some conditions. BLS: federal rules <em>&ldquo;do not allow people to become truck drivers if they have a medical condition, such as high blood pressure or epilepsy.&rdquo;</em> &#9888; Get the medical examination <em>before</em> paying for training.</li>\n<li><strong>A Commercial Learner&rsquo;s Permit.</strong> 49 CFR 383.25: <em>&ldquo;The CLP holder is not eligible to take the CDL skills test in the first 14 days after initial issuance of the CLP.&rdquo;</em></li>\n<li><strong>Entry-level driver training</strong> from a Training Provider Registry provider (above).</li>\n<li><strong>The skills test</strong> for the class.</li>\n</ol>\n<p>&#9888; BLS adds that drivers <em>&ldquo;are also subject to random testing for drug or alcohol abuse,&rdquo;</em> and that a hazardous materials endorsement needs another knowledge test and a background check.</p>\n\n<h2>&#9888;&#9888; What Florida&rsquo;s public programmes are</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Course</th><th>Hours</th><th>What it is</th><th>Public carriers</th></tr></thead>\n<tbody>\n<tr><td>&#9888;&#9888; <strong>TRA0080 Tractor Trailer Truck Driver</strong></td><td><strong>320</strong></td><td>completion point A &mdash; the Class A course</td><td>12 (plus Pensacola State as TRA0080C)</td></tr>\n<tr><td>TRA0084 Truck Driver Heavy, Florida Class &ldquo;B&rdquo;</td><td>150</td><td>completion point A of the Class B route</td><td>8</td></tr>\n<tr><td>TRA0086 Tractor Operator</td><td>150</td><td>completion point B</td><td>2</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>320 hours is about eight weeks full time</strong>; BLS describes truck-driving programmes that last <em>&ldquo;between 3 and 6 months,&rdquo;</em> so ask how a college schedules it. FSCJ packages the same 320 hours as four 80-hour courses (TRA0081, TRA0082, TRA0083, TRA0089).</p>\n<p>&#9888; <strong>Florida&rsquo;s output is all short certificates and all at technical and state colleges</strong>: 1,038 credentials in 2023 at 19 public institutions, led by Sheridan Technical (198), Indian River State (149), FSCJ (107), Marion Technical (81) and Orange Technical (80). Private truck-driving schools and carrier-run academies also train drivers, but this site lists public institutions only.</p>\n<p>&#9888; <strong>Some institutions that award the credential do not show the TRA courses in the state course file</strong> (Indian River State is the largest). Ask the college directly how its programme is packaged and whether it is on the Training Provider Registry.</p>\n\n<h2>&#9888;&#9888; What Florida pays</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$37,700</td><td>$40,140</td><td>&minus;$2,440</td></tr>\n<tr><td>25th</td><td>$45,500</td><td>$47,960</td><td>&minus;$2,460</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$50,640</strong></td><td><strong>$58,640</strong></td><td><strong>&minus;$8,000</strong></td></tr>\n<tr><td>75th</td><td>$62,380</td><td>$69,120</td><td>&minus;$6,740</td></tr>\n<tr><td>90th</td><td>$74,330</td><td>$79,380</td><td>&minus;$5,050</td></tr>\n</tbody></table>\n<p>&#9888; <strong>Florida pays below the national figure at every percentile, by $8,000 at the median.</strong> BLS: drivers <em>&ldquo;usually are paid by how many miles they have driven, plus bonuses,&rdquo;</em> so the job&rsquo;s type &mdash; long haul, regional, local &mdash; changes both the pay and the life. <em>&ldquo;Working as a long-haul truck driver is a lifestyle choice because these drivers can be away from home for days or weeks at a time.&rdquo;</em></p>\n<p>&#9888; Federal hours-of-service rules cap a driver at 11 hours of driving within a 14-hour window, with 10 hours off between shifts (BLS summary). &#9888; <strong>BLS does not mention automation, self-driving trucks or AI</strong> in its outlook; it expects demand to grow with freight and online shopping.</p>\n\n<h2>What the programme is for, and what else to know</h2>\n<ul>\n<li>&#9888;&#9888; <strong>Ask about cost and who pays.</strong> If an employer offers to pay for your training, read what you would owe if you leave before an agreed period.</li>\n<li>&#9888; <strong>Class B is a shorter route</strong> to driving straight trucks rather than tractor-trailers, and Florida numbers it separately (TRA0084, 150 hours).</li>\n<li><strong>The management route</strong> is logistics: dispatch, fleet management and supply chain. See the Logistics Analyst path; Miami Dade&rsquo;s TRA1420 Introduction to Trucking Operations is the college-credit bridge.</li>\n</ul>\n"
+}
