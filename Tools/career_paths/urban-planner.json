@@ -1,0 +1,198 @@
+{
+  "slug": "urban-planner",
+  "name": "Urban and Regional Planner",
+  "cipCode": "04.03",
+  "socCode": "19-3051",
+  "isPublished": true,
+  "sortOrder": 150,
+  "description": "⚠⚠ The planning degree is a master's: all five PAB-accredited programmes in Florida are master's, and they award about 104 a year against 13 planning bachelor's (FAU only). So the undergraduate major is a choice, and this page compares the routes. ⚠ Florida law requires every county and city to maintain a comprehensive plan and review it every seven years, which is why 74% of planners work for local government. Median pay $89,320 nationally, $80,720 in Florida.",
+  "credentialNote": "⚠ FLORIDA DOES NOT LICENSE PLANNERS — BLS names New Jersey as the only state that does. ⚠⚠ What matters is (1) a master's from a PAB-accredited programme — in Florida, UF, FSU, UCF, USF or FAU — and (2) the AICP certification from the American Planning Association, which combines education, years of professional planning experience (the number depends on the degree held) and an exam that may be taken before the experience is complete. ⚠ O*NET's respondents split 56% master's, 40% bachelor's: a bachelor's with GIS skills can get an entry-level planning post, and the master's can follow.",
+  "cipCodes": [
+    {
+      "cipCode": "44.04",
+      "note": "⚠⚠ Public Administration — the closest undergraduate route to the employer, since 74% of planners work for local government (BLS). Taught at bachelor's level at UCF, FIU, FAU, Indian River and St. Petersburg among others."
+    },
+    {
+      "cipCode": "45.07",
+      "note": "⚠⚠ Geography — BLS names social science as a feeder, and geography supplies GIS, which BLS lists as core to accredited planning programmes. Bachelor's at FSU, USF, UF and FIU."
+    },
+    {
+      "cipCode": "04.02",
+      "note": "⚠ Architecture — named by BLS as a feeder background, and the source of urban design and site-planning skills."
+    },
+    {
+      "cipCode": "52.02",
+      "note": "⚠ Business Administration — named by BLS as a feeder background: development finance, budgets and economic development are business skills."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "urban-and-regional-planning",
+      "note": "The programme — at master's level everywhere it is accredited in Florida. Read its note for the five programmes and their accreditation terms."
+    },
+    {
+      "slug": "architecture",
+      "note": "⚠ A feeder BLS names. It suits someone drawn to urban design and the physical form of places.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ A feeder for resilience, conservation and coastal planning, which Florida comprehensive plans require.",
+      "isRoute": false
+    },
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ The planner's colleague on transportation and infrastructure, not a route into planning itself.",
+      "isRoute": false
+    },
+    {
+      "slug": "real-estate",
+      "note": "⚠ The development side of the same decisions: a planner working for a developer navigates the plan from outside.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "POS2112",
+      "sortOrder": 1,
+      "reason": "State and Local Government — twenty carriers. ⚠⚠ Three in four planners work for local government, and this is the course about how counties, cities, commissions and boards actually decide."
+    },
+    {
+      "courseId": "ECO2023",
+      "sortOrder": 2,
+      "reason": "Microeconomics — thirty-nine carriers. ⚠ Land markets, housing affordability and development feasibility are microeconomics, and planning master's programmes assume it."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 3,
+      "reason": "Elementary Statistics — thirty-nine carriers. ⚠ Population projections, travel surveys and census data are the raw material of a comprehensive plan."
+    },
+    {
+      "courseId": "GIS2040",
+      "sortOrder": 4,
+      "reason": "Fundamentals of Geographic Information Systems — ten carriers. ⚠⚠ GIS is named by BLS among the core of accredited planning programmes, and it is the skill most likely to open an entry-level planning post to a bachelor's graduate.",
+      "variantNote": "⚠ The universities teach the principles course as GIS3043 (UF, UNF, College of the Florida Keys) or GIS4043 with GIS4043L (FSU, UWF). GIS3043 and GIS4043 are the same statewide course with a different level digit; GIS2040 is a different, lower-division course."
+    },
+    {
+      "courseId": "GEO3602",
+      "sortOrder": 5,
+      "reason": "Urban Geography — FIU, UF and USF. The spatial organisation of cities, their history and economics, and current urban problems. ⚠ The closest undergraduate course to the substance of planning outside a planning department.",
+      "variantNote": "⚠ FAMU, FAU and FSU carry the same statewide course as GEO4602; the level digit is the institution's choice."
+    },
+    {
+      "courseId": "URP3000",
+      "sortOrder": 6,
+      "reason": "Introduction to Urban Planning and Design — FAU and FSU. The survey of the field: communities and regions, planning history, planning systems and methods. ⚠ The one undergraduate planning course worth taking before applying to a master's, to find out whether you like it."
+    },
+    {
+      "courseId": "PAD3003",
+      "sortOrder": 7,
+      "reason": "Public Administration — ten carriers. ⚠ Budgets, boards, public records and public process: the machinery a planning department works inside."
+    },
+    {
+      "courseId": "URP4710",
+      "sortOrder": 8,
+      "reason": "Introduction to Transportation Planning — FAU and FSU. Funding, legislation and methods. ⚠ Transportation is a major planning specialism, and Florida's metropolitan planning organisations are built around it."
+    },
+    {
+      "courseId": "URP4741",
+      "sortOrder": 9,
+      "reason": "Housing Policy and Planning — FAU and FSU. Housing markets, the history of housing policy, and community development. ⚠ Housing affordability is a recurring subject of Florida comprehensive-plan amendments and commission votes."
+    },
+    {
+      "courseId": "URP6100",
+      "sortOrder": 10,
+      "reason": "Planning Theory and History — UF and USF. BLS names planning theory among the core of accredited programmes: what planning is for, and the political setting of comprehensive planning."
+    },
+    {
+      "courseId": "URP5125",
+      "sortOrder": 11,
+      "reason": "Land Use Law — FSU and USF. Zoning, subdivision regulation, takings and due process. ⚠⚠ The law course is what separates a planner from a GIS analyst, and BLS names land use law as core to accredited programmes.",
+      "variantNote": "⚠ FAU and UF teach the subject as URP6131 Legal Aspects of Planning. ⚠ The statewide record for URP?125 is titled Plan Implementation; read the carrier's title."
+    },
+    {
+      "courseId": "URP5312",
+      "sortOrder": 12,
+      "reason": "Growth Management and Comprehensive Planning — FGCU and FSU. ⚠⚠⚠ The Florida-specific course: the comprehensive plan every local government must maintain under s. 163.3167, and its seven-year evaluation under s. 163.3191.",
+      "variantNote": "⚠ The statewide record for URP?312 is titled Local Land Use Planning; FSU and FGCU both teach it as growth management."
+    },
+    {
+      "courseId": "URP6270",
+      "sortOrder": 13,
+      "reason": "Introduction to GIS in Planning — FAU and UF. GIS applied to land-use analysis, suitability mapping and plan making. ⚠ BLS names GIS for planning as core to accredited programmes."
+    },
+    {
+      "courseId": "URP6711",
+      "sortOrder": 14,
+      "reason": "Multimodal Transportation Planning — FAU, UCF, UF and USF, four of the five accredited programmes. ⚠ The most widely carried planning course in the state."
+    },
+    {
+      "courseId": "URP6439",
+      "sortOrder": 15,
+      "reason": "Disaster Resilient Community — FAU and USF. ⚠⚠ Hazard mitigation and post-disaster redevelopment: in a hurricane state, routine planning work rather than a specialism."
+    },
+    {
+      "courseId": "URP6743",
+      "sortOrder": 16,
+      "reason": "Planning for Affordable Housing — UF and USF. Finance tools, inclusionary policy and the regulatory barriers to supply."
+    },
+    {
+      "courseId": "URP6277",
+      "sortOrder": 17,
+      "reason": "Urban Design: 3D and AI Applications — FAU and UF. ⚠ The only course on this path with AI in its title: 3D modelling and AI tools applied to urban design."
+    },
+    {
+      "courseId": "URP6920",
+      "sortOrder": 18,
+      "reason": "Planning Workshop — FAU and UF. ⚠⚠ A studio project, typically for a real client such as a local government or community group. It gives a planning graduate something concrete to show an employer."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Urban and Regional Planners",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/urban-and-regional-planners.htm",
+      "note": "$89,320 median (2025), 45,800 jobs, +4% for 2025–35 and about 3,200 openings a year; entry-level education master's degree; 74% in local government; undergraduate backgrounds in architecture, social science or business; licensure only in New Jersey."
+    },
+    {
+      "label": "O*NET — Urban and Regional Planners (19-3051.00)",
+      "url": "https://www.onetonline.org/link/summary/19-3051.00",
+      "note": "Job Zone Five; 56% of respondents say a master's is required and 40% a bachelor's; average growth (3% to 4%) for 2024–34."
+    },
+    {
+      "label": "O*NET — Florida wages for 19-3051.00",
+      "url": "https://www.onetonline.org/link/localwages/19-3051.00?st=FL",
+      "note": "Florida median $80,720 against $89,320 national, and $5,000–$9,000 below national at every percentile."
+    },
+    {
+      "label": "Planning Accreditation Board — accredited programmes",
+      "url": "https://www.planningaccreditationboard.org/accredited-programs/all/",
+      "note": "Five Florida programmes, all master's: FAU (through 2030), FSU (2029), UCF (2032), UF (2026) and USF (2032)."
+    },
+    {
+      "label": "s. 163.3167, Florida Statutes — comprehensive plans",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/163.3167",
+      "note": "\"Each local government shall maintain a comprehensive plan of the type and in the manner set out in this part.\""
+    },
+    {
+      "label": "s. 163.3191, Florida Statutes — evaluation and appraisal",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/163.3191",
+      "note": "Each local government must evaluate its comprehensive plan at least once every 7 years; one that fails to may not initiate or adopt publicly initiated plan amendments until it complies."
+    },
+    {
+      "label": "American Planning Association — AICP certification",
+      "url": "https://www.planning.org/certification/",
+      "note": "AICP combines education, professional planning experience and an exam; \"members may take the AICP exam while completing their planning experience.\""
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 04.03 and neighbouring fields",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "04.0301: 104 master's (UF 41, FSU 29, UCF 12, USF 12, FAU 10), 13 bachelor's at FAU and 12 UF postbaccalaureate certificates. Also the feeder fields: public administration (44.04), geography (45.07) and sustainability studies (30.33)."
+    },
+    {
+      "label": "SCNS statewide course file — URP, GIS and GEO",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Carrier counts for every course named; statewide titles for URP?125 (Plan Implementation) and URP?312 (Local Land Use Planning) that the carriers have renamed; GIS?043 and GEO?602 carried at two level digits."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; The planning degree is a master&rsquo;s &mdash; the undergraduate major is a choice</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Urban and regional planners (19-3051)</th></tr></thead>\n<tbody>\n<tr><td>Entry-level education (BLS)</td><td>&#9888;&#9888; <strong>Master&rsquo;s degree</strong></td></tr>\n<tr><td>What O*NET&rsquo;s respondents say</td><td>56% say a master&rsquo;s is required; &#9888; <strong>40% say a bachelor&rsquo;s</strong></td></tr>\n<tr><td>Median, 2025</td><td>$89,320</td></tr>\n<tr><td>Jobs</td><td>45,800</td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>+4% (+1,800)</td></tr>\n<tr><td>Openings a year</td><td>about 3,200</td></tr>\n<tr><td>&#9888;&#9888; Employer</td><td><strong>local government, 74%</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Florida awards 104 planning master&rsquo;s degrees a year and 13 planning bachelor&rsquo;s</strong> &mdash; the bachelor&rsquo;s at FAU alone. So for almost everyone the route is <strong>an undergraduate degree in something else, then a master&rsquo;s in planning</strong>. That makes the undergraduate major a real decision, and the section below is about it.</p>\n<p>&#9888; <strong>The 40% matters too.</strong> Some entry-level posts &mdash; planning technician, &ldquo;Planner I&rdquo; &mdash; are open to a bachelor&rsquo;s, especially with GIS skills. That is a way in, and the master&rsquo;s can follow; ask a prospective employer whether it supports part-time graduate study.</p>\n\n<h2>&#9888;&#9888;&#9888; Why Florida employs planners: the law requires a plan</h2>\n<p>Florida statute obliges every local government to plan. Section 163.3167: <em>&ldquo;Each local government shall maintain a comprehensive plan of the type and in the manner set out in this part.&rdquo;</em> And s. 163.3191: <em>&ldquo;At least once every 7 years, each local government shall evaluate its comprehensive plan to determine if plan amendments are necessary.&rdquo;</em> &#9888; A local government that misses the deadline <em>&ldquo;may not initiate or adopt any publicly initiated plan amendments&rdquo;</em> until it complies.</p>\n<p>&#9888;&#9888; <strong>So Florida&rsquo;s 67 counties and more than 400 municipalities each carry a standing legal duty that is planners&rsquo; work</strong> &mdash; the comprehensive plan, its amendments, the zoning and land-development code that implements it, and the evaluation every seven years. That is why three in four planners work for local government, and why the job follows population growth.</p>\n\n<h2>&#9888;&#9888; Florida&rsquo;s five accredited programmes, all master&rsquo;s</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>Degree (PAB-accredited)</th><th>Accredited through</th><th>Master&rsquo;s awarded, 2023</th></tr></thead>\n<tbody>\n<tr><td>University of Florida</td><td>Master of Urban and Regional Planning (campus and online)</td><td>&#9888; 31 Dec 2026</td><td><strong>41</strong></td></tr>\n<tr><td>Florida State University</td><td>Master of Science in Planning</td><td>31 Dec 2029</td><td>29</td></tr>\n<tr><td>University of Central Florida</td><td>M.S. in Urban and Regional Planning</td><td>31 Dec 2032</td><td>12</td></tr>\n<tr><td>University of South Florida</td><td>Master of Urban and Regional Planning</td><td>31 Dec 2032</td><td>12</td></tr>\n<tr><td>Florida Atlantic University</td><td>Master of Urban and Regional Planning</td><td>31 Dec 2030</td><td>10</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>PAB accreditation is the mark to look for, and every accredited Florida programme is a master&rsquo;s.</strong> FAU&rsquo;s undergraduate planning degree is not on the PAB list. &#9888; UF&rsquo;s listed term ends on 31 December 2026, so check the current status on the PAB site before applying there.</p>\n\n<h2>&#9888;&#9888;&#9888; Choosing the undergraduate major</h2>\n<p>BLS says students <em>&ldquo;may benefit from undergraduate backgrounds in architecture, social science, business, or a related field,&rdquo;</em> and that accredited programmes teach <em>&ldquo;planning theory, land use law, and GIS for planning.&rdquo;</em> &#9888; <strong>No body we could find publishes the undergraduate majors of people entering planning master&rsquo;s programmes</strong> &mdash; nothing like the law-school applicant data on the Lawyer page &mdash; so this section says what each route brings rather than which one wins.</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Undergraduate route</th><th>Florida public output</th><th>What it brings to planning</th></tr></thead>\n<tbody>\n<tr><td><strong>Public administration</strong> (44.04)</td><td>large &mdash; UCF, FIU, FAU, Indian River, St. Petersburg and others at bachelor&rsquo;s</td><td>&#9888;&#9888; how local government actually works: budgets, boards, public process. Closest to the employer</td></tr>\n<tr><td><strong>Geography</strong> (45.07)</td><td>FSU, USF, UF, FIU</td><td>&#9888;&#9888; <strong>GIS</strong> &mdash; the technical skill BLS names among the core of accredited planning curricula</td></tr>\n<tr><td><strong>Sustainability studies</strong> (30.33)</td><td>UF 107, FIU 60, USF 13</td><td>environmental systems, resilience, climate adaptation</td></tr>\n<tr><td><strong>Architecture</strong> (04.02)</td><td>see the Architecture programme</td><td>design, site planning and urban design &mdash; the physical half of the job</td></tr>\n<tr><td>Economics, political science, business</td><td>widely taught</td><td>land markets, development finance, the politics of a zoning vote</td></tr>\n<tr><td>Urban and regional planning, bachelor&rsquo;s (04.0301)</td><td>&#9888; FAU only, 13 a year</td><td>the subject itself, early &mdash; not PAB-accredited</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Whatever the major, take four things</strong>, because they recur in BLS&rsquo;s account of the work and in every accredited curriculum: <strong>GIS</strong>, <strong>statistics</strong>, <strong>state and local government</strong>, and <strong>writing</strong> &mdash; a planner&rsquo;s product is the staff report a council votes on.</p>\n\n<h2>&#9888; What Florida pays</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$52,930</td><td>$60,010</td><td>&minus;$7,080</td></tr>\n<tr><td>25th</td><td>$64,520</td><td>$72,020</td><td>&minus;$7,500</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$80,720</strong></td><td><strong>$89,320</strong></td><td><strong>&minus;$8,600</strong></td></tr>\n<tr><td>75th</td><td>$102,240</td><td>$110,030</td><td>&minus;$7,790</td></tr>\n<tr><td>90th</td><td>$129,350</td><td>$134,490</td><td>&minus;$5,140</td></tr>\n</tbody></table>\n<p>&#9888; <strong>An even discount of $5,000&ndash;$9,000 at every percentile.</strong> That differs from teachers, police officers and firefighters, where Florida pays <em>above</em> the national floor and well below the national ceiling. Planners are mostly local-government employees too, but their Florida pay is simply lower across the range. &#9888; Ask any employer for its pay schedule at step 1 and at the top of the grade, as with any public job.</p>\n\n<h2>Licensing and certification</h2>\n<p>&#9888; <strong>Florida does not license planners.</strong> BLS: most states do not; New Jersey is the exception. &#9888; The professional credential is the <strong>AICP</strong> (American Institute of Certified Planners), which combines a degree, years of professional planning experience (the number depends on the degree held) and an exam. APA: <em>&ldquo;Members may take the AICP exam while completing their planning experience.&rdquo;</em></p>\n\n<h2>&#9888; What the Florida programmes are teaching now</h2>\n<ul>\n<li>&#9888;&#9888; <strong>Resilience.</strong> URP6439 <em>Disaster Resilient Community</em> at FAU and USF. In a hurricane state, post-disaster redevelopment and hazard mitigation are routine planning work.</li>\n<li>&#9888; <strong>AI, by name.</strong> URP6277 at FAU and UF is titled <em>Urban Design: 3D and AI Applications</em> &mdash; the only course on this path with AI in its title. BLS does not mention AI in the outlook for planners.</li>\n<li><strong>Transportation.</strong> URP6711 <em>Multimodal Transportation Planning</em> is the most widely carried planning course in the state, at four of the five accredited programmes.</li>\n</ul>\n<p>&#9888; <strong>Read the carrier&rsquo;s title, not the statewide one.</strong> Several graduate URP records in the statewide file are decades old and the universities have renamed the courses: URP?125 is <em>Plan Implementation</em> statewide and <em>Land Use Law</em> at FSU and USF; URP?312 is <em>Local Land Use Planning</em> statewide and <em>Growth Management and Comprehensive Planning</em> at FSU and FGCU.</p>\n"
+}

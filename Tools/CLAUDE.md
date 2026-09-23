@@ -208,6 +208,7 @@ re-deriving comparators each time:**
 | Architect | −$3,040 | but −$23,190 at the **90th** |
 | Database administrator | −$500 | ✅ and the 75th percentile is ABOVE national |
 | ✅ Database architect | −$1,180 | ✅✅ **90th percentile ABOVE national (+$2,410)** |
+| Urban planner | −$8,600 | ⚠ an even −$5,000 to −$9,000 at every percentile |
 | Commercial pilot | −$1,330 | floor ABOVE national (+$3,740 at the 10th) but ⚠ **−$37,510 at the 90th** |
 | Airline pilot | −$7,120 | ⚠⚠ **−$107,150 at the 90th** ($356,680 vs $463,830) |
 | ✅ Agricultural manager | −$2,820 | ✅✅ **75th +$22,510 and 90th +$26,920 ABOVE national** — ⚠ salaried managers only (see the self-employment rule) |
@@ -232,11 +233,17 @@ floor and the ceiling falls well short of it:**
 | Police officer | **+$3,820** | ⚠ **−$16,930** |
 | Firefighter | **+$2,350** | −$7,730 |
 | ✅ *control:* software developer | −$2,410 | −$10,270 |
+| ⚠ *counter-case:* urban planner (74% local government) | ⚠ **−$7,080** | −$5,140 |
 
 ⚠⚠ **The control row is what makes it a finding rather than a platitude.** Florida software
 developers are below the national figure at BOTH ends — an ordinary discount. **The public-service
 occupations show something different: a raised floor and a lowered ceiling.** Florida starts public
 servants well and tops them out early.
+
+⚠⚠ **But it is not true of every public employer's staff (2026-09-23).** Urban planners are 74%
+local government, yet Florida pays them $5,000–$9,000 BELOW national at every percentile, floor included.
+**So the compression belongs to the uniformed and teaching services on statewide or union pay scales, not to
+public employment as such.** Check the 10th percentile before assuming the pattern.
 
 ⚠⚠⚠ **So on any PUBLIC-SECTOR path, quote the PERCENTILES, not the median**, and tell the
 reader to look up the employer's pay schedule at step 1, step 10 and step 20. **The median hides the

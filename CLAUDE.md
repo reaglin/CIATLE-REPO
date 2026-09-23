@@ -20,8 +20,8 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed: **40,630 courses, 2,504 curriculum guides, 84 career
-paths and 90 programmes** are live as of 2026-09-23. ⚠ **Browse reaches only 39,982 of those
+three-project solution exists and is deployed: **40,870 courses, 2,504 curriculum guides, 85 career
+paths and 91 programmes** are live as of 2026-09-23. ⚠ **Browse reaches only 40,222 of those
 courses** — 648 art courses (`ARH`, `ARE`, `ART`) sit in the catalog under a discipline node that a
 key collision knocked out of the tree. Fixed in the repo, **awaiting a deploy**:
 `docs/DEVELOPMENT-PLAN.md` item 1.5.
@@ -32,8 +32,9 @@ computing, business, law, education and public service. A **second 50 rows** wer
 2026-09-21 (`Tools/career_paths/QUEUE.csv`, ranks 101–150), chosen from the largest Florida
 IPEDS footprints the site does not yet cover: health (16), business (8), a new creative and
 media cluster (7), science (4), social services (3), and the service and transport careers the
-first queue missed. **23 of the 50 are CHOICE paths.** ⚠ Six rows are blocked on a CIP seed
-widening (a deploy) — `REVIEW_QUEUE.md` item 116; the other 44 can be worked today.
+first queue missed. **23 of the 50 are CHOICE paths.** ⚠ **As of 2026-09-23 every workable row is published; the seven that remain are blocked on a CIP seed
+widening (a deploy)** — `REVIEW_QUEUE.md` item 116 — vet tech, pharmacist, truck driver, chef, cosmetologist,
+plumber and carpenter.
 **After this queue, career paths move to REQUEST-DRIVEN, the same as courses.** Guide writing is
 already request-only. Both loops run from the `Tools/` session; neither needs a deploy.
 

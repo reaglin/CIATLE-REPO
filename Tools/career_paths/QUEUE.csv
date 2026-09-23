@@ -135,7 +135,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 147,cosmetologist,Cosmetologist,12.04,Cosmetology and Related Personal Grooming Services,39-5012,"Hairdressers, Hairstylists, and Cosmetologists",SRV,DIRECT,no,
 148,plumber,Plumber,46.05,Plumbing and Related Water Supply Services,47-2152,"Plumbers, Pipefitters, and Steamfitters",MFG,DIRECT,no,
 149,carpenter,Carpenter,46.02,Carpentry,47-2031,Carpenters,MFG,DIRECT,no,
-150,urban-planner,Urban and Regional Planner,04.03,"City/Urban, Community, and Regional Planning",19-3051,Urban and Regional Planners,PUB,DIRECT,yes,
+150,urban-planner,Urban and Regional Planner,04.03,"City/Urban, Community, and Regional Planning",19-3051,Urban and Regional Planners,PUB,DIRECT,yes,published
 151,audiologist,Audiologist,51.02,Communication Disorders Sciences and Services,29-1181,Audiologists,HLT,DIRECT,yes,section:speech-language-pathologist
 152,slp-assistant,Speech-Language Pathology Assistant,51.02,Communication Disorders Sciences and Services,31-9099,"Healthcare Support Workers, All Other",HLT,DIRECT,yes,section:speech-language-pathologist
 153,occupational-therapist,Occupational Therapist,51.23,Rehabilitation and Therapeutic Professions,29-1122,Occupational Therapists,HLT,DIRECT,yes,section:occupational-therapy-assistant

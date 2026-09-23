@@ -1,0 +1,36 @@
+{
+  "slug": "urban-and-regional-planning",
+  "name": "Urban and Regional Planning",
+  "isPublished": true,
+  "sortOrder": 630,
+  "description": "Land use, growth management, transportation, housing and resilience: how communities decide what gets built where. ⚠⚠ In Florida this is a MASTER'S programme. Five universities hold PAB accreditation, all at master's level, and they award about 104 planning master's a year against 13 bachelor's.",
+  "degreesNote": "⚠⚠⚠ THE ACCREDITED DEGREE IS A MASTER'S. PAB accredits five Florida programmes, all master's: UF's Master of Urban and Regional Planning (41 a year, campus and online), FSU's Master of Science in Planning (29), UCF's M.S. in Urban and Regional Planning (12), USF's MURP (12) and FAU's MURP (10). ⚠ UF's listed accreditation term ends 31 December 2026, so check the PAB site for its current status. ⚠ FAU also awards the only planning bachelor's in the state (13 a year), which is not on the PAB list, and UF adds 12 postbaccalaureate certificates. ⚠⚠ So the undergraduate major is a choice: public administration, geography, sustainability studies, architecture, economics and political science all feed planning master's programmes, and BLS names architecture, social science and business. Take GIS, statistics, state and local government and writing whatever the major. ⚠ Florida does not license planners; the professional credential is AICP.",
+  "cips": [
+    {
+      "cipCode": "04.03",
+      "note": "City/Urban, Community and Regional Planning — 129 Florida public credentials a year: master's at UF 41, FSU 29, UCF 12, USF 12 and FAU 10 (all PAB-accredited), FAU's 13 bachelor's, and UF's 12 postbaccalaureate certificates."
+    }
+  ],
+  "related": [
+    {
+      "slug": "architecture",
+      "note": "⚠ BLS names architecture as a feeder, and urban design and site planning are shared ground. The difference is scale and client: an architect designs a building for an owner; a planner writes the rules every building in the jurisdiction must meet.",
+      "isRoute": false
+    },
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ The planner's closest colleague on transportation, stormwater and infrastructure. Transportation planning (URP6711) and transportation engineering (TTE4004) meet at the metropolitan planning organisation.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ Florida comprehensive plans carry conservation and coastal management elements, and resilience planning is now routine, so environmental science graduates move into planning master's programmes.",
+      "isRoute": false
+    },
+    {
+      "slug": "real-estate",
+      "note": "⚠ The other side of the zoning table: developers and their consultants hire planners to navigate the same comprehensive plans and land-development codes.",
+      "isRoute": false
+    }
+  ]
+}
