@@ -1,0 +1,30 @@
+{
+  "slug": "culinary-arts",
+  "name": "Culinary Arts, Baking and Culinary Management",
+  "isPublished": true,
+  "sortOrder": 640,
+  "description": "Cooking, baking and pastry, and running a kitchen, taught in Florida as clock-hour certificates at technical colleges and as college-credit certificates and associate degrees at state colleges. ⚠⚠ About 1,255 credentials a year at 46 public institutions, and no bachelor's degree anywhere: the four-year route is hospitality management.",
+  "degreesNote": "⚠⚠ Three programmes share this classification. Culinary Arts / Chef Training (12.0503) is the largest, 620 credentials a year at 44 institutions, nearly all certificates: Valencia 87, Miami Dade 52, Atlantic Technical 49, McFatter Technical 36. Baking and Pastry Arts (12.0501) is 352 at 12, and ⚠⚠ Valencia alone awards 234 of them, two thirds of the state. Restaurant, Culinary and Catering Management (12.0504) is 280 at 12, 146 of them associate degrees, led by Valencia 78 and Miami Dade 76. ⚠⚠⚠ Florida's clock-hour programme, Commercial Foods and Culinary Arts, is 1,200 hours in four 300-hour courses named after jobs: Food Preparation, Cook (Restaurant), Chef/Head Cook and Food Service Management. The baking programme is 600 hours: Pastry Cook/Baker, then Pastry Chef/Head Baker. Each completion point is a place to stop and be hired, so ask whether the college awards a certificate there. ⚠ Clock hours are not college credit: moving from a technical-college certificate to an A.S. depends on an articulation agreement between the two schools. ⚠ None of these jobs requires the programme to start. What the programme buys is a structured start, the Florida food-safety certificates, baking, and the management rung.",
+  "cips": [
+    {
+      "cipCode": "12.05",
+      "note": "Culinary Arts and Related Services — 1,255 Florida public credentials a year at 46 institutions: Culinary Arts/Chef Training (12.0503) 620 at 44, Baking and Pastry Arts (12.0501) 352 at 12 (Valencia 234), and Restaurant, Culinary and Catering Management (12.0504) 280 at 12. No bachelor's degree."
+    }
+  ],
+  "related": [
+    {
+      "slug": "hospitality-management",
+      "note": "⚠⚠ The four-year route, and where the management rung leads. Florida awards no bachelor's in culinary arts; a hospitality management degree trains people to run restaurants, hotels and food service rather than to cook. A culinary A.S. followed by a hospitality bachelor's combines the kitchen and the management."
+    },
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠ Many cooks aim at their own restaurant, food truck, bakery or catering business. The kitchen skills are necessary but not sufficient: costing, cash flow and leases decide whether the business lasts, and the entrepreneurship courses cover them.",
+      "isRoute": false
+    },
+    {
+      "slug": "dietetics-and-nutrition",
+      "note": "⚠ The licensed neighbour. Hospital and school food service, special diets and menu planning for health all meet dietetics, and nutrition advice beyond general guidance is regulated in Florida.",
+      "isRoute": false
+    }
+  ]
+}

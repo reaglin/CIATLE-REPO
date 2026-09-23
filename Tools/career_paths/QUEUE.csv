@@ -131,7 +131,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 143,agricultural-manager,Agricultural Manager,01.01,Agricultural Business and Management,11-9013,"Farmers, Ranchers, and Other Agricultural Managers",AGR,DIRECT,yes,published
 144,commercial-pilot,Commercial Pilot,49.01,Air Transportation,53-2012,Commercial Pilots,TRN,DIRECT,yes,published
 145,truck-driver,Commercial Truck Driver,49.02,Ground Transportation,53-3032,Heavy and Tractor-Trailer Truck Drivers,TRN,DIRECT,no,
-146,chef,Chef and Culinary Professional,12.05,Culinary Arts and Related Services,35-1011,Chefs and Head Cooks,SRV,DIRECT,no,
+146,chef,Chef and Culinary Professional,12.05,Culinary Arts and Related Services,35-1011,Chefs and Head Cooks,SRV,DIRECT,no,published
 147,cosmetologist,Cosmetologist,12.04,Cosmetology and Related Personal Grooming Services,39-5012,"Hairdressers, Hairstylists, and Cosmetologists",SRV,DIRECT,no,
 148,plumber,Plumber,46.05,Plumbing and Related Water Supply Services,47-2152,"Plumbers, Pipefitters, and Steamfitters",MFG,DIRECT,no,
 149,carpenter,Carpenter,46.02,Carpentry,47-2031,Carpenters,MFG,DIRECT,no,

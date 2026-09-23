@@ -1,0 +1,186 @@
+{
+  "slug": "chef",
+  "name": "Chef, Cook and Baker",
+  "cipCode": "12.05",
+  "socCode": "35-1011",
+  "additionalSocCodes": [
+    "35-2014",
+    "51-3011"
+  ],
+  "isPublished": true,
+  "sortOrder": 146,
+  "description": "⚠⚠⚠ No kitchen job needs a credential to start: restaurant cooks and bakers learn on the job, and a chef needs a high school diploma plus five or more years of experience. ⚠⚠ The pay step is from cook ($37,020 Florida median) to chef or head cook ($58,240), and it takes experience rather than a certificate. Florida's 1,200-hour culinary programme is built from courses named after the jobs (Cook, Restaurant, then Chef/Head Cook), and this page explains what it is worth.",
+  "credentialNote": "⚠⚠ NO LICENCE TO COOK, BUT TWO FLORIDA CERTIFICATES. Every food service employee who stores, prepares or serves food must be certified in food handling within 60 days of being hired, valid for 3 years (s. 509.049, F.S.). Every manager must pass an approved food-protection test within 30 days of being hired (s. 509.039). ⚠ The manager's certificate is the one that matters for moving from cook to kitchen manager or chef. Both are regulated by DBPR's Division of Hotels and Restaurants. ⚠ Beyond those, what an employer checks is experience. BLS lists five years or more for a chef, and no programme replaces that.",
+  "cipCodes": [
+    {
+      "cipCode": "52.09",
+      "note": "⚠⚠ Hospitality Administration/Management — the four-year route, since Florida awards no bachelor's in culinary arts. It leads to running restaurants, hotels and food service; the Hospitality Manager path covers food service managers (SOC 11-9051), the rung the clock-hour programme's last course points at."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "culinary-arts",
+      "note": "The programme — read its note for the clock-hour versus college-credit split and why Valencia dominates baking."
+    },
+    {
+      "slug": "hospitality-management",
+      "note": "⚠⚠ The bachelor's route, and the management side of the same industry. Pairs naturally with a culinary A.S."
+    },
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠ For the cook who wants their own restaurant, bakery, food truck or catering business, where costing and cash flow decide survival more than the food does.",
+      "isRoute": false
+    },
+    {
+      "slug": "dietetics-and-nutrition",
+      "note": "⚠ The licensed neighbour, for hospital, school and special-diet food service.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "HMV0100",
+      "sortOrder": 1,
+      "reason": "Food Preparation — 300 hours, at all 34 institutions that run Florida's clock-hour culinary programme, and its first completion point. Knife work, cooking methods, kitchen equipment and sanitation."
+    },
+    {
+      "courseId": "HMV0170",
+      "sortOrder": 2,
+      "reason": "Cook, Restaurant — 300 hours, a completion point named after the job. ⚠⚠ Restaurant cooking has about 250,700 openings a year (O*NET) and needs no credential to enter, so this is where the programme and the job market meet."
+    },
+    {
+      "courseId": "HMV0171",
+      "sortOrder": 3,
+      "reason": "Chef/Head Cook — 300 hours, a completion point, and the state course record ties it to SOC 35-1011. ⚠⚠ The course teaches the job; being hired as a chef still takes years in kitchens. BLS lists five years or more of experience."
+    },
+    {
+      "courseId": "HMV0126",
+      "sortOrder": 4,
+      "reason": "Food Service Management — 300 hours; the state record ties it to food service managers (SOC 11-9051). ⚠ Menus, costing, staffing and ordering. It is the rung where the pay changes, and Florida requires a manager's food-protection certificate within 30 days of taking a management job."
+    },
+    {
+      "courseId": "FSS0090",
+      "sortOrder": 5,
+      "reason": "Pastry Cook/Baker — completion point A of the clock-hour baking programme, 300 hours, at six technical colleges. ⚠⚠ The baker occupation, taught as a hireable exit.",
+      "variantNote": "⚠ The college-credit equivalent is Baking and Pastries I (FSS1246C) at six state colleges; see below."
+    },
+    {
+      "courseId": "FSS0091",
+      "sortOrder": 6,
+      "reason": "Pastry Chef/Head Baker — completion point B, a further 300 hours: laminated doughs, plated desserts, cakes and production planning."
+    },
+    {
+      "courseId": "FOS2201",
+      "sortOrder": 7,
+      "reason": "Food Safety and Sanitation — eight carriers. ⚠⚠ The course behind the certificates Florida law requires: food handler certification within 60 days of employment (s. 509.049, F.S.) and the manager's food-protection test within 30 days (s. 509.039).",
+      "variantNote": "⚠ Daytona State, FSCJ and Hillsborough teach it as FOS1201 Sanitation and Safety Management; Miami Dade and Palm Beach State as HFT1212 Safety and Sanitation."
+    },
+    {
+      "courseId": "FSS1202C",
+      "sortOrder": 8,
+      "reason": "Food Production I — Daytona State, FSCJ, Gulf Coast and Miami Dade. The foundations of cooking on the college-credit route: methods, stocks and sauces, and station work.",
+      "variantNote": "⚠ Broward, the College of the Florida Keys, Indian River and Valencia call their version FSS1203C Quantity Food Production I. The same statewide course (Basic Food Preparation) is also packaged as a lecture plus a lab: Miami Dade's FSS1202, Northwest Florida State's FSS1202L, and UNF's FSS1202 with FSS1202L, which UNF titles Food Fundamentals and teaches in its nutrition programme. Lecture plus lab completes the course the same way the combined C version does."
+    },
+    {
+      "courseId": "FSS1240C",
+      "sortOrder": 9,
+      "reason": "Classical Cuisine — five carriers. The French foundations — mother sauces, classical cuts and preparations — that kitchens still use as a common language."
+    },
+    {
+      "courseId": "FSS2248C",
+      "sortOrder": 10,
+      "reason": "Garde Manger — seven carriers, the widest culinary course at the state colleges. The cold kitchen: charcuterie, salads, cold sauces, buffet and platter work. ⚠ Catering and banquet kitchens hire for it."
+    },
+    {
+      "courseId": "FSS2242C",
+      "sortOrder": 11,
+      "reason": "International Cuisine — five carriers. ⚠ In a Florida kitchen, the Latin American and Caribbean repertoire is not an elective topic. Ask which cuisines the course covers.",
+      "variantNote": "⚠ The College of the Florida Keys and Northwest Florida State teach FSS2241C International and Regional Cuisine."
+    },
+    {
+      "courseId": "FSS1246C",
+      "sortOrder": 12,
+      "reason": "Baking and Pastries I — six carriers (Broward, Florida Keys, Indian River, Miami Dade, Northwest Florida State, Valencia). ⚠ The college-credit start for the baker career.",
+      "variantNote": "⚠ Daytona State, Gulf Coast, Hillsborough and Pensacola State teach FSS1063C Food Service Specialties - Baking; Palm Beach State and Valencia also offer FSS1050C Basic Baking. Valencia runs a full pastry sequence of its own (artisan breads, cakes, chocolates and confections)."
+    },
+    {
+      "courseId": "FSS2247C",
+      "sortOrder": 13,
+      "reason": "Baking and Pastries II — five carriers. Advanced doughs, cakes and plated desserts: the baking a restaurant pastry station actually needs."
+    },
+    {
+      "courseId": "HUN1203",
+      "sortOrder": 14,
+      "reason": "Culinary Nutrition — Daytona State, FSCJ and Indian River. ⚠ Allergens, special diets and menu labelling are daily kitchen work, and hospital, school and senior-living kitchens run on them."
+    },
+    {
+      "courseId": "FSS2500",
+      "sortOrder": 15,
+      "reason": "Food Service Costing and Controls — six carriers. ⚠⚠ Food cost, portion control and inventory. It is what separates a cook from someone who can run a kitchen: food service margins are thin, and costing decides whether a kitchen makes money."
+    },
+    {
+      "courseId": "FSS2251",
+      "sortOrder": 16,
+      "reason": "Food and Beverage Management — five carriers. Purchasing, beverage service and front-of-house operations: the management half of the A.S."
+    },
+    {
+      "courseId": "FSS2942",
+      "sortOrder": 17,
+      "reason": "Culinary Management Internship I — FSCJ, Indian River, Northwest Florida State and Valencia. ⚠⚠ Every year in a kitchen counts toward the five years BLS says a chef needs. Choose the placement for the kind of kitchen you want to work in: hotel, restaurant, catering or institutional.",
+      "variantNote": "⚠ Gulf Coast and Hillsborough call it FSS1942 Culinary Externship."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Chefs and Head Cooks",
+      "url": "https://www.bls.gov/ooh/food-preparation-and-serving/chefs-and-head-cooks.htm",
+      "note": "$62,470 median (2025), 220,300 jobs, +7% for 2025–35, about 25,200 openings a year. Entry: high school diploma and 5 years or more of related experience; 7% self-employed. No mention of automation or AI."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Cooks",
+      "url": "https://www.bls.gov/ooh/food-preparation-and-serving/cooks.htm",
+      "note": "Restaurant cooks $17.98 an hour (2025); 2.7 million cooks, +7%, about 393,200 openings a year. Most learn on the job and \"no formal education is typically required\". No mention of automation, AI or robots."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Bakers",
+      "url": "https://www.bls.gov/ooh/production/bakers.htm",
+      "note": "$37,160 median (2025), 262,400 jobs, +6%, about 36,500 openings a year; no formal educational credential, with moderate-term on-the-job training of up to a year; 10% self-employed."
+    },
+    {
+      "label": "O*NET — Cooks, Restaurant (35-2014.00)",
+      "url": "https://www.onetonline.org/link/summary/35-2014.00",
+      "note": "Job Zone One to Two; 47% of respondents report a high school diploma and 34% less; 1,460,200 employed and about 250,700 openings a year projected for 2024–34."
+    },
+    {
+      "label": "O*NET — Florida wages for chefs (35-1011), restaurant cooks (35-2014) and bakers (51-3011)",
+      "url": "https://www.onetonline.org/link/localwages/35-2014.00?st=FL",
+      "note": "Florida medians: chefs $58,240, restaurant cooks $37,020, bakers $35,870. The restaurant-cook band runs $29,710 to $46,450 from the 10th to the 90th percentile."
+    },
+    {
+      "label": "s. 509.049, Florida Statutes — food service employee training",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/509.049",
+      "note": "Food service employees must receive certification within 60 days after employment; it remains valid for 3 years."
+    },
+    {
+      "label": "s. 509.039, Florida Statutes — food service managers",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2025/509.039",
+      "note": "All managers must pass an approved food-protection test, within 30 days after employment."
+    },
+    {
+      "label": "CPALMS-CTE — Florida culinary and baking curriculum frameworks (CIP 12.05)",
+      "url": "https://ctepreview.cpalms.org/",
+      "note": "Seventeen culinary and baking programmes, among them Professional Culinary Arts & Hospitality (clock hour), Baking and Pastry Arts (clock hour), Culinary Management A.S., Baking & Pastry Management A.S., and three registered apprenticeships."
+    },
+    {
+      "label": "SCNS statewide course file — HMV and FSS",
+      "url": "https://flscns.fldoe.org/",
+      "note": "HMV0100, HMV0170 and HMV0171 are occupational completion points of the 1,200-hour Commercial Foods and Culinary Arts programme (SOC 35-1011 on the chef course, 11-9051 on management); FSS0090/FSS0091 are baking completion points A and B. All are guaranteed transfer."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 12.05",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "12.0503: 620 at 44 institutions; 12.0501: 352 at 12 (Valencia 234); 12.0504: 280 at 12 (146 associate). No bachelor's."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; No kitchen job requires a credential to start &mdash; the ladder is experience</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Entry (BLS)</th><th>Florida median</th><th>Openings a year</th><th>Outlook 2025&ndash;35</th></tr></thead>\n<tbody>\n<tr><td><strong>Restaurant cook</strong></td><td>35-2014</td><td>&#9888; <strong>no formal credential</strong>; trained on the job</td><td>$37,020</td><td>&#9888;&#9888; <strong>about 250,700</strong> (O*NET)</td><td>+7% (all cooks)</td></tr>\n<tr><td><strong>Baker</strong></td><td>51-3011</td><td>&#9888; <strong>no formal credential</strong>; up to a year on the job</td><td>$35,870</td><td>about 36,500</td><td>+6%</td></tr>\n<tr><td><strong>Chef and head cook</strong></td><td>35-1011</td><td>high school diploma &mdash; &#9888;&#9888; <strong>and 5 years or more of experience</strong></td><td><strong>$58,240</strong></td><td>about 25,200</td><td>+7%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Nobody needs a culinary programme to be hired in a kitchen.</strong> BLS says most cooks <em>&ldquo;learn their skills through on-the-job training and work-related experience,&rdquo;</em> and most bakers the same, with training that <em>&ldquo;may last up to 1 year.&rdquo;</em> O*NET projects about 250,700 openings a year for restaurant cooks, ten times the figure for chefs.</p>\n<p>&#9888;&#9888; <strong>The money is one rung up, and that rung is gated by EXPERIENCE, not by a certificate.</strong> A Florida chef or head cook earns about <strong>$21,220 more at the median</strong> than a restaurant cook, and BLS lists <strong>five years or more</strong> of related work experience as the way in. So the question this page answers is the one the fitness and agriculture pages also had to answer: <strong>what is the programme FOR, when the job does not require it?</strong></p>\n<ol>\n<li><strong>A faster, structured start.</strong> Florida&rsquo;s clock-hour programme is 1,200 hours &mdash; about a school year full time &mdash; and covers knife work, cooking methods, garde manger, baking basics and sanitation in order, rather than whatever station a kitchen needs covered that week.</li>\n<li><strong>The management rung.</strong> The last 300-hour course in the programme is <em>Food Service Management</em>, and Florida&rsquo;s own course record ties it to food service managers (SOC 11-9051). The college-credit route leads to an <strong>A.S. in Culinary Management</strong>. See the Hospitality Manager path for that career.</li>\n<li><strong>Baking and pastry</strong> as a specialism, which a restaurant line does not teach.</li>\n<li><strong>The Florida certificates you will need anyway</strong> (below), taught as part of the course.</li>\n</ol>\n<p>&#9888; <strong>If none of those is the goal, the honest advice is BLS&rsquo;s: get a kitchen job and learn on the line.</strong> What a chef&rsquo;s job asks for is years at the stove, and a programme does not replace them.</p>\n\n<h2>&#9888;&#9888;&#9888; Florida builds the programme out of the jobs themselves</h2>\n<p>Florida&rsquo;s clock-hour culinary programme, <strong>Commercial Foods and Culinary Arts (1,200 hours)</strong>, is taught at <strong>34 public technical and state colleges</strong>, every one with the same four 300-hour courses. Three of them are <strong>occupational completion points</strong> &mdash; places a student can stop, be hired and come back &mdash; and they are named after the job:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Course</th><th>Hours</th><th>What it is</th></tr></thead>\n<tbody>\n<tr><td>HMV0100 Food Preparation</td><td>300</td><td>completion point</td></tr>\n<tr><td>&#9888;&#9888; <strong>HMV0170 Cook, Restaurant</strong></td><td>300</td><td>completion point &mdash; <strong>the restaurant cook</strong></td></tr>\n<tr><td>HMV0171 Chef/Head Cook</td><td>300</td><td>completion point; the state record ties it to SOC 35-1011</td></tr>\n<tr><td>HMV0126 Food Service Management</td><td>300</td><td>the state record ties it to SOC 11-9051, food service managers</td></tr>\n</tbody></table>\n<p>The baking programme is built the same way, at six technical colleges: <strong>FSS0090 Pastry Cook/Baker</strong> (completion point A, 300 hours) and <strong>FSS0091 Pastry Chef/Head Baker</strong> (completion point B, 300 hours) &mdash; 600 hours in all.</p>\n<p>&#9888; <strong>Ask the college whether it actually awards a certificate at each completion point.</strong> The state structures the programme around them; not every school issues the intermediate certificate, and for someone who needs to work partway through, that is the difference between leaving with a credential and leaving with nothing.</p>\n\n<h2>&#9888;&#9888; Two systems: clock hours and college credit</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Clock-hour certificate</th><th>College-credit certificate and A.S.</th></tr></thead>\n<tbody>\n<tr><td>Where</td><td>technical colleges, and some state colleges</td><td>state colleges &mdash; Valencia, Miami Dade, Broward, Indian River, Palm Beach State and others</td></tr>\n<tr><td>Courses</td><td><code>HMV</code> and <code>FSS0xxx</code>, measured in hours</td><td><code>FSS1xxx</code>/<code>FSS2xxx</code>, <code>FOS</code>, <code>HFT</code>, measured in credits</td></tr>\n<tr><td>Leads to</td><td>work, fast</td><td>work, and the <strong>A.S. in Culinary Management</strong> or Baking and Pastry Management</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Clock hours are not college credits.</strong> A technical-college certificate does not turn into credit toward an A.S. by itself. Where a state college grants credit for it, that comes through an articulation agreement between the two schools, so ask before you enrol if an A.S. may come later.</p>\n\n<h2>&#9888;&#9888;&#9888; The Florida certificates every kitchen worker needs</h2>\n<ul>\n<li><strong>Food handler training</strong> &mdash; s. 509.049, F.S.: every food service employee responsible for storing, preparing, displaying or serving food <em>&ldquo;must receive certification within 60 days after employment,&rdquo;</em> and it <em>&ldquo;shall remain valid for 3 years.&rdquo;</em></li>\n<li><strong>Food protection manager</strong> &mdash; s. 509.039, F.S.: <em>&ldquo;All managers employed by a food service establishment must have passed an approved test,&rdquo;</em> and <em>&ldquo;Managers have a period of 30 days after employment to pass the required test.&rdquo;</em> &#9888; This is the one that matters for the move from cook to kitchen manager or chef.</li>\n</ul>\n<p>Both are regulated by the Department of Business and Professional Regulation, Division of Hotels and Restaurants, and Florida&rsquo;s baking framework states that the programme is regulated by that division.</p>\n\n<h2>What Florida pays</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Restaurant cook FL / US</th><th>Baker FL / US</th><th>Chef and head cook FL / US</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$29,710 / $28,700</td><td>$28,780 / $28,120</td><td>$31,920 / $37,900</td></tr>\n<tr><td>25th</td><td>$35,050 / $34,010</td><td>$30,490 / $32,660</td><td>$43,680 / $48,440</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$37,020</strong> / $37,390</td><td><strong>$35,870</strong> / $37,160</td><td><strong>$58,240</strong> / $62,470</td></tr>\n<tr><td>75th</td><td>$42,850 / $44,620</td><td>$39,690 / $44,360</td><td>$75,840 / $78,750</td></tr>\n<tr><td>90th</td><td>$46,450 / $47,900</td><td>$45,330 / $49,020</td><td>$92,300 / $98,560</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>A restaurant cook&rsquo;s pay band is narrow: in Florida the 10th and 90th percentiles are only $16,740 apart.</strong> Getting better at the job moves pay very little; the step that moves it is to <strong>chef or head cook</strong>, where the Florida 90th percentile is $92,300. &#9888; Bakers&rsquo; Florida pay sits below the national figure at every level above the floor.</p>\n<p>&#9888; BLS does not mention automation or AI for cooks, bakers or chefs. It expects demand to grow because <em>&ldquo;people will continue to eat out, buy takeout meals, or have food delivered.&rdquo;</em> The hazards it names are burns, cuts and falls, and the hours are early mornings, late nights, weekends and holidays.</p>\n\n<h2>&#9888;&#9888; Where Florida trains cooks, bakers and chefs</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Programme (CIP)</th><th>Credentials a year</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>Culinary Arts / Chef Training (12.0503)</td><td><strong>620</strong> at 44 institutions</td><td>Valencia 87, Miami Dade 52, Atlantic Technical 49, McFatter Technical 36, Sheridan Technical 27, Orange Technical 25 &hellip;</td></tr>\n<tr><td>Baking and Pastry Arts (12.0501)</td><td><strong>352</strong> at 12</td><td>&#9888;&#9888; <strong>Valencia 234 &mdash; two thirds of the state</strong>; then McFatter Technical 30, Pinellas Technical 18</td></tr>\n<tr><td>Restaurant, Culinary and Catering Management (12.0504)</td><td><strong>280</strong> at 12</td><td>Valencia 78, Miami Dade 76, Indian River 30, Broward 20; 146 of them associate degrees</td></tr>\n</tbody></table>\n<p>&#9888; <strong>No Florida public institution awards a bachelor&rsquo;s degree in culinary arts.</strong> The four-year route is <strong>hospitality management</strong>, which leads to running restaurants, hotels and food service rather than to cooking.</p>\n"
+}
