@@ -1,0 +1,35 @@
+{
+  "slug": "environmental-science",
+  "name": "Environmental Science and Studies",
+  "isPublished": true,
+  "sortOrder": 596,
+  "description": "Measuring, understanding and regulating the natural environment — water, air, soil, habitat and the rules that govern them. ⚠⚠⚠ Two adjacent degrees hide inside this family and they lead to different jobs: Environmental SCIENCE is the laboratory and field science, Environmental STUDIES is policy, law and communication. Florida's largest producer is UCF, and UCF's programme is the studies one.",
+  "degreesNote": "⚠⚠⚠ CHECK WHICH OF THE TWO YOU ARE APPLYING TO. Environmental Science (03.0104) produces 456 credentials at 14 Florida public institutions — USF 149, Florida State 96, UF 48, UWF 35, plus certificate programmes at Broward and FAU. Environmental Studies (03.0103) produces 225 at five — UCF 108, FGCU 59, FIU 37, New College 14, FAMU 7. ⚠⚠ The science degree carries the chemistry, biology, statistics and field-methods load a consultancy, laboratory or monitoring programme hires on; the studies degree carries the policy, regulation and communication load an agency, non-profit or planning office hires on. Both are legitimate; they are not interchangeable, and employers screen on the coursework rather than the title. ⚠ Two smaller codes fill out the family: Natural Resources and Conservation General (03.0101) is Florida State's 41 bachelor's, and Natural Resources Other (03.0199) is a Broward College bachelor's, 23. ⚠⚠⚠ AND THE FAMILY IS WIDER THAN THIS PROGRAMME CAN SHOW. Forestry (03.05, UF, 130 credentials), Wildlife and Wildlands (03.06, UF and the College of the Florida Keys, 113), Fishery Sciences (03.03, UF, 40) and Natural Resources Management (03.02, FGCU, St Petersburg and Florida Gateway, 69) sit in adjacent codes the site's tree does not yet carry. They are concentrated at UF, and a student whose interest is wildlife, fisheries or forestry rather than pollution and compliance should look there directly. ⚠ There is no licence to practise environmental science in Florida and no programme accreditor, so nothing external validates the preparation — which makes the course list matter more here, not less.",
+  "cips": [
+    {
+      "cipCode": "03.01",
+      "note": "Natural Resources, Conservation and Research — 745 credentials at 16 Florida public institutions across four codes. ⚠⚠ Environmental Science (03.0104) 456 at 14 institutions, led by USF 149 and Florida State 96; Environmental Studies (03.0103) 225 at five, led by UCF 108; Natural Resources General (03.0101) 41, all Florida State; Natural Resources Other (03.0199) 23, a Broward College bachelor's. ⚠ Claimed as the whole group because science-versus-studies is a choice a student makes inside it."
+    }
+  ],
+  "related": [
+    {
+      "slug": "environmental-engineering",
+      "note": "⚠⚠ The neighbour with the licence and the higher ceiling. An environmental ENGINEER can sit the FE and become a PE and seal designs; an environmental scientist cannot, whatever their experience. ⚠ Engineering is 7 Florida institutions against this family's 16, the mathematics load is far heavier, and the wage gap is large — so it is a genuinely different decision rather than a harder version of the same one.",
+      "isRoute": false
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠⚠ A genuine and underadvertised destination. Environmental health — water quality, air quality, vector control, hazardous materials — is a named public health specialism, county health departments employ it, and the SOC title for this occupation is literally 'Environmental Scientists and Specialists, INCLUDING HEALTH'."
+    },
+    {
+      "slug": "civil-engineering",
+      "note": "⚠ Named for the Florida-specific reason: stormwater, coastal resilience and water resources are civil engineering work that environmental scientists are staffed onto constantly, and the water management districts employ both. ⚠⚠ Knowing which side of that line you are on decides who signs the report.",
+      "isRoute": false
+    },
+    {
+      "slug": "data-science",
+      "note": "⚠ Named for the skill that most changes an environmental graduate's employability: monitoring programmes generate large time-series and spatial datasets, and GIS2040 plus STA2023 are the two courses this field and that one actually share. ⚠⚠ Environmental data work pays closer to the computing market than to the environmental one.",
+      "isRoute": false
+    }
+  ]
+}

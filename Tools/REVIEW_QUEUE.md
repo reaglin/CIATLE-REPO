@@ -122,7 +122,7 @@ continues around every one of them.
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 | **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
-| **116** | SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — and two of them are the biggest technical-college footprints in Florida (raised 2026-09-21) |
+| **116** | SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22) |
 
 ### Informational — no decision needed (19)
 
@@ -3520,7 +3520,7 @@ which temporarily breaks the *no programme without a career* property. That is t
 work, not an open question.
 
 
-## 116. ⚠⚠⚠ SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — and two of them are the biggest technical-college footprints in Florida (raised 2026-09-21)
+## 116. ⚠⚠⚠ SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22)
 
 **The second 50-row career-path queue is in (`career_paths/QUEUE.csv`, ranks 101–150). Forty-three of
 the fifty can be pushed today. Seven cannot, because their CIP group is not in `Data/Seed/cip.json`
@@ -3536,6 +3536,10 @@ and the push returns 422.**
 | **46.02** Carpentry | `carpenter` | 15 | 57 |
 | ⚠⚠ **01.83** Veterinary/Animal Health Technologies | `veterinary-technician` | **10** | **293** |
 | ⚠ **51.15** Mental and Social Health Services | *(no path blocked — see below)* | 9 | **1,164 MSW** |
+| ✨ **03.05** Forestry | *(no path blocked — see below)* | 1 (UF) | **130** |
+| ✨ **03.06** Wildlife and Wildlands | *(no path blocked)* | 2 (UF, Florida Keys) | **113** |
+| ✨ **03.02** Natural Resources Management | *(no path blocked)* | 3 | 69 |
+| ✨ **03.03** Fishery Sciences | *(no path blocked)* | 1 (UF) | 40 |
 
 ⚠⚠⚠ **The first two are the point.** Culinary arts is taught at **46** Florida public
 institutions and cosmetology at **44** — larger footprints than nursing's 78-institution programme
@@ -3557,6 +3561,20 @@ rows (`scratchpad/qcheck.py`) found this to be the only mis-anchored one.
 under `44.0701` and **796 under `51.1503` Clinical/Medical Social Work** — FSU 431, FAU 143, UWF 120,
 FIU 74, UNF 28, four of which record NO master's under the social work code at all. ⚠ The
 `social-work` programme therefore claims `44.0701` only and states the split in its `degreesNote`.
+✨⚠⚠ **FOUR NATURAL-RESOURCE GROUPS, found 2026-09-22 writing the `environmental-scientist`
+path, and they behave like `51.15` rather than like cosmetology — they block NO path, but they hide
+real programmes.** `03.01` is seeded, so the path and the `environmental-science` programme published
+normally on it. **What `03.01` cannot reach is 352 credentials a year in the SAME family**: Forestry
+(`03.05`) 130, Wildlife and Wildlands (`03.06`) 113, Natural Resources Management (`03.02`) 69 and
+Fishery Sciences (`03.03`) 40.
+
+⚠⚠ **Three of the four are essentially ONE INSTITUTION — the University of Florida** — which is
+what makes the gap sharp rather than diffuse: **a student whose interest is wildlife, fisheries or
+forestry rather than pollution and compliance is looking for a UF programme the site cannot show them.**
+⚠ The `environmental-science` programme names all four in its `degreesNote` and says where they live,
+which is the best available stand-in until the seed widens. ✅ The College of the Florida Keys appears
+only under `03.06`, so seeding it would also add an institution the site does not otherwise carry.
+
 **Seeding `51.15` would let it claim both and would also open mental health counselling (`51.1508`) and
 the 10-institution state-college human services tier (`51.1599`) to the programme layer.** Low urgency;
 fold it in with the rest.

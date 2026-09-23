@@ -20,8 +20,8 @@ draws on (`CAREER_PATHS_PLAN.md`, `COURSE_CATALOG_PLAN.md`) are listed in its Re
 
 **Current Status:** Implemented and **live in production** at
 [floridacourserepo.com](https://floridacourserepo.com) — the Florida Course Repository. The
-three-project solution exists and is deployed: **38,437 courses, 2,504 curriculum guides, 77 career
-paths and 83 programmes** are live as of 2026-09-22. ⚠ **Browse reaches only 37,789 of those
+three-project solution exists and is deployed: **39,533 courses, 2,504 curriculum guides, 78 career
+paths and 84 programmes** are live as of 2026-09-22. ⚠ **Browse reaches only 38,885 of those
 courses** — 648 art courses (`ARH`, `ARE`, `ART`) sit in the catalog under a discipline node that a
 key collision knocked out of the tree. Fixed in the repo, **awaiting a deploy**:
 `docs/DEVELOPMENT-PLAN.md` item 1.5.
