@@ -1,0 +1,39 @@
+{
+  "slug": "biology",
+  "name": "Biology and Biomedical Sciences",
+  "isPublished": true,
+  "sortOrder": 598,
+  "description": "The largest science degree in Florida by a very wide margin — about 5,000 bachelor's a year at 15 public institutions. ⚠⚠⚠ Two degrees live inside it and the difference decides your career: Biology (26.0101) is the research science, Biomedical Sciences (26.0102) is an explicitly pre-health track. At USF two-thirds of the output is the second one, at UCF more than half, and the department name does not tell you which you are applying to.",
+  "degreesNote": "⚠⚠⚠ 5,274 CREDENTIALS A YEAR AT 15 INSTITUTIONS, AND 4,997 OF THEM ARE BACHELOR'S — against 183 master's and 66 doctorates, a doctoral share of 1.3%. (Chemistry's, in the same state, is 19%.) ⚠ That does not mean biology needs the doctorate less; it means the bachelor's is being used as a general-purpose science credential by an enormous number of students who are leaving for professional school, teaching or something else. ⚠⚠ THE SPLIT THAT MATTERS: Biology General (26.0101) is 3,787 credentials at 14 institutions — FIU 943, UF 616, FAU 434, USF 407, Florida State 392, UCF 383. Biomedical Sciences (26.0102) is 1,487 at eight — USF 800, UCF 487, UWF 68, FAU 40, FSCJ 28, FIU 26, Florida State 20, UNF 18. ⚠⚠⚠ SO AT USF THE BIOMEDICAL TRACK IS TWICE THE SIZE OF THE BIOLOGY ONE, at UCF it is larger, and at UWF it is a majority. Those are pre-health degrees structured around admissions tests and professional-school prerequisites, not around research. Read the required-course list rather than the department name. ⚠ There is no licence and no programme accreditor in general biology, so nothing external distinguishes one graduate from another — which in a field producing 5,000 a year puts the entire burden of differentiation on specific courses and specific research experience.",
+  "cips": [
+    {
+      "cipCode": "26.01",
+      "note": "Biology, General — 5,274 credentials at 15 Florida public institutions, 4,997 of them bachelor's. ⚠⚠ Two codes inside it: Biology General (26.0101) 3,787 at 14 institutions, led by FIU 943, UF 616 and FAU 434; and Biomedical Sciences (26.0102) 1,487 at eight, led by USF 800 and UCF 487. ⚠ The second is an explicitly pre-health track, and at Florida's two largest producers it is the bigger of the two."
+    }
+  ],
+  "related": [
+    {
+      "slug": "medicine",
+      "note": "⚠⚠⚠ The real destination of a large share of this degree, and the data says so: 1,487 of Florida's 5,274 biology credentials are BIOMEDICAL SCIENCES, an explicitly pre-health track. ⚠ Florida's six public medical schools admit a few hundred students a year against that; the arithmetic is worth doing before committing."
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠⚠⚠ The finding biology graduates meet too late. Florida LICENSES clinical laboratory personnel, so a general biology degree does not open hospital bench work that an MLS graduate walks into — and MLS pays better than the biological technician role most biology graduates actually enter. Look at it before the third year, not after graduation."
+    },
+    {
+      "slug": "chemistry",
+      "note": "⚠⚠ The instructive contrast. Chemistry awards 19% of its Florida credentials at doctoral level against biology's 1.3%, on a tenth of the volume. ⚠ The organic sequence (CHM2210, 29 carriers) and biochemistry are shared, and a biology student who takes chemistry seriously is competing against far fewer people.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ A genuine destination for the ecology and field half of a biology degree — PCB3043 General Ecology and BSC3052 Conservation Biology are the shared courses, and Florida's water-quality, restoration and invasive-species programmes are permanent work. ⚠⚠ Note the wages: Florida pays environmental science $21,390 below the national median.",
+      "isRoute": false
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠ An underadvertised exit that uses the degree rather than discarding it: epidemiology, environmental health and infectious disease all read as biology, the master's is a common next step, and the CHES credential is coursework-based rather than major-based.",
+      "isRoute": false
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "slug": "biologist",
+  "name": "Biologist and Biological Technician",
+  "cipCode": "26.01",
+  "socCode": "19-1029",
+  "isPublished": true,
+  "sortOrder": 140,
+  "description": "⚠⚠⚠ Begin with the arithmetic. Florida awards about 5,000 biology bachelor's a year; the biological-scientist occupations hire roughly 13,800 people a year NATIONALLY, and two-thirds of those openings are technician roles at a $57,510 median. ⚠⚠ That is not an argument against the degree — it is an argument for knowing what it is FOR. In practice a Florida biology bachelor's is a preparation for professional school, a research doctorate, teaching or a laboratory career that starts at technician level, and the state's own enrolment data already shows it.",
+  "credentialNote": "⚠⚠ NO LICENCE AND NO PROGRAMME ACCREDITOR in general biology, which in a field producing 5,000 graduates a year is a problem rather than a freedom: nothing external distinguishes one graduate from another, so the specific courses and the specific research experience carry the whole burden. ⚠⚠⚠ THE RESEARCH CAREER IS PhD-GATED even though Florida's doctoral share is only 1.3%. BLS classifies biochemists and biophysicists at DOCTORAL entry level and says they \"need a Ph.D. to work in independent research-and-development positions\"; microbiologists enter at bachelor's but employers \"prefer to hire candidates who have a master's degree or Ph.D.\" ⚠ So decide early, because a doctoral application needs two years of undergraduate research, a supervisor and letters. ⚠⚠ AND THE CREDENTIALLED ALTERNATIVE IS NEXT DOOR: Florida LICENSES clinical laboratory personnel, so medical laboratory science opens hospital bench work that a general biology degree does not, and pays better than the biological technician role. Look at it before the third year.",
+  "cipCodes": [
+    {
+      "cipCode": "51.10",
+      "note": "⚠⚠⚠ Clinical/Medical Laboratory Science — named because it is the licensed version of the work most biology graduates end up doing, and they find it too late. Florida licenses clinical laboratory personnel; a general biology degree does not qualify. ⚠ It is a smaller, credentialled market rather than a crowded uncredentialled one."
+    },
+    {
+      "cipCode": "26.13",
+      "note": "⚠ Ecology, Evolution, Systematics and Population Biology — the field half of this degree, and the anchor of the marine biologist path on this site. PCB3043, PCB4674 and BSC3052 are shared. ⚠⚠ Read that page before planning a career on marine biology; the Florida arithmetic there is harsher than here."
+    },
+    {
+      "cipCode": "51.22",
+      "note": "⚠ Public Health — an exit that uses the degree rather than discarding it. Epidemiology, infectious disease and environmental health all read as biology, the master's is the standard next step, and the job market is far less crowded than the research one."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "biology",
+      "note": "The programme — 15 Florida institutions, and the note there carries the Biology-versus-Biomedical Sciences split that decides what the degree is actually preparing you for."
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠⚠ The licensed alternative, and the most actionable link on this page. Florida licenses clinical laboratory personnel; MLS graduates do hospital bench work a biology graduate cannot, and are paid more than biological technicians."
+    },
+    {
+      "slug": "medicine",
+      "note": "⚠⚠ Where 1,487 of Florida's 5,274 biology credentials are explicitly pointed — the Biomedical Sciences track. ⚠ Declare it early; the course order for a pre-health route differs from a biologist's."
+    },
+    {
+      "slug": "chemistry",
+      "note": "⚠ Named as the instructive contrast and a genuine option: 19% doctoral share against biology's 1.3%, on a tenth of the volume, and the organic and biochemistry sequence is shared.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ The ecology and field destination. PCB3043 and BSC3052 are the shared courses and Florida's restoration and water-quality programmes are permanent — but the Florida wages there are $21,390 below national at the median.",
+      "isRoute": false
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠ An underadvertised exit that uses the biology rather than discarding it, and one where a master's is the normal and sufficient credential.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BSC2010",
+      "sortOrder": 1,
+      "reason": "General Biology I, majors sequence — TWENTY public carriers including FIU, Florida Polytechnic, Florida State, New College, UCF, UF, USF and UWF. The gate to the whole degree. ⚠⚠⚠ Take the MAJORS sequence, not the non-majors survey: the survey does not satisfy the prerequisite for genetics, cell biology or ecology, and students discover that in their third year.",
+      "variantNote": "⚠⚠⚠ BSC1010 is the SAME course at seven other institutions — FAMU and FAU among the universities — and the two share NO carrier at all. Twenty-seven institutions, two numbers, zero overlap, and the laboratories split identically. Integrated four-credit forms exist as BSC1010C (10 carriers) and BSC2010C (5). Register by number."
+    },
+    {
+      "courseId": "BSC1010",
+      "sortOrder": 2,
+      "reason": "The same first majors biology course under the identifier FAMU, FAU and five state colleges use. ⚠ Listed separately because a student will only ever find one of the two numbers, and because this is the course almost every science and pre-health student in Florida takes.",
+      "variantNote": "⚠ Both are lower division, so no baccalaureate credit is at risk — but SCNS equivalency does not cross numbers, so an automated transfer match between BSC1010 and BSC2010 finds nothing."
+    },
+    {
+      "courseId": "BSC2010L",
+      "sortOrder": 3,
+      "reason": "The General Biology I laboratory — eighteen carriers, matching the BSC2010 lecture. ⚠ Enrol in BOTH halves; they are usually corequisites and the registration is the only thing you have to get right. ⚠⚠ It is also where technique starts, and technique is what a laboratory job actually tests.",
+      "variantNote": "⚠ BSC1010L is the twin at the seven BSC1010 institutions. Where an institution carries the integrated BSC1010C or BSC2010C instead, that single four-credit course covers both halves."
+    },
+    {
+      "courseId": "BSC2011",
+      "sortOrder": 4,
+      "reason": "General Biology II — eighteen carriers. Organismal diversity, evolution and ecology, and the half of the sequence that decides whether the ecological or the molecular side of the field appeals to you.",
+      "variantNote": "⚠ BSC1011 is the twin at nine institutions. FIU is the ONLY Florida institution carrying both forms of this course."
+    },
+    {
+      "courseId": "CHM2210",
+      "sortOrder": 5,
+      "reason": "Organic Chemistry I — twenty-nine public carriers. ⚠⚠⚠ The real filter on every professional-school route out of a biology degree, and the course medical, dental, pharmacy and veterinary admissions weight most heavily. ⚠ Reckon on eight to twelve hours a week and do not take it in the same term as another laboratory course if you can avoid it."
+    },
+    {
+      "courseId": "PCB3063",
+      "sortOrder": 6,
+      "reason": "Genetics — sixteen public carriers, the widest upper-division biology course in the state. ⚠⚠ It is the conceptual spine of modern biology and the prerequisite most often named by the courses that follow. ⚠ It is also quantitative in a way that surprises students who chose biology to avoid mathematics."
+    },
+    {
+      "courseId": "PCB3023",
+      "sortOrder": 7,
+      "reason": "Cell Biology — seven carriers. Membrane transport, signalling, the cytoskeleton and the cell cycle. ⚠ The course that most directly underlies biomedical research, cancer biology and pharmacology, and the one a laboratory interview will probe."
+    },
+    {
+      "courseId": "MCB2010",
+      "sortOrder": 8,
+      "reason": "Microbiology — sixteen carriers. ⚠⚠ The single most employable lower-division course in this family: clinical, environmental, food-safety and pharmaceutical laboratories all run on it, and microbiologists post an $87,990 median against a biological technician's $57,510.",
+      "variantNote": "⚠ MCB2010C is the integrated three-or-four-credit form at twelve other institutions, and only St Petersburg carries both. MCB3020 is an upper-division treatment at eight institutions."
+    },
+    {
+      "courseId": "PCB3043",
+      "sortOrder": 9,
+      "reason": "General Ecology — seven carriers. Populations, communities, energy and nutrient flow. ⚠ The bridge to environmental and conservation work, and the course that Florida's restoration, water-quality and invasive-species employers expect to see.",
+      "variantNote": "⚠ PCB4043 Ecological Processes is a 4000-level version at Broward, FAMU, FAU and Indian River — approximately the same subject under a different number."
+    },
+    {
+      "courseId": "PCB4674",
+      "sortOrder": 10,
+      "reason": "Evolution — eight carriers. ⚠⚠ The framework that makes the rest of biology one subject rather than a list of facts, and the course most often missing from a pre-health track built purely around prerequisites. ⚠ Graduate committees notice its absence."
+    },
+    {
+      "courseId": "BOT3015",
+      "sortOrder": 11,
+      "reason": "Plant Biology — six carriers. ⚠ Named because it is the part of biology Florida actually pays for: agriculture is a major state industry, invasive plant management is a permanent programme, and plant science graduates compete against far fewer people than animal-focused ones."
+    },
+    {
+      "courseId": "ZOO3713C",
+      "sortOrder": 12,
+      "reason": "Comparative Vertebrate Anatomy — eight carriers, integrated with dissection laboratory. ⚠ A standard requirement for veterinary and several medical routes, and the course that makes gross anatomy manageable later. ⚠⚠ Check whether your professional-school target names it specifically; several do."
+    },
+    {
+      "courseId": "BSC3312",
+      "sortOrder": 13,
+      "reason": "Marine Biology — five carriers. ⚠ Named here because it is the subject that brings most students to a Florida biology department, and because it deserves its own page rather than a line in this one. ⚠⚠ Take it, and read the marine biologist path before planning a career on it."
+    },
+    {
+      "courseId": "BSC2085",
+      "sortOrder": 14,
+      "reason": "Anatomy and Physiology I — twenty carriers. ⚠⚠ The prerequisite that almost every Florida health-professions programme names BY THIS NUMBER, which matters because the same subject is also taught under the APK prefix and health programmes do not accept the substitute readily. ⚠ If a health profession is anywhere in your plan, take the BSC version.",
+      "variantNote": "⚠ BSC2085C is the integrated four-credit form at seven institutions — equivalent packaging, and no institution carries both. The APK2100C/APK2105C sequence is the same subject under a different prefix and is NOT reliably accepted in its place."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 15,
+      "reason": "Statistical Methods I — thirty-nine public carriers and General Education Core. ⚠⚠⚠ Modern biology is data analysis, and the graduates who can actually do it are not competing with the other 5,000. ⚠ This is the cheapest single way out of the crowd, and it costs nothing because it is a general-education requirement anyway."
+    },
+    {
+      "courseId": "BSC4933",
+      "sortOrder": 16,
+      "reason": "Selected Topics in Biology — the number departments use for a research seminar, a special topic or a directed project. ⚠⚠ Named deliberately: RESEARCH EXPERIENCE is the highest-return decision in this degree, and this is frequently the number it is registered under. ⚠ Ask a faculty member in your second year; do not wait to be invited.",
+      "variantNote": "⚠ The transcript line says nothing about what was covered, so keep the project description, the methods and any poster or write-up — that record is what a graduate committee or employer will actually read."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Biochemists and Biophysicists",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/biochemists-and-biophysicists.htm",
+      "note": "$127,410 median, 35,200 jobs, +12% for 2025-35, about 2,900 annual openings — and an entry-level education of DOCTORAL or professional degree. BLS: they \"need a Ph.D. to work in independent research-and-development positions.\""
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Microbiologists",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/microbiologists.htm",
+      "note": "$87,990 median, 20,100 jobs, +6% for 2025-35, about 1,500 annual openings. Growth attributed to pharmaceutical and biotechnology development, biofuels and public health. No AI claim."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Biological Technicians",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/biological-technicians.htm",
+      "note": "$57,510 median, 74,400 jobs, +7% for 2025-35 and about 9,400 annual openings — two-thirds of the openings in this family, at the lowest wage, on a bachelor's entry. The realistic first destination."
+    },
+    {
+      "label": "O*NET — Biological Technicians (19-4021.00), Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/19-4021.00?st=FL",
+      "note": "Florida median $48,700 against $57,510 national, and a 25th percentile of $38,240 against $48,130 — the wage a Florida biology bachelor's is most likely to meet first."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 26.01",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "5,274 credentials at 15 institutions, 4,997 bachelor's, 183 master's, 66 doctorates. Source of the Biology-versus-Biomedical Sciences table, including USF's 407 against 800 and UCF's 383 against 487."
+    },
+    {
+      "label": "SCNS statewide course file — BSC, MCB, PCB, ZOO, BOT carrier counts",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Source of the gateway measurement: BSC1010 at 7 institutions and BSC2010 at 20 with zero overlap, the identical split on the laboratories and on BSC1011/BSC2011, and MCB2010 against MCB2010C overlapping only at St Petersburg."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; Start with the arithmetic, because nothing else on this page matters as much</h2>\n<p><strong>Florida&rsquo;s public institutions award about 5,000 biology bachelor&rsquo;s degrees a year.</strong> Here is what the biological-scientist occupations hire, nationally, across all fifty states:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Entry</th><th>Median</th><th>Jobs</th><th>Openings/yr</th><th>Outlook 2025&ndash;35</th></tr></thead>\n<tbody>\n<tr><td>Biochemist / biophysicist</td><td>19-1021</td><td>&#9888; <strong>Doctorate</strong></td><td><strong>$127,410</strong></td><td>35,200</td><td>2,900</td><td>+12%</td></tr>\n<tr><td>Microbiologist</td><td>19-1022</td><td>Bachelor&rsquo;s</td><td>$87,990</td><td>20,100</td><td>1,500</td><td>+6%</td></tr>\n<tr><td><strong>Biological technician</strong></td><td>19-4021</td><td>Bachelor&rsquo;s</td><td>$57,510</td><td>74,400</td><td>&#9888; <strong>9,400</strong></td><td>+7%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Roughly 13,800 openings a year nationally, against which one state produces 5,000 bachelor&rsquo;s.</strong> And the row with two-thirds of the openings is the <strong>technician</strong> row, at $57,510 &mdash; the lowest-paid of the three.</p>\n<p><strong>This is not an argument against studying biology.</strong> It is an argument for being honest about what the degree is: <strong>in practice a Florida biology bachelor&rsquo;s is a preparation for something else</strong> &mdash; medical, dental, veterinary, pharmacy or physician-assistant school, a research doctorate, teaching, or a laboratory career that starts at technician level. <strong>Very few of these 5,000 graduates become &ldquo;biologists&rdquo; in the sense the word suggests, and the state&rsquo;s own enrolment data shows it already knows that.</strong></p>\n\n<h2>&#9888;&#9888; Florida&rsquo;s two largest producers have already made the choice for most students</h2>\n<p>The federal classification splits this family in two, and the split is the most useful thing in the data:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Code</th><th>What it is</th><th>Florida output</th></tr></thead>\n<tbody>\n<tr><td><strong>26.0101</strong></td><td>Biology / Biological Sciences, General</td><td><strong>3,787</strong> at 14 institutions</td></tr>\n<tr><td><strong>26.0102</strong></td><td>&#9888; <strong>Biomedical Sciences, General</strong> &mdash; an explicitly pre-health track</td><td><strong>1,487</strong> at 8 institutions</td></tr>\n</tbody></table>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>Biology general</th><th>Biomedical sciences</th></tr></thead>\n<tbody>\n<tr><td>&#9888; <strong>University of South Florida</strong></td><td>407</td><td>&#9888;&#9888; <strong>800</strong></td></tr>\n<tr><td>&#9888; <strong>University of Central Florida</strong></td><td>383</td><td>&#9888; <strong>487</strong></td></tr>\n<tr><td>Florida International</td><td><strong>943</strong></td><td>26</td></tr>\n<tr><td>University of Florida</td><td>616</td><td>&mdash;</td></tr>\n<tr><td>Florida Atlantic</td><td>434</td><td>40</td></tr>\n<tr><td>Florida State</td><td>392</td><td>20</td></tr>\n<tr><td>University of West Florida</td><td>55</td><td>68</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>At USF, two-thirds of the &ldquo;biology&rdquo; output is biomedical sciences. At UCF it is more than half. At UWF it is a majority.</strong> Those are pre-health degrees wearing a biology name, and they are structured for admissions tests and professional-school prerequisites rather than for a research career.</p>\n<p>&#9888;&#9888; <strong>So the first question is not which university, it is which of the two degrees you are applying to</strong> &mdash; and at three institutions the answer is not obvious from the department name. <strong>Read the required-course list.</strong> A biomedical sciences track will front-load anatomy, physiology and the pre-health prerequisites; a biology track will front-load genetics, cell biology, ecology and evolution and expect research.</p>\n\n<h2>&#9888;&#9888;&#9888; The doctorate question, and why it is the opposite of chemistry&rsquo;s</h2>\n<p>Florida awards <strong>4,997 biology bachelor&rsquo;s a year against 183 master&rsquo;s and 66 doctorates</strong> &mdash; a doctoral share of about <strong>1.3%</strong>. For comparison, chemistry&rsquo;s doctoral share in this state is <strong>19%</strong>.</p>\n<p>&#9888;&#9888; <strong>Read that carefully, because it does not mean biology needs the doctorate less.</strong> It means the bachelor&rsquo;s degree is being used as a general-purpose science credential by an enormous number of students, most of whom are leaving for professional school, teaching or something unrelated. <strong>The research career in biology is every bit as PhD-gated as chemistry&rsquo;s:</strong> biochemists and biophysicists have a <strong>doctoral</strong> entry-level requirement in BLS&rsquo;s own classification, and BLS says plainly that they <em>&ldquo;need a Ph.D. to work in independent research-and-development positions.&rdquo;</em></p>\n<p>&#9888; <strong>What the 1.3% tells you as an applicant: very few of the people beside you in the lecture are aiming where you may be aiming</strong>, and a department producing 900 bachelor&rsquo;s and almost no doctorates is not organised around getting you into one. <strong>If research is the goal, find the faculty doing it in your second year and do not wait to be invited.</strong></p>\n\n<h2>Money, and what Florida does to it</h2>\n<p>The realistic first destination for a Florida biology bachelor&rsquo;s is a laboratory technician role, so that is the honest wage table to show:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile (biological technicians)</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$36,050</td><td>$40,330</td><td>&minus;$4,280</td></tr>\n<tr><td>25th</td><td>$38,240</td><td>$48,130</td><td>&#9888; &minus;$9,890</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$48,700</strong></td><td><strong>$57,510</strong></td><td>&minus;$8,810</td></tr>\n<tr><td>75th</td><td>$62,120</td><td>$71,520</td><td>&minus;$9,400</td></tr>\n<tr><td>90th</td><td>$78,130</td><td>$84,940</td><td>&minus;$6,810</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>A Florida laboratory technician job pays a $48,700 median and its 25th percentile is $38,240 &mdash; for a bachelor&rsquo;s degree.</strong> That is the number to weigh against four years of tuition, and it is why the routes <em>through</em> biology matter more than the destination labelled &ldquo;biologist&rdquo;.</p>\n<p>&#9888; <strong>The escape routes from that number are real and they are all visible in the table above:</strong> the doctorate (biochemists, $127,410), a specialism with its own credential (clinical laboratory science, which is licensed in Florida and which biology graduates discover far too late), the health professions, or leaving the state.</p>\n\n<h2>&#9888;&#9888; The first biology course has four identifiers, and 27 institutions split cleanly in half</h2>\n<p>This site measured the same shape on General Chemistry last week and expected it here. It fires:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Identifier</th><th>Carriers</th><th>Universities</th></tr></thead>\n<tbody>\n<tr><td><code>BSC1010</code> + <code>BSC1010L</code></td><td><strong>7</strong></td><td>&#9888; <strong>FAMU and FAU only</strong></td></tr>\n<tr><td><code>BSC2010</code> + <code>BSC2010L</code></td><td><strong>20</strong></td><td><strong>FIU, Florida Poly, Florida State, New College, UCF, UF, USF, UWF</strong></td></tr>\n<tr><td><code>BSC1010C</code></td><td>10 (integrated, 4 credits)</td><td>&mdash;</td></tr>\n<tr><td><code>BSC2010C</code></td><td>5 (integrated, 4 credits)</td><td>&mdash;</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong><code>BSC1010</code> and <code>BSC2010</code> share NO carrier &mdash; 27 institutions, two numbers, zero overlap</strong>, and the laboratories split identically. The second semester does the same: <code>BSC1011</code> at 9 and <code>BSC2011</code> at 18, with FIU the only institution carrying both. <strong>Microbiology repeats it: <code>MCB2010</code> at 16 and <code>MCB2010C</code> at 12, overlapping only at St Petersburg.</strong></p>\n<p>&#9888; Both numbers are lower division, so <strong>no baccalaureate credit is at risk</strong> &mdash; but SCNS equivalency does not cross numbers, and this is the course almost every science and pre-health student in Florida takes. <strong>Register by number, keep the syllabus, and name both numbers in writing if you transfer.</strong></p>\n<p>&#9888;&#9888; <strong>One more warning that costs students a year: take the MAJORS sequence, not the non-majors survey.</strong> Florida runs both under different numbers, and the non-majors course does not satisfy the prerequisite for genetics, cell biology or ecology. <strong>Students discover this in their third year, which is exactly when it cannot be fixed cheaply.</strong></p>\n\n<h2>What actually differentiates a biology graduate</h2>\n<ul>\n<li>&#9888;&#9888; <strong>Research experience, starting in year two.</strong> It is the entry requirement for a doctoral programme, the strongest material in a professional-school application, and the thing that turns a technician job into a scientist job.</li>\n<li><strong>The quantitative courses.</strong> <code>STA2023</code> is carried by 39 Florida institutions and is General Education Core. Modern biology is data analysis, and the graduates who can do it are not competing with the other 5,000.</li>\n<li>&#9888; <strong>Organic chemistry and biochemistry.</strong> <code>CHM2210</code> is at 29 institutions and it is the real filter for every professional-school route out of this degree.</li>\n<li><strong>A named technique.</strong> PCR, cell culture, sequencing, microscopy, field sampling &mdash; something specific on a CV, because &ldquo;biology degree&rdquo; describes 5,000 people a year in this state alone.</li>\n</ul>\n<p>&#9888;&#9888; <strong>There is no licence and no programme accreditor in general biology</strong>, so nothing external distinguishes one graduate from another. <strong>In a field this crowded, that puts the entire burden of differentiation on the specific courses and the specific experience</strong> &mdash; which is the whole argument of the list below.</p>\n\n<h2>What BLS says about AI here</h2>\n<p>&#9888; <strong>Nothing on any of the three pages.</strong> Growth is attributed to pharmaceutical and biotechnology research, biofuels, synthetic biology and <em>&ldquo;using cells to deliver drugs within the human body&rdquo;</em> &mdash; no artificial-intelligence claim in either direction.</p>\n<p>&#9888;&#9888; That is worth stating rather than filling in, because computational biology and machine-learning-assisted structure prediction have visibly changed parts of this field. <strong>The federal projections do not yet reflect it.</strong> The pattern across the other pages on this site points the same way it always does: routine bench and screening work is the exposed part, and experimental design, interpretation and accountability for the result are not.</p>\n\n<h2>What to do first</h2>\n<ul>\n<li>&#9888;&#9888;&#9888; <strong>Decide what the degree is FOR before you start it</strong> &mdash; professional school, research, teaching, or laboratory work &mdash; because the course order differs for each and only the first two years are flexible.</li>\n<li>&#9888;&#9888; <strong>Check whether your programme is Biology or Biomedical Sciences.</strong> At USF and UCF the biomedical track is the larger one and it is a pre-health degree.</li>\n<li><strong>Get into a laboratory in year two</strong>, paid or not. It is the single highest-return decision on this page.</li>\n<li>&#9888; <strong>Take the majors biology sequence and register by number</strong> &mdash; <code>BSC1010</code> and <code>BSC2010</code> are the same course and share no institution.</li>\n<li><strong>Take statistics seriously and add a programming course</strong> if you can. It is the cheapest way out of the crowd.</li>\n<li>&#9888;&#9888; <strong>If laboratory work is the goal, look at Medical Laboratory Science before your third year.</strong> It is licensed in Florida, it pays better than a biological technician job, and a general biology degree does not open it.</li>\n</ul>\n"
+}

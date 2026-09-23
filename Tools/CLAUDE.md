@@ -437,6 +437,23 @@ field shares with other fields** — general chemistry, general biology, anatomy
 introductory statistics, composition. **Those are where a split costs the most students**, and they
 are exactly the courses a subject-specific prefix survey never looks at.
 
+✅✅ **CONFIRMED ON THE VERY NEXT PATH (biology, 2026-09-22) — the drill paid immediately:**
+
+| Subject | Lower number | Upper number | Overlap |
+|---|---|---|---|
+| General Biology I | `BSC1010` — **7** (FAMU, FAU + 5 colleges) | `BSC2010` — **20** (FIU, FLPOLY, FSU, NCF, UCF, UF, USF, UWF + 12) | **NONE** |
+| its laboratory | `BSC1010L` — 7 | `BSC2010L` — 18 | **NONE** |
+| General Biology II | `BSC1011` — 9 | `BSC2011` — 18 | FIU only |
+| Microbiology | `MCB2010` — 16 | `MCB2010C` — 12 | St Petersburg only |
+
+⚠ **Plus integrated four-credit forms `BSC1010C` (10) and `BSC2010C` (5)** — so the first majors
+biology course runs under **four identifiers**.
+
+⚠⚠⚠ **Two prefixes, two for two, on the two courses the most students take. Treat the gateway
+split as the DEFAULT EXPECTATION rather than a discovery**, and check it in one flat-file pass at the
+start of any science, health or engineering path.
+
+
 #### ⚠⚠⚠ READ THE LICENSURE STATUTE'S **EXEMPTIONS**, NOT JUST ITS REQUIREMENTS (2026-09-22)
 
 **Every licensure section of this file says to find the statute and quote the requirement. Interior
