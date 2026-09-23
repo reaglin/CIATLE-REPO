@@ -1,0 +1,34 @@
+{
+  "slug": "marine-biology",
+  "name": "Marine Biology and Ecology",
+  "isPublished": true,
+  "sortOrder": 599,
+  "description": "The ocean sciences — marine biology, biological oceanography, ecology, evolution and population biology. ⚠⚠⚠ The fact to start with: the state with the second-longest coastline in the country awards 98 marine biology bachelor's a year, at THREE public institutions. Almost everyone doing this work in Florida arrived through a general biology or environmental science degree with marine coursework instead.",
+  "degreesNote": "⚠⚠⚠ THE NAMED DEGREE BARELY EXISTS. Marine Biology and Biological Oceanography (26.1302) is awarded at three Florida public institutions and produces 98 bachelor's a year — UWF 40, USF 32, FIU 26. ⚠ The wider ecology and evolution family (26.13) adds 41 more credentials, and they are almost all GRADUATE: UF doctorates and master's in ecology (26.1301), USF and UCF in evolutionary biology (26.1307), USF doctorates in ecology other. ⚠⚠ So the undergraduate footprint is tiny and the graduate footprint is where the research careers are, which is consistent with what BLS says: zoologists and wildlife biologists \"typically need a master's degree for higher level jobs\" and \"a Ph.D. to lead research projects.\" ⚠⚠⚠ THE PRACTICAL CONCLUSION IS TO STOP LOOKING FOR THE DEGREE TITLE. A biology degree at an institution with marine faculty, a field station and boat access is a better preparation than a marine-titled degree without them — ask what research is running and who is running it. FAU (Harbor Branch), UF, Florida State, UCF and New College all support marine work without awarding a named marine bachelor's. ⚠ And check the courses rather than the catalogue: 65 of the 72 live undergraduate OCB identifiers are carried by exactly ONE institution, because marine courses are built around the water a particular campus can reach.",
+  "cips": [
+    {
+      "cipCode": "26.13",
+      "note": "Ecology, Evolution, Systematics and Population Biology — 139 credentials at 6 Florida public institutions. ⚠⚠ Marine Biology and Biological Oceanography (26.1302) is 98 bachelor's at three: UWF 40, USF 32, FIU 26. The rest is graduate — UF ecology (26.1301) 14, USF and UCF evolutionary biology (26.1307) 13, UF conservation biology (26.1309) 8, USF doctorates 6. ⚠ A small undergraduate footprint over a graduate-weighted research family."
+    }
+  ],
+  "related": [
+    {
+      "slug": "biology",
+      "note": "⚠⚠⚠ Where almost everyone actually comes from. Florida awards about 5,000 biology bachelor's a year against 98 marine ones, and a biology degree at a campus with marine faculty and a field station is the commoner and frequently better route. ⚠ It is also far more crowded, which is the trade."
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠⚠ The paid version of a similar interest, and worth weighing seriously: 745 credentials at 16 Florida institutions against 98 at three, and a Florida median $8,000 higher. ⚠ Water quality, estuaries, seagrass and coastal resilience are the same coastline from the regulatory side."
+    },
+    {
+      "slug": "environmental-engineering",
+      "note": "⚠ Named for the coastal work specifically — restoration, shoreline stabilisation, stormwater and water-quality infrastructure are engineering projects that marine scientists advise on. ⚠⚠ Engineers on those projects hold a licence and earn roughly double the Florida marine biology median.",
+      "isRoute": false
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠ An unexpected and real Florida destination: harmful algal blooms, shellfish sanitation, beach water quality and vibrio surveillance sit between marine biology and public health, and the public health side is better funded and better paid.",
+      "isRoute": false
+    }
+  ]
+}

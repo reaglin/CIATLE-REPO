@@ -126,7 +126,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 138,environmental-scientist,Environmental Scientist,03.01,Natural Resources Conservation and Research,19-2041,Environmental Scientists and Specialists,SCI,CHOICE,yes,published
 139,chemist,Chemist,40.05,Chemistry,19-2031,Chemists,SCI,DIRECT,yes,published
 140,biologist,Biologist,26.01,"Biology, General",19-1029,Biological Scientists,SCI,CHOICE,yes,published
-141,marine-biologist,Marine Biologist,26.13,"Ecology, Evolution, Systematics, and Population Biology",19-1023,Zoologists and Wildlife Biologists,SCI,CHOICE,yes,
+141,marine-biologist,Marine Biologist,26.13,"Ecology, Evolution, Systematics, and Population Biology",19-1023,Zoologists and Wildlife Biologists,SCI,CHOICE,yes,published
 142,fitness-professional,Fitness and Exercise Professional,31.05,"Sports, Kinesiology, and Physical Education/Fitness",39-9031,Exercise Trainers and Group Fitness Instructors,HLT,CHOICE,yes,
 143,agricultural-manager,Agricultural Manager,01.01,Agricultural Business and Management,11-9013,"Farmers, Ranchers, and Other Agricultural Managers",AGR,DIRECT,yes,
 144,commercial-pilot,Commercial Pilot,49.01,Air Transportation,53-2012,Commercial Pilots,TRN,DIRECT,yes,

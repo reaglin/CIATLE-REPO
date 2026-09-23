@@ -1,0 +1,170 @@
+{
+  "slug": "marine-biologist",
+  "name": "Marine Biologist and Wildlife Biologist",
+  "cipCode": "26.13",
+  "socCode": "19-1023",
+  "isPublished": true,
+  "sortOrder": 141,
+  "description": "⚠⚠⚠ The numbers first, because nobody puts them in front of Florida students: 19,500 zoologists and wildlife biologists nationally, about 1,400 openings a year across all fifty states, and a FLORIDA median of $52,750 against $76,780 nationally — the widest gap this site has measured. ⚠⚠ Florida awards 98 marine biology bachelor's a year at three institutions, and roughly 5,000 biology bachelor's, many of whom want the same jobs. This page is about what to do with that, not about talking you out of it.",
+  "credentialNote": "⚠⚠⚠ BLS LISTS A BACHELOR'S AS ENTRY AND THEN SAYS THE PART THAT MATTERS: zoologists and wildlife biologists \"typically need a master's degree for higher level jobs\" and \"typically need a Ph.D. to lead research projects.\" With 1,400 openings a year the bachelor's-only route runs into SEASONAL TECHNICIAN WORK — real and often enjoyable, but frequently temporary, sometimes unpaid at the start, and paid at the bottom of the wage table. ⚠⚠ Plan for the master's from year one, or plan deliberately for an exit. ⚠ What wins a funded master's place is not grades: it is RESEARCH EXPERIENCE and an advisor who will write for you, and both take two years to build. ⚠⚠ There is no licence. What functions as a credential in the field is practical: scientific diver certification, small-boat handling and a boating safety card, species identification you can demonstrate, and statistics and GIS. ⚠⚠⚠ AND READ THE FUNDING WARNING IN BLS'S OWN WORDS — demand \"may be limited by budgetary constraints, as a substantial portion of the funding… originates from various governmental agencies.\" Your salary is a line in a budget.",
+  "cipCodes": [
+    {
+      "cipCode": "26.01",
+      "note": "⚠⚠⚠ Biology, General — named because this is where almost everyone in this career actually comes from. Florida awards about 5,000 biology bachelor's a year against 98 marine ones, and a biology degree at a campus with marine faculty, a field station and boat access beats a marine-titled degree without them."
+    },
+    {
+      "cipCode": "03.01",
+      "note": "⚠⚠ Natural Resources and Conservation — the better-paid neighbour on the same coastline. Environmental science is 745 Florida credentials at 16 institutions against 98 at three, and its Florida median is about $8,000 higher. Estuaries, seagrass and water quality are the same water from the regulatory side."
+    },
+    {
+      "cipCode": "40.06",
+      "note": "⚠ Geological and Earth Sciences — named for the oceanography half. Physical, chemical and geological oceanography decide where organisms are, and OCE1001 at 21 Florida institutions is the shared course. ⚠⚠ Marine GEOLOGY and coastal processes are also a less crowded corner of the same coastline."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "marine-biology",
+      "note": "The programme — three Florida public institutions award the named bachelor's, and the note there explains why choosing the department rather than the degree title is the better move."
+    },
+    {
+      "slug": "biology",
+      "note": "⚠⚠ The realistic route for most people: 5,000 Florida bachelor's a year, marine coursework available at many more campuses than the three awarding a marine degree, and the same graduate programmes open at the end of it."
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠⚠ Weigh this one seriously before committing. Same coastline, sixteen institutions instead of three, a Florida median about $8,000 higher, and permanent state-funded work in water quality and restoration."
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠ An unexpected Florida destination — harmful algal blooms, shellfish sanitation and beach water quality sit between the two fields, and the public health side is better funded.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-engineering",
+      "note": "⚠ Named because coastal restoration and shoreline work are engineering projects marine scientists advise on, at roughly double this occupation's Florida median.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BSC2010",
+      "sortOrder": 1,
+      "reason": "General Biology I, majors sequence — twenty carriers. ⚠ There is no marine shortcut around it: every marine programme and every graduate committee expects the full majors biology sequence, and the non-majors survey does not satisfy the prerequisites that follow.",
+      "variantNote": "⚠⚠ BSC1010 is the same course at seven other institutions, including FAMU and FAU, with ZERO carrier overlap. Register by number and keep the syllabus."
+    },
+    {
+      "courseId": "OCE1001",
+      "sortOrder": 2,
+      "reason": "Introduction to Oceanography — TWENTY-ONE public carriers and (GE CORE), so it satisfies a general-education science area at every Florida public institution. ⚠⚠ Physical oceanography is what makes marine biology make sense: currents, stratification, upwelling and tides decide where organisms are and why.",
+      "variantNote": "⚠ OCE2001 is the same course at seven other institutions — FAU, FSCJ, Indian River, New College, Pasco-Hernando, St Petersburg and USF — with no overlap. OCE1001C is an integrated form at three more."
+    },
+    {
+      "courseId": "OCB1000",
+      "sortOrder": 3,
+      "reason": "Survey of Marine Biology — six carriers: Florida Keys, Florida SouthWestern, Indian River, St Johns River, Seminole State and Valencia. The lower-division introduction, and the cheapest way to find out whether the subject is what you imagine it to be.",
+      "variantNote": "⚠⚠⚠ FIVE statewide numbers carry introductory marine biology across TWO prefixes and FOUR levels: OCB1000 (1000), BSC1311 (1000), OCB2000 (2000), BSC3312 (3000) and OCB4633 (4000), 18 institutions in total. The same subject is a freshman survey at some institutions and a senior course at others. Check where yours places it."
+    },
+    {
+      "courseId": "BSC3312",
+      "sortOrder": 4,
+      "reason": "Marine Biology at upper division — Florida State, Indian River, St Johns River, UCF and USF. ⚠ The majors treatment rather than the survey, and the one that assumes the general biology sequence. ⚠⚠ Indian River and St Johns River carry BOTH this and OCB1000, which is the clean signal that the two really are different courses rather than one course numbered twice."
+    },
+    {
+      "courseId": "PCB3043",
+      "sortOrder": 5,
+      "reason": "General Ecology — seven carriers. ⚠⚠ The most important non-marine course on this page. Marine ecology is ecology, and graduate committees and consultancies both read this course as the evidence that you understand populations, communities and energy flow rather than just charismatic animals.",
+      "variantNote": "⚠ PCB4043 Ecological Processes covers approximately the same subject at Broward, FAMU, FAU and Indian River."
+    },
+    {
+      "courseId": "PCB4315",
+      "sortOrder": 6,
+      "reason": "Marine Ecology — FAMU, USF and UWF. Productivity, trophic structure and community dynamics in marine systems. ⚠ Three carriers, which is typical of this field: almost every upper marine course in Florida is taught at one to four institutions.",
+      "variantNote": "⚠ UWF's version is a Bahamas field course narrower than the statewide subject — an excellent course, and not the same coverage. Read the syllabus."
+    },
+    {
+      "courseId": "ZOO3205C",
+      "sortOrder": 7,
+      "reason": "Invertebrate Zoology — FGCU, FIU and USF, integrated with laboratory. ⚠⚠ Most marine animals are invertebrates, and most marine survey and monitoring work is invertebrate identification. ⚠ It is the least glamorous course on this list and the one that appears most often in an actual job description."
+    },
+    {
+      "courseId": "ZOO4454C",
+      "sortOrder": 8,
+      "reason": "Ichthyology — FGCU, Florida State and UNF. Fish diversity, anatomy, physiology and identification, with laboratory. ⚠ The core course for fisheries work, and fisheries is where the state jobs are.",
+      "variantNote": "⚠⚠⚠ A DOCUMENTED TRAP. The bare ZOO4454 is carried by FIU, USF and UWF with no overlap — but UWF teaches ELASMOBRANCH BIOLOGY on it: sharks, rays and skates only, about 1,200 species against ichthyology's 35,000. A UWF graduate has not covered the teleosts, which are every fish a Florida fisheries biologist handles. Excellent shark course, wrong label. Check the syllabus."
+    },
+    {
+      "courseId": "ZOO4407",
+      "sortOrder": 9,
+      "reason": "Biology of Sharks and Rays — FAU, FIU, Florida State and UNF. ⚠ Included because it is real, well taught and genuinely a Florida specialism. ⚠⚠ Take it as an addition to ichthyology rather than instead of it: a shark course alone narrows you at exactly the point you need to look broad."
+    },
+    {
+      "courseId": "ZOO4485",
+      "sortOrder": 10,
+      "reason": "Marine Mammal Biology — UF, UNF, USF and UWF. Manatees, dolphins and whales. ⚠⚠ Be clear-eyed: marine mammal work is the most oversubscribed corner of an already oversubscribed field, and Florida's manatee programmes are state-funded. ⚠ It is a strong course; it is not a hiring advantage on its own."
+    },
+    {
+      "courseId": "ZOO4405",
+      "sortOrder": 11,
+      "reason": "Sea Turtle Biology and Conservation — FAU, FGCU and UF. ⚠ Florida hosts the largest loggerhead nesting aggregation in the western hemisphere, so this is genuine local specialism rather than a novelty. ⚠⚠ Nesting-season survey work is also one of the few reliable entry points into paid field experience here."
+    },
+    {
+      "courseId": "CHM2210",
+      "sortOrder": 12,
+      "reason": "Organic Chemistry I — twenty-nine carriers. ⚠ Named because marine biology students routinely try to avoid it and graduate programmes routinely require it. Ocean chemistry, physiology and toxicology all sit on it, and so does the veterinary route if that becomes the plan."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 13,
+      "reason": "Statistical Methods I — thirty-nine carriers and (GE CORE). ⚠⚠⚠ Population assessment, survey design, mark-recapture and stock estimation are statistics. ⚠ This is the single clearest line between a seasonal field technician and a scientist, and consulting — the $84,570 row — hires on it."
+    },
+    {
+      "courseId": "GIS2040",
+      "sortOrder": 14,
+      "reason": "Fundamentals of Geographic Information Systems — ten carriers. ⚠⚠ Habitat mapping, seagrass extent, nesting distributions and survey design all end up in a GIS, and very few biology graduates can produce one. ⚠ One course, and it is the cheapest differentiation available in this field."
+    },
+    {
+      "courseId": "BSC4910",
+      "sortOrder": 15,
+      "reason": "Directed Independent Research — FAU, Florida State, Indian River, St Johns River, UF and USF. ⚠⚠⚠ THE MOST IMPORTANT ROW ON THIS PAGE. With 1,400 national openings a year, what separates applicants is research experience and a named advisor who will write for you — and a funded master's place turns on exactly those two things. ⚠ Start in year two; do not wait to be asked.",
+      "variantNote": "⚠ The transcript line says nothing about what you did, so keep the project description, the methods, the data and any poster or presentation. That record is what a graduate committee actually reads."
+    },
+    {
+      "courseId": "OCE3008",
+      "sortOrder": 16,
+      "reason": "Oceanography at upper division — Broward, FAU, UCF and UNF. The majors treatment of physical, chemical and geological oceanography. ⚠ Worth taking if your degree is biology rather than marine science, because it is the context the biology sits in and the part a general biology curriculum leaves out."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Zoologists and Wildlife Biologists",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/zoologists-and-wildlife-biologists.htm",
+      "note": "$76,780 median, 19,500 jobs, +4% for 2025-35 and about 1,400 annual openings. Source of the master's and PhD statements, the industry table, and the explicit warning that demand \"may be limited by budgetary constraints\" because the funding is governmental. No AI claim."
+    },
+    {
+      "label": "O*NET — Zoologists and Wildlife Biologists (19-1023.00), Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/19-1023.00?st=FL",
+      "note": "The wage table on this page. Florida's median of $52,750 is below the national 25th percentile, and the gap runs $9,200 at the 10th to $30,930 at the 75th — wider than any other occupation measured on this site."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 26.13",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "Marine Biology and Biological Oceanography: 98 bachelor's at three institutions — UWF 40, USF 32, FIU 26. The wider ecology and evolution family adds 41, almost all graduate, at UF, USF and UCF."
+    },
+    {
+      "label": "SCNS statewide course file — OCB, OCE, ZOO and PCB carrier counts",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Source of the five-number introductory measurement across 18 institutions, the 90% single-carrier rate on the OCB prefix (65 of 72 live undergraduate ids), and the OCE1001/OCE2001 gateway split with zero overlap."
+    },
+    {
+      "label": "Florida Fish and Wildlife Research Institute",
+      "url": "https://myfwc.com/research/",
+      "note": "The state's principal marine research employer, in St Petersburg. Named because it runs the monitoring programmes — fisheries, manatee, sea turtle, harmful algal bloom — that most Florida marine careers pass through, and because volunteering there as a student is one of the few reliable ways in."
+    },
+    {
+      "label": "Tools/SOURCES.md — the ZOO4454 divergence (batch 165)",
+      "url": "https://floridacourserepo.com/courses/ZOO4454",
+      "note": "This project's own finding: the statewide subject is Ichthyology, and UWF teaches Elasmobranch Biology on the number — about 1,200 species against 35,000, with the teleosts absent. Recorded when the course was written and repeated here because it has a direct career consequence."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; The honest numbers, first</h2>\n<p>More Florida students say they want to be marine biologists than any other science career, and this page exists to give them the figures nobody puts in front of them.</p>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Figure</th></tr></thead>\n<tbody>\n<tr><td>Zoologists and wildlife biologists, national employment</td><td><strong>19,500</strong></td></tr>\n<tr><td>National annual openings</td><td>&#9888; <strong>1,400</strong></td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>+4%, as fast as average</td></tr>\n<tr><td>National median</td><td>$76,780</td></tr>\n<tr><td>&#9888;&#9888; <strong>Florida median</strong></td><td>&#9888;&#9888; <strong>$52,750</strong></td></tr>\n<tr><td>Florida marine biology bachelor&rsquo;s awarded each year</td><td>98, at three institutions</td></tr>\n<tr><td>Florida biology bachelor&rsquo;s awarded each year</td><td><strong>about 5,000</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>1,400 openings a year, nationally, across all fifty states</strong> &mdash; and that is the whole zoologist and wildlife biologist occupation, of which marine work is a part. Florida alone graduates 98 marine biology majors and several hundred more biology majors who want marine jobs.</p>\n<p><strong>This is the most competitive science career on this site, by a wide margin, and it is also one of the worst paid in Florida.</strong> Everything below is about what to do with that.</p>\n\n<h2>&#9888;&#9888; Florida pays this worse than any occupation measured here</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$39,900</td><td>$49,100</td><td>&minus;$9,200</td></tr>\n<tr><td>25th</td><td>$45,690</td><td>$61,180</td><td>&minus;$15,490</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$52,750</strong></td><td><strong>$76,780</strong></td><td>&#9888;&#9888; <strong>&minus;$24,030</strong></td></tr>\n<tr><td>75th</td><td>$65,170</td><td>$96,100</td><td>&#9888;&#9888; <strong>&minus;$30,930</strong></td></tr>\n<tr><td>90th</td><td>$97,660</td><td>$126,440</td><td>&minus;$28,780</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The Florida median of $52,750 is below the national 25th percentile</strong>, and the gap is wider than anything else this site has measured &mdash; environmental science is $21,390 below at the median, interior design $6,330, architecture $3,040. <strong>Florida is where everyone wants to do this work, and the pay reflects exactly that.</strong></p>\n<p>&#9888; BLS also names the constraint directly, and it is not a market constraint: <em>&ldquo;demand for zoologists and wildlife biologists may be limited by <strong>budgetary constraints</strong>, as a substantial portion of the funding&hellip; originates from various governmental agencies.&rdquo;</em> <strong>Your salary is a line in a state or federal budget. Understand that before you choose, not after.</strong></p>\n<p>The industry table shows where the exceptions are:</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Industry</th><th>Median (national)</th></tr></thead>\n<tbody>\n<tr><td><strong>Management, scientific and technical consulting</strong></td><td><strong>$84,570</strong></td></tr>\n<tr><td>Research and development services</td><td>$84,110</td></tr>\n<tr><td>Government (excluding education and hospitals)</td><td>$78,650</td></tr>\n<tr><td>State colleges and universities</td><td>$78,630</td></tr>\n<tr><td>&#9888; Social advocacy organisations</td><td>&#9888; <strong>$56,700</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Consulting pays $27,870 more than the advocacy organisations, and it is the sector students are least likely to have considered.</strong> Environmental consultancies need people who can do protected-species surveys, seagrass and benthic assessments, manatee and sea-turtle monitoring and permit support &mdash; and in Florida that work is continuous, because construction near water requires it.</p>\n\n<h2>&#9888;&#9888; And the degree itself barely exists in Florida</h2>\n<p><strong>Marine Biology and Biological Oceanography (26.1302) is awarded at three Florida public institutions:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>Bachelor&rsquo;s a year</th></tr></thead>\n<tbody>\n<tr><td>University of West Florida</td><td>40</td></tr>\n<tr><td>University of South Florida</td><td>32</td></tr>\n<tr><td>Florida International University</td><td>26</td></tr>\n<tr><td><strong>Total</strong></td><td><strong>98</strong></td></tr>\n</tbody></table>\n<p>&#9888; <strong>That is the entire named marine biology output of the state with the second-longest coastline in the country.</strong> Everyone else who does this work in Florida comes through a general biology degree with marine coursework, or through environmental science, or from out of state.</p>\n<p>&#9888;&#9888; <strong>Which is the first practical conclusion: do not organise your application around finding a marine biology major.</strong> A biology degree at an institution with marine faculty, a field station and boat access will serve you better than a marine-titled degree without them. <strong>Ask what research is running and who is doing it, not what the degree is called.</strong></p>\n<p>The broader ecology and evolution family (26.13) adds graduate work &mdash; UF, USF and UCF doctorates &mdash; and it is where the research careers actually sit.</p>\n\n<h2>&#9888;&#9888;&#9888; The credential reality: this is a master&rsquo;s field pretending to be a bachelor&rsquo;s field</h2>\n<p>BLS lists bachelor&rsquo;s as the entry-level education and then says the part that matters:</p>\n<blockquote><p>&ldquo;Zoologists and wildlife biologists <strong>typically need a master&rsquo;s degree for higher level jobs.</strong> They <strong>typically need a Ph.D. to lead research projects.</strong>&rdquo;</p></blockquote>\n<p>&#9888;&#9888; <strong>With 1,400 openings a year and far more applicants than that, the bachelor&rsquo;s-only route runs into seasonal technician work</strong> &mdash; real, useful, often outdoors and genuinely enjoyable, but frequently temporary, frequently unpaid at the start, and paid at the bottom of the table above. <strong>Plan for the master&rsquo;s from the beginning, or plan deliberately for one of the exits.</strong></p>\n<p>&#9888; <strong>What gets someone into a funded master&rsquo;s place is not grades alone. It is research experience and a named advisor</strong> &mdash; which is why the directed-research courses on the list below are the most important rows on this page, more than any charismatic-species elective.</p>\n\n<h2>&#9888;&#9888; The course numbering here is the worst on the site, and it has a cause</h2>\n<p><strong>Introductory marine biology runs under FIVE statewide numbers, in TWO prefixes, at FOUR different course levels:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Number</th><th>Level</th><th>Carriers</th></tr></thead>\n<tbody>\n<tr><td><code>OCB1000</code></td><td>1000</td><td>6 &mdash; Florida Keys, Florida SouthWestern, Indian River, St Johns River, Seminole State, Valencia</td></tr>\n<tr><td><code>BSC1311</code></td><td>1000</td><td>3 &mdash; Broward, Palm Beach State, Pasco-Hernando</td></tr>\n<tr><td><code>OCB2000</code></td><td>2000</td><td>4 &mdash; FIU, Hillsborough, New College, Pensacola State</td></tr>\n<tr><td><code>BSC3312</code></td><td>&#9888; 3000</td><td>5 &mdash; Florida State, Indian River, St Johns River, UCF, USF</td></tr>\n<tr><td><code>OCB4633</code></td><td>&#9888; 4000</td><td>3 &mdash; FAMU, FAU, FIU</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Eighteen institutions, five numbers, and the same subject is a freshman survey at some and a senior course at others.</strong> Three institutions carry two of them, which tells you those pairs really are different courses &mdash; but across institutions there is no agreement at all about where marine biology belongs in a degree.</p>\n<p>&#9888; <strong>The whole <code>OCB</code> prefix behaves this way: 72 live undergraduate identifiers and 65 of them are carried by exactly ONE institution &mdash; 90%.</strong> This site has measured sixteen prefixes at between 64% and 85% single-carrier; <strong>marine biology is above all of them.</strong> The cause is not carelessness: marine courses are built around the water a particular campus can reach, so a Keys course, a Panhandle course and a Biscayne Bay course genuinely are different courses.</p>\n<p><strong>The consequence for you is concrete: almost nothing in a marine curriculum transfers by number.</strong> Keep every syllabus, and get transfer decisions in writing before you move.</p>\n<p>&#9888;&#9888; <strong>And the gateway course splits like all the others:</strong> <code>OCE1001</code> Introduction to Oceanography at <strong>21</strong> institutions and <code>OCE2001</code> at <strong>7</strong>, with <strong>no overlap</strong>. Both carry <code>(GE CORE)</code> in the statewide title, so both satisfy a general-education science area everywhere in Florida &mdash; that part is safe.</p>\n<p>&#9888;&#9888;&#9888; <strong>One specific trap this site has documented: <code>ZOO4454</code>.</strong> The statewide subject is <strong>Ichthyology</strong> &mdash; all fishes &mdash; and it runs as <code>ZOO4454C</code> at FGCU, Florida State and UNF, and as bare <code>ZOO4454</code> at FIU, USF and UWF with no overlap. <strong>But UWF teaches Elasmobranch Biology on that number</strong>: sharks, rays and skates only, about 1,200 species instead of 35,000. <strong>A UWF graduate has not covered the teleosts &mdash; every fish a Florida fisheries biologist actually handles.</strong> It is an excellent shark course and the wrong course to present as ichthyology. Read the syllabus, not the number.</p>\n\n<h2>Where the Florida work actually is</h2>\n<p>&#9888; This is the part that justifies staying despite the wage table, and it should be read as a list of employers to target rather than reassurance:</p>\n<ul>\n<li><strong>Florida Fish and Wildlife Conservation Commission</strong> and its Fish and Wildlife Research Institute in St Petersburg &mdash; the largest single employer of marine biologists in the state, and the one whose hiring runs on a state calendar.</li>\n<li><strong>Independent research institutions</strong> &mdash; Mote Marine Laboratory in Sarasota, Harbor Branch at FAU, the Smithsonian station at Fort Pierce, Florida Institute of Oceanography.</li>\n<li>&#9888;&#9888; <strong>Environmental consultancies</strong> &mdash; the highest-paying row in the industry table at $84,570, and the least considered. Protected-species surveys and permit support are continuous work in a state that builds near water.</li>\n<li><strong>Aquaria and attractions</strong> &mdash; SeaWorld, the Florida Aquarium, Disney&rsquo;s animal programmes, the Clearwater and Keys facilities. &#9888; Animal-care roles are competitive and pay below the table above; veterinary and husbandry credentials help more than a marine biology degree does.</li>\n<li><strong>Federal</strong> &mdash; NOAA Fisheries, the National Park Service (Everglades, Dry Tortugas, Biscayne), the US Geological Survey. Fewer posts, better paid, national competition.</li>\n<li><strong>Water management districts and county programmes</strong> &mdash; seagrass, estuary and water-quality monitoring, and a steadier employer than the research institutes.</li>\n</ul>\n<p>&#9888;&#9888; <strong>Florida field experience travels.</strong> Coral restoration, seagrass, manatee and sea-turtle work, harmful algal blooms and estuarine monitoring are done at a scale here that few places match, and several years of it is a strong application anywhere. <strong>On these numbers, taking it elsewhere is worth about $24,000 a year.</strong></p>\n\n<h2>What BLS says about AI here</h2>\n<p>&#9888; <strong>Nothing.</strong> The projection is attributed to biodiversity loss, ecosystem research and &mdash; explicitly &mdash; government budgets. <strong>The binding constraint on this occupation is public funding, not technology</strong>, and that is a more useful thing to know than any speculation about automation.</p>\n\n<h2>What to do first</h2>\n<ul>\n<li>&#9888;&#9888;&#9888; <strong>Read the two numbers at the top of this page again</strong> &mdash; 1,400 national openings, $52,750 Florida median &mdash; and decide with them in front of you. Plenty of people do this work and love it; almost none of them were surprised by the pay.</li>\n<li><strong>Choose the department, not the degree title.</strong> Marine faculty, a field station and boat access matter more than the word &ldquo;marine&rdquo; on the diploma. Only three Florida public institutions award the named degree anyway.</li>\n<li>&#9888;&#9888; <strong>Get into research in year two and keep the advisor.</strong> A funded master&rsquo;s place turns on research experience and a letter, and BLS says the master&rsquo;s is what higher-level jobs need.</li>\n<li><strong>Get the boat and dive credentials early</strong> &mdash; scientific diver certification, a boating safety card, small-boat handling. They are frequently the difference between two otherwise identical applicants for a field position.</li>\n<li>&#9888; <strong>Take statistics and GIS.</strong> Population assessment, survey design and spatial analysis are what separate a technician from a scientist, and they are the skills consultancies pay $84,570 for.</li>\n<li><strong>Volunteer at FWRI, Mote or a county monitoring programme while you are a student.</strong> This field hires on who has already done the work.</li>\n<li>&#9888;&#9888; <strong>Keep every syllabus.</strong> 90% of marine course identifiers are carried by one institution; nothing transfers automatically.</li>\n</ul>\n"
+}

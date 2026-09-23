@@ -192,6 +192,29 @@ about to contradict:**
 python -c "import json,glob,re;[print(f,m) for f in glob.glob('career_paths/*.json') for m in re.findall(r'median wages?[^<]{0,40}', json.load(open(f,encoding='utf-8')).get('bodyHtml') or '')]"
 ```
 
+✨⚠⚠⚠ **KEEP THE FLORIDA-GAP LEAGUE TABLE UP TO DATE — it is what makes a wage comparative
+safe to write (2026-09-22).** The environmental-scientist page was published claiming "the largest gap
+this site has measured" and **marine biology invalidated it THREE PATHS LATER**, exactly as the
+stale-superlative rule predicts. One extra push to reconcile. **So maintain the table instead of
+re-deriving comparators each time:**
+
+| Occupation | FL median vs US | |
+|---|---|---|
+| ⚠⚠ Zoologist / wildlife biologist | **−$24,030** | $52,750 vs $76,780 — below the national 25th percentile |
+| ⚠ Environmental scientist | **−$21,390** | $60,830 vs $82,220 — also below the national 25th |
+| Chemist | −$8,500 | fairly even −$8,000/−$9,000 across percentiles |
+| Biological technician | −$8,810 | $48,700 vs $57,510 |
+| Interior designer | −$6,330 | |
+| Architect | −$3,040 | but −$23,190 at the **90th** |
+| Database administrator | −$500 | ✅ and the 75th percentile is ABOVE national |
+| ✅ Database architect | −$1,180 | ✅✅ **90th percentile ABOVE national (+$2,410)** |
+
+⚠⚠ **Two readings worth carrying forward.** The science paths cluster at the bad end and the
+computing ones at parity — **plausibly because database and software work is priced in a national
+REMOTE market while field and laboratory science is priced locally, where Florida has a large and
+willing supply.** ⚠ **And the median can mislead in both directions**: architecture looks fine at the
+median and is −$23,190 at the ceiling. **Quote the percentile table, not one number.**
+
 ✅✅✅ **A CROSS-PATH FINDING WORTH REUSING: FLORIDA PUBLIC-SECTOR PAY IS COMPRESSED, AND
 IT IS MEASURABLE (established across four occupations, 2026-09-21).**
 
