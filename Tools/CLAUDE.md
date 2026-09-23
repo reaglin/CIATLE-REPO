@@ -434,6 +434,34 @@ migration rather than job loss, and it is a different warning with a different a
 job. **Position on the specification and judgement side of whatever the field is.** That advice is
 supportable from the data rather than from speculation, which is why it belongs on the page.
 
+#### ⚠⚠⚠ CHECK THE OCCUPATION'S **ENTRY-LEVEL EDUCATION** BEFORE ASSUMING THE DEGREE IS THE ROUTE (2026-09-22)
+
+**Every path so far has implicitly assumed the degree is how you get the job. On `fitness-professional`
+that assumption is simply false**, and the BLS field says so in one line:
+
+| | |
+|---|---|
+| Exercise trainer / group fitness instructor | ⚠⚠ **Entry-level education: HIGH SCHOOL DIPLOMA** |
+| Openings | **68,000 a year** — one of the largest figures on this site |
+| What the job actually needs | an **NCCA-accredited CERTIFICATION** |
+| What Florida awards into it | **1,629 credentials a year** in the CIP family |
+
+⚠⚠⚠ **So the page had to answer a different question from the usual one: not "how do I get in"
+but "what is the degree FOR, given that the job does not require one?"** Three defensible answers —
+the clinical role one rung up, graduate school in a health profession, or management — **and a fourth
+that the page states plainly: get certified and start working, because four years of tuition is not a
+prerequisite.**
+
+⚠⚠ **The drill is one line on the OOH page and it should be run on EVERY path:** read
+`Entry-level Education`. Where it says **high school diploma** or **postsecondary nondegree award**, the
+page's job changes from *route* to *value* — and a site built around courses has an obligation to say
+so rather than quietly implying the degree is necessary.
+
+✅ **Related shape already seen twice and now three times — THE DEGREE IS NOT THE CREDENTIAL:**
+interior design (the college is accredited, the individual is registered), chemistry (the ACS approves
+the department, the student earns the certified degree), and here (the certification is checked and the
+degree is not). **Look for the gap between what is accredited and what is checked.**
+
 #### ⚠⚠⚠ THE BIGGEST NUMBER SPLIT IN FLORIDA IS ON **GENERAL CHEMISTRY I** — measure the gateway courses (2026-09-22)
 
 **Number fragmentation has been recorded here on Spanish, `TPA`, `IND`, `EVR` and the database

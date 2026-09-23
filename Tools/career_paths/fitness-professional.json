@@ -1,0 +1,173 @@
+{
+  "slug": "fitness-professional",
+  "name": "Fitness Professional and Exercise Physiologist",
+  "cipCode": "31.05",
+  "socCode": "39-9031",
+  "isPublished": true,
+  "sortOrder": 142,
+  "description": "⚠⚠⚠ The entry-level education for this occupation is a HIGH SCHOOL DIPLOMA, and it has about 68,000 openings a year — one of the largest figures on this site. What the job requires is a CERTIFICATION, not a degree. ⚠⚠ So a Florida student in a kinesiology degree needs an answer to a direct question: what is the degree for? There are three good ones — clinical exercise physiology ($59,460, +13%), graduate school in a health profession, or management — and this page is organised around them.",
+  "credentialNote": "⚠⚠⚠ NO FLORIDA LICENCE FOR PERSONAL TRAINING AND NO PROGRAMMATIC ACCREDITOR FOR THE DEGREE. What employers and insurers check is a CERTIFICATION, and the recognised mark is that the certifying body itself is NCCA-accredited — ACSM, NASM, ACE and NSCA among them. BLS: \"personal trainers usually must be certified before they begin working with clients.\" ⚠⚠ So a four-year graduate and a certified trainer with no degree compete for the same floor job, and the certification is the part that is checked. ⚠ THE DEGREE PAYS OFF ONE LEVEL UP — clinical exercise physiology, cardiac rehabilitation, collegiate strength and conditioning, corporate wellness design, and graduate school. Those roles do read the transcript. ⚠⚠ Exercise physiology is licensed in only one state (Louisiana), so in Florida the clinical gate is the employer's requirement; ask which certification they want BEFORE choosing an exam. ⚠⚠⚠ AND KNOW THE LEGAL EDGE OF THE JOB: dietetics is LICENSED in Florida, so nutrition advice beyond general guidance is regulated, whatever your certification says.",
+  "cipCodes": [
+    {
+      "cipCode": "51.09",
+      "note": "⚠⚠ Allied Health Diagnostic and Treatment Professions — named because athletic training lives here and is the credentialled neighbour: master's-level entry, programmatically accredited and LICENSED in Florida. ⚠ An undergraduate PET or APK course does not accumulate toward it, so work backwards from a target programme's prerequisite list."
+    },
+    {
+      "cipCode": "51.23",
+      "note": "⚠⚠⚠ Rehabilitation and Therapeutic Professions — where a large share of exercise science students are actually heading. ⚠ The decisive prerequisite is anatomy BY NUMBER: DPT programmes name BSC2085C/BSC2086C, and the APK version taught in kinesiology departments is not reliably accepted in its place."
+    },
+    {
+      "cipCode": "51.31",
+      "note": "⚠ Dietetics and Clinical Nutrition — named for a legal reason rather than a thematic one. Nutrition is the first thing a client asks about and dietetics is licensed in Florida, so a trainer has a statutory limit on the advice they may give."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "kinesiology-and-sport",
+      "note": "The programme — and the note there is the one to read first, because the LARGER of the two degrees sharing this classification is sport MANAGEMENT, a business degree, and UF and Florida State award only that one."
+    },
+    {
+      "slug": "athletic-training",
+      "note": "⚠⚠ The credentialled version of the sideline role: master's entry, accredited, and licensed in Florida. A genuine destination for kinesiology graduates and one that must be planned for from the first year."
+    },
+    {
+      "slug": "physical-therapy",
+      "note": "⚠⚠⚠ The commonest graduate destination out of exercise science. ⚠ Take the BSC anatomy sequence, not the APK one, or the application may fail on a prerequisite technicality."
+    },
+    {
+      "slug": "dietetics-and-nutrition",
+      "note": "⚠ Named because it is licensed in Florida and therefore marks the legal boundary of what a fitness professional may advise — and because the two credentials together are a much stronger practice than either alone.",
+      "isRoute": false
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠ A salaried route out that uses the training: worksite wellness, chronic-disease prevention and community physical activity, funded institutionally rather than client by client.",
+      "isRoute": false
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠ Named because the top of this occupation's wage table is management and self-employment, and because the larger degree in this family is already a business degree.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "BSC2085",
+      "sortOrder": 1,
+      "reason": "Anatomy and Physiology I — twenty carriers. ⚠⚠⚠ TAKE THIS NUMBER, not the kinesiology-department alternative. Nearly every Florida health-professions programme names the BSC sequence in its prerequisites, and a large share of exercise science students end up applying to one.",
+      "variantNote": "⚠⚠⚠ The same subject is taught as APK2100C/APK2105C in kinesiology departments, and this site has recorded that divergence as the most damaging in Florida: the APK version is NOT reliably accepted where BSC is named. ⚠ BSC2085C is the equivalent integrated four-credit packaging at seven institutions."
+    },
+    {
+      "courseId": "BSC2086",
+      "sortOrder": 2,
+      "reason": "Anatomy and Physiology II — the second half, and the one covering cardiovascular, respiratory and renal systems. ⚠ That is the physiology exercise science is actually built on, and the half a student who stops after the first course is missing."
+    },
+    {
+      "courseId": "APK3110",
+      "sortOrder": 3,
+      "reason": "Exercise Physiology I — FIU, USF and UWF. ⚠⚠ The core science of the degree: how the body responds to and adapts to exercise, energy systems, cardiovascular and respiratory response, training adaptation. ⚠ It is what separates an exercise science graduate from a certified trainer, and it is what the clinical roles read."
+    },
+    {
+      "courseId": "APK4112",
+      "sortOrder": 4,
+      "reason": "Exercise Physiology II — FGCU, FIU, UCF and UF. The advanced treatment: environmental physiology, ergogenic aids, special populations, chronic disease. ⚠⚠ This is the course that points at the EXERCISE PHYSIOLOGIST role — $59,460 median, +13% growth, the fastest in this family."
+    },
+    {
+      "courseId": "APK4125",
+      "sortOrder": 5,
+      "reason": "Exercise Prescription — FIU, UNF and UWF. Designing programmes for real people with real limitations, against published guidelines. ⚠ It is the single most directly employable course in the APK prefix, and the one a cardiac rehabilitation or corporate wellness employer will ask about."
+    },
+    {
+      "courseId": "PET4550",
+      "sortOrder": 6,
+      "reason": "Exercise Testing — FAU, UNF and USF. Graded exercise testing, VO2 assessment, body composition, interpretation. ⚠⚠ The hands-on assessment course, and the skill that justifies a clinical wage.",
+      "variantNote": "⚠⚠⚠ NOT AUTOMATICALLY TRANSFERABLE — one of 13 PET numbers out of 122 that carry that statewide classification, against roughly 2% in a typical prefix. A receiving programme must attest to your competence itself. ⚠ Take it at the institution you will graduate from."
+    },
+    {
+      "courseId": "PET4551",
+      "sortOrder": 7,
+      "reason": "Physical Fitness Assessment and Exercise Prescription — the assessment-plus-prescription pairing under the PET prefix. ⚠ Where APK4125 is the science of prescription, this is the applied protocol version, and it is the closer match to what a fitness facility actually does.",
+      "variantNote": "⚠⚠ Also NOT AUTOMATICALLY TRANSFERABLE, and PET3551 is a 3000-level twin of the same subject. Check which your programme names and take it late rather than early."
+    },
+    {
+      "courseId": "APK4163",
+      "sortOrder": 8,
+      "reason": "Nutrition for Sport and Exercise Science — FIU, UCF and UWF. ⚠⚠⚠ Nutrition is the first question every client asks and the one a trainer is most likely to answer unlawfully. Dietetics is LICENSED in Florida, so there is a legal limit on advice beyond general guidance. ⚠ Take this course to learn where the limit is as much as to learn the content."
+    },
+    {
+      "courseId": "HUN2201",
+      "sortOrder": 9,
+      "reason": "Fundamentals of Human Nutrition — the lower-division nutrition course, widely carried and usually transferable. ⚠ Named as the accessible alternative where APK4163 is not offered, and because it is a prerequisite for several dietetics and health-professions routes."
+    },
+    {
+      "courseId": "PET2622",
+      "sortOrder": 10,
+      "reason": "Care and Prevention of Athletic Injuries — NINE public carriers, the widest course in this family. Recognition, first response, taping, return-to-activity judgement. ⚠ Practical, immediately useful, and the course that makes you employable in a school, club or team setting while still a student.",
+      "variantNote": "⚠ PET2622C is the integrated form at Central Florida, Florida State, Tallahassee and Valencia — equivalent packaging, and no institution carries both."
+    },
+    {
+      "courseId": "APK4400",
+      "sortOrder": 11,
+      "reason": "Sport Psychology — FIU, Florida State and USF. Motivation, adherence, goal setting and behaviour change. ⚠⚠ Adherence is the actual problem in this profession: the technical programme is rarely what fails, and the clients who stay are what a self-employed trainer's income is made of.",
+      "variantNote": "⚠ PET2210 Sport Psychology is a lower-division treatment at FSCJ, Lake-Sumter and Tallahassee."
+    },
+    {
+      "courseId": "APK4050",
+      "sortOrder": 12,
+      "reason": "Research and Evaluation in Kinesiology — FGCU, FIU and UF. Reading the literature, evaluating a claim, designing an assessment. ⚠⚠ The fitness industry runs on unevidenced claims, and the ability to tell a real study from a marketing one is a genuine professional differentiator — and the course a graduate programme looks for."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 13,
+      "reason": "Statistical Methods I — thirty-nine carriers and (GE CORE). ⚠ Assessment is measurement: body composition, VO2, strength testing and progress tracking are all statistics, and so is every claim made about a training programme. ⚠⚠ It is a general-education requirement anyway, so it costs nothing to take it seriously."
+    },
+    {
+      "courseId": "PSY2012",
+      "sortOrder": 14,
+      "reason": "General Psychology — widely carried and (GE CORE) at most institutions. ⚠ Named because behaviour change is the job, and because it is a prerequisite for the sport psychology and health behaviour courses as well as for most health-professions graduate programmes."
+    },
+    {
+      "courseId": "PET4401",
+      "sortOrder": 15,
+      "reason": "Organization and Administration of Physical Education and Sport — FAMU, FIU, UCF and USF. Budgets, staffing, risk management, facility operations. ⚠⚠ The people earning the 75th and 90th percentile wages in this occupation are mostly managing or self-employed, and this is the only course on the list that addresses that directly."
+    },
+    {
+      "courseId": "PET4946",
+      "sortOrder": 16,
+      "reason": "Sports and Fitness Internship — FAU, FIU and USF. ⚠⚠ In a field where the entry-level job needs no degree, demonstrated experience is what a degree-holder has to bring. ⚠ Choose the placement for the setting you want to work in — clinical, collegiate, commercial or corporate — because they hire from each other far less than students expect."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Exercise Trainers and Group Fitness Instructors",
+      "url": "https://www.bls.gov/ooh/personal-care-and-service/fitness-trainers-and-instructors.htm",
+      "note": "$47,160 median, 388,400 jobs, +7% for 2025-35 and about 68,000 annual openings — on an entry-level education of HIGH SCHOOL DIPLOMA. Source of the certification statement, the industry table, and the 55% fitness-centre / 15% self-employed split. No AI claim."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Exercise Physiologists",
+      "url": "https://www.bls.gov/ooh/healthcare/exercise-physiologists.htm",
+      "note": "$59,460 median, 21,200 jobs, +13% for 2025-35 — the fastest growth in this family — and about 1,400 annual openings, bachelor's entry. Licensure exists in Louisiana only; elsewhere the gate is employer requirement and certification."
+    },
+    {
+      "label": "O*NET — Exercise Trainers and Group Fitness Instructors (39-9031.00), Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/39-9031.00?st=FL",
+      "note": "Florida median $38,800 against $47,160 national. ⚠ The Florida 25th percentile of $28,970 is below a full-time year at the state minimum wage, which reflects how much of this occupation is part-time rather than an hourly rate that low."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 31.05",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "Sport and Fitness Administration 833 at eight institutions; Kinesiology and Exercise Science 711 at six; Health and PE General 58; Physical Fitness Technician 27 associate degrees at four state colleges. Source of the finding that UF and Florida State award only the management degree."
+    },
+    {
+      "label": "SCNS statewide course file — PET transferability and PET/APK carrier counts",
+      "url": "https://flscns.fldoe.org/",
+      "note": "13 of 122 active undergraduate PET numbers are classified NOT AUTOMATICALLY TRANSFERABLE — about 11% against roughly 2% in a typical prefix — and they cluster on exercise testing, fitness assessment, athletic training clinicals and biomechanics."
+    },
+    {
+      "label": "Tools/CLAUDE.md — the BSC/APK anatomy and physiology prefix divergence",
+      "url": "https://floridacourserepo.com/courses/BSC2085",
+      "note": "This project's own finding, recorded as the most damaging prefix divergence in Florida: health-professions prerequisites name BSC2085C/BSC2086C, while kinesiology departments teach the same subject as APK2100C/APK2105C, which is not reliably accepted in its place."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; The job needs no degree. That is the whole shape of this page.</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Entry education</th><th>Median</th><th>Jobs</th><th>Openings/yr</th><th>Outlook 2025&ndash;35</th></tr></thead>\n<tbody>\n<tr><td><strong>Exercise trainer / group fitness instructor</strong></td><td>39-9031</td><td>&#9888;&#9888; <strong>High school diploma</strong></td><td>$47,160</td><td><strong>388,400</strong></td><td>&#9888; <strong>68,000</strong></td><td>+7%</td></tr>\n<tr><td>Exercise physiologist</td><td>29-1128</td><td>Bachelor&rsquo;s</td><td><strong>$59,460</strong></td><td>21,200</td><td>1,400</td><td>&#9888; <strong>+13%</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>68,000 openings a year is one of the largest figures anywhere on this site &mdash; and the entry-level education is a high school diploma.</strong> No Florida licence exists for personal training. What the job actually requires is a <em>certification</em>: BLS says <em>&ldquo;personal trainers usually must be certified before they begin working with clients or with members of a gym or health club.&rdquo;</em></p>\n<p><strong>So a Florida student in a kinesiology or exercise science degree needs to be able to answer a direct question: what is the degree for, given that the job at the end of it does not require one?</strong></p>\n<p>There are three good answers, and this page is organised around them:</p>\n<ol>\n<li><strong>The clinical role.</strong> Exercise physiologist &mdash; bachelor&rsquo;s entry, $59,460, and <strong>+13% growth, the fastest in this family</strong>. Chronic disease management, cardiac rehabilitation, clinical exercise testing.</li>\n<li><strong>Graduate school.</strong> Physical therapy, occupational therapy, athletic training and physician assistant programmes draw heavily on this coursework. &#9888; The degree is a prerequisite package.</li>\n<li><strong>Management.</strong> Running the facility rather than working the floor &mdash; and Florida awards more degrees in this than in exercise science.</li>\n</ol>\n<p>&#9888; <strong>If none of those three is the plan, get certified and start working.</strong> That is a legitimate answer, and four years of tuition is not a prerequisite for it.</p>\n\n<h2>&#9888;&#9888; What Florida actually pays, and the part-time caveat that matters</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile (exercise trainers)</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$27,450</td><td>$28,800</td><td>&minus;$1,350</td></tr>\n<tr><td>&#9888; 25th</td><td>&#9888; <strong>$28,970</strong></td><td>$35,280</td><td>&minus;$6,310</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$38,800</strong></td><td><strong>$47,160</strong></td><td>&minus;$8,360</td></tr>\n<tr><td>75th</td><td>$52,630</td><td>$61,730</td><td>&minus;$9,100</td></tr>\n<tr><td>90th</td><td>$72,870</td><td>$83,100</td><td>&minus;$10,230</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Read the caveat before the numbers.</strong> This is an unusually part-time occupation &mdash; <strong>55% work in fitness centres and 15% are self-employed</strong> &mdash; so annual figures mix full-time and part-time earners and understate the hourly rate. The national median works out at <strong>$22.67 an hour</strong>.</p>\n<p>&#9888;&#9888;&#9888; <strong>Even allowing for that, the Florida 25th percentile of $28,970 is below a full-time year at the state minimum wage</strong> &mdash; which tells you plainly that a quarter of this workforce is part-time, and that the bottom of this occupation is not a living on its own. <strong>The people earning the 75th and 90th percentile figures are almost all doing one of three things: specialising, building a client book as a sole trader, or managing.</strong></p>\n<p>&#9888; The industry table is narrow and worth knowing anyway: government $48,300, fitness and recreational sports centres $48,140, educational services $45,350, civic and social organisations $38,640.</p>\n\n<h2>&#9888;&#9888;&#9888; Two different degrees share this classification, and the bigger one is management</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Code</th><th>Degree</th><th>Florida output</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td><strong>31.0504</strong></td><td>&#9888; <strong>Sport and Fitness Administration/Management</strong></td><td><strong>833</strong> at 8 institutions</td><td>UF 335, Florida State 268, UNF 57, UWF 24</td></tr>\n<tr><td><strong>31.0505</strong></td><td><strong>Kinesiology and Exercise Science</strong></td><td><strong>711</strong> at 6 institutions</td><td>UCF 360, FAU 188, FGCU 70, UWF 64, USF 23, FIU 5</td></tr>\n<tr><td>31.0501</td><td>Health and Physical Education/Fitness, General</td><td>58</td><td>UWF 36, FAMU 22</td></tr>\n<tr><td>&#9888; <strong>31.0507</strong></td><td><strong>Physical Fitness Technician</strong> &mdash; the directly vocational one</td><td><strong>27 associate degrees</strong></td><td>Northwest Florida 15, Chipola 5, Tallahassee 4, Pensacola State 3</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>The largest degree in this family is a BUSINESS degree.</strong> Sport and fitness administration is marketing, finance, facility operations, event management and law &mdash; a perfectly good degree, and not a preparation for assessing a client or running a cardiac rehabilitation session. <strong>UF and Florida State together award 603 of them a year and award no exercise science bachelor&rsquo;s under 31.0505 at all.</strong></p>\n<p>&#9888;&#9888;&#9888; <strong>So &ldquo;kinesiology&rdquo; at UCF and &ldquo;sport management&rdquo; at UF are not versions of one thing.</strong> Decide which you want and then find the institution, rather than the other way round. <strong>Read the required-course list: if it has exercise physiology, biomechanics and anatomy, it is the science degree; if it has accounting, marketing and sport law, it is the management one.</strong></p>\n<p>&#9888; And note the fourth row. <strong>Physical Fitness Technician is a two-year degree at four state colleges that exists specifically to produce working trainers</strong> &mdash; 27 graduates a year statewide. For someone whose plan is answer four above (get certified and work), it is a far cheaper route than a bachelor&rsquo;s, and almost nobody is taking it.</p>\n\n<h2>&#9888;&#9888;&#9888; The certification is the credential, so choose it deliberately</h2>\n<p>There is no Florida licence for personal trainers, and no programmatic accreditor for a fitness degree. <strong>What employers and insurers actually check is a certification</strong>, and they are not all equivalent. The distinction that matters is whether the certifying body is itself accredited &mdash; the recognised mark is <strong>NCCA accreditation</strong>, held by the major bodies (ACSM, NASM, ACE, NSCA and others).</p>\n<p>&#9888;&#9888; <strong>This is the same trap this site has now documented three times</strong> &mdash; in interior design, where the college is not the credential, and in chemistry, where the ACS approves the department but the student earns the certified degree. <strong>Here it is sharper: your degree is not the credential at all.</strong> A four-year kinesiology graduate and a certified trainer with no degree apply for the same floor job, and the certification is the part that is checked.</p>\n<p>&#9888; <strong>The degree&rsquo;s advantage shows up one level up</strong> &mdash; clinical exercise physiology, strength and conditioning with a collegiate or professional team, cardiac rehabilitation, corporate wellness programme design, and graduate school. <strong>Those roles do read the transcript.</strong></p>\n<p>&#9888; Exercise physiology is licensed in only one state (Louisiana), so in Florida the clinical roles are gated by employer requirements and certification rather than by law. <strong>Ask a prospective employer which certification they require BEFORE choosing which exam to sit</strong>; hospital-based cardiac rehabilitation and a commercial gym do not want the same one.</p>\n\n<h2>&#9888;&#9888;&#9888; The most vocational courses in the prefix are the ones that do NOT transfer automatically</h2>\n<p>Almost every Florida course carries the statewide note <em>&ldquo;guaranteed transfer to institution offering same course.&rdquo;</em> <strong><code>PET</code> is an exception, and the exceptions are not random: 13 of 122 active undergraduate <code>PET</code> numbers are marked NOT AUTOMATICALLY TRANSFERABLE &mdash; about 11%, against roughly 2% in a typical prefix.</strong></p>\n<p><strong>And they cluster on exactly the courses this career is built from:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Group</th><th>Numbers</th></tr></thead>\n<tbody>\n<tr><td>Exercise testing and fitness assessment</td><td><code>PET4550</code>, <code>PET4550L</code>, <code>PET4551</code>, <code>PET3551</code>, <code>PET2385</code></td></tr>\n<tr><td>Athletic training clinical experience</td><td><code>PET3672</code>, <code>PET3673</code>, <code>PET3627C</code>, <code>PET4624</code>, <code>PET4625</code></td></tr>\n<tr><td>Biomechanics and coaching</td><td><code>PET3312C</code>, <code>PET4312</code>, <code>PET3765</code>, <code>PET4765</code></td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>The reason is not administrative sloppiness &mdash; it is that these are hands-on competency courses, and a receiving programme has to attest to your competence under its own standards.</strong> It cannot do that on another institution&rsquo;s credit. <strong>The same logic appears in nursing, respiratory care and the other clinical fields on this site.</strong></p>\n<p><strong>What to do about it:</strong> if you plan to transfer, take the assessment and clinical courses <em>after</em> you arrive at the institution you will graduate from, and take the transferable foundations &mdash; anatomy, physiology, nutrition, statistics, psychology &mdash; first. &#9888; <strong>Get a written answer before you enrol in a course that may not count.</strong></p>\n\n<h2>&#9888;&#9888; Two prefixes, and the anatomy trap that costs people a professional-school place</h2>\n<p>This family is taught under <strong><code>PET</code></strong> (physical education and coaching, more state colleges) and <strong><code>APK</code></strong> (applied kinesiology, almost entirely universities). Carrier counts are small throughout &mdash; <code>PET2622</code> Care and Prevention of Athletic Injuries reaches nine institutions and nothing else in either prefix reaches five.</p>\n<p>&#9888;&#9888;&#9888; <strong>The trap is anatomy and physiology, and this site has documented it as the most damaging prefix divergence in Florida.</strong> The subject is taught as <code>BSC2085C</code>/<code>BSC2086C</code> and as <code>APK2100C</code>/<code>APK2105C</code>. <strong>Nearly every health-professions programme names the <code>BSC</code> numbers in its prerequisites</strong>, and a student who took the <code>APK</code> version may find it is not accepted.</p>\n<p>&#9888;&#9888; <strong>If physical therapy, occupational therapy, physician assistant or nursing is anywhere in your plan &mdash; and for a large share of kinesiology students it is &mdash; take the <code>BSC</code> sequence.</strong> The <code>APK</code> version is a good course and it is the wrong identifier to be holding at application time. <strong>Check the prerequisite list of a target programme literally, by number, in your first year.</strong></p>\n\n<h2>What BLS says about AI here</h2>\n<p>&#9888; <strong>Nothing on either page.</strong> Growth is attributed to gym membership, fitness classes, employer wellness programmes, obesity, and &mdash; specifically &mdash; <em>&ldquo;older adults who want low-impact forms of exercise and relief from arthritis and other ailments&rdquo;</em>, plus the rising prevalence of chronic conditions on the exercise physiology side.</p>\n<p>&#9888;&#9888; That is worth saying plainly: <strong>this is a career whose product is physical presence and personal accountability, and the federal projections show no technological dampening at all.</strong> The exposure here is to competition and to price, not to automation &mdash; which is a different problem and has a different answer: specialise, credential up, and move toward the clinical and management ends.</p>\n\n<h2>What to do first</h2>\n<ul>\n<li>&#9888;&#9888;&#9888; <strong>Answer the question the page opens with before you enrol: what is the degree FOR?</strong> Clinical, graduate school, management, or none of the three. If none, get certified and start working &mdash; the job does not require a degree.</li>\n<li>&#9888;&#9888; <strong>Check whether your programme is kinesiology or sport MANAGEMENT.</strong> The larger of the two is management, and UF and Florida State award only that.</li>\n<li>&#9888;&#9888; <strong>Take the <code>BSC</code> anatomy and physiology sequence</strong>, not the <code>APK</code> one, if any health profession is a possibility.</li>\n<li><strong>Get an NCCA-accredited certification while you are still a student</strong>, and ask target employers which one they want before you sit it.</li>\n<li>&#9888; <strong>Sequence the assessment and clinical courses for the institution you will graduate from</strong> &mdash; they are the ones that do not transfer automatically.</li>\n<li><strong>Aim at exercise physiology if the science interests you</strong>: $59,460, +13%, and it reads the transcript.</li>\n<li><strong>Take statistics and a nutrition course.</strong> Assessment is measurement, and nutrition is the question every client asks first.</li>\n</ul>\n"
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "kinesiology-and-sport",
+  "name": "Kinesiology, Exercise Science and Sport Management",
+  "isPublished": true,
+  "sortOrder": 600,
+  "description": "Human movement, exercise and the business of sport. ⚠⚠⚠ Two quite different degrees share this classification and the BIGGER one is business: Sport and Fitness Administration is 833 Florida credentials a year against Kinesiology and Exercise Science's 711 — and UF and Florida State, the two largest producers, award only the management one.",
+  "degreesNote": "⚠⚠⚠ READ THE REQUIRED-COURSE LIST, NOT THE DEPARTMENT NAME. Sport and Fitness Administration (31.0504) produces 833 credentials at 8 Florida public institutions — UF 335, Florida State 268, UNF 57, UWF 24 — and it is a BUSINESS degree: marketing, finance, facility operations, event management, sport law. Kinesiology and Exercise Science (31.0505) produces 711 at six — UCF 360, FAU 188, FGCU 70, UWF 64, USF 23, FIU 5 — and it is the movement science: exercise physiology, biomechanics, anatomy, assessment. ⚠⚠ Neither is a lesser version of the other, and UF and Florida State award no exercise science bachelor's under 31.0505 at all. ⚠ Health and Physical Education General (31.0501) adds 58 at UWF and FAMU — the teacher-preparation end. ⚠⚠⚠ AND THE ROW ALMOST NOBODY TAKES IS THE MOST DIRECTLY VOCATIONAL: Physical Fitness Technician (31.0507) is an ASSOCIATE degree at Northwest Florida State, Chipola, Tallahassee and Pensacola State, and it produces 27 graduates a year for an occupation with 68,000 annual openings nationally whose entry-level education is a high school diploma. ⚠ There is no licence and no programmatic accreditor in this family. What employers check is an NCCA-accredited CERTIFICATION, which the degree does not confer — so a degree here has to be chosen for what it opens afterwards (clinical exercise physiology, graduate school, or management), not for access to the entry-level job.",
+  "cips": [
+    {
+      "cipCode": "31.05",
+      "note": "Sports, Kinesiology and Physical Education/Fitness — 1,629 credentials at 11 Florida public institutions across four codes. ⚠⚠ Sport and Fitness Administration (31.0504) 833 at eight, led by UF 335 and Florida State 268 — a business degree. Kinesiology and Exercise Science (31.0505) 711 at six, led by UCF 360 and FAU 188 — the movement science. Health and PE General (31.0501) 58. ⚠ Physical Fitness Technician (31.0507), the vocational associate, just 27 at four state colleges."
+    }
+  ],
+  "related": [
+    {
+      "slug": "athletic-training",
+      "note": "⚠⚠ The credentialled neighbour, and a common destination for kinesiology graduates. Athletic training moved to MASTER'S-level entry, is programmatically accredited and is licensed in Florida — so an undergraduate PET or APK course does not accumulate toward it. ⚠ Work backwards from a target programme's prerequisite list rather than assuming your degree covers it."
+    },
+    {
+      "slug": "physical-therapy",
+      "note": "⚠⚠⚠ Where a large share of exercise science students are actually heading, whether or not the department frames it that way. ⚠ The prerequisite that decides it is anatomy and physiology BY NUMBER: DPT programmes name the BSC2085C/BSC2086C sequence, and the APK2100C/APK2105C version taught in kinesiology departments is not reliably accepted."
+    },
+    {
+      "slug": "dietetics-and-nutrition",
+      "note": "⚠ The pairing clients ask for and degrees rarely deliver. Nutrition advice beyond general guidance is REGULATED in Florida — dietetics is licensed — so a trainer without that credential has a legal limit on what they may say. ⚠⚠ APK4163 Nutrition for Sport and Exercise Science is the shared course."
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠ Named because the management half of this family IS business, and because the earners at the top of the fitness wage table are running facilities or their own practice. ⚠⚠ 45 Florida institutions award business against six awarding exercise science.",
+      "isRoute": false
+    },
+    {
+      "slug": "public-health",
+      "note": "⚠ A route out that uses the training: worksite wellness, chronic disease prevention and community physical-activity programmes are public health work, the CHES credential is coursework-based, and the funding is institutional rather than client-by-client.",
+      "isRoute": false
+    }
+  ]
+}
