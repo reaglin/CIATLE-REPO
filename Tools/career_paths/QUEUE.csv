@@ -128,7 +128,7 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 140,biologist,Biologist,26.01,"Biology, General",19-1029,Biological Scientists,SCI,CHOICE,yes,published
 141,marine-biologist,Marine Biologist,26.13,"Ecology, Evolution, Systematics, and Population Biology",19-1023,Zoologists and Wildlife Biologists,SCI,CHOICE,yes,published
 142,fitness-professional,Fitness and Exercise Professional,31.05,"Sports, Kinesiology, and Physical Education/Fitness",39-9031,Exercise Trainers and Group Fitness Instructors,HLT,CHOICE,yes,published
-143,agricultural-manager,Agricultural Manager,01.01,Agricultural Business and Management,11-9013,"Farmers, Ranchers, and Other Agricultural Managers",AGR,DIRECT,yes,
+143,agricultural-manager,Agricultural Manager,01.01,Agricultural Business and Management,11-9013,"Farmers, Ranchers, and Other Agricultural Managers",AGR,DIRECT,yes,published
 144,commercial-pilot,Commercial Pilot,49.01,Air Transportation,53-2012,Commercial Pilots,TRN,DIRECT,yes,
 145,truck-driver,Commercial Truck Driver,49.02,Ground Transportation,53-3032,Heavy and Tractor-Trailer Truck Drivers,TRN,DIRECT,no,
 146,chef,Chef and Culinary Professional,12.05,Culinary Arts and Related Services,35-1011,Chefs and Head Cooks,SRV,DIRECT,no,

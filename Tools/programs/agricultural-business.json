@@ -1,0 +1,39 @@
+{
+  "slug": "agricultural-business",
+  "name": "Agricultural Business and Food and Resource Economics",
+  "isPublished": true,
+  "sortOrder": 610,
+  "description": "Running the business side of farming, ranching and the food system: agricultural economics, marketing, finance, commodity risk and farm management. ⚠⚠ A small degree in Florida — about 150 credentials a year, two-thirds of them at the University of Florida — and a business degree with an agricultural subject, which leads to lending, insurance, food companies and hired farm management as often as to a farm.",
+  "degreesNote": "⚠⚠ UF's Food and Resource Economics (01.0103) is the degree in Florida: 88 bachelor's and 11 master's a year, with specialisations in agribusiness marketing and management and in international food and resource economics. FAMU adds 10 agribusiness bachelor's (01.0102) and 29 in general agricultural sciences (01.0000). ⚠ College of Central Florida (6) and Florida Gateway (5) award the associate degree in agricultural business (01.0101). ⚠⚠⚠ THIS PROGRAMME IS THE SMALL END OF FLORIDA AGRICULTURE. The production degrees around it are four times its size and this site cannot list them yet: horticulture and landscape (01.06) 204 a year at ten state and technical colleges, Valencia 127; animal sciences (01.09) 178, UF 155 and Santa Fe 23; plant sciences (01.11) 134 at UF; equine studies (01.05) 67 at Central Florida; soil science (01.12) 56 at UF; production operations (01.03) 18 at four state colleges. ⚠ Choose the production field by the operation you want to run — ranch, grove, nursery — and take the business courses as the common ground. ⚠⚠ The transfer route to UF runs through general courses every college teaches: the state-assigned common prerequisites are MAC2233, STA2023, ACG2021 and ECO2013. ⚠ FGCU teaches agribusiness courses but recorded no agriculture degree in 2023.",
+  "cips": [
+    {
+      "cipCode": "01.01",
+      "note": "Agricultural Business and Management — 120 credentials a year at four Florida public institutions. ⚠⚠ UF 99 (Food and Resource Economics, 01.0103, bachelor's and master's), FAMU 10 (Agribusiness, 01.0102), and the associate degree at College of Central Florida (6) and Florida Gateway (5) under 01.0101."
+    },
+    {
+      "cipCode": "01.00",
+      "note": "Agriculture, General — FAMU's Agricultural Sciences, 29 a year at bachelor's and master's, plus one associate at Indian River. ⚠ Claimed because FAMU's agribusiness students are split between this code and 01.0102, and a reader looking for FAMU's agriculture programme would otherwise miss it."
+    }
+  ],
+  "related": [
+    {
+      "slug": "business-administration",
+      "note": "⚠⚠ The broader and far more portable version of the same training. BLS lists business alongside agriculture as a degree field for farm managers, and 45 Florida institutions award business against a handful awarding agribusiness. ⚠ The agribusiness degree adds commodity markets, agricultural finance and farm law, which a general business degree will not teach."
+    },
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠ Two-thirds of farmers are self-employed, so a farm is a small business before it is anything else — and the entrepreneurship courses cover the part agricultural programmes treat lightly: starting one from nothing.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ The land-stewardship neighbour. Soil, water and natural-resource management are daily farm decisions in Florida, and the forestry and wildlife programmes at UF sit in the same family.",
+      "isRoute": false
+    },
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "⚠ Where a food and resource economics graduate often ends up: moving perishable product from field to shelf. The marketing and finance courses are the shared ground.",
+      "isRoute": false
+    }
+  ]
+}

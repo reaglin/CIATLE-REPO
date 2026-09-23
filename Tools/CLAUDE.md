@@ -208,6 +208,7 @@ re-deriving comparators each time:**
 | Architect | −$3,040 | but −$23,190 at the **90th** |
 | Database administrator | −$500 | ✅ and the 75th percentile is ABOVE national |
 | ✅ Database architect | −$1,180 | ✅✅ **90th percentile ABOVE national (+$2,410)** |
+| ✅ Agricultural manager | −$2,820 | ✅✅ **75th +$22,510 and 90th +$26,920 ABOVE national** — ⚠ salaried managers only (see the self-employment rule) |
 
 ⚠⚠ **Two readings worth carrying forward.** The science paths cluster at the bad end and the
 computing ones at parity — **plausibly because database and software work is priced in a national
@@ -461,6 +462,34 @@ so rather than quietly implying the degree is necessary.
 interior design (the college is accredited, the individual is registered), chemistry (the ACS approves
 the department, the student earns the certified degree), and here (the certification is checked and the
 degree is not). **Look for the gap between what is accredited and what is checked.**
+
+#### ⚠⚠⚠ CHECK THE **SELF-EMPLOYED** SHARE — the BLS wage figure leaves those workers out (2026-09-23)
+
+**The BLS median comes from the OEWS survey, and BLS says on the Pay tab that it does *"not include
+pay for self-employed workers."* On most paths that does not matter. On `agricultural-manager` it
+decides what the headline wage means:**
+
+| | |
+|---|---|
+| Self-employed (BLS) | ⚠⚠⚠ **67%** |
+| Median wage | $89,900 — ⚠ **the salaried THIRD only** |
+| What BLS says about farmers' income | only that it *"varies from year to year"* |
+
+⚠⚠ **So on that page the $89,900 is the pay of hired farm, ranch and nursery managers, and nobody
+should read it as what a farmer earns.** O*NET and BLS also disagree about entry education (Job Zone
+Four against a high school diploma), and **the self-employed share is what explains it**: O*NET's
+sample titles are the hired managers, while BLS covers the whole occupation.
+
+⚠⚠ **The drill: read the self-employed percentage on the OOH "How to Become One" or "Work Environment"
+tab on EVERY path.** Above roughly a quarter, say in the wage section that the figure describes
+employees only. ⚠ **Expect it on** entrepreneur, real estate, cosmetology, chef, carpenter, plumber and
+truck driver, all still in or recently out of the queue.
+
+✅ **Fourth instance of THE DEGREE IS NOT THE CREDENTIAL, with a new twist: here the transcript's most
+concrete value is FINANCIAL.** Under 7 CFR 764.152, 16 credit hours of agriculture-related
+postsecondary education is one of the listed alternatives for part of the three years of farm experience
+a USDA farm ownership loan requires. **Look for rules like this, where a federal or state programme
+counts CREDIT HOURS**; the 14 CFR 61.160 flight-hour reduction is the same shape.
 
 #### ⚠⚠⚠ THE BIGGEST NUMBER SPLIT IN FLORIDA IS ON **GENERAL CHEMISTRY I** — measure the gateway courses (2026-09-22)
 

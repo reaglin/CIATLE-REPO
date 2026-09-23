@@ -3582,6 +3582,26 @@ only under `03.06`, so seeding it would also add an institution the site does no
 the 10-institution state-college human services tier (`51.1599`) to the programme layer.** Low urgency;
 fold it in with the rest.
 
+✨⚠⚠ **SIX PRODUCTION-AGRICULTURE GROUPS, found 2026-09-23 writing `agricultural-manager`.** They
+work like `03.0x`: they block NO path, but they hide real programmes. The path and the new
+`agricultural-business` programme published on `01.01` + `01.00`, which cover **150 credentials a year**.
+**The groups next to them cover more than four times that:**
+
+| CIP | Field | Credentials/yr | Where |
+|---|---|---|---|
+| ⚠⚠ **01.06** | Horticulture and landscape | **204** | **ten state and technical colleges**, Valencia 127 |
+| **01.09** | Animal sciences | 178 | UF 155, Santa Fe 23 |
+| **01.11** | Plant sciences | 134 | UF |
+| 01.05 | Equine studies | 67 | College of Central Florida |
+| 01.12 | Soil sciences | 56 | UF |
+| 01.03 | Agricultural production operations | 18 | four state colleges |
+
+⚠⚠ **`01.06` matters most.** Nursery, greenhouse, floriculture and sod make up **34% of all Florida farm
+sales** (2022 Census of Agriculture, 2nd in the U.S.), and the training for them is at the state colleges.
+The path names the Valencia/EFSC `ORH` courses and says in its body that the programme cannot be listed
+yet. ⚠ `01.80`/`01.81` (UF's DVM and veterinary sciences) are **not** proposed here because they belong
+with the `01.83` veterinary-technician row, not with agriculture.
+
 **What it takes:** add the groups to `EXTRA_GROUPS` in `Tools/build_cip_seed.py` with the reason
 recorded, regenerate `cip.json`, and **redeploy** — the documented procedure, last used for the
 Lawyer path's `22.00` and `45.04`.

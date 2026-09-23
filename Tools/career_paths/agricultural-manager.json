@@ -1,0 +1,201 @@
+{
+  "slug": "agricultural-manager",
+  "name": "Farmer, Rancher and Agricultural Manager",
+  "cipCode": "01.01",
+  "socCode": "11-9013",
+  "isPublished": true,
+  "sortOrder": 143,
+  "description": "⚠⚠⚠ 67% of this occupation is self-employed, and BLS puts the entry-level education at a HIGH SCHOOL DIPLOMA plus five or more years of experience. For most farmers the entry requirement is land and capital, not a qualification. ⚠⚠ The degree leads to the other third: the hired farm, ranch, grove, nursery and greenhouse managers, who are the only people the $89,900 median describes — and who in Florida earn $141,370 at the 75th percentile. This page explains what the degree is actually for.",
+  "credentialNote": "⚠⚠ NO LICENCE TO FARM, AND NO LICENCE TO MANAGE A FARM. What is regulated is specific work: applying restricted-use pesticides outdoors in Florida requires an FDACS licence under Chapter 487, F.S., with an examination under s. 487.044. ⚠ The profession's voluntary credential is the ASFMRA Accredited Farm Manager, which requires a four-year degree, four years of management experience and 82 hours of coursework — the clearest case where the degree is required. ⚠⚠⚠ AND THE ONE MOST PEOPLE MISS: for a USDA Farm Service Agency farm ownership loan, the applicant needs three years of farm business experience in the last ten, and 7 CFR 764.152 accepts 16 credit hours of agriculture-related postsecondary education as one of the alternatives for part of it. About five courses count toward the loan that a would-be farmer most needs.",
+  "cipCodes": [
+    {
+      "cipCode": "01.00",
+      "note": "Agriculture, General — FAMU's Agricultural Sciences degree, 29 a year, where part of FAMU's agribusiness training is recorded."
+    },
+    {
+      "cipCode": "03.01",
+      "note": "⚠ Natural Resources Conservation — the land-stewardship side of farm management: soil, water and habitat decisions made under Florida's water-management districts and best-management-practice rules."
+    },
+    {
+      "cipCode": "52.02",
+      "note": "⚠⚠ Business Administration and Management — BLS names business alongside agriculture as a degree field for this occupation, and it is taught at far more Florida institutions than agribusiness."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "agricultural-business",
+      "note": "The programme. ⚠⚠ Read its note first: agribusiness is the SMALL end of Florida agriculture, and the horticulture, animal and plant science programmes around it are four times its size."
+    },
+    {
+      "slug": "business-administration",
+      "note": "⚠⚠ A legitimate route in, and the portable one. A salaried farm manager's job is mostly budgets, labour and marketing; add AEB2104 and AEB3300 to a business degree for the agricultural half."
+    },
+    {
+      "slug": "entrepreneurship",
+      "note": "⚠ Two-thirds of the occupation runs its own business. The entrepreneurship courses cover starting one from nothing, which agricultural programmes treat lightly.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ The land-stewardship neighbour, and where UF's forestry, wildlife and natural-resource programmes sit.",
+      "isRoute": false
+    },
+    {
+      "slug": "logistics-and-supply-chain",
+      "note": "⚠ Where many food and resource economics graduates actually work: getting perishable product from field to shelf.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "ECO2023",
+      "sortOrder": 1,
+      "reason": "Microeconomics — 39 carriers. ⚠⚠ Agricultural economics IS applied microeconomics: supply, price, cost of production and what a farm should grow. Every AEB course after it assumes it."
+    },
+    {
+      "courseId": "ACG2021",
+      "sortOrder": 2,
+      "reason": "Financial Accounting — 32 carriers, and a state-assigned common prerequisite for UF's Food and Resource Economics degree. ⚠⚠ Two-thirds of this occupation run their own business, and a farm that cannot read its own balance sheet cannot borrow."
+    },
+    {
+      "courseId": "STA2023",
+      "sortOrder": 3,
+      "reason": "Elementary Statistics — 39 carriers and a common prerequisite. ⚠ Yield trials, price series and risk are statistics; so is every claim a seed or chemical salesperson makes."
+    },
+    {
+      "courseId": "ECO2013",
+      "sortOrder": 4,
+      "reason": "Macroeconomics — 38 carriers and the fourth common prerequisite. ⚠ Interest rates, exchange rates and trade policy set the price of what a Florida grower sells and the cost of the loan that planted it."
+    },
+    {
+      "courseId": "AEB2104",
+      "sortOrder": 5,
+      "reason": "Economics of Agriculture — Central Florida, FAMU and FGCU. The introduction to agricultural markets, farm prices and policy, and flagged as a common prerequisite in the statewide file.",
+      "variantNote": "⚠⚠ UF teaches this introduction as AEB3103 Principles of Food and Resource Economics, and UF is its ONLY carrier. Both numbers are flagged as common prerequisites. Take whichever your college offers, and confirm with UF which it accepts before assuming."
+    },
+    {
+      "courseId": "AEB3133",
+      "sortOrder": 6,
+      "reason": "Principles of Agribusiness Management — FAMU, FGCU and UF. Planning, organising and controlling an agricultural firm: the core management course of the degree, and required at UF.",
+      "variantNote": "⚠⚠⚠ SAME TITLE, DIFFERENT COURSE: AEB2102 Principles of Agribusiness Management is taught at Central Florida, Florida SouthWestern, North Florida and St. Johns River. It is a lower-division course with its own number, and taking it does not excuse AEB3133 at a university. The statewide record for AEB3133 names a principles-of-economics prerequisite."
+    },
+    {
+      "courseId": "AEB2192",
+      "sortOrder": 7,
+      "reason": "Farm Records and Accounts — College of Central Florida. ⚠⚠ The most practical course on this list for someone who will run their own operation: enterprise records, cost of production and the books a lender will ask to see.",
+      "variantNote": "⚠ FAMU teaches the upper-division version as AEB3191 Farm Records and Accounts."
+    },
+    {
+      "courseId": "AEB3300",
+      "sortOrder": 8,
+      "reason": "Marketing Agricultural Products — four carriers (Central Florida, FAMU, FGCU, UF). ⚠ Most Florida farms sell under $10,000 a year; the gap between growing something and being paid for it is marketing."
+    },
+    {
+      "courseId": "AEB3144",
+      "sortOrder": 9,
+      "reason": "Agribusiness Finance — FGCU and UF. Credit, capital budgeting, land and equipment decisions. ⚠⚠ Capital, not knowledge, is what keeps most people out of farming, and this is the course about it."
+    },
+    {
+      "courseId": "AEB4085",
+      "sortOrder": 10,
+      "reason": "Agricultural Risk Management and the Law — UF. Crop insurance, contracts, liability and the legal frame around weather and price risk. ⚠ BLS: farm incomes \"vary from year to year because prices of farm products fluctuate with weather conditions and other factors.\""
+    },
+    {
+      "courseId": "AEB4424",
+      "sortOrder": 11,
+      "reason": "Human Resource Management in Agribusiness — UF. ⚠ Only 26% of Florida farms hire labour, but an operation large enough to employ a salaried manager usually employs a crew too, and managing it is much of what that manager does."
+    },
+    {
+      "courseId": "SWS2000",
+      "sortOrder": 12,
+      "reason": "Introduction to Soil Science — Central Florida, North Florida and St. Johns River. ⚠⚠ Florida's sandy soils hold little water or nutrient, which is why fertiliser and irrigation on Florida farms are managed under state best-management-practice programmes.",
+      "variantNote": "⚠ The university version is SWS3022 The Nature and Properties of Soil at FAMU and UF, with SWS3022L as its lab. SWS1102 Soils and Fertilizers (four state colleges) is the applied version."
+    },
+    {
+      "courseId": "ANS3006",
+      "sortOrder": 13,
+      "reason": "Introductory Animal Science — FAMU, St. Petersburg, UF and USF. ⚠ Florida has 1.57 million head of cattle; for anyone heading toward a ranch, this is the entry course to the animal sciences degree, which is larger than agribusiness at UF.",
+      "variantNote": "⚠ College of Central Florida teaches ANS1003 Introduction to Animal Science at the lower division."
+    },
+    {
+      "courseId": "ORH2251C",
+      "sortOrder": 14,
+      "reason": "Nursery Operation and Management — Eastern Florida State and Valencia. ⚠⚠⚠ Nursery, greenhouse, floriculture and sod are 34% of all Florida farm sales, second in the nation, and more than all Florida livestock combined. \"Nursery Manager\" is one of O*NET's own titles for this occupation."
+    },
+    {
+      "courseId": "ORH2260C",
+      "sortOrder": 15,
+      "reason": "Greenhouse Operations and Management — Eastern Florida State and Valencia. ⚠ Controlled-environment production is where the hired-manager jobs in Florida horticulture concentrate.",
+      "variantNote": "⚠ ORH1260 Greenhouse Operations is a shorter version at Central Florida and North Florida."
+    },
+    {
+      "courseId": "AOM2316",
+      "sortOrder": 16,
+      "reason": "Agricultural Machinery and Equipment — Central Florida, North Florida and St. Johns River. ⚠ BLS: \"Tractors, tools, and other farm machinery and equipment can cause serious injury.\" Operation, maintenance and the cost of owning versus hiring equipment."
+    },
+    {
+      "courseId": "AOM2433",
+      "sortOrder": 17,
+      "reason": "Introduction to Precision Agriculture — College of Central Florida. GPS guidance, variable-rate application, sensors and drones. ⚠⚠ This is the productivity technology BLS names as the reason fewer, larger farms need fewer managers — which makes it the skill that the surviving managers have.",
+      "variantNote": "⚠ Florida SouthWestern teaches it as AOM2433C with an integrated lab; UF teaches AOM4434 Precision Agriculture at the upper division."
+    },
+    {
+      "courseId": "AOM3333",
+      "sortOrder": 18,
+      "reason": "Pesticide Application Technology — UF. ⚠⚠ Applying restricted-use pesticides outdoors in Florida requires an FDACS licence under Chapter 487, F.S., and s. 487.044 requires an examination. The course does not grant the licence; it is the preparation for it."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Farmers, Ranchers, and Other Agricultural Managers",
+      "url": "https://www.bls.gov/ooh/management/farmers-ranchers-and-other-agricultural-managers.htm",
+      "note": "$89,900 median (May 2025), 788,700 jobs, −3% for 2025–35 and about 70,800 annual openings, all from replacement. Entry-level education HIGH SCHOOL DIPLOMA with 5 years or more of related experience; 67% self-employed. ⚠ The pay figures exclude self-employed workers. Source of the consolidation and technology sentences; AI is not named."
+    },
+    {
+      "label": "O*NET — Farmers, Ranchers, and Other Agricultural Managers (11-9013.00)",
+      "url": "https://www.onetonline.org/link/summary/11-9013.00",
+      "note": "Job Zone Four — most positions require a bachelor's degree — which disagrees with BLS because O*NET's sample titles (farm, ranch, nursery, greenhouse, hatchery manager) describe the hired third. Projected decline, about 85,500 openings a year for 2024–34."
+    },
+    {
+      "label": "O*NET — Florida wages for 11-9013.00",
+      "url": "https://www.onetonline.org/link/localwages/11-9013.00?st=FL",
+      "note": "Florida median $87,080 against $89,900 national, but the 75th percentile $141,370 (+$22,510) and 90th $186,940 (+$26,920). These are salaried managers only."
+    },
+    {
+      "label": "USDA NASS — 2022 Census of Agriculture, Florida state profile",
+      "url": "https://www.nass.usda.gov/Publications/AgCensus/2022/Online_Resources/County_Profiles/Florida/cp99012.pdf",
+      "note": "44,703 farms; 63% sell under $10,000 a year and 14% sell $100,000 or more; 40% of producers are 65 or over and 7% under 35; 26% of farms hire labour. Nursery, greenhouse, floriculture and sod $3.48 billion — 34% of Florida sales, 2nd in the U.S."
+    },
+    {
+      "label": "7 CFR 764.152 — Farm Service Agency farm ownership loan experience requirements",
+      "url": "https://www.law.cornell.edu/cfr/text/7/764.152",
+      "note": "Three years of participation in a farm's business operations out of the last ten, with listed alternatives that include \"not less than 16 credit hours of post-secondary education in an agriculture-related field.\""
+    },
+    {
+      "label": "ASFMRA — Accredited Farm Manager designation",
+      "url": "https://www.asfmra.org/credentials/accredited-farm-manager",
+      "note": "Requires a four-year college degree or approved equivalent, four years of farm or ranch management experience, 82 hours of ASFMRA coursework, membership and a demonstration farm management plan."
+    },
+    {
+      "label": "FDACS — Pesticide licensing, and s. 487.044, Florida Statutes",
+      "url": "https://www.fdacs.gov/Business-Services/Pesticide-Licensing",
+      "note": "A licence under Chapter 487 is required to apply restricted-use pesticides outdoors other than for structural or public-health pest control; s. 487.044 requires applicants to pass an examination."
+    },
+    {
+      "label": "UF Undergraduate Catalog — Food and Resource Economics B.S.",
+      "url": "https://catalog.ufl.edu/UGRD/colleges-schools/UGAGL/FRE_BS/",
+      "note": "Two specialisations; state-assigned common prerequisites MAC2233, STA2023, ACG2021 and ECO2013 with minimum grades of C; core includes AEB3103, AEB3133, AEB3144 and AEB3300."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 01",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "01.01 agribusiness 120 a year (UF 99); 01.00 general 30 (FAMU 29); and the production fields the site cannot yet list — horticulture 204 at ten colleges (Valencia 127), animal sciences 178, plant sciences 134, equine 67, soil 56."
+    },
+    {
+      "label": "SCNS statewide course files — AEB, AOM, ORH and ANS",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Every undergraduate AEB, AOM and ORH number is guaranteed transfer to an institution offering the same course. AEB2102 and AEB3133 share a title; AEB3103 has one carrier (UF); UF and FAMU share 7 of their 38 and 26 upper-division AEB numbers."
+    }
+  ],
+  "bodyHtml": "<h2>&#9888;&#9888;&#9888; Two-thirds of this occupation is not a job. It is a business.</h2>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>What it says</th></tr></thead>\n<tbody>\n<tr><td>Entry-level education (BLS)</td><td>&#9888;&#9888; <strong>High school diploma</strong></td></tr>\n<tr><td>Work experience in a related occupation (BLS)</td><td>&#9888;&#9888;&#9888; <strong>5 years or more</strong></td></tr>\n<tr><td>Self-employed (BLS)</td><td>&#9888;&#9888;&#9888; <strong>67%</strong></td></tr>\n<tr><td>Jobs, 2025</td><td>788,700</td></tr>\n<tr><td>Outlook 2025&ndash;35</td><td>&#9888; <strong>&minus;3%</strong> (&minus;26,500)</td></tr>\n<tr><td>Openings a year</td><td>about <strong>70,800</strong>, <em>all</em> from replacement</td></tr>\n<tr><td>O*NET job zone</td><td>&#9888; <strong>Zone Four</strong> &mdash; &ldquo;most of these occupations require a four-year bachelor&rsquo;s degree, but some do not&rdquo;</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>The two federal sources disagree about the education this job needs, and both are right &mdash; about different halves of it.</strong> BLS describes the whole occupation, and two in three of its members farm their own land or their family&rsquo;s. For them the entry requirement is not a qualification at all; it is <strong>land, capital and years of experience</strong>. O*NET&rsquo;s sample job titles are the other third: <em>Farm Manager, Greenhouse Manager, Nursery Manager, Ranch Manager, Hatchery Manager</em> &mdash; people hired to run someone else&rsquo;s operation, and those employers do read a transcript.</p>\n<p><strong>So this page, like the fitness page, has to answer a direct question before it lists a single course: what is an agriculture degree for, when most people in the occupation did not need one?</strong> There are four good answers, and they are below. None of them is &ldquo;it will get you a farm.&rdquo;</p>\n\n<h2>&#9888;&#9888; The wage figure describes the hired third, not the farmer</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$53,720</td><td>$54,320</td><td>&minus;$600</td></tr>\n<tr><td>25th</td><td>$74,770</td><td>$66,300</td><td>+$8,470</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$87,080</strong></td><td><strong>$89,900</strong></td><td>&minus;$2,820</td></tr>\n<tr><td>&#9888; 75th</td><td>&#9888; <strong>$141,370</strong></td><td>$118,860</td><td><strong>+$22,510</strong></td></tr>\n<tr><td>&#9888; 90th</td><td>&#9888; <strong>$186,940</strong></td><td>$160,020</td><td><strong>+$26,920</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Read the caveat before the numbers.</strong> BLS states that its pay figures do <em>not</em> include self-employed workers, because the wage survey does not collect them. <strong>So the $89,900 median is the pay of the salaried managers &mdash; the one-third &mdash; and says nothing about what a farmer earns.</strong> On that, BLS says only that &ldquo;incomes of farmers and ranchers vary from year to year because prices of farm products fluctuate with weather conditions and other factors.&rdquo;</p>\n<p>&#9888;&#9888; <strong>Florida&rsquo;s upper tail is the finding.</strong> The Florida median is slightly below the national one, but the 75th and 90th percentiles are <strong>$22,000&ndash;$27,000 higher</strong>. That is what large hired-management operations look like &mdash; sugarcane, citrus groves, nursery and greenhouse companies, cattle ranches &mdash; and it is exactly the half of the occupation a degree leads to.</p>\n\n<h2>&#9888;&#9888;&#9888; What a Florida farm actually is</h2>\n<p>From the <strong>2022 Census of Agriculture</strong> state profile for Florida:</p>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Florida, 2022</th></tr></thead>\n<tbody>\n<tr><td>Farms</td><td>44,703 (&minus;6% since 2017)</td></tr>\n<tr><td>&#9888;&#9888;&#9888; Farms selling <strong>under $10,000</strong> a year</td><td><strong>28,290 &mdash; 63%</strong> (43% under $2,500)</td></tr>\n<tr><td>Farms selling $100,000 or more</td><td>6,045 &mdash; 14%</td></tr>\n<tr><td>Farms under 50 acres</td><td>70%</td></tr>\n<tr><td>Farms that hire labour</td><td>26%</td></tr>\n<tr><td>&#9888;&#9888; Producers aged <strong>65 and over</strong></td><td><strong>31,935 of 79,253 &mdash; 40%</strong></td></tr>\n<tr><td>&#9888;&#9888; Producers <strong>under 35</strong></td><td><strong>5,211 &mdash; 7%</strong></td></tr>\n<tr><td>New and beginning producers</td><td>26,834</td></tr>\n<tr><td>Total sales</td><td>$10.2 billion, 21st in the U.S.</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Most Florida &ldquo;farms&rdquo; are not a livelihood.</strong> Nearly two in three sell less than $10,000 a year; the census counts a place as a farm at $1,000 of potential sales. The income sits in the 14% that sell $100,000 or more, and those are the operations that hire managers.</p>\n<p>&#9888;&#9888; <strong>And there are six producers aged 65 or over for every one under 35.</strong> That is why BLS projects 70,800 openings a year in a shrinking occupation: every one of them is a replacement. BLS is explicit about why the total is shrinking &mdash; <em>&ldquo;increased efficiencies in crop production have led to consolidation and fewer, but larger, farms&hellip; as farms become larger, they invest more in productivity-enhancing technologies, reinforcing this effect&rdquo;</em> &mdash; and about who leaves: <em>&ldquo;operators of small farms will likely continue to exit the business.&rdquo;</em> &#9888; BLS does not name AI on this page. The technology it names is the kind that makes one manager responsible for more acres.</p>\n\n<h2>So what is the degree for? Four answers</h2>\n<ol>\n<li><strong>The hired manager.</strong> The salaried third &mdash; farm, grove, ranch, nursery and greenhouse managers &mdash; is the part of the occupation that reads a transcript, and in Florida it is the better-paid part. &#9888; The profession&rsquo;s own credential requires the degree: the ASFMRA <strong>Accredited Farm Manager</strong> designation asks for <em>&ldquo;a four-year college degree or equivalent,&rdquo;</em> four years of farm or ranch management experience, 82 hours of land-management coursework and a demonstration management plan.</li>\n<li>&#9888;&#9888;&#9888; <strong>The loan.</strong> For someone who wants their own operation, the constraint is capital, and the federal lender of first resort for beginning farmers is USDA&rsquo;s Farm Service Agency. A Farm Ownership loan requires that the applicant has <em>&ldquo;participated in the business operations of a farm for at least 3 years out of the 10 years prior&rdquo;</em> &mdash; and <strong>7 CFR 764.152 lists &ldquo;not less than 16 credit hours of post-secondary education in an agriculture-related field&rdquo; as one of the recognised alternatives for part of that experience.</strong> Sixteen credit hours is about five courses. &#9888; This is the most concrete thing a transcript does for a would-be farmer, and almost nobody knows it.</li>\n<li><strong>The business around the farm.</strong> Florida&rsquo;s agribusiness degrees are business degrees with an agricultural subject &mdash; marketing, finance, commodity risk, supply chains. They lead as often to agricultural lending, crop insurance, input sales, food companies and extension as to a farm. &#9888; UF&rsquo;s own degree is called <em>Food and Resource</em> Economics for that reason.</li>\n<li><strong>The regulated tasks.</strong> Some farm work is licensed regardless of who owns the land. FDACS: <em>&ldquo;To apply restricted use pesticides to any outdoor area in Florida not associated with a structure or public health pest control, you must have a pesticide applicator license pursuant to Chapter 487, Florida Statutes,&rdquo;</em> and s. 487.044 requires an examination. A course in pesticide application does not grant the licence, but it is the preparation for the exam.</li>\n</ol>\n<p>&#9888; <strong>And if none of those four is the plan</strong> &mdash; if the plan is to farm family land &mdash; then the honest advice is BLS&rsquo;s: work on a farm, take the business and soil courses that fit around it, and use the extension service. A degree is valuable here, but it is not a gate.</p>\n\n<h2>&#9888;&#9888;&#9888; Florida&rsquo;s biggest farm product is a plant in a pot</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Category (2022 sales)</th><th>Florida</th><th>U.S. rank</th></tr></thead>\n<tbody>\n<tr><td>&#9888;&#9888; <strong>Nursery, greenhouse, floriculture, sod</strong></td><td><strong>$3.48 billion &mdash; 34% of all Florida farm sales</strong></td><td><strong>2nd</strong></td></tr>\n<tr><td>Vegetables, melons, potatoes</td><td>$1.92 billion</td><td>2nd</td></tr>\n<tr><td>Fruits, tree nuts, berries</td><td>$1.44 billion</td><td>3rd</td></tr>\n<tr><td>All livestock, poultry and products</td><td>$2.13 billion</td><td>30th</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Nursery and greenhouse production outsells ALL Florida livestock combined</strong>, and it is the sector where &ldquo;Greenhouse Manager&rdquo; and &ldquo;Nursery Manager&rdquo; &mdash; two of O*NET&rsquo;s own titles for this occupation &mdash; are hired positions. &#9888; <strong>And its training lives at the STATE COLLEGES, not the universities:</strong> Florida awards 204 horticulture and landscape credentials a year at ten public institutions, <strong>Valencia College 127 of them</strong>, followed by Florida Gateway, Miami Dade and Indian River. ORH2251C Nursery Operation and Management and ORH2260C Greenhouse Operations and Management below are Valencia and Eastern Florida State courses.</p>\n<p>&#9888; This site cannot yet list those horticulture programmes as a programme page &mdash; their classification (CIP 01.06) is not in the site&rsquo;s tree. The courses are listed, and the programme gap is recorded for the next deploy.</p>\n\n<h2>&#9888;&#9888; Florida&rsquo;s agriculture degrees are, overwhelmingly, the University of Florida</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Field (CIP)</th><th>Credentials/yr</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td><strong>Agribusiness and agricultural economics (01.01)</strong></td><td><strong>120</strong></td><td>&#9888; UF 99 (Food and Resource Economics), FAMU 10, College of Central Florida 6, Florida Gateway 5</td></tr>\n<tr><td>Agriculture, general (01.00)</td><td>30</td><td>FAMU 29, Indian River 1</td></tr>\n<tr><td>Horticulture and landscape (01.06)</td><td>204</td><td>ten state and technical colleges, Valencia 127</td></tr>\n<tr><td>Animal sciences (01.09)</td><td>178</td><td>UF 155, Santa Fe 23</td></tr>\n<tr><td>Plant sciences (01.11)</td><td>134</td><td>UF</td></tr>\n<tr><td>Equine studies (01.05)</td><td>67</td><td>College of Central Florida</td></tr>\n<tr><td>Soil sciences (01.12)</td><td>56</td><td>UF</td></tr>\n<tr><td>Agricultural production operations (01.03)</td><td>18</td><td>four state colleges</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>The agribusiness degree that anchors this page is small &mdash; about 150 credentials a year across the two codes the site can show</strong> &mdash; and the animal, plant and horticulture programmes around it are four times that. A student interested in running a ranch should look at animal sciences; a grove or vegetable operation, plant sciences; a nursery, horticulture. &#9888; <strong>The business courses on this page are the common ground under all of them.</strong></p>\n<p>&#9888; <strong>FGCU teaches agribusiness courses but recorded no agriculture degree in 2023</strong>, &#9888;&#9888; And Florida&rsquo;s two land-grant universities teach largely different courses under the same prefix: <strong>UF carries 38 upper-division AEB numbers and FAMU 26, and only 7 are shared.</strong> Moving between them mid-degree is harder than the shared prefix suggests.</p>\n\n<h2>&#9888;&#9888; Getting from a state college to the UF degree</h2>\n<p><strong>The good news is that the transfer route runs almost entirely through courses every college teaches.</strong> The state-assigned common prerequisites for UF&rsquo;s Food and Resource Economics degree are <strong>MAC2233 business calculus (36 carriers), STA2023 statistics (39), ACG2021 financial accounting (32) and ECO2013 macroeconomics (38)</strong>, each with a C or better. None of them is an agriculture course.</p>\n<p>&#9888;&#9888; <strong>Two traps in the agriculture numbers themselves:</strong></p>\n<ul>\n<li>&#9888;&#9888; <strong>AEB2102 and AEB3133 have the SAME TITLE &mdash; Principles of Agribusiness Management &mdash; and are different courses.</strong> AEB2102 is taught at four state colleges (Central Florida, Florida SouthWestern, North Florida, St. Johns River); AEB3133 at FAMU, FGCU and UF. The statewide record for AEB3133 names a principles-of-economics prerequisite. Taking the 2000-level course does not excuse the 3000-level one.</li>\n<li>&#9888; <strong>The introductory agricultural economics course has two numbers:</strong> AEB2104 at Central Florida, FAMU and FGCU, and AEB3103 at UF only. Both are flagged as common prerequisites in the statewide file. Take whichever your college offers, and ask UF which it accepts before assuming.</li>\n</ul>\n<p>&#9888; Every undergraduate AEB, AOM and ORH number in the statewide file is classified <strong>guaranteed transfer to an institution offering the same course</strong> &mdash; the problem here is not transferability but that the receiving school may not offer the same number.</p>\n"
+}
