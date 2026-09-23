@@ -2,6 +2,11 @@
   "name": "Financial Analyst",
   "cipCode": "52.08",
   "socCode": "13-2051",
+  "additionalSocCodes": [
+    "13-2031",
+    "13-2052",
+    "13-2054"
+  ],
   "isPublished": true,
   "sortOrder": 380,
   "description": "Financial analysts value companies and securities, build the models firms decide by, and measure the risk of being wrong. ⚠ A median of $103,570 with 7% growth. ⚠⚠ It is a CHOICE path, but a concentrated one: counted degrees put business at about half of working analysts, with the social sciences — economics among them — the next largest block. ⚠⚠⚠ And the finding that should redirect some readers: the ANALYTICAL roles in this family are growing at 7% while the ADVISORY ones grow at 1%, despite paying the same or more. This page covers four roles.",

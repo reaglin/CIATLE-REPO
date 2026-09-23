@@ -1,0 +1,130 @@
+@page "/queue/careers"
+@model PreseMakerRepo.Api.Pages.Queue.CareersModel
+@using PreseMakerRepo.Api.Services
+@{
+    ViewData["Title"] = "Career Path Request Queue";
+    ViewData["NoIndex"] = true;
+    var waiting = Model.Queue.Filter == CareerRequestService.QueueWaiting;
+    var filters = new[]
+    {
+        (Key: CareerRequestService.QueueWaiting, Label: "Waiting", Count: Model.Queue.Waiting),
+        (Key: CareerRequestService.QueuePublished, Label: "Published", Count: Model.Queue.Published),
+        (Key: CareerRequestService.QueueDeclined, Label: "Declined", Count: Model.Queue.Declined)
+    };
+}
+
+<nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Queues</li>
+    </ol>
+</nav>
+
+<partial name="_QueueNav" model='"careers"' />
+
+<h1 class="h4 mb-2">Career Path Request Queue</h1>
+<p class="text-muted" style="max-width: 760px;">
+    Every <strong>Request</strong> press on a <a asp-page="/Careers/Index">Career Paths</a> field-of-study page
+    lands here. New career paths are written in order of demand, the most-requested careers first, and each one
+    takes research before it is published. Requests are anonymous; nothing about who asked is shown.
+</p>
+
+<p class="small text-muted" style="max-width: 760px;">
+    <strong>Waiting</strong> &mdash; asked for, not started yet &middot;
+    <strong>In progress</strong> &mdash; being researched and written &middot;
+    <strong>Published</strong> &mdash; the path is live, and moves to the Published tab &middot;
+    <strong>Declined</strong> &mdash; will not be written, for example because it is not a career Florida
+    colleges prepare people for.
+</p>
+
+<ul class="nav nav-pills mb-3" aria-label="Filter the queue">
+    @foreach (var f in filters.Where(f => f.Count > 0 || f.Key != CareerRequestService.QueueDeclined || Model.Queue.Filter == f.Key))
+    {
+        var active = Model.Queue.Filter == f.Key;
+        <li class="nav-item">
+            <a class="nav-link @(active ? "active" : "")" aria-current="@(active ? "page" : null)"
+               asp-page="/Queue/Careers" asp-route-status="@f.Key">
+                @f.Label <span class="badge @(active ? "text-bg-light" : "text-bg-secondary")">@f.Count.ToString("N0")</span>
+            </a>
+        </li>
+    }
+</ul>
+
+@if (!Model.Queue.Items.Any())
+{
+    <div class="alert alert-light border" style="max-width: 760px;">
+        @if (waiting)
+        {
+            <text>No career path requests are waiting right now. To ask for one, open
+            <a asp-page="/Careers/Index">Career Paths</a>, choose a field of study, and press <strong>Request</strong>
+            beside a career that does not have a path yet.</text>
+        }
+        else
+        {
+            <text>Nothing here yet.</text>
+        }
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-sm align-middle">
+            <thead>
+                <tr>
+                    @if (waiting) { <th scope="col" class="text-end">#</th> }
+                    <th scope="col">Career</th>
+                    <th scope="col">Field of study</th>
+                    <th scope="col" class="text-end">Requests</th>
+                    <th scope="col">First requested</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Queue.Items)
+                {
+                    <tr>
+                        @if (waiting) { <td class="text-end text-muted">@item.Rank</td> }
+                        <td>
+                            <span class="fw-semibold">@item.SocTitle</span>
+                            <div class="small text-muted">SOC @item.SocCode</div>
+                        </td>
+                        <td class="small">
+                            @foreach (var c in item.CipCodes)
+                            {
+                                <div><a asp-page="/Careers/Area" asp-route-code="@c">@(Model.FieldTitles.TryGetValue(c, out var t) ? t : c)</a>
+                                <span class="text-muted">(@c)</span></div>
+                            }
+                        </td>
+                        <td class="text-end"><span class="badge text-bg-primary">@item.RequestCount</span></td>
+                        <td class="small text-nowrap">@item.FirstRequestedUtc.ToString("MMM d, yyyy")</td>
+                        <td class="text-nowrap">
+                            @switch (item.Status)
+                            {
+                                case "Published" when item.PathSlug is not null:
+                                    <a asp-page="/Careers/Path" asp-route-slug="@item.PathSlug" class="btn btn-sm btn-outline-success">View path</a>
+                                    break;
+                                case "Published":
+                                    <span class="badge text-bg-success">Published</span>
+                                    break;
+                                case "Queued":
+                                    <span class="badge text-bg-info">In progress</span>
+                                    break;
+                                case "Declined":
+                                    <span class="badge text-bg-secondary">Declined</span>
+                                    break;
+                                default:
+                                    <span class="badge text-bg-light border">Waiting</span>
+                                    break;
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<p class="small text-muted mt-3">
+    Also available as JSON: <code>/api/v1/queue/careers?status=waiting</code> (or <code>published</code>,
+    <code>declined</code>, <code>all</code>).
+</p>

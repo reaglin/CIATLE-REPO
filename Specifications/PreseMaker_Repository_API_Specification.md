@@ -1599,3 +1599,32 @@ returns `unmatchedCips` (codes matching no award record, which is usually the wr
 
 ⚠ `Data/Seed/programs.json` **bootstraps** a database that has no programmes and never overwrites an
 existing one, so a programme corrected over the API survives every redeploy.
+
+## 17. Career Path Requests
+
+Request-driven career paths (Ron, 2026-09-23): *"The request driven will follow the same pattern as
+courses. The paths will be listed under the CIP code section with a 'Request' button. The queue of
+request will be available for view."* The twin of guide requests (§12).
+
+**What can be requested.** Each 4-digit CIP group carries the occupations the NCES CIP 2020 / SOC 2018
+crosswalk maps to it (`CipOccupations`, seeded from `Data/Seed/cip_soc.json`, built by
+`Tools/build_cip_soc_seed.py`; the `25-1xxx` postsecondary-teacher family is excluded by rule). An
+occupation is **covered** when a published path names it as `socCode` or in `additionalSocCodes`;
+covered occupations cannot be requested. An admin can hide an odd pairing; the seed never un-hides it.
+
+| Verb | Route | Auth | Purpose |
+|---|---|---|---|
+| GET | `/cip/{code}/occupations` | Public | Occupations under a 4-digit group, each with `pathSlug` (when covered) and `waitingRequests` |
+| POST | `/career-requests` | Public | `{ socCode, cipCode, reason? }` — ask for a path. 404 `OCCUPATION_NOT_FOUND` if not listed under that group; 409 `CAREER_PATH_EXISTS` if a path covers it; 429 when rate-limited (20/hour/IP) |
+| GET | `/queue/careers?status=waiting\|published\|declined\|all` | Public | The public queue, most-requested first. Nothing about requesters is shown |
+| GET | `/career-requests?status=open\|queued\|published\|declined\|all` | Admin | Per-occupation ranking with the reasons given — the Tools session's input |
+| PATCH | `/career-requests/{socCode}/status` | Admin | `{ status, notes? }` — triage every request for an occupation |
+| PATCH | `/cip/{code}/occupations/{socCode}` | Admin | `{ isHidden }` — hide or show one pairing |
+
+**Career paths gained `additionalSocCodes`** (`PUT /career-paths/{slug}`, ≤ 30, each `NN-NNNN`): the
+occupations a path covers as sections of its page. A push closes open requests for every occupation the
+path now covers, as a guide push closes guide requests.
+
+Requests are one row each, deduplicated per requester per day, with the IP stored only as a salted
+SHA-256 hash. Web pages: the **Request** button on `/careers/area/{code}`, the public queue at
+`/queue/careers`, admin triage at `/admin/career-requests`.

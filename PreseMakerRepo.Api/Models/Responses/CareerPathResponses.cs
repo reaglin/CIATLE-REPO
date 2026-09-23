@@ -38,7 +38,8 @@ public record CareerPathDto(
     IReadOnlyList<CareerPathCipDto> CipCodes,
     IReadOnlyList<CareerPathProgramDto> Programs,
     IReadOnlyList<CareerPathCourseDto> Courses,
-    IReadOnlyList<CareerPathSourceDto> Sources);
+    IReadOnlyList<CareerPathSourceDto> Sources,
+    IReadOnlyList<string> AdditionalSocCodes);
 
 /// <summary>A programme that leads to this career.</summary>
 public record CareerPathProgramDto(string Slug, string Name, string? Note, bool IsRoute,

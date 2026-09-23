@@ -75,7 +75,7 @@ else
                             <input type="hidden" name="courseId" value="@i.CourseId" />
                             <input type="hidden" name="Status" value="@Model.Status" />
                             <div class="input-group input-group-sm" style="width: 320px;">
-                                <select name="status" class="form-select form-select-sm">
+                                <select name="newStatus" class="form-select form-select-sm" aria-label="New status for @i.CourseId">
                                     <option value="Queued">Queued</option>
                                     <option value="Published">Published</option>
                                     <option value="Declined">Declined</option>

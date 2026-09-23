@@ -14,6 +14,62 @@
     and — just as important — where <strong>licensure or program accreditation</strong> decides whether a route
     qualifies you at all. A set of individually transferable courses is not always enough.
 </p>
+<section id="find-a-career" class="card mb-4" style="max-width: 60rem;">
+    <div class="card-body">
+        <h2 class="h6 mb-1">Find a career</h2>
+        <p class="small text-muted mb-2">
+            Type a job title, for example <em>dental hygienist</em>, <em>pilot</em> or <em>planner</em>. If the career
+            has a path you can open it; if not, you can request one. The most-requested paths are written first,
+            and you can follow them in the <a asp-page="/Queue/Careers">career request queue</a>.
+        </p>
+        <form method="get" asp-page="/Careers/Index" asp-fragment="find-a-career" class="d-flex gap-2" role="search">
+            <label for="career-q" class="visually-hidden">Job title</label>
+            <input id="career-q" name="q" value="@Model.Q" class="form-control" placeholder="Job title" maxlength="80" />
+            <button type="submit" class="btn btn-primary">Find</button>
+        </form>
+
+        @if (Model.Q is not null)
+        {
+            @if (!Model.Hits.Any())
+            {
+                <p class="small mt-3 mb-0">
+                    No career matched &ldquo;@Model.Q&rdquo;. Try a shorter or more general word (<em>nurse</em> rather than
+                    <em>nursing</em>), or browse by field of study below.
+                </p>
+            }
+            else
+            {
+                <ul class="list-group list-group-flush mt-3">
+                    @foreach (var h in Model.Hits)
+                    {
+                        <li class="list-group-item px-0">
+                            <div class="fw-semibold">@h.SocTitle</div>
+                            @if (h.PathSlug is not null)
+                            {
+                                <a asp-page="/Careers/Path" asp-route-slug="@h.PathSlug" class="small">Read the career path</a>
+                            }
+                            else
+                            {
+                                <div class="small">
+                                    No path yet. Request one from
+                                    @for (var k = 0; k < h.Fields.Count; k++)
+                                    {
+                                        var f = h.Fields[k];
+                                        <a asp-page="/Careers/Area" asp-route-code="@f.Code" asp-fragment="request-a-path">@f.Title</a>@(k < h.Fields.Count - 1 ? " or " : ".")
+                                    }
+                                </div>
+                            }
+                        </li>
+                    }
+                </ul>
+                @if (Model.Hits.Count >= 40)
+                {
+                    <p class="small text-muted mt-2 mb-0">Showing the first 40. Add another word to narrow the list.</p>
+                }
+            }
+        }
+    </div>
+</section>
 
 @if (Model.Paths.Any())
 {
@@ -45,7 +101,7 @@ else
     </div>
 }
 
-<h2 class="h5 mb-1">Browse by field of study</h2>
+<h2 id="browse-by-field" class="h5 mb-1">Browse by field of study</h2>
 <p class="text-muted small mb-3" style="max-width: 60rem;">
     Paths are filed under the federal
     <a href="https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=55" rel="noopener" target="_blank">Classification of
@@ -71,7 +127,7 @@ else
                         }
                         else
                         {
-                            <text>@s.GroupCount group@(s.GroupCount == 1 ? "" : "s")</text>
+                            <text>@s.GroupCount field@(s.GroupCount == 1 ? "" : "s")</text>
                         }
                     </span>
                 </a>

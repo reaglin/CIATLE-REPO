@@ -2,6 +2,10 @@
   "name": "Speech-Language Pathologist",
   "cipCode": "51.02",
   "socCode": "29-1127",
+  "additionalSocCodes": [
+    "29-1181",
+    "31-9099"
+  ],
   "isPublished": true,
   "sortOrder": 460,
   "description": "Speech-language pathologists diagnose and treat disorders of speech, language, voice and swallowing — in children who are not talking, in stroke patients who have lost words, in people who cannot safely swallow. ⚠ A median of $97,870 and 17% growth, among the best combinations on this site. ⚠⚠⚠ But the bachelor's is NOT a terminal degree: Florida awards 513 of them a year into 298 master's places, and 89% of the profession holds a master's. This page covers the assistant, the pathologist and the audiologist, because the bachelor's only reaches the first.",

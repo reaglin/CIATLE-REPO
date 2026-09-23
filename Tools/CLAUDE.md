@@ -3995,7 +3995,15 @@ When starting a fresh session in this project:
    ```bash
    curl -s "https://floridacourserepo.com/api/v1/queue/resources?status=pending"   # resources
    curl -s "https://floridacourserepo.com/api/v1/queue/guides?status=waiting"      # guide requests
+   python career_paths.py requests                                                   # career path requests
    ```
+
+   ⚠⚠ **Career paths became request-driven with the 2026-09-23 deploy** (Ron: *"the request driven will
+   follow the same pattern as courses"*). Visitors press **Request** beside an occupation on a
+   `/careers/area/{code}` page; the queue is `/queue/careers`. **Once the authored queue is finished it is
+   the career-path work list, most requested first.** When a path covers related occupations as sections,
+   list their SOC codes in the path's **`additionalSocCodes`** — that closes their requests and stops the
+   area page offering them.
 
    **Resource suggestions are cleared first** — they are quick, a person is waiting on each one, and
    the rules are in `resources/APPROVAL_RULES.md` (the `/resources` skill drives the loop). **Then

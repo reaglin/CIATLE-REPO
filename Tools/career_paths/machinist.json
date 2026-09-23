@@ -2,6 +2,9 @@
   "name": "Machinist",
   "cipCode": "48.05",
   "socCode": "51-4041",
+  "additionalSocCodes": [
+    "51-9161"
+  ],
   "isPublished": true,
   "sortOrder": 170,
   "description": "Machinists cut metal to a tolerance — setting up lathes, mills, grinders and CNC machines, and deciding how a part on a drawing actually gets made. ⚠ The occupation is flat but replaces about 29,500 people a year, and the money is in setup and programming rather than in running the machine. ⚠ This page also covers the CNC machine operator role, which is the rung below and the one occupation here with a projected decline.",

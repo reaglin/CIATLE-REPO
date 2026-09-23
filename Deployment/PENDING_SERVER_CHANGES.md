@@ -8,15 +8,18 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⏳ READY TO DEPLOY 2026-09-23 — CIP seed at 228 nodes, and the taxonomy key fix
+### ⏳ READY TO DEPLOY 2026-09-23 — CIP seed at 228 nodes, the taxonomy key fix, and request-driven career paths
 
-Full deploy (**not** `-CodeOnly`: `taxonomy.json` changed). No migration.
+Full deploy (**not** `-CodeOnly`: `taxonomy.json` changed, and there is a migration).
 
 | What | Commit | Verify after the deploy |
 |---|---|---|
 | Taxonomy key collision fix — `ART`/`LAW` disciplines renamed, self-parent guard in `TaxonomySeed` (plan 1.5) | `502603a` | `/browse` shows an Art discipline; the tree total matches `/api/v1/courses/catalog` |
 | CIP seed 209 → 228 nodes, the 19 groups of `REVIEW_QUEUE` item 116 | this commit series | `GET /api/v1/cip` returns 228 nodes, including `12.04`, `12.05`, `49.02`, `01.83`, `01.06` |
 
+| **Request-driven career paths** — migration `AddCareerRequests` (`CipOccupations`, `CareerRequests`, `CareerPaths.AdditionalSocCodes`), the `cip_soc.json` seed (1,170 rows), the Request button on `/careers/area/{code}`, `/queue/careers`, `/admin/career-requests`, API spec §17 | this commit | `GET /api/v1/cip/04.03/occupations` lists planners; `/queue/careers` answers 200; `/admin/career-requests` renders; then `python career_paths.py push --all` (29 paths gain `additionalSocCodes`) and `python career_paths.py requests` |
+
+⚠ **This deploy carries a MIGRATION.** The script backs up the database first; do not pass `-SkipBackup`.
 ⚠ The server has no SSH key auth, so the script prompts for the password; Ron runs it.
 
 ### ✅ DEPLOYED 2026-09-20 — the connections, the CIP seed at 209 nodes, and everything behind them

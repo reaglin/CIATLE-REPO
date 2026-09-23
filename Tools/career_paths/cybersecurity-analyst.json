@@ -2,6 +2,9 @@
   "name": "Cybersecurity Analyst",
   "cipCode": "11.10",
   "socCode": "15-1212",
+  "additionalSocCodes": [
+    "15-1299"
+  ],
   "isPublished": true,
   "sortOrder": 350,
   "description": "Cybersecurity analysts defend an organisation's systems and data — hardening configurations, monitoring for intrusion, responding to incidents, testing defences by attacking them, and investigating breaches after the fact. ⚠ A median of $129,180 and 21% projected growth, the fastest of any computing path on this site. ⚠⚠⚠ And the thing nobody says in the advertising: this is NOT an entry-level field. The federal handbook is explicit that analysts typically arrive from systems administration, and a security credential with no operational experience behind it is the commonest disappointment in this job market. This page covers four related roles.",

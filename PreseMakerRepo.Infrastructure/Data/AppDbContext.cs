@@ -39,6 +39,11 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<CareerPathCourse> CareerPathCourses => Set<CareerPathCourse>();
     public DbSet<CareerPathSource> CareerPathSources => Set<CareerPathSource>();
 
+    // Request-driven career paths (2026-09-23): the crosswalk occupations a reader can ask
+    // for, and the requests themselves -- the career-path twin of GuideRequests.
+    public DbSet<CipOccupation> CipOccupations => Set<CipOccupation>();
+    public DbSet<CareerRequest> CareerRequests => Set<CareerRequest>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

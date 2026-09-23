@@ -2,6 +2,10 @@
   "name": "School Teacher (K–12)",
   "cipCode": "13.12",
   "socCode": "25-2021",
+  "additionalSocCodes": [
+    "25-2031",
+    "25-2052"
+  ],
   "isPublished": true,
   "sortOrder": 420,
   "description": "School teachers plan and deliver the curriculum, assess what has been learned, manage a classroom and account for every child's progress. ⚠ This page covers elementary, middle, secondary and special education together, because in Florida they share one certification system and differ mainly by which subject examination you sit. ⚠⚠⚠ And it leads with the finding a Florida student most needs: the state ranks around 19th nationally for STARTING pay and 50th for AVERAGE pay. The salary that recruits you is competitive; the one you reach after fifteen years is not.",

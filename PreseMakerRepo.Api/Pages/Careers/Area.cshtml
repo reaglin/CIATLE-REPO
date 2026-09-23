@@ -65,9 +65,100 @@
     </div>
 }
 
+@if (Model.Node.Level == 4)
+{
+    <h2 id="request-a-path" class="h6 text-uppercase text-muted mt-4 mb-2">Careers without a path yet</h2>
+
+    @if (!string.IsNullOrEmpty(Model.RequestMessage))
+    {
+        <div class="alert @(Model.RequestOk ? "alert-success" : "alert-warning") py-2" role="status" style="max-width: 60rem;">
+            @Model.RequestMessage
+            @if (Model.RequestOk)
+            {
+                <a asp-page="/Queue/Careers" class="alert-link ms-1">Follow it in the career request queue</a>
+            }
+        </div>
+    }
+
+    @if (Model.Requestable.Any())
+    {
+        <p class="small text-body-secondary mb-2" style="max-width: 60rem;">
+            The U.S. Department of Education links these careers to this field of study, but nobody has
+            written a career path for them on this site yet. <strong>Press Request</strong> to ask for one.
+            Paths are written in order of demand, and you can follow each request in the
+            <a asp-page="/Queue/Careers">career request queue</a>. Requests are anonymous.
+            <span class="d-block mt-1">The <abbr title="Standard Occupational Classification">SOC</abbr> number
+            is the U.S. Department of Labor&rsquo;s code for the occupation.</span>
+        </p>
+        <ul class="list-group list-group-flush mb-3" style="max-width: 60rem;">
+            @foreach (var o in Model.Requestable)
+            {
+                var justAsked = Model.RequestOk && Model.RequestedSoc == o.SocCode;
+                <li class="list-group-item d-flex justify-content-between align-items-center gap-3 py-2">
+                    <div>
+                        <span class="fw-semibold">@o.SocTitle</span>
+                        <span class="badge text-bg-light text-muted ms-1">SOC @o.SocCode</span>
+                        @if (o.WaitingRequests > 0)
+                        {
+                            <div class="small text-muted">
+                                @o.WaitingRequests @(o.WaitingRequests == 1 ? "request is" : "requests are") waiting for this path
+                            </div>
+                        }
+                    </div>
+                    @if (justAsked)
+                    {
+                        <span class="badge text-bg-success text-nowrap">&#10003; Requested</span>
+                    }
+                    else
+                    {
+                        <form method="post" asp-page-handler="Request" asp-route-code="@Model.Node.Code" class="m-0">
+                            <input type="hidden" name="soc" value="@o.SocCode" />
+                            <button type="submit" class="btn btn-outline-primary text-nowrap"
+                                    aria-label="Request a career path for @o.SocTitle">Request</button>
+                        </form>
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else if (Model.OccupationCount > 0)
+    {
+        <p class="small text-muted mb-3" style="max-width: 60rem;">
+            Every career the U.S. Department of Education links to this field already has a career path on this
+            site@(Model.Paths.Any() ? " (listed above)" : "").
+            To look for a different career, use <a asp-page="/Careers/Index" asp-fragment="find-a-career">Find a career</a>.
+        </p>
+    }
+    else
+    {
+        <p class="small text-muted mb-3" style="max-width: 60rem;">
+            The U.S. Department of Education&rsquo;s list links no careers to this field of study, so there is
+            nothing to request here. To look for a career by name, use
+            <a asp-page="/Careers/Index" asp-fragment="find-a-career">Find a career</a>.
+        </p>
+    }
+
+    @if (Model.CoveredElsewhere.Any())
+    {
+        <p class="small text-muted mb-1">Also covered by a career path filed under another field:</p>
+        <ul class="small mb-4">
+            @foreach (var o in Model.CoveredElsewhere)
+            {
+                <li>
+                    @o.SocTitle &mdash;
+                    <a asp-page="/Careers/Path" asp-route-slug="@o.PathSlug">@(Model.PathNames.TryGetValue(o.PathSlug!, out var n) ? n : o.PathSlug)</a>
+                </li>
+            }
+        </ul>
+    }
+}
+
 @if (Model.Children.Any())
 {
     <h2 class="h6 text-uppercase text-muted mt-4 mb-2">Fields of study</h2>
+    <p class="small text-body-secondary mb-2">
+        Open a field to see its career paths, and to request a path for a career that does not have one yet.
+    </p>
     <div class="list-group list-group-flush mb-4">
         @foreach (var c in Model.Children)
         {
@@ -88,7 +179,7 @@
         }
     </div>
 }
-else if (!Model.Paths.Any())
+else if (!Model.Paths.Any() && Model.Node.Level != 4)
 {
     <div class="alert alert-info">
         Nothing is published in this area yet. Browse the

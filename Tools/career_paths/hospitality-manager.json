@@ -2,6 +2,10 @@
   "name": "Hospitality, Restaurant and Event Manager",
   "cipCode": "52.09",
   "socCode": "11-9081",
+  "additionalSocCodes": [
+    "11-9051",
+    "13-1121"
+  ],
   "isPublished": true,
   "sortOrder": 640,
   "description": "⚠⚠⚠ Lodging managers earn $69,250 and food service managers $69,390 — $140 apart — but 72% of employers want a bachelor's for the first and 30% will take a high school diploma for the second. ⚠⚠ And food service management is SEVEN TIMES the occupation: 352,800 jobs against 52,000, with 42,000 annual openings against 5,400. In the industry Florida is built on, the degree buys you the smaller half at the same money.",

@@ -22,6 +22,9 @@ public class IndexModel : PageModel
     public int OpenFlags { get; set; }
     public int OpenGuideRequests { get; set; }
     public int OpenGuideRequestCourses { get; set; }
+    public int OpenCareerRequests { get; set; }
+    public int OpenCareerRequestOccupations { get; set; }
+    public int PublishedCareerPaths { get; set; }
     public int PublishedGuides { get; set; }
     public int RecentModules30Days { get; set; }
     public IReadOnlyList<Module> RecentModulesList { get; set; } = [];
@@ -50,6 +53,11 @@ public class IndexModel : PageModel
         OpenGuideRequests = await openRequests.CountAsync();
         OpenGuideRequestCourses = await openRequests.Select(r => r.CourseId).Distinct().CountAsync();
         PublishedGuides = await _db.CurriculumGuides.AsNoTracking().CountAsync();
+
+        var openCareer = _db.CareerRequests.AsNoTracking().Where(r => r.Status == CareerRequestStatus.Open);
+        OpenCareerRequests = await openCareer.CountAsync();
+        OpenCareerRequestOccupations = await openCareer.Select(r => r.SocCode).Distinct().CountAsync();
+        PublishedCareerPaths = await _db.CareerPaths.AsNoTracking().CountAsync(p => p.IsPublished);
 
         var cutoff = DateTime.UtcNow.AddDays(-30);
         RecentModules30Days = await _db.Modules.AsNoTracking()

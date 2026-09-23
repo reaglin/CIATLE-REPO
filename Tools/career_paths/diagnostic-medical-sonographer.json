@@ -2,6 +2,10 @@
   "name": "Diagnostic Medical Sonographer",
   "cipCode": "51.09",
   "socCode": "29-2032",
+  "additionalSocCodes": [
+    "29-2031",
+    "29-2033"
+  ],
   "isPublished": true,
   "sortOrder": 480,
   "description": "Sonographers produce and interpret the ultrasound images physicians diagnose from — deciding in real time which views answer the clinical question, and recognising the difference between healthy and pathological tissue on a screen nobody else is watching. ⚠ A median of $96,590 on a two-year degree, second only to dental hygiene among the two-year routes on this site. ⚠⚠⚠ And a regulatory fact worth knowing before you enrol: Florida does NOT license sonographers, because the statute is written about radiation rather than about imaging.",

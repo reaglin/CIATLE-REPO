@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using PreseMakerRepo.Api.Services;
 using PreseMakerRepo.Infrastructure.Data;
 
 namespace PreseMakerRepo.Api.Pages.Careers;
@@ -15,7 +16,17 @@ namespace PreseMakerRepo.Api.Pages.Careers;
 public class IndexModel : PageModel
 {
     private readonly AppDbContext _db;
-    public IndexModel(AppDbContext db) => _db = db;
+    private readonly CareerRequestService _requests;
+
+    public IndexModel(AppDbContext db, CareerRequestService requests)
+    {
+        _db = db;
+        _requests = requests;
+    }
+
+    /// <summary>"Find a career" -- what the reader typed; null when the box was not used.</summary>
+    [Microsoft.AspNetCore.Mvc.BindProperty(Name = "q", SupportsGet = true)] public string? Q { get; set; }
+    public IReadOnlyList<CareerRequestService.CareerSearchHit> Hits { get; set; } = [];
 
     public sealed record SeriesView(string Code, string Title, int GroupCount, int PathCount);
     public sealed record PathView(string Slug, string Name, string Description, string CipCode, string? CipTitle);
@@ -26,6 +37,22 @@ public class IndexModel : PageModel
 
     public async Task OnGetAsync()
     {
+        Q = string.IsNullOrWhiteSpace(Q) ? null : Q.Trim()[..Math.Min(Q.Trim().Length, 80)];
+        if (Q is not null)
+        {
+            var hits = await _requests.SearchAsync(Q);
+            // A published path whose NAME matches but whose federal title does not ("Commercial and
+            // Airline Pilot" for "airline") is still what the reader is looking for.
+            var words = Q.Split(' ', StringSplitOptions.RemoveEmptyEntries).Where(w => w.Length >= 2).ToList();
+            var named = await _db.CareerPaths.AsNoTracking().Where(p => p.IsPublished)
+                .Select(p => new { p.Slug, p.Name }).ToListAsync();
+            var have = hits.Where(h => h.PathSlug is not null).Select(h => h.PathSlug).ToHashSet();
+            var extra = named.Where(p => !have.Contains(p.Slug) &&
+                    words.All(w => p.Name.Contains(w, StringComparison.OrdinalIgnoreCase)))
+                .Select(p => new CareerRequestService.CareerSearchHit("", p.Name, p.Slug, []));
+            Hits = extra.Concat(hits).Take(40).ToList();
+        }
+
         // Every (series, path) pair, from the primary node AND the additional anchors.
         // ⚠ Counted as DISTINCT paths per series: a path anchored to two groups in the
         // same series (Lawyer sits on both 45.10 and 45.11) is one path there, not two.

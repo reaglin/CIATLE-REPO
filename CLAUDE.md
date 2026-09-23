@@ -35,7 +35,9 @@ media cluster (7), science (4), social services (3), and the service and transpo
 first queue missed. **23 of the 50 are CHOICE paths.** ⚠ **As of 2026-09-23 every workable row is published; the seven that remain are blocked on a CIP seed
 widening (a deploy)** — `REVIEW_QUEUE.md` item 116 — vet tech, pharmacist, truck driver, chef, cosmetologist,
 plumber and carpenter.
-**After this queue, career paths move to REQUEST-DRIVEN, the same as courses.** Guide writing is
+**After this queue, career paths move to REQUEST-DRIVEN, the same as courses — built 2026-09-23 and
+shipping with the next deploy** (Request button on each CIP field page, public queue at `/queue/careers`,
+admin at `/admin/career-requests`; plan Phase 6, API spec §17). Guide writing is
 already request-only. Both loops run from the `Tools/` session; neither needs a deploy.
 
 ## Solution Structure

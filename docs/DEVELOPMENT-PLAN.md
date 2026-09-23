@@ -117,25 +117,24 @@ school list** — which schools offer it is derived from 6,427 IPEDS award rows 
 | 5.2 | `offering_notes` on guides — asked for 2026-09-11, **not written** | The field validates, stores and renders, and `Tools/validate_drafts.py` mirrors the rule |
 | 5.3 | Field sizing — the 133 clock-hour rows, and the guide/course validators disagreeing on the same two fields | Both validators agree and no legitimate row is refused. Detail in `Deployment/PENDING_SERVER_CHANGES.md` |
 
-## Phase 6 — Request-driven career paths (specified by Ron 2026-09-23, not started)
+## Phase 6 — Request-driven career paths (Ron, 2026-09-23 — built, awaiting deploy)
 
-Ron, 2026-09-23: *"I will review all items live on the site and determine if it is a good time to move
-to request driven. The request driven will follow the same pattern as courses. The paths will be listed
+Ron, 2026-09-23: *"The request driven will follow the same pattern as courses. The paths will be listed
 under the CIP code section with a 'Request' button. The queue of request will be available for view."*
+Then: *"Start the request driven career paths, I want to get those into the next site deployment."*
 
-**The pattern to copy is guide requests** (`GuideRequestsController`, `Api/Services/GuideRequestService.cs`,
-`/request-guide`, public `/queue/guides`, admin `/admin/guide-requests`, `queue_mgr.py import-requests`).
-**Waiting on Ron's go-ahead (open question 4)** — nothing below is built.
+**Modelled on guide requests** (`GuideRequestService`, `/queue/guides`, `/admin/guide-requests`).
+Contract: API spec §17. Migration `AddCareerRequests`.
 
 | # | Task | Done when |
 |---|---|---|
-| 6.1 | **What a reader can request.** Each CIP area page (`/careers/area/{code}`) lists the occupations that group leads to but that have no path yet, each with a **Request** button. ⚠ The occupation list needs a source — the NCES **CIP–SOC crosswalk** is the obvious one; it must be seeded (a deploy), the same as `cip.json` | A reader on any CIP area page sees the published paths and the unwritten occupations, and can request one |
-| 6.2 | **The request itself** — one click, the same anti-abuse as guide requests (rate limit, hashed IP, optional reason and email) | A request is stored against a SOC code (and the CIP page it came from) and counted |
-| 6.3 | **A public queue** at `/queue/careers`, most-requested first, as `/queue/guides` is | Anyone can see what has been asked for and how many times |
-| 6.4 | **Admin triage** at `/admin/career-requests` (rank, mark queued/declined) and a JSON endpoint the `Tools/` session reads | The `Tools/` session can pull waiting requests, and publishing a path closes its requests automatically |
-| 6.5 | **Tools side** — `career_paths.py requests` (list) and the queue rows it feeds; the session-start checklist reads it alongside the guide queue | A content session starts by reading the career-request queue |
-| 6.6 | **UX review** of the Request button, the queue page and the admin page (cognitive walkthrough + Nielsen heuristics) | Passed, fixes recorded here |
-
+| 6.1 ⚠️ | **What a reader can request** — the NCES **CIP–SOC crosswalk** (open question 4, answered by default: complete, needs no upkeep). `Tools/build_cip_soc_seed.py` rolls it up to the seeded 4-digit groups: **1,170 occupations under 178 groups**, 534 distinct SOC codes, with the `25-1xxx` postsecondary-teacher family (207 rows, one under nearly every field) excluded by rule. `CipOccupationSeed` loads it at startup and never overwrites an admin's hide | ⚠ Ron looks at the list on a few field pages after the deploy and says whether the crosswalk reads well, or which pairings to hide |
+| 6.2 ⚠️ | **The Request button** — a "Careers without a path yet" section on every 4-digit `/careers/area/{code}` page: one click, no JavaScript needed, returns to the list with a confirmation and a ✓ on the row, and shows how many people have asked. Occupations a path already covers are not requestable; ones covered by a path filed elsewhere are linked. Same anti-abuse as guides (hashed IP, once per person per day, 20 an hour) | Verified locally 2026-09-23 end to end (request recorded, duplicate counted once, queue shows it, a covering path closes it). ⚠ Ron presses one on the live site |
+| 6.3 ⚠️ | **Public queue** at `/queue/careers` (+ `GET /api/v1/queue/careers`), a tab beside guide requests and resource suggestions; the Career Paths page now tells a reader how to request a missing career | ⚠ Ron reads it live |
+| 6.4 ⚠️ | **Admin triage** at `/admin/career-requests` (status, notes, the reasons given) with a hide/show form for crosswalk pairings, and a Career Paths card on the admin dashboard | ⚠ Ron opens it live — it was not rendered locally (no local admin login) |
+| 6.5 ⚠️ | **Paths record the occupations they cover as sections** — new `additionalSocCodes` on the path API; **29 path documents updated** from the `section:` rows in `QUEUE.csv` (CNC operator on Machinist, the security roles on Cybersecurity, …) so they are not offered as requestable. A push closes the requests it now covers | ⚠ **After the deploy: `python career_paths.py push --all`** |
+| 6.6 | **Tools side** — `python career_paths.py requests` lists the public queue; the session-start checklist reads it beside the guide queue | Works against the live site after the deploy |
+| 6.7 ⚠️ | **UX review** (cognitive walkthrough + Nielsen heuristics, `ux-reviewer`, 2026-09-23): **1 critical, 5 major, 6 minor, 3 notes — the critical and four majors fixed, re-verified locally.** ⚠⚠ **Critical, and it was already live on `/admin/guide-requests`:** the status drop-down and the hidden page filter shared a name (`status`/`Status`; form keys ignore case), so the handler received the FILTER and every choice was silently ignored — on the Open tab, "Queued" marked rows Open. Fixed on both admin pages (`newStatus`). **Majors fixed:** a **Find a career** search on `/careers` (a reader thinks in job titles, not CIP codes); one clear sentence on a field with nothing to request instead of three contradictory ones; messages that stay true for a classroom sharing one school network ("a request … from this network was already counted"); a status legend on the queue. **Minors fixed:** the confirmation links to the queue; an unreadable request lands at the list; field titles instead of bare CIP codes in the queue; SOC explained; admin failures shown as warnings; *hide here* on each request row; "Queued = In progress" stated for the admin; the page and the confirmation count requests the same way; "groups" renamed "fields" | ⚠ Ron checks the rendered pages the review could not judge from source: the confirmation visible after the jump, Request buttons on a phone, the queue table on a phone, and contrast on the greyed "not mapped yet" tiles. **Deferred, see open question 5** |
 ---
 
 ## Open questions for Ron
@@ -150,11 +149,20 @@ under the CIP code section with a 'Request' button. The queue of request will be
 3. **(asked 2026-09-19) Course pages do not say which paths or programmes name a course** (item 2.5).
    Both plans call for it, and it is the backlink that makes 24,415 course pages feed the career
    section. Build it now, or once more paths exist to point at?
-4. **(asked 2026-09-23) Build Phase 6 now, or after your review of the live paths?** Building it now
+4. ~~**(asked 2026-09-23) Build Phase 6 now, or after your review of the live paths?**~~ **Answered the
+   same day: build it for the next deploy.** The occupation list defaulted to the full crosswalk with an
+   admin hide switch (6.1); say if a curated list is wanted instead. *Original question:* Building it now
    means it is ready to ship on the next deploy after this one. It needs one decision first: **which
    occupations appear under each CIP code with a Request button.** The NCES CIP–SOC crosswalk would list
    every occupation federally mapped to each programme. That is complete, but it is long and includes
    some odd pairings. A curated list would be shorter and cleaner but would need maintaining.
+5. **(asked 2026-09-23) Three follow-ups from the UX review of career requests, each a judgement:**
+   (a) **Duplicates are counted per network address**, as guide requests are, so a class of students on
+   one school network counts as one request per career per day and shares the 20-an-hour limit. Keep
+   that, or count per browser instead (a cookie), which counts a class properly but is easier to inflate?
+   (b) **A declined request just leaves the queue with a "Declined" badge.** Add a short public reason?
+   (c) **Careers not in the federal crosswalk cannot be requested at all.** Add a free-text "tell us the
+   career you are looking for" form as a fallback?
 
 ## References
 

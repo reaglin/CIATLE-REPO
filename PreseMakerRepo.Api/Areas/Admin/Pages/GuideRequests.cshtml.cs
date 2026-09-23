@@ -27,10 +27,14 @@ public class GuideRequestsModel : PageModel
         TotalRequests = Items.Sum(i => i.RequestCount);
     }
 
-    public async Task<IActionResult> OnPostSetStatusAsync(string courseId, string status, string? notes)
+    // ⚠ The new status is "newStatus", not "status": the form also posts the hidden page filter as
+    // "Status", form keys are case-insensitive, and a string parameter binds the FIRST value -- so a
+    // parameter named "status" received the filter and every choice was silently ignored (found by the
+    // UX review of 2026-09-23).
+    public async Task<IActionResult> OnPostSetStatusAsync(string courseId, string newStatus, string? notes)
     {
         if (GuideRequestService.TryNormalizeCourseId(courseId, out var id) &&
-            Enum.TryParse<GuideRequestStatus>(status, true, out var st))
+            Enum.TryParse<GuideRequestStatus>(newStatus, true, out var st))
         {
             var n = await _service.SetStatusAsync(id, st, notes);
             Message = $"{id}: {n} request(s) marked {st}.";

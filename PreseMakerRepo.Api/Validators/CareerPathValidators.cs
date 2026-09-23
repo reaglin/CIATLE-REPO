@@ -8,6 +8,8 @@ public class UpsertCareerPathRequestValidator : AbstractValidator<UpsertCareerPa
     public const int MaxCipsPerPath = 30;
     public const int MaxCoursesPerPath = 120;
     public const int MaxSourcesPerPath = 40;
+    /// <summary>Fits the 400-character column: 30 codes of 7 characters plus separators.</summary>
+    public const int MaxAdditionalSocs = 30;
 
     public UpsertCareerPathRequestValidator()
     {
@@ -29,6 +31,11 @@ public class UpsertCareerPathRequestValidator : AbstractValidator<UpsertCareerPa
 
         RuleFor(x => x.CipCodes!.Count).LessThanOrEqualTo(MaxCipsPerPath)
             .When(x => x.CipCodes is not null).WithName("cipCodes");
+
+        RuleFor(x => x.AdditionalSocCodes!.Count).LessThanOrEqualTo(MaxAdditionalSocs)
+            .When(x => x.AdditionalSocCodes is not null).WithName("additionalSocCodes");
+        RuleForEach(x => x.AdditionalSocCodes).Matches(@"^\d{2}-\d{4}$")
+            .WithMessage("Each additionalSocCodes entry must look like 51-9161.");
 
         RuleForEach(x => x.CipCodes).SetValidator(new CareerPathCipInputValidator());
         RuleForEach(x => x.Programs).SetValidator(new CareerPathProgramInputValidator());

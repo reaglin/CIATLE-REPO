@@ -78,6 +78,7 @@ LIMITS = {
     "note": 500,
 }
 MAX_COURSES = 120
+MAX_EXTRA_SOCS = 30
 MAX_SOURCES = 40
 MAX_CIPS = 30
 
@@ -121,6 +122,18 @@ def check(slug, doc):
     soc = (doc.get("socCode") or "").strip()
     if soc and not SOC_RE.match(soc):
         err.append("socCode %r must look like 29-1141, or be omitted" % soc)
+
+    # Occupations covered as SECTIONS of this page (2026-09-23). They stop the
+    # career-request list offering an occupation the site already writes about.
+    extra = doc.get("additionalSocCodes") or []
+    if not isinstance(extra, list):
+        err.append("additionalSocCodes must be a list of SOC codes")
+    else:
+        if len(extra) > MAX_EXTRA_SOCS:
+            err.append("%d additionalSocCodes, limit %d" % (len(extra), MAX_EXTRA_SOCS))
+        for x in extra:
+            if not SOC_RE.match(str(x).strip()):
+                err.append("additionalSocCodes: %r must look like 51-9161" % x)
 
     # ⚠ A path may be filed under several CIP groups. Ron, 2026-09-17, on Lawyer:
     # "use those as the CIP codes that would go with the career path". Some
@@ -308,7 +321,7 @@ def cmd_push(args):
         body = {k: doc.get(k) for k in
                 ("name", "cipCode", "description", "socCode", "credentialNote",
                  "bodyHtml", "isPublished", "sortOrder", "cipCodes", "programs",
-                 "courses", "sources")}
+                 "courses", "sources", "additionalSocCodes")}
         r = s.put("%s/api/v1/career-paths/%s" % (BASE_URL, slug), json=body,
                   headers={"Authorization": "Bearer %s" % tok}, timeout=60)
         if r.status_code != 200:
@@ -436,6 +449,39 @@ def cmd_needs(args):
     return 0
 
 
+def cmd_requests(args):
+    """The public career request queue -- what visitors have asked to be written.
+
+    ⚠ Once the authored queue is finished this IS the work list (Ron, 2026-09-23:
+    "the request driven will follow the same pattern as courses"). Most requested first.
+    """
+    status = "all" if args.all else "waiting"
+    try:
+        r = requests.get("%s/api/v1/queue/careers" % BASE_URL, params={"status": status}, timeout=30)
+    except requests.exceptions.ConnectionError:
+        print("cannot reach %s" % BASE_URL)
+        return 1
+    if r.status_code == 404:
+        print("the site does not have career requests yet (deploy the 2026-09-23 build).")
+        return 1
+    r.raise_for_status()
+    q = r.json()["data"]
+    print("%d waiting, %d published, %d declined" % (q["waiting"], q["published"], q["declined"]))
+    if not q["items"]:
+        print("no %s career requests." % status)
+        return 0
+    for i in q["items"]:
+        where = " ".join(i["cipCodes"])
+        tail = (" -> /careers/%s" % i["pathSlug"]) if i.get("pathSlug") else ""
+        print("  %3s  %3d  %-8s %-52s %-10s %s%s"
+              % (i["rank"], i["requestCount"], i["socCode"], i["socTitle"][:52], i["status"], where, tail))
+    print()
+    print("Write the top row: research it as a queue row (Tools/CLAUDE.md), programme first, and")
+    print("name any related occupations the page covers in additionalSocCodes -- publishing the")
+    print("path closes their requests automatically.")
+    return 0
+
+
 def cmd_list(args):
     try:
         r = requests.get("%s/api/v1/career-paths" % BASE_URL, timeout=30)
@@ -473,6 +519,10 @@ def main():
 
     n = sub.add_parser("needs", help="courses on published paths that lack a guide")
     n.set_defaults(func=cmd_needs)
+
+    rq = sub.add_parser("requests", help="career paths visitors have requested (the public queue)")
+    rq.add_argument("--all", action="store_true", help="include published and declined")
+    rq.set_defaults(func=cmd_requests)
 
     q = sub.add_parser("queue", help="the top-50 queue and how far through it we are")
     q.add_argument("--cluster", help="ENG MFG HLT CMP BUS LAW EDU PUB")

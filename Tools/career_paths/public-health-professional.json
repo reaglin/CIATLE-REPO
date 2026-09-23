@@ -2,6 +2,10 @@
   "name": "Public Health Professional",
   "cipCode": "51.22",
   "socCode": "21-1091",
+  "additionalSocCodes": [
+    "19-1041",
+    "21-1094"
+  ],
   "isPublished": true,
   "sortOrder": 530,
   "description": "⚠⚠⚠ The job most students picture when they say public health is the smallest one in the federal data. Epidemiologists: 12,300 employed in the whole country, about 800 openings a year, and entry is effectively 100% graduate. The jobs are in health education (71,800, $64,070) and community health work (65,100, $51,850, high-school entry). ⚠⚠ Florida's own numbers say the same thing from the other side — 579 master's degrees against 560 bachelor's, at just 8 institutions, every one a university.",

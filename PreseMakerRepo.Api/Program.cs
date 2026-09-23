@@ -58,6 +58,7 @@ try
 
     // Guide requests (visitor demand → content queue) and the static-site export job.
     builder.Services.AddScoped<GuideRequestService>();
+    builder.Services.AddScoped<CareerRequestService>();
 
     // Visitor-facing site figures (the course count in the header strip); cached internally.
     builder.Services.AddScoped<SiteStatsService>();
@@ -168,6 +169,7 @@ try
 
         await sp.GetRequiredService<TaxonomySeed>().SeedAsync();
         await sp.GetRequiredService<CipSeed>().SeedAsync();
+        await sp.GetRequiredService<CipOccupationSeed>().SeedAsync();
         await sp.GetRequiredService<ProgramSeed>().SeedAsync();
         await sp.GetRequiredService<EduSeed>().SeedAsync();
         await sp.GetRequiredService<GuideTemplateSeed>().SeedAsync();

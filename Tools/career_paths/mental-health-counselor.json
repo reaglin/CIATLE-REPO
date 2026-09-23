@@ -2,6 +2,10 @@
   "name": "Mental Health Counselor and Therapist",
   "cipCode": "42.01",
   "socCode": "21-1018",
+  "additionalSocCodes": [
+    "19-3033",
+    "21-1013"
+  ],
   "isPublished": true,
   "sortOrder": 590,
   "description": "⚠⚠ 18 percent growth from 2025 to 2035 and about 50,500 openings a year — against 6 percent for social workers and 6 percent for health education specialists. ⚠⚠⚠ And the numbers behind it are brutal: Florida awards 6,228 psychology bachelor's a year against roughly 372 counselling master's seats, the licensure master's is 60 semester hours rather than the usual 30 to 36, two more supervised years follow it, and the median is $59,350.",

@@ -2,6 +2,10 @@
   "name": "Nurse Practitioner and Advanced Practice Nurse",
   "cipCode": "51.38",
   "socCode": "29-1171",
+  "additionalSocCodes": [
+    "29-1151",
+    "29-1161"
+  ],
   "isPublished": true,
   "sortOrder": 550,
   "description": "⚠⚠⚠ Florida grants nurse practitioners autonomous practice — and almost every account of it omits the limit that matters. Autonomous registration covers PRIMARY CARE ONLY. It does not let you practise your specialty without a physician protocol, and only certified midwives are excepted. 11,201 APRNs were registered for autonomous practice as of the 2024 legislative analysis. ⚠⚠ The occupation itself is nearly twice the size of the physician assistant profession — 320,400 employed, 29,500 openings a year, $132,300 median.",

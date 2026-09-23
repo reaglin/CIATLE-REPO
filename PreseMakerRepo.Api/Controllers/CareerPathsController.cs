@@ -92,7 +92,8 @@ public class CareerPathsController : ControllerBase
     public async Task<IActionResult> Upsert(
         string slug,
         [FromBody] UpsertCareerPathRequest request,
-        [FromServices] IValidator<UpsertCareerPathRequest> validator)
+        [FromServices] IValidator<UpsertCareerPathRequest> validator,
+        [FromServices] Services.CareerRequestService careerRequests)
     {
         slug = (slug ?? string.Empty).Trim().ToLowerInvariant();
         if (!System.Text.RegularExpressions.Regex.IsMatch(slug, @"^[a-z0-9]+(-[a-z0-9]+)*$"))
@@ -146,6 +147,9 @@ public class CareerPathsController : ControllerBase
         path.CipCode = request.CipCode!.Trim();
         path.Description = request.Description!.Trim();
         path.SocCode = Blank(request.SocCode);
+        var extraSocs = (request.AdditionalSocCodes ?? [])
+            .Select(s => s.Trim()).Where(s => s.Length > 0 && s != path.SocCode).Distinct().ToList();
+        path.AdditionalSocCodes = extraSocs.Count == 0 ? null : string.Join(",", extraSocs);
         path.CredentialNote = Blank(request.CredentialNote);
         path.BodyHtml = string.IsNullOrWhiteSpace(request.BodyHtml) ? null : Sanitize(request.BodyHtml);
         path.IsPublished = request.IsPublished ?? false;
@@ -221,6 +225,10 @@ public class CareerPathsController : ControllerBase
 
         await _db.SaveChangesAsync();
 
+        // A newly covered occupation closes its career requests, so the public queue shows only
+        // real gaps (the guide-request queue does the same when a guide publishes).
+        await careerRequests.ClosePublishedAsync();
+
         // Courses named but not listed: the push response is where the pipeline learns it
         // owes the catalog their base data, so a path never points at a page that is not there.
         var ids = (request.Courses ?? []).Select(c => c.CourseId!.Trim().ToUpperInvariant()).ToList();
@@ -263,7 +271,8 @@ public class CareerPathsController : ControllerBase
         p.Courses.OrderBy(c => c.SortOrder)
                  .Select(c => new CareerPathCourseDto(c.CourseId, c.Reason, c.VariantNote)).ToList(),
         p.Sources.OrderBy(s => s.SortOrder)
-                 .Select(s => new CareerPathSourceDto(s.Label, s.Url, s.Note)).ToList());
+                 .Select(s => new CareerPathSourceDto(s.Label, s.Url, s.Note)).ToList(),
+        Services.CareerRequestService.SplitSocs(p.AdditionalSocCodes).ToList());
 
     // Same allow-list as the admin taxonomy editor: structure and links, no styling,
     // no scripts, no attributes that can carry behaviour.

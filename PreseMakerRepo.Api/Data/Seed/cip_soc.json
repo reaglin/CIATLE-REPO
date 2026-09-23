@@ -1,0 +1,5856 @@
+{
+ "source": "NCES CIP 2020 / SOC 2018 crosswalk, sheet CIP-SOC",
+ "note": "Rolled up to 4-digit CIP groups in the seeded tree; 25-1xxx postsecondary teachers excluded by rule (Tools/build_cip_soc_seed.py).",
+ "occupations": [
+  {
+   "cipCode": "01.00",
+   "socCode": "19-1011",
+   "socTitle": "Animal Scientists"
+  },
+  {
+   "cipCode": "01.00",
+   "socCode": "19-1012",
+   "socTitle": "Food Scientists and Technologists"
+  },
+  {
+   "cipCode": "01.00",
+   "socCode": "19-1013",
+   "socTitle": "Soil and Plant Scientists"
+  },
+  {
+   "cipCode": "01.00",
+   "socCode": "19-4012",
+   "socTitle": "Agricultural Technicians"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "11-9013",
+   "socTitle": "Farmers, Ranchers, and Other Agricultural Managers"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "13-1021",
+   "socTitle": "Buyers and Purchasing Agents, Farm Products"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "15-1232",
+   "socTitle": "Computer User Support Specialists"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "19-3011",
+   "socTitle": "Economists"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "41-4012",
+   "socTitle": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "43-1011",
+   "socTitle": "First-Line Supervisors of Office and Administrative Support Workers"
+  },
+  {
+   "cipCode": "01.01",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "11-9013",
+   "socTitle": "Farmers, Ranchers, and Other Agricultural Managers"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "19-1011",
+   "socTitle": "Animal Scientists"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "19-1013",
+   "socTitle": "Soil and Plant Scientists"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "45-2021",
+   "socTitle": "Animal Breeders"
+  },
+  {
+   "cipCode": "01.03",
+   "socCode": "45-2093",
+   "socTitle": "Farmworkers, Farm, Ranch, and Aquacultural Animals"
+  },
+  {
+   "cipCode": "01.05",
+   "socCode": "39-2011",
+   "socTitle": "Animal Trainers"
+  },
+  {
+   "cipCode": "01.05",
+   "socCode": "39-2021",
+   "socTitle": "Animal Caretakers"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "11-9013",
+   "socTitle": "Farmers, Ranchers, and Other Agricultural Managers"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "37-1012",
+   "socTitle": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "37-3011",
+   "socTitle": "Landscaping and Groundskeeping Workers"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "37-3012",
+   "socTitle": "Pesticide Handlers, Sprayers, and Applicators, Vegetation"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "41-1011",
+   "socTitle": "First-Line Supervisors of Retail Sales Workers"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "01.06",
+   "socCode": "45-4011",
+   "socTitle": "Forest and Conservation Workers"
+  },
+  {
+   "cipCode": "01.09",
+   "socCode": "11-9013",
+   "socTitle": "Farmers, Ranchers, and Other Agricultural Managers"
+  },
+  {
+   "cipCode": "01.09",
+   "socCode": "19-1011",
+   "socTitle": "Animal Scientists"
+  },
+  {
+   "cipCode": "01.09",
+   "socCode": "19-4012",
+   "socTitle": "Agricultural Technicians"
+  },
+  {
+   "cipCode": "01.09",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "01.09",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "11-9013",
+   "socTitle": "Farmers, Ranchers, and Other Agricultural Managers"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "19-1012",
+   "socTitle": "Food Scientists and Technologists"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "19-1013",
+   "socTitle": "Soil and Plant Scientists"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "19-4013",
+   "socTitle": "Food Science Technicians"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "51-3092",
+   "socTitle": "Food Batchmakers"
+  },
+  {
+   "cipCode": "01.10",
+   "socCode": "51-9012",
+   "socTitle": "Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "11-9013",
+   "socTitle": "Farmers, Ranchers, and Other Agricultural Managers"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "19-1011",
+   "socTitle": "Animal Scientists"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "19-1013",
+   "socTitle": "Soil and Plant Scientists"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "19-4012",
+   "socTitle": "Agricultural Technicians"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "01.11",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "01.12",
+   "socCode": "19-1013",
+   "socTitle": "Soil and Plant Scientists"
+  },
+  {
+   "cipCode": "01.12",
+   "socCode": "19-1022",
+   "socTitle": "Microbiologists"
+  },
+  {
+   "cipCode": "01.12",
+   "socCode": "19-4012",
+   "socTitle": "Agricultural Technicians"
+  },
+  {
+   "cipCode": "01.83",
+   "socCode": "29-2056",
+   "socTitle": "Veterinary Technologists and Technicians"
+  },
+  {
+   "cipCode": "01.83",
+   "socCode": "31-9096",
+   "socTitle": "Veterinary Assistants and Laboratory Animal Caretakers"
+  },
+  {
+   "cipCode": "03.01",
+   "socCode": "13-1041",
+   "socTitle": "Compliance Officers"
+  },
+  {
+   "cipCode": "03.01",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "03.01",
+   "socCode": "19-1032",
+   "socTitle": "Foresters"
+  },
+  {
+   "cipCode": "03.01",
+   "socCode": "19-2041",
+   "socTitle": "Environmental Scientists and Specialists, Including Health"
+  },
+  {
+   "cipCode": "03.01",
+   "socCode": "19-4042",
+   "socTitle": "Environmental Science and Protection Technicians, Including Health"
+  },
+  {
+   "cipCode": "03.01",
+   "socCode": "19-4071",
+   "socTitle": "Forest and Conservation Technicians"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "11-9072",
+   "socTitle": "Entertainment and Recreation Managers, Except Gambling"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "13-1041",
+   "socTitle": "Compliance Officers"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "19-1032",
+   "socTitle": "Foresters"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "19-3011",
+   "socTitle": "Economists"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-1012",
+   "socTitle": "First-Line Supervisors of Police and Detectives"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-1021",
+   "socTitle": "First-Line Supervisors of Firefighting and Prevention Workers"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-2011",
+   "socTitle": "Firefighters"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-2022",
+   "socTitle": "Forest Fire Inspectors and Prevention Specialists"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-3021",
+   "socTitle": "Detectives and Criminal Investigators"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-3031",
+   "socTitle": "Fish and Game Wardens"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-3051",
+   "socTitle": "Police and Sheriff’s Patrol Officers"
+  },
+  {
+   "cipCode": "03.02",
+   "socCode": "33-9092",
+   "socTitle": "Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers"
+  },
+  {
+   "cipCode": "03.03",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "03.03",
+   "socCode": "45-3031",
+   "socTitle": "Fishing and Hunting Workers"
+  },
+  {
+   "cipCode": "03.05",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "03.05",
+   "socCode": "19-1032",
+   "socTitle": "Foresters"
+  },
+  {
+   "cipCode": "03.05",
+   "socCode": "19-4071",
+   "socTitle": "Forest and Conservation Technicians"
+  },
+  {
+   "cipCode": "03.05",
+   "socCode": "45-1011",
+   "socTitle": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+  },
+  {
+   "cipCode": "03.05",
+   "socCode": "45-4011",
+   "socTitle": "Forest and Conservation Workers"
+  },
+  {
+   "cipCode": "03.06",
+   "socCode": "19-1023",
+   "socTitle": "Zoologists and Wildlife Biologists"
+  },
+  {
+   "cipCode": "03.06",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "04.02",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "04.02",
+   "socCode": "17-1011",
+   "socTitle": "Architects, Except Landscape and Naval"
+  },
+  {
+   "cipCode": "04.03",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "04.03",
+   "socCode": "19-3051",
+   "socTitle": "Urban and Regional Planners"
+  },
+  {
+   "cipCode": "04.06",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "04.06",
+   "socCode": "17-1012",
+   "socTitle": "Landscape Architects"
+  },
+  {
+   "cipCode": "04.09",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "04.09",
+   "socCode": "17-3011",
+   "socTitle": "Architectural and Civil Drafters"
+  },
+  {
+   "cipCode": "05.02",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "11-2032",
+   "socTitle": "Public Relations Managers"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "11-2033",
+   "socTitle": "Fundraising Managers"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "13-1131",
+   "socTitle": "Fundraisers"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "27-3011",
+   "socTitle": "Broadcast Announcers and Radio Disc Jockeys"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "27-3023",
+   "socTitle": "News Analysts, Reporters, and Journalists"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "27-3031",
+   "socTitle": "Public Relations Specialists"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "27-3041",
+   "socTitle": "Editors"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "27-3043",
+   "socTitle": "Writers and Authors"
+  },
+  {
+   "cipCode": "09.01",
+   "socCode": "27-3099",
+   "socTitle": "Media and Communication Workers, All Other"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "27-3011",
+   "socTitle": "Broadcast Announcers and Radio Disc Jockeys"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "27-3023",
+   "socTitle": "News Analysts, Reporters, and Journalists"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "27-3041",
+   "socTitle": "Editors"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "27-3043",
+   "socTitle": "Writers and Authors"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "27-4021",
+   "socTitle": "Photographers"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "27-4032",
+   "socTitle": "Film and Video Editors"
+  },
+  {
+   "cipCode": "09.04",
+   "socCode": "43-9081",
+   "socTitle": "Proofreaders and Copy Markers"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "27-2012",
+   "socTitle": "Producers and Directors"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "27-3011",
+   "socTitle": "Broadcast Announcers and Radio Disc Jockeys"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "27-3023",
+   "socTitle": "News Analysts, Reporters, and Journalists"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "27-3099",
+   "socTitle": "Media and Communication Workers, All Other"
+  },
+  {
+   "cipCode": "09.07",
+   "socCode": "27-4032",
+   "socTitle": "Film and Video Editors"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "11-2011",
+   "socTitle": "Advertising and Promotions Managers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "11-2032",
+   "socTitle": "Public Relations Managers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "11-2033",
+   "socTitle": "Fundraising Managers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "11-3121",
+   "socTitle": "Human Resources Managers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "11-3131",
+   "socTitle": "Training and Development Managers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "13-1011",
+   "socTitle": "Agents and Business Managers of Artists, Performers, and Athletes"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "13-1131",
+   "socTitle": "Fundraisers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "13-1151",
+   "socTitle": "Training and Development Specialists"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "21-1091",
+   "socTitle": "Health Education Specialists"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "21-1094",
+   "socTitle": "Community Health Workers"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "27-2099",
+   "socTitle": "Entertainers and Performers, Sports and Related Workers, All Other"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "27-3011",
+   "socTitle": "Broadcast Announcers and Radio Disc Jockeys"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "27-3023",
+   "socTitle": "News Analysts, Reporters, and Journalists"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "27-3031",
+   "socTitle": "Public Relations Specialists"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "27-3041",
+   "socTitle": "Editors"
+  },
+  {
+   "cipCode": "09.09",
+   "socCode": "27-3042",
+   "socTitle": "Technical Writers"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1211",
+   "socTitle": "Computer Systems Analysts"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1212",
+   "socTitle": "Information Security Analysts"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1241",
+   "socTitle": "Computer Network Architects"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1242",
+   "socTitle": "Database Administrators"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1244",
+   "socTitle": "Network and Computer Systems Administrators"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1253",
+   "socTitle": "Software Quality Assurance Analysts and Testers"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-1299",
+   "socTitle": "Computer Occupations, All Other"
+  },
+  {
+   "cipCode": "11.01",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "11.02",
+   "socCode": "15-1231",
+   "socTitle": "Computer Network Support Specialists"
+  },
+  {
+   "cipCode": "11.02",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "11.02",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "11.02",
+   "socCode": "15-1253",
+   "socTitle": "Software Quality Assurance Analysts and Testers"
+  },
+  {
+   "cipCode": "11.02",
+   "socCode": "15-1254",
+   "socTitle": "Web Developers"
+  },
+  {
+   "cipCode": "11.02",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "11.04",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "11.04",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "11.04",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "11.04",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "11.04",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "11.04",
+   "socCode": "15-1299",
+   "socTitle": "Computer Occupations, All Other"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1212",
+   "socTitle": "Information Security Analysts"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1231",
+   "socTitle": "Computer Network Support Specialists"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1253",
+   "socTitle": "Software Quality Assurance Analysts and Testers"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1254",
+   "socTitle": "Web Developers"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-1299",
+   "socTitle": "Computer Occupations, All Other"
+  },
+  {
+   "cipCode": "11.07",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1242",
+   "socTitle": "Database Administrators"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1254",
+   "socTitle": "Web Developers"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "27-1014",
+   "socTitle": "Special Effects Artists and Animators"
+  },
+  {
+   "cipCode": "11.08",
+   "socCode": "27-1024",
+   "socTitle": "Graphic Designers"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1211",
+   "socTitle": "Computer Systems Analysts"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1212",
+   "socTitle": "Information Security Analysts"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1231",
+   "socTitle": "Computer Network Support Specialists"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1241",
+   "socTitle": "Computer Network Architects"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "11.09",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "13-1082",
+   "socTitle": "Project Management Specialists"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1212",
+   "socTitle": "Information Security Analysts"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1231",
+   "socTitle": "Computer Network Support Specialists"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1232",
+   "socTitle": "Computer User Support Specialists"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1241",
+   "socTitle": "Computer Network Architects"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1242",
+   "socTitle": "Database Administrators"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1244",
+   "socTitle": "Network and Computer Systems Administrators"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1254",
+   "socTitle": "Web Developers"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "11.10",
+   "socCode": "15-1299",
+   "socTitle": "Computer Occupations, All Other"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "11-9179",
+   "socTitle": "Personal Service Managers, All Other"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-1022",
+   "socTitle": "First-Line Supervisors of Personal Service Workers"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-5011",
+   "socTitle": "Barbers"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-5012",
+   "socTitle": "Hairdressers, Hairstylists, and Cosmetologists"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-5091",
+   "socTitle": "Makeup Artists, Theatrical and Performance"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-5092",
+   "socTitle": "Manicurists and Pedicurists"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-5093",
+   "socTitle": "Shampooers"
+  },
+  {
+   "cipCode": "12.04",
+   "socCode": "39-5094",
+   "socTitle": "Skincare Specialists"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "11-9051",
+   "socTitle": "Food Service Managers"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "13-1022",
+   "socTitle": "Wholesale and Retail Buyers, Except Farm Products"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "19-1012",
+   "socTitle": "Food Scientists and Technologists"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-1011",
+   "socTitle": "Chefs and Head Cooks"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-1012",
+   "socTitle": "First-Line Supervisors of Food Preparation and Serving Workers"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-2012",
+   "socTitle": "Cooks, Institution and Cafeteria"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-2013",
+   "socTitle": "Cooks, Private Household"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-2014",
+   "socTitle": "Cooks, Restaurant"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-2019",
+   "socTitle": "Cooks, All Other"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "35-3011",
+   "socTitle": "Bartenders"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "51-3011",
+   "socTitle": "Bakers"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "51-3021",
+   "socTitle": "Butchers and Meat Cutters"
+  },
+  {
+   "cipCode": "12.05",
+   "socCode": "51-3023",
+   "socTitle": "Slaughterers and Meat Packers"
+  },
+  {
+   "cipCode": "13.01",
+   "socCode": "25-9042",
+   "socTitle": "Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education"
+  },
+  {
+   "cipCode": "13.01",
+   "socCode": "25-9043",
+   "socTitle": "Teaching Assistants, Special Education"
+  },
+  {
+   "cipCode": "13.03",
+   "socCode": "25-9031",
+   "socTitle": "Instructional Coordinators"
+  },
+  {
+   "cipCode": "13.04",
+   "socCode": "11-3131",
+   "socTitle": "Training and Development Managers"
+  },
+  {
+   "cipCode": "13.04",
+   "socCode": "11-9031",
+   "socTitle": "Education and Childcare Administrators, Preschool and Daycare"
+  },
+  {
+   "cipCode": "13.04",
+   "socCode": "11-9032",
+   "socTitle": "Education Administrators, Kindergarten through Secondary"
+  },
+  {
+   "cipCode": "13.04",
+   "socCode": "11-9033",
+   "socTitle": "Education Administrators, Postsecondary"
+  },
+  {
+   "cipCode": "13.04",
+   "socCode": "11-9039",
+   "socTitle": "Education Administrators, All Other"
+  },
+  {
+   "cipCode": "13.05",
+   "socCode": "13-1151",
+   "socTitle": "Training and Development Specialists"
+  },
+  {
+   "cipCode": "13.05",
+   "socCode": "25-4022",
+   "socTitle": "Librarians and Media Collections Specialists"
+  },
+  {
+   "cipCode": "13.05",
+   "socCode": "25-9031",
+   "socTitle": "Instructional Coordinators"
+  },
+  {
+   "cipCode": "13.06",
+   "socCode": "11-3131",
+   "socTitle": "Training and Development Managers"
+  },
+  {
+   "cipCode": "13.06",
+   "socCode": "13-1111",
+   "socTitle": "Management Analysts"
+  },
+  {
+   "cipCode": "13.06",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "13.06",
+   "socCode": "19-3022",
+   "socTitle": "Survey Researchers"
+  },
+  {
+   "cipCode": "13.06",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "13.06",
+   "socCode": "25-9099",
+   "socTitle": "Educational Instruction and Library Workers, All Other"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-2051",
+   "socTitle": "Special Education Teachers, Preschool"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-2055",
+   "socTitle": "Special Education Teachers, Kindergarten"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-2056",
+   "socTitle": "Special Education Teachers, Elementary School"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-2057",
+   "socTitle": "Special Education Teachers, Middle School"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-2058",
+   "socTitle": "Special Education Teachers, Secondary School"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-2059",
+   "socTitle": "Special Education Teachers, All Other"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "25-9043",
+   "socTitle": "Teaching Assistants, Special Education"
+  },
+  {
+   "cipCode": "13.10",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "13.11",
+   "socCode": "21-1012",
+   "socTitle": "Educational, Guidance, and Career Counselors and Advisors"
+  },
+  {
+   "cipCode": "13.11",
+   "socCode": "39-9041",
+   "socTitle": "Residential Advisors"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "13-1151",
+   "socTitle": "Training and Development Specialists"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-2011",
+   "socTitle": "Preschool Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-2012",
+   "socTitle": "Kindergarten Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-2021",
+   "socTitle": "Elementary School Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-2022",
+   "socTitle": "Middle School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-3011",
+   "socTitle": "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-3021",
+   "socTitle": "Self-Enrichment Teachers"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-3099",
+   "socTitle": "Teachers and Instructors, All Other"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-9042",
+   "socTitle": "Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education"
+  },
+  {
+   "cipCode": "13.12",
+   "socCode": "25-9043",
+   "socTitle": "Teaching Assistants, Special Education"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-2021",
+   "socTitle": "Elementary School Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-2022",
+   "socTitle": "Middle School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-2023",
+   "socTitle": "Career/Technical Education Teachers, Middle School"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-2032",
+   "socTitle": "Career/Technical Education Teachers, Secondary School"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-3099",
+   "socTitle": "Teachers and Instructors, All Other"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "25-4022",
+   "socTitle": "Librarians and Media Collections Specialists"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "27-2022",
+   "socTitle": "Coaches and Scouts"
+  },
+  {
+   "cipCode": "13.13",
+   "socCode": "39-9031",
+   "socTitle": "Exercise Trainers and Group Fitness Instructors"
+  },
+  {
+   "cipCode": "13.14",
+   "socCode": "25-2011",
+   "socTitle": "Preschool Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.14",
+   "socCode": "25-2012",
+   "socTitle": "Kindergarten Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.14",
+   "socCode": "25-2021",
+   "socTitle": "Elementary School Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "13.14",
+   "socCode": "25-2022",
+   "socTitle": "Middle School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "13.14",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "13.14",
+   "socCode": "25-3011",
+   "socTitle": "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors"
+  },
+  {
+   "cipCode": "14.01",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.01",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.02",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.02",
+   "socCode": "17-2011",
+   "socTitle": "Aerospace Engineers"
+  },
+  {
+   "cipCode": "14.02",
+   "socCode": "17-3021",
+   "socTitle": "Aerospace Engineering and Operations Technologists and Technicians"
+  },
+  {
+   "cipCode": "14.02",
+   "socCode": "49-2091",
+   "socTitle": "Avionics Technicians"
+  },
+  {
+   "cipCode": "14.05",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.05",
+   "socCode": "17-2031",
+   "socTitle": "Bioengineers and Biomedical Engineers"
+  },
+  {
+   "cipCode": "14.07",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.07",
+   "socCode": "17-2031",
+   "socTitle": "Bioengineers and Biomedical Engineers"
+  },
+  {
+   "cipCode": "14.07",
+   "socCode": "17-2041",
+   "socTitle": "Chemical Engineers"
+  },
+  {
+   "cipCode": "14.07",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.08",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.08",
+   "socCode": "17-2051",
+   "socTitle": "Civil Engineers"
+  },
+  {
+   "cipCode": "14.08",
+   "socCode": "17-2081",
+   "socTitle": "Environmental Engineers"
+  },
+  {
+   "cipCode": "14.08",
+   "socCode": "17-2151",
+   "socTitle": "Mining and Geological Engineers, Including Mining Safety Engineers"
+  },
+  {
+   "cipCode": "14.08",
+   "socCode": "17-2171",
+   "socTitle": "Petroleum Engineers"
+  },
+  {
+   "cipCode": "14.08",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.09",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.09",
+   "socCode": "15-1241",
+   "socTitle": "Computer Network Architects"
+  },
+  {
+   "cipCode": "14.09",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "14.09",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "14.09",
+   "socCode": "15-1253",
+   "socTitle": "Software Quality Assurance Analysts and Testers"
+  },
+  {
+   "cipCode": "14.09",
+   "socCode": "17-2061",
+   "socTitle": "Computer Hardware Engineers"
+  },
+  {
+   "cipCode": "14.10",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.10",
+   "socCode": "17-2011",
+   "socTitle": "Aerospace Engineers"
+  },
+  {
+   "cipCode": "14.10",
+   "socCode": "17-2061",
+   "socTitle": "Computer Hardware Engineers"
+  },
+  {
+   "cipCode": "14.10",
+   "socCode": "17-2071",
+   "socTitle": "Electrical Engineers"
+  },
+  {
+   "cipCode": "14.10",
+   "socCode": "17-2072",
+   "socTitle": "Electronics Engineers, Except Computer"
+  },
+  {
+   "cipCode": "14.10",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.11",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.11",
+   "socCode": "17-2141",
+   "socTitle": "Mechanical Engineers"
+  },
+  {
+   "cipCode": "14.11",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.14",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.14",
+   "socCode": "17-2081",
+   "socTitle": "Environmental Engineers"
+  },
+  {
+   "cipCode": "14.14",
+   "socCode": "17-2111",
+   "socTitle": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors"
+  },
+  {
+   "cipCode": "14.18",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.18",
+   "socCode": "13-1051",
+   "socTitle": "Cost Estimators"
+  },
+  {
+   "cipCode": "14.18",
+   "socCode": "17-2131",
+   "socTitle": "Materials Engineers"
+  },
+  {
+   "cipCode": "14.19",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.19",
+   "socCode": "13-1051",
+   "socTitle": "Cost Estimators"
+  },
+  {
+   "cipCode": "14.19",
+   "socCode": "17-2011",
+   "socTitle": "Aerospace Engineers"
+  },
+  {
+   "cipCode": "14.19",
+   "socCode": "17-2141",
+   "socTitle": "Mechanical Engineers"
+  },
+  {
+   "cipCode": "14.24",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.24",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.27",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.27",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "14.27",
+   "socCode": "17-2112",
+   "socTitle": "Industrial Engineers"
+  },
+  {
+   "cipCode": "14.27",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.35",
+   "socCode": "11-3051",
+   "socTitle": "Industrial Production Managers"
+  },
+  {
+   "cipCode": "14.35",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.35",
+   "socCode": "17-2112",
+   "socTitle": "Industrial Engineers"
+  },
+  {
+   "cipCode": "14.38",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.38",
+   "socCode": "17-1021",
+   "socTitle": "Cartographers and Photogrammetrists"
+  },
+  {
+   "cipCode": "14.38",
+   "socCode": "17-1022",
+   "socTitle": "Surveyors"
+  },
+  {
+   "cipCode": "14.38",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "14.99",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "14.99",
+   "socCode": "17-2111",
+   "socTitle": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors"
+  },
+  {
+   "cipCode": "14.99",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "15.00",
+   "socCode": "17-3021",
+   "socTitle": "Aerospace Engineering and Operations Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.00",
+   "socCode": "17-3022",
+   "socTitle": "Civil Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.00",
+   "socCode": "17-3023",
+   "socTitle": "Electrical and Electronic Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.00",
+   "socCode": "17-3024",
+   "socTitle": "Electro-Mechanical and Mechatronics Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.00",
+   "socCode": "17-3026",
+   "socTitle": "Industrial Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.00",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.01",
+   "socCode": "17-3011",
+   "socTitle": "Architectural and Civil Drafters"
+  },
+  {
+   "cipCode": "15.01",
+   "socCode": "17-3022",
+   "socTitle": "Civil Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.01",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.02",
+   "socCode": "17-3022",
+   "socTitle": "Civil Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.02",
+   "socCode": "53-6041",
+   "socTitle": "Traffic Technicians"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "17-3012",
+   "socTitle": "Electrical and Electronics Drafters"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "17-3021",
+   "socTitle": "Aerospace Engineering and Operations Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "17-3023",
+   "socTitle": "Electrical and Electronic Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "17-3024",
+   "socTitle": "Electro-Mechanical and Mechatronics Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "17-3028",
+   "socTitle": "Calibration Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "27-2091",
+   "socTitle": "Disc Jockeys, Except Radio"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "27-4014",
+   "socTitle": "Sound Engineering Technicians"
+  },
+  {
+   "cipCode": "15.03",
+   "socCode": "49-2095",
+   "socTitle": "Electrical and Electronics Repairers, Powerhouse, Substation, and Relay"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "17-3012",
+   "socTitle": "Electrical and Electronics Drafters"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "17-3023",
+   "socTitle": "Electrical and Electronic Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "17-3024",
+   "socTitle": "Electro-Mechanical and Mechatronics Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "17-3028",
+   "socTitle": "Calibration Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "49-9062",
+   "socTitle": "Medical Equipment Repairers"
+  },
+  {
+   "cipCode": "15.04",
+   "socCode": "49-9069",
+   "socTitle": "Precision Instrument and Equipment Repairers, All Other"
+  },
+  {
+   "cipCode": "15.05",
+   "socCode": "17-3025",
+   "socTitle": "Environmental Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.05",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.05",
+   "socCode": "19-4042",
+   "socTitle": "Environmental Science and Protection Technicians, Including Health"
+  },
+  {
+   "cipCode": "15.05",
+   "socCode": "47-4041",
+   "socTitle": "Hazardous Materials Removal Workers"
+  },
+  {
+   "cipCode": "15.05",
+   "socCode": "49-9021",
+   "socTitle": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers"
+  },
+  {
+   "cipCode": "15.05",
+   "socCode": "51-8031",
+   "socTitle": "Water and Wastewater Treatment Plant and System Operators"
+  },
+  {
+   "cipCode": "15.06",
+   "socCode": "17-3023",
+   "socTitle": "Electrical and Electronic Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.06",
+   "socCode": "17-3026",
+   "socTitle": "Industrial Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.06",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.06",
+   "socCode": "51-4121",
+   "socTitle": "Welders, Cutters, Solderers, and Brazers"
+  },
+  {
+   "cipCode": "15.06",
+   "socCode": "51-9141",
+   "socTitle": "Semiconductor Processing Technicians"
+  },
+  {
+   "cipCode": "15.07",
+   "socCode": "17-3025",
+   "socTitle": "Environmental Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.07",
+   "socCode": "17-3026",
+   "socTitle": "Industrial Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.07",
+   "socCode": "19-5011",
+   "socTitle": "Occupational Health and Safety Specialists"
+  },
+  {
+   "cipCode": "15.07",
+   "socCode": "19-5012",
+   "socTitle": "Occupational Health and Safety Technicians"
+  },
+  {
+   "cipCode": "15.07",
+   "socCode": "51-9061",
+   "socTitle": "Inspectors, Testers, Sorters, Samplers, and Weighers"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "17-3013",
+   "socTitle": "Mechanical Drafters"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "17-3021",
+   "socTitle": "Aerospace Engineering and Operations Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "17-3024",
+   "socTitle": "Electro-Mechanical and Mechatronics Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "17-3027",
+   "socTitle": "Mechanical Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "17-3029",
+   "socTitle": "Engineering Technologists and Technicians, Except Drafters, All Other"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "49-3023",
+   "socTitle": "Automotive Service Technicians and Mechanics"
+  },
+  {
+   "cipCode": "15.08",
+   "socCode": "49-3051",
+   "socTitle": "Motorboat Mechanics and Service Technicians"
+  },
+  {
+   "cipCode": "15.10",
+   "socCode": "11-9021",
+   "socTitle": "Construction Managers"
+  },
+  {
+   "cipCode": "15.10",
+   "socCode": "13-1051",
+   "socTitle": "Cost Estimators"
+  },
+  {
+   "cipCode": "15.10",
+   "socCode": "17-3022",
+   "socTitle": "Civil Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "15.13",
+   "socCode": "17-3011",
+   "socTitle": "Architectural and Civil Drafters"
+  },
+  {
+   "cipCode": "15.13",
+   "socCode": "17-3012",
+   "socTitle": "Electrical and Electronics Drafters"
+  },
+  {
+   "cipCode": "15.13",
+   "socCode": "17-3013",
+   "socTitle": "Mechanical Drafters"
+  },
+  {
+   "cipCode": "15.13",
+   "socCode": "17-3019",
+   "socTitle": "Drafters, All Other"
+  },
+  {
+   "cipCode": "16.01",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "16.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.01",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.02",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.03",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.03",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.04",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.04",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.05",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.05",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.06",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.07",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.08",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.09",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.09",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.11",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.11",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.12",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.12",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.15",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "16.16",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "16.16",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "19.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "19.01",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "19.04",
+   "socCode": "13-2052",
+   "socTitle": "Personal Financial Advisors"
+  },
+  {
+   "cipCode": "19.04",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "19.06",
+   "socCode": "11-3013",
+   "socTitle": "Facilities Managers"
+  },
+  {
+   "cipCode": "19.06",
+   "socCode": "13-1121",
+   "socTitle": "Meeting, Convention, and Event Planners"
+  },
+  {
+   "cipCode": "19.06",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "19.06",
+   "socCode": "27-1025",
+   "socTitle": "Interior Designers"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "19-3039",
+   "socTitle": "Psychologists, All Other"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "21-1093",
+   "socTitle": "Social and Human Service Assistants"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "21-1099",
+   "socTitle": "Community and Social Service Specialists, All Other"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "25-2011",
+   "socTitle": "Preschool Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "25-9042",
+   "socTitle": "Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "25-9043",
+   "socTitle": "Teaching Assistants, Special Education"
+  },
+  {
+   "cipCode": "19.07",
+   "socCode": "39-9011",
+   "socTitle": "Childcare Workers"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "11-2021",
+   "socTitle": "Marketing Managers"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "13-1022",
+   "socTitle": "Wholesale and Retail Buyers, Except Farm Products"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "13-1161",
+   "socTitle": "Market Research Analysts and Marketing Specialists"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "19-2032",
+   "socTitle": "Materials Scientists"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "25-9021",
+   "socTitle": "Farm and Home Management Educators"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "27-1022",
+   "socTitle": "Fashion Designers"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "27-1025",
+   "socTitle": "Interior Designers"
+  },
+  {
+   "cipCode": "19.09",
+   "socCode": "51-6092",
+   "socTitle": "Fabric and Apparel Patternmakers"
+  },
+  {
+   "cipCode": "22.00",
+   "socCode": "23-2011",
+   "socTitle": "Paralegals and Legal Assistants"
+  },
+  {
+   "cipCode": "22.00",
+   "socCode": "23-2099",
+   "socTitle": "Legal Support Workers, All Other"
+  },
+  {
+   "cipCode": "22.01",
+   "socCode": "23-1011",
+   "socTitle": "Lawyers"
+  },
+  {
+   "cipCode": "22.01",
+   "socCode": "23-1012",
+   "socTitle": "Judicial Law Clerks"
+  },
+  {
+   "cipCode": "22.01",
+   "socCode": "23-1021",
+   "socTitle": "Administrative Law Judges, Adjudicators, and Hearing Officers"
+  },
+  {
+   "cipCode": "22.01",
+   "socCode": "23-1022",
+   "socTitle": "Arbitrators, Mediators, and Conciliators"
+  },
+  {
+   "cipCode": "22.01",
+   "socCode": "23-1023",
+   "socTitle": "Judges, Magistrate Judges, and Magistrates"
+  },
+  {
+   "cipCode": "22.03",
+   "socCode": "23-2011",
+   "socTitle": "Paralegals and Legal Assistants"
+  },
+  {
+   "cipCode": "22.03",
+   "socCode": "23-2093",
+   "socTitle": "Title Examiners, Abstractors, and Searchers"
+  },
+  {
+   "cipCode": "22.03",
+   "socCode": "23-2099",
+   "socTitle": "Legal Support Workers, All Other"
+  },
+  {
+   "cipCode": "22.03",
+   "socCode": "27-3091",
+   "socTitle": "Interpreters and Translators"
+  },
+  {
+   "cipCode": "22.03",
+   "socCode": "27-3092",
+   "socTitle": "Court Reporters and Simultaneous Captioners"
+  },
+  {
+   "cipCode": "22.03",
+   "socCode": "43-6012",
+   "socTitle": "Legal Secretaries and Administrative Assistants"
+  },
+  {
+   "cipCode": "23.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "23.01",
+   "socCode": "43-9081",
+   "socTitle": "Proofreaders and Copy Markers"
+  },
+  {
+   "cipCode": "23.13",
+   "socCode": "27-3041",
+   "socTitle": "Editors"
+  },
+  {
+   "cipCode": "23.13",
+   "socCode": "27-3042",
+   "socTitle": "Technical Writers"
+  },
+  {
+   "cipCode": "23.13",
+   "socCode": "27-3043",
+   "socTitle": "Writers and Authors"
+  },
+  {
+   "cipCode": "23.13",
+   "socCode": "43-9081",
+   "socTitle": "Proofreaders and Copy Markers"
+  },
+  {
+   "cipCode": "23.14",
+   "socCode": "27-3041",
+   "socTitle": "Editors"
+  },
+  {
+   "cipCode": "23.14",
+   "socCode": "27-3043",
+   "socTitle": "Writers and Authors"
+  },
+  {
+   "cipCode": "25.01",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "25.01",
+   "socCode": "25-4011",
+   "socTitle": "Archivists"
+  },
+  {
+   "cipCode": "25.01",
+   "socCode": "25-4022",
+   "socTitle": "Librarians and Media Collections Specialists"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-1099",
+   "socTitle": "Life Scientists, All Other"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-4012",
+   "socTitle": "Agricultural Technicians"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-4013",
+   "socTitle": "Food Science Technicians"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-4021",
+   "socTitle": "Biological Technicians"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "19-4092",
+   "socTitle": "Forensic Science Technicians"
+  },
+  {
+   "cipCode": "26.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "19-1021",
+   "socTitle": "Biochemists and Biophysicists"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "19-1022",
+   "socTitle": "Microbiologists"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "19-4013",
+   "socTitle": "Food Science Technicians"
+  },
+  {
+   "cipCode": "26.02",
+   "socCode": "19-4021",
+   "socTitle": "Biological Technicians"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-1023",
+   "socTitle": "Zoologists and Wildlife Biologists"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-1031",
+   "socTitle": "Conservation Scientists"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-1041",
+   "socTitle": "Epidemiologists"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-1099",
+   "socTitle": "Life Scientists, All Other"
+  },
+  {
+   "cipCode": "26.13",
+   "socCode": "19-4021",
+   "socTitle": "Biological Technicians"
+  },
+  {
+   "cipCode": "26.15",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "26.15",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "26.15",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "26.15",
+   "socCode": "19-4021",
+   "socTitle": "Biological Technicians"
+  },
+  {
+   "cipCode": "27.01",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "27.01",
+   "socCode": "15-2021",
+   "socTitle": "Mathematicians"
+  },
+  {
+   "cipCode": "27.01",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "27.01",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "27.01",
+   "socCode": "15-2099",
+   "socTitle": "Mathematical Science Occupations, All Other"
+  },
+  {
+   "cipCode": "27.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "13-2051",
+   "socTitle": "Financial and Investment Analysts"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "13-2054",
+   "socTitle": "Financial Risk Specialists"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "13-2099",
+   "socTitle": "Financial Specialists, All Other"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "15-2011",
+   "socTitle": "Actuaries"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "15-2021",
+   "socTitle": "Mathematicians"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "15-2099",
+   "socTitle": "Mathematical Science Occupations, All Other"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "27.03",
+   "socCode": "19-3011",
+   "socTitle": "Economists"
+  },
+  {
+   "cipCode": "27.05",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "27.05",
+   "socCode": "15-2011",
+   "socTitle": "Actuaries"
+  },
+  {
+   "cipCode": "27.05",
+   "socCode": "15-2021",
+   "socTitle": "Mathematicians"
+  },
+  {
+   "cipCode": "27.05",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "27.05",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "27.05",
+   "socCode": "19-3022",
+   "socTitle": "Survey Researchers"
+  },
+  {
+   "cipCode": "30.11",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "30.11",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "30.32",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "30.32",
+   "socCode": "19-1023",
+   "socTitle": "Zoologists and Wildlife Biologists"
+  },
+  {
+   "cipCode": "30.32",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "30.32",
+   "socCode": "19-2041",
+   "socTitle": "Environmental Scientists and Specialists, Including Health"
+  },
+  {
+   "cipCode": "30.32",
+   "socCode": "19-2042",
+   "socTitle": "Geoscientists, Except Hydrologists and Geographers"
+  },
+  {
+   "cipCode": "30.32",
+   "socCode": "19-2099",
+   "socTitle": "Physical Scientists, All Other"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "15-1252",
+   "socTitle": "Software Developers"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "30.70",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "11-3031",
+   "socTitle": "Financial Managers"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "13-1111",
+   "socTitle": "Management Analysts"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "13-1161",
+   "socTitle": "Market Research Analysts and Marketing Specialists"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "13-2051",
+   "socTitle": "Financial and Investment Analysts"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "30.71",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "31.05",
+   "socCode": "11-9072",
+   "socTitle": "Entertainment and Recreation Managers, Except Gambling"
+  },
+  {
+   "cipCode": "31.05",
+   "socCode": "27-2021",
+   "socTitle": "Athletes and Sports Competitors"
+  },
+  {
+   "cipCode": "31.05",
+   "socCode": "27-2022",
+   "socTitle": "Coaches and Scouts"
+  },
+  {
+   "cipCode": "31.05",
+   "socCode": "29-1128",
+   "socTitle": "Exercise Physiologists"
+  },
+  {
+   "cipCode": "31.05",
+   "socCode": "29-9091",
+   "socTitle": "Athletic Trainers"
+  },
+  {
+   "cipCode": "31.05",
+   "socCode": "39-9031",
+   "socTitle": "Exercise Trainers and Group Fitness Instructors"
+  },
+  {
+   "cipCode": "38.01",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "38.01",
+   "socCode": "15-2021",
+   "socTitle": "Mathematicians"
+  },
+  {
+   "cipCode": "40.01",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "40.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "40.02",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "40.02",
+   "socCode": "19-2011",
+   "socTitle": "Astronomers"
+  },
+  {
+   "cipCode": "40.02",
+   "socCode": "19-2012",
+   "socTitle": "Physicists"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "15-1299",
+   "socTitle": "Computer Occupations, All Other"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "19-2031",
+   "socTitle": "Chemists"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "19-2041",
+   "socTitle": "Environmental Scientists and Specialists, Including Health"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "19-4013",
+   "socTitle": "Food Science Technicians"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "19-4031",
+   "socTitle": "Chemical Technicians"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "19-4042",
+   "socTitle": "Environmental Science and Protection Technicians, Including Health"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "19-4092",
+   "socTitle": "Forensic Science Technicians"
+  },
+  {
+   "cipCode": "40.05",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "40.06",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "40.06",
+   "socCode": "19-2042",
+   "socTitle": "Geoscientists, Except Hydrologists and Geographers"
+  },
+  {
+   "cipCode": "40.06",
+   "socCode": "19-2043",
+   "socTitle": "Hydrologists"
+  },
+  {
+   "cipCode": "40.06",
+   "socCode": "19-4043",
+   "socTitle": "Geological Technicians, Except Hydrologic Technicians"
+  },
+  {
+   "cipCode": "40.06",
+   "socCode": "19-4044",
+   "socTitle": "Hydrologic Technicians"
+  },
+  {
+   "cipCode": "40.08",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "40.08",
+   "socCode": "19-2012",
+   "socTitle": "Physicists"
+  },
+  {
+   "cipCode": "40.08",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "42.01",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "42.01",
+   "socCode": "19-3032",
+   "socTitle": "Industrial-Organizational Psychologists"
+  },
+  {
+   "cipCode": "42.01",
+   "socCode": "19-3033",
+   "socTitle": "Clinical and Counseling Psychologists"
+  },
+  {
+   "cipCode": "42.01",
+   "socCode": "19-3039",
+   "socTitle": "Psychologists, All Other"
+  },
+  {
+   "cipCode": "42.01",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "19-1029",
+   "socTitle": "Biological Scientists, All Other"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "19-1099",
+   "socTitle": "Life Scientists, All Other"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "19-3033",
+   "socTitle": "Clinical and Counseling Psychologists"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "19-3039",
+   "socTitle": "Psychologists, All Other"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "42.27",
+   "socCode": "21-1021",
+   "socTitle": "Child, Family, and School Social Workers"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "11-3121",
+   "socTitle": "Human Resources Managers"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "11-3131",
+   "socTitle": "Training and Development Managers"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "13-1071",
+   "socTitle": "Human Resources Specialists"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "13-1111",
+   "socTitle": "Management Analysts"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "13-1151",
+   "socTitle": "Training and Development Specialists"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "19-3032",
+   "socTitle": "Industrial-Organizational Psychologists"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "19-3033",
+   "socTitle": "Clinical and Counseling Psychologists"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "19-3034",
+   "socTitle": "School Psychologists"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "19-3039",
+   "socTitle": "Psychologists, All Other"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "21-1012",
+   "socTitle": "Educational, Guidance, and Career Counselors and Advisors"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "21-1014",
+   "socTitle": "Mental Health Counselors"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "21-1019",
+   "socTitle": "Counselors, All Other"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "25-9043",
+   "socTitle": "Teaching Assistants, Special Education"
+  },
+  {
+   "cipCode": "42.28",
+   "socCode": "27-2022",
+   "socTitle": "Coaches and Scouts"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "11-9161",
+   "socTitle": "Emergency Management Directors"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "13-1041",
+   "socTitle": "Compliance Officers"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "13-2061",
+   "socTitle": "Financial Examiners"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "19-4092",
+   "socTitle": "Forensic Science Technicians"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "19-4099",
+   "socTitle": "Life, Physical, and Social Science Technicians, All Other"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "21-1021",
+   "socTitle": "Child, Family, and School Social Workers"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-1011",
+   "socTitle": "First-Line Supervisors of Correctional Officers"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-1012",
+   "socTitle": "First-Line Supervisors of Police and Detectives"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-1091",
+   "socTitle": "First-Line Supervisors of Security Workers"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-1099",
+   "socTitle": "First-Line Supervisors of Protective Service Workers, All Other"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-3011",
+   "socTitle": "Bailiffs"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-3012",
+   "socTitle": "Correctional Officers and Jailers"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-3021",
+   "socTitle": "Detectives and Criminal Investigators"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-3051",
+   "socTitle": "Police and Sheriff’s Patrol Officers"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-3052",
+   "socTitle": "Transit and Railroad Police"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-9021",
+   "socTitle": "Private Detectives and Investigators"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-9031",
+   "socTitle": "Gambling Surveillance Officers and Gambling Investigators"
+  },
+  {
+   "cipCode": "43.01",
+   "socCode": "33-9032",
+   "socTitle": "Security Guards"
+  },
+  {
+   "cipCode": "43.02",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "43.02",
+   "socCode": "33-1021",
+   "socTitle": "First-Line Supervisors of Firefighting and Prevention Workers"
+  },
+  {
+   "cipCode": "43.02",
+   "socCode": "33-2011",
+   "socTitle": "Firefighters"
+  },
+  {
+   "cipCode": "43.02",
+   "socCode": "33-2021",
+   "socTitle": "Fire Inspectors and Investigators"
+  },
+  {
+   "cipCode": "43.02",
+   "socCode": "33-2022",
+   "socTitle": "Forest Fire Inspectors and Prevention Specialists"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "11-9161",
+   "socTitle": "Emergency Management Directors"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "33-1012",
+   "socTitle": "First-Line Supervisors of Police and Detectives"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "33-1091",
+   "socTitle": "First-Line Supervisors of Security Workers"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "33-1099",
+   "socTitle": "First-Line Supervisors of Protective Service Workers, All Other"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "55-1017",
+   "socTitle": "Special Forces Officers"
+  },
+  {
+   "cipCode": "43.03",
+   "socCode": "55-3018",
+   "socTitle": "Special Forces"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-1031",
+   "socTitle": "Legislators"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-3071",
+   "socTitle": "Transportation, Storage, and Distribution Managers"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-9021",
+   "socTitle": "Construction Managers"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-9131",
+   "socTitle": "Postmasters and Mail Superintendents"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-9151",
+   "socTitle": "Social and Community Service Managers"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "19-3051",
+   "socTitle": "Urban and Regional Planners"
+  },
+  {
+   "cipCode": "44.04",
+   "socCode": "53-6041",
+   "socTitle": "Traffic Technicians"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "11-9151",
+   "socTitle": "Social and Community Service Managers"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1013",
+   "socTitle": "Marriage and Family Therapists"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1019",
+   "socTitle": "Counselors, All Other"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1021",
+   "socTitle": "Child, Family, and School Social Workers"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1022",
+   "socTitle": "Healthcare Social Workers"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1023",
+   "socTitle": "Mental Health and Substance Abuse Social Workers"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1029",
+   "socTitle": "Social Workers, All Other"
+  },
+  {
+   "cipCode": "44.07",
+   "socCode": "21-1092",
+   "socTitle": "Probation Officers and Correctional Treatment Specialists"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "19-3022",
+   "socTitle": "Survey Researchers"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "19-3041",
+   "socTitle": "Sociologists"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "25-2021",
+   "socTitle": "Elementary School Teachers, Except Special Education"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "25-2022",
+   "socTitle": "Middle School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "45.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "45.02",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.02",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "45.02",
+   "socCode": "19-3091",
+   "socTitle": "Anthropologists and Archeologists"
+  },
+  {
+   "cipCode": "45.02",
+   "socCode": "19-4092",
+   "socTitle": "Forensic Science Technicians"
+  },
+  {
+   "cipCode": "45.04",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.04",
+   "socCode": "19-3039",
+   "socTitle": "Psychologists, All Other"
+  },
+  {
+   "cipCode": "45.04",
+   "socCode": "19-3041",
+   "socTitle": "Sociologists"
+  },
+  {
+   "cipCode": "45.04",
+   "socCode": "19-4099",
+   "socTitle": "Life, Physical, and Social Science Technicians, All Other"
+  },
+  {
+   "cipCode": "45.05",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.05",
+   "socCode": "19-3041",
+   "socTitle": "Sociologists"
+  },
+  {
+   "cipCode": "45.05",
+   "socCode": "19-3099",
+   "socTitle": "Social Scientists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "13-1161",
+   "socTitle": "Market Research Analysts and Marketing Specialists"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "19-3011",
+   "socTitle": "Economists"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "19-3022",
+   "socTitle": "Survey Researchers"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "45.06",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "45.07",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.07",
+   "socCode": "17-1021",
+   "socTitle": "Cartographers and Photogrammetrists"
+  },
+  {
+   "cipCode": "45.07",
+   "socCode": "17-3031",
+   "socTitle": "Surveying and Mapping Technicians"
+  },
+  {
+   "cipCode": "45.07",
+   "socCode": "19-3092",
+   "socTitle": "Geographers"
+  },
+  {
+   "cipCode": "45.09",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.09",
+   "socCode": "19-3094",
+   "socTitle": "Political Scientists"
+  },
+  {
+   "cipCode": "45.10",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.10",
+   "socCode": "19-3011",
+   "socTitle": "Economists"
+  },
+  {
+   "cipCode": "45.10",
+   "socCode": "19-3094",
+   "socTitle": "Political Scientists"
+  },
+  {
+   "cipCode": "45.10",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "45.10",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "45.11",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "45.11",
+   "socCode": "19-3041",
+   "socTitle": "Sociologists"
+  },
+  {
+   "cipCode": "45.11",
+   "socCode": "19-4061",
+   "socTitle": "Social Science Research Assistants"
+  },
+  {
+   "cipCode": "46.02",
+   "socCode": "47-1011",
+   "socTitle": "First-Line Supervisors of Construction Trades and Extraction Workers"
+  },
+  {
+   "cipCode": "46.02",
+   "socCode": "47-2031",
+   "socTitle": "Carpenters"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "47-1011",
+   "socTitle": "First-Line Supervisors of Construction Trades and Extraction Workers"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "47-2111",
+   "socTitle": "Electricians"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "49-1011",
+   "socTitle": "First-Line Supervisors of Mechanics, Installers, and Repairers"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "49-2095",
+   "socTitle": "Electrical and Electronics Repairers, Powerhouse, Substation, and Relay"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "49-2098",
+   "socTitle": "Security and Fire Alarm Systems Installers"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "49-9051",
+   "socTitle": "Electrical Power-Line Installers and Repairers"
+  },
+  {
+   "cipCode": "46.03",
+   "socCode": "49-9097",
+   "socTitle": "Signal and Track Switch Repairers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "11-3013",
+   "socTitle": "Facilities Managers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "17-3022",
+   "socTitle": "Civil Engineering Technologists and Technicians"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "37-1011",
+   "socTitle": "First-Line Supervisors of Housekeeping and Janitorial Workers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-1011",
+   "socTitle": "First-Line Supervisors of Construction Trades and Extraction Workers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2041",
+   "socTitle": "Carpet Installers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2042",
+   "socTitle": "Floor Layers, Except Carpet, Wood, and Hard Tiles"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2043",
+   "socTitle": "Floor Sanders and Finishers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2044",
+   "socTitle": "Tile and Stone Setters"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2051",
+   "socTitle": "Cement Masons and Concrete Finishers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2053",
+   "socTitle": "Terrazzo Workers and Finishers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2081",
+   "socTitle": "Drywall and Ceiling Tile Installers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2121",
+   "socTitle": "Glaziers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2131",
+   "socTitle": "Insulation Workers, Floor, Ceiling, and Wall"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2132",
+   "socTitle": "Insulation Workers, Mechanical"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2141",
+   "socTitle": "Painters, Construction and Maintenance"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2142",
+   "socTitle": "Paperhangers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2181",
+   "socTitle": "Roofers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2221",
+   "socTitle": "Structural Iron and Steel Workers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-2231",
+   "socTitle": "Solar Photovoltaic Installers"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "47-4011",
+   "socTitle": "Construction and Building Inspectors"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "49-9071",
+   "socTitle": "Maintenance and Repair Workers, General"
+  },
+  {
+   "cipCode": "46.04",
+   "socCode": "49-9095",
+   "socTitle": "Manufactured Building and Mobile Home Installers"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-1011",
+   "socTitle": "First-Line Supervisors of Construction Trades and Extraction Workers"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-2152",
+   "socTitle": "Plumbers, Pipefitters, and Steamfitters"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-4071",
+   "socTitle": "Septic Tank Servicers and Sewer Pipe Cleaners"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-5011",
+   "socTitle": "Derrick Operators, Oil and Gas"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-5012",
+   "socTitle": "Rotary Drill Operators, Oil and Gas"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-5023",
+   "socTitle": "Earth Drillers, Except Oil and Gas"
+  },
+  {
+   "cipCode": "46.05",
+   "socCode": "47-5032",
+   "socTitle": "Explosives Workers, Ordnance Handling Experts, and Blasters"
+  },
+  {
+   "cipCode": "47.02",
+   "socCode": "49-9021",
+   "socTitle": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "47-4021",
+   "socTitle": "Elevator and Escalator Installers and Repairers"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-3042",
+   "socTitle": "Mobile Heavy Equipment Mechanics, Except Engines"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-3043",
+   "socTitle": "Rail Car Repairers"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-9012",
+   "socTitle": "Control and Valve Installers and Repairers, Except Mechanical Door"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-9041",
+   "socTitle": "Industrial Machinery Mechanics"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-9043",
+   "socTitle": "Maintenance Workers, Machinery"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-9044",
+   "socTitle": "Millwrights"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-9045",
+   "socTitle": "Refractory Materials Repairers, Except Brickmasons"
+  },
+  {
+   "cipCode": "47.03",
+   "socCode": "49-9081",
+   "socTitle": "Wind Turbine Service Technicians"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "13-1032",
+   "socTitle": "Insurance Appraisers, Auto Damage"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "17-3021",
+   "socTitle": "Aerospace Engineering and Operations Technologists and Technicians"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-1011",
+   "socTitle": "First-Line Supervisors of Mechanics, Installers, and Repairers"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-2091",
+   "socTitle": "Avionics Technicians"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-2093",
+   "socTitle": "Electrical and Electronics Installers and Repairers, Transportation Equipment"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-2096",
+   "socTitle": "Electronic Equipment Installers and Repairers, Motor Vehicles"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3011",
+   "socTitle": "Aircraft Mechanics and Service Technicians"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3021",
+   "socTitle": "Automotive Body and Related Repairers"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3022",
+   "socTitle": "Automotive Glass Installers and Repairers"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3023",
+   "socTitle": "Automotive Service Technicians and Mechanics"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3031",
+   "socTitle": "Bus and Truck Mechanics and Diesel Engine Specialists"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3051",
+   "socTitle": "Motorboat Mechanics and Service Technicians"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3052",
+   "socTitle": "Motorcycle Mechanics"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3053",
+   "socTitle": "Outdoor Power Equipment and Other Small Engine Mechanics"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3091",
+   "socTitle": "Bicycle Repairers"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "49-3092",
+   "socTitle": "Recreational Vehicle Service Technicians"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "51-2011",
+   "socTitle": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "51-2031",
+   "socTitle": "Engine and Other Machine Assemblers"
+  },
+  {
+   "cipCode": "47.06",
+   "socCode": "51-9124",
+   "socTitle": "Coating, Painting, and Spraying Machine Setters, Operators, and Tenders"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "47-2211",
+   "socTitle": "Sheet Metal Workers"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-2041",
+   "socTitle": "Structural Metal Fabricators and Fitters"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4021",
+   "socTitle": "Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4022",
+   "socTitle": "Forging Machine Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4023",
+   "socTitle": "Rolling Machine Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4031",
+   "socTitle": "Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4032",
+   "socTitle": "Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4033",
+   "socTitle": "Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4034",
+   "socTitle": "Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4035",
+   "socTitle": "Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4041",
+   "socTitle": "Machinists"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4061",
+   "socTitle": "Model Makers, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4062",
+   "socTitle": "Patternmakers, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4071",
+   "socTitle": "Foundry Mold and Coremakers"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4081",
+   "socTitle": "Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4111",
+   "socTitle": "Tool and Die Makers"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4121",
+   "socTitle": "Welders, Cutters, Solderers, and Brazers"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4122",
+   "socTitle": "Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4191",
+   "socTitle": "Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4192",
+   "socTitle": "Layout Workers, Metal and Plastic"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4194",
+   "socTitle": "Tool Grinders, Filers, and Sharpeners"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-4199",
+   "socTitle": "Metal Workers and Plastic Workers, All Other"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-9161",
+   "socTitle": "Computer Numerically Controlled Tool Operators"
+  },
+  {
+   "cipCode": "48.05",
+   "socCode": "51-9162",
+   "socTitle": "Computer Numerically Controlled Tool Programmers"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "11-3071",
+   "socTitle": "Transportation, Storage, and Distribution Managers"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "53-1044",
+   "socTitle": "First-Line Supervisors of Passenger Attendants"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "53-2011",
+   "socTitle": "Airline Pilots, Copilots, and Flight Engineers"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "53-2012",
+   "socTitle": "Commercial Pilots"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "53-2021",
+   "socTitle": "Air Traffic Controllers"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "53-2022",
+   "socTitle": "Airfield Operations Specialists"
+  },
+  {
+   "cipCode": "49.01",
+   "socCode": "53-2031",
+   "socTitle": "Flight Attendants"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "45-4022",
+   "socTitle": "Logging Equipment Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-2071",
+   "socTitle": "Paving, Surfacing, and Tamping Equipment Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-2072",
+   "socTitle": "Pile Driver Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-2073",
+   "socTitle": "Operating Engineers and Other Construction Equipment Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-4051",
+   "socTitle": "Highway Maintenance Workers"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-4061",
+   "socTitle": "Rail-Track Laying and Maintenance Equipment Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-5022",
+   "socTitle": "Excavating and Loading Machine and Dragline Operators, Surface Mining"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-5023",
+   "socTitle": "Earth Drillers, Except Oil and Gas"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-5032",
+   "socTitle": "Explosives Workers, Ordnance Handling Experts, and Blasters"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-5041",
+   "socTitle": "Continuous Mining Machine Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-5049",
+   "socTitle": "Underground Mining Machine Operators, All Other"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "47-5099",
+   "socTitle": "Extraction Workers, All Other"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-1043",
+   "socTitle": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-1049",
+   "socTitle": "First-Line Supervisors of Transportation Workers, All Other"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-3032",
+   "socTitle": "Heavy and Tractor-Trailer Truck Drivers"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-3033",
+   "socTitle": "Light Truck Drivers"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-3051",
+   "socTitle": "Bus Drivers, School"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-3052",
+   "socTitle": "Bus Drivers, Transit and Intercity"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-3053",
+   "socTitle": "Shuttle Drivers and Chauffeurs"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-4011",
+   "socTitle": "Locomotive Engineers"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-4013",
+   "socTitle": "Rail Yard Engineers, Dinkey Operators, and Hostlers"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-4022",
+   "socTitle": "Railroad Brake, Signal, and Switch Operators and Locomotive Firers"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-4031",
+   "socTitle": "Railroad Conductors and Yardmasters"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-4041",
+   "socTitle": "Subway and Streetcar Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-4099",
+   "socTitle": "Rail Transportation Workers, All Other"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-7021",
+   "socTitle": "Crane and Tower Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-7031",
+   "socTitle": "Dredge Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-7041",
+   "socTitle": "Hoist and Winch Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-7051",
+   "socTitle": "Industrial Truck and Tractor Operators"
+  },
+  {
+   "cipCode": "49.02",
+   "socCode": "53-7199",
+   "socTitle": "Material Moving Workers, All Other"
+  },
+  {
+   "cipCode": "50.03",
+   "socCode": "27-2031",
+   "socTitle": "Dancers"
+  },
+  {
+   "cipCode": "50.03",
+   "socCode": "27-2032",
+   "socTitle": "Choreographers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1011",
+   "socTitle": "Art Directors"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1014",
+   "socTitle": "Special Effects Artists and Animators"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1019",
+   "socTitle": "Artists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1021",
+   "socTitle": "Commercial and Industrial Designers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1022",
+   "socTitle": "Fashion Designers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1024",
+   "socTitle": "Graphic Designers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1025",
+   "socTitle": "Interior Designers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1027",
+   "socTitle": "Set and Exhibit Designers"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-1029",
+   "socTitle": "Designers, All Other"
+  },
+  {
+   "cipCode": "50.04",
+   "socCode": "27-4021",
+   "socTitle": "Photographers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-1022",
+   "socTitle": "Fashion Designers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-1027",
+   "socTitle": "Set and Exhibit Designers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2011",
+   "socTitle": "Actors"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2012",
+   "socTitle": "Producers and Directors"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2031",
+   "socTitle": "Dancers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2032",
+   "socTitle": "Choreographers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2041",
+   "socTitle": "Music Directors and Composers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2042",
+   "socTitle": "Musicians and Singers"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-2099",
+   "socTitle": "Entertainers and Performers, Sports and Related Workers, All Other"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "27-3043",
+   "socTitle": "Writers and Authors"
+  },
+  {
+   "cipCode": "50.05",
+   "socCode": "39-3092",
+   "socTitle": "Costume Attendants"
+  },
+  {
+   "cipCode": "50.06",
+   "socCode": "27-2012",
+   "socTitle": "Producers and Directors"
+  },
+  {
+   "cipCode": "50.06",
+   "socCode": "27-4021",
+   "socTitle": "Photographers"
+  },
+  {
+   "cipCode": "50.06",
+   "socCode": "27-4031",
+   "socTitle": "Camera Operators, Television, Video, and Film"
+  },
+  {
+   "cipCode": "50.06",
+   "socCode": "27-4032",
+   "socTitle": "Film and Video Editors"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "25-4011",
+   "socTitle": "Archivists"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "25-4012",
+   "socTitle": "Curators"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "25-4013",
+   "socTitle": "Museum Technicians and Conservators"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "27-1011",
+   "socTitle": "Art Directors"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "27-1012",
+   "socTitle": "Craft Artists"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "27-1013",
+   "socTitle": "Fine Artists, Including Painters, Sculptors, and Illustrators"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "27-1014",
+   "socTitle": "Special Effects Artists and Animators"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "27-1019",
+   "socTitle": "Artists and Related Workers, All Other"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "27-4021",
+   "socTitle": "Photographers"
+  },
+  {
+   "cipCode": "50.07",
+   "socCode": "51-9071",
+   "socTitle": "Jewelers and Precious Stone and Metal Workers"
+  },
+  {
+   "cipCode": "50.09",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "50.09",
+   "socCode": "27-2041",
+   "socTitle": "Music Directors and Composers"
+  },
+  {
+   "cipCode": "50.09",
+   "socCode": "27-2042",
+   "socTitle": "Musicians and Singers"
+  },
+  {
+   "cipCode": "50.09",
+   "socCode": "27-2091",
+   "socTitle": "Disc Jockeys, Except Radio"
+  },
+  {
+   "cipCode": "50.09",
+   "socCode": "27-4014",
+   "socTitle": "Sound Engineering Technicians"
+  },
+  {
+   "cipCode": "51.00",
+   "socCode": "21-1091",
+   "socTitle": "Health Education Specialists"
+  },
+  {
+   "cipCode": "51.00",
+   "socCode": "21-1094",
+   "socTitle": "Community Health Workers"
+  },
+  {
+   "cipCode": "51.02",
+   "socCode": "29-1127",
+   "socTitle": "Speech-Language Pathologists"
+  },
+  {
+   "cipCode": "51.02",
+   "socCode": "29-1181",
+   "socTitle": "Audiologists"
+  },
+  {
+   "cipCode": "51.06",
+   "socCode": "29-1292",
+   "socTitle": "Dental Hygienists"
+  },
+  {
+   "cipCode": "51.06",
+   "socCode": "31-9091",
+   "socTitle": "Dental Assistants"
+  },
+  {
+   "cipCode": "51.06",
+   "socCode": "51-9081",
+   "socTitle": "Dental Laboratory Technicians"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "11-3012",
+   "socTitle": "Administrative Services Managers"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "11-3013",
+   "socTitle": "Facilities Managers"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "11-9033",
+   "socTitle": "Education Administrators, Postsecondary"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "11-9111",
+   "socTitle": "Medical and Health Services Managers"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "13-1031",
+   "socTitle": "Claims Adjusters, Examiners, and Investigators"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "13-1041",
+   "socTitle": "Compliance Officers"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "15-1212",
+   "socTitle": "Information Security Analysts"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "15-1232",
+   "socTitle": "Computer User Support Specialists"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "29-2072",
+   "socTitle": "Medical Records Specialists"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "29-9021",
+   "socTitle": "Health Information Technologists and Medical Registrars"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "29-9099",
+   "socTitle": "Healthcare Practitioners and Technical Workers, All Other"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "31-9092",
+   "socTitle": "Medical Assistants"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "31-9094",
+   "socTitle": "Medical Transcriptionists"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "31-9099",
+   "socTitle": "Healthcare Support Workers, All Other"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "43-1011",
+   "socTitle": "First-Line Supervisors of Office and Administrative Support Workers"
+  },
+  {
+   "cipCode": "51.07",
+   "socCode": "43-6013",
+   "socTitle": "Medical Secretaries and Administrative Assistants"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "29-2012",
+   "socTitle": "Medical and Clinical Laboratory Technicians"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "29-2052",
+   "socTitle": "Pharmacy Technicians"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "29-2055",
+   "socTitle": "Surgical Technologists"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "29-2099",
+   "socTitle": "Health Technologists and Technicians, All Other"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "31-2011",
+   "socTitle": "Occupational Therapy Assistants"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "31-2021",
+   "socTitle": "Physical Therapist Assistants"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "31-9092",
+   "socTitle": "Medical Assistants"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "31-9099",
+   "socTitle": "Healthcare Support Workers, All Other"
+  },
+  {
+   "cipCode": "51.08",
+   "socCode": "53-3011",
+   "socTitle": "Ambulance Drivers and Attendants, Except Emergency Medical Technicians"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "19-4051",
+   "socTitle": "Nuclear Technicians"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "19-5012",
+   "socTitle": "Occupational Health and Safety Technicians"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-1071",
+   "socTitle": "Physician Assistants"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-1124",
+   "socTitle": "Radiation Therapists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-1126",
+   "socTitle": "Respiratory Therapists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2031",
+   "socTitle": "Cardiovascular Technologists and Technicians"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2032",
+   "socTitle": "Diagnostic Medical Sonographers"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2033",
+   "socTitle": "Nuclear Medicine Technologists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2034",
+   "socTitle": "Radiologic Technologists and Technicians"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2035",
+   "socTitle": "Magnetic Resonance Imaging Technologists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2036",
+   "socTitle": "Medical Dosimetrists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2042",
+   "socTitle": "Emergency Medical Technicians"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2043",
+   "socTitle": "Paramedics"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2055",
+   "socTitle": "Surgical Technologists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2092",
+   "socTitle": "Hearing Aid Specialists"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-2099",
+   "socTitle": "Health Technologists and Technicians, All Other"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-9091",
+   "socTitle": "Athletic Trainers"
+  },
+  {
+   "cipCode": "51.09",
+   "socCode": "29-9093",
+   "socTitle": "Surgical Assistants"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "29-2011",
+   "socTitle": "Medical and Clinical Laboratory Technologists"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "29-2012",
+   "socTitle": "Medical and Clinical Laboratory Technicians"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "29-2055",
+   "socTitle": "Surgical Technologists"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "29-2099",
+   "socTitle": "Health Technologists and Technicians, All Other"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "31-9093",
+   "socTitle": "Medical Equipment Preparers"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "31-9097",
+   "socTitle": "Phlebotomists"
+  },
+  {
+   "cipCode": "51.10",
+   "socCode": "51-9083",
+   "socTitle": "Ophthalmic Laboratory Technicians"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1081",
+   "socTitle": "Podiatrists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1211",
+   "socTitle": "Anesthesiologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1212",
+   "socTitle": "Cardiologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1213",
+   "socTitle": "Dermatologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1214",
+   "socTitle": "Emergency Medicine Physicians"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1215",
+   "socTitle": "Family Medicine Physicians"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1216",
+   "socTitle": "General Internal Medicine Physicians"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1217",
+   "socTitle": "Neurologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1218",
+   "socTitle": "Obstetricians and Gynecologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1221",
+   "socTitle": "Pediatricians, General"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1222",
+   "socTitle": "Physicians, Pathologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1223",
+   "socTitle": "Psychiatrists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1224",
+   "socTitle": "Radiologists"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1229",
+   "socTitle": "Physicians, All Other"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1241",
+   "socTitle": "Ophthalmologists, Except Pediatric"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1242",
+   "socTitle": "Orthopedic Surgeons, Except Pediatric"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1243",
+   "socTitle": "Pediatric Surgeons"
+  },
+  {
+   "cipCode": "51.12",
+   "socCode": "29-1249",
+   "socTitle": "Surgeons, All Other"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "19-3033",
+   "socTitle": "Clinical and Counseling Psychologists"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1011",
+   "socTitle": "Substance Abuse and Behavioral Disorder Counselors"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1013",
+   "socTitle": "Marriage and Family Therapists"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1014",
+   "socTitle": "Mental Health Counselors"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1019",
+   "socTitle": "Counselors, All Other"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1021",
+   "socTitle": "Child, Family, and School Social Workers"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1022",
+   "socTitle": "Healthcare Social Workers"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1023",
+   "socTitle": "Mental Health and Substance Abuse Social Workers"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1029",
+   "socTitle": "Social Workers, All Other"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1091",
+   "socTitle": "Health Education Specialists"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-1094",
+   "socTitle": "Community Health Workers"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-2011",
+   "socTitle": "Clergy"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "21-2021",
+   "socTitle": "Directors, Religious Activities and Education"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "29-2053",
+   "socTitle": "Psychiatric Technicians"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "29-9092",
+   "socTitle": "Genetic Counselors"
+  },
+  {
+   "cipCode": "51.15",
+   "socCode": "31-1133",
+   "socTitle": "Psychiatric Aides"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "11-2021",
+   "socTitle": "Marketing Managers"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "11-2022",
+   "socTitle": "Sales Managers"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "11-3051",
+   "socTitle": "Industrial Production Managers"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "11-9111",
+   "socTitle": "Medical and Health Services Managers"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "19-1021",
+   "socTitle": "Biochemists and Biophysicists"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "19-2031",
+   "socTitle": "Chemists"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "19-3011",
+   "socTitle": "Economists"
+  },
+  {
+   "cipCode": "51.20",
+   "socCode": "29-1051",
+   "socTitle": "Pharmacists"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "11-9111",
+   "socTitle": "Medical and Health Services Managers"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "13-1041",
+   "socTitle": "Compliance Officers"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "19-1041",
+   "socTitle": "Epidemiologists"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "19-1042",
+   "socTitle": "Medical Scientists, Except Epidemiologists"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "19-2012",
+   "socTitle": "Physicists"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "19-2041",
+   "socTitle": "Environmental Scientists and Specialists, Including Health"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "19-5011",
+   "socTitle": "Occupational Health and Safety Specialists"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "19-5012",
+   "socTitle": "Occupational Health and Safety Technicians"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "21-1091",
+   "socTitle": "Health Education Specialists"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "21-1094",
+   "socTitle": "Community Health Workers"
+  },
+  {
+   "cipCode": "51.22",
+   "socCode": "29-9092",
+   "socTitle": "Genetic Counselors"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "17-2199",
+   "socTitle": "Engineers, All Other"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "19-1099",
+   "socTitle": "Life Scientists, All Other"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "21-1015",
+   "socTitle": "Rehabilitation Counselors"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "29-1122",
+   "socTitle": "Occupational Therapists"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "29-1123",
+   "socTitle": "Physical Therapists"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "29-1125",
+   "socTitle": "Recreational Therapists"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "29-1128",
+   "socTitle": "Exercise Physiologists"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "29-1129",
+   "socTitle": "Therapists, All Other"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "29-2091",
+   "socTitle": "Orthotists and Prosthetists"
+  },
+  {
+   "cipCode": "51.23",
+   "socCode": "51-9082",
+   "socTitle": "Medical Appliance Technicians"
+  },
+  {
+   "cipCode": "51.27",
+   "socCode": "15-1221",
+   "socTitle": "Computer and Information Research Scientists"
+  },
+  {
+   "cipCode": "51.27",
+   "socCode": "15-1299",
+   "socTitle": "Computer Occupations, All Other"
+  },
+  {
+   "cipCode": "51.27",
+   "socCode": "27-1013",
+   "socTitle": "Fine Artists, Including Painters, Sculptors, and Illustrators"
+  },
+  {
+   "cipCode": "51.27",
+   "socCode": "29-9021",
+   "socTitle": "Health Information Technologists and Medical Registrars"
+  },
+  {
+   "cipCode": "51.31",
+   "socCode": "29-1031",
+   "socTitle": "Dietitians and Nutritionists"
+  },
+  {
+   "cipCode": "51.31",
+   "socCode": "29-2051",
+   "socTitle": "Dietetic Technicians"
+  },
+  {
+   "cipCode": "51.38",
+   "socCode": "11-9111",
+   "socTitle": "Medical and Health Services Managers"
+  },
+  {
+   "cipCode": "51.38",
+   "socCode": "29-1141",
+   "socTitle": "Registered Nurses"
+  },
+  {
+   "cipCode": "51.38",
+   "socCode": "29-1151",
+   "socTitle": "Nurse Anesthetists"
+  },
+  {
+   "cipCode": "51.38",
+   "socCode": "29-1161",
+   "socTitle": "Nurse Midwives"
+  },
+  {
+   "cipCode": "51.38",
+   "socCode": "29-1171",
+   "socTitle": "Nurse Practitioners"
+  },
+  {
+   "cipCode": "51.39",
+   "socCode": "29-2061",
+   "socTitle": "Licensed Practical and Licensed Vocational Nurses"
+  },
+  {
+   "cipCode": "51.39",
+   "socCode": "31-1131",
+   "socTitle": "Nursing Assistants"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-2022",
+   "socTitle": "Sales Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-3012",
+   "socTitle": "Administrative Services Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-3013",
+   "socTitle": "Facilities Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-3051",
+   "socTitle": "Industrial Production Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-3071",
+   "socTitle": "Transportation, Storage, and Distribution Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-9021",
+   "socTitle": "Construction Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-9072",
+   "socTitle": "Entertainment and Recreation Managers, Except Gambling"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-9151",
+   "socTitle": "Social and Community Service Managers"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-9179",
+   "socTitle": "Personal Service Managers, All Other"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "13-1051",
+   "socTitle": "Cost Estimators"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "13-1082",
+   "socTitle": "Project Management Specialists"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "13-1111",
+   "socTitle": "Management Analysts"
+  },
+  {
+   "cipCode": "52.01",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-2022",
+   "socTitle": "Sales Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-2033",
+   "socTitle": "Fundraising Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3012",
+   "socTitle": "Administrative Services Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3013",
+   "socTitle": "Facilities Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3031",
+   "socTitle": "Financial Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3051",
+   "socTitle": "Industrial Production Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3061",
+   "socTitle": "Purchasing Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3071",
+   "socTitle": "Transportation, Storage, and Distribution Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3111",
+   "socTitle": "Compensation and Benefits Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3121",
+   "socTitle": "Human Resources Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-3131",
+   "socTitle": "Training and Development Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9021",
+   "socTitle": "Construction Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9033",
+   "socTitle": "Education Administrators, Postsecondary"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9039",
+   "socTitle": "Education Administrators, All Other"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9041",
+   "socTitle": "Architectural and Engineering Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9072",
+   "socTitle": "Entertainment and Recreation Managers, Except Gambling"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9111",
+   "socTitle": "Medical and Health Services Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9151",
+   "socTitle": "Social and Community Service Managers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9179",
+   "socTitle": "Personal Service Managers, All Other"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1011",
+   "socTitle": "Agents and Business Managers of Artists, Performers, and Athletes"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1023",
+   "socTitle": "Purchasing Agents, Except Wholesale, Retail, and Farm Products"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1051",
+   "socTitle": "Cost Estimators"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1071",
+   "socTitle": "Human Resources Specialists"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1081",
+   "socTitle": "Logisticians"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1082",
+   "socTitle": "Project Management Specialists"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1111",
+   "socTitle": "Management Analysts"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1131",
+   "socTitle": "Fundraisers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1141",
+   "socTitle": "Compensation, Benefits, and Job Analysis Specialists"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-1199",
+   "socTitle": "Business Operations Specialists, All Other"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-2053",
+   "socTitle": "Insurance Underwriters"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-2054",
+   "socTitle": "Financial Risk Specialists"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "13-2099",
+   "socTitle": "Financial Specialists, All Other"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "15-2011",
+   "socTitle": "Actuaries"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "41-1011",
+   "socTitle": "First-Line Supervisors of Retail Sales Workers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "43-1011",
+   "socTitle": "First-Line Supervisors of Office and Administrative Support Workers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "49-1011",
+   "socTitle": "First-Line Supervisors of Mechanics, Installers, and Repairers"
+  },
+  {
+   "cipCode": "52.02",
+   "socCode": "51-1011",
+   "socTitle": "First-Line Supervisors of Production and Operating Workers"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "11-3031",
+   "socTitle": "Financial Managers"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2011",
+   "socTitle": "Accountants and Auditors"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2031",
+   "socTitle": "Budget Analysts"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2041",
+   "socTitle": "Credit Analysts"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2051",
+   "socTitle": "Financial and Investment Analysts"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2054",
+   "socTitle": "Financial Risk Specialists"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2061",
+   "socTitle": "Financial Examiners"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2081",
+   "socTitle": "Tax Examiners and Collectors, and Revenue Agents"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "13-2082",
+   "socTitle": "Tax Preparers"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "43-3031",
+   "socTitle": "Bookkeeping, Accounting, and Auditing Clerks"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "43-3051",
+   "socTitle": "Payroll and Timekeeping Clerks"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "43-4011",
+   "socTitle": "Brokerage Clerks"
+  },
+  {
+   "cipCode": "52.03",
+   "socCode": "43-9111",
+   "socTitle": "Statistical Assistants"
+  },
+  {
+   "cipCode": "52.07",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "52.07",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "52.07",
+   "socCode": "11-9179",
+   "socTitle": "Personal Service Managers, All Other"
+  },
+  {
+   "cipCode": "52.07",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "11-3031",
+   "socTitle": "Financial Managers"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-1141",
+   "socTitle": "Compensation, Benefits, and Job Analysis Specialists"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2031",
+   "socTitle": "Budget Analysts"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2041",
+   "socTitle": "Credit Analysts"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2051",
+   "socTitle": "Financial and Investment Analysts"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2052",
+   "socTitle": "Personal Financial Advisors"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2053",
+   "socTitle": "Insurance Underwriters"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2054",
+   "socTitle": "Financial Risk Specialists"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2071",
+   "socTitle": "Credit Counselors"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2072",
+   "socTitle": "Loan Officers"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "13-2099",
+   "socTitle": "Financial Specialists, All Other"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "41-3031",
+   "socTitle": "Securities, Commodities, and Financial Services Sales Agents"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "43-3011",
+   "socTitle": "Bill and Account Collectors"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "43-3071",
+   "socTitle": "Tellers"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "43-4041",
+   "socTitle": "Credit Authorizers, Checkers, and Clerks"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "43-4131",
+   "socTitle": "Loan Interviewers and Clerks"
+  },
+  {
+   "cipCode": "52.08",
+   "socCode": "43-4141",
+   "socTitle": "New Accounts Clerks"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-3013",
+   "socTitle": "Facilities Managers"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-9051",
+   "socTitle": "Food Service Managers"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-9071",
+   "socTitle": "Gambling Managers"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-9072",
+   "socTitle": "Entertainment and Recreation Managers, Except Gambling"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-9081",
+   "socTitle": "Lodging Managers"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-9179",
+   "socTitle": "Personal Service Managers, All Other"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "13-1121",
+   "socTitle": "Meeting, Convention, and Event Planners"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "13-1199",
+   "socTitle": "Business Operations Specialists, All Other"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "39-1013",
+   "socTitle": "First-Line Supervisors of Gambling Services Workers"
+  },
+  {
+   "cipCode": "52.09",
+   "socCode": "39-7012",
+   "socTitle": "Travel Guides"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "11-3111",
+   "socTitle": "Compensation and Benefits Managers"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "11-3121",
+   "socTitle": "Human Resources Managers"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "11-3131",
+   "socTitle": "Training and Development Managers"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "13-1041",
+   "socTitle": "Compliance Officers"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "13-1071",
+   "socTitle": "Human Resources Specialists"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "13-1075",
+   "socTitle": "Labor Relations Specialists"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "13-1141",
+   "socTitle": "Compensation, Benefits, and Job Analysis Specialists"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "13-1151",
+   "socTitle": "Training and Development Specialists"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "21-1012",
+   "socTitle": "Educational, Guidance, and Career Counselors and Advisors"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "21-1019",
+   "socTitle": "Counselors, All Other"
+  },
+  {
+   "cipCode": "52.10",
+   "socCode": "43-4161",
+   "socTitle": "Human Resources Assistants, Except Payroll and Timekeeping"
+  },
+  {
+   "cipCode": "52.11",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "52.11",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "52.11",
+   "socCode": "13-1199",
+   "socTitle": "Business Operations Specialists, All Other"
+  },
+  {
+   "cipCode": "52.12",
+   "socCode": "11-3021",
+   "socTitle": "Computer and Information Systems Managers"
+  },
+  {
+   "cipCode": "52.12",
+   "socCode": "15-1243",
+   "socTitle": "Database Architects"
+  },
+  {
+   "cipCode": "52.12",
+   "socCode": "15-1251",
+   "socTitle": "Computer Programmers"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "11-1011",
+   "socTitle": "Chief Executives"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "11-1021",
+   "socTitle": "General and Operations Managers"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "13-1111",
+   "socTitle": "Management Analysts"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "13-2053",
+   "socTitle": "Insurance Underwriters"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "13-2054",
+   "socTitle": "Financial Risk Specialists"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "15-2011",
+   "socTitle": "Actuaries"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "15-2031",
+   "socTitle": "Operations Research Analysts"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "15-2041",
+   "socTitle": "Statisticians"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "15-2051",
+   "socTitle": "Data Scientists"
+  },
+  {
+   "cipCode": "52.13",
+   "socCode": "19-3022",
+   "socTitle": "Survey Researchers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "11-2011",
+   "socTitle": "Advertising and Promotions Managers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "11-2021",
+   "socTitle": "Marketing Managers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "11-2022",
+   "socTitle": "Sales Managers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "11-2033",
+   "socTitle": "Fundraising Managers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "13-1131",
+   "socTitle": "Fundraisers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "13-1161",
+   "socTitle": "Market Research Analysts and Marketing Specialists"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "15-1255",
+   "socTitle": "Web and Digital Interface Designers"
+  },
+  {
+   "cipCode": "52.14",
+   "socCode": "19-3022",
+   "socTitle": "Survey Researchers"
+  },
+  {
+   "cipCode": "52.15",
+   "socCode": "11-9141",
+   "socTitle": "Property, Real Estate, and Community Association Managers"
+  },
+  {
+   "cipCode": "52.15",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "52.15",
+   "socCode": "13-2023",
+   "socTitle": "Appraisers and Assessors of Real Estate"
+  },
+  {
+   "cipCode": "52.15",
+   "socCode": "41-9021",
+   "socTitle": "Real Estate Brokers"
+  },
+  {
+   "cipCode": "52.15",
+   "socCode": "41-9022",
+   "socTitle": "Real Estate Sales Agents"
+  },
+  {
+   "cipCode": "52.16",
+   "socCode": "13-2011",
+   "socTitle": "Accountants and Auditors"
+  },
+  {
+   "cipCode": "52.16",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "52.16",
+   "socCode": "13-2061",
+   "socTitle": "Financial Examiners"
+  },
+  {
+   "cipCode": "52.16",
+   "socCode": "13-2081",
+   "socTitle": "Tax Examiners and Collectors, and Revenue Agents"
+  },
+  {
+   "cipCode": "52.16",
+   "socCode": "13-2082",
+   "socTitle": "Tax Preparers"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "11-3111",
+   "socTitle": "Compensation and Benefits Managers"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "13-1031",
+   "socTitle": "Claims Adjusters, Examiners, and Investigators"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "13-1032",
+   "socTitle": "Insurance Appraisers, Auto Damage"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "13-1141",
+   "socTitle": "Compensation, Benefits, and Job Analysis Specialists"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "13-2022",
+   "socTitle": "Appraisers of Personal and Business Property"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "13-2053",
+   "socTitle": "Insurance Underwriters"
+  },
+  {
+   "cipCode": "52.17",
+   "socCode": "41-3021",
+   "socTitle": "Insurance Sales Agents"
+  },
+  {
+   "cipCode": "52.20",
+   "socCode": "11-9021",
+   "socTitle": "Construction Managers"
+  },
+  {
+   "cipCode": "52.20",
+   "socCode": "13-1082",
+   "socTitle": "Project Management Specialists"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "11-9121",
+   "socTitle": "Natural Sciences Managers"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "11-9199",
+   "socTitle": "Managers, All Other"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "19-3093",
+   "socTitle": "Historians"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "25-2031",
+   "socTitle": "Secondary School Teachers, Except Special and Career/Technical Education"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "25-4011",
+   "socTitle": "Archivists"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "25-4012",
+   "socTitle": "Curators"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "25-4013",
+   "socTitle": "Museum Technicians and Conservators"
+  },
+  {
+   "cipCode": "54.01",
+   "socCode": "39-7011",
+   "socTitle": "Tour Guides and Escorts"
+  }
+ ]
+}

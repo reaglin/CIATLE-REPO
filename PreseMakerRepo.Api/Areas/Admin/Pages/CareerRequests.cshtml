@@ -1,0 +1,162 @@
+@page "/admin/career-requests"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.CareerRequestsModel
+@{ ViewData["Title"] = "Career Path Requests"; }
+
+<h1 class="h4 mb-3">Career Path Requests</h1>
+
+<p class="text-muted">
+    Visitor requests for career paths, ranked by demand. Visitors press <strong>Request</strong> beside an
+    occupation on a Career Paths field-of-study page. The Tools session reads the open ones over
+    <code>GET /api/v1/career-requests</code>. Mark an occupation <em>Queued</em> while its path is being written.
+    Requests close automatically when a published path covers the occupation, either as its main occupation
+    or as one of its <code>additionalSocCodes</code>. Visitors see <em>Open</em> as <strong>Waiting</strong> and
+    <em>Queued</em> as <strong>In progress</strong> on the <a href="/queue/careers">public queue</a>.
+</p>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert @(Model.MessageOk ? "alert-success" : "alert-warning") py-2" role="status">@Model.Message</div>
+}
+
+<ul class="nav nav-pills mb-3">
+    @foreach (var s in new[] { "open", "queued", "published", "declined", "all" })
+    {
+        <li class="nav-item">
+            <a class="nav-link @(string.Equals(Model.Status, s, StringComparison.OrdinalIgnoreCase) ? "active" : "")"
+               asp-page="/CareerRequests" asp-route-status="@s">@char.ToUpper(s[0])@s[1..]</a>
+        </li>
+    }
+</ul>
+
+@if (Model.Items.Count == 0)
+{
+    <div class="alert alert-light border">No @(Model.Status == "all" ? "" : Model.Status) requests.</div>
+}
+else
+{
+    <p class="small text-muted">@Model.Items.Count occupation(s) · @Model.TotalRequests request(s)</p>
+    <div class="table-responsive">
+        <table class="table table-sm table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>Requests</th>
+                    <th>Occupation</th>
+                    <th>Asked from (CIP)</th>
+                    <th>Reasons given</th>
+                    <th>First / last</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var i in Model.Items)
+            {
+                <tr>
+                    <td><span class="badge bg-primary fs-6">@i.RequestCount</span></td>
+                    <td>
+                        <strong>@i.SocTitle</strong>
+                        <div class="small text-muted">SOC @i.SocCode</div>
+                        @if (i.PathSlug is not null) { <a class="badge bg-success text-decoration-none" href="/careers/@i.PathSlug">path published</a> }
+                    </td>
+                    <td class="small">
+                        @foreach (var c in i.CipCodes)
+                        {
+                            <div class="text-nowrap">
+                                <a href="/careers/area/@c">@c</a>
+                                <form method="post" asp-page-handler="Hidden" class="d-inline">
+                                    <input type="hidden" name="cip" value="@c" />
+                                    <input type="hidden" name="soc" value="@i.SocCode" />
+                                    <input type="hidden" name="hide" value="true" />
+                                    <input type="hidden" name="Status" value="@Model.Status" />
+                                    <button type="submit" class="btn btn-link btn-sm p-0 ms-1 align-baseline"
+                                            title="Stop listing @i.SocTitle under @c">hide here</button>
+                                </form>
+                            </div>
+                        }
+                    </td>
+                    <td class="small">@string.Join(" · ", i.Reasons)</td>
+                    <td class="small text-nowrap">@i.FirstRequestedUtc.ToString("yyyy-MM-dd")<br />@i.LastRequestedUtc.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        @{
+                            var cls = i.Status switch { "Published" => "bg-success", "Queued" => "bg-info text-dark", "Declined" => "bg-secondary", _ => "bg-warning text-dark" };
+                        }
+                        <span class="badge @cls">@i.Status</span>
+                        @if (!string.IsNullOrWhiteSpace(i.AdminNotes)) { <div class="small text-muted">@i.AdminNotes</div> }
+                    </td>
+                    <td class="text-nowrap">
+                        <form method="post" asp-page-handler="SetStatus" class="d-inline">
+                            <input type="hidden" name="soc" value="@i.SocCode" />
+                            <input type="hidden" name="Status" value="@Model.Status" />
+                            <div class="input-group input-group-sm" style="width: 320px;">
+                                <select name="newStatus" class="form-select form-select-sm" aria-label="New status for @i.SocTitle">
+                                    <option value="Queued">Queued (being written)</option>
+                                    <option value="Declined">Declined</option>
+                                    <option value="Open">Open</option>
+                                    <option value="Published">Published (normally automatic)</option>
+                                </select>
+                                <input name="notes" class="form-control form-control-sm" placeholder="note (optional)" maxlength="1000"
+                                       aria-label="Note for @i.SocTitle" />
+                                <button type="submit" class="btn btn-outline-primary btn-sm">Set</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+<h2 class="h5 mt-5">Hide an occupation from a field of study</h2>
+<p class="text-muted small" style="max-width: 760px;">
+    The list of requestable careers comes from the federal CIP–SOC crosswalk, which links some programmes to
+    occupations that read oddly on a student page. Hiding one removes it from that field's page and stops new
+    requests for it there. It does not delete anything, and a re-seed keeps it hidden. ⚠ Requests already made
+    for it are not changed: decline them above if the career should not be written. A requested career can be
+    hidden with <em>hide here</em> in its row; for any other, type the codes shown on the area page, for example
+    CIP <code>04.03</code> and SOC <code>11-9041</code>.
+</p>
+<form method="post" asp-page-handler="Hidden" class="row g-2 align-items-end mb-3" style="max-width: 560px;">
+    <input type="hidden" name="hide" value="true" />
+    <input type="hidden" name="Status" value="@Model.Status" />
+    <div class="col-4">
+        <label for="hide-cip" class="form-label small mb-1">CIP group</label>
+        <input id="hide-cip" name="cip" class="form-control form-control-sm" placeholder="04.03" required pattern="\d{2}\.\d{2}" />
+    </div>
+    <div class="col-4">
+        <label for="hide-soc" class="form-label small mb-1">SOC code</label>
+        <input id="hide-soc" name="soc" class="form-control form-control-sm" placeholder="11-9041" required pattern="\d{2}-\d{4}" />
+    </div>
+    <div class="col-4">
+        <button type="submit" class="btn btn-outline-secondary btn-sm w-100">Hide</button>
+    </div>
+</form>
+
+@if (Model.Hidden.Any())
+{
+    <table class="table table-sm align-middle" style="max-width: 760px;">
+        <thead><tr><th>CIP</th><th>Occupation</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var h in Model.Hidden)
+        {
+            <tr>
+                <td><a href="/careers/area/@h.CipCode">@h.CipCode</a></td>
+                <td>@h.SocTitle <span class="small text-muted">(@h.SocCode)</span></td>
+                <td class="text-end">
+                    <form method="post" asp-page-handler="Hidden" class="d-inline">
+                        <input type="hidden" name="cip" value="@h.CipCode" />
+                        <input type="hidden" name="soc" value="@h.SocCode" />
+                        <input type="hidden" name="hide" value="false" />
+                        <input type="hidden" name="Status" value="@Model.Status" />
+                        <button type="submit" class="btn btn-sm btn-outline-primary">Show again</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="small text-muted">No occupations are hidden.</p>
+}

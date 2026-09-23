@@ -9,17 +9,21 @@ namespace PreseMakerRepo.Api.Controllers;
 /// The public queues — readable by anyone, including the AI sessions that work them.
 ///   GET /api/v1/queue/guides?status=waiting|published|declined|all   [Public]
 ///   GET /api/v1/queue/resources?status=pending|decided|all           [Public]
+///   GET /api/v1/queue/careers?status=waiting|published|declined|all  [Public]
 /// </summary>
 [ApiController]
 public class QueueController : ControllerBase
 {
     private readonly GuideRequestService _guideRequests;
     private readonly ResourceService _resources;
+    private readonly CareerRequestService _careerRequests;
 
-    public QueueController(GuideRequestService guideRequests, ResourceService resources)
+    public QueueController(GuideRequestService guideRequests, ResourceService resources,
+        CareerRequestService careerRequests)
     {
         _guideRequests = guideRequests;
         _resources = resources;
+        _careerRequests = careerRequests;
     }
 
     [HttpGet("api/v1/queue/resources")]
@@ -40,5 +44,15 @@ public class QueueController : ControllerBase
                 "status must be one of: waiting, published, declined, all."));
 
         return Ok(ApiResponse<PublicGuideQueueResponse>.Ok(await _guideRequests.PublicQueueAsync(filter)));
+    }
+
+    [HttpGet("api/v1/queue/careers")]
+    public async Task<IActionResult> Careers([FromQuery] string? status = null)
+    {
+        if (!CareerRequestService.TryParseQueueFilter(status, out var filter))
+            return BadRequest(ApiResponse<object?>.Fail(ErrorCodes.ValidationError,
+                "status must be one of: waiting, published, declined, all."));
+
+        return Ok(ApiResponse<PublicCareerQueueResponse>.Ok(await _careerRequests.PublicQueueAsync(filter)));
     }
 }

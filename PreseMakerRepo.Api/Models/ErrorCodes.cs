@@ -43,4 +43,9 @@ public static class ErrorCodes
     public const string ProgramNotFound = "PROGRAM_NOT_FOUND";
     /// <summary>A programme cannot be deleted while a career path names it.</summary>
     public const string ProgramInUse = "PROGRAM_IN_USE";
+    /// <summary>A career path already covers the requested occupation.</summary>
+    public const string CareerPathExists = "CAREER_PATH_EXISTS";
+    /// <summary>The occupation is not listed under that CIP group (or is hidden).</summary>
+    public const string OccupationNotFound = "OCCUPATION_NOT_FOUND";
+    public const string CareerRequestNotFound = "CAREER_REQUEST_NOT_FOUND";
 }

@@ -53,6 +53,14 @@ public class CareerPath
     public string? SocCode { get; set; }
 
     /// <summary>
+    /// Further SOC codes this path covers as SECTIONS of the same page, comma-separated, e.g.
+    /// Machinist covering "51-9161" (CNC operator). ⚠ This is what tells the request list that an
+    /// occupation is already written about: without it, every occupation folded into a larger path
+    /// (Ron, 2026-09-21: "lump the family") would still be offered as requestable.
+    /// </summary>
+    public string? AdditionalSocCodes { get; set; }
+
+    /// <summary>
     /// ⚠⚠ What the law or an accreditor requires beyond coursework — licensure, a programme
     /// approved by a named accreditor, an examination. Rendered prominently, because guide
     /// work repeatedly found that <b>accreditation outranks credit</b>: a student can hold

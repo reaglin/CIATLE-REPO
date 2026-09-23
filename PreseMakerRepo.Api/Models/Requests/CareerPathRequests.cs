@@ -17,7 +17,12 @@ public record UpsertCareerPathRequest(
     List<CareerPathCipInput>? CipCodes,
     List<CareerPathProgramInput>? Programs,
     List<CareerPathCourseInput>? Courses,
-    List<CareerPathSourceInput>? Sources);
+    List<CareerPathSourceInput>? Sources,
+    /// <summary>
+    /// Further SOC codes the path covers as SECTIONS, e.g. Machinist covering 51-9161 (CNC operator).
+    /// Optional; it tells the career-request list that those occupations are already written about.
+    /// </summary>
+    List<string>? AdditionalSocCodes = null);
 
 /// <summary>
 /// A further CIP group the path is filed under, beyond <c>CipCode</c>. ⚠ <see cref="Note"/>

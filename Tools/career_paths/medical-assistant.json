@@ -2,6 +2,9 @@
   "name": "Medical Assistant and Pharmacy Technician",
   "cipCode": "51.08",
   "socCode": "31-9092",
+  "additionalSocCodes": [
+    "29-2052"
+  ],
   "isPublished": true,
   "sortOrder": 490,
   "description": "Two of the largest short-certificate routes into health care in Florida, paying within $60 a year of each other and taught at the same technical colleges — and the state treats them completely differently. ⚠⚠⚠ Florida writes down in statute exactly what a medical assistant may do, including venipuncture and administering medication, and requires NO licence, certificate or training to do it. It requires a pharmacy technician, working behind a counter, to register with the Board of Pharmacy and complete a board-approved programme. ⚠⚠ And the medical assisting programme has FOUR labelled exit points you can leave on and be hired at — the pharmacy technician programme has none.",

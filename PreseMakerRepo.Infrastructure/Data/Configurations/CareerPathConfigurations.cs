@@ -43,6 +43,7 @@ public class CareerPathConfiguration : IEntityTypeConfiguration<CareerPath>
         b.Property(p => p.CipCode).IsRequired().HasMaxLength(10);
         b.Property(p => p.Description).IsRequired().HasMaxLength(2000);
         b.Property(p => p.SocCode).HasMaxLength(20);
+        b.Property(p => p.AdditionalSocCodes).HasMaxLength(400);
         b.Property(p => p.CredentialNote).HasMaxLength(2000);
 
         // A path is filed under a CIP node and cannot outlive it; restricting the delete

@@ -151,6 +151,10 @@ namespace PreseMakerRepo.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("AdditionalSocCodes")
+                        .HasMaxLength(400)
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("BodyHtml")
                         .HasColumnType("TEXT");
 
@@ -337,6 +341,64 @@ namespace PreseMakerRepo.Infrastructure.Migrations
                     b.ToTable("CareerPathSources", (string)null);
                 });
 
+            modelBuilder.Entity("PreseMakerRepo.Core.Models.CareerRequest", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AdminNotes")
+                        .HasMaxLength(1000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Channel")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CipCode")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Reason")
+                        .HasMaxLength(1000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("RequestedUtc")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RequesterIpHash")
+                        .HasMaxLength(64)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RequesterUserId")
+                        .HasMaxLength(450)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SocCode")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SocTitle")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("StatusUtc")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RequestedUtc");
+
+                    b.HasIndex("SocCode", "Status");
+
+                    b.ToTable("CareerRequests", (string)null);
+                });
+
             modelBuilder.Entity("PreseMakerRepo.Core.Models.CipNode", b =>
                 {
                     b.Property<string>("Code")
@@ -386,6 +448,34 @@ namespace PreseMakerRepo.Infrastructure.Migrations
                     b.HasIndex("Level", "Code");
 
                     b.ToTable("CipNodes", (string)null);
+                });
+
+            modelBuilder.Entity("PreseMakerRepo.Core.Models.CipOccupation", b =>
+                {
+                    b.Property<string>("CipCode")
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SocCode")
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsHidden")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SocTitle")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("UpdatedUtc")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CipCode", "SocCode");
+
+                    b.HasIndex("SocCode");
+
+                    b.ToTable("CipOccupations", (string)null);
                 });
 
             modelBuilder.Entity("PreseMakerRepo.Core.Models.ContentFlag", b =>
@@ -1432,6 +1522,17 @@ namespace PreseMakerRepo.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Parent");
+                });
+
+            modelBuilder.Entity("PreseMakerRepo.Core.Models.CipOccupation", b =>
+                {
+                    b.HasOne("PreseMakerRepo.Core.Models.CipNode", "Cip")
+                        .WithMany()
+                        .HasForeignKey("CipCode")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Cip");
                 });
 
             modelBuilder.Entity("PreseMakerRepo.Core.Models.ContentFlag", b =>

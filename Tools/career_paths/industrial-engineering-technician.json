@@ -2,6 +2,9 @@
   "name": "Industrial Engineering Technician",
   "cipCode": "15.06",
   "socCode": "17-3026",
+  "additionalSocCodes": [
+    "51-9061"
+  ],
   "isPublished": true,
   "sortOrder": 210,
   "description": "Industrial engineering technicians make production work better — process and layout, quality data, lean methods and scheduling — beside industrial engineers rather than on the machines. ⚠ Median $66,120, and the highest bachelor's expectation of any technician occupation here: 53%. ⚠ It also covers quality-control inspection — a far larger occupation that Florida barely teaches as a programme.",
