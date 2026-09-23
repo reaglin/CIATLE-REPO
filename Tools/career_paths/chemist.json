@@ -1,0 +1,179 @@
+{
+  "slug": "chemist",
+  "name": "Chemist and Chemical Technician",
+  "cipCode": "40.05",
+  "socCode": "19-2031",
+  "isPublished": true,
+  "sortOrder": 139,
+  "description": "⚠⚠⚠ The question this page answers is whether you need a doctorate, and the data is unusually clear: 30% of working chemists report one as required — the highest doctoral share of any occupation on this site — while 56% report a bachelor's. They are two different careers and the choice has to be made in the second undergraduate year. ⚠⚠ Also here: the chemical TECHNICIAN route has 7,600 annual openings on an associate degree, more than chemists and materials scientists combined.",
+  "credentialNote": "⚠⚠ NO LICENCE AND NO CONVENTIONAL ACCREDITOR — what chemistry has instead is the American Chemical Society, and the distinction catches people out. ⚠⚠⚠ THE ACS APPROVES THE DEPARTMENT; THE STUDENT EARNS THE CERTIFIED DEGREE, and you can graduate from an approved department without one. A certified degree requires foundation coursework in all five sub-disciplines — analytical, biochemistry, inorganic, organic and physical — plus four in-depth courses, two semesters each of mathematics and physics, and AT LEAST 400 HOURS OF LABORATORY beyond general chemistry. ⚠ That 400-hour figure is the closest thing to a credential in this field and it is checkable, so ask the department in your FIRST year whether your intended track delivers it. ⚠⚠ For the doctoral route the real credential is undergraduate research plus letters, and both take about two years to build — which is why the decision belongs in year two. ⚠ O*NET puts chemists in Job Zone Four: a four-year degree plus several years of experience. The associate-level chemical technician role is the genuine early entry point and is not a lesser version of the work.",
+  "cipCodes": [
+    {
+      "cipCode": "40.06",
+      "note": "⚠ Geological and Earth Sciences — named because analytical chemistry is the shared skill: Florida's environmental and groundwater laboratories run on the same instruments, and geochemistry is a real destination for a chemistry bachelor's. ⚠⚠ It also leads to the Professional Geologist licence under chapter 492, F.S., one of the few checkable credentials near this field."
+    },
+    {
+      "cipCode": "14.07",
+      "note": "⚠ Chemical Engineering — named because students confuse the two and the difference is structural: a chemist studies what substances do, an engineer designs the plant that makes them. ⚠⚠ Engineering reaches its ceiling through the PE licence; chemistry reaches its ceiling through the doctorate."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "chemistry",
+      "note": "The programme — 10 Florida institutions, and the note there carries the level mix, the Florida State research-department shape, and what the ACS-certified degree actually requires."
+    },
+    {
+      "slug": "chemical-engineering",
+      "note": "⚠ A different decision rather than a harder version of the same one: heavier mathematics, the FE exam and PE licensure, and a higher bachelor's-level ceiling. Four Florida institutions award it.",
+      "isRoute": false
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠⚠ Where a large share of Florida's bachelor's-level chemistry work actually is — environmental and water-quality laboratories, which run on analytical chemistry. ⚠ Worth knowing that those laboratories pay on the environmental scale, which is $21,390 below national at the median in Florida.",
+      "isRoute": false
+    },
+    {
+      "slug": "medicine",
+      "note": "⚠⚠ Named because the organic and biochemistry sequence is a medical, dental and pharmacy prerequisite, and a substantial share of chemistry majors are on that route. ⚠ Declare it early: the course ORDER differs from a chemist's."
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠⚠ The licensed version of laboratory work, and chemistry graduates find it late. Florida licenses clinical laboratory personnel, so a chemistry degree alone does not open hospital bench work.",
+      "isRoute": false
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "CHM2045",
+      "sortOrder": 1,
+      "reason": "General Chemistry I — the gateway to everything. Sixteen public carriers including UF, USF, UNF, UWF, FAU, Florida Polytechnic and New College. ⚠⚠⚠ Register by NUMBER: Florida carries this course under two identifiers that share no institution at all.",
+      "variantNote": "⚠⚠⚠ CHM1045 is the SAME course at 15 other institutions — FAMU, FGCU, FIU and Florida State among the universities, plus 11 state colleges. THIRTY-ONE carriers, ZERO overlap, and the split does NOT follow the sector line. Both are lower division so no baccalaureate credit is at risk, but SCNS equivalency does not cross numbers and an automated transfer match finds nothing."
+    },
+    {
+      "courseId": "CHM1045",
+      "sortOrder": 2,
+      "reason": "The same General Chemistry I under the identifier FAMU, FGCU, FIU, Florida State and eleven state colleges use. ⚠ Listed separately because a student will only ever find one of the two, and because this is the most consequential numbering split in the Florida catalogue — it gates chemistry, biology, pre-medicine, pre-pharmacy, nursing, engineering and environmental science simultaneously.",
+      "variantNote": "⚠ Its laboratory is CHM1045L, and the second semester is CHM1046. The whole family splits the same way; only Santa Fe carries both forms of anything."
+    },
+    {
+      "courseId": "CHM2045L",
+      "sortOrder": 3,
+      "reason": "The General Chemistry I laboratory — sixteen carriers, matching the CHM2045 lecture exactly. ⚠ Enrol in BOTH halves: they are usually corequisites and the registration is the one thing a student has to get right.",
+      "variantNote": "⚠ CHM1045L is the twin at the fifteen CHM1045 institutions. Credits run 1 at most carriers and 2 at a few."
+    },
+    {
+      "courseId": "CHM2046",
+      "sortOrder": 4,
+      "reason": "General Chemistry II — seventeen carriers. Equilibrium, thermodynamics, kinetics and electrochemistry, and the course that decides whether organic chemistry will be survivable.",
+      "variantNote": "⚠ CHM1046 is the twin at fifteen institutions. Santa Fe is the ONLY institution in Florida carrying both forms of this course."
+    },
+    {
+      "courseId": "CHM2210",
+      "sortOrder": 5,
+      "reason": "Organic Chemistry I — TWENTY-NINE public carriers, the most widely carried upper-level chemistry course in Florida and, unlike general chemistry, settled on ONE number. ⚠⚠ It is the gate to the whole discipline and to medicine, dentistry and pharmacy, and it is where chemistry majors are made and unmade. Reckon on eight to twelve hours a week.",
+      "variantNote": "⚠ An integrated CHM2210C combining lecture and laboratory runs at seven more institutions — Daytona State, FSCJ, Lake-Sumter, Northwest Florida, Polk State, Seminole State and Valencia — at 4 or 5 credits. Equivalent packaging, not a different course."
+    },
+    {
+      "courseId": "CHM2210L",
+      "sortOrder": 6,
+      "reason": "Organic Chemistry I Laboratory — twenty-six carriers. ⚠⚠ Where technique is actually learned: separation, purification, recrystallisation, spectroscopy. ⚠ It also counts toward the 400 hours of laboratory beyond general chemistry that an ACS-certified degree requires, so keep a record from the start."
+    },
+    {
+      "courseId": "CHM2211",
+      "sortOrder": 7,
+      "reason": "Organic Chemistry II — twenty-nine carriers, matching the first semester exactly. Synthesis, mechanism and spectroscopic identification. ⚠ This is the semester whose content medical and pharmacy admissions tests draw on most heavily."
+    },
+    {
+      "courseId": "CHM3120",
+      "sortOrder": 8,
+      "reason": "Analytical Chemistry — eleven carriers: Daytona State, FAMU, FAU, FGCU, FIU, Florida Polytechnic, Florida State, UCF, UF, UNF and UWF. ⚠⚠⚠ THE MOST EMPLOYABLE COURSE ON THIS PAGE for a bachelor's-level career. Quantitative method, calibration, error and quality control are what an environmental, clinical or manufacturing laboratory actually hires on."
+    },
+    {
+      "courseId": "CHM3120L",
+      "sortOrder": 9,
+      "reason": "The analytical chemistry laboratory — ten carriers. ⚠ Documented quantitative technique with real error analysis. ⚠⚠ In a job interview this is the work you will be asked to describe, because it is the only undergraduate experience that resembles a production laboratory."
+    },
+    {
+      "courseId": "CHM4130",
+      "sortOrder": 10,
+      "reason": "Instrumental Analysis — FAMU, FGCU, FIU, Florida State, UCF, UF, UNF and UWF. Chromatography, mass spectrometry and the spectroscopies. ⚠⚠ Named instruments on a CV are what gets a laboratory interview; 'chemistry degree' is not. Learn which instruments your department actually lets undergraduates run.",
+      "variantNote": "⚠ CHM4130L, the paired laboratory, runs at the same eight institutions. Take both."
+    },
+    {
+      "courseId": "CHM3610",
+      "sortOrder": 11,
+      "reason": "Inorganic Chemistry — FAMU, FGCU, FIU, Miami Dade, UF, UNF and USF. One of the five foundation areas an ACS-certified degree requires, and the one most easily left out of a track built around pre-medical requirements.",
+      "variantNote": "⚠ CHM4610 is an upper version of the same subject at other institutions. Check which your degree audit names."
+    },
+    {
+      "courseId": "CHM4410",
+      "sortOrder": 12,
+      "reason": "Physical Chemistry I — thermodynamics, quantum mechanics and kinetics from first principles. ⚠⚠ The hardest course in the major and the one that most reliably predicts whether a doctoral programme will admit you. ⚠ It assumes calculus and calculus-based physics, so sequence those first."
+    },
+    {
+      "courseId": "BCH4033",
+      "sortOrder": 13,
+      "reason": "Biochemistry I — FAMU, FGCU, UNF and USF. The fifth ACS foundation area, and the bridge from chemistry into the health professions and the pharmaceutical industry. ⚠ Also the single most useful chemistry course for anyone whose real destination is medicine or pharmacy.",
+      "variantNote": "⚠ BCH3033 General Biochemistry (Broward, FAU, FIU, UWF) and BCH4024 Molecular Biology and Biochemistry (six carriers) are parallel numbers for approximately this subject."
+    },
+    {
+      "courseId": "MAC2311",
+      "sortOrder": 14,
+      "reason": "Calculus I — required for physical chemistry and for the ACS-certified degree's mathematics component. ⚠ Chemistry needs real calculus, unlike architecture or the life-science majors, and the students who defer it are the ones who meet physical chemistry unprepared in their third year."
+    },
+    {
+      "courseId": "PHY2048",
+      "sortOrder": 15,
+      "reason": "General Physics with Calculus I — the calculus-based sequence, not the algebra-based one. ⚠⚠ The ACS-certified degree requires two semesters of physics, and physical chemistry assumes the calculus-based treatment. Taking PHY2053 instead is a common and expensive substitution.",
+      "variantNote": "⚠ PHY2053 College Physics I is the ALGEBRA-based course. It satisfies pre-health requirements but is not the right preparation for physical chemistry."
+    },
+    {
+      "courseId": "CHM1025",
+      "sortOrder": 16,
+      "reason": "Introductory Chemistry — seventeen carriers. The preparatory course for students who are not ready for General Chemistry I. ⚠ Taking it is not a setback; arriving in general chemistry without the algebra and stoichiometry it teaches is. ⚠⚠ It does not count toward a chemistry major, so build it into the plan rather than discovering it in week three."
+    }
+  ],
+  "sources": [
+    {
+      "label": "BLS Occupational Outlook Handbook — Chemists and Materials Scientists",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/chemists-and-materials-scientists.htm",
+      "note": "Chemists $91,240 and 84,900 jobs at +6%; materials scientists $117,790 and 8,600 jobs at +8%; 6,500 combined annual openings. Source of the industry tables and of the statement that a master's or PhD may be needed for research positions. No AI claim is made."
+    },
+    {
+      "label": "BLS Occupational Outlook Handbook — Chemical Technicians",
+      "url": "https://www.bls.gov/ooh/life-physical-and-social-science/chemical-technicians.htm",
+      "note": "$60,390 median, 60,000 jobs, +5% for 2025-35, and about 7,600 annual openings — more than chemists and materials scientists combined, on an associate degree."
+    },
+    {
+      "label": "O*NET — Chemists (19-2031.00)",
+      "url": "https://www.onetonline.org/link/summary/19-2031.00",
+      "note": "The education distribution this page turns on: 56% bachelor's, 30% DOCTORAL, 10% master's. 86,800 employed in 2024, 6,300 annual openings, Job Zone Four."
+    },
+    {
+      "label": "O*NET — Chemists (19-2031.00), Florida wages",
+      "url": "https://www.onetonline.org/link/localwages/19-2031.00?st=FL",
+      "note": "Florida below national throughout by roughly $8,000-$9,000, except $16,910 at the 75th percentile. A far smaller gap than environmental science's $21,390 at the median."
+    },
+    {
+      "label": "ACS — guidelines for bachelor's degree programs and program approval",
+      "url": "https://www.acs.org/education/policies/acs-approval-program/guidelines.html",
+      "note": "The certified-degree requirement quoted here: foundation coursework in analytical, biochemistry, inorganic, organic and physical chemistry, four in-depth courses, two semesters each of mathematics and physics, and at least 400 hours of laboratory beyond general chemistry."
+    },
+    {
+      "label": "ACS — approved chemistry programs",
+      "url": "https://www.acs.org/education/policies/acs-approval-program/approved-programs.html",
+      "note": "The list to check before enrolling. ⚠ Approval attaches to the DEPARTMENT; the certified degree is earned by the individual student, so confirm both."
+    },
+    {
+      "label": "IPEDS completions — Florida, CIP 40.05",
+      "url": "https://nces.ed.gov/ipeds/",
+      "note": "670 credentials at 10 Florida public institutions: 467 bachelor's, 126 doctorates, 77 master's. Source of the institution table, including Florida State's 15 bachelor's against 60 graduate degrees."
+    },
+    {
+      "label": "SCNS statewide course file — CHM and BCH carrier counts",
+      "url": "https://flscns.fldoe.org/",
+      "note": "Source of the General Chemistry measurement — CHM1045 at 15 institutions and CHM2045 at 16 with zero overlap, 31 in total — and of the contrast with CHM2210 Organic Chemistry I, settled on one number at 29 carriers."
+    }
+  ],
+  "bodyHtml": "<h2>Three roles, and the middle one is where most chemistry graduates land</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Role</th><th>SOC</th><th>Entry</th><th>Median</th><th>Jobs</th><th>Openings/yr</th><th>Outlook 2025&ndash;35</th></tr></thead>\n<tbody>\n<tr><td><strong>Chemist</strong></td><td>19-2031</td><td>Bachelor&rsquo;s</td><td><strong>$91,240</strong></td><td>84,900</td><td>&mdash;</td><td>+6% (5,500 jobs)</td></tr>\n<tr><td>Materials scientist</td><td>19-2032</td><td>Bachelor&rsquo;s (often PhD)</td><td><strong>$117,790</strong></td><td>8,600</td><td>&mdash;</td><td>+8% (700 jobs)</td></tr>\n<tr><td>Chemical technician</td><td>19-4031</td><td><strong>Associate</strong></td><td>$60,390</td><td>60,000</td><td>&#9888; <strong>7,600</strong></td><td>+5%</td></tr>\n<tr><td><em>chemists + materials scientists</em></td><td>&mdash;</td><td>&mdash;</td><td>$95,060</td><td>93,500</td><td>6,500</td><td>+7%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Look at the openings column.</strong> Chemical technicians have <strong>7,600</strong> annual openings against 6,500 for chemists and materials scientists combined &mdash; more hiring, on a two-year degree, in a smaller occupation. <strong>It is the largest and most reliable point of entry into a Florida chemistry laboratory</strong>, and a chemistry bachelor&rsquo;s graduate frequently starts in one of those jobs regardless.</p>\n<p>&#9888; Materials science is the highest-paid row and the smallest: <strong>8,600 jobs nationally, 700 new over the decade.</strong> Do not plan a career on a national total that small without knowing where the employers are.</p>\n\n<h2>&#9888;&#9888;&#9888; The question this page exists to answer: do you need a PhD?</h2>\n<p>The honest answer is that it depends on which job, and the numbers are unusually clear. <strong>O*NET&rsquo;s incumbent survey for chemists reports:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Education reported as required</th><th>Share</th></tr></thead>\n<tbody>\n<tr><td>Bachelor&rsquo;s degree</td><td>56%</td></tr>\n<tr><td>&#9888;&#9888; <strong>Doctoral degree</strong></td><td>&#9888;&#9888; <strong>30%</strong></td></tr>\n<tr><td>Master&rsquo;s degree</td><td>10%</td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Thirty per cent is the highest doctoral figure on any occupation this site has written up</strong> &mdash; against 14% master&rsquo;s for database architects and no doctoral figure at all on most paths. BLS puts the same thing carefully: <em>&ldquo;They may need a master&rsquo;s degree or Ph.D. for some jobs, such as research positions.&rdquo;</em></p>\n<p><strong>Read those two rows as two different careers:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th></th><th>Bachelor&rsquo;s chemistry career</th><th>Doctoral chemistry career</th></tr></thead>\n<tbody>\n<tr><td>What you do</td><td>Analysis, quality control, method execution, formulation support, regulatory testing</td><td>Choose the problem, design the programme, publish, direct others</td></tr>\n<tr><td>Where</td><td>Environmental and clinical laboratories, manufacturing QC, food and agriculture, utilities, state agencies</td><td>R&amp;D services, pharmaceutical discovery, national laboratories, universities</td></tr>\n<tr><td>Cost of entry</td><td>Four years</td><td>&#9888; Four years, then typically five to six more, usually funded but on a stipend</td></tr>\n<tr><td>Florida evidence</td><td>467 bachelor&rsquo;s a year</td><td><strong>126 doctorates a year</strong> &mdash; 19% of the state&rsquo;s chemistry output</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Decide which one you are aiming at by the end of the second year</strong>, because the preparation diverges: the doctoral route needs undergraduate research, a relationship with a faculty supervisor and letters, and those take two years to build. <strong>Nobody tells a sophomore this, and it is the single highest-value thing on this page.</strong></p>\n\n<h2>Where the degrees are, and what the shape tells you</h2>\n<p><strong>Ten Florida public institutions award chemistry degrees: 670 credentials a year &mdash; 467 bachelor&rsquo;s, 77 master&rsquo;s and 126 doctorates.</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Institution</th><th>Bachelor&rsquo;s</th><th>Master&rsquo;s</th><th>Doctorate</th></tr></thead>\n<tbody>\n<tr><td><strong>University of Florida</strong></td><td><strong>162</strong></td><td>8</td><td>46</td></tr>\n<tr><td>Florida International</td><td>85</td><td>21</td><td>21</td></tr>\n<tr><td>University of South Florida</td><td>63</td><td>&mdash;</td><td>11</td></tr>\n<tr><td>University of Central Florida</td><td>55</td><td>8</td><td>14</td></tr>\n<tr><td>Florida Atlantic</td><td>38</td><td>&mdash;</td><td>&mdash;</td></tr>\n<tr><td>&#9888; <strong>Florida State</strong></td><td>&#9888; <strong>15</strong></td><td><strong>29</strong></td><td><strong>31</strong></td></tr>\n<tr><td>University of North Florida</td><td>18</td><td>&mdash;</td><td>&mdash;</td></tr>\n<tr><td>University of West Florida</td><td>15</td><td>&mdash;</td><td>&mdash;</td></tr>\n<tr><td>FAMU</td><td>12</td><td>&mdash;</td><td>&mdash;</td></tr>\n</tbody></table>\n<p>&#9888;&#9888; <strong>Read the Florida State row.</strong> It awards <strong>four times as many graduate degrees as bachelor&rsquo;s</strong> &mdash; the profile of a research department rather than a teaching one. <strong>That is a feature if you want undergraduate research and a doctoral route, and something to ask about if you want a large undergraduate cohort.</strong> UF is the opposite shape at scale: 162 bachelor&rsquo;s and 46 doctorates.</p>\n\n<h2>&#9888;&#9888; The accreditation here is not what you think, and you can miss it while attending an approved department</h2>\n<p>Chemistry has no licence and no programme accreditor in the usual sense. What it has is the <strong>American Chemical Society approval programme</strong>, and the distinction matters:</p>\n<ul>\n<li>The ACS <strong>approves the DEPARTMENT.</strong></li>\n<li>&#9888;&#9888;&#9888; <strong>The individual STUDENT earns an ACS-CERTIFIED degree</strong> by completing a specific course set &mdash; and can graduate from an approved department <strong>without</strong> it.</li>\n</ul>\n<p>The certified degree requires <strong>foundation coursework in all five sub-disciplines</strong> &mdash; analytical, biochemistry, inorganic, organic and physical &mdash; plus <strong>four in-depth courses</strong>, two semesters each of mathematics and physics, and <strong>at least 400 hours of hands-on laboratory beyond general chemistry.</strong></p>\n<p>&#9888;&#9888; <strong>That last figure is the one to hold on to.</strong> 400 documented laboratory hours is a concrete, checkable thing to show an employer or a graduate committee, and it is the closest this field comes to a credential. <strong>Ask the department, in your first year, what the certified degree requires there and whether your intended track delivers it.</strong> It is the same trap as elsewhere on this site: <strong>the institution&rsquo;s accreditation is not your credential.</strong></p>\n\n<h2>&#9888;&#9888;&#9888; General Chemistry I has two numbers, 31 institutions, and no overlap at all</h2>\n<p>This is the most consequential course-numbering split this site has measured, because General Chemistry I gates chemistry, biology, pre-medicine, pre-pharmacy, nursing, engineering and environmental science all at once.</p>\n<table class=\"table table-sm\">\n<thead><tr><th>Identifier</th><th>Carriers</th><th>Which universities</th></tr></thead>\n<tbody>\n<tr><td><code>CHM1045</code> + <code>CHM1045L</code></td><td><strong>15</strong> (11 state colleges, 4 universities)</td><td><strong>FAMU, FGCU, FIU, Florida State</strong></td></tr>\n<tr><td><code>CHM2045</code> + <code>CHM2045L</code></td><td><strong>16</strong> (9 state colleges, 7 universities)</td><td><strong>FAU, Florida Polytechnic, New College, UF, UNF, USF, UWF</strong></td></tr>\n</tbody></table>\n<p>&#9888;&#9888;&#9888; <strong>Thirty-one institutions, two numbers, ZERO carriers in common</strong> &mdash; the lectures, the laboratories and the second-semester courses all split the same way, and only Santa Fe carries both forms of anything (General Chemistry II).</p>\n<p>&#9888;&#9888; <strong>And it is NOT a sector split.</strong> The universities divide four against seven, so a student cannot predict the number from the kind of institution. <strong>Both are lower division, so no baccalaureate credit is at risk</strong> &mdash; but SCNS equivalency does not cross numbers, so an automated transfer match between the two finds nothing on the course that more Florida students take than almost any other.</p>\n<p>&#9888; <strong>Contrast Organic Chemistry, which the state DID settle: <code>CHM2210</code> is carried by 29 institutions under one number</strong>, with an integrated <code>CHM2210C</code> at seven more. <strong>So this is not &ldquo;chemistry is messy&rdquo; &mdash; it is one specific unresolved number, on the one course that matters most.</strong></p>\n<p><strong>What to do:</strong> register by number, keep the syllabus, and if you are transferring, name <em>both</em> numbers in writing to the receiving department before you enrol rather than after.</p>\n\n<h2>&#9888; Biochemistry is the commonest way out, and the site cannot yet show you the degree</h2>\n<p><strong>Biochemistry and Molecular Biology is the fifth ACS foundation area and the usual bridge from chemistry into medicine, dentistry, pharmacy and the pharmaceutical industry.</strong> In Florida it is a real and separate degree — <strong>128 credentials a year at five public institutions</strong>: Florida State 63, FIU 48, UF 11 at master&rsquo;s level, FGCU 5, UNF 1. &#9888;&#9888; Its federal code sits outside the part of the classification tree this site currently carries, so there is no programme page to link to yet. <strong>It is named here so you know to look for it directly</strong>, and because a chemistry major who takes the biochemistry sequence is most of the way into it.</p>\n<p>&#9888; The course family is fragmented in the usual way: <code>BCH4033</code>/<code>BCH4034</code> Biochemistry I and II (FAMU, FGCU, UNF, USF), <code>BCH3033</code> General Biochemistry (Broward, FAU, FIU, UWF) and <code>BCH4024</code> Molecular Biology and Biochemistry (six carriers) all cover approximately this subject under three competing numbers. <strong>Register by number.</strong></p>\n\n<h2>Money, and the federal figure again</h2>\n<table class=\"table table-sm\">\n<thead><tr><th>Percentile</th><th>Florida</th><th>United States</th><th>Difference</th></tr></thead>\n<tbody>\n<tr><td>10th</td><td>$50,200</td><td>$58,460</td><td>&minus;$8,260</td></tr>\n<tr><td>25th</td><td>$60,980</td><td>$69,460</td><td>&minus;$8,480</td></tr>\n<tr><td><strong>Median</strong></td><td><strong>$82,740</strong></td><td><strong>$91,240</strong></td><td>&minus;$8,500</td></tr>\n<tr><td>75th</td><td>$108,640</td><td>$125,550</td><td>&minus;$16,910</td></tr>\n<tr><td>90th</td><td>$150,840</td><td>$160,830</td><td>&minus;$9,990</td></tr>\n</tbody></table>\n<p>Florida is below the national figure throughout, by a fairly even $8,000&ndash;$9,000 except at the 75th percentile. &#9888; <strong>That is a much smaller gap than environmental science&rsquo;s &minus;$21,390 at the median</strong>, and roughly comparable to interior design&rsquo;s &minus;$6,330 &mdash; so chemistry is an ordinary Florida discount rather than a severe one.</p>\n<p>&#9888;&#9888; <strong>The industry spread is far larger than the geography, and it is the same shape this site found in environmental science:</strong></p>\n<table class=\"table table-sm\">\n<thead><tr><th>Industry (chemists)</th><th>Median</th></tr></thead>\n<tbody>\n<tr><td>&#9888; <strong>Federal government</strong></td><td><strong>$137,720</strong></td></tr>\n<tr><td>Research and development services</td><td>$105,930</td></tr>\n<tr><td>Chemical manufacturing</td><td>$88,890</td></tr>\n</tbody></table>\n<p><strong>$48,830 between the top and bottom rows, on one job title.</strong> Federal chemistry employment is real in Florida &mdash; food and drug testing, agricultural inspection, environmental laboratories, defence and space-programme laboratories on the Space Coast. &#9888; <strong>Federal hiring runs on its own calendar and its own application format; learn it in your third year.</strong></p>\n<p>&#9888; Materials science pays differently again: R&amp;D services $132,600, management companies $130,330, chemical manufacturing $107,190 &mdash; higher at every step, on a much smaller job base.</p>\n\n<h2>What BLS says about AI here</h2>\n<p>&#9888; <strong>Nothing.</strong> The chemists and materials scientists page attributes growth to <em>&ldquo;innovations in a variety of research areas, including nanotechnology and biomaterials&rdquo;</em> and makes no claim about artificial intelligence in either direction, on either occupation or on chemical technicians.</p>\n<p>&#9888;&#9888; That is worth stating plainly rather than filling in, because computational chemistry and machine-learning-assisted discovery are visibly changing the research end of this field. <strong>The federal projections do not yet reflect it, and this page will not pretend otherwise.</strong> What follows from the pattern on other pages is the usual advice: the exposure is to routine analysis, and the protection is method development, interpretation and accountability for the result.</p>\n\n<h2>What to do first</h2>\n<ul>\n<li>&#9888;&#9888; <strong>Decide bachelor&rsquo;s-career or doctoral-career by the end of your second year.</strong> 30% of chemists report a doctorate as required; the preparation for it takes two years to assemble.</li>\n<li><strong>Get into a research laboratory early</strong> &mdash; it is the doctoral route&rsquo;s entry requirement and the bachelor&rsquo;s route&rsquo;s best interview material.</li>\n<li>&#9888; <strong>Ask what the ACS-certified degree requires at your institution</strong>, and whether your track delivers the 400 laboratory hours. Approval of the department is not certification of you.</li>\n<li><strong>Register General Chemistry by number</strong> &mdash; <code>CHM1045</code> and <code>CHM2045</code> are the same course, share no carrier, and will not match automatically on transfer.</li>\n<li><strong>Take analytical chemistry and instrumental analysis seriously</strong> (<code>CHM3120</code>, <code>CHM4130</code>). They are what a working laboratory actually hires on.</li>\n<li>&#9888;&#9888; <strong>Look at federal employment</strong>, where the chemist median is $137,720 against $88,890 in chemical manufacturing.</li>\n</ul>\n"
+}

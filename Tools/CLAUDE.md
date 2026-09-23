@@ -411,6 +411,32 @@ migration rather than job loss, and it is a different warning with a different a
 job. **Position on the specification and judgement side of whatever the field is.** That advice is
 supportable from the data rather than from speculation, which is why it belongs on the page.
 
+#### ⚠⚠⚠ THE BIGGEST NUMBER SPLIT IN FLORIDA IS ON **GENERAL CHEMISTRY I** — measure the gateway courses (2026-09-22)
+
+**Number fragmentation has been recorded here on Spanish, `TPA`, `IND`, `EVR` and the database
+prefixes. `CHM` is the one that matters most, because the course gates chemistry, biology,
+pre-medicine, pre-pharmacy, nursing, engineering and environmental science simultaneously:**
+
+| Identifier | Carriers | Universities |
+|---|---|---|
+| `CHM1045` + `CHM1045L` | **15** (11 FCS, 4 SUS) | FAMU, FGCU, FIU, **Florida State** |
+| `CHM2045` + `CHM2045L` | **16** (9 FCS, 7 SUS) | FAU, Florida Poly, New College, **UF, UNF, USF, UWF** |
+
+⚠⚠⚠ **THIRTY-ONE institutions, two numbers, ZERO overlap** — lectures, laboratories and the
+second semester all split the same way, and only Santa Fe carries both forms of anything.
+⚠⚠ **And it is NOT a sector split**: the universities divide 4 against 7, so the number cannot be
+predicted from the kind of institution (the batch-220 caution, confirmed at scale).
+
+✅ **The control that makes it a finding rather than a grumble: ORGANIC chemistry IS settled.**
+`CHM2210` is carried by **29** institutions under one number, with an integrated `CHM2210C` at seven
+more. **So this is not "chemistry is messy" — it is one specific unresolved number on the single
+highest-enrolment gateway course in the state.**
+
+⚠⚠ **Generalised drill: before writing any path, run the split check on the GATEWAY courses the
+field shares with other fields** — general chemistry, general biology, anatomy and physiology,
+introductory statistics, composition. **Those are where a split costs the most students**, and they
+are exactly the courses a subject-specific prefix survey never looks at.
+
 #### ⚠⚠⚠ READ THE LICENSURE STATUTE'S **EXEMPTIONS**, NOT JUST ITS REQUIREMENTS (2026-09-22)
 
 **Every licensure section of this file says to find the statute and quote the requirement. Interior

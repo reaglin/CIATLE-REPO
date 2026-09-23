@@ -3540,6 +3540,7 @@ and the push returns 422.**
 | ✨ **03.06** Wildlife and Wildlands | *(no path blocked)* | 2 (UF, Florida Keys) | **113** |
 | ✨ **03.02** Natural Resources Management | *(no path blocked)* | 3 | 69 |
 | ✨ **03.03** Fishery Sciences | *(no path blocked)* | 1 (UF) | 40 |
+| ✨ **26.02** Biochemistry and Molecular Biology | *(no path blocked — dropped from `chemist`)* | 5 | **128** |
 
 ⚠⚠⚠ **The first two are the point.** Culinary arts is taught at **46** Florida public
 institutions and cosmetology at **44** — larger footprints than nursing's 78-institution programme
@@ -3561,6 +3562,8 @@ rows (`scratchpad/qcheck.py`) found this to be the only mis-anchored one.
 under `44.0701` and **796 under `51.1503` Clinical/Medical Social Work** — FSU 431, FAU 143, UWF 120,
 FIU 74, UNF 28, four of which record NO master's under the social work code at all. ⚠ The
 `social-work` programme therefore claims `44.0701` only and states the split in its `degreesNote`.
+✨⚠ **`26.02` BIOCHEMISTRY AND MOLECULAR BIOLOGY, found 2026-09-22 writing the `chemist` path** — the push returned **422 CIP_NODE_NOT_FOUND** and the code was dropped from the path's `cipCodes`, with the content moved into the body instead. **It is 128 credentials a year at five Florida public institutions** (Florida State 63, FIU 48, UF 11 at master's, FGCU 5, UNF 1), and it is the fifth ACS foundation area — **the standard bridge from chemistry into medicine, dentistry, pharmacy and the pharmaceutical industry.** ⚠ Seeding it would let the `chemistry` programme claim it and would give a real destination a page.
+
 ✨⚠⚠ **FOUR NATURAL-RESOURCE GROUPS, found 2026-09-22 writing the `environmental-scientist`
 path, and they behave like `51.15` rather than like cosmetology — they block NO path, but they hide
 real programmes.** `03.01` is seeded, so the path and the `environmental-science` programme published

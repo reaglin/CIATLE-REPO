@@ -1,0 +1,39 @@
+{
+  "slug": "chemistry",
+  "name": "Chemistry and Biochemistry",
+  "isPublished": true,
+  "sortOrder": 597,
+  "description": "The central science — analysis, synthesis, materials and the measurement everything else relies on. ⚠⚠⚠ The shape of Florida's output is the thing to notice: 670 credentials a year and 126 of them are DOCTORATES, 19% of the total. Chemistry is a field where nearly a third of working chemists report a doctorate as required, and the decision to pursue one has to be made in the second undergraduate year, not the fourth.",
+  "degreesNote": "⚠⚠ TEN FLORIDA PUBLIC INSTITUTIONS, 670 CREDENTIALS, AND AN UNUSUAL LEVEL MIX: 467 bachelor's, 77 master's and 126 doctorates. UF 162 bachelor's and 46 doctorates; FIU 85/21/21; USF 63 bachelor's and 11 doctorates; UCF 55/8/14; FAU 38; UNF 18; UWF 15; FAMU 12. ⚠⚠⚠ AND READ THE FLORIDA STATE ROW BEFORE APPLYING: 15 bachelor's against 29 master's and 31 doctorates — four graduate degrees for every bachelor's, the profile of a research department rather than a teaching one. That is an advantage if you want undergraduate research and a doctoral route, and a question to ask if you want a large undergraduate cohort. ⚠ THERE IS NO LICENCE AND NO CONVENTIONAL ACCREDITOR. What exists is the American Chemical Society approval programme, and the distinction bites: the ACS approves the DEPARTMENT, while the individual STUDENT earns an ACS-CERTIFIED degree by completing foundation coursework in all five sub-disciplines (analytical, biochemistry, inorganic, organic, physical), four in-depth courses, mathematics and physics, and at least 400 hours of laboratory beyond general chemistry. ⚠⚠ A student can graduate from an approved department WITHOUT the certified degree. Ask in the first year what your track delivers. ⚠ Biochemistry sits alongside as its own course family (BCH) and is the commonest bridge from chemistry into the health professions.",
+  "cips": [
+    {
+      "cipCode": "40.05",
+      "note": "Chemistry — 10 Florida public institutions and 670 credentials: 467 bachelor's, 126 doctorates and 77 master's. UF 216 across all levels, FIU 127, USF 74, UCF 77, Florida Atlantic 38, Florida State 75, UNF 18, UWF 15, FAMU 12. ⚠⚠ The 19% doctoral share is the highest of any programme family on this site and is the single most informative fact about the field."
+    }
+  ],
+  "related": [
+    {
+      "slug": "chemical-engineering",
+      "note": "⚠⚠ The comparison students most often get wrong. A chemist studies what substances are and do; a chemical engineer designs the plant that makes them at scale. ⚠ Engineering carries the FE exam and PE licensure, a far heavier mathematics load, and a higher bachelor's-level ceiling — chemistry's ceiling is reached mainly through the doctorate instead.",
+      "isRoute": false
+    },
+    {
+      "slug": "medicine",
+      "note": "⚠⚠ A route a large share of chemistry majors are actually taking, whether or not the department says so. The organic sequence and biochemistry are medical, dental and pharmacy prerequisites, and CHM2210 is carried by 29 Florida public institutions largely because of it. ⚠ If this is your plan, say so early — the course order differs from a chemist's."
+    },
+    {
+      "slug": "environmental-science",
+      "note": "⚠ The largest employer of bachelor's-level chemistry in Florida, and it is not obvious from either department. Environmental and clinical laboratories run on analytical chemistry — CHM3120 and CHM4130 are the courses that get someone hired — and Florida's water-quality programmes are permanent work."
+    },
+    {
+      "slug": "medical-laboratory-science",
+      "note": "⚠⚠ Named because it is the licensed, credentialled version of laboratory work, and chemistry graduates frequently discover it late. Florida licenses clinical laboratory personnel; an unlicensed chemistry graduate cannot do the same bench work in a hospital that an MLS graduate can.",
+      "isRoute": false
+    },
+    {
+      "slug": "materials-engineering",
+      "note": "⚠ Named for the materials scientist row: $117,790 median, the highest in this family, on only 8,600 jobs nationally. ⚠⚠ In Florida the materials programmes are small — four institutions, two at bachelor's — so the realistic route is chemistry or mechanical first and specialisation later.",
+      "isRoute": false
+    }
+  ]
+}
