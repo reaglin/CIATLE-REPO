@@ -9,7 +9,7 @@
    "title": "AGRICULTURAL/ANIMAL/PLANT/VETERINARY SCIENCE AND RELATED FIELDS",
    "definition": "Instructional programs that focus on agriculture, animal, plant, veterinary, and related sciences and that prepares individuals to apply specific knowledge, methods, and techniques to the management and performance of agricultural and veterinary operations.",
    "parent": null,
-   "childCount": 3
+   "childCount": 10
   },
   {
    "code": "01.00",
@@ -30,9 +30,72 @@
    "childCount": 0
   },
   {
+   "code": "01.03",
+   "level": 4,
+   "title": "Agricultural Production Operations",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.05",
+   "level": 4,
+   "title": "Agricultural and Domestic Animal Services",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.06",
+   "level": 4,
+   "title": "Applied Horticulture and Horticultural Business Services",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.09",
+   "level": 4,
+   "title": "Animal Sciences",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
    "code": "01.10",
    "level": 4,
    "title": "Food Science and Technology",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.11",
+   "level": 4,
+   "title": "Plant Sciences",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.12",
+   "level": 4,
+   "title": "Soil Sciences",
+   "definition": "",
+   "examples": "",
+   "parent": "01",
+   "childCount": 0
+  },
+  {
+   "code": "01.83",
+   "level": 4,
+   "title": "Veterinary/Animal Health Technologies/Technicians",
    "definition": "",
    "examples": "",
    "parent": "01",
@@ -44,12 +107,48 @@
    "title": "NATURAL RESOURCES AND CONSERVATION",
    "definition": "Instructional programs that focus on the various natural resources and conservation fields and prepare individuals for related occupations.",
    "parent": null,
-   "childCount": 1
+   "childCount": 5
   },
   {
    "code": "03.01",
    "level": 4,
    "title": "Natural Resources Conservation and Research",
+   "definition": "",
+   "examples": "",
+   "parent": "03",
+   "childCount": 0
+  },
+  {
+   "code": "03.02",
+   "level": 4,
+   "title": "Environmental/Natural Resources Management and Policy",
+   "definition": "",
+   "examples": "",
+   "parent": "03",
+   "childCount": 0
+  },
+  {
+   "code": "03.03",
+   "level": 4,
+   "title": "Fishing and Fisheries Sciences and Management",
+   "definition": "",
+   "examples": "",
+   "parent": "03",
+   "childCount": 0
+  },
+  {
+   "code": "03.05",
+   "level": 4,
+   "title": "Forestry",
+   "definition": "",
+   "examples": "",
+   "parent": "03",
+   "childCount": 0
+  },
+  {
+   "code": "03.06",
+   "level": 4,
+   "title": "Wildlife and Wildlands Science and Management",
    "definition": "",
    "examples": "",
    "parent": "03",
@@ -254,6 +353,24 @@
    "title": "CULINARY, ENTERTAINMENT, AND PERSONAL SERVICES",
    "definition": "Instructional programs that prepare individuals to provide professional services related to cosmetology, funeral services, entertainment, and food preparation and service.",
    "parent": null,
+   "childCount": 2
+  },
+  {
+   "code": "12.04",
+   "level": 4,
+   "title": "Cosmetology and Related Personal Grooming Services",
+   "definition": "",
+   "examples": "",
+   "parent": "12",
+   "childCount": 0
+  },
+  {
+   "code": "12.05",
+   "level": 4,
+   "title": "Culinary Arts and Related Services",
+   "definition": "",
+   "examples": "",
+   "parent": "12",
    "childCount": 0
   },
   {
@@ -919,12 +1036,21 @@
    "title": "BIOLOGICAL AND BIOMEDICAL SCIENCES",
    "definition": "Instructional programs that focus on the biological sciences and the non-clinical biomedical sciences, and that prepare individuals for research and professional careers as biologists and biomedical scientists.",
    "parent": null,
-   "childCount": 3
+   "childCount": 4
   },
   {
    "code": "26.01",
    "level": 4,
    "title": "Biology, General",
+   "definition": "",
+   "examples": "",
+   "parent": "26",
+   "childCount": 0
+  },
+  {
+   "code": "26.02",
+   "level": 4,
+   "title": "Biochemistry, Biophysics and Molecular Biology",
    "definition": "",
    "examples": "",
    "parent": "26",
@@ -1391,7 +1517,16 @@
    "title": "CONSTRUCTION TRADES",
    "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills in the building, inspecting, and maintaining of structures and related properties.",
    "parent": null,
-   "childCount": 2
+   "childCount": 4
+  },
+  {
+   "code": "46.02",
+   "level": 4,
+   "title": "Carpenters",
+   "definition": "",
+   "examples": "",
+   "parent": "46",
+   "childCount": 0
   },
   {
    "code": "46.03",
@@ -1406,6 +1541,15 @@
    "code": "46.04",
    "level": 4,
    "title": "Building/Construction Finishing, Management, and Inspection",
+   "definition": "",
+   "examples": "",
+   "parent": "46",
+   "childCount": 0
+  },
+  {
+   "code": "46.05",
+   "level": 4,
+   "title": "Plumbing and Related Water Supply Services",
    "definition": "",
    "examples": "",
    "parent": "46",
@@ -1469,12 +1613,21 @@
    "title": "TRANSPORTATION AND MATERIALS MOVING",
    "definition": "Instructional programs that prepare individuals to apply technical knowledge and skills to perform tasks and services that facilitate the movement of people or materials.",
    "parent": null,
-   "childCount": 1
+   "childCount": 2
   },
   {
    "code": "49.01",
    "level": 4,
    "title": "Air Transportation",
+   "definition": "",
+   "examples": "",
+   "parent": "49",
+   "childCount": 0
+  },
+  {
+   "code": "49.02",
+   "level": 4,
+   "title": "Ground Transportation",
    "definition": "",
    "examples": "",
    "parent": "49",
@@ -1548,7 +1701,7 @@
    "title": "HEALTH PROFESSIONS AND RELATED PROGRAMS",
    "definition": "Instructional programs that prepare individuals to practice as licensed professionals and assistants in the health care professions and related clinical sciences and administrative and support services.",
    "parent": null,
-   "childCount": 15
+   "childCount": 17
   },
   {
    "code": "51.00",
@@ -1617,6 +1770,24 @@
    "code": "51.12",
    "level": 4,
    "title": "Medicine",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.15",
+   "level": 4,
+   "title": "Mental and Social Health Services and Allied Professions",
+   "definition": "",
+   "examples": "",
+   "parent": "51",
+   "childCount": 0
+  },
+  {
+   "code": "51.20",
+   "level": 4,
+   "title": "Pharmacy, Pharmaceutical Sciences, and Administration",
    "definition": "",
    "examples": "",
    "parent": "51",

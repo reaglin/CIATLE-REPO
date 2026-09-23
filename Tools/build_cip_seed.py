@@ -130,6 +130,43 @@ EXTRA_GROUPS = {
     # Health:
     '51.06': 'Dental Support Services -- dental hygiene, an A.S. programme at '
              'state colleges across Florida.',
+
+    # ⚠⚠ REVIEW_QUEUE item 116, approved by Ron 2026-09-23 ("Approve the deploy").
+    # Seven second-queue career-path rows were refused 422 because their group was
+    # missing; the rest block no path but hide real Florida programmes.
+    # Counts are Florida public completions, IPEDS 2023.
+    '12.04': 'Cosmetology -- 44 institutions, 3,146 credentials, overwhelmingly '
+             'technical colleges. Blocks the cosmetologist path.',
+    '12.05': 'Culinary Arts -- 46 institutions, 1,255 credentials. Blocks the chef path.',
+    '49.02': 'Ground Transportation -- CDL truck driving, 20 institutions, 1,040 '
+             'credentials. Blocks the truck-driver path.',
+    '51.20': 'Pharmacy -- 3 institutions, 939 credentials (PharmD). Blocks the '
+             'pharmacist path.',
+    '46.05': 'Plumbing -- 22 institutions, 189 credentials. Blocks the plumber path.',
+    '46.02': 'Carpentry -- 15 institutions, 57 credentials. Blocks the carpenter path.',
+    '01.83': 'Veterinary/Animal Health Technologies -- 10 institutions, 293 '
+             'credentials. ⚠ Florida files vet tech HERE, not under 51.0808 (zero '
+             'Florida rows). Blocks the veterinary-technician path.',
+    '51.15': 'Mental and Social Health Services -- 796 of Florida\'s 1,164 MSWs are '
+             'filed at 51.1503, not 44.0701; also mental health counselling and the '
+             'state-college human services tier.',
+    '26.02': 'Biochemistry and Molecular Biology -- 5 institutions, 128 credentials; '
+             'dropped from the chemist path by a 422.',
+    # The natural-resource family beside 03.01 -- essentially UF.
+    '03.02': 'Natural Resources Management and Policy -- 3 institutions, 69 credentials.',
+    '03.03': 'Fishing and Fisheries Sciences -- UF, 40 credentials.',
+    '03.05': 'Forestry -- UF, 130 credentials.',
+    '03.06': 'Wildlife and Wildlands Science -- UF and Florida Keys, 113 credentials.',
+    # Production agriculture beside 01.01 (agricultural-manager path, 2026-09-23):
+    # 657 credentials a year the site could not list as programmes.
+    '01.03': 'Agricultural Production Operations -- 4 state colleges, 18 credentials.',
+    '01.05': 'Agricultural and Domestic Animal Services -- College of Central '
+             'Florida equine studies, 67 credentials.',
+    '01.06': 'Applied Horticulture -- 10 institutions, 204 credentials (Valencia 127); '
+             'nursery and greenhouse are 34% of Florida farm sales.',
+    '01.09': 'Animal Sciences -- UF and Santa Fe, 178 credentials.',
+    '01.11': 'Plant Sciences -- UF, 134 credentials.',
+    '01.12': 'Soil Sciences -- UF, 56 credentials.',
 }
 
 
