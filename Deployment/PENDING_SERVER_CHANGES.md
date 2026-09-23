@@ -8,7 +8,9 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⏳ READY TO DEPLOY 2026-09-23 — CIP seed at 228 nodes, the taxonomy key fix, and request-driven career paths
+### ✅ DEPLOYED 2026-09-23 — CIP seed at 228 nodes, the taxonomy key fix, and request-driven career paths
+
+✅ **Verified live the same day:** `GET /api/v1/cip` returns 228 nodes (all 19 new groups present); the browse tree totals **40,870 = the catalog total**, with 171 disciplines and Art & Art History holding its 648 courses; `/api/v1/cip/{code}/occupations`, `/queue/careers`, `/careers?q=` and the Request section render; the request API refuses a covered career (409), an unlisted one (404) and a malformed code (400); the admin list answers 200 with a token and `/admin/career-requests` redirects an anonymous visitor to sign-in. All 85 paths re-pushed; 35 now carry `additionalSocCodes`. ⚠ **Not verified by Claude:** the admin page rendered while signed in, and the Set fix on `/admin/guide-requests` — both need a browser session.
 
 Full deploy (**not** `-CodeOnly`: `taxonomy.json` changed, and there is a migration).
 

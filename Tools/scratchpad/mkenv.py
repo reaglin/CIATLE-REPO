@@ -65,6 +65,7 @@ path = {
   "name": "Environmental Scientist and Specialist",
   "cipCode": "03.01",
   "socCode": "19-2041",
+  "additionalSocCodes": ["19-4042"],
   "isPublished": True,
   "sortOrder": 138,
   "description": "Measuring and protecting water, air, soil and habitat, and making the case in front of a regulator. ⚠⚠⚠ Two things a Florida student should know before choosing the major. FIRST, environmental SCIENCE and environmental STUDIES are different degrees leading to different jobs, and the state's largest producer teaches the studies one. SECOND, Florida pays this occupation $21,390 below the national median — the largest gap this site has measured — so choosing the employer matters more here than almost anywhere else.",

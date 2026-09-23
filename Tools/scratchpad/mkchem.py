@@ -83,6 +83,7 @@ path = {
   "name": "Chemist and Chemical Technician",
   "cipCode": "40.05",
   "socCode": "19-2031",
+  "additionalSocCodes": ["19-2032", "19-4031"],
   "isPublished": True,
   "sortOrder": 139,
   "description": "⚠⚠⚠ The question this page answers is whether you need a doctorate, and the data is unusually clear: 30% of working chemists report one as required — the highest doctoral share of any occupation on this site — while 56% report a bachelor's. They are two different careers and the choice has to be made in the second undergraduate year. ⚠⚠ Also here: the chemical TECHNICIAN route has 7,600 annual openings on an associate degree, more than chemists and materials scientists combined.",

@@ -4003,7 +4003,10 @@ When starting a fresh session in this project:
    `/careers/area/{code}` page; the queue is `/queue/careers`. **Once the authored queue is finished it is
    the career-path work list, most requested first.** When a path covers related occupations as sections,
    list their SOC codes in the path's **`additionalSocCodes`** — that closes their requests and stops the
-   area page offering them.
+   area page offering them. ⚠ **The rule is: every SOC the page gives its own figures for** (a family-table
+   row with wage and outlook). A code only mentioned in passing stays requestable. The 2026-09-23 sweep found
+   12 such codes missed on 9 paths; re-run it after writing a family table:
+   `grep -o '[0-9]\{2\}-[0-9]\{4\}' career_paths/<slug>.json | sort -u`
 
    **Resource suggestions are cleared first** — they are quick, a person is waiting on each one, and
    the rules are in `resources/APPROVAL_RULES.md` (the `/resources` skill drives the loop). **Then

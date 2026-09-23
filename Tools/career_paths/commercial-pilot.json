@@ -3,6 +3,9 @@
   "name": "Commercial and Airline Pilot",
   "cipCode": "49.01",
   "socCode": "53-2012",
+  "additionalSocCodes": [
+    "53-2011"
+  ],
   "isPublished": true,
   "sortOrder": 144,
   "description": "⚠⚠ The commercial certificate (250 hours) lets you be paid to fly, but airlines need 1,500, and nearly everyone fills the gap by working as a flight instructor or charter pilot. ⚠⚠⚠ The cost is flight time, not tuition: one Florida college publishes $64,579.80 in flight fees against $4,838.28 in tuition. A qualifying aviation degree cuts the airline minimum to 1,250 or 1,000 hours. Median pay: $123,220 for commercial pilots, $232,140 for airline pilots.",

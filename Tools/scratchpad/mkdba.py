@@ -59,6 +59,7 @@ path = {
   "name": "Database Administrator and Database Architect",
   "cipCode": "11.08",
   "socCode": "15-1242",
+  "additionalSocCodes": ["15-1243"],
   "isPublished": True,
   "sortOrder": 136,
   "description": "⚠⚠⚠ One job title and two occupations, moving in opposite directions. Database ADMINISTRATORS earn a $104,620 median and are projected at 0% growth over 2025-35; database ARCHITECTS earn $139,500 and are projected at +9% — with FEWER people and MORE annual openings. ⚠⚠ And Florida has no undergraduate database degree at all: the dedicated code produces 62 credentials a year and 61 are one UWF master's. So the specialism is assembled from courses, under seven competing statewide numbers in three different colleges.",

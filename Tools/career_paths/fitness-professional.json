@@ -3,6 +3,9 @@
   "name": "Fitness Professional and Exercise Physiologist",
   "cipCode": "31.05",
   "socCode": "39-9031",
+  "additionalSocCodes": [
+    "29-1128"
+  ],
   "isPublished": true,
   "sortOrder": 142,
   "description": "⚠⚠⚠ The entry-level education for this occupation is a HIGH SCHOOL DIPLOMA, and it has about 68,000 openings a year — one of the largest figures on this site. What the job requires is a CERTIFICATION, not a degree. ⚠⚠ So a Florida student in a kinesiology degree needs an answer to a direct question: what is the degree for? There are three good ones — clinical exercise physiology ($59,460, +13%), graduate school in a health profession, or management — and this page is organised around them.",

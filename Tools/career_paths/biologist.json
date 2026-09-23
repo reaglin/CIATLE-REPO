@@ -3,6 +3,11 @@
   "name": "Biologist and Biological Technician",
   "cipCode": "26.01",
   "socCode": "19-1029",
+  "additionalSocCodes": [
+    "19-1021",
+    "19-1022",
+    "19-4021"
+  ],
   "isPublished": true,
   "sortOrder": 140,
   "description": "⚠⚠⚠ Begin with the arithmetic. Florida awards about 5,000 biology bachelor's a year; the biological-scientist occupations hire roughly 13,800 people a year NATIONALLY, and two-thirds of those openings are technician roles at a $57,510 median. ⚠⚠ That is not an argument against the degree — it is an argument for knowing what it is FOR. In practice a Florida biology bachelor's is a preparation for professional school, a research doctorate, teaching or a laboratory career that starts at technician level, and the state's own enrolment data already shows it.",
