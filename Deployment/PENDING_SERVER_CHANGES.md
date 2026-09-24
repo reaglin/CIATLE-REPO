@@ -8,7 +8,9 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⏳ READY TO DEPLOY — career requests counted per browser, and a public decline reason (2026-09-23)
+### ✅ DEPLOYED 2026-09-23 — career requests counted per browser, and a public decline reason
+
+✅ Verified live by Claude: queue and admin items carry `publicNote`; the field page shows the new wording; a Request post set the `cr_vid` cookie (a request for an already-covered career, so nothing was stored — the queue still holds 2 items). ⚠ Ron: the two-browser press test and a declined reason on the live admin page are still worth doing once.
 
 Migration **`CareerRequestBrowserAndPublicNote`** (two nullable columns on `CareerRequests`), so a full
 deploy that takes the database backup. Plan items 6.8 and 6.9; API spec §17.
