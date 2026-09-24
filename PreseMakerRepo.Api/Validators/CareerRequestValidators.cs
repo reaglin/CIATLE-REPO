@@ -28,5 +28,6 @@ public class SetCareerRequestStatusRequestValidator : AbstractValidator<SetCaree
             .Must(s => Enum.TryParse<CareerRequestStatus>(s, true, out _))
             .WithMessage("Status must be one of: Open, Queued, Published, Declined.");
         RuleFor(x => x.Notes).MaximumLength(1000);
+        RuleFor(x => x.PublicNote).MaximumLength(500);
     }
 }

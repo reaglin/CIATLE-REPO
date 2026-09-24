@@ -31,6 +31,13 @@ public class CareerRequest
     /// <summary>Salted SHA-256 of the requester's IP; never the raw address.</summary>
     public string? RequesterIpHash { get; set; }
 
+    /// <summary>
+    /// Salted SHA-256 of a random, anonymous per-browser id (the <c>cr_vid</c> cookie). ⚠ Repeats are
+    /// counted once PER BROWSER, not per network (Ron, 2026-09-23), so a class of students behind one
+    /// school address each count. Null for API requests, which fall back to the IP hash.
+    /// </summary>
+    public string? RequesterBrowserHash { get; set; }
+
     /// <summary>Signed-in contributor who made the request, if any.</summary>
     public string? RequesterUserId { get; set; }
 
@@ -42,4 +49,10 @@ public class CareerRequest
     public DateTime? StatusUtc { get; set; }
 
     public string? AdminNotes { get; set; }
+
+    /// <summary>
+    /// A short reason SHOWN TO VISITORS on the public queue, typically when a request is declined
+    /// (Ron, 2026-09-23: "Yes, if available"). Optional; <see cref="AdminNotes"/> stays private.
+    /// </summary>
+    public string? PublicNote { get; set; }
 }

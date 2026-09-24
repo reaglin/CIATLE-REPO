@@ -28,15 +28,17 @@ namespace PreseMakerRepo.Api.Services;
 /// </summary>
 public class CareerRequestService
 {
-    public enum CreateOutcome { Created, AlreadyRequested, PathExists, NotListed, RateLimited }
+    public enum CreateOutcome { Created, AlreadyRequested, PathExists, NotListed, RateLimited, NetworkRateLimited }
 
     public const string QueueWaiting = "waiting";
     public const string QueuePublished = "published";
     public const string QueueDeclined = "declined";
     public const string QueueAll = "all";
 
+    /// <param name="PerBrowser">True when the requester was identified by browser (the web button),
+    /// false when only by network (the API) -- it decides how a repeat is worded.</param>
     public sealed record CreateResult(CreateOutcome Outcome, string SocCode, string SocTitle,
-                                      int RequestCount, string? PathSlug);
+                                      int RequestCount, string? PathSlug, bool PerBrowser = true);
 
     private static readonly Regex SocPattern = new(@"^\d{2}-\d{4}$", RegexOptions.Compiled);
     private static readonly Regex CipGroupPattern = new(@"^\d{2}\.\d{2}$", RegexOptions.Compiled);
@@ -148,8 +150,10 @@ public class CareerRequestService
             .ToList();
     }
 
+    /// <param name="browserId">The anonymous per-browser id from the <c>cr_vid</c> cookie, or null (API).
+    /// ⚠ Repeats are counted once per BROWSER per day (Ron, 2026-09-23); without one, per network.</param>
     public async Task<CreateResult> CreateAsync(string socRaw, string cipRaw, string? reason, string ip,
-        string? userId, CareerRequestChannel channel)
+        string? userId, CareerRequestChannel channel, string? browserId = null)
     {
         TryNormalizeSoc(socRaw, out var soc);
         TryNormalizeCipGroup(cipRaw, out var cip);
@@ -164,15 +168,23 @@ public class CareerRequestService
             return new CreateResult(CreateOutcome.PathExists, soc, occ.SocTitle, 0, slug);
 
         var ipHash = HashIp(ip);
+        var browserHash = string.IsNullOrWhiteSpace(browserId) ? null : HashIp("browser:" + browserId.Trim());
+        var perBrowser = browserHash is not null;
         var since = DateTime.UtcNow.AddDays(-1);
         bool duplicate = await _db.CareerRequests.AsNoTracking().AnyAsync(r =>
             r.SocCode == soc && r.RequestedUtc >= since &&
-            (r.RequesterIpHash == ipHash || (userId != null && r.RequesterUserId == userId)));
+            ((perBrowser ? r.RequesterBrowserHash == browserHash
+                         : r.RequesterBrowserHash == null && r.RequesterIpHash == ipHash)
+             || (userId != null && r.RequesterUserId == userId)));
         if (duplicate)
-            return new CreateResult(CreateOutcome.AlreadyRequested, soc, occ.SocTitle, await CountAsync(soc), null);
+            return new CreateResult(CreateOutcome.AlreadyRequested, soc, occ.SocTitle, await CountAsync(soc), null, perBrowser);
 
-        if (!CheckRateLimit(ipHash))
-            return new CreateResult(CreateOutcome.RateLimited, soc, occ.SocTitle, 0, null);
+        // Two limits: one per browser, and a higher one per network so a whole classroom fits but
+        // clearing cookies cannot inflate a career without bound.
+        if (!CheckRateLimit("net:" + ipHash, _repo.CareerRequestNetworkRateLimitPerHour))
+            return new CreateResult(CreateOutcome.NetworkRateLimited, soc, occ.SocTitle, 0, null, perBrowser);
+        if (!CheckRateLimit((perBrowser ? "br:" + browserHash : "ip:" + ipHash), _repo.CareerRequestRateLimitPerHour))
+            return new CreateResult(CreateOutcome.RateLimited, soc, occ.SocTitle, 0, null, perBrowser);
 
         _db.CareerRequests.Add(new CareerRequest
         {
@@ -182,6 +194,7 @@ public class CareerRequestService
             CipCode = cip,
             Reason = string.IsNullOrWhiteSpace(reason) ? null : reason.Trim(),
             RequesterIpHash = ipHash,
+            RequesterBrowserHash = browserHash,
             RequesterUserId = userId,
             RequestedUtc = DateTime.UtcNow,
             Status = CareerRequestStatus.Open,
@@ -189,7 +202,7 @@ public class CareerRequestService
         });
         await _db.SaveChangesAsync();
 
-        return new CreateResult(CreateOutcome.Created, soc, occ.SocTitle, await CountAsync(soc), null);
+        return new CreateResult(CreateOutcome.Created, soc, occ.SocTitle, await CountAsync(soc), null, perBrowser);
     }
 
     /// <summary>The sentence the page or API shows for an outcome.</summary>
@@ -198,12 +211,14 @@ public class CareerRequestService
         CreateOutcome.PathExists => $"A career path already covers {r.SocTitle}.",
         CreateOutcome.NotListed => "That occupation is not listed here, so it cannot be requested from this page.",
         CreateOutcome.RateLimited =>
+            "You have made a lot of requests in the last hour, so this one was not recorded. Please try again later.",
+        CreateOutcome.NetworkRateLimited =>
             "Too many requests have come from this network in the last hour, so this one was not recorded. " +
             "On a school or library network other people may be requesting too. Please try again later.",
-        // ⚠ Worded for a shared network: behind a school's single address a DIFFERENT student reaches
-        // this branch, so "you already requested" would be false for them (UX review 2026-09-23).
-        CreateOutcome.AlreadyRequested =>
-            $"A request for {r.SocTitle} from this network was already counted today, so this one was not added again. {Waiting(r.RequestCount)}",
+        // Counted per BROWSER on the web page, so "you" is true there; the API counts per network.
+        CreateOutcome.AlreadyRequested => r.PerBrowser
+            ? $"You already requested {r.SocTitle} today, so it was counted once. {Waiting(r.RequestCount)}"
+            : $"A request for {r.SocTitle} from this network was already counted today, so this one was not added again. {Waiting(r.RequestCount)}",
         _ => $"Thank you. Your request for a career path for {r.SocTitle} has been recorded. {Waiting(r.RequestCount)}"
     };
 
@@ -233,7 +248,7 @@ public class CareerRequestService
     public async Task<PublicCareerQueueResponse> PublicQueueAsync(string filter)
     {
         var rows = await _db.CareerRequests.AsNoTracking()
-            .Select(r => new { r.SocCode, r.SocTitle, r.CipCode, r.Status, r.RequestedUtc })
+            .Select(r => new { r.SocCode, r.SocTitle, r.CipCode, r.Status, r.RequestedUtc, r.PublicNote })
             .ToListAsync();
         var covered = await CoveredSocsAsync();
 
@@ -246,7 +261,9 @@ public class CareerRequestService
                 return new PublicCareerQueueItem(0, g.Key, g.OrderByDescending(r => r.RequestedUtc).First().SocTitle,
                     g.Select(r => r.CipCode).Distinct().OrderBy(c => c).ToList(),
                     counted.Count, dated.Min(r => r.RequestedUtc), dated.Max(r => r.RequestedUtc),
-                    status.ToString(), slug);
+                    status.ToString(), slug,
+                    g.OrderByDescending(r => r.RequestedUtc).Select(r => r.PublicNote)
+                     .FirstOrDefault(n => !string.IsNullOrWhiteSpace(n)));
             })
             .ToList();
 
@@ -293,14 +310,20 @@ public class CareerRequestService
                     Rollup(g.Select(r => r.Status), false).ToString(),
                     slug,
                     g.Select(r => r.Reason).Where(s => !string.IsNullOrWhiteSpace(s)).Select(s => s!).Distinct().ToList(),
-                    g.Select(r => r.AdminNotes).LastOrDefault(n => !string.IsNullOrWhiteSpace(n)));
+                    g.Select(r => r.AdminNotes).LastOrDefault(n => !string.IsNullOrWhiteSpace(n)),
+                    g.Select(r => r.PublicNote).LastOrDefault(n => !string.IsNullOrWhiteSpace(n)));
             })
             .OrderByDescending(s => s.RequestCount).ThenBy(s => s.FirstRequestedUtc)
             .ToList();
     }
 
     /// <summary>Set the status of every request for an occupation. Returns the number updated.</summary>
-    public async Task<int> SetStatusAsync(string soc, CareerRequestStatus status, string? notes)
+    /// <param name="publicNote">Shown to visitors on the public queue (e.g. why it was declined).
+    /// A value sets it and "" clears it. Null keeps an existing one ONLY while the status stays Declined:
+    /// moving to any other status clears it, so a re-opened request never shows an old decline reason
+    /// (UX review 2026-09-23).</param>
+    public async Task<int> SetStatusAsync(string soc, CareerRequestStatus status, string? notes,
+        string? publicNote = null)
     {
         var rows = await _db.CareerRequests.Where(r => r.SocCode == soc).ToListAsync();
         foreach (var r in rows)
@@ -308,6 +331,8 @@ public class CareerRequestService
             r.Status = status;
             r.StatusUtc = DateTime.UtcNow;
             if (!string.IsNullOrWhiteSpace(notes)) r.AdminNotes = notes.Trim();
+            if (publicNote is not null) r.PublicNote = string.IsNullOrWhiteSpace(publicNote) ? null : publicNote.Trim();
+            else if (status != CareerRequestStatus.Declined) r.PublicNote = null;
         }
         await _db.SaveChangesAsync();
         return rows.Count;
@@ -353,15 +378,15 @@ public class CareerRequestService
              : CareerRequestStatus.Open;
     }
 
-    private bool CheckRateLimit(string ipHash)
+    private bool CheckRateLimit(string id, int limit)
     {
-        var key = $"career_request_rate:{ipHash}";
+        var key = $"career_request_rate:{id}";
         var count = _cache.GetOrCreate(key, e =>
         {
             e.AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1);
             return 0;
         });
-        if (count >= _repo.CareerRequestRateLimitPerHour) return false;
+        if (count >= limit) return false;
         _cache.Set(key, count + 1, TimeSpan.FromHours(1));
         return true;
     }

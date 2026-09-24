@@ -48,8 +48,8 @@ public class CareerRequestsController : ControllerBase
                 ErrorCodes.OccupationNotFound, $"{r.SocCode} is not listed under CIP {request.CipCode}.")),
             CareerRequestService.CreateOutcome.PathExists => Conflict(ApiResponse<object?>.Fail(
                 ErrorCodes.CareerPathExists, $"{message} See /careers/{r.PathSlug}.")),
-            CareerRequestService.CreateOutcome.RateLimited => StatusCode(429, ApiResponse<object?>.Fail(
-                ErrorCodes.RateLimitExceeded, message)),
+            CareerRequestService.CreateOutcome.RateLimited or CareerRequestService.CreateOutcome.NetworkRateLimited =>
+                StatusCode(429, ApiResponse<object?>.Fail(ErrorCodes.RateLimitExceeded, message)),
             _ => Ok(ApiResponse<CareerRequestCreatedResponse>.Ok(new CareerRequestCreatedResponse(
                 r.SocCode, r.SocTitle, r.RequestCount,
                 r.Outcome == CareerRequestService.CreateOutcome.AlreadyRequested, message)))
@@ -89,7 +89,7 @@ public class CareerRequestsController : ControllerBase
             return BadRequest(ApiResponse<object?>.Fail(ErrorCodes.ValidationError, "socCode must look like 19-3051."));
 
         var status = Enum.Parse<CareerRequestStatus>(request.Status!, true);
-        var n = await _service.SetStatusAsync(soc, status, request.Notes);
+        var n = await _service.SetStatusAsync(soc, status, request.Notes, request.PublicNote);
         if (n == 0)
             return NotFound(ApiResponse<object?>.Fail(ErrorCodes.CareerRequestNotFound, $"No requests found for {soc}."));
         return Ok(ApiResponse<MessageResponse>.Ok(new MessageResponse($"{n} request(s) for {soc} marked {status}.")));

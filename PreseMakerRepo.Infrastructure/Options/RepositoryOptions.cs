@@ -14,8 +14,12 @@ public class RepositoryOptions
     /// form limit, because working down a subject page is several clicks.</summary>
     public int GuideRequestButtonRateLimitPerHour { get; set; } = 20;
 
-    /// <summary>One-click career-path Request presses accepted per requester IP per hour.</summary>
+    /// <summary>One-click career-path Request presses accepted per BROWSER per hour.</summary>
     public int CareerRequestRateLimitPerHour { get; set; } = 20;
+
+    /// <summary>Career-path requests accepted per NETWORK (IP) per hour, across all its browsers -- high
+    /// enough for a classroom sharing one school address, low enough to blunt cookie-clearing.</summary>
+    public int CareerRequestNetworkRateLimitPerHour { get; set; } = 100;
 
     /// <summary>Resource suggestions accepted per requester IP per hour.</summary>
     public int ResourceSubmissionRateLimitPerHour { get; set; } = 10;

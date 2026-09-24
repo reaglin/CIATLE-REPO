@@ -22,7 +22,9 @@ public sealed record PublicCareerQueueItem(
     DateTime FirstRequestedUtc,
     DateTime LastRequestedUtc,
     string Status,
-    string? PathSlug);
+    string? PathSlug,
+    /// <summary>A reason shown to visitors, typically why a request was declined. Null when none was given.</summary>
+    string? PublicNote);
 
 /// <summary>The public queue for one filter, with the size of each filter for the page tabs.</summary>
 public sealed record PublicCareerQueueResponse(
@@ -43,7 +45,8 @@ public sealed record CareerRequestSummaryResponse(
     string Status,
     string? PathSlug,
     IReadOnlyList<string> Reasons,
-    string? AdminNotes);
+    string? AdminNotes,
+    string? PublicNote);
 
 /// <summary>An occupation listed under a CIP group, as the area page and the API show it.</summary>
 public sealed record CipOccupationResponse(

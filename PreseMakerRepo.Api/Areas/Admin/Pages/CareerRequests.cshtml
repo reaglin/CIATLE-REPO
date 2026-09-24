@@ -10,7 +10,11 @@
     <code>GET /api/v1/career-requests</code>. Mark an occupation <em>Queued</em> while its path is being written.
     Requests close automatically when a published path covers the occupation, either as its main occupation
     or as one of its <code>additionalSocCodes</code>. Visitors see <em>Open</em> as <strong>Waiting</strong> and
-    <em>Queued</em> as <strong>In progress</strong> on the <a href="/queue/careers">public queue</a>.
+    <em>Queued</em> as <strong>In progress</strong> on the <a href="/queue/careers">public queue</a>. The
+    <em>private note</em> is for you; the <em>reason shown to visitors</em> appears under the status on the public
+    queue, which is where a visitor looks when a request is declined. The status list starts on the row's
+    current status. Leave a box empty to keep what is already saved; a visitor reason is removed automatically
+    when the status changes to anything other than Declined.
 </p>
 
 @if (!string.IsNullOrEmpty(Model.Message))
@@ -81,7 +85,8 @@ else
                             var cls = i.Status switch { "Published" => "bg-success", "Queued" => "bg-info text-dark", "Declined" => "bg-secondary", _ => "bg-warning text-dark" };
                         }
                         <span class="badge @cls">@i.Status</span>
-                        @if (!string.IsNullOrWhiteSpace(i.AdminNotes)) { <div class="small text-muted">@i.AdminNotes</div> }
+                        @if (!string.IsNullOrWhiteSpace(i.AdminNotes)) { <div class="small text-muted">Private: @i.AdminNotes</div> }
+                        @if (!string.IsNullOrWhiteSpace(i.PublicNote)) { <div class="small">Public: @i.PublicNote</div> }
                     </td>
                     <td class="text-nowrap">
                         <form method="post" asp-page-handler="SetStatus" class="d-inline">
@@ -89,15 +94,18 @@ else
                             <input type="hidden" name="Status" value="@Model.Status" />
                             <div class="input-group input-group-sm" style="width: 320px;">
                                 <select name="newStatus" class="form-select form-select-sm" aria-label="New status for @i.SocTitle">
-                                    <option value="Queued">Queued (being written)</option>
-                                    <option value="Declined">Declined</option>
-                                    <option value="Open">Open</option>
-                                    <option value="Published">Published (normally automatic)</option>
+                                    <option value="Open" selected="@(i.Status == "Open")">Open</option>
+                                    <option value="Queued" selected="@(i.Status == "Queued")">Queued (being written)</option>
+                                    <option value="Declined" selected="@(i.Status == "Declined")">Declined</option>
+                                    <option value="Published" selected="@(i.Status == "Published")">Published (normally automatic)</option>
                                 </select>
-                                <input name="notes" class="form-control form-control-sm" placeholder="note (optional)" maxlength="1000"
-                                       aria-label="Note for @i.SocTitle" />
+                                <input name="notes" class="form-control form-control-sm" placeholder="private note" maxlength="1000"
+                                       aria-label="Private note for @i.SocTitle" />
                                 <button type="submit" class="btn btn-outline-primary btn-sm">Set</button>
                             </div>
+                            <input name="publicNote" class="form-control form-control-sm mt-1" style="width: 320px;" maxlength="500"
+                                   placeholder="reason shown to visitors (optional, e.g. when declining)"
+                                   aria-label="Reason shown to visitors for @i.SocTitle" />
                         </form>
                     </td>
                 </tr>

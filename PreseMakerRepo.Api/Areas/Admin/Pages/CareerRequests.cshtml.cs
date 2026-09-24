@@ -48,12 +48,14 @@ public class CareerRequestsModel : PageModel
     }
 
     // ⚠ "newStatus", not "status" -- see GuideRequestsModel.OnPostSetStatusAsync for why.
-    public async Task<IActionResult> OnPostSetStatusAsync(string soc, string newStatus, string? notes)
+    public async Task<IActionResult> OnPostSetStatusAsync(string soc, string newStatus, string? notes, string? publicNote)
     {
         if (CareerRequestService.TryNormalizeSoc(soc, out var s) &&
             Enum.TryParse<CareerRequestStatus>(newStatus, true, out var st))
         {
-            var n = await _service.SetStatusAsync(s, st, notes);
+            // An empty box leaves an existing public reason alone; clearing one is done over the API.
+            var n = await _service.SetStatusAsync(s, st, notes,
+                string.IsNullOrWhiteSpace(publicNote) ? null : publicNote);
             MessageOk = n > 0;
             Message = n > 0 ? $"{s}: {n} request(s) marked {st}." : $"No requests found for {s}.";
         }

@@ -135,6 +135,32 @@ public class AreaModel : PageModel
         return Page();
     }
 
+    /// <summary>Cookie holding the anonymous per-browser id that repeat requests are counted by.</summary>
+    public const string BrowserCookie = "cr_vid";
+
+    /// <summary>
+    /// The browser's anonymous id, created on first use: a random value with no link to the person,
+    /// stored server-side only as a salted hash. ⚠ It exists so repeats are counted once per BROWSER
+    /// (Ron, 2026-09-23) -- a classroom behind one school address then counts each student.
+    /// </summary>
+    private string BrowserId()
+    {
+        if (Request.Cookies.TryGetValue(BrowserCookie, out var id) &&
+            System.Text.RegularExpressions.Regex.IsMatch(id ?? "", "^[0-9a-f]{32}$"))
+            return id!;
+        id = Guid.NewGuid().ToString("N");
+        Response.Cookies.Append(BrowserCookie, id, new Microsoft.AspNetCore.Http.CookieOptions
+        {
+            HttpOnly = true,
+            Secure = Request.IsHttps,
+            SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax,
+            IsEssential = true,
+            MaxAge = TimeSpan.FromDays(365),
+            Path = "/"
+        });
+        return id;
+    }
+
     /// <summary>
     /// The one-click Request button. Records the request and comes back to the same place on the
     /// page with a confirmation, so the reader sees the count go up where they pressed.
@@ -152,7 +178,7 @@ public class AreaModel : PageModel
             return RedirectToPage(null, null, new { code }, "request-a-path");
         }
 
-        var result = await _requests.CreateAsync(s, c, null, ip, userId, CareerRequestChannel.Button);
+        var result = await _requests.CreateAsync(s, c, null, ip, userId, CareerRequestChannel.Button, BrowserId());
         RequestOk = result.Outcome is CareerRequestService.CreateOutcome.Created
                                    or CareerRequestService.CreateOutcome.AlreadyRequested;
         RequestMessage = CareerRequestService.MessageFor(result);

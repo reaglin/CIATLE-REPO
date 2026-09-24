@@ -35,6 +35,8 @@ public class CareerRequestConfiguration : IEntityTypeConfiguration<CareerRequest
         b.Property(r => r.CipCode).HasMaxLength(10).IsRequired();
         b.Property(r => r.Reason).HasMaxLength(1000);
         b.Property(r => r.RequesterIpHash).HasMaxLength(64);
+        b.Property(r => r.RequesterBrowserHash).HasMaxLength(64);
+        b.Property(r => r.PublicNote).HasMaxLength(500);
         b.Property(r => r.RequesterUserId).HasMaxLength(450);
         b.Property(r => r.AdminNotes).HasMaxLength(1000);
         b.Property(r => r.Status).HasConversion<int>();

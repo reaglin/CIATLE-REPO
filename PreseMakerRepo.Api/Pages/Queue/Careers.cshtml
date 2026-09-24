@@ -116,6 +116,10 @@ else
                                     <span class="badge text-bg-light border">Waiting</span>
                                     break;
                             }
+                            @if (!string.IsNullOrWhiteSpace(item.PublicNote))
+                            {
+                                <div class="small text-muted mt-1" style="max-width: 22rem; white-space: normal;">@item.PublicNote</div>
+                            }
                         </td>
                     </tr>
                 }

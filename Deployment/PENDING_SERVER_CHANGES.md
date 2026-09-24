@@ -8,6 +8,19 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⏳ READY TO DEPLOY — career requests counted per browser, and a public decline reason (2026-09-23)
+
+Migration **`CareerRequestBrowserAndPublicNote`** (two nullable columns on `CareerRequests`), so a full
+deploy that takes the database backup. Plan items 6.8 and 6.9; API spec §17.
+
+| Verify after the deploy |
+|---|
+| Press Request on a field page in two different browsers on the same network: both count (`/queue/careers` shows 2) |
+| Press it twice in one browser: the second says "You already requested …" and the count does not change |
+| On `/admin/career-requests`, set a request Declined with a *reason shown to visitors*: it appears under the badge on `/queue/careers?status=declined` |
+
+⚠ Phase 7 (free-text career requests) is **planned only** — do not build or deploy it until Ron decides.
+
 ### ✅ DEPLOYED 2026-09-23 — CIP seed at 228 nodes, the taxonomy key fix, and request-driven career paths
 
 ✅ **Verified live the same day:** `GET /api/v1/cip` returns 228 nodes (all 19 new groups present); the browse tree totals **40,870 = the catalog total**, with 171 disciplines and Art & Art History holding its 648 courses; `/api/v1/cip/{code}/occupations`, `/queue/careers`, `/careers?q=` and the Request section render; the request API refuses a covered career (409), an unlisted one (404) and a malformed code (400); the admin list answers 200 with a token and `/admin/career-requests` redirects an anonymous visitor to sign-in. All 85 paths re-pushed; 35 now carry `additionalSocCodes`. ⚠ **Not verified by Claude:** the admin page rendered while signed in, and the Set fix on `/admin/guide-requests` — both need a browser session.

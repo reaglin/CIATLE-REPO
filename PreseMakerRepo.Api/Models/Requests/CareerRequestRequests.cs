@@ -8,7 +8,9 @@ namespace PreseMakerRepo.Api.Models.Requests;
 public record CreateCareerRequestRequest(string? SocCode, string? CipCode, string? Reason);
 
 /// <summary>PATCH /api/v1/career-requests/{socCode}/status — admin triage.</summary>
-public record SetCareerRequestStatusRequest(string? Status, string? Notes);
+/// <param name="PublicNote">Shown to visitors on the public queue (why it was declined, say). Omit to leave
+/// an existing one alone; send "" to clear it.</param>
+public record SetCareerRequestStatusRequest(string? Status, string? Notes, string? PublicNote = null);
 
 /// <summary>PATCH /api/v1/cip/{code}/occupations/{socCode} — hide or show one crosswalk pairing.</summary>
 public record SetOccupationHiddenRequest(bool IsHidden);

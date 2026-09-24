@@ -1618,13 +1618,16 @@ covered occupations cannot be requested. An admin can hide an odd pairing; the s
 | POST | `/career-requests` | Public | `{ socCode, cipCode, reason? }` — ask for a path. 404 `OCCUPATION_NOT_FOUND` if not listed under that group; 409 `CAREER_PATH_EXISTS` if a path covers it; 429 when rate-limited (20/hour/IP) |
 | GET | `/queue/careers?status=waiting\|published\|declined\|all` | Public | The public queue, most-requested first. Nothing about requesters is shown |
 | GET | `/career-requests?status=open\|queued\|published\|declined\|all` | Admin | Per-occupation ranking with the reasons given — the Tools session's input |
-| PATCH | `/career-requests/{socCode}/status` | Admin | `{ status, notes? }` — triage every request for an occupation |
+| PATCH | `/career-requests/{socCode}/status` | Admin | `{ status, notes?, publicNote? }` — triage every request for an occupation. `notes` is private; `publicNote` (≤ 500) is shown on the public queue, typically as the reason for a decline; send `""` to clear it; omitted, an existing one is kept only while the status stays Declined and is cleared by any other status |
 | PATCH | `/cip/{code}/occupations/{socCode}` | Admin | `{ isHidden }` — hide or show one pairing |
 
 **Career paths gained `additionalSocCodes`** (`PUT /career-paths/{slug}`, ≤ 30, each `NN-NNNN`): the
 occupations a path covers as sections of its page. A push closes open requests for every occupation the
 path now covers, as a guide push closes guide requests.
 
-Requests are one row each, deduplicated per requester per day, with the IP stored only as a salted
-SHA-256 hash. Web pages: the **Request** button on `/careers/area/{code}`, the public queue at
+Requests are one row each. **Repeats are counted once per BROWSER per day** (Ron, 2026-09-23): the web
+button sets an anonymous `cr_vid` cookie stored only as a salted hash, so students sharing a school network
+each count. Limits are 20 an hour per browser and 100 an hour per network. API requests carry no cookie and
+are counted per network. The IP is stored only as a salted SHA-256 hash. The public queue items carry
+`publicNote`. Web pages: the **Request** button on `/careers/area/{code}`, the public queue at
 `/queue/careers`, admin triage at `/admin/career-requests`.
