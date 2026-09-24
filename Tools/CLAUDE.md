@@ -55,7 +55,16 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
-## ⚠⚠⚠ CAREER PATHS ARE THE WORK (Ron, 2026-09-17; still current 2026-09-21)
+## ⚠⚠⚠ MAINTENANCE MODE (Ron, 2026-09-23) — career paths AND guides are BY REQUEST ONLY
+
+> *"We are now in maintenance mode, career paths and course guides are by request."*
+
+**Both authored career-path queues are finished.** A session starts by reading BOTH request queues
+(`python career_paths.py requests`, and the guide queue in the checklist below) and works only what is in
+them, most requested first. **Empty queues mean no content work.** Everything below still governs HOW a
+path or guide is researched and written.
+
+## ⚠⚠⚠ CAREER PATHS ARE THE WORK (Ron, 2026-09-17; superseded 2026-09-23 by maintenance mode above)
 
 **Ron shifted the project to the development side and the feature is in.** His words:
 

@@ -49,8 +49,9 @@ sent afterwards — the push response named them, which is what `unlistedCourses
 on 2026-09-19 and is verified live (record below). The entries left here are the guide-field items
 the `Tools/` session raised, which are still unwritten.
 
-**Still open, not written yet:** the **`offering_notes`** field on guides and the **field sizing**
-items from 2026-09-11 (both below). They touch the same validator, so they should ship together.
+~~**Still open, not written yet:** the **`offering_notes`** field on guides and the **field sizing**
+items from 2026-09-11 (both below).~~ ❌ **Not required — Ron, 2026-09-23** (plan Phase 5). Kept below for
+the record only; do not build them.
 
 ## ✅ DEPLOYED 2026-09-19 — Career Paths, the CIP tree, Programs, and the guide prerequisite ceiling
 

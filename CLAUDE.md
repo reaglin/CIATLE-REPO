@@ -24,18 +24,17 @@ three-project solution exists and is deployed: **41,337 courses, 2,504 curriculu
 paths and 98 programmes** are live as of 2026-09-23. ✅ The browse tree now reaches every one of them (the art-course key collision was fixed and deployed
 2026-09-23, `docs/DEVELOPMENT-PLAN.md` item 1.5).
 
-**What is being worked on now: career paths, second queue.** The original 50 rows are complete —
-**47 published paths covering 71 occupations** across engineering, manufacturing/CTE, health,
-computing, business, law, education and public service. A **second 50 rows** were added on
-2026-09-21 (`Tools/career_paths/QUEUE.csv`, ranks 101–150), chosen from the largest Florida
-IPEDS footprints the site does not yet cover: health (16), business (8), a new creative and
-media cluster (7), science (4), social services (3), and the service and transport careers the
-first queue missed. **23 of the 50 are CHOICE paths.** ✅ **As of 2026-09-23 BOTH authored queues are complete** — the seed deploy unblocked the last seven rows
-(vet tech, pharmacist, truck driver, chef, cosmetologist, plumber, carpenter) and all are published.
-**After this queue, career paths move to REQUEST-DRIVEN, the same as courses — built 2026-09-23 and
-shipping with the next deploy** (Request button on each CIP field page, public queue at `/queue/careers`,
-admin at `/admin/career-requests`; plan Phase 6, API spec §17). Guide writing is
-already request-only. Both loops run from the `Tools/` session; neither needs a deploy.
+**⚠⚠ MAINTENANCE MODE (Ron, 2026-09-23): *"career paths and course guides are by request."*** Both
+authored career-path queues are finished (92 paths, 98 programmes). New career paths and curriculum guides
+are written only when a visitor requests one:
+
+| Queue | Read it with | Visitors request at |
+|---|---|---|
+| Career paths | `python Tools/career_paths.py requests` · `/queue/careers` | the **Request** button on each `/careers/area/{code}` field page |
+| Curriculum guides | `curl .../api/v1/queue/guides?status=waiting` · `/queue/guides` | **Request Guide** on any course page |
+
+Both loops run from the `Tools/` session and need no deploy. When both queues are empty there is no
+content work; say so rather than inventing some.
 
 ## Solution Structure
 
