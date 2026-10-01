@@ -28,8 +28,8 @@ continues around every one of them.
 |---|---|
 | ⏳ **Awaiting a decision from Ron** | **86** |
 | Informational — recorded, no decision needed | 19 |
-| ✅ Resolved | 11 |
-| **Total items** | **116** |
+| ✅ Resolved | 12 |
+| **Total items** | **117** |
 
 ---
 
@@ -122,7 +122,7 @@ continues around every one of them.
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 | **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
-| **116** | SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22) |
+| **117** | `ACG2021C` (live since 2026-05-04) claims "approximately 39 Florida institutions" — that is ACG2021's count (found 2026-10-01) |
 
 ### Informational — no decision needed (19)
 
@@ -148,7 +148,7 @@ continues around every one of them.
 | 74 | Say so when a number is CLEAN — new handling applied in batch 199 (informational) |
 | 84 | NEW SHAPES from batch 203 — recorded for awareness, no decision needed |
 
-### ✅ Resolved (11)
+### ✅ Resolved (12)
 
 | # | Item |
 |---|---|
@@ -163,6 +163,7 @@ continues around every one of them.
 | 67 | The 1000-character prerequisite ceiling is doing exactly what it was raised to do (batch 193) |
 | 85 | `OCB3108C` — the C-nobody-carries class gains its cleanest case, and this one resolved itself (batch 203) |
 | 112 | RESOLVED 2026-09-21 — phlebotomy IS its own programme (raised the same day) |
+| 116 | RESOLVED 2026-09-23 (Ron approved; deployed; all seven paths published) — SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22) |
 ## Open — awaiting decision
 ### 1. `ETI4448` — scope gap on a capstone (correction candidate)
 
@@ -3614,6 +3615,26 @@ Lawyer path's `22.00` and `45.04`.
 
 ⚠⚠ **Option 3 costs nothing now** — there are 43 rows of work ahead of these seven — so this does
 not block anything. It should be folded into the next deploy rather than triggering one.
+
+
+## 117. ⚠ `ACG2021C` (live since 2026-05-04) claims "approximately 39 Florida institutions" — that is ACG2021's count (found 2026-10-01)
+
+Writing the `ACG2021` guide (Ron's request, 2026-10-01) turned up an error in the older `ACG2021C` guide.
+Its Course Description says it is *"offered at approximately 39 Florida institutions."* **In the flat
+file, `ACG2021C` has three carriers, all public: St. Johns River, Seminole State and Valencia.** The 39 is the
+all-sector count for bare `ACG2021`. The `queue.csv` row for `ACG2021C` carries `39`, so the queue
+attached the bare number's count to the `C` id. This is the item-106 shape.
+
+The same guide's prerequisite field (*"MAT1033 … or higher math placement; ENC1101 … recommended at most
+institutions"*) is not backed by any of the three carriers' state records. The statewide prerequisite is
+empty.
+
+⚠ **For Ron:**
+1. **Republish `ACG2021C` as v1.1**: name its three carriers, point to the new `ACG2021` guide, and correct
+   the prerequisite field. This is cheap, and the content is otherwise sound; or
+2. **Leave it.** The new `ACG2021` guide states the correct counts and names `ACG2021C`'s carriers.
+
+Recorded rather than acted on because it edits a published guide.
 
 
 ## Resolved

@@ -2034,7 +2034,6 @@ SPN2949,COOPERATIVE EDUCATION,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State
 STS1931,SURGICAL TECHNOLOGY SPECIAL TOPICS SEMINAR,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 THE2949,THEATRE INTERNSHIP,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 OCB3108C,MARINE FIELD STUDIES,3,queued,997,2026-09-04T01:12:12Z,,,"HELD for Ron - batch 203. NO institution carries the C suffix, and this is CONFIRMED ABSENT from the SCNS flat file rather than merely unreachable - a stronger finding than COP3014C or INP3004C. The real ids both exist and are carried: OCB3108 (USF, 'Marine Field Studies', 4 cr) and OCB3108L (UNF 'Field Studies in Marine Science' and UWF 'Study Abroad in Florida - Marine Field Studies', both 3-4 cr). Subject is NOT in doubt - statewide title is 'Study Abroad in Florida - Marine Field Studies' - only the suffix. Note the L form runs 3-4 credits, not the usual 1: it is a full field/study-abroad course numbered L because it is all fieldwork, not a lab attached to a lecture. RESOLUTION: OCB3108L promoted to this row's priority (997) so the real course gets written here. See REVIEW_QUEUE item 28, which asks for one decision covering the whole C-nobody-carries class."
-AOM2316,AGRICULTURAL MACHINERY AND EQUIPMENT,3,pushed,997,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
 ACG4180,FINANCIAL STATEMENT ANALYSIS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-08T20:29:23Z,2026-09-08T20:29:34Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR4211L,PROFESSIONAL OFFICER COURSE LABORATORY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-06T03:42:25Z,2026-09-06T03:42:53Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH3540,AMERICAN MILITARY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-09T00:54:21Z,2026-09-09T00:54:45Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2050,6 +2049,7 @@ ANT4302,GENDER AND CULTURE,3,pushed,997,2026-09-04T01:12:12Z,2026-09-04T09:49:34
 ANT4403,ENVIRONMENTAL ANTHROPOLOGY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-04T09:49:34Z,2026-09-04T09:50:27Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT4516,HUMAN VARIATION,3,pushed,997,2026-09-04T01:12:12Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT4532,DISEASE AND CULTURE,3,pushed,997,2026-09-04T01:12:12Z,2026-09-04T09:49:34Z,2026-09-04T09:50:27Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+AOM2316,AGRICULTURAL MACHINERY AND EQUIPMENT,3,pushed,997,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
 APK2100C,HUMAN ANATOMY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-08T09:36:59Z,2026-09-08T09:37:30Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 APK2105C,HUMAN PHYSIOLOGY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-09T00:54:21Z,2026-09-09T00:54:45Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 APK4119C,EXERCISE PROGRAM DESIGN,3,pushed,997,2026-09-04T01:12:12Z,2026-09-09T01:21:23Z,2026-09-09T01:21:27Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2809,13 +2809,7 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-AOM1465C,Introduction to Sustainable Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
-AOM2012C,Types and Systems of Agricultural Operations,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
-AOM2433,Introduction to Precision Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
-AOM3073,Safety in Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
-AOM3220,Agricultural Construction and Maintenance,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
-ATT3811,Air Traffic Control Systems,,pushed,1000,2026-10-01T21:18:39Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
-EET0052,Fundamentals of Electricity and Basic Materials,,pushed,1000,2026-10-01T21:18:44Z,2026-10-01T21:18:30Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+ACG2021,Principles of Financial Accounting,,pushed,1000,2026-10-01T21:24:02Z,2026-10-01T21:23:56Z,2026-10-01T21:24:10Z,(added by reconcile from orphan draft)
 ANT2100,Introduction to Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
 ANT2511,Biological Anthropology,,pushed,1000,2026-09-04T03:07:50Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,(added by reconcile from orphan draft)
 ANT3137,Shipwreck Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
@@ -2836,8 +2830,14 @@ ANT4820,Archaeological Field Survey,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04
 ANT4835,Maritime Archaeological Field Methods,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04T01:37:01Z,2026-09-04T01:37:19Z,(added by reconcile from orphan draft)
 ANT4836,Scientific and Research Diving,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04T01:37:01Z,2026-09-04T01:37:19Z,(added by reconcile from orphan draft)
 ANT4853C,Geographic Information Systems in Anthropology,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04T01:37:01Z,2026-09-04T01:37:19Z,(added by reconcile from orphan draft)
+AOM1465C,Introduction to Sustainable Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
+AOM2012C,Types and Systems of Agricultural Operations,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
+AOM2433,Introduction to Precision Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+AOM3073,Safety in Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+AOM3220,Agricultural Construction and Maintenance,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 ART3713,Figure Sculpture,,pushed,1000,2026-09-04T14:56:43Z,2026-09-04T14:54:56Z,2026-09-04T14:56:48Z,(added by reconcile from orphan draft)
 ATT2130,Fundamentals of Aviation Instruction — Lower-Level Course,,pushed,1000,2026-09-15T06:57:46Z,2026-09-15T06:56:57Z,2026-09-15T09:12:30Z,(added by reconcile from orphan draft)
+ATT3811,Air Traffic Control Systems,,pushed,1000,2026-10-01T21:18:39Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 BME3100,Biomaterials,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
 BME4211,Biomechanics,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
 BME4332,Cell and Tissue Engineering,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
@@ -2883,6 +2883,7 @@ EEL4712,Digital Design,,pushed,1000,2026-09-04T11:38:49Z,2026-09-04T11:30:57Z,20
 EEL4713,Digital Computer Architecture,,pushed,1000,2026-09-04T11:38:49Z,2026-09-04T11:30:57Z,2026-09-04T11:38:56Z,(added by reconcile from orphan draft)
 EEL4744,Microprocessor Applications,,pushed,1000,2026-09-04T11:38:49Z,2026-09-04T11:38:44Z,2026-09-04T11:38:57Z,(added by reconcile from orphan draft)
 EEL4744L,Microprocessor Applications Laboratory,,pushed,1000,2026-09-04T11:38:49Z,2026-09-04T11:38:44Z,2026-09-04T11:38:57Z,(added by reconcile from orphan draft)
+EET0052,Fundamentals of Electricity and Basic Materials,,pushed,1000,2026-10-01T21:18:44Z,2026-10-01T21:18:30Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 EET2930,Selected Studies in Electronic Engineering Technology,,pushed,1000,2026-05-06T11:24:56Z,2026-05-02T10:27:58Z,2026-05-02T10:27:58.443155+00:00,(added by reconcile from orphan draft)
 EEV0571L,Network Support Services II Lab,,pushed,1000,2026-05-10T21:01:08Z,2026-05-11T01:00:14Z,2026-05-10T21:01:23Z,(added by reconcile from orphan draft)
 EGN3214,Programming for Engineers,,pushed,1000,2026-05-04T19:18:28Z,2026-05-04T23:18:16Z,2026-05-04T19:18:33Z,(added by reconcile from orphan draft)
