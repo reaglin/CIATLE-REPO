@@ -1686,6 +1686,7 @@ MVW4345,PRINCIPAL APPLIED SAXOPHONE,7,skipped,993,2026-09-04T01:12:11Z,,,Applied
 PCB4723C,ANIMAL PHYSIOLOGY,7,skipped,993,2026-09-04T01:12:11Z,,,"UWF publishes no C-suffix entry for this number. The UWF halves are published separately and both are live: the lecture and the L laboratory (batches 134-135). Standing split-family rule, Tools/CLAUDE.md."
 SLS2940,SERVICE LEARNING,7,skipped,993,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 TPP3251C,ACTING THE SONG,7,skipped,993,2026-09-04T01:12:11Z,,,"No UWF equivalent at any suffix. UWF's musical theatre line runs TPP2167C, TPP2715L, TPP3252C, TPP3257L and TPP3250; it publishes no TPP3251. Genuine no-coverage, not a split family."
+ACG1001,PRINCIPLES OF ACCOUNTING,6,pushed,994,2026-10-01T21:18:37Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
 ACG3111,FINANCIAL ACCOUNTING & REPORTING II,6,pushed,994,2026-09-04T01:12:11Z,2026-09-06T03:07:13Z,2026-09-06T03:07:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR4211,U.S. DEFENSE POLICY & STRATEG. FORMULAT.,6,pushed,994,2026-09-04T01:12:11Z,2026-09-06T03:42:25Z,2026-09-06T03:42:52Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ANT2511L,BIOLOGICAL ANTHROPOLOGY LAB,6,pushed,994,2026-09-04T01:12:11Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1763,7 +1764,6 @@ MVS4343,APP MUS PRIN CELLO,6,skipped,994,2026-09-04T01:12:11Z,,,Applied music: i
 NUR3065L,HEALTH ASSESSMENT,6,skipped,994,2026-09-04T01:12:11Z,,,No UWF equivalent; UWF publishes NUR3067 Health Assessment and Promotion instead (published batch 128). Batch 129.
 NUR4828C,PROFESSIONAL NURSING III,6,skipped,994,2026-09-04T01:12:11Z,,,UWF publishes lecture-only NUR4828; covered by NUR4828 (published batch 128). Batch 129.
 PGY2905C,INDEPENDENT STUDY,6,skipped,994,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
-BME4531,MEDICAL IMAGING,5,pushed,995,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 ADV2000C,ADVERTISING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T15:04:22Z,2026-09-07T15:04:35Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH4575,THE CIVIL RIGHTS MOVEMENT,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:08:06Z,2026-09-07T01:08:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMS2010,CIVIL DISCOURSE AND THE AMERICAN POLITICAL ORDER,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:57Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1774,6 +1774,7 @@ BCH3033L,BIOCHEMISTRY I LAB,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:4
 BCH3034,BIOCHEMISTRY II,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN3762,CODES AND STANDARDS,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T11:52:46Z,2026-09-07T11:53:19Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN4720C,SCHEDULING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T11:52:46Z,2026-09-07T11:53:19Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+BME4531,MEDICAL IMAGING,5,pushed,995,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 CAI4203,DEEP LEARNING,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CCJ3014,CRIMINOLOGY,5,pushed,995,2026-09-04T01:12:12Z,2026-09-07T01:46:47Z,2026-09-07T01:46:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CEG3011C,SOIL MECHANICS,5,pushed,995,2026-09-04T01:12:11Z,2026-09-12T00:45:00Z,2026-09-12T00:45:16Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1862,8 +1863,6 @@ PGY2930C,SELECTED TOPICS IN PHOTOGRAPHY,5,skipped,995,2026-08-31T00:09:01Z,,,Day
 THE2905,DIRECTED STUDY,5,skipped,995,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 TPP2500C,MOVEMENT FOR THE ACTOR,5,skipped,995,2026-09-04T01:12:12Z,,,UWF publishes this number without a C suffix; both forms are studio-format and the suffix difference is a filing decision. The UWF form is live. Standing split-family rule.
 TPP3310C,DIRECTING I,5,skipped,995,2026-09-04T01:12:12Z,,,UWF publishes this number without a C suffix; both forms are studio-format and the suffix difference is a filing decision. The UWF form is live. Standing split-family rule.
-BME4361,NEURAL ENGINEERING,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
-BME4581,INTRODUCTION TO BIOMEMS,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 ACG3343,COST ACCOUNTING,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T21:58:07Z,2026-09-07T21:58:18Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ADV3300,MEDIA PLANNING,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T21:58:07Z,2026-09-07T21:58:18Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR1101L,HERITAGE AND VALUES I LAB,4,pushed,996,2026-09-04T01:12:12Z,2026-09-05T19:16:15Z,2026-09-05T19:16:25Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1880,6 +1879,8 @@ ART3442C,PRINTMAKING: INTAGLIO,4,pushed,996,2026-09-04T01:12:12Z,2026-09-04T14:3
 ASH4404,MODERN CHINA,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T22:19:40Z,2026-09-07T22:19:49Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ATT1120,INSTRUMENT PILOT GROUND SCHOOL,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T23:56:15Z,2026-09-07T23:56:26Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN3224C,CONSTRUCTION TECHNIQUES,4,pushed,996,2026-09-04T01:12:12Z,2026-09-08T14:36:51Z,2026-09-08T14:37:01Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+BME4361,NEURAL ENGINEERING,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4581,INTRODUCTION TO BIOMEMS,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 BOT2010L,GENERAL BOTANY LABORATORY,4,pushed,996,2026-09-04T01:12:12Z,2026-09-05T19:16:15Z,2026-09-05T19:16:25Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BOT4404C,PHYCOLOGY,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T23:56:15Z,2026-09-07T23:56:26Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BOT4503L,PLANT PHYSIOLOGY LAB,4,pushed,996,2026-09-04T01:12:12Z,2026-09-05T20:50:48Z,2026-09-05T20:50:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2033,8 +2034,7 @@ SPN2949,COOPERATIVE EDUCATION,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State
 STS1931,SURGICAL TECHNOLOGY SPECIAL TOPICS SEMINAR,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 THE2949,THEATRE INTERNSHIP,4,skipped,996,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 OCB3108C,MARINE FIELD STUDIES,3,queued,997,2026-09-04T01:12:12Z,,,"HELD for Ron - batch 203. NO institution carries the C suffix, and this is CONFIRMED ABSENT from the SCNS flat file rather than merely unreachable - a stronger finding than COP3014C or INP3004C. The real ids both exist and are carried: OCB3108 (USF, 'Marine Field Studies', 4 cr) and OCB3108L (UNF 'Field Studies in Marine Science' and UWF 'Study Abroad in Florida - Marine Field Studies', both 3-4 cr). Subject is NOT in doubt - statewide title is 'Study Abroad in Florida - Marine Field Studies' - only the suffix. Note the L form runs 3-4 credits, not the usual 1: it is a full field/study-abroad course numbered L because it is all fieldwork, not a lab attached to a lecture. RESOLUTION: OCB3108L promoted to this row's priority (997) so the real course gets written here. See REVIEW_QUEUE item 28, which asks for one decision covering the whole C-nobody-carries class."
-BME3009,INTRODUCTION TO BIOMEDICAL ENGINEERING,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
-BME4508,BIOSIGNALS & SYSTEMS,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+AOM2316,AGRICULTURAL MACHINERY AND EQUIPMENT,3,pushed,997,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
 ACG4180,FINANCIAL STATEMENT ANALYSIS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-08T20:29:23Z,2026-09-08T20:29:34Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR4211L,PROFESSIONAL OFFICER COURSE LABORATORY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-06T03:42:25Z,2026-09-06T03:42:53Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AMH3540,AMERICAN MILITARY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-09T00:54:21Z,2026-09-09T00:54:45Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2067,6 +2067,8 @@ ATR3132,KINESIOLOGY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T14:06:50Z,2026-
 BCH3034L,ORGANIC CHEMISTRY II LAB,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:58:00Z,2026-09-12T03:58:12Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN3740,CONSTRUCTION LAW,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:36:32Z,2026-09-12T03:37:03Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN4431,STRUCTURES I,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:36:32Z,2026-09-12T03:37:03Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+BME3009,INTRODUCTION TO BIOMEDICAL ENGINEERING,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4508,BIOSIGNALS & SYSTEMS,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 BSC1086L,ANATOMY & PHYSIOLOGY II LABORATORY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-05T19:16:15Z,2026-09-05T19:16:25Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CAP4136,MALWARE ANALYSIS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-08T09:57:32Z,2026-09-08T09:57:44Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CAP4774,DATA WAREHOUSING,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:36:32Z,2026-09-12T03:37:03Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2364,8 +2366,6 @@ THE3112,THEATRE HISTORY I,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09
 THE3113,THEATRE HISTORY II,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 THE3243,MUSICAL THEATRE HISTORY,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TRA4155,SUPPLY CHAIN MANAGEMENT,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-BME4409,ENGINEERING PHYSIOLOGY,2,pushed,998,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
-BME4801,BIOMEDICAL ENGINEERING PROCESS DESIGN I,2,pushed,998,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
 ACG4151,ACCOUNTING THEORY,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ADV4802,ADVERTISING CAMPAIGNS,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR1112,HERITAGE AND VALUES II,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2421,6 +2421,8 @@ BCN2210,CONSTRUCTION MATERIALS,2,pushed,998,2026-09-04T01:12:12Z,2026-09-15T09:5
 BCN2251C,CONSTRUCTION DRAWINGS,2,pushed,998,2026-09-04T01:12:12Z,2026-09-15T09:53:10Z,2026-09-15T09:53:29Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN3281C,CONSTRUCTION METHODS LAB,2,pushed,998,2026-09-04T01:12:12Z,2026-09-15T09:53:10Z,2026-09-15T09:53:29Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN3590,SUSTAINABLE CONSTRUCTION,2,pushed,998,2026-09-04T01:12:12Z,2026-09-15T09:53:10Z,2026-09-15T09:53:29Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+BME4409,ENGINEERING PHYSIOLOGY,2,pushed,998,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4801,BIOMEDICAL ENGINEERING PROCESS DESIGN I,2,pushed,998,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
 BOT4734C,PLANT BIOTECHNOLOGY,2,pushed,998,2026-09-04T01:12:12Z,2026-09-15T16:08:09Z,2026-09-15T16:08:44Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BOT4850,MEDICAL BOTANY,2,pushed,998,2026-09-04T01:12:12Z,2026-09-15T16:08:09Z,2026-09-15T16:08:44Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BSC1020L,HUMAN BIOLOGY,2,pushed,998,2026-09-16T21:25:12Z,2026-09-16T21:25:00Z,2026-09-16T21:25:31Z,(added by reconcile from orphan draft)
@@ -2807,12 +2809,13 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-BME3100,Biomaterials,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
-BME4211,Biomechanics,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
-BME4332,Cell and Tissue Engineering,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
-BME4503,Biomedical Instrumentation,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
-BSC2010,General Biology I (Majors),,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:26:32Z,2026-09-19T01:33:26Z,(added by reconcile from orphan draft)
-BSC2011,General Biology II (Majors),,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:26:32Z,2026-09-19T01:33:26Z,(added by reconcile from orphan draft)
+AOM1465C,Introduction to Sustainable Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
+AOM2012C,Types and Systems of Agricultural Operations,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
+AOM2433,Introduction to Precision Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+AOM3073,Safety in Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+AOM3220,Agricultural Construction and Maintenance,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+ATT3811,Air Traffic Control Systems,,pushed,1000,2026-10-01T21:18:39Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
+EET0052,Fundamentals of Electricity and Basic Materials,,pushed,1000,2026-10-01T21:18:44Z,2026-10-01T21:18:30Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 ANT2100,Introduction to Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
 ANT2511,Biological Anthropology,,pushed,1000,2026-09-04T03:07:50Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,(added by reconcile from orphan draft)
 ANT3137,Shipwreck Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
@@ -2835,6 +2838,12 @@ ANT4836,Scientific and Research Diving,,pushed,1000,2026-09-04T01:37:06Z,2026-09
 ANT4853C,Geographic Information Systems in Anthropology,,pushed,1000,2026-09-04T01:37:06Z,2026-09-04T01:37:01Z,2026-09-04T01:37:19Z,(added by reconcile from orphan draft)
 ART3713,Figure Sculpture,,pushed,1000,2026-09-04T14:56:43Z,2026-09-04T14:54:56Z,2026-09-04T14:56:48Z,(added by reconcile from orphan draft)
 ATT2130,Fundamentals of Aviation Instruction — Lower-Level Course,,pushed,1000,2026-09-15T06:57:46Z,2026-09-15T06:56:57Z,2026-09-15T09:12:30Z,(added by reconcile from orphan draft)
+BME3100,Biomaterials,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BME4211,Biomechanics,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BME4332,Cell and Tissue Engineering,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BME4503,Biomedical Instrumentation,,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:25Z,(added by reconcile from orphan draft)
+BSC2010,General Biology I (Majors),,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:26:32Z,2026-09-19T01:33:26Z,(added by reconcile from orphan draft)
+BSC2011,General Biology II (Majors),,pushed,1000,2026-09-19T01:32:51Z,2026-09-19T01:26:32Z,2026-09-19T01:33:26Z,(added by reconcile from orphan draft)
 BSC2085,Anatomy and Physiology I,,pushed,1000,2026-09-17T16:20:02Z,2026-09-17T16:19:46Z,2026-09-17T16:20:27Z,(added by reconcile from orphan draft)
 BSC2086,Anatomy and Physiology II,,pushed,1000,2026-09-17T16:20:02Z,2026-09-17T16:19:46Z,2026-09-17T16:20:27Z,(added by reconcile from orphan draft)
 CET1600,CET1600: Networking Hardware (Networking Fundamentals),,pushed,1000,2026-09-11T23:48:40Z,2026-09-11T23:48:22Z,2026-09-12T00:32:37Z,(added by reconcile from orphan draft)
