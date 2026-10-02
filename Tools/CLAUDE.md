@@ -64,6 +64,28 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 them, most requested first. **Empty queues mean no content work.** Everything below still governs HOW a
 path or guide is researched and written.
 
+### ⚠⚠ EXCEPTION: the manufacturing block, `QUEUE.csv` ranks 155–165 (Ron approved 2026-10-02)
+
+A request asked for *"any career paths that might be missing that lead to careers in manufacturing."*
+A gap analysis was run against the 92 live paths, the SCNS flat file, and the 2023 IPEDS Florida
+completions (`institution_awards.json`). **Ron approved adding the result to the queue, so these rows are
+authorised work despite maintenance mode.** Work them in rank order.
+
+| Rank | Path | Evidence | Watch for |
+|---|---|---|---|
+| 155 | `production-technician` | The largest manufacturing job group, and the entry point. `EEV0010` Electronics Assembler at 9 technical colleges, `ETI0482`/`ETI0485` at 4, and 15.0613 awarded at 15 colleges. MSSC CPT | ⚠ 51-2090 and 51-2028 have **no CIP in the crosswalk**, so the anchor is set by hand. Write it as a pair with 157, which shares 15.06 |
+| 156 | `quality-technician` | `ETI1110` Intro to Quality Assurance at about 16 colleges; `ETI1622` Lean and Six Sigma at 10. ASQ CQT/CQI, MSSC CQP | ⚠ **Promotes row 21** (`section:industrial-engineering-technician`). Move 51-9061 out of that path's `additionalSocCodes`, update row 21's status, and re-push both |
+| 157 | `semiconductor-technician` | `ETS2160C`/`2163C`/`2165C` at Valencia, Tallahassee State, St. Petersburg, Miami Dade. Too new for the 2023 IPEDS data | Osceola/NeoCity context. Verify the programmes before naming them |
+| 158 | `aerospace-manufacturing-technician` | 15.0801 at Eastern Florida (76), Pasco-Hernando, Gulf Coast, Daytona, NW Florida. Composites `ETI2460C`/`2464C` at EFSC, FSCJ, GCSC, TSC | Section: aircraft structure assemblers 51-2011 |
+| 159 | `photonics-technician` | 15.0304 at Hillsborough, Indian River, Valencia, Pensacola; `ETS2210C`/`2230C`; UCF CREOL | Small. 17-3029 is an "all other" aggregate, so label its figures as such (O*NET 17-3029.08) |
+| 160 | `biomanufacturing-technician` | 41.0101: 479 completions at 10 colleges (Seminole State 333) | ⚠ **CIP 41.01 not seeded — a deploy.** 19-4021 is now a section of `biologist`, so move it |
+| 161 | `process-technician` | 41.0301: 558 completions at 10 colleges (EFSC 288, FSCJ 103, LSSC 83) | ⚠ **CIP 41.03 not seeded — a deploy.** ⚠⚠ **Verify those counts are what they appear to be** (possibly an embedded certificate) before writing. 19-4031 is a section of `chemist` |
+| 162–165 | `add-section:<slug>` rows | Industrial production manager → `production-supervisor` (and add **52.0205** to its CIPs: Valencia alone awarded 1,469 in 2023); tool and die maker and CNC programmer → `machinist` (5 courses, thin); occupational safety → `industrial-engineer` | `add-section:` means **not done yet**. When it lands, set the row to `section:<slug>` and add the SOC to `additionalSocCodes` |
+
+**Considered and not queued:** industrial/product designer (50.0404 had no Florida public completions in 2023), packaging (UF only), food
+scientist (UF and FAMU only, little technician training), marine technician (repair rather than
+manufacturing; 47.0616 at 13 technical colleges, so worth considering as a non-manufacturing path).
+
 ## ⚠⚠⚠ CAREER PATHS ARE THE WORK (Ron, 2026-09-17; superseded 2026-09-23 by maintenance mode above)
 
 **Ron shifted the project to the development side and the feature is in.** His words:

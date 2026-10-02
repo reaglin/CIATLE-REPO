@@ -140,3 +140,14 @@ rank,slug,name,cip,cip_title,soc,soc_title,cluster,type,cip_seeded,status
 152,slp-assistant,Speech-Language Pathology Assistant,51.02,Communication Disorders Sciences and Services,31-9099,"Healthcare Support Workers, All Other",HLT,DIRECT,yes,section:speech-language-pathologist
 153,occupational-therapist,Occupational Therapist,51.23,Rehabilitation and Therapeutic Professions,29-1122,Occupational Therapists,HLT,DIRECT,yes,section:occupational-therapy-assistant
 154,occupational-therapy-aide,Occupational Therapy Aide,51.08,Allied Health and Medical Assisting Services,31-2012,Occupational Therapy Aides,HLT,DIRECT,yes,section:occupational-therapy-assistant
+155,production-technician,Production Technician and Assembler,15.06,Industrial Production Technologies/Technicians,51-2090,Miscellaneous Assemblers and Fabricators,MFG,DIRECT,yes,
+156,quality-technician,Quality Technician and Inspector,15.07,Quality Control and Safety Technologies/Technicians,51-9061,"Inspectors, Testers, Sorters, Samplers, and Weighers",MFG,DIRECT,yes,
+157,semiconductor-technician,Semiconductor Technician,15.06,Industrial Production Technologies/Technicians,51-9141,Semiconductor Processors,MFG,DIRECT,yes,
+158,aerospace-manufacturing-technician,Aerospace Manufacturing Technician,15.08,Mechanical Engineering Related Technologies/Technicians,17-3021,Aerospace Engineering and Operations Technologists and Technicians,MFG,DIRECT,yes,
+159,photonics-technician,Laser and Photonics Technician,15.03,Electrical/Electronic Engineering Technologies/Technicians,17-3029,"Engineering Technologists and Technicians, Except Drafters, All Other",MFG,DIRECT,yes,
+160,biomanufacturing-technician,Biotechnology and Biomanufacturing Technician,41.01,Biology Technician/Biotechnology Laboratory Technician,19-4021,Biological Technicians,MFG,DIRECT,no,
+161,process-technician,Chemical and Process Technician,41.03,Physical Science Technologies/Technicians,19-4031,Chemical Technicians,MFG,DIRECT,no,
+162,industrial-production-manager,Industrial Production Manager,15.06,Industrial Production Technologies/Technicians,11-3051,Industrial Production Managers,MFG,CHOICE,yes,add-section:production-supervisor
+163,tool-and-die-maker,Tool and Die Maker,48.05,Precision Metal Working,51-4111,Tool and Die Makers,MFG,DIRECT,yes,add-section:machinist
+164,cnc-programmer,CNC Programmer,48.05,Precision Metal Working,51-9162,Computer Numerically Controlled Tool Programmers,MFG,DIRECT,yes,add-section:machinist
+165,occupational-safety-specialist,Occupational Health and Safety Specialist,15.07,Quality Control and Safety Technologies/Technicians,19-5011,Occupational Health and Safety Specialists,MFG,CHOICE,yes,add-section:industrial-engineer
