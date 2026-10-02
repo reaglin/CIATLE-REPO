@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""Row 155 of career_paths/QUEUE.csv (2026-10-02): Production Technician and Assembler.
+
+From the manufacturing gap analysis Ron approved on 2026-10-02. Written as a pair with
+semiconductor-technician (row 157), which shares CIP 15.06.
+"""
+import json
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(HERE, '..', 'career_paths', 'production-technician.json')
+
+body = """<h2>What the work actually is</h2>
+<p>Assemblers and fabricators put together finished products and the parts that go into them. They read blueprints and work instructions, fasten and fit components by hand or with power tools, run and tend the equipment that does the repetitive steps, and check their own work against a specification. BLS describes the setting plainly: most work in factories, many on a team where each person does one stage of a product, and increasingly <em>&ldquo;alongside robots, also known as &lsquo;collaborative robotics.&rsquo;&rdquo;</em></p>
+<p>&#9888; <strong>This is one of the largest groups of manufacturing jobs in the country, and the usual way into the industry.</strong> Most people who become technicians, inspectors or supervisors in a plant started on an assembly line or in a production cell.</p>
+
+<h2>The family, and where it is growing</h2>
+<table class="table">
+<thead><tr><th>Specialty (BLS, 2025)</th><th>Jobs</th><th>Outlook 2025&ndash;35</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Miscellaneous (team) assemblers</td><td>1,403,500</td><td>+1%</td><td>$44,650</td></tr>
+<tr><td>&#9888; Electrical and electronic assemblers</td><td>246,300</td><td>&#9989; <strong>+5%</strong></td><td>$45,850</td></tr>
+<tr><td>Structural metal fabricators</td><td>52,300</td><td>&#9888; &minus;6%</td><td>$51,330</td></tr>
+<tr><td>Aircraft structure assemblers</td><td>34,400</td><td>&#9888; &minus;6%</td><td><strong>$65,380</strong></td></tr>
+<tr><td>Engine and machine assemblers</td><td>33,500</td><td>&#9888;&#9888; <strong>&minus;17%</strong></td><td>$53,710</td></tr>
+</tbody>
+</table>
+<p>All assemblers and fabricators together: <strong>1,799,500 jobs</strong>, growth <strong>1%</strong>, median <strong>$45,450</strong>, and <strong>about 177,500 openings a year</strong>. Almost all of those openings replace people who move up or leave. &#9888; <strong>Enter at electronics, aim higher.</strong> Electronic assembly is the only specialty here that is growing, and aircraft assembly is the best paid. Both reward a certification (below) that general assembly does not ask for.</p>
+
+<h2>&#9888;&#9888; What a Florida assembler is paid, and why that matters</h2>
+<table class="table">
+<thead><tr><th>Team assemblers (51-2092), 2025</th><th>10th</th><th>25th</th><th>Median</th><th>75th</th><th>90th</th></tr></thead>
+<tbody>
+<tr><td>Florida</td><td>$30,020</td><td>$35,380</td><td>$38,410</td><td>$46,730</td><td>$55,170</td></tr>
+<tr><td>United States</td><td>$33,280</td><td>$37,380</td><td>$44,650</td><td>$51,200</td><td>$64,880</td></tr>
+</tbody>
+</table>
+<p>&#9888; <strong>Florida pays general assembly about $6,000 below the national median, and nearly $10,000 below it at the 90th percentile.</strong> The general assembly wage is not the reason to take this job; it is a paid way in. The money is one or two rungs up, in the technician, inspector and supervisor jobs that plants fill from their own floor (see <em>Where it leads</em>).</p>
+
+<h2>&#9888;&#9888;&#9888; You do not need a programme to be hired. Here is what one is for</h2>
+<p>BLS lists the entry-level education as a <strong>high school diploma</strong>, with <strong>no work experience</strong> and <strong>moderate-term on-the-job training</strong>. Plenty of Florida plants hire assemblers who have taken none of the courses on this page. So what is the training for?</p>
+<ul>
+<li><strong>Getting hired at the better plants, faster.</strong> Aerospace, defence and medical-device employers screen harder, and a completed certificate shows the things they screen for: safety, measurement, and reading a drawing.</li>
+<li><strong>The soldering certification.</strong> BLS: <em>&ldquo;many employers, especially those in the aerospace and defense industries, require electrical and electronic assembly workers to have certifications in soldering.&rdquo;</em> In practice that means the IPC standards (J-STD-001 and IPC-A-610). <strong>This is the most valuable thing an electronics assembly course can give you.</strong></li>
+<li><strong>Starting the ladder.</strong> Florida builds these courses as occupational completion points, so you can stop, work, and come back. Production worker (150 hours) leads to assembler (150 hours); electronics assembler (250 hours) leads to electromechanical assembler (500 hours). Each completion point matches a real job title, and each counts toward the technician programmes above it.</li>
+</ul>
+
+<h2>&#9888;&#9888; The 2025 programmes exist, but their courses are not yet taught</h2>
+<p>Florida's current Industrial Engineering Technology framework replaces the old production courses with four new ones, from <em>Advanced Manufacturing Entry Level Worker</em> up to <em>Advanced Manufacturing &amp; Production Technician</em>. The 2025 <em>Advanced Composites</em> framework adds two composite-technician courses. &#9888; <strong>No Florida institution carries any of those six course numbers yet in the statewide course numbering system.</strong> What colleges teach now is the older set listed on this page: Production Worker and Assembler at four technical colleges, and Electronics Assembler at ten. Ask a programme what it delivers, and expect the older names for a while.</p>
+
+<h2>Where it leads</h2>
+<ul>
+<li><strong>Quality inspector</strong>: the most common first move off the line. The same parts, judged instead of built.</li>
+<li><strong>Manufacturing and mechatronics technician</strong>: keeping the automated equipment running. It pays far more, and plants often pay for the training. See that path.</li>
+<li><strong>CNC operator and machinist</strong>, through Florida's CNC Production Technician courses. See the Machinist path.</li>
+<li><strong>Production supervisor</strong>, usually after years on the floor. See that path.</li>
+<li><strong>Semiconductor technician</strong>: cleanroom work in Central Florida pays well above general assembly. See that path.</li>
+</ul>
+
+<h2>Necessary skills</h2>
+<ul>
+<li><strong>Reading a drawing and a work instruction</strong>, and doing exactly what it says.</li>
+<li><strong>Measurement</strong>: calipers, micrometers and gauges, and knowing when a part is out of tolerance.</li>
+<li><strong>Hand-tool and fastening skill</strong>, and for electronics, fine soldering under magnification.</li>
+<li><strong>Safety</strong>: lockout/tagout, machine guarding, and working next to a robot.</li>
+<li>&#9888; <strong>Consistency.</strong> Plants track defects and attendance, and those two records decide who moves up.</li>
+</ul>
+
+<h2>What BLS says about automation</h2>
+<p><em>&ldquo;Increasingly, new advances in robotics have enabled machinery to perform more complex and delicate tasks previously performed by workers. In addition, assemblers and fabricators are increasing efficiency by working alongside robots, also known as &lsquo;collaborative robotics,&rsquo; which may reduce the demand for some assemblers and fabricators.&rdquo;</em> &#9888; <strong>BLS expects robots to reduce demand for the repetitive part of the job.</strong> The data supports the same advice this site gives elsewhere: use the assembly job as the way in, then move toward the people who set up, program, maintain and inspect the robots.</p>
+
+<h2>Advice</h2>
+<ul>
+<li><strong>If you need income now, apply directly and ask about tuition assistance.</strong> Many Florida manufacturers pay for exactly these courses once you are on the payroll.</li>
+<li><strong>If you are choosing a course, choose electronics.</strong> Electronics Assembler is the most widely taught entry course here (ten technical colleges), the specialty is growing, and the soldering certification is recognised by every aerospace and defence employer.</li>
+<li><strong>Ask which certification the course ends in</strong>: IPC soldering, MSSC Certified Production Technician, or, for aircraft work, the NCATT Aerospace/Aircraft Assembly certification. Florida counts NCATT AAA as <strong>9 credits</strong> toward its Aerospace Technology A.S.</li>
+<li><strong>Florida's plants are regional</strong>: aerospace and space-launch suppliers on the Space Coast, defence electronics around Orlando, medical devices around Tampa Bay and Jacksonville, and boat building on both coasts. Ask a programme which employers hire its completers.</li>
+</ul>"""
+
+doc = {
+    "slug": "production-technician",
+    "name": "Production Technician and Assembler",
+    "cipCode": "15.06",
+    "socCode": "51-2092",
+    "additionalSocCodes": ["51-2028", "51-2011", "51-2041", "51-2031"],
+    "isPublished": True,
+    "sortOrder": 155,
+    "description": "Assemblers and production workers build what a factory makes. It is one of the largest groups of manufacturing jobs in the country, and the usual way into the industry. ⚠ No credential is required to start. Florida's 150- to 500-hour courses help you get hired at better plants, earn a soldering certification, and start the climb to technician, inspector or supervisor.",
+    "credentialNote": "⚠ No licence governs assembly work, and no programme is required: BLS lists a high school diploma and moderate-term on-the-job training. The certifications that matter are the ones employers name. IPC soldering (J-STD-001, IPC-A-610) is commonly required of electronic assemblers by aerospace and defence employers, according to BLS. There is also the MSSC Certified Production Technician, and for aircraft work the NCATT Aerospace/Aircraft Assembly (AAA), which Florida counts as 9 credits toward its Aerospace Technology A.S. Ask a course which of these it ends in.",
+    "cipCodes": [
+        {"cipCode": "15.04", "note": "Electromechanical technologies. Florida's Certified Production Technology framework (0615049905, 300 hours) is filed here; 28 Florida public institutions award in the group (IPEDS 2023)."},
+        {"cipCode": "15.03", "note": "Electrical/electronic engineering technologies. The electronics assembler (EEV0010, 10 technical colleges) and electromechanical assembler (EEV0752) courses are electronics completion points, and electronic assembly is the one growing specialty in this family (BLS, +5%)."},
+        {"cipCode": "48.05", "note": "Precision metal working. Florida's CNC Production Technician courses (PMT0026/PMT0027, three technical colleges) and the structural metal fabricator specialty."},
+    ],
+    "programs": [
+        {"slug": "advanced-manufacturing-technology", "note": "The programme that holds most entry production courses, including the 300-hour Certified Production Technology certificate. 28 Florida public institutions."},
+        {"slug": "industrial-production-technology", "note": "Where the production ladder goes next: lean manufacturing, quality assurance and production control, the courses that move an assembler toward inspector and supervisor."},
+        {"slug": "electronics-engineering-technology", "note": "⚠ The route above electronic assembly. Electronic assembly is the only growing specialty in this family, and the technician degree is where its wage sits."},
+        {"slug": "machining-technology", "note": "The CNC production technician courses, for an assembler who would rather run the machines than load them."},
+        {"slug": "welding-technology", "note": "The structural metal fabricator side of this family: cutting, fitting and welding steel. That takes welding training rather than assembly training."},
+    ],
+    "courses": [
+        {"courseId": "ETI0481", "reason": "Production Worker, the first completion point (150 hours): plant safety, measurement, and the production process as a system. A job title on its own.",
+         "variantNote": "⚠ Four technical colleges carry it (Miami Lakes, Manatee, Ridge, Withlacoochee); North Florida College teaches it as ETI0481C. It belongs to the older framework; Florida's 2025 replacement courses (ETI0433–0436) are not yet taught anywhere."},
+        {"courseId": "ETI0482", "reason": "Assembler, the second completion point (150 hours): reading assembly instructions, fastening and fitting, and inspecting your own work.",
+         "variantNote": "⚠ Same four technical colleges as ETI0481; North Florida College teaches it as ETI0482C."},
+        {"courseId": "ETI0485", "reason": "The third course in the same sequence (150 hours): reliability and failure analysis. Why parts and products fail is where an assembler starts thinking like a technician.",
+         "variantNote": "⚠ The state titles it Reliability and Failure Analysis; some carriers title their version Automation and Production Technology. Same four technical colleges."},
+        {"courseId": "EEV0010", "reason": "Electronics Assembler (250 hours): the most widely taught entry course on this page, and the way into the one growing specialty. ⚠ Ask whether it ends in IPC soldering certification.",
+         "variantNote": "Ten Florida technical colleges, including Atlantic, Big Bend, Fort Myers, George T. Baker Aviation, Manatee, Traviss, Orange (South) and Robert Morgan."},
+        {"courseId": "EEV0752", "reason": "Electromechanical Assembler (500 hours), the next rung up: assemblies that combine wiring, electronics and mechanical parts, the kind aerospace and defence suppliers build.",
+         "variantNote": "⚠ Only Fort Myers and Manatee technical colleges carry it."},
+        {"courseId": "EEV0210", "reason": "Certified Production Technician (300 hours), built against the four MSSC assessments: safety, quality and measurement, manufacturing processes, and maintenance awareness. The most portable production credential.",
+         "variantNote": "⚠ North Florida College and Santa Fe carry this number; the 2025 framework delivers it as 60 lab hours plus 240 hours online. The MSSC certification is also taught under local course titles, so ask for it by name."},
+        {"courseId": "PMT0026", "reason": "CNC Production Technician I (300 hours), for an assembler moving to machine operation: setting up, running and checking CNC equipment.",
+         "variantNote": "Brewster, Manatee and Orange (Winter Park) technical colleges, each with the 300-hour second part, PMT0027."},
+        {"courseId": "ETI1110", "reason": "Principles of Quality Assurance: the college-credit course behind the most common move off the line, into inspection. Covers inspection, sampling, measurement and quality systems.",
+         "variantNote": "Taught at 15 Florida state colleges. ⚠ Four more (Eastern Florida, Gulf Coast, Northwest Florida, Palm Beach) teach it as ETI2110."},
+        {"courseId": "ETI1622", "reason": "Introduction to Lean Manufacturing: how plants cut waste and organise work. Every lead and supervisor is expected to know its vocabulary.",
+         "variantNote": "Taught at 12 state colleges; Pensacola and Polk teach ETI1622C, and four more use ETI2622 or ETI2622C."},
+        {"courseId": "ETI1420", "reason": "Engineering Materials and Processes: what products are made of, and how they are formed, joined and finished. A first college-credit course toward a technician degree.",
+         "variantNote": "Taught as ETI1420 at 12 state colleges; six more teach the integrated ETI1420C."},
+    ],
+    "sources": [
+        {"label": "BLS Occupational Outlook Handbook — Assemblers and Fabricators", "url": "https://www.bls.gov/ooh/production/assemblers-and-fabricators.htm",
+         "note": "$45,450 median (2025); 1,799,500 jobs; +1% for 2025–35; about 177,500 openings a year; high school diploma, no experience, moderate-term on-the-job training. Source of the specialty table and the soldering and robotics sentences quoted on this page."},
+        {"label": "O*NET — Florida wages for Team Assemblers (51-2092.00)", "url": "https://www.onetonline.org/link/localwages/51-2092.00?st=FL",
+         "note": "Florida median $38,410 against $44,650 national (2025); Florida 10th–90th percentile $30,020–$55,170, against $33,280–$64,880 nationally."},
+        {"label": "Florida CTE frameworks via CPALMS — Certified Production Technology (2025), Industrial Engineering Technology, Advanced Composites (2025), Aviation Assembly and Fabrication", "url": "https://www.cpalms.org/PreviewCourseProgram/CTE?frameurl=%2Fsearch",
+         "note": "CPT is 60 lab plus 240 online hours. No carrier is listed in SCNS for the current Industrial Engineering Technology and Advanced Composites course numbers (ETI0433–0436, ETI0462–0463). NCATT AAA counts as 9 credits toward the Aerospace Technology A.S."},
+        {"label": "Florida Statewide Course Numbering System — public carriers of every course named", "url": "https://flscns.fldoe.org/",
+         "note": "Carrier counts from the SCNS course inventory (September 2026): EEV0010 at 10 technical colleges; ETI0481/0482/0485 at four; ETI1110 at 15 state colleges; ETI1622 at 12."},
+    ],
+    "bodyHtml": body,
+}
+
+json.dump(doc, open(OUT, 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=2)
+print('wrote', os.path.relpath(OUT), len(body), 'chars of body')

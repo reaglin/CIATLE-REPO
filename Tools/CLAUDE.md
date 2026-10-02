@@ -243,6 +243,10 @@ re-deriving comparators each time:**
 | Commercial pilot | −$1,330 | floor ABOVE national (+$3,740 at the 10th) but ⚠ **−$37,510 at the 90th** |
 | Airline pilot | −$7,120 | ⚠⚠ **−$107,150 at the 90th** ($356,680 vs $463,830) |
 | ✅ Agricultural manager | −$2,820 | ✅✅ **75th +$22,510 and 90th +$26,920 ABOVE national** — ⚠ salaried managers only (see the self-employment rule) |
+| ✅✅ **Semiconductor processing technician** (2026-10-02) | ✅ **+$10,900** | $62,330 vs $51,430; floor also above; only the 90th below (−$2,150). ⚠ The only positive median gap measured so far |
+| Team assembler (2026-10-02) | −$6,240 | $38,410 vs $44,650; −$9,710 at the 90th |
+| CNC tool programmer (2026-10-02) | −$4,150 | $63,970 vs $68,120 |
+| Industrial production manager (2026-10-02) | −$6,190 | ⚠ floor −$11,750 but **90th +$7,390 ABOVE national** |
 
 ⚠⚠ **Two readings worth carrying forward.** The science paths cluster at the bad end and the
 computing ones at parity — **plausibly because database and software work is priced in a national
