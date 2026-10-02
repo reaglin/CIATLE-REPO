@@ -71,6 +71,12 @@ A gap analysis was run against the 92 live paths, the SCNS flat file, and the 20
 completions (`institution_awards.json`). **Ron approved adding the result to the queue, so these rows are
 authorised work despite maintenance mode.** Work them in rank order.
 
+✅ **Done 2026-10-02 (Ron chose "start with 155 + 157"): 155 and 157 published, and 162–165 written into their
+host pages and re-pushed** (`scratchpad/mkprodtech.py`, `mksemitech.py`, `mksections_mfg.py`). ⚠ 155's SOC
+became **51-2092** (Team Assemblers, the detailed code O*NET's wages use). **Next: 156, 158, 159**; then 160
+and 161 after their CIP seed deploy. ⚠ Finding from both: as on `mechatronics-technician`, **the 2025 framework
+course numbers (ETI0433–0436, ETI0462–0463) have NO carriers in SCNS**, so colleges still teach the older courses.
+
 | Rank | Path | Evidence | Watch for |
 |---|---|---|---|
 | 155 | `production-technician` | The largest manufacturing job group, and the entry point. `EEV0010` Electronics Assembler at 9 technical colleges, `ETI0482`/`ETI0485` at 4, and 15.0613 awarded at 15 colleges. MSSC CPT | ⚠ 51-2090 and 51-2028 have **no CIP in the crosswalk**, so the anchor is set by hand. Write it as a pair with 157, which shares 15.06 |
