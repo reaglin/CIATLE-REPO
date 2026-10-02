@@ -304,11 +304,13 @@ TECH_CODES = {
     'MTEC',        # Fred K. Marchman Technical College
     'MTI',         # Manatee Technical College
     'NFTC',        # North Florida Technical College
+    'OTC',         # Okaloosa Technical College (SCNS spells it 'TECHINCAL'; missing until 2026-10-02)
     'OTCMC',       # Orange Technical College-Main Campus
     'OTCSC',       # Orange Technical College-South Campus
     'OTCWC',       # Orange Technical College-West Campus
     'OTCWP',       # Orange Technical College-Winter Park
     'PTCC',        # Pinellas Technical College-Clearwater
+    'RME',         # Robert Morgan Educational Center and Technical College (missing until 2026-10-02)
     'PTCSP',       # Pinellas Technical College-St Petersburg
     'RLTC',        # Locklin Technical College
     'RTC',         # Ridge Technical College

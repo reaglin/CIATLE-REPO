@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **85** |
+| ⏳ **Awaiting a decision from Ron** | **86** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 13 |
-| **Total items** | **117** |
+| **Total items** | **118** |
 
 ---
 
-### ⏳ Awaiting a decision (85)
+### ⏳ Awaiting a decision (86)
 
 | # | Item |
 |---|---|
@@ -122,6 +122,7 @@ continues around every one of them.
 | **113** | ❌ CORRECTED, not pending — the batch-127 "no hospital rotations" finding was wrong (2026-09-21) |
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 | **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
+| **118** | ℹ️ Two more public technical colleges were missing from `TECH_CODES`: Okaloosa (OTC) and Robert Morgan (RME) (found and fixed 2026-10-02) |
 
 ### Informational — no decision needed (19)
 
@@ -3639,6 +3640,19 @@ Recorded rather than acted on because it edits a published guide.
 ✅ **Done 2026-10-02, option 1.** v1.1 names the three carriers, points to the `ACG2021` guide, adds an
 Offering Notes table and `offering_notes`, and replaces the prerequisite with Valencia's published one
 (C or better in MAC 1105, APA 1111C or MTB 1103). The rest of the guide is unchanged.
+
+
+## 118. ℹ️ Two more public technical colleges were missing from `TECH_CODES`: Okaloosa (OTC) and Robert Morgan (RME) (found and fixed 2026-10-02)
+
+Found by the `EEV0203` request: its only carrier, **Okaloosa Technical College**, classified as `other`
+(private). A cross-check of every IPEDS public "Technical" institution against `scns.py` found one more,
+**Robert Morgan Educational Center and Technical College** (Miami-Dade). Same shape as item 109.
+
+✅ **Fixed, no decision needed.** Both were added to `TECH_CODES`. The institutions were sent, and the 24 prefixes
+they carry (189 offerings: AER, PMT, MEA, ACR, EEV, MTE, …) were re-listed with `list_courses.py`:
+3,539 courses sent, **908 newly listed**, 0 failed. ⚠ SCNS spells Okaloosa "TECHINCAL", which is why
+name matching missed it. Treasure Coast and Wilton Simpson technical colleges appear in IPEDS but not
+yet in the SCNS institution map, so they have no SCNS offerings to list.
 
 
 ## Resolved
