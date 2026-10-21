@@ -699,8 +699,11 @@ public class CoursesController : ControllerBase
                 var file = form.Files.GetFile(matMeta.FilePartName);
                 if (file is null) continue;
 
-                var existing = module.Materials.FirstOrDefault(m =>
-                    m.FileName == matMeta.FilePartName || m.Title == matMeta.Title);
+                // Only materials still in the module, and a file-name match before a title match,
+                // so a removed material (or one that only shares a title) is never overwritten.
+                var live = module.Materials.Where(m => m.Status != ContentStatus.Removed).ToList();
+                var existing = live.FirstOrDefault(m => m.FileName == matMeta.FilePartName)
+                               ?? live.FirstOrDefault(m => m.Title == matMeta.Title);
                 if (existing is null) continue;
 
                 if (file.Length > _storageOpts.MaxMaterialSizeBytes)

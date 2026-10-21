@@ -155,7 +155,7 @@ public class MaterialsController : ControllerBase
         if (file.Length > _storageOpts.MaxMaterialSizeBytes)
             return StatusCode(413, ApiResponse<object?>.Fail(ErrorCodes.MaterialTooLarge, "File exceeds size limit."));
 
-        if (!MaterialTypeHelper.IsMimeAccepted(matType, file.ContentType, _storageOpts.OtherMimeTypes))
+        if (!MaterialTypeHelper.IsMimeAccepted(matType, file.ContentType, _storageOpts.OtherMimeTypes, file.FileName))
             return BadRequest(ApiResponse<object?>.Fail(ErrorCodes.ValidationError,
                 $"Content type '{file.ContentType}' is not accepted for material type '{req.Type}'."));
 
@@ -241,7 +241,7 @@ public class MaterialsController : ControllerBase
             if (file.Length > _storageOpts.MaxMaterialSizeBytes)
                 return StatusCode(413, ApiResponse<object?>.Fail(ErrorCodes.MaterialTooLarge, "File exceeds size limit."));
 
-            if (!MaterialTypeHelper.IsMimeAccepted(material.Type, file.ContentType, _storageOpts.OtherMimeTypes))
+            if (!MaterialTypeHelper.IsMimeAccepted(material.Type, file.ContentType, _storageOpts.OtherMimeTypes, file.FileName))
                 return BadRequest(ApiResponse<object?>.Fail(ErrorCodes.ValidationError,
                     $"Content type '{file.ContentType}' is not accepted for this material type."));
 

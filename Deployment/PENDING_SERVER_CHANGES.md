@@ -8,6 +8,23 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — "Other" files accepted again, and module update never touches removed materials (2026-10-21)
+
+Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for the password).
+
+Found while making CourseBuilder+ update a module it published before (PreseMaker plan 20.11). `Storage:OtherMimeTypes`
+holds `".ext:mime"` entries, but `MaterialTypeHelper.IsMimeAccepted` compared the bare content type with the whole
+entry, so **every "Other" file was refused** by `POST`/`PUT …/materials`. Now the entry is split; content-type
+parameters (`; charset=…`) are ignored; `application/octet-stream` is accepted for Other when the extension is listed.
+`PUT …/modules/{id}` matched replacement files against removed materials too, and by title before file name; now
+only live materials, file name first. New test project `PreseMakerRepo.Tests` (13 tests, `dotnet test`).
+
+| Verify after the deploy |
+|---|
+| Upload a `.csv` or `.json` material of type Other to a module you own (`POST /api/v1/courses/{id}/modules/{moduleId}/materials`): 201, not "Content type … is not accepted" |
+| Replace it (`PUT …/materials/{materialId}`) with another `.csv`: 200 |
+| Then tell Claude: CourseBuilder+ can stop sending Other files as Presentation/PrintableHTML/Document (its workaround, `RepoApiClient`) |
+
 ### ✅ DEPLOYED 2026-09-23 — career requests counted per browser, and a public decline reason
 
 ✅ Verified live by Claude: queue and admin items carry `publicNote`; the field page shows the new wording; a Request post set the `cr_vid` cookie (a request for an already-covered career, so nothing was stored — the queue still holds 2 items). ⚠ Ron: the two-browser press test and a declined reason on the live admin page are still worth doing once.
