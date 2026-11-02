@@ -1,0 +1,25 @@
+{
+ "EGM4853": {
+  "title": "Bio-Fluid Mechanics and Bio-Heat Transfer",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "UF (the only Florida public carrier): EGN 3353C Fluid Mechanics, which requires Calculus III (MAC 2313). The title includes heat transfer but no heat-transfer course is required: if you have not taken one (UF's EML 4140), review conduction, the heat equation and convection before the bioheat half. No physiology background assumed. An elective that does not run every term; check UF's schedule. UF also carries a graduate twin, EGM 6855, with the same title and description; ask the department before taking both, since credit for both may not be allowed.",
+  "offering_notes": {
+   "summary": "One public carrier, the University of Florida, at 3 credits. UF does not publish contact hours.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida convention of 15 contact hours per credit for a lecture course; the statewide record marks the course as having no laboratory.",
+   "offerings": [
+    {
+     "institution": "UF",
+     "institution_name": "University of Florida",
+     "title": "Bio-Fluid Mechanics and Bio-Heat Transfer",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite EGN 3353C. Catalog description matches the statewide text. Graduate twin EGM 6855 carries the same title and description (prerequisite: undergraduate fluid mechanics); the catalog does not say they are taught together."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "CHM1032": {
+  "title": "General Chemistry for Science Allied Fields (One Semester): Chemistry for Health Sciences",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "None statewide; no prior chemistry assumed. Carriers set a math gate: UCF a C in MAC1105C or MGF1130; Gulf Coast math placement or a C in college math; Palm Beach and Indian River college-level placement. *** NOT A SUBSTITUTE FOR CHM2045 (the state says so): pharmacy, PA, medicine, dentistry, most dietetics and science majors need CHM2045/2046. Check your target programme before registering. *** NOT GE CORE: whether it counts as natural-science gen ed is each college's call (not at CF or IRSC). *** LAB IS SEPARATE (CHM1032L) at most carriers. *** Indian River carries this number at 1 CREDIT (biochemistry only); everyone else at 3.",
+  "offering_notes": {
+   "summary": "Ten public carriers. Nine at 3 credits; Indian River at 1 credit (biochemistry only). FIU still appears in the state file but its own catalogue marks the course inactive. Broward publishes 48 lecture hours, Gulf Coast 3 lecture hours a week.",
+   "hours_source": "mixed",
+   "derived_contact_hours": 45,
+   "derivation": "Florida convention: 45 hours for a 3-credit lecture course. Broward publishes 48; Gulf Coast publishes 3 lecture hours a week. No other carrier publishes hours.",
+   "offerings": [
+    {
+     "institution": "BC",
+     "institution_name": "Broward College",
+     "title": "General Chemistry Science Allied Fields",
+     "credits": 3,
+     "contact_hours": 48,
+     "note": "Published: 48 lecture hours. \"Designed specifically for Nursing and other Allied Health Technology students.\" Lab CHM1032L 1 credit, 32 lab hours, $19 fee."
+    },
+    {
+     "institution": "CF",
+     "institution_name": "College of Central Florida",
+     "title": "Chemistry for Health Related Fields",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Lab CHM1032L 1 credit. Not designated natural-science general education in the state file."
+    },
+    {
+     "institution": "FGCU",
+     "institution_name": "Florida Gulf Coast University",
+     "title": "General, Organic & Biochemistry",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Lab CHM1032L 1 credit."
+    },
+    {
+     "institution": "GCSC",
+     "institution_name": "Gulf Coast State College",
+     "title": "General, Organic, Biochemistry",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "3 lecture hours a week (published). Fall and spring. Prerequisite: math placement or C in a college-level math course. No separate lab number."
+    },
+    {
+     "institution": "HC",
+     "institution_name": "Hillsborough College",
+     "title": "Chemistry for Health Sciences",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Lab CHM1032L 1 credit."
+    },
+    {
+     "institution": "IRSC",
+     "institution_name": "Indian River State College",
+     "title": "Biochemistry for Health Professionals",
+     "credits": 1,
+     "contact_hours": null,
+     "note": "1 CREDIT, biochemistry only (lipids, carbohydrates, proteins, nucleic acids). Counts inside an 8-credit chemistry requirement (MLT A.S.). IRSC: not a natural-science general-education course."
+    },
+    {
+     "institution": "PBSC",
+     "institution_name": "Palm Beach State College",
+     "title": "Principles of Chemistry",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "\"Designated for Nursing and other Allied Health students.\" CHM1032L recommended corequisite."
+    },
+    {
+     "institution": "SJRSC",
+     "institution_name": "St. Johns River State College",
+     "title": "Principles of Chemistry",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Lab CHM1032L 1 credit. Catalogue description not checked."
+    },
+    {
+     "institution": "TSC",
+     "institution_name": "Tallahassee State College",
+     "title": "General Chemistry for Allied Health",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "No separate lab number in the state file."
+    },
+    {
+     "institution": "UCF",
+     "institution_name": "University of Central Florida",
+     "title": "General Chemistry",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "\"Primarily oriented toward Health Science majors.\" Prerequisite C in MAC1105C or MGF1130. Lab CHM1032L 1 credit, 3 lab hours a week. NC grading policy."
+    },
+    {
+     "institution": "FIU",
+     "institution_name": "Florida International University",
+     "title": "Chemistry and Society",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "State file only: FIU's own catalogue lists CHM1032 (\"Survey General Chem\") as INACTIVE. FIU teaches CHM1033 Survey of Chemistry (4 credits) with CHM1033L."
+    }
+   ]
+  }
+ }
+}

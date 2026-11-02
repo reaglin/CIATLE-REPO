@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **86** |
+| ⏳ **Awaiting a decision from Ron** | **91** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 13 |
-| **Total items** | **118** |
+| **Total items** | **123** |
 
 ---
 
-### ⏳ Awaiting a decision (86)
+### ⏳ Awaiting a decision (91)
 
 | # | Item |
 |---|---|
@@ -123,6 +123,11 @@ continues around every one of them.
 | **114** | Two live PTA guides sit on ids only PRIVATE institutions carry (found 2026-09-21) |
 | **115** | `computer-science` claims CIP `11.01`, which sweeps in every INFORMATION TECHNOLOGY programme (found 2026-09-21, software developer path) |
 | **118** | ℹ️ Two more public technical colleges were missing from `TECH_CODES`: Okaloosa (OTC) and Robert Morgan (RME) (found and fixed 2026-10-02) |
+| **119** | ℹ️ Chipola College was missing from `FCS_CODES` (found and fixed 2026-11-02, batch 243) |
+| **120** | ℹ️ `COP1000C` and `COP3530C` (live since 2026-05-06) overstate their carriers — corrected as v1.1 (2026-11-02) |
+| **121** | `CHM5716` — FAU and FSU teach two different graduate courses on one number (found 2026-11-02, batch 244) |
+| **122** | `EDH6051` — UF uses the number for a doctoral statistics course (found 2026-11-02, batch 244) |
+| **123** | ℹ️ `EML x234` carries general materials science AND failure analysis (found 2026-11-02, batch 244) |
 
 ### Informational — no decision needed (19)
 
@@ -3653,6 +3658,54 @@ they carry (189 offerings: AER, PMT, MEA, ACR, EEV, MTE, …) were re-listed wit
 3,539 courses sent, **908 newly listed**, 0 failed. ⚠ SCNS spells Okaloosa "TECHINCAL", which is why
 name matching missed it. Treasure Coast and Wilton Simpson technical colleges appear in IPEDS but not
 yet in the SCNS institution map, so they have no SCNS offerings to list.
+
+
+## 119. ℹ️ Chipola College was missing from `FCS_CODES` (found and fixed 2026-11-02, batch 243)
+
+Found writing `COP2000`: Chipola (SCNS `CC`, id 94) classified as `other`, so `is_public()` dropped a public
+Florida College System college from every offering list and carrier count. Same shape as items 109 and 118.
+✅ **Fixed, no decision needed:** `'CC'` added to `FCS_CODES`. ⚠ **Still to do:** re-list Chipola's
+prefixes with `list_courses.py` so existing course pages gain its offerings (blocked 2026-11-02 by the
+admin login returning HTTP 500).
+
+
+## 120. ℹ️ `COP1000C` and `COP3530C` (live since 2026-05-06) overstate their carriers — corrected as v1.1 (2026-11-02)
+
+Same shape as item 117. `COP1000C` claimed "approximately 22 Florida institutions" (3 carry it: Broward,
+FSCJ, Valencia; 22 is closer to the bare `COP1000` plus `COP2000`). `COP3530C` claimed "approximately 14"
+(FAU alone carries it), named `COP1000C`/`COP2800C` as prerequisites (FAU's gate is COT2000C or MAD2104, and
+COP3014 or COP3275C) and said "Java or C++" (FAU teaches C++).
+✅ **Corrected under the 2026-09-17 "fix errors as you spot them" rule**: drafts at v1.1 change only those
+sentences and the `COP3530C` prerequisite, and link the new bare-number guides. **They push with batch 243.**
+Say so if you would rather they did not.
+
+
+## 121. ⚠ `CHM5716` — FAU and FSU teach two different graduate courses on one number (found 2026-11-02, batch 244)
+
+FAU: *Materials Chemistry*, a solid-state and inorganic survey with XRD (dual-numbered with CHM 4714).
+FSU: *Characterization of Materials I*, a methods course (microscopy, diffraction, transport, magnetic),
+repeatable to 9 credits; FAU's subject corresponds to FSU's **CHM 5715**. The statewide title "Topics in
+Materials Chemistry II" is stale and duplicates x718. FSU's credit is 3 in its bulletin, 1 in the flat file.
+**The guide covers both as labelled readings.** ⚠ **Decision for Ron: split into `CHM5716-FAU` /
+`CHM5716-FSU` plus a disambiguation page, or leave as one guide?**
+
+
+## 122. ⚠ `EDH6051` — UF uses the number for a doctoral statistics course (found 2026-11-02, batch 244)
+
+Statewide *Introduction to Higher Education in America*; FAU teaches that survey (and FSU as **EDH 5051**,
+equivalent by the last three digits). ⚠ **UF's `EDH6051` has been "Quantitative Approaches for Practitioner
+Research in Higher Education Administration" since June 2026 (Ed.D. only)**; UF teaches the survey as
+**EDH 6066**. FIU's `EDH6051C` is *Leadership in Higher Education*. UF's `EDH7916` shows the same misfiling
+shape. **The guide follows the statewide/FAU reading and names UF's and FIU's courses.**
+⚠ **Decision for Ron: a `-SCNS` / `-UF` split?**
+
+
+## 123. ℹ️ `EML x234` carries general materials science AND failure analysis (found 2026-11-02, batch 244)
+
+Statewide *Material Science and Engineering*; FAMU-FSU teach that as `EML3234`; Florida Polytechnic teaches
+case-study **failure analysis** as `EML4234`. Equivalent by the last three digits, different courses. The
+`EML4234` guide warns in both directions. No action unless `EML3234` is requested, when it needs its own
+guide that cross-references `EML4234`.
 
 
 ## Resolved

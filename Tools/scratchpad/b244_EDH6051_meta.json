@@ -1,0 +1,33 @@
+{
+ "EDH6051": {
+  "title": "Introduction to Higher Education",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "Graduate standing (FAU). Usually a first-term course in a higher education or student affairs master's programme. *** THE NUMBER MEANS DIFFERENT COURSES AT DIFFERENT SCHOOLS: FAU's EDH 6051 is this introductory survey. UF uses EDH 6051 for a doctoral statistics course (Quantitative Approaches for Practitioner Research, Ed.D. students only) and teaches the survey as EDH 6066 American Higher Education. FSU teaches it as EDH 5051 Foundations of Higher Education (the same statewide course). FIU's EDH 6051C is Leadership in Higher Education. When transferring graduate credit, send the syllabus, not just the number.",
+  "offering_notes": {
+   "summary": "Two public carriers of EDH6051, both 3 credits, teaching DIFFERENT courses: FAU the introductory survey, UF a doctoral statistics course. FSU teaches the survey as EDH 5051 (same statewide course, 3 credits); UF teaches it as EDH 6066. No institution publishes contact hours.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida convention of 15 contact hours per credit for a 3-credit lecture course; neither carrier publishes hours.",
+   "offerings": [
+    {
+     "institution": "FAU",
+     "institution_name": "Florida Atlantic University",
+     "title": "Introduction to Higher Education",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "The introductory survey: academic affairs, student services, administration, and governance/policy, with comparative perspectives and the field's professional resources and associations. Prerequisite: graduate standing."
+    },
+    {
+     "institution": "UF",
+     "institution_name": "University of Florida",
+     "title": "Quantitative Approaches for Practitioner Research in Higher Education Administration",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "A DIFFERENT COURSE on this number (effective June 2026): descriptive and inferential statistics for practitioner research; restricted to the Higher Education Administration Ed.D. UF's introductory survey is EDH 6066 American Higher Education."
+    }
+   ]
+  }
+ }
+}

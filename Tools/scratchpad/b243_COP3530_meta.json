@@ -1,0 +1,105 @@
+{
+ "COP3530": {
+  "title": "Data Structures",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "A second programming course plus, at most universities, discrete mathematics - published gates differ: UF (COP3503 or COP3504) + COT3100 + Calculus II, all C or better; FIU COP3337 + (MAD2104 or COT3100); FGCU COP3003 + MAD3107, C or better; UWF COP3014; Daytona State (COP2800, COP2220 or COP2360) + (COT3100 or MAD2104); Eastern Florida COP2334 or COP2800, C or better; Palm Beach State COP1000 + one language course; Miami Dade COP2800 (Java). *** The B.A.S. versions at the colleges require no mathematics; take discrete math before transferring into a CS degree. *** Check the LANGUAGE (Java or C++) before enrolling. *** Not the same as COP3538 Data Structures for IT, which the state says is not acceptable for CS majors. *** The statewide prerequisite (CIS 3020) names a course no Florida institution carries.",
+  "offering_notes": {
+   "summary": "Eleven public carriers. Ten carry it at 3 credits; Miami Dade College carries it at 4. Florida Atlantic teaches the same course as COP3530C. No institution publishes contact hours.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida's convention of 15 contact hours per credit for a lecture course; the statewide record marks COP3530 as having no laboratory component. Miami Dade's 4-credit version works out at about 60.",
+   "offerings": [
+    {
+     "institution": "UF",
+     "institution_name": "University of Florida",
+     "title": "Data Structures and Algorithms",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite (COP3504 or COP3503) and COT3100 and (MAC2234, MAC2312, MAC2512 or MAC3473), all with a minimum grade of C. Carries UF's Artificial Intelligence course attribute."
+    },
+    {
+     "institution": "FIU",
+     "institution_name": "Florida International University",
+     "title": "Data Structures",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite COP3337 and (MAD2104 or COT3100). Linked lists, n-ary trees, sets, graphs, internal sorting. FIU also offers COP3538 Data Structures Fundamentals for IT majors, which does not count for CS."
+    },
+    {
+     "institution": "FGCU",
+     "institution_name": "Florida Gulf Coast University",
+     "title": "Data Structures & Algorithms",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite COP3003 and MAD3107, each with a minimum grade of C. Published syllabus uses Weiss, Data Structures and Algorithm Analysis in C++."
+    },
+    {
+     "institution": "UWF",
+     "institution_name": "University of West Florida",
+     "title": "Data Structures and Algorithms I",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite COP3014. First of a pair; COP4534 Data Structures and Algorithms II (prerequisite COP3530 and COT3100) covers balanced trees, graphs, greedy algorithms and dynamic programming. Equipment fee."
+    },
+    {
+     "institution": "UNF",
+     "institution_name": "University of North Florida",
+     "title": "Data Structures",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisites not confirmed from a public source; the UNF catalogue is client-rendered."
+    },
+    {
+     "institution": "FAMU",
+     "institution_name": "Florida A&M University",
+     "title": "Program, Data and File Structures",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Local title adds file structures. Catalogue content not machine-readable; prerequisites not confirmed."
+    },
+    {
+     "institution": "FLPOLY",
+     "institution_name": "Florida Polytechnic University",
+     "title": "Data Structures & Algorithms",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Catalogue content not machine-readable; prerequisites not confirmed."
+    },
+    {
+     "institution": "DSC",
+     "institution_name": "Daytona State College",
+     "title": "Data Structures",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite (COP2800 or COP2220 or COP2360) and (COT3100 or MAD2104). Offered fall and spring."
+    },
+    {
+     "institution": "EFSC",
+     "institution_name": "Eastern Florida State College",
+     "title": "Data Structures and Algorithm Analysis",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite COP2334 or COP2800 with a grade of C or higher. Description reaches dynamic programming and NP-completeness."
+    },
+    {
+     "institution": "PBSC",
+     "institution_name": "Palm Beach State College",
+     "title": "Data Structures and Algorithm Analysis (BAS)",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Prerequisite COP1000 and one of COP2334, COP2360, COP2800, COP2047, COP2654. Filed under the B.A.S. in Information Management."
+    },
+    {
+     "institution": "MDC",
+     "institution_name": "Miami Dade College",
+     "title": "Data Structures",
+     "credits": 4,
+     "contact_hours": null,
+     "note": "4 credits. B.S. in Information Systems Technology. Taught in Java; prerequisite COP2800. Competencies include hashing, priority queues and internal and external sorting."
+    }
+   ]
+  }
+ }
+}

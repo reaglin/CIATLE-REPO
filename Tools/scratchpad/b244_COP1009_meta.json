@@ -1,0 +1,20 @@
+{
+ "COP1009": {
+  "title": "Beauty and Joy of Computing",
+  "credits": 2,
+  "contact_hours": 30,
+  "version": "1.0",
+  "prerequisites": "None in the statewide record; Florida Poly asks only for basic computer skills. No programming experience is assumed - this is a 2-credit introduction for beginners (Snap! then Python), not Florida Poly's first programming course for computer science majors, which is COP2034 or COP2271. *** One carrier (Florida Polytechnic). Transfer is guaranteed only to an institution offering the same course, so elsewhere expect ELECTIVE credit; it does not substitute for COP1000/COP2000 or COP2034. Ask an adviser whether it counts toward your Florida Poly degree or only as a free elective.",
+  "offering_notes": {
+   "summary": "One public carrier, Florida Polytechnic University, at 2 credits. New number: created February 2025, effective August 2025.",
+   "hours_source": "derived",
+   "derived_contact_hours": 30,
+   "derivation": "Florida's 15-hours-per-credit convention on 2 credits, matching the Spring 2026 syllabus's meeting pattern (two 50-minute meetings a week, labs inside the meetings). No total is published.",
+   "offerings": [
+    {"institution": "FLPOLY", "institution_name": "Florida Polytechnic University",
+     "title": "Beauty and Joy of Computing", "credits": 2, "contact_hours": null,
+     "note": "Description is the statewide text. Spring 2026 syllabus: Snap! for the first half, Python (Colab, pandas, regular expressions) for the second; reference texts Blown to Bits and Python for Everybody; outcomes mapped to the CS programme's ABET outcomes. Prerequisite: basic computer skills. Florida Poly's CS majors start with COP2034 (Python) or COP2271 (C)."}
+   ]
+  }
+ }
+}

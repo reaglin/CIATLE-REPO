@@ -1,0 +1,19 @@
+{"COP1030": {
+ "title": "Programming Concepts I (Introductory Python; Python with Raspberry Pi)",
+ "credits": 3, "contact_hours": 45, "version": "1.0",
+ "prerequisites": "None at state level, but every carrier sets one: CGS 1100 at College of Central Florida and Palm Beach State (a first programming course there); COP 1000 at Hillsborough (unconfirmed - its catalog was unreachable) and Northwest Florida State; COP 2000 at Indian River, whose version goes on to classes, recursion and GUI programming. *** SAME COURSE AS COP 2030: SCNS equivalence is keyed to the last three digits, so COP 1030 and COP 2030 (USF, NWFSC, IRSC) transfer as one course - six public carriers in all. *** PALM BEACH STATE TEACHES IT ON A RASPBERRY PI, with sensor and robotics projects; budget for a kit. Its general Python course is COP 2047. *** Not a computer-science major's first course: it usually transfers as elective credit.",
+ "offering_notes": {
+  "summary": "Three public carriers of COP 1030, all at 3 credits, under three different titles; three more carry the SCNS-equivalent COP 2030 at 3 credits (USF, Northwest Florida State, Indian River). No carrier publishes total contact hours; Palm Beach State lists 3 lecture hours a week.",
+  "hours_source": "derived",
+  "derived_contact_hours": 45,
+  "derivation": "Florida's convention of 45 contact hours for a 3-credit lecture course, consistent with Palm Beach State's published 3 lecture hours per week over a 15-week term. Statewide record has no laboratory component.",
+  "offerings": [
+   {"institution": "CF", "institution_name": "College of Central Florida", "title": "Fundamental Programming Concepts", "credits": 3, "contact_hours": null,
+    "note": "Prerequisite CGS 1100. A first programming course; sections describe it as teaching an object-oriented language such as Python. Appears in computer-information-technology and programming certificate programmes."},
+   {"institution": "HC", "institution_name": "Hillsborough College", "title": "Introduction to Python Programming", "credits": 3, "contact_hours": null,
+    "note": "Prerequisite COP 1000, so a second programming course here. Description and prerequisite from a third-party copy of the catalog; Hillsborough's own catalog did not answer. Confirm with the college."},
+   {"institution": "PBSC", "institution_name": "Palm Beach State College", "title": "Python with Raspberry Pi", "credits": 3, "contact_hours": null,
+    "note": "Prerequisite CGS 1100. Taught on a Raspberry Pi single-board computer: setting up the Pi, writing and running Python on it, and projects with sensors and robotics toward Internet of Things devices. 3 lecture hours a week (2020-21 catalog). Palm Beach State's general Python course is a different number, COP 2047."}
+  ]
+ }
+}}

@@ -1,0 +1,25 @@
+{
+ "ECP3524": {
+  "title": "The Economics of Religion",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "ECO 2023 Principles of Microeconomics (statewide record). Intermediate micro (ECO 3101) is not required, so the course is open after principles, including to non-majors; confirm FSU's current requisite before registering. Taught only at Florida State University, and new: the course record took effect 24 August 2026, so no published syllabus was found and emphasis is set by the instructor. No general-education or Gordon Rule designation. An economics course, not a religious-studies one: it explains religious behaviour with economic models and does not judge belief.",
+  "offering_notes": {
+   "summary": "One public carrier, Florida State University, at 3 credits. FSU lists 3 contact hours a week (45 a semester). New in fall 2026.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "FSU's course record lists 3 contact hours a week of class lecture; 15 weeks gives 45, which matches Florida's 15-hours-per-credit convention for a 3-credit lecture course.",
+   "offerings": [
+    {
+     "institution": "FSU",
+     "institution_name": "Florida State University",
+     "title": "The Economics of Religion",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Department of Economics, College of Social Sciences and Public Policy. Description identical to the statewide text. Effective 2026-08-24; not repeatable; CIP 45.0603. Prerequisite ECO 2023 per the statewide record."
+    }
+   ]
+  }
+ }
+}

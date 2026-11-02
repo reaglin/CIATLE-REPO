@@ -1,0 +1,22 @@
+{
+ "COP2000": {
+  "title": "Introduction to Computer Programming",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "None statewide; written for students with no programming background. IRSC recommends MAT 1033 (Intermediate Algebra). FAU's COP 2000 is an honors course in the Wilkes Honors College. *** SAME COURSE AS COP 1000: SCNS equivalency is set by the prefix and the last three digits, so COP 1000 and COP 2000 share the statewide record COP x000 and transfer as one course; COP 1000C is the same course with an integrated lab. *** The language (Python, C++, Java, C#) varies by college, so ask before you register. *** For a computer-science bachelor's, check the university's own entry course: at FAU it is COP 2220C, a different number, so the transfer is evaluated rather than guaranteed.",
+  "offering_notes": {
+   "summary": "Five Florida public carriers, all at 3 credits. Only FAU publishes contact hours (3 lecture hours a week).",
+   "hours_source": "mixed",
+   "derived_contact_hours": 45,
+   "derivation": "FAU publishes 3 weekly lecture hours (45 a semester); the four state colleges publish none, and Florida's convention for a 3-credit lecture course gives the same 45.",
+   "offerings": [
+    {"institution": "IRSC", "institution_name": "Indian River State College", "title": "Introduction to Computer Programming", "credits": 3, "contact_hours": null, "note": "Catalog title 'Introduction to Computer Programming I'. For students with no programming background; recommends MAT 1033. Prerequisite for COP 2001 Computer Programming II, COP 2800 Java and the database, web and AWS courses."},
+    {"institution": "FGC", "institution_name": "Florida Gateway College", "title": "Introduction to Programming", "credits": 3, "contact_hours": null, "note": "Current form in the state file since September 2023. Catalog not machine-readable (acalog block)."},
+    {"institution": "SFC", "institution_name": "Santa Fe College", "title": "Introduction to Computer Programming", "credits": 3, "contact_hours": null, "note": "New: in the state file from 22 July 2026, alongside a new set of SFC programming courses. Catalog not machine-readable (acalog block)."},
+    {"institution": "CC", "institution_name": "Chipola College", "title": "Introduction to Computer Programming", "credits": 3, "contact_hours": null, "note": "Carried since 2002; followed by COP 2224 C++, COP 2800 Java and COP 2535 Data Structures. Catalog unreachable."},
+    {"institution": "FAU", "institution_name": "Florida Atlantic University", "title": "Honors Foundations of Programming", "credits": 3, "contact_hours": 45, "note": "Wilkes Honors College, Jupiter. 3 lecture hours a week. Not FAU's computer-science entry course, which is COP 2220C Programming 1 (Python)."}
+   ]
+  }
+ }
+}

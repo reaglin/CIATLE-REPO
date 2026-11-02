@@ -1,0 +1,129 @@
+{
+ "COP1000": {
+  "title": "Introduction to Computer Programming",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "None statewide, and no programming experience assumed. Some colleges recommend college-level math placement or MAT1033. Language and route vary by college - logic-first in pseudocode and flowcharts (Daytona State, Eastern Florida, Gulf Coast, Hillsborough, Northwest Florida), Python from day one (Pasco-Hernando), or a graphics/animation environment (FIU) - but SCNS equivalency is by number, not language. At FIU it may NOT be taken after COP 2210 or COP 2250: it is a precursor and does not advance the CS major. COP1000C (Broward, FSCJ, Valencia) is the same course with an integrated lab. Heading for a CS degree? Get the university department to confirm in writing which second programming course your college sequence satisfies - Florida numbers that course five different ways.",
+  "offering_notes": {
+   "summary": "Fifteen public carriers, all at 3 credits; no carrier of the unsuffixed number publishes contact hours. COP1000C is carried separately by Broward, FSCJ and Valencia at 3 credits.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida convention: 15 contact hours per credit for an unsuffixed lecture course, 3 x 15 = 45. FIU's Coursedog record leaves contact hours at 0 (unpublished). For comparison, Broward publishes 48 hours (32 lecture + 16 lab) for its COP1000C.",
+   "offerings": [
+    {
+     "institution": "DSC",
+     "institution_name": "Daytona State College",
+     "title": "Principles of Computer Programming",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Logic-first: algorithms, flowcharts, pseudocode, debugging, documentation and a high-level language. Offered fall, spring and summer."
+    },
+    {
+     "institution": "EFSC",
+     "institution_name": "Eastern Florida State College",
+     "title": "Principles of Programming",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Pseudocode and language-independent algorithms, with a current language as the demonstration platform; secure input validation. Lab fee."
+    },
+    {
+     "institution": "FIU",
+     "institution_name": "Florida International University",
+     "title": "Introduction to Computer Programming",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Graphics and animation in a media programming environment for students with no prior experience. May not be taken after COP 2210 or COP 2250 - a precursor to FIU's majors sequence, not its first course."
+    },
+    {
+     "institution": "FSWSC",
+     "institution_name": "Florida SouthWestern State College",
+     "title": "Introduction to Computer Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "GCSC",
+     "institution_name": "Gulf Coast State College",
+     "title": "Introduction to Programming Logic",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Logic-first, by title."
+    },
+    {
+     "institution": "HC",
+     "institution_name": "Hillsborough College",
+     "title": "Programming Logic",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Logic-first, by title."
+    },
+    {
+     "institution": "LSSC",
+     "institution_name": "Lake-Sumter State College",
+     "title": "Introduction to Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "NWFSC",
+     "institution_name": "Northwest Florida State College",
+     "title": "Introduction to Programming Concepts and Logic",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Logic-first, by title."
+    },
+    {
+     "institution": "PBSC",
+     "institution_name": "Palm Beach State College",
+     "title": "Introduction to Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "PHSC",
+     "institution_name": "Pasco-Hernando State College",
+     "title": "Introduction to Computer Programming-Python",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Python named in the title."
+    },
+    {
+     "institution": "PSC",
+     "institution_name": "Polk State College",
+     "title": "Introduction to Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "SJRSC",
+     "institution_name": "St. Johns River State College",
+     "title": "Introduction to Computer Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "SPC",
+     "institution_name": "St. Petersburg College",
+     "title": "Introduction to Computer Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "SSCF",
+     "institution_name": "Seminole State College of Florida",
+     "title": "Principles of Computer Programming",
+     "credits": 3,
+     "contact_hours": null
+    },
+    {
+     "institution": "TSC",
+     "institution_name": "Tallahassee State College",
+     "title": "Programming Concepts",
+     "credits": 3,
+     "contact_hours": null
+    }
+   ]
+  }
+ }
+}

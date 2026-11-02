@@ -233,8 +233,9 @@ SUS_CODES = {
 
 FCS_CODES = {
     'BC',       # Broward College
+    'CC',       # Chipola College (was missing until 2026-11-02, batch 243)
     'CF',       # College of Central Florida
-    'CFK',      # The College of the Florida Keys
+    'CFK',     # The College of the Florida Keys
     'DSC',      # Daytona State College
     'EFSC',     # Eastern Florida State College
     'FGC',      # Florida Gateway College

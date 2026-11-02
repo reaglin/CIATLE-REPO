@@ -1,0 +1,25 @@
+{
+ "EML4234": {
+  "title": "Engineering Failure Analysis",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "Florida Polytechnic, the only carrier: not confirmed (catalog not readable). Its companion course EML4541 requires EGN3331 Strength of Materials and EGN3365 Structure and Properties of Materials, and EML4234 sits in the same Materials & Advanced Manufacturing concentration list, so expect the same. Check Florida Poly's catalog. *** SAME NUMBER, DIFFERENT COURSE: SCNS matches on the last three digits, and EML x234 is statewide 'Material Science and Engineering'. FAMU and FSU carry EML3234, a general materials science course; Florida Poly teaches failure analysis by case study. Send a syllabus on transfer either way.",
+  "offering_notes": {
+   "summary": "One public carrier, Florida Polytechnic University, at 3 credits. FAMU and FSU carry the SCNS-equivalent EML3234 as a general materials science course, not failure analysis.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida's convention of 45 contact hours for a 3-credit lecture course; Florida Poly does not publish hours and the statewide record marks no laboratory.",
+   "offerings": [
+    {
+     "institution": "FLPOLY",
+     "institution_name": "Florida Polytechnic University",
+     "title": "Engineering Failure Analysis",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Elective in the Materials & Advanced Manufacturing concentration of the B.S. in Mechanical Engineering. Catalog: failure analysis methodology with macroscopic and microscopic examination, taught through case studies. Prerequisite not confirmed."
+    }
+   ]
+  }
+ }
+}

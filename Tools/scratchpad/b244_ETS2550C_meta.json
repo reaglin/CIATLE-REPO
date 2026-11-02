@@ -1,0 +1,33 @@
+{
+ "ETS2550C": {
+  "title": "SCADA Systems",
+  "credits": 3,
+  "contact_hours": 60,
+  "version": "1.0",
+  "prerequisites": "Statewide record: ETS 2544 (PLCs II). Indian River (ETS 2550): ETS 2676 Introduction to Robotics, which follows ETS 2542 PLCs I. Lake-Sumter (ETS 2550C): not confirmed. Either way, arrive able to program a PLC. ETS 2550 and ETS 2550C are the same statewide course filed two ways and transfer as one. Do not confuse with ETS 2556 Introduction to SCADA Cybersecurity (Northwest Florida State), a different, security-focused course. Only two Florida public colleges offer ETS x550, so a receiving school may have no match; ask whether it counts as a technical elective.",
+  "offering_notes": {
+   "summary": "Two public carriers, both at 3 credits: Lake-Sumter State College (ETS 2550C) and Indian River State College (ETS 2550, unsuffixed). Neither publishes contact hours.",
+   "hours_source": "derived",
+   "derived_contact_hours": 60,
+   "derivation": "Florida convention for a 3-credit integrated C course, the requested identifier. Indian River's unsuffixed version carries a $20 lab fee.",
+   "offerings": [
+    {
+     "institution": "LSSC",
+     "institution_name": "Lake-Sumter State College",
+     "title": "SCADA Systems",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Effective 2025-10-15. In the Substation and Relay Technology specialization of the A.S. in Engineering Technology (Duke Energy, SECO Energy). Catalogue unreadable; prerequisite unconfirmed."
+    },
+    {
+     "institution": "IRSC",
+     "institution_name": "Indian River State College",
+     "title": "SCADA Systems",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Unsuffixed ETS 2550, effective 2026-08-15. Prerequisite ETS 2676 Introduction to Robotics. Lab fee $20."
+    }
+   ]
+  }
+ }
+}

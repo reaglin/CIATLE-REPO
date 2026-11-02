@@ -1,0 +1,33 @@
+{
+ "CHM5716": {
+  "title": "Materials Chemistry (FAU) / Characterization of Materials I (FSU)",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "Graduate course; carriers use the number for DIFFERENT COURSES. FAU (Materials Chemistry, 3 cr): graduate students in the College of Science or Engineering; dual-numbered with undergraduate CHM 4714 (prereq CHM 2210), so ask before registering if you took CHM 4714. FSU (Characterization of Materials I): none listed; 3 credits in the 2026-27 bulletin but 1 in the state file; repeatable in the same term to 9 credits. Preparation either way: undergraduate inorganic and physical chemistry. The statewide title \"Topics in Materials Chemistry II\" is a deleted FSU entry and matches neither course. FAU's course corresponds to FSU's CHM 5715. Send the syllabus on transfer, not the number.",
+  "offering_notes": {
+   "summary": "Two public carriers, both graduate, teaching different courses under one number: a solid-state materials chemistry survey at FAU and a characterization-methods course at FSU. Both list 3 credits in their own catalogs; the state course file records FSU at 1 credit. Neither publishes contact hours.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida's convention of 45 contact hours for a 3-credit lecture course. FAU's graduate students also attend crystallography workshop sessions outside lecture.",
+   "offerings": [
+    {
+     "institution": "FAU",
+     "institution_name": "Florida Atlantic University",
+     "title": "Materials Chemistry",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Introduction to solid-state and inorganic materials chemistry, particularly X-ray diffraction; crystallography workshop included. Graduate students in the College of Science or Engineering. Dual-numbered with undergraduate CHM 4714 (same description, prerequisite CHM 2210). Text in the 2013 proposal: Smart and Moore, Solid State Chemistry: An Introduction."
+    },
+    {
+     "institution": "FSU",
+     "institution_name": "Florida State University",
+     "title": "Characterization of Materials I",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Microscopic and diffraction methods for structural characterization, plus transport and magnetic measurements; recommended for materials researchers. Repeatable within the same term to 9 credit hours. 3 credits in the 2026-27 FSU bulletin; the state course file carries it at 1 credit (since 2009). FSU's materials survey is CHM 5715, not this number."
+    }
+   ]
+  }
+ }
+}

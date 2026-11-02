@@ -1,0 +1,25 @@
+{
+ "EGN4630": {
+  "title": "Entrepreneurship for Defense",
+  "credits": 3,
+  "contact_hours": 45,
+  "version": "1.0",
+  "prerequisites": "ENC1101 Composition I (UCF and statewide); no engineering prerequisite, so it is open to any major. Hacking for Defense courses usually admit by APPLICATION AND TEAM INTERVIEW, and UCF advertised that process when it began the course in 2022 - ask the department whether an application is still required; the deadline falls in the fall before the spring offering. SPRING ONLY at UCF, the sole public carrier. Not SCNS-equivalent to UF's similar EGN4648 Innovating for Defense (different number). Non-U.S. citizens: ask whether any sponsor problems carry restrictions.",
+  "offering_notes": {
+   "summary": "One public carrier: the University of Central Florida, at 3 credits, spring only. No contact-hour total is published.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida's 15-hours-per-credit convention for a 3-credit lecture course; UCF's catalog lists 0 laboratory hours.",
+   "offerings": [
+    {
+     "institution": "UCF",
+     "institution_name": "University of Central Florida",
+     "title": "Entrepreneurship for Defense",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Department of Computer Science, College of Engineering and Computer Science. Spring only; not repeatable. Prerequisite ENC1101. Description matches the Hacking for Defense model; a 2021 UCF flyer advertised H4D at UCF from January 2022, by application and interview. UCF also lists a graduate EGN5640 with the same title, filed under the statewide EGN x640 Entrepreneurship for Engineers record."
+    }
+   ]
+  }
+ }
+}
