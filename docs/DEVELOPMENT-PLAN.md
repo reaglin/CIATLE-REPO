@@ -163,6 +163,26 @@ hidden by an admin) cannot be asked for at all.
 
 **When Ron decides to ship it:** build 7.1–7.6, add the migration, and bundle into a deploy; nothing in
 Phases 6 or 4 depends on it.
+
+## Phase 8 — Publisher and vendor Resources pages (PENDING, not scheduled)
+
+Ron, 2026-11-02: *"allow publishers and vendors to post a URL (with short description) that will become a
+Resources page for a course. This is upcoming, but should be noted as a pending development item for the
+site."* **Nothing below is built.** Today anyone, vendors included, can suggest a single link on a course's
+Resources page; each suggestion is reviewed by hand (`Tools/resources/APPROVAL_RULES.md`) and listed with a
+summary that names the vendor and the cost. This phase gives publishers and vendors their own route.
+
+| # | Task | Done when |
+|---|---|---|
+| 8.1 | **Settle the shape** with Ron (open question 6): what "become a Resources page" means, who may post, and how it is reviewed | The answers are recorded here and turned into tasks 8.2 onward |
+| 8.2 | **The form.** A publisher or vendor gives a course (or courses), a URL and a short description, and names the publisher or vendor | A publisher can post in one step and is told plainly what happens next |
+| 8.3 | **Review.** Posts go through the same AI-reviewed queue and approval rules as visitor suggestions: the page is opened and read, the vendor and cost are disclosed, and nothing a publisher writes is shown before review | No unreviewed publisher text reaches a course page |
+| 8.4 | **The page.** The approved post appears on the course's Resources page in the form settled in 8.1 | A visitor can tell a publisher's page from a visitor-suggested link |
+| 8.5 | **UX review** (walkthrough + heuristics) of the form, the confirmation and the course page | Passed and recorded here |
+
+**First evidence for it (2026-11-02):** Hello Keyboard submitted its own product through the visitor form
+("submitted by an AI assistant authorized by Hello Keyboard"), so vendors are already using the
+visitor channel.
 ---
 
 ## Open questions for Ron
@@ -195,6 +215,12 @@ Phases 6 or 4 depends on it.
    (b) **A declined request just leaves the queue with a "Declined" badge.** Add a short public reason?
    (c) **Careers not in the federal crosswalk cannot be requested at all.** Add a free-text "tell us the
    career you are looking for" form as a fallback?
+6. **(asked 2026-11-02) Publisher and vendor Resources pages (Phase 8): what shape?** Not needed until the
+   phase is scheduled. (a) **Does the posted URL become one listing on the course's existing Resources page,
+   or a page of its own** (a publisher's companion site for the course, shown as that course's Resources
+   page)? (b) **Who may post:** anyone who says they are a publisher, or registered and verified publisher
+   accounts? (c) **Review:** the same hand review as visitor suggestions, or a lighter check for verified
+   publishers? (d) Can one post cover **many courses** (a textbook used across a sequence)?
 
 ## References
 

@@ -122,6 +122,11 @@ session adds courses — with or without guides — over a new course API, by ru
 Supersedes the offerings-seed approach in `CAREER_PATHS_PLAN.md` §4: `Institution` / `CourseOffering` are
 built in phase 1 of this plan and fed by the API.
 
+## Publisher and vendor Resources pages (Ron, 2026-11-02) — pending, see `docs/DEVELOPMENT-PLAN.md` Phase 8
+
+Publishers and vendors post a URL with a short description that becomes a Resources page for a course.
+Upcoming; not scheduled. Its open questions are question 6 in the plan.
+
 ## Career pathway tracing (Ron, 2026-09-04) — planned, see `CAREER_PATHS_PLAN.md`
 
 **Take a profession and trace an educational path to it: which courses, in what order, at which
