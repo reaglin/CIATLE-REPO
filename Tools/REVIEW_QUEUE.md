@@ -3664,9 +3664,9 @@ yet in the SCNS institution map, so they have no SCNS offerings to list.
 
 Found writing `COP2000`: Chipola (SCNS `CC`, id 94) classified as `other`, so `is_public()` dropped a public
 Florida College System college from every offering list and carrier count. Same shape as items 109 and 118.
-✅ **Fixed, no decision needed:** `'CC'` added to `FCS_CODES`. ⚠ **Still to do:** re-list Chipola's
-prefixes with `list_courses.py` so existing course pages gain its offerings (blocked 2026-11-02 by the
-admin login returning HTTP 500).
+✅ **Fixed, no decision needed:** `'CC'` added to `FCS_CODES`. ✅ **Re-listed 2026-11-02:** Chipola's 120
+prefixes plus ECP, EDH, EML and EGM sent with `list_courses.py` — 27,403 courses, 5,957 newly listed,
+12,974 updated, 0 failed.
 
 
 ## 120. ℹ️ `COP1000C` and `COP3530C` (live since 2026-05-06) overstate their carriers — corrected as v1.1 (2026-11-02)
@@ -3676,8 +3676,7 @@ FSCJ, Valencia; 22 is closer to the bare `COP1000` plus `COP2000`). `COP3530C` c
 (FAU alone carries it), named `COP1000C`/`COP2800C` as prerequisites (FAU's gate is COT2000C or MAD2104, and
 COP3014 or COP3275C) and said "Java or C++" (FAU teaches C++).
 ✅ **Corrected under the 2026-09-17 "fix errors as you spot them" rule**: drafts at v1.1 change only those
-sentences and the `COP3530C` prerequisite, and link the new bare-number guides. **They push with batch 243.**
-Say so if you would rather they did not.
+sentences and the `COP3530C` prerequisite, and link the new bare-number guides. ✅ **Live as v1.1, 2026-11-02.**
 
 
 ## 121. ⚠ `CHM5716` — FAU and FSU teach two different graduate courses on one number (found 2026-11-02, batch 244)
