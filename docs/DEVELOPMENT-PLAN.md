@@ -183,6 +183,24 @@ summary that names the vendor and the cost. This phase gives publishers and vend
 **First evidence for it (2026-11-02):** Hello Keyboard submitted its own product through the visitor form
 ("submitted by an AI assistant authorized by Hello Keyboard"), so vendors are already using the
 visitor channel.
+
+## Phase 9 — How many people visit the site (Ron, 2026-11-20)
+
+Ron: *"Is it possible to also (on the site, or at least in a report to me) know how many people are
+visiting the site?"* He chose both: a report from the server's logs first, then a counter built into the
+site. Until 9.1 the site had no visitor count at all: no analytics, and the app records no page views.
+Nginx's access logs were the only record, and they keep about 14 days.
+
+| # | Task | Done when |
+|---|---|---|
+| 9.1 ⚠️ | **Report from the Nginx access logs** (built 2026-11-20): `Deployment\visitor-report.ps1` fetches the logs over ssh (one password prompt), and `Deployment\visitor_report.py` counts visitors (one IP address plus browser, held only as a hash) and page views by day and week, which parts of the site are used, the most-visited courses and pages, and where visitors came from. Crawlers, bots, scripts, the API, `/admin` and static files are left out. The report is saved to `Deployment\visitor-reports\` (gitignored), and the downloaded logs are deleted. Tested on sample log lines; not yet run against the server | ⚠ Ron runs `.\Deployment\visitor-report.ps1` once and says whether the numbers look right |
+| 9.2 | **Keep the logs longer.** Nginx's logrotate keeps 14 days, so the report never covers more. Raise it (`/etc/logrotate.d/nginx`, `rotate 14` → e.g. `rotate 400`) — a server change; see open question 7 | The report can cover a year |
+| 9.3 | **The counter in the site.** Middleware records each human page view as the logs report counts it (same bot, API, admin and static rules), keeping only a salted hash of the IP address and browser, as guide requests do. Store daily totals per page (and per course), not one row per request. Migration | Counts accumulate from the deploy onward, with no raw IP stored |
+| 9.4 | **Admin page** `/admin/visitors`: visitors and page views per day, week and month, the most-visited courses and pages, and where visitors come from | Ron sees the figures without running anything |
+| 9.5 | **Public figure** on the home page (e.g. "N visitors this month"), if Ron wants one — open question 7 | Decided, and built if yes |
+| 9.6 | **UX review** (walkthrough + heuristics) of the admin page and any public figure | Passed and recorded here |
+| 9.7 | **Deploy** with the next release; update the privacy wording if the site has any | Counting live |
+
 ---
 
 ## Open questions for Ron
@@ -221,6 +239,9 @@ visitor channel.
    page)? (b) **Who may post:** anyone who says they are a publisher, or registered and verified publisher
    accounts? (c) **Review:** the same hand review as visitor suggestions, or a lighter check for verified
    publishers? (d) Can one post cover **many courses** (a textbook used across a sequence)?
+7. **(asked 2026-11-20) Visitor counts (Phase 9).** (a) **Show a visitor figure publicly** on the home page,
+   or keep it to the admin page? (b) **Keep the server's Nginx logs for a year** instead of 14 days, so the
+   log report covers longer (they hold IP addresses, which the site otherwise only stores hashed)?
 
 ## References
 
@@ -232,4 +253,6 @@ visitor channel.
 - `Tools/career_paths/QUEUE.csv` — the 50 ranked paths with their CIP and SOC anchors, and publish status
 - `Tools/Generate_Guides_and_Push_Process.md` — the guide pipeline end to end (the `Tools/` session)
 - `Tools/REVIEW_QUEUE.md` — content decisions waiting on Ron (the `Tools/` session)
+- `Deployment/visitor-report.ps1` and `Deployment/visitor_report.py` — the visitor report from the server's Nginx logs (Phase 9.1)
+- `docs/SCNS_Access_Needed.md` — the SCNS (and FLDOE) data the `Tools/` pipeline needs made public, written for the SCNS committee (2026-11-20)
 - `Specifications/` — the three Phase-1 specs, still authoritative for the API envelope and error codes

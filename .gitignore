@@ -405,3 +405,12 @@ Tools/scratchpad/*_courses.json
 # IPEDS bulk files (re-downloadable; Tools/scratchpad/ipeds.py fetch)
 Tools/scratchpad/C20*_A.zip
 Tools/scratchpad/HD20*.zip
+
+# Visitor reports (Deployment/visitor-report.ps1): local, made from server logs
+Deployment/visitor-reports/
+# Per-request working folders under the scratchpad: keep the .py, drop the downloaded data
+Tools/scratchpad/*/*.csv
+Tools/scratchpad/*/*.html
+Tools/scratchpad/*/*.pdf
+Tools/scratchpad/*/*.json
+Tools/scratchpad/*/*.txt
