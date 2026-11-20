@@ -14,7 +14,7 @@ IP addresses are only used in memory, as a hash, to tell visitors apart. None ar
 to the report.
 
 USAGE
-    python visitor_report.py access.log [more logs...] [--out report.md] [--days 30]
+    python visitor_report.py access.log [more logs...] [--out report.md] [--days 30 | --month 2026-11]
 
 Normally run through visitor-report.ps1, which fetches the logs from the server first.
 """
@@ -85,7 +85,8 @@ def ref_domain(ref):
     return host[4:] if host.startswith('www.') else host
 
 
-def parse(paths, days):
+def parse(paths, days, month=None):
+    """month: (first_day, last_day) to keep only that calendar month, or None."""
     cutoff = None
     if days:
         cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=days)
@@ -120,6 +121,8 @@ def parse(paths, days):
                     s['unparsed'] += 1
                     continue
                 if cutoff and t < cutoff:
+                    continue
+                if month and not (month[0] <= t.date() <= month[1]):
                     continue
                 ua = m['ua']
                 path = m['path'].split('?', 1)[0].split('#', 1)[0]
@@ -268,8 +271,17 @@ def main():
     ap.add_argument('logs', nargs='+', help='Nginx access log file(s), uncompressed')
     ap.add_argument('--out', help='write the Markdown report here as well as to the screen')
     ap.add_argument('--days', type=int, default=0, help='only the last N days (default: everything)')
+    ap.add_argument('--month', help='only one calendar month, as YYYY-MM (e.g. 2026-11)')
     a = ap.parse_args()
-    report = render(parse(a.logs, a.days), a.logs)
+    month = None
+    if a.month:
+        try:
+            first = datetime.datetime.strptime(a.month, '%Y-%m').date()
+        except ValueError:
+            ap.error('--month must look like 2026-11')
+        nxt = (first.replace(day=28) + datetime.timedelta(days=4)).replace(day=1)
+        month = (first, nxt - datetime.timedelta(days=1))
+    report = render(parse(a.logs, a.days, month), a.logs)
     if a.out:
         with open(a.out, 'w', encoding='utf-8') as fh:
             fh.write(report)

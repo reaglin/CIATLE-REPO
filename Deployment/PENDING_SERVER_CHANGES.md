@@ -8,12 +8,25 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO RUN — keep two months of Nginx logs (2026-11-20; not a deploy)
+
+A one-time server setting, no code: **`.\Deployment\keep-logs-two-months.ps1`** (Ron runs it from `repos\CIATLE-REPO`;
+it asks for the password). Sets `/etc/logrotate.d/nginx` to `daily` / `rotate 62`, keeps the old file as
+`/root/logrotate-nginx.bak`, and prints the result. Plan item 9.2. From then on, in the first days of each month,
+double-click **`visitor-report-last-month.cmd`**. The extra days build up from the day it runs, so the first full
+month on the server is the one after it.
+
+| Verify |
+|---|
+| The script ends with "Done" and the printed file shows `daily` and `rotate 62` |
+| About 15 days later, `/var/log/nginx` holds more than 14 `access.log` files |
+
 ### ⬜ TO DEPLOY — the visitor counter and `/admin/visitors` (2026-11-20)
 
 Migration **`AddVisitorCounter`** (two new tables, `SiteVisits` and `SitePageViews`; nothing existing changes), so a
 **full deploy** that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the
 password). Plan items 9.3, 9.4, 9.6. Counting starts at the deploy; nothing earlier is recovered except by
-`visitor-report.cmd` from the server's last ~14 days of logs (run it **before** the deploy as well, so the time
+`visitor-report.cmd` from the server's logs (the last 14 days, until two months build up — entry above) (run it **before** the deploy as well, so the time
 before the counter is saved).
 
 | Verify after the deploy |
