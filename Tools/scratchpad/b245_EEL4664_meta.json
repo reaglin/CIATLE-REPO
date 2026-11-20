@@ -1,0 +1,25 @@
+{
+ "EEL4664": {
+  "title": "Kinematics and Control of Robotic Systems",
+  "credits": 3,
+  "contact_hours": 45,
+  "prerequisites": "Florida Poly, the only carrier: not confirmed (its online catalogue could not be read for this guide). Expect calculus III, differential equations, linear algebra and a controls background: on Florida Poly's B.S. EE flowchart it is a senior Robotics concentration elective beside EEL4612 Control System Design and EEL4660 Autonomous Robotic Systems. Check Florida Poly's catalogue for the exact prerequisite and grade before registering. *** The statewide title for EEL x664 is 'Autonomous Robotic Systems', which Florida Poly teaches as EEL4660; send a syllabus on transfer.",
+  "version": "1.0",
+  "offering_notes": {
+   "summary": "One public carrier, Florida Polytechnic University, at 3 credits. The statewide title for EEL x664 is Autonomous Robotic Systems, which Florida Poly teaches as EEL4660. UCF carried EEL4664 until 2009.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida's convention of 15 contact hours per credit for a lecture course; Florida Poly does not publish hours and the statewide record marks no laboratory.",
+   "offerings": [
+    {
+     "institution": "FLPOLY",
+     "institution_name": "Florida Polytechnic University",
+     "title": "Kinematics and Control of Robotic Systems",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Robotics concentration elective of the B.S. in Electrical Engineering (2025-2026 flowchart: choose four of EEL4665, EEL4220, EEL4664, EEL4660, EEL4612). Description and prerequisite not confirmed (catalogue not readable)."
+    }
+   ]
+  }
+ }
+}

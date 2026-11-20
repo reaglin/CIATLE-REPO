@@ -24978,3 +24978,43 @@ the repeat-restriction warning.
 | **FAU** Coursedog | `GEO4280C` — the management-half reading |
 | **FSU** registrar bulletin | all three FSU entries, including the catalogue title that differs from the flat file |
 | ❌ **FGCU** | re-probed at session start: still an empty 202. `REVIEW_QUEUE` 104 open |
+
+---
+
+## Batch 245 — scheduled request check (EEL4205, EEL4664), 2026-11-20
+
+Requests in rank order: `EEL2130C`, `EEL4205`, `ETI0602`, `EEL4664`. `review_lookup.py --requests` marked
+none HELD; two were held in the run for Ron (`REVIEW_QUEUE` 124, 125) and `EEL4664` was taken as the third.
+
+### Source register
+
+- ✅✅ **CPALMS `ProgramFrontend/programsummary?ProgramCIP=<cip>&MockIfSingle=true` reports a programme's
+  TERMINATION** — `yearDaggered`, `lastReportableYear`, `teachOutProgram`, `terminationMessage` and a version
+  label such as *"2023 - 2024 (Program Terminated)"*. ⚠ **The cached `cpalms_programs.json` row for the same
+  programme shows `isTerminated: false`** — read `programsummary`, not the list cache, before writing a PSAV
+  guide. ⚠ `programstandards` needs no version; `programindustrycertifications` returns 400 without one
+  (`&version=2023` works). First use: Industrial Technology I150603 (`ETI0600`–`ETI0605`), terminated 2025.
+- ✅ **Florida Poly's catalogue PDFs are readable even though its course pages are not.**
+  `catalog.floridapoly.edu/mime/media/<cat>/<id>/...Flowchart....pdf` answers 200 (the 2025-26 EE flowchart
+  lists every concentration's electives by number, title and credits); `content.php` and
+  `search_advanced.php` still give empty 202s, and the alternate host `floridapolytechnic.catalog.acalog.com`
+  does the same. ✅ **Florida Poly also posts section syllabi** at
+  `floridapoly.edu/wp-content/uploads/<yyyy>/<mm>/<PFX>-<NUM>-<sec>_<TERM>.pdf` (e.g. `EEL-3110-01_SP-2026`),
+  findable by web search; guessing the URL failed (rate-limited after a few requests).
+- ✅ **UCF Kuali** worked again (2026-2027 catalogue `688b8960ddeb091644d2b1ca`): `EEL4205` description,
+  prerequisite with grade, Fall/Spring, `labStudioFieldWorkHours: 0`. UCF ECE flowcharts (Fall 2026 catalog)
+  are PDFs at `www.ece.ucf.edu/wp-content/uploads/2026/08/…Track-Flowchart-Fall-2026-Catalog.pdf`.
+- ❌ **SCNS (`flscns.fldoe.org`) answered 403** to `scns.report_csv` this session — the bot-filter pattern;
+  retry next session. The Sep 2025 flat file was used for carriers.
+- ❌ **manateetech.edu** lists no Industrial Technology programme (2026-11-20).
+
+### Findings
+
+- ⚠ **`EEL x664`'s statewide title is *Autonomous Robotic Systems*, but Florida Poly titles `EEL4664`
+  *Kinematics and Control of Robotic Systems* and teaches autonomy as `EEL4660`.** UCF's old `EEL4664`
+  (discontinued 2009) was the autonomy course. The guide warns on transfer.
+- ⚠ **`EEL2130C` has an active and a discontinued (2025-07-11) row at Florida Poly in the same flat file**
+  — the first duplicate-status pair noticed. Held (`REVIEW_QUEUE` 124).
+- **Electric machines are taught under five numbers in Florida:** UCF `EEL4205`, UNF/FAU `EEL4220`
+  (statewide *Electromechanics I*; ⚠ FAU 2 credits), USF `EEL4224`, Florida Poly `EEL3211`, FAMU `EET4513L`
+  (lab). Florida Poly's own `EEL4220` is *Electronic Motor Control*.

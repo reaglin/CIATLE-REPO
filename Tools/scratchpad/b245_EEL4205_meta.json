@@ -1,0 +1,25 @@
+{
+ "EEL4205": {
+  "title": "Electric Machinery",
+  "credits": 3,
+  "contact_hours": 45,
+  "prerequisites": "UCF, the only carrier: EEL3004C Linear Circuits I with a minimum grade of C. UCF offers it in Fall and Spring only. It sits on the Power & Renewable Energy track as a senior elective, beside EEL4216 Fundamentals of Electric Power Systems; EEL3123C Linear Circuits II and EGN3420 Engineering Analysis are not required for it but make the AC and phasor work much easier.",
+  "version": "1.0",
+  "offering_notes": {
+   "summary": "One public carrier, the University of Central Florida, at 3 credits, Fall and Spring only. UNF and FAU (EEL4220), USF (EEL4224) and Florida Poly (EEL3211) teach electric machines under other numbers.",
+   "hours_source": "derived",
+   "derived_contact_hours": 45,
+   "derivation": "Florida's convention of 15 contact hours per credit for a lecture course; UCF publishes 0 laboratory hours for EEL4205 and no contact-hour figure.",
+   "offerings": [
+    {
+     "institution": "UCF",
+     "institution_name": "University of Central Florida",
+     "title": "Electric Machinery",
+     "credits": 3,
+     "contact_hours": null,
+     "note": "Senior elective, Power & Renewable Energy track of the B.S. in Electrical Engineering. Fall and Spring only. Prerequisite EEL3004C, minimum grade C. Catalogue: \"Fundamentals of DC and AC electric machines.\""
+    }
+   ]
+  }
+ }
+}

@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **91** |
+| ⏳ **Awaiting a decision from Ron** | **93** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 13 |
-| **Total items** | **123** |
+| **Total items** | **125** |
 
 ---
 
-### ⏳ Awaiting a decision (91)
+### ⏳ Awaiting a decision (93)
 
 | # | Item |
 |---|---|
@@ -128,6 +128,8 @@ continues around every one of them.
 | **121** | `CHM5716` — FAU and FSU teach two different graduate courses on one number (found 2026-11-02, batch 244) |
 | **122** | `EDH6051` — UF uses the number for a doctoral statistics course (found 2026-11-02, batch 244) |
 | **123** | ℹ️ `EML x234` carries general materials science AND failure analysis (found 2026-11-02, batch 244) |
+| **124** | `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check) |
+| **125** | `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check) |
 
 ### Informational — no decision needed (19)
 
@@ -3705,6 +3707,32 @@ Statewide *Material Science and Engineering*; FAMU-FSU teach that as `EML3234`; 
 case-study **failure analysis** as `EML4234`. Equivalent by the last three digits, different courses. The
 `EML4234` guide warns in both directions. No action unless `EML3234` is requested, when it needs its own
 guide that cross-references `EML4234`.
+
+
+## 124. ⚠ `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check)
+
+Florida Polytechnic is the only carrier (*Circuits Analysis*, 3 cr; statewide *Circuits Analysis (L)*, effective
+2022-08-01). ⚠ **The Sep 2025 flat file holds TWO rows for it at Florida Poly: one active, one discontinued
+2025-07-11** with the same dates otherwise. The course appears on **no** Florida Poly flowchart read (B.S. EE
+2025-26 uses `EEL3111`/`EEL3112`, with `EEL3110` *Principles of Electrical Engineering* as the service course),
+and no description could be read anywhere: the acalog catalog returns empty 202s, a web search finds nothing,
+and SCNS answered **403** this session (so the institution description report could not be pulled).
+**Not written: there is no content source, and the course may be discontinued.**
+⚠ **Decision for Ron: decline it publicly ("no longer offered at Florida Polytechnic, the only institution that
+carried it"), or hold until SCNS answers and the current status can be confirmed?**
+
+
+## 125. ⚠ `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check)
+
+`ETI0602` *Industrial Technician Assistant 1* (250 clock hours) is OCP C of **Industrial Technology, programme
+I150603, CIP 0615061200 (federal 15.0612)**, 1,600 hours, OCPs A–D = `ETI0600`–`ETI0605`. ⚠⚠ **CPALMS
+`programsummary` says: daggered 2023-24, last reportable year 2024-25, version label "2023 - 2024 (Program
+Terminated)", "terminated at the end of School Year 2024 - 2025"**, teach-out flagged. The only carrier,
+**Manatee Technical College, no longer lists any such programme** (its CTE page, 2026-11-20). The framework
+gives one standard for the course (*Identify manufacturing control procedures*, 5 benchmarks) and no SOC codes
+or certifications. **Not written.**
+⚠ **Decision for Ron: decline (reason: "the state retired this programme in 2025 and no Florida institution
+still teaches it"), or write a short guide for teach-out students? The same answer covers `ETI0600`–`ETI0605`.**
 
 
 ## Resolved
