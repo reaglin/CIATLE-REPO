@@ -10,6 +10,7 @@ using PreseMakerRepo.Api.Authorization;
 using PreseMakerRepo.Api.Middleware;
 using PreseMakerRepo.Api.Options;
 using PreseMakerRepo.Api.Services;
+using PreseMakerRepo.Api.Services.Visits;
 using PreseMakerRepo.Api.Startup;
 using PreseMakerRepo.Api.Validators;
 using PreseMakerRepo.Infrastructure.Data;
@@ -73,6 +74,11 @@ try
     builder.Services.AddHttpClient();
     builder.Services.AddTransient<StaticSiteExporter>();
     builder.Services.AddSingleton<StaticExportJobService>();
+
+    // The visitor counter (plan Phase 9): page views collected in memory, saved once a minute.
+    builder.Services.AddSingleton<VisitRecorder>();
+    builder.Services.AddHostedService(sp => sp.GetRequiredService<VisitRecorder>());
+    builder.Services.AddScoped<VisitorStatsService>();
 
     // Multi-scheme auth: /api/* → JWT Bearer, everything else → Cookie
     builder.Services.AddAuthentication(options =>
@@ -196,6 +202,7 @@ try
     app.UseCors("ApiPolicy");
     app.UseAuthentication();
     app.UseAuthorization();
+    app.UseMiddleware<VisitCounterMiddleware>();   // after auth: administrators are not counted
 
     app.MapControllerRoute(
         name: "default",

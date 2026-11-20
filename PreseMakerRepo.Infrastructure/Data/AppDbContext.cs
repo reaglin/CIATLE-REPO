@@ -44,6 +44,11 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     public DbSet<CipOccupation> CipOccupations => Set<CipOccupation>();
     public DbSet<CareerRequest> CareerRequests => Set<CareerRequest>();
 
+    // The visitor counter (2026-11-20, plan Phase 9): visitors per day as salted hashes, and
+    // page views per page per day. Written by VisitRecorder, read by VisitorStatsService.
+    public DbSet<SiteVisit> SiteVisits => Set<SiteVisit>();
+    public DbSet<SitePageView> SitePageViews => Set<SitePageView>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

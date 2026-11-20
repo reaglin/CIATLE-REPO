@@ -1,0 +1,198 @@
+@page "/admin/visitors"
+@model PreseMakerRepo.Api.Areas.Admin.Pages.VisitorsModel
+@using PreseMakerRepo.Api.Services.Visits
+@{
+    ViewData["Title"] = "Visitors";
+    var s = Model.Stats;
+    var maxVisitors = s.Periods.Count == 0 ? 1 : Math.Max(1, s.Periods.Max(p => p.Visitors));
+    string Range(int d) => d switch { 7 => "Last 7 days", 30 => "Last 30 days", 90 => "Last 90 days", _ => "Last 12 months" };
+    const string ReportHelp = "On your development computer, double-click visitor-report.cmd in the CIATLE-REPO folder. "
+        + "It asks for the web server's password, reads the server's logs (they go back about 14 days from today) "
+        + "and saves the report in Deployment\\visitor-reports.";
+}
+
+<h1 class="h4 mb-2">Visitors</h1>
+<p class="text-muted mb-2" style="max-width: 60rem">
+    How many people open the public site, which parts they use and where they come from.
+    A <strong>visitor</strong> is one network address with one browser, kept only as a scrambled code (the address
+    itself is never stored). Someone who comes back counts <strong>once</strong> in the Visitors total, but once on
+    <strong>each</strong> day (or week) they came in the table below, so the rows add up to more than the total.
+    Search engines, bots, scripts, the API, this admin console and your own browsing while signed in here are not counted.
+    Days are Florida days.
+</p>
+<details class="small mb-3" style="max-width: 60rem">
+    <summary>Why the numbers may be lower (or higher) than you expect</summary>
+    <ul class="mt-2">
+        <li><strong>Shared networks count as one.</strong> Several people on one campus, library or office network using the same browser look like one visitor.</li>
+        <li><strong>One person can count twice:</strong> on a phone that moves from Wi-Fi to mobile data, or on a phone and a laptop.</li>
+        <li><strong>Only pages are counted.</strong> Downloaded files, error pages and redirects are not page views.</li>
+        <li><strong>Your own visits count</strong> when you are not signed in to this console (on your phone, or in a private window).</li>
+        <li><strong>Other tools will differ.</strong> Google Analytics or the log report (<code>visitor-report.cmd</code>) use slightly different rules, so expect close figures, not identical ones.</li>
+    </ul>
+</details>
+
+<div class="btn-group mb-3" role="group" aria-label="Period to show">
+    @foreach (var d in VisitorStatsService.Ranges)
+    {
+        <a class="btn btn-sm @(d == Model.Days ? "btn-primary" : "btn-outline-primary")"
+           href="/admin/visitors?days=@d" aria-current="@(d == Model.Days ? "page" : null)"
+           title="Show the figures for the @Range(d).ToLowerInvariant()">@Range(d)</a>
+    }
+</div>
+
+@if (s.CountingSince is null)
+{
+    <div class="alert alert-info" style="max-width: 60rem">
+        <strong>Nothing has been counted yet.</strong> Counting began when this page was deployed. The first figures
+        appear about a minute after someone opens a public page (pages you open while signed in here are not counted).
+        <br />For the time before that: @ReportHelp
+    </div>
+}
+else
+{
+    @if (s.CountingSince > s.From)
+    {
+        <div class="alert alert-secondary small py-2" style="max-width: 60rem">
+            The counter started on <strong>@s.CountingSince.Value.ToString("d MMMM yyyy")</strong>, so this period covers
+            @s.DaysCounted day@(s.DaysCounted == 1 ? "" : "s"), not @s.Days. Figures from before then are only in reports
+            already saved in <code>Deployment\visitor-reports\</code> (the server keeps just the last 14 days of logs).
+        </div>
+    }
+
+    <p class="small text-muted mb-2">@s.From.ToString("d MMM yyyy") to @s.To.ToString("d MMM yyyy") (today, so far). Figures are saved once a minute.</p>
+
+    <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3">
+            <div class="card stat-card text-center py-3">
+                <div class="display-6 fw-bold text-primary">@s.Visitors.ToString("N0")</div>
+                <div class="small fw-semibold">Visitors</div>
+                <div class="text-muted small">each person once in the period</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card stat-card text-center py-3">
+                <div class="display-6 fw-bold">@s.PageViews.ToString("N0")</div>
+                <div class="small fw-semibold">Page views</div>
+                <div class="text-muted small">pages those visitors opened</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card stat-card text-center py-3">
+                <div class="display-6 fw-bold">@s.AverageVisitorsPerDay.ToString("0.#")</div>
+                <div class="small fw-semibold">Visitors a day</div>
+                <div class="text-muted small">average; a returning person counts each day (today so far included)</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card stat-card text-center py-3">
+                <div class="display-6 fw-bold">@s.PagesPerVisitor.ToString("0.0")</div>
+                <div class="small fw-semibold">Pages per visitor</div>
+                <div class="text-muted small">page views ÷ visitors</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <h2 class="h6 mb-1">@(s.ByWeek ? "By week (weeks start on Monday)" : "By day")</h2>
+            <p class="small text-muted mb-1">Each row counts a visitor once in that @(s.ByWeek ? "week" : "day"). Newest first.</p>
+            <table class="table table-sm align-middle">
+                <thead><tr><th>@(s.ByWeek ? "Week" : "Day")</th><th class="text-end">Visitors</th><th style="width: 35%"><span class="visually-hidden">Bar</span></th><th class="text-end">Page views</th></tr></thead>
+                <tbody>
+                    @foreach (var p in s.Periods.AsEnumerable().Reverse())
+                    {
+                        <tr>
+                            <td class="small">@p.Label</td>
+                            <td class="text-end">@p.Visitors</td>
+                            <td aria-hidden="true"><div class="bg-primary rounded" style="height: .6rem; width: @(Math.Round(100.0 * p.Visitors / maxVisitors))%"></div></td>
+                            <td class="text-end text-muted">@p.PageViews</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="h6">What people looked at</h2>
+            @if (s.Sections.Count == 0)
+            {
+                <p class="small text-muted">No page views in this period.</p>
+            }
+            else
+            {
+                <table class="table table-sm mb-1">
+                    <thead><tr><th>Part of the site</th><th class="text-end">Page views</th></tr></thead>
+                    <tbody>
+                        @foreach (var r in s.Sections)
+                        {
+                            <tr><td>@r.Name</td><td class="text-end">@r.Count</td></tr>
+                        }
+                    </tbody>
+                </table>
+                @if (s.Sections.Any(r => r.Name == "Other pages"))
+                {
+                    <p class="small text-muted">Other pages: anything not in the groups above, such as About or Privacy.</p>
+                }
+            }
+
+            <h2 class="h6 mt-4 mb-1">Where visitors came from</h2>
+            <p class="small text-muted mb-1">The site that sent each visitor to their first page each day; a visitor who comes back on several days is counted each day.</p>
+            <table class="table table-sm">
+                <thead><tr><th>Source</th><th class="text-end">Arrivals</th></tr></thead>
+                <tbody>
+                    <tr><td>No referring site <span class="text-muted small">(typed address, bookmark, email or app, or a visit carried over from the day before)</span></td><td class="text-end">@s.DirectArrivals</td></tr>
+                    @foreach (var r in s.Sources)
+                    {
+                        <tr><td>@r.Name</td><td class="text-end">@r.Count</td></tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="h6 mb-1">Most-viewed courses</h2>
+            <p class="small text-muted mb-1">Course page, its guide and its resources added together; up to 20 courses.</p>
+            @if (s.Courses.Count == 0)
+            {
+                <p class="small text-muted">No course pages opened in this period.</p>
+            }
+            else
+            {
+                <table class="table table-sm">
+                    <thead><tr><th>Course</th><th class="text-end">Page views</th></tr></thead>
+                    <tbody>
+                        @foreach (var r in s.Courses)
+                        {
+                            <tr>
+                                <td><a href="@r.Link" target="_blank" rel="noopener" title="Open the course page in a new tab">@r.Name</a>
+                                    @if (!string.IsNullOrEmpty(r.Detail)) { <span class="text-muted small">— @r.Detail</span> }</td>
+                                <td class="text-end">@r.Count</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="h6 mb-1">Most-viewed pages</h2>
+            <p class="small text-muted mb-1">The 25 most-opened addresses on the site.</p>
+            @if (s.Pages.Count == 0)
+            {
+                <p class="small text-muted">No page views in this period.</p>
+            }
+            else
+            {
+                <table class="table table-sm">
+                    <thead><tr><th>Page</th><th class="text-end">Page views</th></tr></thead>
+                    <tbody>
+                        @foreach (var r in s.Pages)
+                        {
+                            <tr><td class="text-break"><a href="@r.Link" target="_blank" rel="noopener" title="Open this page in a new tab"><code>@r.Name</code></a></td><td class="text-end">@r.Count</td></tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+}

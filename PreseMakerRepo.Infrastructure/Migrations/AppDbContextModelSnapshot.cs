@@ -15,7 +15,7 @@ namespace PreseMakerRepo.Infrastructure.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.31");
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.34");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -1304,6 +1304,49 @@ namespace PreseMakerRepo.Infrastructure.Migrations
                     b.HasIndex("Status", "SubmittedUtc");
 
                     b.ToTable("ResourceSubmissions", (string)null);
+                });
+
+            modelBuilder.Entity("PreseMakerRepo.Core.Models.SitePageView", b =>
+                {
+                    b.Property<DateOnly>("Day")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Path")
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Views")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Day", "Path");
+
+                    b.ToTable("SitePageViews", (string)null);
+                });
+
+            modelBuilder.Entity("PreseMakerRepo.Core.Models.SiteVisit", b =>
+                {
+                    b.Property<DateOnly>("Day")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("VisitorHash")
+                        .HasMaxLength(16)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LandingPath")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PageViews")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Source")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Day", "VisitorHash");
+
+                    b.ToTable("SiteVisits", (string)null);
                 });
 
             modelBuilder.Entity("PreseMakerRepo.Core.Models.TaxonomyCourse", b =>

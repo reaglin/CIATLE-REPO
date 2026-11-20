@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using PreseMakerRepo.Api.Services.Visits;
 using PreseMakerRepo.Core.Constants;
 using PreseMakerRepo.Core.Enums;
 using PreseMakerRepo.Core.Models;
@@ -26,6 +27,8 @@ public class IndexModel : PageModel
     public int OpenCareerRequestOccupations { get; set; }
     public int PublishedCareerPaths { get; set; }
     public int PublishedGuides { get; set; }
+    public int VisitorsLast7Days { get; set; }
+    public DateOnly? VisitorCountingSince { get; set; }
     public int RecentModules30Days { get; set; }
     public IReadOnlyList<Module> RecentModulesList { get; set; } = [];
 
@@ -53,6 +56,9 @@ public class IndexModel : PageModel
         OpenGuideRequests = await openRequests.CountAsync();
         OpenGuideRequestCourses = await openRequests.Select(r => r.CourseId).Distinct().CountAsync();
         PublishedGuides = await _db.CurriculumGuides.AsNoTracking().CountAsync();
+        var visitorStats = new VisitorStatsService(_db);
+        VisitorsLast7Days = await visitorStats.CountVisitorsAsync(7);
+        VisitorCountingSince = await visitorStats.CountingSinceAsync();
 
         var openCareer = _db.CareerRequests.AsNoTracking().Where(r => r.Status == CareerRequestStatus.Open);
         OpenCareerRequests = await openCareer.CountAsync();

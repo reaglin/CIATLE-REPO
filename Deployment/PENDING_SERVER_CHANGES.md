@@ -8,6 +8,21 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — the visitor counter and `/admin/visitors` (2026-11-20)
+
+Migration **`AddVisitorCounter`** (two new tables, `SiteVisits` and `SitePageViews`; nothing existing changes), so a
+**full deploy** that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the
+password). Plan items 9.3, 9.4, 9.6. Counting starts at the deploy; nothing earlier is recovered except by
+`visitor-report.cmd` from the server's last ~14 days of logs (run it **before** the deploy as well, so the time
+before the counter is saved).
+
+| Verify after the deploy |
+|---|
+| `/admin/visitors` opens and says "Nothing has been counted yet" (or already shows figures) |
+| Open two or three public pages on a phone (not signed in), wait a minute, reload `/admin/visitors`: they are there |
+| Browse a public page while signed in as admin: it does **not** appear |
+| The dashboard's Visitors card shows the last 7 days and "Counting began …" |
+
 ### ⬜ TO DEPLOY — "Other" files accepted again, and module update never touches removed materials (2026-10-21)
 
 Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for the password).
