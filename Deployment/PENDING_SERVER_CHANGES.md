@@ -21,13 +21,17 @@ month on the server is the one after it.
 | The script ends with "Done" and the printed file shows `daily` and `rotate 62` |
 | About 15 days later, `/var/log/nginx` holds more than 14 `access.log` files |
 
-### ⬜ TO DEPLOY — the visitor counter and `/admin/visitors` (2026-11-20)
+### ⬜ TO DEPLOY — the visitor counter, `/admin/visitors` and the home page figure (2026-11-20)
 
 Migration **`AddVisitorCounter`** (two new tables, `SiteVisits` and `SitePageViews`; nothing existing changes), so a
 **full deploy** that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the
-password). Plan items 9.3, 9.4, 9.6. Counting starts at the deploy; nothing earlier is recovered except by
-`visitor-report.cmd` from the server's logs (the last 14 days, until two months build up — entry above) (run it **before** the deploy as well, so the time
-before the counter is saved).
+password). Plan items 9.3, 9.4, 9.5, 9.6. Counting starts at the deploy. Nothing earlier is recovered except by
+`visitor-report.cmd` from the server's logs: the last 14 days, until two months build up (entry above). Run it
+**before** the deploy as well, so the time before the counter is saved.
+
+The home page shows "N people used the site in the last … days" only once the figure reaches
+`SiteSettings:PublicVisitorMinimum` (default 100, no setting needed). To change it, set
+`SiteSettings__PublicVisitorMinimum` in the server's environment file and restart the service.
 
 | Verify after the deploy |
 |---|
@@ -35,6 +39,8 @@ before the counter is saved).
 | Open two or three public pages on a phone (not signed in), wait a minute, reload `/admin/visitors`: they are there |
 | Browse a public page while signed in as admin: it does **not** appear |
 | The dashboard's Visitors card shows the last 7 days and "Counting began …" |
+| `/admin/visitors` has an "On the home page" line: hidden until 100 visitors, then the same figure the home page shows |
+| The home page opens normally (no figure until the minimum is reached) |
 
 ### ⬜ TO DEPLOY — "Other" files accepted again, and module update never touches removed materials (2026-10-21)
 

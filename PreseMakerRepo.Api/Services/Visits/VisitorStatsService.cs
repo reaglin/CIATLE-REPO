@@ -5,6 +5,7 @@ using PreseMakerRepo.Infrastructure.Data;
 namespace PreseMakerRepo.Api.Services.Visits;
 
 public sealed record PeriodRow(string Label, DateOnly Start, int Visitors, int PageViews);
+public sealed record PublicVisitorFigure(int Visitors, int Days);
 public sealed record CountRow(string Name, int Count, string? Link = null, string? Detail = null);
 
 public sealed class VisitorStats
@@ -136,6 +137,28 @@ public sealed class VisitorStatsService
         var from = to.AddDays(-(days - 1));
         return await _db.SiteVisits.Where(v => v.Day >= from && v.Day <= to)
             .Select(v => v.VisitorHash).Distinct().CountAsync(ct);
+    }
+
+    /// <summary>The home page's figure covers this many days (the admin page's "Last 30 days").</summary>
+    public const int PublicFigureDays = 30;
+
+    /// <summary>
+    /// The home page's public figure (plan 9.5): distinct visitors over the last 30 days, the same number as
+    /// the admin page's "Last 30 days". While the counter has run for less than that, <c>Days</c> is the days it
+    /// has run. Null below <paramref name="minimum"/> visitors (a tiny early number would say nobody uses the
+    /// site), so the page shows nothing.
+    /// </summary>
+    public async Task<PublicVisitorFigure?> GetPublicFigureAsync(int minimum, DateOnly? today = null, CancellationToken ct = default)
+    {
+        var since = await CountingSinceAsync(ct);
+        if (since is null) return null;
+        var to = today ?? VisitClassifier.FloridaDay(DateTime.UtcNow);
+        var from = to.AddDays(-(PublicFigureDays - 1));
+        var visitors = await _db.SiteVisits.Where(v => v.Day >= from && v.Day <= to)
+            .Select(v => v.VisitorHash).Distinct().CountAsync(ct);
+        if (visitors == 0 || visitors < minimum) return null;
+        var start = since > from ? since.Value : from;
+        return new PublicVisitorFigure(visitors, to.DayNumber - start.DayNumber + 1);
     }
 
     /// <summary>The first day the counter recorded anything, or null.</summary>

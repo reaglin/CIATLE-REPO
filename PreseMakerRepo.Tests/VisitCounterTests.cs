@@ -162,6 +162,36 @@ public class VisitCounterTests
     }
 
     [Fact]
+    public async Task The_home_page_figure_counts_people_once_and_says_since_when()
+    {
+        var (sp, conn) = Database();
+        using (conn) using (sp)
+        {
+            var rec = new VisitRecorder(sp.GetRequiredService<IServiceScopeFactory>(), NullLogger<VisitRecorder>.Instance);
+            using var scope = sp.CreateScope();
+            var svc = new VisitorStatsService(scope.ServiceProvider.GetRequiredService<AppDbContext>());
+
+            Assert.Null(await svc.GetPublicFigureAsync(1, new DateOnly(2026, 11, 20)));   // nothing counted: show nothing
+
+            rec.Record(new VisitHit(FloridaNoon(18), "aaaaaaaaaaaaaaaa", "/", null));
+            rec.Record(new VisitHit(FloridaNoon(20), "aaaaaaaaaaaaaaaa", "/browse", null));
+            rec.Record(new VisitHit(FloridaNoon(20), "bbbbbbbbbbbbbbbb", "/", null));
+            await rec.FlushAsync();
+
+            // Counting began on the 18th: "2 people used the site in the last 3 days" (A once, though on two days).
+            var early = await svc.GetPublicFigureAsync(1, new DateOnly(2026, 11, 20));
+            Assert.Equal(new PublicVisitorFigure(2, 3), early);
+            // Below the minimum it is hidden: a tiny number would say nobody uses the site.
+            Assert.Null(await svc.GetPublicFigureAsync(3, new DateOnly(2026, 11, 20)));
+
+            // A month on, the window is a full 30 days (19 Nov to 18 Dec).
+            Assert.Equal(new PublicVisitorFigure(2, 30), await svc.GetPublicFigureAsync(1, new DateOnly(2026, 12, 18)));
+            // Once every visit is older than 30 days (21 Nov to 20 Dec), the figure goes rather than say "0".
+            Assert.Null(await svc.GetPublicFigureAsync(0, new DateOnly(2026, 12, 20)));
+        }
+    }
+
+    [Fact]
     public async Task An_empty_counter_says_so()
     {
         var (sp, conn) = Database();

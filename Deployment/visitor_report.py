@@ -183,6 +183,11 @@ def render(s, sources):
     w('')
     if not s['views']:
         w('No human page views were found in the logs read (%d lines).' % s['lines'])
+        w('')
+        w('Of those lines, %d were not in the expected Nginx format, %d were bots or scripts and %d were API calls.'
+          % (s['unparsed'], s['bot_requests'], s['api_requests']))
+        if s['lines'] and s['unparsed'] > s['lines'] / 2:
+            w('Most lines could not be read: the log file is probably in another format or text encoding.')
         return '\n'.join(out) + '\n'
     days = (s['last'] - s['first']).days + 1
     w('Made %s from the server\'s Nginx access logs, covering **%s to %s** (%d days).'

@@ -20,6 +20,18 @@
     Search engines, bots, scripts, the API, this admin console and your own browsing while signed in here are not counted.
     Days are Florida days.
 </p>
+<p class="small mb-2" style="max-width: 60rem">
+    <strong>On the home page:</strong>
+    @if (Model.PublicFigure is { } pf)
+    {
+        <text>the public sees "<strong>@pf.Visitors.ToString("N0")</strong> people used the site @(pf.Days == 1 ? "today" : $"in the last {pf.Days} days")".</text>
+    }
+    else
+    {
+        <text>nothing is shown yet. The figure appears once the last 30 days reach <strong>@Model.PublicMinimum.ToString("N0")</strong> visitors.</text>
+    }
+    It is this page's <em>Last 30 days</em> Visitors figure, refreshed every 10 minutes, so it can trail this page a little.
+</p>
 <details class="small mb-3" style="max-width: 60rem">
     <summary>Why the numbers may be lower (or higher) than you expect</summary>
     <ul class="mt-2">
