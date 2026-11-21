@@ -206,16 +206,16 @@ Nginx's access logs were the only record, and they keep about 14 days.
 Ron, 2026-11-21: *"the next items for the site (besides update of HtmlSanitizer) will be adding an 'ad' that randomly
 gives information about all the Microsoft published apps … I am planning a section of the screen (a div) that shows the
 information and is closable on the main screen (an x to close)."* The site's next feature after the HtmlSanitizer
-deploy. Not started: open question 8 settles the shape first.
+deploy. Not started. Its shape was settled by Ron's answers to open question 8 (2026-11-21).
 
 | # | Task | Done when |
 |---|---|---|
-| 10.1 | **Where the list of programs comes from** (open question 8a). SoftwarePlus.ai has no machine-readable list: its programs are tiles on its home page, each with a Store link, and `RELEASES.md` (in `repos\`) tracks versions. Options: a small `apps.json` published on SoftwarePlus.ai that this site reads and caches (one list for both sites, updated with every release), or a seed file in this repo (changing it is a deploy) | Decided; the list holds each program's name, one line about it, its icon, its SoftwarePlus.ai page and its Store link |
-| 10.2 | **The panel**: one program chosen at random on each page load, with its icon, name, one line and two links (more about it on SoftwarePlus.ai; the Microsoft Store). Labelled as what it is, e.g. "From the developer of this site", so a visitor can tell it from the site's own content. An **×** button (with an accessible name, e.g. "Close the program panel") hides it | It shows on the home page (or wherever 8b decides), a different program on reloading, and the × hides it |
-| 10.3 | **Closing is remembered** in the browser (localStorage, no cookie, nothing sent to the server) for as long as 8c decides, so a visitor who closed it is not shown it on every page | Closed stays closed for that time; it never blocks search or the content |
-| 10.4 | **No tracking**: the links are plain links, nothing counts views or clicks unless Ron asks for it (8d). The panel does not delay the page: the list is cached on the server, and a failure to read it simply leaves the panel out | Checked with the list unreachable: the page is unchanged |
-| 10.5 | **UX review** (walkthrough + heuristics) of the panel on the home page, desktop and phone width | Passed and recorded here |
-| 10.6 | **Deploy** (`-CodeOnly` if 10.1 adds no table) | Live |
+| 10.1 | **The list of programs: `apps.json` on SoftwarePlus.ai** (Ron, 8a: *"It can be updated when RELEASES.md is updated"*). Work in the `SoftwarePlus` repo: write `site/apps.json` with **every** Store program (8e: *"All of them"*, BMPFast Plus and the direct-link-only PLC+ and DataStructures+ included), each with a short id, name, one line about it, icon address, its SoftwarePlus.ai page and its Store link; deploy it with `SoftwarePlus\deploy.ps1`. Then add one line to the **"Every Store submission: `RELEASES.md`"** rule in `repos\CLAUDE.md`: *a session that adds or changes a row there also updates `SoftwarePlus\site\apps.json`* (a new program, a rename, a new icon), so the list stays current without anyone remembering it | `https://softwareplus.ai/apps.json` answers with every program; the rule is in `repos\CLAUDE.md` |
+| 10.2 | **The panel, on the home page only** (8b). This site reads `apps.json` and keeps it for a few hours; each home-page load picks one program at random (repeats allowed), with its icon, name, one line and two links (more about it on SoftwarePlus.ai; the Microsoft Store). Labelled as what it is, e.g. "From the developer of this site", so a visitor can tell it from the site's own content. An **×** button (with an accessible name, e.g. "Close the program panel") hides it | It shows on the home page, often a different program on reloading, and the × hides it |
+| 10.3 | **Closed until the browser is closed** (8c: *"when returning to the home page a new one (random, so it can be repeated) shows up"*). The × sets a **session cookie** (no expiry date, so the browser drops it when it closes; shared by all its tabs). The server sees it and leaves the panel out, so it never flashes on and off. Note for Ron: a browser set to "continue where you left off" keeps session cookies, so there it stays closed until the browser clears them | Closed stays closed on every home-page load in that browser session; after the browser is closed and reopened a program shows again |
+| 10.4 | **Clicks are counted** (8d). Each of the panel's two links reports the click as the counter does (`site.js` sends a beacon; the link itself still opens at once): the program and which link (its page or the Store). Saved per day, per program, per link in a new table, with the counter's rules: no addresses stored, bots and administrators not counted, a daily cap per visitor. `/admin/visitors` gets a **Programs panel** table: clicks per program and per link for the chosen period, beside the home page's page views for the rate. The panel never slows or breaks the page: a failure to read the list leaves it out | A click shows on the admin page a minute later; with the list unreachable the home page is unchanged; tests green |
+| 10.5 | **UX review** (walkthrough + heuristics) of the panel on the home page, desktop and phone width, and of the admin table | Passed and recorded here |
+| 10.6 | **Deploy**: a full deploy, since 10.4 adds a table (migration). Nothing to change on a privacy page (the site has none); the session cookie holds only "closed" | Live |
 
 ---
 
@@ -259,7 +259,11 @@ deploy. Not started: open question 8 settles the shape first.
    or keep it to the admin page? (b) Keep the server's Nginx logs longer than 14 days?
    **Answered 2026-11-20: two months**, checked monthly (*"that would ensure the previous month is always available
    to create a report"*) — item 9.2. (a) **Answered 2026-11-20: yes**, in the next deployment — item 9.5.
-8. **(asked 2026-11-21) The programs panel (Phase 10).** Needed before building. (a) **Where does the list come
+8. ~~**(asked 2026-11-21) The programs panel (Phase 10).**~~ **Answered 2026-11-21:** (a) *"Yes, this makes
+   sense. It can be updated when RELEASES.md is updated"* — `apps.json` on SoftwarePlus.ai, item 10.1; (b) *"Home page
+   only"* — 10.2; (c) *"Hidden until the browser is closed, when returning to the home page a new one (random, so it can
+   be repeated) shows up"* — 10.3; (d) *"Clicks are counted"* — 10.4; (e) *"All of them"* — 10.1.
+   *Original question:* Needed before building. (a) **Where does the list come
    from**: an `apps.json` on SoftwarePlus.ai that both sites use (recommended: one list, kept current by every
    release), or a file in this repo? (b) **Which pages**: the home page only ("the main screen"), or every public
    page? (c) **Once closed, for how long**: for good in that browser, a month, or until the browser is closed?
