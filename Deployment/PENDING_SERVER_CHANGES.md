@@ -8,6 +8,19 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — invisible badges: Bootstrap 5.2's `text-bg-*` colours added to `site.css` (2026-11-21)
+
+Code only (one CSS file), no migration: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it). Ron, 2026-11-21: the
+guide queue showed no status. The site ships Bootstrap **5.1**, but 12 pages use the `text-bg-*` classes that came in 5.2,
+so those badges drew white text on no background: the queues' "Waiting" status and request counts, the Published/Declined
+tab counts, admin badges and the Request Guide toasts. `site.css` now defines the eight classes with 5.2's values. Checked
+by rendering the live queue page with the new CSS.
+
+| Verify after the deploy |
+|---|
+| `/queue/guides`: each row shows a blue request count and a "Waiting" badge; the tabs show 57 and 7 |
+| `/queue/careers` and `/queue/resources` show their badges too |
+
 ### ✅ DEPLOYED 2026-11-21 — the program panel on the home page (plan Phase 10, 2026-11-21)
 
 Ron deployed it 2026-11-21 (full deploy, with the HtmlSanitizer fix and `/account/access-denied`). Checked live by Claude:
