@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **96** |
+| ⏳ **Awaiting a decision from Ron** | **100** |
 | Informational — recorded, no decision needed | 20 |
 | ✅ Resolved | 13 |
-| **Total items** | **129** |
+| **Total items** | **133** |
 
 ---
 
-### ⏳ Awaiting a decision (96)
+### ⏳ Awaiting a decision (100)
 
 | # | Item |
 |---|---|
@@ -133,6 +133,10 @@ continues around every one of them.
 | **126** | `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246) |
 | **127** | `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247) |
 | **128** | `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247) |
+| **130** | `EEL4448` (requested ×1) — HELD: Florida Poly's only course has no reachable description (found 2026-11-21, batch 248) |
+| **131** | `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248) |
+| **132** | `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248) |
+| **133** | ℹ️ Power electronics under four numbers; UF prints a prerequisite that does not exist; UWF dropped `EEL4610` (batch 248) |
 
 ### Informational — no decision needed (20)
 
@@ -3771,6 +3775,11 @@ variable-topics course until UNF publishes one?**
 **Not written.** Base data (MDC offering) was sent. ⚠ **Decision for Ron: supply MDC's course description, or wait for
 the curricunet catalogue to come back and retry in a later run?**
 
+⚠ **Update 2026-11-21 (batch 248), applies to items 124–128 alike:** all five requests (`EEL2130C`, `ETI0602`,
+`EEL4016`, `EEL4081`, `PET1170`) were marked **Declined** on the site during the batch-248 run — **not by that
+session** (it declined only `EEL1906`). The decline carries no public reason in `/api/v1/queue/guides?status=declined`.
+⚠ **Ron: confirm these were your decisions; the five items then move to Resolved.**
+
 
 ## 129. ℹ️ `EEL4212` and `EEL4214` carry two subjects each — published as one labelled guide (informational, batch 247)
 
@@ -3785,6 +3794,49 @@ Both were requested and published 2026-11-21 as **one guide covering both readin
 The whole `EEL4213` family is scrambled the same way (FIU machines, FAMU/FSU power flow and faults, USF industrial
 distribution, UCF protection and control, UWF energy systems); both guides say so. **No decision needed**; if Ron wants
 the full `-SCNS` / `-<INST>` three-page split here, it is two more pages per number (`SOURCES.md` batch 247).
+
+
+## 130. ⚠ `EEL4448` (requested ×1) — HELD: Florida Poly's only course has no reachable description (found 2026-11-21, batch 248)
+
+`EEL4448` *Optoelectronics* (3 cr), carried only by **Florida Polytechnic** (effective 2020). The 2019-20 BS EE
+flowchart lists it as an elective with prerequisites **`EEL3470` and `EEE4351`**, and Florida Poly's graduate
+`EEE5457` *Advanced Optoelectronics* syllabus (SP 2026, Kasap text) exists — ⚠ **but no description of `EEL4448`
+itself could be read**: `catalog.floridapoly.edu` course pages give empty 202s, and no section syllabus was found by
+search or URL guess (`EEL-4448-01_FA-2025.pdf` 404). **Not written.** Base data sent. ⚠ **Decision for Ron: supply
+Florida Poly's description or a syllabus, or allow a guide from the title, the prerequisites and the graduate
+course's outline, labelled as such?**
+
+
+## 131. ⚠ `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248)
+
+`EEL5025` *Computational Electrical Engineering* (3 cr, FAMU and FSU — one course at the joint college). The ECE
+graduate page (`eng.famu.fsu.edu/ece/graduate/courses`) lists it only as one of two **"math-equivalent" courses** an
+M.S. student may use for the advanced-mathematics requirement (with `EEE5542` Random Processes). **No description
+found**: FSU's graduate bulletin page (`registrar.fsu.edu/node/911`) does not list it, FSU's course-descriptions page
+is a search front end, and `catalog.famu.edu` failed the TLS check. **Not written.** Base data sent. ⚠ **Decision for
+Ron: supply the description or a syllabus, or decline until one is published?**
+
+
+## 132. ⚠ `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248)
+
+`EEL5009` *Concepts in Electrical and Computer Engineering* (3 cr, FIU only, since 2015). FIU's whole description:
+*"The course covers a broad range of topics and concepts required to pursuing a Master's Degree in Electrical and
+Computer Engineering. Prerequisite: Permission of the instructor."* It reads as a bridge course for entering M.S.
+students, but **FIU never says which topics**, and no syllabus was found. **Not written** — outcomes would be
+invented. Base data sent. ⚠ **Decision for Ron: supply a syllabus, or decline it publicly as a course whose content
+FIU does not define?**
+
+
+## 133. ℹ️ Power electronics under four numbers; UF prints a prerequisite that does not exist; UWF dropped `EEL4610` (batch 248)
+
+- The first power electronics course is **`EEL4241`** (FIU, UNF, USF; UWF as *Advanced Topics*), **`EEL4242C`** (UF),
+  **`EEL4242`** (Florida Poly) and **`EEL4243`** (FAMU-FSU) — all 3 credits; the three guides carry the table.
+- ⚠ **UF's catalogue gives `EEL4242C`'s prerequisite as "EEL 3308"**, a number UF does not carry; older UF
+  catalogues say `EEE3308C` Electronic Circuits 1. The guide says to plan on `EEE3308C` and confirm.
+- **`EEL4610`**: UWF is a carrier in the SCNS file (since 2007) but the course is **not in UWF's 2026-27 catalogue**
+  (state-space design is now part of UWF's `EEL4657`). The guide follows UF and says so. Same shape as items 124 and
+  126 (SCNS active, institution no longer lists it), but a second carrier teaches it, so it was written. No decision
+  needed.
 
 
 ## Resolved

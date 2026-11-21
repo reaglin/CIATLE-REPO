@@ -25104,3 +25104,52 @@ Ten written and live; `EEL4081` (UNF) and `PET1170` (Miami Dade) held because no
 - **SCNS misspelling**: FIU's `EEL4213L` is *Energy Convergance Lab* in the flat file; FIU's own title is *Energy
   Conversion Lab*. The course title was sent corrected.
 - **`EEL4210`** (UWF) is offered concurrently with graduate `EEL5291` — the dual-listing warning is in the guide.
+
+---
+
+## Batch 248 — scheduled request check (six EEL guides), 2026-11-21
+
+Requests in rank order after the five held items (124–128): `EEL4242C`, `EEL4242`, `EEL4243`, `EEL4448`, `EEL4611`,
+`EEL4610`, `EEL5025`, `EEL5009`, `EEL1603`, `EEL1906`. Six written and live; `EEL1906` (UCF directed independent
+study) declined as a shell number; `EEL4448`, `EEL5025`, `EEL5009` held because no usable description could be read
+(items 130–132). Base data sent for all ten: 10 updated, 0 failed. Build script `scratchpad/b248_build.py`; base data
+`scratchpad/b248_base.py`; decline `scratchpad/b248_decline.py`. ⚠ During the run the five earlier holds
+(`EEL2130C`, `ETI0602`, `EEL4016`, `EEL4081`, `PET1170`) were marked Declined on the site by someone else — noted
+under item 128 for Ron to confirm.
+
+### Source register
+
+- ✅ **UF `catalog.ufl.edu/UGRD/courses/electrical_and_computer_engineering/`** — 200, full ECE list: `EEL4242C`,
+  `EEL4610`, `EEL4657C`, `EEE3308C`. ⚠ It prints `EEL4242C`'s prerequisite as **"EEL 3308"**, a number UF does not
+  carry (item 133).
+- ✅ **UWF `catalog.uwf.edu/courseinformation/courses/eel/eel.pdf`** (2026-27, 89 KB) — `EEL4610` **absent**, though
+  SCNS lists UWF; `catalog.uwf.edu/search/?P=EEL%204610` says "Results not found". **The search route is a quick
+  absence check; the prefix PDF confirms it.**
+- ✅ **Florida Poly catalogue PDFs** again: `floridapolytechnic.catalog.acalog.com/mime/media/13/483/BS+in+Electrical+
+  Engineering_2019-2020.pdf` (645 KB) lists every EE elective **with its prerequisites in brackets** (e.g. `EEL4448
+  Optoelectronics (3, EEL 3470 and EEE 4351)`) and `EEL4242` as a required senior course. **Use the flowchart for
+  Florida Poly prerequisites.**
+- ✅ **Florida Poly section syllabi** found by web search: `EEL-5245-01_SP-2026.pdf` (Power Electronics, M. H.
+  Rashid; its catalogue description is UF's `EEL4242C` description word for word) and `EEL-5457-01_SP-2026.pdf`
+  (`EEE5457` Advanced Optoelectronics). ❌ Guessed `EEL-4242-01_FA-2025.pdf` and `EEL-4448-01_FA-2025.pdf` 404.
+- ✅ **FAMU-FSU course list** (`scratchpad/b246_famufsu_list.txt`) supplied `EEL4243`. ✅ The ECE graduate page
+  `eng.famu.fsu.edu/ece/graduate/courses` (the `/ece/academics/graduate/courses` form 404s) gives the M.S. rules —
+  core courses and the two "math-equivalent" courses — but **no descriptions**.
+- ❌ **FSU graduate bulletin** `registrar.fsu.edu/node/911` holds no course descriptions; `/scheduling-curriculum/
+  course-descriptions` is a search front end (not driven). ❌ `catalog.famu.edu` failed Python's TLS check.
+- ✅ **FIU Coursedog cache** supplied `EEL4611` (spring only, no prerequisite text), `EEL5009` (one-line description)
+  and `EEL1603` (fall only, new 2025). ✅ **FIU's new-course records carry the proposal's justification in a
+  `customFields` key** (`0CBiy` on `EEL1603`) — useful when the description is thin.
+
+### Findings
+
+- **Power electronics under four numbers** (item 133): `EEL4241` FIU/UNF/USF/UWF, `EEL4242C` UF, `EEL4242` Florida
+  Poly, `EEL4243` FAMU-FSU; all 3 credits. The three guides written carry the table.
+- **`EEL4242` / `EEL4242C`** is the batch-219 *institutional signature* shape: same number and title, Florida Poly
+  bare, UF with C; no institution carries both.
+- **Second control courses scatter too**: `EEL4611` FIU (design: root locus, Bode, Guillemin-Truxal), `EEL4612`
+  Florida Poly, `EEL4612C` UCF (modern and robust, 4 cr), `EEL4610` UF (state space). First courses: `EEL4657`
+  UNF/USF/UWF, `EEL4657C` UF (4 cr), `EEL4652` FAMU-FSU (4 cr) and Florida Poly (3 cr).
+- **`EEL1603`** (FIU, 2025) carries the statewide title *Robotics-Mechanics and Controls*, the same as NWFSC's
+  `EEL2603C` (itself waiting in the request queue) — different numbers, so no equivalence.
+- **SCNS "active" ≠ taught, third case** (after items 124, 126): UWF's `EEL4610`. Written because UF teaches it.
