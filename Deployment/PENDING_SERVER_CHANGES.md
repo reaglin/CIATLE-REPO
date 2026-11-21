@@ -8,6 +8,18 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — HtmlSanitizer 9.0.892 → 9.0.967, a security fix (2026-11-21)
+
+Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for
+the password). Advisory GHSA-464h-4j8h-q5mf (high, published 2026-11-19: crafted CSS can tie up the server; fixed in
+9.0.967, the same major version, so not 11.x). The sanitizer cleans career-path, programme and taxonomy HTML. Checked:
+the build is clean and reports no vulnerable packages, 52 tests pass, and the old and new versions give **identical
+output** on all 94 career-path HTML fields plus six hostile inputs (script, `javascript:` link, inline style, `onerror`).
+
+| Verify after the deploy |
+|---|
+| A career path page (e.g. `/careers/registered-nurse`) and a programme page look as before |
+
 ### ✅ DONE 2026-11-20 — keep two months of Nginx logs (not a deploy)
 
 Ron ran it 2026-11-20: "Done, logs now kept 62 days". The later check below is still worth doing once.
@@ -23,7 +35,12 @@ month on the server is the one after it.
 | The script ends with "Done" and the printed file shows `daily` and `rotate 62` |
 | About 15 days later, `/var/log/nginx` holds more than 14 `access.log` files |
 
-### ⬜ TO DEPLOY — the visitor counter, `/admin/visitors` and the home page figure (2026-11-20)
+### ✅ DEPLOYED 2026-11-21 — the visitor counter, `/admin/visitors` and the home page figure (2026-11-20)
+
+Ron deployed it 2026-11-21 (full deploy, backup `repo-20261121-015326-predeploy.db`; the first try stopped at a timed-out
+password prompt before touching the server, and `-SkipBackup` finished it). Checked live by Claude: pages carry
+`data-visit="1"`, the new `site.js` is served, `POST /visit` answers 204, `/admin/visitors` asks for a sign-in, course
+pages answer 200. ⚠ Ron: the checks below that need the phone and the admin sign-in.
 
 Migration **`AddVisitorCounter`** (two new tables, `SiteVisits` and `SitePageViews`; nothing existing changes), so a
 **full deploy** that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the
@@ -45,7 +62,7 @@ The home page shows "N people used the site in the last … days" only once the 
 | `/admin/visitors` has an "On the home page" line: hidden until 100 visitors, then the same figure the home page shows |
 | The home page opens normally (no figure until the minimum is reached) |
 
-### ⬜ TO DEPLOY — "Other" files accepted again, and module update never touches removed materials (2026-10-21)
+### ✅ DEPLOYED 2026-11-21 (with the visitor counter: a deploy ships the whole build) — "Other" files accepted again, and module update never touches removed materials (2026-10-21)
 
 Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for the password).
 
