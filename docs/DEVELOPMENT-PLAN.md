@@ -201,6 +201,22 @@ Nginx's access logs were the only record, and they keep about 14 days.
 | 9.6 ⚠️ | **UX review** (walkthrough + heuristics) of the admin page and dashboard card, 2026-11-20: **0 critical, 3 major, 7 minor — all fixed.** The definition of a visitor now says why the daily rows add up to more than the total; a "Why the numbers may be lower (or higher)" list (shared networks, phone and laptop, only pages, your own visits when signed out); the log-report pointer says where and how to run it and that the server keeps only 14 days; captions under each figure instead of tooltips; empty tables say so; course titles; "(part week)" and "(so far)"; the dashboard card says what is counted and when counting began. The public figure (9.5) was reviewed separately (see 9.5) | ⚠ Rendered look (card widths, the bar column, layout) for Ron |
 | 9.7 ⚠️ | **Deploy** — done by Ron 2026-11-21 (full deploy with the migration; backup `repo-20261121-015326-predeploy.db`). Checked live by Claude: pages carry `data-visit`, the new `site.js` is served, `POST /visit` answers 204, `/admin/visitors` asks for a sign-in. The site has no privacy page, so there is no wording to update. HtmlSanitizer was raised to 9.0.967 afterwards (a security fix, identical output on all career paths); it goes out in the next `-CodeOnly` deploy | ⚠ Ron: the phone and admin checks in `Deployment/PENDING_SERVER_CHANGES.md`; then the `-CodeOnly` deploy for HtmlSanitizer |
 
+## Phase 10 — A closable panel about Dr. Ron Eaglin's Microsoft Store programs (PLANNED, not started)
+
+Ron, 2026-11-21: *"the next items for the site (besides update of HtmlSanitizer) will be adding an 'ad' that randomly
+gives information about all the Microsoft published apps … I am planning a section of the screen (a div) that shows the
+information and is closable on the main screen (an x to close)."* The site's next feature after the HtmlSanitizer
+deploy. Not started: open question 8 settles the shape first.
+
+| # | Task | Done when |
+|---|---|---|
+| 10.1 | **Where the list of programs comes from** (open question 8a). SoftwarePlus.ai has no machine-readable list: its programs are tiles on its home page, each with a Store link, and `RELEASES.md` (in `repos\`) tracks versions. Options: a small `apps.json` published on SoftwarePlus.ai that this site reads and caches (one list for both sites, updated with every release), or a seed file in this repo (changing it is a deploy) | Decided; the list holds each program's name, one line about it, its icon, its SoftwarePlus.ai page and its Store link |
+| 10.2 | **The panel**: one program chosen at random on each page load, with its icon, name, one line and two links (more about it on SoftwarePlus.ai; the Microsoft Store). Labelled as what it is, e.g. "From the developer of this site", so a visitor can tell it from the site's own content. An **×** button (with an accessible name, e.g. "Close the program panel") hides it | It shows on the home page (or wherever 8b decides), a different program on reloading, and the × hides it |
+| 10.3 | **Closing is remembered** in the browser (localStorage, no cookie, nothing sent to the server) for as long as 8c decides, so a visitor who closed it is not shown it on every page | Closed stays closed for that time; it never blocks search or the content |
+| 10.4 | **No tracking**: the links are plain links, nothing counts views or clicks unless Ron asks for it (8d). The panel does not delay the page: the list is cached on the server, and a failure to read it simply leaves the panel out | Checked with the list unreachable: the page is unchanged |
+| 10.5 | **UX review** (walkthrough + heuristics) of the panel on the home page, desktop and phone width | Passed and recorded here |
+| 10.6 | **Deploy** (`-CodeOnly` if 10.1 adds no table) | Live |
+
 ---
 
 ## Open questions for Ron
@@ -243,6 +259,13 @@ Nginx's access logs were the only record, and they keep about 14 days.
    or keep it to the admin page? (b) Keep the server's Nginx logs longer than 14 days?
    **Answered 2026-11-20: two months**, checked monthly (*"that would ensure the previous month is always available
    to create a report"*) — item 9.2. (a) **Answered 2026-11-20: yes**, in the next deployment — item 9.5.
+8. **(asked 2026-11-21) The programs panel (Phase 10).** Needed before building. (a) **Where does the list come
+   from**: an `apps.json` on SoftwarePlus.ai that both sites use (recommended: one list, kept current by every
+   release), or a file in this repo? (b) **Which pages**: the home page only ("the main screen"), or every public
+   page? (c) **Once closed, for how long**: for good in that browser, a month, or until the browser is closed?
+   (d) **Count clicks** on its links, or none at all? (e) **All the Store programs**, or only some (for example
+   leave out BMPFast Plus, which is sold rather than free, or programs hidden on the Store such as PLC+ and
+   DataStructures+)?
 
 ## References
 
