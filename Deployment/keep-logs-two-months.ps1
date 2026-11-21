@@ -27,9 +27,25 @@ set -e
 f=/etc/logrotate.d/nginx
 test -f `$f || { echo No `$f on this server.; exit 2; }
 [ -f /root/logrotate-nginx.bak ] || cp `$f /root/logrotate-nginx.bak
+# The check runs on the whole configuration (logrotate.conf holds settings, such as su, that the nginx
+# file alone lacks), before and after the edit; only an error the edit adds counts against it.
+logrotate -d /etc/logrotate.conf >/tmp/lr-before.txt 2>&1 || true
+grep -i 'error' /tmp/lr-before.txt | sort -u >/tmp/lr-before-errors.txt || true
 sed -i -E 's/^([[:space:]]*)(daily|weekly|monthly)[[:space:]]*$/\1daily/; s/^([[:space:]]*)rotate[[:space:]]+[0-9]+/\1rotate $KeepDays/' `$f
 grep -qE '^[[:space:]]*rotate[[:space:]]+$KeepDays' `$f || { echo Could not set rotate in `$f:; cat `$f; exit 3; }
-logrotate -d `$f >/dev/null 2>&1 || { echo logrotate rejects the new file, restoring the copy.; cp /root/logrotate-nginx.bak `$f; exit 4; }
+logrotate -d /etc/logrotate.conf >/tmp/lr-after.txt 2>&1 || true
+grep -i 'error' /tmp/lr-after.txt | sort -u >/tmp/lr-after-errors.txt || true
+if comm -13 /tmp/lr-before-errors.txt /tmp/lr-after-errors.txt | grep -q .; then
+  echo logrotate reports new errors after the change, so the old file is put back:
+  comm -13 /tmp/lr-before-errors.txt /tmp/lr-after-errors.txt | head -20
+  cp /root/logrotate-nginx.bak `$f
+  exit 4
+fi
+if [ -s /tmp/lr-after-errors.txt ]; then
+  echo Note: logrotate already reported these before the change, and still does. The change did not cause them:
+  head -10 /tmp/lr-after-errors.txt
+fi
+rm -f /tmp/lr-before.txt /tmp/lr-after.txt /tmp/lr-before-errors.txt /tmp/lr-after-errors.txt
 echo --- `$f now:
 cat `$f
 echo --- log files on the server now:
