@@ -202,7 +202,7 @@ try
     app.UseCors("ApiPolicy");
     app.UseAuthentication();
     app.UseAuthorization();
-    app.UseMiddleware<VisitCounterMiddleware>();   // after auth: administrators are not counted
+    app.MapVisitReport();   // POST /visit: pages report themselves (site.js); after auth, so administrators are not counted
 
     app.MapControllerRoute(
         name: "default",

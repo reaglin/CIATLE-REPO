@@ -38,7 +38,8 @@ The home page shows "N people used the site in the last … days" only once the 
 | Verify after the deploy |
 |---|
 | `/admin/visitors` opens and says "Nothing has been counted yet" (or already shows figures) |
-| Open two or three public pages on a phone (not signed in), wait a minute, reload `/admin/visitors`: they are there |
+| Open two or three public pages on a phone (not signed in) and read each for 5 seconds or scroll; wait a minute, reload `/admin/visitors`: they are there |
+| On the phone, a page closed within 2 seconds without touching it is **not** there |
 | Browse a public page while signed in as admin: it does **not** appear |
 | The dashboard's Visitors card shows the last 7 days and "Counting began …" |
 | `/admin/visitors` has an "On the home page" line: hidden until 100 visitors, then the same figure the home page shows |

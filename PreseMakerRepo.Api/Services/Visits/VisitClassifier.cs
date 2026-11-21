@@ -46,23 +46,27 @@ public static class VisitClassifier
         string.IsNullOrWhiteSpace(userAgent) || Bot.IsMatch(userAgent);
 
     /// <summary>
-    /// True when the finished request was a person opening a public page: a GET answered 200 with
-    /// HTML, not the API or the admin console, not a prefetch, not a bot, not an administrator.
+    /// The most page views one visitor can add in a day. A person reads far fewer pages than this; it stops
+    /// anyone inflating the count by sending reports by hand.
     /// </summary>
-    public static bool ShouldCount(string method, string? path, int status, string? contentType,
-        string? userAgent, bool isAdministrator, bool isPrefetch)
+    public const int MaxViewsPerVisitorPerDay = 300;
+
+    /// <summary>
+    /// True when a page's report (<c>POST /visit</c>, sent by site.js once there is a sign of a person:
+    /// the page open and visible for 5 seconds, or a scroll, click, tap or key) should be counted: a
+    /// public page, not the API or the admin console, not a bot, not an administrator. Scrapers that
+    /// pose as browsers but never run the page's script, or leave within seconds, never send one
+    /// (plan 9.3: the logs showed 941,945 such "visitors" against about 3,500 people).
+    /// </summary>
+    public static bool ShouldCountReport(string? path, string? userAgent, bool isAdministrator)
     {
-        if (!HttpMethodsIsGet(method) || status != 200) return false;
-        if (contentType is null || !contentType.StartsWith("text/html", StringComparison.OrdinalIgnoreCase)) return false;
-        if (string.IsNullOrEmpty(path)) return false;
+        if (string.IsNullOrEmpty(path) || path[0] != '/' || path.StartsWith("//", StringComparison.Ordinal)) return false;
         if (path.StartsWith("/api/", StringComparison.OrdinalIgnoreCase) || path.Equals("/api", StringComparison.OrdinalIgnoreCase)) return false;
         if (path.StartsWith("/admin", StringComparison.OrdinalIgnoreCase)) return false;
-        if (isAdministrator || isPrefetch) return false;
+        if (path.StartsWith("/visit", StringComparison.OrdinalIgnoreCase)) return false;
+        if (isAdministrator) return false;
         return !IsBot(userAgent);
     }
-
-    private static bool HttpMethodsIsGet(string method) =>
-        string.Equals(method, "GET", StringComparison.OrdinalIgnoreCase);
 
     /// <summary>The path as stored: no trailing slash, course ids in capitals, at most 200 characters.</summary>
     public static string NormalizePath(string path)

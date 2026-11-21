@@ -12,7 +12,9 @@
         <meta name="robots" content="noindex,follow" />
     }
 </head>
-<body>
+@* data-visit: site.js reports this page to the visitor counter (POST /visit) once there is a sign of a person.
+   Only on pages served normally (not error pages), and never for an administrator. *@
+<body data-visit="@(Context.Response.StatusCode == 200 && !User.IsInRole("Administrator") ? "1" : null)">
     @{
         // Cached in SiteStatsService (dropped on course and guide writes), so this is normally a
         // dictionary lookup. Same definitions Browse uses per discipline, so the header and the tree agree.

@@ -214,3 +214,43 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// The visitor counter (plan 9.3). A page is reported once there is a sign of a person reading it: open and
+// visible for 5 seconds, or a scroll, click, tap or key. Programs that pose as browsers but never run this
+// script, or move on within seconds, are not counted, and browsers that say they are automated are skipped.
+// Only the page's address and the page that linked to it are sent; the server keeps a scrambled code for the
+// visitor, never the address. The layout marks which pages count (data-visit).
+(function () {
+    var body = document.body;
+    if (!body || body.getAttribute('data-visit') !== '1' || navigator.webdriver) return;
+    var sent = false, timer = null;
+    var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+
+    function stop() {
+        events.forEach(function (e) { window.removeEventListener(e, send, true); });
+        document.removeEventListener('visibilitychange', onVisibility);
+        clearTimeout(timer);
+    }
+    function send() {
+        if (sent) return;
+        sent = true;
+        stop();
+        var data = JSON.stringify({ p: location.pathname, r: document.referrer || '' });
+        try {
+            if (navigator.sendBeacon && navigator.sendBeacon('/visit', new Blob([data], { type: 'application/json' }))) return;
+            fetch('/visit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: data, keepalive: true })
+                .catch(function () { /* counting must never disturb the page */ });
+        } catch (e) { /* likewise */ }
+    }
+    function startTimer() {
+        if (!timer && document.visibilityState === 'visible') timer = setTimeout(send, 5000);
+    }
+    function onVisibility() {
+        if (document.visibilityState === 'visible') startTimer();
+        else { clearTimeout(timer); timer = null; }
+    }
+
+    events.forEach(function (e) { window.addEventListener(e, send, { capture: true, passive: true }); });
+    document.addEventListener('visibilitychange', onVisibility);
+    startTimer();
+})();

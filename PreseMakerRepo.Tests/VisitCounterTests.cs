@@ -28,24 +28,27 @@ public class VisitCounterTests
     public void A_browser_is_a_person() => Assert.False(VisitClassifier.IsBot(Chrome));
 
     [Fact]
-    public void A_person_opening_a_page_is_counted() =>
-        Assert.True(VisitClassifier.ShouldCount("GET", "/courses/EEL4205", 200, "text/html; charset=utf-8", Chrome, false, false));
+    public void A_page_reported_by_a_persons_browser_is_counted() =>
+        Assert.True(VisitClassifier.ShouldCountReport("/courses/EEL4205", Chrome, isAdministrator: false));
 
     [Theory]
-    [InlineData("POST", "/request-guide", 200, "text/html")]       // a form sent, not a page opened
-    [InlineData("GET", "/courses/XYZ9999", 404, "text/html")]       // not found
-    [InlineData("GET", "/api/v1/courses", 200, "text/html")]        // the API
-    [InlineData("GET", "/admin/visitors", 200, "text/html")]        // the admin console
-    [InlineData("GET", "/courses/EEL4205", 200, "application/json")] // not a page
-    [InlineData("GET", "/lib/site.css", 200, "text/css")]
-    public void Other_requests_are_not_counted(string method, string path, int status, string type) =>
-        Assert.False(VisitClassifier.ShouldCount(method, path, status, type, Chrome, false, false));
+    [InlineData("/api/v1/courses")]          // the API
+    [InlineData("/api")]
+    [InlineData("/admin/visitors")]          // the admin console
+    [InlineData("/visit")]                   // the report address itself
+    [InlineData("")]                         // nothing
+    [InlineData(null)]
+    [InlineData("courses/EEL4205")]          // not a path on this site
+    [InlineData("//evil.example/x")]         // another site's address
+    public void Reports_for_other_addresses_are_not_counted(string? path) =>
+        Assert.False(VisitClassifier.ShouldCountReport(path, Chrome, isAdministrator: false));
 
     [Fact]
-    public void Administrators_and_prefetches_are_not_counted()
+    public void Administrators_and_bots_are_not_counted()
     {
-        Assert.False(VisitClassifier.ShouldCount("GET", "/", 200, "text/html", Chrome, isAdministrator: true, isPrefetch: false));
-        Assert.False(VisitClassifier.ShouldCount("GET", "/", 200, "text/html", Chrome, isAdministrator: false, isPrefetch: true));
+        Assert.False(VisitClassifier.ShouldCountReport("/", Chrome, isAdministrator: true));
+        Assert.False(VisitClassifier.ShouldCountReport("/", "Mozilla/5.0 (compatible; Googlebot/2.1)", isAdministrator: false));
+        Assert.False(VisitClassifier.ShouldCountReport("/", "", isAdministrator: false));
     }
 
     [Theory]
