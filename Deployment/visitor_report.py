@@ -20,6 +20,7 @@ USAGE
 Normally run through visitor-report.ps1, which runs it on the server, so only the report travels.
 """
 import argparse
+import array
 import collections
 import datetime
 import hashlib
@@ -72,7 +73,8 @@ def section_of(path):
 
 
 def visitor_id(ip, ua):
-    return hashlib.sha256(('%s|%s' % (ip, ua)).encode('utf-8', 'replace')).hexdigest()[:16]
+    """A 60-bit number from a hash of IP + browser: tells visitors apart without keeping the address."""
+    return int(hashlib.sha256(('%s|%s' % (ip, ua)).encode('utf-8', 'replace')).hexdigest()[:15], 16)
 
 
 def ref_domain(ref):
@@ -98,36 +100,38 @@ def open_log(p):
     return open(p, encoding=enc, errors='replace')
 
 
+# A real browser fetches the page's stylesheet and scripts; most unannounced scrapers fetch only the HTML.
+# A visitor (IP + browser) who fetched one of these in the period is "browser-confirmed".
+ASSET = re.compile(r'^/(css/site\.css|js/site\.js|lib/bootstrap/)')
+
+
 def parse(paths, days, month=None):
-    """month: (first_day, last_day) to keep only that calendar month, or None."""
+    """Read the logs once. Page views are kept as compact parallel arrays (millions of rows), so the
+    figures can be worked out both for every visitor and for browser-confirmed visitors only.
+    month: (first_day, last_day) to keep only that calendar month, or None."""
     cutoff = None
     if days:
         cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=days)
-    s = {
+    r = {
         'lines': 0, 'unparsed': 0, 'bot_requests': 0, 'api_requests': 0,
         'bot_agents': collections.Counter(),
-        'day_visitors': collections.defaultdict(set), 'day_views': collections.Counter(),
-        'week_visitors': collections.defaultdict(set), 'week_views': collections.Counter(),
-        'all_visitors': set(), 'views': 0,
-        'section_views': collections.Counter(), 'section_visitors': collections.defaultdict(set),
-        'page_views': collections.Counter(), 'page_visitors': collections.defaultdict(set),
-        'course_visitors': collections.defaultdict(set),
-        'referrers': collections.Counter(), 'landings': 0, 'direct': 0,
-        'first': None, 'last': None,
+        'vid': array.array('q'), 'ts': array.array('q'), 'path': array.array('i'), 'ref': array.array('i'),
+        'paths': [], 'refs': ['-', 'other'],      # ref 0: no referrer; 1: our own site or unreadable
+        'confirmed': set(),
     }
-    seen_landing = set()
+    path_ids, ref_ids = {}, {'-': 0, 'other': 1}
     for p in paths:
         with open_log(p) as fh:
             for raw in fh:
-                s['lines'] += 1
+                r['lines'] += 1
                 m = LINE.match(raw)
                 if not m:
-                    s['unparsed'] += 1
+                    r['unparsed'] += 1
                     continue
                 try:
                     t = datetime.datetime.strptime(m['time'], '%d/%b/%Y:%H:%M:%S %z')
                 except ValueError:
-                    s['unparsed'] += 1
+                    r['unparsed'] += 1
                     continue
                 if cutoff and t < cutoff:
                     continue
@@ -136,100 +140,163 @@ def parse(paths, days, month=None):
                 ua = m['ua']
                 path = m['path'].split('?', 1)[0].split('#', 1)[0]
                 if path.startswith('/api/'):
-                    s['api_requests'] += 1
+                    r['api_requests'] += 1
                     continue
                 if not ua or ua == '-' or BOT.search(ua):
-                    s['bot_requests'] += 1
-                    s['bot_agents'][ua[:60] or '(no user agent)'] += 1
+                    r['bot_requests'] += 1
+                    r['bot_agents'][ua[:60] or '(no user agent)'] += 1
                     continue
                 if m['method'] != 'GET' or m['status'] not in ('200', '304'):
+                    continue
+                if ASSET.match(path):
+                    r['confirmed'].add(visitor_id(m['ip'], ua))
                     continue
                 if STATIC.search(path) or path.startswith(('/admin', '/lib/', '/css/', '/js/', '/_')):
                     continue
                 if len(path) > 1:
                     path = path.rstrip('/')
 
-                vid = visitor_id(m['ip'], ua)
-                day = t.date()
-                iso = day.isocalendar()
-                week = '%d-W%02d' % (iso[0], iso[1])
-                s['first'] = day if s['first'] is None or day < s['first'] else s['first']
-                s['last'] = day if s['last'] is None or day > s['last'] else s['last']
+                pid = path_ids.get(path)
+                if pid is None:
+                    pid = path_ids[path] = len(r['paths'])
+                    r['paths'].append(path)
+                ref = m['ref']
+                if not ref or ref == '-':
+                    rid = 0
+                else:
+                    dom = ref_domain(ref)
+                    if dom is None:
+                        rid = 1
+                    else:
+                        rid = ref_ids.get(dom)
+                        if rid is None:
+                            rid = ref_ids[dom] = len(r['refs'])
+                            r['refs'].append(dom)
+                # Days are the server log's own local days, as before.
+                local = t.replace(tzinfo=None)
+                r['vid'].append(visitor_id(m['ip'], ua))
+                r['ts'].append(int((local - EPOCH).total_seconds()))
+                r['path'].append(pid)
+                r['ref'].append(rid)
+    return r
 
-                s['views'] += 1
-                s['all_visitors'].add(vid)
-                s['day_visitors'][day].add(vid)
-                s['day_views'][day] += 1
-                s['week_visitors'][week].add(vid)
-                s['week_views'][week] += 1
-                sec = section_of(path)
-                s['section_views'][sec] += 1
-                s['section_visitors'][sec].add(vid)
-                s['page_views'][path] += 1
-                s['page_visitors'][path].add(vid)
-                cm = COURSE.match(path)
-                if cm:
-                    s['course_visitors'][cm.group(1).upper()].add(vid)
 
-                # Where a visitor came from: their first page view of the day.
-                key = (vid, day)
-                if key not in seen_landing:
-                    seen_landing.add(key)
-                    s['landings'] += 1
-                    dom = ref_domain(m['ref'])
-                    if dom:
-                        s['referrers'][dom] += 1
-                    elif not m['ref'] or m['ref'] == '-':
-                        s['direct'] += 1
+EPOCH = datetime.datetime(1970, 1, 1)
+
+
+def aggregate(r, keep=None, totals_only=False):
+    """The report's figures from the page views in r, for every visitor or only those in keep.
+    totals_only: just visitors and views by day and week (the comparison column), to save memory."""
+    s = {
+        'day_visitors': collections.defaultdict(set), 'day_views': collections.Counter(),
+        'week_visitors': collections.defaultdict(set), 'week_views': collections.Counter(),
+        'all_visitors': set(), 'views': 0,
+        'section_views': collections.Counter(), 'section_visitors': collections.defaultdict(set),
+        'page_views': collections.Counter(), 'page_visitors': collections.defaultdict(set),
+        'course_visitors': collections.defaultdict(set),
+        'referrers': collections.Counter(), 'direct': 0,
+        'first': None, 'last': None,
+    }
+    sections = [section_of(p) for p in r['paths']]
+    courses = [(COURSE.match(p).group(1).upper() if COURSE.match(p) else None) for p in r['paths']]
+    landing = {}                                   # (vid, day) -> (time, ref) of the day's first page
+    for vid, ts, pid, rid in zip(r['vid'], r['ts'], r['path'], r['ref']):
+        if keep is not None and vid not in keep:
+            continue
+        day = EPOCH.date() + datetime.timedelta(days=ts // 86400)
+        iso = day.isocalendar()
+        week = '%d-W%02d' % (iso[0], iso[1])
+        s['first'] = day if s['first'] is None or day < s['first'] else s['first']
+        s['last'] = day if s['last'] is None or day > s['last'] else s['last']
+        s['views'] += 1
+        s['all_visitors'].add(vid)
+        s['day_visitors'][day].add(vid)
+        s['day_views'][day] += 1
+        s['week_visitors'][week].add(vid)
+        s['week_views'][week] += 1
+        if totals_only:
+            continue
+        sec = sections[pid]
+        s['section_views'][sec] += 1
+        s['section_visitors'][sec].add(vid)
+        path = r['paths'][pid]
+        s['page_views'][path] += 1
+        s['page_visitors'][path].add(vid)
+        if courses[pid]:
+            s['course_visitors'][courses[pid]].add(vid)
+        # Where a visitor came from: their first page view of the day (the logs are not read in order).
+        key = (vid, day)
+        prev = landing.get(key)
+        if prev is None or ts < prev[0]:
+            landing[key] = (ts, rid)
+    for _, rid in landing.values():
+        if rid == 0:
+            s['direct'] += 1
+        elif rid > 1:
+            s['referrers'][r['refs'][rid]] += 1
     return s
 
 
-def render(s, sources):
+def render(r, sources):
     out = []
     w = out.append
     today = datetime.date.today().isoformat()
     w('# floridacourserepo.com - visitor report')
     w('')
-    if not s['views']:
-        w('No human page views were found in the logs read (%d lines).' % s['lines'])
+    a = aggregate(r, totals_only=True)     # everything that did not announce itself as a bot
+    s = aggregate(r, r['confirmed'])       # of those, visitors whose browser also loaded the page's CSS or scripts
+    if not a['views']:
+        w('No human page views were found in the logs read (%d lines).' % r['lines'])
         w('')
         w('Of those lines, %d were not in the expected Nginx format, %d were bots or scripts and %d were API calls.'
-          % (s['unparsed'], s['bot_requests'], s['api_requests']))
-        if s['lines'] and s['unparsed'] > s['lines'] / 2:
+          % (r['unparsed'], r['bot_requests'], r['api_requests']))
+        if r['lines'] and r['unparsed'] > r['lines'] / 2:
             w('Most lines could not be read: the log file is probably in another format or text encoding.')
         return '\n'.join(out) + '\n'
-    days = (s['last'] - s['first']).days + 1
+    if not s['views']:
+        s = aggregate(r)                   # an old log with no asset lines: fall back rather than report nothing
+    days = (a['last'] - a['first']).days + 1
     w('Made %s from the server\'s Nginx access logs, covering **%s to %s** (%d days).'
-      % (today, s['first'], s['last'], days))
+      % (today, a['first'], a['last'], days))
     w('')
-    w('| | |')
-    w('|---|---|')
-    w('| **Visitors** (distinct, whole period) | **%d** |' % len(s['all_visitors']))
-    w('| Average visitors a day | %.1f |' % (sum(len(v) for v in s['day_visitors'].values()) / days))
-    w('| **Page views** | **%d** |' % s['views'])
-    w('| Pages per visitor | %.1f |' % (s['views'] / max(1, len(s['all_visitors']))))
-    w('| Requests from crawlers, bots and scripts (not counted above) | %d |' % s['bot_requests'])
-    w('| API requests (the desktop client and our tools; not counted above) | %d |' % s['api_requests'])
+    w('| | Browser-confirmed | Everything not marked as a bot |')
+    w('|---|---:|---:|')
+    w('| **Visitors** (distinct, whole period) | **{:,}** | {:,} |'.format(len(s['all_visitors']), len(a['all_visitors'])))
+    w('| Average visitors a day | **{:,.1f}** | {:,.1f} |'.format(
+        sum(len(v) for v in s['day_visitors'].values()) / days, sum(len(v) for v in a['day_visitors'].values()) / days))
+    w('| **Page views** | **{:,}** | {:,} |'.format(s['views'], a['views']))
+    w('| Pages per visitor | {:.1f} | {:.1f} |'.format(
+        s['views'] / max(1, len(s['all_visitors'])), a['views'] / max(1, len(a['all_visitors']))))
     w('')
-    w('A visitor is one IP address with one browser, so two people behind one school network on the '
-      'same browser count as one, and one person on a phone and a laptop counts as two. '
+    w('| Not counted in either column | Requests |')
+    w('|---|---:|')
+    w('| Crawlers, bots and scripts that say what they are | {:,} |'.format(r['bot_requests']))
+    w('| API requests (the desktop client and our tools) | {:,} |'.format(r['api_requests']))
+    w('')
+    w('**Browser-confirmed** visitors are the ones whose browser also fetched the site\'s stylesheet or '
+      'scripts, as every real browser does on its first visit. Scrapers that pretend to be browsers usually '
+      'fetch only the page, so the right-hand column includes them; the rest of this report uses the left. '
+      'A visitor is one IP address with one browser: two people behind one school network on the same '
+      'browser count as one, and one person on a phone and a laptop counts as two. '
       'The figures are a good guide to the trend rather than an exact head count.')
     w('')
 
     w('## By day')
     w('')
-    w('| Day | Visitors | Page views |')
-    w('|---|---:|---:|')
-    for d in sorted(s['day_visitors']):
-        w('| %s %s | %d | %d |' % (d.isoformat(), d.strftime('%a'), len(s['day_visitors'][d]), s['day_views'][d]))
+    w('| Day | Visitors | Page views | Not confirmed (visitors) |')
+    w('|---|---:|---:|---:|')
+    for d in sorted(a['day_visitors']):
+        w('| %s %s | %d | %d | %d |' % (d.isoformat(), d.strftime('%a'), len(s['day_visitors'].get(d, ())),
+                                         s['day_views'][d], len(a['day_visitors'][d]) - len(s['day_visitors'].get(d, ()))))
     w('')
-    if len(s['week_visitors']) > 1:
+    if len(a['week_visitors']) > 1:
         w('## By week')
         w('')
-        w('| Week | Visitors | Page views |')
-        w('|---|---:|---:|')
-        for k in sorted(s['week_visitors']):
-            w('| %s | %d | %d |' % (k, len(s['week_visitors'][k]), s['week_views'][k]))
+        w('| Week | Visitors | Page views | Not confirmed (visitors) |')
+        w('|---|---:|---:|---:|')
+        for k in sorted(a['week_visitors']):
+            w('| %s | %d | %d | %d |' % (k, len(s['week_visitors'].get(k, ())), s['week_views'][k],
+                                         len(a['week_visitors'][k]) - len(s['week_visitors'].get(k, ()))))
         w('')
 
     w('## What people looked at')
@@ -271,12 +338,12 @@ def render(s, sources):
     w('')
     w('| User agent (first 60 characters) | Requests |')
     w('|---|---:|')
-    for ua, n in s['bot_agents'].most_common(10):
+    for ua, n in r['bot_agents'].most_common(10):
         w('| %s | %d |' % (ua.replace('|', '/'), n))
     w('')
     w('---')
     w('Read %d log lines (%d not in the expected format) from %d file(s).'
-      % (s['lines'], s['unparsed'], len(sources)))
+      % (r['lines'], r['unparsed'], len(sources)))
     return '\n'.join(out) + '\n'
 
 
