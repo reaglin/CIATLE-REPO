@@ -8,7 +8,9 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⬜ TO RUN — keep two months of Nginx logs (2026-11-20; not a deploy)
+### ✅ DONE 2026-11-20 — keep two months of Nginx logs (not a deploy)
+
+Ron ran it 2026-11-20: "Done, logs now kept 62 days". The later check below is still worth doing once.
 
 A one-time server setting, no code: **`.\Deployment\keep-logs-two-months.ps1`** (Ron runs it from `repos\CIATLE-REPO`;
 it asks for the password). Sets `/etc/logrotate.d/nginx` to `daily` / `rotate 62`, keeps the old file as
@@ -26,7 +28,7 @@ month on the server is the one after it.
 Migration **`AddVisitorCounter`** (two new tables, `SiteVisits` and `SitePageViews`; nothing existing changes), so a
 **full deploy** that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the
 password). Plan items 9.3, 9.4, 9.5, 9.6. Counting starts at the deploy. Nothing earlier is recovered except by
-`visitor-report.cmd` from the server's logs: the last 14 days, until two months build up (entry above). Run it
+`visitor-report.cmd` from the server's logs: the last 14 days, until two months build up from 2026-11-20. Run it
 **before** the deploy as well, so the time before the counter is saved.
 
 The home page shows "N people used the site in the last … days" only once the figure reaches
