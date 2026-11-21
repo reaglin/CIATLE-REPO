@@ -25200,3 +25200,45 @@ variable credit) declined as a shell number; `EET2525C` held (item 134). Base da
 - **`BCV0632C` is a split of OCP B**: 27 technical colleges teach Residential Electrician as one course, `BCV0640`;
   NFC splits it into `BCV0641C`/`0631C`/`0632C` (150 h each) and Seminole State into 75-hour modules with different
   content under the same numbers (item 135). Guide `contact_hours` = NFC's 150; Seminole's 75 in the table.
+
+---
+
+## Batch 250 — scheduled request check (six guides), 2026-11-21
+
+Requests in rank order after the four held items (130–132, 134): `EML4328C`, `ETS1542`, `ETS2542`, `ETS2544`,
+`ETS4543C`, `ETS3543L`, `ECH3702` — seven, all taken. Six written and live; `ETS3543L` (FAMU) held (item 136). Base data
+sent for all seven: 7 updated, 0 failed. Build `scratchpad/b250_build.py`; base data `b250_base.py`; checks
+`b250_live.py`; fetches `b250_fetch.py`, `b250_unf.py`; PDF search `b250_pdf.py`.
+
+### Source register
+
+- ✅✅ **NEW: UNF's course API.** The script-rendered `www.unf.edu/catalog/courses/` loads its list from
+  `webappsapi.unf.edu/cascade/api/v1/catalog/GetCourses/course?year=2026-2027` (named in
+  `www.unf.edu/velocity/sites/catalog/course-API-data.js`). **One GET returns all 3,503 UNF courses** with title,
+  department, credit hours, and a description field holding the prerequisite and the description. Cached as
+  `scratchpad/unf_courses_2026-2027.json`; `b250_unf.py <ids>` searches it. **UNF had been unreachable since batch 247**
+  (item 127). ⚠ API numbers can differ from SCNS (`EEL4081C` in the API, `EEL4081` in SCNS).
+- ✅ **UNF programme pages** `www.unf.edu/catalog/programs/ug/ccec/CCEC-BSCADM.html` (Advanced Manufacturing
+  Engineering B.S., 2026-27) are plain HTML with full requirement lists; `CCEC-BSME.html` 404s.
+- ✅ **Pasco-Hernando** `phsc.smartcatalogiq.com/en/<year>/catalog-and-student-handbook/courses/ets-engineering-technology-specialty/1000/ets-1542`
+  (2026-2027 current): description and **"45 class hours"** — a published hour figure.
+- ✅ **Indian River** `irsc.smartcatalogiq.com/en/<year>/catalog/courses/ets-engineering-technology/2000/ets-2542`
+  — 2025-2026 is current (2026-2027 404s). Older years 404 to Python now though search engines still index them.
+- ✅ **USF** `cloud.usf.edu/academic-programs/details/prefix/ECH/code/3702` again; the department's
+  `usf.edu/engineering/chbme/undergraduate/courses-offered.aspx` lists every ChE course it schedules, with terms.
+- ❌ **FAMU** `catalog.famu.edu`: TLS certificate failure for Python **and WebFetch** (root and search). `ETS3543L` held.
+- ❌ **UWF** `catalog.uwf.edu/search/?P=ETS%203543` — "Results not found" (SCNS lists UWF, 4 cr).
+- ❌ **North Florida College** 2026-27 catalogue PDF (cached in `b249/`): no ETS courses at all, though SCNS lists
+  NFC for `ETS1542`. ❌ Santa Fe, Central Florida, Hillsborough, South Florida State: no reachable course page.
+- ❌ `scratchpad/unf_catalog_2025.pdf` has no Flate text streams the scraper can read.
+
+### Findings
+
+- **`ETS4543C` = `EML4328C`**: one UNF course in two departments (item 137); two guides that name each other.
+- **PLC 1 under four identifiers** (`ETS1542` 5 colleges, `ETS1542C` 9, `ETS2542` 2, `ETS2542C` 6 — Daytona State at
+  4 cr); PLC 2 as `ETS2544` (IRSC) and `ETS2544C` (SJRSC, Valencia, Lake-Sumter at 2 cr). SCNS-equivalent by the last
+  three digits; packaging, not divergence.
+- **`ECH3702`** ends at USF 2027-08-01 in SCNS and is missing from the department's schedule list (item 137).
+- **IRSC's PLC II description copies PLC I** in 2025-26 (item 137).
+- **No other Florida university carries a PLC course under an engineering prefix** (`EML`, `EIN`, `EGN`, `EEL`): the
+  flat file's only other "programmable" titles are FPGA courses.

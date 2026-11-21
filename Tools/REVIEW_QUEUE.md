@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **101** |
-| Informational — recorded, no decision needed | 21 |
+| ⏳ **Awaiting a decision from Ron** | **102** |
+| Informational — recorded, no decision needed | 22 |
 | ✅ Resolved | 13 |
-| **Total items** | **135** |
+| **Total items** | **137** |
 
 ---
 
-### ⏳ Awaiting a decision (101)
+### ⏳ Awaiting a decision (102)
 
 | # | Item |
 |---|---|
@@ -138,8 +138,9 @@ continues around every one of them.
 | **132** | `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248) |
 | **133** | ℹ️ Power electronics under four numbers; UF prints a prerequisite that does not exist; UWF dropped `EEL4610` (batch 248) |
 | **134** | `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) |
+| **136** | `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250) |
 
-### Informational — no decision needed (21)
+### Informational — no decision needed (22)
 
 | # | Item |
 |---|---|
@@ -164,6 +165,7 @@ continues around every one of them.
 | 84 | NEW SHAPES from batch 203 — recorded for awareness, no decision needed |
 | 129 | ℹ️ `EEL4212` and `EEL4214` carry two subjects each — published as one labelled guide (informational, batch 247) |
 | 135 | ℹ️ Batch 249 findings: one number teaching two languages; a bulletin that contradicts itself; one PSAV number, two contents (informational, batch 249) |
+| 137 | ℹ️ Batch 250 findings: UNF's course API; one UNF course under two numbers; ECH3702 ending; IRSC repeats a description (informational, batch 250) |
 
 ### ✅ Resolved (13)
 
@@ -3768,6 +3770,14 @@ content.** **Not written** — a guide from the title alone would be invented. C
 ⚠ **Decision for Ron: supply UNF's description or syllabus (or the department's), or decline it publicly as a
 variable-topics course until UNF publishes one?**
 
+✅ **Update 2026-11-21 (batch 250): UNF's description is now readable**, through the course API behind the catalogue
+(`webappsapi.unf.edu/cascade/api/v1/catalog/GetCourses/course?year=2026-2027`, cached in
+`scratchpad/unf_courses_2026-2027.json`). UNF lists it as `EEL4081C` in the API (SCNS: `EEL4081`), 3 cr, prerequisite
+EEL 3111: *"an introduction to the multiple facets of design, fabrication, and testing of adaptive and assistive devices
+for rehabilitation applications … a hands-on course"*. **Not a variable-topics course despite the title.** The request
+was marked Declined on the site (see item 128), so nothing was written; ⚠ **if Ron wants it, it can now be written
+from UNF's own description.**
+
 
 ## 128. ⚠ `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247)
 
@@ -3864,6 +3874,39 @@ description or a syllabus, or allow a PLC guide written from the six other PLC r
   both labelled. ⚠ NFC's catalogue names OCP C as "BCV 0640 Commercial Electrician" (a misprint for `BCV0652`).
 - **`EEL3004C`** (UCF majors' first circuits course) shares its SCNS course record and statewide title with FIU's
   `EEL3004`/`EEL3004L`, a circuits course for **mechanical** engineers. The guide says they are not substitutes.
+
+
+## 136. ⚠ `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250)
+
+`ETS3543L` *Introduction to Programmable Logic Controllers Lab* (1 cr), carried only by **FAMU** (effective 2019), the
+laboratory half of FAMU's `ETS3543` (3 cr). Statewide course *Programmable Logic Controllers (U)*, shared with
+Daytona State's `ETS3543C`, UWF's `ETS3543` (4 cr) and UNF's `ETS4543C`. ⚠ **No description could be read:**
+`catalog.famu.edu` fails the TLS certificate check for Python and for WebFetch on every route (root, search), and web
+searches find no FAMU page for the number. ⚠ **UWF's 2026-27 catalogue search also finds no `ETS 3543`**, though SCNS
+lists UWF. **Not written.** Base data sent. ⚠ **Decision for Ron: supply FAMU's description or lab syllabus, or allow
+a lab guide written from the statewide course and the live `ETS3543` guide, labelled as FAMU's course by title
+only?** (Same shape as item 134.)
+
+
+## 137. ℹ️ Batch 250 findings: UNF's course API; one UNF course under two numbers; ECH3702 ending; IRSC repeats a description (informational, batch 250)
+
+- ✅ **UNF's catalogue is readable after all**: the script-rendered `www.unf.edu/catalog/courses/` loads
+  `webappsapi.unf.edu/cascade/api/v1/catalog/GetCourses/course?year=2026-2027` — 3,503 courses, each with prerequisite
+  and description. This unblocks UNF everywhere it has blocked a guide (item 127's `EEL4081`, batch 247).
+- **`ETS4543C` and `EML4328C` are one UNF course under two numbers** (Electrical Engineering and Mechanical Engineering
+  departments): same description, same prerequisite `EEL3111`, 3 cr each. Published as two guides that name each other.
+  ⚠ For transfer they differ: `ETS4543C` sits on the statewide *Programmable Logic Controllers (U)* course with
+  `ETS3543`/`ETS3543C`; `EML4328C` is its own statewide course.
+- ⚠ **`ECH3702`** (USF *Instrument Systems I*): USF's catalogue page is current, but the department's program-of-study
+  page does not list it and **SCNS end-dates USF's offering 2027-08-01**. Written (the description exists) with the
+  status stated in the guide and the prerequisite field. Same family as items 124 and 126, but milder: not yet
+  discontinued.
+- **Indian River's 2025-26 `ETS2544` (PLC II) description nearly repeats `ETS2542` (PLC I)**; the 2019-20 catalogue gave
+  PLC II its own topics. The guide follows the older, distinct description and says so.
+- **`ETS1542`/`ETS2542` and their C forms are ONE statewide course** (*Programmable Logic Controllers 1*), filed under four
+  identifiers at 22 public colleges; `ETS2544`/`ETS2544C` likewise. Same last three digits, so SCNS-equivalent; the guides
+  say so (the 2026-09-17 packaging rule). ⚠ Lake-Sumter's `ETS2544C` is 2 credits against 3 elsewhere.
+- ⚠ **North Florida College** is an `ETS1542` carrier in SCNS but its 2026-27 catalogue lists no ETS courses.
 
 
 ## Resolved
