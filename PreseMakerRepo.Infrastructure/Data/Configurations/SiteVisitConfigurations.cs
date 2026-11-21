@@ -25,3 +25,14 @@ public class SitePageViewConfiguration : IEntityTypeConfiguration<SitePageView>
         b.Property(p => p.Path).HasMaxLength(200).IsRequired();
     }
 }
+
+public class ProgramPanelClickConfiguration : IEntityTypeConfiguration<ProgramPanelClick>
+{
+    public void Configure(EntityTypeBuilder<ProgramPanelClick> b)
+    {
+        b.ToTable("ProgramPanelClicks");
+        b.HasKey(c => new { c.Day, c.ProgramId, c.Link });
+        b.Property(c => c.ProgramId).HasMaxLength(40).IsRequired();
+        b.Property(c => c.Link).HasMaxLength(10).IsRequired();
+    }
+}

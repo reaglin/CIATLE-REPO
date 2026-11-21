@@ -6,6 +6,11 @@ namespace PreseMakerRepo.Api.Services.Visits;
 
 public sealed record PeriodRow(string Label, DateOnly Start, int Visitors, int PageViews);
 public sealed record PublicVisitorFigure(int Visitors, int Days);
+/// <summary>Clicks on one program in the home page's program panel (plan 10.4).</summary>
+public sealed record ProgramClickRow(string ProgramId, int PageClicks, int StoreClicks)
+{
+    public int Total => PageClicks + StoreClicks;
+}
 public sealed record CountRow(string Name, int Count, string? Link = null, string? Detail = null);
 
 public sealed class VisitorStats
@@ -29,6 +34,10 @@ public sealed class VisitorStats
     /// <summary>Arrivals (one per visitor per day) by referring site; "direct" ones are in <see cref="DirectArrivals"/>.</summary>
     public IReadOnlyList<CountRow> Sources { get; init; } = [];
     public int DirectArrivals { get; init; }
+    /// <summary>Clicks on the home page's program panel, most first (plan 10.4).</summary>
+    public IReadOnlyList<ProgramClickRow> ProgramClicks { get; init; } = [];
+    /// <summary>Views of the home page, where the panel shows: the base for the click rate.</summary>
+    public int HomePageViews { get; init; }
 }
 
 /// <summary>Reads the visitor counter's tables for <c>/admin/visitors</c> and the admin dashboard.</summary>
@@ -58,6 +67,11 @@ public sealed class VisitorStatsService
             .Where(p => p.Day >= from && p.Day <= to)
             .GroupBy(p => p.Path)
             .Select(g => new { Path = g.Key, Views = g.Sum(p => p.Views) })
+            .ToListAsync(ct);
+
+        var clicks = await _db.ProgramPanelClicks.AsNoTracking()
+            .Where(c => c.Day >= from && c.Day <= to)
+            .Select(c => new { c.ProgramId, c.Link, c.Clicks })
             .ToListAsync(ct);
 
         var start = since is { } s && s > from ? s : from;
@@ -127,6 +141,13 @@ public sealed class VisitorStatsService
                 .Select(g => new CountRow(g.Key, g.Count()))
                 .OrderByDescending(r => r.Count).ThenBy(r => r.Name).Take(20).ToList(),
             DirectArrivals = visits.Count(v => v.Source == null),
+            ProgramClicks = clicks
+                .GroupBy(c => c.ProgramId)
+                .Select(g => new ProgramClickRow(g.Key,
+                    g.Where(c => c.Link == "page").Sum(c => c.Clicks),
+                    g.Where(c => c.Link == "store").Sum(c => c.Clicks)))
+                .OrderByDescending(r => r.Total).ThenBy(r => r.ProgramId).ToList(),
+            HomePageViews = pageTotals.Where(p => p.Path == "/").Sum(p => p.Views),
         };
     }
 

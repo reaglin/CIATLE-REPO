@@ -8,6 +8,22 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — the program panel on the home page (plan Phase 10, 2026-11-21)
+
+Migration **`AddProgramPanelClicks`** (one new table, `ProgramPanelClicks`; nothing existing changes), so a **full deploy**
+that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the password). It carries the
+HtmlSanitizer fix below as well, so one deploy covers both. No setting is needed: the list comes from
+`https://softwareplus.ai/apps.json` (live since 2026-11-21); to point elsewhere set `SiteSettings__ProgramsUrl`.
+
+The home page shows one Store program at random under the title; × hides it until the browser is closed; clicks on its
+links are counted (`POST /visit/program`) and shown on `/admin/visitors` → "Program panel on the home page".
+
+| Verify after the deploy |
+|---|
+| The home page shows the panel; reloading usually shows another program |
+| × hides it; reloading the home page keeps it hidden; after closing and reopening the browser it is back |
+| On a phone (not signed in), click "Get it from the Microsoft Store"; a minute later `/admin/visitors` shows it under Store |
+
 ### ⬜ TO DEPLOY — HtmlSanitizer 9.0.892 → 9.0.967, a security fix (2026-11-21)
 
 Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for

@@ -71,3 +71,13 @@ body { margin-bottom: 60px; }
 /* Inline file preview */
 .material-preview iframe { width: 100%; height: 480px; border: 1px solid #dee2e6; border-radius: .375rem; }
 .material-preview img { max-width: 100%; border: 1px solid #dee2e6; border-radius: .375rem; }
+
+/* The home page's program panel (plan Phase 10) */
+.program-panel { position: relative; max-width: 720px; border-color: #cfe2ff; background-color: #f8fbff; }
+.program-panel-icon { border-radius: .75rem; display: block; }
+.program-panel-label { letter-spacing: .02em; }
+.program-panel-close { position: absolute; top: .5rem; right: .5rem; margin: 0; }
+.program-panel-close .btn-close { padding: .5rem; }
+@media (max-width: 575.98px) {
+    .program-panel-icon { width: 48px; height: 48px; }
+}

@@ -68,6 +68,16 @@ public static class VisitClassifier
         return !IsBot(userAgent);
     }
 
+    /// <summary>The most program-panel clicks one visitor can add in a day (plan 10.4).</summary>
+    public const int MaxProgramClicksPerVisitorPerDay = 20;
+
+    /// <summary>The two links on the program panel: the program's SoftwarePlus.ai page, and the Microsoft Store.</summary>
+    public static readonly string[] ProgramLinks = ["page", "store"];
+
+    /// <summary>True when a program-panel click should be counted: one of its two links, not a bot, not an administrator.</summary>
+    public static bool ShouldCountProgramClick(string? link, string? userAgent, bool isAdministrator) =>
+        link is not null && ProgramLinks.Contains(link) && !isAdministrator && !IsBot(userAgent);
+
     /// <summary>The path as stored: no trailing slash, course ids in capitals, at most 200 characters.</summary>
     public static string NormalizePath(string path)
     {

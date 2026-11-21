@@ -48,6 +48,7 @@ public class AppDbContext : IdentityDbContext<Contributor, IdentityRole, string>
     // page views per page per day. Written by VisitRecorder, read by VisitorStatsService.
     public DbSet<SiteVisit> SiteVisits => Set<SiteVisit>();
     public DbSet<SitePageView> SitePageViews => Set<SitePageView>();
+    public DbSet<ProgramPanelClick> ProgramPanelClicks => Set<ProgramPanelClick>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

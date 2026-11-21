@@ -1151,6 +1151,27 @@ namespace PreseMakerRepo.Infrastructure.Migrations
                     b.ToTable("ProgramCips", (string)null);
                 });
 
+            modelBuilder.Entity("PreseMakerRepo.Core.Models.ProgramPanelClick", b =>
+                {
+                    b.Property<DateOnly>("Day")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProgramId")
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Link")
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Clicks")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Day", "ProgramId", "Link");
+
+                    b.ToTable("ProgramPanelClicks", (string)null);
+                });
+
             modelBuilder.Entity("PreseMakerRepo.Core.Models.ProgramRelation", b =>
                 {
                     b.Property<Guid>("Id")

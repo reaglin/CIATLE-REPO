@@ -8,6 +8,9 @@ namespace PreseMakerRepo.Api.Services.Visits;
 /// <summary>One counted page view, as handed from the middleware to the recorder.</summary>
 public sealed record VisitHit(DateTime Utc, string VisitorHash, string Path, string? Source);
 
+/// <summary>One counted click on the home page's program panel (plan 10.4): which program, which link.</summary>
+public sealed record ProgramClickHit(DateTime Utc, string ProgramId, string Link);
+
 /// <summary>
 /// Collects counted page views in memory and writes them to the database once a minute (and when
 /// the site stops), so a page view never waits on a database write. A singleton and a hosted
@@ -17,6 +20,8 @@ public sealed class VisitRecorder : BackgroundService
 {
     private readonly Channel<VisitHit> _queue = Channel.CreateBounded<VisitHit>(
         new BoundedChannelOptions(50_000) { FullMode = BoundedChannelFullMode.DropWrite, SingleReader = true });
+    private readonly Channel<ProgramClickHit> _clicks = Channel.CreateBounded<ProgramClickHit>(
+        new BoundedChannelOptions(10_000) { FullMode = BoundedChannelFullMode.DropWrite, SingleReader = true });
     private readonly IServiceScopeFactory _scopes;
     private readonly ILogger<VisitRecorder> _log;
     private readonly SemaphoreSlim _flushLock = new(1, 1);
@@ -30,6 +35,8 @@ public sealed class VisitRecorder : BackgroundService
     }
 
     public void Record(VisitHit hit) => _queue.Writer.TryWrite(hit);
+
+    public void Record(ProgramClickHit click) => _clicks.Writer.TryWrite(click);
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -54,7 +61,7 @@ public sealed class VisitRecorder : BackgroundService
         catch (Exception ex) { _log.LogWarning(ex, "Visitor counter: could not save page views; they are dropped."); }
     }
 
-    /// <summary>Writes everything waiting. Returns how many page views were written.</summary>
+    /// <summary>Writes everything waiting. Returns how many page views and program-panel clicks were written.</summary>
     public async Task<int> FlushAsync(CancellationToken ct = default)
     {
         await _flushLock.WaitAsync(ct);
@@ -62,7 +69,9 @@ public sealed class VisitRecorder : BackgroundService
         {
             var hits = new List<VisitHit>();
             while (_queue.Reader.TryRead(out var h)) hits.Add(h);
-            if (hits.Count == 0) return 0;
+            var clicks = new List<ProgramClickHit>();
+            while (_clicks.Reader.TryRead(out var c)) clicks.Add(c);
+            if (hits.Count == 0 && clicks.Count == 0) return 0;
 
             using var scope = _scopes.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -103,8 +112,23 @@ public sealed class VisitRecorder : BackgroundService
                 }
             }
 
+            foreach (var byDay in clicks.GroupBy(c => VisitClassifier.FloridaDay(c.Utc)))
+            {
+                var day = byDay.Key;
+                var existing = await db.ProgramPanelClicks.Where(c => c.Day == day).ToListAsync(ct);
+                foreach (var g in byDay.GroupBy(c => (c.ProgramId, c.Link)))
+                {
+                    var row = existing.FirstOrDefault(c => c.ProgramId == g.Key.ProgramId && c.Link == g.Key.Link);
+                    if (row is not null) row.Clicks += g.Count();
+                    else db.ProgramPanelClicks.Add(new ProgramPanelClick
+                    {
+                        Day = day, ProgramId = g.Key.ProgramId, Link = g.Key.Link, Clicks = g.Count()
+                    });
+                }
+            }
+
             await db.SaveChangesAsync(ct);
-            return hits.Count;
+            return hits.Count + clicks.Count;
         }
         finally
         {

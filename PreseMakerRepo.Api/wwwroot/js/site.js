@@ -254,3 +254,38 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('visibilitychange', onVisibility);
     startTimer();
 })();
+
+// The home page's program panel (plan Phase 10). The × hides it and sets a session cookie, so the server leaves
+// it out on every home page in this browser until the browser is closed (without JavaScript the × posts and the
+// server sets the same cookie). A click on one of its links is counted (plan 10.4): the program and which link,
+// sent as a beacon so the link still opens at once. Administrators are not counted (the layout's data-visit).
+(function () {
+    var panel = document.querySelector('.program-panel');
+    if (!panel) return;
+
+    var close = panel.querySelector('.js-program-close');
+    if (close) close.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.cookie = 'fcr_programs_closed=1; path=/; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '');
+        // From the keyboard (no pointer: detail 0), keep focus on the page by moving it to the main search box.
+        // Not after a tap, which would open a phone's on-screen keyboard.
+        var search = e.detail === 0 ? document.querySelector('input[type="search"]') : null;
+        panel.remove();
+        if (search) search.focus({ preventScroll: true });
+    });
+
+    if (document.body.getAttribute('data-visit') !== '1' || navigator.webdriver) return;
+    function report(e) {
+        if (e.type === 'auxclick' && e.button !== 1) return;   // middle-click opens a new tab; other buttons do not
+        var link = e.target.closest('.js-program-link');
+        if (!link) return;
+        var data = JSON.stringify({ id: panel.getAttribute('data-program'), l: link.getAttribute('data-link') });
+        try {
+            if (navigator.sendBeacon && navigator.sendBeacon('/visit/program', new Blob([data], { type: 'application/json' }))) return;
+            fetch('/visit/program', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: data, keepalive: true })
+                .catch(function () { /* counting must never disturb the page */ });
+        } catch (err) { /* likewise */ }
+    }
+    panel.addEventListener('click', report);
+    panel.addEventListener('auxclick', report);
+})();

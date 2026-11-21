@@ -20,6 +20,9 @@
   <ItemGroup>
     <!-- The real allowlist, so a test fails if appsettings.json and the check drift apart. -->
     <None Include="..\PreseMakerRepo.Api\appsettings.json" Link="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- SoftwarePlus.ai's program list, when that repo is beside this one, so a test reads the real file (plan 10.1). -->
+    <None Include="..\..\SoftwarePlus\site\apps.json" Link="apps.json" CopyToOutputDirectory="PreserveNewest"
+          Condition="Exists('..\..\SoftwarePlus\site\apps.json')" />
   </ItemGroup>
 
 </Project>

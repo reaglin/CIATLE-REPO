@@ -166,6 +166,64 @@ else
         </div>
 
         <div class="col-lg-6">
+            <h2 class="h6 mb-1">Program panel on the home page</h2>
+            <p class="small text-muted mb-1">
+                Clicks on the panel that shows one of your Microsoft Store programs at random (the list is
+                <a href="https://softwareplus.ai/apps.json" target="_blank" rel="noopener">softwareplus.ai/apps.json</a>,
+                re-read every 3 hours; each program is shown about equally often, so rows can be compared).
+                <strong>SoftwarePlus.ai page</strong> counts the name, the icon and "More about"; <strong>Store</strong> is
+                "Get it from the Microsoft Store". These are <strong>clicks, not people</strong>: a visitor who clicks both
+                links counts 2 (at most 20 a day each). Not counted: links opened from the right-click menu, or with scripts
+                turned off. The home page was viewed <strong>@s.HomePageViews.ToString("N0")</strong> times in this period;
+                some of those views did not show the panel (the visitor had closed it, or the list could not be read), so the
+                true rate is somewhat higher than the one below.
+                @if (Model.Programs.Count == 0)
+                {
+                    <br /><span class="text-danger">The list could not be read just now, so the panel is not showing. It is tried again every 10 minutes.</span>
+                }
+                else
+                {
+                    <text>@Model.Programs.Count programs are in the list now.</text>
+                }
+            </p>
+            @if (s.ProgramClicks.Count == 0)
+            {
+                <p class="small text-muted">No clicks on the panel in this period.</p>
+            }
+            else
+            {
+                var totalClicks = s.ProgramClicks.Sum(r => r.Total);
+                <table class="table table-sm">
+                    <thead><tr><th>Program</th><th class="text-end">SoftwarePlus.ai page</th><th class="text-end">Store</th><th class="text-end">Total</th></tr></thead>
+                    <tbody>
+                        @foreach (var r in s.ProgramClicks)
+                        {
+                            <tr>
+                                <td>@(Model.Programs.TryGetValue(r.ProgramId, out var pp) ? pp.Name : r.ProgramId)
+                                    @if (pp is null) { <span class="text-muted small">(no longer in the list)</span> }</td>
+                                <td class="text-end">@r.PageClicks</td>
+                                <td class="text-end">@r.StoreClicks</td>
+                                <td class="text-end">@r.Total</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr class="fw-semibold">
+                            <td>All programs</td>
+                            <td class="text-end">@s.ProgramClicks.Sum(r => r.PageClicks)</td>
+                            <td class="text-end">@s.ProgramClicks.Sum(r => r.StoreClicks)</td>
+                            <td class="text-end">@totalClicks</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                @if (s.HomePageViews > 0)
+                {
+                    <p class="small text-muted">Clicks per 100 home-page views (approximate): <strong>@((100.0 * totalClicks / s.HomePageViews).ToString("0.#"))</strong>.</p>
+                }
+            }
+        </div>
+
+        <div class="col-lg-6">
             <h2 class="h6 mb-1">Most-viewed courses</h2>
             <p class="small text-muted mb-1">Course page, its guide and its resources added together; up to 20 courses.</p>
             @if (s.Courses.Count == 0)
