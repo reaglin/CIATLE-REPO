@@ -24,6 +24,10 @@ links are counted (`POST /visit/program`) and shown on `/admin/visitors` → "Pr
 | × hides it; reloading the home page keeps it hidden; after closing and reopening the browser it is back |
 | On a phone (not signed in), click "Get it from the Microsoft Store"; a minute later `/admin/visitors` shows it under Store |
 
+Also in this deploy: **`/account/access-denied`** now exists (it was a 404). Ron, 2026-11-21: `/admin/visitors` after
+logging in went to that 404, meaning the account signed in was not in the Administrator role. The new page says which
+account is signed in and its roles, with a Log out button.
+
 ### ⬜ TO DEPLOY — HtmlSanitizer 9.0.892 → 9.0.967, a security fix (2026-11-21)
 
 Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for

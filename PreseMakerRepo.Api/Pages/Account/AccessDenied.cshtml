@@ -1,0 +1,27 @@
+@page "/account/access-denied"
+@model PreseMakerRepo.Api.Pages.Account.AccessDeniedModel
+@{ ViewData["Title"] = "Not allowed"; ViewData["NoIndex"] = true; Layout = "_Layout"; }
+
+<div class="py-4" style="max-width: 40rem">
+    <h1 class="h4">This page is not open to your account</h1>
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <p>
+            You are signed in as <strong>@User.Identity.Name</strong>, which is not an administrator account
+            (its roles: <strong>@(Model.Roles.Count == 0 ? "none" : string.Join(", ", Model.Roles))</strong>).
+            @if (Model.WantsAdmin)
+            {
+                <text>The admin console needs the administrator account.</text>
+            }
+        </p>
+        <p>To use the other account, log out and log in again with it.</p>
+        <form method="post" asp-page="/Account/Logout" class="d-inline">
+            <button type="submit" class="btn btn-primary">Log out</button>
+        </form>
+        <a href="/" class="btn btn-outline-secondary ms-2">Back to the home page</a>
+    }
+    else
+    {
+        <p>You are not signed in. <a href="/account/login?returnUrl=@Uri.EscapeDataString(Model.ReturnUrl ?? "/")">Log in</a> and try again.</p>
+    }
+</div>
