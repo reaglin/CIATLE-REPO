@@ -8,7 +8,12 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⬜ TO DEPLOY — the program panel on the home page (plan Phase 10, 2026-11-21)
+### ✅ DEPLOYED 2026-11-21 — the program panel on the home page (plan Phase 10, 2026-11-21)
+
+Ron deployed it 2026-11-21 (full deploy, with the HtmlSanitizer fix and `/account/access-denied`). Checked live by Claude:
+the panel shows and changes on reload, a closed cookie leaves it out, `POST /visit/program` answers 204, the new `site.js`
+is served, `/account/access-denied` answers (403 with its page). Ron signed in to `/admin/visitors`. ⚠ Ron: the phone
+checks below.
 
 Migration **`AddProgramPanelClicks`** (one new table, `ProgramPanelClicks`; nothing existing changes), so a **full deploy**
 that takes the database backup: **`.\Deployment\deploy-update.ps1`** (Ron runs it; it asks for the password). It carries the
@@ -28,7 +33,9 @@ Also in this deploy: **`/account/access-denied`** now exists (it was a 404). Ron
 logging in went to that 404, meaning the account signed in was not in the Administrator role. The new page says which
 account is signed in and its roles, with a Log out button.
 
-### ⬜ TO DEPLOY — HtmlSanitizer 9.0.892 → 9.0.967, a security fix (2026-11-21)
+### ✅ DEPLOYED 2026-11-21 — HtmlSanitizer 9.0.892 → 9.0.967, a security fix (2026-11-21)
+
+Went out with the program panel's full deploy, 2026-11-21.
 
 Code only — no migration, no taxonomy change: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it; it asks for
 the password). Advisory GHSA-464h-4j8h-q5mf (high, published 2026-11-19: crafted CSS can tie up the server; fixed in
