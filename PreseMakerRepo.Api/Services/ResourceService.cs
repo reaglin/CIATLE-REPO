@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
@@ -33,6 +34,12 @@ public class ResourceService
     public const string QueueDecided = "decided";
     public const string QueueAll = "all";
     public const int MaxCoursesPerCall = 100;
+    /// <summary>How many other courses a submitter may suggest for one link.</summary>
+    public const int MaxSuggestedAlsoFor = 10;
+    /// <summary>A course id as a submitter may type it (COP2071C, NUR4286-SCNS).</summary>
+    /// <summary>"COP 2071C" as a catalogue prints it, joined to "COP2071C" before splitting on spaces.</summary>
+    private static readonly Regex CatalogSpacing = new(@"\b([A-Za-z]{3})\s+(\d{4}[A-Za-z]?)\b", RegexOptions.Compiled);
+    public static readonly Regex CourseIdPattern = new(@"^[A-Z]{3}\d{4}[A-Z]?(-(SCNS|[A-Z]{2,5}))?$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
     public static readonly TimeSpan DecidedWindow = TimeSpan.FromDays(30);
 
     public static class WriteOutcomes
@@ -116,6 +123,9 @@ public class ResourceService
             Type = parsed.Type,
             YouTubeVideoId = parsed.YouTubeVideoId,
             Description = Clean(request.Description),
+            SuggestedTitle = Clean(request.Title),
+            SuggestedSummary = Clean(request.Summary),
+            SuggestedAlsoFor = JoinSuggestedCourses(request.AlsoFor, id),
             Status = ResourceSubmissionStatus.Pending,
             SubmittedUtc = DateTime.UtcNow,
             SubmitterIpHash = ipHash,
@@ -124,7 +134,9 @@ public class ResourceService
         _db.ResourceSubmissions.Add(submission);
         await _db.SaveChangesAsync();
         return new SubmitResult(SubmitOutcome.Submitted, submission.Id,
-            "Thank you — your suggestion is in the review queue. Reviewed links are listed here with a short summary; the site is updated weekly.");
+            "Thank you — your suggestion is in the review queue. Reviewed links are listed here with a short summary; the site is updated weekly."
+            + (submission.SuggestedTitle is not null || submission.SuggestedSummary is not null
+                ? " The reviewer may edit the title and summary you suggested." : ""));
     }
 
     /// <summary>A course's active listings, newest first, each with the other courses listing the same link.</summary>
@@ -216,7 +228,8 @@ public class ResourceService
 
         var items = rows.Select(s => new ResourceQueueItem(s.Id, s.CourseId, titles.GetValueOrDefault(s.CourseId, s.CourseId),
                 s.Url, s.Type.ToString(), ResourceUrls.DisplayHost(s.Url), s.Description, s.Status.ToString(),
-                s.SubmittedUtc, s.DecidedUtc, s.DecisionNote, s.CourseResourceId))
+                s.SubmittedUtc, s.DecidedUtc, s.DecisionNote, s.CourseResourceId,
+                s.SuggestedTitle, s.SuggestedSummary, SplitCourseIds(s.SuggestedAlsoFor)))
             .ToList();
         return new ResourceQueueResponse(filter, pending, decided, items);
     }
@@ -502,4 +515,20 @@ public class ResourceService
     }
 
     private static string? Clean(string? s) => string.IsNullOrWhiteSpace(s) ? null : s.Trim();
+
+    /// <summary>The submitter's other courses as stored: normalised, without repeats or the course itself; null for none.</summary>
+    public static string? JoinSuggestedCourses(IEnumerable<string>? courses, string ownCourseId)
+    {
+        var ids = (courses ?? [])
+            .Select(NormalizeCourseId)
+            .Where(c => c.Length > 0 && c != ownCourseId && CourseIdPattern.IsMatch(c))
+            .Distinct()
+            .Take(MaxSuggestedAlsoFor)
+            .ToList();
+        return ids.Count == 0 ? null : string.Join(", ", ids);
+    }
+
+    /// <summary>Splits course ids typed into one box ("COP2071C, COP2704; COP1700").</summary>
+    public static List<string> SplitCourseIds(string? text) =>
+        CatalogSpacing.Replace(text ?? string.Empty, "$1$2").Split([',', ';', ' ', '\n', '\r', '\t'], StringSplitOptions.RemoveEmptyEntries).ToList();
 }

@@ -21,6 +21,15 @@ public class ResourceSubmission
     /// <summary>The submitter's optional note — input for the reviewer; not shown on the course page.</summary>
     public string? Description { get; set; }
 
+    /// <summary>The title the submitter suggests for the listing (optional; the reviewer's Approve form starts from it).</summary>
+    public string? SuggestedTitle { get; set; }
+
+    /// <summary>The summary the submitter suggests for the listing (optional; the reviewer edits it before approving).</summary>
+    public string? SuggestedSummary { get; set; }
+
+    /// <summary>Other courses the submitter suggests listing it for: course ids, comma-separated (optional).</summary>
+    public string? SuggestedAlsoFor { get; set; }
+
     public ResourceSubmissionStatus Status { get; set; } = ResourceSubmissionStatus.Pending;
 
     /// <summary>Short, public-safe reason shown in the queue (why it was not added, or a note on approval).</summary>

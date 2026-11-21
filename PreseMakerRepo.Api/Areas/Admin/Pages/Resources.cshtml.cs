@@ -44,8 +44,7 @@ public class ResourcesModel : PageModel
 
     public async Task<IActionResult> OnPostApproveAsync(Guid id, string? title, string? summary, string? alsoFor, string? note)
     {
-        var also = (alsoFor ?? string.Empty)
-            .Split([',', ';', ' ', '\n', '\r', '\t'], StringSplitOptions.RemoveEmptyEntries)
+        var also = ResourceService.SplitCourseIds(alsoFor)
             .Select(c => new ResourceCourseInput(c, null, null))
             .ToList();
         var request = new ApproveResourceSubmissionRequest(title, summary, note, also);

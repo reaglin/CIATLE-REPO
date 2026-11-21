@@ -8,6 +8,19 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — the submitter suggests the listing (plan Phase 11, 2026-11-21) — a FULL deploy
+
+⚠ **A migration** (`AddResourceSubmissionSuggestions`, three nullable columns on `ResourceSubmissions`), so this one is
+**`.\Deployment\deploy-update.ps1`** (full, with migrations), not `-CodeOnly`. It also ships the badge fix below, since a
+deploy sends the whole build. The Add a resource form gets optional Title, Summary and "Other courses it would help"; the
+Approve form at `/admin/resources` opens with them filled in.
+
+| Verify after the deploy |
+|---|
+| A course's Resources page shows "Suggest the listing (optional)" under the link box |
+| Suggest a test link with a title, summary and one other course; `/admin/resources` → Approve… shows them filled in; then reject it ("Test.") |
+| `GET /api/v1/queue/resources?status=pending` items carry `suggestedTitle`, `suggestedSummary`, `suggestedAlsoFor` |
+
 ### ⬜ TO DEPLOY — invisible badges: Bootstrap 5.2's `text-bg-*` colours added to `site.css` (2026-11-21)
 
 Code only (one CSS file), no migration: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (Ron runs it). Ron, 2026-11-21: the

@@ -12,6 +12,14 @@ public class SubmitResourceRequestValidator : AbstractValidator<SubmitResourceRe
         RuleFor(x => x.Url).NotEmpty().WithMessage("Enter the link (web address).")
             .MaximumLength(ResourceUrls.MaxLength);
         RuleFor(x => x.Description).MaximumLength(500).WithMessage("Keep the description under 500 characters.");
+        RuleFor(x => x.Title).MaximumLength(200).WithMessage("Keep the suggested title under 200 characters.");
+        RuleFor(x => x.Summary!).Length(20, 2000).When(x => !string.IsNullOrWhiteSpace(x.Summary))
+            .WithMessage("A suggested summary needs 20 to 2,000 characters (or leave it empty).");
+        RuleFor(x => x.AlsoFor!.Count).LessThanOrEqualTo(ResourceService.MaxSuggestedAlsoFor)
+            .When(x => x.AlsoFor is not null)
+            .WithMessage($"Suggest at most {ResourceService.MaxSuggestedAlsoFor} other courses.");
+        RuleForEach(x => x.AlsoFor).Must(c => c is not null && ResourceService.CourseIdPattern.IsMatch(ResourceService.NormalizeCourseId(c)))
+            .WithMessage((_, c) => $"Other courses: \"{c}\" is not a course number. Use numbers like COP2071C, separated by commas.");
     }
 }
 
@@ -29,8 +37,10 @@ public class ApproveResourceSubmissionRequestValidator : AbstractValidator<Appro
 {
     public ApproveResourceSubmissionRequestValidator()
     {
-        RuleFor(x => x.Title).NotEmpty().MaximumLength(200);
-        RuleFor(x => x.Summary).NotEmpty().MinimumLength(20).MaximumLength(2000);
+        RuleFor(x => x.Title).NotEmpty().WithMessage("Give the listing a title.")
+            .MaximumLength(200).WithMessage("Keep the title under 200 characters.");
+        RuleFor(x => x.Summary).NotEmpty().MinimumLength(20).MaximumLength(2000)
+            .WithMessage("Write a summary of 20 to 2,000 characters.");
         RuleFor(x => x.Note).MaximumLength(300);
         RuleFor(x => x.AlsoFor!.Count).LessThanOrEqualTo(ResourceService.MaxCoursesPerCall)
             .When(x => x.AlsoFor is not null).WithName("alsoFor");

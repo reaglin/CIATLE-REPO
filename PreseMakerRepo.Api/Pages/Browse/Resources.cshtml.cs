@@ -28,6 +28,10 @@ public class ResourcesModel : PageModel
 
     [BindProperty] public string? ResourceUrl { get; set; }
     [BindProperty] public string? Description { get; set; }
+    /// <summary>The listing the submitter suggests (optional): title, summary, other courses typed in one box.</summary>
+    [BindProperty] public string? SuggestedTitle { get; set; }
+    [BindProperty] public string? SuggestedSummary { get; set; }
+    [BindProperty] public string? SuggestedAlsoFor { get; set; }
     /// <summary>Honeypot: hidden from people, filled in by form-spamming bots.</summary>
     [BindProperty] public string? Homepage { get; set; }
 
@@ -52,11 +56,12 @@ public class ResourcesModel : PageModel
         {
             // Look successful to the bot; store nothing.
             SuccessMessage = "Thank you — your suggestion is in the review queue.";
-            ResourceUrl = Description = null;
+            ResourceUrl = Description = SuggestedTitle = SuggestedSummary = SuggestedAlsoFor = null;
             return Page();
         }
 
-        var request = new SubmitResourceRequest(ResourceUrl, Description);
+        var request = new SubmitResourceRequest(ResourceUrl, Description,
+            SuggestedTitle, SuggestedSummary, ResourceService.SplitCourseIds(SuggestedAlsoFor));
         var validation = await _validator.ValidateAsync(request);
         if (!validation.IsValid)
         {
@@ -71,7 +76,7 @@ public class ResourcesModel : PageModel
         if (result.Outcome is ResourceService.SubmitOutcome.Submitted or ResourceService.SubmitOutcome.AlreadySubmitted)
         {
             SuccessMessage = result.Message;
-            ResourceUrl = Description = null;
+            ResourceUrl = Description = SuggestedTitle = SuggestedSummary = SuggestedAlsoFor = null;
             ModelState.Clear();
             PendingCount = await _resources.PendingCountAsync(Course.CourseId);
         }

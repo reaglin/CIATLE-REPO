@@ -219,6 +219,21 @@ the session; the decisions had been saved here): 10.1–10.5 done, 65 tests gree
 | 10.5 | ⚠️ **UX: walkthrough + heuristics passed 2026-11-21, 7 fixes** (no keyboard pop-up on a phone after ×; the admin note says clicks are not people and the rate is approximate; the × and the landmark say what the box is; the program name is not a heading; middle-clicks counted; column "SoftwarePlus.ai page"). Not changed: the links open in the same tab (their words already name SoftwarePlus.ai and the Microsoft Store). **UX review** (walkthrough + heuristics) of the panel on the home page, desktop and phone width, and of the admin table | Passed and recorded here |
 | 10.6 | ⚠️ **Deployed by Ron 2026-11-21** (full deploy; checked live by Claude: panel, close cookie, click endpoint; Ron signed in to `/admin/visitors`). ⚠️ Ron: the phone checks in `Deployment/PENDING_SERVER_CHANGES.md`. **Deploy**: a full deploy, since 10.4 adds a table (migration). Nothing to change on a privacy page (the site has none); the session cookie holds only "closed" | Live |
 
+
+## Phase 11 — The submitter suggests the listing (Ron, 2026-11-21)
+
+Ron, 2026-11-21, approving the first two vendor suggestions for COP4710: *"The submitter should enter the suggested entries
+for the options for listing."* A suggestion on a course's Resources page can now carry the listing itself (a title, a
+summary and other courses it would help), all optional. The admin's Approve form at `/admin/resources` opens with them filled
+in, to check against the link and edit; the `/resources` review loop sees them in `review_resources.py queue`.
+
+| # | Task | Done when |
+|---|---|---|
+| 11.1 | ⚠️ **Built 2026-11-21:** `ResourceSubmission` gains `SuggestedTitle` (≤200), `SuggestedSummary` (≤2000) and `SuggestedAlsoFor` (up to 10 course numbers, normalised, the course itself dropped); migration `AddResourceSubmissionSuggestions` (three nullable columns); `POST /api/v1/courses/{id}/resources` takes optional `title`, `summary`, `alsoFor`; the queue API returns them (`suggestedTitle`, `suggestedSummary`, `suggestedAlsoFor`); `RESOURCE_API.md` and `review_resources.py` updated; 3 new tests (68 green); checked locally (API and form). **Store and return the submitter's suggested listing** | A suggestion with a title, summary and courses shows them in the queue API |
+| 11.2 | ⚠️ **Built 2026-11-21:** "Suggest the listing (optional)" on the Add a resource form (Title, Summary with what to say, Other courses it would help); the Approve form at `/admin/resources` has labelled fields filled in from the suggestion, with a line saying so. **The two forms** | A visitor can suggest the listing; the reviewer sees it filled in |
+| 11.3 | ⚠️ **UX: walkthrough + heuristics passed 2026-11-21, 9 fixes** (the page and cards now say "AI-reviewed summary", since a summary may start from the submitter's text; the note box is "Note to the reviewer", asking who they are, so it no longer asks what the Summary asks; the admin card shows the suggested listing with a "Listing suggested" badge before Approve is opened; the admin summary needs 20 characters in the browser, so a short one cannot lose edits; plain error messages naming the bad course number; "COP 2071C" accepted as typed in a catalogue; "Suggest how it should appear"; the note field labelled; the thank-you says the reviewer may edit). Not changed: unknown course numbers are reported at approval, not to the visitor. Checked locally at 1280 px, including the error messages | Passed and recorded here |
+| 11.4 | ⬜ **Deploy**: a full deploy (`.\Deployment\deploy-update.ps1`, with migrations), which also ships the badge fix | Live; Ron: suggest a test link with a title and see it filled in on `/admin/resources` |
+
 ---
 
 ## Open questions for Ron

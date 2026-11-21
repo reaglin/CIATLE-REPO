@@ -143,6 +143,12 @@ def print_queue(items, as_json: bool, limit: int) -> None:
         print(f"  link       [{item['type']}] {item['url']}")
         if item.get("description"):
             print(f"  submitter  {item['description']}")
+        if item.get("suggestedTitle"):
+            print(f"  sugg title {item['suggestedTitle']}")
+        if item.get("suggestedSummary"):
+            print(f"  sugg summ  {item['suggestedSummary']}")
+        if item.get("suggestedAlsoFor"):
+            print(f"  sugg also  {', '.join(item['suggestedAlsoFor'])}")
         print(f"  submitted  {item['submittedUtc'][:19].replace('T', ' ')} UTC   status {item['status']}")
         if item.get("decisionNote"):
             print(f"  note       {item['decisionNote']}")

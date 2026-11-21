@@ -58,6 +58,9 @@ public class ResourceSubmissionConfiguration : IEntityTypeConfiguration<Resource
         b.Property(s => s.YouTubeVideoId).HasMaxLength(20);
         b.Property(s => s.Description).HasMaxLength(500);
         b.Property(s => s.DecisionNote).HasMaxLength(300);
+        b.Property(s => s.SuggestedTitle).HasMaxLength(200);
+        b.Property(s => s.SuggestedSummary).HasMaxLength(2000);
+        b.Property(s => s.SuggestedAlsoFor).HasMaxLength(600);
         b.Property(s => s.SubmitterIpHash).HasMaxLength(64);
         b.Property(s => s.SubmitterUserId).HasMaxLength(450);
         b.Property(s => s.Type).HasConversion<int>();

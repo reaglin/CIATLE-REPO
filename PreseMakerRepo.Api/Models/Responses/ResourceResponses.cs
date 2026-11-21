@@ -27,7 +27,8 @@ public sealed record ResourceVoteResponse(Guid ResourceId, int HelpfulCount, boo
 public sealed record ResourceSubmittedResponse(Guid? SubmissionId, string Outcome, string Message);
 
 /// <summary>One suggestion in the public review queue. The URL is data for the reviewer; the page shows it unlinked.
-/// The description is the submitter's note — input for the reviewer.</summary>
+/// The description is the submitter's note — input for the reviewer — and the Suggested* fields are the listing the
+/// submitter proposes (title, summary, other courses), which the reviewer's Approve form starts from.</summary>
 public sealed record ResourceQueueItem(
     Guid Id,
     string CourseId,
@@ -40,7 +41,10 @@ public sealed record ResourceQueueItem(
     DateTime SubmittedUtc,
     DateTime? DecidedUtc,
     string? DecisionNote,
-    Guid? CourseResourceId);
+    Guid? CourseResourceId,
+    string? SuggestedTitle,
+    string? SuggestedSummary,
+    IReadOnlyList<string> SuggestedAlsoFor);
 
 public sealed record ResourceQueueResponse(
     string Filter,

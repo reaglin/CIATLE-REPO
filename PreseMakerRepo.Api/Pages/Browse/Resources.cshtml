@@ -41,7 +41,8 @@
 </div>
 <p class="text-muted small mb-4">
     Websites, videos and products suggested by visitors and vendors, reviewed before they are listed. Each
-    summary is written by AI and says whether a resource is free or a commercial product.
+    summary is written or checked by the site's AI reviewer (sometimes starting from the submitter's suggestion) and
+    says whether a resource is free or a commercial product.
     <a href="#add-resource">Add a resource</a>
 </p>
 
@@ -80,7 +81,7 @@ else
                             </div>
                             <p class="mb-1 resource-summary">@r.Summary</p>
                             <div class="d-flex flex-wrap align-items-center gap-2">
-                                <span class="small text-muted fst-italic">AI-written summary</span>
+                                <span class="small text-muted fst-italic">AI-reviewed summary</span>
                                 @{ var voted = Model.VotedIds.Contains(r.Id); }
                                 <form method="post" class="js-vote-form ms-auto"
                                       asp-page="/Browse/Resources" asp-route-courseId="@Model.Course.CourseId" asp-page-handler="Vote">
@@ -121,7 +122,7 @@ else
         <h2 id="add-resource-heading" class="h5 mb-1">Add a resource</h2>
         <p class="small text-muted">
             Suggest a website or YouTube video that helps with @Model.Course.CourseId — free resources and products
-            suited to the course are both welcome; vendors, please say what you offer. Every suggestion is reviewed
+            suited to the course are both welcome; vendors, please say so in the note to the reviewer. Every suggestion is reviewed
             before it is listed, and the review queue is public — <a asp-page="/Queue/Resources">see the queue</a>.
             @if (Model.PendingCount > 0)
             {
@@ -153,10 +154,40 @@ else
                        placeholder="https://… — a website, or a YouTube video link" />
             </div>
             <div class="mb-3">
-                <label class="form-label" for="Description">What is it, and how does it help? Free or paid? <span class="text-muted">(optional)</span></label>
-                <textarea class="form-control" asp-for="Description" rows="3" maxlength="500"></textarea>
-                <div class="form-text">Helps the reviewer. It is not shown on this page.</div>
+                <label class="form-label" for="Description">Note to the reviewer <span class="text-muted">(optional)</span></label>
+                <textarea class="form-control" asp-for="Description" rows="3" maxlength="500" aria-describedby="DescriptionHelp"></textarea>
+                <div id="DescriptionHelp" class="form-text">
+                    Why you recommend it, whether it is free or paid, and who you are (a student, an instructor, or the
+                    company that makes it). Only the reviewer sees this; it is never shown on the course page.
+                </div>
             </div>
+            <fieldset class="mb-3">
+                <legend class="h6 mb-1">Suggest how it should appear <span class="text-muted fw-normal small">(optional)</span></legend>
+                <p class="form-text mt-0">
+                    If the link is listed, it appears with a title and a short summary. You can suggest both, and other
+                    courses it would help. The reviewer checks the link and may edit or rewrite them before listing it.
+                </p>
+                <div class="mb-2">
+                    <label class="form-label" for="SuggestedTitle">Title</label>
+                    <input class="form-control" asp-for="SuggestedTitle" maxlength="200" autocomplete="off"
+                           placeholder="e.g. SQL WHERE Clause — WebCheatSheet" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="SuggestedSummary">Summary</label>
+                    <textarea class="form-control" asp-for="SuggestedSummary" rows="4" maxlength="2000" aria-describedby="SuggestedSummaryHelp"></textarea>
+                    <div id="SuggestedSummaryHelp" class="form-text">
+                        What it is, what it covers, who it suits, and what it costs (free, free with an account, or paid,
+                        with the vendor's name). Plain description, not advertising. If listed, it may appear on this page
+                        after review. At least 20 characters if you write one.
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="SuggestedAlsoFor">Other courses it would help</label>
+                    <input class="form-control" asp-for="SuggestedAlsoFor" autocomplete="off" aria-describedby="SuggestedAlsoForHelp"
+                           placeholder="e.g. COP2071C, COP2704" />
+                    <div id="SuggestedAlsoForHelp" class="form-text">Course numbers such as COP2071C, separated by commas (up to 10).</div>
+                </div>
+            </fieldset>
             <button type="submit" class="btn btn-primary">Submit for review</button>
         </form>
     </div>

@@ -1,7 +1,11 @@
 namespace PreseMakerRepo.Api.Models.Requests;
 
-/// <summary>POST /api/v1/courses/{courseId}/resources — a visitor (or a vendor) suggests a link.</summary>
-public sealed record SubmitResourceRequest(string? Url, string? Description);
+/// <summary>
+/// POST /api/v1/courses/{courseId}/resources — a visitor (or a vendor) suggests a link. Title, Summary and AlsoFor
+/// are the submitter's suggested listing (all optional): the reviewer's Approve form starts from them.
+/// </summary>
+public sealed record SubmitResourceRequest(string? Url, string? Description,
+    string? Title = null, string? Summary = null, List<string>? AlsoFor = null);
 
 /// <summary>A course to list a resource for. Title and summary default to the request's own; give them to
 /// tailor the listing to this course.</summary>

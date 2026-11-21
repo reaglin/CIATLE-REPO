@@ -38,7 +38,9 @@ Same as `COURSE_API.md`: `POST /api/v1/auth/login` with `REPO_ADMIN_EMAIL` / `RE
 
 1. **Read the queue** (oldest first):
    `GET /api/v1/queue/resources?status=pending`
-   Items: `id, courseId, courseTitle, url, type (Website · YouTube), host, description, status, submittedUtc`.
+   Items: `id, courseId, courseTitle, url, type (Website · YouTube), host, description, status, submittedUtc`, and the listing the submitter suggests: `suggestedTitle`,
+   `suggestedSummary`, `suggestedAlsoFor` (course ids; empty when none). These are suggestions to check against the
+   link, not evidence; the reviewer writes the summary that is listed.
 2. **Look at the resource** off-server (fetch the page / video) and apply the approval rules.
 3. **See where the link is already listed** (optional): `GET /api/v1/resources?url=<url>`.
 4. **Approve** — lists it for the suggested course, plus any others:
