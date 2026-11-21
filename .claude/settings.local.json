@@ -20,8 +20,6 @@
       "Bash(awk -F, '{gsub\\(/^\"/, \"\", $7\\); print $4, $7}')",
       "Bash(awk -F, 'BEGIN{OFS=\"|\"}{gsub\\(/^\"/, \"\", $7\\); print $4, $7}')",
       "Bash(awk -F'|' '!a[$1]++')",
-      "Bash(grep -c \"^,*$\" EngineeringTechnology_StatewideInventory.csv)",
-      "Bash(grep -n \"^,*$\" EngineeringTechnology_StatewideInventory.csv)",
       "Bash(awk -F: '{print NR\": Course prefix\", substr\\($2, index\\($2, \"CET\"\\), 8\\), \"OR\", substr\\($2, index\\($2, \"EET\"\\), 8\\)}')",
       "Bash(awk -F, '{ *)",
       "Bash(sed -n '10p' EngineeringTechnology_StatewideInventory.csv)",
