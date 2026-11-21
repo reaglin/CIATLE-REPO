@@ -25153,3 +25153,50 @@ under item 128 for Ron to confirm.
 - **`EEL1603`** (FIU, 2025) carries the statewide title *Robotics-Mechanics and Controls*, the same as NWFSC's
   `EEL2603C` (itself waiting in the request queue) — different numbers, so no equivalence.
 - **SCNS "active" ≠ taught, third case** (after items 124, 126): UWF's `EEL4610`. Written because UF teaches it.
+
+---
+
+## Batch 249 — scheduled request check (eight guides), 2026-11-21
+
+Requests in rank order after the three held items (130–132): `EEL1931`, `EEL2161`, `EEL2603C`, `EEL2880`, `EEL3000`,
+`EEL3003`, `EEL3004C`, `EEL3100`, `BCV0632C`, `EET2525C`. Eight written and live; `EEL1931` (UCF special topics,
+variable credit) declined as a shell number; `EET2525C` held (item 134). Base data sent for all ten: 10 updated,
+0 failed (UCF's Honors row deduplicated on `EEL3004C`; `BCV0632C` titled *Residential Electrician III*). Build
+`scratchpad/b249_build.py`; base data `b249_base.py`; decline `b249_decline.py`; checks `b249_live.py`.
+
+### Source register
+
+- ✅ **USF `cloud.usf.edu/academic-programs/details/prefix/EEL/code/<n>`** again: `EEL2161`, `EEL3100` (with grades).
+- ✅ **UF `catalog.ufl.edu/search/?P=EEL%203003`** finds a course the ECE department page does not list (`EEL3003` is
+  in UF's catalogue but not on `/UGRD/courses/electrical_and_computer_engineering/`), and its result snippets show
+  which programmes require it (BME, ISE). **Use the search route when a department page misses a number.**
+- ✅ **UCF Kuali** (2026-27, `688b8960ddeb091644d2b1ca`) via `ucf_courses_idx.json` pids: `EEL3004C`, `EEL3123C`,
+  full prerequisites, `labStudioFieldWorkHours` 2.
+- ✅ **FAU, FIU, NWFSC Coursedog caches**: `EEL2161` (FAU, `credits.lectureHours` 3), `EEL2880` (FIU, no
+  requisites), `EEL2603C` (NWFSC: `lectureHours` 2 + `labHours` 2). ⚠ **NWFSC's `customFields.INtvT` holds the
+  prerequisite text** (checked against `MAC2312`, `ENC1102`, `PHY2049C`) — `requisites` is empty.
+- ✅ **North Florida College catalogue PDF** `nfc.edu/admissions/catalog-and-schedule/College%20Catalog%202026-2027.pdf`
+  (6 MB): full BCV entries and the Electrician programme (5065, CIP 46.0302, 1500 h, OCPs A–D). ⚠ `pypdf` is not
+  installed in this Python, `pdftotext` and the Read tool's PDF path need approval, and WebFetch returned raw PDF
+  objects — **`scratchpad/b249_pdf.py` (zlib + BT/ET string scrape, no dependencies) read it.**
+- ✅ **Seminole State** `seminolestate.edu/catalog/courses/bcv0632c` (and `bcv0631c`): description, pre/coreqs,
+  terms, **Hours: 75.00**; `bcv0630c` 404s (no such course).
+- ❌ **SCF `catalog.scf.edu`**: root 200 (current catalogue `catoid=20`, not 18), search `search_advanced.php` an empty
+  202, then 403 to WebFetch. Same content-blocked pattern as Santa Fe, FSW, TSC. `EET2525C` held.
+
+### Findings
+
+- **`EEL2161` teaches two languages**: USF C; FAU *C for Engineers* = C++ and MATLAB (item 135). First C courses
+  elsewhere: `COP2220` at 8 public institutions, `COP2271` at UF and Florida Poly.
+- **Three "Introduction to Electrical Engineering" courses**: UF `EEL3000` (2 cr, the profession, majors), FAMU-FSU
+  `EEL3003` (circuits for non-majors; UF calls its `EEL3003` *Elements of Electrical Engineering*), FIU `EEL1603`.
+- ⚠ **FAMU-FSU's bulletin contradicts itself on `EEL3003`** for computer engineering majors (item 135).
+- **The first circuits course for majors**: `EEL3111` (FAMU, FAU, Florida Poly, FSU, UNF, UWF), `EEL3111C` UF (4 cr),
+  `EEL3004C` UCF, `EGN3373` USF (UCF also carries `EGN3373`, for non-EE majors). USF runs **three** circuits courses
+  (`EGN3373` → `EGN3374` → `EEL3100`) and gates `EEL3100` on a **B** in `EGN3374`.
+- **`EEL3004C` vs `EEL3004`**: one SCNS course record, majors' course at UCF, mechanical engineers' at FIU.
+- ⚠ **SCNS statewide titles that name other courses**: `EEL2880` (FIU) → *Applied Software Engineering Techniques*;
+  `EET2525C` (SCF) → *Industrial Motor Control Lab*. Titles sent from the institutions.
+- **`BCV0632C` is a split of OCP B**: 27 technical colleges teach Residential Electrician as one course, `BCV0640`;
+  NFC splits it into `BCV0641C`/`0631C`/`0632C` (150 h each) and Seminole State into 75-hour modules with different
+  content under the same numbers (item 135). Guide `contact_hours` = NFC's 150; Seminole's 75 in the table.

@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **100** |
-| Informational — recorded, no decision needed | 20 |
+| ⏳ **Awaiting a decision from Ron** | **101** |
+| Informational — recorded, no decision needed | 21 |
 | ✅ Resolved | 13 |
-| **Total items** | **133** |
+| **Total items** | **135** |
 
 ---
 
-### ⏳ Awaiting a decision (100)
+### ⏳ Awaiting a decision (101)
 
 | # | Item |
 |---|---|
@@ -137,8 +137,9 @@ continues around every one of them.
 | **131** | `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248) |
 | **132** | `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248) |
 | **133** | ℹ️ Power electronics under four numbers; UF prints a prerequisite that does not exist; UWF dropped `EEL4610` (batch 248) |
+| **134** | `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) |
 
-### Informational — no decision needed (20)
+### Informational — no decision needed (21)
 
 | # | Item |
 |---|---|
@@ -162,6 +163,7 @@ continues around every one of them.
 | 74 | Say so when a number is CLEAN — new handling applied in batch 199 (informational) |
 | 84 | NEW SHAPES from batch 203 — recorded for awareness, no decision needed |
 | 129 | ℹ️ `EEL4212` and `EEL4214` carry two subjects each — published as one labelled guide (informational, batch 247) |
+| 135 | ℹ️ Batch 249 findings: one number teaching two languages; a bulletin that contradicts itself; one PSAV number, two contents (informational, batch 249) |
 
 ### ✅ Resolved (13)
 
@@ -3837,6 +3839,31 @@ FIU does not define?**
   (state-space design is now part of UWF's `EEL4657`). The guide follows UF and says so. Same shape as items 124 and
   126 (SCNS active, institution no longer lists it), but a second carrier teaches it, so it was written. No decision
   needed.
+
+
+## 134. ⚠ `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249)
+
+`EET2525C` *Programmable Logic Controllers* (3 cr), carried only by **State College of Florida, Manatee-Sarasota**
+(effective 2013). ⚠ **The SCNS statewide title on that row is *Industrial Motor Control Lab (L)*** — a different
+subject from SCF's own title, so the number is filed under a statewide course it does not match. **No description
+could be read**: `catalog.scf.edu` answers its root (catalogue `catoid=20`) but the search returns an empty 202 and
+returned 403 to a second fetch. **Not written.** Base data sent (SCF's own title). ⚠ **Decision for Ron: supply SCF's
+description or a syllabus, or allow a PLC guide written from the six other PLC requests now waiting (`ETS1542`,
+`ETS2542`, `ETS2544`, `ETS3543L`, `ETS4543C`, `EML4328C`), labelled as SCF's course by title only?**
+
+
+## 135. ℹ️ Batch 249 findings: one number teaching two languages; a bulletin that contradicts itself; one PSAV number, two contents (informational, batch 249)
+
+- **`EEL2161`**: USF teaches C (*Programming with C*); FAU's *C for Engineers* teaches **C++ and MATLAB**. Published as
+  one guide with both readings labelled; no split proposed.
+- ⚠ **FAMU-FSU bulletin**: `EEL3003` is *"Not accepted for credit toward BSEE and BSCpE"*, yet `EEL3135` lists
+  `EEL3003` as an additional prerequisite **for Computer Engineering majors**. The guide tells CpE students to ask in
+  writing. No decision needed unless Ron knows which is right.
+- **`BCV0632C`**: North Florida College (150 h: lighting, receptacles, NFPA 72, service entrance; completes OCP B)
+  and Seminole State (75 h: AC circuits, high-voltage testing) teach different content under one number. One guide,
+  both labelled. ⚠ NFC's catalogue names OCP C as "BCV 0640 Commercial Electrician" (a misprint for `BCV0652`).
+- **`EEL3004C`** (UCF majors' first circuits course) shares its SCNS course record and statewide title with FIU's
+  `EEL3004`/`EEL3004L`, a circuits course for **mechanical** engineers. The guide says they are not substitutes.
 
 
 ## Resolved
