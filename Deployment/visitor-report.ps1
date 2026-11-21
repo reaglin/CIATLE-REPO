@@ -24,7 +24,8 @@ param(
     [int]$Days = 0,
     [string]$Month,
     [switch]$LastMonth,
-    [string]$LogFile
+    [string]$LogFile,
+    [switch]$Open          # open the saved report in Notepad (the .cmd files pass it)
 )
 
 $ErrorActionPreference = "Stop"
@@ -76,3 +77,4 @@ if ($LogFile) {
 
 Write-Host ""
 Write-Host "Saved: $out" -ForegroundColor Green
+if ($Open) { Start-Process notepad.exe -ArgumentList "`"$out`"" }
