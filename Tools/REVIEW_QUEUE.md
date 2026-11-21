@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **93** |
+| ⏳ **Awaiting a decision from Ron** | **94** |
 | Informational — recorded, no decision needed | 19 |
 | ✅ Resolved | 13 |
-| **Total items** | **125** |
+| **Total items** | **126** |
 
 ---
 
-### ⏳ Awaiting a decision (93)
+### ⏳ Awaiting a decision (94)
 
 | # | Item |
 |---|---|
@@ -130,6 +130,7 @@ continues around every one of them.
 | **123** | ℹ️ `EML x234` carries general materials science AND failure analysis (found 2026-11-02, batch 244) |
 | **124** | `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check) |
 | **125** | `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check) |
+| **126** | `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246) |
 
 ### Informational — no decision needed (19)
 
@@ -3733,6 +3734,19 @@ gives one standard for the course (*Identify manufacturing control procedures*, 
 or certifications. **Not written.**
 ⚠ **Decision for Ron: decline (reason: "the state retired this programme in 2025 and no Florida institution
 still teaches it"), or write a short guide for teach-out students? The same answer covers `ETI0600`–`ETI0605`.**
+
+
+## 126. ⚠ `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246)
+
+`EEL4016` *Electrical Design in Building II* (3 cr; statewide *Electrical Design II*). The Sep 2025 SCNS flat
+file lists it **active** at FIU (effective 1993, changed 2006), ⚠⚠ **but FIU's own Coursedog record says
+"Cleanup of Course Catalog occurred on 28-JUL-2004. Course was inactivated."** (status `Inactive`, effective
+2004-12-31). So there is no description and the course has probably not been taught for twenty years. Its first
+half, `EEL4015` *Electrical Design in Buildings I*, is active at FIU (codes, loads, circuits, surge protection,
+feeders, panels, breakers). **Not written.** Same shape as item 124 (SCNS active, institution no longer teaches it).
+⚠ **Decision for Ron: decline it publicly ("FIU, the only institution with this number, retired it in 2004;
+see EEL4015 for building electrical design"), or write it from the statewide title and `EEL4015`?** Whatever is
+decided for 124 probably settles this too.
 
 
 ## Resolved

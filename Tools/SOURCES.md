@@ -25018,3 +25018,43 @@ none HELD; two were held in the run for Ron (`REVIEW_QUEUE` 124, 125) and `EEL46
 - **Electric machines are taught under five numbers in Florida:** UCF `EEL4205`, UNF/FAU `EEL4220`
   (statewide *Electromechanics I*; ⚠ FAU 2 credits), USF `EEL4224`, Florida Poly `EEL3211`, FAMU `EET4513L`
   (lab). Florida Poly's own `EEL4220` is *Electronic Motor Control*.
+
+---
+
+## Batch 246 — scheduled request check (seven EEL/CEN guides), 2026-11-20
+
+Requests in rank order after the held `EEL2130C` and `ETI0602` (items 124, 125): `CEN4020`, `EEL4030`, `EEL4062`,
+`EEL4021`, `EEL4016`, `EEL4010`, `EEL4005`, `EEL3970`, `EEL3955`, `EEL4070`. Seven written and live; `EEL3970`
+(UCF honours thesis) and `EEL3955` (UCF study abroad) declined as shell numbers; `EEL4016` held (item 126).
+`CEN` re-listed: 170 courses updated, 0 failed.
+
+### Source register
+
+- ✅✅ **NEW: USF course pages are readable** at `cloud.usf.edu/academic-programs/details/prefix/<PFX>/code/<NUM>`
+  — 200, plain HTML, with description, credit hours, prerequisites (with grade) and course attributes (e.g. *One USF
+  Capstone*). **USF's acalog catalogue is still content-blocked; this route bypasses it.** Used for `CEN4020`,
+  `EEL4010`, `EEL4030`.
+- ✅ **FAMU-FSU College of Engineering course lists (PDF)** carry full descriptions and prerequisites for the joint
+  college: `eng.famu.fsu.edu/sites/g/files/upcbnu1751/files/pdfs/ece/Undergraduate-Course-List.pdf` (undated) and
+  `.../ECE_Undergraduate-Courses-Sp24.pdf`. ⚠ **They disagree on `EEL4021`'s prerequisite** (Sp24: MAS3105 and
+  EEL3112 or EEL3003; undated: EEL3112 and MAP3306 or MAS3105); the guide gives both. `EEL4005` is only in the Sp24
+  list. Both lists also describe several other requested numbers (`EEL4113`, `EEL4213`, …) — use them next run.
+- ❌ **FSU's bulletin moved.** `registrar.fsu.edu/bulletin/undergraduate-departments/<dept>` now 301s to
+  `/do-not-delete` (tried `electrical-and-computer-engineering`, `computer-science`, `physics`). The new page is
+  `www.registrar.fsu.edu/bulletin/undergraduate-departments/electrical-computer-engineering`, but it holds **no
+  course descriptions** (8 KB of text); it links to `/scheduling-curriculum/course-descriptions`, not yet tried.
+  FSU's `CEN4020` description could not be read; the guide says so.
+- ✅ **FIU Coursedog cache** answered `EEL4005`, `EEL4062`, `EEL4933`, and showed `EEL4016` **Inactive since 2004**.
+- ❌ SCNS `institution_map()` 403 again; `scratchpad/cached_run.py` served it from `inst_map.json`.
+
+### Findings
+
+- ⚠ **SCNS "active" is not proof a course is taught**: `EEL4016` is active in the flat file but FIU inactivated it in
+  2004 (item 126). Second case today after `EEL2130C` (item 124). **Check the institution's own record before writing
+  a single-carrier course.**
+- **FAMU + FSU carriers are one course** (`EEL4005`, `EEL4021`, `EEL4070`): the joint college teaches them; the guides
+  say so rather than counting two institutions.
+- **`CEN4020` vs `CEN4010`:** the usual Florida number for software engineering is `CEN4010` (Daytona State, FAU, FIU,
+  FSU, UNF); `CEN4020` is FSU (*Software Engineering I*, then `CEN4021`) and USF only. FSU carries both numbers.
+- **Engineering probability:** FAMU-FSU teach it as `EEL4021`; most universities as `STA3032` (Florida Poly, FSU, UCF,
+  UF, UNF). `EEL4021` gates seven communications, radar, sonar and AI electives at the joint college.
