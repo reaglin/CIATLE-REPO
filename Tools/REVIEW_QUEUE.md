@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **94** |
-| Informational — recorded, no decision needed | 19 |
+| ⏳ **Awaiting a decision from Ron** | **96** |
+| Informational — recorded, no decision needed | 20 |
 | ✅ Resolved | 13 |
-| **Total items** | **126** |
+| **Total items** | **129** |
 
 ---
 
-### ⏳ Awaiting a decision (94)
+### ⏳ Awaiting a decision (96)
 
 | # | Item |
 |---|---|
@@ -131,8 +131,10 @@ continues around every one of them.
 | **124** | `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check) |
 | **125** | `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check) |
 | **126** | `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246) |
+| **127** | `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247) |
+| **128** | `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247) |
 
-### Informational — no decision needed (19)
+### Informational — no decision needed (20)
 
 | # | Item |
 |---|---|
@@ -155,6 +157,7 @@ continues around every one of them.
 | 71 | A third contact-hour shape: the STUDIO course (batch 196) — *tooling fixed, no decision needed* |
 | 74 | Say so when a number is CLEAN — new handling applied in batch 199 (informational) |
 | 84 | NEW SHAPES from batch 203 — recorded for awareness, no decision needed |
+| 129 | ℹ️ `EEL4212` and `EEL4214` carry two subjects each — published as one labelled guide (informational, batch 247) |
 
 ### ✅ Resolved (13)
 
@@ -3747,6 +3750,41 @@ feeders, panels, breakers). **Not written.** Same shape as item 124 (SCNS active
 ⚠ **Decision for Ron: decline it publicly ("FIU, the only institution with this number, retired it in 2004;
 see EEL4015 for building electrical design"), or write it from the statewide title and `EEL4015`?** Whatever is
 decided for 124 probably settles this too.
+
+
+## 127. ⚠ `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247)
+
+`EEL4081` *Topics on Rehabilitation Engineering* (3 cr), carried only by UNF, **entered the SCNS file on
+2026-08-16** (created 2017, effective and changed 2026-08-16). ⚠⚠ **No description could be read:** UNF's catalogue
+(`www.unf.edu/catalog/courses/?level=ug`) is script-rendered and returns no course text, and the
+`/catalog/search/?P=` and `catalog.unf.edu/search/` routes 404. **"Topics on" in the title also suggests variable
+content.** **Not written** — a guide from the title alone would be invented. Course base data (UNF offering) was sent.
+⚠ **Decision for Ron: supply UNF's description or syllabus (or the department's), or decline it publicly as a
+variable-topics course until UNF publishes one?**
+
+
+## 128. ⚠ `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247)
+
+`PET1170` *Fundamentals of Athletic Coaching and Management* (3 cr), carried only by **Miami Dade College** (effective
+2024). ⚠ **Every MDC catalogue route failed on 2026-11-21:** `catalog.mdc.edu` DNS failure, `mdc.smartcatalogiq.com`
+500, `mdc.curricunet.com/catalog/search` 500, and `www.mdc.edu/academics/programs/ps/` is a directory-listing error.
+**Not written.** Base data (MDC offering) was sent. ⚠ **Decision for Ron: supply MDC's course description, or wait for
+the curricunet catalogue to come back and retry in a later run?**
+
+
+## 129. ℹ️ `EEL4212` and `EEL4214` carry two subjects each — published as one labelled guide (informational, batch 247)
+
+Both were requested and published 2026-11-21 as **one guide covering both readings, each labelled by school**, the
+`CLP4302` / `APK4200` handling:
+
+| Number | Statewide title | USF | FIU |
+|---|---|---|---|
+| `EEL4212` | Distributed Energy Delivery Systems | *Energy Delivery Systems* — matches the statewide title | ⚠ *High Voltage Engineering* (insulation, breakdown; moved onto the number 2022) |
+| `EEL4214` | Electric Energy Power Systems II | ⚠ *Electric (Utility) Distribution Systems* | *Power Systems II* (load flow, dispatch) — matches the statewide title |
+
+The whole `EEL4213` family is scrambled the same way (FIU machines, FAMU/FSU power flow and faults, USF industrial
+distribution, UCF protection and control, UWF energy systems); both guides say so. **No decision needed**; if Ron wants
+the full `-SCNS` / `-<INST>` three-page split here, it is two more pages per number (`SOURCES.md` batch 247).
 
 
 ## Resolved

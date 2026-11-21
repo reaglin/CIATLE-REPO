@@ -25058,3 +25058,49 @@ Requests in rank order after the held `EEL2130C` and `ETI0602` (items 124, 125):
   FSU, UNF); `CEN4020` is FSU (*Software Engineering I*, then `CEN4021`) and USF only. FSU carries both numbers.
 - **Engineering probability:** FAMU-FSU teach it as `EEL4021`; most universities as `STA3032` (Florida Poly, FSU, UCF,
   UF, UNF). `EEL4021` gates seven communications, radar, sonar and AI electives at the joint college.
+
+---
+
+## Batch 247 — scheduled request check (ten EEL/EEE guides), 2026-11-21
+
+Requests in rank order after the held `EEL2130C`, `ETI0602`, `EEL4016` (items 124–126): `EEL4081`, `EEL4119L`,
+`EEL4113`, `EEL4206L`, `EEL4210`, `EEL4212`, `EEL4213L`, `EEL4214`, `EEL4215`, `EEL4217L`, `PET1170`, `EEE4351`.
+Ten written and live; `EEL4081` (UNF) and `PET1170` (Miami Dade) held because no description could be read
+(items 127, 128). Base data (public offerings, statewide titles, 45 contact hours) sent for all twelve:
+12 updated, 0 failed. Build script `scratchpad/b247_build.py`; base data `scratchpad/b247_base.py`.
+
+### Source register
+
+- ✅ **USF `cloud.usf.edu/academic-programs/details/prefix/<PFX>/code/<NUM>`** answered again for `EEL4206L`,
+  `EEL4212`, `EEL4213`, `EEL4214`, `EEL4241`, `EGN3374`, `EGN3375`. ⚠ It returns an "Unhandled Global Application
+  Error" page (200, ~14.6 KB) for a number USF does not carry (`EEL4205`, `EEL3212`) — **check the body, not the
+  status.**
+- ✅ **UWF `catalog.uwf.edu/search/?P=EEL%204210`** — full block (prereq, concurrent graduate number).
+- ✅ **FAMU-FSU course list** (`scratchpad/b246_famufsu_list.txt`) supplied `EEL4113`, `EEL4217L`, `EEE4351`, as
+  batch 246 predicted.
+- ✅ **FIU Coursedog cache** supplied `EEL4212`, `EEL4213`, `EEL4213L`, `EEL4214`, `EEL4215`, but ⚠ **FIU's records
+  for `EEL4213L`, `EEL4214`, `EEL4215` carry NO prerequisite text** (only an opaque `requirementGroup` id); the guides
+  say so. `EEL4212`'s description does print its prerequisites.
+- ✅ **FAU Coursedog cache** supplied `EEL4119L` with prerequisites, and ⚠ **its `credits.labHours` field (3 a week)
+  — a published hour figure, so `EEL4119L` is the batch's one `hours_source: published`.**
+- ❌ **UNF**: `www.unf.edu/catalog/courses/?level=ug` is script-rendered (no course text); `/catalog/search/?P=` and
+  `catalog.unf.edu/search/?P=` 404. Still no route to a UNF description.
+- ❌ **Miami Dade**: `catalog.mdc.edu` DNS failure; `mdc.smartcatalogiq.com` 500; `mdc.curricunet.com/catalog/search`
+  500 (the catalogue MDC's own site now links to — worth retrying later); `/academics/programs/ps/` directory error.
+
+### Findings
+
+- ⚠⚠ **The power numbers `EEL4212`–`EEL4215` are scrambled across Florida.** `EEL4213` (statewide *Electric Energy
+  Power Systems I*): FIU = machines and components; FAMU/FSU = power flow, dispatch, faults, stability; USF =
+  *Industrial Power Distribution 1*; UCF = *Introduction to Power System Protection and Control*; UWF = *Electric
+  Energy Systems I*. `EEL4212` = USF distributed-energy delivery vs FIU high-voltage engineering; `EEL4214` = FIU
+  load flow vs USF utility distribution. Both two-subject numbers published as one labelled guide (item 129).
+- **FIU runs a three-course power sequence** (`EEL4213` machines → `EEL4214` load flow → `EEL4215` faults and
+  stability) where other universities use one or two courses; `EEL4215` has no partner elsewhere.
+- **Machines laboratories under three numbers**: USF `EEL4206L` (with `EGN3375`), FIU `EEL4213L` (with FIU's
+  `EEL4213`), FAMU-FSU `EEL4217L` (after `EEL3216`, adds transmission lines). Each guide names the other two.
+- ⚠ **FAU runs its electronics laboratories at 3 credits** (`EEL3118L`, `EEL4119L`, 3 lab hours a week) against
+  1 credit elsewhere (FAMU-FSU `EEE3300L`) — a permitted choice, but a transfer credit mismatch; the guide says so.
+- **SCNS misspelling**: FIU's `EEL4213L` is *Energy Convergance Lab* in the flat file; FIU's own title is *Energy
+  Conversion Lab*. The course title was sent corrected.
+- **`EEL4210`** (UWF) is offered concurrently with graduate `EEL5291` — the dual-listing warning is in the guide.
