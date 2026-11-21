@@ -1,12 +1,12 @@
 # visitor-report.ps1 -- how many people are visiting floridacourserepo.com
 #
-# Reads the web server's Nginx access logs over ssh (one password prompt, or none with key
-# auth -- see DATABASE_BACKUPS.md), then counts visitors, page views, the most-visited
-# courses and where visitors came from, with crawlers and bots left out
-# (Deployment\visitor_report.py does the counting).
+# Runs Deployment\visitor_report.py on the web server over ssh (one password prompt, or none
+# with key auth -- see DATABASE_BACKUPS.md). It counts visitors, page views, the most-visited
+# courses and where visitors came from in the server's Nginx access logs, with crawlers and
+# bots left out, and only the report comes back: the logs (gigabytes, with IP addresses) stay
+# on the server. Needs python3 on the server (Ubuntu has it).
 #
 # The report is shown here and saved to Deployment\visitor-reports\visitors-<date>.md.
-# The downloaded logs hold IP addresses, so they are deleted as soon as the report is made.
 #
 # The server keeps about two months of logs (set by Deployment\keep-logs-two-months.ps1; 14 days
 # before that), so a report made any time in a month can still cover the whole month before.
@@ -36,29 +36,42 @@ if ($Month -and $Month -notmatch '^\d{4}-\d{2}$') { throw "-Month must look like
 $out = if ($Month) { Join-Path $outDir "visitors-month-$Month.md" }
        else        { Join-Path $outDir ("visitors-{0:yyyy-MM-dd}.md" -f (Get-Date)) }
 
-$raw = $LogFile
-$downloaded = $false
-if (-not $raw) {
-    $raw = Join-Path $env:TEMP "fcr-nginx-access.log"
-    $downloaded = $true
-    Write-Host "Reading the Nginx access logs from $RemoteHost (ssh may ask for the server password)..." -ForegroundColor Cyan
-    $remote = "cat /var/log/nginx/access.log /var/log/nginx/access.log.1 2>/dev/null; " +
-              "zcat -f /var/log/nginx/access.log.*.gz 2>/dev/null; true"
-    & ssh "$RemoteUser@$RemoteHost" $remote > $raw
-    if ($LASTEXITCODE -ne 0) {
-        Remove-Item $raw -ErrorAction SilentlyContinue
-        throw "ssh to $RemoteHost failed (exit $LASTEXITCODE)."
-    }
-}
+$filter = @()
+if ($Days -gt 0) { $filter += @("--days", "$Days") }
+if ($Month)      { $filter += @("--month", $Month) }
 
-try {
-    $pyArgs = @("$here\visitor_report.py", $raw, "--out", $out)
-    if ($Days -gt 0) { $pyArgs += @("--days", "$Days") }
-    if ($Month)      { $pyArgs += @("--month", $Month) }
-    & python -I @pyArgs
+if ($LogFile) {
+    # A log already on this computer: count it here.
+    & python -I "$here\visitor_report.py" $LogFile --out $out @filter
     if ($LASTEXITCODE -ne 0) { throw "visitor_report.py failed (exit $LASTEXITCODE)." }
-} finally {
-    if ($downloaded) { Remove-Item $raw -ErrorAction SilentlyContinue }
+} else {
+    # Count on the server and bring back only the report (a few KB). The logs are gigabytes, and
+    # downloading them took close to an hour; this way the IP addresses never leave the server either.
+    # The script travels gzipped and base64-encoded on the command line (stdin is left to ssh's password prompt).
+    $bytes = [IO.File]::ReadAllBytes("$here\visitor_report.py")
+    $ms = New-Object IO.MemoryStream
+    $gz = New-Object IO.Compression.GZipStream($ms, [IO.Compression.CompressionMode]::Compress)
+    $gz.Write($bytes, 0, $bytes.Length); $gz.Close()
+    $b64 = [Convert]::ToBase64String($ms.ToArray())
+    $remote = "f=`$(mktemp); echo $b64 | base64 -d | gunzip > `$f; " +
+              "command -v python3 >/dev/null || { echo python3 is not installed on the server >&2; exit 90; }; " +
+              "zcat -f /var/log/nginx/access.log* 2>/dev/null | python3 -I `$f - $($filter -join ' '); " +
+              "rc=`$?; rm -f `$f; exit `$rc"
+
+    Write-Host "Counting visitors on $RemoteHost (ssh may ask for the server password)." -ForegroundColor Cyan
+    Write-Host "The server reads all its logs, millions of lines; this usually takes one to five minutes..." -ForegroundColor Cyan
+    $prevEnc = [Console]::OutputEncoding
+    [Console]::OutputEncoding = [Text.Encoding]::UTF8
+    try {
+        $report = & ssh "$RemoteUser@$RemoteHost" $remote
+        $rc = $LASTEXITCODE
+    } finally {
+        [Console]::OutputEncoding = $prevEnc
+    }
+    if ($rc -ne 0) { throw "The report did not run on $RemoteHost (exit $rc); see the message above." }
+    $text = ($report -join "`n") + "`n"
+    [IO.File]::WriteAllText($out, $text, (New-Object Text.UTF8Encoding($false)))
+    Write-Host $text
 }
 
 Write-Host ""

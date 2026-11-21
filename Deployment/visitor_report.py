@@ -15,13 +15,15 @@ to the report.
 
 USAGE
     python visitor_report.py access.log [more logs...] [--out report.md] [--days 30 | --month 2026-11]
+    zcat -f access.log* | python3 visitor_report.py -     # '-' reads the log from standard input
 
-Normally run through visitor-report.ps1, which fetches the logs from the server first.
+Normally run through visitor-report.ps1, which runs it on the server, so only the report travels.
 """
 import argparse
 import collections
 import datetime
 import hashlib
+import io
 import re
 import sys
 from urllib.parse import urlsplit
@@ -85,6 +87,17 @@ def ref_domain(ref):
     return host[4:] if host.startswith('www.') else host
 
 
+def open_log(p):
+    """A log file as text; '-' is standard input (how visitor-report.ps1 feeds it on the server)."""
+    if p == '-':
+        return io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8', errors='replace')
+    with open(p, 'rb') as probe:
+        bom = probe.read(2)
+    # Windows PowerShell 5.1 writes "> file" as UTF-16; PowerShell 7 as UTF-8.
+    enc = 'utf-16' if bom in (b'\xff\xfe', b'\xfe\xff') else 'utf-8'
+    return open(p, encoding=enc, errors='replace')
+
+
 def parse(paths, days, month=None):
     """month: (first_day, last_day) to keep only that calendar month, or None."""
     cutoff = None
@@ -104,11 +117,7 @@ def parse(paths, days, month=None):
     }
     seen_landing = set()
     for p in paths:
-        with open(p, 'rb') as probe:
-            bom = probe.read(2)
-        # Windows PowerShell 5.1 writes "> file" as UTF-16; PowerShell 7 as UTF-8.
-        enc = 'utf-16' if bom in (b'\xff\xfe', b'\xfe\xff') else 'utf-8'
-        with open(p, encoding=enc, errors='replace') as fh:
+        with open_log(p) as fh:
             for raw in fh:
                 s['lines'] += 1
                 m = LINE.match(raw)
