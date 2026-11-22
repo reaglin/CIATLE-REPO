@@ -278,6 +278,14 @@ browser session, on the first public page opened**, whether or not it is closed,
 | 14.3 | ⚠️ **UX: walkthrough + heuristics passed 2026-11-22, 0 critical, 2 major, 4 minor — all fixed:** crawlers are not shown the panel (they keep no cookies, so it would have been on every page and could become Google's snippet), and it is marked `data-nosnippet`; on course and guide pages, where most visitors land, it sits under the title instead of above the breadcrumb (as on the home page); the × reads "Close this Windows program suggestion" with the tooltip "It will not appear on other pages until you close your browser"; after the ×, focus goes to the start of the page's content for keyboard and screen-reader users (not after a tap); the admin wording names the pages that never show it. Checked locally: a course page has it under the title, Googlebot gets none. ⚠️ Ron: how it looks on a course page on a phone | Passed and recorded here |
 | 14.4 | ⚠️ **Deployed by Ron 2026-11-22.** Checked live by Claude: a course page landed on first has the panel under its title (`data-nosnippet`) and sets `fcr_programs_shown` (Secure, HttpOnly); the home page after it has none; a fresh session on `/careers` has it; Googlebot gets none; the new `site.js` is served. ⚠️ Ron: the phone checks in `Deployment/PENDING_SERVER_CHANGES.md` | Live |
 
+## Phase 15 — Items for the next deploy (Ron, 2026-11-22)
+
+Ron, 2026-11-22: *"We will add these to the 'to do' list."* Captured here as they come; built together, then one deploy.
+
+| # | Task | Done when |
+|---|---|---|
+| 15.1 | ⬜ **Say when a single-school course may not get a guide.** Ron: *"When requesting a guide, let the user know that guides for courses that are only offered at a single school may not be able to be generated due to lack of accessible information on the course."* Where the course has **one** offering (`CourseOfferings`), the Request Guide form (`/courses/{id}` → Request Guide, `Pages/Browse/RequestGuide`) and the course page's one-click Request Guide (its toast) say so before or as the request is made, in plain words, e.g. *"Only one school offers this course, so there may not be enough public information about it to write a guide. You can still request it; if we cannot write one, the queue will say why."* The request is still accepted. Courses with no offerings recorded get no note. Tests; UX review | A single-school course's request form and toast show the note; a course several schools offer does not |
+
 ---
 
 ## Open questions for Ron
