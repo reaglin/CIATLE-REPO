@@ -8,7 +8,7 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⬜ TO DEPLOY — the program panel on the page a visitor lands on, once a browser session (plan Phase 14, 2026-11-22)
+### ✅ DEPLOYED 2026-11-22 — the program panel on the page a visitor lands on, once a browser session (plan Phase 14, 2026-11-22)
 
 Code only, no migration: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (or with a full deploy if one is waiting). The panel
 leaves the home page's fixed spot and shows on the first public page a browser opens in a session; a session cookie
