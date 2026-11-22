@@ -8,7 +8,7 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⬜ TO DEPLOY — guide requests on hold, public decline reasons, re-requests; weekly visitors in the header and a public `/visitors` page (plan Phases 12–13, 2026-11-22)
+### ✅ DEPLOYED 2026-11-22 — guide requests on hold, public decline reasons, re-requests; weekly visitors in the header and a public `/visitors` page (plan Phases 12–13, 2026-11-22)
 
 No migration of its own (the new **Held** status is a number in the existing column), but it goes out with Phase 11's, so
 **`.\Deployment\deploy-update.ps1`** (full).
