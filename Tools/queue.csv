@@ -1357,6 +1357,8 @@ MVK2323,ORGAN,15,skipped,985,2026-08-31T00:09:01Z,,,"Daytona State College proje
 MVS1213,SECONDARY FRESHMAN CELLO,15,skipped,985,2026-08-31T00:09:01Z,,,"Daytona State College project - skipped: applied music/ensemble, individualized instruction"
 MVW1212,SECONDARY APPLIED OBOE,15,skipped,985,2026-08-31T00:09:01Z,,,"Daytona State College project - skipped: applied music/ensemble, individualized instruction"
 MVW1214,SECONDARY APPLIED BASSOON,15,skipped,985,2026-08-31T00:09:01Z,,,"Daytona State College project - skipped: applied music/ensemble, individualized instruction"
+ACG2001,PRINCIPLES OF ACCOUNTING I,14,pushed,986,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
+ACG2011,PRINCIPLES OF ACCOUNTING II,14,pushed,986,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
 COP2224C,PROGRAMMING IN C++,14,pushed,986,2026-05-06T01:12:46Z,2026-05-06T05:12:28Z,2026-05-06T01:13:16Z,(added by reconcile from orphan draft)
 COP3530C,DATA STRUCTURES,14,pushed,986,2026-05-06T01:12:46Z,2026-05-06T05:12:28Z,2026-05-06T01:13:16Z,(added by reconcile from orphan draft)
 ETD2364C,INTRODUCTION TO SOLIDWORKS,14,pushed,986,2026-05-04T00:33:00Z,2026-05-02T10:28:06Z,2026-05-02T10:28:06.397211+00:00,(added by reconcile from orphan draft)
@@ -1494,6 +1496,7 @@ STS2944C,SURGICAL CLINICAL I,11,skipped,989,2026-08-31T00:09:01Z,,,Daytona State
 STS2945C,SURGICAL CLINICAL II,11,skipped,989,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 BSC1010L,GENERAL BIOLOGY I LAB,10,pushed,990,2026-09-16T21:25:12Z,2026-09-16T21:25:00Z,2026-09-16T21:25:31Z,(added by reconcile from orphan draft)
 CCJ4700,METHODS OF RESEARCH IN CRIMINAL JUSTICE,10,pushed,990,2026-09-04T01:12:11Z,2026-09-05T01:29:02Z,2026-09-05T01:29:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+COM3120,ORGANIZATIONAL COMMUNICATION,10,pushed,990,2026-11-22T16:38:48Z,2026-11-22T16:38:15Z,2026-11-22T16:39:10Z,(added by reconcile from orphan draft)
 EEV0010,Electronics Assembler,10,pushed,990,2026-05-04T00:33:00Z,2026-05-02T07:55:42Z,2026-05-04T00:33:33Z,(added by reconcile from orphan draft)
 EEV0100,Electronics Tester,10,pushed,990,2026-05-04T00:33:00Z,2026-05-02T07:57:42Z,2026-08-30T17:53:35Z,(added by reconcile from orphan draft)
 EGS1006C,INTRODUCTION TO THE ENGINEERING PROFESSION,10,pushed,990,2026-09-04T01:12:11Z,2026-09-05T01:29:02Z,2026-09-05T01:29:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1878,6 +1881,7 @@ ARH4470,CONTEMPORARY ART,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T23:25:52Z,
 ART2201C,BASIC DESIGN I,4,pushed,996,2026-09-04T01:12:12Z,2026-09-04T14:36:41Z,2026-09-04T14:36:55Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ART3442C,PRINTMAKING: INTAGLIO,4,pushed,996,2026-09-04T01:12:12Z,2026-09-04T14:36:41Z,2026-09-04T14:36:55Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ASH4404,MODERN CHINA,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T22:19:40Z,2026-09-07T22:19:49Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+ATR5105C,ATHLETIC TRAINING TECHNIQUES,4,pushed,996,2026-11-22T16:38:45Z,2026-11-22T16:38:15Z,2026-11-22T16:39:11Z,(added by reconcile from orphan draft)
 ATT1120,INSTRUMENT PILOT GROUND SCHOOL,4,pushed,996,2026-09-04T01:12:12Z,2026-09-07T23:56:15Z,2026-09-07T23:56:26Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN3224C,CONSTRUCTION TECHNIQUES,4,pushed,996,2026-09-04T01:12:12Z,2026-09-08T14:36:51Z,2026-09-08T14:37:01Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BME4361,NEURAL ENGINEERING,4,pushed,996,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
@@ -2070,6 +2074,7 @@ BCH3034L,ORGANIC CHEMISTRY II LAB,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T0
 BCN3740,CONSTRUCTION LAW,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:36:32Z,2026-09-12T03:37:03Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BCN4431,STRUCTURES I,3,pushed,997,2026-09-04T01:12:12Z,2026-09-12T03:36:32Z,2026-09-12T03:37:03Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 BME3009,INTRODUCTION TO BIOMEDICAL ENGINEERING,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
+BME4311,MOLECULAR ENGINEERING,3,pushed,997,2026-11-22T16:38:45Z,2026-11-22T16:38:15Z,2026-11-22T16:39:11Z,(added by reconcile from orphan draft)
 BME4508,BIOSIGNALS & SYSTEMS,3,pushed,997,2026-09-19T01:32:51Z,2026-09-19T01:32:36Z,2026-09-19T01:33:24Z,(added by reconcile from orphan draft)
 BSC1086L,ANATOMY & PHYSIOLOGY II LABORATORY,3,pushed,997,2026-09-04T01:12:12Z,2026-09-05T19:16:15Z,2026-09-05T19:16:25Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 CAP4136,MALWARE ANALYSIS,3,pushed,997,2026-09-04T01:12:12Z,2026-09-08T09:57:32Z,2026-09-08T09:57:44Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2826,12 +2831,8 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-ECH3702,Instrument Systems I,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:11Z,(added by reconcile from orphan draft)
-EML4328C,Applied Programmable Logic Controllers for Mechanical Engineering,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
-ETS1542,Introduction to Programmable Logic Controllers,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
-ETS2542,Programmable Logic Controllers I,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
-ETS2544,Programmable Logic Controllers II,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
-ETS4543C,Applied Programmable Logic Controllers,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:13Z,(added by reconcile from orphan draft)
+ACG2071,Managerial Accounting,,pushed,1000,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
+ACG2100,Intermediate Accounting I (Lower Division),,pushed,1000,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
 ACG2021,Principles of Financial Accounting,,pushed,1000,2026-10-01T21:24:02Z,2026-10-01T21:23:56Z,2026-10-01T21:24:10Z,(added by reconcile from orphan draft)
 ANT2100,Introduction to Archaeology,,pushed,1000,2026-09-04T01:26:54Z,2026-09-04T01:26:48Z,2026-09-04T01:27:05Z,(added by reconcile from orphan draft)
 ANT2511,Biological Anthropology,,pushed,1000,2026-09-04T03:07:50Z,2026-09-04T03:07:44Z,2026-09-04T03:08:28Z,(added by reconcile from orphan draft)
@@ -2859,6 +2860,8 @@ AOM2433,Introduction to Precision Agriculture,,pushed,1000,2026-10-01T21:18:38Z,
 AOM3073,Safety in Agriculture,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 AOM3220,Agricultural Construction and Maintenance,,pushed,1000,2026-10-01T21:18:38Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 ART3713,Figure Sculpture,,pushed,1000,2026-09-04T14:56:43Z,2026-09-04T14:54:56Z,2026-09-04T14:56:48Z,(added by reconcile from orphan draft)
+ATR2000,Basic Care and Prevention Principles of Athletic Training,,pushed,1000,2026-11-22T16:38:45Z,2026-11-22T16:38:15Z,2026-11-22T16:39:11Z,(added by reconcile from orphan draft)
+ATR5305C,Therapeutic Interventions in Athletic Training I,,pushed,1000,2026-11-22T16:38:45Z,2026-11-22T16:38:15Z,2026-11-22T16:39:12Z,(added by reconcile from orphan draft)
 ATT2130,Fundamentals of Aviation Instruction — Lower-Level Course,,pushed,1000,2026-09-15T06:57:46Z,2026-09-15T06:56:57Z,2026-09-15T09:12:30Z,(added by reconcile from orphan draft)
 ATT3811,Air Traffic Control Systems,,pushed,1000,2026-10-01T21:18:39Z,2026-10-01T21:18:23Z,2026-10-01T21:19:07Z,(added by reconcile from orphan draft)
 BCV0632C,Residential Electrician III,,pushed,1000,2026-11-21T22:42:53Z,2026-11-21T22:42:21Z,2026-11-21T22:42:59Z,(added by reconcile from orphan draft)
@@ -2898,9 +2901,11 @@ CJK0590,Criminal Justice Corrections (Emergency Response and First Aid),,pushed,
 COM3003-SCNS,COM3003: Human Communication (statewide subject),,pushed,1000,2026-09-07T23:26:01Z,2026-09-07T23:25:52Z,2026-09-07T23:26:05Z,(added by reconcile from orphan draft)
 COM3003-UWF,COM3003: Integrated Advertising and Public Relations Concepts (UWF subject),,pushed,1000,2026-09-07T23:26:01Z,2026-09-07T23:25:52Z,2026-09-07T23:26:06Z,(added by reconcile from orphan draft)
 COM4564,Social Media Management,,pushed,1000,2026-09-16T07:40:45Z,2026-09-16T07:40:33Z,2026-09-16T07:41:16Z,(added by reconcile from orphan draft)
+COM5235,Crisis Communication (Graduate Seminar),,pushed,1000,2026-11-22T16:38:48Z,2026-11-22T16:38:15Z,2026-11-22T16:39:12Z,(added by reconcile from orphan draft)
 COP1000,Introduction to Computer Programming,,pushed,1000,2026-11-02T18:49:28Z,2026-11-02T18:49:23Z,2026-11-02T19:07:35Z,(added by reconcile from orphan draft)
 COP1009,Beauty and Joy of Computing,,pushed,1000,2026-11-02T18:57:30Z,2026-11-02T18:53:38Z,2026-11-02T19:07:36Z,(added by reconcile from orphan draft)
 COP3530,Data Structures,,pushed,1000,2026-11-02T18:49:28Z,2026-11-02T18:49:23Z,2026-11-02T19:07:36Z,(added by reconcile from orphan draft)
+ECH3702,Instrument Systems I,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:11Z,(added by reconcile from orphan draft)
 ECH4714,Chemical Process Safety,,pushed,1000,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
 ECP3524,The Economics of Religion,,pushed,1000,2026-11-02T18:57:30Z,2026-11-02T18:57:08Z,2026-11-02T19:07:36Z,(added by reconcile from orphan draft)
 EDH6051,Introduction to Higher Education,,pushed,1000,2026-11-02T18:57:30Z,2026-11-02T18:55:54Z,2026-11-02T19:07:36Z,(added by reconcile from orphan draft)
@@ -2952,6 +2957,7 @@ EML3703,Thermal Systems 3 (EML3703),,pushed,1000,2026-09-03T00:37:19Z,2026-09-03
 EML3960,Certified SolidWorks Professional Exam Preparation,,pushed,1000,2026-09-03T00:37:19Z,2026-09-03T00:37:09Z,2026-09-03T00:37:33Z,(added by reconcile from orphan draft)
 EML4083,Introduction to Exterior Ballistics,,pushed,1000,2026-09-03T00:37:19Z,2026-09-03T00:37:09Z,2026-09-03T00:37:33Z,(added by reconcile from orphan draft)
 EML4234,Engineering Failure Analysis,,pushed,1000,2026-11-02T18:57:30Z,2026-11-02T18:54:23Z,2026-11-02T19:07:37Z,(added by reconcile from orphan draft)
+EML4328C,Applied Programmable Logic Controllers for Mechanical Engineering,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
 EML4804,Mechatronic Systems (EML4804),,pushed,1000,2026-09-03T00:49:10Z,2026-09-03T00:49:02Z,2026-09-03T00:49:22Z,(added by reconcile from orphan draft)
 EML4804L,Mechatronic Systems Lab,,pushed,1000,2026-09-03T00:49:10Z,2026-09-03T00:49:02Z,2026-09-03T00:49:22Z,(added by reconcile from orphan draft)
 EML4961,Fundamentals of Engineering — Mechanical Exam Preparation,,pushed,1000,2026-09-03T00:49:10Z,2026-09-03T00:49:02Z,2026-09-03T00:49:23Z,(added by reconcile from orphan draft)
@@ -2982,8 +2988,12 @@ ETM2317C,Drive and Pump Systems,,pushed,1000,2026-10-02T20:43:23Z,2026-10-02T20:
 ETM2401,Mechanical Devices and Systems,,pushed,1000,2026-05-04T00:33:01Z,2026-05-02T12:45:28Z,2026-05-02T12:45:28.338465+00:00,(added by reconcile from orphan draft)
 ETM3316,Hydraulics (Hydrostatic Forces),,pushed,1000,2026-10-02T20:43:23Z,2026-10-02T20:43:13Z,2026-10-02T20:43:45Z,(added by reconcile from orphan draft)
 ETP4240,Power Systems,,pushed,1000,2026-09-03T18:52:01Z,2026-09-03T18:51:56Z,2026-09-03T18:52:14Z,(added by reconcile from orphan draft)
+ETS1542,Introduction to Programmable Logic Controllers,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
+ETS2542,Programmable Logic Controllers I,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
+ETS2544,Programmable Logic Controllers II,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:12Z,(added by reconcile from orphan draft)
 ETS2940,Biomedical Engineering Technology Internship,,pushed,1000,2026-05-06T11:24:58Z,2026-05-02T14:39:32Z,2026-05-02T14:39:32.841432+00:00,(added by reconcile from orphan draft)
 ETS3543,Programmable Logic Controllers,,pushed,1000,2026-05-04T00:33:01Z,2026-05-02T14:43:58Z,2026-05-02T14:43:58.353700+00:00,(added by reconcile from orphan draft)
+ETS4543C,Applied Programmable Logic Controllers,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:13Z,(added by reconcile from orphan draft)
 GRA3887C,Traditional Methods in Cartoon Design,,pushed,1000,2026-09-16T15:06:38Z,2026-09-16T15:05:28Z,2026-09-16T15:06:44Z,(added by reconcile from orphan draft)
 HSC3555,Pathophysiology,,pushed,1000,2026-09-04T15:43:04Z,2026-09-04T15:41:48Z,2026-09-04T15:43:06Z,(added by reconcile from orphan draft)
 HSC4143,Drugs in Society,,pushed,1000,2026-09-04T15:43:04Z,2026-09-04T15:41:48Z,2026-09-04T15:43:06Z,(added by reconcile from orphan draft)

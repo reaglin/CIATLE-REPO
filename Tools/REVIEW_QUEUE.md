@@ -27,9 +27,9 @@ continues around every one of them.
 | | Count |
 |---|---|
 | ⏳ **Awaiting a decision from Ron** | **102** |
-| Informational — recorded, no decision needed | 22 |
+| Informational — recorded, no decision needed | 23 |
 | ✅ Resolved | 13 |
-| **Total items** | **137** |
+| **Total items** | **138** |
 
 ---
 
@@ -140,7 +140,7 @@ continues around every one of them.
 | **134** | `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) |
 | **136** | `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250) |
 
-### Informational — no decision needed (22)
+### Informational — no decision needed (23)
 
 | # | Item |
 |---|---|
@@ -166,6 +166,7 @@ continues around every one of them.
 | 129 | ℹ️ `EEL4212` and `EEL4214` carry two subjects each — published as one labelled guide (informational, batch 247) |
 | 135 | ℹ️ Batch 249 findings: one number teaching two languages; a bulletin that contradicts itself; one PSAV number, two contents (informational, batch 249) |
 | 137 | ℹ️ Batch 250 findings: UNF's course API; one UNF course under two numbers; ECH3702 ending; IRSC repeats a description (informational, batch 250) |
+| 138 | ℹ️ Batch 251 findings: a lower-division intermediate accounting course; the two-term financial accounting route; FSU's bulletin moved; athletic training numbers (informational, batch 251) |
 
 ### ✅ Resolved (13)
 
@@ -3907,6 +3908,30 @@ only?** (Same shape as item 134.)
   identifiers at 22 public colleges; `ETS2544`/`ETS2544C` likewise. Same last three digits, so SCNS-equivalent; the guides
   say so (the 2026-09-17 packaging rule). ⚠ Lake-Sumter's `ETS2544C` is 2 credits against 3 elsewhere.
 - ⚠ **North Florida College** is an `ETS1542` carrier in SCNS but its 2026-27 catalogue lists no ETS courses.
+
+
+## 138. ℹ️ Batch 251 findings: a lower-division intermediate accounting course; the two-term financial accounting route; FSU's bulletin moved; athletic training numbers (informational, batch 251)
+
+- ⚠ **`ACG2100` Intermediate Accounting I is carried by ten state colleges and NO university**; universities teach the
+  subject as `ACG3101` (8 carriers, UF at 4 cr) or `ACG3103` (4). The batch-220 sector-split shape, at different levels.
+  ⚠ **The CPA question**: Florida's Board of Accountancy requires the exam's accounting hours at the upper-division level
+  (Rule 61H1-27.002, F.A.C.); the current rule defines upper division as *above the principal introductory level* and the
+  Board reviews courses (its Course Guide), while an older version excluded community-college courses outright. The guide
+  tells students to confirm with the Board and the receiving university rather than asserting either answer.
+- ✅ **`ACG2001` + `ACG2011` = `ACG2021`**, stated by Northwest Florida State's catalogue and accepted by USF
+  (`ACG3103` prerequisite: *"ACG X021 OR ACG X021C OR ACG X001 AND ACG X011"*). Nine state colleges carry the pair; Broward,
+  Gulf Coast and Indian River carry no `ACG2021`, so the pair is their only route. Six credits for ACG2021's three.
+- ⚠ **Title collision**: Florida Atlantic titles `ACG2071` (managerial) *Principles of Accounting 2*; nine colleges title
+  `ACG2011` (financial, second half) *Principles of Accounting II*. Both guides warn to match on the number.
+- **`ACG2071`**: 38 public carriers, UF alone at 4 cr. ⚠ Grade gates: FSU accounting majors need a **B**; UF's `ACG3101`
+  needs a B in `ACG2021` and `ACG2071` plus the Fisher School's two competency assessments.
+- **`ATR5305C`** (FIU, 4 cr) is the subject UNF (3), USF (4) and UCF (3) number **`ATR5306C`** *Therapeutic Interventions I*;
+  `ATR5105C` is 4 cr at FIU against 3 at UNF, USF and UWF. All are cohort courses inside CAATE master's programmes.
+- **`ATR2000`** (UWF, new January 2026): the SCNS statewide title is *Exercise Science and Injury Management*, UWF's
+  course is an introduction to athletic training; the guide follows UWF's description.
+- ✅ **FSU's bulletin moved** from `registrar.fsu.edu/bulletin/...` (now a landing page) to **`bulletin.fsu.edu`, a
+  Coursedog catalogue** (`fsu_peoplesoft`, catalog `f8cXWDJD0Lphf2KTcUZh`); added to `scratchpad/coursedog.py` as `fsu`,
+  cache `fsu_courses.json` (15,571 courses, with published learning outcomes in `customFields.ttXjp`).
 
 
 ## Resolved

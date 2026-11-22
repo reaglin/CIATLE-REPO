@@ -13,6 +13,7 @@ Known Florida Coursedog schools (SOURCES.md batches 167 and 173):
     nwfsc  catalog.nwfsc.edu  nwfsc_banner_sql   DGLrTHoh5uNIMFsdbzWf    ~1,780 courses
 
     fau    catalog.fau.edu    fau_banner_ethos   Zm7WidFIJix2TYXQumos
+    fsu    bulletin.fsu.edu   fsu_peoplesoft     f8cXWDJD0Lphf2KTcUZh  ~15,600 courses (added batch 251)
 
 CORRECTION 2026-09-16 (batch 228): FAU IS now a Coursedog school. The batch-173
 finding ("host registered but no catalog assigned") was TRUE THEN and is STALE --

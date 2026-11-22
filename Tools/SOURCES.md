@@ -25242,3 +25242,50 @@ sent for all seven: 7 updated, 0 failed. Build `scratchpad/b250_build.py`; base 
 - **IRSC's PLC II description copies PLC I** in 2025-26 (item 137).
 - **No other Florida university carries a PLC course under an engineering prefix** (`EML`, `EIN`, `EGN`, `EEL`): the
   flat file's only other "programmable" titles are FPGA courses.
+
+---
+
+## Batch 251 — scheduled request check (ten guides), 2026-11-22
+
+Six requests waiting at the start (`COM3120`, `COM5235`, `ATR2000`, `ATR5105C`, `ATR5305C`, `BME4311`); four more arrived
+during the run (`ACG2071`, `ACG2100`, `ACG2001`, `ACG2011`), so ten were taken, the run's limit. All ten written and live;
+none declined, none held. Base data sent for all ten: 6 + 4 updated, 0 failed. Build `scratchpad/b251_build.py` (first
+six) and `b251_build2.py` (ACG); base data `b251_base.py` (`--acg` for the second set; it now drops honors-section
+duplicate offerings); checks `b251_live.py`; fetches `b251_fetch.py`; lookups `b251_cache.py`, `b251_req.py`,
+`b251_count.py` (public carriers from the flat file with the cached institution map), `b251_show.py`.
+
+### Source register
+
+- ✅✅ **FSU moved its bulletin to Coursedog.** `registrar.fsu.edu/bulletin/undergraduate-departments/<dept>` and
+  `.../graduate-departments/<dept>` now return the registrar landing page with no course text; the catalogue is
+  **`bulletin.fsu.edu`** (`fsu_peoplesoft`, catalog `f8cXWDJD0Lphf2KTcUZh`, "26_27 GENERAL BULLETIN"). `coursedog.py
+  discover bulletin.fsu.edu` found it; `coursedog.py find fsu <ID>` now works (cache `fsu_courses.json`, 15,571 courses,
+  undergraduate AND graduate). ✅ **FSU's records carry published learning outcomes** in `customFields.ttXjp` and a CIP
+  code. ❌ `bulletin.fsu.edu/search/?P=…` is client-rendered; `/ribbit/` and `/courses/<prefix>/` 404.
+- ✅ **SCNS live institution lookup returned HTTP 403** (`carriers.py`); `b251_count.py` and `b250_rows.py` use
+  `inst_map.json` instead.
+- ✅ **UF** `catalog.ufl.edu/search/?P=<PFX>%20<NUM>`, **USF** `cloud.usf.edu/academic-programs/details/prefix/<PFX>/code/<NUM>`,
+  **UWF** `catalog.uwf.edu/search/?P=<PFX>%20<NUM>`, **UNF** course API: all answered again.
+- ✅ **Seminole State** `www.seminolestate.edu/catalog/courses/acg2100` (description, prerequisite, textbook);
+  **Pasco-Hernando** `phsc.smartcatalogiq.com/en/2026-2027/catalog-and-student-handbook/courses/acg-accounting-general/2000/acg-2100`.
+- ❌ **Indian River** `irsc.smartcatalogiq.com/en/2026-2027/catalog/courses/acg-accounting-general/2000/acg-2100` 404s
+  (2025-2026 is IRSC's current year; not retried). ❌ **FGCU** `catalog.fgcu.edu/courses/com/com.pdf` empty 202 again.
+  St. Petersburg, Central Florida and Florida Poly (acalog) not tried.
+- ✅ **Florida Board of Accountancy**: the CPA education requirement (`www2.myfloridalicense.com/certified-public-accounting/education-requirements/`)
+  and Rule 61H1-27.002, F.A.C. (`flrules.org`): accounting courses must be upper division, defined in the current rule as
+  above the principal introductory level; the Board's Course Guide reviews courses.
+
+### Findings (REVIEW_QUEUE item 138)
+
+- **`ACG2100`**: ten state colleges, no university; universities use `ACG3101`/`ACG3103`. The guide warns on transfer and
+  on CPA counting.
+- **`ACG2001` + `ACG2011` = `ACG2021`** (NWFSC's catalogue; USF's prerequisite text). Broward, Gulf Coast and Indian River
+  carry only the pair.
+- **"Principles of Accounting II"** is `ACG2071` (managerial) at FAU and `ACG2011` (financial) at nine colleges.
+- **`ACG2071`**: 38 public carriers, UF at 4 cr; B-grade gates at FSU and UF.
+- **`COM3120`**: nine public carriers at 3 cr (two state colleges at 3000 level); FAU and UNF theory-centred, FSU, FIU and
+  UF applied. FAU's Coursedog record gives 3 lecture/contact hours a week.
+- **`ATR5305C`** (FIU) is `ATR5306C` at UNF, USF and UCF; `ATR5105C` 4 cr at FIU, 3 elsewhere.
+- **`BME4311`**: UF teaches molecular and cell biology for BMEs (prerequisites BSC 2010, CHM 3217 or 2210, PCB 3713C);
+  FIU names genetic and proteomic engineering; Florida Poly (new, August 2026) unread.
+- **`COM5235`**: FSU graduate seminar, outcomes published in FSU's Coursedog record.
