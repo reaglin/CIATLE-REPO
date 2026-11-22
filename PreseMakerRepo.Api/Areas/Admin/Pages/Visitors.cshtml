@@ -168,17 +168,18 @@ else
         </div>
 
         <div class="col-lg-6">
-            <h2 class="h6 mb-1">Program panel on the home page</h2>
+            <h2 class="h6 mb-1">Program panel</h2>
             <p class="small text-muted mb-1">
-                Clicks on the panel that shows one of your Microsoft Store programs at random (the list is
+                Clicks on the panel that shows one of your Microsoft Store programs at random, once a browser session, on
+                the first ordinary page the visitor opens (not a sign-in or error page), and never to search crawlers (the list is
                 <a href="https://softwareplus.ai/apps.json" target="_blank" rel="noopener">softwareplus.ai/apps.json</a>,
                 re-read every 3 hours; each program is shown about equally often, so rows can be compared).
                 <strong>SoftwarePlus.ai page</strong> counts the name, the icon and "More about"; <strong>Store</strong> is
                 "Get it from the Microsoft Store". These are <strong>clicks, not people</strong>: a visitor who clicks both
                 links counts 2 (at most 20 a day each). Not counted: links opened from the right-click menu, or with scripts
-                turned off. The home page was viewed <strong>@s.HomePageViews.ToString("N0")</strong> times in this period;
-                some of those views did not show the panel (the visitor had closed it, or the list could not be read), so the
-                true rate is somewhat higher than the one below.
+                turned off. There were <strong>@s.Arrivals.ToString("N0")</strong> arrivals (one per visitor per day) in this
+                period, about one panel each; a visitor who comes back after closing the browser sees it again the same day,
+                and one who leaves within 5 seconds is not counted as an arrival, so the rate below is approximate.
                 @if (Model.Programs.Count == 0)
                 {
                     <br /><span class="text-danger">The list could not be read just now, so the panel is not showing. It is tried again every 10 minutes.</span>
@@ -218,9 +219,9 @@ else
                         </tr>
                     </tfoot>
                 </table>
-                @if (s.HomePageViews > 0)
+                @if (s.Arrivals > 0)
                 {
-                    <p class="small text-muted">Clicks per 100 home-page views (approximate): <strong>@((100.0 * totalClicks / s.HomePageViews).ToString("0.#"))</strong>.</p>
+                    <p class="small text-muted">Clicks per 100 arrivals (approximate): <strong>@((100.0 * totalClicks / s.Arrivals).ToString("0.#"))</strong>.</p>
                 }
             }
         </div>

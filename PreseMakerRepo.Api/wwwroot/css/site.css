@@ -77,7 +77,8 @@ body { margin-bottom: 60px; }
 .program-panel-icon { border-radius: .75rem; display: block; }
 .program-panel-label { letter-spacing: .02em; }
 .program-panel-close { position: absolute; top: .5rem; right: .5rem; margin: 0; }
-.program-panel-close .btn-close { padding: .5rem; }
+.program-panel-close.btn-close { padding: .5rem; }
+#main:focus { outline: none; }
 @media (max-width: 575.98px) {
     .program-panel-icon { width: 48px; height: 48px; }
 }

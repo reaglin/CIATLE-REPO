@@ -8,7 +8,7 @@ namespace PreseMakerRepo.Api.Services.Visits;
 /// <summary>One counted page view, as handed from the middleware to the recorder.</summary>
 public sealed record VisitHit(DateTime Utc, string VisitorHash, string Path, string? Source);
 
-/// <summary>One counted click on the home page's program panel (plan 10.4): which program, which link.</summary>
+/// <summary>One counted click on the program panel (plan 10.4): which program, which link.</summary>
 public sealed record ProgramClickHit(DateTime Utc, string ProgramId, string Link);
 
 /// <summary>

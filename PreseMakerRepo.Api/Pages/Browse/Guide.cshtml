@@ -23,6 +23,9 @@
     </a>
 </div>
 
+@* The program panel under the title on the pages visitors land on most (plan 14.3); elsewhere the layout puts it above the page. *@
+<div class="mt-2"><partial name="_ProgramPanel" /></div>
+
 <div class="d-flex flex-wrap gap-2 mb-3">
     @* PSAV clock-hour courses correctly carry Credits = 0, so `.HasValue` rendered a
        meaningless "0 credit hours" badge on 20+ live guides. `null > 0` is false in C#,

@@ -88,7 +88,7 @@ public class ProgramPanelTests
     }
 
     [Fact]
-    public async Task Clicks_are_saved_per_day_program_and_link_and_read_back_beside_home_page_views()
+    public async Task Clicks_are_saved_per_day_program_and_link_and_read_back_beside_arrivals()
     {
         var conn = new SqliteConnection("DataSource=:memory:");
         conn.Open();
@@ -103,7 +103,7 @@ public class ProgramPanelTests
             var noon = new DateTime(2026, 11, 21, 17, 0, 0, DateTimeKind.Utc);
             var rec = new VisitRecorder(sp.GetRequiredService<IServiceScopeFactory>(), NullLogger<VisitRecorder>.Instance);
             rec.Record(new VisitHit(noon, "aaaaaaaaaaaaaaaa", "/", null));
-            rec.Record(new VisitHit(noon, "bbbbbbbbbbbbbbbb", "/", null));
+            rec.Record(new VisitHit(noon, "bbbbbbbbbbbbbbbb", "/courses/COP1000", null));   // landed on a course page
             rec.Record(new ProgramClickHit(noon, "gamify", "page"));
             rec.Record(new ProgramClickHit(noon, "gamify", "store"));
             Assert.Equal(4, await rec.FlushAsync());
@@ -114,10 +114,48 @@ public class ProgramPanelTests
             using var read = sp.CreateScope();
             var stats = await new VisitorStatsService(read.ServiceProvider.GetRequiredService<AppDbContext>())
                 .GetAsync(7, today: new DateOnly(2026, 11, 21));
-            Assert.Equal(2, stats.HomePageViews);
+            Assert.Equal(2, stats.Arrivals);
             var gamify = stats.ProgramClicks[0];
             Assert.Equal(("gamify", 2, 1), (gamify.ProgramId, gamify.PageClicks, gamify.StoreClicks));
             Assert.Equal(("smada", 0, 1), (stats.ProgramClicks[1].ProgramId, stats.ProgramClicks[1].PageClicks, stats.ProgramClicks[1].StoreClicks));
         }
+    }
+
+    // Plan Phase 14: the panel on the page a visitor lands on, once a browser session.
+    private static Microsoft.AspNetCore.Http.HttpRequest Get(string? cookie = null, string method = "GET", bool staticExport = false,
+        string userAgent = Chrome)
+    {
+        var ctx = new Microsoft.AspNetCore.Http.DefaultHttpContext();
+        ctx.Request.Method = method;
+        ctx.Request.Headers.UserAgent = userAgent;
+        if (cookie is not null) ctx.Request.Headers.Cookie = cookie + "=1";
+        if (staticExport) ctx.Request.Headers["X-Static-Export"] = "1";
+        return ctx.Request;
+    }
+
+    [Theory]
+    [InlineData("/Index")]
+    [InlineData("/Courses/Detail")]
+    [InlineData("/Careers/Index")]
+    [InlineData("/Queue/Guides")]
+    public void Any_public_page_is_offered_the_panel_on_a_first_visit(string page) =>
+        Assert.True(ProgramPanelPageFilter.ShouldOffer(Get(), null, page));
+
+    [Fact]
+    public void Once_shown_or_closed_in_this_session_it_is_not_offered_again()
+    {
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(Get(ProgramPanelService.ShownCookie), null, "/Courses/Detail"));
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(Get(ProgramPanelService.ClosedCookie), null, "/Index"));
+    }
+
+    [Fact]
+    public void Not_on_posts_the_admin_console_the_account_pages_crawlers_or_the_static_export()
+    {
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(Get(method: "POST"), null, "/Index"));
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(Get(), "Admin", "/Visitors"));
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(Get(), null, "/Account/Login"));
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(Get(staticExport: true), null, "/Index"));
+        Assert.False(ProgramPanelPageFilter.ShouldOffer(
+            Get(userAgent: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"), null, "/Browse/Course"));
     }
 }

@@ -53,7 +53,7 @@ public static class VisitEndpoint
         }).DisableAntiforgery();
 
     /// <summary>
-    /// <c>POST /visit/program</c>: a click on one of the home page's program-panel links (plan 10.4), sent by
+    /// <c>POST /visit/program</c>: a click on one of the program panel's links (plan 10.4), sent by
     /// site.js as a beacon while the link opens. Counted by the visitor counter's rules (no bots, no
     /// administrators, a daily cap per visitor), only for a program in the current list. Always 204.
     /// </summary>

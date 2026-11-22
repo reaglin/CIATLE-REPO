@@ -1,0 +1,39 @@
+@using PreseMakerRepo.Api.Services
+@*
+    The program panel (plan Phases 10 and 14): one of Dr. Ron Eaglin's Microsoft Store programs, at random, from
+    softwareplus.ai/apps.json, on the first page a browser opens in a session (ProgramPanelPageFilter decides and sets the
+    session cookie). The layout draws it above the page; a page may draw it itself where it fits better (the home page,
+    under its title). Drawn once: it is taken out of Context.Items here, so the layout's call draws nothing after a page's.
+*@
+@if (Context.Items[ProgramPanelPageFilter.ItemKey] is PanelProgram prog)
+{
+    Context.Items.Remove(ProgramPanelPageFilter.ItemKey);
+    var here = Context.Request.Path + Context.Request.QueryString;
+    @* data-nosnippet: never quoted in a search result (crawlers are not shown it, but just in case). *@
+    <div data-nosnippet>
+    <aside class="program-panel card mx-auto mb-3" aria-labelledby="program-panel-label program-panel-name" data-program="@prog.Id">
+        <div class="card-body d-flex align-items-start gap-3 py-2 pe-5">
+            <a href="@prog.Page" class="js-program-link flex-shrink-0" data-link="page" tabindex="-1" aria-hidden="true">
+                <img src="@prog.Icon" alt="" width="64" height="64" class="program-panel-icon" loading="lazy" />
+            </a>
+            <div class="flex-grow-1">
+                <p id="program-panel-label" class="program-panel-label small text-muted mb-0">From the developer of this site · a Windows program</p>
+                <p id="program-panel-name" class="h6 fw-bold mb-1">
+                    <a href="@prog.Page" class="js-program-link text-reset" data-link="page">@prog.Name</a>
+                </p>
+                <p class="small mb-1">@prog.Summary</p>
+                <p class="small mb-0">
+                    <a href="@prog.Page" class="js-program-link" data-link="page">More about @prog.Name on SoftwarePlus.ai</a>
+                    <span class="text-muted mx-1" aria-hidden="true">·</span>
+                    <a href="@prog.Store" class="js-program-link text-nowrap" data-link="store">Get it from the Microsoft Store</a>
+                </p>
+            </div>
+        </div>
+        @* With scripts, site.js removes the panel in place. Without, the link reloads this page, which the session cookie
+           already keeps free of the panel. *@
+        <a href="@here" class="btn-close program-panel-close js-program-close" role="button"
+           aria-label="Close this Windows program suggestion"
+           title="Close. It will not appear on other pages until you close your browser."></a>
+    </aside>
+    </div>
+}

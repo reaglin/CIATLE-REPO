@@ -80,7 +80,7 @@ try
     builder.Services.AddHostedService(sp => sp.GetRequiredService<VisitRecorder>());
     builder.Services.AddScoped<VisitorStatsService>();
     builder.Services.AddScoped<PublicVisitorFigureService>();
-    builder.Services.AddSingleton<PreseMakerRepo.Api.Services.ProgramPanelService>();   // the home page's program panel (plan Phase 10)
+    builder.Services.AddSingleton<PreseMakerRepo.Api.Services.ProgramPanelService>();   // the program panel (plan Phase 10)
 
     // Multi-scheme auth: /api/* → JWT Bearer, everything else → Cookie
     builder.Services.AddAuthentication(options =>
@@ -162,7 +162,9 @@ try
         options.Conventions.AuthorizePage("/account/profile");
         options.Conventions.AuthorizePage("/account/my-submissions");
         options.Conventions.AuthorizePage("/account/logout");
-    });
+    })
+    // The program panel on the page a visitor lands on, once a browser session (plan Phase 14).
+    .AddMvcOptions(o => o.Filters.Add<PreseMakerRepo.Api.Services.ProgramPanelPageFilter>());
 
     var app = builder.Build();
 
@@ -205,7 +207,7 @@ try
     app.UseAuthentication();
     app.UseAuthorization();
     app.MapVisitReport();   // POST /visit: pages report themselves (site.js); after auth, so administrators are not counted
-    app.MapProgramClickReport();   // POST /visit/program: clicks on the home page's program panel (plan 10.4)
+    app.MapProgramClickReport();   // POST /visit/program: clicks on the program panel (plan 10.4)
 
     app.MapControllerRoute(
         name: "default",

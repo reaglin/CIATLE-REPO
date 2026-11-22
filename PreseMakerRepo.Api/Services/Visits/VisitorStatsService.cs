@@ -6,7 +6,7 @@ namespace PreseMakerRepo.Api.Services.Visits;
 
 public sealed record PeriodRow(string Label, DateOnly Start, int Visitors, int PageViews);
 public sealed record PublicVisitorFigure(int Visitors, int Days);
-/// <summary>Clicks on one program in the home page's program panel (plan 10.4).</summary>
+/// <summary>Clicks on one program in the program panel (plan 10.4).</summary>
 public sealed record ProgramClickRow(string ProgramId, int PageClicks, int StoreClicks)
 {
     public int Total => PageClicks + StoreClicks;
@@ -34,10 +34,10 @@ public sealed class VisitorStats
     /// <summary>Arrivals (one per visitor per day) by referring site; "direct" ones are in <see cref="DirectArrivals"/>.</summary>
     public IReadOnlyList<CountRow> Sources { get; init; } = [];
     public int DirectArrivals { get; init; }
-    /// <summary>Clicks on the home page's program panel, most first (plan 10.4).</summary>
+    /// <summary>Clicks on the program panel, most first (plan 10.4).</summary>
     public IReadOnlyList<ProgramClickRow> ProgramClicks { get; init; } = [];
-    /// <summary>Views of the home page, where the panel shows: the base for the click rate.</summary>
-    public int HomePageViews { get; init; }
+    /// <summary>Arrivals (one per visitor per day): the panel shows once on each, so they are the base for the click rate (plan 14.3).</summary>
+    public int Arrivals { get; init; }
 }
 
 /// <summary>Reads the visitor counter's tables for <c>/admin/visitors</c> and the admin dashboard.</summary>
@@ -147,7 +147,7 @@ public sealed class VisitorStatsService
                     g.Where(c => c.Link == "page").Sum(c => c.Clicks),
                     g.Where(c => c.Link == "store").Sum(c => c.Clicks)))
                 .OrderByDescending(r => r.Total).ThenBy(r => r.ProgramId).ToList(),
-            HomePageViews = pageTotals.Where(p => p.Path == "/").Sum(p => p.Views),
+            Arrivals = visits.Count,
         };
     }
 

@@ -264,6 +264,20 @@ page does not need to be hidden behind an admin login."*
 | 13.2 | ⚠️ **Built 2026-11-22:** **`/visitors`**, public, no login: the admin page's figures for 7 / 30 / 90 days or 12 months (visitors, pages read, visitors a day, pages per visitor; by day or week with bars; parts of the site; referring sites; most-read courses), each range cached 10 minutes. Left out: the program-panel clicks and the list of individual addresses. Hidden below the same minimum. UX reviewed with Phase 12 (the header now opens the matching 7-day view); checked locally at 1280 px | Ron looks at `/visitors` after the deploy |
 | 13.3 | ⚠️ **Deployed by Ron 2026-11-22** with Phase 12; Ron: look at the top bar and `/visitors` | Live |
 
+## Phase 14 — The program panel on the page a visitor lands on (Ron, 2026-11-22)
+
+Ron, 2026-11-22: *"looking at how the visitors find the site, they land on different pages. The ad should therefore show up
+(only once per browser session) on the page that they land on (similar to main index page, but for all pages)."* This
+replaces Phase 10's "home page only" (8b) and "closed until the browser is closed" (10.3): the panel now shows **once per
+browser session, on the first public page opened**, whether or not it is closed, and on no later page of that session.
+
+| # | Task | Done when |
+|---|---|---|
+| 14.1 | ⚠️ **Built 2026-11-22:** `ProgramPanelPageFilter` (a page filter on every Razor page) decides after the page's handler: a GET drawn normally (200, not a redirect or error), not `/admin` or `/account`, not the static export, and no session cookie `fcr_programs_shown` (or Phase 10's `fcr_programs_closed`) yet. It picks a program and sets `fcr_programs_shown` (session, HttpOnly, holds "1"); a page where the list cannot be read sets no cookie, so a later page can still show it. `_ProgramPanel.cshtml` draws it: above the page on every page (layout), under the title on the home page. The × removes it in place (site.js); without scripts it is a link that reloads the page, already free of it. 4 new tests (78 green, with a crawler case). Checked locally: landing on `/careers` shows it and sets the cookie, the home page after shows none, a fresh session landing on `/` shows it under the title, `/account/login` and a 404 never do; in Chrome the × removes it and later pages come without it. **One panel per session, on the landing page** | Ron lands on a course page from a new browser session and sees the panel; the next page and the home page have none |
+| 14.2 | ⚠️ **Built 2026-11-22:** `/admin/visitors` → "Program panel": clicks per 100 **arrivals** (one per visitor per day) instead of per home-page view, with the wording changed to match. Clicks are counted as before (plan 10.4). **The admin rate** | Ron reads the section after the deploy |
+| 14.3 | ⚠️ **UX: walkthrough + heuristics passed 2026-11-22, 0 critical, 2 major, 4 minor — all fixed:** crawlers are not shown the panel (they keep no cookies, so it would have been on every page and could become Google's snippet), and it is marked `data-nosnippet`; on course and guide pages, where most visitors land, it sits under the title instead of above the breadcrumb (as on the home page); the × reads "Close this Windows program suggestion" with the tooltip "It will not appear on other pages until you close your browser"; after the ×, focus goes to the start of the page's content for keyboard and screen-reader users (not after a tap); the admin wording names the pages that never show it. Checked locally: a course page has it under the title, Googlebot gets none. ⚠️ Ron: how it looks on a course page on a phone | Passed and recorded here |
+| 14.4 | ⬜ **Deploy** — code only (no migration): `.\Deployment\deploy-update.ps1 -CodeOnly`, with Ron's other items for this deploy | Live |
+
 ---
 
 ## Open questions for Ron

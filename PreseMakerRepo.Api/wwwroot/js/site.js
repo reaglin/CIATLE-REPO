@@ -255,10 +255,11 @@ document.addEventListener('DOMContentLoaded', function () {
     startTimer();
 })();
 
-// The home page's program panel (plan Phase 10). The × hides it and sets a session cookie, so the server leaves
-// it out on every home page in this browser until the browser is closed (without JavaScript the × posts and the
-// server sets the same cookie). A click on one of its links is counted (plan 10.4): the program and which link,
-// sent as a beacon so the link still opens at once. Administrators are not counted (the layout's data-visit).
+// The program panel (plan Phases 10 and 14), on the first page a browser opens in a session. The server has already set
+// the session cookie that leaves it out of every later page, so the × only removes it from this one (without JavaScript
+// the × is a link that reloads the page, which the cookie keeps free of it). A click on one of its links is counted
+// (plan 10.4): the program and which link, sent as a beacon so the link still opens at once. Administrators are not
+// counted (the layout's data-visit).
 (function () {
     var panel = document.querySelector('.program-panel');
     if (!panel) return;
@@ -266,12 +267,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var close = panel.querySelector('.js-program-close');
     if (close) close.addEventListener('click', function (e) {
         e.preventDefault();
-        document.cookie = 'fcr_programs_closed=1; path=/; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '');
-        // From the keyboard (no pointer: detail 0), keep focus on the page by moving it to the main search box.
-        // Not after a tap, which would open a phone's on-screen keyboard.
-        var search = e.detail === 0 ? document.querySelector('input[type="search"]') : null;
+        // Keep focus on the page by moving it to the start of the page's content (a screen reader then reads on from
+        // there). Not after a tap, which could open a phone's on-screen keyboard or jump the page.
+        var main = document.getElementById('main');
+        var target = e.pointerType === 'touch' ? null : main;
         panel.remove();
-        if (search) search.focus({ preventScroll: true });
+        if (target) target.focus({ preventScroll: true });
+    });
+    // The × is a link acting as a button, so Space closes it too, as it would a button.
+    if (close) close.addEventListener('keydown', function (e) {
+        if (e.key === ' ') { e.preventDefault(); close.click(); }
     });
 
     if (document.body.getAttribute('data-visit') !== '1' || navigator.webdriver) return;

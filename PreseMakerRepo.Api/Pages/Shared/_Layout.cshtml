@@ -103,7 +103,7 @@
         </div>
     </nav>
 
-    <div class="container-lg py-4">
+    <div class="container-lg py-4" id="main" tabindex="-1">
         @if (TempData["Success"] is string successMsg)
         {
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -118,6 +118,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         }
+        @* The page is drawn before the layout, so a page that placed the program panel itself (the home page) has
+           already taken it; otherwise it goes here, above the page (plan Phase 14). *@
+        <partial name="_ProgramPanel" />
         @RenderBody()
     </div>
 

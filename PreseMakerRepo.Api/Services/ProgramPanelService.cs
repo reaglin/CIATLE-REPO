@@ -8,14 +8,20 @@ namespace PreseMakerRepo.Api.Services;
 public sealed record PanelProgram(string Id, string Name, string Summary, string Icon, string Page, string Store);
 
 /// <summary>
-/// The home page's program panel (plan Phase 10): Dr. Ron Eaglin's Microsoft Store programs, read from
+/// The program panel (plan Phase 10; on the landing page since Phase 14, see <see cref="ProgramPanelPageFilter"/>): Dr. Ron Eaglin's Microsoft Store programs, read from
 /// <c>https://softwareplus.ai/apps.json</c> (<c>SiteSettings:ProgramsUrl</c>) and kept for three hours.
 /// The panel must never slow or break the home page: the list is fetched with a short timeout, and a
 /// failure leaves the panel out (and is not retried for ten minutes).
 /// </summary>
 public sealed class ProgramPanelService
 {
-    /// <summary>The session cookie the panel's × sets (plan 10.3). It holds only "1".</summary>
+    /// <summary>
+    /// The session cookie set when the panel is shown (plan 14.1): once per browser session, on the page the visitor
+    /// lands on. It holds only "1".
+    /// </summary>
+    public const string ShownCookie = "fcr_programs_shown";
+
+    /// <summary>The session cookie the home-page-only panel's × set (plan 10.3); still honoured. It holds only "1".</summary>
     public const string ClosedCookie = "fcr_programs_closed";
 
     public const string DefaultUrl = "https://softwareplus.ai/apps.json";

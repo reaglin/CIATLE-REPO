@@ -8,6 +8,18 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — the program panel on the page a visitor lands on, once a browser session (plan Phase 14, 2026-11-22)
+
+Code only, no migration: **`.\Deployment\deploy-update.ps1 -CodeOnly`** (or with a full deploy if one is waiting). The panel
+leaves the home page's fixed spot and shows on the first public page a browser opens in a session; a session cookie
+`fcr_programs_shown` keeps it off every later page. `/admin/visitors` rates clicks per 100 arrivals.
+
+| Verify after the deploy |
+|---|
+| In a private window, open a course page (e.g. `/courses/COP1000`) first: the panel is above the page; open another page and the home page: no panel |
+| Close the private window, open a new one on `/`: the panel is under the title; the × removes it |
+| `/admin/visitors` → "Program panel" reads "Clicks per 100 arrivals" |
+
 ### ✅ DEPLOYED 2026-11-22 — guide requests on hold, public decline reasons, re-requests; weekly visitors in the header and a public `/visitors` page (plan Phases 12–13, 2026-11-22)
 
 No migration of its own (the new **Held** status is a number in the existing column), but it goes out with Phase 11's, so
