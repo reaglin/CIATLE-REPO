@@ -51,6 +51,14 @@ SCHOOLS = {
         "catalog": "Zm7WidFIJix2TYXQumos",
         "cache": "fau_courses.json",
     },
+    # Added 2026-11-22 (batch 251): FSU's bulletin moved from registrar.fsu.edu to
+    # bulletin.fsu.edu, a Coursedog site ("26_27 GENERAL BULLETIN").
+    "fsu": {
+        "host": "bulletin.fsu.edu",
+        "school": "fsu_peoplesoft",
+        "catalog": "f8cXWDJD0Lphf2KTcUZh",
+        "cache": "fsu_courses.json",
+    },
     "fscj": {
         "host": "catalog.fscj.edu",
         "school": "fscj_peoplesoft",
