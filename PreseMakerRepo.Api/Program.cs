@@ -79,6 +79,7 @@ try
     builder.Services.AddSingleton<VisitRecorder>();
     builder.Services.AddHostedService(sp => sp.GetRequiredService<VisitRecorder>());
     builder.Services.AddScoped<VisitorStatsService>();
+    builder.Services.AddScoped<PublicVisitorFigureService>();
     builder.Services.AddSingleton<PreseMakerRepo.Api.Services.ProgramPanelService>();   // the home page's program panel (plan Phase 10)
 
     // Multi-scheme auth: /api/* → JWT Bearer, everything else → Cookie

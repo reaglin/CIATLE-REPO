@@ -72,6 +72,17 @@
     {
         <a href="@Model.Course.CurriculumGuideUrl" target="_blank" rel="noopener">Curriculum Guide ↗</a>
     }
+    else if (Model.DeclineReason is not null)
+    {
+        <div class="small border rounded p-2 w-100" style="max-width: 760px;">
+            <strong>No curriculum guide: an earlier request was declined.</strong> @Model.DeclineReason
+            <div class="mt-1">
+                If that has changed (for example the college now publishes a description or syllabus),
+                <a asp-page="/Browse/RequestGuide" asp-route-course="@Model.Course.CourseId" rel="nofollow">request it again</a>
+                and say what has changed.
+            </div>
+        </div>
+    }
     else
     {
         <span class="text-muted small">No curriculum guide yet.</span>

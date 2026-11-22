@@ -23,16 +23,18 @@
     Days are Florida days.
 </p>
 <p class="small mb-2" style="max-width: 60rem">
-    <strong>On the home page:</strong>
+    <strong>In the bar at the top of every page:</strong>
     @if (Model.PublicFigure is { } pf)
     {
-        <text>the public sees "<strong>@pf.Visitors.ToString("N0")</strong> people used the site @(pf.Days == 1 ? "today" : $"in the last {pf.Days} days")".</text>
+        <text>the public sees "<strong>@pf.Visitors.ToString("N0")</strong> visitors @(pf.Days == 1 ? "today" : $"in the last {pf.Days} days")".</text>
     }
     else
     {
-        <text>nothing is shown yet. The figure appears once the last 30 days reach <strong>@Model.PublicMinimum.ToString("N0")</strong> visitors.</text>
+        <text>no visitor figure is shown yet. It appears once the last 7 days reach <strong>@Model.PublicMinimum.ToString("N0")</strong> visitors.</text>
     }
-    It is this page's <em>Last 30 days</em> Visitors figure, refreshed every 10 minutes, so it can trail this page a little.
+    It is this page's <em>Last 7 days</em> Visitors figure, refreshed every 10 minutes, so it can trail this page a little.
+    It links to the public <a href="/visitors" target="_blank" rel="noopener">visitor page</a>, which shows the figures
+    below except the program panel and the list of individual pages.
 </p>
 <details class="small mb-3" style="max-width: 60rem">
     <summary>Why the numbers may be lower (or higher) than you expect</summary>

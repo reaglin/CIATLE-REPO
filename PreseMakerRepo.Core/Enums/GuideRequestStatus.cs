@@ -10,5 +10,9 @@ public enum GuideRequestStatus
     /// <summary>The guide has been published.</summary>
     Published = 2,
     /// <summary>Will not be produced (not a real course, out of scope, duplicate…).</summary>
-    Declined = 3
+    Declined = 3,
+    /// <summary>Waiting for the site editor's decision: the guide could not be written as things stand
+    /// (no readable description, ...). <c>AdminNotes</c> holds the reason, worded so it can be shown
+    /// publicly if the request is then declined.</summary>
+    Held = 4
 }

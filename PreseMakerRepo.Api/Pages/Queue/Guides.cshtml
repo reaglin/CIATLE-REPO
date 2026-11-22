@@ -26,7 +26,8 @@
 <p class="text-muted" style="max-width: 760px;">
     Every <strong>Request Guide</strong> click lands here. Curriculum guides are written in order of demand —
     the most-requested courses first — and the site is updated weekly. Requests are anonymous; nothing about
-    who asked is shown.
+    who asked is shown. A request is <strong>on hold</strong> when the colleges do not publish enough to write the
+    guide; a <strong>declined</strong> request shows why, and the course can be requested again if that changes.
 </p>
 
 <ul class="nav nav-pills mb-3" aria-label="Filter the queue">
@@ -102,6 +103,9 @@ else
                                 case "Queued":
                                     <span class="badge text-bg-info">In progress</span>
                                     break;
+                                case "Held":
+                                    <span class="badge text-bg-warning" title="The guide cannot be written from what the colleges publish now; the site editor is deciding">On hold</span>
+                                    break;
                                 case "Declined":
                                     <span class="badge text-bg-secondary">Declined</span>
                                     break;
@@ -111,6 +115,23 @@ else
                             }
                         </td>
                     </tr>
+                    @if (item.Status == "Held")
+                    {
+                        <tr class="border-top-0">
+                            <td colspan="@(waiting ? 5 : 4)" class="small text-muted pt-0">
+                                On hold: the colleges do not publish enough to write this guide now, and the site editor is deciding.
+                            </td>
+                        </tr>
+                    }
+                    @if (item.Note is not null)
+                    {
+                        <tr class="border-top-0">
+                            <td colspan="@(waiting ? 5 : 4)" class="small text-muted pt-0">
+                                <span class="fw-semibold">Why:</span> @item.Note
+                                <span>If that has changed, <a asp-page="/Browse/RequestGuide" asp-route-course="@item.CourseId" rel="nofollow">request it again</a> and say what changed.</span>
+                            </td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>

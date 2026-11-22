@@ -9,7 +9,8 @@ public sealed record GuideRequestCreatedResponse(
 
 /// <summary>
 /// One course in the public guide request queue. Carries nothing about who asked — no schools typed by
-/// requesters, reasons, notes or hashes. <see cref="Status"/>: Open · Queued · Published · Declined.
+/// requesters, their reasons or hashes. <see cref="Status"/>: Open · Queued · Held · Published · Declined.
+/// <see cref="Note"/> is set only for Declined: the public reason the guide was not written.
 /// </summary>
 public sealed record PublicGuideQueueItem(
     int Rank,
@@ -20,7 +21,8 @@ public sealed record PublicGuideQueueItem(
     DateTime LastRequestedUtc,
     string Status,
     bool HasGuide,
-    bool IsListed);
+    bool IsListed,
+    string? Note = null);
 
 /// <summary>The public queue for one filter, with the size of each filter for the page tabs.</summary>
 public sealed record PublicGuideQueueResponse(
@@ -41,4 +43,5 @@ public sealed record GuideRequestSummaryResponse(
     string Status,
     bool InTaxonomy,
     bool HasGuide,
-    string? AdminNotes);
+    string? AdminNotes,
+    IReadOnlyList<string>? RequesterNotes = null);

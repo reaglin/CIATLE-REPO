@@ -38,6 +38,8 @@ public class RequestGuideModel : PageModel
     public bool InTaxonomy { get; set; }
     public bool HasGuide { get; set; }
     public int OpenRequests { get; set; }
+    /// <summary>Set when every earlier request was declined: the reason, so the visitor can say what has changed.</summary>
+    public string? DeclineReason { get; set; }
     public string? TaxonomyTitle { get; set; }
     public string? ResultMessage { get; set; }
     public bool Submitted { get; set; }
@@ -99,6 +101,15 @@ public class RequestGuideModel : PageModel
                 : RedirectToPage(new { course });
         }
 
+        // A declined course is asked for again on the form, which shows the reason and asks what has changed.
+        if (await _service.DeclineReasonAsync(id) is not null)
+        {
+            var form = Url.Page("/Browse/RequestGuide", new { course = id })!;
+            return wantsJson
+                ? new JsonResult(new { outcome = "detailsRequired", courseId = id, requestCount = 0, message = "", redirect = form })
+                : LocalRedirect(form);
+        }
+
         var result = await _service.CreateAsync(new CreateGuideRequestRequest(id, null, null, null, null),
             ClientIp(), UserId(), GuideRequestChannel.Button);
         var message = MessageFor(result);
@@ -151,5 +162,6 @@ public class RequestGuideModel : PageModel
         TaxonomyTitle = title;
         HasGuide = hasGuide;
         OpenRequests = await _service.WaitingCountAsync(id);
+        DeclineReason = HasGuide || OpenRequests > 0 ? null : await _service.DeclineReasonAsync(id);
     }
 }

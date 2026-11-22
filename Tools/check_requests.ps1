@@ -9,6 +9,11 @@
      drafts or declines up to -Batch requests, validates, pushes, checks they are live,
      commits, pushes to git and writes a report.
   3. The report is shown here and kept in Tools\logs\check-<date>.log.
+  4. A request Claude cannot write is put ON HOLD on the site with a reason worded for the public.
+     At the end you are shown every held request with its reason and asked what to do
+     (Tools\guide_requests.py decide): decline all, one at a time, or leave them. A declined
+     request shows its reason publicly, and visitors can request the course again if that changes.
+     decide-requests.cmd in the repo root does step 4 on its own.
 
   Run it from check-requests.cmd in the repo root (double-click it, or run it in a terminal).
 
@@ -16,7 +21,7 @@
   The most requests to work in one run (default 10). The rest wait for the next run.
 
 .PARAMETER CheckOnly
-  List what is waiting and stop. Claude is not started.
+  List what is waiting, offer the held decisions, and stop. Claude is not started.
 
 .EXAMPLE
   .\check_requests.ps1                 # the normal check
@@ -42,19 +47,33 @@ try {
     exit 1
 }
 
+# Held = waiting for Ron's decision, not for Claude.
+$work = @($guides.items | Where-Object { $_.status -ne 'Held' })
+$held = @($guides.items | Where-Object { $_.status -eq 'Held' })
+
+function Invoke-HeldDecisions {
+    if ($held.Count -eq 0) { return }
+    Push-Location $Tools
+    try { python guide_requests.py decide } finally { Pop-Location }
+}
+
 Write-Host ""
-Write-Host "Curriculum-guide requests waiting: $($guides.waiting)" -ForegroundColor Cyan
-foreach ($i in $guides.items) {
+Write-Host "Curriculum-guide requests to work:  $($work.Count)" -ForegroundColor Cyan
+foreach ($i in $work) {
     Write-Host ("  {0,3}. {1,-10} {2}  ({3} request(s))" -f $i.rank, $i.courseId, $i.title, $i.requestCount)
+}
+if ($held.Count -gt 0) {
+    Write-Host "On hold for your decision:          $($held.Count)  ($((@($held | ForEach-Object { $_.courseId })) -join ', '))" -ForegroundColor Yellow
 }
 Write-Host "Career-path requests waiting:      $($careers.waiting)" -ForegroundColor Cyan
 foreach ($i in $careers.items) { Write-Host "       $($i | ConvertTo-Json -Compress -Depth 2)" }
 Write-Host ""
 
-if ($CheckOnly) { exit 0 }
+if ($CheckOnly) { Invoke-HeldDecisions; exit 0 }
 
-if ($guides.waiting -eq 0 -and $careers.waiting -eq 0) {
-    Write-Host "Nothing is waiting. No Claude session needed." -ForegroundColor Green
+if ($work.Count -eq 0 -and $careers.waiting -eq 0) {
+    Write-Host "Nothing to work. No Claude session needed." -ForegroundColor Green
+    Invoke-HeldDecisions
     exit 0
 }
 
@@ -67,11 +86,22 @@ the batch. Where you would normally need his decision, skip that item and list i
 Use the guide skill (.claude/skills/guide/SKILL.md) and follow Tools/CLAUDE.md and Tools/SOURCES.md
 as you do in an ordinary session. Work from Tools/.
 
-1. Run python review_lookup.py --requests first (Tools/CLAUDE.md requires it). Any course it marks
-   HELD - ASK RON BEFORE WRITING is skipped in this run and reported with its REVIEW_QUEUE item.
-2. Take up to $Batch of the other waiting requests in rank order. For each, as in earlier batches (see the git log, e.g.
+1. Run python review_lookup.py --requests first (Tools/CLAUDE.md requires it). Requests already ON
+   HOLD on the site are Ron's to decide: leave them alone. Read the open ones with
+   python guide_requests.py list --status open: a course declined before and requested again shows the
+   old reason and what the requester says has changed; write it if the change makes it writable.
+2. Take up to $Batch of the waiting requests in rank order. For each, as in earlier batches (see the git log, e.g.
    "Batches 243-244"): research and draft the guide, send the course's base data where it is
-   missing, or decline it (shell courses and the like) with a public reason, as earlier runs did.
+   missing, or decline a shell course (special topics, independent study and the like) with a public
+   reason, as earlier runs did.
+   Any course you cannot write for another reason (no readable description, a course the college
+   no longer teaches, a course a REVIEW_QUEUE item marks HELD - ASK RON) is put ON HOLD for Ron with
+   python guide_requests.py hold <ID> "<reason>". The reason is shown to the public if Ron declines,
+   so write one to three plain sentences about the course: what is missing and what would let it be
+   written (for example "Florida Poly, the only college that offers EEL4448, does not publish a
+   description or syllabus for it, so there is nothing to base a guide on. If one is published, the
+   course can be requested again."). Never name Ron, a REVIEW_QUEUE item, or the visitor. Also add
+   the REVIEW_QUEUE item as before.
 3. Validate (python validate_drafts.py on the batch). Never push past a FAIL: fix it or skip it.
 4. Reconcile and push, then confirm each guide is live with /api/v1/courses/{id}/guide.
 5. Also read the career-path requests (python career_paths.py requests). Do not write career
@@ -80,8 +110,8 @@ as you do in an ordinary session. Work from Tools/.
    Tools/REVIEW_QUEUE.md as needed). Commit only the files this run changed, with a message in the
    repo's style, and git push.
 7. End with a short report: a table of guides published (course, credits, contact hours), the
-   requests declined and why, the items skipped for Ron and why, how many requests are still
-   waiting, and the career-path requests waiting.
+   requests declined and why, the requests put on hold and their reasons, how many requests are
+   still waiting, and the career-path requests waiting. (Ron decides the held ones right after.)
 "@
 
 $logDir = Join-Path $Tools 'logs'
@@ -112,4 +142,11 @@ try {
 Write-Host ""
 if ($code -eq 0) { Write-Host "Done. Report saved to $log" -ForegroundColor Green }
 else             { Write-Host "Claude exited with code $code. See $log" -ForegroundColor Red }
+
+# The run may have put more on hold: re-read, then offer the decisions.
+try {
+    $guides = (Invoke-RestMethod "$Base/queue/guides?status=waiting" -TimeoutSec 30).data
+    $held = @($guides.items | Where-Object { $_.status -eq 'Held' })
+} catch { }
+Invoke-HeldDecisions
 exit $code

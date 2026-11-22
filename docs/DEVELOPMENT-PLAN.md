@@ -234,6 +234,36 @@ in, to check against the link and edit; the `/resources` review loop sees them i
 | 11.3 | ⚠️ **UX: walkthrough + heuristics passed 2026-11-21, 9 fixes** (the page and cards now say "AI-reviewed summary", since a summary may start from the submitter's text; the note box is "Note to the reviewer", asking who they are, so it no longer asks what the Summary asks; the admin card shows the suggested listing with a "Listing suggested" badge before Approve is opened; the admin summary needs 20 characters in the browser, so a short one cannot lose edits; plain error messages naming the bad course number; "COP 2071C" accepted as typed in a catalogue; "Suggest how it should appear"; the note field labelled; the thank-you says the reviewer may edit). Not changed: unknown course numbers are reported at approval, not to the visitor. Checked locally at 1280 px, including the error messages | Passed and recorded here |
 | 11.4 | ⬜ **Deploy**: a full deploy (`.\Deployment\deploy-update.ps1`, with migrations), which also ships the badge fix | Live; Ron: suggest a test link with a title and see it filled in on `/admin/resources` |
 
+## Phase 12 — Requests on hold, declined with a public reason, and asked for again (Ron, 2026-11-22)
+
+Ron, 2026-11-22: *"These need responses from me and when I do check-requests I do get the reasons we have not published. I
+need to be able to deny them, but also have the reasons they were denied … I need to automate this process as much as
+possible."* and *"the declined ones should have a reason for the decline and also allow users to re-request if the
+conditions around the decline change."* A request the check cannot write is now put **on hold** on the site with a reason
+worded for the public; Ron decides it in one place (`decide-requests.cmd`, the end of `check-requests`, or
+`/admin/guide-requests`); a decline shows its reason publicly, and anyone may request the course again, saying what changed.
+
+| # | Task | Done when |
+|---|---|---|
+| 12.1 | ⚠️ **Built 2026-11-22:** a new request status **Held** (no migration: the status is stored as a number); a hold needs its reason (validator); held courses count as waiting in the public queue ("On hold" badge and a line saying the editor is deciding); a new request for a held course joins the hold; `DeclineHeldAsync` declines held courses with the reason they were held with; the public queue API and page show a declined course's reason (`note`) with "request it again"; the course page shows the reason in place of the Request Guide button, and the request form asks "What has changed?"; the one-click button sends a declined course to that form; the admin list carries what requesters wrote (`requesterNotes`). 4 new tests (72 green). **The site** | A held course shows "On hold"; declining it shows the reason publicly; a new request reopens it with the old reason and the new note visible to the reviewer |
+| 12.2 | ⚠️ **Built 2026-11-22:** `/admin/guide-requests` has an **On hold** tab, a banner when anything is on hold, and per course **Decline** (with the held reason) and **Send back to be written**, plus **Decline all N** (only the courses shown). **The admin page** | Ron can decide every held course in the browser |
+| 12.3 | ⚠️ **Built 2026-11-22:** `Tools/guide_requests.py` (`decide`, `list`, `hold`, `decline`, `release`) and **`decide-requests.cmd`** in the repo root: every held request with its reason and what requesters wrote, then A (decline all, confirmed), O (one at a time: decline, edit the reason, send back to be written) or Enter (leave). `check-requests` starts Claude only for requests it can work (not held ones), tells it to **hold** what it cannot write with a public reason, and ends with the same decisions; `review_lookup.py --requests` skips held courses. **The one-step decision** | Ron double-clicks one file and answers one key |
+| 12.4 | ⚠️ **Done 2026-11-22:** the nine older decline notes that read as internal notes ("Declined by Ron … REVIEW_QUEUE 124") reworded for the public before they become visible (`Tools/scratchpad/b251_reasons.py declined`). **After the deploy:** `python scratchpad/b251_reasons.py hold` puts the five waiting courses (EEL4448, EEL5025, EEL5009, EET2525C, ETS3543L) on hold with their reasons, ready for `decide-requests` | The public queue's Declined tab reads well; the five show On hold |
+| 12.5 | ⚠️ **UX: walkthrough + heuristics passed 2026-11-22, 10 fixes** (Decline all declines only the courses on screen, not any held since; how to undo a decline, on the page and in the console; a failed send-back no longer stops the console run, and it always prints what was done; the console asks Y before declining all; editing a reason states the 20-character minimum and asks again; "Write it" became "Send back to be written"; each Decline asks first; "On hold" explained in a visible line, not only a tooltip; the tab says On hold; a declined course not listed on the site can be requested again too). Not changed: the thank-you after a request that joins a hold still says "in the queue" (it is, on hold). Checked locally at 1280 px | Passed and recorded here |
+| 12.6 | ⬜ **Deploy** (code only would do, but the Phase 11 migration is waiting, so `.\Deployment\deploy-update.ps1`); then 12.4's hold step | Live; Ron: run `decide-requests.cmd` and decide the five |
+
+## Phase 13 — Weekly visitors in the header, and a public visitor page (Ron, 2026-11-22)
+
+Ron, 2026-11-22: *"where we have # of courses, # of guides, we can also put # of weekly visitors (last 7 days) up there …
+(instead of under the title). It would also be nice if that linked to a more detailed visitor analysis page. The visitor
+page does not need to be hidden behind an admin login."*
+
+| # | Task | Done when |
+|---|---|---|
+| 13.1 | ⚠️ **Built 2026-11-22:** the bar at the top of every page reads "… courses · … curriculum guides · **N visitors in the last 7 days**", linked to `/visitors?days=7` (`PublicVisitorFigureService`, cached 10 minutes, hidden below `SiteSettings:PublicVisitorMinimum`, left out of the static export); the figure under the home page title is gone; `/admin/visitors` says what the bar shows. Test added to `VisitCounterTests` | The bar shows the 7-day figure and links to the page |
+| 13.2 | ⚠️ **Built 2026-11-22:** **`/visitors`**, public, no login: the admin page's figures for 7 / 30 / 90 days or 12 months (visitors, pages read, visitors a day, pages per visitor; by day or week with bars; parts of the site; referring sites; most-read courses), each range cached 10 minutes. Left out: the program-panel clicks and the list of individual addresses. Hidden below the same minimum. UX reviewed with Phase 12 (the header now opens the matching 7-day view); checked locally at 1280 px | Ron looks at `/visitors` after the deploy |
+| 13.3 | ⬜ **Deploy** with Phase 12 | Live |
+
 ---
 
 ## Open questions for Ron

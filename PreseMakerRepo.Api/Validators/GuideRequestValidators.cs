@@ -33,7 +33,11 @@ public class SetGuideRequestStatusRequestValidator : AbstractValidator<SetGuideR
         RuleFor(x => x.Status)
             .NotEmpty()
             .Must(s => Enum.TryParse<PreseMakerRepo.Core.Enums.GuideRequestStatus>(s, true, out _))
-            .WithMessage("Status must be one of: Open, Queued, Published, Declined.");
+            .WithMessage("Status must be one of: Open, Queued, Held, Published, Declined.");
         RuleFor(x => x.Notes).MaximumLength(1000);
+        // A hold records why, because that reason becomes the public one if the request is declined.
+        RuleFor(x => x.Notes).NotEmpty()
+            .When(x => string.Equals(x.Status?.Trim(), "Held", StringComparison.OrdinalIgnoreCase))
+            .WithMessage("A hold needs its reason (it is shown publicly if the request is then declined).");
     }
 }

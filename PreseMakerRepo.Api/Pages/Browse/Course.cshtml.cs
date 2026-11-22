@@ -13,7 +13,12 @@ namespace PreseMakerRepo.Api.Pages.Browse;
 public class CourseModel : PageModel
 {
     private readonly AppDbContext _db;
-    public CourseModel(AppDbContext db) => _db = db;
+    private readonly PreseMakerRepo.Api.Services.GuideRequestService _requests;
+    public CourseModel(AppDbContext db, PreseMakerRepo.Api.Services.GuideRequestService requests)
+    {
+        _db = db;
+        _requests = requests;
+    }
 
     public sealed record OfferingView(string Code, string? Name, string? Title, decimal? Credits, int? ClockHours);
 
@@ -24,8 +29,10 @@ public class CourseModel : PageModel
     public IReadOnlyList<ModuleEntity> Modules { get; set; } = [];
     public bool HasGuide { get; set; }
     public IReadOnlyList<OfferingView> Offerings { get; set; } = [];
-    /// <summary>Guide requests still waiting (Open or Queued).</summary>
+    /// <summary>Guide requests still waiting (Open, Queued or Held).</summary>
     public int RequestCount { get; set; }
+    /// <summary>Why the guide was declined, when it was; the visitor may ask again if that has changed.</summary>
+    public string? DeclineReason { get; set; }
     /// <summary>Listed resources.</summary>
     public int ResourceCount { get; set; }
 
@@ -51,7 +58,9 @@ public class CourseModel : PageModel
             .CountAsync(r => r.CourseId == normalizedId && r.Status == ResourceStatus.Active);
         if (!HasGuide)
             RequestCount = await _db.GuideRequests.AsNoTracking().CountAsync(r => r.CourseId == normalizedId &&
-                (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued));
+                (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued || r.Status == GuideRequestStatus.Held));
+        if (!HasGuide && RequestCount == 0)
+            DeclineReason = await _requests.DeclineReasonAsync(normalizedId);
 
         DisplayTitle = CourseTitles.Display(normalizedId, Course.Title, Course.StateTitle, guideTitle);
         if (CourseTitles.IsReal(normalizedId, Course.StateTitle))

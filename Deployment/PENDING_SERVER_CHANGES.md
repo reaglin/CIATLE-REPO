@@ -8,6 +8,21 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
+### ⬜ TO DEPLOY — guide requests on hold, public decline reasons, re-requests; weekly visitors in the header and a public `/visitors` page (plan Phases 12–13, 2026-11-22)
+
+No migration of its own (the new **Held** status is a number in the existing column), but it goes out with Phase 11's, so
+**`.\Deployment\deploy-update.ps1`** (full).
+
+| Verify after the deploy |
+|---|
+| The top bar reads "… courses · … curriculum guides · N visitors in the last 7 days", and the link opens `/visitors?days=7` with the same number (signed out; no login asked) |
+| The home page no longer shows the visitor line under the title |
+| `/queue/guides?status=declined` shows a "Why:" line under each course, with "request it again" |
+| Then, from `Tools/`: `python scratchpad/b251_reasons.py hold` → the five waiting courses show **On hold** in `/queue/guides` |
+| Double-click `decide-requests.cmd`: the five are listed with their reasons; decide them (A, or O one at a time) |
+| A declined course's page (e.g. `/courses/EEL4016`) shows the reason and "request it again"; the one-click Request Guide on lists opens the form for it |
+| `/admin/guide-requests?status=held` shows the On hold tab with Decline / Send back to be written |
+
 ### ⬜ TO DEPLOY — the submitter suggests the listing (plan Phase 11, 2026-11-21) — a FULL deploy
 
 ⚠ **A migration** (`AddResourceSubmissionSuggestions`, three nullable columns on `ResourceSubmissions`), so this one is

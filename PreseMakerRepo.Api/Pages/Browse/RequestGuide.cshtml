@@ -62,21 +62,32 @@
     <div class="card" style="max-width: 720px;">
         <div class="card-body">
             <h2 class="h5 mb-1">@Model.CourseId — @Model.TaxonomyTitle</h2>
-            <p class="text-muted small mb-3">
-                No curriculum guide yet.
-                @if (Model.OpenRequests > 0)
-                {
-                    <span>@Model.OpenRequests @(Model.OpenRequests == 1 ? "person has" : "people have") already asked for it.</span>
-                }
-            </p>
+            @if (Model.DeclineReason is not null)
+            {
+                <div class="alert alert-light border small mb-3">
+                    <strong>An earlier request for this guide was declined.</strong> @Model.DeclineReason
+                    <div class="mt-1">You can ask again. Say what has changed, such as a link to a course description
+                    or syllabus that is now published, so the reviewer can write it.</div>
+                </div>
+            }
+            else
+            {
+                <p class="text-muted small mb-3">
+                    No curriculum guide yet.
+                    @if (Model.OpenRequests > 0)
+                    {
+                        <span>@Model.OpenRequests @(Model.OpenRequests == 1 ? "person has" : "people have") already asked for it.</span>
+                    }
+                </p>
+            }
             <form method="post">
                 <input type="hidden" asp-for="CourseId" />
                 <div class="mb-3">
-                    <label class="form-label" for="Reason">Anything we should know? <span class="text-muted">(optional)</span></label>
-                    <textarea class="form-control" id="Reason" asp-for="Reason" rows="2" maxlength="1000"
-                              placeholder="e.g. taking it next term, or a catalog link"></textarea>
+                    <label class="form-label" for="Reason">@(Model.DeclineReason is null ? "Anything we should know?" : "What has changed?") <span class="text-muted">(optional)</span></label>
+                    <textarea class="form-control" id="Reason" asp-for="Reason" rows="@(Model.DeclineReason is null ? 2 : 3)" maxlength="1000"
+                              placeholder="@(Model.DeclineReason is null ? "e.g. taking it next term, or a catalog link" : "e.g. a link to the course description or syllabus")"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Request this guide</button>
+                <button type="submit" class="btn btn-primary">@(Model.DeclineReason is null ? "Request this guide" : "Request it again")</button>
                 <a asp-page="/Browse/Course" asp-route-courseId="@Model.CourseId" class="btn btn-link">Cancel</a>
             </form>
         </div>

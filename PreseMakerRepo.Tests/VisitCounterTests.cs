@@ -191,6 +191,11 @@ public class VisitCounterTests
             Assert.Equal(new PublicVisitorFigure(2, 30), await svc.GetPublicFigureAsync(1, new DateOnly(2026, 12, 18)));
             // Once every visit is older than 30 days (21 Nov to 20 Dec), the figure goes rather than say "0".
             Assert.Null(await svc.GetPublicFigureAsync(0, new DateOnly(2026, 12, 20)));
+
+            // The header's figure covers the last 7 days: on the 25th that is 19-25 Nov, so A and B count once each,
+            // and a week later (27 Nov: 21-27 Nov) nobody is in the window.
+            Assert.Equal(new PublicVisitorFigure(2, 7), await svc.GetPublicFigureAsync(1, new DateOnly(2026, 11, 25), days: 7));
+            Assert.Null(await svc.GetPublicFigureAsync(1, new DateOnly(2026, 11, 27), days: 7));
         }
     }
 

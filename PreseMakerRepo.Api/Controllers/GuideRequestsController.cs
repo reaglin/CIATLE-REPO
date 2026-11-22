@@ -65,7 +65,7 @@ public class GuideRequestsController : ControllerBase
         {
             if (!Enum.TryParse<GuideRequestStatus>(status, true, out var parsed))
                 return BadRequest(ApiResponse<object?>.Fail(ErrorCodes.ValidationError,
-                    "status must be one of: open, queued, published, declined, all."));
+                    "status must be one of: open, held, queued, published, declined, all."));
             st = parsed;
         }
         var list = await _service.SummaryAsync(st, Math.Max(1, minCount));

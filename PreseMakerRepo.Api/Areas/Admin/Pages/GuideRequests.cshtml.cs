@@ -16,6 +16,7 @@ public class GuideRequestsModel : PageModel
     [BindProperty(SupportsGet = true)] public string Status { get; set; } = "open";
     public IReadOnlyList<GuideRequestSummaryResponse> Items { get; set; } = [];
     public int TotalRequests { get; set; }
+    public int HeldCount { get; set; }
     [TempData] public string? Message { get; set; }
 
     public async Task OnGetAsync()
@@ -25,6 +26,22 @@ public class GuideRequestsModel : PageModel
         GuideRequestStatus? st = Enum.TryParse<GuideRequestStatus>(Status, true, out var parsed) ? parsed : null;
         Items = await _service.SummaryAsync(st);
         TotalRequests = Items.Sum(i => i.RequestCount);
+        HeldCount = st == GuideRequestStatus.Held ? Items.Count : (await _service.SummaryAsync(GuideRequestStatus.Held)).Count;
+    }
+
+    /// <summary>Decline one held course, or the held courses the page showed ("shown"), each with the reason
+    /// recorded when it was held. Never more than was on screen: a course put on hold since is left alone.</summary>
+    public async Task<IActionResult> OnPostDeclineHeldAsync(string? courseId, string[]? shown)
+    {
+        var raw = !string.IsNullOrWhiteSpace(courseId) ? [courseId] : shown ?? [];
+        var only = raw.Select(c => GuideRequestService.TryNormalizeCourseId(c, out var id) ? id : null)
+            .OfType<string>().ToList();
+        if (only.Count == 0) return RedirectToPage(new { Status });
+        var declined = await _service.DeclineHeldAsync(only);
+        Message = declined.Count == 0 ? "Nothing on hold was declined."
+            : $"Declined with their reasons: {string.Join(", ", declined)}. The reasons now show in the public queue. "
+              + "To undo one, open the Declined tab and set it to Open.";
+        return RedirectToPage(new { Status });
     }
 
     // ⚠ The new status is "newStatus", not "status": the form also posts the hidden page filter as
@@ -36,6 +53,11 @@ public class GuideRequestsModel : PageModel
         if (GuideRequestService.TryNormalizeCourseId(courseId, out var id) &&
             Enum.TryParse<GuideRequestStatus>(newStatus, true, out var st))
         {
+            if (st == GuideRequestStatus.Held && string.IsNullOrWhiteSpace(notes))
+            {
+                Message = $"{id}: a hold needs its reason (type it in the box; it is shown publicly if declined).";
+                return RedirectToPage(new { Status });
+            }
             var n = await _service.SetStatusAsync(id, st, notes);
             Message = $"{id}: {n} request(s) marked {st}.";
         }

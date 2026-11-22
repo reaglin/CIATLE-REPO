@@ -95,7 +95,7 @@ public class CourseDirectory
                     .FirstOrDefault(),
                 HasModules = _db.Modules.Any(m => m.CourseId == c.CourseId && m.Status == ContentStatus.Published),
                 RequestCount = _db.GuideRequests.Count(r => r.CourseId == c.CourseId &&
-                    (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued)),
+                    (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued || r.Status == GuideRequestStatus.Held)),
                 ResourceCount = _db.CourseResources.Count(r => r.CourseId == c.CourseId && r.Status == ResourceStatus.Active)
             })
             .ToListAsync();

@@ -24,10 +24,10 @@ public class VisitorsModel : PageModel
 
     public VisitorStats Stats { get; private set; } = new();
 
-    /// <summary>The home page hides its figure below this (plan 9.5).</summary>
+    /// <summary>The header bar hides its figure below this (plan 9.5).</summary>
     public int PublicMinimum { get; private set; }
 
-    /// <summary>What the home page shows now (it may trail by up to 10 minutes), or null if it shows nothing.</summary>
+    /// <summary>What the header bar shows now (it may trail by up to 10 minutes), or null if it shows nothing.</summary>
     public PublicVisitorFigure? PublicFigure { get; private set; }
 
     /// <summary>The programs the panel shows now (from softwareplus.ai/apps.json), by id; empty if it could not be read.</summary>
@@ -38,7 +38,7 @@ public class VisitorsModel : PageModel
         if (!VisitorStatsService.Ranges.Contains(Days)) Days = 30;
         Stats = await _stats.GetAsync(Days, ct: ct);
         PublicMinimum = PreseMakerRepo.Api.Pages.IndexModel.PublicVisitorMinimum(_config);
-        PublicFigure = await _stats.GetPublicFigureAsync(PublicMinimum, ct: ct);
+        PublicFigure = await _stats.GetPublicFigureAsync(PublicMinimum, ct: ct, days: PublicVisitorFigureService.HeaderDays);
         Programs = (await _programs.GetProgramsAsync(ct)).ToDictionary(p => p.Id);
     }
 }

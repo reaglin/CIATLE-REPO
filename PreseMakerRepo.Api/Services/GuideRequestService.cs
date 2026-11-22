@@ -100,6 +100,11 @@ public class GuideRequestService
         if (!CheckRateLimit(ipHash, channel))
             return new CreateResult(CreateOutcome.RateLimited, courseId, 0, inTaxonomy, title);
 
+        // A new request for a course on hold joins the hold, so the course is decided once, for everyone.
+        var hold = await _db.GuideRequests.AsNoTracking()
+            .Where(r => r.CourseId == courseId && r.Status == GuideRequestStatus.Held)
+            .Select(r => new { r.AdminNotes }).FirstOrDefaultAsync();
+
         _db.GuideRequests.Add(new GuideRequest
         {
             Id              = Guid.NewGuid(),
@@ -111,7 +116,8 @@ public class GuideRequestService
             RequesterUserId = userId,
             IsInTaxonomy    = inTaxonomy,
             RequestedUtc    = DateTime.UtcNow,
-            Status          = GuideRequestStatus.Open,
+            Status          = hold is not null ? GuideRequestStatus.Held : GuideRequestStatus.Open,
+            AdminNotes      = hold?.AdminNotes,
             Channel         = channel
         });
         await _db.SaveChangesAsync();
@@ -140,12 +146,9 @@ public class GuideRequestService
             .Select(g =>
             {
                 var latest = g.OrderByDescending(r => r.RequestedUtc).First();
-                // The group's status is the most advanced one recorded (Published > Queued > Open);
+                // The group's status is the most advanced one recorded (Published > Queued > Held > Open);
                 // Declined only when every request was declined.
-                var st = g.All(r => r.Status == GuideRequestStatus.Declined) ? GuideRequestStatus.Declined
-                       : g.Any(r => r.Status == GuideRequestStatus.Published) ? GuideRequestStatus.Published
-                       : g.Any(r => r.Status == GuideRequestStatus.Queued) ? GuideRequestStatus.Queued
-                       : GuideRequestStatus.Open;
+                var st = GroupStatus(g.Select(r => r.Status), false);
                 return new GuideRequestSummaryResponse(
                     g.Key,
                     latest.CourseTitle,
@@ -156,7 +159,9 @@ public class GuideRequestService
                     st.ToString(),
                     g.Any(r => r.IsInTaxonomy),
                     guideSet.Contains(g.Key),
-                    g.Select(r => r.AdminNotes).LastOrDefault(n => !string.IsNullOrWhiteSpace(n)));
+                    g.OrderBy(r => r.StatusUtc).Select(r => r.AdminNotes).LastOrDefault(n => !string.IsNullOrWhiteSpace(n)),
+                    g.OrderByDescending(r => r.RequestedUtc).Select(r => r.Reason).Where(n => !string.IsNullOrWhiteSpace(n))
+                        .Select(n => n!.Trim()).Distinct().Take(5).ToList());
             })
             .Where(s => s.RequestCount >= minCount || status == GuideRequestStatus.Declined)
             .OrderByDescending(s => s.RequestCount).ThenBy(s => s.FirstRequestedUtc)
@@ -182,7 +187,7 @@ public class GuideRequestService
     public async Task<int> ClosePublishedAsync()
     {
         var published = await _db.GuideRequests
-            .Where(r => (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued) &&
+            .Where(r => (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued || r.Status == GuideRequestStatus.Held) &&
                         _db.CurriculumGuides.Any(g => g.CourseId == r.CourseId && g.Title != CurriculumGuide.StubTitle))
             .ToListAsync();
         foreach (var r in published) { r.Status = GuideRequestStatus.Published; r.StatusUtc = DateTime.UtcNow; }
@@ -190,10 +195,25 @@ public class GuideRequestService
         return published.Count;
     }
 
-    /// <summary>Requests still waiting for a course (Open or Queued) — the count shown beside Request Guide.</summary>
+    /// <summary>
+    /// The public reason a course's guide was declined, when every request for it was declined (null otherwise).
+    /// A visitor may still ask again: a new request reopens the course, and its "what has changed" text reaches
+    /// the reviewer with the old reason.
+    /// </summary>
+    public async Task<string?> DeclineReasonAsync(string courseId)
+    {
+        var rows = await _db.GuideRequests.AsNoTracking().Where(r => r.CourseId == courseId)
+            .Select(r => new { r.Status, r.StatusUtc, r.AdminNotes }).ToListAsync();
+        if (rows.Count == 0 || rows.Any(r => r.Status != GuideRequestStatus.Declined)) return null;
+        return rows.OrderByDescending(r => r.StatusUtc).Select(r => r.AdminNotes)
+                   .FirstOrDefault(n => !string.IsNullOrWhiteSpace(n))?.Trim()
+               ?? "The guide could not be written from what the colleges publish.";
+    }
+
+    /// <summary>Requests still waiting for a course (Open, Queued or Held) — the count shown beside Request Guide.</summary>
     public Task<int> WaitingCountAsync(string courseId) =>
         _db.GuideRequests.AsNoTracking().CountAsync(r => r.CourseId == courseId &&
-            (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued));
+            (r.Status == GuideRequestStatus.Open || r.Status == GuideRequestStatus.Queued || r.Status == GuideRequestStatus.Held));
 
     /// <summary>waiting (default; "open" is accepted) · published · declined · all.</summary>
     public static bool TryParseQueueFilter(string? raw, out string filter)
@@ -211,7 +231,7 @@ public class GuideRequestService
     public async Task<PublicGuideQueueResponse> PublicQueueAsync(string filter)
     {
         var rows = await _db.GuideRequests.AsNoTracking()
-            .Select(r => new { r.CourseId, r.CourseTitle, r.Status, r.RequestedUtc })
+            .Select(r => new { r.CourseId, r.CourseTitle, r.Status, r.RequestedUtc, r.StatusUtc, r.AdminNotes })
             .ToListAsync();
         var ids = rows.Select(r => r.CourseId).Distinct().ToList();
         var courses = await _db.TaxonomyCourses.AsNoTracking()
@@ -232,22 +252,25 @@ public class GuideRequestService
             {
                 courses.TryGetValue(g.Key, out var course);
                 var hasGuide = course?.GuideTitle is not null;
-                var status = hasGuide || g.Any(r => r.Status == GuideRequestStatus.Published) ? GuideRequestStatus.Published
-                           : g.All(r => r.Status == GuideRequestStatus.Declined) ? GuideRequestStatus.Declined
-                           : g.Any(r => r.Status == GuideRequestStatus.Queued) ? GuideRequestStatus.Queued
-                           : GuideRequestStatus.Open;
+                var status = GroupStatus(g.Select(r => r.Status), hasGuide);
                 var counted = g.Where(r => r.Status != GuideRequestStatus.Declined).ToList();
                 var dated = counted.Count > 0 ? counted : g.ToList();
                 var title = course is not null
                     ? CourseTitles.Display(g.Key, course.Title, course.StateTitle, course.GuideTitle)
                     : CourseTitles.Readable(g.OrderByDescending(r => r.RequestedUtc).First().CourseTitle.Trim());
+                // Only a decline's reason is public: it is written for the visitor who asked. A hold's
+                // reason stays the editor's working note until it becomes a decline.
+                var note = status == GuideRequestStatus.Declined
+                    ? g.OrderByDescending(r => r.StatusUtc).Select(r => r.AdminNotes).FirstOrDefault(n => !string.IsNullOrWhiteSpace(n))?.Trim()
+                    : null;
                 return new PublicGuideQueueItem(0, g.Key, string.IsNullOrWhiteSpace(title) ? g.Key : title,
                     counted.Count, dated.Min(r => r.RequestedUtc), dated.Max(r => r.RequestedUtc),
-                    status.ToString(), hasGuide, course is not null);
+                    status.ToString(), hasGuide, course is not null, note);
             })
             .ToList();
 
-        static bool IsWaiting(PublicGuideQueueItem i) => i.Status is nameof(GuideRequestStatus.Open) or nameof(GuideRequestStatus.Queued);
+        static bool IsWaiting(PublicGuideQueueItem i) =>
+            i.Status is nameof(GuideRequestStatus.Open) or nameof(GuideRequestStatus.Queued) or nameof(GuideRequestStatus.Held);
         var selected = all.Where(i => filter switch
             {
                 QueueWaiting => IsWaiting(i),
@@ -266,7 +289,51 @@ public class GuideRequestService
             selected);
     }
 
+    /// <summary>
+    /// Decline every held course (or only <paramref name="courseIds"/>) with the reason recorded when it was
+    /// held; that reason becomes the public one. Returns the courses declined.
+    /// </summary>
+    public async Task<List<string>> DeclineHeldAsync(IReadOnlyCollection<string>? courseIds = null)
+    {
+        var heldIds = await _db.GuideRequests.AsNoTracking()
+            .Where(r => r.Status == GuideRequestStatus.Held).Select(r => r.CourseId).Distinct().ToListAsync();
+        if (courseIds is not null)
+            heldIds = heldIds.Where(id => courseIds.Contains(id, StringComparer.OrdinalIgnoreCase)).ToList();
+        var rows = await _db.GuideRequests.Where(r => heldIds.Contains(r.CourseId)).ToListAsync();
+
+        var declined = new List<string>();
+        foreach (var g in rows.GroupBy(r => r.CourseId))
+        {
+            // Published or queued meanwhile: not ours to decline.
+            if (GroupStatus(g.Select(r => r.Status), false) != GuideRequestStatus.Held) continue;
+            var reason = g.Where(r => r.Status == GuideRequestStatus.Held)
+                .Select(r => r.AdminNotes).FirstOrDefault(n => !string.IsNullOrWhiteSpace(n));
+            foreach (var r in g)
+            {
+                r.Status = GuideRequestStatus.Declined;
+                r.StatusUtc = DateTime.UtcNow;
+                if (reason is not null) r.AdminNotes = reason;
+            }
+            declined.Add(g.Key);
+        }
+        await _db.SaveChangesAsync();
+        declined.Sort(StringComparer.Ordinal);
+        return declined;
+    }
+
     // ── helpers ──────────────────────────────────────────────────────────────
+
+    /// <summary>One status for a course's requests: Published if its guide exists or any request was published;
+    /// Declined only when every request was; then Queued, then Held, else Open.</summary>
+    public static GuideRequestStatus GroupStatus(IEnumerable<GuideRequestStatus> statuses, bool hasGuide)
+    {
+        var list = statuses.ToList();
+        return hasGuide || list.Contains(GuideRequestStatus.Published) ? GuideRequestStatus.Published
+             : list.All(s => s == GuideRequestStatus.Declined) ? GuideRequestStatus.Declined
+             : list.Contains(GuideRequestStatus.Queued) ? GuideRequestStatus.Queued
+             : list.Contains(GuideRequestStatus.Held) ? GuideRequestStatus.Held
+             : GuideRequestStatus.Open;
+    }
 
     private bool CheckRateLimit(string ipHash, GuideRequestChannel channel)
     {

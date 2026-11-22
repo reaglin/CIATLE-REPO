@@ -10,10 +10,21 @@
 </div>
 
 <p class="text-muted">
-    Visitor requests for curriculum guides, ranked by demand. The queue tool pulls the open ones with
-    <code>python queue_mgr.py import-requests</code>, which also marks them <em>Queued</em>. Requests whose guide is
-    published are closed automatically.
+    Visitor requests for curriculum guides, ranked by demand. The request check (<code>check-requests</code>) writes the
+    guides it can; a course it cannot write is put <strong>On hold</strong> with the reason, worded for the public.
+    Decide each held course here: <strong>Decline</strong> shows that reason in the public queue and on the course page
+    (visitors can still request it again if things change), and <strong>Send back to be written</strong> returns it to
+    the queue. To undo a decline, open the Declined tab and set the course to Open. ("Open" here is "Waiting" in the
+    public queue.)
+    Requests whose guide is published are closed automatically.
 </p>
+
+@if (Model.HeldCount > 0 && !string.Equals(Model.Status, "held", StringComparison.OrdinalIgnoreCase))
+{
+    <div class="alert alert-warning py-2">
+        <a asp-page="/GuideRequests" asp-route-status="held" class="alert-link">@Model.HeldCount course(s) on hold</a> need your decision.
+    </div>
+}
 
 @if (!string.IsNullOrEmpty(Model.Message))
 {
@@ -21,11 +32,11 @@
 }
 
 <ul class="nav nav-pills mb-3">
-    @foreach (var s in new[] { "open", "queued", "published", "declined", "all" })
+    @foreach (var s in new[] { "open", "held", "queued", "published", "declined", "all" })
     {
         <li class="nav-item">
             <a class="nav-link @(string.Equals(Model.Status, s, StringComparison.OrdinalIgnoreCase) ? "active" : "")"
-               asp-page="/GuideRequests" asp-route-status="@s">@char.ToUpper(s[0])@s[1..]</a>
+               asp-page="/GuideRequests" asp-route-status="@s">@(s == "held" ? "On hold" : char.ToUpper(s[0]) + s[1..])</a>
         </li>
     }
 </ul>
@@ -37,6 +48,15 @@
 else
 {
     <p class="small text-muted">@Model.Items.Count course(s) · @Model.TotalRequests request(s)</p>
+    @if (string.Equals(Model.Status, "held", StringComparison.OrdinalIgnoreCase))
+    {
+        <form method="post" asp-page-handler="DeclineHeld" class="mb-3"
+              onsubmit="return confirm('Decline all @Model.Items.Count held course(s)? Each reason below will be shown publicly.');">
+            <input type="hidden" name="Status" value="@Model.Status" />
+            @foreach (var shown in Model.Items) { <input type="hidden" name="shown" value="@shown.CourseId" /> }
+            <button type="submit" class="btn btn-danger btn-sm">Decline all @Model.Items.Count, each with the reason shown</button>
+        </form>
+    }
     <div class="table-responsive">
         <table class="table table-sm table-hover align-middle">
             <thead>
@@ -67,10 +87,41 @@ else
                         @{
                             var cls = i.Status switch { "Published" => "bg-success", "Queued" => "bg-info text-dark", "Declined" => "bg-secondary", _ => "bg-warning text-dark" };
                         }
-                        <span class="badge @cls">@i.Status</span>
-                        @if (!string.IsNullOrWhiteSpace(i.AdminNotes)) { <div class="small text-muted">@i.AdminNotes</div> }
+                        <span class="badge @cls">@(i.Status == "Held" ? "On hold" : i.Status)</span>
+                        @if (!string.IsNullOrWhiteSpace(i.AdminNotes))
+                        {
+                            <div class="small @(i.Status == "Held" ? "" : "text-muted")" style="max-width: 420px;">
+                                @if (i.Status is "Held" or "Declined") { <span class="text-muted">Reason (public if declined):</span> }
+                                @i.AdminNotes
+                            </div>
+                        }
+                        @if (i.RequesterNotes is { Count: > 0 })
+                        {
+                            <div class="small text-muted mt-1" style="max-width: 420px;">
+                                <span class="fw-semibold">Requesters wrote:</span>
+                                @foreach (var n in i.RequesterNotes) { <div>“@n”</div> }
+                            </div>
+                        }
                     </td>
                     <td class="text-nowrap">
+                        @if (i.Status == "Held")
+                        {
+                            <div class="d-flex gap-1 mb-1">
+                                <form method="post" asp-page-handler="DeclineHeld"
+                                      onsubmit="return confirm('Decline @i.CourseId? Its reason becomes public.');">
+                                    <input type="hidden" name="courseId" value="@i.CourseId" />
+                                    <input type="hidden" name="Status" value="@Model.Status" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Decline with the reason shown; it becomes public">Decline</button>
+                                </form>
+                                <form method="post" asp-page-handler="SetStatus">
+                                    <input type="hidden" name="courseId" value="@i.CourseId" />
+                                    <input type="hidden" name="newStatus" value="Open" />
+                                    <input type="hidden" name="notes" value="Released from hold by the site editor: write the guide." />
+                                    <input type="hidden" name="Status" value="@Model.Status" />
+                                    <button type="submit" class="btn btn-sm btn-outline-success" title="Back to the queue; the next request check writes the guide">Send back to be written</button>
+                                </form>
+                            </div>
+                        }
                         <form method="post" asp-page-handler="SetStatus" class="d-inline">
                             <input type="hidden" name="courseId" value="@i.CourseId" />
                             <input type="hidden" name="Status" value="@Model.Status" />
@@ -79,9 +130,10 @@ else
                                     <option value="Queued">Queued</option>
                                     <option value="Published">Published</option>
                                     <option value="Declined">Declined</option>
+                                    <option value="Held">On hold</option>
                                     <option value="Open">Open</option>
                                 </select>
-                                <input name="notes" class="form-control form-control-sm" placeholder="note (optional)" maxlength="1000" />
+                                <input name="notes" class="form-control form-control-sm" placeholder="reason (public if declined)" maxlength="1000" />
                                 <button type="submit" class="btn btn-outline-primary btn-sm">Set</button>
                             </div>
                         </form>

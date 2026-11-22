@@ -215,3 +215,18 @@ C:\Users\ronal\source\repos\CIATLE-REPO\Tools\drafts\{SCNS_CODE}_guide.json
 Where `{SCNS_CODE}` is the `course_id` value from the queue with no modification (spaces were already removed when the course was added). Example: `EET1035C_guide.json`.
 
 Some older courses may have been published with or without a trailing `C` suffix. When an evaluation references a code like `BCV 0640C`, verify that the file on disk matches before running the comparison.
+
+## Requests on hold and declined (2026-11-22, plan Phase 12)
+
+A request the check cannot write (no readable description, a course no longer taught, a REVIEW_QUEUE item marked HELD) is
+put **on hold** on the site with a reason worded for the public:
+
+```
+python guide_requests.py hold EEL4448 "Florida Polytechnic, the only university that offers EEL4448, does not publish ..."
+```
+
+Ron decides held requests with **`decide-requests.cmd`** (repo root), at the end of `check-requests`, or on
+`/admin/guide-requests` (On hold tab). Declining shows the reason in the public queue and on the course page; anyone may
+request the course again and say what has changed, which reopens it with the old reason and the new note visible in
+`python guide_requests.py list --status open`. Shell numbers (special topics, independent study, co-op) are still declined
+directly with a public reason: `python guide_requests.py decline <ID> --reason "..."`.

@@ -33,7 +33,9 @@ are written only when a visitor requests one:
 | Career paths | `python Tools/career_paths.py requests` · `/queue/careers` | the **Request** button on each `/careers/area/{code}` field page |
 | Curriculum guides | `curl .../api/v1/queue/guides?status=waiting` · `/queue/guides` | **Request Guide** on any course page |
 
-Both loops run from the `Tools/` session and need no deploy. When both queues are empty there is no
+Both loops run from the `Tools/` session and need no deploy. A guide request that cannot be written is put
+**on hold** with a public reason (`python Tools/guide_requests.py hold <ID> "<reason>"`); Ron decides held requests with
+`decide-requests.cmd` (plan Phase 12), and a declined course can be requested again. When both queues are empty there is no
 content work; say so rather than inventing some.
 
 ## Solution Structure

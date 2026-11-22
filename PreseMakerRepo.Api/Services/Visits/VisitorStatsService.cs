@@ -160,21 +160,22 @@ public sealed class VisitorStatsService
             .Select(v => v.VisitorHash).Distinct().CountAsync(ct);
     }
 
-    /// <summary>The home page's figure covers this many days (the admin page's "Last 30 days").</summary>
+    /// <summary>The default span of the public figure (the admin page's "Last 30 days").</summary>
     public const int PublicFigureDays = 30;
 
     /// <summary>
-    /// The home page's public figure (plan 9.5): distinct visitors over the last 30 days, the same number as
-    /// the admin page's "Last 30 days". While the counter has run for less than that, <c>Days</c> is the days it
-    /// has run. Null below <paramref name="minimum"/> visitors (a tiny early number would say nobody uses the
-    /// site), so the page shows nothing.
+    /// A public figure (plan 9.5; the header bar's uses 7 days, plan 13): distinct visitors over the last
+    /// <paramref name="days"/> days, the same number as the admin page's matching range. While the counter has run
+    /// for less than that, <c>Days</c> is the days it has run. Null below <paramref name="minimum"/> visitors (a tiny
+    /// early number would say nobody uses the site), so nothing is shown.
     /// </summary>
-    public async Task<PublicVisitorFigure?> GetPublicFigureAsync(int minimum, DateOnly? today = null, CancellationToken ct = default)
+    public async Task<PublicVisitorFigure?> GetPublicFigureAsync(int minimum, DateOnly? today = null,
+        CancellationToken ct = default, int days = PublicFigureDays)
     {
         var since = await CountingSinceAsync(ct);
         if (since is null) return null;
         var to = today ?? VisitClassifier.FloridaDay(DateTime.UtcNow);
-        var from = to.AddDays(-(PublicFigureDays - 1));
+        var from = to.AddDays(-(days - 1));
         var visitors = await _db.SiteVisits.Where(v => v.Day >= from && v.Day <= to)
             .Select(v => v.VisitorHash).Distinct().CountAsync(ct);
         if (visitors == 0 || visitors < minimum) return null;

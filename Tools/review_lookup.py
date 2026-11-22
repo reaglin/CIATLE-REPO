@@ -163,8 +163,13 @@ def main():
         except Exception as e:
             print('could not read the request queue: %s' % e)
             return 1
-        reqs = data.get('items') or []
-        print('waiting guide requests: %d' % data.get('waiting', 0))
+        allreqs = data.get('items') or []
+        # On hold on the site = waiting for Ron's decision (decide-requests.cmd); not work for this session.
+        onhold = [i['courseId'] for i in allreqs if i.get('status') == 'Held']
+        reqs = [i for i in allreqs if i.get('status') != 'Held']
+        print('waiting guide requests: %d' % len(reqs))
+        if onhold:
+            print('on hold for Ron (skip; he decides with decide-requests.cmd): %s' % ', '.join(onhold))
         if not reqs:
             print('nothing waiting — no course to check.')
             return 0
