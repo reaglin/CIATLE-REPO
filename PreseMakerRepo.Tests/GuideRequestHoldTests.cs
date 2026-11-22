@@ -102,4 +102,13 @@ public class GuideRequestHoldTests : IDisposable
         Assert.Equal(GuideRequestStatus.Open, GuideRequestService.GroupStatus([GuideRequestStatus.Declined, GuideRequestStatus.Open], false));
         Assert.Equal(GuideRequestStatus.Published, GuideRequestService.GroupStatus([GuideRequestStatus.Held], true));
     }
+
+    // Plan 15.1: the asterisk and note for courses offered at one school.
+    [Theory]
+    [InlineData(1, false, true)]
+    [InlineData(1, true, false)]    // a guide exists: the note no longer applies
+    [InlineData(0, false, false)]   // no schools recorded: nothing to say
+    [InlineData(2, false, false)]
+    public void Single_school_mark_applies_only_to_one_school_without_a_guide(int offerings, bool hasGuide, bool expected) =>
+        Assert.Equal(expected, PreseMakerRepo.Api.Services.SingleSchoolMarks.Applies(offerings, hasGuide));
 }

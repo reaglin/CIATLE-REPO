@@ -29,6 +29,7 @@
                 <partial name="_CourseRow" model="row" />
             }
         </div>
+        <partial name="_SingleSchoolNote" model="Model.CourseResults.Any(r => PreseMakerRepo.Api.Services.SingleSchoolMarks.Applies(r.OfferingCount, r.HasGuide))" />
     }
 
     @if (!Model.SearchResults.Any() && !Model.CourseResults.Any())

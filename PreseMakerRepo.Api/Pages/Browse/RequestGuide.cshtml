@@ -27,6 +27,11 @@
 {
     <div class="alert alert-success" role="status" style="max-width: 720px;">
         <strong>@Model.ResultMessage</strong>
+        @if (Model.SingleSchool)
+        {
+            <div class="mt-1">@PreseMakerRepo.Api.Services.GuideRequestService.SingleSchoolNote
+                If it cannot be written, the request queue will say why.</div>
+        }
     </div>
     <p>
         @if (Model.InTaxonomy)
@@ -79,6 +84,15 @@
                         <span>@Model.OpenRequests @(Model.OpenRequests == 1 ? "person has" : "people have") already asked for it.</span>
                     }
                 </p>
+            }
+            @if (Model.SingleSchool)
+            {
+                <div class="alert alert-warning small py-2 mb-3">
+                    <strong>Only one school offers this course.</strong>
+                    @PreseMakerRepo.Api.Services.GuideRequestService.SingleSchoolNote
+                    You can still request one; if it cannot be written, the
+                    <a asp-page="/Queue/Guides" class="alert-link">request queue</a> will say why.
+                </div>
             }
             <form method="post">
                 <input type="hidden" asp-for="CourseId" />

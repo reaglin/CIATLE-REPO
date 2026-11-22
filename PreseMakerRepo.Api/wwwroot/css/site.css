@@ -79,6 +79,10 @@ body { margin-bottom: 60px; }
 .program-panel-close { position: absolute; top: .5rem; right: .5rem; margin: 0; }
 .program-panel-close.btn-close { padding: .5rem; }
 #main:focus { outline: none; }
+.single-school-mark { padding: 0 .2rem; font-weight: 600; }
+.single-school-note { scroll-margin-top: 1rem; }
+.single-school-note:focus { outline: none; }
+.single-school-note:target { background-color: #fff8e1; }
 @media (max-width: 575.98px) {
     .program-panel-icon { width: 48px; height: 48px; }
 }

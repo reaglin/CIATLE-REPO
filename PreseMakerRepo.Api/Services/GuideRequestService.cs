@@ -210,6 +210,22 @@ public class GuideRequestService
                ?? "The guide could not be written from what the colleges publish.";
     }
 
+    /// <summary>
+    /// Ron's statement for courses offered at one school (plan 15.1, 2026-11-22), shown with the asterisk on course lists
+    /// and the course page, on the request form, and after a request.
+    /// </summary>
+    public const string SingleSchoolNote =
+        "Courses that are only offered at a single school may not be able to generate a guide due to insufficient available information about the course.";
+
+    /// <summary>Said after <see cref="SingleSchoolNote"/>, so it is not read as "do not request".</summary>
+    public const string SingleSchoolStillRequest =
+        "You can still request one; if it cannot be written, the request queue will say why.";
+
+    /// <summary>True when the listed course is offered at exactly one school.</summary>
+    public async Task<bool> IsSingleSchoolAsync(string courseId) =>
+        await _db.TaxonomyCourses.AsNoTracking()
+            .Where(c => c.CourseId == courseId).Select(c => c.OfferingCount).FirstOrDefaultAsync() == 1;
+
     /// <summary>Requests still waiting for a course (Open, Queued or Held) — the count shown beside Request Guide.</summary>
     public Task<int> WaitingCountAsync(string courseId) =>
         _db.GuideRequests.AsNoTracking().CountAsync(r => r.CourseId == courseId &&

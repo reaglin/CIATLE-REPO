@@ -1,0 +1,13 @@
+@*
+    The note the asterisk beside "offered at 1 school" links to (plan 15.1). Model: true when the page shows such an
+    asterisk; nothing is drawn otherwise. Ron's sentence word for word, then that a request is still welcome.
+*@
+@model bool
+@if (Model)
+{
+    <p id="single-school-note" class="single-school-note small text-muted border-top pt-2 mt-3" tabindex="-1">
+        <span aria-hidden="true">*</span> @PreseMakerRepo.Api.Services.GuideRequestService.SingleSchoolNote
+        @PreseMakerRepo.Api.Services.GuideRequestService.SingleSchoolStillRequest
+        <a href="#main" class="ms-1 text-nowrap">Back to top</a>
+    </p>
+}

@@ -38,4 +38,5 @@ else
             <partial name="_CourseRow" model="row" />
         }
     </div>
+    <partial name="_SingleSchoolNote" model="Model.Rows.Any(r => SingleSchoolMarks.Applies(r.OfferingCount, r.HasGuide))" />
 }

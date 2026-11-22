@@ -1,10 +1,14 @@
 @model PreseMakerRepo.Api.Services.CourseRow
+@using PreseMakerRepo.Api.Services
 @{
     var meta = new List<string>();
     if (Model.CreditHours > 0) meta.Add($"{Model.CreditHours} cr");
     else if (Model.ContactHours > 0) meta.Add($"{Model.ContactHours} contact hrs");
     if (Model.OfferingCount > 0) meta.Add($"offered at {Model.OfferingCount} school{(Model.OfferingCount == 1 ? "" : "s")}");
+    var offeringIndex = Model.OfferingCount > 0 ? meta.Count - 1 : -1;
     if (Model.HasModules) meta.Add("course materials");
+    // An asterisk after "offered at 1 school" on a course without a guide, linked to the note at the bottom (plan 15.1).
+    var markSingle = SingleSchoolMarks.Applies(Model.OfferingCount, Model.HasGuide);
 }
 <div class="list-group-item course-row">
     <div class="d-flex flex-wrap align-items-center column-gap-3 row-gap-2">
@@ -15,7 +19,13 @@
             </a>
             @if (meta.Count > 0)
             {
-                <div class="small text-muted">@string.Join(" · ", meta)</div>
+                <div class="small text-muted">
+                    @for (var i = 0; i < meta.Count; i++)
+                    {
+                        if (i > 0) { <text> · </text> }
+                        <text>@meta[i]@(i == offeringIndex && markSingle ? await Html.PartialAsync("_SingleSchoolMark") : Microsoft.AspNetCore.Html.HtmlString.Empty)</text>
+                    }
+                </div>
             }
         </div>
         <div class="course-row-actions d-flex gap-2">

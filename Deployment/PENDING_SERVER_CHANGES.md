@@ -10,10 +10,11 @@ Bundle these into the next deploy, then delete the entry.
 
 ### ⬜ TO DEPLOY — next-deploy items (plan Phase 15, 2026-11-22)
 
-Code only so far (no migration): **`.\Deployment\deploy-update.ps1 -CodeOnly`**. Built so far: 15.2, the sponsor line.
+Code only so far (no migration): **`.\Deployment\deploy-update.ps1 -CodeOnly`**. Built so far: 15.1, the single-school note; 15.2, the sponsor line.
 
 | Verify after the deploy |
 |---|
+| A course offered at one school with no guide reads "offered at 1 school*" in a list and "Offered at 1 Florida institution*" on its page; the asterisk jumps to the note at the bottom; Request Guide (one click, and the form) says the same |
 | The top bar and the footer read "Sponsored by Software Plus AI"; the link opens https://softwareplus.ai/ in a new tab (check on a phone width too) |
 
 ### ✅ DEPLOYED 2026-11-22 — the program panel on the page a visitor lands on, once a browser session (plan Phase 14, 2026-11-22)

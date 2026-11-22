@@ -1,6 +1,7 @@
 // PreseMaker Repository — site scripts
 
-function showToast(message, type) {
+// delay: milliseconds before it closes (default 5 s); a longer message gets longer.
+function showToast(message, type, delay) {
     type = type || 'success';
     var container = document.getElementById('toastContainer');
     if (!container) return;
@@ -11,7 +12,7 @@ function showToast(message, type) {
         '<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>' +
         '</div></div>');
     var el = document.getElementById(id);
-    new bootstrap.Toast(el, { delay: 5000 }).show();
+    new bootstrap.Toast(el, { delay: delay || 5000 }).show();
 }
 
 function escapeHtml(text) {
@@ -92,7 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.outcome === 'created' || data.outcome === 'alreadyRequested') {
                     remember(id);
                     buttonsFor(id).forEach(function (b) { markRequested(b, data.requestCount); });
-                    showToast(escapeHtml(data.message) + ' <a class="link-light" href="/queue/guides">See the queue</a>');
+                    // A course offered at one school (plan 15.1): the note on its own line, and time to read it.
+                    var note = data.note ? '<div class="mt-2">' + escapeHtml(data.note) + '</div>' : '';
+                    showToast(escapeHtml(data.message) + ' <a class="link-light" href="/queue/guides">See the queue</a>' + note,
+                        'success', data.note ? 15000 : 5000);
                 } else if (data.redirect) {
                     window.location.href = data.redirect;
                 } else {

@@ -37,6 +37,8 @@ public class RequestGuideModel : PageModel
 
     public bool InTaxonomy { get; set; }
     public bool HasGuide { get; set; }
+    /// <summary>Only one school offers the course: the form and the result say a guide may not be possible (plan 15.1).</summary>
+    public bool SingleSchool { get; set; }
     public int OpenRequests { get; set; }
     /// <summary>Set when every earlier request was declined: the reason, so the visitor can say what has changed.</summary>
     public string? DeclineReason { get; set; }
@@ -113,6 +115,10 @@ public class RequestGuideModel : PageModel
         var result = await _service.CreateAsync(new CreateGuideRequestRequest(id, null, null, null, null),
             ClientIp(), UserId(), GuideRequestChannel.Button);
         var message = MessageFor(result);
+        // Plan 15.1: a course offered at one school may not get a guide; said with the confirmation.
+        var note = result.Outcome is GuideRequestService.CreateOutcome.Created or GuideRequestService.CreateOutcome.AlreadyRequested
+            && await _service.IsSingleSchoolAsync(id)
+            ? GuideRequestService.SingleSchoolNote : null;
         var redirect = result.Outcome switch
         {
             GuideRequestService.CreateOutcome.GuideExists => Url.Page("/Browse/Guide", new { courseId = id }),
@@ -128,12 +134,14 @@ public class RequestGuideModel : PageModel
                 courseId = id,
                 requestCount = result.RequestCount,
                 message,
+                note,
                 redirect
             });
         }
 
         if (redirect is not null) return LocalRedirect(redirect);
-        TempData[result.Outcome == GuideRequestService.CreateOutcome.RateLimited ? "Error" : "Success"] = message;
+        TempData[result.Outcome == GuideRequestService.CreateOutcome.RateLimited ? "Error" : "Success"] =
+            note is null ? message : message + " " + note;
         return LocalRedirect(Url.IsLocalUrl(returnUrl) ? returnUrl! : Url.Page("/Browse/Course", new { courseId = id })!);
     }
 
@@ -162,6 +170,7 @@ public class RequestGuideModel : PageModel
         TaxonomyTitle = title;
         HasGuide = hasGuide;
         OpenRequests = await _service.WaitingCountAsync(id);
+        SingleSchool = inTax && !hasGuide && await _service.IsSingleSchoolAsync(id);
         DeclineReason = HasGuide || OpenRequests > 0 ? null : await _service.DeclineReasonAsync(id);
     }
 }

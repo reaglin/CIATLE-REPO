@@ -2,6 +2,12 @@
 @model PreseMakerRepo.Api.Pages.Browse.CourseModel
 @using PreseMakerRepo.Api.Helpers
 @{
+    // "Offered at 1 Florida institution" gets an asterisk and the note at the bottom while there is no guide (plan 15.1).
+    var singleSchool = Model.Course is not null && Model.Offerings.Count == 1
+        && PreseMakerRepo.Api.Services.SingleSchoolMarks.Applies(Model.Course.OfferingCount, Model.HasGuide)
+        && string.IsNullOrEmpty(Model.Course.CurriculumGuideUrl);
+}
+@{
     ViewData["Title"] = Model.Course is null ? null : $"{Model.Course.CourseId} — {Model.DisplayTitle}";
     if (Model.Course is not null && Model.IsListingOnly) ViewData["NoIndex"] = true;
 }
@@ -104,7 +110,7 @@
     var more = Model.Offerings.Skip(ShownCodes).ToList();
     <section class="mb-4" aria-labelledby="offered-at">
         <h2 id="offered-at" class="h6 mb-2">
-            Offered at @Model.Offerings.Count Florida institution@(Model.Offerings.Count != 1 ? "s" : "")
+            Offered at @Model.Offerings.Count Florida institution@(Model.Offerings.Count != 1 ? "s" : "")@(singleSchool ? await Html.PartialAsync("_SingleSchoolMark") : Microsoft.AspNetCore.Html.HtmlString.Empty)
         </h2>
         <div class="d-flex flex-wrap align-items-start gap-1">
             @foreach (var o in shown)
@@ -184,3 +190,5 @@
         </div>
     }
 }
+
+<partial name="_SingleSchoolNote" model="singleSchool" />
