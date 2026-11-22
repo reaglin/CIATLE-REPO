@@ -1,4 +1,10 @@
 [
-  {"action": "reject", "id": "845bc7fd-335f-48c7-bb86-df61bee1fb7d",
-   "note": "The page has no lesson content that could be reviewed; it can be suggested again once the lessons are available on it."}
+  {"action": "approve", "id": "8aa5cf0c-ad01-49dc-b7b0-b7c3f8272101",
+   "title": "SQL WHERE Clause — WebCheatSheet",
+   "summary": "A short free reference page from WebCheatSheet on the SQL WHERE clause: the SELECT ... FROM ... WHERE syntax with one worked example combining two conditions, plus two practical tips: test for missing values with IS NULL rather than = NULL, and pass user-supplied values as query parameters instead of building SQL strings by hand. Brief rather than a full lesson, it is useful as a quick refresher while writing queries; the previous and next pages on the site cover reading query results and AND/OR conditions. No account needed.",
+   "alsoFor": [{"courseId": "COP2071C"}, {"courseId": "COP2071"}, {"courseId": "COP2704"}, {"courseId": "COP1700"}, {"courseId": "COP4708"}]},
+  {"action": "approve", "id": "89823f4b-78f9-4634-9ace-2cf32e1d6571",
+   "title": "PHPRunner — web application builder for databases (Xlinesoft)",
+   "summary": "PHPRunner is commercial software from Xlinesoft that generates a PHP web application from an existing database: list, add, edit, search and report pages, logins with user groups and permissions, charts and dashboards. It works with MySQL, MariaDB, SQL Server, PostgreSQL, Oracle, SQLite and others. Cost: paid, from $599 for a single developer (educational discounts by request), with a free trial download. Without buying anything, a student can browse nine live demo applications (read-only) that show what a finished interface over a relational database looks like: master-detail pages, permissions, reports. A tool for building database front ends, not a course in SQL or database design.",
+   "alsoFor": [{"courseId": "COP1842"}, {"courseId": "COP2842"}, {"courseId": "COP3834"}]}
 ]
