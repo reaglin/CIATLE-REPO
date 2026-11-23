@@ -126,6 +126,58 @@ public class GuideRequestService
         return new CreateResult(CreateOutcome.Created, courseId, count, inTaxonomy, title);
     }
 
+    /// <summary>The reason recorded on an automatic request (plan 15.3).</summary>
+    public static string MostReadReason(int rank, int pagesRead, int days) =>
+        $"Requested automatically: number {rank} of the most-read courses in the last {days} days ({pagesRead:N0} pages read).";
+
+    /// <summary>
+    /// Requests a guide for each most-read course that needs one (plan 15.3; Ron, 2026-11-23: "If a course reaches the
+    /// top 20 of most read courses … we should automatically add a guide request"). <paramref name="ranked"/> is the
+    /// most-read list, most read first. A course is skipped when it is not listed, already has a guide, or already has a
+    /// request waiting (open, queued or held) or declined — a declined course is not asked for again by the site,
+    /// though a visitor still can. Returns the courses requested.
+    /// </summary>
+    public async Task<List<string>> RequestMostReadAsync(IReadOnlyList<(string CourseId, int PagesRead)> ranked, int days,
+        CancellationToken ct = default)
+    {
+        var ids = ranked.Select(r => r.CourseId.ToUpperInvariant()).Distinct().ToList();
+        if (ids.Count == 0) return [];
+        var courses = await _db.TaxonomyCourses.AsNoTracking()
+            .Where(c => ids.Contains(c.CourseId) && c.CourseId != WellKnownIds.OrphanCourseId)
+            .Select(c => new { c.CourseId, c.Title, c.StateTitle })
+            .ToDictionaryAsync(c => c.CourseId, ct);
+        var withGuide = await _db.CurriculumGuides.AsNoTracking()
+            .Where(g => ids.Contains(g.CourseId) && g.Title != CurriculumGuide.StubTitle)
+            .Select(g => g.CourseId).ToListAsync(ct);
+        var alreadyAsked = await _db.GuideRequests.AsNoTracking()
+            .Where(r => ids.Contains(r.CourseId) && r.Status != GuideRequestStatus.Published)
+            .Select(r => r.CourseId).Distinct().ToListAsync(ct);
+        var skip = withGuide.Concat(alreadyAsked).ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+        var made = new List<string>();
+        var now = DateTime.UtcNow;
+        for (var i = 0; i < ranked.Count; i++)
+        {
+            var id = ranked[i].CourseId.ToUpperInvariant();
+            if (!courses.TryGetValue(id, out var c) || skip.Contains(id) || made.Contains(id)) continue;
+            _db.GuideRequests.Add(new GuideRequest
+            {
+                Id           = Guid.NewGuid(),
+                CourseId     = id,
+                CourseTitle  = CourseTitles.Display(id, c.Title, c.StateTitle),
+                Institution  = string.Empty,
+                Reason       = MostReadReason(i + 1, ranked[i].PagesRead, days),
+                IsInTaxonomy = true,
+                RequestedUtc = now,
+                Status       = GuideRequestStatus.Open,
+                Channel      = GuideRequestChannel.MostRead
+            });
+            made.Add(id);
+        }
+        if (made.Count > 0) await _db.SaveChangesAsync(ct);
+        return made;
+    }
+
     private Task<int> CountAsync(string courseId) =>
         _db.GuideRequests.AsNoTracking().CountAsync(r => r.CourseId == courseId && r.Status != GuideRequestStatus.Declined);
 

@@ -80,6 +80,7 @@ try
     builder.Services.AddHostedService(sp => sp.GetRequiredService<VisitRecorder>());
     builder.Services.AddScoped<VisitorStatsService>();
     builder.Services.AddScoped<PublicVisitorFigureService>();
+    builder.Services.AddHostedService<MostReadGuideRequester>();   // plan 15.3
     builder.Services.AddSingleton<PreseMakerRepo.Api.Services.ProgramPanelService>();   // the program panel (plan Phase 10)
 
     // Multi-scheme auth: /api/* → JWT Bearer, everything else → Cookie

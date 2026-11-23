@@ -8,5 +8,8 @@ public enum GuideRequestChannel
     /// <summary>The one-click Request Guide button on a course row or course page.</summary>
     Button = 1,
     /// <summary>POST /api/v1/guide-requests.</summary>
-    Api = 2
+    Api = 2,
+    /// <summary>Made by the site itself: the course reached the 20 most-read courses of the last 7 days
+    /// and had no guide (plan 15.3; Ron, 2026-11-23).</summary>
+    MostRead = 3
 }

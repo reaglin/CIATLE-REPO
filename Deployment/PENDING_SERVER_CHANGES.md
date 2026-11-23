@@ -10,12 +10,14 @@ Bundle these into the next deploy, then delete the entry.
 
 ### ⬜ TO DEPLOY — next-deploy items (plan Phase 15, 2026-11-22)
 
-Code only so far (no migration): **`.\Deployment\deploy-update.ps1 -CodeOnly`**. Built so far: 15.1, the single-school note; 15.2, the sponsor line.
+Code only so far (no migration): **`.\Deployment\deploy-update.ps1 -CodeOnly`**. Built so far: 15.1, the single-school note; 15.2, the sponsor line; 15.3, automatic guide requests for the 7-day top 20; 15.4, titles in Most read; 15.5, Top 100.
 
 | Verify after the deploy |
 |---|
 | A course offered at one school with no guide reads "offered at 1 school*" in a list and "Offered at 1 Florida institution*" on its page; the asterisk jumps to the note at the bottom; Request Guide (one click, and the form) says the same |
 | The top bar and the footer read "Sponsored by Software Plus AI"; the link opens https://softwareplus.ai/ in a new tab (check on a phone width too) |
+| `/visitors?days=7` → Most read: CJK0570 and other courses show their titles; **Top 100** lists up to 100, numbered, and the period buttons keep it |
+| Within an hour of the deploy, the 7-day top 20's courses that have no guide (and no waiting or declined request) are in `/queue/guides`, one request each; the server log says "Requested guides for N most-read courses" |
 
 ### ✅ DEPLOYED 2026-11-22 — the program panel on the page a visitor lands on, once a browser session (plan Phase 14, 2026-11-22)
 

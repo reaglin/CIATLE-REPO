@@ -24,7 +24,8 @@
 
 <h1 class="h4 mb-2">Guide Request Queue</h1>
 <p class="text-muted" style="max-width: 760px;">
-    Every <strong>Request Guide</strong> click lands here. Curriculum guides are written in order of demand —
+    Every <strong>Request Guide</strong> click lands here. The site also requests a guide, once, for any course among the
+    20 <a href="/visitors?days=7#most-read">most read in the last 7 days</a> that has none. Curriculum guides are written in order of demand —
     the most-requested courses first — and the site is updated weekly. Requests are anonymous; nothing about
     who asked is shown. A request is <strong>on hold</strong> when the colleges do not publish enough to write the
     guide; a <strong>declined</strong> request shows why, and the course can be requested again if that changes.
@@ -63,7 +64,7 @@ else
         <table class="table table-sm align-middle">
             <thead>
                 <tr>
-                    @if (waiting) { <th scope="col" class="text-end">#</th> }
+                    @if (waiting) { <th scope="col" class="text-end"><span aria-hidden="true">#</span><span class="visually-hidden">Rank</span></th> }
                     <th scope="col">Course</th>
                     <th scope="col" class="text-end">Requests</th>
                     <th scope="col">First requested</th>

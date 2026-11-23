@@ -1,5 +1,7 @@
 using System.Globalization;
 using Microsoft.EntityFrameworkCore;
+using PreseMakerRepo.Api.Helpers;
+using PreseMakerRepo.Core.Models;
 using PreseMakerRepo.Infrastructure.Data;
 
 namespace PreseMakerRepo.Api.Services.Visits;
@@ -45,12 +47,18 @@ public sealed class VisitorStatsService
 {
     public static readonly int[] Ranges = [7, 30, 90, 365];
 
+    /// <summary>How many most-read courses a page may ask for (Ron, 2026-11-23: "show the top 100 as an option").</summary>
+    public static readonly int[] CourseCounts = [20, 100];
+    public const int DefaultCourseCount = 20;
+
     private readonly AppDbContext _db;
     public VisitorStatsService(AppDbContext db) => _db = db;
 
-    public async Task<VisitorStats> GetAsync(int days, DateOnly? today = null, CancellationToken ct = default)
+    public async Task<VisitorStats> GetAsync(int days, DateOnly? today = null, CancellationToken ct = default,
+        int topCourses = DefaultCourseCount)
     {
         days = Math.Clamp(days, 1, 366);
+        topCourses = Math.Clamp(topCourses, 1, 500);
         var to = today ?? VisitClassifier.FloridaDay(DateTime.UtcNow);
         var from = to.AddDays(-(days - 1));
 
@@ -111,12 +119,8 @@ public sealed class VisitorStatsService
             .Where(p => p.Course != null)
             .GroupBy(p => p.Course!)
             .Select(g => new { Id = g.Key, Views = g.Sum(p => p.Views) })
-            .OrderByDescending(r => r.Views).ThenBy(r => r.Id).Take(20).ToList();
-        var ids = courses.Select(c => c.Id).ToList();
-        var titles = await _db.TaxonomyCourses.AsNoTracking()
-            .Where(c => ids.Contains(c.CourseId))
-            .Select(c => new { c.CourseId, c.Title })
-            .ToDictionaryAsync(c => c.CourseId, c => c.Title, ct);
+            .OrderByDescending(r => r.Views).ThenBy(r => r.Id).Take(topCourses).ToList();
+        var titles = await CourseTitlesAsync(courses.Select(c => c.Id).ToList(), ct);
 
         return new VisitorStats
         {
@@ -149,6 +153,29 @@ public sealed class VisitorStatsService
                 .OrderByDescending(r => r.Total).ThenBy(r => r.ProgramId).ToList(),
             Arrivals = visits.Count,
         };
+    }
+
+    /// <summary>
+    /// The title each course's own page shows (plan 15.4): the stored title, else the state's, else its guide's —
+    /// <see cref="CourseTitles.Display"/>. A course whose only title is a placeholder gets none (null).
+    /// </summary>
+    private async Task<Dictionary<string, string?>> CourseTitlesAsync(List<string> ids, CancellationToken ct)
+    {
+        if (ids.Count == 0) return [];
+        var rows = await _db.TaxonomyCourses.AsNoTracking()
+            .Where(c => ids.Contains(c.CourseId))
+            .Select(c => new { c.CourseId, c.Title, c.StateTitle })
+            .ToListAsync(ct);
+        var guides = await _db.CurriculumGuides.AsNoTracking()
+            .Where(g => ids.Contains(g.CourseId) && g.Title != CurriculumGuide.StubTitle)
+            .Select(g => new { g.CourseId, g.Title })
+            .ToListAsync(ct);
+        var guideTitle = guides.GroupBy(g => g.CourseId).ToDictionary(g => g.Key, g => (string?)g.First().Title);
+        return rows.ToDictionary(r => r.CourseId, r =>
+        {
+            var shown = CourseTitles.Display(r.CourseId, r.Title, r.StateTitle, guideTitle.GetValueOrDefault(r.CourseId));
+            return shown == r.CourseId ? null : shown;
+        });
     }
 
     /// <summary>Distinct visitors over the last <paramref name="days"/> days, for the dashboard card.</summary>

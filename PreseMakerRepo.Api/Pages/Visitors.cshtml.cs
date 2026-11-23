@@ -17,6 +17,10 @@ public class VisitorsModel : PageModel
     [BindProperty(SupportsGet = true)]
     public int Days { get; set; } = 30;
 
+    /// <summary>How many most-read courses to list: 20 (the default) or 100 (plan 15.5).</summary>
+    [BindProperty(SupportsGet = true)]
+    public int Top { get; set; } = VisitorStatsService.DefaultCourseCount;
+
     public VisitorStats Stats { get; private set; } = new();
 
     /// <summary>True when the range has fewer visitors than the public minimum, so no figures are shown.</summary>
@@ -26,8 +30,9 @@ public class VisitorsModel : PageModel
     public async Task OnGetAsync(CancellationToken ct)
     {
         if (!VisitorStatsService.Ranges.Contains(Days)) Days = 30;
+        if (!VisitorStatsService.CourseCounts.Contains(Top)) Top = VisitorStatsService.DefaultCourseCount;
         Minimum = _figures.Minimum;
-        Stats = await _figures.GetPageStatsAsync(Days, ct);
+        Stats = await _figures.GetPageStatsAsync(Days, ct, Top);
         TooFew = Stats.Visitors < Minimum;
     }
 }

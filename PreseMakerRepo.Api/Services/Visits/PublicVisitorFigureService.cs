@@ -47,12 +47,13 @@ public sealed class PublicVisitorFigureService
         }
     }
 
-    /// <summary>The public page's figures for one range (7, 30, 90 or 365 days), cached 10 minutes.</summary>
-    public async Task<VisitorStats> GetPageStatsAsync(int days, CancellationToken ct = default)
+    /// <summary>The public page's figures for one range (7, 30, 90 or 365 days) and course count (20 or 100), cached 10 minutes.</summary>
+    public async Task<VisitorStats> GetPageStatsAsync(int days, CancellationToken ct = default,
+        int topCourses = VisitorStatsService.DefaultCourseCount)
     {
-        var key = "public:visitor-stats:" + days;
+        var key = $"public:visitor-stats:{days}:{topCourses}";
         if (_cache.TryGetValue(key, out VisitorStats? cached) && cached is not null) return cached;
-        var stats = await _stats.GetAsync(days, ct: ct);
+        var stats = await _stats.GetAsync(days, ct: ct, topCourses: topCourses);
         _cache.Set(key, stats, TimeSpan.FromMinutes(10));
         return stats;
     }

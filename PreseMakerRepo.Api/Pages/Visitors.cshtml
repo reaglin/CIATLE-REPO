@@ -5,6 +5,7 @@
     ViewData["Title"] = "Visitors";
     var s = Model.Stats;
     var maxVisitors = s.Periods.Count == 0 ? 1 : Math.Max(1, s.Periods.Max(p => p.Visitors));
+    string Link(int days, int top) => top == VisitorStatsService.DefaultCourseCount ? $"/visitors?days={days}" : $"/visitors?days={days}&top={top}";
     string Range(int d) => d switch { 7 => "Last 7 days", 30 => "Last 30 days", 90 => "Last 90 days", _ => "Last 12 months" };
 }
 
@@ -38,7 +39,7 @@
     @foreach (var d in VisitorStatsService.Ranges)
     {
         <a class="btn btn-sm @(d == Model.Days ? "btn-primary" : "btn-outline-primary")"
-           href="/visitors?days=@d" aria-current="@(d == Model.Days ? "page" : null)">@Range(d)</a>
+           href="@Link(d, Model.Top)" aria-current="@(d == Model.Days ? "page" : null)">@Range(d)</a>
     }
 </div>
 
@@ -149,8 +150,25 @@
     </div>
 
     <div class="col-lg-6">
-        <h2 class="h6 mb-1">Most-read courses</h2>
-        <p class="small text-muted mb-1">A course's page, its curriculum guide and its resources added together; up to 20 courses.</p>
+        <h2 class="h6 mb-1" id="most-read">Most-read courses</h2>
+        <p class="small text-muted mb-1">A course's page, its curriculum guide and its resources added together; up to @Model.Top courses.
+            @if (Model.Days == 7)
+            {
+                <text>Every hour, each course in the top 20 of this list that has no curriculum guide is requested for one
+                automatically; those requests join the <a href="/queue/guides">guide request queue</a>.</text>
+            }
+            else
+            {
+                <text>Every hour, each course in the top 20 of the <a href="/visitors?days=7#most-read">last 7 days</a> that has
+                no curriculum guide is requested for one automatically; those requests join the <a href="/queue/guides">guide request queue</a>.</text>
+            }</p>
+        <div class="btn-group btn-group-sm mb-2" role="group" aria-label="How many courses to list">
+            @foreach (var n in VisitorStatsService.CourseCounts)
+            {
+                <a class="btn @(n == Model.Top ? "btn-primary" : "btn-outline-primary")" href="@(Link(Model.Days, n))#most-read"
+                   aria-current="@(n == Model.Top ? "page" : null)" title="List the @n most-read courses in this period">Top @n</a>
+            }
+        </div>
         @if (s.Courses.Count == 0)
         {
             <p class="small text-muted">No course pages read in this period.</p>
@@ -158,11 +176,12 @@
         else
         {
             <table class="table table-sm">
-                <thead><tr><th scope="col">Course</th><th scope="col" class="text-end">Pages read</th></tr></thead>
+                <thead><tr><th scope="col" class="text-end"><span aria-hidden="true">#</span><span class="visually-hidden">Rank</span></th><th scope="col">Course</th><th scope="col" class="text-end">Pages read</th></tr></thead>
                 <tbody>
-                    @foreach (var r in s.Courses)
+                    @foreach (var (r, i) in s.Courses.Select((r, i) => (r, i)))
                     {
                         <tr>
+                            <td class="text-end text-muted small">@(i + 1)</td>
                             <td><a href="@r.Link">@r.Name</a>
                                 @if (!string.IsNullOrEmpty(r.Detail)) { <span class="text-muted small">— @r.Detail</span> }</td>
                             <td class="text-end">@r.Count.ToString("N0")</td>
