@@ -25289,3 +25289,40 @@ duplicate offerings); checks `b251_live.py`; fetches `b251_fetch.py`; lookups `b
 - **`BME4311`**: UF teaches molecular and cell biology for BMEs (prerequisites BSC 2010, CHM 3217 or 2210, PCB 3713C);
   FIU names genetic and proteomic engineering; Florida Poly (new, August 2026) unread.
 - **`COM5235`**: FSU graduate seminar, outcomes published in FSU's Coursedog record.
+
+---
+
+## Batch 252 — scheduled request check (five guides), 2026-11-23
+
+Twelve requests waiting (the first from a visitor, the rest the new automatic *most read* requests); the first ten taken
+in rank order. Five written and live (`EDH6046`, `ACG2360`, `BME4536`, `CEN6030`, `CGN4980`); `ACG4940` (internship) and
+`CGS4955` (study abroad) declined as shell numbers; `ACG5875`, `AVM1160`, `BCN6788` held (items 139–141). Base data sent
+for the eight non-shell courses: 8 updated, 0 failed. `EDG1931` and `EDG7365` left waiting (ranks 11–12). Build
+`scratchpad/b252_build.py` (imports the helpers from `b251_build.py`); base data `b252_base.py`; decline
+`b252_decline.py`; fetches `b252_fetch.py`, `b252_fetch2.py`.
+
+### Source register
+
+- ✅ **UF** `catalog.ufl.edu/search/?P=EDH%206046` (one-line description). ❌ Same route for `BCN 6788`: no result; then
+  `catalog.ufl.edu` timed out for the rest of the run (and WebFetch got 503 / connection refused).
+- ✅ **Seminole State** `www.seminolestate.edu/catalog/courses/acg2360`: description, prerequisites, *Typically Offered:
+  Fall*, credits. ❌ Palm Beach State `catalog.palmbeachstate.edu` DNS failure; SCF `search_advanced.php` empty 202.
+- ✅ **FAU Coursedog cache**: `BME4536` (description with prerequisite, `lectureHours` 3), `EEL3502`. ✅ **FIU cache**:
+  `CGN4980` (1 cr, repeatable, description).
+- ✅ **UWF prefix PDF** `catalog.uwf.edu/courseinformation/courses/cen/cen.pdf` read with `b249_pdf.py`: `CEN 6030`,
+  `CEN 6017` (prerequisite `CEN 6030*`). UWF search also answered for `CEN 6030`, then timed out later in the run.
+- ⚠ **FAMU `catalog.famu.edu`**: with certificate verification off (incomplete chain; public text only) the root
+  answers and lists catalogues (catoid 17 = 2026-27, 16 = 2025-26; *All Course Descriptions* navoid 2123), but
+  `search_advanced.php` and the navoid filter return **empty 202s**, the content-block SCF shows. `/search/?P=` 404s.
+- ❌ **Miami Dade**: `www.mdc.edu/catalog/courses/<id>` 404; `mdc.curricunet.com` search 500 and its catalogue page is
+  script-rendered; the programme page `www.mdc.edu/aviationmaintenance/` has no course list.
+
+### Findings
+
+- **`ACG2360`** is lower-division cost accounting at three state colleges; universities teach it at upper division as
+  `ACG3341`, `ACG3361`, `ACG4341` or `ACG3343` (item 142). Statewide title *Basic Cost Accounting, Condensed*.
+- **`CGN4980`**: statewide label *Doctoral Dissertation/Defense* (the 98x slot); FIU's course is a civil engineering
+  seminar. A shell NUMBER can carry a real course; read the description before declining.
+- **`EDH6046`**: statewide title *College Student and Culture*; UF only. Other EDH student-development numbers
+  (`EDH6040` FAU/FSU/UF, `EDH6045` six universities) were not read.
+- **`BME4536`** (FAU) vs **`BME4531`** *Medical Imaging* (FAMU, FIU, FSU, UF, USF): different numbers, no equivalence.

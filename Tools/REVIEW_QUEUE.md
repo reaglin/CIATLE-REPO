@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **102** |
-| Informational — recorded, no decision needed | 23 |
+| ⏳ **Awaiting a decision from Ron** | **105** |
+| Informational — recorded, no decision needed | 24 |
 | ✅ Resolved | 13 |
-| **Total items** | **138** |
+| **Total items** | **142** |
 
 ---
 
-### ⏳ Awaiting a decision (102)
+### ⏳ Awaiting a decision (105)
 
 | # | Item |
 |---|---|
@@ -139,8 +139,11 @@ continues around every one of them.
 | **133** | ℹ️ Power electronics under four numbers; UF prints a prerequisite that does not exist; UWF dropped `EEL4610` (batch 248) |
 | **134** | `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) |
 | **136** | `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250) |
+| **139** | `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252) |
+| **140** | `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252) |
+| **141** | `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252) |
 
-### Informational — no decision needed (23)
+### Informational — no decision needed (24)
 
 | # | Item |
 |---|---|
@@ -167,6 +170,7 @@ continues around every one of them.
 | 135 | ℹ️ Batch 249 findings: one number teaching two languages; a bulletin that contradicts itself; one PSAV number, two contents (informational, batch 249) |
 | 137 | ℹ️ Batch 250 findings: UNF's course API; one UNF course under two numbers; ECH3702 ending; IRSC repeats a description (informational, batch 250) |
 | 138 | ℹ️ Batch 251 findings: a lower-division intermediate accounting course; the two-term financial accounting route; FSU's bulletin moved; athletic training numbers (informational, batch 251) |
+| 142 | ℹ️ Batch 252 findings (informational) |
 
 ### ✅ Resolved (13)
 
@@ -3932,6 +3936,49 @@ only?** (Same shape as item 134.)
 - ✅ **FSU's bulletin moved** from `registrar.fsu.edu/bulletin/...` (now a landing page) to **`bulletin.fsu.edu`, a
   Coursedog catalogue** (`fsu_peoplesoft`, catalog `f8cXWDJD0Lphf2KTcUZh`); added to `scratchpad/coursedog.py` as `fsu`,
   cache `fsu_courses.json` (15,571 courses, with published learning outcomes in `customFields.ttXjp`).
+
+
+## 139. ⚠ `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252)
+
+`ACG5875` *Development of Accounting Thought* (3 cr, graduate), carried only by **FAMU** (effective 1990); statewide
+title *Grad History of Accounting*. ⚠ **No description could be read**: `catalog.famu.edu` now answers with certificate
+checks off (the chain is incomplete), but its Acalog search and the *All Course Descriptions* filter (catoid 17, navoid
+2123) return **empty 202 bodies** (the SCF content-block pattern), and WebFetch still fails the certificate. **Not
+written.** Base data sent. ⚠ **Decision for Ron: supply FAMU's description or syllabus, or decline?** (Same shape as
+item 136.) Public hold reason names FAMU's unreadable catalogue.
+
+
+## 140. ⚠ `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252)
+
+`AVM1160` *Aviation Maintenance Programs and Inspections* (3 cr), carried only by **Miami Dade** (effective 2019), one of
+five MDC aviation-maintenance-management numbers added together (`AVM1160`–`AVM1164`). ⚠ **No description**:
+`www.mdc.edu/catalog/courses/avm1160` 404s, `mdc.curricunet.com` search 500s (its catalogue page is script-rendered),
+and `www.mdc.edu/aviationmaintenance/` (the A.S. programme page) lists no courses. **Not written.** Base data sent.
+⚠ **Decision for Ron: supply MDC's course outline, or decline?** (Same shape as item 128.)
+
+
+## 141. ⚠ `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252)
+
+`BCN6788` *Construction Information Systems* (3 cr, graduate), carried only by **UF** in SCNS (effective 1997).
+⚠ **UF's 2026-27 catalogue search (`catalog.ufl.edu/search/?P=BCN%206788`) returns no result**, while the same route
+found `EDH 6046` minutes earlier; UF's catalogue then stopped answering for the rest of the run (connection timeouts), so
+the graduate courses A-Z page and older catalogue years were not checked. **Possibly no longer taught** (SCNS "active" is
+not "taught", items 124, 126). **Not written.** Base data sent. ⚠ **Decision for Ron: decline, or retry UF's older
+catalogues in a later run?**
+
+
+## 142. ℹ️ Batch 252 findings (informational)
+
+- ⚠ **`ACG2360` Cost Accounting is lower-division at three state colleges (PBSC, SCF, Seminole State), and universities
+  teach the subject at upper division under FOUR numbers**: `ACG3341` (7), `ACG3361` (UCF, FAMU, Seminole State),
+  `ACG4341` (UF at 4 cr, FIU as *Management Accounting*, EFSC, CF), `ACG3343` (UWF, MDC). Item 138's shape again; the guide
+  tells students to expect to take the university course too.
+- **`CGN4980`'s statewide label is *Doctoral Dissertation/Defense*** (the generic 98x slot), but FIU's course is a 1-credit
+  repeatable civil engineering seminar with a real description. Written as a seminar; the guide says the label does not
+  describe it.
+- **`EDH6046`**: UF's description is one line; statewide title *College Student and Culture*. Written with the Florida
+  2023 DEI-spending law (SB 266, s. 1004.06, F.S.) stated as context for the field, not as a claim about the course.
+- `CEN6030` (UWF) sits between `COP 6416` and `CEN 6017` Continuous Software Engineering (UWF, UNF).
 
 
 ## Resolved
