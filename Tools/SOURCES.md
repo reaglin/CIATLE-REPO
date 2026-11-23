@@ -25326,3 +25326,27 @@ for the eight non-shell courses: 8 updated, 0 failed. `EDG1931` and `EDG7365` le
 - **`EDH6046`**: statewide title *College Student and Culture*; UF only. Other EDH student-development numbers
   (`EDH6040` FAU/FSU/UF, `EDH6045` six universities) were not read.
 - **`BME4536`** (FAU) vs **`BME4531`** *Medical Imaging* (FAMU, FIU, FSU, UF, USF): different numbers, no equivalence.
+
+---
+
+## Batch 253 — scheduled request check (one guide), 2026-11-23
+
+Two open requests waiting (both automatic *most read* requests; `ACG5875`, `AVM1160`, `BCN6788` still on hold for Ron).
+`EDG7365` written and live; `EDG1931` declined as a special-topics shell (UCF, variable credit). Base data sent for
+`EDG7365` and its prerequisite `EDG7982`: 2 updated, 0 failed. Build `scratchpad/b253_build.py`; base data
+`b253_base.py`; decline `b253_decline.py`. No career-path requests.
+
+### Source register
+
+- ✅ **UF** `catalog.ufl.edu/search/?P=EDG%207365` and `?P=EDG%207982`: description, 3 credits, prerequisite. The
+  *Catalog Program Pages Referencing* block was empty for both, so the programme that requires them is not named.
+  ❌ The UF course-search API (`route=search`, keyword `EDG 7365`, spaced) returned `count: 0` for a course the search
+  page finds — **a false negative; do not treat that API's 0 as proof of absence for graduate courses.**
+- ⚠ **SCNS live institution lookup returned HTTP 403** (was 500 on 2026-09-23); `scratchpad/cached_run.py carriers.py …`
+  (run from `Tools/`, script name without the `scratchpad/` prefix) still works.
+
+### Findings
+
+- **`EDG7365`**: UF only; statewide title *Practitioner Research in Schools and the Community*, same subject as UF's
+  title. Second course of a pair after `EDG7982` *Practitioner Research: Theory & Practice* (UF only, "intended for
+  doctoral students"). The guide carries the IRB-plus-district-approval warning in the prerequisite field.
