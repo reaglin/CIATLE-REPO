@@ -8,7 +8,7 @@ Bundle these into the next deploy, then delete the entry.
 
 ## Open entries
 
-### ⬜ TO DEPLOY — next-deploy items (plan Phase 15, 2026-11-22)
+### ✅ DEPLOYED 2026-11-23 — next-deploy items (plan Phase 15, 2026-11-22)
 
 Code only so far (no migration): **`.\Deployment\deploy-update.ps1 -CodeOnly`**. Built so far: 15.1, the single-school note; 15.2, the sponsor line; 15.3, automatic guide requests for the 7-day top 20; 15.4, titles in Most read; 15.5, Top 100.
 
