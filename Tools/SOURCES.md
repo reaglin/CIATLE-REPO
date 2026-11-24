@@ -25384,3 +25384,35 @@ confirmed live; base data sent (4 updated, 0 failed; `STA3123` re-sent at 3 cred
   current catalogue. `list_missing.build()` broke the 1–1 credit tie toward FAU's 4, so the course's credit was set by hand.
 - **`STA2360`**: UCF and UWF, 3 cr, no prerequisite; at UWF it meets general education mathematics and the computation
   skills requirement.
+
+---
+
+## Batch 255 — scheduled request check, 2026-11-24
+
+Seven requests waiting (`ACG2061`, `ACG2072`, `CJE2540`, `EUH6612`, `HUN2202`, `HFT1102`, `DIG2040C`), none held, none
+with a REVIEW_QUEUE item about them. **Three written** (`CJE2540`, `HUN2202`, `HFT1102`), validated clean and confirmed
+live. **Four put on hold** for want of a readable description (`REVIEW_QUEUE.md` items 144–147). Base data sent for all
+seven (7 updated, 0 failed). Build `scratchpad/b255_build.py`; base data `b255_base.py`; lookups `b255_live.py`,
+`b255_fetch.py`, `b255_fetch2.py`, `b255_titles.py`, `b255_scns.py`, `b255_confirm.py`. No career-path requests.
+
+### Source register
+
+- ✅ **Seminole State** `www.seminolestate.edu/catalog/courses/<id>`: `cje2540`, `hun2202` (description, prerequisite,
+  terms, credits; also the term's textbook). The description sits just before "Terms Typically Offered" in the flattened page.
+- ✅ **FIU Coursedog cache**: `HFT1102` (description, pass/fail grade mode, spring-only, no requisites, CIP 52.0901).
+- ❌ **SCNS `report_csv` (statewide and institution description reports) 403** — `scratchpad/b255_scns.py` is ready for when
+  it answers; the institution report would have covered every blocked college below.
+- ❌ **Valencia, Polk (`catalog.polk.edu`), Florida Gateway (`catalog.fgc.edu`)**: empty 202s from Python all run (from the
+  first request, so not a burst we caused), 403 to WebFetch.
+- ❌ **Hillsborough**: `catalog.hccfl.edu` and `catalog.hcfl.edu` do not resolve; programme pages 404/403.
+- ❌ **UF**: course-search API answered once (no `EUH 6612`), then `catalog.ufl.edu` refused/timed out for the rest of the run.
+- ❌ `campusanswers.pages.dev` course paths redirect to `campusanswers.org` and show only a college directory;
+  `campusanswers-lite.pages.dev` does not resolve. Search snippets from it are leads, not sources.
+
+### Findings
+
+- ⚠ **`CJE2540`**: Seminole State teaches *Police Organization and Administration*; the statewide title is *The Patrol
+  Function*. Police administration is spread over `CJE1300`, `CJE2300`, `CJE2302`, `CJE2540` (item 148).
+- **`HUN2202`**: Seminole State and Valencia, 3 cr, lecture only (Valencia 3 contact hours, 0 lab). Seminole prerequisite
+  BSC 2010C, HUN 1201, BSC 2093C or BSC 2094C with C or higher.
+- **`HFT1102`**: FIU 1-credit first-term GST seminar, pass/fail, spring only; published at 15 derived contact hours.

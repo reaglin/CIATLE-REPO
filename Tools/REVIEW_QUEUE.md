@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **106** |
-| Informational — recorded, no decision needed | 24 |
+| ⏳ **Awaiting a decision from Ron** | **110** |
+| Informational — recorded, no decision needed | 25 |
 | ✅ Resolved | 13 |
-| **Total items** | **143** |
+| **Total items** | **148** |
 
 ---
 
-### ⏳ Awaiting a decision (106)
+### ⏳ Awaiting a decision (110)
 
 | # | Item |
 |---|---|
@@ -143,8 +143,12 @@ continues around every one of them.
 | **140** | `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252) |
 | **141** | `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252) |
 | **143** | `STA3024` — one number, two subjects: Statistics II vs SAS programming (found 2026-11-23, batch 254) — **split candidate** |
+| **144** | `ACG2061` (requested ×1) — HELD: Hillsborough's only course could not be read (found 2026-11-24, batch 255) |
+| **145** | `ACG2072` (requested ×1) — HELD: Polk State's only course could not be read (found 2026-11-24, batch 255) |
+| **146** | `DIG2040C` (requested ×1) — HELD: Florida Gateway's only course could not be read (found 2026-11-24, batch 255) |
+| **147** | `EUH6612` (requested ×1) — HELD: UF's only course not found in its current catalogue (found 2026-11-24, batch 255) |
 
-### Informational — no decision needed (24)
+### Informational — no decision needed (25)
 
 | # | Item |
 |---|---|
@@ -172,6 +176,7 @@ continues around every one of them.
 | 137 | ℹ️ Batch 250 findings: UNF's course API; one UNF course under two numbers; ECH3702 ending; IRSC repeats a description (informational, batch 250) |
 | 138 | ℹ️ Batch 251 findings: a lower-division intermediate accounting course; the two-term financial accounting route; FSU's bulletin moved; athletic training numbers (informational, batch 251) |
 | 142 | ℹ️ Batch 252 findings (informational) |
+| 148 | ℹ️ Batch 255 findings (informational) |
 
 ### ✅ Resolved (13)
 
@@ -3996,6 +4001,55 @@ for the SAS course, bare disambiguation)?** The SAS half is held by two universi
 Also noted (informational): `STA3123`'s FAU row in SCNS (4 cr, *Statistics in Behavioral Analysis*, last changed 1999) is
 not in FAU's current catalogue; FIU is the only active carrier (course credit set to 3). FIU inactivated its `STA2122`
 effective 2026-08-01 as *"redundant to STA 2023"* (SCNS does not list FIU for it either).
+
+
+## 144. ⚠ `ACG2061` (requested ×1) — HELD: Hillsborough's only course could not be read (found 2026-11-24, batch 255)
+
+`ACG2061` *Computers and Accounting* (3 cr), carried only by **Hillsborough College** (effective 2021); statewide title
+the same. HCC's programme pages list it in the A.S. Accounting Technology (Financial Option), year II, and as an A.A.
+accounting-pathway elective (one page titles it *Computers in Accounting*), but give no description. ⚠ `catalog.hccfl.edu`
+and `catalog.hcfl.edu` do not resolve (DNS), `hcfl.edu` programme pages 404/403, SCNS's description report 403.
+**Not written.** Base data sent. ⚠ **Decision for Ron: supply HCC's description or syllabus, retry in a later run, or
+decline?** Probably a computerised-accounting (QuickBooks-type) course like `ACG2450`, but that is a guess.
+
+
+## 145. ⚠ `ACG2072` (requested ×1) — HELD: Polk State's only course could not be read (found 2026-11-24, batch 255)
+
+`ACG2072` *Accounting for Professionals* (3 cr), carried only by **Polk State** (effective 2023-08); ⚠ **statewide title
+*Cost Accounting for Business***. A third-party mirror (campusanswers, not readable here) was summarised by search as
+*"an overview of financial accounting with a focus on cost accounting… not an AA elective"*; not confirmed. It is **not**
+in Polk's 60-credit A.S. Accounting Technology (the programme flyer lists `ACG2021`, `ACG2071`, `ACG2100`, `ACG2450`, …).
+`catalog.polk.edu` gave 403 (WebFetch) and empty 202s (Python) all run. **Not written.** Base data sent. ⚠ **Decision
+for Ron: supply Polk's description, retry later, or decline?**
+
+
+## 146. ⚠ `DIG2040C` (requested ×1) — HELD: Florida Gateway's only course could not be read (found 2026-11-24, batch 255)
+
+`DIG2040C` *History of Video Games* (3 cr), carried only by **Florida Gateway College** (effective 2015); ⚠ **statewide
+title *Survey of Game Development***, so the college's description decides the subject. `catalog.fgc.edu` gave 403
+(WebFetch) and empty 202s (Python). **Not written.** Base data sent. ⚠ **Decision for Ron: supply FGC's description,
+retry later, or decline?**
+
+
+## 147. ⚠ `EUH6612` (requested ×1) — HELD: UF's only course not found in its current catalogue (found 2026-11-24, batch 255)
+
+`EUH6612` *Gender and Power in Europe & Mediterranean* (4 cr, graduate), carried only by **UF** in SCNS; statewide title
+*Gender and Power in the West (Graduate)*. UF's course-search API returned **no result** for `EUH 6612` early in the run;
+`catalog.ufl.edu` then stopped answering (connection refused/timeouts), so the graduate history page was not read.
+history.ufl.edu graduate listings Fall 2020–Fall 2022 do not show it. **Possibly no longer taught** (item 141's shape).
+**Not written.** Base data sent. ⚠ **Decision for Ron: decline, or retry UF's catalogue in a later run?**
+
+
+## 148. ℹ️ Batch 255 findings (informational)
+
+- ⚠ **Police administration is taught under FOUR lower-division numbers**: `CJE1300` (PHSC, SCF, GCSC, FSW, PBSC — statewide
+  *Police Role in Crime*), `CJE2300` (SFSC, IRSC, NFC, HC — same statewide title), `CJE2302` (LSSC — *Management of Police
+  Functions*) and `CJE2540` (Seminole State — ⚠ statewide *The Patrol Function*). Seminole also has upper-division `CJE4310`.
+  The `CJE2540` guide follows Seminole's catalogue and names the other numbers.
+- `HUN2202` statewide *Princ. of Nutrition, Diet, and Disease* is also Broward's `HUN1202`; Seminole and Valencia also
+  carry 1-credit `HUN2015` Diet Therapy for Health Care Professionals. Rasmussen (private) carries `HUN2202` at 4 cr, left out.
+- `HFT1102` (FIU) is a 1-credit pass/fail, spring-only orientation seminar for the Global Sustainable Tourism programme; its
+  statewide title (*Sustainable Tourism Assessment & Development*) names a fuller subject (closer to FIU's `HFT3103`).
 
 
 ## Resolved
