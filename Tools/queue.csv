@@ -1567,6 +1567,7 @@ MVW3331,PRINCIPAL APPLIED FLUTE,9,skipped,991,2026-09-04T01:12:11Z,,,Applied mus
 MVW3332,PRINCIPAL APPLIED OBOE,9,skipped,991,2026-09-04T01:12:11Z,,,Applied music: individual studio instruction - out of scope per Ron 2026-09-04
 MVW4341,PRINCIPAL APPLIED FLUTE,9,skipped,991,2026-09-04T01:12:11Z,,,Applied music: individual studio instruction - out of scope per Ron 2026-09-04
 MVW4342,PRINCIPAL APPLIED OBOE,9,skipped,991,2026-09-04T01:12:11Z,,,Applied music: individual studio instruction - out of scope per Ron 2026-09-04
+STA3024,SAS FOR DATA AND STATISTICAL ANALYSES,8,pushed,992,2026-11-24T00:55:15Z,2026-11-24T00:54:36Z,2026-11-24T00:55:26Z,(added by reconcile from orphan draft)
 ACG3401,ACCOUNTING INFORMATION SYSTEMS,8,pushed,992,2026-09-04T01:12:11Z,2026-09-05T18:42:30Z,2026-09-05T18:42:43Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ART2203C,THREE-DIMENSIONAL DESIGN,8,pushed,992,2026-09-04T01:12:11Z,2026-09-04T14:36:41Z,2026-09-04T14:36:54Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ATT1100C,PRIVATE PILOT GROUND SCHOOL,8,pushed,992,2026-09-04T01:12:11Z,2026-09-05T18:58:41Z,2026-09-05T18:58:52Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -1689,6 +1690,7 @@ MVW4345,PRINCIPAL APPLIED SAXOPHONE,7,skipped,993,2026-09-04T01:12:11Z,,,Applied
 PCB4723C,ANIMAL PHYSIOLOGY,7,skipped,993,2026-09-04T01:12:11Z,,,"UWF publishes no C-suffix entry for this number. The UWF halves are published separately and both are live: the lecture and the L laboratory (batches 134-135). Standing split-family rule, Tools/CLAUDE.md."
 SLS2940,SERVICE LEARNING,7,skipped,993,2026-08-31T00:09:01Z,,,Daytona State College project - skipped: shell course (internship/special topics/thesis etc.)
 TPP3251C,ACTING THE SONG,7,skipped,993,2026-09-04T01:12:11Z,,,"No UWF equivalent at any suffix. UWF's musical theatre line runs TPP2167C, TPP2715L, TPP3252C, TPP3257L and TPP3250; it publishes no TPP3251. Genuine no-coverage, not a split family."
+STA2122,INTRODUCTION TO APPLIED STATISTICS,6,pushed,994,2026-11-24T00:55:15Z,2026-11-24T00:54:36Z,2026-11-24T00:55:26Z,(added by reconcile from orphan draft)
 ACG1001,PRINCIPLES OF ACCOUNTING,6,pushed,994,2026-10-01T21:18:37Z,2026-10-01T21:18:23Z,2026-10-01T21:19:06Z,(added by reconcile from orphan draft)
 ACG3111,FINANCIAL ACCOUNTING & REPORTING II,6,pushed,994,2026-09-04T01:12:11Z,2026-09-06T03:07:13Z,2026-09-06T03:07:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR4211,U.S. DEFENSE POLICY & STRATEG. FORMULAT.,6,pushed,994,2026-09-04T01:12:11Z,2026-09-06T03:42:25Z,2026-09-06T03:42:52Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2370,11 +2372,12 @@ SPM4003,CAREER IN PROFESSIONAL SPORT,2,queued,998,2026-09-04T01:12:13Z,,,"UWF bu
 SPM4162,ESPORTS MANAGEMENT,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 SPN4500,SPANISH CULTURE,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 SSE4324,TEACHING MIDDLE SCHOOL SOCIAL STUDIES,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
-STA2360,INTRODUCTION TO DATA SCIENCE,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 THE3112,THEATRE HISTORY I,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 THE3113,THEATRE HISTORY II,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 THE3243,MUSICAL THEATRE HISTORY,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TRA4155,SUPPLY CHAIN MANAGEMENT,2,queued,998,2026-09-04T01:12:13Z,,,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+STA2360,INTRODUCTION TO DATA SCIENCE,2,pushed,998,2026-09-04T01:12:13Z,2026-11-24T00:54:36Z,2026-11-24T00:55:27Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
+STA3123,STATISTICS IN BEHAVIORAL ANALYSIS,2,pushed,998,2026-11-24T00:55:15Z,2026-11-24T00:54:36Z,2026-11-24T00:55:27Z,(added by reconcile from orphan draft)
 ACG4151,ACCOUNTING THEORY,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 ADV4802,ADVERTISING CAMPAIGNS,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 AFR1112,HERITAGE AND VALUES II,2,pushed,998,2026-09-04T01:12:12Z,2026-09-14T20:49:07Z,2026-09-14T20:49:58Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
@@ -2831,7 +2834,6 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-EDG7365,Practitioner Research: Data Collection and Analysis,,pushed,1000,2026-11-23T20:05:53Z,2026-11-23T20:05:30Z,2026-11-23T20:05:55Z,(added by reconcile from orphan draft)
 ACG2021,Principles of Financial Accounting,,pushed,1000,2026-10-01T21:24:02Z,2026-10-01T21:23:56Z,2026-10-01T21:24:10Z,(added by reconcile from orphan draft)
 ACG2071,Managerial Accounting,,pushed,1000,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
 ACG2100,Intermediate Accounting I (Lower Division),,pushed,1000,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
@@ -2913,6 +2915,7 @@ COP3530,Data Structures,,pushed,1000,2026-11-02T18:49:28Z,2026-11-02T18:49:23Z,2
 ECH3702,Instrument Systems I,,pushed,1000,2026-11-21T23:13:09Z,2026-11-21T23:13:01Z,2026-11-21T23:13:11Z,(added by reconcile from orphan draft)
 ECH4714,Chemical Process Safety,,pushed,1000,2026-09-18T12:05:02Z,2026-09-18T12:04:50Z,2026-09-18T12:05:06Z,(added by reconcile from orphan draft)
 ECP3524,The Economics of Religion,,pushed,1000,2026-11-02T18:57:30Z,2026-11-02T18:57:08Z,2026-11-02T19:07:36Z,(added by reconcile from orphan draft)
+EDG7365,Practitioner Research: Data Collection and Analysis,,pushed,1000,2026-11-23T20:05:53Z,2026-11-23T20:05:30Z,2026-11-23T20:05:55Z,(added by reconcile from orphan draft)
 EDH6046,Diversity Issues in Higher Education,,pushed,1000,2026-11-23T18:55:10Z,2026-11-23T18:54:43Z,2026-11-23T18:55:28Z,(added by reconcile from orphan draft)
 EDH6051,Introduction to Higher Education,,pushed,1000,2026-11-02T18:57:30Z,2026-11-02T18:55:54Z,2026-11-02T19:07:36Z,(added by reconcile from orphan draft)
 EEE3342C,EEE3342C: Digital Systems,,pushed,1000,2026-09-09T20:40:51Z,2026-09-09T20:40:18Z,2026-09-09T20:49:40Z,(added by reconcile from orphan draft)

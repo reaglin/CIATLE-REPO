@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **105** |
+| ⏳ **Awaiting a decision from Ron** | **106** |
 | Informational — recorded, no decision needed | 24 |
 | ✅ Resolved | 13 |
-| **Total items** | **142** |
+| **Total items** | **143** |
 
 ---
 
-### ⏳ Awaiting a decision (105)
+### ⏳ Awaiting a decision (106)
 
 | # | Item |
 |---|---|
@@ -142,6 +142,7 @@ continues around every one of them.
 | **139** | `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252) |
 | **140** | `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252) |
 | **141** | `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252) |
+| **143** | `STA3024` — one number, two subjects: Statistics II vs SAS programming (found 2026-11-23, batch 254) — **split candidate** |
 
 ### Informational — no decision needed (24)
 
@@ -3979,6 +3980,22 @@ catalogues in a later run?**
 - **`EDH6046`**: UF's description is one line; statewide title *College Student and Culture*. Written with the Florida
   2023 DEI-spending law (SB 266, s. 1004.06, F.S.) stated as context for the field, not as a claim about the course.
 - `CEN6030` (UWF) sits between `COP 6416` and `CEN 6017` Continuous Software Engineering (UWF, UNF).
+
+
+## 143. ⚠ `STA3024` — one number, two subjects: Statistics II vs SAS programming (found 2026-11-23, batch 254) — **split candidate**
+
+`STA3024` (requested ×1, published as ONE guide covering both readings, each labelled, as `CLP4302`/`APK4200` were).
+Statewide title *Introd. to Probability and Statistics II*. **Statistics II reading**: UF (*Introduction to Statistics 2*,
+title confirmed by UF's course search), USF (*Introductory Statistics II*, description read on cloud.usf.edu), FAMU
+(statewide title), Eastern Florida (*Statistics 2 for Data Scientists*). **SAS reading**: FAU and FSU, *SAS for Data and
+Statistical Analyses*, near-identical descriptions (lab-based SAS programming). All six at 3 credits. Methods vs software:
+a student moving between the two groups gets credit under the number without the content the next course expects.
+⚠ **Decision for Ron: leave as one labelled guide, or do the three-page split (`STA3024-SCNS`, `STA3024-FAU` or `-FSU`
+for the SAS course, bare disambiguation)?** The SAS half is held by two universities, so the `-<INST>` suffix needs a choice.
+
+Also noted (informational): `STA3123`'s FAU row in SCNS (4 cr, *Statistics in Behavioral Analysis*, last changed 1999) is
+not in FAU's current catalogue; FIU is the only active carrier (course credit set to 3). FIU inactivated its `STA2122`
+effective 2026-08-01 as *"redundant to STA 2023"* (SCNS does not list FIU for it either).
 
 
 ## Resolved

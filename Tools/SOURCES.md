@@ -25350,3 +25350,37 @@ Two open requests waiting (both automatic *most read* requests; `ACG5875`, `AVM1
 - **`EDG7365`**: UF only; statewide title *Practitioner Research in Schools and the Community*, same subject as UF's
   title. Second course of a pair after `EDG7982` *Practitioner Research: Theory & Practice* (UF only, "intended for
   doctoral students"). The guide carries the IRB-plus-district-approval warning in the prerequisite field.
+
+---
+
+## Batch 254 — scheduled request check (four STA guides), 2026-11-23
+
+Four requests waiting, all `STA`: `STA2122`, `STA3123`, `STA2360`, `STA3024`. All four written, validated clean and
+confirmed live; base data sent (4 updated, 0 failed; `STA3123` re-sent at 3 credits). Nothing declined or held. Build
+`scratchpad/b254_build.py`; base data `b254_base.py`; lookups `b254_look.py`, `b254_cache.py`, `b254_desc.py`,
+`b254_fetch.py`, `b254_fetch2.py`, `b254_confirm.py`. No career-path requests. `review_lookup.py` flagged `STA2122` as
+"mentions item 43" — a false match (item 43 is `TTE3004C`); no REVIEW_QUEUE item is about these courses.
+
+### Source register
+
+- ✅ **FIU, FAU, FSU Coursedog caches** answered `STA2122` (FSU, FIU), `STA3123` (FIU), `STA3024` (FAU, FSU), with FSU's
+  learning outcomes in custom field `ttXjp`. FAU's cache has **no `STA3123`** (checked against its full STA list).
+- ✅ **UCF Kuali** via `ucf_courses_idx.json` pids: `STA2360`, `STA2023` (description, credits; no prerequisite field).
+- ✅ **UWF** `catalog.uwf.edu/courseinformation/courses/sta/sta.pdf` with `pypdf`: `STA2360`, `STA2023`.
+- ✅ **Gulf Coast** `gulfcoast.edu/catalog/current/courses/sta/index.html`: `STA2122` 4 credits / 4 lecture hours.
+- ✅ **USF** `cloud.usf.edu/academic-programs/details/prefix/STA/code/<n>`: `STA2122`, `STA3024` with prerequisites.
+- ✅ UF course-search API (`STA 3024`, spaced) gave the title; ❌ `catalog.ufl.edu/search/?P=…` timed out.
+- ❌ coursicle 429 on every URL; `catalog.usf.edu` 403; UCF's public catalogue page is JS-only. FGCU, Tallahassee State,
+  FAMU and Eastern Florida not read (no fetchable route).
+
+### Findings
+
+- ⚠ **`STA3024` carries two subjects**: Statistics II (UF, USF, FAMU, EFSC, statewide title) and **SAS programming** (FAU,
+  FSU). One labelled guide; split question in `REVIEW_QUEUE.md` item 143.
+- **`STA2122`**: 3 credits at FGCU, FSU, USF; **4 at Gulf Coast State and Tallahassee State**. Gulf Coast: STA 2023 +
+  STA 2122 do not complete its six-hour mathematics requirement. **FIU inactivated `STA2122` effective 2026-08-01**, "redundant
+  to STA 2023" (rationale in the cache's inactivation form).
+- **`STA3123`**: FIU is the only active carrier (3 cr). SCNS still lists FAU at 4 cr (last changed 1999); not in FAU's
+  current catalogue. `list_missing.build()` broke the 1–1 credit tie toward FAU's 4, so the course's credit was set by hand.
+- **`STA2360`**: UCF and UWF, 3 cr, no prerequisite; at UWF it meets general education mathematics and the computation
+  skills requirement.
