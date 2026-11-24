@@ -26,14 +26,14 @@ continues around every one of them.
 
 | | Count |
 |---|---|
-| ⏳ **Awaiting a decision from Ron** | **110** |
+| ⏳ **Awaiting a decision from Ron** | **93** |
 | Informational — recorded, no decision needed | 25 |
-| ✅ Resolved | 13 |
-| **Total items** | **148** |
+| ✅ Resolved | 31 |
+| **Total items** | **149** |
 
 ---
 
-### ⏳ Awaiting a decision (110)
+### ⏳ Awaiting a decision (93)
 
 | # | Item |
 |---|---|
@@ -128,25 +128,8 @@ continues around every one of them.
 | **121** | `CHM5716` — FAU and FSU teach two different graduate courses on one number (found 2026-11-02, batch 244) |
 | **122** | `EDH6051` — UF uses the number for a doctoral statistics course (found 2026-11-02, batch 244) |
 | **123** | ℹ️ `EML x234` carries general materials science AND failure analysis (found 2026-11-02, batch 244) |
-| **124** | `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check) |
-| **125** | `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check) |
-| **126** | `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246) |
-| **127** | `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247) |
-| **128** | `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247) |
-| **130** | `EEL4448` (requested ×1) — HELD: Florida Poly's only course has no reachable description (found 2026-11-21, batch 248) |
-| **131** | `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248) |
-| **132** | `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248) |
 | **133** | ℹ️ Power electronics under four numbers; UF prints a prerequisite that does not exist; UWF dropped `EEL4610` (batch 248) |
-| **134** | `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) |
-| **136** | `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250) |
-| **139** | `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252) |
-| **140** | `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252) |
-| **141** | `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252) |
 | **143** | `STA3024` — one number, two subjects: Statistics II vs SAS programming (found 2026-11-23, batch 254) — **split candidate** |
-| **144** | `ACG2061` (requested ×1) — HELD: Hillsborough's only course could not be read (found 2026-11-24, batch 255) |
-| **145** | `ACG2072` (requested ×1) — HELD: Polk State's only course could not be read (found 2026-11-24, batch 255) |
-| **146** | `DIG2040C` (requested ×1) — HELD: Florida Gateway's only course could not be read (found 2026-11-24, batch 255) |
-| **147** | `EUH6612` (requested ×1) — HELD: UF's only course not found in its current catalogue (found 2026-11-24, batch 255) |
 
 ### Informational — no decision needed (25)
 
@@ -178,7 +161,7 @@ continues around every one of them.
 | 142 | ℹ️ Batch 252 findings (informational) |
 | 148 | ℹ️ Batch 255 findings (informational) |
 
-### ✅ Resolved (13)
+### ✅ Resolved (31)
 
 | # | Item |
 |---|---|
@@ -195,6 +178,24 @@ continues around every one of them.
 | 112 | RESOLVED 2026-09-21 — phlebotomy IS its own programme (raised the same day) |
 | 116 | RESOLVED 2026-09-23 (Ron approved; deployed; all seven paths published) — SEVEN CAREER-PATH ROWS NEED A CIP SEED WIDENING — plus four NATURAL-RESOURCE groups that hide UF programmes (raised 2026-09-21, extended 2026-09-22) |
 | 117 | RESOLVED 2026-10-02 (Ron: "yes for ACG2021C"; republished as v1.1) — `ACG2021C` (live since 2026-05-04) claims "approximately 39 Florida institutions" — that is ACG2021's count (found 2026-10-01) |
+| 124 | `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 125 | `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 126 | `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 127 | `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 128 | `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 130 | `EEL4448` (requested ×1) — HELD: Florida Poly's only course has no reachable description (found 2026-11-21, batch 248) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 131 | `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 132 | `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 134 | `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 136 | `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 139 | `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 140 | `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 141 | `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 144 | `ACG2061` (requested ×1) — HELD: Hillsborough's only course could not be read (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 145 | `ACG2072` (requested ×1) — HELD: Polk State's only course could not be read (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 146 | `DIG2040C` (requested ×1) — HELD: Florida Gateway's only course could not be read (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 147 | `EUH6612` (requested ×1) — HELD: UF's only course not found in its current catalogue (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)** |
+| 149 | Rule change: every requested course gets a guide (Ron, 2026-11-24) |
 ## Open — awaiting decision
 ### 1. `ETI4448` — scope gap on a capstone (correction candidate)
 
@@ -3732,7 +3733,7 @@ case-study **failure analysis** as `EML4234`. Equivalent by the last three digit
 guide that cross-references `EML4234`.
 
 
-## 124. ⚠ `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check)
+## 124. ✅ `EEL2130C` (requested ×2) — HELD: Florida Poly's only course may no longer be taught (found 2026-11-20, scheduled request check) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 Florida Polytechnic is the only carrier (*Circuits Analysis*, 3 cr; statewide *Circuits Analysis (L)*, effective
 2022-08-01). ⚠ **The Sep 2025 flat file holds TWO rows for it at Florida Poly: one active, one discontinued
@@ -3745,7 +3746,7 @@ and SCNS answered **403** this session (so the institution description report co
 carried it"), or hold until SCNS answers and the current status can be confirmed?**
 
 
-## 125. ⚠ `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check)
+## 125. ✅ `ETI0602` (requested ×1) — HELD: its state programme is TERMINATED (found 2026-11-20, scheduled request check) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `ETI0602` *Industrial Technician Assistant 1* (250 clock hours) is OCP C of **Industrial Technology, programme
 I150603, CIP 0615061200 (federal 15.0612)**, 1,600 hours, OCPs A–D = `ETI0600`–`ETI0605`. ⚠⚠ **CPALMS
@@ -3758,7 +3759,7 @@ or certifications. **Not written.**
 still teaches it"), or write a short guide for teach-out students? The same answer covers `ETI0600`–`ETI0605`.**
 
 
-## 126. ⚠ `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246)
+## 126. ✅ `EEL4016` (requested ×1) — HELD: FIU, the only carrier, inactivated it in 2004 (found 2026-11-20, batch 246) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EEL4016` *Electrical Design in Building II* (3 cr; statewide *Electrical Design II*). The Sep 2025 SCNS flat
 file lists it **active** at FIU (effective 1993, changed 2006), ⚠⚠ **but FIU's own Coursedog record says
@@ -3771,7 +3772,7 @@ see EEL4015 for building electrical design"), or write it from the statewide tit
 decided for 124 probably settles this too.
 
 
-## 127. ⚠ `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247)
+## 127. ✅ `EEL4081` (requested ×1) — HELD: UNF's new course has no reachable description (found 2026-11-21, batch 247) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EEL4081` *Topics on Rehabilitation Engineering* (3 cr), carried only by UNF, **entered the SCNS file on
 2026-08-16** (created 2017, effective and changed 2026-08-16). ⚠⚠ **No description could be read:** UNF's catalogue
@@ -3790,7 +3791,7 @@ was marked Declined on the site (see item 128), so nothing was written; ⚠ **if
 from UNF's own description.**
 
 
-## 128. ⚠ `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247)
+## 128. ✅ `PET1170` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-21, batch 247) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `PET1170` *Fundamentals of Athletic Coaching and Management* (3 cr), carried only by **Miami Dade College** (effective
 2024). ⚠ **Every MDC catalogue route failed on 2026-11-21:** `catalog.mdc.edu` DNS failure, `mdc.smartcatalogiq.com`
@@ -3819,7 +3820,7 @@ distribution, UCF protection and control, UWF energy systems); both guides say s
 the full `-SCNS` / `-<INST>` three-page split here, it is two more pages per number (`SOURCES.md` batch 247).
 
 
-## 130. ⚠ `EEL4448` (requested ×1) — HELD: Florida Poly's only course has no reachable description (found 2026-11-21, batch 248)
+## 130. ✅ `EEL4448` (requested ×1) — HELD: Florida Poly's only course has no reachable description (found 2026-11-21, batch 248) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EEL4448` *Optoelectronics* (3 cr), carried only by **Florida Polytechnic** (effective 2020). The 2019-20 BS EE
 flowchart lists it as an elective with prerequisites **`EEL3470` and `EEE4351`**, and Florida Poly's graduate
@@ -3830,7 +3831,7 @@ Florida Poly's description or a syllabus, or allow a guide from the title, the p
 course's outline, labelled as such?**
 
 
-## 131. ⚠ `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248)
+## 131. ✅ `EEL5025` (requested ×1) — HELD: FAMU-FSU graduate course with no reachable description (found 2026-11-21, batch 248) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EEL5025` *Computational Electrical Engineering* (3 cr, FAMU and FSU — one course at the joint college). The ECE
 graduate page (`eng.famu.fsu.edu/ece/graduate/courses`) lists it only as one of two **"math-equivalent" courses** an
@@ -3840,7 +3841,7 @@ is a search front end, and `catalog.famu.edu` failed the TLS check. **Not writte
 Ron: supply the description or a syllabus, or decline until one is published?**
 
 
-## 132. ⚠ `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248)
+## 132. ✅ `EEL5009` (requested ×1) — HELD: FIU's only description names no topics (found 2026-11-21, batch 248) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EEL5009` *Concepts in Electrical and Computer Engineering* (3 cr, FIU only, since 2015). FIU's whole description:
 *"The course covers a broad range of topics and concepts required to pursuing a Master's Degree in Electrical and
@@ -3862,7 +3863,7 @@ FIU does not define?**
   needed.
 
 
-## 134. ⚠ `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249)
+## 134. ✅ `EET2525C` (requested ×1) — HELD: SCF's only course could not be read, and its SCNS title is another course (found 2026-11-21, batch 249) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EET2525C` *Programmable Logic Controllers* (3 cr), carried only by **State College of Florida, Manatee-Sarasota**
 (effective 2013). ⚠ **The SCNS statewide title on that row is *Industrial Motor Control Lab (L)*** — a different
@@ -3887,7 +3888,7 @@ description or a syllabus, or allow a PLC guide written from the six other PLC r
   `EEL3004`/`EEL3004L`, a circuits course for **mechanical** engineers. The guide says they are not substitutes.
 
 
-## 136. ⚠ `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250)
+## 136. ✅ `ETS3543L` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-21, batch 250) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `ETS3543L` *Introduction to Programmable Logic Controllers Lab* (1 cr), carried only by **FAMU** (effective 2019), the
 laboratory half of FAMU's `ETS3543` (3 cr). Statewide course *Programmable Logic Controllers (U)*, shared with
@@ -3944,7 +3945,7 @@ only?** (Same shape as item 134.)
   cache `fsu_courses.json` (15,571 courses, with published learning outcomes in `customFields.ttXjp`).
 
 
-## 139. ⚠ `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252)
+## 139. ✅ `ACG5875` (requested ×1) — HELD: FAMU's only course could not be read (found 2026-11-23, batch 252) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `ACG5875` *Development of Accounting Thought* (3 cr, graduate), carried only by **FAMU** (effective 1990); statewide
 title *Grad History of Accounting*. ⚠ **No description could be read**: `catalog.famu.edu` now answers with certificate
@@ -3954,7 +3955,7 @@ written.** Base data sent. ⚠ **Decision for Ron: supply FAMU's description or 
 item 136.) Public hold reason names FAMU's unreadable catalogue.
 
 
-## 140. ⚠ `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252)
+## 140. ✅ `AVM1160` (requested ×1) — HELD: Miami Dade's only course could not be read (found 2026-11-23, batch 252) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `AVM1160` *Aviation Maintenance Programs and Inspections* (3 cr), carried only by **Miami Dade** (effective 2019), one of
 five MDC aviation-maintenance-management numbers added together (`AVM1160`–`AVM1164`). ⚠ **No description**:
@@ -3963,7 +3964,7 @@ and `www.mdc.edu/aviationmaintenance/` (the A.S. programme page) lists no course
 ⚠ **Decision for Ron: supply MDC's course outline, or decline?** (Same shape as item 128.)
 
 
-## 141. ⚠ `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252)
+## 141. ✅ `BCN6788` (requested ×1) — HELD: UF's only course is not in its current catalogue (found 2026-11-23, batch 252) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `BCN6788` *Construction Information Systems* (3 cr, graduate), carried only by **UF** in SCNS (effective 1997).
 ⚠ **UF's 2026-27 catalogue search (`catalog.ufl.edu/search/?P=BCN%206788`) returns no result**, while the same route
@@ -4003,7 +4004,7 @@ not in FAU's current catalogue; FIU is the only active carrier (course credit se
 effective 2026-08-01 as *"redundant to STA 2023"* (SCNS does not list FIU for it either).
 
 
-## 144. ⚠ `ACG2061` (requested ×1) — HELD: Hillsborough's only course could not be read (found 2026-11-24, batch 255)
+## 144. ✅ `ACG2061` (requested ×1) — HELD: Hillsborough's only course could not be read (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `ACG2061` *Computers and Accounting* (3 cr), carried only by **Hillsborough College** (effective 2021); statewide title
 the same. HCC's programme pages list it in the A.S. Accounting Technology (Financial Option), year II, and as an A.A.
@@ -4013,7 +4014,7 @@ and `catalog.hcfl.edu` do not resolve (DNS), `hcfl.edu` programme pages 404/403,
 decline?** Probably a computerised-accounting (QuickBooks-type) course like `ACG2450`, but that is a guess.
 
 
-## 145. ⚠ `ACG2072` (requested ×1) — HELD: Polk State's only course could not be read (found 2026-11-24, batch 255)
+## 145. ✅ `ACG2072` (requested ×1) — HELD: Polk State's only course could not be read (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `ACG2072` *Accounting for Professionals* (3 cr), carried only by **Polk State** (effective 2023-08); ⚠ **statewide title
 *Cost Accounting for Business***. A third-party mirror (campusanswers, not readable here) was summarised by search as
@@ -4023,7 +4024,7 @@ in Polk's 60-credit A.S. Accounting Technology (the programme flyer lists `ACG20
 for Ron: supply Polk's description, retry later, or decline?**
 
 
-## 146. ⚠ `DIG2040C` (requested ×1) — HELD: Florida Gateway's only course could not be read (found 2026-11-24, batch 255)
+## 146. ✅ `DIG2040C` (requested ×1) — HELD: Florida Gateway's only course could not be read (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `DIG2040C` *History of Video Games* (3 cr), carried only by **Florida Gateway College** (effective 2015); ⚠ **statewide
 title *Survey of Game Development***, so the college's description decides the subject. `catalog.fgc.edu` gave 403
@@ -4031,7 +4032,7 @@ title *Survey of Game Development***, so the college's description decides the s
 retry later, or decline?**
 
 
-## 147. ⚠ `EUH6612` (requested ×1) — HELD: UF's only course not found in its current catalogue (found 2026-11-24, batch 255)
+## 147. ✅ `EUH6612` (requested ×1) — HELD: UF's only course not found in its current catalogue (found 2026-11-24, batch 255) — **guide published 2026-11-24 as a limited-information guide (Ron\'s new rule)**
 
 `EUH6612` *Gender and Power in Europe & Mediterranean* (4 cr, graduate), carried only by **UF** in SCNS; statewide title
 *Gender and Power in the West (Graduate)*. UF's course-search API returned **no result** for `EUH 6612` early in the run;
@@ -4051,6 +4052,33 @@ history.ufl.edu graduate listings Fall 2020–Fall 2022 do not show it. **Possib
 - `HFT1102` (FIU) is a 1-credit pass/fail, spring-only orientation seminar for the Global Sustainable Tourism programme; its
   statewide title (*Sustainable Tourism Assessment & Development*) names a fuller subject (closer to FIU's `HFT3103`).
 
+
+## 149. ✅ Rule change: every requested course gets a guide (Ron, 2026-11-24)
+
+Ron: *"We need a better way to deal with requests that have only one school or have a lack of information…
+Change the rules, and lets write guides for all the courses I've declined and the ones I have on hold."*
+The rule is at the top of `CLAUDE.md` (limited-information guide: four kinds, a warning box, and a
+*Where to Learn More* section whose links are all fetched before use).
+
+**Batch 256 published all 29 held or declined requests the same day** (build scripts
+`scratchpad/b256_{acg,eel,misc,shell}.py`), and their request rows were released so none stays held or
+declined. Items 124–128, 130–132, 134, 136, 139–141 and 144–147 are closed by it. Points for Ron to look at
+when convenient (none blocks anything):
+
+- `EEL2130C`: one of Florida Poly's two SCNS records was discontinued 2025-07-11; if the course has ended,
+  turn the guide into the *retired* kind.
+- `EEL4081`: UNF lists it as `EEL 4081C` (hands-on), so the guide uses 60 contact hours; the SCNS number has no C.
+- `ACG2072`: Polk's 2025–26 catalogue was readable and matches the statewide "Cost Accounting for Business" —
+  one subject, not two. Its 2026–27 catalogue shows the title only; confirm it is still scheduled.
+- `BCN6788`: UF teaches the subject under `BCN6785` (syllabi Spring/Fall 2025); FIU's `BCN6788C` is AI in
+  construction management under the same statewide course.
+- The UCF shell numbers (`EEL3970`, `EEL3955`, `CGS4955`, `EEL1906`, `EEL1931`, `EDG1931`, and UCF's `SOW2949`)
+  are not in UCF's current Kuali catalogue; the guides say so. `EEL3970` may be a legacy number (the honors
+  handbook uses xxx4903H/4970H). Their 3-credit figure is a placeholder for a VAR number, and the guides say that too.
+- `AVM1160` links FAA AC 120-16D (2003) labelled as such; faa.gov refused automated fetches, so a newer
+  revision was not confirmed.
+- `ACG4940`: USF's own pages disagree on the GPA requirement (2.75 vs 2.5); the guide gives both.
+- `CET1112` has no public carrier, so its draft has no `offering_notes` (the validator refuses an empty list).
 
 ## Resolved
 

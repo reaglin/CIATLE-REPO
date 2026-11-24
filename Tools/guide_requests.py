@@ -5,7 +5,7 @@ Run from Tools/ (decide-requests.cmd in the repo root runs `decide` for you).
 
     python guide_requests.py decide                 # Ron: go through the held requests, one key each
     python guide_requests.py list [--status held]   # open | held | queued | published | declined | all
-    python guide_requests.py hold EEL5025 "reason"  # the request check: can't write it, so hold it
+    python guide_requests.py hold EEL5025 "reason"  # a real question for Ron only: thin or one-school courses get a limited-information guide (CLAUDE.md, 2026-11-24)
     python guide_requests.py decline EEL5025        # decline with the reason it was held with
     python guide_requests.py decline EEL5025 --reason "new public reason"
     python guide_requests.py release EEL5025        # back to the queue (to be written), or undo a decline

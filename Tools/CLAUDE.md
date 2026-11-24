@@ -55,6 +55,67 @@ When in doubt about scope, **err toward fewer high-quality guides over more rush
 
 ---
 
+## ⚠⚠⚠ EVERY REQUESTED COURSE GETS A GUIDE — the limited-information guide (Ron, 2026-11-24)
+
+> *"We need a better way to deal with requests that have only one school or have a lack of information.
+> I propose we still create a guide that indicates the course is only offered at one institution that
+> also offers only minor information for the course. The guide can contain links that might contain more
+> information about similar courses or also similar courses offered at other locations outside of
+> Florida."* … *"Change the rules, and lets write guides for all the courses I've declined and the ones I
+> have on hold."*
+
+**A request is no longer held or declined because the course has one carrier or no readable description.**
+It gets a **limited-information guide** instead. `guide_requests.py hold` is now for a real question for
+Ron (a `REVIEW_QUEUE` hold, a scope call), not for "we could not read the catalogue".
+
+**Four kinds, and each says which it is in a box at the top of Course Description:**
+
+| Kind | When | What the guide is |
+|---|---|---|
+| **Limited information** | one (or few) carriers, and little or no published description | what the record shows + what a course of that title commonly covers, clearly marked as such |
+| **Experiential / variable-content** (internship, co-op, study abroad, independent study, special topics, honors thesis) | the shell numbers in *What to skip* | a guide to **how this kind of course works**: credit, enrolment steps, what is graded, Florida rules (screening, excess hours, repeat limits, aid), how it transfers — not a made-up syllabus |
+| **Retired** | the only carrier has dropped it | what it was, when it ended, and **the course that replaces it** (linked) |
+| **No public carrier** | only a private institution carries the number | which public course teaches the subject (linked); nothing invented about the private one |
+
+**The box (top of Course Description), in plain words:**
+
+```html
+<div class="alert alert-warning"><strong>Limited information.</strong> Only <em>[Institution]</em> offers
+[ID] in Florida's public colleges and universities, and it publishes [only a title and credits / a
+one-sentence description]. This guide sets out what the record shows and what a course of this kind
+commonly covers. Check the institution's syllabus before relying on it.</div>
+```
+
+**What still holds, unchanged:**
+
+1. ⚠⚠ **Never invent the institution's specifics.** What the institution says (title, credits,
+   description, prerequisites) is quoted or stated as such. Everything else is labelled **"commonly
+   covers"** and goes under **Optional** outcomes and topics where it is a guess about emphasis.
+   Required outcomes are only what the title and the record make certain.
+2. ⚠⚠ **Where the statewide title and the carrier's title name different subjects, say so** and cover
+   what each name means; do not pick one silently (the `-SCNS`/`-<INST>` rule still applies when both
+   halves can be sourced).
+3. **Credits, contact hours and the offering table** come from the SCNS flat file as always
+   (`python scratchpad/cached_run.py carriers.py <ID>` while SCNS's live lookup refuses).
+
+**The new section: `<h2>Where to Learn More</h2>`**, after Career Pathways and before Special Information:
+
+- **The institution's own pages** (catalogue entry, programme page, department).
+- **The same subject in Florida under other numbers** — the sector and prefix twins this file tracks —
+  linked to their course pages on floridacourserepo.com (`/courses/{ID}`).
+- **Similar courses outside Florida** — public universities' catalogue pages for a course of the same
+  subject, labelled *"a similar course, not an equivalent for transfer"*.
+- **Free open materials** — OpenStax, MIT OpenCourseWare, LibreTexts, professional bodies' free pages.
+
+⚠⚠⚠ **EVERY OUTSIDE LINK IS FETCHED AND READ BEFORE IT GOES IN.** A course page at another university
+is where a guide is most likely to cite something that does not exist, was renumbered, or teaches
+something else. **No link from memory. If the page did not load and say what the link claims, leave it
+out.** Prefer stable catalogue URLs over syllabus PDFs and term-specific pages.
+
+**What a limited-information guide is NOT:** padded. It can be shorter than a full guide (the
+validator's "unusually thin" warning is acceptable here); its value is the honest box, the offering
+facts and the links. **Omit a section rather than fill it.**
+
 ## ⚠⚠⚠ MAINTENANCE MODE (Ron, 2026-09-23) — career paths AND guides are BY REQUEST ONLY
 
 > *"We are now in maintenance mode, career paths and course guides are by request."*
@@ -1235,7 +1296,7 @@ When writing one variant, cross-reference the other and note that programs typic
 - 8+ institutions: confident, definitive language. Content is well-validated.
 - 4-7 institutions: confident with light hedging where appropriate.
 - 2-3 institutions: explicit hedging — "varies by institution," "students should consult their specific institution," "content may emphasize X at some institutions and Y at others." Use Optional Outcomes / Optional Topics generously.
-- 1 institution (faculty request only): treat as a custom guide for that institution. Apply faculty specifications precisely.
+- 1 institution: a guide whenever it is requested (Ron, 2026-11-24). Where the institution publishes enough, write a normal guide hedged to that one institution; where it does not, write a **limited-information guide** (section near the top of this file). A faculty request with specifications is still followed precisely.
 
 **Always include where applicable:**
 - FE/PE exam relevance (the FE exam is the gateway to PE licensure; topics that appear on FE exams should say so)
@@ -1268,6 +1329,10 @@ After generating, surface anything in this list to the user as part of the post-
 ---
 
 ## What to skip (default)
+
+⚠ **Skip means "do not pick it off a list". It does not mean "decline a request" (Ron, 2026-11-24).**
+When a visitor requests a shell number, write the **experiential / variable-content** kind of
+limited-information guide (top of this file): how the course works, not an invented syllabus.
 
 Shell-style courses in any prefix, unless the user says otherwise:
 - `XXXX900`, `XXXX905`, `XXXX910` — independent study / directed individual study
