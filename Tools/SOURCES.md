@@ -290,6 +290,14 @@ single best CJK reference found — it lists *every* CJK course with credits and
 hours in one table, across law enforcement, corrections, correctional probation, and
 crossover programs. Fetch it whenever a CJK number needs hours.
 
+✅ **The CJSTC learning objectives themselves are in the FSCJ Coursedog cache (batch 257, 2026-11-24).**
+`scratchpad/fscj_courses.json` stores, for each CJK course FSCJ runs, the Commission's numbered objectives
+(e.g. `HL211.1`–`HL245.6` for CJK0031 First Aid) in a custom field whose list items carry the key `iIl3l`,
+updated with its 2025 curriculum proposals. **That is the statewide curriculum, readable offline, and it
+outranks any summary.** It also showed the May 2026 CJK0031C guide was wrong to promise CPR/AED and AHA BLS:
+CPR is not among the first-aid objectives. ⚠ Broward's CJK page and fdle.state.fl.us both returned 403 to
+automated fetches on 2026-11-24.
+
 ⚠ **Multiple curriculum versions are in circulation, in both disciplines.** Same titles,
 different numbers, different hours. They are **not** equivalent, and title-matching produces
 wrong equivalency decisions.
