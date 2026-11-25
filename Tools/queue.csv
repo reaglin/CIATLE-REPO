@@ -2839,7 +2839,7 @@ TPA4045C,COSTUME DESIGN I,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z
 TPA4077C,SCENE PAINTING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-15T21:38:44Z,2026-09-15T21:39:11Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 TTE3004C,TRANSPORTATION ENGINEERING,1,pushed,999,2026-09-04T01:12:12Z,2026-09-12T02:27:38Z,2026-09-12T02:27:51Z,"UWF build 2026-09-04: non-shell, undergraduate (levels 1-4). Graduate 5xxx+ and x9xx shells excluded per the standing procedure in SOURCES.md."
 COM4564C,SOCIAL MEDIA MANAGEMENT,1,skipped,999,2026-09-04T01:12:12Z,,,"No PUBLIC carrier: only carrier is Keiser (private), and the public-institution scope rule applies. Guide written at the bare number COM4564 (UWF), same statewide title and description."
-CJK0031,First Aid for Criminal Justice Officers,,pushed,1000,2026-11-24T23:15:51Z,2026-11-24T23:15:43Z,2026-11-24T23:16:03Z,(added by reconcile from orphan draft)
+BME4057C,Biomedical Engineering Lab II,,pushed,1000,2026-11-25T21:29:02Z,2026-11-25T21:28:54Z,2026-11-25T21:29:39Z,(added by reconcile from orphan draft)
 ACG2021,Principles of Financial Accounting,,pushed,1000,2026-10-01T21:24:02Z,2026-10-01T21:23:56Z,2026-10-01T21:24:10Z,(added by reconcile from orphan draft)
 ACG2061,Computers and Accounting,,pushed,1000,2026-11-24T22:55:33Z,2026-11-24T22:54:31Z,2026-11-24T22:56:06Z,(added by reconcile from orphan draft)
 ACG2071,Managerial Accounting,,pushed,1000,2026-11-22T16:43:31Z,2026-11-22T16:43:10Z,2026-11-22T16:43:39Z,(added by reconcile from orphan draft)
@@ -2919,6 +2919,7 @@ CHM2046,General Chemistry II,,pushed,1000,2026-09-18T11:54:49Z,2026-09-18T11:54:
 CHM2210,Organic Chemistry I,,pushed,1000,2026-09-18T11:54:49Z,2026-09-18T11:54:13Z,2026-09-18T11:54:52Z,(added by reconcile from orphan draft)
 CHM2211,Organic Chemistry II,,pushed,1000,2026-09-18T11:54:49Z,2026-09-18T11:54:13Z,2026-09-18T11:54:52Z,(added by reconcile from orphan draft)
 CJE2540,Police Organization and Administration,,pushed,1000,2026-11-24T13:38:28Z,2026-11-24T13:38:23Z,2026-11-24T13:38:54Z,(added by reconcile from orphan draft)
+CJK0031,First Aid for Criminal Justice Officers,,pushed,1000,2026-11-24T23:15:51Z,2026-11-24T23:15:43Z,2026-11-24T23:16:03Z,(added by reconcile from orphan draft)
 CJK0420,Criminal Justice Corrections (Defensive Tactics),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:21Z,(added by reconcile from orphan draft)
 CJK0570,Criminal Justice Corrections (Firearms),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:21Z,(added by reconcile from orphan draft)
 CJK0590,Criminal Justice Corrections (Emergency Response and First Aid),,pushed,1000,2026-05-09T10:26:08Z,2026-05-09T14:25:36Z,2026-05-09T10:26:22Z,(added by reconcile from orphan draft)

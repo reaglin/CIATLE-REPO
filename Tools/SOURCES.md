@@ -25424,3 +25424,25 @@ seven (7 updated, 0 failed). Build `scratchpad/b255_build.py`; base data `b255_b
 - **`HUN2202`**: Seminole State and Valencia, 3 cr, lecture only (Valencia 3 contact hours, 0 lab). Seminole prerequisite
   BSC 2010C, HUN 1201, BSC 2093C or BSC 2094C with C or higher.
 - **`HFT1102`**: FIU 1-credit first-term GST seminar, pass/fail, spring only; published at 15 derived contact hours.
+
+## Batch 258 — scheduled request check, 2026-11-25
+
+One request waiting (`BME4057C`), none held, no REVIEW_QUEUE item about it. **Written, validated clean and confirmed
+live** as a limited-information guide (USF the only carrier, one-sentence description), with base data sent (1 updated,
+0 failed; 30 derived contact hours). The request queue is now empty (0 waiting, 131 published); no career-path requests.
+Build `scratchpad/b258_build.py`; base data `b258_base.py`; lookups `b258_fetch.py`, `b258_live.py`.
+
+### Source register
+
+- ✅ **USF** `cloud.usf.edu/academic-programs/details/prefix/BME/code/<NUM>` answered for `4057C`, `4056C`, `3312`,
+  `4232`, `3632` (description, credits, prerequisites with grades, "Majors Only, Permit Required").
+- ✅ **USF Medical Engineering** department: `www.usf.edu/engineering/bme/` (200). ❌ `www.bme.usf.edu` does not resolve.
+- ✅ **MIT OCW 20.109** *Laboratory Fundamentals in Biological Engineering* (Spring 2010) read and linked as a similar
+  course outside Florida.
+
+### Findings
+
+- **`BME4057C`** (USF, 2 cr): *Experimental design, testing and analysis of molecular, cellular and tissue engineering
+  systems, including biomaterials, biomechanics and fluid transport.* Prerequisites BME 3312, BME 4056C, BME 4232 (C);
+  co-requisite BME 3632. Its partner `BME4056C` Lab I (instrumentation, physiological systems; 2 cr, USF only) has no
+  guide yet — write it with the same sources if it is requested.
