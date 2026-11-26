@@ -290,6 +290,20 @@ Ron, 2026-11-22: *"We will add these to the 'to do' list."* Captured here as the
 | 15.4 | ⚠️ **Built 2026-11-23.** Ron: *"a lot of the courses show on their page with the description (such as https://floridacourserepo.com/courses/CJK0570 ) but show up in the Most read without the description."* The most-read list took only the course's stored title, which for many courses is the course id as a placeholder; it now uses the same choice as the course page (`CourseTitles.Display`: stored title, else the state's, else the guide's). On `/visitors` and `/admin/visitors`. Test: CJK0570-like placeholder shows the state title. **Titles in Most read** | After the deploy, CJK0570 and the others show their title in Most read |
 | 15.5 | ⚠️ **Built 2026-11-23.** Ron: *"it would be nice to show the top 100 as an option."* `/visitors` has **Top 20 / Top 100** buttons above the list (`?top=100`, kept when the period changes; any other value falls back to 20), and a rank column. Cached per period and count, 10 minutes. **Top 100** | After the deploy, `/visitors?days=7&top=100` lists up to 100 courses, numbered |
 
+## Phase 16 — The visitor count and the 21–24 November scraper (Ron, 2026-11-26)
+
+Ron, 2026-11-26: *"The visitors page … shows either numbers that are too high for most days or it totally missed
+Wednesday."* Neither: Wednesday's 7 visitors were real. From Sat 21 to Tue 24 a program running a full browser opened
+about 58,000 `/courses/*/resources` pages (58,829 of the week's 65,051 page views), each from a different address
+with no referring site, about one page each, and waited 5 seconds on each, which the counter took as a reader: 12,600–15,800
+"visitors" a day against a real 10 or so pages a day (course pages 87 and guides 97 for the week). It stopped on Wednesday.
+Ron: *"Yes, lets do 1 and 2."*
+
+| # | Task | Done when |
+|---|---|---|
+| 16.1 | ⚠️ **Built 2026-11-26.** A page counts only after the reader does something on it: moves the mouse, scrolls, clicks, taps or types (`site.js`; the 5-second timer is gone, events made by a script — `isTrusted` false — and events while the tab is hidden are ignored). Wording on `/visitors` and `/admin/visitors` updated, with a note on the 21–24 November jump. Cost: a reader who opens a page and never touches it is no longer counted. 87 tests green, `node --check` clean | ⚠ After the deploy: Ron opens a few public pages on his phone (scroll or tap each) and on a computer (move the mouse) without signing in, and sees them on `/admin/visitors` a minute later |
+| 16.2 | ⚠️ **Built 2026-11-26.** Migration `RemoveBotVisitsNov2026` (data only, runs once when the site starts after the deploy): for 21–24 Nov 2026 it deletes visits with no referring site that landed on a course-resources page or the subject tree, and those two sections' page views for those days. The few real readers of those pages on those days go with them. Tested on sample rows (`BotVisitCleanupTests`) | ⚠ After the deploy: `/visitors?days=7` shows Sat–Tue in the tens, not the thousands, and the header's weekly figure drops to match |
+
 ---
 
 ## Open questions for Ron

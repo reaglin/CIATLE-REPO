@@ -219,21 +219,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// The visitor counter (plan 9.3). A page is reported once there is a sign of a person reading it: open and
-// visible for 5 seconds, or a scroll, click, tap or key. Programs that pose as browsers but never run this
-// script, or move on within seconds, are not counted, and browsers that say they are automated are skipped.
+// The visitor counter (plan 9.3, 16.1). A page is reported once the reader does something on it: moves the
+// mouse, scrolls, clicks, taps or types. Being open for a while is not enough: from 21 to 24 November 2026 a
+// program running a full browser opened about 58,000 course-resources pages, waited 5 seconds on each and
+// was counted as 15,000 visitors a day. Programs that never run this script or never touch the page are not
+// counted, nor are browsers that say they are automated, nor events made by a script (isTrusted).
 // Only the page's address and the page that linked to it are sent; the server keeps a scrambled code for the
 // visitor, never the address. The layout marks which pages count (data-visit).
 (function () {
     var body = document.body;
     if (!body || body.getAttribute('data-visit') !== '1' || navigator.webdriver) return;
-    var sent = false, timer = null;
-    var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+    var sent = false;
+    var events = ['pointermove', 'pointerdown', 'wheel', 'scroll', 'keydown', 'touchstart'];
 
     function stop() {
-        events.forEach(function (e) { window.removeEventListener(e, send, true); });
-        document.removeEventListener('visibilitychange', onVisibility);
-        clearTimeout(timer);
+        events.forEach(function (e) { window.removeEventListener(e, onEvent, true); });
+    }
+    function onEvent(e) {
+        if (e && e.isTrusted === false) return;
+        if (document.visibilityState && document.visibilityState !== 'visible') return;
+        send();
     }
     function send() {
         if (sent) return;
@@ -246,17 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .catch(function () { /* counting must never disturb the page */ });
         } catch (e) { /* likewise */ }
     }
-    function startTimer() {
-        if (!timer && document.visibilityState === 'visible') timer = setTimeout(send, 5000);
-    }
-    function onVisibility() {
-        if (document.visibilityState === 'visible') startTimer();
-        else { clearTimeout(timer); timer = null; }
-    }
-
-    events.forEach(function (e) { window.addEventListener(e, send, { capture: true, passive: true }); });
-    document.addEventListener('visibilitychange', onVisibility);
-    startTimer();
+    events.forEach(function (e) { window.addEventListener(e, onEvent, { capture: true, passive: true }); });
 })();
 
 // The program panel (plan Phases 10 and 14), on the first page a browser opens in a session. The server has already set

@@ -53,7 +53,7 @@ public static class VisitClassifier
 
     /// <summary>
     /// True when a page's report (<c>POST /visit</c>, sent by site.js once there is a sign of a person:
-    /// the page open and visible for 5 seconds, or a scroll, click, tap or key) should be counted: a
+    /// a mouse movement, scroll, click, tap or key on the page) should be counted: a
     /// public page, not the API or the admin console, not a bot, not an administrator. Scrapers that
     /// pose as browsers but never run the page's script, or leave within seconds, never send one
     /// (plan 9.3: the logs showed 941,945 such "visitors" against about 3,500 people).

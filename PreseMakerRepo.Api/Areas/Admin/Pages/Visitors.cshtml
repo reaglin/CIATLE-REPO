@@ -17,7 +17,7 @@
     A <strong>visitor</strong> is one network address with one browser, kept only as a scrambled code (the address
     itself is never stored). Someone who comes back counts <strong>once</strong> in the Visitors total, but once on
     <strong>each</strong> day (or week) they came in the table below, so the rows add up to more than the total.
-    A page counts once it has been open on screen for 5 seconds, or the visitor scrolls, clicks, taps or types;
+    A page counts once the visitor moves the mouse, scrolls, clicks, taps or types on it (being open is not enough);
     that leaves out the programs that pose as browsers (the server logs show many times more of those than people).
     Search engines, bots, the API, this admin console and your own browsing while signed in here are not counted.
     Days are Florida days.
@@ -42,8 +42,8 @@
         <li><strong>Shared networks count as one.</strong> Several people on one campus, library or office network using the same browser look like one visitor.</li>
         <li><strong>One person can count twice:</strong> on a phone that moves from Wi-Fi to mobile data, or on a phone and a laptop.</li>
         <li><strong>Only pages are counted.</strong> Downloaded files, error pages and redirects are not page views.</li>
-        <li><strong>Very short visits are not counted:</strong> a page closed within 5 seconds without scrolling or clicking, or opened by a browser with scripts turned off.</li>
-        <li><strong>Some programs may still get in:</strong> one that runs a full browser and waits on each page looks like a reader. A sudden jump on one day is usually that.</li>
+        <li><strong>Very short visits are not counted:</strong> a page closed without moving the mouse, scrolling or tapping, or opened by a browser with scripts turned off.</li>
+        <li><strong>Some programs may still get in:</strong> one that runs a full browser and imitates the mouse looks like a reader. A sudden jump on one day is usually that. (From 21 to 24 November 2026 a program that opened about 58,000 course-resources pages and waited 5 seconds on each was counted as about 15,000 visitors a day; those visits were removed by the migration <code>RemoveBotVisitsNov2026</code>, and since then waiting is no longer enough to be counted.)</li>
         <li><strong>Your own visits count</strong> when you are not signed in to this console (on your phone, or in a private window).</li>
         <li><strong>Other tools will differ.</strong> Google Analytics or the log report (<code>visitor-report.cmd</code>) use slightly different rules, so expect close figures, not identical ones.</li>
     </ul>
@@ -62,7 +62,7 @@
 {
     <div class="alert alert-info" style="max-width: 60rem">
         <strong>Nothing has been counted yet.</strong> Counting began when this page was deployed. The first figures
-        appear about a minute after someone reads a public page for 5 seconds or scrolls or clicks on it (pages you open while signed in here are not counted).
+        appear about a minute after someone moves the mouse, scrolls or taps on a public page (pages you open while signed in here are not counted).
         <br />For the time before that: @ReportHelp
     </div>
 }
@@ -179,7 +179,7 @@ else
                 links counts 2 (at most 20 a day each). Not counted: links opened from the right-click menu, or with scripts
                 turned off. There were <strong>@s.Arrivals.ToString("N0")</strong> arrivals (one per visitor per day) in this
                 period, about one panel each; a visitor who comes back after closing the browser sees it again the same day,
-                and one who leaves within 5 seconds is not counted as an arrival, so the rate below is approximate.
+                and one who leaves without touching the page is not counted as an arrival, so the rate below is approximate.
                 @if (Model.Programs.Count == 0)
                 {
                     <br /><span class="text-danger">The list could not be read just now, so the panel is not showing. It is tried again every 10 minutes.</span>
